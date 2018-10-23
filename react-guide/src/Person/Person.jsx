@@ -1,13 +1,14 @@
 import React from "react";
+import './Person.scss';
 
 const person = props => {
   return (
-    <div>
+    <div className='Person'>
       <h1>
         Hi I'm a {props.name} and I'm {props.age} years old!
       </h1>
       <p>{props.children}</p>
-      <input type="text" value={props.name} onChange={props.handleChange} />
+      <input type="text" onChange={props.handleChange} value={props.name} />
     </div>
   );
 };

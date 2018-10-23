@@ -10,39 +10,41 @@ class App extends Component {
   };
 
   handleNameSwitch = ({ target }, name) => {
-    // const persons = [...this.state.persons];
-    // const personIndex = persons.findIndex(person => person.name === name);
-    // const newPerson = { ...persons[personIndex] };
 
     const person = {...this.state.person};
     person.name = target.value;
     this.setState({ person });
-
-    target.focus();
   };
 
+  handleNameChange = ({ target }) => {
+    console.log('NameChanged!');
+    this.setState({
+      persons: [{ name: target.value, age: 29 }, { name: "max", age: 22 }]
+    });
+  }
+
   render() {
+    const { persons } = this.state;
+
     return (
       <div className="App">
         <header className="App-header">
-          {this.state.persons.map(person => (
-            <Person
-              key={person.name}
-              name={person.name}
-              age={person.age}
-              handleChange={event => this.handleNameSwitch(event, person.name)}
-            >
-              My hobbies - racing
-            </Person>
-          ))}
+          <Person
+            name={persons[0].name}
+            age={persons[0].age}
+            handleChange={this.handleNameChange}
+          >
+            My hobbies - racing
+          </Person>
+          
 
           <Person
-              name={this.state.person.name}
-              age={this.state.person.age}
-              handleChange={event => this.handleNameSwitch(event, "name")}
-            >
-              My hobbies - racing
-            </Person>
+            name={this.state.person.name}
+            age={this.state.person.age}
+            handleChange={event => this.handleNameSwitch(event, "name")}
+          >
+            My hobbies - racing
+          </Person>
         </header>
         <img src={logo} alt="react" />
       </div>
