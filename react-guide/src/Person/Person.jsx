@@ -4,7 +4,7 @@ import './Person.scss';
 const person = props => {
   return (
     <div className='Person'>
-      <h1>
+      <h1 onClick={props.handleDelete}>
         Hi I'm a {props.name} and I'm {props.age} years old!
       </h1>
       <p>{props.children}</p>

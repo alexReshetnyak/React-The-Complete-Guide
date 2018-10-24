@@ -1,7 +1,14 @@
 
 .Person {
   border: 1px solid blue;
+  box-shadow: 1px 1px 10px 1px blue;
+  margin-bottom: 20px;
+  width: 60%;
+  padding: 10px;
   h1 {
     color: orchid;
+  }
+  &:first-child {
+    margin-top: 20px;
   }
 }
