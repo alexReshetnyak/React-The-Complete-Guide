@@ -18,11 +18,23 @@ class App extends Component {
     this.setState({ person });
   };
 
-  handleNameChange = ({ target }) => {
+  handleNameChange = ({ target }, personId ) => {
     console.log('NameChanged!');
-    this.setState({
-      persons: [{ id: 1, name: target.value, age: 29 }, { id: 2, name: "max", age: 22 }]
+    const persons = [...this.state.persons];
+
+    const personIndex = persons.findIndex(p => {
+      return p.id === personId;
     });
+
+    const person = {
+      ...persons[personIndex]
+    };
+
+    person.name = target.value;
+
+    persons[personIndex] = person;
+
+    this.setState({ persons });
   }
 
   togglePersonHandler = () => {
@@ -59,7 +71,7 @@ class App extends Component {
                 key={person.id}
                 name={person.name}
                 age={person.age}
-                handleChange={this.handleNameChange}
+                handleChange={(event) => this.handleNameChange(event, person.id)}
                 handleDelete={() => this.handleDeletePerson(index)}
               >
                 My hobbies - racing
