@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import Radium, { StyleRoot } from "radium"; // * Radium fot css rules like :hover, StyleRoot for css @media
 
+import  "./App.scss";
+
 import logo from "../logo.svg";
 import Person from "../components/Persons/Person/Person";
 import Persons from "../components/Persons/Persons";
-
-import  "./App.scss";
+import Cockpit from "../components/Cockpit/Cockpit";
 
 
 class App extends Component {
@@ -63,18 +64,6 @@ class App extends Component {
 
   render() {
     const { showPersons, persons } = this.state;
-    const style = {
-      backgroundColor: 'green',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer',
-      fontWeight: 'bold',
-      color: 'white',
-      ':hover': {   // * Thank you Radium !
-        backgroundColor: 'lightgreen',
-        color: 'black'
-      }
-    };
 
     let personsWrap = null;
 
@@ -97,28 +86,13 @@ class App extends Component {
           </Persons>
         </header>
       );
-
-      style.backgroundColor = 'red';
-      style[':hover'] = {   // * Thank you Radium !
-        backgroundColor: 'lightblue',
-        color: 'black'
-      }
     }
-
-    const classes = [];
-
-    persons.length <= 1 && classes.push('red');
-    persons.length <= 2 && classes.push('bold');
 
     return (
       <StyleRoot>  {/* Needed for implement @media in js file */}
         <div className='App'>
-          <p className={classes.join(' ')}>This is working!</p>
 
-          <button style={style} onClick={this.togglePersonHandler}>
-            Toggle Persons
-          </button>
-
+          <Cockpit togglePersonHandler={this.togglePersonHandler} showPersons={showPersons}></Cockpit>
           {personsWrap}
           <img src={logo} alt="react" />
         </div>
