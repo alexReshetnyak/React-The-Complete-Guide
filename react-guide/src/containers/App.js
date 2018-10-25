@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import Radium, { StyleRoot } from "radium"; // * Radium fot css rules like :hover, StyleRoot for css @media
-import logo from "./logo.svg";
-import Person from "./Person/Person";
+
+import logo from "../logo.svg";
+import Person from "../components/Persons/Person/Person";
+import Persons from "../components/Persons/Persons";
+
 import  "./App.scss";
-import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
+
 
 class App extends Component {
   state = {
@@ -78,27 +81,20 @@ class App extends Component {
     if (showPersons) {
       personsWrap =  (
         <header className="App-header">
-          {persons.map((person, index) => {
-            return <ErrorBoundary key={person.id}>
-                <Person
-                  name={person.name}
-                  age={person.age}
-                  handleChange={(event) => this.handleNameChange(event, person.id)}
-                  handleDelete={() => this.handleDeletePerson(index)}
-                >
-                  My hobbies - racing
-              </Person>
-            </ErrorBoundary>
-          })}
-
-          <Person
-            name={this.state.person.name}
-            age={this.state.person.age}
-            handleChange={event => this.handleNameSwitch(event, "name")}
-            handleDelete={this.handleDeletePerson}
+          <Persons 
+            persons={persons}
+            handleChange={({event, person}) => this.handleNameChange(event, person.id)}
+            handleDelete={(index) => this.handleDeletePerson(index)}
           >
-            My hobbies - racing
-          </Person>
+            <Person
+              name={this.state.person.name}
+              age={this.state.person.age}
+              handleChange={event => this.handleNameSwitch(event, "name")}
+              handleDelete={this.handleDeletePerson}
+            >
+              My hobbies - racing
+            </Person>
+          </Persons>
         </header>
       );
 
