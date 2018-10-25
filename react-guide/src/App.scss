@@ -5,19 +5,24 @@
     color: #61dafb;
   }
 
+  button {
+    transition: 0.2s;
+  }
+  
   header {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
+  .red {
+    color: red;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-    
-  }
-}
+
+

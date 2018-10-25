@@ -1,11 +1,16 @@
 import React, { Component } from "react";
+import Radium from "radium";
 import logo from "./logo.svg";
 import Person from "./Person/Person";
 import "./App.scss";
 
 class App extends Component {
   state = {
-    persons: [{ id: 1, name: "alex", age: 29 }, { id: 2, name: "max", age: 22 }],
+    persons: [
+      { id: 1, name: "alex", age: 29 }, 
+      { id: 2, name: "max", age: 22 },
+      { id: 3, name: 'name', age: 21 }
+    ],
     person: { id: 3, name: 'name', age: 21 },
     showPersons: false
   };
@@ -55,14 +60,17 @@ class App extends Component {
   render() {
     const { showPersons, persons } = this.state;
     const style = {
-      backgrpundColor: 'white',
+      backgroundColor: 'green',
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      fontWeight: 'bold',
+      color: 'white'
     };
 
     let personsWrap = null;
+
     if (showPersons) {
       personsWrap =  (
         <header className="App-header">
@@ -77,8 +85,6 @@ class App extends Component {
                 My hobbies - racing
             </Person>
           })}
-         
-          
 
           <Person
             name={this.state.person.name}
@@ -90,32 +96,22 @@ class App extends Component {
           </Person>
         </header>
       );
+
+      style.backgroundColor = 'red';
     }
+
+    const classes = [];
+
+    persons.length <= 1 && classes.push('red');
+    persons.length <= 2 && classes.push('bold');
 
     return (
       <div className="App">
-        <button style={style} onClick={this.togglePersonHandler}>Toggle Persons</button>
+        <p className={classes.join(' ')}>This is working!</p>
 
-        {/* {
-          showPersons && <header className="App-header">
-            <Person
-              name={persons[0].name}
-              age={persons[0].age}
-              handleChange={this.handleNameChange}
-            >
-              My hobbies - racing
-            </Person>
-            
-
-            <Person
-              name={this.state.person.name}
-              age={this.state.person.age}
-              handleChange={event => this.handleNameSwitch(event, "name")}
-            >
-              My hobbies - racing
-            </Person>
-          </header>
-        } */}
+        <button style={style} onClick={this.togglePersonHandler}>
+          Toggle Persons
+        </button>
 
         {personsWrap}
         <img src={logo} alt="react" />
@@ -125,4 +121,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Radium(App); // * Applied Radium package to possibility use pseudo classes like :hover
