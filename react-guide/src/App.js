@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Radium from "radium";
+import Radium, { StyleRoot } from "radium"; // * Radium fot css rules like :hover, StyleRoot for css @media
 import logo from "./logo.svg";
 import Person from "./Person/Person";
-import "./App.scss";
+import  "./App.scss";
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
 class App extends Component {
   state = {
@@ -61,12 +62,15 @@ class App extends Component {
     const { showPersons, persons } = this.state;
     const style = {
       backgroundColor: 'green',
-      font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
       cursor: 'pointer',
       fontWeight: 'bold',
-      color: 'white'
+      color: 'white',
+      ':hover': {   // * Thank you Radium !
+        backgroundColor: 'lightgreen',
+        color: 'black'
+      }
     };
 
     let personsWrap = null;
@@ -75,15 +79,16 @@ class App extends Component {
       personsWrap =  (
         <header className="App-header">
           {persons.map((person, index) => {
-            return  <Person
-                key={person.id}
-                name={person.name}
-                age={person.age}
-                handleChange={(event) => this.handleNameChange(event, person.id)}
-                handleDelete={() => this.handleDeletePerson(index)}
-              >
-                My hobbies - racing
-            </Person>
+            return <ErrorBoundary key={person.id}>
+                <Person
+                  name={person.name}
+                  age={person.age}
+                  handleChange={(event) => this.handleNameChange(event, person.id)}
+                  handleDelete={() => this.handleDeletePerson(index)}
+                >
+                  My hobbies - racing
+              </Person>
+            </ErrorBoundary>
           })}
 
           <Person
@@ -98,6 +103,10 @@ class App extends Component {
       );
 
       style.backgroundColor = 'red';
+      style[':hover'] = {   // * Thank you Radium !
+        backgroundColor: 'lightblue',
+        color: 'black'
+      }
     }
 
     const classes = [];
@@ -106,19 +115,22 @@ class App extends Component {
     persons.length <= 2 && classes.push('bold');
 
     return (
-      <div className="App">
-        <p className={classes.join(' ')}>This is working!</p>
+      <StyleRoot>  {/* Needed for implement @media in js file */}
+        <div className='App'>
+          <p className={classes.join(' ')}>This is working!</p>
 
-        <button style={style} onClick={this.togglePersonHandler}>
-          Toggle Persons
-        </button>
+          <button style={style} onClick={this.togglePersonHandler}>
+            Toggle Persons
+          </button>
 
-        {personsWrap}
-        <img src={logo} alt="react" />
-      </div>
+          {personsWrap}
+          <img src={logo} alt="react" />
+        </div>
+      </StyleRoot>
+  
     );
     // return React.createElement('div', {className: 'app'}, 'h1', 'Hi, I\'m react app' );
   }
 }
 
-export default Radium(App); // * Applied Radium package to possibility use pseudo classes like :hover
+export default Radium(App); // * Applied Radium package to possibility use pseudo classes like :hover inside this Component
