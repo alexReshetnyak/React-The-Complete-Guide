@@ -1,30 +1,66 @@
-import React from "react";
+import React, { Component } from "react";
 import Radium from "radium";
-import './Person.scss';
+import PropTypes from "prop-types";
+import "./Person.scss";
+import { AuthContext } from "../../../containers/App"; //* Receive data through many components
 
-const person = props => {
-  const style = {
-    '@media (min-width: 1200px)': {
-      width: '450px'
-    }
+class Person extends Component {
+  constructor(props) {
+    super(props);
+    console.log("[Person] Constructor Start!");
+    this.inputElement = React.createRef();
   }
 
-  // const rnd = Math.random();
-  // console.log('RND:', rnd);
-  
-  // if (rnd > 0.98) {
-  //   throw new Error('Something fail in Person Component');
-  // }
+  componentWillMount() {
+    // console.log('[Person] Component will mount!');
+  }
 
-  return (
-    <div className='Person' style={style}>
-      <h1 onClick={props.handleDelete}>
-        Hi I'm a {props.name} and I'm {props.age} years old!
-      </h1>
-      <p>{props.children}</p>
-      <input type="text" onChange={props.handleChange} value={props.name} />
-    </div>
-  );
+  componentDidMount() {
+    // console.log('[Person] Component Did mount!');
+    // this.props.position === 0 && this.inputElement.current.focus();
+  }
+
+  focus() {
+    this.inputElement.current.focus();
+  }
+
+  render() {
+    // console.log('[Person] Render method was called');
+
+    const style = {
+      "@media (min-width: 1200px)": {
+        width: "450px"
+      }
+    };
+
+    const { handleDelete, age, name, handleChange, children } = this.props;
+
+    return (
+      <div className="Person" style={style}>
+        <AuthContext.Consumer>
+          {auth => (auth ? <p>Authenticated</p> : null)}
+        </AuthContext.Consumer>
+
+        <h1 onClick={handleDelete}>
+          Hi I'm a {name} and I'm {age} years old!
+        </h1>
+        <p>{children}</p>
+        <input
+          ref={this.inputElement}
+          type="text"
+          onChange={handleChange}
+          value={name}
+        />
+      </div>
+    );
+  }
+}
+
+Person.propTypes = {
+  handleDelete: PropTypes.func,
+  age: PropTypes.number,
+  name: PropTypes.string,
+  handleChange: PropTypes.func
 };
 
-export default Radium(person);
+export default Radium(Person);
