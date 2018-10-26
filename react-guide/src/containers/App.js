@@ -92,7 +92,7 @@ class App extends Component {
       <StyleRoot>  {/* Needed for implement @media in js file */}
         <div className='App'>
 
-          <Cockpit togglePersonHandler={this.togglePersonHandler} showPersons={showPersons}></Cockpit>
+          <Cockpit togglePersonHandler={this.togglePersonHandler} showPersons={showPersons} persons={persons}></Cockpit>
           {personsWrap}
           <img src={logo} alt="react" />
         </div>

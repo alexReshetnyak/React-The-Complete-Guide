@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cockpit.scss';
 
 const Cockpit = ({togglePersonHandler, showPersons, persons = []}) => {
   const classes = [];
@@ -29,11 +30,14 @@ const Cockpit = ({togglePersonHandler, showPersons, persons = []}) => {
 
   return ( 
     <React.Fragment>
-      <p className={classes.join(' ')}>This is working!</p>
+      <div className='Cockpit'>
+        <p className={classes.join(' ')}>This is working!</p>
 
-      <button style={style} onClick={togglePersonHandler}>
-        Toggle Persons
-      </button>
+        <button style={style} onClick={togglePersonHandler}>
+          Toggle Persons
+        </button>
+      </div>
+  
     </React.Fragment>
    );
 }
