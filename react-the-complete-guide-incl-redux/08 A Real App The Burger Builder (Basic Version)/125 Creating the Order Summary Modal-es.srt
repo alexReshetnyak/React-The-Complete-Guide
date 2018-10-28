@@ -1,0 +1,668 @@
+1
+00:00:02,260 --> 00:00:06,790
+En la ltima conferencia editamos este botn de orden ahora mismo y est funcionando bien.
+
+2
+00:00:06,790 --> 00:00:12,640
+Ahora quiero asegurarme de que una vez que haga clic en el botn, abra este resumen de orden de Modal Swiftie.
+
+3
+00:00:12,730 --> 00:00:19,730
+Ahora para eso obviamente necesitamos el modal, necesitamos un teln de fondo y tenemos que mostrar un resumen de orden.
+
+4
+00:00:19,810 --> 00:00:26,590
+La idea detrs de la movilidad es tener un elemento de envoltura que proporciona el estilo que luego simplemente se
+
+5
+00:00:26,590 --> 00:00:29,190
+envuelve sobre cualquier contenido que desee mostrar.
+
+6
+00:00:29,200 --> 00:00:33,010
+En ese modelo que al menos tiene sentido para m.
+
+7
+00:00:33,010 --> 00:00:40,660
+As que crear un componente modal as y quiero crearlo en una nueva carpeta en la carpeta
+
+8
+00:00:40,660 --> 00:00:45,510
+de sus componentes o crear una subcarpeta de escritura para usted.
+
+9
+00:00:45,580 --> 00:00:52,170
+Elementos como el modal Entonces, agregar modal al archivo modal de Che.
+
+10
+00:00:52,690 --> 00:00:59,950
+Como dije, tambin ser el teln de fondo, as que agregar una carpeta de fondo. De hecho, Eifel o dos. No agregu el
+
+11
+00:00:59,980 --> 00:01:05,000
+fondo a la funcin mvil porque es posible que tambin reutilices el fondo en otros lugares.
+
+12
+00:01:05,020 --> 00:01:09,600
+Por ejemplo, para un cajn lateral para la navegacin que vamos a agregar ms adelante.
+
+13
+00:01:10,120 --> 00:01:13,960
+Y en la carpeta de fondo estn ah para que todos agreguen un fondo simplemente siga.
+
+14
+00:01:14,080 --> 00:01:16,310
+Ahora tenemos estos dos componentes.
+
+15
+00:01:16,540 --> 00:01:25,450
+Y comencemos con el modal Ahora, cmo debera verse este componente modal como si fuera un componente
+
+16
+00:01:25,450 --> 00:01:26,160
+funcional?
+
+17
+00:01:26,170 --> 00:01:28,750
+No tiene ningn estado asociado.
+
+18
+00:01:28,750 --> 00:01:34,800
+Acaba de recibir algunos accesorios y le devolvi algo de GSX y podra sorprenderlo.
+
+19
+00:01:34,810 --> 00:01:42,460
+Pero, por supuesto, importamos volver a actuar a partir de volver a actuar aqu tambin y exportamos la funcin modal como el
+
+20
+00:01:42,700 --> 00:01:44,400
+valor predeterminado de este archivo.
+
+21
+00:01:45,340 --> 00:01:52,990
+Ahora, cmo se ve el cdigo GSX? Entonces, el moton debera ser simplemente un div al final que se
+
+22
+00:01:52,990 --> 00:01:54,800
+envuelve alrededor de cualquier contenido.
+
+23
+00:01:55,000 --> 00:02:02,260
+envuelto alrededor de los nios y los accesorios prop puede ser cualquier cosa. Nuestros propios componentes pueden
+
+24
+00:02:02,260 --> 00:02:10,240
+ser texto, un prrafo que depende totalmente de nosotros, cmo usamos el mdem y no podemos transmitir nada all.
+
+25
+00:02:10,240 --> 00:02:12,340
+Entonces, un div que est
+
+26
+00:02:12,460 --> 00:02:19,660
+Por supuesto, la envoltura div debe recibir un poco de estilo demasiado bien para verse bien al final para tener un
+
+27
+00:02:19,750 --> 00:02:20,590
+aspecto modal.
+
+28
+00:02:20,860 --> 00:02:27,310
+Entonces para eso voy a agregar un modal modal C-s como archivo aqu y all.
+
+29
+00:02:27,310 --> 00:02:33,280
+Tambin comparto algunas semillas de cdigo que puedes encontrar adjuntas a este video que puedes pegar
+
+30
+00:02:33,280 --> 00:02:33,820
+all.
+
+31
+00:02:33,940 --> 00:02:42,970
+de Sanders en el medio de la pgina y nos da una pequea sombra de cuadro y tambin cambia algunos de Starling para un paso
+
+32
+00:02:43,090 --> 00:02:50,550
+de pantalla ms amplio realmente es todo con eso puede importar las clases de ese SEUS de la siguiente manera.
+
+33
+00:02:50,560 --> 00:02:56,840
+Ah tenemos nuestra clase modal y ahora podemos ver que esto simplemente crea una posicin fija modales
+
+34
+00:02:56,840 --> 00:03:04,630
+Por lo tanto, importe las clases de C-s modales como archivo y asgnelas a la profundidad de envoltura con el atributo de
+
+35
+00:03:04,900 --> 00:03:05,910
+nombre de clase.
+
+36
+00:03:05,920 --> 00:03:13,110
+As que aqu tenemos clases de punto mvil con una M mayscula porque ese es el nombre de la clase C S S.
+
+37
+00:03:13,180 --> 00:03:16,560
+Por cierto, asegrese de guardar que C S S se caiga.
+
+38
+00:03:16,600 --> 00:03:18,980
+Pegas mi contenido all.
+
+39
+00:03:19,120 --> 00:03:22,310
+As que ese es el modal J. S. archivo.
+
+40
+00:03:22,360 --> 00:03:25,000
+Esto crear tal modal.
+
+41
+00:03:25,000 --> 00:03:27,540
+Ahora agreguemos un pequeo inmediatamente.
+
+42
+00:03:27,610 --> 00:03:34,280
+Y la pregunta, por supuesto, es dnde en nuestra aplicacin debemos agregar el modal.
+
+43
+00:03:34,870 --> 00:03:41,530
+Bueno, yo dira que les agregamos el lugar donde queremos mostrarlo porque ese es el lugar lgico al
+
+44
+00:03:41,530 --> 00:03:47,560
+que pertenece y en el que probablemente tengamos que indicar y los mtodos para controlar esa visualizacin.
+
+45
+00:03:47,890 --> 00:03:50,410
+Entonces, en nuestro caso, ese es el generador de hamburguesas.
+
+46
+00:03:50,920 --> 00:03:55,320
+Simplemente agreguemos en orden en el modal superior de.
+
+47
+00:03:55,540 --> 00:04:02,200
+Y ahora tenemos que navegar a ese archivo modal que podemos encontrar en los componentes.
+
+48
+00:04:02,200 --> 00:04:09,310
+Eres un modal y hay el modal Jey tan sucio como siempre sin la extensin de archivo.
+
+49
+00:04:09,310 --> 00:04:13,970
+Y luego toma el modal y agrgalo a la J es X de Bergere Boulder.
+
+50
+00:04:14,050 --> 00:04:16,280
+Ahora aqu tenemos nuestro componente auxiliar.
+
+51
+00:04:16,300 --> 00:04:18,380
+Tenemos el Bergere y los controles a granel.
+
+52
+00:04:18,580 --> 00:04:24,280
+Ahora aqu simplemente agregar modal y por supuesto esto pronto se ajustar para que no sea visible todo el tiempo en
+
+53
+00:04:24,980 --> 00:04:25,240
+rojo.
+
+54
+00:04:25,240 --> 00:04:29,920
+Ahora si guardamos esto, vemos el cuadro modal aqu en el medio.
+
+55
+00:04:29,920 --> 00:04:35,640
+Por supuesto, sin ningn contenido porque, como dije, debemos ajustar este modo para mostrar y leer
+
+56
+00:04:35,950 --> 00:04:41,490
+ahora, es un elemento de cierre automtico y, por lo tanto, no se enreda en nada.
+
+57
+00:04:41,500 --> 00:04:49,320
+El objetivo era mostrar el resumen de la orden y el archivo de compilador de descarga ya est bastante abarrotado.
+
+58
+00:04:49,540 --> 00:04:57,910
+As que no quiero agregar a la lgica para transformar esta matriz en un resumen muy bien estructurado en este archivo.
+
+59
+00:04:57,910 --> 00:05:06,370
+Lo subcontratar en su propio componente, ya que generalmente es una buena prctica en re-actuar
+
+60
+00:05:06,400 --> 00:05:08,460
+tener componentes enfocados granulares.
+
+61
+00:05:08,820 --> 00:05:15,130
+El componente que quiero crear es un componente de resumen de orden y lo agregar.
+
+62
+00:05:15,180 --> 00:05:23,800
+La hamburguesa del componente Andrew y tiene sentido agregarse en el mismo nivel que los controles de construccin y los
+
+63
+00:05:23,800 --> 00:05:25,750
+ingredientes de la hamburguesa, supongo.
+
+64
+00:05:25,750 --> 00:05:33,350
+As que agreguemos el resumen de la orden all y, por supuesto, el orden en que se ordena un punto resumen J como archivo.
+
+65
+00:05:33,520 --> 00:05:40,950
+Ahora cuando todos estn tratando un resumen de orden de funcin que recibe algunos accesorios y que luego debe tener
+
+66
+00:05:40,950 --> 00:05:47,890
+un cuerpo de funcin normal porque tendr que ejecutar algn cdigo para obtener el resumen de la orden de
+
+67
+00:05:47,920 --> 00:05:51,850
+los ingredientes que obtengo en el formato correcto y as sucesivamente.
+
+68
+00:05:51,940 --> 00:06:02,810
+Por supuesto, como siempre tenemos que importar volver a actuar de nuevo y tambin queremos exportar resumen de pedidos en
+
+69
+00:06:02,810 --> 00:06:05,270
+cuanto a archivo predeterminado.
+
+70
+00:06:05,300 --> 00:06:12,030
+Ahora, cmo deberamos superar el resumen de la orden? Qu tan seguro parece ser al final?
+
+71
+00:06:12,040 --> 00:06:18,590
+Quiero tener un ttulo que diga su pedido y tal vez un breve texto, luego una lista de todos los
+
+72
+00:06:18,590 --> 00:06:22,830
+artculos en el pedido y el precio, y luego tal vez una pregunta.
+
+73
+00:06:22,880 --> 00:06:24,330
+Continuar a la comprobacin.
+
+74
+00:06:24,530 --> 00:06:25,590
+Y algunos botones
+
+75
+00:06:25,660 --> 00:06:27,290
+As que algunas cosas.
+
+76
+00:06:27,290 --> 00:06:29,980
+Ahora realmente no necesito un elemento de envoltura aqu.
+
+77
+00:06:30,080 --> 00:06:41,480
+Por lo tanto, importar mi elemento auxiliar de alks whoops Agios Seahawks.
+
+78
+00:06:41,490 --> 00:06:48,490
+Entonces, ahora podemos devolver algo del cdigo X aqu con un elemento auxiliar de envoltura y sin preocupaciones.
+
+79
+00:06:48,490 --> 00:06:53,850
+Vamos a agregar algo de lgica al frente de la declaracin de retorno para que tenga sentido tener
+
+80
+00:06:53,850 --> 00:06:57,270
+un cuerpo de funcin real y no solo la declaracin de retorno.
+
+81
+00:06:57,750 --> 00:07:06,080
+As que all agregar una etiqueta gratuita donde digo su pedido a continuacin y quiero
+
+82
+00:07:06,080 --> 00:07:06,710
+agregar
+
+83
+00:07:08,760 --> 00:07:15,460
+un prrafo en el que simplemente diga hamburguesa deliciosa con los siguientes ingredientes.
+
+84
+00:07:15,510 --> 00:07:22,520
+Colin y ahora quiero agregar una lista desordenada que debera contener tantos elementos de la lista como sea
+
+85
+00:07:22,790 --> 00:07:26,030
+necesario para generar toda la informacin sobre mi hamburguesa.
+
+86
+00:07:26,030 --> 00:07:29,090
+Entonces, para cada ingrediente, un elemento de la lista.
+
+87
+00:07:29,150 --> 00:07:34,850
+que pude codificar all pero quiero crear esto dinmicamente porque siempre somos dinmicos y
+
+88
+00:07:34,880 --> 00:07:41,240
+reaccionamos para que puedan agregar una nueva variable en realidad un concepto porque no planeo cambiarlo.
+
+89
+00:07:41,240 --> 00:07:41,990
+Por supuesto
+
+90
+00:07:41,990 --> 00:07:46,700
+Resumen de ingredientes que debe tomar algunos ingredientes.
+
+91
+00:07:46,700 --> 00:07:53,730
+Espero obtener como accesorios y, bsicamente, asignarlos en elementos de la lista.
+
+92
+00:07:53,810 --> 00:08:01,010
+Ahora, para los ingredientes, tendremos el viejo problema de que estn en formato de objeto y
+
+93
+00:08:01,160 --> 00:08:02,540
+no en matriz.
+
+94
+00:08:02,540 --> 00:08:08,360
+Ahora, por supuesto, tambin podramos crear este componente de una manera para esperar una matriz y transformar la
+
+95
+00:08:08,360 --> 00:08:12,790
+matriz en el generador de hamburguesas, donde luego la pasaremos al resumen de Oracle.
+
+96
+00:08:13,100 --> 00:08:17,990
+al revs y simplemente pasar el objeto y hacer la transformacin en orden de resumen.
+
+97
+00:08:17,990 --> 00:08:19,330
+Pero tambin puede hacerlo
+
+98
+00:08:19,340 --> 00:08:26,390
+Es el enfoque que seguir porque creo que esto nos permite mantener al constructor profundo mejor preparado,
+
+99
+00:08:26,600 --> 00:08:30,370
+aunque podras argumentar en ambas direcciones donde debera suceder.
+
+100
+00:08:30,680 --> 00:08:36,770
+As que aqu espero obtener mis ingredientes en un formato de objeto y al final lo que quiero mostrar es algo como
+
+101
+00:08:36,770 --> 00:08:37,160
+esto.
+
+102
+00:08:37,160 --> 00:08:45,350
+Quiero tener un elemento de lista en el que bsicamente puedo decir para nombrar como venderlo y luego simplemente el nmero de
+
+103
+00:08:45,440 --> 00:08:47,060
+ingredientes de ese tipo.
+
+104
+00:08:47,090 --> 00:08:51,040
+Y tendra un artculo de la lista para cada ingrediente, por supuesto.
+
+105
+00:08:51,080 --> 00:08:56,000
+Ahora, cuando la codificacin dura, sera ms fcil, porque podra codificar una
+
+106
+00:08:56,270 --> 00:09:00,880
+lista y acceder a la propiedad correspondiente en el objeto de ingredientes.
+
+107
+00:09:01,040 --> 00:09:04,000
+Pero quiero crear de una manera ms flexible.
+
+108
+00:09:04,060 --> 00:09:06,560
+Sin embargo, la salida que quiero tener nuevamente.
+
+109
+00:09:06,650 --> 00:09:17,390
+Entonces, lo que podemos hacer es tomar los ingredientes que obtenemos aqu y de nuevo usar las teclas de objeto para
+
+110
+00:09:17,390 --> 00:09:22,790
+transformar esto en una matriz de teclas de celda y dems.
+
+111
+00:09:22,790 --> 00:09:25,620
+Ahora pregunto antes de querer mapear esto.
+
+112
+00:09:25,910 --> 00:09:30,140
+Queremos mapear esto en una matriz de elementos J S X al final.
+
+113
+00:09:30,140 --> 00:09:34,110
+As que tenemos las teclas de Ingrediente aqu como entrada y queremos volver.
+
+114
+00:09:34,190 --> 00:09:39,910
+Bueno, bsicamente, enumera el artculo que acabo de encontrar aqu.
+
+115
+00:09:39,980 --> 00:09:43,240
+As que agarremos el ltimo artculo y lo agreguemos aqu.
+
+116
+00:09:43,270 --> 00:09:48,290
+Ahora, cmo conseguimos que la clula ya tenga el nombre del ingrediente?
+
+117
+00:09:48,290 --> 00:09:58,700
+Ahora esa es solo nuestra clave de ingredientes y el valor es solo los ingredientes del accesorio y luego acceder a la tecla de
+
+118
+00:09:58,700 --> 00:10:00,800
+ingredientes y eso es todo.
+
+119
+00:10:00,860 --> 00:10:09,050
+agregar es que envuelva la clave de ingredientes aqu en un lapso porque quiero capitalizarla, as que convierta la primera letra en
+
+120
+00:10:09,230 --> 00:10:15,950
+mayscula porque los arreglos de los ingredientes en el generador de hamburguesas en el objeto de ingredientes me disculpan.
+
+121
+00:10:16,250 --> 00:10:18,200
+Lo nico que voy a
+
+122
+00:10:18,260 --> 00:10:20,600
+Por supuesto, tenemos ensalada de tocino, etc.
+
+123
+00:10:20,630 --> 00:10:22,860
+Todo comienza con caracteres en minsculas.
+
+124
+00:10:23,000 --> 00:10:27,260
+Ahora, si los estamos produciendo, quiero tener caracteres iniciales en maysculas.
+
+125
+00:10:27,260 --> 00:10:35,180
+Por lo tanto, envuelvo el nombre en un lapso para que pueda usar algunos estilos en lnea aqu y simplemente establecer
+
+126
+00:10:35,180 --> 00:10:37,240
+esto en un objeto javascript.
+
+127
+00:10:37,340 --> 00:10:45,860
+Es por eso que tengo llaves dobles, el par exterior es para marcar y la entrada dinmica y las llaves internas
+
+128
+00:10:45,950 --> 00:10:48,580
+de Cauley son el objeto javascript.
+
+129
+00:10:48,980 --> 00:10:54,800
+Y all establecer el texto transforma C-s como propiedad para capitalizar.
+
+130
+00:10:54,800 --> 00:10:58,360
+As que simplemente usando algunos estilos en lnea aqu.
+
+131
+00:10:58,800 --> 00:11:04,570
+Ahora djame envolver esto en varias lneas para que sea un poco ms fcil de leer.
+
+132
+00:11:04,580 --> 00:11:13,030
+As que tenemos un elemento de la lista aqu y en ese elemento de la lista tenemos nuestro Spanne.
+
+133
+00:11:13,080 --> 00:11:17,650
+Ahora esto es lo que quiero que crees una lista de estos elementos de la lista.
+
+134
+00:11:17,820 --> 00:11:24,870
+Y ahora podemos simplemente generar un resumen de Ingredion dentro de esa lista desordenada y una cita diseada como una
+
+135
+00:11:24,870 --> 00:11:32,490
+lista ordenada porque ests en esta rara ocasin o realmente usar el estilo predeterminado de todos estos elementos, por eso el componente
+
+136
+00:11:32,790 --> 00:11:38,950
+de resumen de orden ni siquiera tiene su propio resumen de orden Cs de la siguiente manera.
+
+137
+00:11:39,030 --> 00:11:43,270
+Aunque, por supuesto, puede agregar uno y estilista segn sus necesidades.
+
+138
+00:11:43,590 --> 00:11:50,920
+Y luego quiero agregar un prrafo donde digo continuar revisando de esa manera.
+
+139
+00:11:51,160 --> 00:11:57,360
+Ahora vamos con este enfoque por ahora con este resumen de orden y utilicmoslo en el constructor de Bergere.
+
+140
+00:11:57,760 --> 00:12:02,780
+Quiero pasarlo entre mis etiquetas de apertura y cierre modal.
+
+141
+00:12:03,010 --> 00:12:10,720
+Primero, importemos este componente de resumen de pedido desde nuestra carpeta de componentes y, desde la carpeta Bergere
+
+142
+00:12:10,720 --> 00:12:17,020
+desde la carpeta de resumen de pedidos en el archivo de resumen de pedidos, estas
+
+143
+00:12:17,020 --> 00:12:19,710
+instrucciones de importacin pueden ser bastante largas.
+
+144
+00:12:19,720 --> 00:12:23,950
+Ahora tomemos eso o una variable de resumen en la cual importa la seguridad.
+
+145
+00:12:24,380 --> 00:12:29,770
+Y bajemos al modal y cambiemos solo para tener la etiqueta de apertura y cierre.
+
+146
+00:12:30,040 --> 00:12:38,800
+Y en el medio ahora quiero dar salida a mi resumen de orden, por supuesto, como un componente de cierre automtico aqu.
+
+147
+00:12:39,760 --> 00:12:40,980
+Para trabajar correctamente.
+
+148
+00:12:40,990 --> 00:12:47,680
+El resumen del pedido por supuesto necesita para obtener los ingredientes propiedad porque estamos accediendo a los ingredientes
+
+149
+00:12:47,680 --> 00:12:49,960
+en el objeto del accesorio aqu.
+
+150
+00:12:50,760 --> 00:12:52,140
+En resumen de orden.
+
+151
+00:12:52,560 --> 00:12:56,990
+Entonces necesitamos pasar nuestros ingredientes y los obtenemos de nuestro estado.
+
+152
+00:12:57,000 --> 00:13:00,090
+Entonces este estado ingredientes.
+
+153
+00:13:00,390 --> 00:13:06,170
+Ahora veamos cmo se ve si guardamos todas las fallas y volvemos a su aplicacin.
+
+154
+00:13:07,800 --> 00:13:11,610
+Vers que recibimos una advertencia de que olvidamos agregar la clave a nuestra matriz.
+
+155
+00:13:11,670 --> 00:13:13,890
+Pero generalmente esto se ve bien.
+
+156
+00:13:14,130 --> 00:13:17,030
+Y si hago clic en los botones, tambin actualiza el mdem.
+
+157
+00:13:17,160 --> 00:13:21,240
+Y, por supuesto, sera una buena idea no mostrar constantemente este modelo, pero vamos a trabajar
+
+158
+00:13:21,240 --> 00:13:22,060
+en esto pronto.
+
+159
+00:13:22,230 --> 00:13:25,110
+Arreglemos esta rea clave o primero.
+
+160
+00:13:25,170 --> 00:13:27,070
+Y, por supuesto, es fcil de arreglar.
+
+161
+00:13:27,090 --> 00:13:33,000
+Pruebe esto por su cuenta, es un resumen de la orden, por supuesto, aqu en el elemento de la lista.
+
+162
+00:13:33,010 --> 00:13:38,180
+Tenemos que agregar una clave y la clave muerta debe ser una clave nica.
+
+163
+00:13:38,200 --> 00:13:45,280
+Como ya sabes, simplemente usemos la tecla IGY tan slida, y as sucesivamente como clave aqu.
+
+164
+00:13:45,400 --> 00:13:48,190
+Y con eso, la advertencia debera desaparecer.
+
+165
+00:13:48,380 --> 00:13:54,340
+Ahora el siguiente paso es asegurarnos de que no siempre veamos el modelo, pero que podemos agregarlo o
+
+166
+00:13:54,340 --> 00:13:54,850
+mostrarlo.
+
+167
+00:13:54,850 --> 00:13:56,410
+Una vez que haga clic en ordenar ahora.
+

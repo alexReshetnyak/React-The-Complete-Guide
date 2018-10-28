@@ -1,0 +1,144 @@
+1
+00:00:02,210 --> 00:00:04,030
+Bu yzden o dersten balayalm.
+
+2
+00:00:04,070 --> 00:00:09,200
+Ancak nce bu dersten en iyi ekilde nasl yararlanabileceinizi aklamak istiyorum.
+
+3
+00:00:09,200 --> 00:00:14,950
+Belli ki videolar izliyorsunuz ve hepinizin sadan kodlamasn neriyorum.
+
+4
+00:00:14,960 --> 00:00:16,260
+zn kendiniz.
+
+5
+00:00:16,400 --> 00:00:18,640
+En ok nasl rendiiniz budur.
+
+6
+00:00:18,650 --> 00:00:21,110
+Ayrca kaynak kodumu kontrol edin.
+
+7
+00:00:21,230 --> 00:00:27,170
+nk bazen sadece kk bir yanl yazlm ve kaynam altrmazsanz kodunuzu yazp
+
+8
+00:00:27,170 --> 00:00:34,170
+sizinle karlatrn, kodunuzda neyin yanl olduunu renemez ve neden yanl gittiini daha iyi anlarsnz.
+
+9
+00:00:34,580 --> 00:00:39,770
+Sorunlarla karlayorsanz, her bir modln sonuna eklediklerini ve ayrca tm modl
+
+10
+00:00:39,770 --> 00:00:44,360
+iin birok konferansa katlandn grebilir ve kaynak kodu salarsnz,
+
+11
+00:00:44,360 --> 00:00:47,640
+Ayrca, D birok ipucu ve eyi dnn.
+
+12
+00:00:47,660 --> 00:00:50,970
+Bu dersin hata ayklama blmnde size reteceim.
+
+13
+00:00:51,080 --> 00:00:56,560
+Burada, yeniden ileme hatalarn nasl ele alacanz ve onlara nasl tepki vereceinizi ve onaracam reteceim.
+
+14
+00:00:56,750 --> 00:00:59,470
+Kesinlikle, nasl yaplacan bilmeniz gereken bir ey.
+
+15
+00:00:59,540 --> 00:01:04,460
+Karlatnz sorunlar dzeltmek iin orada kazandnz bilgiyi kullann.
+
+16
+00:01:04,460 --> 00:01:10,070
+imdi taklp kaldysanz ve hata bulamyorsanz Q ve A blmnde sorun.
+
+17
+00:01:10,070 --> 00:01:13,940
+Ekibimle birlikte size yardmc olmaktan ok mutluyuz, ancak bu nemli.
+
+18
+00:01:13,940 --> 00:01:15,500
+Sadece orada sorma.
+
+19
+00:01:15,590 --> 00:01:17,360
+Ayrca orada cevaplad.
+
+20
+00:01:17,360 --> 00:01:19,970
+Bunu sylemiyorum nk sorularnza cevap vermek istemiyorum.
+
+21
+00:01:20,000 --> 00:01:25,220
+steyeceim ama cevap vereceksen daha fazla reneceksin.
+
+22
+00:01:25,220 --> 00:01:27,740
+Sormak ok basit, ancak cevap vermek zor.
+
+23
+00:01:27,770 --> 00:01:29,580
+Ve orada yanl gidemem.
+
+24
+00:01:29,810 --> 00:01:32,850
+Cevabnz yanl olsa bile sizi kimse ldrecek deil.
+
+25
+00:01:32,870 --> 00:01:39,380
+Bunun yerine, insanlar sizi dzeltip uyarlamayacaklarn ve cevaplama gleriyle bir problemi dnp zm
+
+26
+00:01:39,440 --> 00:01:40,820
+bulup bulamayacanz reneceksiniz.
+
+27
+00:01:40,850 --> 00:01:47,630
+Gerekten harika bir yeniden-aktr gelitirici olmak istiyorsanz, problemleri zmeniz ve Q ve A blmne
+
+28
+00:01:47,630 --> 00:01:55,150
+cevap vermeniz sadece bunu uygulamak iin iyi bir yoldur ve en sonunda uygulama pratiklerini uygulamaktr.
+
+29
+00:01:55,160 --> 00:01:56,540
+O kadar kolay.
+
+30
+00:01:56,630 --> 00:02:00,390
+Bu dersi bitirdikten sonra bile rendiiniz eyleri uygulamaya koymanz gerekiyor.
+
+31
+00:02:00,530 --> 00:02:07,850
+Kendi demo projelerinizi kurmanz gerekir kendi zorluklarnz belirleyebilirsiniz. Bu ders Dudi egzersizlerini
+
+32
+00:02:07,940 --> 00:02:11,630
+deitirir; bu ders pratikte tepki gsterecektir.
+
+33
+00:02:11,900 --> 00:02:17,900
+Bu admlar izlerseniz ve bu tm dersi takip ederseniz harika bir yeniden davranm gelitiricisi
+
+34
+00:02:18,320 --> 00:02:20,410
+olacaksnz ve pirzola bavurusunda bulunabileceksiniz.
+
+35
+00:02:20,420 --> 00:02:23,850
+Babanzla ne yaparsanz yapn, re-act freelancer olunuz.
+
+36
+00:02:24,020 --> 00:02:27,520
+Hadi reaksiyona girip nasl altn renelim.
+

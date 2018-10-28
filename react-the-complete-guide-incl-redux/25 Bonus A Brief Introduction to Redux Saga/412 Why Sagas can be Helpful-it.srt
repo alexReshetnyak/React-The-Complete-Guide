@@ -1,0 +1,64 @@
+1
+00:00:02,160 --> 00:00:09,840
+Quindi, durante le ultime lezioni, abbiamo spostato tutto il codice asincrono e posso rimuovere l'importazione di axios dal
+
+2
+00:00:09,840 --> 00:00:12,100
+file di creazione azioni dell'ordine.
+
+3
+00:00:12,210 --> 00:00:18,300
+Quindi abbiamo spostato tutto il codice asincrono e persino il codice dell'effetto collaterale sincrono dai
+
+4
+00:00:18,300 --> 00:00:21,270
+nostri file creatore di azioni alle nostre saghe.
+
+5
+00:00:21,660 --> 00:00:26,900
+Il vantaggio tra virgolette perch non  necessariamente migliore, dipende
+
+6
+00:00:26,940 --> 00:00:28,700
+da ci che preferisci.
+
+7
+00:00:28,920 --> 00:00:33,990
+Quindi il vantaggio pu essere che i nostri creatori di azioni sono tutti
+
+8
+00:00:34,110 --> 00:00:36,030
+molto magri, fanno davvero solo
+
+9
+00:00:36,030 --> 00:00:37,600
+una cosa, creano un'azione
+
+10
+00:00:37,650 --> 00:00:45,750
+che non eseguono nessun altro codice e tutti i nostri codici effetto collaterale, quindi il codice che non  correlato a
+
+11
+00:00:45,810 --> 00:00:49,250
+riduce o alle azioni  nelle nostre saghe.
+
+12
+00:00:49,260 --> 00:00:55,500
+Qui  dove abbiamo le nostre chiamate API, le nostre chiamate di archiviazione locali in cui potremmo persino cambiare la
+
+13
+00:00:55,530 --> 00:00:57,470
+rotta in cui ci troviamo attualmente.
+
+14
+00:00:57,470 --> 00:01:03,240
+Questo  uno schema che non devi usare ma porta a creatori di azioni pi snelle.
+
+15
+00:01:03,240 --> 00:01:10,650
+Ora ci sono un paio di altre cose che voglio mostrarvi con la saga di Redux di cui dovreste essere
+
+16
+00:01:11,160 --> 00:01:15,430
+a conoscenza e che dovrebbe permettervi di creare applicazioni davvero potenti.
+

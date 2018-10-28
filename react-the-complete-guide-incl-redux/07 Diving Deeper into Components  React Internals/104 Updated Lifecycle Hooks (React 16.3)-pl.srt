@@ -1,0 +1,260 @@
+1
+00:00:02,750 --> 00:00:06,420
+Teraz ostatnia, ale nie najmniej jedna zmiana, ktr chc wam pokaza.
+
+2
+00:00:06,620 --> 00:00:12,770
+W aplikacji. Plik js, otrzymujemy wszystkie te metody cyklu ycia, ktre wyjani wam w tym module. Teraz
+
+3
+00:00:12,820 --> 00:00:19,500
+reaguj 16. 3 faktycznie zniechca do korzystania z trzech z nich i
+
+4
+00:00:19,520 --> 00:00:24,470
+dodaje dwa nowe, ale krok po kroku. Ktrych naley unika?
+
+5
+00:00:24,590 --> 00:00:32,330
+S to rekordy componentWillMount, componentWillUpdate i componentWillReceive.
+
+6
+00:00:32,330 --> 00:00:38,370
+Dlaczego te trzy zniechcaj si? S zniechceni, poniewa czsto byli niewaciwie uywani.
+
+7
+00:00:38,720 --> 00:00:45,380
+Moesz tam wywoa stan zestawu i by moe pierwszy z pierwszych renderw, w ktrych moesz robi ze
+
+8
+00:00:45,380 --> 00:00:45,980
+rzeczy.
+
+9
+00:00:45,980 --> 00:00:51,270
+To jest powd, dla ktrego rzadko uywamy tych trzech w tym kursie, jak zobaczysz w projekcie kursu,
+
+10
+00:00:51,290 --> 00:00:52,510
+ktry mamy zamiar zbudowa,
+
+11
+00:00:52,520 --> 00:00:56,130
+nie s one zbyt uyteczne i s atwe do uycia niepoprawnie.
+
+12
+00:00:56,300 --> 00:00:57,670
+Wic nadal moesz z
+
+13
+00:00:57,680 --> 00:01:03,620
+nich korzysta, to nadal bdzie dziaao, nie jest niebezpieczne, ale jest zniechcone, reaguje na dwa nowe.
+
+14
+00:01:03,850 --> 00:01:14,750
+Pierwszym nowym dodatkiem do cyklu ycia, ktry dodaje, jest getDerivedStateFromProps, a otrzymaj nastpne
+
+15
+00:01:15,110 --> 00:01:18,080
+rekwizyty i poprzedni stan.
+
+16
+00:01:18,110 --> 00:01:26,310
+Teraz ten hak do cyklu ycia jest wykonywany za kadym razem, gdy twoje rekwizyty s aktualizowane i daje ci szans aktualizacji
+
+17
+00:01:26,310 --> 00:01:27,970
+twojego stanu wrd nich.
+
+18
+00:01:28,230 --> 00:01:30,150
+Teraz czsto nie chcecie tego,
+
+19
+00:01:30,210 --> 00:01:34,100
+wasz stan rzadko powinien by sprzony z waszymi rekwizytami,
+
+20
+00:01:34,140 --> 00:01:39,540
+powinny to by dwie niezalene rzeczy. Ale czasami otrzymujesz przypadki, w ktrych otrzymujesz nowe
+
+21
+00:01:39,540 --> 00:01:44,130
+rekwizyty i chcesz zaktualizowa swj stan lokalny, poniewa by moe chcesz pracowa z tym
+
+22
+00:01:44,160 --> 00:01:50,880
+stanem, chcesz go zmieni w tym komponencie, zanim uytkownik kliknie przycisk zapisu i zatwierdzisz go do stanu drzewo, drzewo komponentw
+
+23
+00:01:50,880 --> 00:01:55,560
+w twojej aplikacji, a nastpnie zmienisz je gdzie indziej i dlatego ponownie zmienisz rekwizyty.
+
+24
+00:01:55,890 --> 00:02:00,150
+Wic dodajmy po prostu instrukcj logu konsoli tutaj i jestemy
+
+25
+00:02:01,280 --> 00:02:07,770
+wewntrz getDerivedStateFromProps i moemy wypisa poprzedni stan tutaj i teraz, jak ju powiedziaem, tutaj powiniene rwnie
+
+26
+00:02:09,400 --> 00:02:16,120
+zwrci nowy stan, aby mg to by obiekt, ktry zostanie scalony ze starym stanem, podobnie jak
+
+27
+00:02:16,120 --> 00:02:21,580
+ustawione wywoania stanu, ale moesz te oczywicie przywrci stary stan, w ktrym to
+
+28
+00:02:21,610 --> 00:02:24,800
+przypadku nigdy go nie zaktualizujesz, poniewa zawsze bierzesz ostatni.
+
+29
+00:02:24,910 --> 00:02:30,070
+Ale moesz wzi rekwizyty, zrobi z nimi co i zwrci nowy obiekt stanu, ktry zostanie
+
+30
+00:02:30,100 --> 00:02:31,110
+uyty zamiast tego.
+
+31
+00:02:31,600 --> 00:02:34,020
+Tak wic teraz mamy t konfiguracj, jedn
+
+32
+00:02:34,030 --> 00:02:39,820
+rzecz, aby to zrobi, jest to, e musimy uy sowa kluczowego static przed tym, poniewa jest to
+
+33
+00:02:39,820 --> 00:02:41,060
+metoda statyczna, a wic
+
+34
+00:02:41,080 --> 00:02:47,400
+w zasadzie metoda, ktra nie jest doczona do pojedynczej instancji. Dziki temu, jeli przeadujemy teraz nasz aplikacj, otrzymamy to
+
+35
+00:02:47,470 --> 00:02:52,060
+ostrzeenie, poniewa uywamy nowego haka w cyklu ycia, a jednoczenie uywamy dwch starych, ale
+
+36
+00:02:52,080 --> 00:02:53,100
+to w porzdku.
+
+37
+00:02:54,030 --> 00:02:59,520
+Bardziej interesujce jest to, e widzimy tutaj wywoanie getDerivedStateFromProps, kiedy faktycznie
+
+38
+00:02:59,520 --> 00:03:03,860
+zaadowalimy nasz aplikacj i jest to oczywicie bardzo przydatne.
+
+39
+00:03:03,930 --> 00:03:06,950
+To si nazywa, zanim faktycznie to zrobi i
+
+40
+00:03:07,020 --> 00:03:12,870
+zanim to zrobi, da nam szans na zaktualizowanie naszego stanu, zanim wykona te kroki i
+
+41
+00:03:13,260 --> 00:03:16,860
+bdzie ponownie uruchamiany, gdy tylko nasze rekwizyty si zmieni.
+
+42
+00:03:16,860 --> 00:03:22,260
+Znowu nie powinno si czego naduywa, ale zdecydowanie fajnie, jeli masz komponent,
+
+43
+00:03:22,260 --> 00:03:24,750
+ktry wymaga synchronizacji stanu i rekwizytw.
+
+44
+00:03:24,750 --> 00:03:31,510
+Drugim nowym cyklem ycia, ktry zosta dodany, jest getSnapshotBeforeUpdate.
+
+45
+00:03:31,920 --> 00:03:37,790
+Teraz pozwala to uzyska migawk twojej domeny tu przed zmian, wic jeli
+
+46
+00:03:37,800 --> 00:03:44,550
+masz jakie zmiany w komponencie, ktre trzeba zmieni na dom, ten hak cyklu ycia
+
+47
+00:03:44,550 --> 00:03:47,910
+zostanie wykonany tu przed aktualizacj domeny.
+
+48
+00:03:47,910 --> 00:03:53,070
+Moemy tutaj rwnie skonsolidowa log, moemy zapisa w pamici log, a
+
+49
+00:03:53,460 --> 00:03:59,670
+jeli to zapiszemy i przeadujemy nasz aplikacj, to nic nie widzimy tutaj, ale
+
+50
+00:04:00,780 --> 00:04:08,850
+jeli klikam Show persons, widzimy to tutaj, getSnapshotBeforeUpdate i to si wykonuje tu przed uruchomieniem skadnika ComponentDidUpdate
+
+51
+00:04:09,030 --> 00:04:11,410
+dla aplikacji. skadnik js.
+
+52
+00:04:11,430 --> 00:04:17,460
+Jest to wic wietne miejsce na przykad do zapisania aktualnej pozycji przewijania uytkownika.
+
+53
+00:04:17,460 --> 00:04:20,640
+Moe to by bardzo przydatne, poniewa
+
+54
+00:04:20,670 --> 00:04:27,540
+w getSnapshotBeforeUpdate mona zapisa je przed zmianami domingu i w componentDidUpdate, mona na przykad
+
+55
+00:04:27,570 --> 00:04:33,030
+przewin uytkownika do poprzednio zapisanej pozycji. Zamy, e masz list przedmiotw, dodajesz nowe pozycje
+
+56
+00:04:33,330 --> 00:04:36,270
+na licie, moesz zapisywa pozycje przewijania, zanim zostan
+
+57
+00:04:36,270 --> 00:04:40,710
+dodane i tutaj moesz ustawi uytkownikw przewijajcych do tej pozycji po ich dodaniu.
+
+58
+00:04:40,950 --> 00:04:46,020
+Jest to rwnie dokadny przykad, ktry mona zobaczy w oficjalnych dokumentach w oficjalnych postach na blogu
+
+59
+00:04:46,020 --> 00:04:48,200
+w nowej wersji. Tam, jeli
+
+60
+00:04:48,270 --> 00:04:52,810
+klikniesz na link getSnapshotBeforeUpdate, otrzymasz szczegow dokumentacj i
+
+61
+00:04:52,920 --> 00:04:56,960
+zobaczysz ten przykad z zapisan pozycj przewijania.
+
+62
+00:04:56,970 --> 00:05:00,290
+Jest to wic dobre narzdzie, z ktrego moesz teraz korzysta
+
+63
+00:05:00,480 --> 00:05:01,330
+i to wszystko.
+
+64
+00:05:01,440 --> 00:05:04,850
+S to wspaniae nowe funkcje wprowadzone przez reagowanie 16. 3 Jeli uywasz wersji,
+
+65
+00:05:04,950 --> 00:05:10,140
+zagraj z nimi i poczuj trzy, aby uy ich w nastpnym projekcie.
+

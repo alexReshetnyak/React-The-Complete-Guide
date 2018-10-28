@@ -1,0 +1,132 @@
+1
+00:00:01,990 --> 00:00:07,330
+Ento, na ltima palestra, entendemos neste projeto de base de fogo e mudamos as regras.
+
+2
+00:00:07,470 --> 00:00:14,730
+Agora vamos comear a enviar pedidos HTB para este ponto final e enviar pedidos HTP.
+
+3
+00:00:14,730 --> 00:00:18,970
+ claro que devemos instalar um novo pacote no nosso projeto de curso.
+
+4
+00:00:19,050 --> 00:00:25,830
+Fazemos isso com NPM install dash dash save x yes  o pacote que eu quero instalar porque voc
+
+5
+00:00:25,830 --> 00:00:27,690
+ como qualquer mdulo HTP.
+
+6
+00:00:27,730 --> 00:00:31,890
+Deseja usar eixos para definir minha idade para manter os pedidos.
+
+7
+00:00:31,890 --> 00:00:38,210
+Voc pode, naturalmente, usar um pacote diferente do Ajax, mas na verdade  realmente timo e eu s posso recomend-lo.
+
+8
+00:00:38,250 --> 00:00:43,260
+Posteriormente, podemos reiniciar o daemon abre-a com o comeo do NPM.
+
+9
+00:00:43,530 --> 00:00:47,290
+E,  claro, queremos adicionar acesso ao nosso aplicativo.
+
+10
+00:00:47,550 --> 00:00:55,020
+No mdulo do ltimo curso, use todas as formas diferentes de adicion-lo adicionando-o criando uma instncia
+
+11
+00:00:55,290 --> 00:01:00,000
+de acesso ou simplesmente importando-o e potencialmente configurando alguns padres.
+
+12
+00:01:00,000 --> 00:01:08,700
+Agora eu adicionei adicionando instncia xes, mas voc tambm pode simplesmente importar globalmente e definir esses padres globais que
+
+13
+00:01:08,700 --> 00:01:10,940
+voc viu no ltimo mdulo.
+
+14
+00:01:11,010 --> 00:01:12,900
+Definitivamente brinque com os dois.
+
+15
+00:01:12,930 --> 00:01:15,110
+Escolha o que voc mais gosta.
+
+16
+00:01:15,210 --> 00:01:22,900
+importar x anos do pacote ex-EUA e, em seguida, chame X criar e passar um objeto javascript para configur-lo.
+
+17
+00:01:23,310 --> 00:01:30,600
+Agora, para criar uma instncia de X anos, eu vou criar um novo arquivo e irei chamar as
+
+18
+00:01:30,630 --> 00:01:38,010
+ordens desses X ponta Jesus por causa de usar isso para todas as coisas relacionadas  ordem l,
+
+19
+00:01:38,010 --> 00:01:38,780
+agora preciso
+
+20
+00:01:38,790 --> 00:01:46,050
+Agora, voc configurou a base para voc. Eu apenas copiei do firebase dessous e voc  Alwar, que
+
+21
+00:01:46,050 --> 00:01:50,760
+deseja enviar seu pedido para armazenar seus dados no banco de dados.
+
+22
+00:01:50,820 --> 00:01:55,260
+E, novamente, no caso de voc ter perdido,  essa parte.
+
+23
+00:01:55,440 --> 00:02:02,280
+no banco de dados Dator que  o que eu configurei como minha base padro, sua L, claro, diz
+
+24
+00:02:02,330 --> 00:02:08,820
+que o que  criado aqui deve ser armazenado em algumas constantes ou constantes ou variveis e nomeando-a aqui.
+
+25
+00:02:08,820 --> 00:02:09,910
+Voc pode ver
+
+26
+00:02:10,110 --> 00:02:13,520
+E ento eu posso exportar isso como padro do arquivo.
+
+27
+00:02:13,530 --> 00:02:18,100
+Agora eu tenho minha prpria instncia de acesso configurada para este seu e outros.
+
+28
+00:02:18,140 --> 00:02:23,670
+Esta  tambm a razo pela qual eu uso esta abordagem de instncia porque, mais tarde, no curso,
+
+29
+00:02:23,760 --> 00:02:27,230
+quando adicionamos autenticao, todos usaremos um diferente de voc com x sim.
+
+30
+00:02:27,240 --> 00:02:34,230
+Ento eu no quero definir espao para voc ou como padro global mesmo que, no momento, eu poderia fazer isso.
+
+31
+00:02:34,260 --> 00:02:36,640
+Ento, agora, ns criamos a instncia de acesso.
+
+32
+00:02:36,690 --> 00:02:37,570
+Isso  timo.
+
+33
+00:02:37,590 --> 00:02:40,440
+Vamos agora, Vaun, realmente enviar o solicitante.
+

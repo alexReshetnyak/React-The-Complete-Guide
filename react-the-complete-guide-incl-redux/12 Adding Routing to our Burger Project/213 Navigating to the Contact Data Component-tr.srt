@@ -1,0 +1,424 @@
+1
+00:00:02,210 --> 00:00:09,320
+Balamsal veri bileeni ekleyelim ve aslnda bu da yalnzca ynlendirme sistemimize yklendii iin deil, ayn zamanda
+
+2
+00:00:09,320 --> 00:00:16,940
+zellikle de bir kez tepki gstererek forumlar kapsam olduumuz kendi durumunu idare edebilecei iin bir konteyner olacak.
+
+3
+00:00:16,940 --> 00:00:25,640
+Bu yzden, kontak klasrndeki kontak veri klasrnde kontak verileriyle birlikte kontrol etmek iin bir alt klasr olarak
+
+4
+00:00:25,910 --> 00:00:27,940
+dzenleme yapmama izin verin.
+
+5
+00:00:28,150 --> 00:00:35,930
+Arzalar ve iletiim bilgilerim bileeni ve hepsi bunu bir snf iletiim verisi olarak oluturuyor
+
+6
+00:00:35,930 --> 00:00:40,930
+ve elbette bu bileen esini bu bileen nesnesini geniletiyorlar.
+
+7
+00:00:40,940 --> 00:00:48,790
+Yani reaksiyona girmek ve byle bir bileeni reaksiyona sokmak iin.
+
+8
+00:00:49,130 --> 00:00:51,710
+imdi nasl gstereceimizi grelim.
+
+9
+00:00:51,710 --> 00:00:56,050
+Bu iletiim verileri bileeni iinde yaratclar ne girmelidirler.
+
+10
+00:00:56,240 --> 00:01:04,460
+Her eyden nce, tm ihracat iletiim verileri snfn imdi orada istediimiz veri balantlarn alabiliriz
+
+11
+00:01:04,460 --> 00:01:11,300
+ve bu girdileri ynetmek iin devlet kuracaz ve gerekten form zerinde almayacaz.
+
+12
+00:01:11,300 --> 00:01:17,120
+Bu modlde bitirmeyeceim, nk Martial syleminden sonra formlar ve formlarn geerlilii hakknda btn
+
+13
+00:01:17,360 --> 00:01:19,230
+bir modle sahip olacaz.
+
+14
+00:01:19,250 --> 00:01:22,980
+Hl getirmek istiyorum, kullanc adn burada syleyelim.
+
+15
+00:01:23,030 --> 00:01:31,650
+Belki bir e-postay almak istiyorum ve belki de sokak gibi belki bir posta
+
+16
+00:01:31,650 --> 00:01:37,580
+kodu olan bir nesne olan bir adresi almak istiyorum.
+
+17
+00:01:37,740 --> 00:01:39,000
+yle bir ey yle.
+
+18
+00:01:39,030 --> 00:01:44,620
+Bu, yl getirmek istediim veriler olabilir ve bu konuda daima almaya devam edebiliriz.
+
+19
+00:01:44,640 --> 00:01:47,390
+Elbette render yntemime de ihtiyacm var.
+
+20
+00:01:47,400 --> 00:01:50,210
+Ve dediim gibi, orada drt kiilik bir eve gittim.
+
+21
+00:01:50,300 --> 00:02:00,140
+Bylece render ynteminde baz GSX dnecek ve orada temelde bir aygta ihtiyacm var.
+
+22
+00:02:00,210 --> 00:02:04,500
+De iletiim veri konteyner iin sarc.
+
+23
+00:02:04,740 --> 00:02:15,060
+bugnlerde 14 yandayken kullandm formun olmasn istersem, bu gnk iletiim verileriniz ve bunun altndaki HMO
+
+24
+00:02:15,210 --> 00:02:25,830
+form esini kullanan bir formun o zaman 4'e istediiniz ekilde ekleyebileceimi belirtin. eklemek iin ekle.
+
+25
+00:02:25,830 --> 00:02:26,800
+Ve
+
+26
+00:02:26,970 --> 00:02:29,600
+imdi dediim gibi A burada ok fazla vakit geirmeyecektir.
+
+27
+00:02:29,640 --> 00:02:31,950
+Bundan sonra modllerde yapacam.
+
+28
+00:02:31,950 --> 00:02:40,320
+Bu yzden her eyden nce, aslnda sadece benim adma bir ka metin girii girii olan hzl bir form
+
+29
+00:02:40,320 --> 00:02:41,380
+yl yaratyorum.
+
+30
+00:02:41,400 --> 00:02:47,130
+yleyse adlar eit olacak ekilde ayarlayacam, bylece orada olmas gerektiini grebilelim.
+
+31
+00:02:47,250 --> 00:02:57,060
+Yer tutucu ekleyeceim veya adnz syleyeceim ve bu kendi kendine kapanmal ve sonra e-posta tr e-postas
+
+32
+00:02:57,060 --> 00:03:02,740
+iin bir tane ekleyeceim ve sonra bu adres blmn edindim.
+
+33
+00:03:02,780 --> 00:03:13,820
+Bu yzden caddeye bir tane, bir tane ise WIPs Caddesi gibi, bir tane de posta kodu iin ihtiyacm var.
+
+34
+00:03:14,130 --> 00:03:22,430
+Bylece burada belki kod yazmak zereydim Posta ve adnz bor gibi sermayeye N yazalm ve elbette bir dme
+
+35
+00:03:23,550 --> 00:03:27,570
+ekleyelim ve bunun iin kendi dme bileenini kullanacam.
+
+36
+00:03:27,570 --> 00:03:30,420
+Dmeleri ok hzl bir ekilde ie aktarn.
+
+37
+00:03:30,420 --> 00:03:37,800
+Ve imdi, bileenler klasrne UI klasre gidip dme klasrne gidelim ve Jr'nin buraya
+
+38
+00:03:37,810 --> 00:03:39,300
+dmesine izin verin.
+
+39
+00:03:40,110 --> 00:03:43,950
+Ve daha sonra bunu kullanalm ama yllarn tm girdilerinin altnda.
+
+40
+00:03:43,950 --> 00:03:51,970
+buradan dmenin trn sipari ettiimiz son dme bu yzden burada baarl olmalyz.
+
+41
+00:03:52,060 --> 00:03:56,540
+Syleyeceiniz sipari bileeninin bir paras gibisiniz, nk
+
+42
+00:03:56,560 --> 00:04:00,480
+Ve elbette sonradan bir tklama dinleyicisi de ekleyeceiz.
+
+43
+00:04:00,500 --> 00:04:09,170
+imdi bir kez hediye temas formunu burada baz ekillendirme bylece C-s gibi bir iletiim verileri eklemek aadaki gibidir.
+
+44
+00:04:09,200 --> 00:04:13,870
+Ve elbette bunu yapmak istiyorsanz stili ileyen bir alt bileen de oluturabilirsiniz.
+
+45
+00:04:14,150 --> 00:04:23,750
+Bu yzden burada balam verileri ekleyeceim belki bir st ve alt kenar boluu ekleyip otomatikle ortalanm olarak
+
+46
+00:04:23,870 --> 00:04:28,750
+yzde 80 ekleyelim ve btn metni merkeze hizalayalm diyelim.
+
+47
+00:04:28,940 --> 00:04:35,330
+Ayrca, zet aknn zeti iin yaptmz gibi Wise'i semek iin genilii snrlamak iin bir medya
+
+48
+00:04:35,330 --> 00:04:36,440
+sorgusu da ekleyin.
+
+49
+00:04:36,590 --> 00:04:42,180
+Dolaysyla iletiim verileriniz en fazla en fazla 500 piksel genilikte olacaktr.
+
+50
+00:04:42,200 --> 00:04:44,500
+Bununla iletiim verileri bileenini edindik.
+
+51
+00:04:44,510 --> 00:04:51,830
+imdi bunu ynlendirme yoluyla ykleyeceim ve zetleri kontrol etmek iin yerletirmemelisiniz diye zet
+
+52
+00:04:51,830 --> 00:04:58,160
+aklarnn altndaki yuvalanm bir yoldan bir kontrolde bunu yapacam, elbette bunu yapabiliriz.
+
+53
+00:04:58,190 --> 00:05:04,130
+Bunun yerine, gerekte iki i ie gemi rotalarda kullandnz bir ey olduunu gstermek
+
+54
+00:05:04,130 --> 00:05:06,130
+iin hepsinin altna yklemek istiyorum.
+
+55
+00:05:06,230 --> 00:05:16,020
+ynlendiriciden aaya rota aktarn ve ardndan imdi u anda bulunduum yola ve iletiim verilerinin ekteki izgiye baml
+
+56
+00:05:16,020 --> 00:05:23,640
+olmas gereken bir yol iin bir ey yklemek iin zet akmn altndaki rota kullanyorum.
+
+57
+00:05:23,640 --> 00:05:27,220
+Bu yzden kontrn ierisindeki tekrar aktr
+
+58
+00:05:27,510 --> 00:05:29,900
+ylesine adil sahne aletleri.
+
+59
+00:05:30,270 --> 00:05:41,700
+Ve sonra eleme u r l kullanabiliriz veya ayn zamanda Boulding demeleri ve gzergahlar ve eik izgi iletiim verileri kullanabileceiniz yollar
+
+60
+00:05:42,000 --> 00:05:43,860
+iin de kullanabilirsiniz.
+
+61
+00:05:44,220 --> 00:05:50,390
+Ve bu da burada bu dizgenin dinamik ksmnn bir paras olmaldr.
+
+62
+00:05:50,400 --> 00:05:52,530
+Bu durumda imdi bu rotay yklyoruz.
+
+63
+00:05:52,530 --> 00:05:55,900
+Tabii ki hangi bileeni ileyeceimizi tanmlamamz gerekir.
+
+64
+00:05:55,950 --> 00:06:04,010
+iin her biri iletiim veri konteynerimi noktal eik izgi iletiim verilerinden temas verileri J'ye girdi olarak ie aktarr.
+
+65
+00:06:04,040 --> 00:06:05,310
+Bunun S. dmek.
+
+66
+00:06:05,640 --> 00:06:12,820
+Bu durumda, Quantic verilerini alalm ve onu bu rota bileeni zerinde bir bileen olarak kuralm.
+
+67
+00:06:12,870 --> 00:06:19,400
+Pastie bileeni Propp var ve bunun gibi iletiim verilerini iletin.
+
+68
+00:06:19,570 --> 00:06:22,780
+Bununla tm dosyalar kaydedelim.
+
+69
+00:06:23,160 --> 00:06:25,520
+Ve imdi tklama burada devam ederse.
+
+70
+00:06:25,980 --> 00:06:28,320
+te iletiim verileri.
+
+71
+00:06:28,410 --> 00:06:36,130
+imdi, drst olmak gerekirse ok irkin grnyor nk iletiim verilerim olarak kullanmay unuttum.
+
+72
+00:06:36,210 --> 00:06:45,240
+ve daha sonra bu snfa snf ad ve daha sonra snflar iletiim verileri ile saran blme atamas gerekir.
+
+73
+00:06:45,240 --> 00:06:51,080
+Tabii ki Klaas'n nokta eik izgi iletiim verileri C-s'lerinden ie aktarmas
+
+74
+00:06:51,120 --> 00:06:54,190
+Hadi bunu abucak yapalm ve bundan sonra.
+
+75
+00:06:54,200 --> 00:06:55,350
+imdi byle grnyor.
+
+76
+00:06:55,390 --> 00:06:59,520
+Bu sayfay, otomatik olarak yaptmz gibi yeniden ykleyerek yklersek.
+
+77
+00:06:59,680 --> 00:07:03,590
+Ebeveynlerin gittiini ve dolaysyla burgerin bo olduunu sorgusunu gryorsunuz.
+
+78
+00:07:03,640 --> 00:07:11,480
+hamburger hl orada nk ebeveynler kaybolmu olsalar bile devletin zerine yazmadndan eski devletin zerine
+
+79
+00:07:11,670 --> 00:07:17,320
+yazmaz ve gerekten rendiiniz gibi bu bileeni oluturduunuzdan, bu nedenle,
+
+80
+00:07:17,380 --> 00:07:24,550
+sorgu permalarna bal olarak durumu ayarladmz Burga'y oluturduumuz Da olan bileen tekrar almyor.
+
+81
+00:07:24,640 --> 00:07:30,430
+imdi burger yaparak devam edersem ve devam edersem tklar ve
+
+82
+00:07:30,430 --> 00:07:31,270
+devam edersem
+
+83
+00:07:31,390 --> 00:07:37,050
+Yeni bir bileen yklediimiz iin burger hala buna benziyor.
+
+84
+00:07:37,060 --> 00:07:43,440
+Bu yzden, eitli admlar tklayarak oraya gidersek, gzel durmu bir burger bulacaz.
+
+85
+00:07:43,450 --> 00:07:46,600
+imdi yine form gzel deil.
+
+86
+00:07:46,600 --> 00:07:52,690
+Bunun nedeni, daha sonra zerinde alacak bu modlde bunu bitirmeyeceim.
+
+87
+00:07:52,690 --> 00:07:58,540
+Yapmak istediim tek ey, yaptnz tm girdilerin en azndan kendi satrlarna sahip
+
+88
+00:07:58,540 --> 00:08:02,800
+olduundan emin olmak istiyorum, bylece orada bir izgi var.
+
+89
+00:08:02,860 --> 00:08:09,880
+Ve dmenin kendine zg bir izgiye sahip olduunu ve bunu baarmak iin giri eleman iin bir tasarm
+
+90
+00:08:09,910 --> 00:08:18,580
+eklemeniz yeterlidir, bu yzden yeni bir giri snf ekleyeceim belki nerede baka ekrann Engel olmas gerektiini syleyin ve imdi otomatik olarak
+
+91
+00:08:18,580 --> 00:08:27,290
+bir izgi kaydrma ekleyecektir nk imdi bir blok esi bu yzden tm bu girdilere snf ad snf girdileri ekleyeceim ve bununla
+
+92
+00:08:27,830 --> 00:08:29,980
+biraz daha gzel grnyor.
+
+93
+00:08:30,020 --> 00:08:32,820
+Elbette tabii ki burada solda oturuyor.
+
+94
+00:08:32,830 --> 00:08:34,710
+Ancak yine de zerinde alacaz.
+
+95
+00:08:35,210 --> 00:08:37,480
+Bu bizim emir formumuz.
+
+96
+00:08:37,490 --> 00:08:44,030
+verilerine giderek irtibat verilerinin ekillendirilmesini daha da artrabileceimizi dnyor mu?
+
+97
+00:08:44,030 --> 00:08:46,780
+Yukardaki zetimiz yukarda temas
+
+98
+00:08:47,030 --> 00:08:55,070
+Bu ak gri renkte belki 0 2 piksel bo piksel ve bunun gibi daha ak gri bir kenarlk
+
+99
+00:08:55,220 --> 00:08:59,400
+ieren bir kutu kabuu ekleyip iine bir miktar dolgu ekliyor.
+
+100
+00:08:59,760 --> 00:09:03,840
+te o zaman tm set kutusu POC'lar snrlandrmak iin boyutlandrlyor.
+
+101
+00:09:03,860 --> 00:09:10,510
+Dolaysyla bu, temas veri bileeniyle ilgili biraz styling olup, inanyorum ki biraz daha gzel grnyor.
+
+102
+00:09:10,670 --> 00:09:13,870
+Dolaysyla, iletiim verileri bileenini ykleyebiliyoruz.
+
+103
+00:09:13,970 --> 00:09:20,900
+Bir sonraki adm, sipari dmesini tkladmzda aslnda bu istei sunucumuza gnderdiinden
+
+104
+00:09:20,990 --> 00:09:22,110
+emin olmaktr.
+
+105
+00:09:22,130 --> 00:09:28,610
+imdi bu konuyu bir sonraki dersde birlikte oluturalm nk maddeleri temas
+
+106
+00:09:28,610 --> 00:09:31,790
+veri bileenine sokmak greceiniz gibi zor.
+

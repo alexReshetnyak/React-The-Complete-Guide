@@ -1,0 +1,268 @@
+1
+00:00:02,230 --> 00:00:07,860
+So we got working routing, we got information about the props we received from react router.
+
+2
+00:00:08,080 --> 00:00:14,530
+Wouldn't it also be nice to see which route is active here by styling it appropriately.
+
+3
+00:00:14,530 --> 00:00:21,640
+We kind of want to add a special css class to the link which is active so that we can use that class
+
+4
+00:00:21,640 --> 00:00:23,300
+to change the styling.
+
+5
+00:00:23,620 --> 00:00:29,450
+Right now, if we inspect that here, you'll see it is an anchor tag which was created behind the scenes
+
+6
+00:00:29,470 --> 00:00:35,980
+but again, an anchor tag managed by the react router preventing the default which would be to really send
+
+7
+00:00:36,010 --> 00:00:37,220
+that request.
+
+8
+00:00:37,450 --> 00:00:41,670
+But you also see that there is no class being added to it
+
+9
+00:00:41,680 --> 00:00:46,210
+even though that technically right now is still active page.
+
+10
+00:00:46,210 --> 00:00:52,930
+So what we have to do is we manually have to tell react router to do so and we do this by not using
+
+11
+00:00:52,930 --> 00:00:56,310
+a link but a different type of link,
+
+12
+00:00:56,520 --> 00:00:59,090
+the nav link component.
+
+13
+00:00:59,380 --> 00:01:06,760
+It's pretty similar to link but it has some extra props which allow us to define some styling for the
+
+14
+00:01:06,760 --> 00:01:12,060
+active link. Let's replace this link with nav link
+
+15
+00:01:12,460 --> 00:01:15,880
+and make sure to import it as I just did.
+
+16
+00:01:15,880 --> 00:01:23,170
+Now if you go back to the application, you see the inspect element which is the link here at the top for
+
+17
+00:01:23,170 --> 00:01:27,160
+the active route which is new-post in my case has changed,
+
+18
+00:01:27,160 --> 00:01:29,700
+there is an active class added now,
+
+19
+00:01:29,700 --> 00:01:36,640
+this css class wasn't present before. This of course now allows us to apply some styling.
+
+20
+00:01:36,700 --> 00:01:45,640
+So in blog.css, I can simply add a new rule and not only change the link color to orange if we're hovering
+
+21
+00:01:45,640 --> 00:01:50,720
+over it or clicking on it but also for all links which have the active class.
+
+22
+00:01:50,890 --> 00:01:56,260
+If we save this, now actually both are orange,
+
+23
+00:01:56,260 --> 00:02:03,020
+If I click on home though, only home is orange. Why is that? The reason for this is something we learned
+
+24
+00:02:03,020 --> 00:02:11,390
+about earlier, by default react router treats these paths here as prefixes, and the same is true for links.
+
+25
+00:02:11,750 --> 00:02:14,200
+When checking whether a link is active or not,
+
+26
+00:02:14,210 --> 00:02:16,440
+it treats this as a prefix,
+
+27
+00:02:16,550 --> 00:02:25,250
+so we have to add exact here just as on the route, to tell react router no, the full path should be this
+
+28
+00:02:25,400 --> 00:02:27,840
+for this to be the active link.
+
+29
+00:02:28,130 --> 00:02:31,030
+So this doesn't change the link we're pointing to,
+
+30
+00:02:31,100 --> 00:02:37,380
+It will always be the path we defined but for the active class, it would take this as a prefix.
+
+31
+00:02:37,520 --> 00:02:39,250
+We override that with exact,
+
+32
+00:02:39,380 --> 00:02:45,980
+now the full path has to be / for this to receive this active css class.
+
+33
+00:02:46,280 --> 00:02:52,550
+So with exact added to the first link, it's not needed for the second because there we don't really
+
+34
+00:02:52,550 --> 00:02:57,590
+have any nested links which should not trigger the active class here.
+
+35
+00:02:57,950 --> 00:03:00,560
+So with exact added for the first link,
+
+36
+00:03:00,560 --> 00:03:03,490
+now we have the home link still being highlighted
+
+37
+00:03:03,500 --> 00:03:09,930
+if we are on the root page but if I click on new post, only new post is highlighted now.
+
+38
+00:03:09,980 --> 00:03:13,030
+So this is how we can set up active classes.
+
+39
+00:03:13,260 --> 00:03:20,360
+Now sometimes you don't want to use that default of active as an active class name.
+
+40
+00:03:20,390 --> 00:03:25,890
+Maybe you want to use my-active or highlight or whatever you want,
+
+41
+00:03:26,060 --> 00:03:29,960
+that's why you can override the class which should be appended.
+
+42
+00:03:30,260 --> 00:03:35,660
+You can add additional props and I'm just splitting this over multiple lines to make it easy to read,
+
+43
+00:03:35,990 --> 00:03:42,020
+you can add active class name and set this to a string
+
+44
+00:03:42,260 --> 00:03:46,620
+and this could now be my active. And now for the first link
+
+45
+00:03:46,880 --> 00:03:53,370
+my-active will be added as an active css class and not the default of active.
+
+46
+00:03:53,390 --> 00:03:55,630
+So now you see if we reload
+
+47
+00:03:55,680 --> 00:04:00,880
+new post still in style because it still has the active class, because there I didn't change anything
+
+48
+00:04:01,370 --> 00:04:07,700
+but home now doesn't receive the active styling because as you can see if we inspect it on the right,
+
+49
+00:04:07,970 --> 00:04:13,330
+it has a css class of my-active because that is what we set up here.
+
+50
+00:04:13,370 --> 00:04:19,670
+Active class name, my-active. Now I'll switch this to active which is redundant because that's the default anyways
+
+51
+00:04:19,790 --> 00:04:23,980
+but just to leave it here for reference that you can set this up.
+
+52
+00:04:24,020 --> 00:04:28,820
+You also don't have to work with css classes if you don't want to
+
+53
+00:04:28,820 --> 00:04:31,870
+you can also set the active style instead.
+
+54
+00:04:32,180 --> 00:04:36,730
+So let's turn this back to my-active which wouldn't apply any styling
+
+55
+00:04:37,010 --> 00:04:40,150
+and let's instead said active style here.
+
+56
+00:04:40,450 --> 00:04:42,300
+This is a dynamic value,
+
+57
+00:04:42,440 --> 00:04:47,880
+It's a javascript object and it actually works just like you use inline styling.
+
+58
+00:04:47,900 --> 00:04:57,200
+Here you can set up any css styles like maybe color and set this to #fa923f which is the
+
+59
+00:04:57,200 --> 00:05:03,400
+color we use in css too but let's also set text-decoration to underline.
+
+60
+00:05:03,410 --> 00:05:08,600
+Now if we save this and go back to the app, you'll see home is orange and underlined
+
+61
+00:05:08,930 --> 00:05:17,040
+whereas new post is just orange because new post uses this active css class, home
+
+62
+00:05:17,060 --> 00:05:22,080
+however when being active receives the my-active class which does nothing
+
+63
+00:05:22,280 --> 00:05:26,140
+but then also receive some inline styling, the inline styling
+
+64
+00:05:26,140 --> 00:05:32,410
+we set up with active style. So this is how you can style the active links
+
+65
+00:05:32,420 --> 00:05:39,740
+The key takeaway is you have to use to nav link object, not the regular link object and you might need
+
+66
+00:05:39,740 --> 00:05:46,700
+to use exact to make sure you only style the links for the routes you want to style and you don't use
+
+67
+00:05:46,700 --> 00:05:53,400
+the to part here as a prefix when it comes to determining whether a route is active or not.
+

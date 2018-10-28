@@ -1,0 +1,144 @@
+1
+00:00:02,210 --> 00:00:04,030
+Quindi iniziamo con quel corso.
+
+2
+00:00:04,070 --> 00:00:09,200
+Ma prima voglio spiegarti come puoi ottenere il massimo da questo corso.
+
+3
+00:00:09,200 --> 00:00:14,950
+Ovviamente si guardano i video e consiglio vivamente a tutti di codificare a destra.
+
+4
+00:00:14,960 --> 00:00:16,260
+Decodifica te stesso.
+
+5
+00:00:16,400 --> 00:00:18,640
+Questo  il modo in cui impari di pi.
+
+6
+00:00:18,650 --> 00:00:21,110
+Inoltre controlla il mio codice sorgente.
+
+7
+00:00:21,230 --> 00:00:27,170
+un errore di battitura e se non esegui la mia fonte codice e confrontarlo con il tuo non
+
+8
+00:00:27,170 --> 00:00:34,170
+sar in grado di scoprire cosa c' di sbagliato nel codice e ottenere una comprensione pi profonda del perch  andato storto.
+
+9
+00:00:34,580 --> 00:00:39,770
+Se riscontri problemi puoi trovarlo allegato alla fine di ogni modulo e anche a molte conferenze
+
+10
+00:00:39,770 --> 00:00:44,360
+per tutti i moduli e fornisco il codice sorgente perch a volte  solo
+
+11
+00:00:44,360 --> 00:00:47,640
+Considera anche D molti suggerimenti e cose.
+
+12
+00:00:47,660 --> 00:00:50,970
+Ti insegner nella sezione di debug di questo corso.
+
+13
+00:00:51,080 --> 00:00:56,560
+L ti insegner come gestire gli errori di re-act e come reagire a loro e risolverli.
+
+14
+00:00:56,750 --> 00:00:59,470
+Sicuramente qualcosa che devi sapere come fare.
+
+15
+00:00:59,540 --> 00:01:04,460
+Quindi usa quella conoscenza che ottieni l per risolvere eventuali problemi che incontri.
+
+16
+00:01:04,460 --> 00:01:10,070
+Ora se sei bloccato e non riesci a trovare l'errore chiedi nella sezione Q e A.
+
+17
+00:01:10,070 --> 00:01:13,940
+Io e il mio team siamo pi che felici di aiutarti, ma  importante.
+
+18
+00:01:13,940 --> 00:01:15,500
+Non limitarti a chiedere l.
+
+19
+00:01:15,590 --> 00:01:17,360
+Anche risposto l.
+
+20
+00:01:17,360 --> 00:01:19,970
+Non sto dicendo questo perch non voglio rispondere alle tue domande.
+
+21
+00:01:20,000 --> 00:01:25,220
+Lo far, ma se rispondi, imparerai molto pi che se lo chiedi.
+
+22
+00:01:25,220 --> 00:01:27,740
+Chiedere  cos semplice, ma rispondere  difficile.
+
+23
+00:01:27,770 --> 00:01:29,580
+E non puoi sbagliare l.
+
+24
+00:01:29,810 --> 00:01:32,850
+Anche se la tua risposta  sbagliata, nessuno ti uccider.
+
+25
+00:01:32,870 --> 00:01:39,380
+Invece, imparerai se le persone ti correggono e rispondendo ti costringono a pensare a un problema ea
+
+26
+00:01:39,440 --> 00:01:40,820
+trovare una soluzione.
+
+27
+00:01:40,850 --> 00:01:47,630
+Se vuoi davvero diventare un grande sviluppatore di reati, devi risolvere i problemi e rispondere
+
+28
+00:01:47,630 --> 00:01:55,150
+alla sezione Q e A  un buon modo per esercitarti e alla fine praticare la pratica.
+
+29
+00:01:55,160 --> 00:01:56,540
+ cos facile.
+
+30
+00:01:56,630 --> 00:02:00,390
+Anche dopo aver finito questo corso devi praticare le cose che hai imparato.
+
+31
+00:02:00,530 --> 00:02:07,850
+Devi costruire i tuoi progetti demo per creare le tue sfide Esercizi di Dudi da questo corso
+
+32
+00:02:07,940 --> 00:02:11,630
+alterano il codice che imparerai in questo corso.
+
+33
+00:02:11,900 --> 00:02:17,900
+Se segui questi passaggi e segui l'intero corso, sarai un fantastico sviluppatore di re-act e sarai in
+
+34
+00:02:18,320 --> 00:02:20,410
+grado di candidarti per le costolette.
+
+35
+00:02:20,420 --> 00:02:23,850
+Diventa un re-act freelancer come vuoi con pap.
+
+36
+00:02:24,020 --> 00:02:27,520
+Entriamo nella reazione e impariamo come funziona.
+

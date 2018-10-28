@@ -1,0 +1,352 @@
+1
+00:00:02,150 --> 00:00:05,680
+Na ltima conferncia, criamos nosso rude produtor e a loja.
+
+2
+00:00:05,710 --> 00:00:11,930
+Agora eu quero usar essa loja e no apenas exibir com esta declarao consular, mas todo
+
+3
+00:00:11,990 --> 00:00:16,490
+o envio e, na verdade,  despachado simplesmente acessando a loja.
+
+4
+00:00:16,580 --> 00:00:19,930
+Assim, armazena constantemente o que a loja Holstege cria.
+
+5
+00:00:20,260 --> 00:00:25,820
+E nesse conceito de loja podemos chamar despachar despachar como uma funo.
+
+6
+00:00:25,940 --> 00:00:33,950
+E agora importante esta funo de despacho aqui leva um argumento e esse argumento  uma ao que
+
+7
+00:00:33,950 --> 00:00:39,360
+deve ser um objeto javascript que precisa ter uma propriedade de tipo.
+
+8
+00:00:39,680 --> 00:00:45,510
+Ento, no perca o tipo ou algo assim,  s digitar, certifique-se de escrever isso corretamente.
+
+9
+00:00:45,620 --> 00:00:53,930
+Este ser mais tarde um importante bloqueio de construo para obter a informao sobre o tipo de ao que foi despachada e o
+
+10
+00:00:54,170 --> 00:00:56,100
+que devemos fazer no redutor.
+
+11
+00:00:56,120 --> 00:00:58,310
+ por isso que o tipo  to importante.
+
+12
+00:00:58,610 --> 00:01:02,900
+Digite ento  apenas um identificador exclusivo de sua escolha.
+
+13
+00:01:02,930 --> 00:01:09,950
+A conveno  usar todas as maisculas e minsculas, por exemplo, o contador de tinta para o incremento de Kountry.
+
+14
+00:01:10,070 --> 00:01:16,390
+Agora voc pode usar o que quiser, mas esta  a conveno em maiscula e seja descritiva, enquanto
+
+15
+00:01:16,400 --> 00:01:21,440
+tambm  curto sobre o que voc est fazendo quando o desastre  corrigido.
+
+16
+00:01:21,470 --> 00:01:29,350
+Agora eu disse que voc tambm pode passar alguma carga til opcional far isso com a prxima ao alm do contador AInc.
+
+17
+00:01:29,360 --> 00:01:32,420
+Isso tambm  imit no balco.
+
+18
+00:01:32,430 --> 00:01:34,360
+Agora, engg deve aument-lo em 1.
+
+19
+00:01:34,400 --> 00:01:37,380
+Ento voc no precisa passar nenhuma informao extra.
+
+20
+00:01:37,520 --> 00:01:44,750
+Mas, como contador, de fato, deve adicionar um nmero especfico ao contador e esse valor precisa ser passado
+
+21
+00:01:44,750 --> 00:01:50,920
+juntamente com o tipo, no um tipo  a nica propriedade que voc deve usar assim.
+
+22
+00:01:51,050 --> 00:01:58,620
+Voc pode adicionar quaisquer outras propriedades que voc deseja neste Optik Agora voc pode adicionar o ID do nome de valor o que quiser.
+
+23
+00:01:58,820 --> 00:02:04,550
+Ou voc adiciona uma propriedade adicional que voc pode chamar de carga til ou qualquer outro nome que voc gosta, o
+
+24
+00:02:04,550 --> 00:02:10,310
+que, em seguida, poderia, por sua vez, ser um objeto javascript agrupando todos os dados que deseja passar com a ao.
+
+25
+00:02:10,310 --> 00:02:11,990
+Isso depende totalmente de voc.
+
+26
+00:02:12,320 --> 00:02:18,730
+No vou passar um objeto de carga til porque eu s quero passar um campo Alber de informaes com todos os nomes
+
+27
+00:02:18,770 --> 00:02:19,480
+de valor.
+
+28
+00:02:19,520 --> 00:02:25,190
+Mas, novamente, o nome da propriedade depende totalmente de voc e  um valor de 10 porque eu quero aumentar
+
+29
+00:02:25,190 --> 00:02:26,290
+para contar at 10.
+
+30
+00:02:26,450 --> 00:02:28,820
+E  claro que voc pode escolher qualquer nmero.
+
+31
+00:02:28,850 --> 00:02:31,550
+Ento, agora estamos despachando duas aes.
+
+32
+00:02:32,030 --> 00:02:35,390
+O que voc acha que isso faz para nossa loja.
+
+33
+00:02:35,750 --> 00:02:44,210
+Vamos consertar a loja de logs obter estado aqui e antes de executar isso eu quero que voc adivine o que
+
+34
+00:02:44,210 --> 00:02:47,250
+agora ser nosso estado nosso contador no estado.
+
+35
+00:02:47,300 --> 00:02:48,830
+O que ser agora.
+
+36
+00:02:53,550 --> 00:02:55,220
+Ento, voc tem uma opinio.
+
+37
+00:02:55,410 --> 00:02:56,280
+Vamos descobrir.
+
+38
+00:02:56,280 --> 00:03:00,700
+Reencontre nota de redox dash BASIX perseguio.
+
+39
+00:03:00,930 --> 00:03:02,890
+Vamos ver o que escreve.
+
+40
+00:03:03,030 --> 00:03:05,380
+Recebemos o zero do contador duas vezes.
+
+41
+00:03:05,430 --> 00:03:10,430
+O primeiro  do primeiro passo de bloqueio do console e logo aps a criao da loja.
+
+42
+00:03:10,620 --> 00:03:18,430
+O segundo decorre da declarao de bloqueio Descanso, que se refere ao quando despachamos nossas aes.
+
+43
+00:03:18,510 --> 00:03:22,360
+Ento, aqui ainda temos um contador de zero.
+
+44
+00:03:22,410 --> 00:03:25,420
+Voc achou que teramos um contador de 11 aqui.
+
+45
+00:03:25,440 --> 00:03:29,260
+Como aumentamos a lmpada e adicionamos um 10.
+
+46
+00:03:29,280 --> 00:03:32,780
+Agora, isso seria de alguma forma esperado.
+
+47
+00:03:32,940 --> 00:03:38,730
+Mas  claro que no adicionamos nenhuma lgica para reagir a esses diferentes tipos de ao.
+
+48
+00:03:38,790 --> 00:03:41,110
+Poderamos tambm ter despachado algo.
+
+49
+00:03:41,190 --> 00:03:45,560
+No importa porque no escutamos o tipo de ao em qualquer lugar.
+
+50
+00:03:45,630 --> 00:03:49,230
+Isto  o que agora ir adicionar no nosso redutor.
+
+51
+00:03:49,290 --> 00:03:51,820
+Recebemos a ao como um segundo argumento.
+
+52
+00:03:52,050 --> 00:03:55,900
+Ento,  claro, podemos reagir a diferentes tipos de aes.
+
+53
+00:03:56,070 --> 00:03:59,760
+Podemos adicionar a instruo if e ver se o tipo de ponto de ao.
+
+54
+00:03:59,940 --> 00:04:06,290
+E ns observamos que uma propriedade de tipo estar l porque eu disse que  obrigatrio em
+
+55
+00:04:07,580 --> 00:04:16,890
+cada ao que despachamos para que possamos verificar se o tipo de ao , por exemplo, contador de tinta se estiver dentro da instruo if.
+
+56
+00:04:16,910 --> 00:04:19,420
+Eu quero retornar outra coisa agora aqui.
+
+57
+00:04:19,460 --> 00:04:29,180
+Uma coisa importante que voc no define o contador de estados mais mais, que aumentaria e retornaria o estado porque
+
+58
+00:04:29,180 --> 00:04:31,400
+isso no  imutvel.
+
+59
+00:04:31,440 --> 00:04:34,190
+Voc est mutando o estado original aqui.
+
+60
+00:04:34,640 --> 00:04:42,320
+Ento, o que voc faz  que voc devolva um novo objeto javascript onde voc primeiro copie o estado
+
+61
+00:04:42,380 --> 00:04:48,910
+antigo com o estado do operador espalhado e, em seguida, substitua a nica propriedade que deseja ajustar.
+
+62
+00:04:49,040 --> 00:04:50,380
+Ento, o contador.
+
+63
+00:04:50,570 --> 00:04:56,630
+E se esse tudo seria um objeto javascript, voc teria que copi-lo primeiro tambm para que
+
+64
+00:04:56,720 --> 00:04:58,530
+voc nunca mata nenhum dado.
+
+65
+00:04:58,610 --> 00:05:00,490
+Nunca faa isso sempre.
+
+66
+00:05:00,530 --> 00:05:07,220
+Immivelbly here thankfully counter  um nmero para que eu possa simplesmente pegar um contador de estado para obter acesso ao
+
+67
+00:05:07,220 --> 00:05:08,170
+meu contador antigo.
+
+68
+00:05:08,210 --> 00:05:11,210
+Basta ler X-ists para que eu possa fazer isso.
+
+69
+00:05:11,210 --> 00:05:13,760
+No estou mudando nada com essa expresso.
+
+70
+00:05:13,760 --> 00:05:15,370
+E agora mais um.
+
+71
+00:05:15,650 --> 00:05:22,190
+E isso agora  armazenado nesta propriedade de pas que eu adiciono a este novo objeto javascript quando eu
+
+72
+00:05:22,190 --> 00:05:25,730
+primeiro copiando as propriedades e os valores do meu estado antigo.
+
+73
+00:05:26,000 --> 00:05:32,540
+Com isso, eu estou retornando um contador atualizado ou um estado atualizado com um contador atualizado sobre
+
+74
+00:05:32,720 --> 00:05:35,180
+a ao do contador de tinta aqui.
+
+75
+00:05:35,510 --> 00:05:38,190
+E  claro que posso duplicar essa afirmao if.
+
+76
+00:05:38,190 --> 00:05:42,580
+Agora tambm faa o mesmo para o contador ADD.
+
+77
+00:05:42,950 --> 00:05:47,440
+Ento, se no chegarmos  primeira afirmao, talvez o faamos no segundo.
+
+78
+00:05:47,480 --> 00:05:52,530
+Se o tipo de ao estiver no balco aqui, porm no quero adicionar um.
+
+79
+00:05:52,550 --> 00:06:00,560
+Eu quero adicionar ao e agora  valor porque eu especifiquei uma propriedade de valor aqui no
+
+80
+00:06:00,590 --> 00:06:02,030
+objeto que despachei.
+
+81
+00:06:02,030 --> 00:06:07,590
+Agora, com isso, apenas retornamos o estado se no desses dois, se as condies forem aplicveis.
+
+82
+00:06:07,850 --> 00:06:14,220
+Ento, agora, se salvarmos este outono e no executemos nenhum bsico do redux, vemos um resultado diferente.
+
+83
+00:06:14,360 --> 00:06:21,770
+Recebemos o contador 0 para o primeiro registro que  executado logo aps a inicializao da loja, mas depois
+
+84
+00:06:21,770 --> 00:06:27,800
+de despachar as duas aes, ns realmente recebemos uma sada diferente para o segundo bloco, onde
+
+85
+00:06:28,010 --> 00:06:32,080
+o contador  11 porque o incrementamos e adicionamos a isso.
+
+86
+00:06:32,100 --> 00:06:36,710
+Isso agora  ao e despacho de aes em ao.
+
+87
+00:06:36,710 --> 00:06:39,610
+No entanto, uma coisa ainda est faltando a assinatura.
+
+88
+00:06:39,800 --> 00:06:42,290
+Vamos dar uma olhada na prxima palestra.
+

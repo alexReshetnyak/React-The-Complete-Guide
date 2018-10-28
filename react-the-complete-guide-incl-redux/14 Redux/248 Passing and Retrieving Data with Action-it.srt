@@ -1,0 +1,184 @@
+1
+00:00:02,110 --> 00:00:03,860
+Il precedente incarico.
+
+2
+00:00:03,910 --> 00:00:11,230
+Abbiamo aggiunto tre nuove azioni che possiamo spedire e le inviamo un contatore di contatori del contatore
+
+3
+00:00:11,440 --> 00:00:18,420
+delle ore addizione e sottrazione ora o addizione e sottrazione che ovviamente stiamo riducendo il nostro riduttore.
+
+4
+00:00:18,520 --> 00:00:27,670
+Non avrebbe senso ricevere anche un carico utile alcuni dati aggiuntivi trasmessi insieme al tipo di azione, perch in questo momento
+
+5
+00:00:28,300 --> 00:00:33,270
+abbiamo il codice fisso pi 10 e meno 8 nel riduttore.
+
+6
+00:00:33,490 --> 00:00:40,300
+Ma ovviamente in molte applicazioni, ad esempio quando si crea un nuovo post di blocco, si otterranno le
+
+7
+00:00:40,330 --> 00:00:47,680
+informazioni dal proprio componente, l'input che l'utente ha immesso, ad esempio l'idea dell'utente del poster su cui  stato
+
+8
+00:00:47,680 --> 00:00:52,060
+fatto clic non si pu codificare nel proprio utente per quella ragione
+
+9
+00:00:52,060 --> 00:00:59,080
+Quindi diciamo anche che non vogliamo codificare il valore con il quale si desidera aggiungere o sottrarre
+
+10
+00:00:59,260 --> 00:01:02,020
+al contatore o dal contatore nel riduttore.
+
+11
+00:01:02,020 --> 00:01:10,210
+Invece, vogliamo ottenere queste informazioni insieme all'azione, in modo che possiamo facilmente implementarle sulla
+
+12
+00:01:10,300 --> 00:01:11,790
+nostra azione qui.
+
+13
+00:01:11,860 --> 00:01:18,580
+Stiamo semplicemente inviando un oggetto javascript e solo per digitare la propriet  impostato su pietra.
+
+14
+00:01:18,730 --> 00:01:24,620
+Quindi per dire possiamo ovviamente aggiungere pi propriet a quell'oggetto.
+
+15
+00:01:24,670 --> 00:01:33,690
+Nessuno ci impedisce di farlo, possiamo semplicemente aggiungere una seconda propriet come valore di esempio o semplicemente essere quello
+
+16
+00:01:33,730 --> 00:01:34,600
+che vuoi.
+
+17
+00:01:34,600 --> 00:01:39,570
+Puoi scegliere qualsiasi nome tu voglia qui e puoi anche aggiungere pi propriet.
+
+18
+00:01:39,570 --> 00:01:42,700
+Quindi prender il valore qui per.
+
+19
+00:01:42,710 --> 00:01:50,020
+E spesso vedi anche il payload del carico utile che Dennet potrebbe essere un oggetto javascript che contiene tutto il
+
+20
+00:01:50,080 --> 00:01:52,290
+carico utile pertinente a questa azione.
+
+21
+00:01:52,420 --> 00:01:54,550
+Ma  solo qualcosa che vedi spesso.
+
+22
+00:01:54,550 --> 00:02:01,130
+Puoi anche saltare il payload e solo avere un valore e diciamo che  dieci e un nome e questo  max.
+
+23
+00:02:01,180 --> 00:02:04,470
+Quindi puoi aggiungere tutte le propriet che vuoi.
+
+24
+00:02:04,550 --> 00:02:06,900
+Ora qui aggiunger uno che  levell.
+
+25
+00:02:06,940 --> 00:02:08,290
+Di nuovo il nome spetta a te.
+
+26
+00:02:08,290 --> 00:02:10,940
+E diciamo che vogliamo sempre aggiungere 10.
+
+27
+00:02:11,020 --> 00:02:17,730
+E naturalmente dal momento che siamo all'interno del container, potremmo facilmente collegarlo ad alcuni campi di input.
+
+28
+00:02:17,740 --> 00:02:23,990
+Ora abbiamo quattro sottrazioni. Aggiunger Velle e diciamo che  15.
+
+29
+00:02:24,460 --> 00:02:29,910
+Cos ora passo il valore che voglio aggiungere o sottrarre insieme al tipo.
+
+30
+00:02:29,980 --> 00:02:35,690
+E ancora una volta la propriet type  l'unica propriet che devi avere dove il nome non spetta a te.
+
+31
+00:02:35,740 --> 00:02:40,120
+Ora possiamo estrarre quella propriet value nel nostro produttore.
+
+32
+00:02:40,120 --> 00:02:45,480
+Quindi qui per aggiungere e sottrarre non voglio pi aggiungere 10 o sottrarre 8.
+
+33
+00:02:45,610 --> 00:02:55,600
+Invece qui in at se controllo tutto semplicemente all'azione punto Velle E qui il nome della propriet Velle  ovviamente il nome della
+
+34
+00:02:55,600 --> 00:02:59,670
+propriet che ho scelto qui nel mio contatore contenitore.
+
+35
+00:02:59,750 --> 00:03:04,540
+ un oggetto un passaggio in questa azione o l'OP prender questa patch.
+
+36
+00:03:04,730 --> 00:03:11,330
+Bene e lo stesso naturalmente per la sottrazione qui uso anche semplicemente l'azione velle.
+
+37
+00:03:11,450 --> 00:03:17,240
+Quindi, in qualit di sviluppatore, so certamente cosa ho chiamato questa propriet quando ha inviato l'azione e
+
+38
+00:03:17,240 --> 00:03:23,830
+devo recuperare il mio valore oi dati che sono rilevanti per me e il produttore dallo stesso nome di propriet.
+
+39
+00:03:23,840 --> 00:03:27,320
+Salva tutti i file e torna all'applicazione.
+
+40
+00:03:27,320 --> 00:03:30,850
+Ora le etichette sono sbagliate qui stiamo sottraendo 15 in realt.
+
+41
+00:03:30,890 --> 00:03:33,410
+Ma facciamo clic sui pulsanti per vedere se funziona.
+
+42
+00:03:33,620 --> 00:03:41,840
+Sottraiamo e sottraiamo quello 50 e possiamo aggiungere nuovamente 10 perch impostiamo il valore a 10 per questo pulsante.
+
+43
+00:03:41,840 --> 00:03:48,980
+Quindi aggiorna rapidamente la didascalia sul pulsante in modo che non dica sottrazione 8, ma invece
+
+44
+00:03:48,980 --> 00:03:51,000
+dice semplicemente sottrarre 15.
+
+45
+00:03:51,110 --> 00:03:56,660
+E ora la nostra applicazione  al 100% di aggiornamento ora e questo  importante.
+
+46
+00:03:56,690 --> 00:04:04,040
+Passando un payload con l'azione passando alcuni dati aggiuntivi e non solo passando il tipo.
+

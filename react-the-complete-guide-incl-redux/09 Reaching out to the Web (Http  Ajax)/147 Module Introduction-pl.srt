@@ -1,0 +1,44 @@
+1
+00:00:02,360 --> 00:00:10,040
+Witaj w tym module, w ktrym dowiemy si, jak moemy wysya dania HTTP z naszej aplikacji
+
+2
+00:00:10,040 --> 00:00:17,390
+reagowania na serwer, poniewa oczywicie reagujemy na bibliotek, ktra pozwala ci stworzy interfejs twojej aplikacji.
+
+3
+00:00:17,390 --> 00:00:22,530
+Zasadniczo kod HTML, czyli kod dziaajcy w przegldarce i jeli tworzysz aplikacj
+
+4
+00:00:22,670 --> 00:00:27,660
+na jedn stron, co, co czsto robisz z reakcj, to masz
+
+5
+00:00:27,830 --> 00:00:35,720
+jeszcze bardziej oddzielon aplikacj, bardziej oddzielon od twojego zaplecza. Dlatego oczywicie wane jest, aby zrozumie,
+
+6
+00:00:35,720 --> 00:00:42,200
+w jaki sposb mona faktycznie wysa HTTP lub poniewa mamy
+
+7
+00:00:42,200 --> 00:00:50,000
+to rozczenie, proba ajaxowa specyficznie od twojego frontendu reagowania, od kodu javascript
+
+8
+00:00:50,000 --> 00:00:51,800
+do backendu twojego serwera.
+
+9
+00:00:51,830 --> 00:00:54,680
+Pozwl mi teraz pokaza, jak to dziaa w
+
+10
+00:00:54,770 --> 00:00:59,780
+nastpnym wykadzie, a nastpnie pozwl mi pokaza, jak faktycznie zaimplementowa go w aplikacji
+
+11
+00:00:59,900 --> 00:01:01,340
+reagowania w tym module.
+

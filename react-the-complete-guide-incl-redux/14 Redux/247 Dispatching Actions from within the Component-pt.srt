@@ -1,0 +1,292 @@
+1
+00:00:02,340 --> 00:00:08,680
+Ento ns conseguimos nossa fatia do estado aqui e emitimos com o CTA nossos adereos.
+
+2
+00:00:09,060 --> 00:00:12,030
+Agora, eu tambm quero poder enviar aes.
+
+3
+00:00:12,630 --> 00:00:20,790
+E para isso, precisamos descobrir como todos podemos despachar aes de nossos componentes.
+
+4
+00:00:20,820 --> 00:00:27,350
+Agora, quando usamos relaxar sozinhos, simplesmente chamamos de despacho na loja.
+
+5
+00:00:27,570 --> 00:00:31,760
+Agora, no temos acesso  loja em nosso continer pelo menos no diretamente.
+
+6
+00:00:31,860 --> 00:00:33,900
+Temos acesso livre coneco embora.
+
+7
+00:00:34,140 --> 00:00:40,630
+E assim que pudemos passar algumas informaes sobre qual tipo de estado ou qual parte do
+
+8
+00:00:40,630 --> 00:00:44,820
+estado voc quer obter, tambm podemos passar uma segunda configurao.
+
+9
+00:00:44,910 --> 00:00:53,010
+Eu irei nomear o mapa de despacho para o suporte, porque aqui vou dizer que tipo de aes
+
+10
+00:00:53,100 --> 00:00:55,190
+eu quero enviar neste recipiente.
+
+11
+00:00:55,230 --> 00:01:03,630
+Todas as lojas so uma funo que receber a funo de despacho que podemos executar como um argumento exatamente
+
+12
+00:01:04,320 --> 00:01:07,570
+como ns enviamos disponveis no ano da loja.
+
+13
+00:01:07,620 --> 00:01:15,000
+Se ns acessamos diretamente a loja, voc reage, ns x pacote nos d bem, basicamente, ajuda ou
+
+14
+00:01:15,210 --> 00:01:19,200
+funciona, que chamaremos de despacho na loja nos bastidores.
+
+15
+00:01:19,440 --> 00:01:25,860
+Ns no ouvimos todo o retorno de um objeto javascript onde podemos encontrar alguns nomes apropriados
+
+16
+00:01:25,890 --> 00:01:32,360
+que mantero uma referncia a uma funo que eventualmente deve ser executada para enviar uma ao.
+
+17
+00:01:32,370 --> 00:01:37,780
+Agora voc pode escolher qualquer nome de propriedade que deseje aqui, vou nome-lo no contador de incremento.
+
+18
+00:01:37,800 --> 00:01:39,410
+Mas, novamente, o nome depende de voc.
+
+19
+00:01:39,510 --> 00:01:46,110
+Essa propriedade agora possui um valor de curso e esse valor deve ser uma funo annima.
+
+20
+00:01:46,140 --> 00:01:50,010
+Ento, voc  todo o uso em cada 6 funes de seta assim.
+
+21
+00:01:50,010 --> 00:01:54,870
+E usarei a verso muito curta onde, se estiver escrito em uma linha, a
+
+22
+00:01:54,870 --> 00:01:57,790
+parte no lado direito da seta  automaticamente retornada.
+
+23
+00:01:57,900 --> 00:02:01,000
+Ento, voc deseja retornar uma chamada para despachar.
+
+24
+00:02:01,650 --> 00:02:03,970
+E isso  Decore o que eu quero fazer aqui.
+
+25
+00:02:04,380 --> 00:02:12,230
+Esta funo aqui estar, no final, disponvel desta propriedade e, portanto, sempre que essa propriedade for
+
+26
+00:02:12,510 --> 00:02:14,430
+executada como uma funo.
+
+27
+00:02:14,430 --> 00:02:20,890
+Por exemplo, se ns atribu-lo a um manipulador de clique, ento este mtodo de despacho aqui ser executado.
+
+28
+00:02:21,330 --> 00:02:26,700
+E para este mtodo, agora posso passar um objeto javascript onde precisamos configurar o tipo.
+
+29
+00:02:26,700 --> 00:02:34,480
+Como voc aprende e eu configurarei o tipo para incrementar o seu com que ns temos uma propriedade, tambm podemos usar
+
+30
+00:02:34,480 --> 00:02:35,300
+nosso continer.
+
+31
+00:02:35,470 --> 00:02:40,690
+Bem, pelo menos, podemos faz-lo quando passamos como um segundo argumento para se conectar.
+
+32
+00:02:40,690 --> 00:02:46,960
+no precisa de uma fatia de O estado que voc simplesmente passar nulo como o primeiro argumento para se conectar.
+
+33
+00:02:46,960 --> 00:02:52,960
+E, a propsito, se voc j tiver um caso em que voc no tenha aes no seu continer, basta
+
+34
+00:02:52,960 --> 00:02:57,950
+deix-lo fora como antes ou se voc possui um recipiente que s precisa enviar aes, mas
+
+35
+00:02:58,120 --> 00:02:59,700
+Assim como uma nota lateral.
+
+36
+00:03:00,250 --> 00:03:05,860
+Ento, de volta  nossa configurao, agora estou passando o mapa desta pgina para adereos ao mtodo de conexo tambm.
+
+37
+00:03:05,980 --> 00:03:09,730
+E com isso eu tenho acesso ao mtodo de contador de incrementos aqui.
+
+38
+00:03:09,730 --> 00:03:11,490
+Ento, vamos usar essa propriedade.
+
+39
+00:03:11,770 --> 00:03:17,440
+Vou copiar o nome no contador de incremento e eu quero us-lo aqui no meu controle de contra-golpe,
+
+40
+00:03:17,440 --> 00:03:24,640
+onde eu tenho o boto de incremento aqui agora no suporte de clique que  apenas um suporte que passei na referncia.
+
+41
+00:03:24,640 --> 00:03:30,250
+O que eu quero executar no controle do contador para que eu possa passar uma funo que deve
+
+42
+00:03:30,300 --> 00:03:32,640
+ser executada e eu clicar neste suporte aqui.
+
+43
+00:03:32,650 --> 00:03:39,970
+Agora eu no quero passar mais essa funo annima, mas isso no contador de incremento sem execut-la.
+
+44
+00:03:39,970 --> 00:03:40,160
+&nbsp;
+
+45
+00:03:40,210 --> 00:03:42,340
+Ento, sem parnteses assim.
+
+46
+00:03:42,490 --> 00:03:48,460
+Isso se referir a este suporte que contm uma referncia a esta funo annima
+
+47
+00:03:48,460 --> 00:03:55,300
+que ser ento executada, que ento enviar essa ao com a distribuio e a ao.
+
+48
+00:03:55,300 --> 00:04:01,040
+Agora, tambm vejamos como mudar isso para contador, voltando ao redutor.
+
+49
+00:04:01,150 --> 00:04:04,210
+E, claro, ajust-lo para lidar com essa ao.
+
+50
+00:04:04,210 --> 00:04:12,340
+Ento, voc conhece a instruo if para verificar o tipo de ao desse tipo e veremos se o tipo de ao
+
+51
+00:04:12,340 --> 00:04:13,110
+ igual.
+
+52
+00:04:13,390 --> 00:04:19,060
+E agora eu preciso pegar o mesmo identificador especificado aqui, porque  claro que o
+
+53
+00:04:19,090 --> 00:04:21,100
+identificador identifica essa ao exata.
+
+54
+00:04:21,100 --> 00:04:23,530
+Ento, um erro de digitao e isso no funcionar.
+
+55
+00:04:23,780 --> 00:04:31,180
+de incremento e vou verificar se o tipo de ao  igual a esse dentro do seu Eu no quero retornar
+
+56
+00:04:31,540 --> 00:04:38,230
+meu estado atualizado de forma imutvel criando um novo objeto javascript e nem preciso copiar meu antigo afirma aqui.
+
+57
+00:04:38,230 --> 00:04:40,070
+To velho copie o texto
+
+58
+00:04:40,090 --> 00:04:42,060
+Primeiro, embora possamos fazer isso.
+
+59
+00:04:42,340 --> 00:04:48,430
+Por enquanto, simplesmente retornarei um novo objeto com a propriedade do contador porque  o equivalente a copiar tudo porque
+
+60
+00:04:48,430 --> 00:04:52,880
+voc s possui a propriedade do contador em nosso estado antigo de qualquer maneira.
+
+61
+00:04:53,290 --> 00:05:00,010
+Ento, aqui vou retornar contador e definir  igual ao contador de estado, mais um como esse.
+
+62
+00:05:00,400 --> 00:05:08,070
+Ento, se esse usurio estiver configurado para voltar para o contador, certifique-se de que no meu balco aqui deveria
+
+63
+00:05:08,100 --> 00:05:09,520
+enviar essa ao.
+
+64
+00:05:09,520 --> 00:05:17,010
+Agora, se voc tiver uma olhada, aqui est aqui um erro, colete, onde nos referimos ao encontro de introduo.
+
+65
+00:05:17,090 --> 00:05:22,680
+Isso,  claro, no  um mtodo de classe, pois seria necessrio se o chamssemos assim.
+
+66
+00:05:22,700 --> 00:05:24,270
+Passou por adereos.
+
+67
+00:05:24,440 --> 00:05:32,030
+Ento, esses adereos no contador de incremento so corretos porque  apenas um suporte. Recebemos uma propriedade que contm uma
+
+68
+00:05:32,030 --> 00:05:34,720
+referncia a esta funo.
+
+69
+00:05:34,730 --> 00:05:40,490
+Agora, se estas mudanas no local, se salvarmos tudo, salve todos os arquivos e volte para o
+
+70
+00:05:40,490 --> 00:05:41,320
+aplicativo, veremos Nanavati.
+
+71
+00:05:41,390 --> 00:05:48,710
+Mas isso faz qualquer coisa, exceto o incremento, mas ele incrementa um contador, mas agora  gerenciado pelo Rydex.
+
+72
+00:05:48,860 --> 00:05:49,850
+Isso  incrvel.
+
+73
+00:05:49,850 --> 00:05:51,310
+Agora vamos quebrar isso como um pouco.
+

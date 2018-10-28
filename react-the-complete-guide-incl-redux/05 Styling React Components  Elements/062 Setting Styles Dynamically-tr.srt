@@ -1,0 +1,160 @@
+1
+00:00:02,200 --> 00:00:08,410
+Bu nedenle, The Last Lecture'da zetleniyorsa, Weber'de bekleyen stili dinamik olarak
+
+2
+00:00:08,410 --> 00:00:11,580
+ayarlayalm ki bizler kiileri gstermek zereyiz.
+
+3
+00:00:11,620 --> 00:00:17,920
+imdiden burada dinamik olarak durumla nasl render edebildiimizi ve baz GSX'i
+
+4
+00:00:17,920 --> 00:00:25,400
+bir deikende depoladmz ve daha sonra bu deikeni ablonumuzda veya iade ilevinde ktrabileceimizi
+
+5
+00:00:25,400 --> 00:00:26,660
+ya da sylemeliyiz.
+
+6
+00:00:26,910 --> 00:00:30,910
+imdi her zaman olduu gibi burada her ey javascript.
+
+7
+00:00:31,000 --> 00:00:38,680
+Dolaysyla dmeye bir stil atarsak, Cauley ayralar arasndaki bu blm herhangi bir javascript
+
+8
+00:00:38,680 --> 00:00:39,740
+ifadesi olabilir.
+
+9
+00:00:39,940 --> 00:00:46,330
+Birimiz iin elbette bir javascript nesnesi stilleri tanmladmz yerden geirebiliriz veya
+
+10
+00:00:46,330 --> 00:00:48,600
+elbette stil zelliklerine ulaabiliriz.
+
+11
+00:00:48,670 --> 00:00:51,080
+Affedersiniz, yaptm gibi sylemeliyim deiken.
+
+12
+00:00:51,160 --> 00:00:54,350
+Bu stil deikenini dinamik olarak ayarlayabiliriz.
+
+13
+00:00:54,350 --> 00:01:03,170
+Dolaysyla, burada bu durum, eer doruysa, bu durum geerliliini gsterir; bu, Pearse'un grlebilecei anlamna gelir.
+
+14
+00:01:03,190 --> 00:01:10,030
+Son dersin ana hatlarn izdiim gibi butonun krmz bir arka plan olmaldr nk bir
+
+15
+00:01:10,030 --> 00:01:12,780
+tklama dier taraftan kiileri kaldracaktr.
+
+16
+00:01:12,910 --> 00:01:18,500
+Varsaylan kurulum, beyaz bir arka plan rengine sahip olmamal, yeil bir arka plan rengine sahip olmamaldr.
+
+17
+00:01:18,790 --> 00:01:25,680
+Ve belki metin rengini beyaza ayarlamak istiyoruz, bylece normal renk mlkyle ne kyor.
+
+18
+00:01:25,690 --> 00:01:29,860
+imdi bunu sylersem, yeil bir arka plan rengim var.
+
+19
+00:01:29,980 --> 00:01:32,350
+Ona tklarsak kiininkini grrz.
+
+20
+00:01:32,490 --> 00:01:37,730
+Artk kiilerin kazanl olmas iin krmz arka plan rengi almas lazm.
+
+21
+00:01:37,750 --> 00:01:44,110
+Bu yzden yapabileceimiz ey, bir kiinin deikenini belirlediimiz haliyle zaten var olan
+
+22
+00:01:44,110 --> 00:01:51,810
+F bildirimimizde elbette bunu yapann yan sra bu kiinin deikenini belirlemekten baka yapacaklarmz vermektir.
+
+23
+00:01:51,820 --> 00:01:58,630
+Ayrca tarz renebilir ve stil nesnesinin aka sahip olduu arka plan rengi zelliklerini ayarlayabilirim.
+
+24
+00:01:58,630 --> 00:02:03,640
+Elbette bunun gibi okumak iin onu buraya kurduk.
+
+25
+00:02:03,970 --> 00:02:07,380
+Dolaysyla bu tarz nesneye basite giriyoruz.
+
+26
+00:02:07,510 --> 00:02:10,900
+Yeni bir deer atamyoruz, bu yzden hala bir sabittir.
+
+27
+00:02:11,200 --> 00:02:15,610
+Ancak, zelliklerinden birine arka plan rengine yeni bir deer atadk.
+
+28
+00:02:16,060 --> 00:02:20,980
+Ve bu kck deiim, dinamik bir tasarma sahip olduk.
+
+29
+00:02:21,070 --> 00:02:22,880
+Bu uygulamay tekrar ykleyeyim.
+
+30
+00:02:23,050 --> 00:02:27,770
+Yeil Dme krmz dme yeil dme vb.
+
+31
+00:02:28,210 --> 00:02:34,870
+Yani bu, hayr ban sarmak zorunda olduun ok nemli bir ey, zaten yapmadysan gsterir.
+
+32
+00:02:34,870 --> 00:02:36,580
+Her ey javascript.
+
+33
+00:02:36,640 --> 00:02:45,800
+Sanrm bu deikeni dinamik olarak deitirmeden nce bunu sylemitim, tpk bu deikeni dinamik olarak deitirirken tpk bir
+
+34
+00:02:46,090 --> 00:02:50,530
+eyi dinamik olarak deitirirsek, burada javascript hakknda konuuyoruz.
+
+35
+00:02:50,620 --> 00:02:56,230
+Stil nesnesini istediiniz herhangi bir javascript koduyla deitirebilir ve sonra
+
+36
+00:02:56,230 --> 00:03:01,360
+onu buraya baladnzda, basite nasl dzenlenmi olursanz olun uygulanacaktr.
+
+37
+00:03:01,390 --> 00:03:06,850
+Bu ok nemli bir yenileme ve bu size nasl dinamik olarak hcreler atayabileceinizi gsterir.
+
+38
+00:03:06,850 --> 00:03:09,010
+imdi snf isimleri olsa ne olacak.
+
+39
+00:03:09,040 --> 00:03:14,030
+Bunlar dinamik olarak ayarlayabilir miyiz, snf isimleri listesini iletebilir miyiz?
+
+40
+00:03:14,230 --> 00:03:18,030
+Evet yapabiliriz ve bir sonraki dersin nasl altn gstereceim.
+

@@ -1,0 +1,68 @@
+1
+00:00:02,170 --> 00:00:09,700
+Bem-vindo a este mdulo, neste mdulo vou dar uma olhada no nextjs e
+
+2
+00:00:09,700 --> 00:00:16,450
+dar uma breve introduo a ele. NextJs  uma biblioteca que se baseia no reagir e voc ainda estar
+
+3
+00:00:16,450 --> 00:00:16,810
+escrevendo
+
+4
+00:00:16,810 --> 00:00:20,250
+um aplicativo reagente com ele, no  uma estrutura ou sintaxe extra da biblioteca.
+
+5
+00:00:20,470 --> 00:00:20,920
+Em
+
+6
+00:00:20,980 --> 00:00:27,100
+seguida, o NextJS impe uma estrutura de pastas especfica que voc deve usar e fornece algumas coisas como renderizao
+
+7
+00:00:27,100 --> 00:00:32,380
+do lado do servidor para fora da caixa. Como voc usa essa estrutura de pastas, ela pode
+
+8
+00:00:32,380 --> 00:00:37,560
+gerenciar muitas coisas para voc, para que voc no precise configur-las manualmente e, portanto, pode tornar a criao
+
+9
+00:00:37,560 --> 00:00:45,580
+de reaturas mais conveniente, especialmente a parte de renderizao do lado do servidor. Renderizao do lado do servidor  uma parte super interessante de reagir
+
+10
+00:00:45,580 --> 00:00:51,700
+o que voc pode no precisar, mas que pode ser til se voc tiver um aplicativo que 
+
+11
+00:00:51,700 --> 00:00:55,410
+altamente dependente de ser encontrado nos motores de busca, por exemplo.
+
+12
+00:00:55,420 --> 00:00:56,510
+Ento, isso  o
+
+13
+00:00:56,530 --> 00:00:57,490
+prximo em poucas palavras.
+
+14
+00:00:57,490 --> 00:01:00,830
+Agora vamos percorr-lo passo a passo neste mdulo e,
+
+15
+00:01:00,830 --> 00:01:06,860
+claro, tenha em mente,  apenas um mdulo introdutrio no cobrir todos os recursos do nextjs
+
+16
+00:01:06,970 --> 00:01:09,060
+aqui, mas os principais conceitos importantes.
+
+17
+00:01:09,080 --> 00:01:10,430
+Ento vamos mergulhar nisso.
+

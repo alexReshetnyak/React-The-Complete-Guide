@@ -1,0 +1,200 @@
+1
+00:00:02,160 --> 00:00:09,570
+Creamos un foro que simplemente configuramos en javascript, que luego manejamos dinmicamente con nuestro propio componente
+
+2
+00:00:09,570 --> 00:00:17,550
+de entrada y nuestro manejador de cambios de entrada donde actualizamos inmutablemente cualquier efecto de elementos extraos.
+
+3
+00:00:17,550 --> 00:00:21,080
+Ahora asegurmonos de que tambin podamos enviar este formulario.
+
+4
+00:00:21,330 --> 00:00:23,530
+Para eso tenemos el botn con el controlador cliqueado.
+
+5
+00:00:23,550 --> 00:00:26,210
+Y no quiero usar para recolectar controlador.
+
+6
+00:00:26,220 --> 00:00:27,930
+En realidad hay
+
+7
+00:00:27,930 --> 00:00:35,220
+En el controlador de eventos submit podemos usarlo en el formulario en s, y ahora quiero ejecutar el
+
+8
+00:00:35,220 --> 00:00:39,990
+mtodo que usamos para el handler de rdenes en el envo.
+
+9
+00:00:40,350 --> 00:00:45,530
+Ahora, en el controlador de pedidos, por supuesto, quiero evitar el valor predeterminado.
+
+10
+00:00:45,540 --> 00:00:49,320
+Todava obtenemos un objeto de evento que se pasa automticamente por reaccionar.
+
+11
+00:00:49,320 --> 00:00:53,730
+Ahora quiero evitar el valor predeterminado porque no quiero enviar la
+
+12
+00:00:53,730 --> 00:00:56,440
+solicitud automticamente que recargue mi pgina.
+
+13
+00:00:56,530 --> 00:00:58,810
+Ahora necesito extraer los datos.
+
+14
+00:00:58,950 --> 00:01:05,040
+Quiero enviar y lo bueno es que todos los datos ya se gestionan en este estado y nuestro objeto de
+
+15
+00:01:05,040 --> 00:01:11,610
+formulario aqu que se actualiza todo el tiempo con dos enlaces, el valor se actualiza al menos y el valor es sin
+
+16
+00:01:11,610 --> 00:01:13,140
+duda lo que me interesa.
+
+17
+00:01:13,140 --> 00:01:14,430
+Puedo crear una nueva constante.
+
+18
+00:01:14,460 --> 00:01:22,920
+Vamos a nombrarlo como datos y all quiero obtener los datos de mi estado y bsicamente quiero obtener mi objeto de formulario
+
+19
+00:01:22,920 --> 00:01:28,780
+de pedido aqu, aunque no me importa el tipo de elemento y el conflicto de elementos.
+
+20
+00:01:28,950 --> 00:01:33,800
+Solo quiero obtener el nombre y luego el valor directamente mapeado entre s.
+
+21
+00:01:33,840 --> 00:01:42,960
+As que lo voy a transformar un poco para este formulario. Los datos pueden ser inicialmente un objeto vaco y
+
+22
+00:01:43,030 --> 00:01:45,520
+luego recorrer todo mi formulario.
+
+23
+00:01:45,520 --> 00:01:54,930
+Entonces todos tienen mi identificador de elemento de formulario en esta forma de orden estatal.
+
+24
+00:01:55,030 --> 00:02:02,340
+As que este elemento de forma muy larga y el fuego es simplemente un pas de correo electrnico y as sucesivamente.
+
+25
+00:02:03,600 --> 00:02:11,670
+Y luego quiero establecer datos de formulario para un identificador de elemento de formulario dado igual a este formulario de orden de estado
+
+26
+00:02:12,290 --> 00:02:16,400
+para el identificador de elemento de formulario y su valor exista.
+
+27
+00:02:16,440 --> 00:02:22,420
+As que simplemente creo pares clave de valor donde tengo que agregar una nueva propiedad a datos extranjeros.
+
+28
+00:02:22,620 --> 00:02:26,090
+Una propiedad como un pas como el correo electrnico, etc.
+
+29
+00:02:26,250 --> 00:02:32,060
+Y establec el valor de esa propiedad no igual a un objeto sino simplemente al valor ingresado por el usuario.
+
+30
+00:02:32,550 --> 00:02:35,490
+Y ahora con esto tengo ese mapeo simple.
+
+31
+00:02:35,700 --> 00:02:38,570
+Ahora puedo usar eso para enviarlo.
+
+32
+00:02:38,640 --> 00:02:43,830
+As que aqu los datos de mi formulario al final lo que quiero pasar.
+
+33
+00:02:43,860 --> 00:02:49,720
+As que all agregar una propiedad de fecha de pedido a mi objeto de pedido y lo establecer como datos extranjeros.
+
+34
+00:02:50,100 --> 00:02:53,420
+Y ahora veamos si esto funciona de la manera que quiero que funcione.
+
+35
+00:02:53,640 --> 00:02:56,400
+Vamos tambin a Firebase por eso.
+
+36
+00:02:56,420 --> 00:02:58,700
+Entonces en firebase aqu estn mis rdenes.
+
+37
+00:02:58,800 --> 00:03:04,190
+Aadamos ahora un nuevo pedido y veamos si funciona para eso, pasar por todo el proceso.
+
+38
+00:03:04,260 --> 00:03:07,350
+Todas las hamburguesas comerciante hacen clic ahora.
+
+39
+00:03:07,360 --> 00:03:11,770
+Contina continuando aqu y luego configura algunos datos.
+
+40
+00:03:11,770 --> 00:03:21,290
+Su cdigo postal de la calle tiene un cdigo al azar. Estados Unidos quizs lo pruebe en test dot com.
+
+41
+00:03:21,580 --> 00:03:24,480
+Vamos a elegir el ms barato aqu y hacer clic en el orden.
+
+42
+00:03:24,790 --> 00:03:28,480
+Estamos redirigidos, no echemos un vistazo a firebase. Se agreg un nuevo pedido.
+
+43
+00:03:28,630 --> 00:03:33,370
+Y luego hemos ordenado los datos donde efectivamente tenemos todas estas asignaciones donde tenemos los datos que
+
+44
+00:03:33,370 --> 00:03:38,630
+el usuario ingres, por lo que enviar el formulario funciona muy bien y de una manera muy dinmica.
+
+45
+00:03:38,650 --> 00:03:40,980
+Mira qu fcil es agregar una nueva entrada.
+
+46
+00:03:40,990 --> 00:03:47,050
+Simplemente agregue una nueva propiedad a su formulario de pedido en el estado configure el tipo de elementos
+
+47
+00:03:47,060 --> 00:03:51,170
+configrelo aqu y asigne un valor y agregue rpidamente una nueva entrada.
+
+48
+00:03:51,190 --> 00:03:58,090
+el tiempo de ejecucin para que pueda agregar dinmicamente nuevas propiedades, mejorar nuevas entradas o eliminarlas o cambiar la configuracin.
+
+49
+00:03:58,240 --> 00:04:05,230
+Y, por supuesto, dado que esto se encuentra en el estado, puede incluso manipular esta forma de orden inmutablemente en
+
+50
+00:04:05,230 --> 00:04:09,150
+Es por eso que una forma tan dinmica de crear un foro es tan asombrosa.
+

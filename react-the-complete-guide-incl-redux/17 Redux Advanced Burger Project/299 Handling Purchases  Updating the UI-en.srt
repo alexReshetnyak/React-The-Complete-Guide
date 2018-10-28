@@ -1,0 +1,444 @@
+1
+00:00:02,230 --> 00:00:07,980
+Over the last lectures we added a lot of functionality and it's all working except for that we never get
+
+2
+00:00:07,980 --> 00:00:10,440
+redirected once we placed an order.
+
+3
+00:00:10,440 --> 00:00:14,110
+Now there are various ways of implementing redirection,
+
+4
+00:00:14,130 --> 00:00:21,990
+one thing is you could pass a reference to that router history prop onto your order action creator
+
+5
+00:00:22,260 --> 00:00:27,870
+and when you dispatch burger success or fail, or at least for the success case, you could then use
+
+6
+00:00:27,870 --> 00:00:32,890
+that if you receive it as an argument in this function to call the push method on it.
+
+7
+00:00:33,000 --> 00:00:35,770
+I don't like this approach too much though
+
+8
+00:00:35,850 --> 00:00:37,920
+but you can definitely do that.
+
+9
+00:00:38,100 --> 00:00:41,510
+Now the approach I'll use is a redux only approach,
+
+10
+00:00:41,700 --> 00:00:48,630
+I'll add a new action type to the action types file so I'll export a new const and I'll actually name it
+
+11
+00:00:48,630 --> 00:00:51,090
+PURCHASE_INIT,
+
+12
+00:00:52,090 --> 00:00:59,940
+here, I'll of course also use PURCHASE_INIT as a string identifier. PURCHASE_INIT will be dispatched whenever
+
+13
+00:00:59,940 --> 00:01:02,910
+we load the checkout page,
+
+14
+00:01:02,910 --> 00:01:06,310
+now I'll create my action creator for it,
+
+15
+00:01:06,420 --> 00:01:07,810
+position doesn't matter,
+
+16
+00:01:07,870 --> 00:01:10,470
+I'll create a constant which I'll name purchaseInit
+
+17
+00:01:11,290 --> 00:01:18,700
+and this will receive no arguments and just return an action, so just return a javascript object where
+
+18
+00:01:18,700 --> 00:01:23,230
+the type will be actionTypes.PURCHASE_INIT.
+
+19
+00:01:23,230 --> 00:01:27,200
+Now I need to export this purchaseInit function in my index.js
+
+20
+00:01:27,290 --> 00:01:28,240
+file here,
+
+21
+00:01:28,420 --> 00:01:36,910
+so it's in the order file, purchaseInit and then, I'll head over to my checkout container and there
+
+22
+00:01:37,300 --> 00:01:43,760
+I want to add componentDidMount and in componentDidMount,
+
+23
+00:01:43,780 --> 00:01:49,150
+I want to dispatch this action, in this action or in the reducer,
+
+24
+00:01:49,180 --> 00:01:57,070
+I then want to add a new property to our state where I set something like purchasing to false which is
+
+25
+00:01:57,070 --> 00:02:02,140
+set to true once we did finish the purchase so that we then redirect.
+
+26
+00:02:02,140 --> 00:02:12,550
+So let me add the logic here by also adding map dispatch to prop const mapDispatchToProps here, get
+
+27
+00:02:12,610 --> 00:02:16,880
+the dispatch function here and then return a map
+
+28
+00:02:17,050 --> 00:02:28,350
+as always and in this map here, I'll have onInitPurchase for example, hold an anonymous function where
+
+29
+00:02:28,350 --> 00:02:33,740
+I dispatch and where I now dispatch something I have to import from that actions file.
+
+30
+00:02:33,870 --> 00:02:43,730
+So import everything as actions from that index file in the store actions folder, like that, and I want to
+
+31
+00:02:43,760 --> 00:02:45,360
+dispatch an action
+
+32
+00:02:45,370 --> 00:02:51,890
+here, the action is the purchaseInit action which takes no arguments.
+
+33
+00:02:51,890 --> 00:02:59,810
+So now I can execute onInitPurchase in my componentDidMount method here, so I'll call this.props
+
+34
+00:03:00,590 --> 00:03:03,080
+.onInitPurchase like this,
+
+35
+00:03:03,850 --> 00:03:11,630
+we could actually take the WillMount lifecycle here and with that, I'm now dispatching this.
+
+36
+00:03:11,640 --> 00:03:21,050
+Now I can go to my order reducer and there I'll add a new case, actionTypes.PURCHASE_INIT, the type
+
+37
+00:03:21,060 --> 00:03:25,800
+I just added and there I'll return a new state object,
+
+38
+00:03:25,830 --> 00:03:32,980
+I'll add a new property to my state which is purchasing and I'll initially set it to false and oh excuse
+
+39
+00:03:32,990 --> 00:03:37,700
+me I'll name it purchased and initially it's false. In purchaseInit,
+
+40
+00:03:37,770 --> 00:03:44,270
+I'll copy the existing state and then set purchased to false here too
+
+41
+00:03:44,670 --> 00:03:49,210
+but in success and that's the interesting thing now, in success,
+
+42
+00:03:49,290 --> 00:03:52,210
+I'll set purchased to true.
+
+43
+00:03:52,560 --> 00:03:56,840
+So now purchased changes as soon as we did successfully purchase
+
+44
+00:03:56,910 --> 00:04:03,270
+but it's always reset once we revisit the checkout container. And now i can go to the checkout container
+
+45
+00:04:03,450 --> 00:04:08,110
+and redirect when ever we did successfully purchase something.
+
+46
+00:04:08,400 --> 00:04:14,370
+So I can go to the summary, to the render method excuse me, where we already redirect when we got no ingredients
+
+47
+00:04:14,370 --> 00:04:18,770
+basically, now I'll add another constant
+
+48
+00:04:18,780 --> 00:04:30,260
+in this case where I will name it purchasedRedirect, this will only be relevant if we got props though,
+
+49
+00:04:30,290 --> 00:04:32,710
+so I'll put it into this if statement here.
+
+50
+00:04:33,660 --> 00:04:37,790
+And there I'll set this equal to either a redirect
+
+51
+00:04:37,840 --> 00:04:44,770
+to home, let's say or and for that I need a ternary expression,
+
+52
+00:04:44,800 --> 00:04:46,950
+I'll set it to null, to not redirect.
+
+53
+00:04:46,960 --> 00:04:50,660
+Now I want to redirect if purchased is true,
+
+54
+00:04:50,920 --> 00:04:58,240
+so for that, I need to map that to a prop in mapStateToProps, I'll add my purchase prop and reach out
+
+55
+00:04:58,240 --> 00:05:05,320
+to state order and there it's also named purchase, this is a prop we just added in the reducer. And then
+
+56
+00:05:05,320 --> 00:05:12,970
+here, this purchase prop I'll use here to check if this.props.purchased, that's a boolean and so if this
+
+57
+00:05:12,970 --> 00:05:16,120
+is true, then I'll redirect because then we're done,
+
+58
+00:05:16,120 --> 00:05:17,470
+I want to leave the page,
+
+59
+00:05:17,470 --> 00:05:20,230
+otherwise, we're still in the purchasing process
+
+60
+00:05:20,230 --> 00:05:27,280
+so I'll set this to null. And now I can render purchasedRedirect in our div here and the other paths below
+
+61
+00:05:27,280 --> 00:05:29,650
+it won't matter then, it will redirect us.
+
+62
+00:05:30,100 --> 00:05:33,490
+Let's save all files and see if that works as imagined,
+
+63
+00:05:33,610 --> 00:05:41,360
+if we open our application here, let's build a burger, let's click on order now continue
+
+64
+00:05:41,620 --> 00:05:43,770
+and it doesn't like onInitPurchase
+
+65
+00:05:43,770 --> 00:05:47,740
+so let's quickly have a look what's wrong about that.
+
+66
+00:05:47,740 --> 00:05:55,510
+onInitPurchase holds a reference to a function here but of course isn't worth that much if we don't add it
+
+67
+00:05:55,510 --> 00:05:57,170
+to our connect function call,
+
+68
+00:05:57,190 --> 00:06:00,220
+so mapDispatchToProps should be added there,
+
+69
+00:06:00,460 --> 00:06:01,650
+now let's try again,
+
+70
+00:06:01,660 --> 00:06:03,820
+let's build a nice burger,
+
+71
+00:06:03,910 --> 00:06:04,970
+continue,
+
+72
+00:06:05,140 --> 00:06:06,790
+yes continue,
+
+73
+00:06:06,880 --> 00:06:08,560
+let's quickly fill out this form
+
+74
+00:06:08,650 --> 00:06:17,710
+test street, some arbitrary zip code, an e-mail address and let's click order and we are redirected once we're
+
+75
+00:06:17,710 --> 00:06:18,250
+done.
+
+76
+00:06:18,330 --> 00:06:24,800
+And now if we add a new burger and click order now and continue, we again are redirected,
+
+77
+00:06:24,820 --> 00:06:25,850
+do you know why?
+
+78
+00:06:29,150 --> 00:06:35,890
+it's related to our place where we call onInitPurchase, componentWillMount in the checkout container
+
+79
+00:06:35,900 --> 00:06:37,130
+is too late,
+
+80
+00:06:37,160 --> 00:06:44,510
+whilst it does run before render runs, it doesn't prevent the rendering with the old props we received and in
+
+81
+00:06:44,510 --> 00:06:47,480
+the old props, purchased is still true.
+
+82
+00:06:47,810 --> 00:06:50,680
+So we can't dispatch this here in componentWillMount,
+
+83
+00:06:50,840 --> 00:06:51,470
+I'll get rid of
+
+84
+00:06:51,470 --> 00:06:53,570
+mapDispatchToProps here entirely,
+
+85
+00:06:53,630 --> 00:06:55,380
+I don't need to dispatch it here.
+
+86
+00:06:55,580 --> 00:06:59,860
+Instead we want the init to purchase in the burger builder
+
+87
+00:06:59,870 --> 00:07:02,370
+when we click on the order now button,
+
+88
+00:07:02,510 --> 00:07:07,970
+so here, purchaseContinued in the end right before we push to the checkout page,
+
+89
+00:07:07,970 --> 00:07:10,840
+that's the place where we want to initialize a purchase.
+
+90
+00:07:11,060 --> 00:07:13,960
+So to do this I'll simply add a new,
+
+91
+00:07:13,960 --> 00:07:18,740
+actually I can dispatch onInitPurchase,
+
+92
+00:07:19,040 --> 00:07:24,330
+this will hold an anonymous function and dispatch actions
+
+93
+00:07:24,470 --> 00:07:29,120
+or here it's called burger builder actions, I should rename this because it's really more than just burger
+
+94
+00:07:29,120 --> 00:07:30,090
+builder actions
+
+95
+00:07:30,350 --> 00:07:34,440
+so let's rename all of them to actions in the import and down there,
+
+96
+00:07:34,640 --> 00:07:39,910
+so actions and then purchaseInit, like that.
+
+97
+00:07:40,040 --> 00:07:46,700
+With that we're dispatching this initialization action here in the burger builder or at least, we're now
+
+98
+00:07:46,700 --> 00:07:48,100
+ready to dispatch it,
+
+99
+00:07:48,110 --> 00:07:53,030
+I have to call onInitPurchase and I want to call it right before I navigate,
+
+100
+00:07:53,090 --> 00:07:58,980
+so this.props.onInitPurchase I'll execute it here. With that change in place,
+
+101
+00:07:58,980 --> 00:08:02,250
+let's see if this now works, the application reloaded,
+
+102
+00:08:02,420 --> 00:08:06,840
+I can build a burger, I'll continue, continue here too
+
+103
+00:08:07,040 --> 00:08:09,060
+and let's quickly fill out that form
+
+104
+00:08:09,150 --> 00:08:13,450
+with test street, like that, let's click order,
+
+105
+00:08:13,520 --> 00:08:14,570
+we're redirected,
+
+106
+00:08:14,750 --> 00:08:16,970
+let's now go back and click order again
+
+107
+00:08:17,090 --> 00:08:20,480
+and now we can go there without being redirected one more time.
+
+108
+00:08:20,480 --> 00:08:21,850
+We got to one flaw,
+
+109
+00:08:21,890 --> 00:08:24,820
+not sure if you noticed it though, on the burger builder,
+
+110
+00:08:24,860 --> 00:08:28,090
+our price never resets after redirecting.
+
+111
+00:08:28,130 --> 00:08:32,640
+So this is something I will do or I'll take care about in the next lecture.
+

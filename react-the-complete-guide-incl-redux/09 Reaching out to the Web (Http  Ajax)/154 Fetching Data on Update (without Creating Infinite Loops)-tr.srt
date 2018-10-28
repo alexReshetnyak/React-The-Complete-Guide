@@ -1,0 +1,368 @@
+1
+00:00:02,130 --> 00:00:05,510
+Son derste postay seilebilir klmay renirsiniz.
+
+2
+00:00:05,660 --> 00:00:10,380
+Fakat tabii ki aksiyomlarla veya HTP talepleriyle hibir ilgisi yoktur.
+
+3
+00:00:10,400 --> 00:00:13,070
+Manila tekrar iyi bir uygulama yapmt.
+
+4
+00:00:13,070 --> 00:00:17,230
+Ama imdi gidelim ve aslnda HGP istei gnderelim.
+
+5
+00:00:17,330 --> 00:00:22,670
+Geerli bir kimlii bulduktan sonra imdi hangi yaam dngs kancasn kullanmalyz.
+
+6
+00:00:22,910 --> 00:00:27,630
+Bileenleri gncellemek iin yaam dngs kancasna bakarsak bir gz atalm.
+
+7
+00:00:27,740 --> 00:00:34,100
+Ve elbette gncelleme mr kancas hakknda konuuyoruz, nk bilgisayar balangta doru
+
+8
+00:00:34,100 --> 00:00:35,060
+bir yerdedir.
+
+9
+00:00:35,210 --> 00:00:38,900
+Ancak, yeni bir mlk kimliini aldmzda veriler alnmaldr.
+
+10
+00:00:38,960 --> 00:00:46,030
+Bu yzden aradmz ey u ki bu gncelleme yan etkisi yaratmak iin iyi bir yer.
+
+11
+00:00:46,250 --> 00:00:48,110
+Yine de bir sorunu var.
+
+12
+00:00:48,260 --> 00:00:55,690
+Durumunu orada gncellersek, bileeni tekrar gncelleriz ve bu nedenle sonsuz dngye gireriz.
+
+13
+00:00:55,700 --> 00:00:57,890
+Bu dikkat etmemiz gereken bir ey.
+
+14
+00:00:58,040 --> 00:01:03,000
+Fakat ncelikle HTP isteini tam gazete ilan edelim.
+
+15
+00:01:03,200 --> 00:01:12,620
+tam olarak ykledikten sonra uygulayabiliriz bileen gncelleme yapt ve X yln kullanabilmeleri iin HTP istei hazrlayabilirsin imdi yapyorsun
+
+16
+00:01:12,620 --> 00:01:21,050
+ya da yapmalsn Dammy arka uumuza bir gz atalmsa, kimlii tek bir yayn hedef al.
+
+17
+00:01:21,460 --> 00:01:29,240
+Ve her eyden nce x yl X yln X yl paketi iinden aktarmalyz, ardndan bileeni
+
+18
+00:01:29,540 --> 00:01:37,910
+Bunu elde etmek iin bir rota var ve daha sonra kimliini izelim, bylece rl'inizi kopyalayp imdi Adell
+
+19
+00:01:37,910 --> 00:01:44,810
+olduunuza dair bir istekte bulunabiliriz, ancak elbette bir tanesi sabit kod iermeyecek ancak bunun
+
+20
+00:01:44,900 --> 00:01:49,440
+yerine art bu sahne kimliini kullanp Sahada bulunan kimlii.
+
+21
+00:01:49,700 --> 00:01:53,820
+Tabii ki, kimlii sfrsa bu istei gndermek istemiyoruz.
+
+22
+00:01:53,830 --> 00:01:55,630
+Bu yzden bunu yapmak istemiyoruz.
+
+23
+00:01:55,910 --> 00:01:57,930
+Ve eer fikir geersizdir.
+
+24
+00:01:58,490 --> 00:02:04,240
+Bu yzden, pervan'n fikrinin geerli sayld anlamna gelen true olarak muamele edilip edilmediini kontrol ederdim.
+
+25
+00:02:04,520 --> 00:02:11,030
+Sonra da aslnda bu istei x 'ile gnderebiliriz ve Meffert' borcumuza sokabiliriz.
+
+26
+00:02:11,030 --> 00:02:23,750
+imdiyse o zaman temsilcileri yaparsam, engellerseniz, konsol log yantyla borcum ktrabilir ve bir eyi
+
+27
+00:02:23,750 --> 00:02:28,380
+tklar tklamaz bir cevap grrsnz.
+
+28
+00:02:28,400 --> 00:02:32,480
+Burada aliment'i tklarsam, cevab grrz.
+
+29
+00:02:32,480 --> 00:02:34,660
+imdi burada sorun yok
+
+30
+00:02:34,850 --> 00:02:36,680
+Ancak elbette ktsn almak istiyorsunuz.
+
+31
+00:02:36,920 --> 00:02:44,270
+devletleri ynetmeliyiz ve belki balangta NULL olarak ayarlanm olan bu bileende bu
+
+32
+00:02:44,270 --> 00:02:54,740
+ede ykl bir yayn istiyoruz, o zaman ykl posta baln ve yklediimiz sonras ierii yazmzda yaynlayabiliriz.
+
+33
+00:02:54,920 --> 00:02:57,950
+Bu yzden de burada baz
+
+34
+00:02:57,950 --> 00:03:05,750
+J. S. X ierii ve yantnz kilitlediiniz yerde artk gnle kaydetmeyeceim.
+
+35
+00:03:05,930 --> 00:03:07,630
+Bunun yerine ben burada yapmak istediim ey bu.
+
+36
+00:03:07,670 --> 00:03:16,190
+Bu set durumunu armak istiyorum ve ayarladmz kmeler, post-edit biz arka u ve bir saat
+
+37
+00:03:16,230 --> 00:03:23,330
+J tarafndan elbette X-code'lar gibi X-ists bu durumda bu duruma yklenen post
+
+38
+00:03:23,570 --> 00:03:32,380
+olarak gnderilecek tooter yant verilerini yklendi ayarlar. imdi eer uygulamanza gidip yeniden yklersek ve bir
+
+39
+00:03:33,130 --> 00:03:38,050
+postaya tklarsak, aslnda unvann okuyamadmz bir hata alrsak.
+
+40
+00:03:38,050 --> 00:03:46,620
+hemen X-ists bu devlet ykl posta bal ve biz geerli bir mlk edinir alr en ksa srede bunu.
+
+41
+00:03:46,630 --> 00:03:52,090
+imdi bu ok mantkl nk burada tam yaz iin GSX kodumuzda
+
+42
+00:03:52,090 --> 00:03:58,960
+Geerli ykl bir postaya sahip olmadan nce geerli bir mlk elde ettik nk veri
+
+43
+00:03:58,960 --> 00:04:00,320
+getirme ilemi asenkron.
+
+44
+00:04:00,340 --> 00:04:06,940
+lk nce kimliini alyoruz ve sonra biraz ykl postay alyoruz ama fikri aldktan hemen
+
+45
+00:04:06,940 --> 00:04:08,770
+sonra yurdumuzu yeniden hazrlyoruz.
+
+46
+00:04:09,310 --> 00:04:15,970
+Bunu, zaten sahip olduumuz bu pervanenin fikirleri ile birlikte Kimliin geerliliine ilikin bir
+
+47
+00:04:15,970 --> 00:04:24,910
+kontrol ekleyerek dzeltebilir ve bu durumda postann aslnda bir paragraf hala olmas gerektiini syleyebiliriz ancak belki bir
+
+48
+00:04:24,910 --> 00:04:31,130
+ykleme setiimizden dolay bir paragraf olmal diyelim ancak veriler henz mevcut deil.
+
+49
+00:04:31,180 --> 00:04:37,600
+Ve sonra dip deyiminde, devlet ykl postann balangta imdi olduu veya yanl
+
+50
+00:04:37,600 --> 00:04:40,020
+olduu kabul edildiinden emin olduk.
+
+51
+00:04:40,180 --> 00:04:44,470
+Ama en ksa srede bu bir doruya dner ya da doru zer.
+
+52
+00:04:44,650 --> 00:04:47,020
+Dolaysyla bu GSX kodunu oluturacaz.
+
+53
+00:04:47,230 --> 00:04:53,710
+Ve imdi bunu kaydedip bir postaya tklarsam, bir saniyenin ok ksa bir srede yklendiini
+
+54
+00:04:53,710 --> 00:04:55,390
+greceiz ve sonras grrz.
+
+55
+00:04:55,390 --> 00:04:57,320
+Burada da bir sorunumuz var.
+
+56
+00:04:57,550 --> 00:05:05,890
+A sekmesini aarsak, talep zerine talep sonras talep ettikten sonra yeniden gndermi olduumuzu greceksiniz.
+
+57
+00:05:06,100 --> 00:05:08,990
+Bunun durduundan emin olmak iin sayfay yeniden ykleyebiliriz.
+
+58
+00:05:09,190 --> 00:05:20,920
+Ancak neden bu sonsuz istekleri grdmz gryoruz, nk durumu gncelleme bileeninden gncelliyoruz ve bu sonsuz
+
+59
+00:05:20,920 --> 00:05:27,940
+bir dngye neden oluyor; zira ad dediimizde bileen gncellenecek
+
+60
+00:05:27,940 --> 00:05:31,950
+ve bileen gncellemesi yine yrtecektir.
+
+61
+00:05:32,320 --> 00:05:41,080
+Dolaysyla bu HTP isteini yalnzca gnderdiimizden emin olmalyz ve dolaysyla aslnda yeni bir yayn
+
+62
+00:05:41,100 --> 00:05:42,880
+yklediysek durumu gncelleyelim.
+
+63
+00:05:42,880 --> 00:05:44,510
+Peki bunu nasl yapacaz.
+
+64
+00:05:44,710 --> 00:05:53,470
+ieri girebiliriz Buraya bir kontrol edersek, eer doruysa yklemi olduumuz durumu gsterebiliriz.
+
+65
+00:05:53,470 --> 00:05:55,350
+Darda kontrol ederseniz
+
+66
+00:05:55,360 --> 00:05:59,020
+Bu, daha nce yaynlar yklediimizin ilk gstergesi.
+
+67
+00:05:59,230 --> 00:06:06,310
+Sonra tabii ki hepimiz Ford gnlerinin kimliini yklediinden emin olmak istiyoruz, nk yeni veriler getirmek
+
+68
+00:06:06,310 --> 00:06:12,940
+istediimiz kimliin, zaten yklemi olduumuz Kimliidir anlamna gelmesi nedeniyle sadece sahne tarafndan sahip olduumuz
+
+69
+00:06:12,940 --> 00:06:16,940
+kimlii deil. Bu durumda bir HTP isteinde bulunmamz gerekmiyor.
+
+70
+00:06:17,320 --> 00:06:20,080
+Bu yzden duyulabilir ykl bir yaz olup olmadn kontrol edin.
+
+71
+00:06:20,080 --> 00:06:29,170
+Ve sonra eer bu durum yklenirse kimlii pervanenin kimliine eittir.
+
+72
+00:06:29,230 --> 00:06:35,770
+yeni bir yayn iin veri almaya alrsak, bu durumda her durumda DHC istei yapmak isterim.
+
+73
+00:06:36,130 --> 00:06:37,200
+Dolaysyla aslnda
+
+74
+00:06:37,210 --> 00:06:41,740
+stekte bulunmak iin veri getirmeye altk nk ilerleyip yapmayacam.
+
+75
+00:06:41,770 --> 00:06:47,560
+Zaten bir grev iin elimizdeki bu istemleri gndermek zorundayz.
+
+76
+00:06:47,560 --> 00:06:51,070
+imdi, o sayfay ykleyip yklemediime bakalm ve bir yazya tklyorum.
+
+77
+00:06:51,430 --> 00:06:54,010
+Aslnda post verilerini asla elde edemeyiz.
+
+78
+00:06:54,010 --> 00:06:57,000
+Bir ekilde bizim eklerimiz baarsz oluyor.
+
+79
+00:06:57,250 --> 00:07:03,040
+Eh, biraz dzeltmek zorundayz, nk balangta ykl posta balangta bo olduundan elbette
+
+80
+00:07:03,040 --> 00:07:04,230
+baarsz olacak.
+
+81
+00:07:04,270 --> 00:07:07,530
+Dolaysyla bu, ancak en az bir yk yklediysek baarl olurdu.
+
+82
+00:07:07,840 --> 00:07:16,270
+Bunun yerine onun ykl posta yklemesine sahip olup olmadmz m yoksa sahip olduumuzu kontrol edeceiz, ancak yklemeyi
+
+83
+00:07:16,270 --> 00:07:19,600
+planladmz Kimliinden farkl bir kimlii varsa onaylayacam.
+
+84
+00:07:19,630 --> 00:07:25,660
+Dolaysyla, ykl postumuz yoksa veya bir tane varsa, ancak kimlikler farklysa da,
+
+85
+00:07:25,660 --> 00:07:26,590
+istekte bulunalm.
+
+86
+00:07:26,760 --> 00:07:27,060
+Whoops.
+
+87
+00:07:27,100 --> 00:07:28,620
+Bu olsa post yklenmelidir.
+
+88
+00:07:28,660 --> 00:07:34,930
+uygulamaya geri dnersek, ykledii bir yayn tklarz ve sonsuzluk istekleri gndermeye balamaz.
+
+89
+00:07:35,020 --> 00:07:37,510
+imdi bunu kaydedip, a sekmesindeki
+
+90
+00:07:37,720 --> 00:07:42,940
+Ve yine deiebilir, ancak anahtar bana yalnzca bir istek alyoruz ve tam olarak ne istersek istiyoruz.
+
+91
+00:07:42,940 --> 00:07:49,600
+imdi bileen gncellemesindeki verileri gvenle almann bir yolunu bulduk ve yine de yeni istekler
+
+92
+00:07:49,600 --> 00:07:54,410
+aldmzda veriyi almak istediimiz iin tamamlanm bir gncelleme doru yer.
+

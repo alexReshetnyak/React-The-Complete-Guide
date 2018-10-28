@@ -1,0 +1,52 @@
+1
+00:00:02,060 --> 00:00:08,960
+Bienvenido a otro mdulo importante en este curso, probando reacciones de aplicaciones. Ahora con las pruebas aqu, no me refiero
+
+2
+00:00:08,990 --> 00:00:12,580
+a hacer clic manualmente en nuestra aplicacin, ya lo
+
+3
+00:00:12,710 --> 00:00:17,090
+hacemos constantemente mientras lo desarrollamos. Con las pruebas aqu, me refiero
+
+4
+00:00:17,090 --> 00:00:22,280
+a escribir pruebas automatizadas y ahora aqu hay algo importante que quiero mencionar desde el
+
+5
+00:00:22,280 --> 00:00:29,630
+comienzo de este mdulo, la prueba es un tema complejo y en realidad es un tema lo suficientemente grande como para
+
+6
+00:00:29,630 --> 00:00:32,170
+componer todo un curso por s mismo .
+
+7
+00:00:32,180 --> 00:00:39,440
+Esta no es una prueba en la introduccin general y tampoco es un mdulo completo de gua de
+
+8
+00:00:39,440 --> 00:00:40,610
+prueba de reaccin.
+
+9
+00:00:40,630 --> 00:00:48,860
+En su lugar, lo presentar en las pruebas de unidad de escritura para aplicaciones de reaccin creadas con la aplicacin create reaccionar
+
+10
+00:00:48,860 --> 00:00:55,190
+y que luego puede ser algo que desarrolle o que le ayude a aplicar sus conocimientos generales
+
+11
+00:00:55,190 --> 00:00:59,600
+de prueba de JavaScript que ya posee o reunir otros recursos.
+
+12
+00:00:59,690 --> 00:01:06,080
+Con eso fuera del camino, profundicemos en qu es exactamente la prueba en la prxima conferencia
+
+13
+00:01:06,080 --> 00:01:10,940
+y luego aprendamos cmo podemos escribir pruebas para nuestra aplicacin de reaccin.
+

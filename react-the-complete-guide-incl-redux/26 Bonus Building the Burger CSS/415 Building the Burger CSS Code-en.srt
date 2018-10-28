@@ -1,0 +1,1216 @@
+1
+00:00:02,670 --> 00:00:07,680
+Welcome to this video. this is a video I also released on my YouTube channel, academind.
+
+2
+00:00:08,040 --> 00:00:11,270
+In this video, I will show you how to build this
+
+3
+00:00:11,310 --> 00:00:15,840
+burger we're building in the burger builder and with build the burger here, I mean not what we do in
+
+4
+00:00:15,840 --> 00:00:21,780
+the react app but I mean build the css code for the burger. We'll do this in codepen,
+
+5
+00:00:21,840 --> 00:00:27,300
+you can find the finished project attached to this video and I hope you'll like this,
+
+6
+00:00:27,300 --> 00:00:29,650
+I hope this was helpful and interesting to you
+
+7
+00:00:29,940 --> 00:00:35,710
+so have fun with the video.
+
+8
+00:00:35,790 --> 00:00:42,990
+So I want to build this burger here and it's written as I said entirely in css, we won't animate it,
+
+9
+00:00:43,020 --> 00:00:45,690
+we won't add javascript logic to build it up,
+
+10
+00:00:45,720 --> 00:00:51,840
+that is what we do with react in the react course but it is I guess interesting to see how you can use
+
+11
+00:00:51,840 --> 00:00:55,720
+css to create all these ingredients here.
+
+12
+00:00:55,740 --> 00:01:01,680
+So for that, let's create a new pen here on codepen which is the web editor I'm going to use, you
+
+13
+00:01:01,680 --> 00:01:03,370
+could build this locally
+
+14
+00:01:03,570 --> 00:01:09,080
+but here, this is a nice playing ground for exactly this kind of project so why don't we use it.
+
+15
+00:01:09,390 --> 00:01:14,490
+So in this new codepen here, I want to build the burger.
+
+16
+00:01:14,610 --> 00:01:21,600
+Now this burger as I said won't use javascript but it will use html and it will use css obviously
+
+17
+00:01:21,600 --> 00:01:26,320
+to well make the burger look like a burger. In html,
+
+18
+00:01:26,400 --> 00:01:29,310
+I will not have that many elements,
+
+19
+00:01:29,520 --> 00:01:35,860
+I will have a wrapping div which I will give to a class box and this will just be like a container for
+
+20
+00:01:35,900 --> 00:01:40,480
+the burger and then in there, I want to have a div for each ingredient
+
+21
+00:01:40,530 --> 00:01:46,140
+so the goal is to have something like bread-top maybe
+
+22
+00:01:46,620 --> 00:01:54,530
+and then also have something like salad and then bread-bottom it and we're going to add more ingredients
+
+23
+00:01:54,530 --> 00:01:59,030
+than just these three, this wouldn't be that delicious of a burger.
+
+24
+00:01:59,180 --> 00:02:06,320
+But that is the idea, having all these ingredients sit next to each other and styling them with css.
+
+25
+00:02:06,440 --> 00:02:11,230
+So this is our html code, how does the css code look like
+
+26
+00:02:11,240 --> 00:02:17,720
+that? Well I go, I'm going to create all these classes I'm using here and I'll start with the box which is
+
+27
+00:02:17,720 --> 00:02:21,360
+the most boring one because it's not an ingredient,
+
+28
+00:02:21,430 --> 00:02:26,450
+this box should just be the container for the burger and the burger then also should be built
+
+29
+00:02:26,450 --> 00:02:30,850
+in a way that it's really flexible and grows with the box.
+
+30
+00:02:30,860 --> 00:02:38,240
+So therefore to start off, I'll give this box a width of let's say 500px and the margin of auto to
+
+31
+00:02:38,300 --> 00:02:45,160
+just center it and a height of 450px and you can always adjust this later.
+
+32
+00:02:45,170 --> 00:02:49,000
+Now let's work on the bread-top
+
+33
+00:02:49,070 --> 00:02:59,480
+so this is the first element I got here on the left and now the bread-top should be a box with round
+
+34
+00:02:59,480 --> 00:03:02,290
+corners on the top left and right corner
+
+35
+00:03:02,330 --> 00:03:09,200
+so that we have a straight line at the bottom and clear edges on the sides, on the bottom edges but then on
+
+36
+00:03:09,200 --> 00:03:10,280
+the bottom corners
+
+37
+00:03:10,370 --> 00:03:17,270
+but then this rounded look at the top, like a burger bread you cut into pieces where you then, well take
+
+38
+00:03:17,270 --> 00:03:20,240
+the upper piece. In css,
+
+39
+00:03:20,310 --> 00:03:27,350
+we obviously always work with boxes and all these ingredients are nothing else than boxes with some
+
+40
+00:03:27,350 --> 00:03:29,670
+rounded edges, some round corners
+
+41
+00:03:29,690 --> 00:03:30,980
+from time to time.
+
+42
+00:03:31,070 --> 00:03:37,310
+So first of all, let's give this bread-top a height and let's say this should be 20%,
+
+43
+00:03:37,310 --> 00:03:42,340
+keep in mind, it's inside the box it will be 20% of that height here.
+
+44
+00:03:42,700 --> 00:03:49,580
+Let's also give it a width and let's say that should be 80% and we can always tweak this later,
+
+45
+00:03:49,580 --> 00:03:57,260
+now we want to have a background color for this bread-top so I'll assign background color and of course
+
+46
+00:03:57,260 --> 00:03:58,680
+you can make this red
+
+47
+00:03:58,820 --> 00:04:02,610
+so that we now see this box. Red
+
+48
+00:04:02,630 --> 00:04:06,780
+doesn't seem to be the most optimal color for bread though,
+
+49
+00:04:06,980 --> 00:04:16,580
+brown probably would be better but I actually want to use a linear gradient to give this also some three
+
+50
+00:04:16,580 --> 00:04:22,870
+dimensional look so that we don't have the same monotone color for the entire bread.
+
+51
+00:04:23,210 --> 00:04:28,040
+And if we want to use linear gradient, we can do this on background color because it's not treated as
+
+52
+00:04:28,040 --> 00:04:28,710
+a color,
+
+53
+00:04:28,790 --> 00:04:31,360
+we do it on the background property instead.
+
+54
+00:04:31,670 --> 00:04:37,190
+Now linear gradient takes all the different shapes you want to well, transition through and here I
+
+55
+00:04:37,190 --> 00:04:40,820
+only want to have two and I picked two brownish colors,
+
+56
+00:04:40,970 --> 00:04:48,480
+the first one the hash code for the, the hex code for the first one is #BC581E
+
+57
+00:04:48,950 --> 00:04:57,550
+and the second color I want to transition to is #E27B36, like this.
+
+58
+00:04:58,060 --> 00:04:59,590
+So this is the brown color I picked
+
+59
+00:04:59,600 --> 00:05:03,160
+and of course, you can always pick a different one.
+
+60
+00:05:03,290 --> 00:05:06,110
+Now here, we got the look
+
+61
+00:05:06,260 --> 00:05:10,100
+but of course we're missing the round corners and so on,
+
+62
+00:05:10,100 --> 00:05:10,810
+right
+
+63
+00:05:10,940 --> 00:05:17,760
+so we should probably add some border radius to this and now we could say 10px, this gives us
+
+64
+00:05:17,840 --> 00:05:19,680
+around corners everywhere.
+
+65
+00:05:20,030 --> 00:05:24,420
+We only want to have the top and the top two corners to be round though
+
+66
+00:05:24,620 --> 00:05:32,210
+so what we can do is we can say 10px 10px 0 0. The first two numbers or basically these numbers
+
+67
+00:05:32,210 --> 00:05:35,870
+go from top left to top right to bottom right to bottom left
+
+68
+00:05:35,870 --> 00:05:44,480
+so one time around the burger. If we do it like this, only the top corners around but 10px
+
+69
+00:05:44,570 --> 00:05:46,030
+isn't enough,
+
+70
+00:05:46,040 --> 00:05:54,260
+actually I'm going to use percentages here so we can use 50% here, 50% basically looks much
+
+71
+00:05:54,260 --> 00:05:57,320
+closer to a burger, a bread,
+
+72
+00:05:57,330 --> 00:05:58,470
+a cut up bread
+
+73
+00:05:58,470 --> 00:06:00,770
+look, as I want it.
+
+74
+00:06:00,950 --> 00:06:05,930
+Now in this, this bread almost already looks pretty good
+
+75
+00:06:06,050 --> 00:06:08,730
+but now I also want to give it some three dimensional look
+
+76
+00:06:08,780 --> 00:06:17,090
+so I'll add a box shadow but not one which goes outside of the bread but an inset shadow, so which falls
+
+77
+00:06:17,270 --> 00:06:23,290
+onto the bread so to say, then I'll use 15px
+
+78
+00:06:23,510 --> 00:06:30,790
+and 0 here as dimensions for this shadow and this black shadow actually doesn't look too bad
+
+79
+00:06:31,010 --> 00:06:38,840
+but I want to have some dark brown color here which I can get with #C15711 and this now looks
+
+80
+00:06:38,840 --> 00:06:40,220
+really good, for me at least
+
+81
+00:06:40,220 --> 00:06:43,240
+and as always, you can tweak this around.
+
+82
+00:06:43,250 --> 00:06:46,970
+Now with that we've got the bread-top finished for now,
+
+83
+00:06:47,030 --> 00:06:50,280
+now all these seeds on the bread are missing for now,
+
+84
+00:06:50,410 --> 00:06:51,850
+we'll add them later,
+
+85
+00:06:52,100 --> 00:06:58,940
+let's next work on the salad. Now how should the salad look like, how should the salad
+
+86
+00:06:59,010 --> 00:07:01,020
+be styled? For the salad,
+
+87
+00:07:01,100 --> 00:07:06,430
+let's first of all define its width and the bread-top had a width of 80%,
+
+88
+00:07:06,740 --> 00:07:13,850
+I think it would look nice if the salad is a little bit broader than the bread so maybe we take 90%
+
+89
+00:07:13,860 --> 00:07:14,900
+here,
+
+90
+00:07:15,140 --> 00:07:20,120
+we also have to assign a height and there, let's try 7%,
+
+91
+00:07:20,150 --> 00:07:24,450
+so much smaller than the bread because salad obviously isn't as big.
+
+92
+00:07:24,590 --> 00:07:28,720
+Now the next step is I want to give this a background color
+
+93
+00:07:28,760 --> 00:07:34,700
+and here again, I'm going to use a linear gradient to have this nicer look than just one single color
+
+94
+00:07:34,970 --> 00:07:42,740
+and there, I picked some green colors in advance #228C1D is the code of the first color,
+
+95
+00:07:42,740 --> 00:07:50,620
+the color where we're starting at and then I want to end at #91CE50.
+
+96
+00:07:50,870 --> 00:07:52,830
+This is now a green color,
+
+97
+00:07:52,850 --> 00:07:55,830
+it also is not positioned correctly.
+
+98
+00:07:56,150 --> 00:08:01,020
+For one we want to use margin auto to center it,
+
+99
+00:08:01,040 --> 00:08:07,450
+the same should of course then be done on the bread on the top, here we also should center this.
+
+100
+00:08:07,670 --> 00:08:14,830
+Now it's centered but it also doesn't have any space between the bread and the salad
+
+101
+00:08:14,900 --> 00:08:21,220
+so we probably want to add some spacing, maybe 2% of the total height of the box to the bread
+
+102
+00:08:21,830 --> 00:08:30,230
+and maybe add the same amount of spacing to the salad and as so often, you can also finetune this of course.
+
+103
+00:08:30,680 --> 00:08:34,850
+So this is now the style I want to use,
+
+104
+00:08:34,910 --> 00:08:36,370
+one thing's missing,
+
+105
+00:08:36,380 --> 00:08:45,380
+I don't like the edges here, the corners of the salad, so it makes sense to give that a border radius of let's
+
+106
+00:08:45,380 --> 00:08:50,560
+say 20px and you can just play around with this number until it looks good to you,
+
+107
+00:08:50,660 --> 00:08:54,220
+I like this look, you can of course choose a different one.
+
+108
+00:08:54,560 --> 00:08:57,620
+So now we got the salad finished,
+
+109
+00:08:57,620 --> 00:08:59,780
+let's now work on the bottom
+
+110
+00:08:59,840 --> 00:09:02,070
+bread, so I'll add
+
+111
+00:09:02,330 --> 00:09:06,680
+bread-bottom here to target this last div
+
+112
+00:09:07,250 --> 00:09:12,770
+and on this bread, I'll also assign a height, let's bake 13%
+
+113
+00:09:12,770 --> 00:09:15,160
+so that's smaller than the top bread
+
+114
+00:09:15,170 --> 00:09:20,100
+but we also won't have this round part on the top here
+
+115
+00:09:20,450 --> 00:09:25,390
+and let's bake a width which probably should be equal to the width of the top bread
+
+116
+00:09:25,400 --> 00:09:31,810
+so 80% was our width there, let's go with the same width on the bottom bread.
+
+117
+00:09:31,870 --> 00:09:33,410
+Now so that we can see something,
+
+118
+00:09:33,500 --> 00:09:35,040
+I'll also use a background here
+
+119
+00:09:35,090 --> 00:09:41,680
+and I also want to set the background to a linear gradient here and I will use the following color,
+
+120
+00:09:41,710 --> 00:09:49,150
+#F08E4A and then go to #E27B36 and I simply picked
+
+121
+00:09:49,150 --> 00:09:54,100
+all these colors in some color pickers, before I started recording this.
+
+122
+00:09:54,140 --> 00:09:57,360
+Now we got the background color for that,
+
+123
+00:09:57,560 --> 00:10:05,470
+let's also add our margin of 2%, so to 2% and auto here to center this and have some spacing
+
+124
+00:10:06,050 --> 00:10:11,850
+and let's also add this inset box shadow as we use on the top bread
+
+125
+00:10:12,080 --> 00:10:18,170
+so inset -15px 0 and then #C15711
+
+126
+00:10:18,200 --> 00:10:21,190
+so that we get the same look as we have on the top.
+
+127
+00:10:21,410 --> 00:10:29,000
+Some border radius can't hurt here too though, a little bit too edgy for my taste
+
+128
+00:10:29,000 --> 00:10:36,180
+so I'll add a border radius but I won't use as round of a corner as we did for the top bread
+
+129
+00:10:36,320 --> 00:10:39,380
+instead the top two corners shouldn't be rounded,
+
+130
+00:10:39,380 --> 00:10:47,000
+also I'll assign a value of 0 but I want to have round corners at the bottom so I'll use 30px
+
+131
+00:10:47,000 --> 00:10:47,460
+here
+
+132
+00:10:47,660 --> 00:10:48,460
+and I like this
+
+133
+00:10:48,460 --> 00:10:50,540
+look, of course you can have
+
+134
+00:10:50,540 --> 00:10:55,570
+well make it a little bit less round with 20 maybe, also looks good,
+
+135
+00:10:55,760 --> 00:10:57,820
+whatever you like, I'll go back to 30
+
+136
+00:10:57,830 --> 00:11:00,550
+but again, you can tweak this to your needs
+
+137
+00:11:00,980 --> 00:11:04,520
+and with that, we get our bottom bread style too.
+
+138
+00:11:04,670 --> 00:11:10,490
+This already really looks nice in my opinion but we haven't gotten that many ingredients so time to add
+
+139
+00:11:10,490 --> 00:11:11,510
+more,
+
+140
+00:11:11,510 --> 00:11:17,090
+one great thing we can already see though is if I simply duplicate the salad div here,
+
+141
+00:11:17,270 --> 00:11:19,200
+well we got two salads in there
+
+142
+00:11:19,340 --> 00:11:20,630
+so that really works great,
+
+143
+00:11:20,630 --> 00:11:22,150
+it's reusable.
+
+144
+00:11:22,150 --> 00:11:30,190
+Still let's add more ingredients, let's add bacon below the salad, let's add cheese,
+
+145
+00:11:30,230 --> 00:11:38,210
+let's maybe start with two slices of cheese and let's add meat here, maybe also two slices.
+
+146
+00:11:38,210 --> 00:11:42,280
+These are all the ingredients I want to support and well, build here,
+
+147
+00:11:42,440 --> 00:11:43,880
+now let's add them step by step,
+
+148
+00:11:43,880 --> 00:11:45,520
+let's start with the bacon,
+
+149
+00:11:45,590 --> 00:11:49,430
+now I'm going to add this class right below the salad.
+
+150
+00:11:49,610 --> 00:11:53,910
+So the bacon also of course has to have a width
+
+151
+00:11:53,960 --> 00:12:00,880
+and here I'll use 80% to have it as width as the bread, you can make it smaller, you can make
+
+152
+00:12:00,880 --> 00:12:08,950
+it bigger, whatever you want, the height should be really small because bacon isn't that fat, at least
+
+153
+00:12:08,950 --> 00:12:11,620
+not from the height perspective
+
+154
+00:12:12,040 --> 00:12:14,790
+and we also want to assign a background here
+
+155
+00:12:14,830 --> 00:12:20,800
+and as always, I'll use a linear gradient here too to have nicer colors. The linear gradient here should
+
+156
+00:12:20,800 --> 00:12:35,440
+go from #BF3813 to #C45E38, like that and let's also add our margin of 2% and auto,
+
+157
+00:12:35,440 --> 00:12:36,590
+to center it,
+
+158
+00:12:36,820 --> 00:12:37,850
+that's my bacon.
+
+159
+00:12:38,110 --> 00:12:45,730
+Now here, I don't actually have round corners, you could add them, you could add rounded corners here but
+
+160
+00:12:45,760 --> 00:12:52,150
+I like my bacon to have rough edges, rough corners like it has here, again as always change this if you
+
+161
+00:12:52,150 --> 00:12:53,630
+want a different look.
+
+162
+00:12:53,990 --> 00:12:55,990
+Let me move on to the cheese
+
+163
+00:12:56,110 --> 00:12:59,780
+and you probably already understood the pattern,
+
+164
+00:13:00,040 --> 00:13:06,220
+we can copy the code from the bacon here and just adjust these values. For example,
+
+165
+00:13:06,220 --> 00:13:12,240
+I want to have cheese which overlaps or which goes beyond the width of my bread,
+
+166
+00:13:12,290 --> 00:13:16,430
+so I'll pick let's say 91%
+
+167
+00:13:16,430 --> 00:13:25,380
+here, the height of the cheese could be 3% but let's make it slightly bigger, maybe 4.5
+
+168
+00:13:25,530 --> 00:13:28,140
+and the color of course is off,
+
+169
+00:13:28,140 --> 00:13:30,700
+it should be in a yellowish region,
+
+170
+00:13:30,870 --> 00:13:37,440
+so there I'll pick #F4D004 and then
+
+171
+00:13:37,650 --> 00:13:42,920
+#D6BB22 and obviously, I know all these hex codes by heart,
+
+172
+00:13:42,990 --> 00:13:46,810
+no you simply look them up and pick a color you like,
+
+173
+00:13:46,830 --> 00:13:49,290
+so that's our background.
+
+174
+00:13:49,290 --> 00:13:52,050
+Now for the cheese, I want to have round corners again
+
+175
+00:13:52,110 --> 00:13:58,840
+so I'll add a border radius here and I'll simply set 20px for all corners,
+
+176
+00:13:58,880 --> 00:14:00,270
+this looks nice to me
+
+177
+00:14:00,270 --> 00:14:01,640
+looks like nice cheese,
+
+178
+00:14:01,680 --> 00:14:02,370
+as always you can
+
+179
+00:14:02,390 --> 00:14:03,000
+tweak it
+
+180
+00:14:03,120 --> 00:14:09,040
+but I like the look of these cheese pieces here and that already is the cheese.
+
+181
+00:14:09,090 --> 00:14:12,770
+Now of course that's not all though, we also get the meat, so I'll
+
+182
+00:14:12,780 --> 00:14:18,110
+duplicate the cheese because meat also will need width and height and so on
+
+183
+00:14:18,390 --> 00:14:22,040
+so let me name this meat here.
+
+184
+00:14:22,080 --> 00:14:29,130
+Now let's think about the width, I'll go with maybe 78%, slightly smaller than the bread,
+
+185
+00:14:29,580 --> 00:14:37,210
+I'll give it a height of let's say 8% to have bigger slices of meat,
+
+186
+00:14:37,440 --> 00:14:40,970
+the background here again will be a linear gradient
+
+187
+00:14:41,220 --> 00:14:53,600
+and here I want to go from #7F3608 to #702E05 for this look of my bread.
+
+188
+00:14:53,820 --> 00:15:02,160
+The border radius may be a little bit less round, maybe 15px, looks nice to me and I think the width
+
+189
+00:15:02,160 --> 00:15:04,870
+should be a little big or maybe 82%,
+
+190
+00:15:04,890 --> 00:15:06,430
+yeah that looks better
+
+191
+00:15:07,020 --> 00:15:12,120
+and with that, I'm I'm happy with the look of my of my meat, it looks good to me,
+
+192
+00:15:12,120 --> 00:15:14,080
+I got my meat here,
+
+193
+00:15:14,100 --> 00:15:14,890
+looks fine.
+
+194
+00:15:15,060 --> 00:15:22,290
+So as you can see, we basically have a lot of similar properties in all these ingredients, we just assign
+
+195
+00:15:22,290 --> 00:15:24,080
+different values for them
+
+196
+00:15:24,090 --> 00:15:30,400
+but besides that, all ingredients work in the same way. What we can also already see is if I go up to
+
+197
+00:15:30,400 --> 00:15:36,780
+my box and I decrease this to 300px, it all adjusts, of course the burger can look a bit
+
+198
+00:15:36,780 --> 00:15:40,440
+skewed depending on how you set the aspect ratio here
+
+199
+00:15:40,500 --> 00:15:45,450
+but in general, it adjusts nicely so that is really good,
+
+200
+00:15:45,450 --> 00:15:47,910
+I'll go back to what I used before though.
+
+201
+00:15:48,150 --> 00:15:55,470
+Now this is the burger in general but the seeds on the top bread are missing and the seeds are actually
+
+202
+00:15:55,470 --> 00:16:01,510
+a bit more work to to have them look good. So the seeds will be wrapped
+
+203
+00:16:01,530 --> 00:16:09,930
+elements in this bread-top div, I'll add a seeds element and a seeds to elements, so two divs with these
+
+204
+00:16:09,930 --> 00:16:12,090
+two different classes.
+
+205
+00:16:12,090 --> 00:16:19,020
+Now the reason for this is that I of course want to have more than one seed and I will take advantage
+
+206
+00:16:19,020 --> 00:16:26,910
+of a css feature to actually convert each div here into up to three seeds if I want to but I can't
+
+207
+00:16:26,910 --> 00:16:30,170
+go above these three seeds easily.
+
+208
+00:16:30,300 --> 00:16:33,570
+So I'll use this approach and here,
+
+209
+00:16:34,020 --> 00:16:35,900
+how do we make this work?
+
+210
+00:16:36,730 --> 00:16:44,060
+I will add my seeds class here below bread-top to start working with that,
+
+211
+00:16:44,260 --> 00:16:53,950
+I want to position it inside the bread-top and I want to be able to use this like an absolute viewport.
+
+212
+00:16:54,160 --> 00:17:04,150
+So I want to use position absolute here to really display or position these seeds as I want, now for
+
+213
+00:17:04,330 --> 00:17:08,130
+absolute, referring to my outer div,
+
+214
+00:17:08,230 --> 00:17:13,140
+I need to give my bread-top class the position relative,
+
+215
+00:17:13,240 --> 00:17:17,550
+then the next absolute position will refer to this.
+
+216
+00:17:17,560 --> 00:17:23,890
+Now we can start working on the seeds, I'll give them a width of 10% and this will now refer to the width
+
+217
+00:17:23,950 --> 00:17:33,740
+of the bread-top not to the box width and I'll give my seed, let's say our height of 15%,
+
+218
+00:17:33,790 --> 00:17:40,430
+now I also need to give them some color and here I'll simply use white as a background color.
+
+219
+00:17:40,560 --> 00:17:45,720
+With that we don't see the seed yet because I also need to position it,
+
+220
+00:17:45,780 --> 00:17:48,260
+I do this with left and top.
+
+221
+00:17:48,330 --> 00:17:53,050
+Now I'll try left 30% and top 50%
+
+222
+00:17:53,190 --> 00:17:59,570
+and now we see the seeds appear here, 30% into the burger and 50% from the top.
+
+223
+00:18:00,840 --> 00:18:04,320
+Now of course my seed also should have round corners,
+
+224
+00:18:04,320 --> 00:18:12,390
+so I'll give it a border radius of 40% to not have an entire ellipse but some edges but overall,
+
+225
+00:18:12,420 --> 00:18:14,700
+very round corners.
+
+226
+00:18:14,700 --> 00:18:18,160
+Now the next thing is I want to rotate it a little bit,
+
+227
+00:18:18,170 --> 00:18:25,740
+so I'll use the transform property and then rotate the rotate function and let's say by -20 degrees
+
+228
+00:18:25,980 --> 00:18:31,730
+so that it's not sitting parallel and parallel on the burger.
+
+229
+00:18:31,770 --> 00:18:38,700
+And finally I'll also give it a box shadow, an inset shadow -2px -3px and then
+
+230
+00:18:38,700 --> 00:18:43,290
+let's say #C9C9C9 which is like a grayish shadow,
+
+231
+00:18:43,290 --> 00:18:49,560
+I like this look here and you can always tweak these values to reposition the shadow.
+
+232
+00:18:49,560 --> 00:18:52,740
+So that's my first seed but I want to have more than one
+
+233
+00:18:52,950 --> 00:18:56,420
+and now I'm going to use a little well trick, well not really a trick,
+
+234
+00:18:56,430 --> 00:19:03,620
+I'm using a pseudo selector and taking the seeds class I just worked on and I'll add the after pseudo selector,
+
+235
+00:19:03,690 --> 00:19:12,450
+this allows me to create a new element which is displayed after this seed element, the content should
+
+236
+00:19:12,450 --> 00:19:13,630
+be an empty string,
+
+237
+00:19:13,630 --> 00:19:19,890
+this is required to display something though and then I'll give it a width of 100% because this
+
+238
+00:19:19,890 --> 00:19:22,740
+will now refer to the seeds class,
+
+239
+00:19:22,740 --> 00:19:29,670
+so to this width, so not 100% of the bread-top but 100% of the width of this seed and it
+
+240
+00:19:29,670 --> 00:19:34,400
+should be equally sized, therefore 100%. Now height
+
+241
+00:19:34,410 --> 00:19:42,890
+will be 100% so I'll add it like this and now, let's also give this a position of
+
+242
+00:19:43,010 --> 00:19:44,300
+absolute,
+
+243
+00:19:44,570 --> 00:19:51,030
+let's give it a background color of white and let's give it a left position
+
+244
+00:19:51,080 --> 00:19:53,540
+and now this also refers to the other seed
+
+245
+00:19:53,600 --> 00:19:58,490
+so I'll use -170% to move it to the left,
+
+246
+00:19:58,580 --> 00:20:02,900
+100% of, 70% of the width of that previous seed
+
+247
+00:20:03,230 --> 00:20:08,230
+and let's move it to the top by -260%,
+
+248
+00:20:08,240 --> 00:20:14,260
+this will move up by 2.6 times the height of this seed.
+
+249
+00:20:14,270 --> 00:20:22,790
+Now all I need to do is give this the round corners we already used, so 40% and I want to rotate
+
+250
+00:20:22,790 --> 00:20:24,130
+this differently,
+
+251
+00:20:24,260 --> 00:20:26,250
+so now I'll transform this
+
+252
+00:20:26,450 --> 00:20:35,300
+and if I now do rotate 0 degrees, it won't change because now the default rotation is the rotation of the
+
+253
+00:20:35,300 --> 00:20:35,710
+element
+
+254
+00:20:35,710 --> 00:20:37,000
+I positioned it after,
+
+255
+00:20:37,040 --> 00:20:39,530
+so of these seeds.
+
+256
+00:20:39,530 --> 00:20:46,430
+So now if I wanted to make this, well convert this back to be in parallel to my bread-top, I would have
+
+257
+00:20:46,430 --> 00:20:53,720
+to rotate it by 20 degrees, so if I do that it's back to a straight element, a straight line.
+
+258
+00:20:53,720 --> 00:20:56,520
+I want to rotate it by 60 degrees though
+
+259
+00:20:56,540 --> 00:21:00,550
+so to have it rotate in the opposite direction essentially.
+
+260
+00:21:00,920 --> 00:21:05,550
+And then I'm going to add a box shadow here
+
+261
+00:21:06,710 --> 00:21:15,290
+also with inset 1px 2px and then #C9C9C9, like this,
+
+262
+00:21:15,320 --> 00:21:19,190
+so this is the second seed I wanted to add.
+
+263
+00:21:19,520 --> 00:21:21,540
+Now I'll add a third one
+
+264
+00:21:21,710 --> 00:21:29,570
+and for that, I'm going to copy the seeds after element here, paste it in and change after to the other
+
+265
+00:21:29,590 --> 00:21:31,880
+pseudo selector before.
+
+266
+00:21:32,150 --> 00:21:37,310
+Now I can also do the same and create another seed visually,
+
+267
+00:21:37,520 --> 00:21:39,650
+so all the set up here is the same,
+
+268
+00:21:39,650 --> 00:21:43,120
+the position changes though, I want to move this to the right
+
+269
+00:21:43,160 --> 00:21:51,600
+so let's use 180% and then I want to not push this up as high so I'll use
+
+270
+00:21:51,600 --> 00:21:53,610
+-50% to move it up.
+
+271
+00:21:54,030 --> 00:21:58,270
+Then all the rest however stays the same,
+
+272
+00:21:58,320 --> 00:22:04,200
+I'll just adjust the box shadow to come from an opposite direction with -3px,
+
+273
+00:22:04,200 --> 00:22:08,230
+now it's coming from the bottom, whoops from the bottom left
+
+274
+00:22:08,730 --> 00:22:13,110
+and with that, that seed also looks good to me.
+
+275
+00:22:13,110 --> 00:22:21,930
+Now we can work on the next seed, seedsTwo because I only have after and before, so I'll need my new element
+
+276
+00:22:22,500 --> 00:22:32,080
+seedsTwo and seedsTwo of course just is styled as the other seed, without a pseudo selector was.
+
+277
+00:22:32,110 --> 00:22:38,450
+So I'm going to copy the code from there and paste it into seedsTwo, like this
+
+278
+00:22:38,570 --> 00:22:42,140
+and now let's see what we have to adjust, position absolute, width and height,
+
+279
+00:22:42,170 --> 00:22:43,380
+that's all great,
+
+280
+00:22:43,540 --> 00:22:45,920
+the positioning here has to change,
+
+281
+00:22:45,980 --> 00:22:53,940
+I'm going to push this farther to the right with a distance to the left of 64% and I'll
+
+282
+00:22:53,990 --> 00:23:00,590
+leave top to 50%, set to 50% though. I'll leave the border radius but I want to rotate
+
+283
+00:23:00,590 --> 00:23:07,820
+it differently, let's say +10 degree to have a slight rotation to the right and adjust the box shadow
+
+284
+00:23:08,060 --> 00:23:11,060
+-3px then maybe zero
+
+285
+00:23:11,120 --> 00:23:13,480
+and the same color as before.
+
+286
+00:23:13,490 --> 00:23:16,460
+Now with that, we got this seed in place,
+
+287
+00:23:16,520 --> 00:23:20,070
+now I'll use seeds after again.
+
+288
+00:23:20,370 --> 00:23:24,690
+So let me copy seedsTwo here,
+
+289
+00:23:26,090 --> 00:23:33,160
+use the after pseudo selector with as you learned, as height should be 100%.
+
+290
+00:23:33,170 --> 00:23:35,010
+Now the position has to change though,
+
+291
+00:23:35,030 --> 00:23:39,780
+first of all, let me add some content however so that we can see something
+
+292
+00:23:39,840 --> 00:23:42,650
+and now let's move farther to the right,
+
+293
+00:23:42,740 --> 00:23:51,620
+maybe by pushing this 150% to, well to the right away from left and for top, let me use
+
+294
+00:23:51,620 --> 00:23:55,280
+-130% to move it up a little bit.
+
+295
+00:23:55,340 --> 00:24:01,490
+Border radius is fine but let me rotate it by 90 degree to really have it be rotated totally different
+
+296
+00:24:02,000 --> 00:24:11,300
+and I'll adjust the shadow to use 1px 3px here, to come from the right like this.
+
+297
+00:24:11,300 --> 00:24:17,540
+Now with that, I got this seed in place and I'd say this looks like a nice burger.
+
+298
+00:24:17,540 --> 00:24:24,950
+This is the burger we built in the react app in the burger builder in this react course and I hope
+
+299
+00:24:24,950 --> 00:24:30,460
+you enjoyed learning how you can build elements like this with just css,
+
+300
+00:24:30,470 --> 00:24:34,100
+this doesn't use svg, doesn't use any images,
+
+301
+00:24:34,100 --> 00:24:41,550
+nothing like that, it's just css and as you saw, not even that many css properties we're using.
+
+302
+00:24:41,600 --> 00:24:44,390
+So really, I hope you like this kind of video,
+
+303
+00:24:44,390 --> 00:24:49,340
+I hope this was helpful and hopefully see you in future videos too.
+
+304
+00:24:49,520 --> 00:24:52,940
+You can of course find this code attached to this video. Bye.
+

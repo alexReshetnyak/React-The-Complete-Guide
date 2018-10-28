@@ -1,0 +1,112 @@
+1
+00:00:02,100 --> 00:00:04,820
+imdi son derste zamanlamalardan
+
+2
+00:00:04,820 --> 00:00:11,480
+bahsettik, imdi animasyonun durumu bittiinde bazen sadece belirli bir kodu
+
+3
+00:00:11,480 --> 00:00:14,150
+yrtmek istediinizde ve ekrana
+
+4
+00:00:14,300 --> 00:00:21,490
+ne yaptnz deitirmediinizde, eitli geri bildirimler aldnz iin, bir geie yrtebilirim,
+
+5
+00:00:21,770 --> 00:00:26,450
+uygulamaya geri dneceim. js dosyas ve bunu, bu krmz blokta
+
+6
+00:00:26,450 --> 00:00:31,430
+sarmak iin kullandmz bu gei bileeninde yapalm. Bu gei bileeninde dinleyebileceimiz
+
+7
+00:00:31,430 --> 00:00:33,870
+alt farkl olay var,
+
+8
+00:00:33,980 --> 00:00:42,520
+bunlardan birincisi onEnter ve orada, ben basite oturum atm bir ilevi yrteceim. Bu
+
+9
+00:00:42,520 --> 00:00:44,610
+olayn ne zaman
+
+10
+00:00:44,720 --> 00:00:54,550
+olduunu grebilmemiz iin, ikincisi onEntering olalm. yazdrmakEntering. ncs yanyor ve tabii ki
+
+11
+00:00:54,590 --> 00:01:00,370
+bu yntemler uygulandnda tahmin edebileceksiniz.
+
+12
+00:01:00,740 --> 00:01:10,420
+Biz de onExit burada onExit yazdrmak gerekir var ve o zaman, biz de bu yzden bu gnl iin yazdrabilirsiniz ve
+
+13
+00:01:10,490 --> 00:01:16,520
+sonra biz de byle, bu gibi var, onExiting var tahmin etmek mmkn olabilir.
+
+14
+00:01:16,520 --> 00:01:21,070
+imdi bu alt farkl sahne, sadece burada
+
+15
+00:01:21,230 --> 00:01:27,980
+yaptm gibi ilevlere bal olabilir ve istediiniz herhangi bir kodu altrabilir
+
+16
+00:01:28,160 --> 00:01:34,940
+ve bu srayla alrlar, onEnter giri moduna girmeden hemen nce yrtlr,
+
+17
+00:01:35,220 --> 00:01:39,670
+onEntering daha sonra Giri moduna girdik ve
+
+18
+00:01:39,750 --> 00:01:47,180
+girilen moda girdiimizde, giri ok fazla girildi. k ve benzerleri ayn ekilde davranr, onExit,
+
+19
+00:01:47,180 --> 00:01:54,610
+k modunu tam olarak kesinlemeden nce balattmzda kullanlr, onExiting daha sonra k modundayken yrtlr
+
+20
+00:01:55,010 --> 00:02:01,210
+ve k modundan ktmzda karlr. Tm bunlar kaydetmeme izin verin ve sadece konsol
+
+21
+00:02:01,220 --> 00:02:07,070
+gnlnde grelim, eer krmz dmeye basarsanz buraya tklayn, onEnter, onEntering'i greceksiniz ve bu bir saniye
+
+22
+00:02:07,190 --> 00:02:14,600
+sonra, OnEntered ve onExit, onExiting ve on-off iin onExited. Bir sonraki animasyona balamadan nce bir
+
+23
+00:02:14,600 --> 00:02:20,150
+animasyonun bitmesini beklemek istediiniz hareketli animasyonlar oluturmak gzel
+
+24
+00:02:20,150 --> 00:02:20,900
+olabilir.
+
+25
+00:02:20,900 --> 00:02:26,570
+Bu yntemlerle, ne olduunu, neyi bitirdiini, neyi balattn ve ardndan animasyonlarnz buna
+
+26
+00:02:26,570 --> 00:02:27,370
+gre zamanla
+
+27
+00:02:27,500 --> 00:02:30,200
+renmek iin ihtiyacnz olan tm kontrol
+
+28
+00:02:30,200 --> 00:02:31,010
+elde edersiniz.
+

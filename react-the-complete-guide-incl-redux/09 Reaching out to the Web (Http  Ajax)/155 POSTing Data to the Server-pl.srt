@@ -1,0 +1,204 @@
+1
+00:00:02,080 --> 00:00:06,510
+Podczas ostatnich wykadw duo ci pokazaem, jak zdoby dane.
+
+2
+00:00:06,520 --> 00:00:12,450
+Teraz oczywicie chc rwnie pokaza, w jaki sposb mona publikowa dane na serwerze i dla tego
+
+3
+00:00:12,510 --> 00:00:15,290
+dodamy tutaj obszar postu na dole, jest on
+
+4
+00:00:15,370 --> 00:00:21,070
+zarzdzany przez nowy komponent postu, ktry jest komponentem opartym na klasach, ktry zarzdza wasnym stanem i
+
+5
+00:00:21,340 --> 00:00:27,020
+dlatego znajduje si w kontenerze, poniewa nie przekazujemy ani nie przekazujemy tego stanu innym komponentom.
+
+6
+00:00:27,100 --> 00:00:33,230
+A teraz chc podczy ten przycisk dodawania postw, aby zasadniczo wysa danie POST do naszego dummy backend.
+
+7
+00:00:33,740 --> 00:00:34,640
+W
+
+8
+00:00:34,660 --> 00:00:42,290
+tym celu najpierw dodam metod, postDataHandler lub modu obsugi postw, jeli chcesz to
+
+9
+00:00:42,300 --> 00:00:45,330
+zrobi, a potem oczywicie potrzebuj
+
+10
+00:00:45,340 --> 00:00:53,260
+uy aksiosw. Teraz najpierw zacznijmy t metod dodawa, dodajc detektor kliknicia tam, to
+
+11
+00:00:53,270 --> 00:00:54,330
+postDataHandler, a
+
+12
+00:00:54,670 --> 00:01:00,180
+teraz zaimportujmy aksjos, abymy mogli wysa prob o wpis.
+
+13
+00:01:00,550 --> 00:01:02,290
+Teraz wysyanie postw wci
+
+14
+00:01:02,310 --> 00:01:04,180
+uywa obiektu axios, ale
+
+15
+00:01:04,320 --> 00:01:08,440
+teraz oczywicie nie jest to metoda get, ale metoda post.
+
+16
+00:01:08,700 --> 00:01:15,360
+W pocie postmhtod nadal znajduje si URL jako dane wejciowe, a dla naszego dummy backend moemy po prostu
+
+17
+00:01:15,480 --> 00:01:21,090
+uy tego samego adresu URL, ktry uylimy do dania otrzymania, a take akceptowa dania postw.
+
+18
+00:01:21,120 --> 00:01:27,390
+Teraz danie postu potrzebuje wicej ni URL, potrzebuje drugiego argumentu, ktry chcemy
+
+19
+00:01:27,390 --> 00:01:32,850
+przesa, poniewa oczywicie danie postu bez danych nie ma wikszego sensu.
+
+20
+00:01:32,850 --> 00:01:39,930
+Dane, ktre chc wysa, to obiekt javascript zawierajcy tytu, tre i autora posta.
+
+21
+00:01:39,930 --> 00:01:45,900
+Tak wic utworz now sta, ktra powinna by obiektem javascript i tam ustawi tytu.
+
+22
+00:01:46,140 --> 00:01:47,940
+stan. tytu,
+
+23
+00:01:48,020 --> 00:01:55,290
+ustawi ciao na to. stan. tre i moesz oczywicie wybra
+
+24
+00:01:55,290 --> 00:02:00,980
+dowolne waciwoci, ktre tu chcesz, a ja ustawi autora na ten stan autora.
+
+25
+00:02:00,990 --> 00:02:02,450
+Ponownie moesz doda
+
+26
+00:02:02,520 --> 00:02:06,500
+wicej, moesz rozwin ten formularz tutaj na dole oczywicie.
+
+27
+00:02:06,660 --> 00:02:13,230
+Wwczas powiem post, ta staa tutaj jako drugi argument do metody postu i oczywicie, to jest po
+
+28
+00:02:13,470 --> 00:02:18,840
+prostu nazywana post, poniewa to, co przesyasz, to niektre dane o pocie, moesz nazwa
+
+29
+00:02:18,840 --> 00:02:20,080
+to, co chcesz,
+
+30
+00:02:20,100 --> 00:02:22,360
+moesz te nazwa te dane.
+
+31
+00:02:22,860 --> 00:02:27,120
+Teraz moesz rwnie przekaza trzeci argument, aby skonfigurowa t prob, ale nie
+
+32
+00:02:27,120 --> 00:02:29,500
+potrzebujemy jej tutaj. Wane dla nas,
+
+33
+00:02:29,550 --> 00:02:35,460
+to oczywicie obiekt javascript, ale aksjomaty automatycznie to w naturalny sposb uszereguj, wic przekszta
+
+34
+00:02:35,460 --> 00:02:37,160
+to w dane json,
+
+35
+00:02:37,170 --> 00:02:43,200
+zrobi to za nas tak samo, jak wyodrbni dane json i dostanie dla nas dania.
+
+36
+00:02:43,680 --> 00:02:46,820
+A teraz to oczywicie dziaa asynchronicznie, moemy
+
+37
+00:02:46,860 --> 00:02:54,210
+sucha odpowiedzi tak, jak moemy to zrobi, aby uzyska dania, a my moemy wydrukowa to na
+
+38
+00:02:54,210 --> 00:02:55,290
+konsoli tutaj.
+
+39
+00:02:55,290 --> 00:02:56,480
+Teraz sprbujmy
+
+40
+00:02:56,480 --> 00:02:57,680
+tego, zapiszmy
+
+41
+00:02:57,900 --> 00:03:03,570
+to, otwrzmy konsol i wprowadmy tutaj troch treci, to jest
+
+42
+00:03:03,580 --> 00:03:09,670
+jaka tre testowa, moe zamieni autora na Manu i trafi add post.
+
+43
+00:03:10,020 --> 00:03:18,000
+A oto odpowied, tekst statusu 201, ktry wskazuje, e si udao. A teraz, gdy fikcyjny backend tutaj nie bdzie
+
+44
+00:03:18,000 --> 00:03:24,540
+przechowywa danych oczywicie, po prostu zwraca dane w odpowiedzi, abymy mogli zobaczy, e
+
+45
+00:03:24,540 --> 00:03:27,880
+wysalimy to pomylnie i wyglda tak, jak
+
+46
+00:03:27,910 --> 00:03:28,620
+zrobilimy,
+
+47
+00:03:28,620 --> 00:03:32,640
+to s dane, ktre wysalimy. Znowu dla prawdziwego serwera oczywicie, na
+
+48
+00:03:32,640 --> 00:03:38,430
+wasny serwer prawdopodobnie masz pewn logik na serwerze, aby nastpnie przechowywa go rwnie w bazie danych.
+
+49
+00:03:38,430 --> 00:03:44,250
+W ten sposb moemy publikowa dane, to wszystko. Wystarczy wymieni sowo tutaj, nazw metody i
+
+50
+00:03:44,250 --> 00:03:47,460
+przekaza dane jako drugi argument, a teraz
+
+51
+00:03:47,610 --> 00:03:50,350
+moemy rwnie wysya dane do serwerw.
+

@@ -1,0 +1,384 @@
+1
+00:00:02,230 --> 00:00:10,120
+Bu modlden sonra, eylemlerimizi gnderirken bize uyumsuz kodu altrmamza izin verdiklerinden, zellikle de aksiyon yaratclar ve
+
+2
+00:00:10,120 --> 00:00:17,000
+ara katman Arkie eyleri gibi Rydex ile yapabileceiniz gelimi eyler hakknda ok ey reneceksiniz.
+
+3
+00:00:17,030 --> 00:00:22,070
+imdi gelimi redktr setine dalmak istiyorum.
+
+4
+00:00:22,150 --> 00:00:23,640
+u anda iki reddi var.
+
+5
+00:00:23,680 --> 00:00:30,340
+Biraz gelimi nk zaten onu blp kombine indirgeyicileri kullanyorduk fakat introducer yine de nispeten
+
+6
+00:00:30,340 --> 00:00:37,150
+uzun bir switch ifadesine sahip ve redktrlerini birden ok dosyaya blerken bile introducer iin
+
+7
+00:00:37,150 --> 00:00:43,060
+nispeten uzun switch case ifadeleri var, en azndan daha fazlasn ilerse iki
+
+8
+00:00:43,060 --> 00:00:44,160
+eylemden daha.
+
+9
+00:00:44,620 --> 00:00:48,730
+Bu yzden Rafal' biraz azaltacak temizleme bir fikir olabilir.
+
+10
+00:00:48,850 --> 00:00:51,630
+Ve diyorum, bu bir zorunluluk deil de olabilir.
+
+11
+00:00:51,700 --> 00:00:52,990
+stee bal.
+
+12
+00:00:52,990 --> 00:00:55,500
+Syleyeceklerim iyi bir uygulama.
+
+13
+00:00:55,660 --> 00:00:57,820
+Ancak bunu yapmak zorunda deilsin.
+
+14
+00:00:57,880 --> 00:01:03,970
+Bu redktrleri adm adm temizlemenin baz yollarn gstermek istiyorum, ancak son derece
+
+15
+00:01:03,970 --> 00:01:05,800
+temiz bir redktrle sonulanacaktr.
+
+16
+00:01:05,800 --> 00:01:08,270
+Yine sana gstermek istediim ey istee bal.
+
+17
+00:01:08,680 --> 00:01:12,950
+Yapabildiimiz ilk ey deimezlikle ilgilidir.
+
+18
+00:01:13,330 --> 00:01:18,740
+Yeni bir devlet dndmzde, burada bir nesneyi srekli olarak gncelliyoruz.
+
+19
+00:01:18,940 --> 00:01:26,470
+Yaptmz ey, gncellenmi bir nesneyi yalnzca geri dndrmek, eski devletin zelliklerini kopyalar ve
+
+20
+00:01:26,470 --> 00:01:30,570
+sonra zelliklerden birini deitiren bir nesne dndrmektir.
+
+21
+00:01:30,910 --> 00:01:37,570
+Akas kesinlikle bunu byle yapabiliriz ancak bor iin fayda fonksiyonlar yaratabiliriz ve gncellenmesi iin de
+
+22
+00:01:37,570 --> 00:01:38,960
+ayn eyleri yapabilirsiniz.
+
+23
+00:01:38,970 --> 00:01:46,800
+Erase daha sonra bu yardmc program ilevini aramamza ve baz kodlar burada saklamamza izin verir.
+
+24
+00:01:46,840 --> 00:01:47,960
+Bu nasl olabilir?
+
+25
+00:01:48,070 --> 00:01:49,290
+Sana gsterebilirim.
+
+26
+00:01:49,420 --> 00:01:57,700
+Bunun iin yardmc olacam yeni bir dosya oluturacam ve onu maaza klasrnde saklayacam.
+
+27
+00:01:57,700 --> 00:02:02,760
+Redktr klasrne saklayabilirsin, ancak bunun iin bir yapmc gibi grnd iin istemiyorum.
+
+28
+00:02:03,040 --> 00:02:07,010
+Ve bunu baka bir klasre de saklayabilirsiniz, ancak bunu sadece redktrde kullanacam.
+
+29
+00:02:07,060 --> 00:02:09,440
+Dolaysyla benim iin maaza klasr harika geliyor.
+
+30
+00:02:10,300 --> 00:02:14,600
+Hepsi E-6 ilev stili ile bir ilev yaratyorlar.
+
+31
+00:02:14,680 --> 00:02:21,940
+Bu yzden, sonunda bir fonksiyon tutan bir sabit oluturacam. Bu fonksiyon, E6 ok szdizimini
+
+32
+00:02:22,180 --> 00:02:27,440
+kullanarak iki deikeni bekleyerek gncelleme nesnesine bu fonksiyonu tekrar isimlendirecek.
+
+33
+00:02:27,550 --> 00:02:36,700
+Kopyalamak ve gncellemek istediim eski nesne ve bu ileve ait gncellenmi deerler.
+
+34
+00:02:36,900 --> 00:02:40,220
+Basite redktrde yaptklarm yapmak istiyorum.
+
+35
+00:02:40,440 --> 00:02:43,310
+Gncellenmi nesneyi iade etmek istiyorum.
+
+36
+00:02:43,350 --> 00:02:48,520
+Dolaysyla 1'i kopyalayp burada bulunan fayda fonksiyonuna geri getirin.
+
+37
+00:02:48,610 --> 00:02:56,640
+Her eyden nce eski nesne zelliklerini datmak zorundaym, bylece iindeki tm eski nesne zelliklerini ve
+
+38
+00:02:56,640 --> 00:02:59,700
+deerlerini ieren yeni bir nesne oluturacam.
+
+39
+00:03:00,000 --> 00:03:03,080
+Ve muhtemelen gncellenecek baz paralar var.
+
+40
+00:03:03,270 --> 00:03:07,880
+imdi burada, bunu ektiim indirgeyicinin kar olacan biliyordum.
+
+41
+00:03:08,010 --> 00:03:15,810
+Burada gncellenen deerler ve gncellenmi deerler, geersiz klmak istediiniz tm deerleri ieren bir
+
+42
+00:03:15,810 --> 00:03:17,450
+javascript nesnesi olabilir.
+
+43
+00:03:17,640 --> 00:03:20,780
+Bylece tm datm gncellenmi deerleri elde eder.
+
+44
+00:03:20,940 --> 00:03:24,840
+Gncellenen deerlerin bir Java nesnesi olmasn bekliyorum.
+
+45
+00:03:24,840 --> 00:03:28,800
+Bu, bir nesneyi gncellemek iin kullanlan fayda fonksiyonudur.
+
+46
+00:03:28,800 --> 00:03:33,740
+imdi sayac js dosyasnda nasl kullanabileceinizi gstereceim.
+
+47
+00:03:33,750 --> 00:03:35,240
+Hepsi ithal edildi.
+
+48
+00:03:35,450 --> 00:03:42,710
+Bir ey iinden ithal edeceim ve u an sadece de ve ithal ettiim bir eylere geeceim.
+
+49
+00:03:42,750 --> 00:03:47,010
+Elbette gncellemem ve ihracat yapmam lazm.
+
+50
+00:03:47,020 --> 00:03:55,440
+Bu nedenle, ie aktarma ifadesi eklememe izin verin, bylece ie aktarmay istediiniz bir ey benim gncelleme nesnesi ilevimdir.
+
+51
+00:03:56,040 --> 00:04:02,000
+Daha sonra her eyi gncellemek istediimde temel olarak onu deitirebilmem iin kullanabilirsiniz.
+
+52
+00:04:02,250 --> 00:04:09,300
+Yani benim redksiyonumda sadece o zaman eski bir nesne olarak bir devreden nesne gncellemek iin bir ar dndrr
+
+53
+00:04:10,140 --> 00:04:12,760
+ve daha sonra tm yeni zelliklerle nesne.
+
+54
+00:04:12,810 --> 00:04:19,150
+MIKE HAYES yeni deeri devletin kar eksi eylem deerinin bulunduu kar mlkiyetle nesne.
+
+55
+00:04:19,560 --> 00:04:27,240
+Optik tedavinin tamam devlet alr ve ardndan sayac gncelletirdiimiz bir javascript nesnesi ve bir
+
+56
+00:04:27,240 --> 00:04:34,580
+javascript nesnesi iletmemiz gerekiyor nk Bu nesnenin deerlerini, fayda ilevindeki kopyalanm eski nesneye datn.
+
+57
+00:04:34,580 --> 00:04:40,320
+Ve imdi biraz daha yaln, bu yardmc program ilevi daha sonra
+
+58
+00:04:41,190 --> 00:04:44,690
+bunu tm olgularmz iin yapabilir miyiz?
+
+59
+00:04:44,710 --> 00:04:48,770
+Bunu dier tm kullanmlar iin de abucak yapmama izin verin.
+
+60
+00:04:48,780 --> 00:04:58,080
+Ortalama durumlarn her biri iin durumu her zaman gncelleyin ve gncellenmi zelliklerle bir javascript nesnesi iletin.
+
+61
+00:04:58,320 --> 00:05:06,960
+Nihayetinde son kez bunu yapmam lazm benim ilerlememde Mefford burada daha nce devletimi gncellemenin daha
+
+62
+00:05:07,020 --> 00:05:09,680
+uzun bir yaklamn kullanyorum.
+
+63
+00:05:09,750 --> 00:05:16,940
+imdi hepsi sadece geri dnen gncelleme nesnesini oraya geri dndrmenin ok ksa ve zl yaklam ieriyor.
+
+64
+00:05:17,010 --> 00:05:19,640
+Saya sonuncusu arttrmak istiyorum.
+
+65
+00:05:20,010 --> 00:05:26,070
+Yeni yardmc program japes dosyas da dahil olmak zere tm dosyalar hzl bir ekilde kaydedelim ve ie yarayp yaramadn
+
+66
+00:05:26,070 --> 00:05:27,810
+grmek iin 10 zararly tkalm.
+
+67
+00:05:28,050 --> 00:05:30,660
+Bu, uygulamanzn almas iin ie yaryor gibi grnyor.
+
+68
+00:05:30,690 --> 00:05:34,450
+Grmeden nce saklamaya devam etmeden nce saklamaya aln.
+
+69
+00:05:34,590 --> 00:05:36,740
+Fakat artk fayda fonksiyonunu kullanyoruz.
+
+70
+00:05:36,870 --> 00:05:40,470
+Dolaysyla kullandmz ey, uygun bir ekilde nesne gncellemeyi hedeflemektedir.
+
+71
+00:05:40,590 --> 00:05:42,600
+yice hepsi cisimdir.
+
+72
+00:05:42,600 --> 00:05:44,530
+Ayrca gncelleme yapalm.
+
+73
+00:05:44,550 --> 00:05:49,940
+Nesne kullanm, J sonucunda Falzone aberant indirgeyici olarak uygulanmaktadr.
+
+74
+00:05:50,170 --> 00:06:01,420
+Bu yzden AUM iin gncelleme nesnesini ie aktarn ve artk James'in d programna gein ve sonra gncelleme nesnelerini burada
+
+75
+00:06:01,420 --> 00:06:02,610
+da kullanalm.
+
+76
+00:06:02,810 --> 00:06:10,520
+Gncelleme nesnesini dndrmek iin devlet astm' getikten sonra gncellenecek nesne ve daha sonra yalnzca
+
+77
+00:06:10,520 --> 00:06:14,780
+bir javascript nesnesi gncellenecek zelliklere sahip olur.
+
+78
+00:06:15,200 --> 00:06:22,940
+Ve yaptmz eski koddan kurtulmamz ve daha ksa olan ve tabii ki ayn
+
+79
+00:06:22,940 --> 00:06:26,110
+sonucu da silmek iin kullanmamz salyor.
+
+80
+00:06:26,120 --> 00:06:28,390
+imdi her zaman bir diziyi gncelliyorum.
+
+81
+00:06:28,430 --> 00:06:33,950
+Bir dizinin gncellenmesi, bir diziyle ne yaptmza bal olarak bor iin bir fayda
+
+82
+00:06:33,950 --> 00:06:34,650
+fonksiyonu yazmayacam.
+
+83
+00:06:34,880 --> 00:06:39,590
+Yeni bir e eklemek, rnein, klasrle birlikte konat kaldrma ile alr.
+
+84
+00:06:39,620 --> 00:06:44,770
+Dolaysyla bu, nesne kadar kolay deildir ve fayda ilevi, bu nedenle bu kadar
+
+85
+00:06:44,780 --> 00:06:45,710
+mantkl deildir.
+
+86
+00:06:45,980 --> 00:06:48,450
+Ancak sonunda burada bir nesneyi gncelliyoruz.
+
+87
+00:06:48,560 --> 00:06:50,580
+Her zaman yeni bir devlet iade etmekle urarz.
+
+88
+00:06:50,810 --> 00:06:56,950
+Bylece eski durumu elde ederiz ve daha sonra gncellenmi dizimizle sonular geersiz klmak istiyoruz.
+
+89
+00:06:57,080 --> 00:07:02,230
+Bu yzden bunu ikinci argmann javascript nesnesinde geelim.
+
+90
+00:07:02,330 --> 00:07:03,350
+Hepsini kurtaralm.
+
+91
+00:07:03,360 --> 00:07:05,320
+imdi de eylemde l grelim.
+
+92
+00:07:05,660 --> 00:07:07,130
+Yani hepsi ie yaryor gibi grnyor.
+
+93
+00:07:07,140 --> 00:07:08,490
+Sonu saklayalm.
+
+94
+00:07:09,280 --> 00:07:11,130
+Ayn zamanda silmek iin de alr.
+
+95
+00:07:11,260 --> 00:07:12,520
+Bu iyi grnyor.
+
+96
+00:07:12,520 --> 00:07:18,730
+Gncelleme nesnesi redktrmz biraz daha yasz hale getirmek iin ekleyebileceimiz gzel bir yardmc fonksiyon mu kullanyor mu?
+

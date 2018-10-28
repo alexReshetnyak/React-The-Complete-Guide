@@ -1,0 +1,400 @@
+1
+00:00:02,200 --> 00:00:07,070
+Ve biz uyguladmz Son Konuma ya da Burgert kurucusunu uygulamaya baladk.
+
+2
+00:00:07,200 --> 00:00:09,020
+Ama ok eksik.
+
+3
+00:00:09,090 --> 00:00:16,020
+imdi almalarmza devam etme ve bumerere ait bileenleri ve zellikle burger bileenlerini eklediimizden emin
+
+4
+00:00:16,020 --> 00:00:22,410
+olmamzn zaman geldi; bu nedenle, bileen klasrne gidip adlandracamz yeni bir alt klasr
+
+5
+00:00:22,410 --> 00:00:23,020
+deitireceim.
+
+6
+00:00:23,020 --> 00:00:23,730
+Burger.
+
+7
+00:00:23,910 --> 00:00:26,870
+Ilgili burger her ey oraya gidecek.
+
+8
+00:00:27,240 --> 00:00:34,050
+nk iyi bir uygulamadr ve ayrntl paralar deil byk paralar oluturmak iin tepki verin.
+
+9
+00:00:34,050 --> 00:00:41,040
+Ve yine bu, projenizi yaplandrmann iyi bir yoludur nk daha byk projelerde ve ok
+
+10
+00:00:41,040 --> 00:00:46,440
+byk projelerde hayal edebileceiniz gibi tm bu bileenleri ynetmek zor olabilir,
+
+11
+00:00:46,440 --> 00:00:51,840
+Bir sr dosyanz varsa ve bir sr dosyanz varsa ve bu dosyalar ynetilebilir
+
+12
+00:00:51,840 --> 00:00:58,530
+tutmak iin yalnzca bileen ve kaplara blnm olmann yan sra, bileenlerin ierdii kaplar olan bir klasr
+
+13
+00:00:58,650 --> 00:01:00,140
+yaps oluturmak istiyorsanz.
+
+14
+00:01:00,240 --> 00:01:06,510
+Ayrca, zellik alanna gre bldnzden burger zerinde almam gerekiyorsa hzl bir ekilde bildiinizden
+
+15
+00:01:06,840 --> 00:01:10,140
+ve orada Bergere klasrne girmek zorunda kalacam.
+
+16
+00:01:10,140 --> 00:01:12,660
+Birka Suppe bileeni ekleyeceiz.
+
+17
+00:01:12,660 --> 00:01:21,060
+rnein orada gerekten burger olmal burger js dosyasn
+
+18
+00:01:21,060 --> 00:01:22,180
+ekleyeceiz.
+
+19
+00:01:22,650 --> 00:01:26,510
+imdi her zaman sadece burgerin hile yapmayacan syleyebilirim.
+
+20
+00:01:26,700 --> 00:01:34,100
+Ekmek gibi o burgerde peynirin etine pastrma satmak iin malzemelere ihtiyacmz var.
+
+21
+00:01:34,470 --> 00:01:37,390
+Bunun iin hepsi burada bir alt klasr oluturuyor.
+
+22
+00:01:37,560 --> 00:01:39,940
+Hamburger malzemesi.
+
+23
+00:01:40,200 --> 00:01:44,150
+Ve sonra hepsi bir burger maddesi ekler.
+
+24
+00:01:44,340 --> 00:01:50,610
+bileenle balamak istiyorum nk aslnda ekrana bir ey gstermek iin ihtiya duyduum ey bu.
+
+25
+00:01:50,820 --> 00:01:53,170
+JS dosyas ve aslnda bu
+
+26
+00:01:53,580 --> 00:01:58,040
+imdi burger maddeleri iin bir C SS d hazrladm.
+
+27
+00:01:58,050 --> 00:02:05,700
+Hamburger malzemelerini CSSA ile ilemek iin bir sr C S S kodunu ieren bu videoyu,
+
+28
+00:02:05,730 --> 00:02:09,890
+yalnzca elbette harika bir resim almadan eklemek mmkndr.
+
+29
+00:02:09,890 --> 00:02:18,540
+Fafa'nn perspektifinden bakldnda, son kullanc tarafndan bu kadar ok kod veya ieriin indirilmesi gerekmez.
+
+30
+00:02:18,570 --> 00:02:24,850
+Artk l CSSA kodunu indirmekten ve yeni oluturulan bir dosyaya yaptrmaktan ekinmeyin.
+
+31
+00:02:24,870 --> 00:02:28,070
+Bergere maddesinin C S S dosyas.
+
+32
+00:02:28,110 --> 00:02:33,270
+yapmsnzdr: Bergere malzemelerini vermeniz gerekir, ancak elbette ki tek bana bir ey yapmazsnz.
+
+33
+00:02:33,270 --> 00:02:36,840
+Birlikte paylatm eyleri kopyaladktan sonra, tm C-lerini u ekilde
+
+34
+00:02:36,840 --> 00:02:40,440
+Hayatta bir burger bileeni bileeninin tamamna ihtiyacmz var.
+
+35
+00:02:40,770 --> 00:02:43,010
+Her zaman olduu gibi bu bir ilev olacaktr.
+
+36
+00:02:43,050 --> 00:02:50,610
+Bu yzden bir devlet daha az bileen ve Burger madde adn ve baz sahne almak iin beklemek ve bir ey
+
+37
+00:02:50,610 --> 00:02:56,190
+iade etmek istiyorum ve ben aslnda dnmeden nce baz mantk altrmak istiyorum nk kvrck parantez
+
+38
+00:02:56,190 --> 00:02:56,880
+kullanacaz.
+
+39
+00:02:56,890 --> 00:03:03,650
+Sonunda baz GSX yazacamdan GSX deitireceim veya tepki vereceim.
+
+40
+00:03:03,960 --> 00:03:07,610
+Ve elbette bunu varsaylan olarak verecektir.
+
+41
+00:03:07,770 --> 00:03:16,050
+Bu ilev ve eyaletten daha az bir bileen oluturmak iin editrnz iin ok iyi bir snippet yazabilirsiniz, nk
+
+42
+00:03:16,320 --> 00:03:18,070
+her zaman byle grnr.
+
+43
+00:03:18,120 --> 00:03:21,240
+Bir fonksiyonu ve da aktarma ilemini yeniden balatn.
+
+44
+00:03:21,300 --> 00:03:24,410
+Editrnz iin bir snippet yazmakta ekinmeyin.
+
+45
+00:03:24,420 --> 00:03:32,370
+Geri bileene geri dndk, Bergere bileenimiz var ve GSX kodunu oluturmak iin baz
+
+46
+00:03:32,700 --> 00:03:35,450
+mantklara ihtiyacmz olduunu syledim.
+
+47
+00:03:35,520 --> 00:03:42,150
+Bu mantk farkl tipteki maddeler olduundan ve hangi bileenin ilenecei hakknda bilgi
+
+48
+00:03:42,150 --> 00:03:44,290
+almak istedii iin gereklidir.
+
+49
+00:03:44,340 --> 00:03:51,660
+Neden buraya gelin imdi bir madde deikeni oluturacam ve balangta null deerine ayarlayacam.
+
+50
+00:03:51,720 --> 00:03:54,110
+Bu yzden balangta bir ey yaratmayacaz.
+
+51
+00:03:54,120 --> 00:04:02,700
+rnein, geersiz bir ey geerse, normal javascript switch ifadesini deitireceim ve ieriimin
+
+52
+00:04:02,730 --> 00:04:09,260
+trn analiz ederek almam beklediim bir zellik olarak yazacam.
+
+53
+00:04:09,930 --> 00:04:12,430
+Ve imdi birka farkl durumumuz var.
+
+54
+00:04:12,510 --> 00:04:14,790
+rnein Brad alt.
+
+55
+00:04:15,000 --> 00:04:18,230
+Bu davay istediiniz gibi tanmlamakta zgrsnz.
+
+56
+00:04:18,240 --> 00:04:20,320
+Sadece dolandrclk kullandnzdan emin olun.
+
+57
+00:04:20,340 --> 00:04:22,830
+Gei yapmay planlyorsanz bavuru.
+
+58
+00:04:22,920 --> 00:04:28,730
+Bunlarn hepsi iin burger CSSA snflarnzn alttaki Brad'leri burada bulunacakt.
+
+59
+00:04:28,770 --> 00:04:33,850
+Onlar yaknda uygulayacaz ve DS, Starling'in dzeltilmesi iin bavuracak.
+
+60
+00:04:33,960 --> 00:04:40,610
+Diyelim ki bir de Brad dibinde bir vaka var, o zaman maddi madde aslnda olmal.
+
+61
+00:04:40,750 --> 00:04:44,670
+Sevgili snf ad ile.
+
+62
+00:04:44,800 --> 00:04:51,610
+imdi, snflarm ie aktarmam gerekiyor, bylece Bruguera bileeni C S S dosyasndaki
+
+63
+00:04:51,610 --> 00:04:58,810
+ie aktarma snflarn abucak ekleyeceim ve daha sonra olduunuzda Brad snflar atamak istiyorum.
+
+64
+00:04:59,020 --> 00:05:01,300
+Ve DC indekslerinin snfn grebilirsiniz.
+
+65
+00:05:01,310 --> 00:05:02,700
+te Brad alt ksm.
+
+66
+00:05:02,710 --> 00:05:04,380
+Hepimizin srlar var.
+
+67
+00:05:04,510 --> 00:05:11,710
+Bratta koltuklarmz var ve et peyniri salatas ve pastrma var.
+
+68
+00:05:11,800 --> 00:05:16,460
+Yani burada alt ekmek retiriz.
+
+69
+00:05:16,490 --> 00:05:20,960
+Bir yar-kolon ekleyeyim ve sonra mola edeyim.
+
+70
+00:05:20,960 --> 00:05:23,000
+imdi baka bir vaka daha ekleyelim.
+
+71
+00:05:23,300 --> 00:05:28,520
+Kontrol etmek istediim ikinci dava da ekmek tabamn olmas.
+
+72
+00:05:28,520 --> 00:05:35,780
+bir maddenin sadece bir lm gerektirir, ancak stteki ekmekte baz koltuklar olacaktr.
+
+73
+00:05:35,840 --> 00:05:38,100
+Bu aslnda biraz farkl
+
+74
+00:05:38,120 --> 00:05:48,220
+Yani burada aslnda baz ok satrl J, X olarak d div da Clauss ad ve daha sonra
+
+75
+00:05:49,000 --> 00:05:51,660
+Klaas'n ekmek topu alr dnmek.
+
+76
+00:05:52,450 --> 00:05:58,630
+Ama ieride koltuklar temsil eden Obert cihazna ihtiyacm var.
+
+77
+00:05:58,630 --> 00:06:08,870
+Bylece snfn adnn ilk gnnde ve daha sonra snflarn koltuklar var ve hepsinin de koltuklar olan
+
+78
+00:06:08,870 --> 00:06:11,980
+bir div olmas iin oaltacam.
+
+79
+00:06:12,020 --> 00:06:14,090
+Yani alternatif budur.
+
+80
+00:06:14,090 --> 00:06:24,080
+bir sonraki davaya devam edelim, bulualm, et var m diye ekleyelim diyelim ki bulualm.
+
+81
+00:06:24,080 --> 00:06:28,590
+Hepimiz burada bir mola verelim ve
+
+82
+00:06:28,970 --> 00:06:36,950
+Ve o gn snf ismini kullanacak olursak ve tahmin edersen snflar imdi buluur.
+
+83
+00:06:37,000 --> 00:06:44,140
+Bunlar C S S dosyasnda grebileceiniz ortalama gradyanlar iin bunlar tamamlamaktan ekinmeyin
+
+84
+00:06:44,860 --> 00:06:50,570
+ve burada tanmlayabileceiniz tm ierikler iin tm vakalar oluturun.
+
+85
+00:06:50,620 --> 00:06:55,040
+Sana makarna yapman iin bir ans vereceim ve bunu tek banza deneyip sonra birlikte yapacaz.
+
+86
+00:06:57,870 --> 00:07:01,050
+Baarl olsaydn bunu birlikte tamamlayalm.
+
+87
+00:07:01,320 --> 00:07:03,320
+Aslnda olduka basittir.
+
+88
+00:07:03,510 --> 00:07:11,640
+peynir vakalarn, ardndan pastrma snfn uyguladmz pastrmay yapmak iin de yapamayz.
+
+89
+00:07:11,640 --> 00:07:20,230
+Sadece eti kopyalayamayz ve birka kez buraya girerek, peynir snfn uyguladmz
+
+90
+00:07:20,400 --> 00:07:25,640
+Ve sonunda salata snfn uyguladmz salata.
+
+91
+00:07:25,800 --> 00:07:31,680
+Bu arada, bunu farkl bir ekilde uygulamak istiyorsanz ve tabii ki bu byk
+
+92
+00:07:31,680 --> 00:07:36,280
+anahtar ama seeneine alternatifleriniz varsa tabii ki bunu yapmak daha zgrdr.
+
+93
+00:07:36,360 --> 00:07:41,520
+imdi hepsi yanl bir eyin getii durumda varsaylan bir durum oluturdu.
+
+94
+00:07:41,520 --> 00:07:50,430
+Ingridion Shelby, yine burada bulunan bu dev deiim ifadesinin ardndan u maddeyi gvenle geri getirebiliriz:
+
+95
+00:07:50,910 --> 00:07:56,510
+Ingrection u ana kadar ya da birok lmmzden biridir.
+
+96
+00:07:56,520 --> 00:08:04,230
+konferansta gerekten yapacamz bir ilem nk bir type zellii aldmzdan emin olmak istiyoruz.
+
+97
+00:08:04,230 --> 00:08:10,970
+imdi yapabileceimiz bir ey var: Propp tr dorulamasnda yapabileceimiz bir sonraki
+
+98
+00:08:11,040 --> 00:08:12,720
+imdi bunu kendi banza deneyin.
+
+99
+00:08:12,720 --> 00:08:19,350
+Bir sonraki ders dnyasnda Prop borularnn paketlenmesinden sonra Gabr'a bunu kendi banza denemekten
+
+100
+00:08:19,350 --> 00:08:26,110
+ekinmeyin ve tip zelliklerin gerekten bu bileene geirildiini dorulamak iin Rob Taieb'i ekleyin.
+

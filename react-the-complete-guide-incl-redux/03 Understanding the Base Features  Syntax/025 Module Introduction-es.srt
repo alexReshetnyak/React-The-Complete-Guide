@@ -1,0 +1,28 @@
+1
+00:00:02,360 --> 00:00:08,030
+Ahora y echamos un vistazo a los reactores y por qu es posible que deseemos usarlos, as como hemos informado
+
+2
+00:00:08,060 --> 00:00:09,520
+que construimos nuestra primera reaccin.
+
+3
+00:00:09,770 --> 00:00:15,280
+Vamos a sumergirnos en todos los conceptos de reaccin central y la sintaxis bsica de reaccionar.
+
+4
+00:00:15,440 --> 00:00:20,180
+Y este mdulo echar un vistazo a lo que se necesita para construir una aplicacin de reactivacin real.
+
+5
+00:00:20,270 --> 00:00:25,690
+Y con eso, por supuesto, tambin me refiero localmente en nuestra mquina y no en el lpiz de cdigos.
+
+6
+00:00:26,000 --> 00:00:30,000
+Y aprender qu caractersticas principales ofrecen y cmo las usa.
+
+7
+00:00:30,080 --> 00:00:36,990
+Vamos a profundizar en eso y aprendamos cmo configuramos un Proyecto de Rea local en nuestra mquina.
+

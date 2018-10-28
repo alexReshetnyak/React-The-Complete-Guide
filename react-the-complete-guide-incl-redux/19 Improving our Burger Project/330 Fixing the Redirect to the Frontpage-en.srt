@@ -1,0 +1,288 @@
+1
+00:00:02,210 --> 00:00:03,980
+So here's our application
+
+2
+00:00:04,040 --> 00:00:06,100
+and generally, it works fine.
+
+3
+00:00:06,110 --> 00:00:09,690
+Now there is a tiny issue when we place a new order,
+
+4
+00:00:09,920 --> 00:00:17,240
+if you inspect your order reducer file, you will see that on purchaseBurgerStart which of course
+
+5
+00:00:17,330 --> 00:00:20,750
+is dispatched when we click on order,
+
+6
+00:00:20,750 --> 00:00:23,200
+when we send the order to the server,
+
+7
+00:00:23,570 --> 00:00:26,330
+we set loading to false.
+
+8
+00:00:26,330 --> 00:00:33,470
+Now that doesn't make any sense at all because here we want to set loading to true and we had it set
+
+9
+00:00:33,470 --> 00:00:35,440
+to true earlier in this course,
+
+10
+00:00:35,540 --> 00:00:38,310
+I messed this up when refactoring the reducer.
+
+11
+00:00:38,390 --> 00:00:44,270
+So this should of course be true, we want to show a spinner if we implement this functionality in our
+
+12
+00:00:44,270 --> 00:00:47,680
+component when we are sending this to a server,
+
+13
+00:00:47,930 --> 00:00:51,160
+so this is the first tiny improvement.
+
+14
+00:00:51,190 --> 00:00:53,190
+Now there's another improvement,
+
+15
+00:00:53,420 --> 00:00:58,070
+if we are talking about placing an order, let's build a burger there.
+
+16
+00:00:58,070 --> 00:01:07,020
+Now let's login first, submit this and we are redirected here back to our front page.
+
+17
+00:01:07,050 --> 00:01:14,130
+Now that shouldn't happen, we fix this in the authentication section that we should be redirected to
+
+18
+00:01:14,130 --> 00:01:14,970
+checkout
+
+19
+00:01:15,000 --> 00:01:22,800
+and we were there for a fraction of a second but somehow it decided to redirect us back to the front
+
+20
+00:01:22,800 --> 00:01:23,600
+page.
+
+21
+00:01:23,640 --> 00:01:30,000
+So here we did correctly adjust set auth redirect but still it decided that a good place for us would
+
+22
+00:01:30,000 --> 00:01:31,290
+be the front page,
+
+23
+00:01:31,290 --> 00:01:33,730
+so it is something else I want to fix. Now
+
+24
+00:01:33,750 --> 00:01:41,100
+the reason for this problem with this wrong redirection is that we do redirect in the auth container here
+
+25
+00:01:41,150 --> 00:01:46,410
+this code, there we set or we use our redirect path to redirect the user.
+
+26
+00:01:46,410 --> 00:01:53,130
+The problem is this happens in the auth container and in our app container, in our root app component
+
+27
+00:01:53,160 --> 00:01:59,670
+where we render different routes for different authentication statuses, there where we are authenticated,
+
+28
+00:01:59,970 --> 00:02:02,400
+we don't render the auth component anymore.
+
+29
+00:02:02,400 --> 00:02:07,860
+Hence the code in the auth component which would redirect us correctly to the checkout page will never
+
+30
+00:02:07,860 --> 00:02:08,920
+be used.
+
+31
+00:02:09,330 --> 00:02:18,780
+So to fix this, we can reintroduce the auth route into our set of routes in the authentication state,
+
+32
+00:02:18,780 --> 00:02:24,990
+now of course the disadvantage is that now authenticated users can visit the auth page, on the other hand, they
+
+33
+00:02:24,990 --> 00:02:26,790
+can't do any harm there.
+
+34
+00:02:26,910 --> 00:02:31,440
+You might of course also be able to find other solutions to redirect anywhere else
+
+35
+00:02:31,440 --> 00:02:37,110
+but this is a quick and easy and safe solution to get back to the original behavior.
+
+36
+00:02:37,110 --> 00:02:44,100
+Now another issue we face is if I build a burger and I am logged in here, in that burger builder here,
+
+37
+00:02:44,460 --> 00:02:50,080
+you will see that on certain screen sizes, the burger is positioned incorrectly it's not centered.
+
+38
+00:02:50,110 --> 00:02:55,230
+The reason for this is that the burger has a width which is adjusted to the viewport but it's always
+
+39
+00:02:55,230 --> 00:02:59,830
+inside a div which takes 100% of the width of its wrapping element
+
+40
+00:03:00,000 --> 00:03:01,570
+and that would be this div
+
+41
+00:03:01,770 --> 00:03:07,920
+which also dictates a a certain width, 80% in this case, the checkoutSummary.
+
+42
+00:03:07,920 --> 00:03:16,410
+So the checkoutSummary here is dictating a certain width for our burger and that is influencing how
+
+43
+00:03:16,410 --> 00:03:18,990
+our well burger is displayed here.
+
+44
+00:03:19,230 --> 00:03:26,430
+To fix that, we can go to our components, to the checkoutSummary we can find it under order, checkout
+
+45
+00:03:26,430 --> 00:03:33,520
+summary and there where we set the width to 500px for wider displays.
+
+46
+00:03:33,840 --> 00:03:35,770
+In the end I don't want to do that,
+
+47
+00:03:35,820 --> 00:03:42,990
+I want to stick to the 80% I have by default and now with that, if we go back to the application
+
+48
+00:03:43,200 --> 00:03:46,700
+and we build a new burger I am logged in here already,
+
+49
+00:03:46,820 --> 00:03:53,510
+this burger should now be nicely centered on all device screens, so this is looking much better now,
+
+50
+00:03:53,530 --> 00:03:58,590
+so now the burger is looking good all the time, no matter where we we're viewing it.
+
+51
+00:03:58,620 --> 00:04:04,770
+Now there's one other visual glitch I want to get rid of and that is on small devices,
+
+52
+00:04:04,770 --> 00:04:11,850
+if we open our side nav and I click on a link, it navigates there correctly without errors but
+
+53
+00:04:11,850 --> 00:04:12,690
+it doesn't close
+
+54
+00:04:12,690 --> 00:04:15,150
+the side nav, I have to manually do that.
+
+55
+00:04:15,160 --> 00:04:19,420
+Of course it should close the side nav whenever we click a link here.
+
+56
+00:04:19,770 --> 00:04:26,520
+Now to fix this we have to go into our sideDrawer where we in the end have our sideDrawer here and
+
+57
+00:04:26,520 --> 00:04:28,500
+there we have the navigation items
+
+58
+00:04:28,890 --> 00:04:35,370
+and now we want to ensure that whenever we click a navigation item, we essentially close that drawer.
+
+59
+00:04:35,610 --> 00:04:43,820
+So we essentially want to emit or execute this closed method, the method we get on the closed prop in
+
+60
+00:04:43,840 --> 00:04:46,960
+this sideDrawer component.
+
+61
+00:04:47,040 --> 00:04:54,180
+Now to do that, we could for example simply listen to a click anywhere on the sideDrawer, now that of course
+
+62
+00:04:54,180 --> 00:05:00,510
+would mean that not only clicking on links would close it. We could also go into the navigation items
+
+63
+00:05:00,690 --> 00:05:07,050
+and try to register onClick listener there too, I'll go with the general closing strategy here.
+
+64
+00:05:07,170 --> 00:05:15,990
+So on a click on the sideDrawer in general, let's try to then reach out to props.closed which should
+
+65
+00:05:16,170 --> 00:05:21,320
+be handled in the parent component of this component and close this side menu.
+
+66
+00:05:21,450 --> 00:05:26,910
+With that change in place, let's open the sideDrawer, if I click anywhere on it, it closes but that should
+
+67
+00:05:26,910 --> 00:05:28,270
+be all right, if I click on
+
+68
+00:05:28,420 --> 00:05:31,000
+orders, it therefore also closes.
+
+69
+00:05:31,260 --> 00:05:37,320
+So now we got a sideDrawer which does work as we would expect it to work closing when we do navigate
+
+70
+00:05:37,320 --> 00:05:38,130
+around.
+
+71
+00:05:38,220 --> 00:05:43,920
+These were a couple of visual glitches we had and fixes to them so that now our application looks and behaves
+
+72
+00:05:43,980 --> 00:05:46,340
+nicer and more as we would expect it.
+

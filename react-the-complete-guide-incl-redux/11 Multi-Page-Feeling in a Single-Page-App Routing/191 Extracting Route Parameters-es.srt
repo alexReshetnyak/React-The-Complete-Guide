@@ -1,0 +1,152 @@
+1
+00:00:02,050 --> 00:00:09,660
+En la ltima conferencia agregamos el cdigo para pasar los parmetros de la ruta y menciono que simplemente hace esto
+
+2
+00:00:09,660 --> 00:00:16,860
+al envolver su elemento en un carril, ya que lo hacemos all, no lo usamos para convertirlo en una
+
+3
+00:00:17,160 --> 00:00:23,680
+ruta absoluta y pasamos ID de correo que podemos recibirlo porque establecemos un camino flexible aqu.
+
+4
+00:00:23,790 --> 00:00:27,560
+Sin embargo, ahora necesitamos recuperar ese parmetro tambin.
+
+5
+00:00:27,600 --> 00:00:30,030
+Entonces en el componente de publicacin completo all.
+
+6
+00:00:30,120 --> 00:00:33,220
+Ahora la ID de este accesorio ya no funciona.
+
+7
+00:00:33,810 --> 00:00:34,800
+Imprimo eso.
+
+8
+00:00:34,800 --> 00:00:36,080
+Apoyos a la consola.
+
+9
+00:00:36,090 --> 00:00:38,710
+Antes, si inspeccionado.
+
+10
+00:00:38,830 --> 00:00:40,430
+Esto es cuatro componentes diferentes.
+
+11
+00:00:40,440 --> 00:00:43,310
+Pero el objeto siempre tiene la misma estructura.
+
+12
+00:00:43,380 --> 00:00:45,140
+Ves eso debajo del partido.
+
+13
+00:00:45,270 --> 00:00:47,870
+En realidad existe como los padres se oponen.
+
+14
+00:00:48,270 --> 00:00:59,580
+Y si imprimimos la consola, bloquearemos estos accesorios en nuestro componente de publicacin completa all y tambin importante que active el componente que se
+
+15
+00:00:59,580 --> 00:01:05,420
+actualiza en el componente que se monta porque ahora no estamos actualizando esto.
+
+16
+00:01:05,580 --> 00:01:08,850
+Se est agregando o eliminando desde y hacia el amanecer.
+
+17
+00:01:08,850 --> 00:01:18,260
+Entonces, esto necesita ser un componente en Mount si hacemos eso, luego vemos el objeto en nuestro componente post y estn
+
+18
+00:01:18,620 --> 00:01:23,250
+bajo una coincidencia. Vemos que los padres tenemos el padre ideal.
+
+19
+00:01:23,540 --> 00:01:30,950
+Y se llama I. RE. porque ese es el nombre que configuramos como el nombre
+
+20
+00:01:30,950 --> 00:01:34,590
+de este elemento flexible en esta definicin de ruta en el componente de bloque.
+
+21
+00:01:35,120 --> 00:01:37,880
+Ahora, por supuesto, eso nos permite extraer esto.
+
+22
+00:01:37,940 --> 00:01:45,530
+As que aqu no solo podemos registrarlo sino que tambin podemos acceder a este fsforo que coincide con el ID de inicio de los
+
+23
+00:01:45,530 --> 00:01:52,750
+padres y sabemos que estar all porque este componente solo se carga a travs de esta ruta que define esta idea de Paran.
+
+24
+00:01:53,060 --> 00:02:01,060
+el error que obtenemos es que, de alguna manera, seguimos teniendo acceso a la ID incorrecta, la ID de la publicacin incorrecta que estamos enviando.
+
+25
+00:02:01,060 --> 00:02:06,080
+Entonces, si guardamos esto, vemos que obtenemos un error aqu, por lo que algo es mejor,
+
+26
+00:02:06,220 --> 00:02:12,610
+Bueno, la razn para eso simplemente es agregar en la publicacin completa que estamos llegando a la solicitud de HTP, pero todava tenemos acceso
+
+27
+00:02:12,610 --> 00:02:14,840
+a la ID de la unidad de disco.
+
+28
+00:02:14,840 --> 00:02:21,970
+Por supuesto, tambin tiene que ser la identificacin de los padres de este accesorio y con los datos si guardamos todo y volvemos
+
+29
+00:02:21,970 --> 00:02:28,480
+a cargar la aplicacin ahora que carga con xito el nmero de publicacin o si lo cambiamos por la publicacin nmero
+
+30
+00:02:28,480 --> 00:02:29,070
+cuatro.
+
+31
+00:02:29,110 --> 00:02:32,130
+Y, por supuesto, tambin si hacemos clic aqu.
+
+32
+00:02:32,530 --> 00:02:39,850
+la que tenemos un elemento dinmico porque estamos pasando parmetros de ruta y extrayndolos con xito.
+
+33
+00:02:39,850 --> 00:02:42,770
+Entonces ahora tenemos una aplicacin en
+
+34
+00:02:42,790 --> 00:02:46,840
+Ahora todava hay un par de cosas que no funcionan exactamente para decir que queremos trabajar.
+
+35
+00:02:46,870 --> 00:02:53,440
+Por ejemplo, si hace clic en una publicacin nueva, estamos cargando el formulario de nuevas publicaciones, pero tambin cargamos
+
+36
+00:02:53,440 --> 00:02:54,580
+esa publicacin nica.
+
+37
+00:02:54,580 --> 00:02:57,560
+Ahora sabes por qu sucede esto.
+
+38
+00:02:57,730 --> 00:03:01,360
+Echemos un vistazo ms de cerca a este problema y cmo solucionarlo en la prxima conferencia.
+

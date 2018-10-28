@@ -1,0 +1,320 @@
+1
+00:00:02,200 --> 00:00:04,450
+Klasr yapmz hazrladk.
+
+2
+00:00:04,480 --> 00:00:10,240
+imdi bu eylem yaratclar yaratalm ve ben burger Boulder'den balayacam, nk teorik olarak
+
+3
+00:00:10,450 --> 00:00:11,950
+sahip olduumuz ilevsellik bu.
+
+4
+00:00:12,070 --> 00:00:14,860
+Ve uygulamanm tekrar krmak istiyorum.
+
+5
+00:00:15,200 --> 00:00:19,750
+Yani ncelikle eylem trlerini ie aktarmam gerekiyor.
+
+6
+00:00:19,750 --> 00:00:26,860
+Yani burger kasesinde veya eylemler klasrne derseniz, l javascript dosyalarna atf yaplan eylem trlerini
+
+7
+00:00:26,950 --> 00:00:33,960
+reaksiyon trlerinizdeki javascript dosyalarna atfta bulunarak gezinirsiniz ve ardndan ierdikleri maddeyi ekledii bir sabiti
+
+8
+00:00:34,060 --> 00:00:35,280
+da aktarn.
+
+9
+00:00:35,440 --> 00:00:41,450
+Eylem yaratclarm tanmlayclar gibi adlandrmam izleyen kalptan sonra.
+
+10
+00:00:41,560 --> 00:00:45,770
+Ancak hepsi alt izgi ile deil, Kemel davasnda.
+
+11
+00:00:46,220 --> 00:00:48,640
+Yani bir bileen, eylem yaratcsdr.
+
+12
+00:00:48,640 --> 00:00:51,730
+imdilik bir maddenin eklendiini tahmin ettiniz.
+
+13
+00:00:51,940 --> 00:00:58,210
+Ve aslnda burger reticisi konteynrnda byle bir eylemi
+
+14
+00:00:58,210 --> 00:01:06,370
+gnderdiimiz yeri incelersek, bileen altndaki ieri doru ilerlersek malzemenin adn bir
+
+15
+00:01:06,370 --> 00:01:09,320
+yk olarak bize bildiririz.
+
+16
+00:01:09,340 --> 00:01:12,320
+Yani mlkiyet ad verilen bu ilave madde var.
+
+17
+00:01:12,430 --> 00:01:17,650
+Ve bunu eylem yaratcmda veya eylem yaratcsnda yaratlan eylemde
+
+18
+00:01:17,650 --> 00:01:23,790
+saklamak istiyorum, bylece redktrdeki tm yerlerde varolan kodun krlmamas iin sylemeliyim.
+
+19
+00:01:24,040 --> 00:01:29,650
+Dolaysyla, bu madde adn ayarlamamz gerekir ve bu nedenle madde adn, bu nedenle
+
+20
+00:01:29,770 --> 00:01:32,190
+Yaratc'ya bir girdi olarak almay umabiliriz.
+
+21
+00:01:32,200 --> 00:01:37,990
+Yani bir bileen aslnda Ingredion'un adn alan bir ok ilevi
+
+22
+00:01:37,990 --> 00:01:47,230
+olup, hangi Ingredion'un ekleneceini ve nereden alacam bir javascript nesnesi dndreceim, aldm bir ad atadm
+
+23
+00:01:47,650 --> 00:01:49,470
+bileen name maldr.
+
+24
+00:01:49,570 --> 00:01:55,780
+eylemi yarattnzda veya ikinci bir eylem oluturmak iin oaltmadm iin zorunlu tip mlkiyiz var.
+
+25
+00:01:55,840 --> 00:02:01,210
+Ve elbette, eylem trlerime ulatmzda ve bir madde setiimizde ve yalnzca bu
+
+26
+00:02:01,210 --> 00:02:04,000
+Bu bir madde kaldrmak denir.
+
+27
+00:02:04,120 --> 00:02:09,880
+Ve Bergere Boulder'a tekrar bakarsak, bir eyi kaldrmak istediimiz
+
+28
+00:02:09,880 --> 00:02:18,520
+tm bileenleri de ieriyorduk; bylece burada da bu ismi kabul etmemiz ve temelde Redan'
+
+29
+00:02:18,610 --> 00:02:26,080
+eklemek iin ayn eylemi yaynlayabilmemiz veya gndermemiz gerekebilir. tkancy atmak iin tancy
+
+30
+00:02:26,080 --> 00:02:31,360
+bir tre evirin ve burger Bolar aksiyonu sonlandrld.
+
+31
+00:02:31,360 --> 00:02:35,620
+imdi D.'yi kullanabiliriz. S. uygulayclarmzn, uygulamanzn krlmamas iin.
+
+32
+00:02:35,620 --> 00:02:41,680
+de dikkat etmeliyiz ve orada, eylem trlerimizin alnd ithalat rotamz gncellemeliyiz.
+
+33
+00:02:41,680 --> 00:02:43,150
+Ayrca, redktrlerin dmesine
+
+34
+00:02:43,150 --> 00:02:44,970
+Artk eik izgi ilemleri deil.
+
+35
+00:02:45,100 --> 00:02:50,800
+Bunun yerine eylemler klasrne bir klasr kadar gitmek ve daha sonra
+
+36
+00:02:51,100 --> 00:02:57,360
+her zaman olduu gibi reticinin hazrlad dosya uzantsn atlayarak eylem trlerini semek zorundayz.
+
+37
+00:02:57,640 --> 00:03:03,640
+Akas, indiriciyi bir alt klasre tadmz iin okuduumuz kullancya iaret
+
+38
+00:03:03,700 --> 00:03:06,200
+ettiimizde maazamz gncellememiz gerekiyor.
+
+39
+00:03:06,430 --> 00:03:12,120
+Dolaysyla sonbahar gibi endekste artk reticiyi maaza klasrnden ie aktarmyoruz.
+
+40
+00:03:12,280 --> 00:03:17,490
+Bunun yerine redktr klasrne gitmeli ve Berger Boler' semeliyiz.
+
+41
+00:03:17,590 --> 00:03:19,480
+Yaknda hepsi Alred kullanclarn bir araya getiriyor.
+
+42
+00:03:19,540 --> 00:03:25,520
+Ama u anda sadece bir burger Bouclier var, bu yzden bu burger kurucu redktrn setim.
+
+43
+00:03:25,540 --> 00:03:31,000
+Ve imdilik tek redksiyon bu, bu yzden onu seip maazay yaratmak iin geeceim.
+
+44
+00:03:31,030 --> 00:03:40,120
+Son olarak, benim burger Boulder konteynerimi burada gncelleyeceim, burada devletimi harekete geirdiim yerlere
+
+45
+00:03:40,300 --> 00:03:41,140
+ynlendiriyorum.
+
+46
+00:03:41,200 --> 00:03:43,560
+Onlar artk dorudan gndermiyorum.
+
+47
+00:03:43,600 --> 00:03:49,750
+Bunun yerine, eylem yaratclarm kullanmak istiyorum, bu yzden kendim olduum ya da eylem trlerimin stne
+
+48
+00:03:49,750 --> 00:03:52,080
+kadar gidiyorum ve artk bunu yapmayacam.
+
+49
+00:03:52,100 --> 00:03:57,790
+Bunun yerine hareketlerimi veya belki hamburger cesur hareketlerimi ie aktaracam.
+
+50
+00:03:57,880 --> 00:04:02,600
+Adyla ilgili sper hassas olmak istersek tabii ki adnz size kalm demektir.
+
+51
+00:04:02,720 --> 00:04:09,730
+imdi tekrar maaza klasrne gidin ve orada iki eylem ve ie aktarabileceim bir merkezi dosyaya
+
+52
+00:04:09,730 --> 00:04:10,890
+sahip olmak istemiyorum.
+
+53
+00:04:11,050 --> 00:04:11,980
+Bu yzden adn vereceim.
+
+54
+00:04:12,070 --> 00:04:13,180
+Index Dot.
+
+55
+00:04:13,230 --> 00:04:15,130
+Evet gerekten eylemler klasr.
+
+56
+00:04:15,460 --> 00:04:18,400
+Ve onlar da son modlde gsterildii gibi.
+
+57
+00:04:18,400 --> 00:04:25,720
+Exploit'lerimi gruplamak istiyorum, bu yzden noktal eik izgi Bergere Boulder'den her eyi kartacam.
+
+58
+00:04:25,720 --> 00:04:31,920
+Daha sonra sipari js dosyasndan ve Bergere Buller'den vermek istediim elbette.
+
+59
+00:04:31,960 --> 00:04:37,180
+eri ekleyin ve agzll kaldrn ve byle tedavi etmeyi kolaylatrmak iin sadece
+
+60
+00:04:37,330 --> 00:04:39,820
+birden fazla satra gre yaplandracam.
+
+61
+00:04:39,820 --> 00:04:45,400
+imdi asl olarak asistan dm, burger reticisi konteynerine geri dnebilir ve
+
+62
+00:04:45,400 --> 00:04:48,880
+ie aktarmm eylemler endeksine ynlendirmek iin ayarlayabilirim.
+
+63
+00:04:48,880 --> 00:04:53,500
+Aslnda burada i ak ayarlandndan endeksi bile atlayabilirsiniz.
+
+64
+00:04:53,500 --> 00:04:55,990
+Dizini otomatik olarak aadaki gibi seecektir.
+
+65
+00:04:56,020 --> 00:05:01,460
+Bir klasre iaret ederseniz ancak hepsi ok net ve eklenebilir Ama yine burada dizin atlanabilir.
+
+66
+00:05:02,250 --> 00:05:08,480
+Bununla Berger Boulder'daki Berger cesur eylem nesnesini bir konteyner dosyasnda buldum ve
+
+67
+00:05:08,480 --> 00:05:16,250
+bunu dosyann alt ksmnda ADD katk maddesi eylemini gndermek iin buraya gnderdiim dosyann altnda kullanabilirsiniz.
+
+68
+00:05:16,370 --> 00:05:17,190
+Ve nemli.
+
+69
+00:05:17,300 --> 00:05:21,780
+eriklerimizi burada aradmz ileve geirmeliyiz.
+
+70
+00:05:22,190 --> 00:05:26,030
+Ve elbette burada bir eylem yapmak istiyorum.
+
+71
+00:05:26,210 --> 00:05:31,240
+Yani Berger cesur hareketler malzemeyi karr ve burada bileen ismini iletir.
+
+72
+00:05:31,250 --> 00:05:37,010
+S Debbie ile gndermek istediim iki eylem bu dosyay kaydedebilir.
+
+73
+00:05:37,040 --> 00:05:40,990
+Ve tm dosyalar kaydedildiyse uygulama saatleri tekrar alacaktr.
+
+74
+00:05:41,300 --> 00:05:44,440
+Bunu aslnda alan bir uygulamaya kontrol edebiliriz.
+
+75
+00:05:44,720 --> 00:05:47,850
+Burger's' tekrar eklersek.
+
+76
+00:05:47,960 --> 00:05:53,280
+Yeiller, beni balar ve yerlerinden karr, eskisi gibi ie yaradn grmeliyiz.
+
+77
+00:05:53,390 --> 00:06:00,920
+Ancak elbette, eylem yaratclarmzn yardmyla, hareket ettirdiimiz ilk adm olan tabii ki eylem
+
+78
+00:06:00,920 --> 00:06:02,210
+yaratclar kurduk.
+
+79
+00:06:02,240 --> 00:06:06,970
+Elbette asenkron Kodo'yu altrmak iin bunu yaptk, bir sonraki adm da olacakt.
+
+80
+00:06:07,100 --> 00:06:13,730
+Rydex iin tm sipari verme srecini nihai olarak idare edebilmemiz iin sipariler iin ection yaratclar ekleme.
+

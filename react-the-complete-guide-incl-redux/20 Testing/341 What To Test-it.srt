@@ -1,0 +1,168 @@
+1
+00:00:02,060 --> 00:00:06,620
+Quindi ora che sappiamo quali strumenti utilizziamo e perch i test in
+
+2
+00:00:06,620 --> 00:00:13,010
+generale sono una buona idea, dobbiamo ovviamente scoprire cosa dovremmo testare e l, la risposta  semplice.
+
+3
+00:00:13,040 --> 00:00:19,760
+In realt scrivere buoni test  piuttosto complesso e richiede molta pratica, che  anche uno dei motivi per cui
+
+4
+00:00:19,760 --> 00:00:22,520
+non si tratta di una guida completa ai
+
+5
+00:00:22,580 --> 00:00:23,700
+test, per niente.
+
+6
+00:00:24,050 --> 00:00:27,450
+Quindi, in generale, qui ci sono alcune cose che non
+
+7
+00:00:27,470 --> 00:00:29,220
+vorresti testare, non vuoi testare
+
+8
+00:00:29,240 --> 00:00:33,340
+la libreria, non testare la reazione o gli assiemi o ridurti,
+
+9
+00:00:33,590 --> 00:00:38,270
+queste sono librerie di terze parti che sono gi state testate dal sviluppatori.
+
+10
+00:00:38,270 --> 00:00:40,400
+Non  necessario testare se funzionano correttamente,
+
+11
+00:00:40,460 --> 00:00:44,610
+non  necessario testare se il negozio, il redux store funziona correttamente, si
+
+12
+00:00:44,720 --> 00:00:45,940
+vuole testare il codice
+
+13
+00:00:45,980 --> 00:00:51,520
+che si aggiunge all'applicazione e l si vuole testare il codice che non usa quella libreria.
+
+14
+00:00:51,530 --> 00:00:57,830
+Ad esempio, se stai inviando una richiesta di posta su un assioma, non  necessario testare se viene inviata con successo, se fallisce probabilmente
+
+15
+00:00:58,040 --> 00:01:04,100
+non hai una connessione internet, non  la libreria di axios. In genere, si desidera falsificare i dati che si
+
+16
+00:01:04,100 --> 00:01:10,700
+ottengono dal mio server in un tale caso d'uso e basta testare ci che si sta facendo con tali
+
+17
+00:01:10,700 --> 00:01:11,300
+dati restituiti,
+
+18
+00:01:11,420 --> 00:01:14,360
+cos questa  l'idea alla base del test.
+
+19
+00:01:14,360 --> 00:01:19,580
+Inoltre, non si desidera testare connessioni troppo complesse, soprattutto in caso di reazione, c' il rischio
+
+20
+00:01:19,580 --> 00:01:24,770
+di testare che si fa clic su un pulsante in un componente e si cambia
+
+21
+00:01:24,770 --> 00:01:26,770
+qualcosa in un componente completamente diverso.
+
+22
+00:01:26,780 --> 00:01:33,050
+Ora non  necessario testare se la reazione  in grado di utilizzare il concetto di oggetti di scena per emettere un
+
+23
+00:01:33,050 --> 00:01:33,660
+evento e
+
+24
+00:01:33,920 --> 00:01:39,080
+trasmetterlo, si sarebbe interessati a testare se il clic del pulsante nella propria reazione attiva un puntello specifico
+
+25
+00:01:39,080 --> 00:01:40,160
+in primo luogo o
+
+26
+00:01:40,310 --> 00:01:46,790
+se la modifica dei dati ricevuti tramite oggetti di scena in un componente porta a un risultato diverso da sottoporre a rendering,
+
+27
+00:01:46,850 --> 00:01:48,570
+ovvero ci che si desidera testare.
+
+28
+00:01:48,590 --> 00:01:55,320
+Ci sono alcune guide di prova che vanno cos lontano per dire per reagire componenti,  solo necessario verificare
+
+29
+00:01:55,320 --> 00:01:58,310
+se un componente di reazione stessa  reso correttamente.
+
+30
+00:01:58,310 --> 00:02:04,250
+Ora ti mostrer come testare cose diverse con componenti reattivi, ma sicuramente tieni a
+
+31
+00:02:04,250 --> 00:02:06,830
+mente, non testare connessioni troppo complesse.
+
+32
+00:02:06,890 --> 00:02:08,980
+Quindi queste sono le cose
+
+33
+00:02:09,110 --> 00:02:14,210
+che non vuoi testare, cosa testerai allora? Esempi tipici sono unit isolate, si desidera
+
+34
+00:02:14,210 --> 00:02:17,160
+testare la funzione di riduttore che  stata
+
+35
+00:02:17,270 --> 00:02:20,660
+creata, si desidera testare la funzione del componente che 
+
+36
+00:02:20,660 --> 00:02:23,860
+stata creata, si desidera anche testare l'output condizionale se
+
+37
+00:02:23,960 --> 00:02:31,160
+il componente ha una propriet che porta a qualcosa che viene sottoposto a rendering se quella propriet  vera ,
+
+38
+00:02:31,160 --> 00:02:33,430
+quindi vuoi testare se questo accade davvero.
+
+39
+00:02:33,590 --> 00:02:36,790
+Cosa succede se alcune propriet cambiano nel tuo componente?
+
+40
+00:02:36,890 --> 00:02:39,150
+Ci influenza l'output correttamente?
+
+41
+00:02:39,350 --> 00:02:42,980
+Queste sono le cose che vuoi testare nei tuoi test unitari.
+
+42
+00:02:42,980 --> 00:02:48,330
+Ora, con le conoscenze acquisite, impariamo come scriviamo i test unitari in un'app reattiva.
+

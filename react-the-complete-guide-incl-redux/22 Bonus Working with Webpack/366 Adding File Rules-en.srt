@@ -1,0 +1,172 @@
+1
+00:00:02,130 --> 00:00:05,260
+In the last lecture we set up the basic webpack config,
+
+2
+00:00:05,350 --> 00:00:07,320
+it's far from being finished though.
+
+3
+00:00:07,540 --> 00:00:14,370
+One important thing we have to add upfront is to make sure that webpack automatically appends .js
+
+4
+00:00:14,440 --> 00:00:20,170
+at the end of these imports here so that it is able to import that correctly.
+
+5
+00:00:20,230 --> 00:00:27,490
+Now to get it to behave like this, we have to configure it in a certain way, in our webpack config
+
+6
+00:00:27,910 --> 00:00:34,270
+on the same level as entry output and so on, we add the resolve configuration. That takes a javascript
+
+7
+00:00:34,270 --> 00:00:41,230
+object and there we can resolve some extensions, so we can basically tell webpack that it should be
+
+8
+00:00:41,230 --> 00:00:42,990
+aware of certain extensions
+
+9
+00:00:43,090 --> 00:00:49,270
+and if it encounters an import without an extension, it should try these extensions and see if it finds
+
+10
+00:00:49,270 --> 00:00:50,970
+a file of one of these.
+
+11
+00:00:50,980 --> 00:00:53,090
+So that's an array of possible extensions
+
+12
+00:00:53,230 --> 00:01:01,210
+and I want to support .js and .jsx here so that it will see if it finds a file with that extension
+
+13
+00:01:01,210 --> 00:01:05,020
+if no extension is defined, that's one important thing.
+
+14
+00:01:05,020 --> 00:01:13,870
+Now the next and most important thing are our loaders though where I want to make sure that we do correctly
+
+15
+00:01:13,960 --> 00:01:16,330
+handle different file types,
+
+16
+00:01:16,420 --> 00:01:22,540
+this is done with a special configuration on the same level as output and resolve which is named module
+
+17
+00:01:22,930 --> 00:01:27,260
+because I import a dependency is referred to as a module,
+
+18
+00:01:27,370 --> 00:01:30,520
+so you could kind of translate module with file.
+
+19
+00:01:30,640 --> 00:01:38,290
+So here we set up what webpack should do with the individual files and we control this with a rules array.
+
+20
+00:01:38,290 --> 00:01:46,720
+Now each rule is a javascript object and each rule now needs to first of all test, which means test if
+
+21
+00:01:46,780 --> 00:01:52,150
+a given file, a file webpack identified fulfills a certain criteria,
+
+22
+00:01:52,330 --> 00:01:59,920
+this criteria is the file name and is checked with a regular expression, the regular expression commonly
+
+23
+00:01:59,920 --> 00:02:04,470
+checks the file extension. So we could say anything ending with .js
+
+24
+00:02:04,510 --> 00:02:07,230
+and I have to escape the dot here
+
+25
+00:02:07,250 --> 00:02:11,610
+since we're in a regular expression and otherwise it would refer to any character.
+
+26
+00:02:11,770 --> 00:02:13,310
+If we're in a .js
+
+27
+00:02:13,370 --> 00:02:14,300
+file,
+
+28
+00:02:14,320 --> 00:02:21,060
+so if it ends with .js, then I'll want to apply a certain loader,
+
+29
+00:02:21,220 --> 00:02:25,870
+now a loader is like a third party plugin which does something to the file.
+
+30
+00:02:25,900 --> 00:02:27,510
+Now for js files,
+
+31
+00:02:27,520 --> 00:02:30,990
+I also want to add an additional configuration which is exclude
+
+32
+00:02:31,210 --> 00:02:34,090
+which allows me to exclude certain patterns.
+
+33
+00:02:34,090 --> 00:02:35,900
+Also a regular expression,
+
+34
+00:02:36,040 --> 00:02:43,570
+I only want to check for node modules in the file path, so it shouldn't try to transform anything in
+
+35
+00:02:43,570 --> 00:02:47,230
+node modules since these are third party libraries
+
+36
+00:02:47,230 --> 00:02:48,740
+we already do import,
+
+37
+00:02:48,880 --> 00:02:50,730
+we don't want to transform them again,
+
+38
+00:02:50,830 --> 00:02:53,590
+they are already optimized,
+
+39
+00:02:53,590 --> 00:02:56,470
+it should only touch our own files.
+
+40
+00:02:56,500 --> 00:02:59,240
+Now what about this loader though?
+
+41
+00:02:59,770 --> 00:03:04,650
+Well for javascript, we will use the babel loader,
+
+42
+00:03:04,960 --> 00:03:11,990
+babel is the defacto standard for transpiling next generation javascript to current gen javascript,
+
+43
+00:03:12,190 --> 00:03:16,090
+so let's install and configure babel in the next lecture.
+

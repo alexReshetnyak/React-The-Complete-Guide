@@ -1,0 +1,116 @@
+1
+00:00:02,140 --> 00:00:06,600
+So I want to leave the realm of Route parameters and so on soon.
+
+2
+00:00:06,610 --> 00:00:13,360
+One more thing I want to do though, we have that home link which is not marked as active when being
+
+3
+00:00:13,420 --> 00:00:17,150
+on a single post and it kind of makes sense by the label of it.
+
+4
+00:00:17,440 --> 00:00:22,910
+But what if this was named posts which would make sense because we have a lot of posts there
+
+5
+00:00:22,930 --> 00:00:26,720
+so let's maybe rename that link to be posts.
+
+6
+00:00:27,190 --> 00:00:34,410
+If we do this, now it will be strange that it's not highlighted when we are on a single post,
+
+7
+00:00:34,450 --> 00:00:43,420
+we certainly would want this. Now the reason for this of course is exact, since exact is set, this only is
+
+8
+00:00:43,420 --> 00:00:48,570
+treated as active if we well have exactly this
+
+9
+00:00:48,580 --> 00:00:55,040
+URL is just slash and not slash three which we have of course for the post with ID.
+
+10
+00:00:55,060 --> 00:01:01,150
+The problem is that if we remove exact what we saw that before, now it will be marked as active for
+
+11
+00:01:01,150 --> 00:01:04,810
+a single post but also for a new post.
+
+12
+00:01:04,900 --> 00:01:11,340
+So this is kind of tricky and it's only really tricky for this exact case that we're talking about,
+
+13
+00:01:11,340 --> 00:01:13,010
+the root URL.
+
+14
+00:01:13,120 --> 00:01:19,600
+If we had /posts then it will be a different story and we could absolutely use this prefix because
+
+15
+00:01:19,600 --> 00:01:23,760
+we probably have no conflicts with our routes in the application.
+
+16
+00:01:23,770 --> 00:01:30,850
+It's really just that root URL, this root path of just slash which happens to be part of any page
+
+17
+00:01:30,880 --> 00:01:32,060
+in our app.
+
+18
+00:01:32,200 --> 00:01:37,610
+So this is just an edge case here, a special case and I'm going to add exact again
+
+19
+00:01:37,650 --> 00:01:40,720
+therefore not getting highlighting for a single post.
+
+20
+00:01:40,720 --> 00:01:46,120
+And again it is fine for me because this is an edge case which you will rarely face.
+
+21
+00:01:46,120 --> 00:01:53,950
+Most of the time your posts are going to be at slash posts and I'm just not changing it here to deliberately
+
+22
+00:01:54,070 --> 00:01:57,200
+leave this edge case here for reference.
+
+23
+00:01:57,220 --> 00:01:59,450
+I just wanted to bring this to your awareness,
+
+24
+00:01:59,470 --> 00:02:03,130
+you can face issues when using the root path,
+
+25
+00:02:03,190 --> 00:02:08,190
+Just slash and you want to style some child components but not all of them,
+
+26
+00:02:08,290 --> 00:02:11,550
+so some paths which follow it but not all paths,
+
+27
+00:02:11,560 --> 00:02:13,210
+this is really tricky to do,
+
+28
+00:02:13,210 --> 00:02:14,580
+not really possible.
+
+29
+00:02:14,680 --> 00:02:20,510
+You typically use more specific routes like /posts though so this shouldn't be an issue.
+

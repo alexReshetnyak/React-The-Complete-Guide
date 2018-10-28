@@ -1,0 +1,64 @@
+1
+00:00:02,140 --> 00:00:07,790
+Abbiamo una bella applicazione che abbiamo aggiunto molte funzionalit durante le ultime lezioni.
+
+2
+00:00:08,030 --> 00:00:15,320
+Ovviamente, vogliamo davvero avere una buona applicazione non solo per il suo aspetto ma anche per
+
+3
+00:00:15,320 --> 00:00:16,480
+come la strutturiamo.
+
+4
+00:00:16,490 --> 00:00:20,460
+Lavoriamo con esso ora dalla costruzione di questa applicazione.
+
+5
+00:00:20,480 --> 00:00:26,900
+Ti ho gi mostrato un sacco di best practice per la costruzione che ho condiviso il mio processo di pensiero
+
+6
+00:00:26,900 --> 00:00:32,230
+su come strutturare e pianificare l'applicazione e ti ho dato alcune alternative in alcuni punti del
+
+7
+00:00:32,390 --> 00:00:34,540
+tempo su come dividere qualcosa in componenti.
+
+8
+00:00:34,580 --> 00:00:38,410
+Qui abbiamo in realt una struttura di componenti relativamente granulare.
+
+9
+00:00:38,510 --> 00:00:41,970
+Potresti certamente combinare alcuni dei componenti che stiamo usando.
+
+10
+00:00:42,410 --> 00:00:45,640
+Ma puoi anche migliorare alcune cose.
+
+11
+00:00:45,950 --> 00:00:52,960
+Diamo un'occhiata a due cose importanti che abbiamo imparato sui tipi di Propp e sui componenti puri.
+
+12
+00:00:53,000 --> 00:00:54,750
+Quindi un breve aggiornamento dei componenti.
+
+13
+00:00:54,920 --> 00:01:00,420
+E diamo anche uno sguardo a tutti questi metodi del ciclo di vita che impari in generale.
+
+14
+00:01:00,620 --> 00:01:01,840
+Li usiamo l dentro.
+
+15
+00:01:01,850 --> 00:01:06,450
+Perch non li usiamo in qualsiasi momento proprio dove li utilizzeremmo.
+
+16
+00:01:06,680 --> 00:01:09,400
+Rispondiamo a queste domande durante le prossime lezioni.
+

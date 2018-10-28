@@ -1,0 +1,268 @@
+1
+00:00:02,030 --> 00:00:08,340
+In the last lecture I walked you through the project we'll use and through axios, the package I recommend for
+
+2
+00:00:08,460 --> 00:00:11,970
+making HTTP requests in react applications,
+
+3
+00:00:12,000 --> 00:00:14,510
+let's now make such an HTTP request.
+
+4
+00:00:14,730 --> 00:00:20,960
+And for that dummy backend we're using, I already showed you the URL you need to send the request to
+
+5
+00:00:21,130 --> 00:00:23,700
+to get an array of posts.
+
+6
+00:00:23,700 --> 00:00:27,990
+Now I want to render that array of posts in my blog container.
+
+7
+00:00:28,180 --> 00:00:30,930
+There I have the individual post components
+
+8
+00:00:30,930 --> 00:00:37,410
+and of course that should be dynamically generated list of posts, a list of posts we fetched from a server
+
+9
+00:00:37,410 --> 00:00:39,230
+to be precise.
+
+10
+00:00:39,240 --> 00:00:47,820
+Now where do we make this HTTP request then? Let's have a look at the lifecycle slides again for that,
+
+11
+00:00:47,850 --> 00:00:51,180
+maybe we find a fitting lifecycle hook there.
+
+12
+00:00:51,240 --> 00:00:56,250
+If we have a look at the lifecycle hooks we encountered during component creation,
+
+13
+00:00:56,250 --> 00:00:59,660
+there is one life cycle hook we should use for side effects,
+
+14
+00:00:59,700 --> 00:01:04,520
+componentDidMount and the HTTP request is a side effect,
+
+15
+00:01:04,590 --> 00:01:11,520
+it doesn't affect your react logic or something like that but it has the side effect of fetching new
+
+16
+00:01:11,530 --> 00:01:18,230
+data and if your react application is dynamically outputting some data which it probably is, the data
+
+17
+00:01:18,270 --> 00:01:22,670
+changing of course is a side effect affecting your application.
+
+18
+00:01:23,010 --> 00:01:29,560
+So componentDidMount is a great place for causing side effects but not for updating state since it triggers
+
+19
+00:01:29,560 --> 00:01:30,770
+a re-render.
+
+20
+00:01:31,020 --> 00:01:37,560
+We will still update the state here once the HTTP request has gone and got us new data because we actually
+
+21
+00:01:37,560 --> 00:01:39,480
+want to re-update the page,
+
+22
+00:01:39,480 --> 00:01:46,640
+so here this is actually a wanted behavior. So componentDidMount is the best place to send a HTTP request,
+
+23
+00:01:46,740 --> 00:01:53,790
+so in the blog container, let's implement componentDidMount and now we need axios to sent that request.
+
+24
+00:01:53,880 --> 00:01:57,460
+So I will import axios from the axios package
+
+25
+00:01:57,680 --> 00:02:05,640
+and now we can use it here in componentDidMount, axios offers a GET method for sending you guessed it,
+
+26
+00:02:05,820 --> 00:02:07,900
+GET requests.
+
+27
+00:02:07,920 --> 00:02:10,540
+This method needs at least one argument,
+
+28
+00:02:10,580 --> 00:02:14,120
+the URL you want to send this GET request to,
+
+29
+00:02:14,170 --> 00:02:20,870
+so here that is the URL I copied from the dummy placeholder page with /posts at the end.
+
+30
+00:02:20,880 --> 00:02:26,700
+Now you can also pass a second argument to configure this request and you can learn more about all the
+
+31
+00:02:26,700 --> 00:02:28,520
+configuration options and so on
+
+32
+00:02:28,590 --> 00:02:33,000
+on that Github page. This course is of course not mainly about axios
+
+33
+00:02:33,060 --> 00:02:39,170
+so I won't walk you through all this set up you can possibly add here but this page is a great starting point.
+
+34
+00:02:39,180 --> 00:02:43,880
+Still we're about to see some of the things you can do with axios throughout this module.
+
+35
+00:02:44,220 --> 00:02:47,130
+Here however, I don't need any specific configuration,
+
+36
+00:02:47,130 --> 00:02:51,310
+I just want to send vanilla normal GET request to that URL.
+
+37
+00:02:51,750 --> 00:02:59,430
+The thing of course is this should return some posts but trying to store them in a post constant won't
+
+38
+00:02:59,430 --> 00:03:05,110
+work because of course that get request happens asynchronously,
+
+39
+00:03:05,310 --> 00:03:07,050
+it doesn't finish immediately,
+
+40
+00:03:07,080 --> 00:03:10,710
+it needs some time to go to the server and get the data.
+
+41
+00:03:11,220 --> 00:03:15,510
+Javascript though executes your code in a synchronous manner,
+
+42
+00:03:15,570 --> 00:03:22,440
+so after this line, the next line is executed immediately, it won't pause until this is finished, so it
+
+43
+00:03:22,440 --> 00:03:25,550
+won't store the posts and the posts constant here.
+
+44
+00:03:25,830 --> 00:03:33,210
+This is the wanted behavior because we don't want to block the execution of our application just because
+
+45
+00:03:33,210 --> 00:03:35,400
+we're waiting for this request to finish.
+
+46
+00:03:35,790 --> 00:03:36,820
+Axios
+
+47
+00:03:36,810 --> 00:03:42,600
+therefore uses promises, a default javascript object introduced with ES6
+
+48
+00:03:42,690 --> 00:03:46,330
+and thanks to our workflow we're using with create react app
+
+49
+00:03:46,590 --> 00:03:52,950
+also available in older browsers since the code gets compiled to code which also works in older browsers.
+
+50
+00:03:53,610 --> 00:04:01,620
+So axios uses promises and GET returns a promise, so we can chain then on it, then is simply a method
+
+51
+00:04:01,620 --> 00:04:08,640
+which takes a function as the input and this function will get executed once the promise resolves.
+
+52
+00:04:08,700 --> 00:04:16,170
+So once the data from the backend is there, we can say. The function then receives a response object
+
+53
+00:04:16,200 --> 00:04:17,340
+as an input,
+
+54
+00:04:17,340 --> 00:04:23,850
+this will be passed into the function automatically by axios and let's for now simply print that to the
+
+55
+00:04:23,850 --> 00:04:27,560
+console so that we can see what's inside of it.
+
+56
+00:04:27,570 --> 00:04:34,320
+I'll save this code, go back to the react application and reload the page and we immediately see this
+
+57
+00:04:34,320 --> 00:04:36,820
+object being printed to the console.
+
+58
+00:04:36,900 --> 00:04:43,860
+If we expand it, we see the status code here and all these properties here are just properties provided
+
+59
+00:04:43,860 --> 00:04:45,480
+by the axios package.
+
+60
+00:04:45,480 --> 00:04:48,820
+So we got the status code 200, so it was successful,
+
+61
+00:04:48,840 --> 00:04:53,900
+we see the request which was sent, we see the response headers and important for us,
+
+62
+00:04:53,940 --> 00:04:58,240
+we have the data object which contains the data returned from the server
+
+63
+00:04:58,260 --> 00:05:05,780
+we sent the request to. And for this dummy placeholder service, this simply is an array of javascript
+
+64
+00:05:05,810 --> 00:05:09,560
+objects where each object should represent a post.
+
+65
+00:05:09,830 --> 00:05:15,540
+As we can see, there we got a title, a body an id and an user id property.
+
+66
+00:05:15,560 --> 00:05:21,380
+Now we can work with that data and of course I want to work with it to render it dynamically to the screen
+
+67
+00:05:21,380 --> 00:05:27,020
+here and output some posts instead of that dummy content I have right now.
+

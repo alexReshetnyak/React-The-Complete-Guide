@@ -1,0 +1,52 @@
+1
+00:00:02,060 --> 00:00:08,960
+Bu derste baka bir nemli modle ho geldiniz, tepki uygulamalarn test edin. imdi burada test yapmakla, uygulamay uygulamamzn
+
+2
+00:00:08,990 --> 00:00:12,580
+etrafnda manuel olarak tklamak anlamna gelmiyor,
+
+3
+00:00:12,710 --> 00:00:17,090
+bunu gelitirirken srekli yapyoruz. Buradaki testlerle, otomatik testler yazmak
+
+4
+00:00:17,090 --> 00:00:22,280
+demek istiyorum ve imdi burada bu modln banda bahsetmek istediim nemli
+
+5
+00:00:22,280 --> 00:00:29,630
+bir konu var, test karmak bir konu ve aslnda tmyle kendi bana bir ders oluturmak iin
+
+6
+00:00:29,630 --> 00:00:32,170
+yeterince byk bir konu. .
+
+7
+00:00:32,180 --> 00:00:39,440
+Bu genel girite bir test deildir ve ayn zamanda tam bir tepki testi guidelike
+
+8
+00:00:39,440 --> 00:00:40,610
+modl deildir.
+
+9
+00:00:40,630 --> 00:00:48,860
+Bunun yerine, tepki oluturma uygulamas ile oluturulmu tepki uygulamalar iin yazm birimi testlerini size tantacam ve
+
+10
+00:00:48,860 --> 00:00:55,190
+bu, zerinde oluturduunuz veya daha nce sahip olduunuz veya dier kaynaklar topladnz genel
+
+11
+00:00:55,190 --> 00:00:59,600
+javascript testi bilginizi uygulamanza yardmc olabilecek bir ey olabilir.
+
+12
+00:00:59,690 --> 00:01:06,080
+Bu yoldan knca, bir sonraki derste testin tam olarak neye benzediine bakalm
+
+13
+00:01:06,080 --> 00:01:10,940
+ve daha sonra reaksiyon uygulamamz iin nasl testler yazabileceimizi renelim.
+

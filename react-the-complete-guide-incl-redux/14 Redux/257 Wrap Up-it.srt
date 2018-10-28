@@ -1,0 +1,64 @@
+1
+00:00:02,140 --> 00:00:06,220
+Quindi su questo modulo imparerai molto sulle basi del redux.
+
+2
+00:00:06,220 --> 00:00:11,160
+Ci sono anche cose che non abbiamo ancora visto con il codice asincrono.
+
+3
+00:00:11,320 --> 00:00:17,650
+Trovo importante prima di tutto approfondire le basi e ora iniziare a utilizzare le conoscenze
+
+4
+00:00:17,650 --> 00:00:22,200
+di base acquisite nel progetto del corso nel Bergere Boulder.
+
+5
+00:00:22,260 --> 00:00:29,050
+Impari come Rydex funziona in generale che lavori con riduttori e azioni che colleghi i contenitori di
+
+6
+00:00:29,050 --> 00:00:36,970
+re-act per leggere X in quel negozio che hai creato in quel singolo negozio che hai questo in cui
+
+7
+00:00:36,970 --> 00:00:42,740
+puoi dividere i riduttori in riduttori multipli con riduttori combinati come ti ho mostrato
+
+8
+00:00:42,910 --> 00:00:49,100
+E che dovresti sempre manipolare i tuoi dati immutabilmente non mutare mai direttamente il negozio.
+
+9
+00:00:49,300 --> 00:00:54,710
+Vedete anche che lavoriamo ancora con i container e i componenti di presentazione.
+
+10
+00:00:54,760 --> 00:01:02,260
+Qui abbiamo due contenitori che sono collegati per leggere X dove possiamo dichiarare come oggetti di scena o le
+
+11
+00:01:02,290 --> 00:01:09,640
+azioni di invio come oggetti di scena e che quindi possiamo ancora distribuire i nostri dati su altri componenti.
+
+12
+00:01:09,640 --> 00:01:16,600
+Quindi questo schema non  cambiato, ma ovviamente non possiamo creare tutti i contenitori di cui abbiamo bisogno
+
+13
+00:01:17,140 --> 00:01:23,130
+e l'applicazione per collegarli al nostro stato e ottenere le fette rilevanti dallo stato in
+
+14
+00:01:23,260 --> 00:01:30,810
+ciascuno dei nostri contenitori oggi distribuiti su tutti i componenti di presentazione questo container sa dessous redux nel suo nucleo.
+
+15
+00:01:30,980 --> 00:01:34,880
+Spero che le basi su di esso e come lo si utilizza con re-act sono chiare.
+
+16
+00:01:35,120 --> 00:01:39,880
+Passiamo alla prossima lezione usando redox nella nostra applicazione Bergere Boulder.
+

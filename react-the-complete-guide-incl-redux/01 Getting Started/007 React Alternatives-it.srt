@@ -1,0 +1,60 @@
+1
+00:00:02,010 --> 00:00:04,020
+Non  non solo reagire.
+
+2
+00:00:04,030 --> 00:00:08,330
+Ci sono anche alternative al re-act, naturalmente,  ci che copriremo in questo corso.
+
+3
+00:00:08,380 --> 00:00:14,350
+Ma c' anche Engler e si vedrebbe il caos e ci sono avarizia come spina dorsale o
+
+4
+00:00:14,380 --> 00:00:17,730
+ambra ma angolare e vista sono le alternative pi popolari.
+
+5
+00:00:17,950 --> 00:00:22,330
+E posso solo consigliare di immergerti in DS per scegliere davvero il tuo preferito.
+
+6
+00:00:22,330 --> 00:00:25,250
+Ho anche corsi su di loro se sei interessato.
+
+7
+00:00:25,600 --> 00:00:32,500
+Tutti e tre sono perfetti nella creazione di applicazioni web altamente scalabili che
+
+8
+00:00:32,500 --> 00:00:34,090
+siano gradevoli all'utilizzatore.
+
+9
+00:00:34,090 --> 00:00:41,050
+Non tanto un'alternativa come Jake dove si potrebbe pensare che sia uno, ma Shakeri  in realt solo di attraversare
+
+10
+00:00:41,350 --> 00:00:44,820
+il dormitorio e gli elementi di targeting in un dormitorio.
+
+11
+00:00:44,830 --> 00:00:51,490
+Ora come hai visto nel nostro esempio re-act  solo dichiarare ci che vedi e concentrarti
+
+12
+00:00:51,790 --> 00:00:59,050
+sulla logica invece concentrarti sul come e quindi reagire angolare e vista ti permettono di creare applicazioni
+
+13
+00:00:59,050 --> 00:01:05,860
+pi potenti perch puoi concentrarti sulla logica e il tuo modello di business e non tanto
+
+14
+00:01:05,860 --> 00:01:08,450
+sul lato tecnico dell'effettivo raggiungimento dell'elemento morto.
+
+15
+00:01:08,500 --> 00:01:09,670
+Volevi cambiare.
+

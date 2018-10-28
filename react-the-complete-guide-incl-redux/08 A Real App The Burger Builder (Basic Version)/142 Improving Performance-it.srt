@@ -1,0 +1,368 @@
+1
+00:00:02,200 --> 00:00:04,810
+Quindi questi erano i miei due centesimi sui tipi di Prop.
+
+2
+00:00:04,870 --> 00:00:09,560
+Che dire dei componenti puri e dovrebbe aggiornare i componenti.
+
+3
+00:00:09,580 --> 00:00:12,400
+Non stiamo usando i dati nell'applicazione.
+
+4
+00:00:12,460 --> 00:00:15,130
+Ora analizziamo l'applicazione.
+
+5
+00:00:15,130 --> 00:00:23,410
+Abbiamo qualche modifica dello stato o dell'elica che innesca un re-aggiornamento anche se questo potrebbe non essere necessario
+
+6
+00:00:24,370 --> 00:00:27,340
+se diamo un'occhiata all'applicazione in esecuzione.
+
+7
+00:00:27,340 --> 00:00:36,880
+La maggior parte dei clic e delle cose che realmente cambiano l'interfaccia utente e quindi dovrebbero innescare gli aggiornamenti
+
+8
+00:00:37,210 --> 00:00:40,840
+dovrebbero innescare una rilettura di questi componenti.
+
+9
+00:00:40,900 --> 00:00:43,360
+Quindi non dovremmo davvero perdere le prestazioni l.
+
+10
+00:00:43,540 --> 00:00:49,030
+E l'utilizzo di molti componenti puri non  necessario nel caso in cui i controlli di
+
+11
+00:00:49,030 --> 00:00:54,460
+aggiornamento dei componenti potrebbero addirittura colpire le prestazioni pi che eseguire un rendering non necessario occasionale.
+
+12
+00:00:54,940 --> 00:01:00,420
+Punti cruciali dovremmo controllare il nostro naturalmente il nostro contenitore per hamburger Bolar.
+
+13
+00:01:00,610 --> 00:01:07,060
+L abbiamo cambiato lo stato, ma ogni volta che facciamo un cambiamento per affermare ci influisce davvero sulla nostra
+
+14
+00:01:07,060 --> 00:01:09,490
+applicazione e abbiamo bisogno di ricordare cose.
+
+15
+00:01:09,610 --> 00:01:17,020
+Posso identificare qui un elemento anche se potremmo essere in grado di salvare alcune prestazioni
+
+16
+00:01:17,020 --> 00:01:18,310
+non rendendole inutilmente.
+
+17
+00:01:18,550 --> 00:01:20,860
+E questa  la componente modale.
+
+18
+00:01:20,980 --> 00:01:28,660
+Riordina il sommario degli ordini e questo ovviamente significa che ogni volta che gli ingredienti o il prezzo cambia
+
+19
+00:01:29,110 --> 00:01:34,390
+poich questi sono puntelli del riepilogo dell'ordine, il riepilogo dell'ordine verr reso nuovamente.
+
+20
+00:01:34,570 --> 00:01:39,060
+Tuttavia, se il motore non  vincibile, non  necessario farlo.
+
+21
+00:01:39,310 --> 00:01:46,860
+Quindi, in realt, solo se il modem  mostrato, il rendering di quell'elemento avvolto qui ha senso.
+
+22
+00:01:46,870 --> 00:01:51,200
+Quindi  qualcosa che potremmo voler controllare e controllare.
+
+23
+00:01:51,370 --> 00:01:58,480
+Quindi, prima di tutto, scopriamo quando il riepilogo ordinato viene nuovamente visualizzato aggiungendo semplicemente un hook del ciclo di vita
+
+24
+00:01:58,480 --> 00:01:59,060
+ad esso.
+
+25
+00:01:59,140 --> 00:02:00,960
+Quindi vai al riepilogo dell'ordine.
+
+26
+00:02:01,150 --> 00:02:05,070
+E attualmente questo  ovviamente un componente funzionale.
+
+27
+00:02:05,380 --> 00:02:11,350
+Trasformiamolo in un componente di classe in modo che possiamo aggiungere gli hook del ciclo di vita in modo che possiamo vedere
+
+28
+00:02:11,350 --> 00:02:12,310
+quando questo viene aggiornato.
+
+29
+00:02:12,550 --> 00:02:21,660
+Estendiamo quindi l'oggetto componente che dobbiamo ora importare da re-act e l quando abbiamo appreso che
+
+30
+00:02:21,810 --> 00:02:29,450
+dobbiamo avere un metodo di rendering in cui dobbiamo restituire il nostro codice GSX.
+
+31
+00:02:29,460 --> 00:02:33,170
+Quindi in pratica questo codice qui.
+
+32
+00:02:33,300 --> 00:02:38,180
+Ora abbiamo anche alcuni aggiustamenti di Urey che calcoliamo.
+
+33
+00:02:38,240 --> 00:02:41,210
+Quindi facciamolo prima di tornare a J come codice X.
+
+34
+00:02:41,220 --> 00:02:47,280
+Ma all'interno del metodo di rendering e ora possiamo sbarazzarci di quelle cose laggi e abbiamo bisogno di regolare
+
+35
+00:02:47,410 --> 00:02:55,880
+il nome esportato e gli oggetti di scena ora sono sempre questi oggetti di scena, come si apprende, questo  il caso in componenti basati su classi.
+
+36
+00:02:56,900 --> 00:03:04,510
+Quindi, con quello che manca qui, abbiamo anche oggetti di scena, cos dovrebbe essere anche l'anno dell'elica.
+
+37
+00:03:04,550 --> 00:03:08,050
+Ora se quella sicurezza dovesse funzionare di nuovo dovrebbe funzionare bene.
+
+38
+00:03:08,510 --> 00:03:16,270
+Non implementiamo Meffert per vedere quando questo effettivamente aggiorno aggiunger che il componente verr aggiornato qui.
+
+39
+00:03:16,760 --> 00:03:24,960
+E voglio semplicemente consolare il riepilogo dell'ordine di Larke che verr aggiornato.
+
+40
+00:03:25,040 --> 00:03:27,560
+Ora vediamo gli aggiornamenti di Windows.
+
+41
+00:03:27,560 --> 00:03:32,530
+Se ricarichiamo l'applicazione e aggiungiamo un ingrediente, il riepilogo dell'ordine verr aggiornato.
+
+42
+00:03:32,540 --> 00:03:38,910
+Anche se non lo stiamo mostrando, non ha necessariamente senso essere morto.
+
+43
+00:03:39,050 --> 00:03:46,770
+Ora vediamo se questo cambia se ci assicuriamo che il motore non si aggiorni inutilmente.
+
+44
+00:03:46,920 --> 00:03:53,450
+E per questo passiamo al file modal jazz e questo  tutto il termine modale in una classe
+
+45
+00:03:53,450 --> 00:03:56,210
+in modo che possiamo implementare l'aggiornamento dei componenti.
+
+46
+00:03:56,210 --> 00:04:00,110
+Quindi modale quindi estender anche la componente.
+
+47
+00:04:00,460 --> 00:04:10,820
+Importiamo quindi il componente da re-act ed esportiamo il modal rinominato e, naturalmente, ora assicuriamoci di implementare un body di classe con un
+
+48
+00:04:10,820 --> 00:04:17,940
+metodo di rendering in cui ora restituiamo il nostro codice X per le jail come questo.
+
+49
+00:04:18,970 --> 00:04:22,780
+Qui e sbarazzati di quelle cose laggi che non abbiamo pi bisogno.
+
+50
+00:04:22,840 --> 00:04:31,860
+E come sempre assicurati che gli oggetti di scena diventino questi oggetti di scena in modo che il modalista lavori di nuovo.
+
+51
+00:04:31,860 --> 00:04:42,000
+E vediamo ora se possiamo controllare l'aggiornamento del sommario degli ordini che  avvolto dal modello cambiando il modo in cui
+
+52
+00:04:42,000 --> 00:04:44,510
+il modem stesso si aggiorna.
+
+53
+00:04:44,550 --> 00:04:53,750
+Quindi aggiungiamo semplicemente l'aggiornamento dei componenti della camicia alla demo e otterremo i prossimi oggetti di scena e il teatro della
+
+54
+00:04:53,780 --> 00:04:55,670
+prossima fase come argomenti.
+
+55
+00:04:55,670 --> 00:05:03,140
+Quindi ora voglio controllare o ora potrei volere assicurarmi che questo si aggiorni solo se lo show cambia perch questa 
+
+56
+00:05:03,140 --> 00:05:05,420
+l'unica cosa che conta per me qui.
+
+57
+00:05:05,750 --> 00:05:18,050
+Quindi se i prossimi oggetti di scena mostrano se pap  uguale a questo prop's mostra fino allo stato precedente, allora voglio tornare
+
+58
+00:05:18,050 --> 00:05:25,390
+vero o ovviamente possiamo semplicemente accorciarlo e semplicemente restituire il risultato di questo controllo.
+
+59
+00:05:25,430 --> 00:05:27,260
+Questo  quello che voglio fare qui.
+
+60
+00:05:28,330 --> 00:05:34,390
+Passiamo ora a tutto il componente dell'elemento che verr aggiornato qui per confermare se funziona.
+
+61
+00:05:34,390 --> 00:05:43,230
+Quindi user semplicemente la modalit di blocco della console. Aggiorneremo e salveremo come componente ora.
+
+62
+00:05:43,320 --> 00:05:50,560
+Ora vediamo se ora ricarico la pagina e comincio ad aggiungere elementi che vediamo il riepilogo degli ordini non sta
+
+63
+00:05:50,560 --> 00:05:51,710
+chiamando Aggiorneremo pi.
+
+64
+00:05:51,820 --> 00:05:53,130
+Per ordine di clic ora.
+
+65
+00:05:53,130 --> 00:05:57,160
+Ora mobile aggiorner  chiamato un riepilogo dell'ordine che aggiorneremo  chiamato.
+
+66
+00:05:57,400 --> 00:06:04,420
+Quindi qui abbiamo sicuramente migliorato la nostra applicazione perch ci assicuriamo di non aggiornare inutilmente il sommario
+
+67
+00:06:04,450 --> 00:06:07,650
+degli ordini che non ri-letto inutilmente sono morti.
+
+68
+00:06:07,930 --> 00:06:15,090
+E vedi anche che l'elemento wrapping controlla l'aggiornamento dall'elemento avvolto.
+
+69
+00:06:15,190 --> 00:06:22,540
+Quindi il sommario degli ordini in teoria al componente  incluso nel builder di Bergere, ma non viene
+
+70
+00:06:22,780 --> 00:06:26,230
+aggiornato perch l'elemento wrapping modal ha un componente sicuro.
+
+71
+00:06:26,230 --> 00:06:29,360
+Aggiorna Meffert dove controlliamo questo.
+
+72
+00:06:29,630 --> 00:06:37,090
+codice qui  abbastanza pulito nel modello e ci che non facciamo non reagisce ai cambiamenti nel listener cliccato.
+
+73
+00:06:37,180 --> 00:06:38,190
+Ora il nostro
+
+74
+00:06:38,260 --> 00:06:42,760
+Quindi, se la propriet dei vestiti del modello cambierebbe, non stiamo controllando.
+
+75
+00:06:43,000 --> 00:06:46,600
+Quindi restituiamo true solo se Show  cambiato.
+
+76
+00:06:46,600 --> 00:06:51,200
+ ok qui in questa applicazione perch in realt non riassegniamo mai questo listener cliccato.
+
+77
+00:06:51,310 --> 00:06:59,470
+Se dovessimo farlo o se dovessimo modificare lo stato del cambiamento nel modello, dovremmo anche verificare le modifiche nei nostri oggetti di scena
+
+78
+00:06:59,470 --> 00:07:06,520
+e nelle propriet dello stato medio o semplicemente estendere il componente puro qui Non sto usando un componente puro perch
+
+79
+00:07:06,540 --> 00:07:10,740
+il componente puro potrebbe eseguire pi controlla di quanto io voglia fare.
+
+80
+00:07:10,810 --> 00:07:14,410
+La componente pura controllerebbe anche la presenza del motore vicino per essere cambiato.
+
+81
+00:07:14,680 --> 00:07:16,040
+E non mi interessa.
+
+82
+00:07:16,060 --> 00:07:21,270
+Quindi i miei sforzi dovrebbero essere ancora pi diretti e ancor pi mirati.
+
+83
+00:07:21,330 --> 00:07:29,550
+Ora con ci possiamo naturalmente anche riportare il nostro riepilogo degli ordini in un componente funzionale per non produrre pi componenti
+
+84
+00:07:29,580 --> 00:07:30,480
+di output.
+
+85
+00:07:30,480 --> 00:07:35,620
+Aggiorner qui ma lo lascer qui per scopi di debug per riferimento.
+
+86
+00:07:35,700 --> 00:07:42,380
+Ma commenter che questa potrebbe essere una componente funzionale.
+
+87
+00:07:44,840 --> 00:07:48,660
+Non deve essere necessario essere una classe.
+
+88
+00:07:48,710 --> 00:07:54,430
+ richiesto, sicuramente l'aggiornamento del componente non  richiesto qui perch non  necessario controllarlo.
+
+89
+00:07:54,590 --> 00:07:56,750
+E ovviamente l'aggiornamento componibile non
+
+90
+00:07:56,800 --> 00:08:02,790
+Questo deve sempre essere aggiornato se viene mostrato il modello e il modello  dove lo facciamo, controlla
+
+91
+00:08:02,810 --> 00:08:04,610
+ovunque debba essere aggiornato o meno.
+
+92
+00:08:04,790 --> 00:08:08,210
+Quindi questo  un miglioramento che possiamo aggiungere a questa applicazione.
+

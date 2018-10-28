@@ -1,0 +1,164 @@
+1
+00:00:02,160 --> 00:00:04,340
+Ento aprendemos sobre o descanso e a propagao.
+
+2
+00:00:04,350 --> 00:00:11,110
+Existe uma caracterstica de prxima gerao que eu definitivamente quero cobrir e isso  chamado de desestruturao.
+
+3
+00:00:11,250 --> 00:00:18,070
+A desestruturao permite extrair facilmente elementos da matriz ou propriedades do objeto e armazen-las em variveis.
+
+4
+00:00:18,180 --> 00:00:23,460
+Quando voc primeiro ouve sobre isso, pode soar como a coisa exata que o operador de propagao faz, mas na
+
+5
+00:00:23,460 --> 00:00:24,840
+verdade,  uma coisa diferente.
+
+6
+00:00:24,890 --> 00:00:32,300
+A Spratt tira todos os elementos de todas as propriedades e as distribui em uma nova matriz ou objeto ou
+
+7
+00:00:32,300 --> 00:00:33,630
+onde voc est usando.
+
+8
+00:00:33,810 --> 00:00:41,820
+extrair elementos ou propriedades nicos e armazen-los em variveis para arrays e objetos.
+
+9
+00:00:42,270 --> 00:00:43,820
+A desestruturao permite
+
+10
+00:00:43,950 --> 00:00:46,130
+Agora, para arrays, parece assim.
+
+11
+00:00:46,140 --> 00:00:48,050
+Se tivermos uma matriz com dois elementos.
+
+12
+00:00:48,130 --> 00:00:54,900
+Ol e mximo, ento podemos usar essa sintaxe de aparncia estranha no lado esquerdo do
+
+13
+00:00:54,900 --> 00:01:03,480
+sinal de igual que parece que estamos tratando e eramos, mas no devemos atribuir as variveis a e b para
+
+14
+00:01:03,480 --> 00:01:12,630
+um hello e Max, respectivamente, e para a desestruturao tica  o mesma sintaxe com cintas curvas e onde a desestruturao
+
+15
+00:01:12,640 --> 00:01:17,090
+da ordem define qual propriedade ns levamos  desestruturao Optik.
+
+16
+00:01:17,130 --> 00:01:24,180
+propriedade de nome do objeto no lado direito e puxa o valor que  por que a idade de logon renderia indefinida.
+
+17
+00:01:24,180 --> 00:01:30,150
+ um nome de propriedade com o nome de brays curly. O Bray Curly no lado esquerdo almeja a
+
+18
+00:01:30,180 --> 00:01:33,120
+No estamos tirando isso da ptica aqui.
+
+19
+00:01:33,120 --> 00:01:34,730
+Da mesma forma, essa estruturao.
+
+20
+00:01:34,830 --> 00:01:42,280
+Vamos tambm dar uma olhada na prtica decente de volta em Jay Espen Vamos comear com nossa matriz de
+
+21
+00:01:42,580 --> 00:01:46,430
+nmeros novamente, que tem os nmeros 1 2 e 3.
+
+22
+00:01:46,630 --> 00:01:49,450
+E agora digamos que queremos obter os nmeros 1 e 2.
+
+23
+00:01:49,840 --> 00:01:55,750
+Ento, podemos usar essa sintaxe de matriz no lado esquerdo do sinal de igualdade e escolher qualquer
+
+24
+00:01:55,810 --> 00:02:02,980
+nome de varivel de nossa escolha como nmero um e nmero dois e atribumos isso igual ao nmero  aere.
+
+25
+00:02:03,380 --> 00:02:12,200
+Se eu agora, o Konsole  o nmero um eo nmero dois e eu executo isso, voc v 1 e 2 estarem bloqueados porque estou
+
+26
+00:02:12,200 --> 00:02:14,890
+puxando esses dois para fora da matriz.
+
+27
+00:02:14,900 --> 00:02:18,050
+Eu no estou sem esclarecimentos se eu quiser me libertar.
+
+28
+00:02:18,060 --> 00:02:21,130
+A propsito, agora eu estou livre aqui.
+
+29
+00:02:21,170 --> 00:02:27,740
+Voc no precisa renome-lo e voc deixar o nico espao com um espao vazio aqui na
+
+30
+00:02:28,340 --> 00:02:30,140
+sua declarao no lado esquerdo.
+
+31
+00:02:30,140 --> 00:02:33,630
+Agora, se voc tivesse executado, pegue um e grtis.
+
+32
+00:02:33,650 --> 00:02:35,710
+Isso  uma desestruturao.
+
+33
+00:02:35,750 --> 00:02:42,910
+Agora, a desestruturao de objetos tambm  ordenada pelo nosso projeto, pois o usaremos neste curso.
+
+34
+00:02:42,920 --> 00:02:46,250
+No entanto, no  suportado por Jay Espen aqui.
+
+35
+00:02:46,250 --> 00:02:47,750
+Ento eu posso mostrar isso para voc.
+
+36
+00:02:47,780 --> 00:02:50,320
+Mas mostrou sua sintaxe no slide.
+
+37
+00:02:50,480 --> 00:02:56,600
+ apenas uma sintaxe onde voc usa para ligar as chaves  esquerda e direcionar uma propriedade com o nome
+
+38
+00:02:56,600 --> 00:02:57,170
+da propriedade.
+
+39
+00:02:57,170 --> 00:03:03,620
+sintaxe de desestruturao de Steese com demasiada frequncia, mas eu quero que voc esteja ciente da existncia deles e que
+
+40
+00:03:03,620 --> 00:03:09,800
+eles sejam bons modos de retirar certos elementos de uma matriz ou propriedades com seus valores de um objeto.
+
+41
+00:03:09,800 --> 00:03:11,840
+Neste curso, no irei usar a
+

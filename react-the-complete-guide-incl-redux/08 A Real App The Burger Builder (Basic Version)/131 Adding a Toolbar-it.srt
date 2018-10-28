@@ -1,0 +1,452 @@
+1
+00:00:02,170 --> 00:00:09,640
+Ora che la funzionalit principale di Bergere Boulder  finita per ora e, come ho detto, rivisiteremo pi avanti in
+
+2
+00:00:09,640 --> 00:00:15,790
+questo corso per inoltrare questo a un server per avere pi pagine in questa applicazione e molto
+
+3
+00:00:15,790 --> 00:00:16,580
+altro ancora.
+
+4
+00:00:16,750 --> 00:00:23,860
+Prima di passare ai DS DS, finiamo il dessert aggiungendo una barra e un lato.
+
+5
+00:00:23,890 --> 00:00:30,160
+Questo ovviamente  cruciale perch pi tardi, una volta aggiunte pi pagine,  necessario avere un modo di
+
+6
+00:00:30,160 --> 00:00:30,680
+navigare l.
+
+7
+00:00:30,880 --> 00:00:33,850
+E ogni applicazione dovrebbe probabilmente avere una barra degli strumenti.
+
+8
+00:00:33,880 --> 00:00:35,810
+Lo fa sembrare migliore.
+
+9
+00:00:35,980 --> 00:00:41,590
+Quindi chiudiamo i componenti nella cartella di Bergere nella cartella dei componenti e li carichiamo e
+
+10
+00:00:41,590 --> 00:00:44,480
+voi isoliamo un progetto di lavoro pulito qui.
+
+11
+00:00:44,650 --> 00:00:50,220
+E aggiungiamo una nuova cartella nella cartella dei componenti laggi ora.
+
+12
+00:00:50,740 --> 00:00:57,790
+Lo chiamer navigazione perch voglio memorizzare tutti i componenti relativi alla navigazione come la barra degli strumenti come
+
+13
+00:00:57,790 --> 00:01:03,700
+il cassetto laterale e la barra degli strumenti  in realt con ci che inizier.
+
+14
+00:01:03,880 --> 00:01:09,100
+Quindi in navigazione lasciami aggiungere una nuova barra degli strumenti per le cartelle.
+
+15
+00:01:09,100 --> 00:01:14,120
+Non sorprendentemente, aggiungiamo un file dot js sulla barra degli strumenti.
+
+16
+00:01:14,440 --> 00:01:23,110
+degli strumenti js mostra come appare sicuramente come dovrebbe sembrare che la barra degli strumenti sar effettivamente un componente funzionale.
+
+17
+00:01:23,110 --> 00:01:24,900
+Ora che la barra
+
+18
+00:01:24,910 --> 00:01:27,550
+Perch non ha bisogno di gestire nessuno stato l dentro.
+
+19
+00:01:28,000 --> 00:01:36,080
+Mi aspetto di ottenere alcuni oggetti di scena l e poi, come sapete, stiamo producendo un po 'di GSX per questo motivo.
+
+20
+00:01:36,160 --> 00:01:44,080
+Esportiamo anche re-act da re-act qui e esportiamo questa funzione della barra degli strumenti qui come
+
+21
+00:01:44,110 --> 00:01:45,820
+predefinita di questo file.
+
+22
+00:01:45,820 --> 00:01:50,750
+In che modo la shell della shell appariva dalla prospettiva GSX.
+
+23
+00:01:50,950 --> 00:01:58,630
+Voglio avere un elemento di intestazione wrapping perch l'intestazione ISDE della barra degli strumenti della mia applicazione web e al
+
+24
+00:01:58,630 --> 00:02:02,290
+suo interno voglio avere un paio di elementi alla fine.
+
+25
+00:02:02,380 --> 00:02:09,910
+Voglio avere un pulsante che apre il cassetto laterale e rimuoveremo questo segnaposto fittizio qui e lo
+
+26
+00:02:09,910 --> 00:02:12,900
+sostituiremo con un pulsante reale in seguito.
+
+27
+00:02:12,900 --> 00:02:14,980
+Ma per ora manteniamo questo dev qui.
+
+28
+00:02:15,250 --> 00:02:16,610
+Quindi voglio essere morto.
+
+29
+00:02:17,000 --> 00:02:28,000
+Poi voglio anche avere un div che contenga il mio logo e dovr aggiungere questo e quello dopo che avr un elemento
+
+30
+00:02:28,000 --> 00:02:32,080
+naff che contiene i miei link di navigazione.
+
+31
+00:02:32,080 --> 00:02:38,590
+sono segnaposti in questo momento sostituiranno questi elementi con i loro componenti un componente logo che noi pu riutilizzare
+
+32
+00:02:38,590 --> 00:02:44,730
+un componente del menu che potremmo usare e il componente degli elementi di navigazione che vogliamo tutti riutilizzare.
+
+33
+00:02:44,800 --> 00:02:50,620
+Quindi in pratica questo conterr una lista non ordinata con tutti i link e tutti rimossi l'onore
+
+34
+00:02:50,620 --> 00:02:55,860
+della lista per ora e lasceremo il segnaposto DOT DOT DOT qui cos tutti questi
+
+35
+00:02:55,900 --> 00:03:01,780
+Dal momento che avremo tutti un cassetto laterale per i layout mobili in modo da non avere sempre tutti gli elementi di navigazione
+
+36
+00:03:01,780 --> 00:03:02,730
+nella barra degli strumenti.
+
+37
+00:03:02,740 --> 00:03:08,110
+A volte vuoi spostarli nel cassetto laterale e quindi avere un componente riutilizzabile
+
+38
+00:03:08,110 --> 00:03:10,480
+per questi elementi ha molto senso.
+
+39
+00:03:10,720 --> 00:03:15,350
+Prima di creare qualsiasi sottocomponente, creiamo per quella barra degli strumenti di base.
+
+40
+00:03:15,520 --> 00:03:18,600
+E ovviamente questa barra degli strumenti avr anche bisogno di un po 'di stile.
+
+41
+00:03:18,810 --> 00:03:21,780
+Quindi per quello aggiunger la mia barra degli strumenti punto C  la seguente.
+
+42
+00:03:21,790 --> 00:03:23,620
+Qui ci sono due in l.
+
+43
+00:03:23,620 --> 00:03:29,680
+Creer una barra degli strumenti vedendoci come classe che possiamo importare in seguito perch stiamo usando C
+
+44
+00:03:29,680 --> 00:03:37,230
+come moduli, ovviamente, e voglio avere una barra degli strumenti che abbia un'altezza di 56 pixel e una larghezza del 100 percento.
+
+45
+00:03:37,240 --> 00:03:41,690
+Ora l'obiettivo qui  quello di sviluppare prima questa applicazione mobile.
+
+46
+00:03:41,750 --> 00:03:49,890
+Quindi prima di tutto imposta le due impostazioni qui per i dispositivi mobili e poi daremo un'occhiata.
+
+47
+00:03:49,930 --> 00:03:56,370
+Pi avanti in questo modulo sei dove dobbiamo adattarlo a tutti per avere un bell'aspetto sui dispositivi desktop.
+
+48
+00:03:56,530 --> 00:04:02,130
+in grado di sistemare in modo che sia sempre in alto anche se si scorre e si posiziona in alto .
+
+49
+00:04:02,130 --> 00:04:07,780
+Anche se per la barra degli strumenti la maggior parte delle impostazioni dovrebbe funzionare sia per desktop che per altro, ecco perch
+
+50
+00:04:07,780 --> 00:04:10,780
+ho iniziato con la barra degli strumenti in modo che ora sia
+
+51
+00:04:10,780 --> 00:04:14,740
+Certo che ho bisogno di impostare in alto 0 e lasciato 0.
+
+52
+00:04:15,020 --> 00:04:17,850
+Non ho la barra degli strumenti di un colore di sfondo.
+
+53
+00:04:18,010 --> 00:04:21,600
+E qui ho gi scelto un bel colore brunastro.
+
+54
+00:04:21,670 --> 00:04:24,480
+7 0 3 essere 0 9.
+
+55
+00:04:24,820 --> 00:04:32,680
+nella barra degli strumenti siano allineati uno accanto all'altro perch la scatola flex direzionale predefinita  gli elementi di posizionamento delle file
+
+56
+00:04:32,680 --> 00:04:39,070
+uno accanto all'altro anche se si tratta di elementi di blocco e controllare alcuni articoli su blocchi flessibili.
+
+57
+00:04:39,100 --> 00:04:44,230
+Dovrebbe sembrare davvero bello impostare il display per flettere in modo che tutti gli elementi
+
+58
+00:04:44,230 --> 00:04:51,100
+Se questo concetto  totalmente nuovo per te, la flex box deve giustificare la propriet del contenuto che definisce come
+
+59
+00:04:51,100 --> 00:04:54,140
+gli elementi che sono incapsulati dalla barra degli strumenti.
+
+60
+00:04:54,190 --> 00:04:57,670
+L'ultimo oggetto dovrebbe essere distribuito.
+
+61
+00:04:57,670 --> 00:05:04,810
+E qui voglio usare lo spazio tra di loro in modo che lo spazio della baleniera sia riempito con gli elementi all'interno di
+
+62
+00:05:04,840 --> 00:05:09,950
+questo elemento della barra degli strumenti alla fine e che mantengano automaticamente una certa distanza l'uno dall'altro.
+
+63
+00:05:10,320 --> 00:05:13,090
+Un elemento pubblicitario determina in che modo devono essere allineati.
+
+64
+00:05:13,090 --> 00:05:16,380
+Eravamo legalmente e ci sono due elementi centrali.
+
+65
+00:05:16,420 --> 00:05:18,440
+Finalmente aggiunger del padding.
+
+66
+00:05:18,620 --> 00:05:21,430
+Il riempimento qui dovrebbe essere zero dall'alto e dal basso.
+
+67
+00:05:21,520 --> 00:05:28,930
+Ma 20 pixel da sinistra e destra e poi anche il ridimensionamento della casella e impostalo sulla casella di bordo per assicurarti
+
+68
+00:05:29,080 --> 00:05:32,890
+che la barra degli strumenti sia dimensionata correttamente anche con il padding.
+
+69
+00:05:33,220 --> 00:05:38,300
+E infine ho bisogno di un indice e l'eroe sceglier 90 importanti, ovviamente.
+
+70
+00:05:38,320 --> 00:05:43,450
+Questo numero qui deve essere inferiore al numero scelto per lo sfondo.
+
+71
+00:05:43,600 --> 00:05:45,080
+E l ho scelto 100.
+
+72
+00:05:45,250 --> 00:05:48,790
+Perch lo sfondo dovrebbe andare sopra la barra degli strumenti almeno.
+
+73
+00:05:48,820 --> 00:05:54,880
+Voglio avere questo comportamento qui ora aggiunger un'altra regola e il  come segue.
+
+74
+00:05:55,100 --> 00:06:03,460
+Voglio controllare come D-Nev. l'elemento viene visualizzato quando  annidato all'interno di una barra che ovviamente
+
+75
+00:06:03,470 --> 00:06:09,980
+sar l Voglio impostare l'altezza del 100 percento in modo che nella navigazione possa poi controllare anche l'altezza
+
+76
+00:06:10,100 --> 00:06:16,520
+relativa all'altezza della barra degli strumenti e posso assicurarmi che gli elementi di navigazione spanning l'intera altezza di
+
+77
+00:06:16,520 --> 00:06:19,880
+questa barra degli strumenti con quel debito dovrebbe farlo.
+
+78
+00:06:19,880 --> 00:06:22,410
+Per ora torniamo alla barra degli strumenti.
+
+79
+00:06:22,520 --> 00:06:32,780
+Cadere ora e importiamo i nostri s. c. classi di importazione dalla barra di punti a Barresi SS e
+
+80
+00:06:32,790 --> 00:06:41,610
+poi aggiunger questo alla mia intestazione o aggiunger un nome di classe e imposteremo queste due classi e la useremo per bloccare la classe C S S.
+
+81
+00:06:41,630 --> 00:06:43,280
+Come classi, basta semplicemente aggiungere
+
+82
+00:06:43,290 --> 00:06:44,570
+Abbiamo appena creato.
+
+83
+00:06:44,840 --> 00:06:51,570
+E come sempre, tieni presente che gli indiani d'importazione importano semplicemente un paio di stringhe.
+
+84
+00:06:51,600 --> 00:06:59,210
+I C-s creati dinamicamente come nomi di classi che sono stati aggiustati con cura per essere associati a questo componente e quindi
+
+85
+00:06:59,210 --> 00:07:03,120
+stiamo assegnando il nome della classe che  stato generato qui.
+
+86
+00:07:03,260 --> 00:07:08,380
+Ora con quello dovremmo avere una barra degli strumenti di lavoro di base.
+
+87
+00:07:08,390 --> 00:07:10,430
+Ora ovviamente vogliamo usarlo.
+
+88
+00:07:10,730 --> 00:07:14,830
+E dove dovremmo aggiungere questa barra degli strumenti allora.
+
+89
+00:07:14,910 --> 00:07:19,100
+Ovviamente potresti obiettare che vuoi modificare il bowler di Briger perch  l che vogliamo avere
+
+90
+00:07:19,100 --> 00:07:20,640
+una barra degli strumenti in alto.
+
+91
+00:07:20,930 --> 00:07:24,620
+Ma alla fine vogliamo avere una barra degli strumenti nella parte superiore di qualsiasi pagina che carichiamo.
+
+92
+00:07:24,770 --> 00:07:29,470
+Quindi potremmo usare il file yes, ma il posto migliore  ovviamente il nostro layout.
+
+93
+00:07:29,510 --> 00:07:35,210
+Disneyland parla della nostra pagina e qui abbiamo gi aggiunto alcuni segnaposti per
+
+94
+00:07:35,210 --> 00:07:36,820
+la barra degli strumenti.
+
+95
+00:07:36,950 --> 00:07:45,260
+Quindi nel componente di layout importiamo il componente della barra degli strumenti appena creato da quel file della barra degli strumenti sotto la barra
+
+96
+00:07:45,350 --> 00:07:49,010
+degli strumenti di navigazione e quindi la sua barra degli strumenti.
+
+97
+00:07:49,010 --> 00:07:56,540
+J. S. come sempre senza l'estensione del file e quindi possiamo semplicemente sostituire il
+
+98
+00:07:56,600 --> 00:07:59,210
+nostro segnaposto qui con questi componenti della barra degli strumenti appena importati.
+
+99
+00:07:59,210 --> 00:08:03,660
+Possiamo utilizzare un componente a chiusura automatica e non assicurarci di salvare tutti i file.
+
+100
+00:08:03,650 --> 00:08:09,770
+Assicurati che l'avvio di NPM sia ancora in esecuzione e dovresti vedere la barra degli strumenti in questo modo ora.
+
+101
+00:08:09,830 --> 00:08:11,020
+Non  super bello.
+
+102
+00:08:11,030 --> 00:08:15,770
+Probabilmente il testo dovrebbe essere bianco ma in seguito sostituiremo tutte queste cose con alcuni
+
+103
+00:08:15,770 --> 00:08:16,260
+contenuti reali.
+
+104
+00:08:16,260 --> 00:08:25,160
+16 pixel all'altezza della barra degli strumenti di 56 pixel che abbiamo impostato cos pu farlo velocemente nel layout C  come segue.
+
+105
+00:08:25,250 --> 00:08:34,160
+Ad ogni modo una cosa che tutti possiamo notare  che la nostra pagina principale qui  sovrapposta alla barra degli strumenti in
+
+106
+00:08:34,220 --> 00:08:40,430
+modo che l'elemento principale che ha un margine superiore di 16 pixel dovrebbe probabilmente aggiungere Deese
+
+107
+00:08:40,520 --> 00:08:46,700
+Dove devo trovare questa clausola costante che imposta il margine superiore e voglio cambiarlo in 72 che
+
+108
+00:08:46,700 --> 00:08:53,870
+essenzialmente  solo 56 pixel in altezza della barra degli strumenti Pi l'altezza di 16 pixel o margine superiore.
+
+109
+00:08:53,870 --> 00:08:56,230
+In realt volevo avere da prima.
+
+110
+00:08:56,540 --> 00:08:59,090
+Ora visavis usa il debugger  bello.
+
+111
+00:08:59,090 --> 00:09:00,960
+La posizione di nuovo.
+
+112
+00:09:01,040 --> 00:09:04,160
+Quindi con questo aggiungiamo la barra degli strumenti nel prossimo passaggio.
+
+113
+00:09:04,190 --> 00:09:09,020
+Lavoriamo su quel logo in modo da ottenere un logo dall'aspetto piacevole in questa applicazione.
+

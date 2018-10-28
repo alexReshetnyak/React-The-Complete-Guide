@@ -1,0 +1,252 @@
+1
+00:00:02,170 --> 00:00:09,740
+Ento, vamos combinar nossos redutores chegamos a Berger bowler e encomendar para que qualquer ndice de aes caia em nossa aplicao.
+
+2
+00:00:09,760 --> 00:00:12,090
+Agora  hora de combinar redutores.
+
+3
+00:00:12,100 --> 00:00:18,770
+Ento, antes de tudo, vamos importar redutores combinados do pacote de leitura X, ento eu
+
+4
+00:00:18,800 --> 00:00:30,710
+quero importar meu segundo produtor para importar o meu redutor de pedidos da ordem dos redutores da barra de pontos e agora eu posso combinar ambos.
+
+5
+00:00:30,730 --> 00:00:39,020
+Ento, o que eu vou fazer  criar uma nova constante seu redutor de rotas porque eles so combinados em um
+
+6
+00:00:39,080 --> 00:00:44,900
+usurio como um chamado aprendido combinado com usurios aqui e passar um objeto javascript.
+
+7
+00:00:45,220 --> 00:00:53,260
+E l, eu posso agora passar Bergere Boulder e atribuir esse redutor Bergen Bolla e encomendar e atribuir
+
+8
+00:00:53,350 --> 00:00:54,630
+a ordem para.
+
+9
+00:00:54,690 --> 00:01:00,460
+As duas coisas que importamos nos redutores grosseiros do que o que eu passei para criar uma loja com
+
+10
+00:01:00,460 --> 00:01:05,550
+isso toda a aplicao vai quebrar porque agora temos diferentes fatias de estado burger Boulder e ordem.
+
+11
+00:01:05,860 --> 00:01:12,280
+Ento eu preciso ir para os meus contineres e atualizar o recipiente Bolar do hambrguer no fundo, onde eu alcano o
+
+12
+00:01:12,280 --> 00:01:15,070
+preo total e o erro dos ingredientes do estado.
+
+13
+00:01:15,250 --> 00:01:25,230
+Isso deve ser o estado dos ingredientes do construtor de hambrguer e o mesmo para o preo total e o erro no recipiente de sada, onde
+
+14
+00:01:25,270 --> 00:01:31,420
+eles tambm obtm os ingredientes que devem ser os ingredientes do burger Burger e o continer
+
+15
+00:01:31,420 --> 00:01:35,420
+de dados de contato onde eu direto para os ingredientes.
+
+16
+00:01:35,530 --> 00:01:40,070
+Vocs deveriam ser ingredientes agressivos de burger de estado no burger de estado Buller.
+
+17
+00:01:40,150 --> 00:01:49,030
+Preo total, mas o carregamento aqui est vindo das ordens, ento este deve ser o pedido de pedidos de estado para
+
+18
+00:01:49,630 --> 00:01:54,340
+usar ou apenas pedir desculpe-me para pedir apenas usar essa propriedade.
+
+19
+00:01:54,370 --> 00:02:01,500
+Ento, apenas indique que um carregamento que pode salvar todos esses arquivos e voltar para o aplicativo parece ser
+
+20
+00:02:01,530 --> 00:02:01,850
+bom.
+
+21
+00:02:01,850 --> 00:02:04,270
+Isso ainda funciona se continuarmos agora.
+
+22
+00:02:04,440 --> 00:02:08,900
+Vamos ver se podemos despachar com sucesso uma ao aqui.
+
+23
+00:02:08,940 --> 00:02:13,560
+Ento, digite alguns dados de demonstrao do teste.
+
+24
+00:02:13,920 --> 00:02:19,890
+Apenas algo que possamos enviar teste no teste que vem e vamos clicar em ordem.
+
+25
+00:02:19,890 --> 00:02:22,400
+Vimos a tela de carregamento.
+
+26
+00:02:22,890 --> 00:02:26,630
+Recebemos algo do servidor que est bem.
+
+27
+00:02:26,790 --> 00:02:28,080
+ assim que vejo ler x.
+
+28
+00:02:28,110 --> 00:02:30,920
+Eu vejo pelo menos uma coisa que no funcionar como esperado.
+
+29
+00:02:31,170 --> 00:02:36,450
+Comeamos o incio do pr-Chase Bergere e vimos o spinner por um segundo, de
+
+30
+00:02:36,450 --> 00:02:44,760
+modo que o sucesso e o xito do sucesso trabalhado e pr-perseguio vemos tudo que as ordens foram atualizadas e ns adicionamos este
+
+31
+00:02:44,760 --> 00:02:49,400
+novo objeto aqui onde temos nossos ingredientes e depois armazenamos alguns dados nele.
+
+32
+00:02:49,650 --> 00:02:50,980
+Ns examinamos o estado.
+
+33
+00:02:51,030 --> 00:02:52,740
+Podemos expandir nossos pedidos.
+
+34
+00:02:52,830 --> 00:02:57,460
+D uma olhada naquela ordem e vemos que esse pedido est aqui.
+
+35
+00:02:57,520 --> 00:03:05,480
+Eu acho que preciso fazer isso um pouco mais amplo para ver se ele possui uma ID que no est correta.
+
+36
+00:03:05,520 --> 00:03:09,600
+Eu deveria ter extrado o nome da propriedade, ento  uma coisa que precisamos ajustar.
+
+37
+00:03:09,840 --> 00:03:13,580
+Alm disso, tudo isso parece estar funcionando.
+
+38
+00:03:13,590 --> 00:03:15,000
+Robert  bom.
+
+39
+00:03:15,000 --> 00:03:17,460
+Claro que no somos redirecionados assim que terminarmos.
+
+40
+00:03:17,670 --> 00:03:22,440
+Ento, essa idia pensa e redireciona que h duas coisas que eu quero consertar.
+
+41
+00:03:22,470 --> 00:03:25,800
+Vamos verificar rapidamente se ele funcionou no back-end tambm.
+
+42
+00:03:25,800 --> 00:03:29,650
+Mas, obviamente, no teramos uma ideia do contrrio.
+
+43
+00:03:29,730 --> 00:03:31,400
+Ento est tudo bem.
+
+44
+00:03:31,590 --> 00:03:33,030
+Ns temos um hambrguer aqui.
+
+45
+00:03:33,390 --> 00:03:35,690
+O mtodo de entrega no foi passado, vejo.
+
+46
+00:03:35,790 --> 00:03:37,760
+Ento, isso  algo que tambm devemos corrigir.
+
+47
+00:03:37,950 --> 00:03:43,650
+Mas, alm disso, est bem, ento vamos consertar todas essas coisas e vamos ver o que mais podemos
+
+48
+00:03:43,650 --> 00:03:44,870
+fazer em nossa aplicao.
+
+49
+00:03:44,880 --> 00:03:47,250
+Vamos resolver rapidamente os problemas que encontramos.
+
+50
+00:03:47,310 --> 00:03:52,260
+Um deles est no contexto de dados aqui onde enviamos o formulrio.
+
+51
+00:03:52,260 --> 00:03:58,940
+A coisa  se nunca ajustar o valor suspenso, ento o valor est vazio.
+
+52
+00:03:59,220 --> 00:04:00,680
+E no deve ser.
+
+53
+00:04:00,750 --> 00:04:05,760
+Deve ser, digamos, o mais rpido por padro.
+
+54
+00:04:06,060 --> 00:04:09,950
+Ento eu adicionei isso  propriedade Value no mtodo de entrega.
+
+55
+00:04:09,990 --> 00:04:12,530
+Objeto em um estado dos dados de contato.
+
+56
+00:04:12,720 --> 00:04:17,600
+Esse  um ajuste importante para ter funcionou corretamente agora.
+
+57
+00:04:17,670 --> 00:04:26,130
+Quando tudo est no redutor na ordem J. S. quando temos um sucesso e recebemos ID da ordem
+
+58
+00:04:26,160 --> 00:04:33,360
+de ao, essa  a identificao errada, porque no arquivo da ordem e na pasta de aes onde passamos a ID, eu transmito
+
+59
+00:04:33,360 --> 00:04:35,390
+o estado da resposta como ID.
+
+60
+00:04:35,610 --> 00:04:41,730
+Mas, em vez disso, acabamos de ver no bloqueio que est na propriedade Nome nos dados que  o ID
+
+61
+00:04:41,730 --> 00:04:42,610
+que queremos armazenar.
+
+62
+00:04:43,170 --> 00:04:49,290
+Mas com isso temos trabalhando a nica coisa faltante  que ns redirecionamos o roteamento e isso  algo
+
+63
+00:04:49,290 --> 00:04:51,280
+que vou fazer na prxima palestra.
+

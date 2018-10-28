@@ -1,0 +1,128 @@
+1
+00:00:02,060 --> 00:00:04,790
+Son derste ynlendirme hakknda rendik.
+
+2
+00:00:04,790 --> 00:00:08,130
+imdi sana birka ynlendirme kullanma iznini vereyim.
+
+3
+00:00:08,130 --> 00:00:13,790
+Aslnda yeni post bileeninde cesaret ediyoruz muhtemelen ynlendirme yapmak istiyoruz.
+
+4
+00:00:13,800 --> 00:00:21,600
+Sizden gnder dmesine tkladktan ve bir kez HDP isteimizi yaptktan sonra sayfay deitirmek istemiyorsunuz
+
+5
+00:00:21,600 --> 00:00:26,490
+ve ynlendirme bileenini kullanarak o sayfada kalmamak istiyoruz.
+
+6
+00:00:26,490 --> 00:00:27,940
+Bunu kolayca yapabiliriz.
+
+7
+00:00:28,230 --> 00:00:36,470
+Dorudan ynlendirici ynlendirici Dom'u daha nce olduu gibi dorudan alabiliriz.
+
+8
+00:00:36,570 --> 00:00:43,320
+koyarsak, biz her zaman iki mlkle yeniden ynlendirme yapmak zorundayz, ancak bizden yararlanamayz.
+
+9
+00:00:43,320 --> 00:00:46,970
+GSX'de bir switch deyiminin dna yeniden ynlendirme
+
+10
+00:00:46,980 --> 00:00:50,240
+Dolaysyla buradaki eik yazlara ynlendirebiliriz.
+
+11
+00:00:50,250 --> 00:00:57,690
+rnein tabii bununla ilgili sorun u ki eer yeni postaya tklarsam bu gibi
+
+12
+00:00:58,290 --> 00:01:04,190
+kodlara kaydedecek olursak, ynlendirme bileeni ilendiinde derhal yazlara geri ynlendiriliriz
+
+13
+00:01:04,190 --> 00:01:06,600
+ve ie yaratldnda bize ynlendirir.
+
+14
+00:01:06,600 --> 00:01:09,480
+Dolaysyla ierie girme ansmz yok.
+
+15
+00:01:09,600 --> 00:01:12,500
+Bu nedenle bunu koullu hale getirmeliyiz.
+
+16
+00:01:12,750 --> 00:01:20,130
+tamam normal bir bileen olduundan, dier ierii koullu hale getirirken koullu hale getirmek zorundayz.
+
+17
+00:01:20,400 --> 00:01:23,400
+Ve bu yeniden ynlendirici ynlendiricinin
+
+18
+00:01:23,400 --> 00:01:25,500
+Bu yzden burada yeni bir devlet ekleyebiliriz.
+
+19
+00:01:25,580 --> 00:01:31,590
+Belki de balangta yanltr, sonra da doruya koyduk.
+
+20
+00:01:31,710 --> 00:01:40,210
+Bir keresinde HTP talebinde bulunduumuzda orada alkol devlet syledi ve doruya gnderildiini syledi.
+
+21
+00:01:40,220 --> 00:01:45,180
+imdi, ynlendirmeyi sunup sunmayacam belirlemek iin gnderimi kullanabilirim.
+
+22
+00:01:45,450 --> 00:01:51,060
+Bylece render ynteminde varsaylan olarak null olan bir ynlendirme deikeni olabilir.
+
+23
+00:01:51,440 --> 00:01:59,390
+durumun doru olup olmadn kontrol ederdim ve o zaman redirect, ynlendirme bileenine eit olur ve ardndan
+
+24
+00:01:59,390 --> 00:02:06,290
+J'yi u an olan yeniden ynlendirme deikenini ieren X olarak dndrr veya bileeni ynlendirme yaparsnz.
+
+25
+00:02:06,290 --> 00:02:07,850
+Ancak gnderilen bu
+
+26
+00:02:07,850 --> 00:02:16,640
+Veri kodunu kaydettiysek, baaryla yeni bir postaya gidebiliriz ancak bir post gnderdiinde ve
+
+27
+00:02:16,640 --> 00:02:21,840
+sunucuya basarsa, koullu yeniden ynlendirme ile ynlendiriliriz.
+
+28
+00:02:21,860 --> 00:02:26,310
+imdi hangi deyim dmzda ynlendirme kullanmann bu yoludur.
+
+29
+00:02:26,390 --> 00:02:30,460
+Thrawn'la deil, bunun yerine sadece degonditioned.
+
+30
+00:02:30,470 --> 00:02:37,700
+Bu bileeni oluturmak istediim bir ey oldu ve daha sonra yalnzca ynlendirme yapmak istediimde
+
+31
+00:02:37,700 --> 00:02:38,750
+bunu oluturduk.
+
+32
+00:02:38,810 --> 00:02:45,440
+lk bata, sayfay terk etmeniz iin bir bileen oluturduunuzda garip gelebilir, ancak bu nasl iledii gibi.
+

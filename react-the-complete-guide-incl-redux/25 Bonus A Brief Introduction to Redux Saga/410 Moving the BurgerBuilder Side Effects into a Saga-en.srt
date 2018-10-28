@@ -1,0 +1,332 @@
+1
+00:00:02,140 --> 00:00:10,000
+So let's continue our road to a pure action creator focused world by also outsourcing the burger builder
+
+2
+00:00:10,180 --> 00:00:13,630
+and the order action creator code into sagas
+
+3
+00:00:13,870 --> 00:00:15,770
+Let's start with the burger builder,
+
+4
+00:00:15,940 --> 00:00:20,290
+if we analyze the burger builder action creator file, it's very simple,
+
+5
+00:00:20,290 --> 00:00:23,390
+we got a lot of pure action creators in there already,
+
+6
+00:00:23,440 --> 00:00:27,630
+so action creators which just do that, create an action.
+
+7
+00:00:27,940 --> 00:00:35,050
+But we got one action creator initIngredients which actually runs some asynchronous code which executes
+
+8
+00:00:35,050 --> 00:00:36,390
+a side effect,
+
+9
+00:00:36,400 --> 00:00:45,010
+so for that, I'll create a new file in the sagas folder BurgerBuilder.js. In there, I'll create my
+
+10
+00:00:45,030 --> 00:00:49,900
+initIngredients saga which will be exported generator function,
+
+11
+00:00:50,780 --> 00:00:59,840
+add saga after the name, we'll get our action in there and now I'll take the code from initIngredients
+
+12
+00:01:00,710 --> 00:01:02,790
+and put it into the BurgerBuilder.js
+
+13
+00:01:02,800 --> 00:01:04,160
+file here.
+
+14
+00:01:04,930 --> 00:01:06,830
+Now we do use axios here
+
+15
+00:01:06,950 --> 00:01:12,950
+but if we go back to the burger builder file in the actions folder, we see that we actually import axios
+
+16
+00:01:13,040 --> 00:01:18,930
+from our custom instance, so that we use our custom axios instance from the axios orders file.
+
+17
+00:01:19,040 --> 00:01:25,340
+So I'll use the same import here in my saga file because I obviously want to use the same instance of
+
+18
+00:01:25,340 --> 00:01:35,340
+axios here, that means we can also get rid of it in the BurgerBuilder.js file in the actions folder.
+
+19
+00:01:35,490 --> 00:01:41,910
+Now back in the BurgerBuilder.js file in the sagas folder, we import axios,
+
+20
+00:01:41,970 --> 00:01:48,720
+now if we have a look at the auth.js file, we see that we also probably should import put from redux
+
+21
+00:01:48,770 --> 00:01:53,790
+saga effects so that we can dispatch actions from within our saga.
+
+22
+00:01:53,820 --> 00:02:00,610
+So let me add this import here too and with that, I'll use the same approach as we did earlier,
+
+23
+00:02:00,620 --> 00:02:08,060
+I'm going to store the response here in the response constant and use yield to wait for it to be returned
+
+24
+00:02:08,090 --> 00:02:11,190
+and to automatically get the data
+
+25
+00:02:11,200 --> 00:02:19,190
+this promise gives us once it resolves and to also handle handle a failure, I'll wrap it with try.
+
+26
+00:02:19,520 --> 00:02:24,680
+So I'll try to get my constant, my response here I should say
+
+27
+00:02:24,820 --> 00:02:32,110
+but if that fails, well then we will go into the catch block here and catch any error we might have
+
+28
+00:02:34,370 --> 00:02:37,350
+and then handling it in the block thereafter.
+
+29
+00:02:37,670 --> 00:02:41,810
+Now the only things I do is I do dispatch something,
+
+30
+00:02:41,810 --> 00:02:49,640
+so in the saga world, we do this by yielding a put call and what we do put is of course our action
+
+31
+00:02:49,640 --> 00:02:57,770
+creator calls here where we pass on the data we got. For that, I'll need to import them so I'll import everything
+
+32
+00:02:57,830 --> 00:03:00,340
+as actions from
+
+33
+00:03:00,350 --> 00:03:05,610
+and now let's go to the actions folder and there to the index file which we can also import
+
+34
+00:03:05,630 --> 00:03:13,640
+just like that by just referring to the folder as a whole. And then I can yield put actions and now setIngredients
+
+35
+00:03:13,850 --> 00:03:15,820
+is required here, for that
+
+36
+00:03:15,830 --> 00:03:22,520
+we should make sure that in the index.js file in the actions folder, setIngredients is actually provided,
+
+37
+00:03:22,550 --> 00:03:23,990
+it currently is not,
+
+38
+00:03:24,230 --> 00:03:32,480
+so let's add it as an export from the burger builder file in there, setIngredients. We also have
+
+39
+00:03:32,490 --> 00:03:34,240
+fetchIngredients failed here,
+
+40
+00:03:34,410 --> 00:03:38,360
+we should also export this from burger builder,
+
+41
+00:03:38,460 --> 00:03:47,240
+so let's add this too. With these two exports added, we can go back to our saga and dispatch actions set
+
+42
+00:03:47,250 --> 00:03:50,230
+ingredients, pass on the response data,
+
+43
+00:03:51,070 --> 00:03:53,010
+whoops excuse me, up here of course
+
+44
+00:03:53,110 --> 00:04:01,300
+so pass on the response data or in the error case, put actions.fetchIngredientsFailed,
+
+45
+00:04:01,330 --> 00:04:02,740
+make sure to also execute
+
+46
+00:04:02,730 --> 00:04:07,310
+that, you can then remove the then catch code down there.
+
+47
+00:04:07,320 --> 00:04:09,750
+This is our newly created saga,
+
+48
+00:04:10,090 --> 00:04:17,890
+let's now go back to index.js down there and let's register it, and for this, I'll export a new generator
+
+49
+00:04:17,900 --> 00:04:23,550
+here which I'll name watchBurgerBuilder to group all burger builder related code.
+
+50
+00:04:23,710 --> 00:04:30,280
+Technically we could add it here too and we could have one big watch function or generator but I'll like
+
+51
+00:04:30,280 --> 00:04:31,770
+to have multiple ones
+
+52
+00:04:32,350 --> 00:04:35,650
+and then, I will also import my sagas,
+
+53
+00:04:35,680 --> 00:04:40,850
+here it is only one but could be more from ./BurgerBuilder
+
+54
+00:04:41,190 --> 00:04:45,080
+and that one saga we do have of course is the
+
+55
+00:04:45,430 --> 00:04:47,540
+initIngredients saga.
+
+56
+00:04:47,800 --> 00:04:49,660
+So in watchBurgerBuilder,
+
+57
+00:04:49,870 --> 00:04:50,980
+I will yield
+
+58
+00:04:51,040 --> 00:04:54,230
+takeEvery action types
+
+59
+00:04:54,430 --> 00:05:00,460
+and now I need a new action type which we actually dispatch in the burger builder file in the action
+
+60
+00:05:00,460 --> 00:05:02,770
+creator or in the actions folder.
+
+61
+00:05:02,860 --> 00:05:08,890
+So the action we actually create here now because I no longer want to return dispatch and run async
+
+62
+00:05:08,890 --> 00:05:12,550
+code in there, I just want to create an action instead.
+
+63
+00:05:12,820 --> 00:05:18,690
+So let's create a new action type for that, I'll create a constant here in the action types
+
+64
+00:05:18,690 --> 00:05:20,820
+folder which I'll name
+
+65
+00:05:20,850 --> 00:05:25,310
+INIT_INGREDIENTS, so just as the action creator is called then, INIT_INGREDIENTS,
+
+66
+00:05:25,310 --> 00:05:31,890
+like this and in the action creator, in the burger builder file in the actions folder,
+
+67
+00:05:32,250 --> 00:05:38,710
+I'll set the type to actionTypes.INIT_INGREDIENTS.
+
+68
+00:05:38,740 --> 00:05:41,350
+So this is the action type to which you want to listen,
+
+69
+00:05:41,410 --> 00:05:49,330
+so in the index.js file, I'll listen to actionTypes.INIT_INGREDIENTS and I will execute the initIngredientsSaga
+
+70
+00:05:49,410 --> 00:05:51,990
+whenever this occurs.
+
+71
+00:05:52,210 --> 00:06:00,100
+The final step is to also call this newly created generator function here from our index.js file
+
+72
+00:06:00,100 --> 00:06:07,280
+on the root level of our application so to say, there where we have saga middleware run watch off,
+
+73
+00:06:07,390 --> 00:06:09,640
+I'll also add saga middleware run
+
+74
+00:06:09,850 --> 00:06:16,270
+and now let's import this from our sagas folder to watch burger builder,
+
+75
+00:06:16,550 --> 00:06:21,540
+this saga here should also be run at the start
+
+76
+00:06:21,580 --> 00:06:25,650
+without parentheses here. Let's save all of that
+
+77
+00:06:26,110 --> 00:06:26,920
+and this looks good,
+
+78
+00:06:26,920 --> 00:06:30,440
+we still initialize our ingredients here successfully.
+
+79
+00:06:30,550 --> 00:06:37,060
+If I reload this application one more time, we see setIngredients is dispatched here and we do set
+
+80
+00:06:37,060 --> 00:06:45,720
+the ingredients and this works because we have our burger builder saga where we yield setIngredients.
+
+81
+00:06:45,880 --> 00:06:53,610
+If I comment it out here, you see we got an infinite loading screen because we never set the ingredients
+
+82
+00:06:53,700 --> 00:06:57,570
+so we can really say that our saga is working correctly here.
+
+83
+00:06:57,780 --> 00:06:59,070
+Let me comment it back in.
+

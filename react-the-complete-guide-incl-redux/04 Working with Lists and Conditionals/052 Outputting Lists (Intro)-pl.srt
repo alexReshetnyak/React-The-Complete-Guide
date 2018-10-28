@@ -1,0 +1,60 @@
+1
+00:00:02,190 --> 00:00:08,250
+Podczas ostatnich wykadw nauczylimy si, jak tworzy treci w sposb warunkowy i po
+
+2
+00:00:08,250 --> 00:00:11,310
+prostu wykorzystujemy fakt, e wszystko jest javascript.
+
+3
+00:00:11,310 --> 00:00:20,100
+Teraz chc odda moj list osb, do tej pory tak naprawd nie robimy tego w dynamiczny sposb.
+
+4
+00:00:20,100 --> 00:00:26,000
+Mamy tutaj kilka osb w naszym stanie i powinno to by nasze jedyne rdo prawdy.
+
+5
+00:00:26,010 --> 00:00:32,090
+To powinno by nasze rdo danych w wikszych aplikacjach, w rzeczywistych aplikacjach
+
+6
+00:00:32,100 --> 00:00:37,010
+moe by wypeniane danymi lub danymi pobieranymi z serwera.
+
+7
+00:00:37,350 --> 00:00:46,260
+Mamy tutaj szereg osb, ale w jsx, ktry teraz zwracamy tutaj, w naszym trybie warunkowym, po prostu na
+
+8
+00:00:46,260 --> 00:00:53,400
+stae utworzylimy trzy osoby i rcznie przypisalimy dane do rnych osb z naszej tablicy,
+
+9
+00:00:54,050 --> 00:00:56,470
+co oczywicie jest bardzo nieelastyczne.
+
+10
+00:00:56,700 --> 00:01:04,560
+Jeli kiedykolwiek co zmienimy, jeli dodamy now osob lub j usuniemy, bdzie to w zasadzie zepsuo si i nie bdziemy w
+
+11
+00:01:04,560 --> 00:01:11,200
+stanie adresowa konkretnej osoby podczas jej aktualizacji, tak jak robimy to tutaj za pomoc kliknicia lub zmienionego komunikatu.
+
+12
+00:01:11,210 --> 00:01:14,400
+To wszystko nie dziaa tak, jak powinno dziaa,
+
+13
+00:01:14,520 --> 00:01:22,170
+wic nauczmy si, w jaki sposb moemy generowa listy danych, tablice, a take w jaki sposb moemy rwnie wchodzi
+
+14
+00:01:22,170 --> 00:01:25,620
+w interakcje z nimi, aktualizowa je i poprawnie zmienia
+
+15
+00:01:25,620 --> 00:01:29,500
+tablice w naszym stanie. Skupimy si na tych wszystkich rzeczach podczas kolejnych wykadw.
+

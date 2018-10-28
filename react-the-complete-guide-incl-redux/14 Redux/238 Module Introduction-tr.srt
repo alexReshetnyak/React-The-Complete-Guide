@@ -1,0 +1,44 @@
+1
+00:00:02,180 --> 00:00:07,900
+Bu modle ho geldiniz Bu dersin ana modllerinden biridir.
+
+2
+00:00:07,940 --> 00:00:09,300
+Bu redoks hakknda.
+
+3
+00:00:09,410 --> 00:00:16,680
+Redox'u zaten biliyorsunuz, ounlukla tepki vererek Gabr olarak adlandrlm ancak bamsz bir nc parti kitapl.
+
+4
+00:00:16,760 --> 00:00:24,480
+Devlet ynetimine uygulama ynetimini kolaylatrmak iin ounlukla yeniden hareket projelerinde kullanlan
+
+5
+00:00:24,480 --> 00:00:26,010
+bir ktphanedir.
+
+6
+00:00:26,060 --> 00:00:30,540
+nk daha kompleks reaktr projelerinde lm olabilir.
+
+7
+00:00:30,590 --> 00:00:37,070
+Halihazrda ders projemizde, devlet ynetiminin gereksiz yere zorlat yerde kralie
+
+8
+00:00:37,070 --> 00:00:42,800
+amal veri aktarmak zorunda olduumuz baz durumlar olduunu grdk.
+
+9
+00:00:42,980 --> 00:00:49,940
+Bu nedenle, redoks hakknda reneceimiz modl, bu soruna bir zm getirerek, devletimizi tekrar
+
+10
+00:00:49,940 --> 00:00:51,360
+ynetilebilir hale getirebilir.
+
+11
+00:00:51,510 --> 00:00:58,950
+Bunun iin ncelikle devletin tam olarak ne olduunu ve tam olarak ne olduunu ve nasl altn anlamaya alalm.
+

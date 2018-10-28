@@ -1,0 +1,324 @@
+1
+00:00:02,140 --> 00:00:08,470
+Ora con le loro azioni i produttori hanno impostato almeno le basi su di esso e la nostra
+
+2
+00:00:08,470 --> 00:00:09,470
+storia collegata all'applicazione.
+
+3
+00:00:09,640 --> 00:00:12,630
+Riempiamo il nostro produttore di vita.
+
+4
+00:00:12,940 --> 00:00:17,170
+E alla fine dobbiamo avere le due azioni che organizziamo qui.
+
+5
+00:00:17,320 --> 00:00:20,200
+Aggiunta di ingredienti e rimozione degli ingredienti.
+
+6
+00:00:20,290 --> 00:00:26,010
+Pertanto, come sempre, aggiunger il mio introduttore di istruzioni switch e il tipo di azione switchy.
+
+7
+00:00:26,080 --> 00:00:29,930
+Tieni presente che devi sempre avere una propriet di tipo sulla tua azione.
+
+8
+00:00:29,930 --> 00:00:32,080
+Questo  il motivo per cui possiamo uscire tranquillamente qui.
+
+9
+00:00:32,530 --> 00:00:37,120
+Ora otteniamo due tipi che vogliamo gestire nelle nostre dichiarazioni sui casi.
+
+10
+00:00:37,120 --> 00:00:44,650
+Il primo  il tipo di azione aggiungi ingrediente in cui vogliamo restituire un oggetto che
+
+11
+00:00:44,650 --> 00:00:45,580
+Holston dichiari.
+
+12
+00:00:45,940 --> 00:00:51,500
+Il secondo  il caso in cui abbiamo i nostri tipi di azione e rimuoviamo l'ingrediente.
+
+13
+00:00:51,730 --> 00:01:02,670
+E anche qui vogliamo restituire qualche negozio dove qualche oggetto statale e alla fine vogliamo sempre tornare.
+
+14
+00:01:02,880 --> 00:01:09,850
+Basta dire nel caso in cui ci rendiamo parte di questi casi, sebbene qui ci sia il mio ID Dutreuil che
+
+15
+00:01:09,850 --> 00:01:13,630
+suggerisce che dovremmo avere uno stato predefinito o un gestore predefinito, intendo.
+
+16
+00:01:13,630 --> 00:01:18,490
+Quindi aggiungiamo semplicemente il valore predefinito alla nostra istruzione switch e torniamo allo stato qui.
+
+17
+00:01:18,550 --> 00:01:21,630
+Questo sar raggiunto se non si applica il caso.
+
+18
+00:01:21,640 --> 00:01:27,250
+Anche in questo caso non abbiamo bisogno di dichiarazioni di interruzione perch in ogni caso torniamo in ogni caso in modo
+
+19
+00:01:27,250 --> 00:01:29,410
+che l'esecuzione del codice non continui in disfunzione.
+
+20
+00:01:29,410 --> 00:01:34,530
+Ora per aggiungere gli ingredienti vogliamo naturalmente aggiungere l'oggetto dei nostri ingredienti.
+
+21
+00:01:34,540 --> 00:01:36,070
+Ora qui abbiamo iniziato con NULL.
+
+22
+00:01:36,090 --> 00:01:45,010
+Ma tieni a mente il builder Burgi con cui iniziamo adesso perch il componente ha fatto MT. In realt, caricando i
+
+23
+00:01:45,100 --> 00:01:48,750
+nostri ingredienti, stiamo iniziando gli ingredienti da Internet.
+
+24
+00:01:48,760 --> 00:01:55,360
+con i miei ingredienti impostati qui nello stato quindi i tuoi ingredienti non saranno No.
+
+25
+00:01:55,360 --> 00:02:03,700
+Questo  qualcosa che aggiunger davvero, ma per ora poich non abbiamo imparato come gestire il codice asincrono qui
+
+26
+00:02:03,700 --> 00:02:09,550
+ignorer quest'anno commenter fondamentalmente il codice e il componente che monta e invece inizier
+
+27
+00:02:09,610 --> 00:02:10,780
+Nel mio riduttore.
+
+28
+00:02:10,930 --> 00:02:21,650
+Ma invece essere un oggetto dove abbiamo zero zero bacon zero formaggio Siro e soddisfare zero.
+
+29
+00:02:21,660 --> 00:02:24,930
+Anche in questo caso si tratta solo di un'inversione temporanea.
+
+30
+00:02:25,000 --> 00:02:31,990
+Ora, quando aggiungiamo un ingrediente, abbiamo bisogno ovviamente di ottenere l'informazione su quale ingrediente Thaddeus e per quel determinato
+
+31
+00:02:31,990 --> 00:02:38,010
+ingrediente abbiamo quindi semplicemente bisogno di aggiungerne uno, quindi non abbiamo bisogno di ottenere l'importo perch
+
+32
+00:02:38,050 --> 00:02:39,370
+sempre pi uno.
+
+33
+00:02:39,520 --> 00:02:42,310
+Ma abbiamo bisogno di sapere quale ingrediente .
+
+34
+00:02:42,310 --> 00:02:48,910
+Quindi, quello che faremo qui  prima di tutto copiare l'intero vecchio stato con l'operatore di spread
+
+35
+00:02:48,940 --> 00:02:54,940
+in modo che quando impostiamo nuovi ingredienti manteniamo anche le nostre propriet in giro distribuendole prima
+
+36
+00:02:54,940 --> 00:02:57,030
+su questo nuovo oggetto javascript.
+
+37
+00:02:57,400 --> 00:02:59,820
+Ma quella  la seconda cosa che vogliamo fare.
+
+38
+00:02:59,860 --> 00:03:06,150
+Imposta gli ingredienti su qualcosa di nuovo che non dovrebbe essere un nuovo oggetto javascript.
+
+39
+00:03:06,220 --> 00:03:08,500
+Immutabilit non riutilizzare quello vecchio.
+
+40
+00:03:08,500 --> 00:03:15,000
+Creane uno nuovo dove distribuisco prima di tutto tutte le propriet degli ingredienti di stato.
+
+41
+00:03:15,390 --> 00:03:23,980
+Anche in questo caso, creare veramente un nuovo oggetto semplicemente distribuendo lo stato qui non lo far perch
+
+42
+00:03:23,980 --> 00:03:27,080
+non crea cloni profondi di oggetti.
+
+43
+00:03:27,100 --> 00:03:31,600
+Non entra negli oggetti e crea nuovi oggetti per questi due.
+
+44
+00:03:31,750 --> 00:03:37,930
+Semplicemente copia solo l'oggetto circostante, ma gli ingredienti che sono da solo oggetti punterebbero
+
+45
+00:03:37,930 --> 00:03:45,280
+ancora a quel vecchio oggetto mentre risolviamo questo diffondendo qui le propriet di quel vecchio oggetto
+
+46
+00:03:45,280 --> 00:03:46,990
+in un nuovo oggetto.
+
+47
+00:03:46,990 --> 00:03:53,920
+Ora con questo oggetto di nuovi ingredienti vogliamo ignorare l'ingrediente dato che dobbiamo ottenere
+
+48
+00:03:53,920 --> 00:03:56,950
+come carico utile di questa azione.
+
+49
+00:03:57,160 --> 00:04:04,600
+Ora nell'anno 6 c' questa sintassi speciale che puoi usare per sovrascrivere dinamicamente una propriet in un
+
+50
+00:04:04,600 --> 00:04:05,890
+dato oggetto javascript.
+
+51
+00:04:06,070 --> 00:04:08,080
+Puoi usare parentesi quadre ora.
+
+52
+00:04:08,080 --> 00:04:10,410
+Questo non crea un array qui.
+
+53
+00:04:10,690 --> 00:04:17,410
+Invece qui puoi ora passare una variabile su qualcosa che contiene il nome che vuoi usare come nome
+
+54
+00:04:17,410 --> 00:04:22,840
+di una propriet e mi aspetto di ottenere quel nome di propriet sulla mia azione.
+
+55
+00:04:22,900 --> 00:04:30,280
+Forse sulla propriet del nome dell'ingrediente ora il nome dell'ingrediente  qualcosa che otteniamo come carico utile per l'azione
+
+56
+00:04:30,730 --> 00:04:35,190
+e quindi qui semplicemente distribuiamo tutti gli ingredienti nel nostro nuovo oggetto.
+
+57
+00:04:35,260 --> 00:04:37,780
+Quindi questo oggetto tiene quindi della carne solida.
+
+58
+00:04:37,780 --> 00:04:40,480
+Pancetta e formaggio e uno di questi.
+
+59
+00:04:40,510 --> 00:04:46,120
+Che mai ci che riceviamo come carico utile dell'azione ricever un nuovo valore.
+
+60
+00:04:46,150 --> 00:04:51,030
+Lo indirizziamo con questa sintassi e poi con i due punti e il nuovo valore.
+
+61
+00:04:51,070 --> 00:05:00,480
+Bene, impostiamo questo nuovo valore il nuovo valore ora semplicemente come ingredienti di stato, quindi selezioniamo nuovamente il nome
+
+62
+00:05:00,480 --> 00:05:05,870
+dell'ingrediente dato, quindi questo ora  il vecchio valore di quell'ingrediente.
+
+63
+00:05:05,870 --> 00:05:11,170
+Quindi, come 0 o 1 o qualunque cosa fosse e poi aggiungiamo pi uno.
+
+64
+00:05:11,180 --> 00:05:17,360
+ne aggiungiamo uno e assegniamo questo ingrediente di carineria dove sostituiamo la copia che abbiamo creato qui.
+
+65
+00:05:17,360 --> 00:05:20,530
+Quindi ora qui prendiamo il numero dei vecchi ingredienti
+
+66
+00:05:20,550 --> 00:05:25,670
+Ora stiamo restituendo una nuova parola, non lo stato con gli ingredienti aggiornati.
+
+67
+00:05:26,060 --> 00:05:28,520
+Ecco come aggiungiamo un ingrediente.
+
+68
+00:05:28,550 --> 00:05:30,480
+Come ne rimuoviamo uno.
+
+69
+00:05:30,830 --> 00:05:33,020
+Bene per la rimozione.
+
+70
+00:05:33,020 --> 00:05:39,250
+Voglio anche creare una nuova versione del mio stato in cui semplicemente decremento di un ingrediente per uno.
+
+71
+00:05:39,350 --> 00:05:46,200
+E per questo iniziamo naturalmente copiando quel codice qui dalla logica dell'ingrediente ADD.
+
+72
+00:05:46,460 --> 00:05:54,980
+Copiamo ancora il vecchio stato e quindi distribuiamo le propriet dell'ingrediente in questo nuovo oggetto ingredienti.
+
+73
+00:05:55,010 --> 00:06:00,830
+Prendo anche qui l'ingrediente che ricevo come carico utile reale per questo caso.
+
+74
+00:06:01,100 --> 00:06:02,860
+Ma ora non ne aggiungo uno.
+
+75
+00:06:02,900 --> 00:06:10,350
+Ne rimuovo uno e con quello abbiamo raccolto uster che dovrebbe essere in grado di aggiornare i nostri ingredienti.
+
+76
+00:06:10,400 --> 00:06:13,080
+Non aggiorner il prezzo in questo momento.
+
+77
+00:06:13,160 --> 00:06:15,060
+Ci penseremo pi tardi.
+
+78
+00:06:15,380 --> 00:06:18,230
+Ma aggiorneremo i nostri ingredienti qui.
+
+79
+00:06:18,380 --> 00:06:24,560
+Ora con quello nella prossima lezione ovviamente voglio collegarlo al mio burger Boler.
+
+80
+00:06:24,700 --> 00:06:32,900
+abbiamo usato uster standard e queste azioni per gestire le RIA che aggiungiamo al nostro hamburger o rimuoviamo da esso.
+
+81
+00:06:32,900 --> 00:06:33,290
+Cos
+

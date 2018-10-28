@@ -1,0 +1,340 @@
+1
+00:00:02,120 --> 00:00:05,570
+In the last lecture, we added logic to fetch orders,
+
+2
+00:00:05,660 --> 00:00:09,050
+let's now loop through them and output them.
+
+3
+00:00:09,050 --> 00:00:18,000
+Now here I'll do this inline, I'll reach out to this.state.orders and map this array and then while you
+
+4
+00:00:18,000 --> 00:00:21,650
+know it into the array of jsx elements.
+
+5
+00:00:21,690 --> 00:00:29,130
+So here I got my individual order which should basically just be converted into an order object like
+
+6
+00:00:29,130 --> 00:00:29,600
+this,
+
+7
+00:00:29,670 --> 00:00:31,020
+that's it for now.
+
+8
+00:00:31,350 --> 00:00:36,730
+We save this we should get as many objects here as we have orders in firebase,
+
+9
+00:00:36,870 --> 00:00:39,730
+as always, we also need to add that key prop here.
+
+10
+00:00:39,750 --> 00:00:44,110
+So let's add key and let's set this to
+
+11
+00:00:44,490 --> 00:00:51,270
+well now we can use Order ID because there will be an id property, that unique firebase ID which makes
+
+12
+00:00:51,270 --> 00:00:53,160
+for a perfect key.
+
+13
+00:00:53,160 --> 00:00:58,350
+Now with that, we can save it and we get the orders from firebase of course we're not using the values from
+
+14
+00:00:58,350 --> 00:00:59,150
+there though,
+
+15
+00:00:59,320 --> 00:01:01,100
+this is the next thing I want to do.
+
+16
+00:01:01,350 --> 00:01:04,690
+We get the orders, we render the order,
+
+17
+00:01:04,710 --> 00:01:10,800
+now of course it would be sensible to also pass the order information on to that order component so
+
+18
+00:01:10,800 --> 00:01:12,490
+that we can render something there.
+
+19
+00:01:12,810 --> 00:01:15,190
+We want to pass on the ingredients
+
+20
+00:01:15,210 --> 00:01:23,720
+so there I will pass on order ingredients and I also want to pass on the price.
+
+21
+00:01:23,760 --> 00:01:29,740
+Now if we have a look at the firebase object, the price is stored in a price property there
+
+22
+00:01:29,910 --> 00:01:31,410
+so this is what I want to pass on to
+
+23
+00:01:31,410 --> 00:01:39,300
+price shall be order.price. With that, we're passing the information to order,
+
+24
+00:01:39,330 --> 00:01:44,940
+let's now output it there in the order component. The price is simple,
+
+25
+00:01:44,940 --> 00:01:52,410
+simply use dynamic content output with single curly braces and we output props price like this,
+
+26
+00:01:52,440 --> 00:01:55,190
+so now we should already see the real price here,
+
+27
+00:01:55,350 --> 00:02:04,590
+and we do. We also see that back here we want to use price.toFixed with 2 decimal places,
+
+28
+00:02:04,650 --> 00:02:09,360
+this will only work on a number though and by default this is a string.
+
+29
+00:02:09,360 --> 00:02:21,570
+So what I can do is I can simply call number, parse float to convert a string to a number or of course
+
+30
+00:02:21,600 --> 00:02:29,400
+you add a plus sign at the point of time you're passing it here in the orders component adding a plus
+
+31
+00:02:29,400 --> 00:02:32,460
+in front of order.price should also do the trick,
+
+32
+00:02:32,460 --> 00:02:39,780
+both should work and should output this price. Now the ingredients are a bit more complex because ingredients
+
+33
+00:02:39,810 --> 00:02:46,370
+are so often an object and we need an array to loop through them and output them.
+
+34
+00:02:46,620 --> 00:02:53,070
+So in the order component here where I want the output my ingredients, I now need to turn my ingredients
+
+35
+00:02:53,520 --> 00:03:00,990
+into an array, and you can either do that conversion in the orders container or here in the order component,
+
+36
+00:03:01,170 --> 00:03:03,680
+I'll do it here in the order component.
+
+37
+00:03:04,070 --> 00:03:11,880
+So for that i'll changed my order function to not just return jsx but to have a real function body where
+
+38
+00:03:11,880 --> 00:03:16,920
+we then also return jsx of course but where I can run some code before doing so.
+
+39
+00:03:17,160 --> 00:03:19,900
+So let's do it like that
+
+40
+00:03:20,010 --> 00:03:23,990
+and let's now add the code to transform my ingredients.
+
+41
+00:03:24,270 --> 00:03:28,300
+So here I'll add ingredients which should be an ingredients array
+
+42
+00:03:28,590 --> 00:03:34,150
+and we had the logic for transforming this before. In the burger component here,
+
+43
+00:03:34,180 --> 00:03:36,180
+the transformed ingredients,
+
+44
+00:03:36,180 --> 00:03:43,870
+this actually is the logic we can use to turn our ingredients into an array of ingredients.
+
+45
+00:03:44,190 --> 00:03:46,350
+I want to show you an alternative though.
+
+46
+00:03:46,590 --> 00:03:50,030
+So here ingredients is just an array, for now an empty array,
+
+47
+00:03:50,250 --> 00:03:57,600
+I'll then use a for/in loop for ingredient name in props.ingredients.
+
+48
+00:03:57,600 --> 00:04:00,170
+This is what I can do because in a for/in loop,
+
+49
+00:04:00,330 --> 00:04:03,580
+the variable element is going to be the property name
+
+50
+00:04:03,600 --> 00:04:09,330
+and since my properties are simply just ingredients representations, ingredient name makes sense to me
+
+51
+00:04:09,330 --> 00:04:10,500
+as a name.
+
+52
+00:04:10,500 --> 00:04:19,100
+So here I can then use my ingredients array and push this ingredient onto it,
+
+53
+00:04:19,360 --> 00:04:26,490
+so here I can then reach out to props.ingredients and access the ingredient with the ingredient name.
+
+54
+00:04:26,500 --> 00:04:30,600
+This is the value of the ingredient so 0 1 2 and so on,
+
+55
+00:04:30,940 --> 00:04:39,610
+I want to push a javascript object though where I of course also have the amount but before storing
+
+56
+00:04:39,610 --> 00:04:40,500
+the amount,
+
+57
+00:04:40,540 --> 00:04:46,540
+I also want to store the name of the ingredient and that just is the key name, ingredient name here.
+
+58
+00:04:46,600 --> 00:04:53,290
+So this is the object I'm now pushing onto this ingredients array, very simple transformation, certainly
+
+59
+00:04:53,290 --> 00:04:58,860
+a bit shorter than the other one so that's why I also wanted to show this alternative.
+
+60
+00:04:59,200 --> 00:05:07,420
+Now with that being pushed onto the ingredients array, I can map my ingredients to text basically here.
+
+61
+00:05:07,900 --> 00:05:16,950
+So I'll then create a new variable here or a new constant just as this is a constant which I'll name
+
+62
+00:05:16,950 --> 00:05:24,240
+ingredientOutput, and ingredientOutput should be ingredients.map as you learned it,
+
+63
+00:05:24,280 --> 00:05:30,670
+we get the individual ingredient and want to return some jsx here and here I will return a span,
+
+64
+00:05:31,620 --> 00:05:42,090
+I'll assign some class to it soon where I output ig with curly braces ig.name and then in parentheses
+
+65
+00:05:42,230 --> 00:05:51,310
+and then in curly braces for dynamic output, ig.amount, closing span like this. Now let's output ingredient
+
+66
+00:05:51,340 --> 00:05:52,870
+output down there
+
+67
+00:05:53,740 --> 00:05:58,730
+like this and let's have a look at this output here.
+
+68
+00:05:59,050 --> 00:06:01,230
+Get the good old key error here
+
+69
+00:06:01,240 --> 00:06:03,910
+but we see this is generally working.
+
+70
+00:06:03,910 --> 00:06:11,170
+Now regarding the key, I actually can use the ingredient name as the key as it is unique here, so I can
+
+71
+00:06:11,170 --> 00:06:19,930
+use name as a unique key and now I want to style this span and I will simply style it with some inline
+
+72
+00:06:19,930 --> 00:06:24,470
+styling here so I'll assign a javascript object, I'll
+
+73
+00:06:24,700 --> 00:06:28,330
+Use text transform to capitalize the first letter.
+
+74
+00:06:28,480 --> 00:06:34,590
+So capitalize does exactly this if we save that, we see it starts with the starting letter now.
+
+75
+00:06:35,050 --> 00:06:42,630
+And I also want to put these spans into little boxes so that they stand out from each other,
+
+76
+00:06:42,970 --> 00:06:51,600
+so I'll wrap this javascript object here over multiple lines to display inline
+
+77
+00:06:52,600 --> 00:06:59,590
+block, add a little bit of margin left and right zero to top and bottom though, so just 8px to left
+
+78
+00:06:59,590 --> 00:07:11,480
+and right 0 8px and add a border maybe 1px solid gray and a little bit of padding like 5px
+
+79
+00:07:11,500 --> 00:07:15,370
+and you could of course also use a css class for that.
+
+80
+00:07:15,470 --> 00:07:17,310
+This is how I want to output it,
+
+81
+00:07:17,320 --> 00:07:19,330
+these are my ingredients, this is my price,
+
+82
+00:07:19,360 --> 00:07:21,450
+these are my orders.
+
+83
+00:07:21,460 --> 00:07:23,590
+Now we can add more to the orders,
+
+84
+00:07:23,620 --> 00:07:29,660
+we can add logic to delete an order or to mark it as fulfilled.
+
+85
+00:07:29,890 --> 00:07:32,670
+For now this is how I want to output them though.
+

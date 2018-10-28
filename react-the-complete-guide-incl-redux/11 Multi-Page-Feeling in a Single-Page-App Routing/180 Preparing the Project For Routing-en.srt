@@ -1,0 +1,252 @@
+1
+00:00:01,950 --> 00:00:08,670
+In the last lecture we broke our app by moving the components into the containers folder because now we're
+
+2
+00:00:08,670 --> 00:00:14,280
+going to load them as pages through routing and that really turns them into containers because they're no
+
+3
+00:00:14,280 --> 00:00:16,670
+longer included by some other component.
+
+4
+00:00:16,800 --> 00:00:23,940
+Yes kind of for routing but they really are now on the root level being exchanged for previously root
+
+5
+00:00:24,000 --> 00:00:25,490
+level components.
+
+6
+00:00:25,920 --> 00:00:30,220
+So with that, let's work on the post component which is the one component we're now missing.
+
+7
+00:00:30,240 --> 00:00:32,790
+I'm going to grab the section here
+
+8
+00:00:32,790 --> 00:00:41,220
+Class name posts and put it into my post component which I'll create with the class keyword, class posts
+
+9
+00:00:41,310 --> 00:00:43,900
+extends component.
+
+10
+00:00:43,950 --> 00:00:51,220
+Now therefore we need to import both react and component from react
+
+11
+00:00:51,600 --> 00:00:58,560
+and now here we need a render method where in the end, we simply return some jsx, that section I just
+
+12
+00:00:58,560 --> 00:00:59,910
+copied.
+
+13
+00:00:59,910 --> 00:01:06,810
+Now posts of course doesn't exist here because we created that dynamically in the blog component so let's
+
+14
+00:01:06,810 --> 00:01:12,330
+fetch all that code here where we create posts and let's move that into the render method now.
+
+15
+00:01:12,330 --> 00:01:17,450
+This on the other hand now depends on the state of this component,
+
+16
+00:01:17,610 --> 00:01:23,320
+so we should manage to state for the posts in the post component, makes sense I guess.
+
+17
+00:01:24,110 --> 00:01:29,170
+So let's quickly take the state here from the blog component,
+
+18
+00:01:29,480 --> 00:01:34,710
+let's cut it from there and move it to the post component.
+
+19
+00:01:34,710 --> 00:01:41,490
+There we now have our posts array and error and the selected posts ID,
+
+20
+00:01:41,510 --> 00:01:47,510
+now I am going to remove that part of the state. And here for clicking the postSelectedHandler will
+
+21
+00:01:47,560 --> 00:01:49,490
+pass the post ID.
+
+22
+00:01:49,490 --> 00:01:53,600
+I will also import that from my blog component, there
+
+23
+00:01:53,610 --> 00:02:01,140
+I'll grab the postSelectedHandler and also add this to my posts class in the newly created post
+
+24
+00:02:01,140 --> 00:02:02,160
+component.
+
+25
+00:02:02,450 --> 00:02:08,690
+And finally from the blog component I am going to fetch the componentDidMount code here so that
+
+26
+00:02:08,690 --> 00:02:15,740
+I only have render here in the blog component and put that componentDidMount method also back
+
+27
+00:02:15,740 --> 00:02:20,100
+into my post components so that we are mounting here.
+
+28
+00:02:20,360 --> 00:02:22,050
+Now for the error,
+
+29
+00:02:22,080 --> 00:02:27,170
+I'm no longer handling that here to keep it a bit simpler, so I'm just logging it we shouldn't face any errors
+
+30
+00:02:27,200 --> 00:02:28,280
+anyways.
+
+31
+00:02:28,300 --> 00:02:36,110
+And with that, we now got the post component created, fetching its own posts and rendering them to the
+
+32
+00:02:36,110 --> 00:02:37,120
+screen.
+
+33
+00:02:37,520 --> 00:02:45,910
+Now here we also now need to import axios in the post component,
+
+34
+00:02:45,910 --> 00:02:51,730
+So axios and keep in mind here we were using our own instance.
+
+35
+00:02:51,730 --> 00:02:54,390
+So let's point to that instance
+
+36
+00:02:54,430 --> 00:03:01,840
+so from now we have to move up all the way to the top so that we can import from that axios file and now
+
+37
+00:03:01,840 --> 00:03:06,540
+we have an application which should work again if we for the second
+
+38
+00:03:06,690 --> 00:03:12,430
+import our newly created post component in the blog component.
+
+39
+00:03:12,580 --> 00:03:13,940
+So let me quickly do that
+
+40
+00:03:13,950 --> 00:03:21,210
+let's navigate to the post subfolder with the posts.js file and let's include post here,
+
+41
+00:03:21,220 --> 00:03:29,020
+so include posts like this and then the posts file, we need to import the post component of course because
+
+42
+00:03:29,020 --> 00:03:31,520
+we're rendering it to the screen,
+
+43
+00:03:31,690 --> 00:03:36,450
+so make sure to add the import posts to this newly created post component.
+
+44
+00:03:36,760 --> 00:03:39,640
+So import post from
+
+45
+00:03:39,670 --> 00:03:41,090
+and now we need to go up
+
+46
+00:03:41,320 --> 00:03:48,220
+Then we need to go up even more and more into the components folder into the post folder to the post.js
+
+47
+00:03:48,220 --> 00:03:50,400
+files that we can use that.
+
+48
+00:03:50,500 --> 00:03:54,660
+And finally we need to import some css here too
+
+49
+00:03:55,000 --> 00:03:58,510
+and of course also export our posts component.
+
+50
+00:03:58,570 --> 00:04:01,110
+So let's add a default export to the posts.js
+
+51
+00:04:01,190 --> 00:04:06,070
+file where we export this post's class.
+
+52
+00:04:06,310 --> 00:04:12,640
+Now for the css again, here in the blog css, we have that post class, remove it from there, from
+
+53
+00:04:12,640 --> 00:04:17,630
+the blog file, we don't need it there and put it into to be created
+
+54
+00:04:17,640 --> 00:04:24,450
+post.css file which we now import in the post component.
+
+55
+00:04:24,580 --> 00:04:29,170
+So there I'll import simply
+
+56
+00:04:29,180 --> 00:04:29,520
+./posts.css,
+
+57
+00:04:29,590 --> 00:04:33,020
+keep in mind here we're not using css modules
+
+58
+00:04:33,040 --> 00:04:40,210
+hence the different syntax. With all that changed, if we go back to the app we see just the posts and
+
+59
+00:04:40,210 --> 00:04:44,070
+if that was too fast, obviously feel free to download this,
+
+60
+00:04:44,110 --> 00:04:51,250
+it was just some restructuring turning our components into containers and adding the new post container.
+
+61
+00:04:51,310 --> 00:04:59,620
+Now we get different components, containers which we can use as pages in our app because we want to load
+
+62
+00:04:59,710 --> 00:05:07,240
+either all posts or a single post or the new post page.
+
+63
+00:05:07,240 --> 00:05:10,960
+Now we need routing to load only one of them.
+

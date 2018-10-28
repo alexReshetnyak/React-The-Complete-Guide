@@ -1,0 +1,408 @@
+1
+00:00:02,200 --> 00:00:09,040
+So in the last module I showed you some ways of refactoring your reducers and I mentioned that these ways
+
+2
+00:00:09,040 --> 00:00:15,280
+or these methods are all optional and they are, still I want to employ them here to clean up this reducer
+
+3
+00:00:15,280 --> 00:00:19,140
+and make the switch case statement a little bit leaner I should say.
+
+4
+00:00:19,420 --> 00:00:25,780
+So for example I'll add my updateObject convenience method which makes updating objects like we do
+
+5
+00:00:25,780 --> 00:00:30,130
+for the entire state but then also the ingredients object here for example easier.
+
+6
+00:00:30,610 --> 00:00:39,030
+For that, let's quickly add a new function and I'll add it in the store folder, utility.js, that's
+
+7
+00:00:39,040 --> 00:00:39,990
+not written like that,
+
+8
+00:00:40,120 --> 00:00:41,320
+that's correct.
+
+9
+00:00:41,350 --> 00:00:46,870
+And now when there, I'll export a new constant which I'll name updateObject,
+
+10
+00:00:46,870 --> 00:00:48,520
+it's an arrow function
+
+11
+00:00:49,210 --> 00:00:58,160
+and in this function, I expect to get my old object and the updated properties or whatever you want to
+
+12
+00:00:58,160 --> 00:01:00,920
+call it, new properties, whatever it is,
+
+13
+00:01:01,040 --> 00:01:05,270
+and in there, it's the same function as I wrote in the last modules. So in there,
+
+14
+00:01:05,510 --> 00:01:08,530
+I'll simply return a new javascript object,
+
+15
+00:01:08,540 --> 00:01:10,220
+that's the whole idea behind that,
+
+16
+00:01:10,250 --> 00:01:17,480
+a new object, distribute the properties of the old object but then also distribute the properties of
+
+17
+00:01:17,540 --> 00:01:22,480
+updated properties which should be an object too.
+
+18
+00:01:22,560 --> 00:01:26,030
+Now I can use that updateObject function in my reducers
+
+19
+00:01:26,220 --> 00:01:35,970
+so I will import it at the top, import updateObject it's a named export so we need curly braces from
+
+20
+00:01:36,540 --> 00:01:39,490
+moving up the utility file
+
+21
+00:01:39,490 --> 00:01:45,170
+and now I can call updateObject whenever I have code like this, where I distribute some props.
+
+22
+00:01:45,540 --> 00:01:54,090
+So in this case here, I'll have my updatedIngredients first, that will now be a call to updateObject
+
+23
+00:01:54,600 --> 00:01:58,260
+where I pass state.ingredient, so the old ingredients,
+
+24
+00:01:58,260 --> 00:02:05,590
+so now I'm replicating this part and where I pass my new ingredients, this part.
+
+25
+00:02:05,640 --> 00:02:11,880
+So here I'll create my, a new constant just to have it split up over multiple lines and not set all of
+
+26
+00:02:11,880 --> 00:02:13,470
+that into one expression,
+
+27
+00:02:13,500 --> 00:02:17,830
+so here I'll have my updatedIngredient,
+
+28
+00:02:18,450 --> 00:02:25,140
+that should be a javascript object where I have just that key value pair, the dynamic name of the ingredient
+
+29
+00:02:25,410 --> 00:02:31,950
+and then the updated value which is incremented and then I'll pass this updatedIngredient as a second
+
+30
+00:02:31,980 --> 00:02:33,450
+argument to updateObject
+
+31
+00:02:33,510 --> 00:02:38,880
+and it has to be an object, updatedIngredient has to be an object because this is what the utility
+
+32
+00:02:38,880 --> 00:02:39,990
+function expects
+
+33
+00:02:40,050 --> 00:02:42,720
+otherwise this won't work as expected.
+
+34
+00:02:42,720 --> 00:02:45,820
+So with that, I have the updatedIngredients,
+
+35
+00:02:45,890 --> 00:02:48,540
+this is what I assign to ingredients now
+
+36
+00:02:48,990 --> 00:02:53,420
+but of course, the whole idea is that I also replace this part.
+
+37
+00:02:53,610 --> 00:02:58,500
+So I'll create a new constant which I'll name updatedState
+
+38
+00:02:58,500 --> 00:03:07,060
+maybe, this should be a javascript object where I now have my ingredients and total price, like that.
+
+39
+00:03:07,350 --> 00:03:15,900
+And in the end here, I can therefore then call updateObject, this and pass the old state which is the
+
+40
+00:03:15,920 --> 00:03:20,360
+object I want to update, I want to return here and pass the updated state.
+
+41
+00:03:20,360 --> 00:03:25,340
+So still a lot of lines, a little bit more structured and using that utility function
+
+42
+00:03:25,430 --> 00:03:27,610
+and I just wanted to show how to implement this,
+
+43
+00:03:27,740 --> 00:03:33,480
+we could have squeezed all of that into one line but that would have been a bit hard to follow along,
+
+44
+00:03:33,510 --> 00:03:35,660
+that is why I wrote it over multiple lines.
+
+45
+00:03:36,020 --> 00:03:41,630
+So now I'll copy all that code because when we remove ingredient, it's essentially the same story
+
+46
+00:03:41,900 --> 00:03:48,110
+but there of course, the difference is that we need to decrement our ingredient by one.
+
+47
+00:03:48,440 --> 00:03:56,000
+And even though it's in a switch case statement, it does like the fact that I reassign a constant here,
+
+48
+00:03:56,360 --> 00:03:59,370
+doesn't recognize that I can't reach this code.
+
+49
+00:03:59,480 --> 00:04:03,030
+So what I'll do is I'll simply rename these constants,
+
+50
+00:04:03,050 --> 00:04:08,760
+not ideal but unfortunately has to be done, updatedSt
+
+51
+00:04:09,170 --> 00:04:16,510
+maybe, so this is just again necessary due to the fact that the IDE doesn't pick up these constant, constants
+
+52
+00:04:16,550 --> 00:04:18,380
+can never be reassigned.
+
+53
+00:04:18,410 --> 00:04:21,270
+So with that, let's use updatedIngredients
+
+54
+00:04:21,290 --> 00:04:30,140
+here, so this new constant I just created and updatedIng here and then updatedState, down there.
+
+55
+00:04:30,140 --> 00:04:33,690
+Now for setIngredients, it's a bit easier, there
+
+56
+00:04:33,710 --> 00:04:39,750
+I also want to return a call to updateObject, so to the function we're importing,
+
+57
+00:04:39,750 --> 00:04:45,810
+I pass state of course and the second argument should be a javascript object where I now just copy
+
+58
+00:04:45,810 --> 00:04:49,040
+all the code I previously also passed to this new object.
+
+59
+00:04:49,270 --> 00:04:56,600
+So now I'm using my utility function here too to update the state and the same of course down here for
+
+60
+00:04:56,600 --> 00:04:58,220
+the error, there
+
+61
+00:04:58,230 --> 00:05:06,500
+I also want to call updateState, like this, updateObject I mean.
+
+62
+00:05:06,550 --> 00:05:07,940
+So as always updateObject
+
+63
+00:05:07,960 --> 00:05:16,380
+where I pass the state and then object where I set error to true, like this.
+
+64
+00:05:16,490 --> 00:05:22,750
+So that is the ingredient reducer updated with our utility function,
+
+65
+00:05:22,760 --> 00:05:25,790
+let's now do the same for that order reducer.
+
+66
+00:05:25,790 --> 00:05:36,020
+There I'll also import as a named export updateObject from the utility file which we can find one level
+
+67
+00:05:36,020 --> 00:05:40,000
+above our reducers folder and now I'll use updateObject here too.
+
+68
+00:05:40,010 --> 00:05:46,150
+So I'll return updateObject, pass the state and pass a javascript object where purchased is set to false,
+
+69
+00:05:46,220 --> 00:05:50,250
+you can remove this code here, the same here,
+
+70
+00:05:50,600 --> 00:05:58,290
+updateObject pass the state and an object where we set loading to false, like this,
+
+71
+00:05:58,340 --> 00:05:59,390
+remove that code.
+
+72
+00:06:00,220 --> 00:06:05,840
+And also when we get success case here, there we of course also want to update an object,
+
+73
+00:06:05,860 --> 00:06:17,850
+so here I will update an object where I pass the state of course and then all these things here as properties
+
+74
+00:06:17,880 --> 00:06:21,430
+of a javascript object, can get rid of the code thereafter.
+
+75
+00:06:21,660 --> 00:06:23,880
+And of course we update another object here, here
+
+76
+00:06:23,910 --> 00:06:25,150
+newOrder,
+
+77
+00:06:25,170 --> 00:06:28,260
+there we also update an object,
+
+78
+00:06:28,260 --> 00:06:32,720
+we get the action order data here as an object
+
+79
+00:06:32,760 --> 00:06:43,110
+and I want to pass a new property to it, the id which should be action order ID and with that, I can get
+
+80
+00:06:43,110 --> 00:06:45,200
+rid of this code here.
+
+81
+00:06:45,450 --> 00:06:48,970
+So now we got this using our updateObject function too
+
+82
+00:06:49,350 --> 00:06:51,090
+and we're nearing the end,
+
+83
+00:06:51,090 --> 00:06:57,870
+let's also do this for purchaseBurger, burger fail, fail, have the state here, loading set to false.
+
+84
+00:06:58,020 --> 00:07:07,640
+So there also using the updateObject function and I'll quickly duplicate this for fetch order start
+
+85
+00:07:07,910 --> 00:07:09,450
+except for data here,
+
+86
+00:07:09,730 --> 00:07:17,500
+as you see I want to set loading to true and for fetchOrderSuccess, I'll call updateObject also
+
+87
+00:07:17,510 --> 00:07:24,950
+pass the state and then I'll have orders and loading set to false as properties which I want to pass
+
+88
+00:07:25,250 --> 00:07:28,600
+as a javascript object, like that.
+
+89
+00:07:29,620 --> 00:07:33,650
+And now the last updateObject called down there for fetch orders fail,
+
+90
+00:07:33,740 --> 00:07:40,720
+there I'll pass the existing state which is to be updated and an object where I set loading to false.
+
+91
+00:07:40,730 --> 00:07:43,120
+Again all of that is optional
+
+92
+00:07:43,360 --> 00:07:45,820
+but it does re-use that utility function
+
+93
+00:07:45,820 --> 00:07:50,200
+and if you ever were to change the logic you use for updating an object, you only have to do it in one
+
+94
+00:07:50,200 --> 00:07:51,400
+place.
+
+95
+00:07:51,430 --> 00:07:56,380
+Now let's quickly see if that all works, loading does work,
+
+96
+00:07:56,380 --> 00:07:58,570
+managing the burger does seem to work
+
+97
+00:07:58,570 --> 00:08:01,450
+so that is all good, I guess.
+
+98
+00:08:01,660 --> 00:08:04,300
+Let's quickly go to the checkout page
+
+99
+00:08:04,300 --> 00:08:05,560
+so that's that's looking good,
+
+100
+00:08:05,560 --> 00:08:06,520
+seems to work.
+
+101
+00:08:06,550 --> 00:08:07,510
+What else can we do?
+
+102
+00:08:07,520 --> 00:08:09,120
+Let's have a look in the next lecture.
+

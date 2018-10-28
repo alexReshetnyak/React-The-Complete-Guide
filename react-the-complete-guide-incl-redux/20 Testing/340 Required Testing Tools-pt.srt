@@ -1,0 +1,108 @@
+1
+00:00:02,070 --> 00:00:05,220
+Ento aprendemos que o teste pode fazer
+
+2
+00:00:05,220 --> 00:00:07,170
+sentido, como testamos ento?
+
+3
+00:00:07,530 --> 00:00:13,370
+Precisamos de duas ferramentas para escrever bons testes e poder testar nossa aplicao de reao.
+
+4
+00:00:13,410 --> 00:00:16,270
+A primeira ferramenta  o executor de
+
+5
+00:00:16,350 --> 00:00:20,690
+teste,  basicamente uma ferramenta que  responsvel por executar nossos
+
+6
+00:00:20,730 --> 00:00:27,720
+testes para executar o cdigo, testar cdigo e fornecer uma biblioteca de validao que no final  uma
+
+7
+00:00:27,720 --> 00:00:31,610
+biblioteca que nos permite fazer comparaes e potencialmente lanar alguns erros.
+
+8
+00:00:31,650 --> 00:00:38,700
+A idia por trs dos testes de unidade  que eles no so executados no navegador, mas sim com o nodeJS, embora geralmente emulado para estar
+
+9
+00:00:38,760 --> 00:00:45,530
+em um ambiente de navegador com a ajuda de pacotes especficos de javascript. O executor de testes, ento,  a ferramenta principal
+
+10
+00:00:45,580 --> 00:00:50,360
+que simplesmente executa nosso cdigo usando esse ambiente e o bom 
+
+11
+00:00:50,520 --> 00:00:55,140
+criar um aplicativo de resposta j vem com um ambiente de teste
+
+12
+00:00:55,140 --> 00:00:56,510
+pr-configurado que podemos construir.
+
+13
+00:00:56,850 --> 00:01:02,490
+Ento, esse  o corredor de teste e vamos usar jest neste curso, jest j est instalado no
+
+14
+00:01:02,490 --> 00:01:08,460
+aplicativo criado com criar reagir aplicativo e  uma ferramenta de teste de javascript popular que no se limita
+
+15
+00:01:08,490 --> 00:01:15,450
+a reagir, mas muitas vezes usado em aplicativos de reagir. Agora rodar o teste  uma coisa, quando estamos trabalhando
+
+16
+00:01:15,450 --> 00:01:22,380
+com componentes que reagem, ns tambm precisamos de uma maneira de emular esses componentes, ento basicamente montando-os em algum dom inexistente
+
+17
+00:01:22,380 --> 00:01:28,350
+que voc poderia dizer e ento percorrendo nossos componentes e queremos fazer isso de uma forma maneira eficiente
+
+18
+00:01:28,350 --> 00:01:34,340
+e rpida, sem ter que realmente criar toda a rvore componente que tambm pode introduzir alguns efeitos colaterais.
+
+19
+00:01:34,680 --> 00:01:42,030
+Para isso, precisamos de utilitrios de teste que nos ajudem a testar e, especificamente, precisamos da ajuda recm-descrita para
+
+20
+00:01:42,030 --> 00:01:48,510
+simular o aplicativo de reao, montar componentes e cavar aquele dom que  criado com o reagir.
+
+21
+00:01:49,230 --> 00:01:55,680
+Neste curso, poderamos reagir como utilitrios de teste, que  a ferramenta oficial de utilidade, mas h outra ferramenta
+
+22
+00:01:55,680 --> 00:02:01,160
+que se tornou mais e mais importante e interessante e tambm  sugerida pela equipe de
+
+23
+00:02:01,260 --> 00:02:04,980
+reao e que  a enzima. Enzyme  uma ferramenta desenvolvida
+
+24
+00:02:04,980 --> 00:02:11,400
+pela AirBnB, eles usam reagir em muitos dos seus projetos e eles compartilham essa ferramenta que facilita a
+
+25
+00:02:11,610 --> 00:02:13,480
+montagem de componentes e, em
+
+26
+00:02:13,530 --> 00:02:18,710
+seguida, navegar por eles e, naturalmente, mostrar-lhe como usar as ferramentas, brincadeira e enzima nesse curso.
+
+27
+00:02:18,720 --> 00:02:24,450
+Ento, essas so as ferramentas de teste, que nos deixam apenas com uma pergunta: o que devemos testar?
+

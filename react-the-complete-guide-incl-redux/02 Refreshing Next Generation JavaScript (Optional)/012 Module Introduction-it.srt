@@ -1,0 +1,80 @@
+1
+00:00:02,290 --> 00:00:06,500
+Benvenuto a smantellare in questo coro, lo dir subito.
+
+2
+00:00:06,520 --> 00:00:08,480
+Questo modulo  opzionale
+
+3
+00:00:08,590 --> 00:00:15,780
+Se conosci gi il javascript di prossima generazione, cose come le funzioni Aero lasciano Konst e cos via.
+
+4
+00:00:15,880 --> 00:00:22,450
+Si potrebbe molto giunti questo modulo per voi modulo se sapete javascript, ma non hanno lavorato con
+
+5
+00:00:22,450 --> 00:00:30,040
+ESX o qualsiasi culto ABA di uno script, quindi javascript come lo usiamo in questo corso potrebbe a volte sembrare
+
+6
+00:00:30,040 --> 00:00:35,680
+una nuova lingua per te a causa di tutti la prossima generazione di caratteristiche reagisce
+
+7
+00:00:35,680 --> 00:00:36,600
+tipicamente da Eppes.
+
+8
+00:00:36,730 --> 00:00:41,960
+Ora non sto usando queste funzionalit di prossima generazione perch voglio mettermi in mostra o qualcosa del genere.
+
+9
+00:00:42,100 --> 00:00:48,250
+React EBS tipicamente sono costruiti con l'ultima versione di javascript e l'utilizzo delle funzionalit next gen ci
+
+10
+00:00:48,590 --> 00:00:55,240
+permette di scrivere applicazioni di re-act pulite e solide reagire e risolvere utilizzando molte delle migliori caratteristiche di Chalis
+
+11
+00:00:55,240 --> 00:00:56,150
+di prossima generazione.
+
+12
+00:00:56,380 --> 00:01:01,780
+Pertanto  importante per voi comprendere tutte queste caratteristiche e non essere confusi da questo.
+
+13
+00:01:01,870 --> 00:01:06,020
+A volte parole dall'aspetto davvero strano di javascript.
+
+14
+00:01:06,220 --> 00:01:12,310
+Javascript si sta evolvendo rapidamente e quindi le nuove funzionalit possono sembrare diverse ma ci permettono
+
+15
+00:01:12,310 --> 00:01:15,330
+davvero come sviluppatori di fare cose pi potenti.
+
+16
+00:01:15,370 --> 00:01:21,420
+usiamo in questo Cloro, in modo che il codice da allora in poi si spera un po 'meno strano per te.
+
+17
+00:01:21,470 --> 00:01:24,700
+Questo Marshallese per te, ti voglio su una caratteristica fondamentale che
+
+18
+00:01:24,820 --> 00:01:28,460
+E di nuovo sentiti libero di saltare questo modulo se gi lo conosci.
+
+19
+00:01:28,510 --> 00:01:33,460
+Sentiti libero di tornarci sempre se pi tardi nel corso incontri qualcosa che ti
+
+20
+00:01:33,460 --> 00:01:34,210
+sembra strano.
+

@@ -1,0 +1,204 @@
+1
+00:00:01,990 --> 00:00:05,440
+Na ltima leitura, editamos o cdigo para obter alguns dados.
+
+2
+00:00:05,590 --> 00:00:11,950
+Claro que esse  um primeiro passo enorme, mas seria ainda mais til se pudssemos escrever
+
+3
+00:00:11,950 --> 00:00:18,940
+esses dados na tela se pudesse renderiz-lo para a tela e substitudo  um raio de mensagens Dammy
+
+4
+00:00:18,940 --> 00:00:26,380
+aqui com matriz gerada dinamicamente com base nas postagens que ns buscado porque precisamos gerenciar algum estado de curso
+
+5
+00:00:26,380 --> 00:00:29,340
+e devemos ter algumas postagens nesse estado.
+
+6
+00:00:29,470 --> 00:00:32,290
+Inicialmente, isso pode ser uma matriz vazia.
+
+7
+00:00:32,320 --> 00:00:38,530
+Agora eu quero atualizar este estado uma vez que buscamos dados do servidor e, portanto, o local
+
+8
+00:00:38,620 --> 00:00:42,140
+para chamar este estado definido est dentro do mtodo ento.
+
+9
+00:00:42,460 --> 00:00:50,200
+Se chamssemos isso de fora disso, ento os X-ers recebem Meffert, ns no teramos deposto ainda por causa do
+
+10
+00:00:50,200 --> 00:00:51,860
+que eu mencionei anteriormente.
+
+11
+00:00:52,090 --> 00:00:58,900
+O cdigo javascript no espera que isso termine, ento, se chamar imediatamente esse estado definido depois
+
+12
+00:00:58,900 --> 00:01:02,020
+do mtodo get, os dados no sero buscados.
+
+13
+00:01:02,440 --> 00:01:10,550
+Ento, dentro do bloco, ento,  o lugar certo e podemos definir mensagens nos dados de resposta.
+
+14
+00:01:10,600 --> 00:01:16,510
+Voc viu no console que a propriedade de dados est disponvel nesse objeto de resposta e
+
+15
+00:01:16,510 --> 00:01:24,460
+que a propriedade de dados contm uma srie de postagens para que eu comentei o log de resposta e, em vez disso,
+
+16
+00:01:24,490 --> 00:01:26,170
+configurei meu estado nas postagens.
+
+17
+00:01:26,170 --> 00:01:30,380
+Agora vamos exibir mensagens dinamicamente no mtodo de renderizao encaminhado.
+
+18
+00:01:30,400 --> 00:01:38,260
+Eu criarei uma nova constante para suas postagens e essa deve ser uma srie de elementos GSX para usar
+
+19
+00:01:38,350 --> 00:01:40,180
+essas postagens no estado.
+
+20
+00:01:40,180 --> 00:01:46,720
+Acabamos de atualizar isso com os dados do servidor e, assim como voc aprendeu, chamou o mtodo do mapa para
+
+21
+00:01:46,780 --> 00:01:52,570
+mape-lo em uma srie de vrios elementos x e o mtodo do mapa, obviamente, retorna uma nova matriz
+
+22
+00:01:52,570 --> 00:01:54,790
+que eu armazeno nesses posts constante.
+
+23
+00:01:54,890 --> 00:01:56,830
+Agora, no mtodo do mapa, voc.
+
+24
+00:01:56,840 --> 00:02:03,560
+uma entrada naquela funo que estamos passando para o mtodo do mapa e l eu quero retornar um j como elemento x.
+
+25
+00:02:03,560 --> 00:02:05,480
+Eu recebo minhas postagens individuais como
+
+26
+00:02:05,480 --> 00:02:08,100
+Quero retornar minha nica publicao aqui.
+
+27
+00:02:09,030 --> 00:02:11,420
+Como est l embaixo.
+
+28
+00:02:11,420 --> 00:02:18,060
+Ento, claro, quero exibir esta matriz de postagens que est armazenada nesses posts constante.
+
+29
+00:02:18,060 --> 00:02:21,210
+Agora, esta publicao, pelo menos, produz o ttulo.
+
+30
+00:02:21,210 --> 00:02:25,260
+Se inspecionarmos o componente de publicao, veremos que eu exibo o tile aqui.
+
+31
+00:02:25,650 --> 00:02:27,210
+Ento, portanto, seu.
+
+32
+00:02:27,270 --> 00:02:32,180
+Eu provavelmente quero obter alguns adereos talvez um adereos com o ttulo do nome.
+
+33
+00:02:32,180 --> 00:02:35,810
+Ento, deve propriedade do ttulo de pasters para uma nica publicao.
+
+34
+00:02:35,970 --> 00:02:43,680
+Ento, no recipiente de bloco, eu preciso definir uma propriedade de ttulo aqui e passar a postar que ensinou que o ttulo
+
+35
+00:02:43,680 --> 00:02:50,130
+da propriedade do ttulo neste elemento de publicao est disponvel por causa dos dados que buscamos do servidor apenas
+
+36
+00:02:50,130 --> 00:02:50,710
+para tranquiliz-lo.
+
+37
+00:02:51,060 --> 00:02:52,940
+Voc j ficou mimado que funcionou.
+
+38
+00:02:53,190 --> 00:02:58,260
+Mas hoje voltamos do servio Desirae e cada elemento aqui tem uma propriedade de ttulo.
+
+39
+00:02:58,710 --> 00:03:01,450
+Ento, como voc pode ver claramente, isso j funciona aqui.
+
+40
+00:03:01,650 --> 00:03:02,970
+O estilo  um pouco fora.
+
+41
+00:03:02,970 --> 00:03:08,580
+Ns tambm exibimos todas as postagens que podem ser demais e que no estamos configurados para manter-se adequados.
+
+42
+00:03:08,640 --> 00:03:10,750
+Ento vamos consertar essas trs coisas.
+
+43
+00:03:10,770 --> 00:03:12,280
+Vamos definir a chave.
+
+44
+00:03:12,510 --> 00:03:16,450
+E, como pode verificar, verificando os dados que retornamos do servidor.
+
+45
+00:03:16,560 --> 00:03:19,760
+Voc ver que h propriedade id em cada publicao.
+
+46
+00:03:19,800 --> 00:03:23,750
+Isso, obviamente, faz uma chave perfeita porque  nico.
+
+47
+00:03:23,790 --> 00:03:30,120
+Agora, no que diz respeito ao estilo e  quantidade de postagens para o estilo, vamos ao componente
+
+48
+00:03:30,120 --> 00:03:33,320
+de postagem e mudamos para 2, talvez 250 pixels.
+
+49
+00:03:33,690 --> 00:03:37,020
+Agora eles tm um pouco mais espao para o ttulo.
+
+50
+00:03:37,020 --> 00:03:41,920
+Ainda h muitas postagens e  algo que eu me ocuparia na prxima palestra.
+
+51
+00:03:42,000 --> 00:03:44,750
+Quando eu mostr-lo como transformar os dados que voc retornou.
+

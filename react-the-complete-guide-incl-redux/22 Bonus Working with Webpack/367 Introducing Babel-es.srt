@@ -1,0 +1,232 @@
+1
+00:00:02,160 --> 00:00:08,100
+Agregu mi regla aqu en la ltima conferencia, pero falta un cargador y para javascript mencion que
+
+2
+00:00:08,100 --> 00:00:15,420
+quiero usar babel, el estndar de facto para transpilar mi javascript. Lo instalaremos nuevamente con npm install --save-dev
+
+3
+00:00:15,630 --> 00:00:21,830
+porque es una dependencia de solo desarrollo y necesitamos instalar el paquete
+
+4
+00:00:21,840 --> 00:00:23,850
+babel-loader, que sin embargo
+
+5
+00:00:23,910 --> 00:00:31,740
+solo proporciona el gancho para el paquete web. Babel en s es una biblioteca que tiene el
+
+6
+00:00:31,740 --> 00:00:34,570
+conocimiento de cmo transpilar su javascript,
+
+7
+00:00:34,710 --> 00:00:39,660
+por lo que tambin necesitamos instalar babel-core que contenga ese conocimiento.
+
+8
+00:00:39,660 --> 00:00:46,230
+Ahora tambin necesitamos algunas configuraciones para decirle bsicamente a babel qu tipo de
+
+9
+00:00:46,440 --> 00:00:54,330
+javascript de prxima generacin o qu sintaxis especial de JavaScript queremos apoyar y aqu, estos
+
+10
+00:00:54,330 --> 00:01:06,150
+son los llamados preajustes, los paquetes que necesitamos son babel-preset-reac para soportar jsx y babel -preset-env para un preajuste de ajuste de entorno
+
+11
+00:01:06,180 --> 00:01:13,320
+que bsicamente tiene un vistazo a las caractersticas que usamos y transpone automticamente todo
+
+12
+00:01:13,320 --> 00:01:14,550
+correctamente.
+
+13
+00:01:14,670 --> 00:01:17,620
+Estas son las dependencias que instalar ahora, ahora tambin
+
+14
+00:01:17,820 --> 00:01:24,180
+tenemos que configurar nuestro proyecto, primero tenemos que configurar babel. As que la instalacin finaliz, ahora necesitamos configurar Babel
+
+15
+00:01:24,180 --> 00:01:24,700
+porque
+
+16
+00:01:24,720 --> 00:01:30,630
+el hecho de que hayamos instalado los preajustes no hace que Babel los use, no analiza
+
+17
+00:01:30,630 --> 00:01:36,510
+todos los dems paquetes que instalamos y luego ve si hay un preajuste dentro de ellos.
+
+18
+00:01:36,540 --> 00:01:42,040
+Entonces, en su lugar, agregamos un nuevo archivo, el punto y el punto al principio es importante,. babelrc.
+
+19
+00:01:43,230 --> 00:01:47,710
+ese es un archivo de configuracin que Babel leer automticamente si est en nuestra carpeta raz, por lo
+
+20
+00:01:47,730 --> 00:01:56,430
+tanto, en la misma carpeta donde luego ejecutaremos nuestro flujo de trabajo de compilacin de la carpeta web. El archivo babelrc toma la configuracin adyacente y all debemos agregar un
+
+21
+00:01:56,430 --> 00:02:00,610
+nodo de ajustes preestablecidos, ahora podemos hacer que Babel est al
+
+22
+00:02:00,810 --> 00:02:06,810
+tanto de todos los ajustes preestablecidos que queremos aplicar y aqu, quiero aplicar dos de los
+
+23
+00:02:06,840 --> 00:02:07,540
+ajustes preestablecidos,
+
+24
+00:02:07,560 --> 00:02:10,730
+el primero es env y el segundo es reaccionar.
+
+25
+00:02:11,010 --> 00:02:15,930
+As que estos son los dos preajustes que instalamos sin el preestablecimiento de babel al
+
+26
+00:02:16,050 --> 00:02:21,120
+principio, solo el camino al final as que reacciona y env, estos son los dos preajustes.
+
+27
+00:02:21,120 --> 00:02:26,480
+Ahora el preajuste env recibir alguna configuracin especial de mi parte, lo hago
+
+28
+00:02:26,550 --> 00:02:33,000
+encerrndolo en una matriz con corchetes y luego el segundo argumento despus del nombre del preajuste
+
+29
+00:02:33,000 --> 00:02:36,160
+es un objeto javascript donde puedo configurarlo y
+
+30
+00:02:36,260 --> 00:02:40,250
+aqu quiero establecer los objetivos de ese preset, lo que
+
+31
+00:02:40,260 --> 00:02:43,650
+significa qu versiones de navegador quiero admitir, eso
+
+32
+00:02:43,650 --> 00:02:44,970
+por supuesto es importante.
+
+33
+00:02:44,970 --> 00:02:49,220
+Identifica automticamente qu caractersticas de la prxima generacin uso, pero
+
+34
+00:02:49,310 --> 00:02:55,240
+para saber qu significa la prxima generacin, necesita saber cul es mi gen actual,
+
+35
+00:02:55,260 --> 00:02:58,590
+entonces, a qu navegadores me refiero con mi aplicacin?
+
+36
+00:02:58,830 --> 00:03:05,490
+As que los objetivos son otro objeto de JavaScript donde podemos configurar navegadores y navegadores, y
+
+37
+00:03:05,500 --> 00:03:12,780
+luego podemos usar el tipo de configuracin de la lista de navegadores, puedes buscar en la lista
+
+38
+00:03:12,900 --> 00:03:20,640
+de navegadores en Google para encontrar este repositorio aqu para obtener ms informacin sobre la sintaxis que puedes
+
+39
+00:03:20,640 --> 00:03:22,530
+usar para configurar navegadores.
+
+40
+00:03:22,890 --> 00:03:23,920
+Sin embargo, la
+
+41
+00:03:23,940 --> 00:03:27,050
+sintaxis que te mostrar aqu es una configuracin bastante comn.
+
+42
+00:03:27,390 --> 00:03:32,660
+Entonces, lo que queremos hacer aqu es apuntar a un mayor 1%
+
+43
+00:03:33,060 --> 00:03:41,550
+de cuota de mercado o las dos ltimas versiones, de modo que esto se combine con o en el medio.
+
+44
+00:03:41,550 --> 00:03:48,300
+As que ahora este es el entorno de destino que queremos apoyar y esto es lo que Babel tendr en
+
+45
+00:03:48,300 --> 00:03:52,000
+cuenta al compilar nuestro javascript de prxima generacin con la generacin
+
+46
+00:03:52,020 --> 00:03:56,960
+actual, lo compilar a javascript que se ejecuta en navegadores que cumplen con este criterio.
+
+47
+00:03:57,240 --> 00:04:00,300
+As que con eso, obtenemos la
+
+48
+00:04:00,300 --> 00:04:09,660
+configuracin babel terminada, ahora podemos agregar el cargador babel en nuestra configuracin de paquete web, all agregar un cargador
+
+49
+00:04:09,660 --> 00:04:10,990
+entre comillas simples,
+
+50
+00:04:11,190 --> 00:04:12,860
+el cargador babel.
+
+51
+00:04:12,870 --> 00:04:18,630
+Entonces aqu tomo el nombre completo del paquete que instalamos, babel-loader.
+
+52
+00:04:19,170 --> 00:04:26,850
+As que ahora se aplicar a los archivos javascript que compilan las caractersticas jsx y javascript de
+
+53
+00:04:26,850 --> 00:04:36,330
+la prxima generacin, pero an as fallara porque tambin importamos CSS que el paquete web no entendera, solo entiende javascript de
+
+54
+00:04:36,330 --> 00:04:37,710
+forma nativa y
+
+55
+00:04:37,980 --> 00:04:40,170
+en el componente pizzaImage, importara
+
+56
+00:04:40,370 --> 00:04:43,850
+css e incluso una imagen, as que tenemos
+
+57
+00:04:43,980 --> 00:04:45,920
+que apoyar eso tambin.
+
+58
+00:04:46,170 --> 00:04:49,950
+Agreguemos soporte para este tipo de archivos en la prxima conferencia.
+

@@ -1,0 +1,220 @@
+1
+00:00:02,330 --> 00:00:10,850
+Projemizi dev sunucusu tarafndan veya daha sonra retime hazr hale
+
+2
+00:00:10,850 --> 00:00:16,880
+getirmek iin dizinimizi balamalyz. html dosyas oluturulan kt dosyalarna, dev sunucuyu kullanrken
+
+3
+00:00:16,880 --> 00:00:22,100
+sadece bellekte saklanrlar ancak yine de retilirler. Bunun iin bir webpack eklentisi
+
+4
+00:00:22,220 --> 00:00:28,610
+yklemeliyiz, npm install --save-, kaydet dev, bana bir sr tire, kaydet-dev ile,
+
+5
+00:00:28,610 --> 00:00:33,390
+html-webpack-plugin'i kurabiliriz, bu zel bir eklentidir. html dosyamz kmza
+
+6
+00:00:33,830 --> 00:00:40,940
+ve web paketimize balamak iin bunu otomatik olarak yapar ve birlikte verilen komut dosyasn
+
+7
+00:00:41,000 --> 00:00:47,440
+ve bu html dosyasna enjekte eder. Webpack yaplandrmasnda, imdi eklentileri ekliyoruz, kk
+
+8
+00:00:47,450 --> 00:00:49,920
+yaplandrma seviyesinde yeni bir dm
+
+9
+00:00:49,920 --> 00:00:56,720
+var, eklentiler ve bir argman veya bir deer olarak bir dizi almalym,
+
+10
+00:00:56,720 --> 00:00:57,340
+demeliyim.
+
+11
+00:00:57,690 --> 00:01:00,420
+Ve imdi ilk biz html
+
+12
+00:01:00,440 --> 00:01:04,900
+webpack eklentisi sylemeliyim ya da ithal etmeliyiz, bu
+
+13
+00:01:04,910 --> 00:01:08,860
+yzden htmlWebpackPlugin ismini vereceim bir sabit oluturacam
+
+14
+00:01:08,990 --> 00:01:15,290
+ama adnz size kalm ve burada html-webpack-plugin gerektirecektir, yeni yklediimiz paket.
+
+15
+00:01:15,290 --> 00:01:17,100
+imdi eklenti dizisinde,
+
+16
+00:01:17,180 --> 00:01:25,190
+yeni bir HTMLmlWebpackPlugin rnei yaratyorum ve bu eklentiyi yaplandrdmz kurucuya bir nesne
+
+17
+00:01:25,190 --> 00:01:27,280
+gnderiyoruz. Burada bir
+
+18
+00:01:27,290 --> 00:01:32,930
+ablon kuracam, bu yzden bir temel olarak kullanmak istediim html dosyas
+
+19
+00:01:32,930 --> 00:01:43,040
+ve tabii ki html dosyasn kaynak klasrde kullanmak istiyorum. Bu yzden dirname ile gstereceim ve sonra / source /
+
+20
+00:01:43,040 --> 00:01:45,370
+index ekleyeceim. html, ona
+
+21
+00:01:45,410 --> 00:01:47,550
+bir yol ina etmek.
+
+22
+00:01:47,550 --> 00:01:50,960
+Yani imdi ablon olarak kullanmak istediimiz dosyaya iaret
+
+23
+00:01:50,990 --> 00:01:58,400
+ediyoruz, ekstra yaplandrma yapabildiim gvdeye eyalarm enjekte etmek istiyorum ki buraya eklentiyi ve kt dosyasna aktarabiliriz,
+
+24
+00:01:58,430 --> 00:02:02,890
+dosya ad da dizin olmal. html, sonuta retecei dosya,
+
+25
+00:02:02,930 --> 00:02:06,780
+sadece sunucuda bellek iin, daha sonra bunu
+
+26
+00:02:06,890 --> 00:02:08,150
+retmek iin
+
+27
+00:02:08,150 --> 00:02:14,330
+farkl bir i ak kullandmzda, retim iin, bize bir sunucuya ykleyebileceimiz
+
+28
+00:02:14,330 --> 00:02:16,310
+gerek dosyalar verecektir.
+
+29
+00:02:16,340 --> 00:02:20,040
+Yani ekledik, imdi npm start
+
+30
+00:02:20,090 --> 00:02:25,040
+balayalm, imdi webpack'den html dosyasna balanty almalyz,
+
+31
+00:02:25,050 --> 00:02:32,660
+o zaman ie yarayp yaramadn grelim. Localhost8080'i tekrar ziyaret edelim ve en azndan bo
+
+32
+00:02:32,660 --> 00:02:35,630
+bir sayfa gryoruz, ancak baz hatalar var.
+
+33
+00:02:35,720 --> 00:02:38,900
+imdi bunlar iyi bir iaret
+
+34
+00:02:38,900 --> 00:02:46,010
+olan tepki hatalardr, uygulamamzn alt grlyor, bize bileenimizi tanmlad dosyadan da aktarmay
+
+35
+00:02:46,010 --> 00:02:48,620
+unuttuumuzu bildiriyor. Kontrol edelim, pizzaImage'i,
+
+36
+00:02:48,620 --> 00:02:56,240
+pizza snf bileenini ve kullanc bileenini da aktaryoruz ancak uygulamay asla ihra etmedik, bu yzden uygulama
+
+37
+00:02:56,290 --> 00:02:56,960
+bileenine
+
+38
+00:02:57,050 --> 00:03:01,130
+varsaylan bir ihracat ekleyelim, bu her zaman bir ey
+
+39
+00:03:01,130 --> 00:03:03,620
+oluturmada tehlike oluturuyor ve imdi
+
+40
+00:03:03,890 --> 00:03:05,300
+bu daha iyi
+
+41
+00:03:05,300 --> 00:03:12,920
+grnyor Kullanclar gryoruz ve imdi ilgin oluyor, bu pizza. Biz pizza grmek ve a sekmesini incelemek mthi
+
+42
+00:03:12,920 --> 00:03:19,730
+ve ben kullanclara geri gitmek ve uygulamay yeniden yklemek, a isteklerini izlemek, 0
+
+43
+00:03:19,730 --> 00:03:21,730
+olduunu gryoruz. js dosyas m?
+
+44
+00:03:21,740 --> 00:03:28,100
+Bizim indirdiimiz tembel ykl javascript dosyas, bu yzden tembel ykleme burada alyor ve
+
+45
+00:03:28,100 --> 00:03:29,740
+bizim tepki uygulama
+
+46
+00:03:29,840 --> 00:03:33,450
+alyor, stil ayn zamanda tekme gibi grnyor,
+
+47
+00:03:33,470 --> 00:03:40,520
+biz pizza grntsn incelediimizde burada css modllerini kullanyoruz ve stilleri alyoruz css dosyalarmzda kurulum yapyoruz.
+
+48
+00:03:40,520 --> 00:03:44,330
+imdi burada yapacam her ey balantlar zerinde hzl ve kolay
+
+49
+00:03:44,330 --> 00:03:49,800
+bir zm, ikinci balantnn nnde bir boluk bulunmad gereini beenmedim, hadi bunun gibi dzeltelim ama
+
+50
+00:03:49,820 --> 00:03:51,080
+bu tamamen kozmetik.
+
+51
+00:03:51,080 --> 00:03:57,920
+Bizim iin nemli olan, alan bir i akmz, bu derste rendiiniz zelliklere sahip
+
+52
+00:03:57,950 --> 00:04:02,450
+bir tepki uygulamas oluturabileceimiz bir alma projesi kurulumumuz.
+
+53
+00:04:02,450 --> 00:04:05,900
+imdi sadece gelitirme i ak, gelitirme sunucusu, eer
+
+54
+00:04:06,050 --> 00:04:11,510
+imdi bu uygulamay gerek bir sunucuya gndermek istiyorsak, hazrlanmak ve retim iin optimize
+
+55
+00:04:11,510 --> 00:04:15,050
+edilmek zere kurulum iin baz ayarlamalar yapmamz gerekecek.
+

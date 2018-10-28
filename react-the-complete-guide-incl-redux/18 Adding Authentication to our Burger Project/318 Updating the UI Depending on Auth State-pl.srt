@@ -1,0 +1,360 @@
+1
+00:00:02,280 --> 00:00:07,230
+W ostatnim wykadzie w kocu uylimy tokena, aby uzyska dostp do chronionych zasobw.
+
+2
+00:00:07,230 --> 00:00:13,530
+Teraz chc si upewni, e moemy zobaczy w naszym interfejsie w aplikacji, czy jestemy uwierzytelnieni czy nie.
+
+3
+00:00:13,530 --> 00:00:18,000
+W tej chwili zawsze widzimy tutaj uwierzytelnianie, ktre prowadzi nas
+
+4
+00:00:18,240 --> 00:00:26,100
+do formularza uwierzytelnienia, ale nawet jeli z powodzeniem zalogujemy si tutaj, nadal zobaczymy tutaj uwierzytelnienie, lepiej byoby
+
+5
+00:00:26,100 --> 00:00:30,980
+si wylogowa tutaj, gdybymy uwierzytelnili, abymy mogli zobaczy, e jestemy uwierzytelnieni.
+
+6
+00:00:31,050 --> 00:00:31,590
+Oczywicie moesz
+
+7
+00:00:31,590 --> 00:00:34,690
+rwnie pokaza co podobnego uytkownikowi, aby uzyska dostp do
+
+8
+00:00:34,860 --> 00:00:37,060
+Twojego profilu, ale pozostan przy wylogowaniu.
+
+9
+00:00:37,200 --> 00:00:43,080
+To byby wietny dodatek do naszej aplikacji i jest atwy do wdroenia.
+
+10
+00:00:43,170 --> 00:00:50,760
+Zarzdzamy tym, co widzimy w obszarze nawigacji tutaj, w folderze komponentw pod
+
+11
+00:00:50,850 --> 00:00:52,510
+pozycjami nawigacji nawigacyjnej,
+
+12
+00:00:52,530 --> 00:01:01,170
+w tym komponencie okrelamy, co jest w naszym menu zarwno responsywne, jak i nawigacyjne.
+
+13
+00:01:01,230 --> 00:01:06,410
+Pomys polega na tym, aby wywietla tylko element nawigacyjny
+
+14
+00:01:06,510 --> 00:01:08,370
+z uwierzytelnianiem, jeli
+
+15
+00:01:08,430 --> 00:01:14,810
+jeste nieuwierzytelniony, wic jeli musisz si zalogowa, zaloguj si i poka
+
+16
+00:01:14,910 --> 00:01:17,690
+link wylogowania, jeli jeste zalogowany.
+
+17
+00:01:17,700 --> 00:01:25,920
+Musimy wic sprawdzi nasz stan, nasz stan logowania w elementach nawigacyjnych, elementy nawigacyjne s oczywicie
+
+18
+00:01:25,920 --> 00:01:30,490
+skadnikiem prezentacji, wic nie moemy poczy tego z redux.
+
+19
+00:01:30,540 --> 00:01:36,160
+Chocia moglibymy, moglibymy po prostu przeksztaci go w klasowy, a nastpnie uy poczenia na
+
+20
+00:01:36,450 --> 00:01:37,550
+tym komponencie, moesz
+
+21
+00:01:37,590 --> 00:01:38,830
+to zrobi, ale
+
+22
+00:01:38,880 --> 00:01:44,370
+nie polecibym tego, poniewa amie to pomys posiadania kilku komponentw kontenerowych, ktre s poczone
+
+23
+00:01:44,370 --> 00:01:47,660
+z tym komponentem. przechowywa i mie wiele gupich
+
+24
+00:01:47,910 --> 00:01:55,530
+komponentw, ktre nie wiedz o sklepie, wic nie polecabym tego podejcia. Lepszym rozwizaniem byoby wybranie odpowiedniego pojemnika, ktry faktycznie aduje elementy
+
+25
+00:01:55,530 --> 00:01:57,720
+nawigacyjne, a tutaj nie ma go
+
+26
+00:01:57,990 --> 00:02:03,780
+w folderze kontenera, ale w folderze ukadu, poniewa uywamy go do zawijania innych komponentw.
+
+27
+00:02:04,290 --> 00:02:12,510
+Ukad. Plik js jest komponentem opartym na klasach i tam implementujemy pasek narzdzi
+
+28
+00:02:12,600 --> 00:02:16,650
+i sidedrawer, ktre s oczywicie elementami, ktre na kocu uywaj elementw nawigacyjnych.
+
+29
+00:02:16,680 --> 00:02:26,250
+Byoby wic rozsdnie poczy ten ukad z naszym sklepem, abymy mogli przekaza informacje auth do paska narzdzi i
+
+30
+00:02:26,250 --> 00:02:33,090
+bocznej szuflady, ktra z kolei mogaby przekaza je do elementw nawigacyjnych, dokadnie to
+
+31
+00:02:33,090 --> 00:02:34,040
+chc zrobi.
+
+32
+00:02:34,260 --> 00:02:45,020
+Tak wic zaimportuj poczenie z React-redux tutaj i pocz swj layout, teraz jestem zainteresowany jakim stanem, wic dodam tutaj sta
+
+33
+00:02:45,040 --> 00:02:51,990
+mapStateToProps, bdzie to funkcja, w ktrej otrzymuj stan jak zawsze i ja zwr
+
+34
+00:02:52,060 --> 00:02:57,580
+obiekt javascript, w ktrym odwzorowuj niektre rekwizyty na plasterki mojego
+
+35
+00:02:57,580 --> 00:03:06,650
+stanu i chc utworzy waciwo, ktr nazw nazw, ktra bdzie uwierzytelniona, a nastpnie zwi j do stanu
+
+36
+00:03:07,430 --> 00:03:09,360
+i teraz, jak moemy
+
+37
+00:03:09,710 --> 00:03:15,980
+sprawdzi, czy uytkownik jest uwierzytelniony? Na koniec, jeli przyjrzymy si naszemu auth
+
+38
+00:03:16,220 --> 00:03:22,230
+reduktorowi, widzimy, e w stanie mamy odpowiednie do uwierzytelniania, jeli token jest pusty,
+
+39
+00:03:22,240 --> 00:03:25,520
+uytkownik jest nieuwierzytelniony, jeli token nie jest
+
+40
+00:03:25,520 --> 00:03:28,200
+zerowy, uytkownik jest uwierzytelniony, to jest
+
+41
+00:03:28,280 --> 00:03:32,420
+szczeglnie prawda, poniewa usunlimy token automatycznie po jego wyganiciu,
+
+42
+00:03:32,420 --> 00:03:37,970
+to kod, ktry dodalimy wczeniej. Moemy wic polega na tokenie, ktry daje nam wskazwk, czy uytkownik jest
+
+43
+00:03:37,970 --> 00:03:40,520
+uwierzytelniony, czy te nie. Majc to na uwadze, moemy wrci do
+
+44
+00:03:40,550 --> 00:03:47,510
+ukadu i po prostu ustawi warto IsAuthenticated na warto stanu. auth. token i porwnaj j z
+
+45
+00:03:47,930 --> 00:03:49,680
+wartoci null, jeli nie
+
+46
+00:03:49,790 --> 00:03:57,500
+jest rwna zeru, to, co to sprawdza, sprawdza, czy uwierzytelnienie jest prawdziwe, poniewa jestemy uwierzytelnieni.
+
+47
+00:03:58,370 --> 00:04:08,110
+Teraz uyj tego razem z connect, wic przeka to, aby poczy i zawin, whoops, zawi komponent ukadu z funkcj return przez funkcj connect
+
+48
+00:04:08,290 --> 00:04:15,910
+i mog uy IsAuthenticated jako rekwizyt w moim kodzie jsx tutaj lub gdziekolwiek w tym elemencie oczywicie i
+
+49
+00:04:15,940 --> 00:04:21,880
+chc przekaza go do mojego paska narzdziowego, wic dodam nowy rekwizyt tutaj i na
+
+50
+00:04:21,940 --> 00:04:30,470
+to nazw bd na przykadAuth, i przeka to. rekwizyty. jest uwierzytelniony, wic ta waciwo
+
+51
+00:04:30,520 --> 00:04:37,190
+zostaa po prostu zmapowana i zrobi to samo dla bocznej szuflady.
+
+52
+00:04:38,340 --> 00:04:42,650
+Teraz oczywicie musz edytowa te dwa komponenty, aby mc uy nowego rekwizytu, wic
+
+53
+00:04:42,900 --> 00:04:47,070
+przejd do skadnika paska narzdzi tu i tam, teraz otrzymuj te nowe informacje
+
+54
+00:04:47,070 --> 00:04:52,550
+dotyczce podpory i musz przekaza je do elementw nawigacyjnych. Podam nazw tego wniosku, ktry jest
+
+55
+00:04:52,550 --> 00:04:55,760
+uwierzytelniony i zmieniam te nazwy tylko po
+
+56
+00:04:55,770 --> 00:05:00,540
+to, aby upewni si, e nie mylisz tego, co nadchodzi
+
+57
+00:05:00,540 --> 00:05:01,610
+i co
+
+58
+00:05:01,860 --> 00:05:09,030
+przekazujemy, wic tutaj jest Uwierzytelniony zostanie przekazany do elementw nawigacyjnych jako rekwizyt i przechodzimy na rekwizytach
+
+59
+00:05:09,690 --> 00:05:17,580
+jestAuth, isAuth, poniewa wanie to wybralimy w layoucie, isAuth. To samo dla bocznej szuflady oczywicie, w bocznej szufladzie,
+
+60
+00:05:17,580 --> 00:05:19,170
+tam te mamy elementy
+
+61
+00:05:19,260 --> 00:05:23,500
+nawigacyjne i wi si z uwierzytelnionym, wic nazwa podpory wanie
+
+62
+00:05:23,550 --> 00:05:29,070
+wybraem na pasku narzdzi i przekazuj rekwizyty. isAuth.
+
+63
+00:05:29,340 --> 00:05:31,890
+Dziki temu zapisuj oba komponenty,
+
+64
+00:05:31,890 --> 00:05:39,270
+a teraz w elementach nawigacyjnych, wiem, e otrzymuj ten Uwierzytelniony wniosek, ktry jest prawdziwy
+
+65
+00:05:39,270 --> 00:05:40,430
+lub faszywy.
+
+66
+00:05:40,440 --> 00:05:44,750
+Wic teraz, tutaj, mog po prostu renderowa ten element nawigacyjny
+
+67
+00:05:44,950 --> 00:05:47,240
+warunkowo, mog to zrobi w
+
+68
+00:05:47,300 --> 00:05:53,550
+linii lub osobno, zrobi to w linii i po prostu sprawdz, czy rekwizyty, ktre tu
+
+69
+00:05:54,000 --> 00:06:01,050
+otrzymam, dodaj je jako argument, jeli rekwizyty s uwierzytelnione, to oczywicie rekwizyt, ktry wanie zdefiniowalimy w bocznej
+
+70
+00:06:01,860 --> 00:06:04,060
+szufladzie i pasku narzdzi, jeli
+
+71
+00:06:04,230 --> 00:06:11,370
+jest to uwierzytelnione, to chc renderowa ten element nawigacyjny, podziel to na wiele linii, aby byo nieco
+
+72
+00:06:11,370 --> 00:06:12,240
+atwiejsze do odczytania.
+
+73
+00:06:12,240 --> 00:06:22,440
+Alternatyw jest renderowanie elementu nawigacyjnego, w ktrym faktycznie prowadz cze do / wylogowania i gdzie mwi wylogowanie, teraz / wylogowanie prowadzi
+
+74
+00:06:22,740 --> 00:06:29,400
+do trasy, ktrej jeszcze nie zarejestrowalimy, ale jest to logika, ktrej chc uy.
+
+75
+00:06:29,640 --> 00:06:33,480
+Zachowajmy to, a teraz moemy zobaczy przycisk wylogowania w
+
+76
+00:06:33,480 --> 00:06:37,070
+menu, ale teraz jest niepoprawny, pokazuje wylogowanie, gdy
+
+77
+00:06:37,080 --> 00:06:41,630
+nie jestemy uwierzytelnieni, poniewa nie jestemy uwierzytelnieni po ponownym zaadowaniu aplikacji,
+
+78
+00:06:41,760 --> 00:06:45,770
+wic szybko sprawdmy logik w kontenerze ukadu , isAuthenticated
+
+79
+00:06:45,780 --> 00:06:50,100
+jest przypisany do stanu tokenu, ktry jest pocztkowo pusty, wic
+
+80
+00:06:50,100 --> 00:06:56,610
+jest poprawny, ale w elementach nawigacyjnych mam bd logiczny, jeli jestem uwierzytelniony, to oczywicie nie
+
+81
+00:06:56,610 --> 00:06:58,850
+chc pokazywa uwierzytelnienia, ale wylogowa si.
+
+82
+00:06:59,010 --> 00:07:03,020
+Sprawdz co przeciwnego, jeli nie jestem uwierzytelniony, dodajc wykrzyknik, a nastpnie
+
+83
+00:07:03,150 --> 00:07:04,420
+poka, e w przeciwnym
+
+84
+00:07:04,680 --> 00:07:08,010
+razie jest to wylogowanie, w tej kolejnoci ma sens.
+
+85
+00:07:08,010 --> 00:07:09,960
+A wic teraz zapiszmy ten plik ponownie,
+
+86
+00:07:10,170 --> 00:07:13,570
+a teraz, jeli ta aplikacja zaaduje ponownie, zobacz, e uwierzytelnianie jest domylne.
+
+87
+00:07:13,590 --> 00:07:18,950
+Jeli teraz si zalogujemy, wic zmienimy si na logowanie i przesyanie, zobaczysz,
+
+88
+00:07:19,050 --> 00:07:21,540
+e zostanie ona wymieniona na wylogowanie.
+
+89
+00:07:21,810 --> 00:07:28,200
+Teraz aktualizujemy interfejs uytkownika, w nastpnym wykadzie upewnimy si, e po klikniciu wylogowania faktycznie co robimy,
+
+90
+00:07:28,200 --> 00:07:30,540
+poniewa obecnie ta trasa nie istnieje.
+

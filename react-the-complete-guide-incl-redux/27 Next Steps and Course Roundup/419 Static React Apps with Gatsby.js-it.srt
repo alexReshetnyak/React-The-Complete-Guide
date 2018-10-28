@@ -1,0 +1,124 @@
+1
+00:00:02,150 --> 00:00:06,900
+Quindi hai dato un'occhiata a build con reagire e reagire. rocce, ora andiamo
+
+2
+00:00:06,980 --> 00:00:10,550
+via dai progetti dimostrativi e
+
+3
+00:00:10,610 --> 00:00:14,500
+cos via e vediamo invece gatsbyjs.
+
+4
+00:00:14,580 --> 00:00:22,160
+Ora gatsbyjs  in realt una libreria che si basa sulla reazione, proprio come ha fatto nextjs,
+
+5
+00:00:22,160 --> 00:00:25,550
+gatsbyjs ha comunque uno scopo diverso ed 
+
+6
+00:00:25,550 --> 00:00:33,440
+una libreria piuttosto eccitante, sar onesto con te. Gatsbyjs  una libreria che consente di creare siti Web statici con reazione.
+
+7
+00:00:33,440 --> 00:00:40,210
+Ora, cos' un sito Web statico? Un sito web statico  una pagina che usa solo html, javascript
+
+8
+00:00:40,310 --> 00:00:46,550
+e css, beh questo  vero per normale, reagisce anche a un'applicazione singola pagina, ma un sito statico ha anche una cosa
+
+9
+00:00:46,550 --> 00:00:47,930
+speciale che lo fa, di
+
+10
+00:00:48,080 --> 00:00:53,220
+solito non usi il router di reazione l, tu non usarlo direttamente almeno, invece quello che hai 
+
+11
+00:00:53,330 --> 00:00:59,960
+che hai una struttura di cartelle in cui ogni cartella ha un indice. file html e le risorse corrispondenti
+
+12
+00:00:59,990 --> 00:01:02,780
+appartenenti al file in esso.
+
+13
+00:01:02,780 --> 00:01:09,320
+Ora la cosa interessante  che costruisci davvero siti web come hai fatto negli anni '90 o
+
+14
+00:01:09,320 --> 00:01:17,180
+in quel periodo, ma stai usando reagisci, lo stai costruendo come un'app reattiva e gatsbyjs, questa tecnologia, questa libreria quindi
+
+15
+00:01:17,180 --> 00:01:19,780
+fa effettivamente il riposa per te, divide
+
+16
+00:01:19,770 --> 00:01:25,700
+tutto e su un determinato comando, genera questa struttura di cartelle in cui hai un
+
+17
+00:01:25,700 --> 00:01:30,520
+paio di cartelle con file html, in base alla reazione che hai creato.
+
+18
+00:01:30,560 --> 00:01:33,510
+Puoi saperne di pi su gatsbyjs. com,  una
+
+19
+00:01:33,530 --> 00:01:39,830
+biblioteca incredibile e in realt fornirebbe abbastanza contenuti per il proprio corso.
+
+20
+00:01:39,860 --> 00:01:42,140
+Ora non ho un corso in questo
+
+21
+00:01:42,170 --> 00:01:46,880
+momento, potresti iniziare qui con i documenti per imparare a usarlo e sicuramente giocarci
+
+22
+00:01:46,880 --> 00:01:53,630
+un po 'per saperne di pi su come funziona e se ha senso per te, paragonabile le alternative menzionate nella
+
+23
+00:01:53,660 --> 00:01:56,930
+pagina delle caratteristiche di gatsbyjs sarebbero Jekyll ma l non
+
+24
+00:01:56,960 --> 00:02:00,940
+si usano sistemi di gestione dei contenuti o di reazione come Wordpress,
+
+25
+00:02:00,980 --> 00:02:04,810
+tuttavia, si  bloccati a scrivere anche un codice lato server,
+
+26
+00:02:04,850 --> 00:02:11,780
+ necessario un database SQL e tutto il resto. Gatsbyjs funziona con reagire e offre
+
+27
+00:02:11,780 --> 00:02:13,280
+molti vantaggi.
+
+28
+00:02:13,280 --> 00:02:15,730
+Considera quindi questo per il tuo prossimo progetto, controlla
+
+29
+00:02:15,740 --> 00:02:20,610
+la pagina dei documenti e delle caratteristiche sulla loro pagina per sapere se  la scelta giusta
+
+30
+00:02:20,840 --> 00:02:25,610
+per te e, una volta che hai deciso che  interessante per te, sentiti libero di immergerti.
+
+31
+00:02:25,610 --> 00:02:29,370
+Volevo renderti consapevole perch  un progetto davvero sorprendente.
+

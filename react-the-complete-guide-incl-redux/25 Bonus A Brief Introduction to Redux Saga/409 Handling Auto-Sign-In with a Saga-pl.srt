@@ -1,0 +1,268 @@
+1
+00:00:02,190 --> 00:00:07,830
+Wr do auth. Plik js w folderze dziaa, ju zlecilimy
+
+2
+00:00:07,830 --> 00:00:14,430
+sporo logiki do folderu sagi, do sagi, ktr stworzylimy, i dlatego otrzymujemy bardzo szczupy plik twrcy
+
+3
+00:00:14,850 --> 00:00:17,440
+akcji ju tutaj, gdzie ju nie
+
+4
+00:00:17,460 --> 00:00:23,670
+musz importowa osi, moemy usu ten import, a teraz mamy tylko twrcw akcji, ktrzy zwracaj
+
+5
+00:00:23,670 --> 00:00:24,110
+akcje,
+
+6
+00:00:24,150 --> 00:00:27,490
+ktre naprawd to robi, tworz akcje, z jednym wyjtkiem.
+
+7
+00:00:27,690 --> 00:00:35,370
+Na samym dole tego pliku otrzymalimy kreator akcji authCheckState, ktry uruchamiamy w momencie, gdy
+
+8
+00:00:35,370 --> 00:00:40,600
+nasza aplikacja zacznie sprawdza, czy moemy automatycznie zalogowa uytkownika. Powinno
+
+9
+00:00:40,950 --> 00:00:43,480
+to rwnie wej w sag,
+
+10
+00:00:43,710 --> 00:00:52,110
+ale na koniec dodajmy tutaj te saga. Nazw go tak, jak nazwalimy twrc akcji authCheckStateSaga tutaj, wic
+
+11
+00:00:52,110 --> 00:00:54,190
+nazw go authCheckStateSaga, to jest
+
+12
+00:00:55,200 --> 00:00:57,920
+nazwa, otrzymam tutaj moj akcj jako
+
+13
+00:00:58,020 --> 00:01:07,130
+argument, a ja ponownie skopiuj cay kod z mojego auth. js.
+
+14
+00:01:07,380 --> 00:01:11,260
+plik w folderze actions i zastp go krok po kroku.
+
+15
+00:01:11,670 --> 00:01:13,320
+Wic co tu robimy?
+
+16
+00:01:13,530 --> 00:01:16,390
+Dostajemy token z lokalnej pamici, dodam tu
+
+17
+00:01:16,440 --> 00:01:22,230
+take wydajno, tak jak robi to dla wszystkich krokw, ktre wykonuj w moich sagach.
+
+18
+00:01:22,380 --> 00:01:28,380
+Tak wic teraz otrzymujemy token, ktry jest tutaj synchronicznym zadaniem, nastpnie sprawdzam, czy token
+
+19
+00:01:28,380 --> 00:01:29,880
+rzeczywicie istnieje, a
+
+20
+00:01:30,210 --> 00:01:38,810
+jeli nie, oczywicie nadal chc wysa tutaj wylogowanie, wo akcje. wyloguj si, aby to waciwie wysa, i tutaj
+
+21
+00:01:38,810 --> 00:01:42,610
+te zwiksz wydajno. Teraz, gdy mamy
+
+22
+00:01:42,630 --> 00:01:50,460
+wany token, sprawdzamy dat wyganicia, obliczamy to, ja te to zrobi, a
+
+23
+00:01:50,460 --> 00:01:57,150
+jeli to jest duo wczeniej ni nasza aktualna data, chc
+
+24
+00:01:57,300 --> 00:02:03,050
+rwnie da si wylogowa, poniewa mamy nieprawidow dat wyganicia.
+
+25
+00:02:03,180 --> 00:02:11,280
+W przeciwnym razie otrzymam identyfikator uytkownika z lokalnego magazynu, a take uzyskamy go, a
+
+26
+00:02:11,280 --> 00:02:14,780
+nastpnie odnielimy sukces, wic tutaj otrzymam
+
+27
+00:02:14,790 --> 00:02:16,070
+polecenie authSuccess
+
+28
+00:02:16,080 --> 00:02:23,010
+i przekazuj token oraz identyfikator uytkownika, jednak tu i tam i authSuccess
+
+29
+00:02:23,010 --> 00:02:27,530
+powinien by dostp do obiektu dziaa, ktry importuj,
+
+30
+00:02:27,540 --> 00:02:30,310
+aby uy tych twrcw akcji,
+
+31
+00:02:30,340 --> 00:02:38,290
+a take chc uzyska akcje putAuthTiemout, odwoujc si do tego twrcy akcji, ktry dobrze
+
+32
+00:02:38,290 --> 00:02:43,330
+zwraca t akcj authCheckoutTimeout, ktra z kolei wyzwoli kolejn sag.
+
+33
+00:02:43,330 --> 00:02:52,790
+To wszystko, wszystkie zmiany, ktrych potrzebujemy, to moja authCheckStateSaga.
+
+34
+00:02:53,060 --> 00:03:00,240
+Teraz chcemy to podczy i upewni si, e zostanie to wykonane w momencie, gdy
+
+35
+00:03:00,350 --> 00:03:07,210
+uruchamiamy aplikacj, do tego przejd do auth. js action creator file i zwr cay kod w tej
+
+36
+00:03:07,210 --> 00:03:09,180
+funkcji, ju go nie potrzebuj.
+
+37
+00:03:09,620 --> 00:03:16,460
+Zamiast tego, po prostu chc zwrci mj obiekt akcji i utworz dla niego
+
+38
+00:03:16,460 --> 00:03:25,900
+nowy typ akcji, nazw go AUTH_CHECK_INITIAL_STATE, na przykad nazwa oczywicie zaley od Ciebie, uyj tego rwnie tutaj,
+
+39
+00:03:26,900 --> 00:03:29,390
+a moe nie, po prostu
+
+40
+00:03:29,510 --> 00:03:36,410
+nazwij go AUTH_CHECK_STATE, aby by bardziej zgodny z nasz nazw twrcy akcji, wic
+
+41
+00:03:37,580 --> 00:03:38,780
+AUTH_CHECK_STATE, a
+
+42
+00:03:38,880 --> 00:03:47,520
+nastpnie tam, zwrc moj akcj typu actionTypes. AUTH_CHECK_STATE i nie musz przekazywa adnych argumentw
+
+43
+00:03:47,520 --> 00:03:49,800
+ani niczego z t
+
+44
+00:03:49,830 --> 00:03:57,410
+akcj, to teraz powinno wywoa moj authCheckStateSaga tutaj i aby to umoliwi, musz
+
+45
+00:03:57,600 --> 00:04:02,020
+ustawi detektor w indeksie. js, tam
+
+46
+00:04:02,040 --> 00:04:14,120
+wydam takeEvery dla actionTypes. AUTH_CHECK_STATE i zaimportuj mj nowo utworzony authCheckStateSaga, ktry
+
+47
+00:04:14,120 --> 00:04:15,530
+wykonam po
+
+48
+00:04:15,590 --> 00:04:22,340
+wykryciu tego typu akcji. Zapiszmy wszystkie zmienione pliki,
+
+49
+00:04:22,410 --> 00:04:30,760
+wrmy i przeadujmy aplikacj, widzimy authSuccess, wic zalogowalimy si automatycznie.
+
+50
+00:04:30,980 --> 00:04:33,390
+Teraz wyloguj si i zaaduj
+
+51
+00:04:33,890 --> 00:04:41,630
+ponownie, a teraz widzisz, e inicjuje on wywoanie stanu sprawdzania tutaj, ale nastpnie inicjuje wylogowanie, poniewa nie
+
+52
+00:04:41,630 --> 00:04:44,150
+znajduje wanego tokena i tak dalej.
+
+53
+00:04:44,180 --> 00:04:52,790
+Zastpilimy teraz wszystkie efekty uboczne, ktrymi zajmowalimy si w auth. js action creator file z kodem w naszym pliku saga, sagami, ktre
+
+54
+00:04:52,790 --> 00:04:54,680
+wykonaem ze wzgldu na naszych
+
+55
+00:04:54,880 --> 00:05:02,480
+suchaczy, naszymi obserwatorami tutaj, ktry z kolei jest tutaj wykonany w indeksie. plik js, w ktrym uruchamiamy
+
+56
+00:05:02,480 --> 00:05:06,130
+go na naszym middleware sagi.
+
+57
+00:05:06,440 --> 00:05:12,990
+I dziki temu zredukowalimy redux-thunk cakowicie nadmiarow dla auth czci naszej aplikacji, teraz
+
+58
+00:05:13,040 --> 00:05:20,210
+aby mc j cakowicie usun, oczywicie musimy rwnie uczyni j zbdn dla czci budowniczej
+
+59
+00:05:20,210 --> 00:05:23,440
+burgera i czci zamawiania, a to
+
+60
+00:05:23,660 --> 00:05:26,250
+ju by dla ciebie wietn praktyk.
+
+61
+00:05:26,270 --> 00:05:27,450
+Wic jeli masz na to
+
+62
+00:05:27,530 --> 00:05:29,490
+ochot, zdecydowanie sprbuj tego na wasn rk.
+
+63
+00:05:29,510 --> 00:05:31,420
+Sprbuj doda wicej sag, moe w
+
+64
+00:05:31,490 --> 00:05:33,040
+nowych plikach, skonfiguruj obserwatorw
+
+65
+00:05:33,170 --> 00:05:40,390
+i zastp kod, ktry masz w burgerBuilder. js w folderze dziaa i w kolejnoci. js w folderze dziaa z
+
+66
+00:05:40,400 --> 00:05:48,290
+kodem sagi, aby zleci wszystkie efekty uboczne do sag. Zrobimy to razem, zaczynajc
+
+67
+00:05:48,290 --> 00:05:50,660
+od nastpnego filmu.
+

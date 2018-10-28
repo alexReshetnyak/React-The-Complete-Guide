@@ -1,0 +1,136 @@
+1
+00:00:02,210 --> 00:00:08,400
+W ostatnim wykadzie uczymy si, jak wszystkim przekazywa dane za pomoc akcji, jak je odzyska.
+
+2
+00:00:08,400 --> 00:00:13,880
+Teraz poznajemy niektre z podstawowych poj uywania read x.
+
+3
+00:00:14,100 --> 00:00:21,450
+Teraz jeli spojrzymy na nasz reduktor tutaj jest co, co zapewne zauwaysz, ma
+
+4
+00:00:21,450 --> 00:00:25,200
+ju wiele replikacji kodu wiele instrukcji if.
+
+5
+00:00:25,260 --> 00:00:30,200
+Teraz nie ma nic zego w korzystaniu z instrukcji IF, jeli lubisz takie podejcie.
+
+6
+00:00:30,660 --> 00:00:36,500
+Ale moemy rwnie uy innego typu wyraenia instrukcji w javascript.
+
+7
+00:00:36,500 --> 00:00:45,630
+W instrukcji switch moemy zmieni typ akcji, a nastpnie zdefiniowa wiele przypadkw, takich jak
+
+8
+00:00:45,630 --> 00:00:46,680
+przypadek Inkermana.
+
+9
+00:00:47,070 --> 00:00:48,250
+Nastpnie mamy dwukropek.
+
+10
+00:00:48,270 --> 00:00:56,820
+Tak wic normalna skadnia javascript i e tutaj moemy zwrci ten zaktualizowany stan dla przypadku inkrementacji, a teraz moemy
+
+11
+00:00:57,140 --> 00:00:59,240
+pozby si tej instrukcji if.
+
+12
+00:00:59,430 --> 00:01:01,830
+A teraz moemy oczywicie doda wicej przypadkw tutaj.
+
+13
+00:01:01,830 --> 00:01:08,220
+Tak wic chodzio o jedn spraw dla Decory i nie musz dodawa instrukcji break, poniewa powrt automatycznie wychodzi
+
+14
+00:01:08,430 --> 00:01:14,340
+z dysfunkcji, nigdy nie dotarlimy do tej linii i tylko oczywicie, jeli zajmiemy si t spraw
+
+15
+00:01:14,340 --> 00:01:15,450
+w pierwszej kolejnoci.
+
+16
+00:01:15,750 --> 00:01:19,380
+Wic ze wzgldu na uszczerbek wszyscy chcielibymy zmieni tutaj stan.
+
+17
+00:01:19,440 --> 00:01:26,820
+Zwrcilibymy ten stan i teraz moemy to powtrzy dla wszystkich przypadkw, wic szybko
+
+18
+00:01:26,820 --> 00:01:31,130
+dodaj przypadek dla dodania sprawy do odejmowania.
+
+19
+00:01:31,380 --> 00:01:36,620
+I oczywicie te identyfikatory wci musz pasowa do identyfikatorw uywanych podczas wysyania akcji.
+
+20
+00:01:36,810 --> 00:01:45,810
+Tak wic identyfikator, ktry tu powiedziae na typie w kontenerze licznikowym, a teraz wszystkie wycignij kod z tych
+
+21
+00:01:45,810 --> 00:01:46,870
+instrukcji if.
+
+22
+00:01:46,920 --> 00:01:54,990
+Dodaj je do kodu do odpowiednich przypadkw, gdy ponownie sformatujesz kod i pozbdziesz si tych instrukcji if.
+
+23
+00:01:54,990 --> 00:02:01,560
+A teraz nasz producent jest nieco szczuplejszy i nieco atwiejszy do odczytania, poniewa jest jasne, e
+
+24
+00:02:01,560 --> 00:02:06,170
+patrzymy na typ kierunku, a my zajmujemy si tylko rnymi przypadkami.
+
+25
+00:02:06,420 --> 00:02:12,000
+A jeli nie dokonamy tego w adnym z tych przypadkw, zawsze mamy tutaj
+
+26
+00:02:12,000 --> 00:02:15,620
+domyln instrukcj powrotu, ktra zwraca nasz pocztkowy stan.
+
+27
+00:02:15,840 --> 00:02:21,810
+Lub, jeli by ju ustawiony aktualny stan, jest to szczeglnie wane, poniewa musisz pamita,
+
+28
+00:02:21,810 --> 00:02:28,590
+e gdybymy wysali akcj, ktra ma typ, ktry nie jest tutaj objty, nadal dziaalibymy na szkod
+
+29
+00:02:28,590 --> 00:02:34,740
+tego reduktora, poniewa kiedy kiedykolwiek wylesz co, pochodzi z tego pojedynczego reduktora, ktry masz
+
+30
+00:02:34,800 --> 00:02:36,390
+w swoim wniosku.
+
+31
+00:02:36,590 --> 00:02:42,050
+Dlatego jeli tata skorzysta z Besant, wykona ten typ akcji, ktry wysae.
+
+32
+00:02:42,180 --> 00:02:45,780
+Musisz przywrci biecy stan, aby nie zama aplikacji.
+
+33
+00:02:45,780 --> 00:02:52,550
+Zrbmy wic wszystkie te pliki, a zobaczysz, e jeli wrcisz, to nadal dziaa tak jak poprzednio.
+
+34
+00:02:52,650 --> 00:02:58,760
+Ale teraz z tymi centralnymi reduktorami nadal, ale tam z komunikatem przecznika.
+

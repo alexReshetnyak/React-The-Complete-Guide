@@ -1,0 +1,152 @@
+1
+00:00:02,190 --> 00:00:08,370
+Quindi, durante le ultime lezioni, abbiamo dato un'occhiata a molti possibili passi successivi, incluse
+
+2
+00:00:08,370 --> 00:00:12,700
+librerie come Gatsbyjs o librerie di componenti come Materiale-UI.
+
+3
+00:00:13,050 --> 00:00:16,330
+Ecco un'altra bella libreria che
+
+4
+00:00:16,350 --> 00:00:24,630
+potresti voler esaminare, in preact. Ora non  un refuso, preact che puoi leggere di pi su preactjs. com  un'alternativa leggera per
+
+5
+00:00:24,720 --> 00:00:26,340
+reagire,  solo
+
+6
+00:00:26,460 --> 00:00:34,060
+3kb grande e offre praticamente lo stesso con alcune deviazioni, ma non quello che
+
+7
+00:00:34,130 --> 00:00:37,820
+fanno molte API. Quindi dovresti usarlo sempre, i
+
+8
+00:00:37,820 --> 00:00:39,580
+creatori di reagire sono stupidi?
+
+9
+00:00:39,610 --> 00:00:41,580
+Non lo sono, ci sono
+
+10
+00:00:41,580 --> 00:00:47,910
+delle differenze e ne parler nella prossima lezione, ma per ora lascia che ti spieghi che
+
+11
+00:00:47,910 --> 00:00:49,170
+cosa , puoi
+
+12
+00:00:49,170 --> 00:00:54,610
+sempre leggere questa pagina ovviamente, ma facciamo clic sul repl qui, su quella pagina.
+
+13
+00:00:54,660 --> 00:00:59,250
+L semplicemente vedi un esempio per il preact o per il preact
+
+14
+00:00:59,400 --> 00:01:03,080
+in azione e se analizzi questo esempio, riconoscerai il codice.
+
+15
+00:01:03,210 --> 00:01:10,530
+Per esempio laggi, abbiamo un componente normale nella forma funzionale che usa solo la destrutturazione qui per
+
+16
+00:01:10,530 --> 00:01:14,160
+estrarre una propriet dell'argomento puntelli ma alla fine 
+
+17
+00:01:14,340 --> 00:01:17,110
+solo il tuo normale codice jsx, 
+
+18
+00:01:17,190 --> 00:01:23,310
+solo un componente funzionale che viene usato. E sopra e ne abbiamo uno basato
+
+19
+00:01:23,310 --> 00:01:24,120
+su una
+
+20
+00:01:24,300 --> 00:01:32,970
+classe che estende anche i componenti, quindi questa sintassi assomiglia molto alla sintassi di reazione ed  in una maggioranza o
+
+21
+00:01:32,970 --> 00:01:40,860
+in una certa misura, in realt in misura molto grande. Preact utilizza praticamente la stessa API ma utilizza un algoritmo difforme pi snello
+
+22
+00:01:40,860 --> 00:01:41,530
+dietro le
+
+23
+00:01:41,580 --> 00:01:47,010
+quinte, quindi per scoprire se ha bisogno di aggiornare il dominio reale, ha un algoritmo pi snello per quello.
+
+24
+00:01:47,080 --> 00:01:53,850
+Lean non significa strettamente meglio, ma ovviamente porta a dimensioni del file molto pi
+
+25
+00:01:53,970 --> 00:02:00,090
+piccole, 3kb come ti ho appena mostrato. La cosa importante qui  che il preact e
+
+26
+00:02:00,090 --> 00:02:00,930
+che puoi sempre
+
+27
+00:02:00,930 --> 00:02:06,670
+imparare di pi qui sulla guida offre anche alcune differenze per reagire, anche alcune nuove funzionalit come
+
+28
+00:02:06,680 --> 00:02:09,840
+andr a finire, ma pi sulle differenze nella prossima lezione.
+
+29
+00:02:10,050 --> 00:02:18,270
+Puoi iniziare a lavorare con preact, se usi google per preact-cli, allora dovresti trovare questa pagina github dove trovi un progetto che
+
+30
+00:02:18,270 --> 00:02:25,230
+ molto simile a creare l'app react che ti permette di creare nuove app preact che usano preact
+
+31
+00:02:25,410 --> 00:02:27,180
+invece di reagire ovviamente ,
+
+32
+00:02:27,180 --> 00:02:33,420
+basato su alcuni dei modelli che trovi qui. In questo modo  possibile impalcare rapidamente una nuova
+
+33
+00:02:33,420 --> 00:02:39,300
+app in cui  possibile utilizzare la maggior parte delle cose apprese in questo corso, anche in
+
+34
+00:02:39,300 --> 00:02:47,400
+questo caso le differenze sono evidenziate nella lezione successiva e utilizzare semplicemente questo bundle molto pi piccolo, questa libreria molto pi piccola.
+
+35
+00:02:47,400 --> 00:02:54,720
+Questo  preact-cli e questa  una valida alternativa, che utilizza praticamente la stessa API e, quindi,
+
+36
+00:02:54,720 --> 00:02:58,890
+le cose che hai imparato in questo corso sono valide.
+
+37
+00:02:58,890 --> 00:03:04,470
+Ora scopriamo quali sono le differenze e quando dovresti e non dovresti usare la
+
+38
+00:03:04,470 --> 00:03:06,300
+risposta, facciamolo nella prossima lezione.
+

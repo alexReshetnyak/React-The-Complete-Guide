@@ -1,0 +1,160 @@
+1
+00:00:02,500 --> 00:00:09,410
+Zayflatclarmz ortak admmz dardan tedarik ederek daha yaln hale getirmek iin, faydal ilevi gncelleme nesnesini
+
+2
+00:00:09,710 --> 00:00:11,510
+kullandmz son dersi sonlandrn.
+
+3
+00:00:11,510 --> 00:00:15,770
+Her yerde bir fayda fonksiyonuna tekrarlarz.
+
+4
+00:00:15,770 --> 00:00:23,870
+imdi redktr durumlarmz aslnda gzel Linville, hesaplarda REDUCE-IT'de daha az ya alabiliyorlar ve en
+
+5
+00:00:24,580 --> 00:00:30,240
+azndan diziyi gncellediimiz fazladan bir adm atm salam bir yapmc
+
+6
+00:00:30,240 --> 00:00:31,160
+olduklarn sylyorlar.
+
+7
+00:00:31,640 --> 00:00:37,720
+Baz gelitiriciler hepsini deil, bazlar aslnda byk / kk harfli durumda bulunmaktan holanyor; burada byk /
+
+8
+00:00:37,850 --> 00:00:40,750
+kk harf ayrm ve ardnz bir ilev var.
+
+9
+00:00:40,850 --> 00:00:47,640
+Akas, yine de mantm altrmamz gerekiyor, ancak switch case ifadesinin ok yaln olmas iin bunu bir fonksiyona
+
+10
+00:00:47,660 --> 00:00:49,490
+d kaynaktan yklemekten holanyorlar.
+
+11
+00:00:49,520 --> 00:00:54,960
+Anahtar kutusu bildirimi kar redktre benziyorsa, nemli bir avantaj vardr.
+
+12
+00:00:55,100 --> 00:01:00,650
+Her reticide neler olduunu veya en azndan bir eyler zerinde altmz hzl bir ekilde grebiliriz.
+
+13
+00:01:00,710 --> 00:01:08,300
+Dolaysyla, tek bir sayfadaki tm davalar gryoruz, bu nedenle bu sonbaharda yaplan sonulara gre,
+
+14
+00:01:08,330 --> 00:01:11,920
+bu mant burada kendi iine yerletirebileceksiniz demek.
+
+15
+00:01:12,110 --> 00:01:14,660
+Bu ilev ayn dosyaya girer.
+
+16
+00:01:14,870 --> 00:01:20,100
+Bylece indiricinin dnda sadece yeni bir fonksiyon ekleyeceim.
+
+17
+00:01:20,110 --> 00:01:24,060
+Akas ve silmek iin ad vereceim.
+
+18
+00:01:24,160 --> 00:01:25,110
+Sonu.
+
+19
+00:01:25,220 --> 00:01:32,270
+Szleme, eylem trn ad olarak deil, byk harflerle deil deve haliyle kullanmaktr.
+
+20
+00:01:32,450 --> 00:01:38,150
+Yani gerek anlamda tuz ve orada durumumu alyorum ve eyleme gemem lazm.
+
+21
+00:01:38,150 --> 00:01:41,880
+Aslnda redktrde elde ettiim ayn veri.
+
+22
+00:01:41,930 --> 00:01:48,580
+imdi bunu 6 ok ilev szdizimi olarak kullanmak istiyorum, bu yzden bunu yapacam.
+
+23
+00:01:48,960 --> 00:01:54,400
+Ve bu ileve, temelde switch case ifadesinde daha nce yaptklarm uyguluyorum.
+
+24
+00:01:54,620 --> 00:02:02,300
+hepsi orada bu yntemi koymak dizisini gnceller veya oradaki kodu silme sonucu ilevi haline getirir.
+
+25
+00:02:02,300 --> 00:02:04,040
+Dolaysyla benim durumumda
+
+26
+00:02:04,080 --> 00:02:10,530
+imdi burada bu fonksiyonda gncellenmi hali hala dndrmek gerekiyor.
+
+27
+00:02:10,760 --> 00:02:18,950
+Bu yzden de silme saldr durumumdan bu kodu grep edeceim ve gncellenmi nesneyi bir durumla aracam.
+
+28
+00:02:19,190 --> 00:02:23,270
+Ve temel olarak switch case deyiminde daha nce yaptm gibi davranyorlar.
+
+29
+00:02:23,540 --> 00:02:26,320
+Ve onun tam da onun yardmnn veya ilevlerinin ardndaki fikir.
+
+30
+00:02:26,360 --> 00:02:31,930
+Eski kodunuzu onlara koydunuz ve daha sonra lead n-tuzunu arayp burada veriyi geri veremem.
+
+31
+00:02:32,090 --> 00:02:34,750
+Bu nedenle Rosol'u sildikten sonra nesne olan haritay dndrr.
+
+32
+00:02:34,760 --> 00:02:38,100
+Silme sonucunu burada geri getirebilirim.
+
+33
+00:02:38,150 --> 00:02:39,410
+Sadece byle aryorlar.
+
+34
+00:02:39,410 --> 00:02:44,780
+Tabii ki devlete ve eyleme gemek zorundaym nk her ikisi de bu ilevde gerekli.
+
+35
+00:02:46,280 --> 00:02:52,490
+Bundan dolay, burada daha zayf olmayacak ekilde yorumlar kaldrmamza izin vermek iin yasz bir indirgeyici var.
+
+36
+00:02:52,490 --> 00:02:58,100
+Ayrca, eer gerekten yaslanm olmanz ve her satrda bir kutuya sahip olmanz isteseydik, iki nokta
+
+37
+00:02:58,100 --> 00:02:59,950
+st ste yanndaki satrda yazabiliriz.
+
+38
+00:03:00,170 --> 00:03:01,600
+Ve hepsi istee baldr.
+
+39
+00:03:01,670 --> 00:03:07,700
+Bu, belirli bir azaltcda hangi vaka ile uratnz kolaylatran ve bu yaklamn bir
+
+40
+00:03:07,700 --> 00:03:12,660
+avantaj olabilen ok temiz anahtar kutusu ifadeleri oluturmak iin bir yoldur.
+

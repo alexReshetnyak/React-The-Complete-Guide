@@ -1,0 +1,212 @@
+1
+00:00:02,050 --> 00:00:05,930
+Nell'ultima lezione impariamo come usare i percorsi annidati.
+
+2
+00:00:05,950 --> 00:00:13,390
+Ora potreste aver notato una cosa forse anche prima quando siamo su un determinato post e facciamo clic su
+
+3
+00:00:13,390 --> 00:00:21,170
+un altro post in realt non carichiamo il debito sebbene sia possibile vedere nella R L che l'ID cambia.
+
+4
+00:00:21,460 --> 00:00:26,110
+Quindi sta registrando il clic ma non sta caricando il nuovo componente.
+
+5
+00:00:26,140 --> 00:00:33,340
+Ora la ragione di ci  un router morto dietro le quinte che non sostituisce il componente in
+
+6
+00:00:33,340 --> 00:00:34,230
+ogni momento.
+
+7
+00:00:34,300 --> 00:00:41,950
+un componente su cui sei gi acceso come siamo qui, non render veramente l'intero componente e
+
+8
+00:00:41,950 --> 00:00:50,260
+quindi per il componente post completo il mount non viene eseguito di nuovo perch dovrebbe farlo.
+
+9
+00:00:50,260 --> 00:00:51,520
+Se stai caricando
+
+10
+00:00:51,520 --> 00:00:57,850
+Decomprimilo da solo non lo cambierebbe sarebbe molto inefficiente smontarlo e rimontarlo.
+
+11
+00:00:57,850 --> 00:01:05,380
+Quindi, dal momento che i componenti montati non vengono eseguiti di nuovo, non stiamo ancora raggiungendo il Web.
+
+12
+00:01:05,500 --> 00:01:12,490
+Quindi, per risolvere questo problema, dovremmo implementare anche il componente update per gestire questo
+
+13
+00:01:12,780 --> 00:01:16,220
+caso perch l'aggiornamento verr eseguito di nuovo.
+
+14
+00:01:16,600 --> 00:01:25,330
+codice qui dove raggiungo il web e caricher i miei dati perch ora voglio chiamare questo sia nel componente mount che nel componente che
+
+15
+00:01:25,360 --> 00:01:32,710
+si aggiorna in modo tale che questi dati di caricamento essere chiamato in entrambi gli hook del ciclo di vita
+
+16
+00:01:32,710 --> 00:01:39,670
+in modo da essere preparato sia per la prima volta che questo singolo post viene caricato e la seconda volta.
+
+17
+00:01:39,700 --> 00:01:46,520
+E aggiunger un nuovo metodo per caricare il metodo di convenienza dei dati che terr semplicemente il mio vecchio
+
+18
+00:01:46,540 --> 00:01:52,220
+Ora per si vede dal registro della console gi che abbiamo un ciclo infinito.
+
+19
+00:01:52,300 --> 00:01:55,060
+Quindi questa non  la soluzione perfetta.
+
+20
+00:01:55,060 --> 00:01:59,470
+Clicco su un link qui e continua a caricare di nuovo.
+
+21
+00:01:59,740 --> 00:02:04,640
+Quindi sicuramente non  quello che vogliamo fare ci che  sbagliato nella nostra configurazione attuale qui.
+
+22
+00:02:05,520 --> 00:02:13,540
+Bene,  il nostro check in caricare i dati che stiamo controllando se la nostra idea  cambiata e stiamo controllando per questo
+
+23
+00:02:13,620 --> 00:02:14,500
+ID corretto.
+
+24
+00:02:14,610 --> 00:02:21,210
+dappertutto qui questo deve essere l'abbinamento di questo puntello. L'ID di Perrin non sar mai impostato.
+
+25
+00:02:21,210 --> 00:02:22,250
+Ora come
+
+26
+00:02:22,410 --> 00:02:27,930
+Quindi abbiamo avuto lo stesso problema di loop infinito che avevamo nella sezione HD perch il nostro
+
+27
+00:02:27,930 --> 00:02:33,390
+controllo qui non funzionava pi e non abbiamo solo bisogno di aggiornarlo qui, dobbiamo aggiornarlo ovunque e
+
+28
+00:02:33,390 --> 00:02:40,230
+come componente in cui abbiamo fatto riferimento a questo ID del puntello, ovviamente anche ecco perch la cancellazione non funzionerebbe mai.
+
+29
+00:02:40,230 --> 00:02:46,580
+E naturalmente anche qui sotto, dove controlliamo se l'ID  impostato.
+
+30
+00:02:46,710 --> 00:02:53,220
+Ora, con tutti questi cambiamenti in atto, non funzionerebbe ancora perch l'ID che stavano
+
+31
+00:02:53,220 --> 00:02:57,480
+recuperando dai genitori orgogliosi sarebbe in realt una stringa.
+
+32
+00:02:57,480 --> 00:03:05,270
+Ora qui stiamo controllando che l'uguaglianza dei tipi di anti-ID memorizzata nel post caricato sia effettivamente un numero.
+
+33
+00:03:05,280 --> 00:03:12,060
+Quindi dobbiamo prendere le parole E-string ID a un numero o semplicemente trasformarle in un assegno
+
+34
+00:03:12,060 --> 00:03:14,260
+o semplicemente controllare il valore.
+
+35
+00:03:14,280 --> 00:03:17,780
+Ora se controlliamo solo il valore e facciamo clic su un post.
+
+36
+00:03:17,910 --> 00:03:20,850
+Ora vedi che non si carica tutto il tempo.
+
+37
+00:03:20,850 --> 00:03:26,080
+Invece carica solo una volta ma lo aggiorna correttamente quando passiamo al post.
+
+38
+00:03:26,250 --> 00:03:31,440
+Ancora una volta l'alternativa sarebbe quella di lasciare il controllo della qualit di digitazione, ma per convertirlo in un
+
+39
+00:03:31,440 --> 00:03:34,050
+numero aggiungendo un plus di fronte ad esso, ad esempio.
+
+40
+00:03:34,050 --> 00:03:38,220
+Ora di nuovo, se clicco su un post che abbiamo caricato, l'abbiamo caricato solo una volta.
+
+41
+00:03:38,220 --> 00:03:40,010
+Non entriamo nel ciclo infinito.
+
+42
+00:03:40,320 --> 00:03:46,740
+Questa  un'importante correzione per il componente di post completo in generale che usiamo corrispondere a Perens
+
+43
+00:03:46,870 --> 00:03:53,950
+ID su tutto il componente ed  anche importante capire che  necessario gestire le modifiche nel componente.
+
+44
+00:03:53,970 --> 00:04:01,800
+Aggiornato se DB post componente o se il componente in generale  gi stato caricato per l'instradamento perch il
+
+45
+00:04:01,800 --> 00:04:07,350
+router non smonter il vecchio e monter nuovamente lo stesso con dati diversi.
+
+46
+00:04:07,350 --> 00:04:12,320
+Riutilizza il vecchio e regola semplicemente il parametro del percorso.
+
+47
+00:04:12,390 --> 00:04:20,460
+ tuo compito reagire a questo nuovo parametro e puoi reagire a quel componente in aggiornamento che verr chiamato perch
+
+48
+00:04:20,460 --> 00:04:23,010
+gli oggetti di scena sono cambiati.
+
+49
+00:04:23,070 --> 00:04:29,840
+Riceverai un nuovo oggetto di scena con un nuovo oggetto partita con un nuovo oggetto genitori con il nuovo ID.
+
+50
+00:04:29,850 --> 00:04:31,170
+Questo  quello che sta succedendo qui.
+
+51
+00:04:31,170 --> 00:04:32,830
+Fa quello che stiamo sfruttando.
+
+52
+00:04:32,910 --> 00:04:34,530
+E questo  importante per capire.
+
+53
+00:04:34,660 --> 00:04:36,780
+Quando si lavora con percorsi nidificati.
+

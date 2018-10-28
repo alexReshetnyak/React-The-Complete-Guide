@@ -1,0 +1,104 @@
+1
+00:00:02,240 --> 00:00:06,050
+Ento, nas ltimas palestras e mdulos, voc aprende muito sobre ler.
+
+2
+00:00:06,200 --> 00:00:08,920
+Agora estou no ponto redox Jay s dot org.
+
+3
+00:00:08,990 --> 00:00:14,000
+A pgina oficial do pacote redux e sempre lembre de ler atua como uma estrutura
+
+4
+00:00:14,120 --> 00:00:15,050
+autnoma ou biblioteca.
+
+5
+00:00:15,080 --> 00:00:17,320
+No faz parte da reao.
+
+6
+00:00:17,510 --> 00:00:22,730
+Mas  claro que  comumente usado com a reao, e  por isso que voc encontra muitos recursos
+
+7
+00:00:23,000 --> 00:00:25,470
+redux mais re-agir na pgina oficial do redux tambm.
+
+8
+00:00:25,640 --> 00:00:33,110
+tantos casos de uso e possveis ajustes que voc pode observar, eu recomendo encarecidamente dar uma olhada nesta pgina.
+
+9
+00:00:33,200 --> 00:00:39,860
+Claro que voc est tomando o curso para aprender coisas ao fazer vdeos redux, no entanto, tem
+
+10
+00:00:39,950 --> 00:00:46,460
+Se voc sente que sua abordagem atual est presa ou a sua reduo ou as funes
+
+11
+00:00:46,460 --> 00:00:51,970
+esto explodindo, voc pode aprender mais sobre possveis prticas alternativas e melhores prticas aqui.
+
+12
+00:00:52,160 --> 00:00:58,070
+Agora, a maioria dos contedos cobertos nesta pgina foi coberto no bsico e faz um mdulo avanado, por isso no
+
+13
+00:00:58,070 --> 00:01:04,880
+h necessidade de mergulhar diretamente nisso agora e passar por tudo isso, apenas v-lo como uma pgina traseira cheia que voc pode entrar
+
+14
+00:01:04,880 --> 00:01:10,760
+e olhar se algo no est claro ou h algum caso de uso em que voc no tem certeza de
+
+15
+00:01:10,760 --> 00:01:11,940
+como lidar com isso.
+
+16
+00:01:12,200 --> 00:01:18,230
+ um artigo de padres de atualizao imutvel aqui sob a receita na pgina redux.
+
+17
+00:01:18,380 --> 00:01:22,230
+Um recurso especialmente til que eu quero apontar para voc
+
+18
+00:01:22,370 --> 00:01:27,840
+Se voc clicar nele, voc ler mais sobre como voc atualiza objetos e arrays aninhados.
+
+19
+00:01:27,860 --> 00:01:35,270
+Imediatamente, isso pode ser complicado, pois voc tem que ir para todos os nveis aninhados se voc tiver um objeto com
+
+20
+00:01:35,270 --> 00:01:40,540
+um objeto com um objeto dentro dele e quiser mudar algo no objeto profundamente aninhado.
+
+21
+00:01:40,670 --> 00:01:42,900
+Voc deve fechar tudo gratuitamente primeiro.
+
+22
+00:01:43,130 --> 00:01:49,280
+Como mostrado aqui antes, voc pode atualizar algo de forma imutvel e voc pode ver alguns padres
+
+23
+00:01:49,310 --> 00:01:55,340
+e exemplos neste artigo que podem ser de grande ajuda para garantir que voc esteja atualizando tudo
+
+24
+00:01:55,340 --> 00:01:58,030
+da maneira que deseja atualizar com a dvida.
+
+25
+00:01:58,040 --> 00:02:00,290
+Cobrimos muito sobre a Rydex.
+
+26
+00:02:00,440 --> 00:02:05,060
+ hora de avanar para o projeto do Curso novamente e atualizar a dvida para.
+

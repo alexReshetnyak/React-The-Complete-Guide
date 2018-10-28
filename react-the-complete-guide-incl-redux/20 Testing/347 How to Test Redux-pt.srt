@@ -1,0 +1,252 @@
+1
+00:00:02,000 --> 00:00:08,070
+Aprendemos como testar contineres e eu mencionei que a parte importante  que voc no testa a
+
+2
+00:00:08,070 --> 00:00:09,060
+conexo com o
+
+3
+00:00:09,270 --> 00:00:12,630
+redux, como voc testa o redux ento, voc testa tudo?
+
+4
+00:00:12,630 --> 00:00:17,340
+A resposta  sim, ns testamos, mas temos que ter cuidado com o que testamos.
+
+5
+00:00:17,340 --> 00:00:24,100
+Ns provavelmente no queremos testar cadeias muito complexas de aes e redues e, no final,
+
+6
+00:00:24,100 --> 00:00:30,540
+os redutores so a carne que queremos testar, especialmente se seguirmos o padro de no
+
+7
+00:00:30,540 --> 00:00:36,740
+colocar muita lgica nos criadores de ao. Ento testar redutores  super simples, no 
+
+8
+00:00:36,840 --> 00:00:42,000
+sncrona, ento ns no temos que lidar com cdigo assncrono e h apenas
+
+9
+00:00:42,000 --> 00:00:43,260
+funes, ns passamos
+
+10
+00:00:43,410 --> 00:00:48,110
+algo, ns pegamos algo como, por exemplo, para autenticao, digamos que ns
+
+11
+00:00:48,180 --> 00:00:50,600
+queremos escrever um teste para esta.
+
+12
+00:00:50,640 --> 00:00:57,510
+Ento adicione uma autorizao. teste. arquivo js, aqui ns nem precisamos
+
+13
+00:00:57,510 --> 00:00:58,230
+de enzima
+
+14
+00:00:58,230 --> 00:01:05,820
+porque no estamos testando nenhum componente reagente, no precisamos renderizar nada, apenas testamos cdigo javascript normal, testamos funes, a funo redutor.
+
+15
+00:01:06,270 --> 00:01:16,230
+Ento, o que eu fao aqui  no arquivo de teste, em primeiro lugar eu importo a funo de redutor. / auth js neste arquivo, neste caso assim e
+
+16
+00:01:16,230 --> 00:01:20,790
+agora eu tambm preciso importar os tipos de ao assim
+
+17
+00:01:20,910 --> 00:01:26,970
+como tipos de ao, eu importo tudo. / actions action types e
+
+18
+00:01:26,970 --> 00:01:28,810
+agora apenas escrevemos
+
+19
+00:01:29,010 --> 00:01:30,730
+o teste.
+
+20
+00:01:30,900 --> 00:01:32,680
+Ento, novamente ns descrevemos, agora
+
+21
+00:01:33,030 --> 00:01:39,730
+eu dou a isso uma descrio clara que podemos ver no console como o redutor de autenticao e, em
+
+22
+00:01:40,170 --> 00:01:44,200
+seguida, na funo aqui, podemos escrever os muitos testes que temos.
+
+23
+00:01:44,340 --> 00:01:49,140
+Obviamente podemos usar novamente beforeEach para fazer alguma configurao geral se precisarmos,
+
+24
+00:01:49,440 --> 00:01:51,730
+mas eu quero que voc comece
+
+25
+00:01:51,810 --> 00:01:52,800
+logo com
+
+26
+00:01:52,800 --> 00:01:59,550
+os testes, ento e agora vamos ver o que testamos, vamos por exemplo testar se conseguimos
+
+27
+00:01:59,550 --> 00:02:02,680
+o estado inicial correto se realmente passar um
+
+28
+00:02:02,730 --> 00:02:08,340
+tipo de ao invlido para ele, ento deve retornar o estado inicial, pode ser
+
+29
+00:02:08,340 --> 00:02:09,920
+a descrio aqui.
+
+30
+00:02:10,620 --> 00:02:18,060
+E ento eu passo minha funo javascript e l, agora eu espero que meu redutor se eu o executar agora
+
+31
+00:02:18,240 --> 00:02:19,350
+dentro do esperado,
+
+32
+00:02:19,350 --> 00:02:25,140
+eu simplesmente executo o cdigo que eu quero testar, assim como antes com o wrapper
+
+33
+00:02:25,140 --> 00:02:31,860
+mas agora com uma funo javascript normal e ele Na verdade, passar undefined aqui como um estado inicial,
+
+34
+00:02:31,860 --> 00:02:39,840
+que  o caso quando o estado est apenas sendo configurado no incio do nosso aplicativo e a ao  apenas
+
+35
+00:02:39,850 --> 00:02:42,250
+um objeto vazio, portanto nenhuma ao especfica.
+
+36
+00:02:42,270 --> 00:02:47,470
+Ento neste caso eu espero que meu estado seja igual e
+
+37
+00:02:47,730 --> 00:02:53,910
+agora ele deve ser igual ao meu estado inicial definido na funo redutor, claro,
+
+38
+00:02:54,000 --> 00:02:56,660
+ento esse objeto javascript, que 
+
+39
+00:02:56,880 --> 00:02:58,550
+exatamente o que eu
+
+40
+00:02:58,560 --> 00:03:01,560
+testei, deveria ser igual quele objeto.
+
+41
+00:03:01,560 --> 00:03:05,080
+Agora, se salvarmos esse arquivo, isso deve ser executado tambm
+
+42
+00:03:05,220 --> 00:03:08,060
+e  auth. teste. js  executado por a,
+
+43
+00:03:08,370 --> 00:03:13,710
+agora vemos que isso  bem sucedido e  assim que voc pode testar um redutor. Claro que voc tambm
+
+44
+00:03:13,710 --> 00:03:21,030
+pode testar casos especficos, ento podemos escrever outro teste onde ele deve
+
+45
+00:03:21,170 --> 00:03:23,760
+armazenar o token no
+
+46
+00:03:23,760 --> 00:03:34,340
+login e agora nesta funo aqui, eu realmente espero executar uma funo redutora com digamos o estado
+
+47
+00:03:34,340 --> 00:03:38,920
+inicial e poderamos definir isso em diante.
+
+48
+00:03:39,110 --> 00:03:39,460
+Ento
+
+49
+00:03:39,470 --> 00:03:48,190
+eu executo a funo redutor com o estado inicial e com uma ao onde o tipo  actionTypes. AUTH_SUCCESS e agora,  claro, tambm precisamos passar a carga
+
+50
+00:03:48,200 --> 00:03:54,360
+correta com essa ao, portanto, no apenas o tipo, mas tambm a carga til
+
+51
+00:03:54,500 --> 00:03:58,570
+dessa ao, e podemos ver essa carga til no
+
+52
+00:03:58,750 --> 00:04:03,710
+nosso arquivo de criadores de aes. Em AUTH_SUCCESS, tambm passamos o token de
+
+53
+00:04:03,770 --> 00:04:07,890
+ID e o ID do usurio, de modo que  algo
+
+54
+00:04:07,890 --> 00:04:17,120
+que devemos passar aqui tambm, e isso pode ser algum token, o valor exato do curso no importa para o teste e algum ID de usurio.
+
+55
+00:04:17,500 --> 00:04:21,040
+Agora essa  a funo redutora, como ns a executamos.
+
+56
+00:04:21,040 --> 00:04:27,490
+Agora esperamos que ele gere um estado atualizado que respeite esse token e id de usurio, ento o
+
+57
+00:04:27,490 --> 00:04:37,270
+estado atualizado deve ser igual ao nosso estado inicial em geral, mas o token deve ser algum token e aqui, esse deve ser o valor exato aqui,
+
+58
+00:04:37,270 --> 00:04:42,650
+se no fosse, ento algo estaria errado dentro do nosso redutor, essa  a idia
+
+59
+00:04:42,790 --> 00:04:44,610
+por trs do teste, o
+
+60
+00:04:45,620 --> 00:04:48,910
+ID do usurio deve ser algum ID de usurio.
+
+61
+00:04:48,960 --> 00:04:57,600
+Agora, se salvarmos isso, isso tambm passa e, assim que eu altero o valor esperado para algum usurio, ele falha
+
+62
+00:04:57,840 --> 00:05:00,020
+porque agora temos valores diferentes.
+
+63
+00:05:00,360 --> 00:05:07,410
+Ento,  assim que tambm podemos testar redutores, so funes puras e, portanto, muito simples de testar.
+

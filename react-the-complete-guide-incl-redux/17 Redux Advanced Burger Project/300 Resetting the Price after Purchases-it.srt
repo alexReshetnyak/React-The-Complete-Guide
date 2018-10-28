@@ -1,0 +1,72 @@
+1
+00:00:02,080 --> 00:00:07,700
+E The Last Lecture siamo stati in grado di implementare il nostro reindirizzamento, ma ora possiamo vedere
+
+2
+00:00:07,700 --> 00:00:13,610
+che il nostro prezzo non viene mai ripristinato una volta che siamo reindirizzati, quindi una volta terminato abbiamo
+
+3
+00:00:13,970 --> 00:00:20,930
+gi riscontrato che il prezzo non si azzera mai perch nella nostra Bergere Buller o ridurre o dove abbiamo gestito il
+
+4
+00:00:21,620 --> 00:00:28,790
+prezzo totale, aggiorniamo solo il prezzo quando aggiungiamo o rimuoviamo gli ingredienti ma non lo ripristiniamo mai quando chiamiamo gli ingredienti
+
+5
+00:00:29,160 --> 00:00:33,440
+set questi set L'azione Ingredion viene inviata quando questa pagina viene caricata.
+
+6
+00:00:33,450 --> 00:00:40,610
+Sebbene lo facciamo nella componente Bergere Boulder che Mt. gancio e che  apposta e una volta per caricare i
+
+7
+00:00:40,610 --> 00:00:44,260
+miei ingredienti e ripristinarli ogni volta che questo componente viene montato.
+
+8
+00:00:44,540 --> 00:00:52,730
+Ora, per quel motivo, dato che lo stiamo facendo qui, abbiamo il problema di non aggiornare il prezzo.
+
+9
+00:00:52,730 --> 00:00:58,870
+Possiamo facilmente risolvere questo problema nel riduttore Burguet Buller quando chiamiamo gli ingredienti dell'insieme e aggiorniamo gli ingredienti.
+
+10
+00:00:59,060 --> 00:01:05,570
+Dobbiamo anche semplicemente aggiornare il prezzo totale e potremmo ottenere questo valore da un server o
+
+11
+00:01:05,590 --> 00:01:13,940
+semplicemente codificato 2: 4, che  il nostro prezzo iniziale qui con quello se salviamo questo ora avremo un prezzo
+
+12
+00:01:13,940 --> 00:01:14,420
+aggiornato.
+
+13
+00:01:14,450 --> 00:01:20,330
+Quindi adesso se faccio subito un delizioso cheese burger al bacon e inserisco qui tutti i
+
+14
+00:01:20,330 --> 00:01:27,180
+dati per fare il lavoro che a cadere per mescolare le cose, vedi che il prezzo non  sempre
+
+15
+00:01:27,180 --> 00:01:29,220
+azzerato e tutto ci senza errori.
+
+16
+00:01:29,240 --> 00:01:34,320
+Con ci abbiamo ottenuto il bowler Burga e il flusso di lavoro degli ordini gestito per Reed.
+
+17
+00:01:34,340 --> 00:01:41,090
+Ora, naturalmente,  sempre il momento di lavorare sulla pagina degli ordini per il debito, prima di tutto cancellare nuovamente tutti gli
+
+18
+00:01:41,150 --> 00:01:42,200
+ordini su Firebase.
+

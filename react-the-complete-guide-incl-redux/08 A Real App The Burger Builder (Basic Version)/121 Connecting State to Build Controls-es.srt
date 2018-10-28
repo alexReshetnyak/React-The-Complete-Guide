@@ -1,0 +1,384 @@
+1
+00:00:02,190 --> 00:00:04,350
+Hasta aqu, ya hemos construido mucho.
+
+2
+00:00:04,360 --> 00:00:07,240
+Agregamos mucha lgica.
+
+3
+00:00:07,240 --> 00:00:09,510
+Agregamos muchas cosas a nuestra UI.
+
+4
+00:00:09,670 --> 00:00:16,090
+Ahora es el momento de atar los controles del barco con nuestros ingredientes reales para que podamos
+
+5
+00:00:16,090 --> 00:00:19,650
+manejar esa hamburguesa por nuestra cuenta o la del usuario.
+
+6
+00:00:20,220 --> 00:00:27,670
+Para eso necesitamos un par de mtodos en el controlador de compilacin y el generador de hamburguesas
+
+7
+00:00:27,850 --> 00:00:32,680
+me disculpa para actualizar nuestros ingredientes para agregar ingredientes o eliminarlos.
+
+8
+00:00:32,680 --> 00:00:42,010
+dos mtodos aqu, el ingrediente ADD hndler que recibir el tipo de ingrediente para el que quiero agregar uno.
+
+9
+00:00:42,010 --> 00:00:43,470
+As que agregar
+
+10
+00:00:43,720 --> 00:00:50,350
+Y, por supuesto, eliminar ingrediente hndler, que tambin necesita saber para qu tipo debe eliminar
+
+11
+00:00:50,350 --> 00:00:50,850
+uno.
+
+12
+00:00:50,980 --> 00:00:54,550
+Bueno, comencemos aadiendo al ingrediente.
+
+13
+00:00:54,550 --> 00:00:58,660
+Antes que nada, necesito saber cul es el conteo de ingrediente antiguo.
+
+14
+00:00:58,660 --> 00:01:06,790
+As que sume la variable o constante de recuento antiguo para ser precisos, los ingredientes del estado de existencia para un tipo
+
+15
+00:01:06,820 --> 00:01:08,100
+dado como ese.
+
+16
+00:01:08,440 --> 00:01:14,530
+Luego calcular el recuento actualizado que simplemente es el recuento anterior ms uno.
+
+17
+00:01:14,680 --> 00:01:19,240
+Y s, por supuesto, podras hacer esto en menos lneas, solo quiero ser explcito sobre lo
+
+18
+00:01:19,240 --> 00:01:20,380
+que est sucediendo aqu.
+
+19
+00:01:20,800 --> 00:01:23,280
+Ahora necesito actualizar mis ingredientes.
+
+20
+00:01:23,500 --> 00:01:29,880
+Lo intentar y puedes enviar ingredientes actualizados porque como aprendiste, el estado debera actualizarse
+
+21
+00:01:29,880 --> 00:01:38,650
+de manera inmutable, por lo que probar un nuevo objeto javascript y usar como 6 puntos los puntos gratuitos
+
+22
+00:01:38,650 --> 00:01:47,860
+para distribuir las propiedades del antiguo estado de ingredientes en el nuevo objeto y la creacin aqu y luego estoy
+
+23
+00:01:48,760 --> 00:01:55,030
+tomando mis ingredientes actualizados acceso a objetos para el tiempo para el cual tengo
+
+24
+00:01:55,360 --> 00:02:03,790
+que actualizar los ingredientes y establecer el recuento el valor que es solo la cantidad de ingredientes iguales
+
+25
+00:02:03,790 --> 00:02:07,990
+actualizarlo recuento actualizado y contado para actualizar cuenta as
+
+26
+00:02:07,990 --> 00:02:17,740
+Ahora si ese tipo puede llamar a este estado establecido para actualizar mis ingredientes en mi estado, tambin quiero comenzar a hacer
+
+27
+00:02:17,740 --> 00:02:27,280
+un seguimiento del precio, as que agregar una propiedad de precio total a mis ingredientes y digamos que el precio base
+
+28
+00:02:27,280 --> 00:02:32,290
+de la hamburguesa no importa lo que hay es $ 4.
+
+29
+00:02:32,350 --> 00:02:35,050
+Ahora elija el precio que desee, por supuesto.
+
+30
+00:02:35,080 --> 00:02:37,210
+Ahora ese es mi precio base.
+
+31
+00:02:37,330 --> 00:02:41,660
+Ahora aqu quiero actualizar este precio.
+
+32
+00:02:41,980 --> 00:02:48,250
+Entonces necesito tener un mapeo de qu ingrediente cuesta qu.
+
+33
+00:02:48,520 --> 00:02:51,940
+Para eso intentar la nueva constante fuera de la clase.
+
+34
+00:02:51,940 --> 00:02:59,860
+Pero en la misma cada que nombrar como ingrediente y le dar un nombre capital de los precios de
+
+35
+00:02:59,860 --> 00:03:07,200
+los ingredientes, normalmente usted llama Constance que desea usar como constantes globales en todos los caracteres capitales.
+
+36
+00:03:07,780 --> 00:03:11,700
+Entonces, los premios de Ingredion son un objeto javascript donde digo OK vendolo.
+
+37
+00:03:11,710 --> 00:03:13,520
+Tal vez sea el punto 5.
+
+38
+00:03:13,860 --> 00:03:17,210
+Ella podra ser un punto para no s.
+
+39
+00:03:17,290 --> 00:03:22,540
+Podra ser 1 3 y eso significa que el tocino es Daut 7.
+
+40
+00:03:22,540 --> 00:03:24,330
+O as.
+
+41
+00:03:24,340 --> 00:03:27,920
+Entonces estos podran ser los Thaller Bryce para cada ingrediente.
+
+42
+00:03:28,330 --> 00:03:34,850
+Ahora quiero actualizar el premio total con el premio del tipo que agregamos.
+
+43
+00:03:35,170 --> 00:03:45,740
+Entonces s que la edicin del premio bsicamente es precios de ingredientes para un tipo determinado.
+
+44
+00:03:45,910 --> 00:03:51,070
+Porque ten en cuenta que tambin estoy usando los mismos tipos que estoy usando en todas partes en el queso Uppsala
+
+45
+00:03:51,070 --> 00:03:52,890
+con la misma envoltura, y as sucesivamente.
+
+46
+00:03:53,320 --> 00:03:56,470
+Entonces, para ese tipo, puedo buscar el precio.
+
+47
+00:03:56,590 --> 00:04:01,510
+Y como siempre agrego una unidad como un tiempo, no necesito multiplicarlas por nada.
+
+48
+00:04:01,510 --> 00:04:14,910
+precio total estatal y establecer el nuevo precio igual al precio anterior ms la suma del precio y, s, de nuevo, puede hacerlo en menos lneas.
+
+49
+00:04:15,500 --> 00:04:20,380
+As que ahora puedo tomar mi precio anterior de este
+
+50
+00:04:20,700 --> 00:04:31,050
+Pero con eso ahora puedo llamar a establecer estado y all ahora puedo establecer el precio total para el nuevo precio y
+
+51
+00:04:31,050 --> 00:04:33,160
+puedo establecer el precio.
+
+52
+00:04:33,300 --> 00:04:33,930
+Disculpe.
+
+53
+00:04:33,930 --> 00:04:38,530
+Ingredientes iguales a los ingredientes actualizados.
+
+54
+00:04:38,550 --> 00:04:39,900
+Entonces esto es ahora una actualizacin de estado.
+
+55
+00:04:39,900 --> 00:04:46,760
+Quiero hacer cuando se agrega un nuevo ingrediente actualizando degradados y actualizo el precio.
+
+56
+00:04:46,830 --> 00:04:53,810
+Con eso, vamos a enganchar el controlador Ed Ingredion al botn ms en nuestros controles de compilacin.
+
+57
+00:04:54,640 --> 00:05:07,820
+Para hacer eso, necesito pasar una propiedad a ambos controles y all simplemente agregar la propiedad editar de Ingredion, que contiene una
+
+58
+00:05:08,360 --> 00:05:15,380
+referencia a este elemento adicional hndndler ahora dentro de los controles accionados.
+
+59
+00:05:15,380 --> 00:05:18,610
+Ahora necesito distribuir esto correctamente.
+
+60
+00:05:18,830 --> 00:05:25,160
+As que copiemos el nombre de propiedad que elegimos aqu en Bergere Boulder y listo para construir
+
+61
+00:05:25,830 --> 00:05:26,450
+controles all.
+
+62
+00:05:26,480 --> 00:05:30,860
+Necesito pasarlo al control de bala individual que tenemos.
+
+63
+00:05:30,950 --> 00:05:33,720
+Entonces, no solo tenemos que clave y la etiqueta.
+
+64
+00:05:33,740 --> 00:05:36,080
+Tambin tenemos el botn ms all.
+
+65
+00:05:36,320 --> 00:05:44,470
+Entonces, cuando se agrega o cuando se hace clic en ms, puede nombrar estos accesorios, por supuesto, todo lo que desee.
+
+66
+00:05:44,470 --> 00:05:53,660
+Luego quiero pasar el ingrediente adicional de prop para que la propiedad que recibimos en compilacin controle la propiedad que acabamos
+
+67
+00:05:53,750 --> 00:05:58,760
+de configurar aqu y que estamos pasando a los controles de compilacin.
+
+68
+00:05:58,830 --> 00:06:07,200
+Ahora con los controles incorporados lo paso al control de compilacin individual para que este control de facturacin pueda
+
+69
+00:06:07,320 --> 00:06:08,530
+llamar a muerto.
+
+70
+00:06:08,730 --> 00:06:16,770
+Sin embargo, tambin necesito, por supuesto, hacer un seguimiento de qu tipo de control de visualizacin est desactivado.
+
+71
+00:06:16,800 --> 00:06:25,590
+Entonces, qu tipo tiene este control y tenemos esta propiedad de tipo y la matriz de controles que usamos
+
+72
+00:06:25,590 --> 00:06:28,130
+para crear todos estos controles.
+
+73
+00:06:28,200 --> 00:06:38,490
+As que probablemente tambin debera pasar el tipo a mi ingrediente, ahora podra hacerlo, pero en esencia es
+
+74
+00:06:38,490 --> 00:06:40,680
+un bucle adicional innecesario.
+
+75
+00:06:40,920 --> 00:06:46,490
+Ahora implementara un oyente en el control accionado para devolver todo nuevamente.
+
+76
+00:06:46,590 --> 00:06:51,110
+As que no puedo omitir esto y en su lugar configurar en EIAS seis funciones aqu.
+
+77
+00:06:51,570 --> 00:06:54,340
+Ejecute la edicin de ingredientes del accesorio.
+
+78
+00:06:54,420 --> 00:07:02,560
+Entonces, la referencia de funcin que recibimos en los controles de compilacin es simplemente un tipo de control de restitucin.
+
+79
+00:07:02,760 --> 00:07:05,280
+Recuerde que tengo acceso a control escriba su.
+
+80
+00:07:05,330 --> 00:07:12,940
+ejecucin tipo Nahm agregado que al final no conducir a nada ms, entonces agregue el manejador de ingredientes que se est ejecutando.
+
+81
+00:07:12,940 --> 00:07:18,730
+Porque dentro de ese bucle donde se pasar por todos los controles y cada control tiene
+
+82
+00:07:18,730 --> 00:07:19,800
+un ingrediente de
+
+83
+00:07:20,080 --> 00:07:26,710
+Y all espero obtener el tipo como un argumento y es por eso que lo estoy pasando como un argumento aqu en
+
+84
+00:07:26,740 --> 00:07:28,010
+los controles de compilacin.
+
+85
+00:07:28,090 --> 00:07:35,140
+Ahora, por supuesto, para que esto funcione, esta propiedad aadida, que para volver a pasar a un nico
+
+86
+00:07:35,140 --> 00:07:37,990
+control integrado debe conectarse al botn ms.
+
+87
+00:07:37,990 --> 00:07:44,920
+Entonces en ese botn agregar el manejador de clic al hacer clic en Lisner. Debo decir que es proporcionado por reaccionar.
+
+88
+00:07:44,920 --> 00:07:48,540
+Tenga en cuenta que no es una propiedad porque no es un componente personalizado.
+
+89
+00:07:48,640 --> 00:07:53,840
+Eso es un elemento incorporado y ah lo apoyo.
+
+90
+00:07:54,070 --> 00:08:00,820
+Por lo tanto, esta propiedad adicional que se pasa desde los controles de compilacin no debera ser y desencaden
+
+91
+00:08:00,820 --> 00:08:02,730
+este mtodo en ese momento.
+
+92
+00:08:02,780 --> 00:08:10,470
+Ahora si eso, si guardamos todos los archivos y vamos a nuestra hamburguesa, hagamos clic en ms y
+
+93
+00:08:10,740 --> 00:08:12,200
+podr agregar ingredientes.
+
+94
+00:08:12,350 --> 00:08:14,780
+Genial ya en mi opinin.
+
+95
+00:08:14,790 --> 00:08:17,030
+Ahora, por supuesto, no podemos eliminarlos sin embargo.
+
+96
+00:08:17,070 --> 00:08:20,710
+As que trabajemos en eliminar los ingredientes en el siguiente paso.
+

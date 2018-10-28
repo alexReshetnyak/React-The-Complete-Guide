@@ -1,0 +1,408 @@
+1
+00:00:02,200 --> 00:00:09,040
+Entonces, en el ltimo mdulo, le mostr algunas formas de refacturar sus reductores y una mencin de que estas formas o
+
+2
+00:00:09,040 --> 00:00:15,280
+estos mtodos son todos opcionales y an as quiero utilizarlos aqu para limpiar este reductor y hacer que la
+
+3
+00:00:15,280 --> 00:00:19,140
+declaracin de la caja del interruptor sea un poco limpiador, debera decir.
+
+4
+00:00:19,420 --> 00:00:25,780
+Entonces, por ejemplo, agregar el mtodo de conveniencia de mi objeto de actualizacin que hace que actualizar objetos como lo hacemos
+
+5
+00:00:25,780 --> 00:00:30,130
+para todo el estado, pero luego todos los ingredientes de Optik te resulten ms fciles.
+
+6
+00:00:30,610 --> 00:00:39,030
+Para eso agreguemos rpidamente una nueva funcin y la agregar a la utilidad de la carpeta de la tienda dord genius que no
+
+7
+00:00:39,040 --> 00:00:39,990
+est escrita as.
+
+8
+00:00:40,120 --> 00:00:41,320
+Eso es correcto.
+
+9
+00:00:41,350 --> 00:00:46,870
+Y cuando hay exportacin, una nueva constante a la que denominar objeto de actualizacin.
+
+10
+00:00:46,870 --> 00:00:48,520
+As que la funcin de flecha.
+
+11
+00:00:49,210 --> 00:00:58,160
+Y en esta funcin espero obtener mi objeto antiguo y las propiedades actualizadas o lo que sea que quiera llamar
+
+12
+00:00:58,160 --> 00:01:00,920
+nuevas propiedades, sea lo que sea.
+
+13
+00:01:01,040 --> 00:01:05,270
+Y luego est la misma funcin que escrib en los ltimos mdulos que hay all.
+
+14
+00:01:05,510 --> 00:01:08,530
+Simplemente devolver un nuevo objeto javascript.
+
+15
+00:01:08,540 --> 00:01:10,220
+Esa es la idea detrs de eso.
+
+16
+00:01:10,250 --> 00:01:17,480
+tambin distribuye las propiedades de las propiedades actualizadas a las que debera pertenecer un objeto.
+
+17
+00:01:17,540 --> 00:01:22,480
+Un nuevo objeto distribuye las propiedades del objeto antiguo pero
+
+18
+00:01:22,560 --> 00:01:26,030
+Ahora puedo usar esa funcin de objeto de actualizacin en mis reductores.
+
+19
+00:01:26,220 --> 00:01:35,970
+As que lo importar en el objeto de actualizacin de importacin superior que se denomina exportaciones y necesitamos los medios
+
+20
+00:01:36,540 --> 00:01:39,490
+para mover el archivo de utilidad.
+
+21
+00:01:39,490 --> 00:01:45,170
+Y ahora puedo llamar a objeto de actualizacin cada vez que tengo un cdigo como este donde distribuyo algunos accesorios.
+
+22
+00:01:45,540 --> 00:01:54,090
+Entonces, en este caso, tendr primero mis ingredientes actualizados que ahora sern una llamada para actualizar el
+
+23
+00:01:54,600 --> 00:01:58,260
+objeto donde paso los ingredientes estatales Sodhi.
+
+24
+00:01:58,260 --> 00:02:05,590
+As que ahora estoy replicando esta parte y dnde paso mis nuevos ingredientes esta parte.
+
+25
+00:02:05,640 --> 00:02:11,880
+As que todos ustedes crean mi nuevo concepto solo para dividirlo en varias lneas y no establecer todo
+
+26
+00:02:11,880 --> 00:02:13,470
+eso en una sola expresin.
+
+27
+00:02:13,500 --> 00:02:17,830
+As que aqu tendr mi ingrediente actualizado.
+
+28
+00:02:18,450 --> 00:02:25,140
+Ese debera ser un objeto Java donde tengo el par de valores clave muertos el nombre dinmico del ingrediente y
+
+29
+00:02:25,410 --> 00:02:31,950
+luego el valor actualizado que se incrementa y luego todo el ingrediente pasado se actualiza como un segundo argumento
+
+30
+00:02:31,980 --> 00:02:33,450
+para el objeto Apptd.
+
+31
+00:02:33,510 --> 00:02:38,880
+Y eso tiene que ser un objeto actualizado ingrediente tiene que ser un objeto porque esto es lo que espera
+
+32
+00:02:38,880 --> 00:02:39,990
+la funcin de utilidad.
+
+33
+00:02:40,050 --> 00:02:42,720
+De lo contrario, no funcionar como se esperaba.
+
+34
+00:02:42,720 --> 00:02:45,820
+Entonces con eso tengo los ingredientes actualizados.
+
+35
+00:02:45,890 --> 00:02:48,540
+Esto es lo que asigno a los ingredientes ahora.
+
+36
+00:02:48,990 --> 00:02:53,420
+Pero, por supuesto, la idea es que siempre reemplace esta parte.
+
+37
+00:02:53,610 --> 00:02:58,500
+Entonces todos crean un nuevo contenido que nombrar el estado actualizado.
+
+38
+00:02:58,500 --> 00:03:07,060
+Quizs esto debera ser un objeto de JavaScript donde ahora tengo mis ingredientes y el precio total as.
+
+39
+00:03:07,350 --> 00:03:15,900
+Y al final aqu puedo, por lo tanto, llamar al objeto de actualizacin y pasar el estado anterior que es el Optik
+
+40
+00:03:15,920 --> 00:03:20,360
+que deseo actualizar. Deseo regresar aqu y pasar el estado actualizado.
+
+41
+00:03:20,360 --> 00:03:25,340
+Entonces todava hay muchas lneas un poco ms estructuradas y que usan esa funcin de utilidad.
+
+42
+00:03:25,430 --> 00:03:27,610
+Y solo quera mostrar cmo implementar esto.
+
+43
+00:03:27,740 --> 00:03:33,480
+Podramos haber exprimido todo eso en una sola lnea, pero habra sido un poco difcil de seguir.
+
+44
+00:03:33,510 --> 00:03:35,660
+Es por eso que lo escrib en mltiples lneas.
+
+45
+00:03:36,020 --> 00:03:41,630
+As que ahora voy a copiar todo ese cdigo porque cuando eliminamos el ingrediente es esencialmente
+
+46
+00:03:41,900 --> 00:03:48,110
+la misma historia, pero por supuesto la diferencia es que tenemos que disminuir nuestro ingrediente por uno.
+
+47
+00:03:48,440 --> 00:03:56,000
+Y a pesar de que est en una declaracin de maysculas y minsculas, me gusta que el hecho de reasignar una constante
+
+48
+00:03:56,360 --> 00:03:59,370
+aqu no reconozca que no puedo alcanzar este cdigo.
+
+49
+00:03:59,480 --> 00:04:03,030
+Entonces lo que har es simplemente renombrar estos Constantes.
+
+50
+00:04:03,050 --> 00:04:08,760
+No es ideal, pero lamentablemente tiene que ser actualizado.
+
+51
+00:04:09,170 --> 00:04:16,510
+Tal vez esto solo sea necesario una vez ms debido a que la ID no recoge las constantes constantes de DS
+
+52
+00:04:16,550 --> 00:04:18,380
+que nunca se pueden reasignar.
+
+53
+00:04:18,410 --> 00:04:21,270
+Entonces con eso usemos ingredientes actualizados.
+
+54
+00:04:21,290 --> 00:04:30,140
+Aqu est esta nueva constante que acabo de crear y actualizar aqu y luego la actualizacin se mantuvo all.
+
+55
+00:04:30,140 --> 00:04:33,690
+Ahora, para los ingredientes establecidos, es un poco ms fcil all.
+
+56
+00:04:33,710 --> 00:04:39,750
+Tambin deseo devolver una llamada para actualizar el objeto a la funcin que estamos importando.
+
+57
+00:04:39,750 --> 00:04:45,810
+Pas el estado del curso y el segundo argumento debera ser un objeto javascript donde ahora simplemente copio todo
+
+58
+00:04:45,810 --> 00:04:49,040
+el cdigo que previamente tambin pas a este nuevo objeto.
+
+59
+00:04:49,270 --> 00:04:56,600
+As que ahora estoy usando mi funcin de utilidad aqu para actualizar el estado y lo mismo, por supuesto aqu
+
+60
+00:04:56,600 --> 00:04:58,220
+abajo para el error all.
+
+61
+00:04:58,230 --> 00:05:06,500
+Tambin quiero llamar al estado de actualizacin como este objeto de actualizacin que quiero decir.
+
+62
+00:05:06,550 --> 00:05:07,940
+As que como siempre actualizacin.
+
+63
+00:05:07,960 --> 00:05:16,380
+La violacin de objeto tiene que indicar y luego optik donde dicho error o demasiado cierto como este.
+
+64
+00:05:16,490 --> 00:05:22,750
+Entonces ese es el ingrediente que usamos y se actualiza con nuestra funcin de utilidad.
+
+65
+00:05:22,760 --> 00:05:25,790
+Hagamos ahora lo mismo para ese orden reductor.
+
+66
+00:05:25,790 --> 00:05:36,020
+Tambin hay importacin como un objeto de actualizacin de exportacin nombrado de la utilidad para la que podemos encontrar un nivel por encima de la carpeta de
+
+67
+00:05:36,020 --> 00:05:40,000
+reductores y no hay actualizaciones de noticias pticas para su uso.
+
+68
+00:05:40,010 --> 00:05:46,150
+Entonces, un objeto de actualizacin pasado a estado y pasado un objeto javascript fue perseguido se establece en falso.
+
+69
+00:05:46,220 --> 00:05:50,250
+Puede eliminar este cdigo y luego lo mismo aqu.
+
+70
+00:05:50,600 --> 00:05:58,290
+Actualice el pase del objeto para indicar que se ha restablecido el objeto cargando a falso de esta manera.
+
+71
+00:05:58,340 --> 00:05:59,390
+Eliminar ese cdigo.
+
+72
+00:06:00,220 --> 00:06:05,840
+Y tambin cuando tenemos xito, ests all, por supuesto, todos queremos actualizar un objeto.
+
+73
+00:06:05,860 --> 00:06:17,850
+As que aqu actualizar un objeto justo despus del estado del curso y luego todas estas cosas aqu como propiedades de un objeto javascript pueden
+
+74
+00:06:17,880 --> 00:06:21,430
+deshacerse del cdigo a partir de ese momento.
+
+75
+00:06:21,660 --> 00:06:23,880
+Y, por supuesto, actualizamos un nmero de Optik aqu aqu.
+
+76
+00:06:23,910 --> 00:06:25,150
+Nuevo orden.
+
+77
+00:06:25,170 --> 00:06:28,260
+Ah tambin actualizamos un objeto.
+
+78
+00:06:28,260 --> 00:06:32,720
+Obtenemos D. S. ordenar datos aqu como un objeto.
+
+79
+00:06:32,760 --> 00:06:43,110
+Y quiero pasarle una nueva propiedad a ID, que debera ser ID de orden de accin y con eso no puedo deshacerme
+
+80
+00:06:43,110 --> 00:06:45,200
+de este cdigo aqu.
+
+81
+00:06:45,450 --> 00:06:48,970
+Entonces ahora tenemos esto usando nuestra aplicacin esa funcin ptica tambin.
+
+82
+00:06:49,350 --> 00:06:51,090
+Y estamos llegando al final.
+
+83
+00:06:51,090 --> 00:06:57,870
+Hagmoslo tambin para comprar Forgan Berger FAIL FAIL tenemos al estado aqu cargando conjuntos a falso.
+
+84
+00:06:58,020 --> 00:07:07,640
+Por lo tanto, tambin estn usando la funcin de actualizacin de Optik y / o duplican rpidamente esto para iniciar el pedido de recuperacin, excepto el
+
+85
+00:07:07,910 --> 00:07:09,450
+da de hoy aqu.
+
+86
+00:07:09,730 --> 00:07:17,500
+Como puede ver, quiero configurar la carga en true y para obtener pedidos exitosos. Llamar. Obtendran el objeto
+
+87
+00:07:17,510 --> 00:07:24,950
+tambin pasado al estado y luego todos tendran rdenes y cargadas configuradas en falso como propiedades que
+
+88
+00:07:25,250 --> 00:07:28,600
+pas una vez como objeto de JavaScript. ese.
+
+89
+00:07:29,620 --> 00:07:33,650
+Y ahora falla el ltimo objeto de actualizacin llamado all para rdenes de recuperacin.
+
+90
+00:07:33,740 --> 00:07:40,720
+Terrible pasar el estado existente que se va a actualizar y todo particulariz la carga a falso.
+
+91
+00:07:40,730 --> 00:07:43,120
+De nuevo, todo eso es opcional.
+
+92
+00:07:43,360 --> 00:07:45,820
+Pero reduce la funcin de utilidad.
+
+93
+00:07:45,820 --> 00:07:50,200
+Y si alguna vez fueras a cambiar la lgica que usas para actualizar un objeto, solo tienes que
+
+94
+00:07:50,200 --> 00:07:51,400
+hacerlo en un solo lugar.
+
+95
+00:07:51,430 --> 00:07:56,380
+Ahora veamos rpidamente si funciona todo lo que carga.
+
+96
+00:07:56,380 --> 00:07:58,570
+Administrar una hamburguesa parece funcionar.
+
+97
+00:07:58,570 --> 00:08:01,450
+As que eso es todo bueno, supongo.
+
+98
+00:08:01,660 --> 00:08:04,300
+Vamos rpidamente a la pgina de pago.
+
+99
+00:08:04,300 --> 00:08:05,560
+As que eso se ve bien.
+
+100
+00:08:05,560 --> 00:08:06,520
+Parece funcionar.
+
+101
+00:08:06,550 --> 00:08:07,510
+Qu ms podemos hacer.
+
+102
+00:08:07,520 --> 00:08:09,120
+Echemos un vistazo en la prxima conferencia.
+

@@ -1,0 +1,48 @@
+1
+00:00:02,240 --> 00:00:09,090
+Benvenuti in questo modulo, in questo modulo daremo un'occhiata all'animazione nelle app di reazione.
+
+2
+00:00:09,170 --> 00:00:15,320
+In realt usiamo gi alcune animazioni, alcune animazioni minuscole nel nostro progetto del corso nel generatore di hamburger,
+
+3
+00:00:15,320 --> 00:00:16,060
+pensiamo a
+
+4
+00:00:16,070 --> 00:00:22,280
+questo pulsante ora del comando che si attiva quando diventa attivo ma non stiamo facendo molto con le animazioni
+
+5
+00:00:22,310 --> 00:00:28,890
+e ci sarebbero alcune cose che abbiamo solo non poteva fare o almeno non poteva fare in un modo carino.
+
+6
+00:00:28,970 --> 00:00:31,120
+Mi tuffer in queste cose in questo modulo.
+
+7
+00:00:31,190 --> 00:00:37,790
+L'obiettivo generale di questo modulo  quello di mostrarti quali diversi modi o opzioni hai quando si
+
+8
+00:00:37,790 --> 00:00:42,140
+tratta di animare le app reattive perch le animazioni sono importanti,
+
+9
+00:00:42,140 --> 00:00:49,670
+non sono solo qualcosa da tenere in considerazione nelle app, ma le animazioni sono qualcosa di cui potresti aver bisogno
+
+10
+00:00:49,760 --> 00:00:53,210
+quasi qualsiasi app perch le animazioni guidano l'attenzione dell'utente,
+
+11
+00:00:53,210 --> 00:01:00,240
+mostrano all'utente ci che  cambiato, lo rendono pi gradevole alla vista e sono quindi un concetto importante.
+
+12
+00:01:00,500 --> 00:01:05,570
+Dunque, immergiamoci nei diversi modi di animare le app di reazione che possiamo pensare.
+

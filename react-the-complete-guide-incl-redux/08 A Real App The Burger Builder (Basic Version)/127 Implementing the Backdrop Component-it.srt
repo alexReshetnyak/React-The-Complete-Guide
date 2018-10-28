@@ -1,0 +1,404 @@
+1
+00:00:02,200 --> 00:00:09,910
+Aggiungiamo questo sfondo e, prima di tutto, creiamo il componente per lo sfondo e aggiungiamo lo stile per
+
+2
+00:00:09,910 --> 00:00:10,970
+lo sfondo.
+
+3
+00:00:11,350 --> 00:00:15,370
+Quindi andiamo alla nostra cartella You Are in the backdrop.
+
+4
+00:00:15,550 --> 00:00:19,390
+E iniziamo a lavorare su quel componente di sfondo.
+
+5
+00:00:19,420 --> 00:00:21,420
+Sar un componente super semplice.
+
+6
+00:00:21,790 --> 00:00:28,200
+Come sempre  un componente funzionale qui che ha ricevuto alcuni oggetti di scena e restituito alcuni GSX.
+
+7
+00:00:28,210 --> 00:00:37,140
+Pertanto, ha anche bisogno di importare la reazione di reagire e ha bisogno di esportare se stessa come predefinita.
+
+8
+00:00:37,220 --> 00:00:40,380
+Ora nella J  il codice X che ritorno.
+
+9
+00:00:40,670 --> 00:00:44,260
+In realt non ho nemmeno bisogno di scrivere codice complesso.
+
+10
+00:00:44,270 --> 00:00:47,670
+Voglio solo controllare se lo show di prop  vero.
+
+11
+00:00:47,810 --> 00:00:55,490
+Se questo  il caso di nuovo usando un'espressione di turno qui, se  cos, allora voglio restituire una morte
+
+12
+00:00:56,340 --> 00:01:00,760
+che questa def sar semplicemente trattenuta per fermare lo sfondo in avanti.
+
+13
+00:01:00,960 --> 00:01:02,710
+Altrimenti restituir NULL.
+
+14
+00:01:02,730 --> 00:01:09,150
+Si pu tornare ora in componenti che  OK o semplicemente significa che non viene eseguito il rendering ma  OK.
+
+15
+00:01:09,750 --> 00:01:14,760
+Ora non ho bisogno di passare alcun contenuto al div ho bisogno di impostare alcuni stili per.
+
+16
+00:01:14,880 --> 00:01:21,040
+Quindi aggiungiamo uno sfondo al file C S S in cui aggiungiamo alcuni stili per lo sfondo.
+
+17
+00:01:21,110 --> 00:01:23,250
+Possiamo scrivere rapidamente a noi per gabber.
+
+18
+00:01:23,280 --> 00:01:30,570
+Aggiungiamo la classe C S S per poter utilizzare questi moduli di Frue C S S e
+
+19
+00:01:30,570 --> 00:01:36,390
+quindi eseguire il backup dell'intera altezza e larghezza della pagina per coprire tutto.
+
+20
+00:01:36,590 --> 00:01:43,010
+Dovrebbe avere una posizione fissa in modo che rimanga in posizione anche mentre lo si scorre dovrebbe
+
+21
+00:01:43,010 --> 00:01:50,620
+avere un indice impostato di diciamo 100 in modo che sia sopra gli elementi di cui si desidera averlo impostato.
+
+22
+00:01:50,750 --> 00:01:55,570
+E questo diventer importante pi tardi una volta aggiunta la barra della barra degli strumenti, ad esempio.
+
+23
+00:01:55,670 --> 00:02:00,890
+Ma se verifichiamo lo stile modale vedrai che ha anche un indice di 500.
+
+24
+00:02:00,890 --> 00:02:02,070
+Questo  ovviamente importante.
+
+25
+00:02:02,090 --> 00:02:07,610
+Il modale ha bisogno di stare seduto sopra lo sfondo e lo sfondo dovr successivamente sedersi sopra ad altri elementi come
+
+26
+00:02:07,610 --> 00:02:08,790
+la barra degli strumenti.
+
+27
+00:02:09,110 --> 00:02:10,070
+Aggiungiamo anche.
+
+28
+00:02:10,100 --> 00:02:18,200
+Sinistra zero allo zero superiore per posizionarsi nell'angolo in alto a sinistra e consente di aggiungere un colore di sfondo in
+
+29
+00:02:18,200 --> 00:02:26,120
+cui user il nostro G. P. UN. valore per impostarlo su un colore nero con una trasparenza del 50%.
+
+30
+00:02:26,120 --> 00:02:34,940
+Ora  il momento di importare  classista lievito queste classi o classe simile in realt nel componente
+
+31
+00:02:34,940 --> 00:02:36,010
+di sfondo.
+
+32
+00:02:36,260 --> 00:02:46,760
+assegnarlo come nome di classe al div in modo che il nome della classe ora sia uguale allo sfondo di classi con una B maiuscola.
+
+33
+00:02:46,760 --> 00:02:54,450
+Quindi qui, quindi, mi limiter semplicemente a importare classis da quella barra di sfondo C S S e
+
+34
+00:02:54,470 --> 00:02:58,590
+ importante ottenere un componente sullo sfondo.
+
+35
+00:02:58,760 --> 00:03:00,840
+Ora dobbiamo usarlo.
+
+36
+00:03:00,910 --> 00:03:03,490
+Si aspetta di ottenere una propriet show.
+
+37
+00:03:03,500 --> 00:03:07,610
+La domanda ora  dove aggiungere questo sfondo.
+
+38
+00:03:07,880 --> 00:03:14,280
+E ora puoi avere pi posti in cui puoi aggiungerlo dove potresti sostenere che  logico che
+
+39
+00:03:15,290 --> 00:03:22,310
+un posto del genere si trovi in un componente profondo se si trova accanto al layout al di fuori
+
+40
+00:03:22,460 --> 00:03:26,670
+del layout anche perch non fa parte del contenuto della pagina principale.
+
+41
+00:03:26,700 --> 00:03:34,100
+Avendo detto nel componente lay out potresti argomentare perch fa parte della pagina ma non dovrebbe essere parte del contenuto
+
+42
+00:03:34,100 --> 00:03:39,160
+principale e non far parte della barra degli strumenti o qualcosa del genere.
+
+43
+00:03:39,350 --> 00:03:42,840
+Puoi sicuramente farlo puoi metterlo nel componente di layout.
+
+44
+00:03:42,920 --> 00:03:48,150
+Devi solo assicurarti di poterlo raggiungere passando lo spettacolo.
+
+45
+00:03:48,150 --> 00:03:52,130
+Lo sfondo  rimasto fino alla componente morta e cos via.
+
+46
+00:03:52,160 --> 00:03:54,040
+Questa  una bella sfida per te.
+
+47
+00:03:54,260 --> 00:03:58,820
+Prova a posizionare e gestire lo sfondo in diversi punti della tua app.
+
+48
+00:03:59,120 --> 00:04:05,960
+a componenti basati su classi perch forse all'improvviso  necessario definire un metodo in un componente.
+
+49
+00:04:05,960 --> 00:04:12,190
+Per pap potrebbe anche essere necessario passare alcuni componenti da componenti meno funzionali allo stato
+
+50
+00:04:12,230 --> 00:04:20,930
+Cercher un altro approccio, anche se aggiunger lo sfondo al mio modello perch, a mio parere, questo
+
+51
+00:04:20,930 --> 00:04:23,930
+fondale  strettamente connesso al modello.
+
+52
+00:04:24,020 --> 00:04:32,000
+Se viene mostrato il modem, dovrebbe essere mostrato lo sfondo quindi quindi importer i miei componenti ausiliari qui perch ho
+
+53
+00:04:32,000 --> 00:04:35,450
+bisogno di posizionare quella modale vicino allo sfondo.
+
+54
+00:04:35,840 --> 00:04:45,090
+Quindi, lasciami semplicemente andare fino al punto in cui posso accedere all'et Ossi e poi al mio ausiliario.
+
+55
+00:04:45,200 --> 00:04:56,120
+E ora facciamo il wrapping del modale in questo componente alk e ora importiamo lo sfondo in questo autunno
+
+56
+00:04:56,150 --> 00:05:04,110
+per importare lo sfondo dalla cartella dello sfondo del file Julias di sfondo.
+
+57
+00:05:04,220 --> 00:05:06,800
+Mettiamolo accanto al modal.
+
+58
+00:05:06,820 --> 00:05:08,660
+Questo  il mio sfondo.
+
+59
+00:05:08,970 --> 00:05:15,200
+Ora dovremmo configurare la propriet show sullo sfondo, perch ce ne aspettiamo l e per fortuna
+
+60
+00:05:15,200 --> 00:05:21,980
+otteniamo le informazioni dello show su prop's nel componente modale stesso, cos possiamo semplicemente passare sullo show
+
+61
+00:05:22,070 --> 00:05:23,830
+di Prop sullo sfondo.
+
+62
+00:05:24,080 --> 00:05:27,200
+Se viene mostrato lo sfondo dovrebbe essere mostrato.
+
+63
+00:05:27,920 --> 00:05:32,770
+Se lo facciamo salviamo tutti i file e vediamo se funziona.
+
+64
+00:05:32,960 --> 00:05:33,500
+Sembra buono.
+
+65
+00:05:33,500 --> 00:05:34,960
+Abbiamo uno sfondo.
+
+66
+00:05:35,360 --> 00:05:39,680
+Assicuriamoci di poter fare clic su questo sfondo per pap.
+
+67
+00:05:39,680 --> 00:05:46,430
+Ovviamente  necessario aggiungere un click listener all'interno dello sfondo alla morte, quindi al click.
+
+68
+00:05:46,650 --> 00:05:55,070
+Certo esegue un metodo e ovviamente ricever un riferimento a quel metodo su una propriet quindi eseguir oggetti
+
+69
+00:05:55,070 --> 00:05:55,860
+di scena.
+
+70
+00:05:55,910 --> 00:05:58,950
+E poi diciamo che raccogliere potrebbe essere il nome della propriet.
+
+71
+00:05:59,090 --> 00:06:01,820
+Puoi scegliere qualsiasi nome tu voglia per il tuo.
+
+72
+00:06:01,930 --> 00:06:03,960
+Torniamo al modale.
+
+73
+00:06:04,030 --> 00:06:11,890
+Qui dobbiamo fornire una propriet click e ora dobbiamo fare qualcosa l e far semplicemente
+
+74
+00:06:12,490 --> 00:06:17,200
+scattare Propp su quel Motilal che dovrebbe essere chiuso.
+
+75
+00:06:17,590 --> 00:06:23,280
+Quindi la chiusura mobile  ora una propriet che dobbiamo aggiungere al componente modale.
+
+76
+00:06:23,320 --> 00:06:24,930
+Quando abbiamo aggiunto a J.
+
+77
+00:06:24,940 --> 00:06:26,960
+X alla nostra produzione.
+
+78
+00:06:27,010 --> 00:06:32,480
+Quindi per dirlo e ovviamente usiamo quella modale nel costruttore di hamburger.
+
+79
+00:06:32,820 --> 00:06:41,340
+Tutto ci che ora dobbiamo fare  aggiungere queste propriet modal close a modal perch l'abbiamo appena
+
+80
+00:06:41,400 --> 00:06:46,030
+aggiunto l come riferimento del metodo che vogliamo eseguire.
+
+81
+00:06:46,140 --> 00:06:53,100
+Una volta attivato lo sfondo,  sufficiente assicurarsi che sia chiaro quando ci accade quando viene
+
+82
+00:06:53,340 --> 00:06:54,770
+attivato il clic.
+
+83
+00:06:54,810 --> 00:07:01,790
+Tutto il diff che fa da sfondo allo sviluppatore di Burgert, dove alla fine otterremo questa informazione.
+
+84
+00:07:01,950 --> 00:07:10,280
+Voglio eseguire del codice una volta che questo sfondo  stato cliccato alla fine e aggiunger un nuovo gestore che cancella
+
+85
+00:07:10,480 --> 00:07:16,500
+il gestore di Chase perch fare clic sullo sfondo significa essenzialmente che vogliamo chiudere il
+
+86
+00:07:16,620 --> 00:07:18,900
+modal e che vogliamo annullare l'acquisto.
+
+87
+00:07:18,900 --> 00:07:29,560
+quindi chiamer questo stato impostato e le dar la caccia con l'indice speciale che sto usando di nuovo qui per assicurarmi
+
+88
+00:07:29,690 --> 00:07:37,140
+che questo all'interno di questo Meffert si riferisca a declasse e non a qualcos'altro.
+
+89
+00:07:37,140 --> 00:07:38,610
+Non vogliamo continuare,
+
+90
+00:07:38,610 --> 00:07:41,040
+Quindi  il gestore del cancellatore di Paperchase.
+
+91
+00:07:41,310 --> 00:07:44,420
+Voglio eseguire una volta che il modem  stato chiuso.
+
+92
+00:07:44,580 --> 00:07:47,470
+Quindi questo gestore di annullamenti pre-Chase.
+
+93
+00:07:47,820 --> 00:07:53,790
+Se ora salviamo tutto e torniamo all'applicazione e apriamo il modello lo vediamo.
+
+94
+00:07:53,820 --> 00:07:59,490
+Se faccio clic sullo sfondo vedrai che la modale scompare e lo sfondo scompare e possiamo farlo
+
+95
+00:07:59,670 --> 00:08:01,340
+tutte le volte che vogliamo.
+
+96
+00:08:01,340 --> 00:08:03,400
+Questo a proposito  un hamburger super gustoso.
+
+97
+00:08:03,450 --> 00:08:05,240
+Nessun battito ma molto formaggio.
+
+98
+00:08:05,310 --> 00:08:06,930
+Delizioso.
+
+99
+00:08:06,960 --> 00:08:13,830
+Ora continuiamo e assicuriamoci di aggiungere alcuni pulsanti come parte del riepilogo dell'ordine in modo che
+
+100
+00:08:13,830 --> 00:08:14,650
+possiamo continuare.
+
+101
+00:08:14,790 --> 00:08:16,290
+O che possiamo annullare.
+

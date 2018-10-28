@@ -1,0 +1,260 @@
+1
+00:00:02,750 --> 00:00:06,420
+Agora, por ltimo, mas no menos importante, h outra mudana que quero mostrar a voc.
+
+2
+00:00:06,620 --> 00:00:12,770
+E ele realmente cai, temos todos esses mtodos de ciclo de vida que eu explico para voc
+
+3
+00:00:12,820 --> 00:00:19,500
+neste mdulo agora re-agir 16 so livres, na verdade, desencoraja o uso de livre deles e adiciona novos.
+
+4
+00:00:19,520 --> 00:00:24,470
+Mas passo a passo quais voc deve tentar um branco.
+
+5
+00:00:24,590 --> 00:00:32,330
+Estes so um componente que ir montar o componente que ser atualizado e o componente receber adereos.
+
+6
+00:00:32,330 --> 00:00:38,370
+Agora, por que estes livres so desencorajados, eles so desencorajados porque eles eram freqentemente usados incorretamente.
+
+7
+00:00:38,720 --> 00:00:45,380
+Voc poderia chamar set state l e possivelmente o primeiro, o primeiro render que voc poderia fazer coisas ruins
+
+8
+00:00:45,380 --> 00:00:45,980
+l dentro.
+
+9
+00:00:45,980 --> 00:00:51,270
+Esta  tambm a razo pela qual raramente os usamos gratuitamente neste curso, como voc ver no projeto do curso
+
+10
+00:00:51,290 --> 00:00:52,510
+que estamos prestes a construir.
+
+11
+00:00:52,520 --> 00:00:56,130
+Eles no so to teis e fceis de serem usados incorretamente.
+
+12
+00:00:56,300 --> 00:00:57,670
+Ento voc ainda pode us-los.
+
+13
+00:00:57,680 --> 00:01:03,620
+Ele ainda funcionar no  inseguro, mas  desencorajado re-oferece oferece aos novos embora.
+
+14
+00:01:03,850 --> 00:01:14,750
+O primeiro novo gancho de ciclo de vida que ele adiciona  obter o estado derivado de adereos e isso obter os
+
+15
+00:01:15,110 --> 00:01:18,080
+prximos adereos e o estado anterior.
+
+16
+00:01:18,110 --> 00:01:26,310
+Agora, esse gancho de ciclo de vida  executado sempre que seus objetos so atualizados e d a voc a chance de
+
+17
+00:01:26,310 --> 00:01:27,970
+atualizar seu estado com eles.
+
+18
+00:01:28,230 --> 00:01:30,150
+Agora muitas vezes voc no quer isso.
+
+19
+00:01:30,210 --> 00:01:34,100
+Seu estado raramente deve ser acoplado aos seus adereos.
+
+20
+00:01:34,140 --> 00:01:39,540
+Estas devem ser duas coisas independentes, mas s vezes voc recebe casos em que recebe novos adereos e
+
+21
+00:01:39,540 --> 00:01:44,130
+quer atualizar seu estado local porque talvez queira trabalhar com esse estado, voc deseja alter-lo
+
+22
+00:01:44,160 --> 00:01:50,880
+nesse componente antes que um usurio clique em um boto seguro e voc Comprometeu-se a trs componentes do estado em seu aplicativo e,
+
+23
+00:01:50,880 --> 00:01:55,560
+em seguida, voc alter-lo em outro lugar e eles esto livres iro mudar ou prop novamente.
+
+24
+00:01:55,890 --> 00:02:00,150
+Ento vamos simplesmente adicionar uma declarao de bloqueio do console aqui.
+
+25
+00:02:01,280 --> 00:02:07,770
+E ns estamos dentro de obter o estado derivado de adereos e podemos produzir o estado anterior aqui.
+
+26
+00:02:09,400 --> 00:02:16,120
+E agora, como eu disse em qualquer ano, vocs todos devem retornar e voc declarar, ento este pode ser um objeto que ser
+
+27
+00:02:16,120 --> 00:02:21,580
+fundido com o antigo estado, assim como as chamadas estaduais fazem, mas voc tambm pode,  claro, retornar
+
+28
+00:02:21,610 --> 00:02:24,800
+o antigo estado. nunca atualizado porque voc sempre pega o ltimo.
+
+29
+00:02:24,910 --> 00:02:30,070
+Mas voc poderia fazer os props fazer algo com eles e retornar um novo objeto de estado que seria
+
+30
+00:02:30,100 --> 00:02:31,110
+usado em seu lugar.
+
+31
+00:02:31,600 --> 00:02:34,020
+Ento agora temos essa configurao.
+
+32
+00:02:34,030 --> 00:02:39,820
+Uma coisa para fazer isso funcionar  que, na verdade, temos que usar a palavra-chave static, porque
+
+33
+00:02:39,820 --> 00:02:41,060
+ um mtodo esttico.
+
+34
+00:02:41,080 --> 00:02:47,400
+Ento, basicamente, um mtodo que no  anexado a uma nica instncia seria que, se recarregssemos nosso aplicativo, receberamos esse aviso porque
+
+35
+00:02:47,470 --> 00:02:52,060
+estamos usando um novo ciclo de vida bem, ao mesmo tempo em que usamos dois antigos.
+
+36
+00:02:52,080 --> 00:02:53,100
+Mas tudo bem.
+
+37
+00:02:54,030 --> 00:02:59,520
+Mais interessante  que aqui vemos que obtemos o estado derivado da chamada do prop quando
+
+38
+00:02:59,520 --> 00:03:03,860
+realmente carregamos nosso aplicativo e isso, claro,  bem til de se ver.
+
+39
+00:03:03,930 --> 00:03:06,950
+ chamado antes de realmente renderizar isso.
+
+40
+00:03:07,020 --> 00:03:12,870
+E antes de mont-lo, isso nos d a chance de atualizar nosso estado imediatamente antes de testar as
+
+41
+00:03:13,260 --> 00:03:16,860
+etapas e ele ser executado sempre que nossos objetos forem alterados.
+
+42
+00:03:16,860 --> 00:03:22,260
+Novamente, no  algo que voc deve usar em excesso, mas definitivamente  bom se voc tem um
+
+43
+00:03:22,260 --> 00:03:24,750
+componente que precisa trazer estado e adereos em sincronia.
+
+44
+00:03:24,750 --> 00:03:31,510
+O segundo novo ciclo de vida que foi adicionado  obter um instantneo antes da atualizao.
+
+45
+00:03:31,920 --> 00:03:37,790
+Agora, isso permite que voc tire uma foto do seu dormitrio antes que ele mude.
+
+46
+00:03:37,800 --> 00:03:44,550
+Portanto, se voc tiver algumas alteraes em seu componente que precisem ser alteradas para um Dom, o gancho do ciclo
+
+47
+00:03:44,550 --> 00:03:47,910
+de vida ser executado logo antes do incio da atualizao.
+
+48
+00:03:47,910 --> 00:03:53,070
+Ento, aqui tambm podemos consolar o log de algo que podemos cancelar com esse nome.
+
+49
+00:03:53,460 --> 00:03:59,670
+E se salvarmos isso e recarregarmos nosso aplicativo, na verdade no veremos nada aqui, mas se
+
+50
+00:04:00,780 --> 00:04:08,850
+eu clicar em Mostrar pessoas, veremos aqui o snapshot antes da atualizao e isso ser executado imediatamente antes que um
+
+51
+00:04:09,030 --> 00:04:11,410
+componente atualize o componente de captura.
+
+52
+00:04:11,430 --> 00:04:17,460
+Portanto, este  um timo lugar para, por exemplo, salvar a posio atual de rolagem de um usurio.
+
+53
+00:04:17,460 --> 00:04:20,640
+Isso pode ser muito til, porque ele pega o snapchat antes da atualizao.
+
+54
+00:04:20,670 --> 00:04:27,540
+Voc pode salv-lo antes da madrugada mudar e no componente fez atualizar voc poderia passear o usurio de volta para a posio salva anteriormente
+
+55
+00:04:27,570 --> 00:04:33,030
+por exemplo, digamos que voc tem uma lista de itens que voc adicionar e voc lista itens aqui voc
+
+56
+00:04:33,330 --> 00:04:36,270
+pode salvar posies de rolagem antes que eles so adicionados.
+
+57
+00:04:36,270 --> 00:04:40,710
+E aqui voc pode definir o usurio rolar para essa posio depois de terem sido adicionados.
+
+58
+00:04:40,950 --> 00:04:46,020
+H tambm este exemplo exato que voc v nos documentos oficiais nos posts oficiais do bloco
+
+59
+00:04:46,020 --> 00:04:48,200
+na nova verso para ser preciso l.
+
+60
+00:04:48,270 --> 00:04:52,810
+Se voc clicar no link obter instantneo antes da atualizao, obter a documentao detalhada.
+
+61
+00:04:52,920 --> 00:04:56,960
+E a voc v esse exemplo com a posio de rolagem que  salva.
+
+62
+00:04:56,970 --> 00:05:00,290
+Ento este  um bom utilitrio que voc tambm pode usar.
+
+63
+00:05:00,480 --> 00:05:01,330
+E  sobre isso.
+
+64
+00:05:01,440 --> 00:05:04,850
+Estes so timos novos recursos introduzidos pela re-act 16 no gratuitos.
+
+65
+00:05:04,950 --> 00:05:10,140
+Se voc estiver usando essa palavra, por favor, brinque com eles e sinta-se  vontade para us-los em seu prximo projeto.
+

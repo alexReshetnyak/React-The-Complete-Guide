@@ -1,0 +1,368 @@
+1
+00:00:02,200 --> 00:00:04,810
+So these were my two cents about prop types,
+
+2
+00:00:04,870 --> 00:00:09,560
+what about pure components and shouldComponentUpdate.
+
+3
+00:00:09,580 --> 00:00:12,400
+We're not using that in the application,
+
+4
+00:00:12,460 --> 00:00:15,130
+now let's analyze the application,
+
+5
+00:00:15,130 --> 00:00:23,410
+do we have any state or prop changes which trigger a re-rendering even though this might not be required?
+
+6
+00:00:24,370 --> 00:00:27,340
+If we have a look at the running application,
+
+7
+00:00:27,340 --> 00:00:36,880
+most clicks and things we do really change the UI and therefore should trigger updates, should trigger
+
+8
+00:00:37,210 --> 00:00:40,840
+a re-renderings of these components.
+
+9
+00:00:40,900 --> 00:00:43,360
+So we shouldn't really lose performance there
+
+10
+00:00:43,540 --> 00:00:49,030
+and using a lot of pure components for unnecessary shouldComponentUpdate checks might even hit the
+
+11
+00:00:49,030 --> 00:00:54,460
+performance more than doing an occasional, unnecessary re-rendering.
+
+12
+00:00:54,940 --> 00:01:00,420
+Crucial points we should check are of course our burger builder container,
+
+13
+00:01:00,610 --> 00:01:07,060
+there we changed the state but whenever we do a change the state, it really affects our application and
+
+14
+00:01:07,060 --> 00:01:09,490
+we do need to re-render stuff.
+
+15
+00:01:09,610 --> 00:01:17,020
+I can identify one element here though where we might be able to save some performance by not re-rendering
+
+16
+00:01:17,020 --> 00:01:18,310
+it unnecessarily
+
+17
+00:01:18,550 --> 00:01:20,860
+and that is the modal component.
+
+18
+00:01:20,980 --> 00:01:28,660
+It wraps the orderSummary and that of course means that whenever ingredients or the price changes
+
+19
+00:01:29,110 --> 00:01:34,390
+since these are props of orderSummary, orderSummary will be re-rendered
+
+20
+00:01:34,570 --> 00:01:39,060
+however if the modal is not visible, we don't need to do that.
+
+21
+00:01:39,310 --> 00:01:46,860
+So actually only if the modal is shown, re-rendering of that wrapped element here makes sense,
+
+22
+00:01:46,870 --> 00:01:51,200
+so that is something we might want to check and control.
+
+23
+00:01:51,370 --> 00:01:58,480
+So let's first of all find out when orderSummary is re-rendered by simply adding a lifecycle hook
+
+24
+00:01:58,480 --> 00:01:59,060
+to it.
+
+25
+00:01:59,140 --> 00:02:00,960
+So I go to orderSummary
+
+26
+00:02:01,150 --> 00:02:05,070
+and currently this is of course a functional component,
+
+27
+00:02:05,380 --> 00:02:11,350
+let's turn it into a class component so that we can add lifecycle hooks so that we can see when this
+
+28
+00:02:11,350 --> 00:02:12,310
+is updated.
+
+29
+00:02:12,550 --> 00:02:21,660
+So let's extend the component object which we of course now need to import from react and in there
+
+30
+00:02:21,810 --> 00:02:29,450
+as you learned it, we need to have a render method where we need to return our jsx code,
+
+31
+00:02:29,460 --> 00:02:33,170
+so basically this code here.
+
+32
+00:02:33,300 --> 00:02:38,180
+Now we also have some adjustments here, the ingredient summary we calculate
+
+33
+00:02:38,240 --> 00:02:41,210
+so let's do that prior to returning the jsx code
+
+34
+00:02:41,220 --> 00:02:47,280
+but inside the render method and now we can get rid of that stuff down there and we need to adjust the
+
+35
+00:02:47,410 --> 00:02:55,880
+exported name and props now always are this.props as you learned, that's the case in class based components.
+
+36
+00:02:56,900 --> 00:03:04,510
+So with that, what else missing here? We got also props so that should be this.props here too.
+
+37
+00:03:04,550 --> 00:03:08,050
+Now with that saved, it should work again, should be working fine,
+
+38
+00:03:08,510 --> 00:03:16,270
+let's now implement a method to see when this actually updates. I'll add componentWillUpdate here
+
+39
+00:03:16,760 --> 00:03:24,960
+and I simply want to console log orderSummary willUpdate.
+
+40
+00:03:25,040 --> 00:03:27,560
+Now let's see when this updates,
+
+41
+00:03:27,560 --> 00:03:32,530
+if we reload the application and add an ingredient, you see orderSummary willUpdate
+
+42
+00:03:32,540 --> 00:03:38,910
+even though we're not showing it so it doesn't necessarily make a lot of sense to re-render that.
+
+43
+00:03:39,050 --> 00:03:46,770
+Now let's see if that changes, if we make sure that modal doesn't update unnecessarily
+
+44
+00:03:46,920 --> 00:03:53,450
+and for that, let's head over to the modal.js file and let's also turn modal into a class so that
+
+45
+00:03:53,450 --> 00:03:56,210
+we can implement shouldComponentUpdate.
+
+46
+00:03:56,210 --> 00:04:00,110
+So modal will therefore also extend component,
+
+47
+00:04:00,460 --> 00:04:10,820
+let's import component from react then and export the renamed modal and of course also now make sure
+
+48
+00:04:10,820 --> 00:04:17,940
+to implement the class body with a render method where we now return our jsx code like this
+
+49
+00:04:18,970 --> 00:04:22,780
+here and get rid of that stuff down there which we don't need anymore
+
+50
+00:04:22,840 --> 00:04:31,860
+and as always, make sure that props become this.props. So now the modal is working again
+
+51
+00:04:31,860 --> 00:04:42,000
+and let's now see if we can control the updating of orderSummary which is wrapped by the modal by changing
+
+52
+00:04:42,000 --> 00:04:44,510
+the way the modal itself updates.
+
+53
+00:04:44,550 --> 00:04:53,750
+So let's simply add shouldComponentUpdate to the modal and we'll get the nextProps and nextState here
+
+54
+00:04:53,780 --> 00:04:55,670
+as arguments.
+
+55
+00:04:55,670 --> 00:05:03,140
+So now I want to check or now I might want to make sure that this only updates if show changes because
+
+56
+00:05:03,140 --> 00:05:05,420
+that's the only thing which matters for me here.
+
+57
+00:05:05,750 --> 00:05:18,050
+So if nextProps show, if that is unequal to this.props.show, so to the previous state, then I want to
+
+58
+00:05:18,050 --> 00:05:25,390
+return true or we can of course simply shorten this and simply return the result of this check
+
+59
+00:05:25,430 --> 00:05:27,260
+so that is what I want to do here.
+
+60
+00:05:28,330 --> 00:05:34,390
+Let's now also implement componentWillUpdate here to confirm if this works
+
+61
+00:05:34,390 --> 00:05:43,230
+so I will simply console log modal willUpdate and save this component now.
+
+62
+00:05:43,320 --> 00:05:50,560
+Now let's see, if I now reload the page and I start adding elements, we see orderSummary is not calling
+
+63
+00:05:50,560 --> 00:05:51,710
+willUpdate anymore.
+
+64
+00:05:51,820 --> 00:05:53,130
+If I click order now,
+
+65
+00:05:53,130 --> 00:05:57,160
+now modal willUpdate is called and orderSummary willUpdate is called.
+
+66
+00:05:57,400 --> 00:06:04,420
+So here we definitely improved our application because we make sure that we don't unnecessarily update
+
+67
+00:06:04,450 --> 00:06:07,650
+ordersummary, that we don't unnecessarily re-render that
+
+68
+00:06:07,930 --> 00:06:15,090
+and you also see that the wrapping element controls the updating of the wrapped element.
+
+69
+00:06:15,190 --> 00:06:22,540
+So orderSummary theoretically, the component is included in the burger builder but it is not updated
+
+70
+00:06:22,780 --> 00:06:26,230
+because the wrapping element modal has a shouldComponentUpdate
+
+71
+00:06:26,230 --> 00:06:29,360
+method where we control this.
+
+72
+00:06:29,630 --> 00:06:37,090
+Now our code here is pretty lean in the modal and what we don't do, we don't react to changes in the
+
+73
+00:06:37,180 --> 00:06:38,190
+clicked listener
+
+74
+00:06:38,260 --> 00:06:42,760
+so if the modalClosed property were changed, we're not checking this.
+
+75
+00:06:43,000 --> 00:06:46,600
+So we only return true if show changed.
+
+76
+00:06:46,600 --> 00:06:51,200
+It's ok here in this application because we actually never re-assigned this clicked listener.
+
+77
+00:06:51,310 --> 00:06:59,470
+If we were to do that or if we were to alter change state in the modal, we definitely should also check
+
+78
+00:06:59,470 --> 00:07:06,520
+for changes in other props and other state properties or simply extend pure component. Here I'm not using
+
+79
+00:07:06,540 --> 00:07:10,740
+pure component because pure component would run more checks than I want to do,
+
+80
+00:07:10,810 --> 00:07:14,410
+pure component would also check for modalClosed to be changed
+
+81
+00:07:14,680 --> 00:07:16,040
+and I'm not interested in that
+
+82
+00:07:16,060 --> 00:07:21,270
+so my method should be even more straightforward, even more focused.
+
+83
+00:07:21,330 --> 00:07:29,550
+Now with that, we can of course also turn our orderSummary back into a functional component to no longer
+
+84
+00:07:29,580 --> 00:07:30,480
+output
+
+85
+00:07:30,480 --> 00:07:35,620
+componentWillUpdate here but I'll leave it in here for debugging purposes, for reference
+
+86
+00:07:35,700 --> 00:07:42,380
+but I will comment that this could be a functional component,
+
+87
+00:07:44,840 --> 00:07:48,660
+doesn't have to be a class.
+
+88
+00:07:48,710 --> 00:07:54,430
+And of course componentWillUpdate is not required, shouldComponentUpdate is definitely not required here
+
+89
+00:07:54,590 --> 00:07:56,750
+because we don't need to check this,
+
+90
+00:07:56,800 --> 00:08:02,790
+this always needs to be updated if the modal is shown, if the modal is where we do it check wherever
+
+91
+00:08:02,810 --> 00:08:04,610
+it needs to be updated or not.
+
+92
+00:08:04,790 --> 00:08:08,210
+So this is one improvement we can add to this application.
+

@@ -1,0 +1,264 @@
+1
+00:00:02,240 --> 00:00:09,390
+Zajmijmy si cakowit cen, ktr teraz przechowujemy w stanie Bergere Boulder, ale
+
+2
+00:00:09,410 --> 00:00:11,720
+oczywicie nie czytamy zaktualizowanego.
+
+3
+00:00:11,780 --> 00:00:14,080
+Dlatego zawsze tak jest.
+
+4
+00:00:14,330 --> 00:00:18,290
+Ju j skonfigurowalimy i zmniejszamy, ale nie zmieniamy jej tutaj.
+
+5
+00:00:18,380 --> 00:00:25,100
+Teraz ceny zmieniaj si, gdy dodamy lub usuwamy skadniki, teraz moesz wybra dwie trasy.
+
+6
+00:00:25,490 --> 00:00:30,440
+Moesz zdefiniowa nowy typ akcji dla zmiany ceny.
+
+7
+00:00:30,440 --> 00:00:38,180
+Moglibycie nazwa skadniki aktualizacji lub zaktualizowa cen i e moemy oczywicie wskaza to w
+
+8
+00:00:38,180 --> 00:00:45,350
+boulderze Bergere na dole do nieruchomoci, ktr wykonamy, aby wysa t akcj, a
+
+9
+00:00:45,350 --> 00:00:53,510
+ta akcja zostanie po prostu zapana przez reduktor, a nastpnie ponownie obliczy cena byaby dobra
+
+10
+00:00:53,510 --> 00:01:02,150
+i zapewniaby, e kade dziaanie prowadzi do manipulacji tylko jednym elementem twojego pastwa w twoim reduktorze.
+
+11
+00:01:02,600 --> 00:01:09,350
+Z drugiej strony mamy ju tylko dwa typy dziaa, ktre zmieniaj nasz skadnik dodajcy cen
+
+12
+00:01:09,350 --> 00:01:10,520
+i usuwaj go.
+
+13
+00:01:11,120 --> 00:01:18,000
+Wic byoby sprawiedliwie nie tylko aktualizowa skadniki tutaj, ale take aktualizowa cen.
+
+14
+00:01:18,060 --> 00:01:20,790
+I znw cakowicie zaley od ciebie, ktr drog wybierasz.
+
+15
+00:01:20,820 --> 00:01:26,730
+Czy chcesz zmieni tylko jedn cz swojego stanu w przypadku, a nastpnie musisz wyodrbni.
+
+16
+00:01:26,730 --> 00:01:32,220
+Czy dobrze sobie radzisz z manipulowaniem wieloma czciami swojego stanu, podczas gdy moesz wzi jeden z
+
+17
+00:01:32,280 --> 00:01:33,860
+nich w tej drugiej.
+
+18
+00:01:34,050 --> 00:01:36,540
+Wic ju teraz aktualizujemy skadniki.
+
+19
+00:01:36,540 --> 00:01:42,870
+Teraz chcemy rwnie ponownie obliczy cen, a wic ca czn cen tutaj.
+
+20
+00:01:42,900 --> 00:01:49,330
+Po powrocie i stwierdzeniu, e najpierw skopiowalimy cay stary stan i wszystkie waciwoci.
+
+21
+00:01:49,350 --> 00:01:55,110
+Teraz nie tylko nadpisuj skadniki, ale take star cen i s one oczywicie wartociowe.
+
+22
+00:01:55,110 --> 00:02:01,070
+Teraz jest stan D lub cakowita cena starego stanu, ktry powinienem powiedzie.
+
+23
+00:02:01,210 --> 00:02:08,350
+Tak wic stan, w ktrym otrzymujemy reduktor Windass, jest nazywany i dostosowywany przez cen 40 skadnikw,
+
+24
+00:02:08,350 --> 00:02:09,670
+ktre zostay dodane.
+
+25
+00:02:10,150 --> 00:02:14,080
+Teraz dostajemy t map cenow w burger Boler tutaj.
+
+26
+00:02:14,080 --> 00:02:19,390
+Dostalimy wszystkie ceny skadnikw, ktre zostay ju pokryte.
+
+27
+00:02:19,390 --> 00:02:23,740
+Waciwie nie potrzebuj go tutaj i przenie go do mojego reduktora.
+
+28
+00:02:24,040 --> 00:02:31,780
+Tak wic teraz nie tylko zdefiniuj mj pocztkowy stan, ale take moje rzeczywiste ceny, ktre moemy znale w dowolnym miejscu w
+
+29
+00:02:31,780 --> 00:02:36,000
+naszej aplikacji, ale moemy pobra to z bazy danych lub z serwera.
+
+30
+00:02:36,040 --> 00:02:40,850
+W tej chwili nie moglimy, poniewa nie wiemy, jak obsugiwa kod asynchroniczny, ale w przyszoci to zrobimy.
+
+31
+00:02:41,130 --> 00:02:43,680
+Ale to jest po prostu mocno zakodowane.
+
+32
+00:02:43,930 --> 00:02:49,550
+I znowu mamy te same nazwy waciwoci skadnikw, ktrych uywamy wszdzie w naszej aplikacji.
+
+33
+00:02:49,690 --> 00:02:59,020
+Teraz moemy po prostu ustawi cakowit cen rwn starej cenie cakowitej plus i teraz wzrost cen
+
+34
+00:02:59,290 --> 00:03:04,110
+skadnika, ktry otrzymujemy rok w naszej nazwie stopni dziaania.
+
+35
+00:03:04,450 --> 00:03:12,100
+To bdzie na przykad nadmiar sprzeday tutaj i daj nam kropk 5, ktra jest nastpnie dodawana
+
+36
+00:03:12,100 --> 00:03:22,380
+do starej ceny i ustawiana jako nowa cena w tym miejscu, jak moemy manipulowa i aktualizowa cen za dodawanie skadnikw do usuwania
+
+37
+00:03:22,380 --> 00:03:22,860
+skadnikw.
+
+38
+00:03:22,860 --> 00:03:28,610
+Skopiowaem ten kod, a take dodaem do usuwania sprawy Riette do Aktualizacji stanu.
+
+39
+00:03:28,620 --> 00:03:33,670
+Tam oczywicie odejmujemy cen stopnia, ktry usunlimy.
+
+40
+00:03:33,930 --> 00:03:40,290
+Gdybymy teraz zapisali wszystko, co musimy, musimy wrci do burgera Boulder, poniewa
+
+41
+00:03:40,290 --> 00:03:47,010
+mamy tam strzay, ktre wci odnosimy do tego starego kodu aktualizujcego ceny skadnikw.
+
+42
+00:03:47,340 --> 00:03:49,630
+Nie robimy obsugi skadnika ADD.
+
+43
+00:03:49,830 --> 00:03:57,480
+I tak naprawd moemy teraz pozby si metod dodawania i usuwania skadnikw hondra.
+
+44
+00:03:57,540 --> 00:03:58,860
+Czyszczenie tego pliku.
+
+45
+00:03:58,860 --> 00:04:06,470
+Oczywicie oczywicie z tym, jeli zapiszemy ten plik, zapiszemy wszystkie pliki i wrcimy do aplikacji.
+
+46
+00:04:06,630 --> 00:04:08,650
+Powinnimy to zobaczy, jeli teraz.
+
+47
+00:04:09,010 --> 00:04:12,420
+Pozwl mi si troch zmniejszy, by zbliy je do siebie.
+
+48
+00:04:12,420 --> 00:04:18,740
+Jeli teraz podniesiemy t komrk to i boczek cena si nie zmieni.
+
+49
+00:04:19,020 --> 00:04:28,100
+Dlaczego tak, poniewa teraz aktualizujemy nasz globalny reduktor Fruita.
+
+50
+00:04:28,440 --> 00:04:36,360
+Ale oczywicie w pojemniku Boulder na dnie burgera wci pobierane byy tylko skadniki z naszego globalnego stanu, w
+
+51
+00:04:36,600 --> 00:04:41,740
+ktrym po prostu musimy si upewni, e wszystkie produkty s cenniejsze.
+
+52
+00:04:41,790 --> 00:04:48,000
+Tak wic od stanu i tam nieruchomoci zostaa nazwana cena cakowita z martwych.
+
+53
+00:04:48,020 --> 00:04:54,840
+Moemy wykorzysta ceny wszystkich rekwizytw w pojemniku Baldor burger i moemy rwnie usun cakowit nagrod od
+
+54
+00:04:54,890 --> 00:04:59,910
+pastwa, poniewa nie zarzdzamy ni Fruita stan i burger Boulder ju.
+
+55
+00:05:00,440 --> 00:05:08,930
+A wic teraz skorzystajmy z cakowitej ceny tam i wszdzie w tej czci, w ktrej uywamy starej ceny cakowitej
+
+56
+00:05:08,930 --> 00:05:10,960
+w tym stanie, jak tutaj.
+
+57
+00:05:11,210 --> 00:05:15,500
+Powinnimy go zastpi, mimo e 40 kontynuuje obsug pocigu.
+
+58
+00:05:15,740 --> 00:05:19,510
+Nie bd na razie, bo i tak wkrtce pozbd si tego caego kodu.
+
+59
+00:05:19,610 --> 00:05:24,060
+Przejdmy wic do metody renderowania i upewnijmy si, e zaktualizujemy tam cen.
+
+60
+00:05:24,170 --> 00:05:28,010
+Tutaj poszedem do aktualizacji na temat naszych wbudowanych sterownikw, w ktrych je przekazujemy.
+
+61
+00:05:28,100 --> 00:05:36,680
+Po prostu przekazujemy cen tego wniosku, a w podsumowaniu zlecenia, w ktrym rwnie uywamy ceny, powinna
+
+62
+00:05:36,700 --> 00:05:44,430
+by rwnie cena tego wniosku, tak jak powinny by wszystkie miejsca, w ktrych cenilimy.
+
+63
+00:05:44,420 --> 00:05:51,670
+Teraz zapiszmy ten komponent wrmy do aplikacji i zacznijmy dodawa skadniki, a
+
+64
+00:05:51,670 --> 00:05:56,180
+zobaczysz, e teraz aktualizujemy cen w obu kierunkach.
+
+65
+00:05:56,320 --> 00:06:01,890
+Jedn z rzeczy, ktrych wci nie widzimy, jest wczenie przycisku zamwienia teraz.
+
+66
+00:06:01,900 --> 00:06:03,950
+A wic nad tym bdziemy pracowa.
+

@@ -1,0 +1,572 @@
+1
+00:00:02,120 --> 00:00:03,680
+As que implementemos esto.
+
+2
+00:00:03,680 --> 00:00:11,210
+El componente de verificacin en realidad se implement, es un contenedor porque ser un componente que administrar
+
+3
+00:00:11,210 --> 00:00:16,590
+su propio estado y tambin lo transferir a los componentes de Avro.
+
+4
+00:00:16,640 --> 00:00:22,690
+As que agrega una nueva carpeta en contenedores y la pondr en la lista de verificacin y all agregar esa verificacin.
+
+5
+00:00:22,730 --> 00:00:27,010
+Archivo JS que bien debera contener mi componente de verificacin.
+
+6
+00:00:27,080 --> 00:00:34,190
+Ser un componente basado en clases y el estado estar involucrado y, por lo tanto, extiendo el objeto
+
+7
+00:00:34,190 --> 00:00:42,380
+componente que tengo que importar desde reaccionar a Gabr con el paquete de accin en s para soportar como X. As que agreguemos esta clase.
+
+8
+00:00:42,680 --> 00:00:45,610
+el componente shoat parece que debera comportarse.
+
+9
+00:00:45,830 --> 00:00:53,720
+Vamos a exportarlo como un archivo de oficina predeterminado y luego vamos a planificar cmo se comprueba que
+
+10
+00:00:53,810 --> 00:00:56,000
+Lo que quiero tener en el componente de pago es un pequeo resumen del pago.
+
+11
+00:00:56,000 --> 00:01:02,970
+Bsicamente, lo que el usuario est a punto de comprar y el precio probablemente, y luego un botn
+
+12
+00:01:03,020 --> 00:01:10,290
+para cancelar el proceso de pago y volver a Bergere Boulder y, por supuesto, un botn para continuar.
+
+13
+00:01:10,310 --> 00:01:15,460
+Y supongo que para el resumen, sera bueno no volver a
+
+14
+00:01:15,680 --> 00:01:22,580
+mostrar solo una lista de los ingredientes, pero tal vez mostrar la hamburguesa en s.
+
+15
+00:01:22,580 --> 00:01:24,210
+Reconstruye la hamburguesa en esto.
+
+16
+00:01:24,230 --> 00:01:26,060
+Mira el resumen.
+
+17
+00:01:26,060 --> 00:01:27,850
+Entonces ese es el objetivo aqu, el resumen de Chaudiere.
+
+18
+00:01:27,950 --> 00:01:30,760
+Y luego, cuando el usuario haga clic en continuar, no quiero cargar el formulario de contacto.
+
+19
+00:01:30,830 --> 00:01:36,700
+As que, paso a paso, el objetivo es crear un formulario de resumen
+
+20
+00:01:37,040 --> 00:01:44,780
+de pago que me permita mostrar una vista previa de la hamburguesa y mostrarle los botones Continuar
+
+21
+00:01:44,780 --> 00:01:52,280
+o Cancelar para que todo vaya a mi carpeta de componentes y agregue una nueva carpeta all.
+
+22
+00:01:52,370 --> 00:01:55,340
+Cul es tu nombre.
+
+23
+00:01:55,340 --> 00:01:56,530
+Consulte o
+
+24
+00:01:56,660 --> 00:02:05,770
+solicite que se coloquen todos los componentes relacionados con la orden como para verificar la salida de componentes.
+
+25
+00:02:05,780 --> 00:02:05,960
+Debe ser nombrado.
+
+26
+00:02:05,960 --> 00:02:07,740
+Mira el resumen tal vez.
+
+27
+00:02:07,820 --> 00:02:09,980
+Y luego all para crear un resumen de salida.
+
+28
+00:02:10,130 --> 00:02:13,270
+J. S. caer en.
+
+29
+00:02:13,330 --> 00:02:14,840
+Consulte el resumen de cada de CSSA para el diseo.
+
+30
+00:02:15,020 --> 00:02:20,310
+Ahora echemos un vistazo al resumen de la cada ms difcil de todos
+
+31
+00:02:20,540 --> 00:02:27,440
+los das, todos estn acostumbrados a la forma funcional para crear el componente de comprobacin de resumen.
+
+32
+00:02:27,440 --> 00:02:29,950
+Bsicamente, solo revisa la funcin de Samari aqu como lo sabes.
+
+33
+00:02:29,990 --> 00:02:33,580
+Probablemente recibiremos algunos accesorios para renderizar la hamburguesa y luego devolveremos algo de GSX.
+
+34
+00:02:33,700 --> 00:02:39,630
+Entonces, por lo tanto, definitivamente necesitamos importar el reactivo del paquete de Riak.
+
+35
+00:02:39,680 --> 00:02:44,810
+Y, por supuesto, siempre exporta.
+
+36
+00:02:45,020 --> 00:02:47,260
+Verifique el resumen como el predeterminado.
+
+37
+00:02:47,270 --> 00:02:50,150
+Ahora el objetivo es mostrar una vista previa de todo o ao de hamburguesa y luego mostrar los botones Continuar o Cancelar.
+
+38
+00:02:50,150 --> 00:03:00,180
+Entonces, lo que har en la J es X, y quiero volver aqu, en primer lugar, Raptor
+
+39
+00:03:00,200 --> 00:03:09,500
+est en una div, que tambin utilizar para estilizar y dar estilo a la disconformidad.
+
+40
+00:03:09,500 --> 00:03:14,900
+Entonces quiero tener cada etiqueta donde digo que esperamos que sepa bien.
+
+41
+00:03:14,900 --> 00:03:19,640
+Algo as y su oferta.
+
+42
+00:03:19,640 --> 00:03:22,940
+Ahora quiero tener un cuadro en un div bsicamente donde quiero obtener una vista previa de mi componente de Bergere.
+
+43
+00:03:22,960 --> 00:03:29,420
+Davis requiere establecer los lmites de ese componente de Bergere?
+
+44
+00:03:29,620 --> 00:03:33,650
+Y, por supuesto, voy a reutilizar mi componente de Bergere que ya tengo.
+
+45
+00:03:33,650 --> 00:03:37,240
+Eso es genial.
+
+46
+00:03:37,250 --> 00:03:38,180
+Podemos reutilizarlo as
+
+47
+00:03:38,180 --> 00:03:45,590
+que voy a establecer un estilo en lnea aqu en ese envoltorio div que mantendr mi hamburguesa solo para establecer
+
+48
+00:03:46,040 --> 00:03:55,420
+el ancho de ese ahorro 300 pxeles y luego tambin nuestra altura de, digamos, 300 pxeles y vamos a establecer tambin el margen para auto aqu.
+
+49
+00:03:55,430 --> 00:04:00,180
+Ahora dentro de ese div quiero usar mis componentes de hamburguesas solo para importarlos,
+
+50
+00:04:00,180 --> 00:04:06,970
+todos importan Bergere desde y ahora navegan hacia la carpeta de Bergere y ah est Steve J como archivo.
+
+51
+00:04:06,970 --> 00:04:11,620
+Tiene una hora componente de Bergere que ahora puedo agregar de esta manera.
+
+52
+00:04:11,650 --> 00:04:15,730
+La hamburguesa es una etiqueta de cierre automtico.
+
+53
+00:04:15,740 --> 00:04:17,790
+Tambin necesito pasar mis ingredientes para pap.
+
+54
+00:04:18,440 --> 00:04:24,050
+Por supuesto, ser importante saber cmo recib estos ingredientes.
+
+55
+00:04:24,050 --> 00:04:29,740
+Supongo que por ahora simplemente puedo establecer los ingredientes que son propiedad de
+
+56
+00:04:29,750 --> 00:04:37,220
+mi componente de hamburguesa, lo que se espera si echamos un vistazo al componente de hamburguesas.
+
+57
+00:04:37,280 --> 00:04:40,080
+Aqu tenemos los ingredientes del pilar que
+
+58
+00:04:40,220 --> 00:04:47,060
+utilizamos, as que TODO el pasado es el ingrediente de hoy en el componente de Tudor.
+
+59
+00:04:47,240 --> 00:04:48,380
+Tal vez no o hacer un resumen resumen de salida.
+
+60
+00:04:48,440 --> 00:04:50,670
+Aqu estamos.
+
+61
+00:04:50,690 --> 00:04:51,630
+As que esperamos
+
+62
+00:04:51,920 --> 00:04:58,460
+los ingredientes en la hamburguesa, as que deberamos pasarla y por ahora solo esperar eso en el componente de resumen de pago.
+
+63
+00:04:58,460 --> 00:04:59,970
+y de la carpeta
+
+64
+00:05:00,050 --> 00:05:08,450
+del botn y luego el botn simplemente cae, por supuesto, y los botones DS, como probablemente sepa, admiten dos estilos diferentes.
+
+65
+00:05:08,480 --> 00:05:16,160
+Tambin obtendr la propiedad de los ingredientes, la cual luego le doy a continuacin, que no quiero mostrar mis botones
+
+66
+00:05:16,160 --> 00:05:24,130
+y me lo puedo permitir importar mis propios botones que constru para que el componente del botn de la carpeta UI
+
+67
+00:05:24,170 --> 00:05:25,640
+Aqu tenemos el xito
+
+68
+00:05:25,640 --> 00:05:31,850
+y la clase de peligro que no podemos aprobar y lo pasamos con las propiedades del tipo de botn.
+
+69
+00:05:31,850 --> 00:05:33,200
+As que agregar mis botones a continuacin.
+
+70
+00:05:33,500 --> 00:05:35,900
+Hay en el primer botn.
+
+71
+00:05:35,900 --> 00:05:38,210
+Dnde ms en el tipo de botn?
+
+72
+00:05:38,210 --> 00:05:39,890
+Digamos que el peligro con mayscula D porque la FCC tiene un nombre de clase donde R simplemente quiere decir cancelar.
+
+73
+00:05:40,430 --> 00:05:48,260
+Tal vez todas las maysculas para los fines de estancamiento solamente y luego se duplican para todos
+
+74
+00:05:48,260 --> 00:05:55,850
+lo que tiene es el botn de acceso con una S mayscula donde tendr que decir continuar.
+
+75
+00:05:55,850 --> 00:06:00,210
+Entonces estos son los dos botones.
+
+76
+00:06:00,230 --> 00:06:01,800
+Tambin sabe que los botones
+
+77
+00:06:01,880 --> 00:06:08,510
+exponen la propiedad de clic que simplemente indica que hicimos clic en el botn, as que eso es algo que tendr que hacer.
+
+78
+00:06:08,510 --> 00:06:11,910
+Vamos a dividir esto en mltiples lneas.
+
+79
+00:06:12,020 --> 00:06:14,210
+Implementar hizo clic aqu y luego hacer algo con un clic.
+
+80
+00:06:14,240 --> 00:06:18,460
+Ahora que es algo que agregar por ahora, solo quiero terminar el diseo de este componente.
+
+81
+00:06:18,500 --> 00:06:23,810
+As que con eso conseguimos nuestro cdigo JSA X de resumen.
+
+82
+00:06:23,810 --> 00:06:29,970
+Ahora permtame tambin asignar un nombre de clase al div de envoltura y esta es una clase que
+
+83
+00:06:29,990 --> 00:06:36,820
+quiero configurar y ver el resumen con xito todo en el resumen de verificacin. Consulte la clase de negocios aqu.
+
+84
+00:06:36,820 --> 00:06:42,900
+Porque recuerde que estamos de regreso en nuestro proyecto de curso, estamos usando mdulos de CSSA aqu para definir nuestros estilos.
+
+85
+00:06:42,950 --> 00:06:50,290
+Todos configuran el texto alineado al centro para centrar todo o establecen el ancho al 80 por ciento
+
+86
+00:06:50,330 --> 00:06:57,080
+tal vez y un margen de auto 2, luego el centro hace div o hace elemento.
+
+87
+00:06:57,080 --> 00:07:01,440
+Y agregar una consulta de medios donde se verifique si tenemos un
+
+88
+00:07:01,760 --> 00:07:08,300
+mnimo de 600 pxeles en cuyo momento simplemente quiero limitar el ancho para que ya no sea un porcentaje.
+
+89
+00:07:08,330 --> 00:07:13,110
+Pero aqu lo limitar a 500 pxeles.
+
+90
+00:07:13,280 --> 00:07:16,730
+Ahora con eso tengo que importar ve es como
+
+91
+00:07:16,730 --> 00:07:24,560
+cdigo o el objeto de clases que debe ser preciso desde el resumen C S S y luego asignarlo aqu.
+
+92
+00:07:24,560 --> 00:07:27,860
+Entonces aqu todos agregan clases.
+
+93
+00:07:27,860 --> 00:07:30,500
+Mira el resumen.
+
+94
+00:07:30,500 --> 00:07:32,050
+Aprovechando los mdulos C S S aqu.
+
+95
+00:07:32,120 --> 00:07:35,190
+Ahora podemos verificar el componente de resumen.
+
+96
+00:07:35,450 --> 00:07:38,280
+que acabamos de crear de la carpeta de componentes.
+
+97
+00:07:38,300 --> 00:07:46,640
+S cundo usar estadsticas en mi archivo de salida en el contenedor de salida, para que sean precisas, por lo que importar rpidamente el componente de resumen
+
+98
+00:07:46,640 --> 00:07:54,170
+Por lo tanto, all cre esa carpeta de orden que contiene la carpeta
+
+99
+00:07:54,170 --> 00:08:01,050
+de resumen de verificacin y all el extracto de Ejay como archivo.
+
+100
+00:08:01,050 --> 00:08:03,690
+Ahora dentro de mi componente de verificacin, donde
+
+101
+00:08:03,740 --> 00:08:11,070
+implementar un mtodo de renderizacin donde, por supuesto, devuelvo que soy GSX. Quiero tener un div que envuelva toda mi pgina
+
+102
+00:08:11,080 --> 00:08:17,270
+porque se usar como pgina con el enrutador de reactivacin. por supuesto, y todos estn ahora en.
+
+103
+00:08:17,270 --> 00:08:21,940
+Mira un resumen como este.
+
+104
+00:08:21,950 --> 00:08:24,340
+Tenga en cuenta.
+
+105
+00:08:24,410 --> 00:08:25,250
+Check out summary
+
+106
+00:08:25,280 --> 00:08:32,630
+espera obtener los ingredientes como un accesorio, por lo que debe pasar los ingredientes aqu y, por supuesto, es una pregunta interesante.
+
+107
+00:08:32,630 --> 00:08:34,860
+De donde obtengo mis ingredientes
+
+108
+00:08:34,880 --> 00:08:38,560
+Por ahora, simplemente pasar un objeto con ingredientes ficticios pero, por supuesto, esto es algo que reemplazar.
+
+109
+00:08:38,560 --> 00:08:46,290
+Agregar estado al componente de pago y all en el estado agregar ingredientes e
+
+110
+00:08:46,360 --> 00:08:54,210
+ingredientes por ahora sern ensalada una carne un queso uno y un tocino uno.
+
+111
+00:08:54,220 --> 00:09:01,700
+Y esto nuevamente es solo algunos datos ficticios que reemplazar.
+
+112
+00:09:01,750 --> 00:09:05,430
+para volver a tomar los ingredientes ms adelante.
+
+113
+00:09:05,440 --> 00:09:12,330
+As que, por ahora, eso me permite pasar estos ingredientes estatales. Tendremos que usar el enrutamiento
+
+114
+00:09:12,340 --> 00:09:13,830
+Ahora recibimos el cheque de verano y revisamos el contenedor aqu.
+
+115
+00:09:13,840 --> 00:09:17,930
+S que quiero usarlo por supuesto y
+
+116
+00:09:18,160 --> 00:09:26,170
+para eso codificar en mi apt Cheras caer justo debajo del Bergere Boulder.
+
+117
+00:09:26,170 --> 00:09:27,540
+Aqu estn las
+
+118
+00:09:27,760 --> 00:09:38,260
+importaciones, pero echa un vistazo al contenedor de los contenedores dot slash echa un vistazo a la salida solo para ver cmo se ve.
+
+119
+00:09:38,260 --> 00:09:39,220
+Vamos a cargar y cablear el enrutamiento pronto.
+
+120
+00:09:39,430 --> 00:09:42,700
+Asegrate de guardar todos los archivos y asegrate de que el inicio de NPM se est ejecutando y se te ofrece con tu pgina.
+
+121
+00:09:42,700 --> 00:09:49,630
+Recibimos un error con respecto a la escucha en clic, pero eso no debera ser un problema en este momento.
+
+122
+00:09:49,630 --> 00:09:54,500
+As es como se ve nuestro.
+
+123
+00:09:54,520 --> 00:09:56,960
+Verifique el componente de resumen.
+
+124
+00:09:56,980 --> 00:09:59,360
+Ahora podemos ver que de alguna forma
+
+125
+00:09:59,590 --> 00:10:05,470
+la estrategia con la hamburguesa no est realmente centrada, as que es algo que deberamos solucionar.
+
+126
+00:10:05,470 --> 00:10:06,670
+Para eso, volver a consultar el resumen
+
+127
+00:10:06,700 --> 00:10:11,890
+donde utilic la hamburguesa y una cosa que debo ajustar aqu es que debera usar el 100 por ciento para aprovechar todo el ancho del componente de comprobacin de resumen.
+
+128
+00:10:11,890 --> 00:10:18,070
+Ahora con eso se ve mucho mejor en dispositivos pequeos y dispositivos ms grandes ahora y pequeos de lo contrario.
+
+129
+00:10:18,070 --> 00:10:25,080
+El ao pasado tuvimos un poco ms de altura.
+
+130
+00:10:25,080 --> 00:10:29,050
+Esto es algo que podemos solucionar al deshabilitar esta altura.
+
+131
+00:10:29,180 --> 00:10:32,020
+No siempre configurndolo en pxeles gratuitos.
+
+132
+00:10:32,050 --> 00:10:34,630
+As que deshagmonos de la propiedad hide aqu.
+
+133
+00:10:34,750 --> 00:10:37,990
+Para el estilo que era un poco demasiado.
+
+134
+00:10:38,120 --> 00:10:40,970
+Ahora definitivamente podemos usar eso en dispositivos mviles y en el escritorio.
+
+135
+00:10:41,020 --> 00:10:47,020
+Esto luce bien.
+
+136
+00:10:47,020 --> 00:10:47,870
+debera mostrarse.
+
+137
+00:10:47,880 --> 00:10:55,620
+Q Ahora, por supuesto, todava hay espacio, pero necesitamos espacio para hamburguesas ms grandes, as que lo que hacemos es liberarnos,
+
+138
+00:10:56,500 --> 00:11:02,830
+pero lo principal en lo que ahora quiero trabajar es que no siempre lo muestre, sino que
+
+139
+00:11:02,860 --> 00:11:03,770
+Si hago clic en "ordenar ahora", contino y luego quiero cargar para ver el resumen en lugar del "generador de hamburguesas".
+
+140
+00:11:03,880 --> 00:11:12,130
+Dats el objetivo y para los datos, por supuesto, necesitamos enrutamiento.
+
+141
+00:11:12,150 --> 00:11:15,430
+Ahora sintase libre de seguir adelante e implementar esto
+
+142
+00:11:15,430 --> 00:11:22,510
+por su cuenta y luego comparar su solucin con la ma, que comenzar a construir en la prxima conferencia.
+
+143
+00:11:22,510 --> 00:11:24,790
+&nbsp;
+

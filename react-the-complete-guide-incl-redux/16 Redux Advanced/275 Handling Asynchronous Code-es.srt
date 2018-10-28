@@ -1,0 +1,384 @@
+1
+00:00:02,240 --> 00:00:07,110
+En el ltimo video presentamos algunos creadores de accin sincrnica.
+
+2
+00:00:07,310 --> 00:00:13,670
+Ahora queremos aprovecharlos para manejar el cdigo asncrono y para manejar el cdigo asncrono; necesitamos agregar
+
+3
+00:00:13,670 --> 00:00:16,660
+un middleware especial a nuestro proyecto redux.
+
+4
+00:00:16,730 --> 00:00:24,130
+Una biblioteca de terceros que podemos agregar llamada redux phunk aqu estoy en la pgina de Get simplemente google
+
+5
+00:00:24,140 --> 00:00:29,630
+for redox funk Ripp as para encontrarlo aqu puede encontrar ms instrucciones sobre eso.
+
+6
+00:00:29,630 --> 00:00:36,740
+Generalmente esta es una biblioteca que, como acabo de decir, agrega un middleware a su
+
+7
+00:00:36,740 --> 00:00:45,740
+proyecto que permite que sus acciones no sean exactamente las de sus creadores para no devolver la accin en
+
+8
+00:00:45,740 --> 00:00:52,460
+s, sino que devuelven una funcin que eventualmente enviar una accin con este pequeo truco.
+
+9
+00:00:52,550 --> 00:00:57,390
+Nadra mezcla la accin misma pero una funcin que luego despachar una.
+
+10
+00:00:57,410 --> 00:01:05,910
+Podemos ejecutar cdigo asncrono porque eventualmente enviamos una parte es la parte que puede ejecutarse de forma asncrona.
+
+11
+00:01:05,900 --> 00:01:08,500
+Se aclarar una vez que hayamos agregado.
+
+12
+00:01:08,570 --> 00:01:15,160
+Entonces, para agregarlo, detengamos o detengamos el inicio de NPM e instalemos un nuevo paquete
+
+13
+00:01:15,170 --> 00:01:21,460
+con NPM instalado dash dash, guarde el nombre como ledo X dash phunk escrito as.
+
+14
+00:01:21,530 --> 00:01:24,410
+Ahora con esto, esto se descargar y almacenar.
+
+15
+00:01:24,440 --> 00:01:29,800
+Como siempre, podemos registrarlo como middleware en nuestro proyecto.
+
+16
+00:01:29,810 --> 00:01:33,580
+Las instrucciones detalladas siempre se pueden encontrar y obtenemos una pgina, por supuesto.
+
+17
+00:01:33,590 --> 00:01:34,670
+Ah lo ves.
+
+18
+00:01:34,670 --> 00:01:39,790
+Despus de instalarlo, acabamos de agregar con Apply middleware.
+
+19
+00:01:40,130 --> 00:01:47,330
+Volvamos a nuestros chips de ndice donde creamos la tienda y agregamos middleware y
+
+20
+00:01:47,330 --> 00:01:49,880
+ahora importamos este nuevo paquete.
+
+21
+00:01:50,020 --> 00:01:59,010
+As que importe algo de func redox y que se pueda encontrar algo en su pgina.
+
+22
+00:01:59,030 --> 00:02:01,710
+En realidad tienen exportaciones por defecto y nosotros no.
+
+23
+00:02:01,740 --> 00:02:05,180
+Igualmente bracers podemos darle el nombre que queramos.
+
+24
+00:02:05,180 --> 00:02:08,420
+Me quedar con el phunk pero puedes cambiarle el nombre a lo que quieras.
+
+25
+00:02:08,540 --> 00:02:11,490
+Este paquete esencialmente solo explota el middleware.
+
+26
+00:02:11,660 --> 00:02:13,250
+Ahora esto ya es un middleware.
+
+27
+00:02:13,280 --> 00:02:19,550
+As que detrs de las escenas parece nuestra costumbre con la palabra par de llamadas a funcin anidadas y, por
+
+28
+00:02:19,550 --> 00:02:21,530
+lo tanto, podemos agregarla ahora aqu.
+
+29
+00:02:21,560 --> 00:02:22,720
+Ahora aplica middleware.
+
+30
+00:02:22,810 --> 00:02:23,670
+Lo agregar
+
+31
+00:02:23,780 --> 00:02:30,520
+Despus del phunk ms largo Entonces, un objeto que acabamos de importar esa funcin para ser precisos.
+
+32
+00:02:30,680 --> 00:02:36,260
+queremos ejecutar los tiempos de espera y solo despus de 2 segundos queremos almacenar el resultado.
+
+33
+00:02:36,440 --> 00:02:44,780
+As que esta vez con el se agregaron con que podemos volver a nuestros creadores reales y el SJS real cae y digamos
+
+34
+00:02:44,810 --> 00:02:47,660
+en el resultado de la tienda que realmente
+
+35
+00:02:47,660 --> 00:02:56,000
+Entonces aqu en esta funcin que se ejecuta de alguna manera, queremos devolver esta accin despus de dos segundos para simular
+
+36
+00:02:56,000 --> 00:03:03,230
+que previamente o antes de esta accin llegamos a un servidor para almacenarla all y solo actualizamos nuestro
+
+37
+00:03:03,320 --> 00:03:10,160
+estado una vez que esto fue exitoso, por ejemplo ahora con pap con la configuracin actual aqu,
+
+38
+00:03:10,160 --> 00:03:11,710
+esto no funcionar.
+
+39
+00:03:12,040 --> 00:03:19,460
+Pero con el middleware phunk, adelo. Lo que podemos hacer es cambiar aqu, devolver declaracin, y lo pondr justo
+
+40
+00:03:19,460 --> 00:03:23,560
+antes de ese momento, moldable, limpiar el resto aqu pronto.
+
+41
+00:03:23,810 --> 00:03:29,480
+As que agregar una nueva declaracin de devolucin en realidad que devolver una funcin que es importante.
+
+42
+00:03:29,480 --> 00:03:31,910
+Ahora puede usar nuevamente la palabra clave function.
+
+43
+00:03:31,910 --> 00:03:36,980
+Esta funcin recibe el despacho como argumento para despachar la accin.
+
+44
+00:03:36,980 --> 00:03:39,000
+Ahora tenemos despacho aqu.
+
+45
+00:03:39,190 --> 00:03:47,510
+Debido a la funcin de reduccin, dije que el middleware se ejecuta entre el envo de una accin y el momento en
+
+46
+00:03:47,510 --> 00:03:49,800
+que la accin llega al productor.
+
+47
+00:03:50,120 --> 00:03:56,150
+Ahora lo que hacemos aqu es que todava enviamos una accin, pero luego Rydex dice que el middleware
+
+48
+00:03:56,300 --> 00:03:59,470
+entra por pasos para acceder a la accin all.
+
+49
+00:03:59,720 --> 00:04:06,530
+Bsicamente bloquea la vieja accin que podramos decir y la distribuye nuevamente en el futuro.
+
+50
+00:04:06,530 --> 00:04:13,790
+Ahora la nueva X llegar al productor, pero el func redux intermedio puede esperar porque puede enviar
+
+51
+00:04:13,790 --> 00:04:15,890
+una accin como lo desee.
+
+52
+00:04:15,890 --> 00:04:21,860
+Esta es la parte asncrona y eso nos permite ejecutar un cdigo asncrono dentro
+
+53
+00:04:21,860 --> 00:04:22,930
+de esta funcin.
+
+54
+00:04:22,980 --> 00:04:29,360
+Y, por supuesto, tambin podemos usar la buena sintaxis ESX erro aqu de esta manera.
+
+55
+00:04:29,570 --> 00:04:36,850
+Entonces el cdigo dentro de esta funcin de despacho aqu se ejecuta y ahora est dentro del tiempo de espera establecido.
+
+56
+00:04:36,890 --> 00:04:45,500
+pasada para establecer el tiempo de espera, podemos ejecutar este parche para enviar ahora cualquier accin que deseemos despachar.
+
+57
+00:04:45,650 --> 00:04:47,480
+Dentro de esta funcin
+
+58
+00:04:47,480 --> 00:04:55,090
+Ahora, por supuesto, trataramos un ciclo infinito si volvemos a enviar el resultado de la tienda aqu o el creador de la accin.
+
+59
+00:04:55,550 --> 00:05:02,030
+Entonces, qu hacemos normalmente? Creamos creadores de acciones asncronas que India despacha acciones creadas
+
+60
+00:05:02,030 --> 00:05:03,680
+por los sincrnicos.
+
+61
+00:05:03,680 --> 00:05:10,180
+Entonces, lo que har es crear rpidamente un nuevo creador de ection y exportarlo o reclamarlo para guardar el resultado.
+
+62
+00:05:10,210 --> 00:05:17,420
+Este seguir siendo el creador de acciones como lo tenamos antes de recibir el resultado y devolvern la accin
+
+63
+00:05:17,780 --> 00:05:21,780
+que usamos previamente con el resultado de tipo de tienda.
+
+64
+00:05:23,220 --> 00:05:28,740
+Pap es mi accin de sincronizacin Creador en el resultado de la tienda.
+
+65
+00:05:28,750 --> 00:05:37,440
+Sin embargo, ahora enviar exactamente ese creador de acciones de asalto de Savery que me devuelve esta accin que realmente actualiza
+
+66
+00:05:37,530 --> 00:05:42,960
+el estado y la tienda porque es la accin del tipo que manejamos
+
+67
+00:05:42,960 --> 00:05:43,990
+en el reductor.
+
+68
+00:05:44,040 --> 00:05:47,370
+Ahora, antes de ver eso en accin, debera hacer que el flujo sea ms claro.
+
+69
+00:05:47,640 --> 00:05:53,580
+Hay una cosa que tenemos que tener en cuenta aqu sin asalto cuando devolvemos esta funcin que ser
+
+70
+00:05:53,580 --> 00:05:59,310
+ejecutada por redux funk y donde hemos establecido un tiempo de espera donde el dentista parche la accin
+
+71
+00:05:59,310 --> 00:06:01,940
+que debera ejecutarse sincrnicamente y actualizar la historia.
+
+72
+00:06:02,190 --> 00:06:09,130
+el asalto Savery, que es este creador de accin como una funcin del curso y pasar el resto.
+
+73
+00:06:09,150 --> 00:06:09,780
+Necesitamos ejecutar
+
+74
+00:06:09,780 --> 00:06:13,480
+As que no rehacer ms all de la carga til a la tienda con muertos.
+
+75
+00:06:13,500 --> 00:06:20,910
+Asegrate de guardar todas las cadas, incluido el contador, justo antes de que caiga y luego reiniciemos NPM para ver si
+
+76
+00:06:20,910 --> 00:06:21,790
+esto funciona.
+
+77
+00:06:21,840 --> 00:06:31,190
+Y para ver tambin el flujo de eventos en nuestras herramientas de desarrollo redox para que la aplicacin se cargue,
+
+78
+00:06:31,190 --> 00:06:34,780
+podemos manipular nuestra licorera o asalto aqu.
+
+79
+00:06:35,000 --> 00:06:40,760
+Vers que tard dos segundos en imprimir el resultado de la tienda.
+
+80
+00:06:40,880 --> 00:06:42,250
+Ahora eso es lo interesante.
+
+81
+00:06:42,320 --> 00:06:44,840
+Nunca viste a este otro creador de ecciones.
+
+82
+00:06:44,840 --> 00:06:48,350
+Tenemos que establecer el tiempo dentro de lo que conduce a cualquier salida.
+
+83
+00:06:48,480 --> 00:06:54,010
+El resultado de la tienda de hechos no ocurre inmediatamente solo despus de dos segundos de que almacenamos el resultado.
+
+84
+00:06:54,210 --> 00:07:00,830
+Entonces, solo la accin enviada all despus de dos segundos deja una huella porque es nuestra accin
+
+85
+00:07:00,830 --> 00:07:08,900
+sncrona y solo se pueden agregar acciones sncronas para almacenar a los otros creadores de acciones como el resultado de
+
+86
+00:07:08,930 --> 00:07:11,630
+la tienda que ejecuta algn cdigo asncrono.
+
+87
+00:07:11,780 --> 00:07:16,410
+Nuestro nico funto youtoo redux posible y estn atrapados en el medio.
+
+88
+00:07:16,670 --> 00:07:18,760
+Nunca llegan al reductor.
+
+89
+00:07:18,800 --> 00:07:27,050
+Solo los utilizamos como un paso de utilidad intermedio para ejecutar nuestro cdigo asncrono que, por casualidad, se requiere para
+
+90
+00:07:27,050 --> 00:07:33,860
+ejecutar en muchas acciones y luego enviar una accin sncrona para cambiar el estado en la tienda.
+
+91
+00:07:33,860 --> 00:07:36,150
+Una vez que estamos seguros de que sabemos qu hacer all.
+
+92
+00:07:36,170 --> 00:07:41,780
+Una vez que nuestro cdigo asncrono finaliz, esto es por lo que lo vemos
+
+93
+00:07:42,190 --> 00:07:49,160
+aqu en la consola lo suficientemente interesante donde tenemos nuestro logger middleware para que veas que obtenemos ms
+
+94
+00:07:49,280 --> 00:07:56,630
+resultados porque el registro ms largo de todo lo que llega al embudo de accin incluye nuestro funcin que
+
+95
+00:07:56,630 --> 00:08:03,820
+es devuelta por la accin asncrona, nunca agregamos este estado aqu porque eso es bloqueado por el func redux.
+
+96
+00:08:03,890 --> 00:08:11,890
+As que as es como podemos trabajar con los creadores de acciones para manejar el cdigo asncrono en nuestra tienda redux.
+

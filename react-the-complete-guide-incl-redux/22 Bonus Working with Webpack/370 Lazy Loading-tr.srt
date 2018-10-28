@@ -1,0 +1,264 @@
+1
+00:00:02,180 --> 00:00:07,450
+Yani son derste, kural kural grntlere bir kural ekleyerek bitirdik, imdi
+
+2
+00:00:07,460 --> 00:00:12,520
+eklentilere bakmak istiyorum ve kurulumun gerekten ie yarayp yaramadn grmek istiyorum.
+
+3
+00:00:12,560 --> 00:00:17,920
+imdi eklentilerle ilgili olarak, aslnda burada bizim iin sper basit, gelitirme i
+
+4
+00:00:17,990 --> 00:00:20,360
+ak iin herhangi bir ihtiyacmz
+
+5
+00:00:20,420 --> 00:00:25,450
+yok, bunu retim iin ayarladmzda bir tane daha ekleyeceiz, orada bir
+
+6
+00:00:25,460 --> 00:00:26,950
+eklenti eklemek istiyorum
+
+7
+00:00:27,110 --> 00:00:30,880
+ama imdilik hepsi iin, buraya bir eklenti eklemez.
+
+8
+00:00:31,310 --> 00:00:38,720
+Bylece, burada kullandmz kuruluma bir gz atabilir ve dosyay kaydedip kaydetmediimizi grebiliriz, eer bu
+
+9
+00:00:38,930 --> 00:00:44,900
+betik dosyasn altracam dev sunucusunu altran balang betiimizi altrrsak bu ie
+
+10
+00:00:44,900 --> 00:00:45,740
+yarar.
+
+11
+00:00:45,860 --> 00:00:50,980
+Yani bu betii npm start ile altralm, tm dosyalarn kaydedildiinden emin
+
+12
+00:00:51,200 --> 00:00:58,990
+olun ve bunun ie yarayp yaramadna bakalm, burada yolun mutlak bir yol olmadn bir hatayla karlatk, bu
+
+13
+00:00:59,040 --> 00:01:02,240
+yzden kt yolumuzla ilgili bir ey yanltr.
+
+14
+00:01:02,370 --> 00:01:04,390
+una bir bakalm, webpack yaplandrmasna
+
+15
+00:01:04,530 --> 00:01:07,360
+gidelim, kt iin buradan yola kalm, ben
+
+16
+00:01:07,770 --> 00:01:09,990
+de onu kartrdm, deil mi?
+
+17
+00:01:10,090 --> 00:01:16,660
+Yol burada bu ksm olmal ve bo yol dize olmal, bu dzeltme ile
+
+18
+00:01:16,860 --> 00:01:19,770
+imdi tekrar deneyelim, ayrca gncellenmi config
+
+19
+00:01:19,770 --> 00:01:22,260
+dosyasn da kaydettiinizden emin olun.
+
+20
+00:01:23,130 --> 00:01:26,460
+imdi en azndan sunucu balatlrken kmez,
+
+21
+00:01:26,970 --> 00:01:32,580
+bize bu ithalat szdizimini anlamad halde, dinamik ie aktarm szdizimini
+
+22
+00:01:32,650 --> 00:01:36,010
+anlamamza ramen bir hata veriyor, bunu anlamyor.
+
+23
+00:01:36,210 --> 00:01:45,190
+Peki bu dinamik ithalat anlamaya nasl yardmc oluruz? Dinamik olarak oluturulmu fazladan kod paralar oluturabilmek iin buradaki
+
+24
+00:01:45,190 --> 00:01:48,910
+kurulumumuzu ayarlamamz gerekiyor. Tembel ykleme, balangta indirilen ana
+
+25
+00:01:49,180 --> 00:01:54,850
+paketin bir paras deil, web paketindeki kod blnmesini desteklemek ve kod blme
+
+26
+00:01:55,270 --> 00:02:01,420
+yapmak iin ekstra bir paket anlamna geliyor. tembel ykleme iin farkl bir ad,
+
+27
+00:02:01,480 --> 00:02:05,000
+chunkFileName'i k yaplandrmam iin buraya eklemeliyim.
+
+28
+00:02:05,120 --> 00:02:12,460
+Bu sadece, bu dier dosyalarn ne olduunu, elbette pakette yer almayan tembel yklenen kod iin retilen, kod
+
+29
+00:02:12,460 --> 00:02:15,040
+blme ileminin amacn ortadan kaldran, bu
+
+30
+00:02:15,040 --> 00:02:17,220
+dosya adnn ne olmas gerektiini
+
+31
+00:02:17,500 --> 00:02:19,540
+belirleyen ayr dosyalar belirler.
+
+32
+00:02:19,690 --> 00:02:24,890
+Webpack tarafndan dinamik olarak retildikleri iin adlarnda deiken bir para olmas gerekiyor, ben
+
+33
+00:02:25,000 --> 00:02:26,500
+ID kullanacam. js burada,
+
+34
+00:02:26,530 --> 00:02:33,050
+ID'ler dinamik olarak oluturulmu ID 0, 1, 2 ve benzeri, web paketi tarafndan oluturulmutur, bylece
+
+35
+00:02:33,190 --> 00:02:37,750
+zellik ayr demetler halinde d kaynakl olarak kendi javascript dosyalarn almtr.
+
+36
+00:02:38,140 --> 00:02:45,090
+Ek olarak, bu anlama gelmedii bu dinamik ie aktarm szdizimini babelden haberdar
+
+37
+00:02:45,400 --> 00:02:50,650
+etmemiz gerekiyor, bu yzden yapacam ey bir eklenti ykleyeceim,
+
+38
+00:02:50,650 --> 00:02:59,800
+npm install --save-dev, buna babel-plugin-syntax dynamic deniliyor Ithalat ve bu babel bu dinamik ithalat szdizimini
+
+39
+00:02:59,800 --> 00:03:01,720
+anladndan emin olacaktr.
+
+40
+00:03:02,020 --> 00:03:08,980
+Bu yzden bir kez kurulduktan sonra, babelrc dosyasna gidebiliriz ve zaten nayarlar alyoruz, imdi
+
+41
+00:03:08,980 --> 00:03:13,150
+de bir dizi olan bir eklenti dm de ekleyeceim
+
+42
+00:03:13,200 --> 00:03:17,490
+ve burada benim szdizimi dinamik ie aktarma eklentisini ekleyeceim,
+
+43
+00:03:17,570 --> 00:03:19,730
+yani bu isim eklentinin
+
+44
+00:03:19,940 --> 00:03:26,720
+Buna ek olarak, tm bu dosyalar saklayalm ve npm'i yeniden balatalm ve imdi alp almadna bakalm, imdi bu
+
+45
+00:03:26,720 --> 00:03:29,320
+derler ama farkl bir hata alrz, bu
+
+46
+00:03:29,390 --> 00:03:35,270
+szdizimini burada bizim mlklerimizi tahsis ettiimiz yer bu gibi deil diye bir hata alrz .
+
+47
+00:03:35,270 --> 00:03:42,590
+Bunun nedeni, kullanmakta olduumuz env n ayarnn, buradaki zelliin yalnzca bir paras olan en yeni
+
+48
+00:03:42,590 --> 00:03:45,550
+tarayc zelliklerini desteklediidir. Bu zel zellik
+
+49
+00:03:45,740 --> 00:03:51,710
+szdizimi yalnzca taslak halindedir ve env n ayarnda yer almaz. Sorun deil, sadece
+
+50
+00:03:52,070 --> 00:03:54,790
+baka bir n ayar eklememiz gerek.
+
+51
+00:03:54,860 --> 00:04:04,550
+imdi, npm install save-dev ile, imdi babel-preset-stage-2, stage 2 n ayarlar olarak adlandrlan baka
+
+52
+00:04:04,550 --> 00:04:11,300
+bir n ayar yklyoruz, en sonunda desteklenebilecek ama zaten kullanmak
+
+53
+00:04:11,300 --> 00:04:13,280
+istediimiz taslak zellikler.
+
+54
+00:04:13,280 --> 00:04:22,040
+Bylece bunun kurulumunu buraya ekledik ve n ayarm ortada ekleyeceim, ben de bu
+
+55
+00:04:22,670 --> 00:04:25,380
+aamada 2. aama ekleyeceim.
+
+56
+00:04:25,400 --> 00:04:29,240
+imdi npm start ile bunu tekrar deneyelim ve imdi bu daha
+
+57
+00:04:29,240 --> 00:04:31,200
+iyi grnyor, en azndan bir hata
+
+58
+00:04:31,460 --> 00:04:33,840
+alamyoruz, yine de bir problemle karlaacaz.
+
+59
+00:04:33,860 --> 00:04:41,480
+Uygulama imdi ve varsaylan olarak, localhost8080 zerinde yapyor, bu yzden aalm, orada uygulamay grmeyiz,
+
+60
+00:04:41,960 --> 00:04:44,510
+nedeni u ki, bu ekilde
+
+61
+00:04:44,750 --> 00:04:51,530
+ina edilen kmz birbirine balamadk. Webpack dev-server' kullandmzda, ancak bu bellekte, indeksle bu
+
+62
+00:04:51,530 --> 00:04:57,150
+k balamadmz zaman dist klasr. html dosyas, bu dosyada
+
+63
+00:04:57,170 --> 00:04:57,840
+hibir
+
+64
+00:04:57,860 --> 00:04:59,730
+ithalatmz yok, bu
+
+65
+00:04:59,750 --> 00:05:01,970
+betii nasl ekleyelim?
+
+66
+00:05:02,000 --> 00:05:08,000
+Bu bizim kendi bamza yapmamz gereken bir ey ve bunu bir sonraki derste yapacaz.
+

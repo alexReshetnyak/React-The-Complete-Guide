@@ -1,0 +1,500 @@
+1
+00:00:02,130 --> 00:00:09,760
+Yani orada gerek Evet dosyam dndm ve rendim render yntemi orada
+
+2
+00:00:09,850 --> 00:00:14,450
+Bileen Nesnesine uzatarak bir bileen olutururken kullanlr.
+
+3
+00:00:14,470 --> 00:00:23,800
+ kiiye kt ve aka bir liste var, nk buradaki
+
+4
+00:00:23,800 --> 00:00:26,350
+durumumuz Pearse'un ynetiminde.
+
+5
+00:00:26,460 --> 00:00:33,900
+Bunu bir liste olarak vermek mantkl olacaktr, ancak ieri girmeden nce, koullu
+
+6
+00:00:33,940 --> 00:00:42,880
+olarak ierii karmaya balayalm. lk nce bu dmeyi tkladmzda isimleri imdi yapmak istediimiz gibi
+
+7
+00:00:42,910 --> 00:00:44,300
+deitirmek istemiyoruz.
+
+8
+00:00:44,530 --> 00:00:52,810
+Bunun yerine, burada bulunduumuz kiileri gstermek veya gizlemek istiyoruz diyelim.
+
+9
+00:00:53,140 --> 00:01:00,610
+Bunun iin, rnein, tm bu kiileri, diyelim ki, sonunda bu cihaz gsterebileceimiz veya gizleyebileceimiz bir
+
+10
+00:01:00,610 --> 00:01:06,550
+gnde sarabiliyoruz ve bylece gn herkesin saklamaya alt dncesi gn na kan
+
+11
+00:01:06,550 --> 00:01:09,680
+her eyi gsterebiliyor ve gizleyebiliyoruz. bira.
+
+12
+00:01:10,030 --> 00:01:11,680
+te bu ilk adm.
+
+13
+00:01:12,160 --> 00:01:21,690
+kinci adm u: Kiinin ileyicisini deitirmek iin bu aretinin adn deitirmemiz gerekiyor ve artk
+
+14
+00:01:22,510 --> 00:01:26,190
+bu yntemi bir argman olarak geemeyeceiz.
+
+15
+00:01:26,200 --> 00:01:32,740
+imdi bununla birlikte, bir say ilev ars dndren bir ilev kullanmamakla birlikte eski szdizimine geri dneceim,
+
+16
+00:01:32,740 --> 00:01:39,550
+ancak yalnzca bir bavuru geirmeyi biliyorum Altamonte true Yate, gei ileci adnda bir yntem kullandn biliyorum.
+
+17
+00:01:39,850 --> 00:01:42,670
+Bu yzden render ynteminin st ksmna ekleyeceim.
+
+18
+00:01:42,970 --> 00:01:49,570
+Ve her iki szdizimini buradaki szdizimi gibi kullanabiliriz; buradaki bir yntemi ele alacaz, burada bu
+
+19
+00:01:49,600 --> 00:01:52,130
+anahtar szcn kullanmak istiyorsak problem yaayacaz.
+
+20
+00:01:52,390 --> 00:02:00,010
+Ve burada bu yntemi yurtta havalandrlan bir havalandrma zerine aracamz iin bu gerek sorunlara yol aacaktr.
+
+21
+00:02:00,070 --> 00:02:05,370
+Sabol, bir mala bir ok ilevi atamak iin Iverson vergisini gryorsunuz.
+
+22
+00:02:05,410 --> 00:02:07,280
+Eninde sonunda bir yntem yaratacaktr.
+
+23
+00:02:07,330 --> 00:02:14,440
+Sadece farkl bir szdizimi ve javascript'lerin ieriklerinden dolay bu, bu yntem iindeki bu
+
+24
+00:02:14,500 --> 00:02:21,310
+anahtar kelimenin her zaman her koulda sadece snfna dndnden emin olmanz salar.
+
+25
+00:02:21,310 --> 00:02:24,250
+Bu yzden imdi bunu kullanmanz neririm.
+
+26
+00:02:24,250 --> 00:02:31,600
+imdi, bu Dave'mizin ierisindeki kiilerle birlikte gstermek isteyen sitelerin sonunda
+
+27
+00:02:31,600 --> 00:02:34,140
+baz mlkleri hedeflemek istiyoruz.
+
+28
+00:02:34,510 --> 00:02:41,320
+Bu yzden ncelikle devletime gidip bir mlk sahibi ad ekleyip kiilere tabii ki size kalm
+
+29
+00:02:41,320 --> 00:02:42,260
+isimleri gstereceim.
+
+30
+00:02:42,550 --> 00:02:45,280
+Ve balangta yanl yapacam.
+
+31
+00:02:45,280 --> 00:02:52,690
+imdi eer yanlsa, gnahlarnn karsna kmanz istemiyorum ve bunu imdi dinamik olarak nasl yapabiliriz.
+
+32
+00:02:53,290 --> 00:03:01,210
+da gelecekte evet, artk lme ilikin bir talimat verecektik;
+
+33
+00:03:01,210 --> 00:03:07,580
+lme gidebiliriz ve bir melek gibi erevelerde ya
+
+34
+00:03:07,780 --> 00:03:10,580
+imdi yeniden hareket farkl iliyor burada.
+
+35
+00:03:10,630 --> 00:03:18,280
+Her zaman unutmayn, javascript ile alyoruz ancak yalnzca burada HVM'ye benzeyebilir ancak J
+
+36
+00:03:18,280 --> 00:03:19,140
+x'dir.
+
+37
+00:03:19,240 --> 00:03:23,750
+Sadece yeniden yaratma unsuru iin szdizimsel ekerdir.
+
+38
+00:03:23,920 --> 00:03:27,980
+Sonuta burada javascript kodu var.
+
+39
+00:03:28,420 --> 00:03:35,860
+Bu nedenle, bunu dinamik olarak oluturmak istersek javascript kodu ile alabileceimizden onunla alabiliriz.
+
+40
+00:03:35,860 --> 00:03:43,600
+iareti iine alabiliriz, btn div, kiileri d div deil inisiyatifle saryor.
+
+41
+00:03:43,600 --> 00:03:44,850
+Tek trnak
+
+42
+00:03:45,160 --> 00:03:50,640
+Ve imdi trnak iaretleri arasnda ular ve javascript ifadeler yazabilirsiniz.
+
+43
+00:03:50,830 --> 00:03:55,470
+Bu yalnzca iki art iki ya da drt devlete ulamada geerli deil.
+
+44
+00:03:55,600 --> 00:04:01,490
+Ayrca, her ifadeye bir dn ekleyerek ierii koullu hale getirebilirsiniz.
+
+45
+00:04:01,930 --> 00:04:10,150
+Burada yapamayacanz ey bir if deyimiyse, o zaman byle grnen bir ey if
+
+46
+00:04:10,150 --> 00:04:15,510
+blounun iindeki fark buraya tamak iin doru zm olacaktr.
+
+47
+00:04:15,700 --> 00:04:17,020
+Ancak bu ie yaramyor.
+
+48
+00:04:17,110 --> 00:04:24,150
+Aslnda, bu dinamik sz diziminin bir paras olarak basit cmlelerle blok cmleleri kullanamazsnz.
+
+49
+00:04:24,190 --> 00:04:27,720
+Bylece ama ve kapama tekli arama parantezi arasna.
+
+50
+00:04:27,940 --> 00:04:33,640
+Bunun gibi bir blok kullanmak ie yaramayacak, ancak l bir ifade kullanabiliriz.
+
+51
+00:04:33,670 --> 00:04:37,710
+Bu durumun kiilere gsterilip gsterilmediini basite kontrol edebiliriz.
+
+52
+00:04:37,750 --> 00:04:40,470
+Bunun bir boolean olduunu unutmayn.
+
+53
+00:04:40,660 --> 00:04:44,990
+lk bata yanl koyuyoruz.
+
+54
+00:04:45,110 --> 00:04:52,730
+Dolaysyla bu bize doru veya yanl verir ve varsaylan bir javascript yaps olan her ifadeyi evirmez.
+
+55
+00:04:52,730 --> 00:04:59,330
+Bu durumu bir soru iareti ekleyerek kontrol eder ve bu doruysa ne yapacanza karar veririz.
+
+56
+00:04:59,570 --> 00:05:03,110
+Doruysa bu sevgileri retmek istiyoruz.
+
+57
+00:05:03,800 --> 00:05:07,470
+u anda blm bir soru iareti sundu.
+
+58
+00:05:07,550 --> 00:05:10,470
+Yani bu def zlr.
+
+59
+00:05:10,610 --> 00:05:18,350
+Eer bu doruysa, else kutusu da bir iki nokta st ste ekleyerek ve daha sonra ne yapmak istediimizi tanmlamamz gerekir.
+
+60
+00:05:18,410 --> 00:05:23,850
+Doru deilse, bu boluk yalnzca bir ey gstermemek demektir.
+
+61
+00:05:23,870 --> 00:05:27,530
+Bu, ilk kullannzda sper kafa kartrc grnyor olabilir.
+
+62
+00:05:27,530 --> 00:05:29,670
+Bunun farkndaym.
+
+63
+00:05:29,780 --> 00:05:37,610
+Dolaysyla burada ihtiya duyduumuz ve burada yapmakta olduumuz ey, burada yazdmz eylerin dnt
+
+64
+00:05:37,670 --> 00:05:44,960
+javascript'inde olmas ve javascript ifadelerinin JS X'e tekli arma ayralaryla blnebilmesi gereinden yararlanmaktr.
+
+65
+00:05:44,960 --> 00:05:52,820
+Bu, tabii ki herhangi bir javascript mlkne eriebildiimiz anlamna gelir ve bir ifadeyle bizim ifademizi kullandmz renirsiniz.
+
+66
+00:05:52,820 --> 00:06:00,650
+Yine bu, varsaylan bir javascript yapsdr ve l bir ifade baz koullarla yaratlmtr.
+
+67
+00:06:00,650 --> 00:06:02,500
+Bu bir mlk olmak zorunda deildir.
+
+68
+00:06:02,510 --> 00:06:05,140
+Ayrca, bunun doru olup olmadn grmek iin bir kontrol olabilir.
+
+69
+00:06:05,270 --> 00:06:08,400
+Fakat bu bir Boolean olduundan otomatik olarak dorudur veya yanltr.
+
+70
+00:06:08,450 --> 00:06:15,980
+Ancak bu, gerek durumumuzda ne yaplacandan ekimizi ayrmak iin bir soru iaretiyle birlikte
+
+71
+00:06:15,980 --> 00:06:16,950
+belet olurdu.
+
+72
+00:06:17,060 --> 00:06:19,070
+Ve bu burada bir para yok.
+
+73
+00:06:19,070 --> 00:06:22,560
+imdi daha nce ona h yazmadmz unutmayn.
+
+74
+00:06:22,620 --> 00:06:23,620
+erefe x.
+
+75
+00:06:23,780 --> 00:06:28,350
+Sonunda biz re-act create eleman aryoruz.
+
+76
+00:06:28,550 --> 00:06:32,340
+Bu durum doruysa, aka sylemiyoruz.
+
+77
+00:06:32,510 --> 00:06:34,030
+Bu ierii hazrlyoruz.
+
+78
+00:06:34,070 --> 00:06:40,080
+Ancak, tepki verecek bir kod szcnn perde arkasnda yaratma esinin olduunu rendiniz ve sonra Altes
+
+79
+00:06:40,080 --> 00:06:43,460
+koulunu iki nokta st ste ile ayrlm halde aldk.
+
+80
+00:06:43,460 --> 00:06:49,040
+Bu, burada kontrol doru deilse basite anlamna gelir.
+
+81
+00:06:49,520 --> 00:06:51,380
+O zaman bunu.
+
+82
+00:06:51,380 --> 00:06:55,420
+Ve burada hibir ey altrmadmz iin NULL dndryoruz.
+
+83
+00:06:55,430 --> 00:07:00,620
+Temel olarak, boa kartan hibir eyi vermeyeceimiz anlamna gelir ve bu hibir ey deildir.
+
+84
+00:07:00,620 --> 00:07:02,910
+Bunu tekrar okuyabilirsiniz.
+
+85
+00:07:02,960 --> 00:07:09,560
+Sper tuhaf grnebilir ancak, javascriptin yeniden hareketin nasl iledii konusuna banz sardktan sonra mkemmel
+
+86
+00:07:09,590 --> 00:07:10,810
+mantkl grnr.
+
+87
+00:07:10,910 --> 00:07:13,820
+Hepsi javascript.
+
+88
+00:07:13,820 --> 00:07:16,410
+imdi bununla mantm tamamlayalm.
+
+89
+00:07:16,540 --> 00:07:24,510
+Gei yapan kiinin ileyicisinin doru bir ekilde devlete getiinden emin olarak, yalnzca Konst'u ayarlayamayz.
+
+90
+00:07:24,620 --> 00:07:26,820
+ov orada yeni bir sabit yaratyor mu?
+
+91
+00:07:26,840 --> 00:07:29,660
+Bu devlet hangi kiilere gsteriyor.
+
+92
+00:07:29,690 --> 00:07:36,250
+Geerli durumdan beri bu doru ya da yanl ve daha sonra durumu ayarlamak iin bu ayar aamasn diyoruz.
+
+93
+00:07:36,560 --> 00:07:42,990
+Ve imdi burada ov insanlarn ovun neyine eit olarak ayarlyoruz.
+
+94
+00:07:43,000 --> 00:07:50,240
+nnde nlem iareti ekleyerek sadece kelime denir Das gstermek doruysa, yanl sebat
+
+95
+00:07:50,240 --> 00:07:52,120
+gstermek syledi dedi.
+
+96
+00:07:52,310 --> 00:08:00,280
+devlet ahslar ortalama devlet sadece dokunulmaz re-act gncellenmi ovun kiinin deerini bu eyalete birletirir.
+
+97
+00:08:00,280 --> 00:08:07,480
+Eer veriler yanl gsteriyorsa, gstermek kalcl doruya ve tekrar nemlisi de devletle
+
+98
+00:08:07,480 --> 00:08:15,610
+birletiini sylerdi devletle devlet arasnda bir nesne bulunduunu belirtiriz, yalnzca ov kiileri belirterek tm
+
+99
+00:08:15,760 --> 00:08:20,770
+devletin ov kiileri ile deitirilecei anlamna gelmez sadece eski
+
+100
+00:08:20,770 --> 00:08:25,110
+Burada babam yerinde olan biteni takip ediyor.
+
+101
+00:08:25,270 --> 00:08:32,530
+Bu tekliften tasarruf edebilmeli ve UM balangcnn alp almadndan emin olmal ve
+
+102
+00:08:32,530 --> 00:08:34,820
+orada alan uygulamanza ynelmeliyiz.
+
+103
+00:08:34,840 --> 00:08:39,130
+Anahtar adn tklarsanz imdi kiileri grrsnz.
+
+104
+00:08:39,310 --> 00:08:44,590
+bir ekilde balanmaya hazrlanmad iin, zaten l deer kaybettik uyarsna ulatk.
+
+105
+00:08:44,590 --> 00:08:46,870
+Bu insanlardan bazlarnn aslnda yanl
+
+106
+00:08:46,930 --> 00:08:48,540
+Burada olsa da onu grmezden gelebiliriz.
+
+107
+00:08:48,580 --> 00:08:51,670
+Aslnda burada olsun iyi bir ey.
+
+108
+00:08:51,700 --> 00:08:56,520
+l yeniden hareketin deerleri daha nce gizlemediini aka gsteriyor.
+
+109
+00:08:56,710 --> 00:08:59,890
+Aksi taktirde, bu uyary batan alm olurdu.
+
+110
+00:08:59,890 --> 00:09:01,900
+Sayfay yeniden yklediimizde anlamyoruz.
+
+111
+00:09:02,080 --> 00:09:03,900
+Bunu yalnzca dmeyi tkladktan sonra alyoruz.
+
+112
+00:09:04,000 --> 00:09:11,010
+Bu durumda, reaktr gerekten yalnzca tekrar tklamak iin koulumuz doru olduunda bu unsurlar oluturuyor.
+
+113
+00:09:11,320 --> 00:09:12,810
+Gizlendi.
+
+114
+00:09:13,110 --> 00:09:16,800
+imdi afak inceleyerek de bunu onaylayabilirim.
+
+115
+00:09:17,100 --> 00:09:23,430
+Bir kk elemana haritaya daha yakndan bakarsak onu grrz, ancak alttaki ve
+
+116
+00:09:23,430 --> 00:09:25,720
+alttaki hibir ey yoktur.
+
+117
+00:09:25,860 --> 00:09:27,570
+imdi sada bir yer izledim.
+
+118
+00:09:27,570 --> 00:09:34,260
+Burada grdn dmeyi tkladmzda, bunun yanp sndn grdm; bu, bu, yeni gn bizimkilerle.
+
+119
+00:09:34,260 --> 00:09:40,360
+Durum gerekten doru olduunda, gerekten Dom render'a eklendi.
+
+120
+00:09:40,410 --> 00:09:43,300
+Bunun nasl iledii ve tepki verdii.
+
+121
+00:09:43,380 --> 00:09:49,960
+imdi kiileri deitirmek iin bu dmenin baln gncelleyeceim, ancak bu sadece kozmetik bir deiiklik.
+
+122
+00:09:50,130 --> 00:09:57,720
+Zaten alma koullu bir kontrolmz var, ancak ite byle artlar yazyor ancak GSX
+
+123
+00:09:57,720 --> 00:10:00,360
+kodunu kartrmaya da neden olabilir.
+
+124
+00:10:00,360 --> 00:10:07,350
+Muhtemelen ok sayda i ie gemi ekleriniz varsa, bir sonraki dersin buna bir alternatif
+
+125
+00:10:07,350 --> 00:10:08,010
+gstereceim.
+

@@ -1,0 +1,168 @@
+1
+00:00:02,090 --> 00:00:07,030
+Nas ltimas palestras, aprendemos a passar e extrair parmetros de rotas dinmicas.
+
+2
+00:00:07,030 --> 00:00:12,600
+Agora, tambm vemos que isso de alguma forma leva a problemas com nossa nova rota de publicao.
+
+3
+00:00:12,700 --> 00:00:18,760
+H uma palavra como pode ser vista se ns tivermos uma olhada no bloco de continer l onde ns configuramos nossas rotas.
+
+4
+00:00:19,090 --> 00:00:24,160
+Temos a nova rota de postagem que carrega o novo componente de postagem e essa rota de identificao flexvel.
+
+5
+00:00:24,310 --> 00:00:31,900
+Agora eu disse que eu iria at o final para que ele no capture essa rota aqui porque
+
+6
+00:00:31,900 --> 00:00:32,590
+ flexvel.
+
+7
+00:00:32,590 --> 00:00:38,290
+O ID de criao, claro, tambm interpretar uma nova postagem como ID.
+
+8
+00:00:38,320 --> 00:00:46,390
+isso ao nomear isso Publica o ID da barra e tambm conserta isso aqui no nosso link para as postagens da barra de identificao.
+
+9
+00:00:47,260 --> 00:00:53,020
+Agora, ele no captura essa rota, mas lembre-se de que todas as rotas aqui so renderizadas se
+
+10
+00:00:53,060 --> 00:01:00,340
+combinarem com o caminho,  claro,  um problema aqui, pois nosso sistema de disco rgido que Denis sempre  exibido
+
+11
+00:01:00,340 --> 00:01:03,540
+quando voc publica esse render que, claro, podemos corrigir
+
+12
+00:01:03,670 --> 00:01:10,720
+Se fizermos isso agora, voc v que s carregamos a nova postagem e, se eu clicar em uma nica publicao,
+
+13
+00:01:10,720 --> 00:01:14,950
+estamos em mensagens secundrias um e, portanto, apenas vejo uma nica publicao.
+
+14
+00:01:14,980 --> 00:01:22,150
+Definitivamente,  possvel, mas, s vezes, voc simplesmente tem que usar um dado voc ou L porque voc ou voc ou ento, de
+
+15
+00:01:22,180 --> 00:01:23,110
+outra forma, pareceria.
+
+16
+00:01:23,230 --> 00:01:28,580
+Bem, no da maneira que voc quer que eles vejam no final, ento talvez possamos usar essa configurao.
+
+17
+00:01:28,690 --> 00:01:37,210
+Ns ainda podemos dizer ao roteador de reativar para carregar apenas uma de todas essas rotas ao mesmo tempo, envolvendo nossa configurao
+
+18
+00:01:37,240 --> 00:01:43,710
+de rota aqui com um nmero de componentes fornecidos pelo roteador de reagem, o pacote Dom faz.
+
+19
+00:01:43,720 --> 00:01:45,200
+Qual componente.
+
+20
+00:01:45,520 --> 00:01:47,650
+Troque o roteador re-agir da Telsey.
+
+21
+00:01:47,720 --> 00:01:50,980
+Ei, por favor, apenas carregue uma das rotas.
+
+22
+00:01:51,010 --> 00:01:56,190
+O primeiro, na verdade, voc encontra as correspondncias de um determinado conjunto de rotas.
+
+23
+00:01:56,200 --> 00:02:03,400
+Ento, agora podemos embrulhar nossas rotas grtis com switch e a primeira rota que corresponda a um
+
+24
+00:02:03,400 --> 00:02:11,150
+determinado caminho ser carregada e, depois disso, simplesmente deixar de analisar as rotas, no renderizar nenhuma nossa rota.
+
+25
+00:02:11,650 --> 00:02:18,100
+Com isso no lugar agora voc ver que se eu voltar para casa e clicar em uma nica publicao,
+
+26
+00:02:18,100 --> 00:02:19,020
+carregamos essa publicao.
+
+27
+00:02:19,120 --> 00:02:25,780
+Se eu clicar na nova postagem, apenas carregamos esse formulrio e no mais veremos essa nica publicao.
+
+28
+00:02:25,780 --> 00:02:34,120
+Ns tambm vemos agora que se eu alterei a ordem e coloquei ID primeiro que nunca possamos alcanar nova postagem
+
+29
+00:02:34,120 --> 00:02:35,090
+neste cenrio.
+
+30
+00:02:35,230 --> 00:02:41,230
+E  claro que recebemos um erro porque a nova postagem agora  tratada como a idia e, obviamente, uma
+
+31
+00:02:41,230 --> 00:02:42,680
+ID invlida para nosso backend.
+
+32
+00:02:43,120 --> 00:02:49,500
+rota apropriada que , naturalmente, esta com um parmetro flexvel e, portanto, uma nova postagem nunca  processada.
+
+33
+00:02:49,500 --> 00:02:53,540
+Ento, agora vemos que ele pra depois de encontrar a primeira
+
+34
+00:02:53,560 --> 00:02:59,740
+Portanto, o seu pedido  importante, especialmente quando se usa o interruptor do curso, no entanto,  importante se
+
+35
+00:02:59,740 --> 00:03:02,510
+voc quiser garantir que apenas uma rota seja carregada.
+
+36
+00:03:02,830 --> 00:03:04,420
+E, claro, voc tambm pode mistur-lo.
+
+37
+00:03:04,510 --> 00:03:10,570
+Voc pode colocar uma rota fora do switch para que isso sempre seja analisado pelo menos e potencialmente tambm seja renderizado
+
+38
+00:03:10,570 --> 00:03:11,810
+se ele for adequado.
+
+39
+00:03:12,040 --> 00:03:14,060
+E ento, um dos seguintes.
+
+40
+00:03:14,110 --> 00:03:19,580
+E ento talvez adicione mais um a seguir para que voc possa realmente misturar e combinar isso como quiser.
+
+41
+00:03:19,600 --> 00:03:24,910
+Essa  a coisa legal sobre o roteador  realmente flexvel, ento este  um potencial de configurao
+
+42
+00:03:24,910 --> 00:03:30,960
+onde podemos usar para voc ou ento voc quer usar e ainda garantir que apenas carregamos uma rota por vez.
+

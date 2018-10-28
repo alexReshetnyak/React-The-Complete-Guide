@@ -1,0 +1,100 @@
+1
+00:00:02,270 --> 00:00:06,040
+In the last lecture we added this toggle button and it works fine,
+
+2
+00:00:06,290 --> 00:00:11,130
+let's now make sure that we actually turn this into something more pretty.
+
+3
+00:00:11,200 --> 00:00:16,420
+For that, I'll add a css file to my drawerToggle component,
+
+4
+00:00:16,460 --> 00:00:23,450
+drawerToggle.css and in there, I want to style this as a hamburger icon. Now attached to this video, you
+
+5
+00:00:23,450 --> 00:00:30,320
+will find the css code which is responsible for that and this code essentially just creates a div
+
+6
+00:00:30,380 --> 00:00:36,290
+with three bars inside of it where each bar is one of the hamburger icon bars.
+
+7
+00:00:36,410 --> 00:00:42,460
+Now to make that css code work, we need to adjust the actual html or jsx code,
+
+8
+00:00:42,710 --> 00:00:46,760
+so there we no longer have a div which wraps the menu text
+
+9
+00:00:46,760 --> 00:00:52,510
+instead what we'll have is a div which holds three div elements inside of it.
+
+10
+00:00:52,580 --> 00:00:55,190
+And these div elements don't have any content,
+
+11
+00:00:55,190 --> 00:00:59,050
+don't have any css class due to the assigned styling
+
+12
+00:00:59,060 --> 00:01:05,240
+they will be styled correctly because I'm styling all divs which are nested in a div or in any element
+
+13
+00:01:05,420 --> 00:01:10,610
+which has the drawerToggle class. That of course means we have to assign this drawerToggle class
+
+14
+00:01:10,610 --> 00:01:11,830
+to the outer div.
+
+15
+00:01:12,200 --> 00:01:23,510
+So i'll import classes from the css file to get access to that class and then add class name to the outer
+
+16
+00:01:23,510 --> 00:01:31,230
+div and assign classes drawerToggle referring to that drawerToggle css class which is set up there.
+
+17
+00:01:31,310 --> 00:01:32,990
+So make sure all files are saved
+
+18
+00:01:33,040 --> 00:01:34,730
+and let's then have a look at that,
+
+19
+00:01:34,790 --> 00:01:41,930
+and here we see the nice looking hamburger icon. And with it we get a pretty nice looking application
+
+20
+00:01:42,050 --> 00:01:47,410
+where we can build our own burger, check it out, continue
+
+21
+00:01:47,460 --> 00:01:52,820
+which doesn't do too much yet and have a lot of nice looking functionality in there.
+
+22
+00:01:53,040 --> 00:02:00,210
+Now over the next modules, we'll add more functionality like sending this or the data to a real server, adding
+
+23
+00:02:00,210 --> 00:02:06,630
+multiple pages and handling the application state differently but I'm already pretty happy with this
+
+24
+00:02:06,720 --> 00:02:13,980
+state of the application and I'd say let's now have a look at how we may optimize this or what we can
+
+25
+00:02:13,980 --> 00:02:18,390
+fine tune about that before we move on with other course modules.
+

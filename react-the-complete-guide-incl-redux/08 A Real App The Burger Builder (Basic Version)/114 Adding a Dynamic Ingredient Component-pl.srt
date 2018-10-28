@@ -1,0 +1,400 @@
+1
+00:00:02,200 --> 00:00:07,070
+I The Last Lecture, ktry wdroylimy lub zaczlimy wdraa ciebie, budowniczego Burgert.
+
+2
+00:00:07,200 --> 00:00:09,020
+Ale wiele brakuje.
+
+3
+00:00:09,090 --> 00:00:16,020
+Nadszed czas, aby kontynuowa nasz prac i upewni si, e dodamy skadniki zwizane z
+
+4
+00:00:16,020 --> 00:00:22,410
+bugerem, a szczeglnie skadniki burgera. Przejd do folderu komponentw, a wymieni nowy podfolder,
+
+5
+00:00:22,410 --> 00:00:23,020
+ktrego nazw.
+
+6
+00:00:23,020 --> 00:00:23,730
+Burger.
+
+7
+00:00:23,910 --> 00:00:26,870
+Wszystko, co zwizane jest z burgerem, powinno tam wej.
+
+8
+00:00:27,240 --> 00:00:34,050
+I znowu jest to dobry sposb na uporzdkowanie projektu, poniewa jak mona sobie wyobrazi w
+
+9
+00:00:34,050 --> 00:00:41,040
+wikszych projektach i bardzo duych projektach, ciko bdzie zarzdza wszystkimi tymi komponentami, poniewa jest to
+
+10
+00:00:41,040 --> 00:00:46,440
+dobra praktyka i reaguje na tworzenie ziarnistych komponentw, a nie duych porcji.
+
+11
+00:00:46,440 --> 00:00:51,840
+Teraz, jeli masz duo komponentw, masz duo plikw i chcesz zarzdza tymi
+
+12
+00:00:51,840 --> 00:00:58,530
+plikami, chcesz utworzy struktur folderw, ktra jest nie tylko podzielona na komponenty i kontenery, ale
+
+13
+00:00:58,650 --> 00:01:00,140
+take wewntrz kontenerw.
+
+14
+00:01:00,240 --> 00:01:06,510
+Ty te podzielisz go wedug obszaru funkcji, aby szybko wiedzia, czy musz pracowa
+
+15
+00:01:06,840 --> 00:01:10,140
+nad hamburgerem. Musz i do folderu Bergere.
+
+16
+00:01:10,140 --> 00:01:12,660
+Dodamy kilka skadnikw Suppe.
+
+17
+00:01:12,660 --> 00:01:21,060
+Na przykad dodam plik burger js, ktry powinien by burgerem, ktry naprawd wywietlamy
+
+18
+00:01:21,060 --> 00:01:22,180
+na ekranie.
+
+19
+00:01:22,650 --> 00:01:26,510
+Teraz zawsze mog powiedzie, e sam burger nie poradzi sobie z tym.
+
+20
+00:01:26,700 --> 00:01:34,100
+Potrzebujemy skadnikw w tym burgerowskim chlebie, eby sprzedawa w misie sera na bekonie.
+
+21
+00:01:34,470 --> 00:01:37,390
+W tym celu utwrz podfolder.
+
+22
+00:01:37,560 --> 00:01:39,940
+Skadnik burger.
+
+23
+00:01:40,200 --> 00:01:44,150
+A potem wszyscy dodaj skadnik burger.
+
+24
+00:01:44,340 --> 00:01:50,610
+Plik JS i tak naprawd chc zacz od tego skadnika, poniewa tak naprawd to jest to, czego
+
+25
+00:01:50,820 --> 00:01:53,170
+potrzebujemy, aby renderowa co na ekranie.
+
+26
+00:01:53,580 --> 00:01:58,040
+Teraz dla skadnikw hamburgera przygotowaem upadek C S S.
+
+27
+00:01:58,050 --> 00:02:05,700
+Moesz znale doczenie do tego wideo, ktre zawiera duo kodu S S do renderowania skadnikw burgera z
+
+28
+00:02:05,730 --> 00:02:09,890
+CSSA tylko bez importowania obrazu, ktry oczywicie jest wietny.
+
+29
+00:02:09,890 --> 00:02:18,540
+Z perspektywy Fauzji oznacza to, e uytkownik kocowy nie musi pobiera zbyt duo kodu lub treci.
+
+30
+00:02:18,570 --> 00:02:24,850
+Teraz moesz pobra martwy kod CSSA i wklei go do nowo utworzonego pliku.
+
+31
+00:02:24,870 --> 00:02:28,070
+Plik Bergere skadnika C S S.
+
+32
+00:02:28,110 --> 00:02:33,270
+Po skopiowaniu tego, co wanie udostpniem, masz wszystkie C-y w nastpujcy sposb: Musisz wyrenderowa
+
+33
+00:02:33,270 --> 00:02:36,840
+skadniki Bergere, ale samo to oczywicie nic nie da.
+
+34
+00:02:36,840 --> 00:02:40,440
+Wszyscy potrzebujemy penego skadnika skadnika hamburgera z ycia.
+
+35
+00:02:40,770 --> 00:02:43,010
+To jak zawsze bdzie funkcj.
+
+36
+00:02:43,050 --> 00:02:50,610
+Wic stan mniej komponentowy i nazwa go skadnikiem Burger i oczekuj, e zdobd jakie rekwizyty i chc
+
+37
+00:02:50,610 --> 00:02:56,190
+co zwrci, a uyj klamrowych klamr, bo tak naprawd chc uruchomi jak logik
+
+38
+00:02:56,190 --> 00:02:56,880
+zanim wrc.
+
+39
+00:02:56,890 --> 00:03:03,650
+GSX zmieniam lub zareaguj tutaj, poniewa napisz troch GSX.
+
+40
+00:03:03,960 --> 00:03:07,610
+I oczywicie wyeksportuj to jako domylne.
+
+41
+00:03:07,770 --> 00:03:16,050
+Ta funkcja i moesz bardzo dobrze napisa fragment edytora do tworzenia stanu mniej komponentu, poniewa
+
+42
+00:03:16,320 --> 00:03:18,070
+zawsze wyglda tak.
+
+43
+00:03:18,120 --> 00:03:21,240
+Ponownie zaimportuj funkcj i eksportuj.
+
+44
+00:03:21,300 --> 00:03:24,410
+Zachcamy do napisania fragmentu swojego edytora.
+
+45
+00:03:24,420 --> 00:03:32,370
+Teraz wracamy do naszego komponentu, chocia mamy nasz skadnik Bergere i powiedziaem, e potrzebuj jakiej
+
+46
+00:03:32,700 --> 00:03:35,450
+logiki do renderowania kodu GSX.
+
+47
+00:03:35,520 --> 00:03:42,150
+Ta logika jest wymagana, poniewa istniej rne rodzaje skadnikw i spodziewam si uzyska informacje
+
+48
+00:03:42,150 --> 00:03:44,290
+o tym, ktry skadnik wyrenderowa.
+
+49
+00:03:44,340 --> 00:03:51,660
+Skoro ju tu rekwizyty, utworz zmienn skadnika i pocztkowo ustawi j na zero.
+
+50
+00:03:51,720 --> 00:03:54,110
+Na pocztku nic nie wyrenderujemy.
+
+51
+00:03:54,120 --> 00:04:02,700
+Na przykad, jeli teraz co jest niewane, przeo normaln instrukcj zmiany javascript i
+
+52
+00:04:02,730 --> 00:04:09,260
+przeanalizuj typ mojego skadnika, wic wpisz jako waciwo, ktr oczekuj.
+
+53
+00:04:09,930 --> 00:04:12,430
+A teraz mamy kilka rnych przypadkw.
+
+54
+00:04:12,510 --> 00:04:14,790
+Na przykad Brad bottom.
+
+55
+00:04:15,000 --> 00:04:18,230
+Moesz dowolnie definiowa t spraw.
+
+56
+00:04:18,240 --> 00:04:20,320
+Tylko pamitaj, aby uy tego oszustwa.
+
+57
+00:04:20,340 --> 00:04:22,830
+Aplikacja, jeli planujesz przej.
+
+58
+00:04:22,920 --> 00:04:28,730
+No c, dolny Brad z twoich klas CSSA z burgerami na wszystkie te rzeczy mia znale tutaj.
+
+59
+00:04:28,770 --> 00:04:33,850
+Wkrtce zastosujemy je, a DS zastosuje poprawn wersj Starling's.
+
+60
+00:04:33,960 --> 00:04:40,610
+Powiedzmy, e mamy przypadek dna Brada, wic mj skadnik powinien by.
+
+61
+00:04:40,750 --> 00:04:44,670
+Szanowny z nastpujc nazw klasy.
+
+62
+00:04:44,800 --> 00:04:51,610
+Teraz musiaem zaimportowa moje klasy, wic szybko dodaj te klasy importu z
+
+63
+00:04:51,610 --> 00:04:58,810
+pliku C S S Bruguera, a potem chc przypisa klasy Brad do dna.
+
+64
+00:04:59,020 --> 00:05:01,300
+I mona zobaczy, e wskaniki klasy DC jako.
+
+65
+00:05:01,310 --> 00:05:02,700
+Tutaj na dole Brad.
+
+66
+00:05:02,710 --> 00:05:04,380
+Wszyscy mamy ten top.
+
+67
+00:05:04,510 --> 00:05:11,710
+Mamy miejsca na bachora, a potem dostalimy saatk z sera i boczek.
+
+68
+00:05:11,800 --> 00:05:16,460
+Wic tutaj tworzymy chleb na dole wanie taki.
+
+69
+00:05:16,490 --> 00:05:20,960
+Pozwl mi doda rednik, a nastpnie przerwa.
+
+70
+00:05:20,960 --> 00:05:23,000
+Dodajmy teraz kolejn spraw.
+
+71
+00:05:23,300 --> 00:05:28,520
+Drug spraw, ktr chc sprawdzi, jest to, e mamy gr chleba.
+
+72
+00:05:28,520 --> 00:05:35,780
+To naprawd wymaga nieco innego skadnika, nie tylko pojedynczej mierci, ale na wierzchu
+
+73
+00:05:35,840 --> 00:05:38,100
+chleba bdzie kilka miejsc.
+
+74
+00:05:38,120 --> 00:05:48,220
+Tak wic tutaj zwracam kilka wielowierszowych J jako X, gdzie zewntrzny div otrzymuje rwnie nazw Claussa, a
+
+75
+00:05:49,000 --> 00:05:51,660
+nastpnie wierzchoek chleba Klaas.
+
+76
+00:05:52,450 --> 00:05:58,630
+Ale w rodku potrzebuj urzdzenia Obert, ktre reprezentuje siedzenia.
+
+77
+00:05:58,630 --> 00:06:08,870
+Tak wic pierwszego dnia wszyscy w klasie, a potem mam zajcia w klasie jeden, a ja to duplikuj dla
+
+78
+00:06:08,870 --> 00:06:11,980
+wszystkich, ktrzy maj div z miejscami.
+
+79
+00:06:12,020 --> 00:06:14,090
+To jest alternatywa.
+
+80
+00:06:14,090 --> 00:06:24,080
+Zrbmy sobie przerw, a teraz moemy kontynuowa nastpny przypadek: spotkalimy si, powiedzmy, jeli
+
+81
+00:06:24,080 --> 00:06:28,590
+mamy miso, a nastpnie dodajemy skadnik.
+
+82
+00:06:28,970 --> 00:06:36,950
+I w tym dniu, jeli uyjemy nazwy klasowej i odgadlicie, e klasy si teraz spotykaj.
+
+83
+00:06:37,000 --> 00:06:44,140
+Moesz to uzupeni dla wszystkich rednich gradientw, ktre moesz zobaczy w pliku C S S i
+
+84
+00:06:44,860 --> 00:06:50,570
+po prostu utworzy wszystkie przypadki dla wszystkich skadnikw, ktre moesz tu zidentyfikowa.
+
+85
+00:06:50,620 --> 00:06:55,040
+Dam ci szans na makaron z tob i sprbuj tego na wasn rk, a potem zrobimy to razem.
+
+86
+00:06:57,870 --> 00:07:01,050
+Pomylelimy, nie rbmy tego razem.
+
+87
+00:07:01,320 --> 00:07:03,320
+To naprawd proste.
+
+88
+00:07:03,510 --> 00:07:11,640
+Nie moemy po prostu skopiowa misa i wprowadzi go kilka razy tutaj, aby rwnie mie skrzynie
+
+89
+00:07:11,640 --> 00:07:20,230
+dla sera, w ktrym stosujemy klasy klasy sera, a nastpnie boczek, w ktrym stosujemy klas bekonow.
+
+90
+00:07:20,400 --> 00:07:25,640
+I wreszcie saatka, w ktrej stosujemy klas saatkow.
+
+91
+00:07:25,800 --> 00:07:31,680
+A tak na marginesie, jeli chcesz inaczej to zaimplementowa i na pewno s alternatywy dla
+
+92
+00:07:31,680 --> 00:07:36,280
+tego wielkiego przecznika, moesz oczywicie zrobi to wicej ni za darmo.
+
+93
+00:07:36,360 --> 00:07:41,520
+Teraz wszystko tutaj jest ustawione domylnie, na wypadek, gdyby przekazano co nieprawidowego.
+
+94
+00:07:41,520 --> 00:07:50,430
+I jeszcze raz Ingredion Shelby, teraz po tym gigantycznym owiadczeniu, e moemy bezpiecznie zwrci ten skadnik,
+
+95
+00:07:50,910 --> 00:07:56,510
+a Ingredion jest teraz albo jedn z wielu naszych mierci.
+
+96
+00:07:56,520 --> 00:08:04,230
+Teraz jest co, co moemy zrobi, a my zrobimy to w nastpnym wykadzie, jaki moemy
+
+97
+00:08:04,230 --> 00:08:10,970
+przeprowadzi przy sprawdzaniu poprawnoci typu propp, poniewa chcemy mie pewno, e otrzymamy waciwo typu.
+
+98
+00:08:11,040 --> 00:08:12,720
+Teraz sprbuj tego na wasn rk.
+
+99
+00:08:12,720 --> 00:08:19,350
+Moesz to wyprbowa samemu w nastpnym wykadowym wiecie Gabra po pakowaniu rurek Prop
+
+100
+00:08:19,350 --> 00:08:26,110
+i doda Rob Taieb, aby zweryfikowa, e waciwo type jest przekazywana do tego komponentu.
+

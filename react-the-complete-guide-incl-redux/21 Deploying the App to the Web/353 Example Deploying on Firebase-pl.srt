@@ -1,0 +1,228 @@
+1
+00:00:02,250 --> 00:00:04,570
+W ostatnim wykadzie stworzylimy nasze pliki,
+
+2
+00:00:04,610 --> 00:00:10,350
+teraz chc je wdroy i naprawd moesz wybra, ktry statyczny host plikw chcesz uy.
+
+3
+00:00:10,430 --> 00:00:16,730
+Wystarczy postpowa zgodnie z instrukcjami wybranego hosta, aby przesa pliki w folderze build i upewni si, e
+
+4
+00:00:16,730 --> 00:00:19,040
+zawsze zwracasz indeks. plik
+
+5
+00:00:19,040 --> 00:00:22,910
+html. Bd korzysta z hostingu firebase,
+
+6
+00:00:22,910 --> 00:00:25,920
+wic w konsoli firebase projektu, ktry ju mamy,
+
+7
+00:00:26,000 --> 00:00:32,710
+moemy klikn na hostingu i tam, na pocztek, otrzymujemy instrukcje. Teraz, jeli chodzi o hosting firebase, musimy
+
+8
+00:00:32,750 --> 00:00:36,570
+zainstalowa globalnie na naszym komputerze dodatkowe narzdzie, jeli nie
+
+9
+00:00:36,710 --> 00:00:42,520
+chcemy tego po prostu ledzi z innym statycznym hostem, takim jak AWS S3.
+
+10
+00:00:43,010 --> 00:00:48,710
+sprawd dokumentacj wybranego hosta, aby dowiedzie si, jak wdroy t konkretn
+
+11
+00:00:48,710 --> 00:00:49,460
+stron.
+
+12
+00:00:49,460 --> 00:00:54,330
+Tutaj skopiuj polecenie, a uywajc sudo na Macu, w systemie Windows
+
+13
+00:00:54,350 --> 00:01:01,310
+nie potrzebujesz tego, a nastpnie skopiowanego polecenia, mog zainstalowa te narzdzia firebase na caym wiecie na
+
+14
+00:01:01,370 --> 00:01:02,320
+moim komputerze.
+
+15
+00:01:02,330 --> 00:01:05,090
+Teraz to potrwa kilka sekund, aby to zakoczy,
+
+16
+00:01:05,090 --> 00:01:08,920
+moemy ju przeskoczy do przodu i spojrze na drugi krok.
+
+17
+00:01:08,930 --> 00:01:09,910
+Zobaczysz, e po
+
+18
+00:01:09,920 --> 00:01:15,830
+zainstalowaniu narzdzi moesz uruchomi logowanie do Firebase, aby uwierzytelni si przy uyciu konta Firebase, a
+
+19
+00:01:15,830 --> 00:01:21,410
+nastpnie zainicjowa projekt jako projekt bazy Firebase, ktry chcesz wdroy, a nastpnie wdroy za pomoc
+
+20
+00:01:21,410 --> 00:01:22,650
+komendy wdraania, teraz
+
+21
+00:01:22,670 --> 00:01:24,250
+zrobimy to razem .
+
+22
+00:01:24,620 --> 00:01:26,410
+Zaczekajmy wic kilka dni, a
+
+23
+00:01:27,220 --> 00:01:31,550
+skoczymy, a kiedy to si skoczy, musisz uruchomi logowanie do bazy firebase.
+
+24
+00:01:31,570 --> 00:01:38,110
+Ju to zrobiem Kontynuuj z firebase init, a teraz jeste pytany, ktre funkcje chcesz uy tutaj,
+
+25
+00:01:38,110 --> 00:01:42,430
+teraz moemy po prostu sprawdzi hosting, naciskajc spacj po przejciu
+
+26
+00:01:42,430 --> 00:01:44,110
+do tej opcji, nie
+
+27
+00:01:44,350 --> 00:01:47,260
+potrzebujemy adnego z innych, nastpnie nacinij enter.
+
+28
+00:01:47,380 --> 00:01:49,940
+Teraz wybierasz projekt, ktrego chcesz uy, wic
+
+29
+00:01:50,050 --> 00:01:51,320
+zrobi to rwnie tutaj.
+
+30
+00:01:52,200 --> 00:01:58,360
+Teraz zapytae, jaki jest Twj publiczny katalog i dla nas, to nie jest domylny publiczny,
+
+31
+00:01:58,680 --> 00:02:05,080
+ale kompilowany, ktry mwi firebase, ktre pliki do przesania, a my chcemy przesa wszystkie pliki
+
+32
+00:02:05,150 --> 00:02:07,530
+w katalogu kompilacji, wic wprowadz kompilacj.
+
+33
+00:02:07,600 --> 00:02:10,180
+Teraz chcemy, eby by skonfigurowany jako aplikacja pojedyncza strona?
+
+34
+00:02:10,210 --> 00:02:11,440
+tak.
+
+35
+00:02:11,440 --> 00:02:14,870
+Spowoduje to automatyczne ustawienie tego, aby zawsze zwraca indeks. html jak tutaj
+
+36
+00:02:14,920 --> 00:02:16,030
+mwi, wic
+
+37
+00:02:16,090 --> 00:02:18,730
+wpisz Y, aby tak.
+
+38
+00:02:18,840 --> 00:02:22,530
+Teraz prosi nas, czy powinien nadpisa indeks. znaleziony plik html, odpowied brzmi "Nie",
+
+39
+00:02:22,530 --> 00:02:23,670
+wic "N", poniewa oczywicie
+
+40
+00:02:23,670 --> 00:02:31,170
+chcemy zachowa ten wygenerowany przez nasz projekt i tym samym skoczylimy. Teraz, w przypadku firebase, dostarczylimy specjalny
+
+41
+00:02:31,180 --> 00:02:37,770
+plik rc i baz firebase. plik json, aby
+
+42
+00:02:37,770 --> 00:02:43,270
+skonfigurowa ten projekt. FirebaseRC zawiera po prostu informacje o tym projekcie, oczywicie
+
+43
+00:02:43,420 --> 00:02:46,200
+powiniene zamieni to na swj ID projektu, jeli kiedykolwiek
+
+44
+00:02:46,360 --> 00:02:53,230
+pobierzesz mj projekt i chcesz go uy i baz firebase. json to miejsce, w ktrym skonfigurowano hosting, gdzie folder publiczny
+
+45
+00:02:53,350 --> 00:02:58,510
+jest ustawiony jako folder kompilacji, w ktrym ignoruje niektre pliki, aby nie przesya tych plikw
+
+46
+00:02:58,550 --> 00:03:05,500
+i gdzie rwnie przepisuje wszystkie przychodzce dania do indeksu powrotu. html i dla firebase, moesz przeczyta wicej
+
+47
+00:03:05,500 --> 00:03:09,680
+w ich dokumentacji, dla twoich ulubionych hostw statycznych stron,
+
+48
+00:03:09,730 --> 00:03:11,810
+wybierasz ich dokumenty, oczywicie.
+
+49
+00:03:11,980 --> 00:03:17,140
+Tak wic w przypadku bazy Firebase ze wszystkimi ustawieniami, moemy wdroy to przy wdraaniu firebase, dla
+
+50
+00:03:17,140 --> 00:03:22,210
+innych hostw moe by konieczne rczne przesanie plikw, ktre rwnie nie powinny by zbyt trudne.
+
+51
+00:03:22,510 --> 00:03:28,060
+W zwizku z tym przygotowuje nasz katalog do zaadowania, jak to si mwi, przesa go, a
+
+52
+00:03:28,060 --> 00:03:34,520
+teraz moemy odwiedzi aplikacj pod tym hostingowym adresem URL, a istniej rwnie sposoby na przypisanie wasnej domeny, po prostu
+
+53
+00:03:34,570 --> 00:03:39,760
+sprawd dokumentacj firebase, jeli " jestem zainteresowany. Odwiedmy t stron, a teraz
+
+54
+00:03:39,970 --> 00:03:46,700
+widzimy, e nasza aplikacja dziaa tak, jak dziaa na naszym lokalnym komputerze.
+
+55
+00:03:46,960 --> 00:03:54,520
+Wic oczywicie moemy si teraz zalogowa, korzystamy z tej samej bazy danych za scen,
+
+56
+00:03:54,520 --> 00:04:00,370
+a nastpnie zaczynamy budowa naszego burgera tutaj, zamwi, i tak dalej.
+
+57
+00:04:00,410 --> 00:04:04,600
+To jest teraz nasza aplikacja dziaajca na prawdziwym serwerze.
+

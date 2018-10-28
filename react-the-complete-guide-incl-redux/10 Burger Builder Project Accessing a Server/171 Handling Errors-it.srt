@@ -1,0 +1,560 @@
+1
+00:00:02,130 --> 00:00:07,580
+Nell'ultima lezione abbiamo fatto in modo di mostrare a un lanciatore un caricatore all'utente che cosa sta facendo
+
+2
+00:00:07,580 --> 00:00:08,320
+la richiesta.
+
+3
+00:00:08,510 --> 00:00:14,870
+Questa  ovviamente una buona cosa per migliorare la nostra esperienza utente perch l'utente vede chiaramente che
+
+4
+00:00:14,870 --> 00:00:15,820
+qualcosa sta accadendo.
+
+5
+00:00:15,830 --> 00:00:22,500
+ anche un miglioramento dell'esperienza utente se mostriamo messaggi di errore nel caso in cui qualcosa non funzioni.
+
+6
+00:00:22,520 --> 00:00:27,810
+E qui di nuovo ci sono diversi posti in cui  possibile mostrare un messaggio di errore simile.
+
+7
+00:00:27,860 --> 00:00:36,020
+Voglio semplicemente impostare un gestore di errori globale che mostri un messaggio di errore Swiftie modale, ma non
+
+8
+00:00:36,020 --> 00:00:43,910
+usa il modal qui perch non voglio essere bloccato su questo contenitore nel contenitore di Bergere Boulder.
+
+9
+00:00:44,130 --> 00:00:49,550
+Non voglio avere un modo flessibile di mostrare un errore, non importa quale componente e quale
+
+10
+00:00:49,640 --> 00:00:50,770
+contenitore si verifica.
+
+11
+00:00:51,020 --> 00:00:59,120
+Quindi la mia modal verr aggiunta ad un livello pi alto nell'applicazione e voglio avere un livello
+
+12
+00:00:59,370 --> 00:01:07,910
+pi alto dall'applicazione, quindi un componente pi alto e il contenitore di Asperger Bodor dove prendo errori e
+
+13
+00:01:08,000 --> 00:01:13,610
+dove poi mi assicurer che il mio errore o modal  visualizzato.
+
+14
+00:01:13,610 --> 00:01:17,390
+Ora dove possiamo impostare questo.
+
+15
+00:01:17,390 --> 00:01:19,970
+Come possiamo controllarlo.
+
+16
+00:01:19,970 --> 00:01:27,440
+dovrebbe avere questo errore o modale con esso e pu comodamente aggiungere la funzionalit di gestione degli errori ad esso.
+
+17
+00:01:27,440 --> 00:01:34,250
+Voglio semplicemente creare un componente di ordine superiore con il quale posso avvolgere il buger builder o che effettivamente
+
+18
+00:01:34,250 --> 00:01:40,850
+user in quel secondo modo in cui ti ho mostrato per usare componenti di ordine superiore in modo
+
+19
+00:01:40,850 --> 00:01:43,490
+che possiamo semplicemente racchiudere qualsiasi componente che
+
+20
+00:01:43,490 --> 00:01:50,480
+Quindi per questo ho intenzione di creare un nuovo componente di ordine superiore in una cartella che chiamer con
+
+21
+00:01:50,510 --> 00:01:51,610
+gestore degli errori.
+
+22
+00:01:51,830 --> 00:02:00,380
+Sto usando questa sintassi con il gestore degli errori perch voglio usare  il secondo modo di creare un componente
+
+23
+00:02:00,380 --> 00:02:06,020
+di ordine elevato che verr usato qui sulla scheda X e non usato come.
+
+24
+00:02:06,070 --> 00:02:07,090
+Codice X.
+
+25
+00:02:07,400 --> 00:02:16,310
+Quindi sono tutti aggiunti con il punto J del gestore aereo come file e questo file qui ora avr il
+
+26
+00:02:16,310 --> 00:02:17,380
+seguente modulo.
+
+27
+00:02:17,480 --> 00:02:20,810
+Sar una funzione con gestore degli errori.
+
+28
+00:02:20,960 --> 00:02:28,490
+E questa dovrebbe essere una funzione che prende il componente avvolto come input e che restituisce una
+
+29
+00:02:28,530 --> 00:02:31,370
+funzione che riceve oggetti di scena.
+
+30
+00:02:31,580 --> 00:02:37,310
+E ovviamente ritorna semplicemente Steese I'm Chia's X incluso il componente incartato.
+
+31
+00:02:37,460 --> 00:02:42,400
+Quindi per questo dobbiamo importare il re-act dal re-act.
+
+32
+00:02:42,590 --> 00:02:49,100
+componente potrebbe ricevere su di esso perch non conosco questi oggetti di scena ma sicuramente non voglio perderli.
+
+33
+00:02:49,100 --> 00:02:54,360
+E ora qui ovviamente voglio restituire il componente spostato e distribuire qualsiasi Propst che questo
+
+34
+00:02:54,370 --> 00:02:59,790
+Quindi voglio esportare con la funzione di gestione degli errori di default.
+
+35
+00:02:59,990 --> 00:03:03,670
+Ma ora voglio anche usare il mio O aggiungere il mio errore o modal.
+
+36
+00:03:03,670 --> 00:03:05,990
+Quindi per quello ho bisogno di importare due cose.
+
+37
+00:03:05,990 --> 00:03:16,170
+La componente modale ovviamente dai componenti te o la cartella modale e l D-Mo. file js.
+
+38
+00:03:16,440 --> 00:03:24,880
+E dal momento che voglio metterlo accanto ad esso ho bisogno di componente alks dalla cartella ox nella cartella HLC.
+
+39
+00:03:24,990 --> 00:03:33,100
+Quindi ora posso concludere tutto con alchini come questo e al modale accanto ad esso.
+
+40
+00:03:33,180 --> 00:03:37,680
+Non usare un tag di chiusura automatica qui perch nel modale ovviamente voglio produrre qualcosa.
+
+41
+00:03:37,680 --> 00:03:44,220
+Per ora dir solo che qualcosa non funziona proprio cos.
+
+42
+00:03:44,360 --> 00:03:47,630
+Ora non possiamo trovarti in questo, ma questo  quello che voglio mostrare adesso.
+
+43
+00:03:47,630 --> 00:03:54,520
+Ora vediamo se questo funziona se salviamo questo ora abbiamo il nostro componente di ordine superiore.
+
+44
+00:03:54,710 --> 00:03:57,100
+Usiamo ora questo sul Bergere Boulder.
+
+45
+00:03:57,140 --> 00:03:58,430
+L lo far.
+
+46
+00:03:58,460 --> 00:04:04,430
+un carattere minuscolo perch non lo useremo come X e ora tutti navigano nella mia cartella
+
+47
+00:04:04,430 --> 00:04:13,750
+HNC e ci sono 2D con la cartella di gestione aria Anthi con gestore degli errori J come segue di Certo e poi prendilo
+
+48
+00:04:13,750 --> 00:04:20,710
+con la funzione di gestione degli errori dove importa e avvolgi l'hamburger Boulder con esso in questo modo.
+
+49
+00:04:20,710 --> 00:04:24,820
+O in alto quindi con gestore degli errori che inizia con
+
+50
+00:04:24,820 --> 00:04:31,480
+Ora con questo se torniamo alla funzione di gestione aria impostata per mostrare cos in modo vero solo
+
+51
+00:04:31,510 --> 00:04:36,440
+sul modello se salviamo questo e torniamo dovremmo sempre vedere qualcosa non ha funzionato.
+
+52
+00:04:36,580 --> 00:04:40,120
+Ora ovviamente vogliamo mostrarlo solo se abbiamo un errore.
+
+53
+00:04:40,120 --> 00:04:47,910
+Quindi abbiamo bisogno di mostrare mostrare qualcos'altro e che qualcos'altro deve venire dal componente avvolto
+
+54
+00:04:47,920 --> 00:04:49,840
+di cui abbiamo bisogno.
+
+55
+00:04:49,990 --> 00:04:56,890
+Se non  riuscito a ottenere quell'informazione, dovremmo aggiungere un secondo argomento alla nostra funzione di ordine
+
+56
+00:04:56,890 --> 00:04:57,490
+superiore qui.
+
+57
+00:04:57,720 --> 00:05:05,670
+L'istanza ex-US che  stata utilizzata in modo da poter impostare un gestore degli errori su un gestore di errori globale.
+
+58
+00:05:05,830 --> 00:05:13,960
+Ora per usare istanza puntata qui cambier questo componente funzionale in uno basato sulla classe.
+
+59
+00:05:14,200 --> 00:05:21,730
+Quindi qui restituir la classe che dovrebbe ora estendere l'oggetto componente dalla reazione, quindi devo importare la
+
+60
+00:05:21,730 --> 00:05:26,830
+classe estende il componente come puoi vedere  una classe anonima.
+
+61
+00:05:26,830 --> 00:05:30,280
+Non ho creato un nome qui perch non uso mai quella classe.
+
+62
+00:05:30,280 --> 00:05:31,350
+Lo restituisco qui.
+
+63
+00:05:31,360 --> 00:05:37,090
+ una fabbrica di classi essenzialmente con il gestore degli errori che crea queste classi.
+
+64
+00:05:37,460 --> 00:05:44,080
+chiaramente bisogno di un metodo di rendering in cui alla fine restituiamo ci che restituiamo e il nostro componente funzionale qui.
+
+65
+00:05:44,080 --> 00:05:45,200
+No, qui abbiamo
+
+66
+00:05:45,310 --> 00:05:52,480
+Quindi, semplicemente, restituisci che, naturalmente, il materiale di scena  ora questo materiale di scena dato che lo abbiamo cambiato in una classe.
+
+67
+00:05:52,600 --> 00:05:54,040
+Non possiamo sbarazzarci di quella parte.
+
+68
+00:05:54,040 --> 00:06:03,940
+Laggi ora e ora con questo possiamo aggiungere il componente ha fatto montare qui e nel componente ha fatto montare
+
+69
+00:06:03,940 --> 00:06:14,170
+possiamo ora impostare i nostri ascoltatori di assi cos sull'istanza di accesso qui possiamo ora impostare il nostro intercettore globale che
+
+70
+00:06:14,260 --> 00:06:20,450
+ci permette anche di gestire gli errori cos io aggiunger interi settori qui.
+
+71
+00:06:21,300 --> 00:06:28,000
+Quindi risponde e quindi con te c' una funzione che voglio usare.
+
+72
+00:06:28,230 --> 00:06:33,330
+fare qualcosa con esso, ma non sono davvero interessato a quel primo argomento quindi passer null qui.
+
+73
+00:06:33,330 --> 00:06:36,150
+Quindi questa funzione qui otterr la risposta e quindi
+
+74
+00:06:36,150 --> 00:06:38,330
+Il secondo argomento  quello a cui sono interessato.
+
+75
+00:06:38,430 --> 00:06:42,120
+Questo  il caso di errore in cui ottengo un errore qui.
+
+76
+00:06:42,150 --> 00:06:44,680
+Non voglio mostrare il mio errore o modale.
+
+77
+00:06:44,760 --> 00:06:45,800
+Quindi per morto.
+
+78
+00:06:45,810 --> 00:06:55,260
+Ora aggiungo uno stato in cui imposter semplicemente l'errore su null inizialmente e in questo punto, quindi, verr
+
+79
+00:06:55,290 --> 00:06:58,660
+chiamato questo stato impostato e impostato l'errore.
+
+80
+00:06:58,780 --> 00:07:06,060
+e questo  un oggetto che contiene anche un messaggio di errore sulla propriet del messaggio.
+
+81
+00:07:06,060 --> 00:07:08,860
+D L'errore sto tornando da Firebase
+
+82
+00:07:08,880 --> 00:07:14,100
+Puoi semplicemente Konsole bloccare questo errore per vedere come appare questo oggetto.
+
+83
+00:07:14,190 --> 00:07:16,350
+Quindi ora sto impostando questo errore qui.
+
+84
+00:07:16,410 --> 00:07:17,230
+Una volta noi.
+
+85
+00:07:17,260 --> 00:07:19,980
+Bene Godwine Ora che altro.
+
+86
+00:07:20,010 --> 00:07:26,010
+Tutto ci che devi fare  aggiungere un nuovo setter Interesse per una richiesta.
+
+87
+00:07:26,280 --> 00:07:32,720
+Cos ci chiamano e non sono molto interessato alla richiesta, ma c' una cosa che voglio fare l dentro.
+
+88
+00:07:32,790 --> 00:07:40,320
+volta che invio la richiesta non abbia pi impostato il mio errore in modo da poterlo cancellare definitivamente qui.
+
+89
+00:07:40,320 --> 00:07:44,850
+Voglio chiamare questo stato e cancellare eventuali errori in modo che ogni
+
+90
+00:07:45,180 --> 00:07:53,700
+Quindi ora sul cellulare lo mostrer solo se questo errore di stato non  essenzialmente nullo.
+
+91
+00:07:54,060 --> 00:08:01,830
+E che l dentro posso emettere questo errore di stato e poi di nuovo ci sar una propriet
+
+92
+00:08:01,920 --> 00:08:08,260
+message sull'oggetto error restituito da firebase ci sar solo un'altra cosa che dovremo fare.
+
+93
+00:08:08,450 --> 00:08:15,790
+Il componente modale che creiamo mostra anche la propriet click che si verifica quando facciamo clic sullo sfondo.
+
+94
+00:08:15,950 --> 00:08:20,980
+E in questo caso, naturalmente, voglio anche cancellare l'errore perch poi clicchiamo sul modal.
+
+95
+00:08:20,990 --> 00:08:22,600
+Non voglio pi mostrarlo.
+
+96
+00:08:22,610 --> 00:08:29,620
+Devo eliminare l'errore, quindi l'annuncio ha fatto clic qui e l chiamer un metodo.
+
+97
+00:08:29,630 --> 00:08:39,060
+Devo creare nel mio con il componente gestore di errori o nominarlo errore o gestore confermato.
+
+98
+00:08:39,500 --> 00:08:46,500
+Questo  semplicemente un metodo in cui  possibile chiamare questo stato impostato e impostare l'errore su null due.
+
+99
+00:08:46,970 --> 00:08:51,800
+E lo assegner qui questo gestore confermato errore.
+
+100
+00:08:51,800 --> 00:08:56,450
+Ora con questo set qui c' un'altra cosa che voglio fare.
+
+101
+00:08:56,480 --> 00:09:03,740
+Il messaggio di errore di stato che sto trasmettendo qui generer inizialmente un errore perch il componente dello
+
+102
+00:09:03,740 --> 00:09:07,730
+stampo  sempre presente anche se non lo mostriamo l.
+
+103
+00:09:08,030 --> 00:09:15,350
+Quindi quello che far  in definitiva a sua volta la loro espressione, dove altrimenti si dice questo errore di stato solo
+
+104
+00:09:15,410 --> 00:09:16,850
+quando non lo fa.
+
+105
+00:09:16,850 --> 00:09:21,130
+Ora poi emetter che altrimenti tutto l'output null quindi non produce nulla.
+
+106
+00:09:21,140 --> 00:09:27,710
+Ora con questo, se salvi questo e torni all'applicazione, non riesco a leggere gli Interceptor delle propriet
+
+107
+00:09:27,950 --> 00:09:30,930
+che ha senso perch proviamo ad eseguirlo.
+
+108
+00:09:30,930 --> 00:09:35,800
+X s ma non riceviamo X ci aspettiamo di averlo come argomento.
+
+109
+00:09:35,870 --> 00:09:41,150
+Ma nella Bergere Buller, che uso con il gestore degli errori, sto passando solo il componente
+
+110
+00:09:41,420 --> 00:09:42,960
+burger Boulter al componente avvolto.
+
+111
+00:09:42,980 --> 00:09:50,070
+Quindi qui devo semplicemente passare x anni che stiamo importando qui e che  la nostra istanza x '.
+
+112
+00:09:50,110 --> 00:09:55,790
+c' un'altra cosa che dobbiamo fare nei nostri intercessori. Ovviamente dobbiamo restituire qualcosa quando inviamo la richiesta.
+
+113
+00:09:56,030 --> 00:09:57,170
+Ora con quello
+
+114
+00:09:57,170 --> 00:10:00,860
+Dobbiamo restituire il conflitto della richiesta in modo che la richiesta possa continuare.
+
+115
+00:10:01,010 --> 00:10:06,830
+E per la risposta voglio anche implementare il gestore di risposta qui, dove ho semplicemente restituito una
+
+116
+00:10:06,950 --> 00:10:09,490
+risposta, la sintassi pi breve possibile per farlo.
+
+117
+00:10:09,500 --> 00:10:14,690
+Ora con quello se salviamo tutto questo e torniamo all'applicazione e aggiungiamo un ladro.
+
+118
+00:10:14,900 --> 00:10:16,480
+Questo dovrebbe ancora funzionare.
+
+119
+00:10:16,580 --> 00:10:17,100
+Lo fa.
+
+120
+00:10:17,120 --> 00:10:19,010
+Possiamo ancora salvare un hamburger.
+
+121
+00:10:19,190 --> 00:10:24,140
+Ora facciamo un po 'di casino e vediamo se funziona anche nel container Builder di Broga in
+
+122
+00:10:24,140 --> 00:10:25,480
+cui abbiamo inviato la richiesta.
+
+123
+00:10:25,700 --> 00:10:32,390
+Se ora cambiamo il tuo nome e forse rimuovi il punto Jason che ho detto  una
+
+124
+00:10:32,390 --> 00:10:38,490
+parte valida o importante dell'endpoint API di inoltro di un database Firebase, invieremo la richiesta all'anno.
+
+125
+00:10:38,660 --> 00:10:40,530
+Quindi se togliamo che dovrebbe fallire.
+
+126
+00:10:40,610 --> 00:10:46,910
+Quindi ora se proviamo a memorizzare un hamburger, riceviamo effettivamente un messaggio di errore di rete qui.
+
+127
+00:10:47,210 --> 00:10:50,440
+Ora la chiusura facendo clic sullo sfondo non funziona per.
+
+128
+00:10:50,450 --> 00:10:53,400
+Controlliamo rapidamente perch questo  il caso.
+
+129
+00:10:53,420 --> 00:10:55,350
+Fammi avere rapidamente un'occhiata.
+
+130
+00:10:55,370 --> 00:11:01,580
+Sto usando il puntello sbagliato nel motore che, naturalmente, si  fatto clic,  per lo sfondo che sostiene
+
+131
+00:11:01,580 --> 00:11:05,920
+che il fondale espone il motore e utilizza il metodo modale di disonest chiuso.
+
+132
+00:11:05,930 --> 00:11:07,470
+Cerchiamo di eseguire qui.
+
+133
+00:11:07,520 --> 00:11:09,600
+Quindi questa  la propriet che dovremmo implementare.
+
+134
+00:11:09,710 --> 00:11:12,360
+Quindi il modale chiuso  il problema corretto.
+
+135
+00:11:12,590 --> 00:11:17,480
+Ora con quello di nuovo se proviamo a inviare questo con il torto, io sono io che otteniamo l'errore.
+
+136
+00:11:17,660 --> 00:11:19,700
+Ma possiamo respingerlo.
+
+137
+00:11:19,700 --> 00:11:25,380
+Quindi ora abbiamo una gestione globale degli errori e sistemer quell'ordine mentre tu sei Allegan.
+
+138
+00:11:25,610 --> 00:11:30,580
+Quindi ora stiamo trattando sia il caso anti-euro di successo che mostriamo un valore pi basso del necessario.
+
+139
+00:11:30,650 --> 00:11:37,400
+E con questo otteniamo un'applicazione robusta con un componente di ordine superiore riutilizzabile che possiamo avvolgere attorno a qualsiasi
+
+140
+00:11:37,490 --> 00:11:41,140
+componente che utilizza gli assi per gestire i suoi errori.
+

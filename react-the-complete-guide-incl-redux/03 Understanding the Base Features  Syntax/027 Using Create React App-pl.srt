@@ -1,0 +1,280 @@
+1
+00:00:02,350 --> 00:00:08,310
+W ostatnim wykadzie podkreliem, dlaczego chcemy stworzy projekt, ktry daje nam dodatkowe
+
+2
+00:00:08,310 --> 00:00:11,520
+funkcje, ktre uatwiaj nam ycie jako programisty.
+
+3
+00:00:11,520 --> 00:00:15,990
+Teraz, jak ju wspomniaem, istnieje narzdzie, ktre tworzy dla nas taki
+
+4
+00:00:16,080 --> 00:00:21,990
+projekt, nazywane jest tworzeniem aplikacji reagowania i wystarczy po prostu google, aby znale link do
+
+5
+00:00:22,160 --> 00:00:23,450
+jego oficjalnego repozytorium github.
+
+6
+00:00:23,490 --> 00:00:28,970
+Jak powiedziaem, jest utrzymywany przez Facebooka lub spoeczno wok Facebooka, wic
+
+7
+00:00:29,160 --> 00:00:37,350
+jest to oficjalnie zalecane narzdzie do tworzenia projektw reagowania. Na tej stronie github znajdziesz instrukcje instalacji
+
+8
+00:00:37,350 --> 00:00:43,280
+i szczegowe wyjanienie, co robi i jak to dziaa.
+
+9
+00:00:43,290 --> 00:00:44,900
+Zapraszam do przeczytania, ale
+
+10
+00:00:44,910 --> 00:00:49,160
+oczywicie bdziemy si o tym uczy take podczas tego kursu.
+
+11
+00:00:49,160 --> 00:00:51,650
+Zacznijmy wic od instalacji.
+
+12
+00:00:51,660 --> 00:00:59,880
+Instalujemy go globalnie, npm i npm to po prostu meneder pakietw wza, narzdzie, ktre automatycznie dostajesz
+
+13
+00:00:59,880 --> 00:01:07,150
+podczas instalacji nodejs, co uatwia zarzdzanie pakietami osb trzecich, inne pakiety javascript na kocu
+
+14
+00:01:07,220 --> 00:01:15,660
+i tworzenie aplikacji reagowania jest wanie takim pakietem. Aby uy npm, musisz zainstalowa nodejs, ktry moesz
+
+15
+00:01:15,660 --> 00:01:17,820
+pobra i zainstalowa z
+
+16
+00:01:17,850 --> 00:01:19,670
+js wza. org.
+
+17
+00:01:19,740 --> 00:01:23,540
+Teraz powiniene wybra najnowsz wersj 8. 5 w moim przypadku tutaj, ale
+
+18
+00:01:23,550 --> 00:01:30,030
+jeli napotkasz jakiekolwiek problemy z tym, wyprbuj take wersj 6. 11 lub jakakolwiek dugoterminowa wersja wsparcia
+
+19
+00:01:30,060 --> 00:01:31,920
+jest w twoim przypadku,
+
+20
+00:01:31,920 --> 00:01:36,500
+gdy przegldasz t stron. Teraz nie ma
+
+21
+00:01:36,740 --> 00:01:39,860
+obaw, nie zamierzamy pisa
+
+22
+00:01:39,860 --> 00:01:40,970
+tutaj adnego
+
+23
+00:01:40,990 --> 00:01:48,980
+kodu nodejs, nie musisz zna nodejs. Musielimy uywa tylko menedera pakietw, a take dla tego serwera
+
+24
+00:01:48,980 --> 00:01:51,570
+programistycznego, ktry zostanie automatycznie przeniesiony do nas.
+
+25
+00:01:51,680 --> 00:01:57,410
+Po prostu kliknij te przyciski, pobierz nodejs i uruchomi si instalator, przez ktry
+
+26
+00:01:57,410 --> 00:01:58,580
+bdziesz mg chodzi.
+
+27
+00:01:58,580 --> 00:02:04,730
+Po zakoczeniu instalacji powiniene mc uruchomi polecenie npm na swoim komputerze, wic
+
+28
+00:02:04,730 --> 00:02:10,820
+zrbmy to razem w nastpnym kroku. Aby zainstalowa twoj aplikacj reagowania poprzez
+
+29
+00:02:10,940 --> 00:02:18,680
+npm, powiniene wej do terminala lub wiersza polece twojego komputera i tam moesz teraz
+
+30
+00:02:18,680 --> 00:02:26,500
+uruchomi npm install, jest to dostpne od momentu zainstalowania wza, nastpnie tworzenia-reakcji-aplikacji, jedno sowo
+
+31
+00:02:26,520 --> 00:02:33,680
+z mylnikami pomidzy sowa, a nastpnie -g. Ta flaga na koniec instaluje si na caym wiecie na naszym
+
+32
+00:02:33,680 --> 00:02:38,510
+komputerze, dziki czemu moemy go uruchomi w dowolnym miejscu na maszynie, co oczywicie jest tym,
+
+33
+00:02:38,510 --> 00:02:42,700
+co chcemy zrobi, poniewa chcemy mie moliwo tworzenia nowych projektw reagowania, gdziekolwiek chcemy.
+
+34
+00:02:42,710 --> 00:02:49,610
+Teraz na komputerach Mac i Linux moe by konieczne dodanie przed tym wszystkim funkcji sudo, aby uzyska odpowiednie uprawnienia do
+
+35
+00:02:49,610 --> 00:02:50,980
+uruchamiania tego polecenia, a
+
+36
+00:02:51,170 --> 00:02:57,950
+jeli je dodasz, prawdopodobnie zostaniesz poproszony o podanie hasa. Teraz, gdy ju to wprowadzie, i
+
+37
+00:02:57,980 --> 00:02:59,330
+to nie jest
+
+38
+00:02:59,330 --> 00:03:04,100
+wymagane w Windowsie, zainstalujesz aplikacj reagowania na swoim komputerze.
+
+39
+00:03:04,100 --> 00:03:09,170
+Po zakoczeniu mona rozpocz tworzenie nowych projektw reakcji za jego pomoc.
+
+40
+00:03:09,170 --> 00:03:15,000
+Polecenie mona rwnie znale na tej stronie github, ktr pokazaem ci wczeniej, ale oczywicie uruchomimy
+
+41
+00:03:15,000 --> 00:03:16,000
+to razem.
+
+42
+00:03:16,250 --> 00:03:18,700
+Po prostu uruchom aplikacj create-response-app, wic
+
+43
+00:03:18,740 --> 00:03:25,040
+nazwa pakietu na kocu, a nastpnie nazwa aplikacji, bdzie to nazwa tworzonego folderu, w ktrym domylna
+
+44
+00:03:25,040 --> 00:03:31,400
+konfiguracja i wiele pocztkowych plikw bdzie pooone w. Nazwijmy go "React-complete-guide", ale
+
+45
+00:03:31,620 --> 00:03:33,540
+moesz go
+
+46
+00:03:33,540 --> 00:03:36,150
+nazwa, jak chcesz.
+
+47
+00:03:36,320 --> 00:03:42,930
+Nacinij Enter, aby automatycznie utworzy folder i zainstalowa wszystkie zalenoci, ktrych potrzebuje.
+
+48
+00:03:43,160 --> 00:03:51,200
+Jak widzicie, ju reagujecie, reagujcie domem, aby uzyska dostp do domeny i reagujcie na skrypty, ktre s
+
+49
+00:03:51,260 --> 00:03:54,570
+pakietem czcym wszystkie te rne narzdzia, o
+
+50
+00:03:54,620 --> 00:04:01,500
+ktrych mwiem na slajdzie z ostatniego wykadu. Po zakoczeniu konfiguracji moesz przej do tego
+
+51
+00:04:01,510 --> 00:04:06,340
+nowo utworzonego folderu za pomoc cd, a nastpnie nazw wybranego
+
+52
+00:04:06,340 --> 00:04:11,740
+projektu, w moim przypadku react-complete-guide, a nastpnie po prostu uruchom npm start.
+
+53
+00:04:11,860 --> 00:04:17,590
+Teraz dla mnie pokazuje pocztek przdzy i wszystkie te polecenia przdzy, poniewa mam
+
+54
+00:04:17,590 --> 00:04:20,140
+zainstalowan przdz, alternatyw dla npm, ale
+
+55
+00:04:20,140 --> 00:04:27,840
+nie potrzebujesz tego, moesz po prostu uruchomi npm start, a to teraz uruchomi serwer programistyczny i otworzy
+
+56
+00:04:27,850 --> 00:04:30,660
+now stron ju, t stron tutaj.
+
+57
+00:04:30,950 --> 00:04:32,470
+To jest strona pocztkowa,
+
+58
+00:04:32,470 --> 00:04:33,890
+ktr daje ten projekt,
+
+59
+00:04:33,940 --> 00:04:35,510
+jest to w zasadzie
+
+60
+00:04:35,500 --> 00:04:40,650
+punkt wyjcia, zaczniemy j pniej edytowa. I zawsze powiniene zachowa ten
+
+61
+00:04:40,660 --> 00:04:43,600
+proces, zaczynae od npm, zacznij dziaa.
+
+62
+00:04:43,660 --> 00:04:50,610
+Jest to serwer deweloperski, do ktrego si odwoywaem, ktry aduje twoj aplikacj w przegldarce, symuluje j tak,
+
+63
+00:04:50,650 --> 00:04:56,490
+jak dziaa na prawdziwej stronie internetowej i przeadowuje stron za kadym razem, gdy zmieniasz
+
+64
+00:04:56,500 --> 00:05:00,640
+kod, moesz rwnie znale adres, pod ktrym go obsuguje. terminal.
+
+65
+00:05:00,640 --> 00:05:02,590
+Dlatego zawsze miej ten proces
+
+66
+00:05:02,590 --> 00:05:04,600
+wczony, jeli pracujesz nad aplikacj.
+
+67
+00:05:04,810 --> 00:05:07,970
+Jeli chcesz go zamkn, moesz to zrobi za pomoc Ctrl
+
+68
+00:05:08,050 --> 00:05:11,630
++ C, ale nie bdziesz mg ponownie odwiedzi tej strony tutaj.
+
+69
+00:05:12,070 --> 00:05:14,730
+Teraz mamy skonfigurowany projekt, spjrzmy teraz
+
+70
+00:05:14,860 --> 00:05:20,430
+na to, co jest w rodku i co zostao nam stworzone na nastpnym wykadzie.
+

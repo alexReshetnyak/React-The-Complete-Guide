@@ -1,0 +1,244 @@
+1
+00:00:02,250 --> 00:00:08,530
+W ostatnim wykadzie nauczylimy si, jak renderowa zawarto dynamicznie, warunkowo, powinienem powiedzie,
+
+2
+00:00:08,550 --> 00:00:14,520
+e po prostu wykorzystujemy fakt, e wszystko tutaj jest javascriptem i to
+
+3
+00:00:14,580 --> 00:00:16,240
+oglnie jest mantra
+
+4
+00:00:16,320 --> 00:00:18,160
+reakcji, wszystko jest javascript.
+
+5
+00:00:18,180 --> 00:00:24,600
+Wspomniaem rwnie, e uywanie tego potrjnego wyraenia, jak to tutaj robimy, niekoniecznie jest optymalne,
+
+6
+00:00:24,600 --> 00:00:25,700
+tutaj jest
+
+7
+00:00:25,710 --> 00:00:33,930
+zupenie w porzdku, ale w miar jak nasza aplikacja ronie i, jak moemy, warunki gniazdowania, ciko jest ledzi,
+
+8
+00:00:33,930 --> 00:00:36,330
+ktra ekspresja jest odpowiedzialna za
+
+9
+00:00:36,360 --> 00:00:39,250
+co i aby je w naszym kodzie jsx.
+
+10
+00:00:39,750 --> 00:00:43,830
+Tak wic istnieje czystsze rozwizanie tego, co chc wam pokaza
+
+11
+00:00:43,830 --> 00:00:48,290
+w tym wykadzie, pozwlcie mi usun ten nawias klamrowy i
+
+12
+00:00:48,390 --> 00:00:53,480
+ten potrjny wyraz tutaj, aby na razie wszystkie osoby byy ponownie renderowane.
+
+13
+00:00:53,590 --> 00:00:59,640
+Powinienem si upewni, e usunito tylko czci wyraenia, a nie div.
+
+14
+00:00:59,790 --> 00:01:04,270
+Tak wic wracamy do punktu wyjcia, teraz nie moemy tego zmieni.
+
+15
+00:01:04,350 --> 00:01:11,390
+Teraz naley pamita, e wszystko jest javascript, a na kocu to, co robimy tutaj z jsx, polega
+
+16
+00:01:11,390 --> 00:01:16,790
+na tym, e zwracamy je za pomoc instrukcji return w tej metodzie renderowania.
+
+17
+00:01:16,800 --> 00:01:23,310
+Teraz naley pamita o jednej wanej rzeczy, gdy reaguje ona renderowaniem czego na
+
+18
+00:01:23,310 --> 00:01:31,330
+ekran, gdy zdecyduje, e musi zaktualizowa ekran, wykonuje t metod renderowania, a nie tylko wyraenie zwrotu,
+
+19
+00:01:31,390 --> 00:01:32,820
+wszystko tutaj.
+
+20
+00:01:33,030 --> 00:01:41,640
+Zatem wszystko wewntrz metody renderowania jest wykonywane, gdy tylko reagujemy na ponowne renderowanie tego komponentu i dlatego moemy
+
+21
+00:01:42,060 --> 00:01:43,790
+skorzysta z tego, moemy
+
+22
+00:01:43,860 --> 00:01:47,720
+doda tutaj troch kodu, zanim co zwrc.
+
+23
+00:01:47,730 --> 00:01:52,400
+Dodam tutaj zmienn o nazwie persons, ktr ustawi na warto null.
+
+24
+00:01:52,470 --> 00:01:54,880
+Powinno to by domylne, moesz
+
+25
+00:01:54,900 --> 00:01:57,650
+poda dowoln inn nazw, a nastpnie
+
+26
+00:01:57,720 --> 00:02:00,060
+dodaj zwyk instrukcj if.
+
+27
+00:02:00,120 --> 00:02:03,150
+Mog to zrobi tutaj, poniewa nie jestem wewntrz jsx, jestem wewntrz
+
+28
+00:02:03,180 --> 00:02:10,500
+mojego normalnego kodu javascript tutaj, i tam teraz chc sprawdzi, czy ten stan. showPersons, naley pamita, e showPersons jest
+
+29
+00:02:10,500 --> 00:02:14,740
+wartoci logiczn, wic jest to prawda lub fasz.
+
+30
+00:02:14,760 --> 00:02:17,930
+Nie musimy koniecznie porwnywa go
+
+31
+00:02:17,940 --> 00:02:26,460
+z prawd lub faszem, moemy to pomin. Teraz mam t kontrol i jeli to prawda, to chc ustawi
+
+32
+00:02:26,790 --> 00:02:29,850
+zmienn "moje osoby" na jaki kod jsx i
+
+33
+00:02:29,910 --> 00:02:36,150
+zawsze pamitam, mgbym te ustawi j na wynik reagowania elementu create, to jest to, co jsx kompiluje
+
+34
+00:02:36,140 --> 00:02:37,050
+do na kocu.
+
+35
+00:02:37,290 --> 00:02:39,390
+Teraz zapi kod
+
+36
+00:02:39,420 --> 00:02:40,860
+tutaj, Moje
+
+37
+00:02:41,190 --> 00:02:48,300
+osoby, rozetn go tam z osob wewntrz i dodaj tutaj.
+
+38
+00:02:48,300 --> 00:02:50,310
+Teraz to, co robi, jest
+
+39
+00:02:50,430 --> 00:02:51,450
+nastpujce, Domylnie, osoby.
+
+40
+00:02:51,450 --> 00:02:52,970
+ta zmienna ma warto NULL.
+
+41
+00:02:53,160 --> 00:02:59,800
+Ale jeli ten stan showPersons jest prawdziwy, ludzie faktycznie posiadaj ten kod jsx
+
+42
+00:02:59,800 --> 00:03:05,820
+i dziki temu mog po prostu wzi t zmienn i dane wyjciowe
+
+43
+00:03:05,820 --> 00:03:14,400
+ktre tutaj w moim kodzie jsx wrciem na kocu. Wic jeli pojedyncze nawiasy klamrowe mog wyprowadza tutaj osoby, odnoszc si do tej
+
+44
+00:03:14,610 --> 00:03:22,230
+zmiennej, ktra jest nawet teraz domylnie lub osb, jeli showPersons jest prawd i poniewa render jest wywoywany za kadym razem, gdy reaguje, sprawdza
+
+45
+00:03:22,320 --> 00:03:29,010
+czy potrzebuje ponownie renderowa t stron lub ten komponent, powinienem mwi. Poniewa dzieje si to za kadym razem, gdy
+
+46
+00:03:29,030 --> 00:03:35,300
+pojawia si ponowne renderowanie, upewniamy si, e zawsze bierzemy pod uwag najnowszy stan, ktry mamy,
+
+47
+00:03:35,310 --> 00:03:42,090
+i czy nie oddajemy niczego lub osb, poniewa naley pamita, e jedn z dwch rzeczy wyzwalajcych
+
+48
+00:03:42,120 --> 00:03:43,430
+aktualizacj jest zmiana stanu.
+
+49
+00:03:43,500 --> 00:03:49,560
+Teraz z tym, pozwl mi zapisa ten plik i wrci do aplikacji.
+
+50
+00:03:49,570 --> 00:03:53,040
+Tam idziemy do konsoli, nie widzimy bdu.
+
+51
+00:03:53,280 --> 00:03:57,410
+Mog ponownie zaadowa stron, aby wyranie zobaczy, e uywamy najnowszej wersji,
+
+52
+00:03:57,660 --> 00:04:03,410
+a teraz pozwol mi klikn Przecz ludzi i tak samo jak poprzednio, widzisz to samo zachowanie.
+
+53
+00:04:03,460 --> 00:04:10,080
+Moemy to zmieni, ale teraz uywamy tego bardziej eleganckiego sposobu outsourcingu tego
+
+54
+00:04:10,440 --> 00:04:16,840
+czeku od jsx, ktry zwracamy do zmiennej, ktr warunkowo przypisujemy przed powrotem.
+
+55
+00:04:16,920 --> 00:04:19,590
+Nadal w funkcji
+
+56
+00:04:19,600 --> 00:04:27,560
+renderowania, ale przed zwrceniem tego. Dziki temu zachowujemy jsx, ktry zwracamy, a zatem nasz podstawowy
+
+57
+00:04:27,560 --> 00:04:28,050
+szablon
+
+58
+00:04:28,050 --> 00:04:34,820
+tego komponentu mona powiedzie, utrzymujemy go w czystoci, a my upewniamy si, e mamy tu tylko to
+
+59
+00:04:34,830 --> 00:04:40,410
+mae odniesienie, osoby, wewntrz ktrego si koczymy, albo nic albo nic te osoby.
+
+60
+00:04:40,520 --> 00:04:46,470
+W rzeczywistoci jest to preferowany sposb generowania treci warunkowych i jest to sposb, ktry
+
+61
+00:04:46,470 --> 00:04:46,980
+polecam.
+

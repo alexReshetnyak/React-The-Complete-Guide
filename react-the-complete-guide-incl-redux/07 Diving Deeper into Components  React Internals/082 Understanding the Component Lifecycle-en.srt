@@ -1,0 +1,340 @@
+1
+00:00:02,250 --> 00:00:07,680
+Now that we had such a close look at stateful and stateless components,
+
+2
+00:00:07,700 --> 00:00:13,100
+we should have a look at the component lifecycle, something I mentioned but we haven't taken a closer
+
+3
+00:00:13,100 --> 00:00:13,550
+look.
+
+4
+00:00:13,730 --> 00:00:15,990
+So what is the component lifecycle?
+
+5
+00:00:16,280 --> 00:00:22,580
+In the end when react creates a component for us, that means instantiates and renderers that for us,
+
+6
+00:00:23,180 --> 00:00:31,840
+it runs through multiple lifecycle phases and we can define methods in a stateful component, only in
+
+7
+00:00:31,840 --> 00:00:38,840
+stateful components because you can't define methods and functional components we can define methods
+
+8
+00:00:39,110 --> 00:00:46,170
+which react will execute which allows us to run some code during some of these lifecycle phases.
+
+9
+00:00:46,490 --> 00:00:53,940
+Let's have a look at all these component lifecycle methods and let's see when which of these is executed.
+
+10
+00:00:54,500 --> 00:01:01,790
+Important as I just mentioned, these are only available to stateful components not in stateless components
+
+11
+00:01:01,930 --> 00:01:04,930
+and there, we got the following methods.
+
+12
+00:01:04,930 --> 00:01:09,370
+Now these are a lot as you can see, constructor componentWillMount,
+
+13
+00:01:09,370 --> 00:01:12,060
+WillUpdate, DidMount, render.
+
+14
+00:01:12,280 --> 00:01:18,640
+You might know some of these, some of these might be kind of intuitive about when they get executed but
+
+15
+00:01:18,640 --> 00:01:23,370
+let's still analyze when which of these methods is executed
+
+16
+00:01:23,770 --> 00:01:27,280
+and let's have a look at the component creation first.
+
+17
+00:01:27,640 --> 00:01:34,540
+Not all these lifecycle hooks are executed there, not all these methods are executed during creation,
+
+18
+00:01:34,660 --> 00:01:37,210
+only these methods are executed,
+
+19
+00:01:37,420 --> 00:01:42,400
+Constructor, WillMount, DidMount and render.
+
+20
+00:01:42,400 --> 00:01:47,520
+Now let's take a closer look at that creation component lifecycle process,
+
+21
+00:01:47,590 --> 00:01:55,060
+first of all the constructor gets executed and the constructor actually is a default ES6 class
+
+22
+00:01:55,060 --> 00:01:55,600
+feature,
+
+23
+00:01:55,600 --> 00:02:03,310
+it's not a method defined by react, what react does though is it creates the component in the end,
+
+24
+00:02:03,310 --> 00:02:09,940
+So it instantiates it and it parses on any props this component receives to the constructor.
+
+25
+00:02:09,970 --> 00:02:15,790
+Therefore if we implement this constructor method and we don't have to, thus far in our demo project
+
+26
+00:02:15,790 --> 00:02:16,580
+we didn't,
+
+27
+00:02:16,870 --> 00:02:24,290
+if we do implement the constructor method we do have to call super and pass on props, this calls the
+
+28
+00:02:24,290 --> 00:02:26,180
+constructor of the parents class,
+
+29
+00:02:26,350 --> 00:02:33,310
+and since we can only implement this method in stateful components, the parent class is this component
+
+30
+00:02:33,550 --> 00:02:41,680
+object we imported from react. And by calling super and passing on props, things like this.props which
+
+31
+00:02:41,680 --> 00:02:47,470
+we then need to use anywhere else in the component get populated or managed by react.
+
+32
+00:02:47,500 --> 00:02:54,700
+So always call super and pass on props if you implement the constructor. What else may you do here and
+
+33
+00:02:54,820 --> 00:02:56,430
+that of course is optional,
+
+34
+00:02:56,710 --> 00:03:00,040
+you may initialize the state in the constructor,
+
+35
+00:03:00,040 --> 00:03:04,010
+we did this by simply defining a state property
+
+36
+00:03:04,090 --> 00:03:10,390
+but you could also define this property here in the constructor and in older code snippets which had
+
+37
+00:03:10,390 --> 00:03:13,460
+access to the new javascript features we were using,
+
+38
+00:03:13,570 --> 00:03:14,820
+You saw that your comment
+
+39
+00:03:14,890 --> 00:03:18,270
+did initialize state in the constructor.
+
+40
+00:03:18,490 --> 00:03:22,950
+What you should never ever do there is cause side effects.
+
+41
+00:03:23,170 --> 00:03:27,600
+What are side effects? For example reaching out to a web server,
+
+42
+00:03:27,730 --> 00:03:34,540
+so requests which come back and then edit the state of your application, that is the side effect.
+
+43
+00:03:34,540 --> 00:03:40,180
+You should not do that in the constructor because this may lead to a re-rendering of your application
+
+44
+00:03:40,330 --> 00:03:42,310
+and hence to performance issues,
+
+45
+00:03:42,310 --> 00:03:50,240
+it may also lead to your state becoming unpredictable. After constructor, another function gets
+
+46
+00:03:50,240 --> 00:03:55,520
+executed, this function is the componentWillMount method.
+
+47
+00:03:55,670 --> 00:04:01,430
+Now this is a method defined by react and it is available because we extend that component from the
+
+48
+00:04:01,430 --> 00:04:09,710
+react library. componentWillMount exists for historic reasons mainly, you don't really use it that
+
+49
+00:04:09,710 --> 00:04:11,080
+often anymore.
+
+50
+00:04:11,330 --> 00:04:14,090
+If you use it, you want to use it to update your state here,
+
+51
+00:04:14,120 --> 00:04:19,840
+do some last minute optimizations but still you shouldn't cause side effects here,
+
+52
+00:04:19,850 --> 00:04:21,580
+you shouldn't reach out to the web.
+
+53
+00:04:21,740 --> 00:04:25,110
+Now as I mentioned, you don't really use it that often anymore,
+
+54
+00:04:25,160 --> 00:04:32,740
+it still exists but chances are you won't implement it in your application. After componentWillMount,
+
+55
+00:04:32,990 --> 00:04:34,880
+the component will render.
+
+56
+00:04:34,980 --> 00:04:41,980
+Now executing the render method does not mean that it accesses the real dom,
+
+57
+00:04:42,050 --> 00:04:50,460
+I will come back to how exactly react renders the real dom and updates to dom in this module again.
+
+58
+00:04:50,540 --> 00:04:56,960
+For now, you should know that render, executing the render method gives react the idea of what it should
+
+59
+00:04:56,960 --> 00:04:58,780
+render, how it would look like
+
+60
+00:04:58,880 --> 00:05:02,920
+if it then reaches out to the real dom and manipulates it,
+
+61
+00:05:02,990 --> 00:05:06,590
+depends on what does real dom looks like already.
+
+62
+00:05:06,680 --> 00:05:11,290
+If no changes need to be made, it doesn't go ahead and re-rendered it anyways.
+
+63
+00:05:11,600 --> 00:05:17,690
+But the render method is an important step because it clearly defines how your application or how this
+
+64
+00:05:17,690 --> 00:05:21,380
+component should look like from a html perspective.
+
+65
+00:05:21,650 --> 00:05:28,400
+So it's in the render method where you prepare and structure your jsx code, defining which content gets
+
+66
+00:05:28,400 --> 00:05:30,800
+rendered for this component.
+
+67
+00:05:30,890 --> 00:05:37,580
+Now thereafter, react of course also knows which child components this component has, because in
+
+68
+00:05:37,580 --> 00:05:44,150
+the end once you call render and define your jsx code it also knows which components you included in
+
+69
+00:05:44,150 --> 00:05:47,340
+there, like the persons component in our demo project.
+
+70
+00:05:47,480 --> 00:05:51,260
+So it will then go ahead and render all these child components,
+
+71
+00:05:51,260 --> 00:05:58,760
+basically executing this process for every child component and thereafter it will call componentDidMount
+
+72
+00:05:58,760 --> 00:06:04,730
+to basically tell you that this component was successfully mounted.
+
+73
+00:06:04,730 --> 00:06:07,110
+Now there in componentDidMount,
+
+74
+00:06:07,280 --> 00:06:09,330
+you can cause side effects,
+
+75
+00:06:09,390 --> 00:06:14,540
+this is the point of time where you want to reach out to the web for example to fetch some data.
+
+76
+00:06:14,810 --> 00:06:20,880
+What you shouldn't do here is update the state though because that will trigger a re-render so that is
+
+77
+00:06:20,900 --> 00:06:22,660
+something you have to keep in mind,
+
+78
+00:06:22,700 --> 00:06:26,480
+don't call this.setState in componentDidMount,
+
+79
+00:06:26,600 --> 00:06:32,390
+this will trigger a re-rendering and if you're wondering how exact it would look like reaching out
+
+80
+00:06:32,390 --> 00:06:38,510
+to the web and using the result from that web access, this is something we'll also have a look in this
+
+81
+00:06:38,510 --> 00:06:39,140
+course
+
+82
+00:06:39,140 --> 00:06:46,790
+once we start adding web access to our applications. Now, it's nice to see this diagram here but it's
+
+83
+00:06:46,790 --> 00:06:48,390
+still very abstract,
+
+84
+00:06:48,460 --> 00:06:54,350
+so let's head back to our project and let's implement these hooks and maybe log something to the console
+
+85
+00:06:54,620 --> 00:06:58,230
+so that we can really see the flow of our application.
+

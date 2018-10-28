@@ -1,0 +1,160 @@
+1
+00:00:02,130 --> 00:00:06,270
+Teraz, gdy omawialimy wszystkie techniki przekierowa, z ktrych
+
+2
+00:00:06,480 --> 00:00:12,500
+moesz skorzysta, porozmawiajmy o czym, co jest zwizane z przekierowywaniem, nawigacj.
+
+3
+00:00:13,080 --> 00:00:20,400
+Stranik to co, co moesz pozna z innych frameworkw i ich routerw. Zazwyczaj osony s uywane na przykad
+
+4
+00:00:20,400 --> 00:00:25,030
+wtedy, gdy nie wiesz, czy uytkownik jest uwierzytelniony,
+
+5
+00:00:25,170 --> 00:00:32,790
+czy nie, a w aplikacji s okrelone cieki, niektre trasy, ktre chcesz zezwoli
+
+6
+00:00:32,790 --> 00:00:42,360
+uytkownikowi na wizyt, jeli jest on uwierzytelniony. Przy pomocy routera reagowania moe by konieczne obejrzenie tych oson w nowy sposb.
+
+7
+00:00:42,360 --> 00:00:49,080
+Na przykad w komponentach blogu tutaj, w kontenerze blogu, w ktrym konfigurujemy routing dla
+
+8
+00:00:49,080 --> 00:00:51,300
+nowego posta i tak dalej.
+
+9
+00:00:51,370 --> 00:00:58,020
+Poniewa w kocu wszystko, co tutaj robimy, renderuje tylko niektre komponenty, komponenty
+
+10
+00:00:58,020 --> 00:01:04,170
+trasy, komponent przecznika, jeli chcemy mie pewno, e nowe posty nie
+
+11
+00:01:04,170 --> 00:01:08,340
+s osigalne, moemy to po prostu uczyni warunkowo.
+
+12
+00:01:08,340 --> 00:01:16,670
+Zamy, e mamy tu jaki stan uwierzytelnienia, dodam stan i e stan auth jest faszywy pocztkowo, teraz co mog
+
+13
+00:01:18,050 --> 00:01:25,430
+oczywicie zrobi, to mog przej do mojego renderowania i albo teraz uy zmiennej, ktra zwraca null lub
+
+14
+00:01:25,430 --> 00:01:31,530
+t tras albo aby uy szybkiego i brudnego rozwizania wbudowanego, mog sprawdzi, czy ten
+
+15
+00:01:31,700 --> 00:01:39,350
+stan jest prawdziwy, w ktrym to przypadku chc renderowa t tras, w przeciwnym razie zwracam warto null.
+
+16
+00:01:39,380 --> 00:01:45,890
+Teraz nie ma sposobu, aby uytkownik mg uzyska dostp do nowego postu, jeli nie jest uwierzytelniony, wic jeli stan
+
+17
+00:01:46,070 --> 00:01:50,340
+auth jest faszywy, poniewa ta trasa jest waciwie nieznana, poniewa nie jest renderowana.
+
+18
+00:01:50,660 --> 00:01:56,750
+Wic jeli teraz to zapamituj i pamitam, domylny stan jest teraz taki, e auth jest
+
+19
+00:01:56,750 --> 00:02:04,350
+faszywy, jeli tak jest i klikn na nowy post, jestem przekierowywany z powrotem na stron pocztkow, poniewa to,
+
+20
+00:02:04,350 --> 00:02:08,250
+co w zasadzie si tutaj dzieje, to przekierowania tutaj.
+
+21
+00:02:08,370 --> 00:02:15,630
+Jak ju powiedziaem, w zasadzie po prostu uywa si go jako przedrostka i dlatego apie wszystko,
+
+22
+00:02:15,660 --> 00:02:19,740
+co nie jest wczeniej zapane i przekierowuje mnie na
+
+23
+00:02:19,740 --> 00:02:21,590
+posty, to jest stranik.
+
+24
+00:02:21,630 --> 00:02:27,480
+Zupenie inne jest to, e uywamy oson w Angular lub jakiejkolwiek innej strukturze, ale w
+
+25
+00:02:27,570 --> 00:02:32,610
+kocu moesz w wygodny sposb kontrolowa, czy uytkownik moe uzyska dostp do tej
+
+26
+00:02:32,610 --> 00:02:34,440
+strony, czy te nie.
+
+27
+00:02:34,440 --> 00:02:42,230
+Oczywicie alternatyw dla tego byoby przejcie na stron chronion i do skadnika componentDidMount tutaj, mona rwnie sprawdzi,
+
+28
+00:02:42,450 --> 00:02:49,080
+czy uytkownik jest uwierzytelniony i oczywicie zaley to od aplikacji, skd otrzymujesz te informacje, ale
+
+29
+00:02:49,140 --> 00:02:51,200
+moesz rwnie sprawdzi to tutaj
+
+30
+00:02:51,480 --> 00:03:01,060
+i po prostu uyj tego. rekwizyty. historia. zastpuj posty.
+
+31
+00:03:01,260 --> 00:03:04,940
+jeli uytkownik jest uwierzytelniony, na przykad w ten sposb.
+
+32
+00:03:05,190 --> 00:03:11,460
+Jest to rwnie alternatywa, przy uyciu componentDidMount, aby zasadniczo przekierowa uytkownika, jeli nie
+
+33
+00:03:11,490 --> 00:03:12,780
+jest to prawda.
+
+34
+00:03:12,780 --> 00:03:19,680
+W ten sposb pracujesz z routerem reagujcym, dlatego chc, eby o tym pomyla. Kontrolujesz wiele z nich poprzez
+
+35
+00:03:19,680 --> 00:03:20,620
+sposb
+
+36
+00:03:20,740 --> 00:03:23,080
+renderowania jego skadnikw.
+
+37
+00:03:23,160 --> 00:03:27,240
+A jeli ta trasa nie zostanie wyrenderowana, nie moesz dotrze do
+
+38
+00:03:27,240 --> 00:03:32,790
+tej trasy, definicja nie zostanie wyrenderowana, wic nie mona wczyta komponentu z ni poczonego.
+
+39
+00:03:33,240 --> 00:03:38,310
+W ten sposb musisz si nad tym zastanowi i jak musisz uporzdkowa swoj aplikacj.
+
+40
+00:03:38,460 --> 00:03:44,070
+Obr swoj gow, e to naprawd wane, aby zrozumia.
+

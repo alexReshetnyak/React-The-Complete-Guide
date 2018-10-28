@@ -1,0 +1,256 @@
+1
+00:00:02,180 --> 00:00:08,730
+Sipariler sayfamda alalm ve hepsini de hepsi kutu klasrne yeni bir klasr oluturun
+
+2
+00:00:08,740 --> 00:00:13,610
+ve hepsini sipari verin ve tabii ki emirler yaratacaktr.
+
+3
+00:00:13,640 --> 00:00:20,490
+J. S. iermesi gereken d veya 40 sipari snf anahtar kelime snf ile oluturulacaktr.
+
+4
+00:00:20,510 --> 00:00:29,360
+Sipari bileenini geniletir kod yazmaktr ve orada yazmas gereken tm ie aktarma ve bileen
+
+5
+00:00:29,840 --> 00:00:32,480
+Q bir bileen oluturabilmelidir.
+
+6
+00:00:32,480 --> 00:00:37,850
+Bu ekilde ve daha sonra tm ihracat Klosters sipari snfa veya der's yok.
+
+7
+00:00:37,880 --> 00:00:44,690
+Cl. Varsaylan olarak emir yasalarn bala, akas bu bileen
+
+8
+00:00:44,690 --> 00:00:48,870
+iin JS X'i dndrdmzde aka bir render yntemine sahip olacaz.
+
+9
+00:00:48,950 --> 00:00:55,070
+Elbette tabii ki, orada gstermek istediimiz ey bu sayfadaki emirlerinizin ne
+
+10
+00:00:55,070 --> 00:00:56,040
+olduu ak.
+
+11
+00:00:56,110 --> 00:01:03,400
+Bunun iin, sipari bileeni klasrnde yeni bir bileen oluturacam, sipari bileeni kendisi J'yi bir sipari
+
+12
+00:01:03,410 --> 00:01:11,840
+Dud's C S S olarak sipari ediyor ve imdi tabii ki soru, tek bir sipariin bu sayfada
+
+13
+00:01:11,990 --> 00:01:12,920
+nasl grnd.
+
+14
+00:01:13,280 --> 00:01:20,720
+Ona bir sahne alacam ve MJM x 'i geri getireceim bir ilevi greceim.
+
+15
+00:01:20,750 --> 00:01:28,850
+aktive ederek buraya ithal ediyoruz ve bu ilevleri bu siparile varsaylan olarak drmek iin ihra ediyoruz; bu da baz stil alacak
+
+16
+00:01:29,720 --> 00:01:36,530
+ve tabii ki sonunu alacak bir div olmal ve sadece bileenlerin ve fiyatn ktsn almak istiyorum .
+
+17
+00:01:36,530 --> 00:01:39,120
+Akas her zaman olduu gibi re-act'i yeniden
+
+18
+00:01:39,130 --> 00:01:49,790
+Diyelim ki bu paragrafta bir paragrafa benzer bir ey istiyorum diye syledim, iki nokta altn
+
+19
+00:01:50,720 --> 00:01:51,490
+syleyebilirim.
+
+20
+00:01:51,560 --> 00:01:57,600
+Ve sonra salatalk gibi iki e sahibim ve sonra DDM'den sonra parantez iinde 1 ya da
+
+21
+00:01:57,620 --> 00:01:59,340
+buna benzer bir ey var.
+
+22
+00:01:59,840 --> 00:02:08,540
+Ve sonra bir paragraftaki fiyat bardaklar ve gl vurgulamak iin gl metinler gibi bir ey
+
+23
+00:02:08,930 --> 00:02:18,500
+olabilir, o zaman deer gibi dolar 5 nokta 45, nasl bir maln benzeyecei ve elbette ihtiyacm olan
+
+24
+00:02:18,500 --> 00:02:20,990
+eyin fiyatna benziyor. almak.
+
+25
+00:02:20,990 --> 00:02:25,090
+Neden sahne var bu yzden biraz stil istiyorum.
+
+26
+00:02:25,240 --> 00:02:29,540
+Grlen btn sipariler, Claassen'in grd sipari aadaki gibidir.
+
+27
+00:02:29,780 --> 00:02:33,640
+Diyelim ki emirlerin tam genilii olmaldr.
+
+28
+00:02:33,890 --> 00:02:42,860
+Yani yzde 100'lk bir piksel kat bir kenarlk istiyorum ve gri renktir ve 0 2 piksel bo
+
+29
+00:02:42,860 --> 00:02:52,240
+pikselin bir kutu glgesi ekleyeceim ve bu gri renk, kenar rengini biraz daha parlak bir renge dntrecek.
+
+30
+00:02:53,340 --> 00:02:57,590
+Tm 10 piksel eklemek suretiyle tamam kenar boluu ekler.
+
+31
+00:02:57,600 --> 00:03:06,330
+Diyelim ki st ve alt 10 punto ancak iki sola ve saa kutu boyutlandrmasn kenarlk kutusuna
+
+32
+00:03:06,330 --> 00:03:13,300
+ayarlayp, dolgunun kutu boyutuna ekleneceini ve bunun gzel bir grnm arz edebileceini varsayalm.
+
+33
+00:03:13,310 --> 00:03:21,250
+imdi bu C-s'lerden snflar, C aadaki gibi siparilerden alabilirim.
+
+34
+00:03:21,650 --> 00:03:23,330
+Ve onlar buraya atadlar.
+
+35
+00:03:23,330 --> 00:03:28,260
+Bylece snf ad imdi Clausius dnce emri olabilir.
+
+36
+00:03:28,370 --> 00:03:33,100
+Bir sipariin siparilerde nasl grnd budur.
+
+37
+00:03:33,110 --> 00:03:40,430
+Aslnda, birden fazla emir kartmak isterim aslnda emirleri kadar sipari veririm ve elbette
+
+38
+00:03:40,430 --> 00:03:43,490
+ktlamam gereken emirler arka utan getirilmelidir.
+
+39
+00:03:43,550 --> 00:03:44,540
+imdi bunun iin.
+
+40
+00:03:44,630 --> 00:03:46,310
+Her eyden nce ayaa kalkn.
+
+41
+00:03:46,340 --> 00:03:51,640
+Ve aslnda emirlerimi burada temizleyeceim nk ok ey var.
+
+42
+00:03:51,860 --> 00:03:57,080
+Bu yzden daha kolay hale getirmek iin btn sipariler dmn sileceim ve orada sadece
+
+43
+00:03:57,500 --> 00:04:02,440
+baz yeni olanlar yaratacam, tamam bo bir Burger ile baladmz Suriye Gansevoort'u karlayacam dedi.
+
+44
+00:04:02,510 --> 00:04:09,410
+imdi onunla uygulamaya geri dnelim ve siparilerde u an sadece 1
+
+45
+00:04:09,410 --> 00:04:11,590
+Dhami emri kartalm.
+
+46
+00:04:11,660 --> 00:04:13,880
+Bylece sipari bileenini ie aktarn.
+
+47
+00:04:13,880 --> 00:04:20,690
+Oluturduk ve daha sonra, bileen klasrne sipari klasrne gidip bu siparii alalm.
+
+48
+00:04:20,690 --> 00:04:24,140
+JS dosyas ve sonra James X'dasn. Dediim gibi, bu sayfann etrafnda bir kaydrma Dave olacak ve aslnda sadece kt var.
+
+49
+00:04:24,290 --> 00:04:31,110
+Bugn iki sipari verelim, neye benzediini grebiliriz.
+
+50
+00:04:31,340 --> 00:04:35,090
+imdi bunu gerek verilerle doldurmadan nce.
+
+51
+00:04:35,090 --> 00:04:38,140
+Bu rota ykleyelim ve
+
+52
+00:04:38,240 --> 00:04:45,700
+sipari sayfalar burger reticisi veya kontrol sayfas yerine elbette yklenmelidir.
+
+53
+00:04:45,690 --> 00:04:47,240
+Dolaysyla, Che'nin sonbaharnda, herkesin
+
+54
+00:04:47,480 --> 00:04:52,990
+bir rota kurmak istedii rotalar, babam iin emir vermek iin ayarlad sonbaharda.
+
+55
+00:04:53,120 --> 00:04:55,140
+ncelikle noktal eik izgi konteynerlerindeki ie aktarma siparileri, eik izgi siparilerini eik izgilerle izin.
+
+56
+00:04:55,160 --> 00:05:05,440
+J. S. Ve sonra da senin iin bu yeni rota ekleyeceim, slash emri diyelim.
+
+57
+00:05:05,440 --> 00:05:07,070
+Bir uygulamann dndaki sipari bileenlerine gitmek istiyorum.
+
+58
+00:05:07,410 --> 00:05:12,560
+Evet.
+
+59
+00:05:12,720 --> 00:05:16,990
+imdi, rotasnn henz yapmadm bir eyi yapmak zorunda kalacan grmek iin.
+
+60
+00:05:17,040 --> 00:05:18,100
+Bir balant eklemek zorundayz.
+
+61
+00:05:18,330 --> 00:05:22,890
+Ve bunun iin gezinme elerimize burada dokunmamz gerekiyor.
+
+62
+00:05:23,040 --> 00:05:25,120
+Bunu bir sonraki dersimizde yapalm.
+
+63
+00:05:25,290 --> 00:05:29,850
+&nbsp;
+
+64
+00:05:30,000 --> 00:05:32,520
+&nbsp;
+

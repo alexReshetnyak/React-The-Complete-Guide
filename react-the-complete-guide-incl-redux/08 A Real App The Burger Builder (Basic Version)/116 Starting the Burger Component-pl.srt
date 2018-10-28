@@ -1,0 +1,336 @@
+1
+00:00:02,110 --> 00:00:03,700
+Z przygotowanym skadnikiem burgera.
+
+2
+00:00:03,750 --> 00:00:06,800
+Przejdmy przez skadnik burgera.
+
+3
+00:00:06,990 --> 00:00:09,490
+I sprbuj tego ponownie w funkcjonalnej formie.
+
+4
+00:00:09,570 --> 00:00:17,220
+Nazwij funkcj burger otrzymaem kilka rekwizytw i znowu uyj nawiasw klamrowych, dziki czemu mog rwnie doda
+
+5
+00:00:17,220 --> 00:00:21,260
+troch logiki javascript przed zwrceniem J jest x.
+
+6
+00:00:21,330 --> 00:00:25,280
+Na razie wszystko, co zrobi, to jednak zwraca JS X.
+
+7
+00:00:25,380 --> 00:00:32,280
+Ale wrcimy do tego komponentu, aby go ulepszy i warunkowo renderowa co innego pniej.
+
+8
+00:00:32,280 --> 00:00:41,670
+Na razie zaimportujmy re-act z reakcji, poniewa dobrze uywamy j jako X i pozwlmy sobie wyeksportowa
+
+9
+00:00:41,670 --> 00:00:43,860
+domyln funkcj burgera oczywicie.
+
+10
+00:00:43,860 --> 00:00:45,150
+Teraz co tam jest.
+
+11
+00:00:45,230 --> 00:00:52,980
+James x Chc wyeksportowa ich JS X powinien po prostu uy tego komponentu skadnika Bergere.
+
+12
+00:00:53,040 --> 00:00:58,940
+Tworzymy go w rzeczywistoci wiele z nich, ale rwnie chc zawin wszystko w div.
+
+13
+00:00:59,010 --> 00:01:06,780
+Wic tutaj celowo uywam elementu div, poniewa chc nada temu opakowaniu komponent Bergere,
+
+14
+00:01:06,780 --> 00:01:09,950
+poniewa jest to opakowanie wszystkich skadnikw.
+
+15
+00:01:10,150 --> 00:01:15,770
+Chc nada mu troch stylizacji, aby okreli szeroko i wysoko naszego Bruer'a, aby sobie na to pozwoli.
+
+16
+00:01:15,780 --> 00:01:17,140
+Dodam nowy upadek.
+
+17
+00:01:17,160 --> 00:01:22,570
+Plik Bergere dot C S S i wszystkie one sumuj burger Seer's jako klas.
+
+18
+00:01:22,650 --> 00:01:24,380
+Nie ten, ktry daby tej klasie powiew.
+
+19
+00:01:24,420 --> 00:01:28,840
+Powiedzmy, e 100 procent i margines automatyczny.
+
+20
+00:01:29,100 --> 00:01:34,580
+Ale chc ograniczy wysoko do 250 pikseli i wybra inn wysoko.
+
+21
+00:01:34,580 --> 00:01:38,840
+Oczywicie to po prostu co, co moim zdaniem bdzie wyglda dobrze.
+
+22
+00:01:39,730 --> 00:01:48,880
+Ustawi przepenienie, aby przewin tak, e nawet jeli zbudujemy wikszy burger ni 250 pikseli, moemy go po prostu
+
+23
+00:01:48,880 --> 00:01:55,150
+przewin i nie mamy na nim naoonego ani obcitego, poniewa ograniczamy tutaj wysoko.
+
+24
+00:01:55,150 --> 00:02:00,850
+Gdybymy nie ograniczali wysokoci i zbudowalibymy bardzo duego burgera, to w jaki sposb zajoby to ca nasz stron
+
+25
+00:02:00,850 --> 00:02:03,520
+lub nawet wicej, a to nie wygldaoby dobrze.
+
+26
+00:02:03,520 --> 00:02:10,220
+Dodam te rodek wyrwnania tekstu, aby wyrodkowa wszystko i znale miejsce, w ktrym powinien zosta zbudowany.
+
+27
+00:02:10,300 --> 00:02:14,480
+Nie drukujemy jeszcze adnego tekstu, ale zrobimy to w przyszoci.
+
+28
+00:02:14,530 --> 00:02:21,400
+Ustaw take rozmiar czcionki na holenderski na R. MI. M. to po prostu jako jednostka na wypadek,
+
+29
+00:02:21,400 --> 00:02:25,050
+gdyby nie wiedzia, ktra skala jest oparta na domylnym rozmiarze czcionki wybranego przez uytkownika.
+
+30
+00:02:25,330 --> 00:02:28,560
+Wic to jest ukad, ktry chc uy.
+
+31
+00:02:28,600 --> 00:02:31,140
+To jednak ukad mobilny.
+
+32
+00:02:31,300 --> 00:02:38,530
+Teraz chc utworzy zapytanie o media tutaj, gdzie sprawdz, czy mamy ekran z wszystkimi wspomnianymi
+
+33
+00:02:38,620 --> 00:02:44,600
+minimum 1000 pikseli i jest to wane, poniewa Bergere jest oczywicie sowem budowa.
+
+34
+00:02:45,040 --> 00:02:48,990
+Jeli mamy minimaln wysoko 700 pikseli.
+
+35
+00:02:49,150 --> 00:02:56,590
+Jeli tak jest, to moja klasa Bergere zostanie poprawiona i nie ustawi ony na 100 procent, ale
+
+36
+00:02:56,590 --> 00:03:00,860
+na 2 700 pikseli i na wysoko do 600.
+
+37
+00:03:01,270 --> 00:03:09,500
+Dodam te kolejn wyszukiwark multimedialn, w ktrej sprawdz, czy menader ma 500 pikseli, wic jest nieco
+
+38
+00:03:09,790 --> 00:03:18,850
+mniejszy i jeli minimalna wysoko to 400 pikseli i jedna piksel, a jeli tak, to chc wzi 450
+
+39
+00:03:19,170 --> 00:03:30,030
+pikseli jako szeroko i 400 pikseli jako wysoko i w kocu do wszystkich urzdze, ktre nie s martwe, ale do wysokie.
+
+40
+00:03:30,070 --> 00:03:33,160
+Wstaw sowo do trybu portretu.
+
+41
+00:03:33,160 --> 00:03:40,100
+Chc mie mural o minimalnej szerokoci piciuset pikseli, ale o maksymalnej wysokoci 400.
+
+42
+00:03:40,480 --> 00:03:47,570
+I tam chc si upewni, e z jest 350, a wysoko 300 pikseli.
+
+43
+00:03:48,040 --> 00:03:56,220
+To tylko niektre z pyta o media, ktre sprawiaj, e burger wyglda dobrze na jak najwikszej liczbie punktw widzenia.
+
+44
+00:03:56,470 --> 00:04:00,270
+Jak zawsze, dostosuj to do swoich potrzeb.
+
+45
+00:04:00,340 --> 00:04:03,790
+Jeli masz wraenie, e nie wyglda tak dobrze na Twoim urzdzeniu.
+
+46
+00:04:03,790 --> 00:04:05,260
+Teraz wystarczajco duo C S.
+
+47
+00:04:05,270 --> 00:04:08,770
+Wrmy do burgera i zaimportujmy D. DO. .
+
+48
+00:04:08,770 --> 00:04:13,510
+Jako klasy po prostu edytujemy przechowywane w tym szklanym obiekcie pniej.
+
+49
+00:04:13,600 --> 00:04:19,900
+Zaimportujmy je z pliku CSSA burgera i zamy je do tego zawijania mierci z nazw klasy,
+
+50
+00:04:19,900 --> 00:04:22,490
+a ich odtajtowaniem zawsze jest Asperger.
+
+51
+00:04:22,510 --> 00:04:25,210
+Media Cuore nie maj znaczenia.
+
+52
+00:04:25,270 --> 00:04:28,730
+Teraz moemy zacz dodawa skadniki wewntrz tego burgera.
+
+53
+00:04:28,960 --> 00:04:37,070
+Tak wic zaimportuj skadnik Bergere z folderu regionu Burger King i tam skadniki CSSA burgera, a
+
+54
+00:04:37,170 --> 00:04:44,770
+teraz moemy po prostu uy go jako skadnika samozamykajcego, takiego jak skadnik Burgert, ale pamitaj,
+
+55
+00:04:44,770 --> 00:04:47,200
+e musimy zdefiniowa typ.
+
+56
+00:04:47,440 --> 00:04:49,060
+Typ moe by acuchem.
+
+57
+00:04:49,090 --> 00:04:50,440
+Waciwie to nie moe by cig.
+
+58
+00:04:50,470 --> 00:04:51,660
+Musi to by cig znakw.
+
+59
+00:04:51,660 --> 00:04:57,780
+Wdraamy sprawdzanie typu podpory i zaczn tutaj od chleba.
+
+60
+00:04:57,940 --> 00:05:00,690
+Wic myl, e ma to sens w tym.
+
+61
+00:05:00,720 --> 00:05:03,400
+C gra u dou.
+
+62
+00:05:03,400 --> 00:05:12,080
+Nigdy nie zgadniesz wszystkiego na czerwonym dnie w cigu godziny, dodajmy jeszcze dwa
+
+63
+00:05:12,320 --> 00:05:17,640
+skadniki, moe troch sera i poniej tego misa.
+
+64
+00:05:17,890 --> 00:05:18,920
+Teraz z martwymi.
+
+65
+00:05:18,940 --> 00:05:25,620
+Dostaem mj skadnik hamburgerowy, ktry powinien przygotowa burgera z chlebem i serem.
+
+66
+00:05:25,630 --> 00:05:29,950
+Teraz zaimplementujmy to i po prostu pokamy tego burgera.
+
+67
+00:05:30,100 --> 00:05:31,790
+Ju eksportujemy.
+
+68
+00:05:32,050 --> 00:05:39,700
+Teraz moemy uda si do naszego kontenera Boulder z burgerami i zastpi to Dammy death naszym burgerem.
+
+69
+00:05:40,030 --> 00:05:43,230
+Wic importuj hamburgera z.
+
+70
+00:05:43,510 --> 00:05:51,500
+A teraz musimy przej do poziomu rdowego, a nastpnie do komponentw do burgera i importowa burgera.
+
+71
+00:05:51,570 --> 00:05:58,870
+JOT. S. a teraz zastp t rnic naszym samozamykajcym si skadnikiem burgera.
+
+72
+00:05:59,020 --> 00:06:07,740
+Zapiszmy to, zapiszmy wszystko i przeadujmy stron i powiniene zobaczy tego burgera na wypadek, gdyby Twoja
+
+73
+00:06:07,740 --> 00:06:09,310
+stylizacja bya wyczona.
+
+74
+00:06:09,310 --> 00:06:13,570
+Koniecznie porwnaj swj kod CSX tego komponentu z moim.
+
+75
+00:06:13,810 --> 00:06:18,450
+Powiniene zobaczy, e to rwnie wyglda OK, jeli ponownie zmniejszysz i zmienisz rozmiar strony.
+
+76
+00:06:18,460 --> 00:06:24,340
+Zapoznaj si z wymiarem sprawiedliwoci CSSA, aby dopasowa wszystkie moliwe rozmiary.
+
+77
+00:06:24,400 --> 00:06:25,280
+To jest burger.
+
+78
+00:06:25,300 --> 00:06:26,530
+To wspaniale.
+
+79
+00:06:26,530 --> 00:06:28,040
+Nie takie wspaniae.
+
+80
+00:06:28,040 --> 00:06:31,780
+Wszystko na temat tego burgera jest w kocu mocno zakodowane.
+
+81
+00:06:31,780 --> 00:06:38,800
+Uywamy komponentw, ale nie moemy zmieni tego hamburgera dynamicznie i nawet nie robimy
+
+82
+00:06:38,800 --> 00:06:40,050
+tego dynamicznie.
+
+83
+00:06:40,100 --> 00:06:47,020
+Zacznijmy wic od zarzdzania skadnikami, dlaczego stan i dynamicznego renderowania hamburgera na kolejnych
+
+84
+00:06:47,020 --> 00:06:47,790
+wykadach.
+

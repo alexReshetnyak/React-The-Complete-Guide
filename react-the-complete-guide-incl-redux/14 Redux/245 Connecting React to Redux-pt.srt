@@ -1,0 +1,180 @@
+1
+00:00:02,210 --> 00:00:04,770
+Ento, aprendemos sobre o relaxamento eo bsico do redux.
+
+2
+00:00:04,850 --> 00:00:05,650
+Cair.
+
+3
+00:00:05,780 --> 00:00:08,950
+Agora no trabalhamos com deadfall agora.
+
+4
+00:00:08,970 --> 00:00:15,230
+Agora eu quero conectar minha aplicao de re-ao para relaxar e usei as vantagens do redux nela, de modo que
+
+5
+00:00:15,230 --> 00:00:21,830
+no final gerenciei meu estado com este contador e os botes aqui com a Rydex, claro, para uma aplicao to simples
+
+6
+00:00:21,830 --> 00:00:27,590
+como essa, um redux poderia ser um exagero, mas  bom usar uma aplicao mais simples para praticar
+
+7
+00:00:27,740 --> 00:00:32,490
+os conceitos bsicos, ento, aplicar o redux ao nosso projeto de registros no prximo mdulo tambm.
+
+8
+00:00:32,570 --> 00:00:33,950
+No se preocupe.
+
+9
+00:00:33,950 --> 00:00:36,250
+Agora, ns j instalamos redirecionamentos.
+
+10
+00:00:36,590 --> 00:00:39,370
+E com isso podemos criar uma loja.
+
+11
+00:00:39,370 --> 00:00:45,820
+Esta loja deve ser criada logo antes da nossa aplicao ou quando a nossa aplicao comea o Sodhi em troca,
+
+12
+00:00:45,870 --> 00:00:51,610
+tanto quanto um timo lugar faz isso, onde ns montamos nosso componente de aplicativo para o DOM.
+
+13
+00:00:51,710 --> 00:00:55,160
+Ento, criar a loja aqui tambm faz muito sentido.
+
+14
+00:00:55,160 --> 00:01:01,740
+Por isso, vou importar algo e nem todos usam o bom e velho E-6 importa o seu de relaxar.
+
+15
+00:01:01,760 --> 00:01:08,660
+Ento, a partir do pacote redux que instalamos e o algo  criar uma funo de loja.
+
+16
+00:01:08,820 --> 00:01:15,060
+Ento, antes de montar o aplicativo, todos criam para armazenar e armazen-lo em uma loja chamada constante.
+
+17
+00:01:15,060 --> 00:01:18,240
+Ento, acho que h muitas lojas.
+
+18
+00:01:18,240 --> 00:01:21,150
+Ento eu crio minha histria com create store.
+
+19
+00:01:21,150 --> 00:01:26,690
+Agora voc aprendeu que isso leva uma entrada de entrada SD do redutor para o pai.
+
+20
+00:01:26,700 --> 00:01:33,090
+Eu, claro, preciso criar a sua reduo e no vai fazer isso e, neste outono, eu vou
+
+21
+00:01:33,090 --> 00:01:39,930
+ter redutores mais complexos em aplicaes de reao com muitos cdigos para diferentes tipos de aes e, portanto,
+
+22
+00:01:39,930 --> 00:01:42,810
+normalmente armazenamos essa lgica em seus arquivos prprios.
+
+23
+00:01:42,810 --> 00:01:49,140
+configuraes diferentes que voc pode usar, mas muitas vezes voc ver que h uma loja de uma pasta no
+
+24
+00:01:49,140 --> 00:01:55,830
+seu projeto ao lado dos contineres e da pasta de componentes e, l, voc pode ter um redutor que dodgiest cair.
+
+25
+00:01:55,830 --> 00:01:56,570
+Agora, existem
+
+26
+00:01:56,580 --> 00:02:03,930
+Este ser agora o arquivo que podemos exportar os redutores que eu quero usar. Ainda o redutor  apenas
+
+27
+00:02:04,280 --> 00:02:11,670
+uma funo uma funo que recupera um estado e uma ao e depois deve retornar um estado que no
+
+28
+00:02:11,670 --> 00:02:12,940
+muda um pouco.
+
+29
+00:02:12,960 --> 00:02:19,950
+Vou exportar isso como o padro de outono para que possamos us-lo fora deste outono e
+
+30
+00:02:19,950 --> 00:02:22,440
+tambm configurarei um estado inicial aqui.
+
+31
+00:02:22,740 --> 00:02:30,170
+de javascript que deve refletir o meu estado inicial para o produtor, tudo isso para conter zero aqui tambm
+
+32
+00:02:30,210 --> 00:02:37,830
+porque temos um contador nesta aplicao, agora tudo atribudo aqui para o meu estado inicial do estado, como este.
+
+33
+00:02:37,830 --> 00:02:38,740
+Um objeto
+
+34
+00:02:39,370 --> 00:02:43,470
+E com isso conseguimos um produtor acabado.
+
+35
+00:02:43,480 --> 00:02:46,270
+Agora, podemos importar isso no ndice, sim, cair.
+
+36
+00:02:46,420 --> 00:02:50,080
+Ento, vou adicionar o redutor de importao de importao.
+
+37
+00:02:50,200 --> 00:02:57,810
+E agora d um ponto slash os dias do redutor da barra sem a extenso como sempre e depois que crie a loja.
+
+38
+00:02:58,060 --> 00:03:01,820
+Com isso, estamos criando uma histria com sucesso com a nossa REDUCE-IT.
+
+39
+00:03:01,990 --> 00:03:05,570
+Assim como aprendemos antes no arquivo notrio.
+
+40
+00:03:05,590 --> 00:03:08,630
+Agora,  claro, quando voc est sozinho, no faz tanto.
+
+41
+00:03:08,650 --> 00:03:16,480
+Ns tambm queremos conectar-se a loja que voc apenas criou e armazene em uma constante aqui para o nosso
+
+42
+00:03:16,480 --> 00:03:24,430
+aplicativo de reao, e queremos poder obter fatias do estado em nossos contineres de re-atuao para que possamos exibir
+
+43
+00:03:24,430 --> 00:03:29,620
+um estado ou renderizar algo dependendo do estado que o aplicativo possui.
+
+44
+00:03:29,620 --> 00:03:35,590
+E  claro que todos ns queremos poder enviar aes para conectar redox para reagir.
+
+45
+00:03:35,590 --> 00:03:37,140
+Isso  o que ser o prximo.
+

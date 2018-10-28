@@ -1,0 +1,112 @@
+1
+00:00:02,100 --> 00:00:04,820
+Ora nell'ultima lezione, abbiamo parlato dei
+
+2
+00:00:04,820 --> 00:00:11,480
+tempi, ora a volte vuoi eseguire un determinato codice quando lo stato dell'animazione finisce
+
+3
+00:00:11,480 --> 00:00:14,150
+e non solo cambiare ci
+
+4
+00:00:14,300 --> 00:00:21,490
+che rendi sullo schermo, per questo ottieni vari callback, puoi aggiungere funzioni tu posso eseguire
+
+5
+00:00:21,770 --> 00:00:26,450
+una transizione, torner all'app. js file e fare questo su questo componente di
+
+6
+00:00:26,450 --> 00:00:31,430
+transizione che abbiamo usato per avvolgere questo blocco rosso. Riceviamo sei diversi eventi che
+
+7
+00:00:31,430 --> 00:00:33,870
+possiamo ascoltare su questo componente
+
+8
+00:00:33,980 --> 00:00:42,520
+di transizione, il primo  onEnter e l, eseguir semplicemente una funzione dove eseguo il log onEnter in
+
+9
+00:00:42,520 --> 00:00:44,610
+modo che possiamo vedere
+
+10
+00:00:44,720 --> 00:00:54,550
+quando ci accade, il secondo  onEntering quindi facciamo stampa onEntering. Il terzo  onEntered e potresti ovviamente essere
+
+11
+00:00:54,590 --> 00:01:00,370
+in grado di indovinare quando questi metodi vengono eseguiti.
+
+12
+00:01:00,740 --> 00:01:10,420
+Abbiamo anche preso Esci che dovrebbe stampare su Esci qui e quindi potresti essere in grado di indovinarlo, siamo usciti da Esci,
+
+13
+00:01:10,490 --> 00:01:16,520
+quindi stampiamo anche questo al log qui e poi siamo usciti, come questo.
+
+14
+00:01:16,520 --> 00:01:21,070
+Ora questi sei diversi oggetti di scena possono essere associati a funzioni come
+
+15
+00:01:21,230 --> 00:01:27,980
+ho appena fatto qui e quindi puoi eseguire qualsiasi tipo di codice che desideri e vengono eseguiti in questo
+
+16
+00:01:28,160 --> 00:01:34,940
+ordine, onEnter viene eseguito appena prima di entrare nella modalit di immissione, onEntering viene quindi eseguito una volta abbiamo
+
+17
+00:01:35,220 --> 00:01:39,670
+inserito la modalit di inserimento e onEntered  eseguito una volta che siamo
+
+18
+00:01:39,750 --> 00:01:47,180
+entrati nella modalit inserita, beh questo  un sacco di entrate. Exit e cos via si comportano allo stesso modo, onExit viene utilizzato
+
+19
+00:01:47,180 --> 00:01:54,610
+quando si avvia la modalit di uscita appena prima che sia preciso, onExiting viene quindi eseguito quando ci si trova nella modalit di uscita e
+
+20
+00:01:55,010 --> 00:02:01,210
+si esce quando ci si trova nella modalit di uscita. Consentitemi di salvare tutto questo e vediamolo semplicemente nel log
+
+21
+00:02:01,220 --> 00:02:07,070
+della console, se faccio clic qui per attivare il pulsante rosso, vedrete onEnter, onEntering e dopo questo un secondo
+
+22
+00:02:07,190 --> 00:02:14,600
+ci vuole, onEntered e lo stesso per rimuovere, onExit, onExiting e onExited. Questo pu essere utile per creare animazioni sfalsate
+
+23
+00:02:14,600 --> 00:02:20,150
+in cui si desidera attendere la fine di un'animazione prima di iniziare
+
+24
+00:02:20,150 --> 00:02:20,900
+quella successiva.
+
+25
+00:02:20,900 --> 00:02:26,570
+Con questi metodi, hai tutto il controllo di cui hai bisogno per scoprire cosa  successo, cosa 
+
+26
+00:02:26,570 --> 00:02:27,370
+finito, cosa 
+
+27
+00:02:27,500 --> 00:02:30,200
+iniziato e quindi cronometrare le animazioni basate su quello,
+
+28
+00:02:30,200 --> 00:02:31,010
+ad esempio.
+

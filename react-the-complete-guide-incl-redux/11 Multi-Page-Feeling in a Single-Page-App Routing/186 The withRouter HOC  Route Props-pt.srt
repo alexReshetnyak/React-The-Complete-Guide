@@ -1,0 +1,164 @@
+1
+00:00:02,100 --> 00:00:07,680
+No ltimo vdeo, aprendemos sobre os adereos, podemos enviar essas informaes de utilidade.
+
+2
+00:00:07,850 --> 00:00:14,540
+E, em relao ao objeto de histrico, usamos mtodos de utilidade, mesmo podemos usar para
+
+3
+00:00:14,540 --> 00:00:17,080
+navegar ou descobrir onde estamos agora.
+
+4
+00:00:17,150 --> 00:00:22,930
+E se realmente queremos obter essa informao no em um dos nossos contineres.
+
+5
+00:00:23,030 --> 00:00:31,820
+Ento, no em um componente que foi carregado atravs de uma rota conforme definido no bloco como queda, mas em um componente que
+
+6
+00:00:31,850 --> 00:00:38,390
+ processado como parte de um tal recipiente como o recipiente do Post, o continer de postagem
+
+7
+00:00:38,660 --> 00:00:46,190
+ carregado com esta rota aqui no recipiente do bloco e o O container de postagem simplesmente torna o componente
+
+8
+00:00:46,220 --> 00:00:47,200
+de postagem ento.
+
+9
+00:00:47,330 --> 00:00:57,080
+Agora, se entramos nesse componente de postagem e, por um segundo, vira o componente de postagem em um
+
+10
+00:00:57,620 --> 00:01:01,760
+componente onde realmente devolvemos J como X assim.
+
+11
+00:01:01,760 --> 00:01:03,150
+Se nos atrevemos.
+
+12
+00:01:03,290 --> 00:01:06,320
+Agora o console logar os adereos.
+
+13
+00:01:06,680 --> 00:01:12,640
+Ento voc ver que os adereos no componente do post vemos que quatro vezes porque
+
+14
+00:01:12,640 --> 00:01:16,710
+estamos representando quatro posts  apenas oferecer um ttulo clicado.
+
+15
+00:01:16,850 --> 00:01:24,560
+No h nenhum suporte de histrico de localizao de correspondncia l, como o temos no componente de postagens, no
+
+16
+00:01:24,560 --> 00:01:25,700
+ um nico.
+
+17
+00:01:25,700 --> 00:01:34,100
+Portanto, o rel de roteamento os adereos no so transmitidos pelo componente, no podemos acess-los em componentes que
+
+18
+00:01:34,100 --> 00:01:39,980
+simplesmente incorporamos como parte de d. j como cdigo X de um recipiente.
+
+19
+00:01:39,980 --> 00:01:45,440
+Agora, se voc quisesse usar os adereos, h duas maneiras de obter acesso.
+
+20
+00:01:45,470 --> 00:01:53,680
+ claro que podemos pass-los com o operador de propagao e este adereos isso passa por todos os adereos.
+
+21
+00:01:53,690 --> 00:01:57,590
+Este recipiente de postagem est no componente de postagem.
+
+22
+00:01:57,590 --> 00:02:03,560
+Claro que tambm poderia direcionar especificamente certos adereos, como, por exemplo, se voc deseja transmitir
+
+23
+00:02:03,560 --> 00:02:04,890
+a propriedade correspondente.
+
+24
+00:02:04,910 --> 00:02:08,320
+Ns tambm poderamos fazer este jogo de adereos.
+
+25
+00:02:08,330 --> 00:02:10,500
+Agora, esta  uma maneira de transmiti-lo.
+
+26
+00:02:10,640 --> 00:02:16,820
+Mas tambm h um componente de ordem superior que podemos usar no componente de postagem l.
+
+27
+00:02:16,850 --> 00:02:24,050
+Ns podemos importar algo que  chamado com o roteador do roteador de reimpresso Daum.
+
+28
+00:02:24,170 --> 00:02:32,070
+Agora, com o roteador  um componente de ordem superior que usamos envolvendo nossa exportao com ele assim.
+
+29
+00:02:32,450 --> 00:02:40,310
+Com isso adicionado Se agora guardarmos todos os arquivos, voc ver que, agora, os adereos so exibidos para as postagens
+
+30
+00:02:40,310 --> 00:02:45,030
+individuais, eles tm uma localizao de histrico e uma propriedade de correspondncia.
+
+31
+00:02:45,320 --> 00:02:52,990
+Ento, com os adereos do Anstey do roteador para os componentes do Avro para qualquer componente, envolvemos isso.
+
+32
+00:02:53,300 --> 00:03:00,560
+componente consciente e ele ir usar ou ele ir obter a informao de contedo do prop para a rota carregada mais prxima.
+
+33
+00:03:00,890 --> 00:03:05,240
+Assim, com o roteador  uma boa maneira de tornar essa rota de
+
+34
+00:03:05,240 --> 00:03:11,840
+Ento, neste caso, desde que a postagem est includa nas postagens, obtemos os mesmos problemas que recebemos nas postagens.
+
+35
+00:03:12,080 --> 00:03:18,170
+Eu vou remov-lo aqui, mas esta  uma maneira para voc ter acesso aos recursos relacionados
+
+36
+00:03:18,170 --> 00:03:25,910
+ao roteamento que voc pode precisar para chamar pressionar o Histrico Propp ou para obter informaes sobre a rota carregada.
+
+37
+00:03:25,910 --> 00:03:27,980
+Esta  uma maneira de obter acesso.
+
+38
+00:03:28,070 --> 00:03:35,420
+Usando essa abordagem de acesso aos prop's com o componente de ordem superior aqui.
+
+39
+00:03:35,420 --> 00:03:37,060
+Agora novamente eu estou removendo isso aqui.
+
+40
+00:03:37,130 --> 00:03:40,490
+Ento voltei ao estado original para o meu componente de publicao.
+
+41
+00:03:40,640 --> 00:03:42,780
+Eu s queria compartilhar isso com voc.
+

@@ -1,0 +1,76 @@
+1
+00:00:02,190 --> 00:00:06,680
+Chcemy wic skonfigurowa nasz wasny przepyw pracy, a my uyjemy do tego
+
+2
+00:00:06,780 --> 00:00:10,800
+pakietu internetowego, najpierw przeanalizujmy, jakie s wymagania naszego przepywu pracy.
+
+3
+00:00:10,830 --> 00:00:16,650
+Z pewnoci chcemy obsugiwa funkcje javascript nastpnej generacji, wic musimy mie moliwo skompilowania
+
+4
+00:00:16,890 --> 00:00:22,620
+kodu javascript nastpnej generacji do obecnego kodu javascript, ktry dziaa obecnie we wszystkich
+
+5
+00:00:22,620 --> 00:00:23,850
+gwnych przegldarkach.
+
+6
+00:00:23,850 --> 00:00:32,610
+Dodatkowo chcemy by w stanie obsuy jsx, abymy mogli uywa jsx w naszych plikach skryptw, w
+
+7
+00:00:32,790 --> 00:00:34,300
+naszym projekcie reagowania.
+
+8
+00:00:34,320 --> 00:00:43,560
+Chcemy rwnie doda automatyczne prefiksowanie css, abymy mogli napisa proste reguy css i uzyska automatyczne prefiksy,
+
+9
+00:00:43,800 --> 00:00:49,760
+aby zapewni najlepsz skadni we wszystkich przegldarkach obsugiwanych przez nasze aplikacje.
+
+10
+00:00:49,910 --> 00:00:55,780
+Chcielibymy rwnie wspiera obrazy oczywicie, powinnimy mc importowa obrazy tak, jak robilimy to w
+
+11
+00:00:55,790 --> 00:01:00,660
+naszej aplikacji do tworzenia reakcji, a nastpnie uywa jej do naszego szablonu.
+
+12
+00:01:00,670 --> 00:01:07,300
+Na koniec chcemy zoptymalizowa kod, zanim skonstruujemy tego pakera lub wyplujemy go, powinien
+
+13
+00:01:07,300 --> 00:01:13,690
+on by zoptymalizowany tak, aby zmniejszy nasz kod javascript do jak najmniejszego rozmiaru.
+
+14
+00:01:13,690 --> 00:01:15,160
+S to wymagania, w zasadzie
+
+15
+00:01:15,160 --> 00:01:20,940
+to, co tworzy reakcje, daje nam jednak to, co daje nam bardziej podobne linting i tak dalej, ale
+
+16
+00:01:21,190 --> 00:01:23,800
+s to podstawowe wymagania, ktre chc rwnie zbudowa
+
+17
+00:01:23,800 --> 00:01:25,620
+w tym niestandardowym przepywie pracy.
+
+18
+00:01:25,660 --> 00:01:30,820
+Przejdmy wic do tego i zobaczmy, jakie zalenoci musimy zainstalowa i jak faktycznie
+
+19
+00:01:30,820 --> 00:01:33,850
+nimi zarzdzamy i jak wtedy konfigurujemy pakiet sieciowy.
+

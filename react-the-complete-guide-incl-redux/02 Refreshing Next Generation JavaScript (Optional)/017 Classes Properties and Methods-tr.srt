@@ -1,0 +1,152 @@
+1
+00:00:02,150 --> 00:00:06,750
+Son bir ylda snflar rendik ve zelliklerini ve yntemlerini rendik.
+
+2
+00:00:06,770 --> 00:00:14,670
+Q imdi jenerik javascript, zellikleri ve yntemleri balatan farkl bir szdizimi sunar.
+
+3
+00:00:14,830 --> 00:00:19,120
+Ve aslnda bu daha modern szdizimi tm altn iziyor.
+
+4
+00:00:19,160 --> 00:00:21,280
+Bu yzden sana burada da gstermek istiyorum.
+
+5
+00:00:21,530 --> 00:00:27,170
+Zaten zelliklerin snflara eklediiniz deikenler gibi olduunu rendiniz ve nesneler
+
+6
+00:00:27,170 --> 00:00:34,070
+yntemler snflara ve nesnelere eklenmi ilevlere benzer ve yapc ilevinde zellikleri ayarladmz
+
+7
+00:00:34,070 --> 00:00:35,750
+bu szdizimini reneceksiniz.
+
+8
+00:00:35,750 --> 00:00:43,400
+yapc ilevi yeni nesil javascript ile kullanmamz salayan daha modern bir szdizimi var.
+
+9
+00:00:43,400 --> 00:00:46,380
+imdi bu kursta kullanacamz bu
+
+10
+00:00:46,490 --> 00:00:52,880
+Eim deeri eliinde, snfnzn iinde dorudan bir mlk atayabilirsiniz.
+
+11
+00:00:52,880 --> 00:00:55,680
+Bylece yapc ilev arsn atladnz.
+
+12
+00:00:55,850 --> 00:00:59,270
+Sahnelerin arkasnda bu hala kurucu ilevleri kullanacak ekilde dntrlecektir.
+
+13
+00:00:59,330 --> 00:01:04,010
+Ancak bunu yazmann daha kolay bir zaman var ve biim efekti olduka benzer.
+
+14
+00:01:04,010 --> 00:01:05,140
+Bu eski yol.
+
+15
+00:01:05,150 --> 00:01:07,070
+Son konferansa sana gstereceim.
+
+16
+00:01:07,310 --> 00:01:13,880
+ilevi bir deer olarak saklar ve o zaman onunla sona eren bir zellik olarak dnmektir.
+
+17
+00:01:14,270 --> 00:01:20,930
+imdi nesil javascript yolu, bir mlk kurduunuz soldan gelen szdizimini kullanmak ve yalnzca bir yntemi
+
+18
+00:01:20,930 --> 00:01:21,580
+bir
+
+19
+00:01:21,770 --> 00:01:26,030
+Benim yntemim eittir ve sonra bir ok ilevi.
+
+20
+00:01:26,030 --> 00:01:32,950
+Bu szdiziminin en byk avantaj, bir mlk deeri olarak bir ok ilevi olduu iin, bu
+
+21
+00:01:32,960 --> 00:01:39,350
+anahtar kelimeyle hibir sorununuz olmamtr ve burada bu szdizimini sa alt kede ve szln
+
+22
+00:01:39,350 --> 00:01:44,080
+szdiziminde kullanmamzn tam nedeni budur. Bu dersin sol alt kesidir.
+
+23
+00:01:44,150 --> 00:01:46,240
+Sana szdizimini gstereceim.
+
+24
+00:01:47,040 --> 00:01:52,330
+J'ye geri dnn, burada insan ve kii snfyla zerinde altmz projeye devam ettiniz.
+
+25
+00:01:52,440 --> 00:01:57,310
+nsan snfndaki yapcdan kurtulamayz ve bu anahtar kelimeden kurtulamayz.
+
+26
+00:01:57,320 --> 00:02:00,890
+Cinsiyeti erkekle eit hale getirin ve yazdrn.
+
+27
+00:02:00,900 --> 00:02:06,450
+Cinsiyet, Kohn'un bir gnlk olduu bir ok ilevi ile eit olarak ayarlanabilir.
+
+28
+00:02:06,450 --> 00:02:11,430
+Mlke ulatmzda bu cinsiyet bu anahtar kelimeyi kullanmaya devam ediyor.
+
+29
+00:02:11,440 --> 00:02:17,610
+u an iin o okunaklarn grmezden gelebilir ve kiinin yapcya artk ihtiyac olmayacak
+
+30
+00:02:17,700 --> 00:02:20,860
+ve artk bu nedenle sper armamz gerekmiyor.
+
+31
+00:02:20,880 --> 00:02:27,750
+Bunun yerine, eer isterseniz ve adm bastrmak iin byle bir ok
+
+32
+00:02:27,760 --> 00:02:35,840
+ilevine eitse, bu ad adsz olmadan Max ve cinsiyet eit dii olmakszn adlandrrz.
+
+33
+00:02:35,840 --> 00:02:41,330
+imdi sprge almazsa Sendak'n aslnda javascript deyimiyle birlikte bulunduu alr menye
+
+34
+00:02:41,660 --> 00:02:46,600
+gitmeniz gerektiini kabul etmedii iin bir hata mesaj alrsnz.
+
+35
+00:02:46,700 --> 00:02:47,920
+Babil burada.
+
+36
+00:02:48,260 --> 00:02:52,230
+Bunu yaparsanz ve aka vurursanz ve koarsanz, Max ve dii grrsnz.
+
+37
+00:02:52,250 --> 00:02:55,490
+Sol taraftaki oklar hl grrsnz, ancak onlar yok sayabilirsiniz.
+
+38
+00:02:55,490 --> 00:03:01,490
+Bu, bu derste gerekten kullanacamz yeni nesil javascript olan szdizimidir.
+

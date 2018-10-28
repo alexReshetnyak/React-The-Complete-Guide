@@ -1,0 +1,292 @@
+1
+00:00:02,340 --> 00:00:05,630
+Now we restructured our actions in the last lecture,
+
+2
+00:00:05,640 --> 00:00:10,410
+now I want to dive into what we actually put into the action creators.
+
+3
+00:00:10,440 --> 00:00:12,990
+It's obviously easy for asynchronous code,
+
+4
+00:00:13,020 --> 00:00:18,720
+the only place where we can execute asynchronous code is in our action creator,
+
+5
+00:00:18,810 --> 00:00:23,700
+it's what redux-thunk is made for and it's the common and best practice pattern if
+
+6
+00:00:23,790 --> 00:00:29,820
+you need to reach out to a server to fetch data from it and thereafter store it in your store,
+
+7
+00:00:29,940 --> 00:00:35,580
+definitely do that with the action creator. Send your HTTP request here instead of set timeout and once
+
+8
+00:00:35,580 --> 00:00:37,860
+the answer is there, the response is there,
+
+9
+00:00:37,890 --> 00:00:42,780
+store it in your store, you will see this in action in the course project of course.
+
+10
+00:00:42,890 --> 00:00:51,010
+However you can of course put much more logic into your action creators, think about saveResult,
+
+11
+00:00:51,120 --> 00:00:57,300
+we save our result there, we get it as an argument and we simply return an action where we pass it on
+
+12
+00:00:57,300 --> 00:00:58,390
+as a payload.
+
+13
+00:00:58,410 --> 00:01:00,930
+Now this is a very dry action creator,
+
+14
+00:01:00,930 --> 00:01:05,940
+it doesn't do anything else but just return object with the unchanged response,
+
+15
+00:01:05,940 --> 00:01:07,260
+result, excuse me.
+
+16
+00:01:07,260 --> 00:01:15,700
+Now obviously what we could do is we could create a constant maybe name it updatedResult and set it
+
+17
+00:01:15,720 --> 00:01:17,960
+equal to result times two.
+
+18
+00:01:17,970 --> 00:01:24,720
+Now obviously, that doesn't make this much sense here but we can theoretically alter anything you want
+
+19
+00:01:24,720 --> 00:01:28,310
+here and you might have transformations which make more sense,
+
+20
+00:01:28,470 --> 00:01:36,690
+maybe we want to update some id, we want to add a user name and we then pass on our updatedResult.
+
+21
+00:01:36,690 --> 00:01:39,770
+The thing is this happens upon saving the result,
+
+22
+00:01:39,780 --> 00:01:40,960
+keep that in mind,
+
+23
+00:01:41,280 --> 00:01:49,620
+our application still works. If I store that, we stored 20 because we updated the result by multiplying
+
+24
+00:01:49,620 --> 00:01:51,470
+it with two.
+
+25
+00:01:51,480 --> 00:01:54,110
+Now we have logic in the action creator
+
+26
+00:01:54,180 --> 00:01:58,970
+and this might be valid logic instead of some nonsense operation like this one,
+
+27
+00:01:58,980 --> 00:02:03,160
+the thing is you could of course also execute the same logic
+
+28
+00:02:03,180 --> 00:02:07,700
+so let me revert this to the previous state of just passing on response.
+
+29
+00:02:07,860 --> 00:02:13,440
+You could execute that same logic if you need to transform the data before storing it in the state which
+
+30
+00:02:13,440 --> 00:02:15,680
+is perfectly fine which might happen.
+
+31
+00:02:15,840 --> 00:02:20,210
+You can execute that same logic of course in your reducer, here
+
+32
+00:02:20,340 --> 00:02:21,670
+storeResult,
+
+33
+00:02:21,900 --> 00:02:25,750
+here we concatenate the result and store the value and
+
+34
+00:02:25,780 --> 00:02:30,650
+now obviously, nothing is keeping us from multiplying this with two here,
+
+35
+00:02:30,720 --> 00:02:33,990
+if I do it there in the result reducer,
+
+36
+00:02:34,020 --> 00:02:38,870
+now if I save 10, we still store 20 in the store as you can see
+
+37
+00:02:38,940 --> 00:02:41,620
+but now we change it at a totally different place,
+
+38
+00:02:41,640 --> 00:02:43,310
+we change it in the reducer.
+
+39
+00:02:43,350 --> 00:02:49,470
+Now as I said, this operation here might not make that much sense but you'll often have cases where you
+
+40
+00:02:49,470 --> 00:02:53,190
+really want to change something before you store it in the state,
+
+41
+00:02:53,310 --> 00:02:56,950
+you'll not always get the value you just want to pass on,
+
+42
+00:02:57,030 --> 00:03:00,190
+where should you then change it? In the reducer
+
+43
+00:03:00,300 --> 00:03:09,180
+as I show you here, you can of course also run some code before returning here, change data or in the action
+
+44
+00:03:09,180 --> 00:03:10,000
+creator
+
+45
+00:03:10,140 --> 00:03:13,550
+like I showed you before, here what I commented out.
+
+46
+00:03:13,980 --> 00:03:15,570
+Both works,
+
+47
+00:03:15,600 --> 00:03:18,020
+what's better? Let's take a closer look.
+
+48
+00:03:18,720 --> 00:03:23,030
+In the end, the question comes down to where to put the logic,
+
+49
+00:03:23,070 --> 00:03:27,670
+we have action creators and reducers as options. Now
+
+50
+00:03:27,690 --> 00:03:35,270
+action creators as you learned are great for running async code when you dispatch an action, reducers
+
+51
+00:03:35,280 --> 00:03:44,240
+on the other hand only are able to run synchronous code and are pure, input in updated state out. Reducers
+
+52
+00:03:44,240 --> 00:03:50,740
+however keep that in mind, are meant to be the place where you update the state,
+
+53
+00:03:50,740 --> 00:03:59,030
+this is one core redux concept. Action creators are not core redux concept, a core concept are actions,
+
+54
+00:03:59,180 --> 00:04:05,930
+these javascript objects with a type and a payload. So the reducer is the core concept and the whole idea
+
+55
+00:04:05,930 --> 00:04:12,980
+behind redux is that the reducer is the only thing which updates the state, action creators shouldn't
+
+56
+00:04:12,980 --> 00:04:14,460
+prepare the state too much
+
+57
+00:04:14,460 --> 00:04:19,940
+for that reason because it should be the reducer which does the update but there of course is also a difference
+
+58
+00:04:19,940 --> 00:04:27,090
+between updating the state which essentially just means returning a new object which makes up our
+
+59
+00:04:27,080 --> 00:04:30,910
+state and changing the data which goes into the state.
+
+60
+00:04:31,220 --> 00:04:35,370
+Still you can find arguments for both directions,
+
+61
+00:04:35,390 --> 00:04:42,770
+I lean towards putting the logic into the reducer and not too much logic into the action creator.
+
+62
+00:04:42,770 --> 00:04:49,010
+Asynchronous code has to go there but once you got back the data from the server you might need to reach
+
+63
+00:04:49,010 --> 00:04:55,860
+out, you can of course transform it in the action creator and you should do that to a certain extent
+
+64
+00:04:56,540 --> 00:05:03,970
+but once you've got data that is relatively clean, you should hand it off to the reducer.
+
+65
+00:05:04,130 --> 00:05:09,980
+And if you then still need to manipulate it, for example by taking 8 times 2 or anything like that, in my
+
+66
+00:05:09,980 --> 00:05:12,910
+opinion that should go into the reducer.
+
+67
+00:05:13,100 --> 00:05:18,620
+Now you will also find arguments for the other side and in the end, it's your decision. If you choose
+
+68
+00:05:18,620 --> 00:05:21,660
+one approach, stick to it though, don't change it,
+
+69
+00:05:21,800 --> 00:05:27,860
+don't put a lot of logic in one action creator, just to then have a lot of logic in another reducer.
+
+70
+00:05:27,920 --> 00:05:35,120
+Be consistent and decide, where do you want to transform and prepare your data, the action creator or reducer,
+
+71
+00:05:35,120 --> 00:05:36,960
+I recommend the latter
+
+72
+00:05:36,980 --> 00:05:38,640
+but ultimately it's up to you,
+
+73
+00:05:38,750 --> 00:05:40,460
+just take a consistent route.
+

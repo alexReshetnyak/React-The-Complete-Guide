@@ -1,0 +1,116 @@
+1
+00:00:02,190 --> 00:00:07,420
+Teraz przyjrzelimy si CSSTransition w tym komponencie podczas ostatniego wykadu,
+
+2
+00:00:07,450 --> 00:00:14,850
+tam wyjaniem, e ustawilimy t nazw klasy podstawowej, ten katalog naszych klas css i
+
+3
+00:00:14,850 --> 00:00:20,540
+komponent CSSTransition automatycznie rozszerzyby to na kilka rnych klas css i
+
+4
+00:00:20,550 --> 00:00:22,710
+tak jest. Z jakiego powodu
+
+5
+00:00:22,710 --> 00:00:29,160
+moesz rwnie chcie upewni si, e nadal uywasz modal open i modal closed, wic zasadniczo nie
+
+6
+00:00:29,160 --> 00:00:32,910
+musisz definiowa tych klas. Z tego powodu
+
+7
+00:00:32,910 --> 00:00:36,290
+moesz nie tylko przekaza cig z
+
+8
+00:00:36,360 --> 00:00:38,140
+twoim pniem do
+
+9
+00:00:38,340 --> 00:00:46,620
+ClassNames, moesz take przekaza obiekt javascript iw tym obiekcie moesz rcznie zdefiniowa rne klasy css,
+
+10
+00:00:46,620 --> 00:00:49,770
+ktre powinny by uywane dla rnych hakw.
+
+11
+00:00:49,890 --> 00:00:53,320
+Tak wic w tym obiekcie przekazae
+
+12
+00:00:53,340 --> 00:01:04,950
+nazw klasy, moesz zdefiniowa enter, enter-active, exit i exit-active, a tam s jeszcze dwa, pojawiaj si i wygldaj - aktywne, ktrych nie
+
+13
+00:01:04,950 --> 00:01:07,550
+musisz definiowa, one rwnie miayby
+
+14
+00:01:07,560 --> 00:01:10,420
+zosta dodany do twojego baganika.
+
+15
+00:01:10,650 --> 00:01:16,080
+S one uywane, wic pojawiaj si i pojawiaj si-aktywne jest po raz pierwszy co jest renderowane
+
+16
+00:01:16,200 --> 00:01:19,590
+do domu, nie robic tego warunkowo, renderujc go, na przykad
+
+17
+00:01:19,590 --> 00:01:21,710
+po klikniciu przycisku lub nie, ale
+
+18
+00:01:21,840 --> 00:01:28,680
+jeli zakodowae go w dom jak w naszym aplikacja. js, h1 i button, wic jeli jest zawsze tam,
+
+19
+00:01:28,680 --> 00:01:34,200
+ale aplikacja si aduje, to oczywicie po raz pierwszy jest to montowane w domenie
+
+20
+00:01:34,200 --> 00:01:39,190
+i moesz oywi to z pojawieniem si. Ale wydaje mi si, e nie
+
+21
+00:01:39,300 --> 00:01:46,830
+jest to, na czym chc si skupi, zamiast tego, jeli mwisz "enter", nie chc niczego zacza, to nie
+
+22
+00:01:46,830 --> 00:01:50,160
+bdziesz musia tego definiowa, lub po prostu zdefiniujesz
+
+23
+00:01:50,160 --> 00:01:56,790
+pusty cig, dla enter-active, you moe teraz zdefiniowa konkretn klas css, ktr chcesz doda, np. modalny,
+
+24
+00:01:56,790 --> 00:02:03,050
+a nastpnie, moesz wykluczy z tego schematu posiadanie pnia, a nastpnie -enter, -enter-active i tak dalej.
+
+25
+00:02:03,390 --> 00:02:10,290
+Tak wic przy tej konfiguracji moesz zdefiniowa wasne klasy css, ktre powinny zosta dodane lub powinny zosta uyte,
+
+26
+00:02:10,710 --> 00:02:12,840
+modalne zamknij to jest klasa zamykajca.
+
+27
+00:02:13,140 --> 00:02:20,150
+A jeli zapiszemy to, a teraz otworzymy modal, widzimy, e otrzymujemy te same animacje co poprzednio,
+
+28
+00:02:20,220 --> 00:02:22,710
+ale teraz uywamy wasnych klas css.
+
+29
+00:02:22,710 --> 00:02:28,970
+To may dodatek, jest to pewna elastyczno, ktr trzeba bardzo dokadnie dostosowa do swoich potrzeb.
+

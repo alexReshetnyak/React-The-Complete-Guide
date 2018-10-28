@@ -1,0 +1,36 @@
+1
+00:00:02,230 --> 00:00:05,780
+So we deployed our application in this module,
+
+2
+00:00:05,800 --> 00:00:10,240
+the last and of course very important step to really conclude this project.
+
+3
+00:00:10,240 --> 00:00:15,030
+We now see a run in the internet and that of course is a huge step.
+
+4
+00:00:15,070 --> 00:00:22,030
+It is a step towards really building realistic react apps because such apps of course should also be
+
+5
+00:00:22,030 --> 00:00:23,710
+able to run in the internet.
+
+6
+00:00:23,950 --> 00:00:26,150
+As you saw deployment is super easy,
+
+7
+00:00:26,170 --> 00:00:27,220
+it's one command and
+
+8
+00:00:27,250 --> 00:00:33,880
+a couple of things to keep in mind and no matter which host you then choose, these steps never change.
+
+9
+00:00:33,880 --> 00:00:39,760
+So with that, I hope you enjoyed building this application and I hope you enjoy your delicious burger.
+

@@ -1,0 +1,76 @@
+1
+00:00:02,440 --> 00:00:04,860
+Bu lansmana bir sr ey kapacaz.
+
+2
+00:00:04,900 --> 00:00:11,110
+Sahnelerin arkasnda bir sr teori, bilmeniz gereken ok nemli eyi ierir.
+
+3
+00:00:11,170 --> 00:00:15,800
+imdilik kalpten tandnz bir ey deilse, ok olmayn.
+
+4
+00:00:15,820 --> 00:00:22,570
+Bu ok eydi ve ok nemli bir teori vard, nk daha sonra ders
+
+5
+00:00:22,570 --> 00:00:27,740
+projemize dalacaz ve imdiye kadar renmi olduunuz ok ey kullanyoruz.
+
+6
+00:00:27,940 --> 00:00:32,210
+Ve bu nedenle sahnelerin arkasnda nasl altn anlamanz ok nemlidir.
+
+7
+00:00:32,440 --> 00:00:35,830
+Bu modlden baz videolara geri dnmekten ekinmeyin.
+
+8
+00:00:35,980 --> 00:00:42,680
+alt hakknda bir eyler gncelleme yntemi hakknda emin olmak iin ok iyi bir yol var.
+
+9
+00:00:42,690 --> 00:00:47,860
+Bazlarnn tekrar tekrar gemesi gerekiyorsa, bileenin gncellenmesi iin nasl bir mr dngs
+
+10
+00:00:47,860 --> 00:00:51,970
+Ve btn bu kavramlar grme korkmayn.
+
+11
+00:00:52,150 --> 00:00:53,740
+Hepsini kullanamazsnz.
+
+12
+00:00:53,800 --> 00:00:57,730
+Sadece birkan kullanabilirsiniz, ancak daha iyi ve daha iyi olursunuz.
+
+13
+00:00:57,730 --> 00:01:02,320
+Bunu ne kadar ok reneceksin ve ne kadar ok yaklam kullanrsan sorarsn.
+
+14
+00:01:02,320 --> 00:01:08,500
+Belki de iyi yerletirilmi yksek mertebeden bir bileen veya saf bir bileen gibi kullanabileceiniz baz gelimi
+
+15
+00:01:08,500 --> 00:01:09,370
+kavramlar vardr.
+
+16
+00:01:09,700 --> 00:01:15,040
+var ve dolaysyla neyi ne zaman kullanacanza dair bir his de almanz lazm.
+
+17
+00:01:15,040 --> 00:01:21,310
+Ve tekrar, burada kullanld iin rendiiniz eylerin bir ounu greceiniz bir sonraki derste bir ders projesi
+
+18
+00:01:21,310 --> 00:01:27,460
+Bu yzden ders projesine dalalm ve u ana kadar zerinde altmz bir demo projesinden daha
+
+19
+00:01:27,640 --> 00:01:30,220
+byk bir projede bunlardan daha fazlasn grelim.
+

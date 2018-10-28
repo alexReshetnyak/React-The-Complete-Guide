@@ -1,0 +1,384 @@
+1
+00:00:02,190 --> 00:00:04,350
+imdiye kadar ok ey yaptk.
+
+2
+00:00:04,360 --> 00:00:07,240
+ok fazla mantk ekledik.
+
+3
+00:00:07,240 --> 00:00:09,510
+UI'mize ok ey ekledik.
+
+4
+00:00:09,670 --> 00:00:16,090
+imdi tekne kontrollerini gerek malzemelerle balamann zaman geldi, burgeri kendi
+
+5
+00:00:16,090 --> 00:00:19,650
+bamza ya da kullancya gerekten ynetebiliriz.
+
+6
+00:00:20,220 --> 00:00:27,670
+Bunun iin, yapm denetleyicisinde birka ynteme ihtiyacmz var ve hamburger reticisi, malzemeleri eklemek
+
+7
+00:00:27,850 --> 00:00:32,680
+veya kaldrmak iin malzemelerimizi gncellemek iin beni affet.
+
+8
+00:00:32,680 --> 00:00:42,010
+ADD maddesi hdndler' eklemek istediim bileen trn alacak iki yntem ekleyeceim.
+
+9
+00:00:42,010 --> 00:00:43,470
+Bu yzden,
+
+10
+00:00:43,720 --> 00:00:50,350
+Ve tabii ki hangi trn kartmas gerektiini de bilmeleri gereken madde kaldrma maddesini
+
+11
+00:00:50,350 --> 00:00:50,850
+kaldrn.
+
+12
+00:00:50,980 --> 00:00:54,550
+Maddeye eklenerek balayalm.
+
+13
+00:00:54,550 --> 00:00:58,660
+Her eyden nce eski madde saysnn ne olduunu bilmeliyim.
+
+14
+00:00:58,660 --> 00:01:06,790
+yleyse, eski saym deikenini veya sabiti, belirli bir tr iin varolu hali bileenleri olacak
+
+15
+00:01:06,820 --> 00:01:08,100
+ekilde ekleyin.
+
+16
+00:01:08,440 --> 00:01:14,530
+Sonra yalnzca eski saynn art birincisi olan gncellenmi saym hesaplayacam.
+
+17
+00:01:14,680 --> 00:01:19,240
+Ve evet elbette bunu daha az izgide yapabilirim, sadece burada olanlarla ilgili
+
+18
+00:01:19,240 --> 00:01:20,380
+ak olmak isterim.
+
+19
+00:01:20,800 --> 00:01:23,280
+imdi malzemelerimi gncellemeliyim.
+
+20
+00:01:23,500 --> 00:01:29,880
+Bunu deneyeceim ve gncellenmi bileenleri gnderebilirsiniz nk rendiiniz gibi deimeyen
+
+21
+00:01:29,880 --> 00:01:38,650
+bir ekilde gncellenmelidir, bylece yeni bir javascript nesnesi deneyecek ve eski ierik maddelerinin zelliklerini
+
+22
+00:01:38,650 --> 00:01:47,860
+datmak iin bu yaylm olarak 6 boaltma operatr olarak kullanabilirsiniz yeni nesne ve burada yaratma
+
+23
+00:01:48,760 --> 00:01:55,030
+ve sonra gncellenmi maddelerim nesne eriimini alyorum ve hangi maddeleri
+
+24
+00:01:55,360 --> 00:02:03,790
+gncelleyeceimi ve sayy, sadece bileenlerin miktar olan gncellenmi saym gncellemeye eit olan deeri
+
+25
+00:02:03,790 --> 00:02:07,990
+ayarlamalym ve gncellenmi olarak sayyorum yle say.
+
+26
+00:02:07,990 --> 00:02:17,740
+imdi bu adam durumumdaki maddelerimi gncellemek iin bu kmesi devleti arayabilirse de, zaten fiyatm takip etmeye
+
+27
+00:02:17,740 --> 00:02:27,280
+balamak istiyorum, bu yzden toplam malzemelerimi fiyat zelliine ekleyelim ve burger iin temel fiyat ne
+
+28
+00:02:27,280 --> 00:02:32,290
+olursa olsun diyelim neyin zerinde 4 $ olduunu.
+
+29
+00:02:32,350 --> 00:02:35,050
+imdi elbette istediiniz herhangi bir fiyat sein.
+
+30
+00:02:35,080 --> 00:02:37,210
+imdi benim temel fiyatm.
+
+31
+00:02:37,330 --> 00:02:41,660
+imdi burada bu fiyat gncellemek istiyorum.
+
+32
+00:02:41,980 --> 00:02:48,250
+Bu yzden, hangi maddenin maliyetinin bulunduu bir elemeye ihtiyacm var.
+
+33
+00:02:48,520 --> 00:02:51,940
+Bunun iin snfn dnda yeni sabiti deneyeceim.
+
+34
+00:02:51,940 --> 00:02:59,860
+Fakat ayn dte hangi maddeye isim koyacam ve genel sermayedeki
+
+35
+00:02:59,860 --> 00:03:07,200
+karakteristik kresel sabitler olarak kullanmak istediiniz Constance adn veriyorsunuz.
+
+36
+00:03:07,780 --> 00:03:11,700
+Dolaysyla Ingredion dlleri, satmak iin Tamam diyorum bir javascript nesnesi.
+
+37
+00:03:11,710 --> 00:03:13,520
+Belki de nokta 5'tir.
+
+38
+00:03:13,860 --> 00:03:17,210
+Nokta olabilir, nk bilmiyorum.
+
+39
+00:03:17,290 --> 00:03:22,540
+1 3 olabilir ve pastrmann Daut olduunu syler 7.
+
+40
+00:03:22,540 --> 00:03:24,330
+Ya da byle.
+
+41
+00:03:24,340 --> 00:03:27,920
+Yani bunlar her madde iin Thaller Bryce'lar olabilir.
+
+42
+00:03:28,330 --> 00:03:34,850
+imdi eklediimiz trdeki dl ile toplam dl gncellemek istiyorum.
+
+43
+00:03:35,170 --> 00:03:45,740
+Bu yzden, dl basksnn temelde belirli bir tre ait bileen fiyatlar olduunu biliyorum.
+
+44
+00:03:45,910 --> 00:03:51,070
+Unutma ki ayn kalplar kullanarak Uppsala peynirinin her yerinde kullandm
+
+45
+00:03:51,070 --> 00:03:52,890
+ayn tipleri kullanyorum.
+
+46
+00:03:53,320 --> 00:03:56,470
+Bu tip iin fiyat alabilirim.
+
+47
+00:03:56,590 --> 00:04:01,510
+Ve her zaman bir nite olarak zaman eklediimden, bunlar herhangi bir eyle arpmam gerekmiyor.
+
+48
+00:04:01,510 --> 00:04:14,910
+fiyattan alabilir ve yeni fiyat eski fiyat art fiyat eklenmesine eit hale getirebilirim ve evet yine bunu daha az izgide yapabilirsiniz.
+
+49
+00:04:15,500 --> 00:04:20,380
+Bu yzden imdi eski fiyatm bu toplam
+
+50
+00:04:20,700 --> 00:04:31,050
+Fakat imdi ayarlanm durum diyebilirim ve imdi toplam fiyat yeni fiyata ayarlayabilirim
+
+51
+00:04:31,050 --> 00:04:33,160
+ve fiyat ayarlayabilirim.
+
+52
+00:04:33,300 --> 00:04:33,930
+Affedersiniz.
+
+53
+00:04:33,930 --> 00:04:38,530
+Malzemeler gncellenmi ierie eittir.
+
+54
+00:04:38,550 --> 00:04:39,900
+Yani imdi bu bir Devlet Gncellemesi.
+
+55
+00:04:39,900 --> 00:04:46,760
+Degradeleri gncelleyen ve fiyat gncelleyen yeni bir bileen eklendiinde yapmak istiyorum.
+
+56
+00:04:46,830 --> 00:04:53,810
+Bununla birlikte, Ed Ingredion ileyicisini yap denetimlerindeki daha dmeye kadar getirelim.
+
+57
+00:04:54,640 --> 00:05:07,820
+Bunu yapmak iin her iki denetime bir mlk aktarmam gerekiyor ve oradaki Ingredion dzen mlkn, imdi bu kabuklu
+
+58
+00:05:08,360 --> 00:05:15,380
+kontroller iinde bulunan madde ekleine bir referans tutacak ekleyeceim.
+
+59
+00:05:15,380 --> 00:05:18,610
+imdi bunu doru bir ekilde datmam gerekiyor.
+
+60
+00:05:18,830 --> 00:05:25,160
+O halde burada setiimiz mlkiyet adn Bergere Boulder'da kopyalalm ve burada kontrol salamak iin
+
+61
+00:05:25,830 --> 00:05:26,450
+bitti.
+
+62
+00:05:26,480 --> 00:05:30,860
+Elimdeki mermi kontrolne geirmeliyim.
+
+63
+00:05:30,950 --> 00:05:33,720
+Dolaysyla sadece anahtar ve etiket zorunda deiliz.
+
+64
+00:05:33,740 --> 00:05:36,080
+inde daha fazla buton var.
+
+65
+00:05:36,320 --> 00:05:44,470
+Bu yzden ne zaman eklendiinde veya daha fazla tklandnda ve bu sahneyi elbette istediiniz herhangi bir ey olarak adlandrabilirsiniz.
+
+66
+00:05:44,470 --> 00:05:53,660
+Ardndan, prop bileenini eklemeye devam etmek isterim, bylece ina aamasnda aldmz mlkiyet burada yeni kurduumuz mlkleri
+
+67
+00:05:53,750 --> 00:05:58,760
+ve kontrolleri oluturmak iin gemekte olduumuz mlk kontrol eder.
+
+68
+00:05:58,830 --> 00:06:07,200
+imdi bu dahili kontrollerle, bireysel inaat kontrolne geirdim, bylece fatura kontrolnn l
+
+69
+00:06:07,320 --> 00:06:08,530
+olarak arayabileceini.
+
+70
+00:06:08,730 --> 00:06:16,770
+Bununla birlikte, elbette hangi ekran grntsnn kapal olduunu takip etmem gerekiyor.
+
+71
+00:06:16,800 --> 00:06:25,590
+Bu kontrol hangi tre sahiptir ve tm bu kontrolleri oluturmak iin kullandmz bu tr zellik
+
+72
+00:06:25,590 --> 00:06:28,130
+ve kontrol dizisine sahibiz.
+
+73
+00:06:28,200 --> 00:06:38,490
+Bu yzden de, muhtemelen benim trn teneffs etmeliyim, ancak bunu yapabilirdim, ama aslnda gereksiz
+
+74
+00:06:38,490 --> 00:06:40,680
+bir ekstra halka.
+
+75
+00:06:40,920 --> 00:06:46,490
+imdi her eyi geri getirmek iin kabark denetime bir dinleyici uygulayacam.
+
+76
+00:06:46,590 --> 00:06:51,110
+Bu yzden sadece bunu atlayp EIAS alt ileve yerletiremem.
+
+77
+00:06:51,570 --> 00:06:54,340
+Pervanenin madde dzenini yrtn.
+
+78
+00:06:54,420 --> 00:07:02,560
+Dolaysyla aldmz ilev referans denetimler ina ediyor ve basite denetim trne geri dnyorlar.
+
+79
+00:07:02,760 --> 00:07:05,280
+Unuttuunuz kiinin trn denetleme yetkisine sahibim.
+
+80
+00:07:05,330 --> 00:07:12,940
+Nahm tr yrtme bileen eklendiinde sonunda eklenecek baka bir ey getirmeyecek e ileyici eklenir.
+
+81
+00:07:12,940 --> 00:07:18,730
+nk bu dng iinde tm denetimleri ve her denetleyiciyi dngye
+
+82
+00:07:18,730 --> 00:07:19,800
+sokan bir
+
+83
+00:07:20,080 --> 00:07:26,710
+Ve burada tr bir argman olarak almay umuyoruz, bu yzden buray yap denetimlerinde bir
+
+84
+00:07:26,740 --> 00:07:28,010
+argman olarak geiyorum.
+
+85
+00:07:28,090 --> 00:07:35,140
+phesiz, tabii ki bunun almas iin tek bir kontrol iin repassing zellii olan bu
+
+86
+00:07:35,140 --> 00:07:37,990
+ek zellik daha butona balanmaldr.
+
+87
+00:07:37,990 --> 00:07:44,920
+Bu dme zerinde tklama ilecini tklattmda Lisner'e ekleyeceim, bunun tepki verdii sylenebilir.
+
+88
+00:07:44,920 --> 00:07:48,540
+Unutmayn, bu bir mlk deil, nk bu zel bir bileen deildir.
+
+89
+00:07:48,640 --> 00:07:53,840
+Bu yerleik bir unsur ve ben orada x prop var.
+
+90
+00:07:54,070 --> 00:08:00,820
+Bu nedenle, bu yntemi eklememeli ve tetiklemeyecek olan Build denetimlerinden geirilen
+
+91
+00:08:00,820 --> 00:08:02,730
+bu eklenen zellik.
+
+92
+00:08:02,780 --> 00:08:10,470
+imdi tm dosyalar kaydedip biz hamburgerimize gidersek, daha fazlasn tklayalm ve siz
+
+93
+00:08:10,740 --> 00:08:12,200
+malzemeler ekleyebilmelisiniz.
+
+94
+00:08:12,350 --> 00:08:14,780
+Bence ok gzel zaten.
+
+95
+00:08:14,790 --> 00:08:17,030
+imdilik elbette bunlar henz kaldramyoruz.
+
+96
+00:08:17,070 --> 00:08:20,710
+Bir sonraki admda malzemelerin karlmas iin alalm.
+

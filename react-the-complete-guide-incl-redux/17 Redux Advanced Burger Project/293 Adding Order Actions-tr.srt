@@ -1,0 +1,292 @@
+1
+00:00:02,200 --> 00:00:05,160
+Malzemeleri sunucudan ykleyebilir ve hamburgeri cvata verebiliriz.
+
+2
+00:00:05,260 --> 00:00:08,460
+imdi burada check-out ilemi zerinde alalm.
+
+3
+00:00:08,470 --> 00:00:15,190
+Bu iletiim verilerini girdiimizde bir kez geerli bir iletiim formumuz var ve o sipari
+
+4
+00:00:15,190 --> 00:00:22,630
+dmesini tkladmz kontrol etmek istiyoruz, tabii bu emri gnderiyoruz ve elbette ki ak alan sunucusunda
+
+5
+00:00:22,630 --> 00:00:24,040
+bir sipari saklanmaktadr.
+
+6
+00:00:24,220 --> 00:00:26,020
+Fakat ben bunlardan daha fazlasn yapmak istiyorum.
+
+7
+00:00:26,050 --> 00:00:27,520
+Neden redktr
+
+8
+00:00:27,520 --> 00:00:33,430
+iletiim verileri bileeni veya konteynerini ykledikten sonra iletiim veri konteyneri ykleyeceiz.
+
+9
+00:00:33,430 --> 00:00:39,420
+Orada kontrole gz attmzda kontrol etmek iin hibir ey yapmadmzdan, nce nce
+
+10
+00:00:39,460 --> 00:00:43,430
+ok byk bir konteyner, nk formun tm bu devlet ynetimini burada yapyoruz.
+
+11
+00:00:43,460 --> 00:00:51,140
+Orada bir sipari verme grevlisi var, burada nihayetinde arka plan hastalna ya da istenmeyen
+
+12
+00:00:51,240 --> 00:00:59,040
+bir eylemciye eylem yaratcs ulatracaz, bylece aslnda sipariimizi orada yaratyor ve otomatik olarak hikayemize ekliyoruz.
+
+13
+00:00:59,800 --> 00:01:01,490
+Bu yzden zerinde almaya balayalm.
+
+14
+00:01:01,540 --> 00:01:04,070
+Ve ncelikle baz eylem trlerini tanmlayalm.
+
+15
+00:01:04,180 --> 00:01:10,330
+letiim veri kapsaycsna baktmzda, bunu aslnda birka eyleme blebiliriz.
+
+16
+00:01:10,330 --> 00:01:12,100
+Muhtemelen gndermek istiyoruz.
+
+17
+00:01:12,100 --> 00:01:14,920
+Bunu gndermeye balamak istiyoruz.
+
+18
+00:01:15,100 --> 00:01:23,110
+Bu, Che'ler iin deneyin ya da komple bir sipari deneyin gibi bir eydir, ancak o zaman baar davas
+
+19
+00:01:23,110 --> 00:01:29,330
+iin bir eyleme ve bir hata ya da kurmak isteyebileceimiz bir baarszla ihtiya duyarz.
+
+20
+00:01:29,350 --> 00:01:35,440
+Veya diea ile hibir ey yapmak istemiyorsak sadece iki d yklemek deniyor ya da
+
+21
+00:01:35,440 --> 00:01:37,660
+serbest eylem trleri muhtemelen mantkl.
+
+22
+00:01:37,660 --> 00:01:45,610
+Yani eylem trleri dosyasnda geri koyacam birka sabitler ve ilk ilki aslnda
+
+23
+00:01:46,240 --> 00:01:56,950
+Chase ncesi burger baars ve elbette benzer ekilde adl bir String veya dize benzer bir deer ve
+
+24
+00:01:57,420 --> 00:02:00,690
+Che'nin burger bana baarsz olmas.
+
+25
+00:02:00,900 --> 00:02:03,060
+Ve gerek gnderme bu olacak.
+
+26
+00:02:03,060 --> 00:02:09,690
+Eer baarsz olursa, burada kovalamaca harekete geirici param yok, nk bunun iin bir tanmlaycya ihtiyacmz yok.
+
+27
+00:02:09,720 --> 00:02:14,190
+Sadece bir eylem yaratacak veya baz uyumsuz kod altrmak iin uygulayacaz.
+
+28
+00:02:14,220 --> 00:02:19,590
+ndirgemeye ulamak iin gnderdiimiz veya asenkron kod nedeniyle eylem olmayacaktr.
+
+29
+00:02:19,920 --> 00:02:26,340
+yleyse Jabes dosyasna, ardndan eylemler klasrne gidelim ve ncelikle nokta eik
+
+30
+00:02:26,700 --> 00:02:36,770
+izgi eylem trlerinden eylemlerimi ie aktarn ve ardndan baz ileyiciler veya baz eylem yaratclar da aktarmak istiyorum.
+
+31
+00:02:36,810 --> 00:02:38,480
+Birincisi olacak.
+
+32
+00:02:38,760 --> 00:02:44,010
+Ve biz, Burger'in baarsn satn alarak hareket trlerine yn verebiliriz.
+
+33
+00:02:44,010 --> 00:02:51,020
+Yani hepiniz ismini veriyor, deve vaka notasyonunda Che'nin Burger baars burada.
+
+34
+00:02:51,150 --> 00:02:54,810
+Yeni yaratlan emir fikrini almam bekliyorum.
+
+35
+00:02:54,840 --> 00:03:00,900
+Arka srta ve veritabannda srtmda yaratlan emir ve burada bunu bir
+
+36
+00:03:00,900 --> 00:03:08,010
+fikir olarak almamz lazm; nk onu burada yarattm eylemde aktarmak istiyoruz, bylece tantmc
+
+37
+00:03:08,070 --> 00:03:15,680
+bu eylemi kullanabiliriz Aslnda sipariimizi siparilerimize ekleyin ve belki de kimlikten daha fazlasna ihtiyacm
+
+38
+00:03:15,690 --> 00:03:18,740
+var Belki de veri siparii vermek istiyoruz.
+
+39
+00:03:18,810 --> 00:03:27,650
+gereken eylem trleri ve daha sonra n Chase Burger baars var benim kimlii olan bir sipari kimlii zellii
+
+40
+00:03:27,920 --> 00:03:35,930
+ayarlayacaz dndrmek ve sipari verilerini gemek mlkiyet ve evet elbette birlikte set sipari verilerini bir araya getirebiliriz.
+
+41
+00:03:35,930 --> 00:03:42,820
+Yani tm pasaport sipari verileri nesne o zaman Optik burada bir tr tipi olmas
+
+42
+00:03:42,890 --> 00:03:51,920
+imdi Shea burgeri bana bir tane baarsz m diye adlandrlan baka bir ection yaratcs eklemeliyim.
+
+43
+00:03:51,940 --> 00:04:01,020
+Hata mesajn alabilirim ama sonra sadece eylem eylemi trlerinin yeni bir nesnesini iade etmek istiyorum.
+
+44
+00:04:01,120 --> 00:04:08,060
+Chase ncesi burger baarsz oluyor ve ald andan itibaren hatay geeceim.
+
+45
+00:04:08,110 --> 00:04:11,560
+Bunlar sraya senkronize eylem yaratclardr.
+
+46
+00:04:11,560 --> 00:04:19,870
+imdi, Che'nin burger balangcna gre adlandracamz zaman uyumsuz biri konteynerden gnderdiimiz eylem bu
+
+47
+00:04:19,870 --> 00:04:20,350
+geliyor.
+
+48
+00:04:20,350 --> 00:04:28,760
+dmesini tkladnzda, kullanc verileri rience ekleme vb. Gibi baz sipari verilerini elde etmeyi umuyorum.
+
+49
+00:04:28,800 --> 00:04:29,770
+Buradaki sipari
+
+50
+00:04:31,160 --> 00:04:39,020
+Ve sonra bu ileve, gnderme fonksiyonunu redux func ara katmann kullanarak nereden
+
+51
+00:04:39,030 --> 00:04:44,600
+alacam, X ylna kadar uzanacak bir fonksiyon dndreceim.
+
+52
+00:04:44,640 --> 00:04:52,110
+ncelikle x yl sonra ie aktarn ve burada Xs sipari dosyasna gemeniz gerekir.
+
+53
+00:04:52,930 --> 00:04:57,490
+Hepsi yllara uzanyor ve yeni bir sipari gndermek istiyorlar.
+
+54
+00:04:57,770 --> 00:05:02,520
+Aslnda kodumuz ve iletiim veri kapsaycmz zaten var.
+
+55
+00:05:02,690 --> 00:05:10,130
+Buradaki kod bu yzden oradan kesip onu sipari verme eylemi yaratcsna koymak istiyorum, yapmak istediim
+
+56
+00:05:11,090 --> 00:05:16,240
+isteim ve sipari verilerimi burada bir argman olarak vermek istiyorum.
+
+57
+00:05:16,310 --> 00:05:21,460
+Elbette, sipari verilerini gerek yaratcya yeniden yaplandrmamz gerekirse bunu yapmamz gerekir.
+
+58
+00:05:21,650 --> 00:05:24,720
+Kesinlikle burada bu kme durumu armak istemiyorum.
+
+59
+00:05:24,980 --> 00:05:28,710
+Ve ben de bu pervane tarih itme seslenmeyecektir.
+
+60
+00:05:28,730 --> 00:05:30,890
+Burada ynlendiriciye eriimimiz yok.
+
+61
+00:05:30,890 --> 00:05:31,690
+Anlaalm.
+
+62
+00:05:31,730 --> 00:05:36,450
+Bunu bir argman olarak aktarabilirdik, ancak daha sonra yeniden ynlendirmenin farkl bir yolunu seeceim.
+
+63
+00:05:36,620 --> 00:05:39,710
+Bunun yerine bunun yerine olmaz.
+
+64
+00:05:39,980 --> 00:05:49,070
+olabilmemiz iin yant aldktan sonra, burada satn burger baar eylemi yaratcsn gnderirim.
+
+65
+00:05:49,070 --> 00:05:50,000
+Baarl
+
+66
+00:05:50,830 --> 00:05:59,550
+Elbette bu ilemi gerekletireceiz ve yant verilerini geireceim ve yeni oluturulan enin fikrini nasl alabileceimizi grmek
+
+67
+00:06:00,420 --> 00:06:04,950
+iin burada hukuk cevab verisinin seimini kaldrp brakmayacamza bakacaz.
+
+68
+00:06:05,310 --> 00:06:09,560
+Ve yine de ihtiyacm olan sipari verilerini geireceim.
+
+69
+00:06:09,600 --> 00:06:18,210
+Peki, biz bunu yerel maazamza ekleyebilmemiz iin ne sipari ettik ve Arap durumda tm bu yama satn alma
+
+70
+00:06:18,250 --> 00:06:26,170
+ilemi hava ya da imdiye kadar burger baarsz bir burger baarsz ve bu hata nesnesini gemek.
+
+71
+00:06:26,760 --> 00:06:31,550
+Bununla birlikte, sipari dosyasndaki eylem yaratclar bir sonraki derste bitirildi.
+
+72
+00:06:31,550 --> 00:06:37,130
+Onlar konteynerma balamak ve sipariin gerekten meyveli olmasn salamak istiyorum.
+
+73
+00:06:37,200 --> 00:06:37,810
+Rahatlayn.
+

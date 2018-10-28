@@ -1,0 +1,72 @@
+1
+00:00:02,080 --> 00:00:07,700
+In the last lecture, we were able to implement that we are redirected, now however we can see that
+
+2
+00:00:07,700 --> 00:00:13,610
+our price never is reset once we are redirected, so once we are done, we had that issue before already.
+
+3
+00:00:13,970 --> 00:00:20,930
+Now the price never resets because in our burger builder reducer where we manage the total price,
+
+4
+00:00:21,620 --> 00:00:28,790
+we only update the price when we add or remove ingredients but we never reset it when we call setIngredients,
+
+5
+00:00:29,160 --> 00:00:33,440
+the setIngredient action is dispatched whenever this page is loaded
+
+6
+00:00:33,450 --> 00:00:40,610
+though, we do it in the burger builder componentDidMount hook and that is on purpose, I want to load
+
+7
+00:00:40,610 --> 00:00:44,260
+my ingredients and reset them whenever this component gets mounted.
+
+8
+00:00:44,540 --> 00:00:52,730
+Now for that reason since we're doing it here, we have the issue of not updating the price,
+
+9
+00:00:52,730 --> 00:00:58,870
+we can easily fix this. In the burger builder reducer when we call setIngredients and update the ingredients,
+
+10
+00:00:59,060 --> 00:01:05,570
+we simply also have to update the total price and we could get this value from a server too or we simply
+
+11
+00:01:05,590 --> 00:01:13,940
+hardcode it to form which is our initial price up here too. With that if we save this, now we will have an updated
+
+12
+00:01:13,940 --> 00:01:14,420
+price,
+
+13
+00:01:14,450 --> 00:01:20,330
+so now if I quickly build a delicious cheese bacon burger and just enter any data here to get the job
+
+14
+00:01:20,330 --> 00:01:27,180
+done, let's switch to dropdown to mix things up, if I order this, you see the price is now always reset and all
+
+15
+00:01:27,180 --> 00:01:29,220
+of that without any errors.
+
+16
+00:01:29,240 --> 00:01:34,320
+So with that we got the burger builder and the order workflow managed through redux,
+
+17
+00:01:34,340 --> 00:01:41,090
+now of course it's also time to work on the orders page. For that, I'll first of all clear all the orders
+
+18
+00:01:41,150 --> 00:01:42,200
+on firebase again.
+

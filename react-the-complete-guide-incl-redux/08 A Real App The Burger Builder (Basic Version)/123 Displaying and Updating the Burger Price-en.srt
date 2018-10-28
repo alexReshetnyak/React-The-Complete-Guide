@@ -1,0 +1,124 @@
+1
+00:00:02,120 --> 00:00:07,250
+In the last lecture we made sure that we can also remove ingredients from the burger, now I want to update
+
+2
+00:00:07,250 --> 00:00:12,560
+the burger price and display it as part of that burger too.
+
+3
+00:00:12,740 --> 00:00:18,800
+Now actually, if I add a lot of ingredients to a burger, it is scrollable because we configured it to
+
+4
+00:00:18,800 --> 00:00:19,500
+be,
+
+5
+00:00:19,730 --> 00:00:25,370
+so the price should probably display it above the build controls, let's say.
+
+6
+00:00:25,370 --> 00:00:29,200
+So in the build controls here, besides outputting the controls,
+
+7
+00:00:29,270 --> 00:00:37,930
+I want to show the burger price and we can simply use a paragraph here where we say current price colon
+
+8
+00:00:38,180 --> 00:00:41,410
+and then I expect to get the price passed in with props.
+
+9
+00:00:41,510 --> 00:00:45,450
+So props.price, something like that.
+
+10
+00:00:45,560 --> 00:00:49,860
+Now the price is calculated in the burger builder container,
+
+11
+00:00:49,910 --> 00:00:57,500
+here we have the total price state. So I want to pass this price to my build controls then because that is where
+
+12
+00:00:57,500 --> 00:01:00,670
+I just added the usage of that property.
+
+13
+00:01:01,010 --> 00:01:02,920
+So let's add the price property,
+
+14
+00:01:02,930 --> 00:01:09,690
+the name I just picked in build controls and pass this.state.totalPrice,
+
+15
+00:01:09,890 --> 00:01:12,750
+make sure to save all files and let's have a look,
+
+16
+00:01:13,010 --> 00:01:14,560
+we see the current price here
+
+17
+00:01:14,720 --> 00:01:21,680
+and if I add ingredients, you see this price increases, here however we get it back with decimal numbers
+
+18
+00:01:21,740 --> 00:01:27,280
+in javascript so we should fix this and maybe we also want to print that in
+
+19
+00:01:27,590 --> 00:01:29,100
+well, emphasized.
+
+20
+00:01:29,420 --> 00:01:39,580
+So what we can do in the build controls for one, let's wrap this in a strong tag,
+
+21
+00:01:39,620 --> 00:01:42,560
+the price so that is basically with font-weight
+
+22
+00:01:42,560 --> 00:01:48,640
+bold and let's fix it by fixing this price here.
+
+23
+00:01:48,660 --> 00:01:52,810
+Now for that, price needs to be a number but thankfully it is,
+
+24
+00:01:52,820 --> 00:01:58,880
+so now we can call toFixed on it and fix it to two decimal places.
+
+25
+00:01:58,930 --> 00:02:00,790
+Let's save this
+
+26
+00:02:01,060 --> 00:02:03,020
+and now we see four
+
+27
+00:02:03,190 --> 00:02:09,910
+and if I start adding, you see the price goes up. I guess we built a quite affordable burger here which
+
+28
+00:02:09,910 --> 00:02:12,160
+looks really delicious.
+
+29
+00:02:12,160 --> 00:02:16,530
+So with that, the burger builder is actually in pretty good shape.
+
+30
+00:02:16,600 --> 00:02:21,060
+The check out button is missing but that's something I will add in a second
+
+31
+00:02:21,310 --> 00:02:26,890
+and thereafter we need to take care about all that navigation which is hidden here at the top.
+

@@ -1,0 +1,152 @@
+1
+00:00:02,240 --> 00:00:08,560
+Ento, vamos na validao de tipo de suporte e os Fords so cancelar o servidor de desenvolvimento e, em seguida, executar o
+
+2
+00:00:08,570 --> 00:00:16,330
+quadro de trao de instalao do NPM, salve o guio dash, salvo na entrada da proteo e o pacote Georgeson e, em seguida, os tipos de suporte.
+
+3
+00:00:16,370 --> 00:00:17,590
+Este  o pacote.
+
+4
+00:00:17,600 --> 00:00:25,340
+Eu mostrei voc na ltima seo do ncleo que  fornecida pela equipe de reao para validar os tipos de
+
+5
+00:00:25,400 --> 00:00:34,290
+suporte de suas propriedades de re-atuao, simplesmente importar tipos de Propp dos tipos do Propp e voc pode comear a usar esse pacote
+
+6
+00:00:34,680 --> 00:00:35,650
+toda a resposta.
+
+7
+00:00:35,660 --> 00:00:44,090
+Reinicie o desenvolvimento para ler com o incio do NPM e depois eu disse que voc pode usar os tipos do Propp nos componentes
+
+8
+00:00:44,300 --> 00:00:47,030
+que so criados com a palavra-chave da classe.
+
+9
+00:00:47,030 --> 00:00:52,850
+Agora, aqui temos um componente sem estado criado como uma funo em que podemos simplesmente convert-lo.
+
+10
+00:00:53,090 --> 00:00:56,940
+E isso no o transforma automaticamente em um recipiente.
+
+11
+00:00:57,050 --> 00:01:03,080
+Voc pode adicion-lo  pasta de contineres, mas ainda no planeja gerenciar nenhum estado aqui ou passar
+
+12
+00:01:03,080 --> 00:01:05,780
+para qualquer outro estado em qualquer outro componente.
+
+13
+00:01:05,780 --> 00:01:08,840
+Ento, para mim, ele ainda permanece um componente de despejo.
+
+14
+00:01:08,840 --> 00:01:15,170
+Um ltimo componente do estado normal que no muda apenas porque eu criei com a palavra-chave da classe
+
+15
+00:01:15,170 --> 00:01:18,410
+e isso geralmente  uma coisa importante para entender.
+
+16
+00:01:18,470 --> 00:01:22,160
+Voc no decide se algo  um recipiente ou no.
+
+17
+00:01:22,160 --> 00:01:23,750
+Temos uma palavra-chave da classe.
+
+18
+00:01:23,750 --> 00:01:26,960
+Voc pode criar todos os seus componentes como uma classe, se desejar.
+
+19
+00:01:27,140 --> 00:01:33,880
+ apenas uma boa prtica usar a forma funcional com a maior freqncia possvel, mas no  uma obrigao.
+
+20
+00:01:34,310 --> 00:01:40,040
+Bem, com isso vamos renomear o ingrediente Bergere para ter um B principal para
+
+21
+00:01:40,040 --> 00:01:50,270
+seguir a conveno de nomenclatura das classes e vamos importar o componente como uma importao nomeada de reagem agora Ingrediente Burgert deve estender o componente
+
+22
+00:01:50,960 --> 00:01:57,220
+e podemos ento adicionar um corpo de classe onde precisamos implementar o mtodo de renderizao.
+
+23
+00:01:57,560 --> 00:02:02,250
+Agora, dentro de renderizao, agora podemos executar nossa lgica nossa declarao de mudana.
+
+24
+00:02:02,390 --> 00:02:04,580
+E, no final, devolver o ingrediente.
+
+25
+00:02:04,580 --> 00:02:07,210
+Ento, simplesmente coloque isso l.
+
+26
+00:02:07,220 --> 00:02:16,780
+Remova o rel morto l e exporte seus novos adeptos agora nomeados da classe. Taieb no funcionar porque ele termina em uma classe
+
+27
+00:02:16,780 --> 00:02:20,540
+em que voc acessa o suporte com esses adereos.
+
+28
+00:02:20,650 --> 00:02:26,740
+Ento, certifique-se de adicionar um presente na frente de adereos com deaded deve estar funcionando novamente embora.
+
+29
+00:02:26,920 --> 00:02:35,200
+Agora, podemos adicionar a validao de tipo de prompt, levando o nome da nossa classe, adicionando a propriedade de tipos apropriados
+
+30
+00:02:35,200 --> 00:02:39,690
+com um P minsculo e configurando-o igual a um objeto javascript.
+
+31
+00:02:39,910 --> 00:02:45,550
+E agora eu quero configurar a propriedade type usando os tipos de suporte.
+
+32
+00:02:45,560 --> 00:02:48,940
+Ns importamos daqueles tubos Propp.
+
+33
+00:02:48,950 --> 00:02:57,140
+Pacote usando isso e l eu quero ter certeza de que o tipo deve ser uma string e podemos alterar
+
+34
+00:02:57,140 --> 00:02:59,800
+uma condio de nmero que  necessria.
+
+35
+00:02:59,960 --> 00:03:08,050
+Ento, se alguma vez tentssemos usar o componente Ingredion sem passar por um tipo, obteremos um erro para que
+
+36
+00:03:08,060 --> 00:03:10,130
+o ingrediente Bergere seja concludo.
+
+37
+00:03:10,130 --> 00:03:16,070
+Agora,  claro, seria interessante tambm v-lo em ao e para isso na prxima conferncia,
+
+38
+00:03:16,070 --> 00:03:20,330
+na verdade, comearemos a puxar nosso hambrguer no componente de hambrguer.
+

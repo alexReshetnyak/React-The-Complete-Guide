@@ -1,0 +1,136 @@
+1
+00:00:02,120 --> 00:00:05,370
+W ostatnim wykadzie uczymy si przekierowania
+
+2
+00:00:05,480 --> 00:00:12,020
+warunkowego i jest to dobry sposb przekierowania. Szczerze mwic, sposb, w jaki przekierowujemy w nowym komponencie,
+
+3
+00:00:12,410 --> 00:00:19,560
+moe nie jest taki, jak zawsze zamierzasz to zrobi. W kocu po pomylnym wysaniu posta, po
+
+4
+00:00:19,700 --> 00:00:26,090
+prostu chcesz przeczy si na stron i do tego moesz oczywicie uy tej
+
+5
+00:00:26,090 --> 00:00:35,240
+historii, ktr dostajesz na kadym komponencie, ktry jest zaadowany wewntrz routera przegldarki, zawinity komponent i nowy post jest w
+
+6
+00:00:35,250 --> 00:00:36,680
+kocu adowany przez
+
+7
+00:00:36,680 --> 00:00:43,280
+bloga, dlatego jest zawijany przez router przegldarki. Tam mamy dostp do tej lokalizacji meczowej i
+
+8
+00:00:43,310 --> 00:00:45,070
+rekwizytu historii, ktr pokazaem
+
+9
+00:00:45,380 --> 00:00:51,260
+wczeniej, i e w historii jest kilka metod wygody, ktrych moemy uy do zastpienia aktualnej
+
+10
+00:00:51,350 --> 00:00:53,170
+trasy lub popchnicia nowej trasy.
+
+11
+00:00:53,540 --> 00:01:02,330
+Moemy wic zmieni stron tutaj bez zmiany stanu, a wic nigdy nie renderujc tego skadnika przekierowania, ale zamiast
+
+12
+00:01:02,390 --> 00:01:09,740
+tego uzyskujc do niego dostp. rekwizyty. historia i tam metoda push, ktra pozwala
+
+13
+00:01:09,740 --> 00:01:11,330
+nam pcha now stron.
+
+14
+00:01:11,330 --> 00:01:18,130
+Tak wic moglibymy rwnie przej do / postw, co zasadniczo doprowadzioby do takiego samego zachowania jak wczeniej.
+
+15
+00:01:18,710 --> 00:01:20,570
+Moemy przej do nowych postw, moemy wprowadzi
+
+16
+00:01:20,750 --> 00:01:27,780
+nowy post, a kiedy ju to zrobimy, pchamy now stron i jestemy przekierowywani. Technicznie push przesuwa t stron na
+
+17
+00:01:27,890 --> 00:01:30,850
+stos, wic jeli klikniemy przycisk
+
+18
+00:01:30,950 --> 00:01:37,670
+Wstecz, wrcimy do nowej strony postu. Natomiast przekierowanie zastpuje biec stron, wic jeli
+
+19
+00:01:37,670 --> 00:01:38,290
+klikniemy
+
+20
+00:01:38,390 --> 00:01:42,700
+przycisk Wstecz i oczywicie moesz wyprbowa to po ponownym
+
+21
+00:01:42,710 --> 00:01:48,330
+komentarzu, jeli klikniesz przycisk powrotu po przekierowaniu, a nie naciskajc, moesz
+
+22
+00:01:48,650 --> 00:01:54,830
+wrci, ale nie bdziesz wr do ostatniej strony, poniewa przekierowanie zastpuje biec
+
+23
+00:01:54,830 --> 00:02:00,290
+stron na stosie, nie przesya nowej. Chocia mona rwnie replikowa to zachowanie, nie uywajc polecenia
+
+24
+00:02:00,620 --> 00:02:04,750
+push, ale tutaj zamie obiekt historii. Jeli tego uywasz, przechodzisz do
+
+25
+00:02:04,760 --> 00:02:08,350
+nowego posta, jeli teraz co tutaj wpisujesz, opucimy
+
+26
+00:02:08,510 --> 00:02:12,320
+te t stron, ale teraz, jeli naciniemy przycisk
+
+27
+00:02:12,470 --> 00:02:19,940
+Wstecz, nadal bdziemy publikowa posty, poniewa bylimy tam, zanim odwiedzilimy nowy wpis, poniewa nowy wpis zosta zastpiony
+
+28
+00:02:19,940 --> 00:02:21,460
+na stosie stron.
+
+29
+00:02:21,770 --> 00:02:27,650
+Wic zamie w zasadzie to samo, co przekierowanie, dlatego moesz uy go jako alternatywy.
+
+30
+00:02:27,680 --> 00:02:32,780
+Chciaem pokaza wam obie metody, poniewa moe macie przypadek uycia, w ktrym chcecie wyrenderowa
+
+31
+00:02:32,780 --> 00:02:35,070
+ten element przekierowania warunkowo, a nastpnie
+
+32
+00:02:35,150 --> 00:02:37,720
+jest to prosty sposb na zrobienie tego.
+
+33
+00:02:37,910 --> 00:02:44,360
+Jeli nie chcesz uywa podejcia polegajcego na renderowaniu tego komponentu, zastp lub nacinij rwnie
+
+34
+00:02:44,450 --> 00:02:47,630
+jest sposobem zmiany strony po zakoczeniu operacji.
+

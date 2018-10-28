@@ -1,0 +1,308 @@
+1
+00:00:02,320 --> 00:00:06,310
+Son derslerde sahne sprgelerine baktk.
+
+2
+00:00:06,340 --> 00:00:12,950
+Kendi bileenlerimize aktardmz tm niteliklere bize eriim salayan basit bir nesne.
+
+3
+00:00:13,050 --> 00:00:20,530
+Artk bazen dardan bilgi almak istemiyorsunuz ancak bir bileene dahil
+
+4
+00:00:20,590 --> 00:00:23,880
+etmek ve ieriden deitirmek istiyorsun.
+
+5
+00:00:24,310 --> 00:00:35,220
+rnein, burada uygulama js dosyamzda, biz tklarsak, burada kullandmz isimlerden birine gei yapan bir
+
+6
+00:00:35,420 --> 00:00:38,850
+dme eklemek istediimizi varsayalm.
+
+7
+00:00:38,920 --> 00:00:42,550
+Dolaysyla, anahtar adnn baln belki de koyduk.
+
+8
+00:00:43,150 --> 00:00:47,160
+Bu tklama olayn ve bir sonraki dersleri halledeceiz.
+
+9
+00:00:47,320 --> 00:00:55,060
+Fakat ncelikle burada bu isimleri zor kodlamam bir ekilde tanmlamamz gerekir.
+
+10
+00:00:55,060 --> 00:00:57,840
+u anda GSX kodumuza zor kodlanm.
+
+11
+00:00:57,850 --> 00:01:04,720
+Ve burada sorun yok, ancak daha sonra deitirmek istersek, onu bir deiken veya benzeri bir
+
+12
+00:01:04,720 --> 00:01:05,650
+eyde saklamalsn.
+
+13
+00:01:06,070 --> 00:01:12,080
+Bu aslnda bir snftr ve bir snfn zellikleri vardr.
+
+14
+00:01:12,130 --> 00:01:17,190
+Bu sadece javascript'te bir durum deil, ancak bir saatlik programlama dili de.
+
+15
+00:01:17,350 --> 00:01:22,790
+Bir mlk bir snfn bir deikeni olarak dnebilirsin.
+
+16
+00:01:22,810 --> 00:01:29,300
+Yani normal javascript kodunda yalnzca bir eyin bir miktarla eit olduunu yazarsnz.
+
+17
+00:01:30,710 --> 00:01:32,650
+Bu bir snfta ie yaramaz.
+
+18
+00:01:32,810 --> 00:01:38,710
+Orada bir eyler eit bir deere yazabilirsiniz.
+
+19
+00:01:38,940 --> 00:01:40,380
+Biraz daha ksa.
+
+20
+00:01:40,410 --> 00:01:48,030
+Ancak sonunda ayn eyi syleyebiliriz, bileeni genileten herhangi bir bileende bulabileceiniz bir
+
+21
+00:01:48,030 --> 00:01:49,630
+zellik var demektir.
+
+22
+00:01:49,770 --> 00:01:52,360
+Yani bizzat yapamazsn.
+
+23
+00:01:52,380 --> 00:01:56,840
+zelliklerini burada bulabilirsiniz, nk bu normal bir ilevdir.
+
+24
+00:01:56,850 --> 00:02:02,940
+ancak yine de sadece hakkmzda olan ey, yalnzca bileeni genileterek oluturulan bileenlerde alyor.
+
+25
+00:02:03,030 --> 00:02:07,480
+Yani burada baz Constans' veya baz deikenleri kullanmak zorundasn,
+
+26
+00:02:07,740 --> 00:02:17,340
+Orada zel bir mlkiyet ad devleti tanmlayabiliriz, burada sahne dndan, ad ve ya gibi dardan
+
+27
+00:02:17,340 --> 00:02:24,900
+bir bileenin iinden ynetilen kii bileen devletine geirilir ve devlet, uzatlm bileen
+
+28
+00:02:24,900 --> 00:02:31,700
+tarafndan kullanlan bileenlerde yalnzca bir yol seviyesidir. tepkiden ithal edildi.
+
+29
+00:02:31,710 --> 00:02:35,480
+Bu, ilev bileenleri iinde bir yol deil.
+
+30
+00:02:35,760 --> 00:02:43,260
+Yine de, mmkn olduunca ilev bileenlerini kullanmalsnz nk devleti ve tm bileenleri sahibi
+
+31
+00:02:43,680 --> 00:02:49,640
+olmak ve uygulamanzn herhangi bir yerindeki uygulama kartrcsnda hzla ngrlemeyen
+
+32
+00:02:49,650 --> 00:02:54,580
+ve zellikle bydke ynetmek zor olduunda durumu ehemmiyetle kullanmalsnz.
+
+33
+00:02:54,660 --> 00:02:57,060
+Tabii ki bu hi de kullanmamalsnz anlamna gelmez.
+
+34
+00:02:57,120 --> 00:02:59,230
+Burada mantkl geliyor.
+
+35
+00:02:59,310 --> 00:03:05,050
+Bir deeri atayarak balatrz ve bu deer bir javascript nesnesidir.
+
+36
+00:03:05,070 --> 00:03:14,160
+Yine bu ayrlm bir szcktr ve baz bileen i verilerini iyi ynetmek istersek
+
+37
+00:03:14,250 --> 00:03:14,690
+kullanmalsnz.
+
+38
+00:03:14,690 --> 00:03:22,820
+imdi de sylemelisin ki devlet baz insanlara sahip olabilir Bu tamamen size kalm.
+
+39
+00:03:22,830 --> 00:03:28,980
+Bir kiilerin mlkiyetini basite ele alyorum ve javascript nesnesi yapyorum ve bu bir dizi olacak.
+
+40
+00:03:29,160 --> 00:03:36,210
+trn ayarlayabilir, burada istediiniz her eyi gerekten ynetebileceiniz bir isim zellii ayarlayabilirsiniz.
+
+41
+00:03:36,210 --> 00:03:40,940
+Ve bu devlet nesnesinde istediiniz herhangi bir veri
+
+42
+00:03:40,950 --> 00:03:44,090
+Bir dizi kiiyi ynetmek istiyorum.
+
+43
+00:03:44,370 --> 00:03:52,050
+imdi bu kiinin dizisi yine her nesnenin bir ad olan bir dizi javascript nesnesi.
+
+44
+00:03:52,080 --> 00:04:00,720
+Belki Max ve H belki bir numara burada bir dize deil, aksine bir dize geiririz ama burada bir numara
+
+45
+00:04:00,720 --> 00:04:03,270
+gayet iyi bir dize olabilir.
+
+46
+00:04:03,450 --> 00:04:07,510
+Ayrca adnza bir numara yapmak istiyorum.
+
+47
+00:04:07,530 --> 00:04:11,970
+Seni ve ya 29 yanda, ncs.
+
+48
+00:04:12,000 --> 00:04:19,130
+Sizce drt yandaki Stefany 26 yanda olduunu tahmin ettiniz.
+
+49
+00:04:19,240 --> 00:04:21,560
+imdi bu benim devletim.
+
+50
+00:04:21,640 --> 00:04:24,860
+Artk byle bir mlke eriebiliriz.
+
+51
+00:04:24,910 --> 00:04:32,110
+Ve bu durum iin sadece doru deil, rendiimiz gibi tek arma ayralaryla dinamik
+
+52
+00:04:32,110 --> 00:04:41,570
+bir ey kartarak Meffert'mzdaki herhangi bir mlk iin de geerlidir. Daha sonra bu anahtar kelime, kullandmz Evet
+
+53
+00:04:42,060 --> 00:04:45,360
+alt szdizimine snf ifade etmektedir.
+
+54
+00:04:45,730 --> 00:04:52,530
+Ve snfta, ABD borcunu deitirdiimiz halde bunu yapmamamz gerektiini syleyebileceimiz bir render yntemine sahibiz ancak
+
+55
+00:04:52,540 --> 00:04:54,550
+bir devletin mlkmz var.
+
+56
+00:04:54,640 --> 00:04:59,200
+de tanmlayabilirsin, ancak bir sonraki derslerde renecein gibi zellikle bir tanesini ifade eder.
+
+57
+00:04:59,200 --> 00:05:00,880
+Ve dediim gibi Kendi zelliklerini
+
+58
+00:05:00,880 --> 00:05:06,510
+Bylece burada burada bu duruma eriebiliriz ve tm bunlar kiinin dzenini devlete aklar.
+
+59
+00:05:06,610 --> 00:05:12,580
+Dizin 0' ve ardndan ad kullanarak ilk e olabilir.
+
+60
+00:05:12,850 --> 00:05:20,080
+Dolaysyla sabit kodlama yerine u anda burada bu mlkte devlet mlkndeki
+
+61
+00:05:20,260 --> 00:05:22,520
+kiinin dizisine eriiyorum.
+
+62
+00:05:22,540 --> 00:05:29,400
+imdi bu kodu buraya kopyalayp yam onunla orda deitireceim.
+
+63
+00:05:29,440 --> 00:05:31,910
+Elbette mlkiyetime erimek istiyorum.
+
+64
+00:05:32,930 --> 00:05:34,920
+Ve bunu adam iin tekrarlayacam.
+
+65
+00:05:34,950 --> 00:05:37,810
+Ancak sizin ilk unsurunuz elbette.
+
+66
+00:05:37,850 --> 00:05:44,870
+Bu dizide birincil olan ve tm fazla element 1'in ya iin ikinci unsur.
+
+67
+00:05:44,900 --> 00:05:51,540
+Ve elbette age zellii ve Stephanie iin muhtemelen bu dizini tahmin etmisinizdir.
+
+68
+00:05:51,710 --> 00:05:59,870
+Ve D. iin de. H. indeks de ve bunun bir zellii varsa bunu kaydedersek ve
+
+69
+00:06:00,170 --> 00:06:02,240
+uygulamaya dnersek, hibir ey yapmayan dmeyi grrz.
+
+70
+00:06:02,420 --> 00:06:07,570
+Ve bir mlk kullanarak bu saatten nce ayn kty gryoruz.
+
+71
+00:06:07,700 --> 00:06:09,650
+Devlet mlkiyet olsa.
+
+72
+00:06:09,650 --> 00:06:12,810
+imdi devlet zel bir mlk olacan syledim.
+
+73
+00:06:12,830 --> 00:06:21,920
+imdiye kadar bunu zel bir ekilde kullanmamza ramen biz deitirebiliriz bu durumu deitirebilir ve deitirebiliriz.
+
+74
+00:06:21,950 --> 00:06:26,510
+Ve bu konuda zel bir ey bu sadece devlet malnda ie yaryor.
+
+75
+00:06:26,510 --> 00:06:35,880
+Deiiklik yaparsa, yurdumuzun yeniden oluturulmas ya da sylemem gereken yurt gncellemesi tepki verecektir.
+
+76
+00:06:36,230 --> 00:06:45,380
+rnein, Max'in adn deitirdiysek, bu, bunun, ilenip okunmasna yol aacaktr.
+
+77
+00:06:45,620 --> 00:06:51,660
+Bu dmeyi tklamak gibi olaylar nasl dinleyeceinizi size gsterecek ekilde kantlayaym.
+

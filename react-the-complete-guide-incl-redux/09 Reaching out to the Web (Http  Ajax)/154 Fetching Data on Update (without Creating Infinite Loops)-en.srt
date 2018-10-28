@@ -1,0 +1,368 @@
+1
+00:00:02,130 --> 00:00:05,510
+In the last lecture you learn how to make the post selectable
+
+2
+00:00:05,660 --> 00:00:10,380
+but that of course has nothing to do with axios or with HTTP requests,
+
+3
+00:00:10,400 --> 00:00:13,070
+it was vanilla react, a nice practice
+
+4
+00:00:13,070 --> 00:00:17,230
+but now let's move on and let's actually send HTTP request
+
+5
+00:00:17,330 --> 00:00:22,670
+once we got a valid ID. Now which lifecycle hook should we use here?
+
+6
+00:00:22,910 --> 00:00:27,630
+Let's have a look. If we have a look at the lifecycle hook for updating components
+
+7
+00:00:27,740 --> 00:00:34,100
+and we are of course speaking about the update lifecycle hook because the component is there right from
+
+8
+00:00:34,100 --> 00:00:35,060
+the start
+
+9
+00:00:35,210 --> 00:00:38,900
+but data should be fetched once we receive a new prop ID,
+
+10
+00:00:38,960 --> 00:00:46,030
+so that is what we're looking for. Then componentDidUpdate is a good place for causing side effects,
+
+11
+00:00:46,250 --> 00:00:48,110
+it also has one issue though.
+
+12
+00:00:48,260 --> 00:00:55,690
+If we update the state in there, we update the component again and we therefore enter an infinite loop,
+
+13
+00:00:55,700 --> 00:00:57,890
+that is something we'll have to watch out for
+
+14
+00:00:58,040 --> 00:01:03,000
+but first of all let's make the HTTP request. I'll head over to full post
+
+15
+00:01:03,200 --> 00:01:12,620
+and first of all we need to import axios here, axios from the axios package. Then in full post, in the
+
+16
+00:01:12,620 --> 00:01:21,050
+component, we can implement componentDidUpdate and make the HTTP request, so there I can use axios get
+
+17
+00:01:21,460 --> 00:01:29,240
+and now the URL has to target one single post by the ID. if we have a look at our dummy backend,
+
+18
+00:01:29,540 --> 00:01:37,910
+there is a route for that, get and then post slash the ID, so we can copy that URL and now make a
+
+19
+00:01:37,910 --> 00:01:44,810
+request to that URL though of course we'll not hard code one in there but instead use plus
+
+20
+00:01:44,900 --> 00:01:49,440
+this.props.id to take the ID we got on the props.
+
+21
+00:01:49,700 --> 00:01:53,820
+Of course we also don't want to send this request if ID is null
+
+22
+00:01:53,830 --> 00:01:55,630
+so we don't want to do this
+
+23
+00:01:55,910 --> 00:01:57,930
+if the idea is invalid.
+
+24
+00:01:58,490 --> 00:02:04,240
+So I will check if this.props.id is treated as true which means it is a valid ID
+
+25
+00:02:04,520 --> 00:02:11,030
+and then we can actually send this request with axios and the get method to that
+
+26
+00:02:11,030 --> 00:02:23,750
+URL. Now if I do whoops at that then block here, I can output that with console log response and we
+
+27
+00:02:23,750 --> 00:02:28,380
+should see a response as soon as we clicked on one element.
+
+28
+00:02:28,400 --> 00:02:32,480
+So if we click on element here we see the response.
+
+29
+00:02:32,480 --> 00:02:34,660
+Now this works fine here,
+
+30
+00:02:34,850 --> 00:02:36,680
+however of course you want to output it.
+
+31
+00:02:36,920 --> 00:02:44,270
+So we should also manage some state in here and maybe we have like a loaded post in this element, in
+
+32
+00:02:44,270 --> 00:02:54,740
+this component which is initially set to null then here we can output loadedPost.title and loadedPost.content
+
+33
+00:02:54,920 --> 00:02:57,950
+in our post
+
+34
+00:02:57,950 --> 00:03:05,750
+jsx content. And in here where I log the response, I won't log it anymore,
+
+35
+00:03:05,930 --> 00:03:07,630
+instead what I want to do here is
+
+36
+00:03:07,670 --> 00:03:16,190
+I want to call this.setState and there set the loaded post to the response data which will be the
+
+37
+00:03:16,230 --> 00:03:23,330
+post that we fetched from the backend. And in our jsx code of course we should access loaded post
+
+38
+00:03:23,570 --> 00:03:32,380
+on this.state, like that. Now with that, if we go to our application and reload it and I click on a post,
+
+39
+00:03:33,130 --> 00:03:38,050
+we actually receive an error that we can't read title of
+
+40
+00:03:38,050 --> 00:03:46,620
+null. This makes a lot of sense because here in our jsx code for full post, we immediately access this.
+
+41
+00:03:46,630 --> 00:03:52,090
+state.loadedPost.title and we do this as soon as we get a valid property.
+
+42
+00:03:52,090 --> 00:03:58,960
+Now we get a valid property before we have a valid loaded post because as you learned, fetching data
+
+43
+00:03:58,960 --> 00:04:00,320
+is asynchronous.
+
+44
+00:04:00,340 --> 00:04:06,940
+So first we get the ID and then a little bit later, we get the loaded post but we reran it in the dom immediately
+
+45
+00:04:06,940 --> 00:04:08,770
+after we got the id.
+
+46
+00:04:09,310 --> 00:04:15,970
+We can simply fix this by adding a check for the validity of the ID with this.props.id as we already
+
+47
+00:04:15,970 --> 00:04:24,910
+have it and say that in this case, post should actually be a paragraph still but maybe a paragraph where
+
+48
+00:04:24,910 --> 00:04:31,130
+we simply say loading because we selected a post but the data isn't there yet.
+
+49
+00:04:31,180 --> 00:04:37,600
+And then in the bottom if statement, we check if state.loadedPost has been set because initially it's
+
+50
+00:04:37,600 --> 00:04:40,020
+null so it would be treated as false
+
+51
+00:04:40,180 --> 00:04:44,470
+but as soon as we got one, this will return to true or resolve to true
+
+52
+00:04:44,650 --> 00:04:47,020
+and hence, we will render this jsx code.
+
+53
+00:04:47,230 --> 00:04:53,710
+And now if I save this and I click on a post we see loading for a fraction of a second and then we
+
+54
+00:04:53,710 --> 00:04:55,390
+see the post.
+
+55
+00:04:55,390 --> 00:04:57,320
+We also got an issue here though,
+
+56
+00:04:57,550 --> 00:05:05,890
+if we open the network tab, you'll see that we're resending after request after request after request,
+
+57
+00:05:06,100 --> 00:05:08,990
+we can simply reload the page to make sure this stops,
+
+58
+00:05:09,190 --> 00:05:20,920
+but why are we seeing this? We are seeing these infinite requests because we're updating the state from
+
+59
+00:05:20,920 --> 00:05:27,940
+within componentDidUpdate and this creates an infinite loop because when we call setState, the component
+
+60
+00:05:27,940 --> 00:05:31,950
+will be updated and componentDidUpdate will execute again.
+
+61
+00:05:32,320 --> 00:05:41,080
+So we have to make sure that we only send this HTTP request and hence update the state if we actually
+
+62
+00:05:41,100 --> 00:05:42,880
+loaded a new post.
+
+63
+00:05:42,880 --> 00:05:44,510
+So how do we do that?
+
+64
+00:05:44,710 --> 00:05:53,470
+We can enter if check inside the outer if check here and there we can show if we already have loaded
+
+65
+00:05:53,470 --> 00:05:55,350
+post, if that is true.
+
+66
+00:05:55,360 --> 00:05:59,020
+So that is a first indicator that we did already load a post.
+
+67
+00:05:59,230 --> 00:06:06,310
+Then of course we also want to make sure that for this loaded post, the ID is not the same ID as we just
+
+68
+00:06:06,310 --> 00:06:12,940
+got via props because that would mean the ID for which we want to fetch new data is the ID we already
+
+69
+00:06:12,940 --> 00:06:16,940
+have loaded, so we don't need to make HTTP request in this case.
+
+70
+00:06:17,320 --> 00:06:20,080
+So here we'll check if we have a loaded post
+
+71
+00:06:20,080 --> 00:06:29,170
+and then if this.state.loadedPost.id is unequal to props.id.
+
+72
+00:06:29,230 --> 00:06:35,770
+So if we essentially try to get data for a new post which is fine, in which case I want to make the HTTP request,
+
+73
+00:06:36,130 --> 00:06:37,200
+in all other cases,
+
+74
+00:06:37,210 --> 00:06:41,740
+I won't go ahead and make it because then, we're trying to fetch data for a request
+
+75
+00:06:41,770 --> 00:06:47,560
+we already have, for a post we already have, this should be this.props, of course.
+
+76
+00:06:47,560 --> 00:06:51,070
+Now let's see, if I load that page and I click on a post,
+
+77
+00:06:51,430 --> 00:06:54,010
+well we never get the post data,
+
+78
+00:06:54,010 --> 00:06:57,000
+so somehow our check here is failing.
+
+79
+00:06:57,250 --> 00:07:03,040
+Well we have to amend it a little bit because initially it will of course fail because loaded post is
+
+80
+00:07:03,040 --> 00:07:04,230
+null initially
+
+81
+00:07:04,270 --> 00:07:07,530
+so this would only succeed if we had at least one post loaded.
+
+82
+00:07:07,840 --> 00:07:16,270
+So I will instead check if we don't have this.state.loadedPost or if we do have it but if it then also
+
+83
+00:07:16,270 --> 00:07:19,600
+has a different ID than the ID we plan on loading.
+
+84
+00:07:19,630 --> 00:07:25,660
+So we go ahead and make the request even if we have no loaded post or if we do have one but the IDs
+
+85
+00:07:25,660 --> 00:07:26,590
+are different,
+
+86
+00:07:26,760 --> 00:07:27,060
+whoops
+
+87
+00:07:27,100 --> 00:07:28,620
+this should be loaded post though.
+
+88
+00:07:28,660 --> 00:07:34,930
+So now if we save this and we go back to the application, on the network tab if I click a post it loads and
+
+89
+00:07:35,020 --> 00:07:37,510
+it doesn't start sending infinity requests
+
+90
+00:07:37,720 --> 00:07:42,940
+and it can still switch but we only get one request per switch and that is exactly what we want.
+
+91
+00:07:42,940 --> 00:07:49,600
+So now we got a way of safely fetching data in componentDidUpdate and still componentDidUpdate is
+
+92
+00:07:49,600 --> 00:07:54,410
+the right place because we want to fetch data whenever we receive new props.
+

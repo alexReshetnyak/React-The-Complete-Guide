@@ -1,0 +1,80 @@
+1
+00:00:02,170 --> 00:00:07,400
+W ostatnim wykadzie stworzylimy wasny komponent, skadnik osobowy.
+
+2
+00:00:07,400 --> 00:00:10,640
+Pytanie, jaka jest tego dua zaleta?
+
+3
+00:00:11,060 --> 00:00:19,020
+Komponenty s niesamowite, poniewa moemy skupi nasz kod w kadym pliku, a tym samym sprawi, e bdzie on
+
+4
+00:00:19,070 --> 00:00:26,690
+duo atwiejszy w utrzymaniu. Nie umieszczamy wszystkiego w aplikacji. Plik js, ktry naprawd moe by zatoczony dla wikszych aplikacji,
+
+5
+00:00:26,990 --> 00:00:30,110
+a ten komponent jest rwnie wielokrotnego uytku i konfigurowalny.
+
+6
+00:00:30,290 --> 00:00:34,460
+Teraz wrc do konfiguracji czci, ponowne uycie jest do proste,
+
+7
+00:00:34,700 --> 00:00:38,510
+moemy po prostu skopiowa i wklei je tak czsto, jak
+
+8
+00:00:38,510 --> 00:00:46,010
+chcemy, moe trzy razy i po prostu robic to i zapisujc ten plik, otrzymujemy wynik wielokrotnie i to bardzo
+
+9
+00:00:46,010 --> 00:00:50,510
+atwy sposb ponownego uycia go w dowolnym miejscu w naszej aplikacji.
+
+10
+00:00:50,720 --> 00:00:57,160
+A gdyby nasza aplikacja zawieraa coraz wicej komponentw, bardzo atwo byoby zbudowa j z tych wszystkich
+
+11
+00:00:57,160 --> 00:01:01,350
+skadnikw i uywa ich wszdzie tam, gdzie potrzebujemy ich uywa
+
+12
+00:01:01,400 --> 00:01:02,190
+w naszej
+
+13
+00:01:02,330 --> 00:01:06,190
+aplikacji, teraz jest to faktycznie nasz niestandardowy element html.
+
+14
+00:01:06,830 --> 00:01:12,230
+Moemy to rwnie skonfigurowa, ale zanim to zrobimy, zmiemy co jeszcze
+
+15
+00:01:12,380 --> 00:01:17,900
+na temat naszego kodu reakcji, poniewa teraz wszystko jest statyczne, mamy
+
+16
+00:01:18,050 --> 00:01:23,730
+nasz niestandardowy komponent, ale wci mamy po prostu troch statycznego tekstu
+
+17
+00:01:23,750 --> 00:01:27,230
+HTML, troch treci HTML na kocu .
+
+18
+00:01:27,230 --> 00:01:35,810
+Teraz czsto szablony, kod jsx powinny by dynamiczne, powinny wyprowadza rne rzeczy w zalenoci od stanu
+
+19
+00:01:35,810 --> 00:01:39,250
+aplikacji lub wprowadzania danych przez uytkownika.
+
+20
+00:01:39,470 --> 00:01:45,490
+Teraz zrobimy to duo na kursie, ale zamy podstawy tego w nastpnym wykadzie.
+

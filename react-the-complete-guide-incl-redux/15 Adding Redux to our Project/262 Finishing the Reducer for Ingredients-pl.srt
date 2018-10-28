@@ -1,0 +1,324 @@
+1
+00:00:02,140 --> 00:00:08,470
+Teraz z ich dziaaniami producenci tworz przynajmniej podstawy na ten temat i nasz histori zwizan
+
+2
+00:00:08,470 --> 00:00:09,470
+z aplikacj.
+
+3
+00:00:09,640 --> 00:00:12,630
+Wypenijmy naszego producenta pewnym yciem.
+
+4
+00:00:12,940 --> 00:00:17,170
+I w kocu musimy mie dwa dziaania, ktre tutaj ustanowilimy.
+
+5
+00:00:17,320 --> 00:00:20,200
+Dodawanie skadnikw i usuwanie skadnikw.
+
+6
+00:00:20,290 --> 00:00:26,010
+Dlatego jak zwykle dodam mj program do wprowadzania instrukcji switch i typ akcji switchy.
+
+7
+00:00:26,080 --> 00:00:29,930
+Pamitaj, e zawsze musisz mie waciwo typu na swojej akcji.
+
+8
+00:00:29,930 --> 00:00:32,080
+Dlatego moemy tutaj bezpiecznie wyj.
+
+9
+00:00:32,530 --> 00:00:37,120
+Teraz otrzymujemy dwa typy, ktre chcemy obsuy w naszych opisach spraw.
+
+10
+00:00:37,120 --> 00:00:44,650
+Pierwszy to typ akcji dodaj skadnik, w ktrym chcemy zwrci obiekt, ktry podae
+
+11
+00:00:44,650 --> 00:00:45,580
+przez Holstona.
+
+12
+00:00:45,940 --> 00:00:51,500
+Drugi to przypadek, w ktrym mamy nasze typy akcji i tam usuwamy skadnik.
+
+13
+00:00:51,730 --> 00:01:02,670
+I tutaj te chcemy zwrci jaki sklep, w ktrym znajduje si jaki obiekt pastwowy, a na kocu zawsze chcemy powrci.
+
+14
+00:01:02,880 --> 00:01:09,850
+Po prostu powiedz, na wypadek, gdybymy nie znaleli si w tych przypadkach, ale oto mj dowd tosamoci Dutreuila
+
+15
+00:01:09,850 --> 00:01:13,630
+narzeka, e powinnimy mie domylny stan lub domylny handler.
+
+16
+00:01:13,630 --> 00:01:18,490
+Dodajmy wic domylnie do naszej instrukcji switch i wrmy do stanu tutaj.
+
+17
+00:01:18,550 --> 00:01:21,630
+Zostanie to osignite, jeli nie ma zastosowania aden z przypadkw.
+
+18
+00:01:21,640 --> 00:01:27,250
+Znowu nie potrzebujemy instrukcji break, poniewa w kadym przypadku zwracamy si w kadym przypadku, wic wykonanie kodu
+
+19
+00:01:27,250 --> 00:01:29,410
+nie bdzie kontynuowane w przypadku dysfunkcji.
+
+20
+00:01:29,410 --> 00:01:34,530
+Teraz, aby doda skadniki, ktre oczywicie chcemy doda do naszego obiektu skadnikw.
+
+21
+00:01:34,540 --> 00:01:36,070
+Teraz zaczlimy od NULL.
+
+22
+00:01:36,090 --> 00:01:45,010
+Ale pamitaj o konstruktorze Burgi, od ktrego zaczynamy teraz, poniewa komponent zrobi MT. W
+
+23
+00:01:45,100 --> 00:01:48,750
+rzeczywistoci adujemy nasze skadniki z Internetu.
+
+24
+00:01:48,760 --> 00:01:55,360
+To jest co, co naprawd dodam, ale na razie, poniewa nie nauczylimy si obsugi
+
+25
+00:01:55,360 --> 00:02:03,700
+asynchronicznego kodu tutaj, zignoruj ten rok w zasadzie skomentuj kod i komponent, ktry montuj i zaczn od moich
+
+26
+00:02:03,700 --> 00:02:09,550
+wasnych skadnikw utworzonych tutaj w stanie wic twoje skadniki nie bd No.
+
+27
+00:02:09,610 --> 00:02:10,780
+W moim reduktorze.
+
+28
+00:02:10,930 --> 00:02:21,650
+Ale zamiast tego bd obiektem, w ktrym mamy zerowy zerowy ser Siro zerowy z bekonem i spotykamy zero.
+
+29
+00:02:21,660 --> 00:02:24,930
+Ponownie jest to tylko tymczasowe odwrcenie.
+
+30
+00:02:25,000 --> 00:02:31,990
+Teraz, gdy dodajemy skadnik, musimy oczywicie uzyska informacje, ktry skadnik Thaddeus i dany
+
+31
+00:02:31,990 --> 00:02:38,010
+skadnik musimy po prostu doda, abymy nie musieli go pobiera, poniewa
+
+32
+00:02:38,050 --> 00:02:39,370
+zawsze plus jeden.
+
+33
+00:02:39,520 --> 00:02:42,310
+Ale musimy wiedzie, ktry to skadnik.
+
+34
+00:02:42,310 --> 00:02:48,910
+Wic to, co zrobimy tutaj, to przede wszystkim skopiowanie caego starego stanu z operatorem rozprzestrzeniania, tak
+
+35
+00:02:48,940 --> 00:02:54,940
+e kiedy ustawimy nowe skadniki, zachowamy rwnie dowolne z naszych waciwoci, najpierw dystrybuujc je
+
+36
+00:02:54,940 --> 00:02:57,030
+na tym nowym obiekcie javascript.
+
+37
+00:02:57,400 --> 00:02:59,820
+Ale to jest druga rzecz, ktr chcemy zrobi.
+
+38
+00:02:59,860 --> 00:03:06,150
+Ustaw skadniki na co nowego, co nie powinno by nowym obiektem javascript.
+
+39
+00:03:06,220 --> 00:03:08,500
+Niezmienno nie naley ponownie uywa starej.
+
+40
+00:03:08,500 --> 00:03:15,000
+Utwrz nowy, w ktrym najpierw rozprowadzam wszystkie waciwoci skadnikw pastwowych.
+
+41
+00:03:15,390 --> 00:03:23,980
+Ponownie robi si to, aby naprawd stworzy nowy obiekt, po prostu dystrybucja stanu tutaj nie zrobi tego,
+
+42
+00:03:23,980 --> 00:03:27,080
+poniewa nie tworzy gbokich klonw obiektw.
+
+43
+00:03:27,100 --> 00:03:31,600
+Nie wchodzi w obiekty i nie tworzy nowych obiektw dla tych dwch elementw.
+
+44
+00:03:31,750 --> 00:03:37,930
+Po prostu kopiuje otaczajcy obiekt, ale skadniki, ktre s obiektami, same bd
+
+45
+00:03:37,930 --> 00:03:45,280
+wskazyway na ten stary obiekt, podczas gdy naprawimy to, rozkadajc waciwoci tego starego obiektu
+
+46
+00:03:45,280 --> 00:03:46,990
+na nowy obiekt tutaj.
+
+47
+00:03:46,990 --> 00:03:53,920
+Teraz w tym nowym obiekcie skadnikw chcemy zastpi dany skadnik, ktry musimy
+
+48
+00:03:53,920 --> 00:03:56,950
+pobra jako adunek tego dziaania.
+
+49
+00:03:57,160 --> 00:04:04,600
+Teraz w roku 6 istnieje ta specjalna skadnia, ktrej mona uy do dynamicznego nadpisywania waciwoci w
+
+50
+00:04:04,600 --> 00:04:05,890
+danym obiekcie javascript.
+
+51
+00:04:06,070 --> 00:04:08,080
+Moesz teraz uy nawiasw kwadratowych.
+
+52
+00:04:08,080 --> 00:04:10,410
+To nie tworzy tutaj tablicy.
+
+53
+00:04:10,690 --> 00:04:17,410
+Zamiast tego moesz teraz przekaza zmienn ponad co, co zawiera nazw, ktrej chcesz uywa jako
+
+54
+00:04:17,410 --> 00:04:22,840
+nazwy waciwoci, i oczekuj, e nazwa tej waciwoci zostanie dodana do mojej akcji.
+
+55
+00:04:22,900 --> 00:04:30,280
+By moe na nazwie skadnika nazwa skadnika jest teraz czym, co dostajemy jako adunek akcji, a
+
+56
+00:04:30,730 --> 00:04:35,190
+nastpnie po prostu rozprowadzamy wszystkie skadniki do naszego nowego obiektu.
+
+57
+00:04:35,260 --> 00:04:37,780
+Wic ten obiekt trzyma solidne miso.
+
+58
+00:04:37,780 --> 00:04:40,480
+Boczek i ser i jeden z nich.
+
+59
+00:04:40,510 --> 00:04:46,120
+To, co otrzymamy jako adunek akcji, otrzyma now warto.
+
+60
+00:04:46,150 --> 00:04:51,030
+Celujemy za pomoc tej skadni, a nastpnie dwukropka i nowej wartoci.
+
+61
+00:04:51,070 --> 00:05:00,480
+C, ustawiamy t now warto na now warto teraz po prostu jako skadniki pastwowe, a nastpnie ponownie wybierz
+
+62
+00:05:00,480 --> 00:05:05,870
+nazw danego skadnika, wic teraz fatuus stara warto tego skadnika.
+
+63
+00:05:05,870 --> 00:05:11,170
+Tak jak 0 lub 1 lub cokolwiek to byo, a nastpnie dodajemy plus jeden.
+
+64
+00:05:11,180 --> 00:05:17,360
+Tak wic teraz otrzymujemy liczb starych skadnikw, dodajc jeden i przypiszmy ten sodki skadnik,
+
+65
+00:05:17,360 --> 00:05:20,530
+w ktrym nadpisujemy kopi, ktr tu stworzylimy.
+
+66
+00:05:20,550 --> 00:05:25,670
+Teraz zwracamy nowe sowo, a nie stan ze zaktualizowanymi skadnikami.
+
+67
+00:05:26,060 --> 00:05:28,520
+Tak wanie dodajemy skadnik.
+
+68
+00:05:28,550 --> 00:05:30,480
+Jak usun jeden.
+
+69
+00:05:30,830 --> 00:05:33,020
+C za usunicie.
+
+70
+00:05:33,020 --> 00:05:39,250
+Chc te stworzy now wersj mojego stanu, w ktrej po prostu zmniejszam jeden skadnik o jeden.
+
+71
+00:05:39,350 --> 00:05:46,200
+I na to oczywicie zaczynamy od skopiowania tego kodu z logiki skadnika ADD.
+
+72
+00:05:46,460 --> 00:05:54,980
+Nadal kopiujemy stary stan, a nastpnie dystrybuujemy waciwoci skadnikw do tego nowego obiektu skadnikw.
+
+73
+00:05:55,010 --> 00:06:00,830
+Bior te tutaj skadnik, ktry otrzymuj jako rzeczywist adunek dla tego przypadku.
+
+74
+00:06:01,100 --> 00:06:02,860
+Ale teraz nie dodaj.
+
+75
+00:06:02,900 --> 00:06:10,350
+Usuwam jedn i razem zebralimy uster, ktry powinien by w stanie zaktualizowa nasze skadniki.
+
+76
+00:06:10,400 --> 00:06:13,080
+Nie zaktualizuje teraz ceny.
+
+77
+00:06:13,160 --> 00:06:15,060
+Zajmiemy si tym pniej.
+
+78
+00:06:15,380 --> 00:06:18,230
+Ale zaktualizujemy nasze skadniki tutaj.
+
+79
+00:06:18,380 --> 00:06:24,560
+Teraz, w nastpnym wykadzie, oczywicie chc poczy to z moim burgerem Boler.
+
+80
+00:06:24,700 --> 00:06:32,900
+Wic uylimy standardowego uster i tych dziaa do zarzdzania RIA, ktre dodajemy do naszego burgera lub usuwamy z
+
+81
+00:06:32,900 --> 00:06:33,290
+niego.
+

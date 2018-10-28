@@ -1,0 +1,80 @@
+1
+00:00:02,290 --> 00:00:06,500
+Bienvenido a desmantelar en este coro lo voy a decir de inmediato.
+
+2
+00:00:06,520 --> 00:00:08,480
+Este mdulo es opcional.
+
+3
+00:00:08,590 --> 00:00:15,780
+Si ya conoce javascript de prxima generacin, cosas como Aero le permiten a Konst, etc.
+
+4
+00:00:15,880 --> 00:00:22,450
+Puede muy voltios si este modulo tiene mdulos para usted si conoce javascript pero no ha trabajado
+
+5
+00:00:22,450 --> 00:00:30,040
+con ESX o cualquier adoracin ABA de un guin, entonces javascript como lo usamos en este curso a veces puede
+
+6
+00:00:30,040 --> 00:00:35,680
+parecer un nuevo lenguaje para usted debido a todo la siguiente generacin de funciones reacciona
+
+7
+00:00:35,680 --> 00:00:36,600
+Eppes generalmente.
+
+8
+00:00:36,730 --> 00:00:41,960
+Ahora no estoy usando estas caractersticas de prxima generacin porque quiero presumir o algo por el estilo.
+
+9
+00:00:42,100 --> 00:00:48,250
+Reaccionar EBS por lo general estn construidos con la ltima versin de javascript y el uso de las
+
+10
+00:00:48,590 --> 00:00:55,240
+caractersticas de prxima generacin nos permite escribir aplicaciones limpias y robustas para reaccionar reaccionan y resuelven utilizando muchas caractersticas de
+
+11
+00:00:55,240 --> 00:00:56,150
+Next Generation Chalis.
+
+12
+00:00:56,380 --> 00:01:01,780
+Por lo tanto, es importante que comprenda todas estas caractersticas y no se deje confundir por esto.
+
+13
+00:01:01,870 --> 00:01:06,020
+A veces, palabras de javascript realmente extraas.
+
+14
+00:01:06,220 --> 00:01:12,310
+Javascript est evolucionando rpidamente y, por lo tanto, las nuevas caractersticas pueden verse diferentes pero realmente
+
+15
+00:01:12,310 --> 00:01:15,330
+nos permiten, como desarrolladores, hacer cosas ms poderosas.
+
+16
+00:01:15,370 --> 00:01:21,420
+que usamos en este Chloris para que el cdigo de all en adelante te parezca un poco menos extrao.
+
+17
+00:01:21,470 --> 00:01:24,700
+Este Marshallese para ti, querr que tengas las caractersticas principales
+
+18
+00:01:24,820 --> 00:01:28,460
+Y nuevamente sintete libre de saltarte este mdulo si ya lo sabes.
+
+19
+00:01:28,510 --> 00:01:33,460
+Sintete libre de regresar siempre si ms adelante en el curso encuentras algo que te
+
+20
+00:01:33,460 --> 00:01:34,210
+parece extrao.
+

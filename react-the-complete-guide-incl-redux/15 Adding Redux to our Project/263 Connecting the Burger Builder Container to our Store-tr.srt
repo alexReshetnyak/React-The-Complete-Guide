@@ -1,0 +1,468 @@
+1
+00:00:02,250 --> 00:00:06,730
+Fikirleri imdi en azndan maddelerle ilgili olarak bitti.
+
+2
+00:00:07,080 --> 00:00:11,310
+Maazamza bir burger kab veya konteyner balayalm.
+
+3
+00:00:11,400 --> 00:00:16,890
+nceden nmzdeki  ylda maazay kurduk, iki salayc getikten sonra
+
+4
+00:00:16,890 --> 00:00:18,060
+salaycya verdik.
+
+5
+00:00:18,270 --> 00:00:22,280
+imdi, oradaki verileri almak iin burger bowlingisi zerinde almann zaman geldi.
+
+6
+00:00:22,680 --> 00:00:24,230
+Ve bunun nasl altn renirsin.
+
+7
+00:00:24,240 --> 00:00:26,870
+Connectome ilevi ile alr.
+
+8
+00:00:26,910 --> 00:00:29,980
+Yeniden hareket reduksnden ithal ediyoruz.
+
+9
+00:00:30,030 --> 00:00:38,480
+O halde, oradan oraya re-act redux'ten ithal edelim ve bu ithalat addasyla
+
+10
+00:00:38,570 --> 00:00:40,650
+ihracatmz onunla saralm.
+
+11
+00:00:40,730 --> 00:00:47,980
+Kesin olmak gerekirse, hzl olmas iin onunla harita datmn santrallara ve
+
+12
+00:00:47,990 --> 00:00:52,860
+harita durumlarna santraln Constance'na, pastac Berger Boulder'a yapalm.
+
+13
+00:00:53,180 --> 00:01:01,940
+Ancak burada bir sorunla kar karyayz; burada verdiimiz hata ileyici yksek sipari bileeni ile ihracatmz saran daha
+
+14
+00:01:01,970 --> 00:01:05,070
+yksek bir sipari bileeni zaten var.
+
+15
+00:01:05,570 --> 00:01:07,500
+Bu aslnda sorun deil.
+
+16
+00:01:07,520 --> 00:01:11,950
+stediiniz kadar yksek sipari bileeni alabilirsiniz.
+
+17
+00:01:12,170 --> 00:01:18,320
+Connect'in yapacaklar nihayetinde, paketledii bileende yalnzca birka sahne alacak.
+
+18
+00:01:18,620 --> 00:01:25,280
+Bu sahneyi kendi st dzey bileenlerinizde geirdiiniz srece bu iyi bir sonu vermelidir;
+
+19
+00:01:25,290 --> 00:01:32,210
+nk yksek sipari bileenlerimiz tarafndan ayarlanm herhangi bir sahne yine de iyi durumda
+
+20
+00:01:32,210 --> 00:01:32,790
+geecektir.
+
+21
+00:01:32,960 --> 00:01:35,690
+Dolaysyla bu hi de bir sorun tekil etmemelidir.
+
+22
+00:01:35,930 --> 00:01:43,370
+edelim. Hangi baklar burgerle bulacamz bulalm Boler harita siparii ve harita durumunu sahibe
+
+23
+00:01:43,370 --> 00:01:53,840
+gnderecek Siparii tersine evireceim nk daha nce Conn's harita durumunu pervanenin harita durumuna dntreceksiniz Pervane, otomatik olarak durumu alp,
+
+24
+00:01:53,840 --> 00:02:02,000
+hangi mlkn eyaletin hangi Sly'sini tutmas gerektiini tanmladmz bir javascript nesnesi dndren bir ileve sahip.
+
+25
+00:02:02,000 --> 00:02:08,270
+imdi ie yarayp yaramayacana bakalm, Burger Bolar'a geri dnelim ve hadi
+
+26
+00:02:08,270 --> 00:02:10,540
+bizim Q Constans'mz tedavi
+
+27
+00:02:10,880 --> 00:02:19,280
+Dolaysyla, ierdekiler iin yon G'ler yaratabiliriz ve eyaletimizdeki bu madde mlkiyetine erimek iin devlet
+
+28
+00:02:19,280 --> 00:02:26,480
+bileenlerini atayabiliriz ve u an bir ilev alr ya da gnderme ilevini
+
+29
+00:02:26,480 --> 00:02:30,840
+bir argman olarak alan bir ilevi tutarz.
+
+30
+00:02:31,250 --> 00:02:35,360
+Ve sonra tm dnler, belki de ilev eletirmeleriyle nesne buluyor.
+
+31
+00:02:35,360 --> 00:02:43,100
+Bu durumda ve burada, Shabelle propunun temelde veya tetiklenebilecek iki koltuu sevk
+
+32
+00:02:43,100 --> 00:02:44,480
+etmek istiyorum.
+
+33
+00:02:44,480 --> 00:02:53,000
+Elbette bir katk maddesi ekleyeceim ve burada bu elbette tamamen size kalm bir mlk ve bu mlk
+
+34
+00:02:53,000 --> 00:02:54,130
+adn ekleyeceim.
+
+35
+00:02:54,620 --> 00:03:02,690
+Yani burada, anons fonksiyonuna sahip olacam, sonra gnderimi gerekletirip, burada bir ADD Ingredion eylem
+
+36
+00:03:02,690 --> 00:03:09,470
+trnn olduu bir kanal eridi Optik geireceim ve bunun iin her yolu
+
+37
+00:03:09,470 --> 00:03:18,020
+dosyaya tayacam ve her eyi eylem olarak ie aktaracam maaza klasrnde iki seviye bulabildiimiz bu
+
+38
+00:03:18,020 --> 00:03:21,790
+eylem trleri klasrnden trler ve eylemler der.
+
+39
+00:03:21,790 --> 00:03:24,440
+lem trleri burada saklanr.
+
+40
+00:03:24,440 --> 00:03:26,600
+imdi burada imzalayacam ey bu mu?
+
+41
+00:03:26,600 --> 00:03:29,960
+Tr, aksiyon trleri iindekileri ekle.
+
+42
+00:03:30,440 --> 00:03:37,820
+Ve imdi redktre bir baktmzda ve muhtemelen hepinizin hepsinin bir malzemeyi kaldrmak gibi bir
+
+43
+00:03:37,820 --> 00:03:40,790
+maddeyi hatrladnzda bir yk yklemesi gerekiyor.
+
+44
+00:03:40,850 --> 00:03:45,070
+Orada bileen ismini kullanrz ve eylem zerine eriiriz.
+
+45
+00:03:45,260 --> 00:03:49,470
+Bu yzden trnzn yannda madde adn iletmemiz gerekiyor.
+
+46
+00:03:49,480 --> 00:03:57,730
+Buradaki burger reticisine geri dnmek iin bir ey var, ancak ayn zamanda madde adm eylem mlkiyetim ve
+
+47
+00:03:57,760 --> 00:03:59,950
+madde ismi de ayarlayacam.
+
+48
+00:03:59,950 --> 00:04:06,480
+imdi burada bu ileve girmeyi umduum bir ey var, bu yzden burada iyon adn syleyeceim.
+
+49
+00:04:06,490 --> 00:04:12,880
+Bu argmana, tabii ki ne istersen ismini koyabilirsin ve sonra burada bir deer
+
+50
+00:04:12,910 --> 00:04:21,490
+olarak imzalayacam ve sonra bu mlkn oaltlmas ve kendi Ingredion kaldrlan mlkmn, ayn zamanda madde adn karlad yerden
+
+51
+00:04:21,490 --> 00:04:22,110
+ekleyeceim.
+
+52
+00:04:22,210 --> 00:04:30,520
+Ama sonra burada madde kaldrma eylemi gnderdim, ancak hala madde adm getim.
+
+53
+00:04:30,520 --> 00:04:37,630
+imdi bu iki sabite harita durumunu iki sahne ve bu yamay haritalyoruz iki sahne
+
+54
+00:04:37,630 --> 00:04:39,860
+kuruyoruz, bileeni redux'e balayabiliyoruz.
+
+55
+00:04:40,210 --> 00:04:47,470
+ve bu yamay argmanlar olarak deste olarak eletirelim ve daha sonra bu pasters tm genilik
+
+56
+00:04:47,470 --> 00:04:55,120
+hata ileyici ars ilevi kesme ilev ars iin bir argman olarak bizi bu ayarla dndrr.
+
+57
+00:04:55,120 --> 00:04:59,470
+imdi baladmz balam ekleyelim ve haritalar States'i sahtelerie geelim
+
+58
+00:04:59,470 --> 00:05:05,100
+imdi maazamza bal Bergere Boulder konteynerimiz var.
+
+59
+00:05:05,320 --> 00:05:12,430
+imdi, Burger Bergere'de ya da ben gibi tm bu sahne takmlarn kullanalm ve u
+
+60
+00:05:12,430 --> 00:05:16,480
+anda enerjilerimizi kullanmak istediimiz malzemeleri kullandmz her yerde.
+
+61
+00:05:16,750 --> 00:05:22,120
+Ve en azndan u anki fiyat iin yerel devleti artk
+
+62
+00:05:22,120 --> 00:05:26,800
+maddeler iin kullanmadm gerekten netletirmek iin buradaki malzemeleri kaldracam.
+
+63
+00:05:26,800 --> 00:05:33,940
+Bu yzden bunu dzeltelim veya bunu bir madde yapalm ve madde tedarikisini kaldralm.
+
+64
+00:05:33,940 --> 00:05:36,890
+Bunu tamamen kaldrabilmeliyiz.
+
+65
+00:05:36,910 --> 00:05:41,760
+Fakat daha sonra buradan toplam fiyat gncelleme kodu setiinizden beri burada brakacam.
+
+66
+00:05:41,890 --> 00:05:44,000
+Ancak bunlar daha fazla yrtmek istemiyoruz.
+
+67
+00:05:44,290 --> 00:05:51,390
+Bunun yerine, bu devlet ieriklerine eritiimiz her yerde render yntemine geersek, bunun yerine
+
+68
+00:05:51,400 --> 00:05:54,240
+enerji isteyen sahtekarlar kullanmak istiyoruz.
+
+69
+00:05:54,490 --> 00:05:57,450
+Harita durumuna getirdiimiz mlk var.
+
+70
+00:05:57,520 --> 00:06:05,580
+Props burada yleyse, bir saatlik render metodunu kullanmak istediim ey bu sahne Algy'nin
+
+71
+00:06:05,610 --> 00:06:09,270
+yerine devlet materyali durumu hatas vb.
+
+72
+00:06:09,300 --> 00:06:11,270
+imdilik dokunmayacaz.
+
+73
+00:06:11,580 --> 00:06:16,920
+Ama burada rnein devlet katk maddeleri devleti bu sahne ve.
+
+74
+00:06:17,300 --> 00:06:20,280
+Ve ite, ierikleri geirmemiz gereken Bergere buras.
+
+75
+00:06:20,280 --> 00:06:21,050
+Bil bakalm ne oldu.
+
+76
+00:06:21,120 --> 00:06:23,430
+Bu sahne ben-ve.
+
+77
+00:06:23,930 --> 00:06:25,410
+Ve bunun gibi.
+
+78
+00:06:25,640 --> 00:06:32,300
+imdi ben yeil ekleme zerinde almadan nce her eyden nce tm malzemeleri deitireceim ve sahne takmlarn burada kaldracam.
+
+79
+00:06:32,360 --> 00:06:34,260
+Buraya devam etmeme izin ver.
+
+80
+00:06:34,260 --> 00:06:40,700
+Btn iler Ben Angie'nin nndr ve yle olmal.
+
+81
+00:06:40,700 --> 00:06:44,990
+imdi katk maddesi zerinde alalm ve bileen ileyicilerini kartalm.
+
+82
+00:06:45,320 --> 00:06:46,980
+Buna artk seslenmiyoruz.
+
+83
+00:06:47,090 --> 00:06:57,770
+Bunun yerine, bu sahay eklenen katk maddesi zerine uyguluyoruz ve bu katk maddesi kaldrlyor, ancak her iki ilevin de
+
+84
+00:06:57,770 --> 00:06:59,330
+argmana ihtiyac var.
+
+85
+00:06:59,570 --> 00:07:06,290
+Haritamza inersek, bu sayfa iki sahne sabit olur; bu ilevi, bu
+
+86
+00:07:06,290 --> 00:07:09,540
+sahnede saklanr veya bu sahnelere aktarlr.
+
+87
+00:07:09,740 --> 00:07:15,250
+kisi de, burada madde trnn nmzdeki gnmzdeki argman olarak alyor.
+
+88
+00:07:15,260 --> 00:07:18,540
+nce Boltt kontroller bileenimize bir gz atalm.
+
+89
+00:07:18,650 --> 00:07:24,620
+Bileenlerimize geersek ve cvata kontrolleri klasrn aar ve toplu kontrol
+
+90
+00:07:25,190 --> 00:07:33,550
+bileenine girersek, kontrol trn buradaki bileene argman olarak eklediimizi ve pervane yntemlerini kaldrdmz
+
+91
+00:07:33,560 --> 00:07:34,230
+grrz.
+
+92
+00:07:34,280 --> 00:07:40,490
+Dolaysyla, bu koltuk takmlarndan geilen metoda gre, burada kurduumuz
+
+93
+00:07:40,490 --> 00:07:41,730
+yntem olur.
+
+94
+00:07:42,260 --> 00:07:48,830
+imdi sadece kontrol trnn tam aradmz ey olup olmadn kontrol etmemiz gerektii anlamna geliyor ve
+
+95
+00:07:48,860 --> 00:07:53,860
+kontrol trnn bu blm olduu iin salata pastrmas peyniri ve eti yazn.
+
+96
+00:07:54,020 --> 00:08:01,850
+olarak kullandmz isimlerle ayn biimde ve elbette bunun eit olduuna emin olmalyz.
+
+97
+00:08:01,850 --> 00:08:05,330
+Ve bu, redktr kaplamasnda zellikler
+
+98
+00:08:05,330 --> 00:08:11,600
+imdiye dek gidebilir ve kontrollerinizi ve burgerleri cesur kontrollere cesur hale getirmek
+
+99
+00:08:11,600 --> 00:08:16,600
+iin madde devletlerini buraya almak iin uygulamanz yeniden biimlendirebilirsiniz.
+
+100
+00:08:16,750 --> 00:08:23,510
+Bileeni burada ancak biz olduu gibi brakacaz ve sadece doru deeri
+
+101
+00:08:23,810 --> 00:08:30,010
+eylem datclarmza ilettiimizden emin oluyoruz ve o zaman tm dosyalar kaydediyoruz.
+
+102
+00:08:30,310 --> 00:08:31,930
+Ve imdi unu deneyelim.
+
+103
+00:08:32,030 --> 00:08:39,560
+alan uygulamanza geri dnelim, pastrma peyniri veya et satmak gibi o burger iin baz
+
+104
+00:08:39,890 --> 00:08:42,950
+maddeler ekleyelim ve hepsi ie yaryor.
+
+105
+00:08:43,280 --> 00:08:51,230
+imdi akas fiyat burada gncellenmiyor nk burada sahip olduumuz ey fiyat durumunu artk herhangi
+
+106
+00:08:51,230 --> 00:08:53,630
+bir zaman noktasnda deitirmememiz.
+
+107
+00:08:53,790 --> 00:08:55,960
+Bunu yaknda hallederiz.
+
+108
+00:08:56,000 --> 00:08:57,740
+Gerisi de alyor.
+
+109
+00:08:58,050 --> 00:09:02,290
+imdi sipari dmesi de aktif hale gelmiyor.
+
+110
+00:09:03,120 --> 00:09:05,750
+O sraya imdi o srada bakalm o zaman.
+
+111
+00:09:05,880 --> 00:09:11,970
+Niin aktif olmadnn nedeni sonunda meyve tutucular tarafndan satn alnabilir mlkiyetlerin kontrol
+
+112
+00:09:11,970 --> 00:09:12,740
+edilmesidir.
+
+113
+00:09:12,900 --> 00:09:18,000
+Daha nce bu Marchal Sodhi dzeninde fiyat vermek iin bir dme daha vard.
+
+114
+00:09:18,000 --> 00:09:23,580
+Bunlar kendi balarna malzemeler zerinde almak zorunda kalacamz iki ey, zaten burger
+
+115
+00:09:23,630 --> 00:09:24,990
+Boler'da harika alyorlar.
+
+116
+00:09:25,170 --> 00:09:30,510
+Bu yola devam edelim ve imdi sipari dmesinin ie yaradndan ve fiyat gncelletirdiinden
+
+117
+00:09:30,510 --> 00:09:31,230
+emin olalm.
+

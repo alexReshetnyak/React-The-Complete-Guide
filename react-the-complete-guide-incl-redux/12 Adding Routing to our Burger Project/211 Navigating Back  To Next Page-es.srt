@@ -1,0 +1,144 @@
+1
+00:00:02,140 --> 00:00:08,010
+Por lo tanto, podemos acertar en la pgina de pago en la pgina de pago, hagamos que los
+
+2
+00:00:08,020 --> 00:00:13,190
+botones que forman parte de la cuenta de cheques trabajen para cancelar y continuar el botn.
+
+3
+00:00:13,240 --> 00:00:18,460
+Ahora bien, estos botones estn, por supuesto, en el resumen del check
+
+4
+00:00:18,460 --> 00:00:27,870
+out. Podra manejarlos all convirtindolo en una clase, pero solo quiero exponer este evento bsicamente en un contenedor que revisa el componente
+
+5
+00:00:27,870 --> 00:00:34,240
+de resumen usando el enfoque de uso accesorios y, a continuacin, cualquier accesorio Espero obtener
+
+6
+00:00:34,300 --> 00:00:38,930
+la referencia al mtodo que se debe ejecutar con un clic en.
+
+7
+00:00:39,220 --> 00:00:41,860
+As que aqu nombrar est encendido.
+
+8
+00:00:41,860 --> 00:00:50,600
+simplemente el check out no puede estar en lnea con mis nomenclaturas anteriores y luego continuar con sus apoyos.
+
+9
+00:00:50,600 --> 00:00:52,650
+El check out cancelado o
+
+10
+00:00:52,650 --> 00:00:56,340
+Ahora necesito implementar estos accesorios cuando utilizo el componente de resumen de verificacin.
+
+11
+00:00:56,490 --> 00:01:05,350
+As que all no solo paso los fines de lectura, sino que tambin cancelo la salida y contino.
+
+12
+00:01:05,610 --> 00:01:10,680
+Ahora cualquier mtodo que haga algo en cada uno de los dos lo agregar.
+
+13
+00:01:10,710 --> 00:01:17,850
+Echa un vistazo al controlador cancelado, que es un mtodo que debera hacer algo y usar esta
+
+14
+00:01:17,850 --> 00:01:26,070
+sintaxis de mtodo para poder usar la palabra clave this dentro de all y verifique el controlador continuo, que
+
+15
+00:01:26,580 --> 00:01:28,130
+tambin debera verse as.
+
+16
+00:01:28,140 --> 00:01:35,310
+tambin la historia Propp y el historial Propp tambin tienen un mtodo de devolucin que quiero ejecutar al cancelar.
+
+17
+00:01:35,310 --> 00:01:42,390
+Ahora que estoy en el contenedor de descarga que se carg con el componente de ruta, aqu tambin
+
+18
+00:01:42,390 --> 00:01:44,990
+tenemos acceso a estos accesorios y all
+
+19
+00:01:45,000 --> 00:01:52,440
+Esto simplemente regresa a la ltima pgina en el caso Arrow aqu donde quiero continuar todo el
+
+20
+00:01:52,440 --> 00:02:02,690
+uso reemplazar en su lugar para reemplazar la ruta actual con los datos de contacto de barra, por ejemplo, todava no manejamos esta
+
+21
+00:02:02,780 --> 00:02:10,010
+parte, pero esta debera ser la parte que pronto carga el componente de datos de contacto
+
+22
+00:02:10,010 --> 00:02:11,390
+que an no tenemos.
+
+23
+00:02:11,420 --> 00:02:15,230
+Ahora tenemos que enganchar a estos manejadores as que all abajo.
+
+24
+00:02:15,530 --> 00:02:20,690
+Se debe usar este manejador cancelado y se debe usar el manejador continuo.
+
+25
+00:02:20,870 --> 00:02:24,190
+Guarde todo lo falso y ahora probemos esto.
+
+26
+00:02:24,230 --> 00:02:29,140
+Echa un vistazo si hago clic en cancelar y lo llevo a mi creador de Bergrin.
+
+27
+00:02:29,360 --> 00:02:34,430
+Djame volver a mirar si hago clic en Continuar.
+
+28
+00:02:34,550 --> 00:02:39,910
+Vers tus cambios pero, por supuesto, eso no hace nada porque an no lo estamos manejando.
+
+29
+00:02:40,010 --> 00:02:43,590
+Entonces esto es algo que tendr que manejar en el futuro.
+
+30
+00:02:43,820 --> 00:02:50,390
+Lo que quiero hacer antes de manejar la deuda es que quiero renderizar la hamburguesa que realmente
+
+31
+00:02:50,690 --> 00:02:55,010
+construyo y no una hamburguesa arbitraria aqu para procesar la hamburguesa.
+
+32
+00:02:55,010 --> 00:03:04,010
+De hecho, tengo que pasar los datos respectivos sobre mi hamburguesa a la pgina de pago.
+
+33
+00:03:04,010 --> 00:03:11,030
+As que desde el Bergere Boulder aqu construyo un poco de hamburguesas y si ahora hago clic en "ordenar ahora" y
+
+34
+00:03:11,300 --> 00:03:19,100
+contino, necesito pasar datos sobre los ingredientes en el prximo objetivo del desastre de la pgina de pago, ms all de los datos.
+
+35
+00:03:19,100 --> 00:03:25,960
+Quiero transmitirle por qu una consulta de padres aqu nuevamente se siente libre de implementar esto por su cuenta.
+
+36
+00:03:26,030 --> 00:03:31,380
+Aprende todo lo que necesita durante das sobre el ltimo mdulo lo har juntos en la prxima conferencia.
+

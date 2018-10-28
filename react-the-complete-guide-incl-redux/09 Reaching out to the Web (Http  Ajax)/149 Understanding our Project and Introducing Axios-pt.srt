@@ -1,0 +1,192 @@
+1
+00:00:02,100 --> 00:00:07,220
+Anexado a esta palestra, voc encontrar o projeto de partida que voc pode ver aqui.
+
+2
+00:00:07,250 --> 00:00:16,250
+Acabei de inici-lo com o NPM, que ele usa o projeto Riak criativo que fiz e editado para usar mdulos CSSA em vez de
+
+3
+00:00:16,250 --> 00:00:20,920
+apenas importar CSA como arquivos para que eles afetem o projeto globalmente.
+
+4
+00:00:21,020 --> 00:00:23,360
+Mas isso no representa um problema aqui.
+
+5
+00:00:23,630 --> 00:00:28,220
+E eu tenho um par de recipientes ou um recipiente e alguns componentes.
+
+6
+00:00:28,220 --> 00:00:33,530
+Como voc pode ver no exemplo do componente de publicao completo aqui que  responsvel por
+
+7
+00:00:33,530 --> 00:00:40,160
+tornar esta parte aqui, eu at tenho componentes baseados em classe aqui como componentes porque eu planejo adicionar algum estado
+
+8
+00:00:40,160 --> 00:00:45,940
+local e alguns ganchos do ciclo de vida a esses componentes, razo pela qual eu configurei Eles assim.
+
+9
+00:00:45,950 --> 00:00:52,100
+Ainda no tenho um componente que distribuir algumas propriedades para os componentes Obert.
+
+10
+00:00:52,130 --> 00:00:58,730
+Esta  a pgina raiz que voc pode dizer, o que deve renderizar algumas postagens no topo, depois de clicar em uma
+
+11
+00:00:58,730 --> 00:01:04,730
+postagem completa com alguns detalhes sobre uma publicao e sobre a rea para criar uma nova publicao, voc pode ver
+
+12
+00:01:04,730 --> 00:01:06,790
+todos esses recursos aqui nessa pgina.
+
+13
+00:01:06,800 --> 00:01:13,230
+Agora eu tenho algum contedo falso aqui porque eu quero carregar esses dados de publicao de um servidor.
+
+14
+00:01:13,370 --> 00:01:16,230
+E para isso, no vamos usar um servidor real.
+
+15
+00:01:16,310 --> 00:01:22,930
+Faremos isso no prximo mdulo quando aplicarmos algumas funcionalidades HTP ao nosso projeto de curso.
+
+16
+00:01:23,180 --> 00:01:31,070
+enviar pedidos para buscar alguns dados simblicos ou para simular o armazenamento de dados por vezes, embora voc no armazene realmente algo sobre isso.
+
+17
+00:01:31,220 --> 00:01:37,070
+Mas aqui vou usar algum espao reservado que voc pode encontrar em algum ponto de espao com
+
+18
+00:01:37,070 --> 00:01:44,350
+um cdigo de ponto de ponto com que simplesmente  um back end um backend de API restante que voc normalmente usa
+
+19
+00:01:44,390 --> 00:01:47,510
+como eu expliquei na ltima palestra onde voc pode
+
+20
+00:01:47,510 --> 00:01:53,510
+Claro que  apenas fingir alguns dados, mas exatamente o que precisamos para aprender a enviar idade
+
+21
+00:01:53,510 --> 00:01:54,730
+para repetir pedidos.
+
+22
+00:01:54,770 --> 00:02:02,030
+Por exemplo, voc pode enviar uma solicitao para papai antes de um pedido GET e voc receber uma matriz
+
+23
+00:02:02,060 --> 00:02:04,220
+de javascript objeto de mensagens falsas.
+
+24
+00:02:04,220 --> 00:02:06,730
+E, na verdade,  o que eu quero comear.
+
+25
+00:02:06,800 --> 00:02:10,010
+Ento vamos comear com isso na prxima palestra.
+
+26
+00:02:10,040 --> 00:02:15,280
+Mas,  claro, precisamos de alguma maneira de enviar pedidos do DS Ajax.
+
+27
+00:02:15,470 --> 00:02:18,870
+E aqui voc tem basicamente duas opes.
+
+28
+00:02:19,250 --> 00:02:25,040
+Javascript, claro, tem o Exham l h para o objeto de solicitao.
+
+29
+00:02:25,130 --> 00:02:32,010
+Este objeto aqui com voc pode construir seus prprios pedidos do Ajax e envi-los para um L especfico
+
+30
+00:02:32,050 --> 00:02:33,890
+e lidar com a resposta.
+
+31
+00:02:33,890 --> 00:02:39,330
+Nada de errado com os mortos desde o re-ato  apenas escrever javascript em todos os lugares.
+
+32
+00:02:39,350 --> 00:02:46,640
+Voc pode, naturalmente, usar todos os recursos de javascript, incluindo Exham L. H. com esse objeto manualmente  bastante pesada.
+
+33
+00:02:46,640 --> 00:02:50,400
+A solicitao TDP, mas a escrita e a configurao de solicitaes
+
+34
+00:02:50,630 --> 00:02:57,560
+Ento, a segunda opo  usar o pacote de uma biblioteca de terceiros que facilite isso.
+
+35
+00:02:57,710 --> 00:03:04,130
+E por isso recomendo usar X anos x anos como uma biblioteca de javascript de terceiros que voc pode
+
+36
+00:03:04,160 --> 00:03:06,170
+adicionar a qualquer projeto de javascript.
+
+37
+00:03:06,170 --> 00:03:08,850
+No est conectado para reagir.
+
+38
+00:03:08,990 --> 00:03:15,890
+Mas,  claro, ele se encaixa bem na CE, porque  bem javascript e o DXi  a pgina aqui para obter  um
+
+39
+00:03:15,980 --> 00:03:18,970
+bom ponto de partida para saber mais sobre o pacote.
+
+40
+00:03:19,010 --> 00:03:23,300
+Claro que, claro, o acompanharemos por alguns dos seus recursos principais neste mdulo.
+
+41
+00:03:23,330 --> 00:03:29,720
+Mas, novamente, isso no  algo que eu me conecte fortemente para reagir ao ex-U. S. pode ser usado em qualquer cdigo javascript.
+
+42
+00:03:29,720 --> 00:03:36,710
+Ento, vamos instalar X-ists nesta palestra j e comear a us-lo na prxima palestra para instalar
+
+43
+00:03:36,710 --> 00:03:37,480
+o X.
+
+44
+00:03:37,470 --> 00:03:44,750
+Sim, eu acelerarei o meu servidor de desenvolvimento com o controle C e depois executarei o NTM install ex-U. S. dash dash save em toda
+
+45
+00:03:44,750 --> 00:03:48,640
+a loja e insira o arquivo adjacente do pacote.
+
+46
+00:03:48,650 --> 00:03:54,200
+Isso ir baixar e armazenar o pacote e com isso podemos comear a us-lo na prxima
+
+47
+00:03:54,200 --> 00:04:01,580
+conferncia para buscar algumas postagens para que possamos reiniciar o servidor de desenvolvimento com o incio do NPM e depois na
+
+48
+00:04:01,940 --> 00:04:04,460
+prxima conferncia para baixar algumas postagens e exibi-las.
+

@@ -1,0 +1,84 @@
+1
+00:00:02,080 --> 00:00:07,210
+W ostatnim wykadzie uywamy routera do renderowania kodu jsx.
+
+2
+00:00:07,210 --> 00:00:13,840
+i dowiedziae si rwnie o dokadnoci i moesz renderowa tyle tras, ile chcesz.
+
+3
+00:00:13,870 --> 00:00:20,980
+Teraz w tym wykadzie chc to skorygowa, skomentuj to, a przy okazji, skomentujesz jsx, uywajc komentarza do blogu
+
+4
+00:00:20,980 --> 00:00:27,670
+z / * i zawijajc go w nawiasy klamrowe. A teraz dodam inn tras, gdzie cieka
+
+5
+00:00:27,670 --> 00:00:29,690
+powinna by rwnie /.
+
+6
+00:00:29,710 --> 00:00:38,260
+Szukam dokadnego dopasowania i teraz jednak nie chc uywa renderowania, chc uy innej waciwoci, ktr mog przekaza,
+
+7
+00:00:38,380 --> 00:00:39,950
+chc uy waciwoci
+
+8
+00:00:40,060 --> 00:00:46,420
+komponentu i jak sama nazwa wskazuje, pozwala to nam przekaza komponent, ktry powinien
+
+9
+00:00:46,420 --> 00:00:49,390
+by renderowany w miejscu tej trasy.
+
+10
+00:00:49,390 --> 00:00:55,260
+Teraz komponent nie jest cigiem, wic nie piszemy tutaj postw, ktre
+
+11
+00:00:55,330 --> 00:01:02,180
+nie dziaayby, komponent musi by referencj do funkcji lub klasy, ktrej chcemy uy.
+
+12
+00:01:02,200 --> 00:01:09,910
+A wic po prostu do tego, co zaimportujemy ze skadnika post, co wczeniej uywalimy bezporednio w jsx.
+
+13
+00:01:10,690 --> 00:01:14,060
+po prostu parsowalimy to w takie krcone
+
+14
+00:01:14,110 --> 00:01:21,610
+klamry, a teraz, gdy to zapisz, przyjrzymy si naszej aplikacji i wrcimy do slasha, widzimy, jak
+
+15
+00:01:21,700 --> 00:01:24,280
+wszystkie posty aduj si tutaj.
+
+16
+00:01:24,580 --> 00:01:32,020
+To pokazuje nam teraz, jak moemy adowa komponenty, tak jak w renderowaniu, ale za pomoc waciwoci komponentu.
+
+17
+00:01:32,580 --> 00:01:38,380
+Oczywicie jest to przypadek uycia, ktry prawdopodobnie wykorzystasz nieco wicej, renderowanie jest
+
+18
+00:01:38,380 --> 00:01:40,570
+najwaniejsze dla krtkich wiadomoci informacyjnych.
+
+19
+00:01:40,570 --> 00:01:45,640
+Naprawd nie powiniene renderowa tutaj caego kodu komponentu, nawet gdyby mg to
+
+20
+00:01:45,670 --> 00:01:52,360
+technicznie zrobi, ale to zepsuje twj kod, utrudni to jego obsug, ale adowanie komponentw takich jak
+
+21
+00:01:52,360 --> 00:01:55,330
+tutaj jest domylnym przypadkiem, ktry bdzie duo uywa.
+

@@ -1,0 +1,104 @@
+1
+00:00:02,300 --> 00:00:05,080
+Agregamos lgica para cargar nuestros ingredientes.
+
+2
+00:00:05,150 --> 00:00:10,250
+Y, por cierto, si te ests preguntando por qu hay una ensalada en la parte inferior, porque desde
+
+3
+00:00:10,250 --> 00:00:16,700
+que cargamos desde la base de fuego y all no podemos ordenar las propiedades manualmente, las ensaladas ordenadas en el fondo de
+
+4
+00:00:16,700 --> 00:00:17,570
+una receta mdica.
+
+5
+00:00:17,570 --> 00:00:19,280
+Y por lo tanto, est en la parte inferior aqu.
+
+6
+00:00:19,280 --> 00:00:26,480
+solo un nmero como un valor sino tambin un objeto donde tambin encuentres una posicin y luego tendras que ajustar tu
+
+7
+00:00:26,480 --> 00:00:31,910
+frente y cdigo para ocuparte de esto. posicin para o, por supuesto, simplemente elija una solucin
+
+8
+00:00:31,910 --> 00:00:37,790
+en la que codifique los ingredientes y no establezca ingredientes iguales a los ingredientes que obtiene del servidor.
+
+9
+00:00:37,790 --> 00:00:42,230
+P Simplemente tendras que ajustar tu cdigo para convertir manualmente tus ingredientes que
+
+10
+00:00:42,230 --> 00:00:42,910
+digan no
+
+11
+00:00:43,070 --> 00:00:51,320
+Pero para un objeto javascript donde no se lo mapea manualmente, los ingredientes se venden, y as sucesivamente, por supuesto, pierde un poco de
+
+12
+00:00:51,320 --> 00:00:58,010
+la flexibilidad que tena antes, donde simplemente poda aprovechar la configuracin de cualquier cosa y luego usarla en su
+
+13
+00:00:58,100 --> 00:01:04,370
+aplicacin front end, aunque nunca tuvo toda esa flexibilidad de todos modos porque solo tenemos una cantidad limitada
+
+14
+00:01:04,370 --> 00:01:10,920
+de ingredientes compatibles con nuestra s. do. s s aqu y la propiedad de
+
+15
+00:01:10,960 --> 00:01:14,300
+ingredientes donde todos tenemos una declaracin de maysculas y minsculas.
+
+16
+00:01:14,570 --> 00:01:21,440
+aplicacin y comience a agregar ensalada, y as sucesivamente, el orden es correcto nuevamente porque ahora estamos mapeando esto manualmente.
+
+17
+00:01:21,440 --> 00:01:28,520
+As que solo para completar ese pensamiento aqu podemos llegar a Regans cheese y as sucesivamente aqu para mapear esto
+
+18
+00:01:28,520 --> 00:01:35,000
+uno por uno cuando establezcamos los ingredientes tambin con la carne, por supuesto, y con todo lo que
+
+19
+00:01:35,000 --> 00:01:39,380
+agreguemos lo vern ahora si logramos ahorrar esto y regrese a la
+
+20
+00:01:39,380 --> 00:01:45,200
+De nuevo, la desventaja es que, dado que tenemos que hacer esto, realmente solo admitimos estos cuatro ingredientes, pero lo estamos haciendo
+
+21
+00:01:45,200 --> 00:01:46,920
+de todos modos en nuestra aplicacin.
+
+22
+00:01:47,000 --> 00:01:53,390
+Como acabo de decir, por ejemplo, en el componente de ingredientes en el ao del rea de hamburguesas donde todos tenemos una
+
+23
+00:01:53,390 --> 00:01:57,900
+declaracin de maysculas y minsculas en la que tambin solo admitimos la cantidad limitada de componentes.
+
+24
+00:01:57,920 --> 00:02:03,550
+As que este es el caso de todos modos y ahora, al menos, el orden vuelve a ser lo que era antes.
+
+25
+00:02:03,560 --> 00:02:06,610
+Entonces esta es una mejora posible puramente opcional.
+
+26
+00:02:06,650 --> 00:02:10,510
+Solo quera asegurarme de que no est confundido sobre por qu el Senado est en la parte inferior.
+

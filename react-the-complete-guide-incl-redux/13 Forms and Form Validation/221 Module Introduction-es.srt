@@ -1,0 +1,36 @@
+1
+00:00:02,230 --> 00:00:06,510
+Bienvenido a este mdulo de curso, nuestra aplicacin est tomando forma.
+
+2
+00:00:06,550 --> 00:00:12,940
+Pero hay un elemento de la aplicacin del que realmente no nos hemos ocupado y es nuestro
+
+3
+00:00:12,940 --> 00:00:15,970
+formulario de datos de contacto en nuestra aplicacin.
+
+4
+00:00:16,030 --> 00:00:21,980
+En general, no hemos hablado demasiado acerca de los formularios en este curso, pero hablamos sobre el manejo de Inport,
+
+5
+00:00:21,980 --> 00:00:25,150
+tenemos que usar encuadernacin y esto a menudo es suficiente.
+
+6
+00:00:25,450 --> 00:00:31,540
+Pero si realmente tiene un formulario y todos quieren validar que para l eso es algo
+
+7
+00:00:31,720 --> 00:00:39,010
+que puede ser complejo debido a la forma en que reacciona, debido a que es solo javascript en este mdulo.
+
+8
+00:00:39,010 --> 00:00:45,070
+para la validacin, y cmo podemos manejar nuestro formulario de datos de contacto en la aplicacin Burger con estos.
+
+9
+00:00:45,070 --> 00:00:47,470
+Echaremos un vistazo a los formularios y
+

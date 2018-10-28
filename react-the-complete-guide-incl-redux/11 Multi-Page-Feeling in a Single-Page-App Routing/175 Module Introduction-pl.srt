@@ -1,0 +1,44 @@
+1
+00:00:02,200 --> 00:00:06,770
+W tym module zwrcimy uwag na bardzo wane funkcje,
+
+2
+00:00:06,840 --> 00:00:10,870
+ktre prawdopodobnie dodamy do wielu aplikacji reagujcych, ktre
+
+3
+00:00:10,890 --> 00:00:12,650
+zamierzasz budowa. Teraz jedna wana
+
+4
+00:00:12,690 --> 00:00:19,920
+rzecz, routing, o czym jest ten modu, nie jest wbudowana w rdze reakcji. Uyjemy innego pakietu, ktry nie jest
+
+5
+00:00:20,010 --> 00:00:26,740
+tworzony przez Facebooka, ale faktycznego standardu dla tego zadania w tym
+
+6
+00:00:26,880 --> 00:00:28,310
+module, wic
+
+7
+00:00:28,400 --> 00:00:32,800
+to jest wane. React w swojej istocie jest po prostu
+
+8
+00:00:32,970 --> 00:00:41,160
+bibliotek tworzenia komponentw, teraz przeksztacamy j bardziej w struktur, dodajc gwn funkcj, routing. To oczywicie prowadzi do jednego pytania,
+
+9
+00:00:41,160 --> 00:00:42,580
+co to
+
+10
+00:00:42,660 --> 00:00:44,300
+jest routing?
+
+11
+00:00:44,310 --> 00:00:49,110
+Odpowiadajmy na to, a nastpnie nauczmy si, jak wdroy to na kolejnych wykadach.
+

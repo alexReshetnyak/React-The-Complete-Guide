@@ -1,0 +1,180 @@
+1
+00:00:02,210 --> 00:00:04,770
+Bylece rahatlatc ve temel kavramlarn reniriz.
+
+2
+00:00:04,850 --> 00:00:05,650
+Dmek.
+
+3
+00:00:05,780 --> 00:00:08,950
+Onun yerine artk kmsz almyoruz.
+
+4
+00:00:08,970 --> 00:00:15,230
+imdi yeniden eyleme bavurmam rahatlamak iin balamak istiyorum ve redux'un avantajlarn kullandm, bylece sonunda durumumu
+
+5
+00:00:15,230 --> 00:00:21,830
+bu sayala idare ettim ve dmeler burada Rydex ile tabii ki bu gibi basit bir uygulama
+
+6
+00:00:21,830 --> 00:00:27,590
+iin redux might ar talibin olmasna ramen temellerini uygulamaya koymak iin daha basit bir
+
+7
+00:00:27,740 --> 00:00:32,490
+uygulama kullanmak gzel, daha sonra bir sonraki modldeki kaytlarmza da redux uygulayacak.
+
+8
+00:00:32,570 --> 00:00:33,950
+Telaa gerek yok.
+
+9
+00:00:33,950 --> 00:00:36,250
+imdi yeniden ynlendirmeler ykledik.
+
+10
+00:00:36,590 --> 00:00:39,370
+Ve bununla bir maaza yaratabiliyoruz.
+
+11
+00:00:39,370 --> 00:00:45,820
+Bu maaza, uygulamanzn hemen ncesinde veya uygulama bileeni DOM'a baladmzda
+
+12
+00:00:45,870 --> 00:00:51,610
+harika bir yer oluturduu halde Sodhi'yi balattnda yaratlmaldr.
+
+13
+00:00:51,710 --> 00:00:55,160
+Dolaysyla maazann burada oluturulmas da mantkl geliyor.
+
+14
+00:00:55,160 --> 00:01:01,740
+Bu nedenle, bir eyi ie aktaracam ve hepsi eski E-6 ithalatlarnz rahatlamanzdan deil de kullanacaktr.
+
+15
+00:01:01,760 --> 00:01:08,660
+Yani biz kurduumuz redux paketinden bir ey maaza fonksiyonu yaratmaktr.
+
+16
+00:01:08,820 --> 00:01:15,060
+Daha sonra uygulama monte edilmeden nce hepsini sabit bir adreste depolamak ve saklamak iin yaratn.
+
+17
+00:01:15,060 --> 00:01:18,240
+Sanrm burada bir sr maaza var.
+
+18
+00:01:18,240 --> 00:01:21,150
+Bu yzden, create store ile hikayemi yaratyorum.
+
+19
+00:01:21,150 --> 00:01:26,690
+Artk bunun babanz iin bir azaltc SD girdi girii aldn rendiniz.
+
+20
+00:01:26,700 --> 00:01:33,090
+Elbette ki onu azaltmanz gerekiyor ve bunu yapmayacam ve bunu yapmayacam ve bu dte, farkl eylemler
+
+21
+00:01:33,090 --> 00:01:39,930
+trleri iin ok sayda kod ieren yeniden eyleme geme uygulamalarnda daha karmak indirgecilere sahip olacam ve bu
+
+22
+00:01:39,930 --> 00:01:42,810
+nedenle bu mant genellikle kendi kendi dosyalarnz.
+
+23
+00:01:42,810 --> 00:01:49,140
+kullanabileceiniz farkl ayarlar var, ancak projenizde konteynerlerin ve bileenler klasrnn yannda bir
+
+24
+00:01:49,140 --> 00:01:55,830
+klasr bulunduunu sk sk greceksiniz ve orada bir drcy dodgiest d yaayabilirsiniz.
+
+25
+00:01:55,830 --> 00:01:56,570
+imdi
+
+26
+00:01:56,580 --> 00:02:03,930
+Bu, imdi kullanmak istediim redktrleri ihra edebildiimiz bir dosya olacak Hl azaltc, yalnzca bir
+
+27
+00:02:04,280 --> 00:02:11,670
+ilevi, bir durum ve bir eylemi alr ve sonra biraz deimeyen bir durum dndrmek
+
+28
+00:02:11,670 --> 00:02:12,940
+olan bir ilevdir.
+
+29
+00:02:12,960 --> 00:02:19,950
+Daha sonra bunu sonbahar varsaylan olarak da aktaracam, bylece onu sonbaharn dnda kullanabilir ve
+
+30
+00:02:19,950 --> 00:02:22,440
+burada da balang durumu kuracam.
+
+31
+00:02:22,740 --> 00:02:30,170
+balang durumunu yanstmas gereken bir javascript nesnesi bunu da burada sfra indirgemek iin ayarlad
+
+32
+00:02:30,210 --> 00:02:37,830
+nk bu bavurudaki sayamn hepsi imdi burada benim devlet balang durumum iin atand.
+
+33
+00:02:37,830 --> 00:02:38,740
+Yapmc iin
+
+34
+00:02:39,370 --> 00:02:43,470
+Ve bununla bitmi bir yapmcmz var.
+
+35
+00:02:43,480 --> 00:02:46,270
+imdi bunu evet sonbahar endeksinde ie aktarabiliriz.
+
+36
+00:02:46,420 --> 00:02:50,080
+Bu yzden, ithalat indirgeyici ekleyeceim.
+
+37
+00:02:50,200 --> 00:02:57,810
+Ve imdi eik izgi izgi eik izgi drc gnleri her zaman olduu gibi uzant olmadan ve maaza yaratmak iin getikten sonra.
+
+38
+00:02:58,060 --> 00:03:01,820
+Bundan dolay, kendi REDCTEMZZLE baaryla bir hikaye oluturuyoruz.
+
+39
+00:03:01,990 --> 00:03:05,570
+Tpk daha nce kt niyetli dosyada rendiimiz gibi.
+
+40
+00:03:05,590 --> 00:03:08,630
+phesiz sen yalnz kaldn zaman o kadar da yapmaz.
+
+41
+00:03:08,650 --> 00:03:16,480
+Ayn zamanda oluturduunuz maazay balamak istiyoruz ve burada tekrar hareket uygulamamza sabit koyuyoruz
+
+42
+00:03:16,480 --> 00:03:24,430
+ve bir durum grntleyecek veya grnt gsterebilmemiz iin yeniden tama konteynerlerimizde dilimlerini karabilmek
+
+43
+00:03:24,430 --> 00:03:29,620
+istiyoruz uygulamann hangi duruma bal olduunu gsteren bir ey.
+
+44
+00:03:29,620 --> 00:03:35,590
+Ve tabii ki hepimiz, redoksu tepki verecek ekilde balayacak eylemleri gndermek istiyoruz.
+
+45
+00:03:35,590 --> 00:03:37,140
+Srada ne olacak.
+

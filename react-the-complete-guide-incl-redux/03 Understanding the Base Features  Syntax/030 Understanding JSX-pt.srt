@@ -1,0 +1,264 @@
+1
+00:00:02,150 --> 00:00:06,920
+Na ltima palestra, passei por esse componente e como geralmente  estruturado.
+
+2
+00:00:07,020 --> 00:00:08,610
+Agora vamos mergulhar mais profundamente nisso.
+
+3
+00:00:08,680 --> 00:00:17,160
+GSX coisa para este comentrio desta fechadura aqui, ento no  mais usado e vou retornar outra coisa, eu posso
+
+4
+00:00:17,730 --> 00:00:23,310
+usar o objeto re-agir, estamos importando aqui e chamamos um mtodo para isso.
+
+5
+00:00:23,370 --> 00:00:30,690
+O verdadeiro elemento de Yate neste esconderijo todas as razes pelas quais temos que importar agimos porque este cdigo aqui ainda no
+
+6
+00:00:31,050 --> 00:00:33,720
+foi compilado para o que estamos escrevendo aqui.
+
+7
+00:00:33,810 --> 00:00:40,260
+que no vejamos esse elemento criativo, o mtodo a e leva argumentos livres realmente leva uma
+
+8
+00:00:40,260 --> 00:00:48,240
+quantidade infinita de argumentos, mas pelo menos para mim o primeiro  o elemento que queremos renderizar para o DOM.
+
+9
+00:00:48,240 --> 00:00:48,840
+Mesmo
+
+10
+00:00:48,840 --> 00:00:54,580
+Isso pode ser um disco de morte pode ser um elemento macho H-G normal, como um div.
+
+11
+00:00:54,660 --> 00:00:58,980
+Tambm pode ser seu prprio componente, se voc tiver um pouco por aqui.
+
+12
+00:00:59,160 --> 00:01:04,860
+No nos parece, porque estamos dentro de um componente que no podemos renderizar para que possamos renderizar qualquer
+
+13
+00:01:04,860 --> 00:01:08,390
+componente de udio que estamos importando, mas no temos esse componente.
+
+14
+00:01:08,400 --> 00:01:13,000
+O segundo argumento  basicamente a configurao para isso.
+
+15
+00:01:13,350 --> 00:01:20,460
+E a, passamos um objeto de javascript, o opcional do Desire, todos ns podemos passar nulo e vamos fazer
+
+16
+00:01:20,460 --> 00:01:23,140
+isso por enquanto porque no quero configur-lo.
+
+17
+00:01:23,280 --> 00:01:30,510
+O terceiro argumento aqui  ento qualquer quantidade de crianas e poderamos ter vrios argumentos
+
+18
+00:01:30,510 --> 00:01:31,820
+separados pelo Hamas.
+
+19
+00:01:31,890 --> 00:01:35,980
+Crianas significa o que est aninhado dentro dessa morte.
+
+20
+00:01:36,060 --> 00:01:39,450
+Agora, neste caso, voc quer que Nasta h um elemento.
+
+21
+00:01:39,720 --> 00:01:49,650
+Vamos tentar adicionando idade 1 e, em seguida, como o argumento numrico, vamos adicionar este texto aqui com vrios pontos de exclamao e vamos
+
+22
+00:01:49,650 --> 00:01:56,310
+escapar esta aspas aqui com a barra invertida para que possamos identificar que isso foi processado
+
+23
+00:01:56,310 --> 00:01:58,570
+por mtodo de elemento discreto.
+
+24
+00:01:59,410 --> 00:02:05,450
+Agora com isso, deixe-me salvar este cdigo criar elemento com quatro argumentos div. salvo se voc vir uma cruz aqui e nenhum ponto e ento vamos voltar para nossa aplicao.
+
+25
+00:02:05,500 --> 00:02:13,270
+Agora, idade 1 e o texto, certifique-se de salvar o arquivo no cdigo do Visual Studio que voc v que 
+
+26
+00:02:13,270 --> 00:02:19,300
+Aqui vemos H-1.
+
+27
+00:02:19,300 --> 00:02:21,210
+Oi, eu reagir.
+
+28
+00:02:21,440 --> 00:02:23,610
+E se inspecionarmos isso nas ferramentas
+
+29
+00:02:23,650 --> 00:02:28,840
+do desenvolvedor no Chrome, voc est no meu caso, o que recomendo vivamente.
+
+30
+00:02:28,840 --> 00:02:29,600
+Voc ver comear uma div com dois ns de texto dentro de uma extremidade.
+
+31
+00:02:29,770 --> 00:02:34,330
+Oi, sou um aplicativo de reator, ento no fizemos ajuda.
+
+32
+00:02:34,390 --> 00:02:37,340
+1 ano  interpretada como texto.
+
+33
+00:02:37,360 --> 00:02:45,370
+Um elemento que renderizamos texto e isso , na verdade, a idade de comportamento padro de
+
+34
+00:02:45,370 --> 00:02:46,010
+No  processado como elemento se voc quiser renderizar outro elemento dentro do diff.
+
+35
+00:02:46,120 --> 00:02:52,510
+O que temos a fazer  substituir este cdigo aqui por um
+
+36
+00:02:52,750 --> 00:03:00,580
+novo elemento chamado para reagir criar para criar um novo elemento HVM l no final.
+
+37
+00:03:00,580 --> 00:03:03,290
+Aqui, agora passamos h uma configurao ento nula e, em seguida, o texto que deseja renderizar.
+
+38
+00:03:03,310 --> 00:03:10,900
+Ento, vamos misturar isso e dizer que isso funciona agora.
+
+39
+00:03:10,900 --> 00:03:15,800
+Agora, se salvarmos este arquivo e voltarmos para o aplicativo, vemos h one tech. Isso funciona.
+
+40
+00:03:15,810 --> 00:03:21,690
+Agora, tambm podemos ver isso se inspecionarmos isso nas ferramentas do desenvolvedor.
+
+41
+00:03:21,690 --> 00:03:25,640
+Ns recebemos um invlucro da morte.
+
+42
+00:03:25,780 --> 00:03:27,460
+H uma tag.
+
+43
+00:03:27,490 --> 00:03:29,900
+Agora, o que no vemos  que
+
+44
+00:03:29,950 --> 00:03:38,290
+o estilo C S S se aplica porque no vemos a classe que est sendo adicionada no nosso cdigo J  X.
+
+45
+00:03:39,190 --> 00:03:40,770
+Ns adicionamos uma classe C S S com o nome da classe no com a classe.
+
+46
+00:03:40,780 --> 00:03:45,640
+Pela maneira, eu vou voltar para o porqu usamos o nome da classe
+
+47
+00:03:45,640 --> 00:03:51,680
+na prxima palestra, ento ns tivemos o nome da classe em nossa chamada de elemento comercial.
+
+48
+00:03:51,690 --> 00:03:55,850
+Ns simplesmente no passariamos nulo como configurao, mas um objeto javascript.
+
+49
+00:03:55,920 --> 00:04:01,020
+E podemos definir o nome da classe e atribuir todas as classes C S S que queremos adicionar.
+
+50
+00:04:01,530 --> 00:04:07,470
+Por exemplo, na mesma classe, estamos aplicando aqui.
+
+51
+00:04:07,620 --> 00:04:11,930
+Agora salvamos este arquivo de novo, recarrega e agora vemos
+
+52
+00:04:12,770 --> 00:04:20,710
+o estilo atualizado com o texto do centro que vemos esses CEOs como classe a serem aplicados aqui
+
+53
+00:04:20,710 --> 00:04:28,210
+no dia de dois dias  super importante para entender o cdigo que acabamos de escrever aqui
+
+54
+00:04:28,210 --> 00:04:36,910
+com re-act create elemento e o elemento recriado aninhado  o equivalente exato deste cdigo GSX X e, na verdade,
+
+55
+00:04:36,940 --> 00:04:45,310
+ o que este cdigo aqui ser compilado por uma das muitas ferramentas construdas que samos da caixa.
+
+56
+00:04:45,340 --> 00:04:46,960
+usaremos uma vez que seja compilada.
+
+57
+00:04:46,960 --> 00:04:54,160
+Neste projeto,  a razo pela qual precisamos importar o re-ato, mesmo que no o estivemos utilizando ao usar esta sintaxe, porque, nos bastidores,
+
+58
+00:04:54,160 --> 00:04:59,720
+ claro que escrever o cdigo como esse criar um
+
+59
+00:05:00,010 --> 00:05:07,180
+elemento  realmente pesado especialmente quando voc adiciona e anina mais e mais elementos.
+
+60
+00:05:07,180 --> 00:05:10,000
+ por isso que normalmente no usamos esse cdigo.
+
+61
+00:05:10,000 --> 00:05:12,910
+Mas, em vez disso, esse cdigo que comeamos com isso  a razo pela qual usamos j como X. Mas  super importante entender os
+
+62
+00:05:13,210 --> 00:05:19,930
+internos e entender o que isso compila.
+
+63
+00:05:19,930 --> 00:05:24,080
+E tambm o mais importante de tudo, entende que, embora parea como no, no .
+
+64
+00:05:24,130 --> 00:05:31,090
+Este  o javascript no final.
+
+65
+00:05:31,090 --> 00:05:33,370
+Ele  compilado para este cdigo.
+
+66
+00:05:33,400 --> 00:05:35,960
+&nbsp;
+

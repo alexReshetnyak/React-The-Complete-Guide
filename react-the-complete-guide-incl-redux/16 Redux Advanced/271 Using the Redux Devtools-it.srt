@@ -1,0 +1,400 @@
+1
+00:00:02,240 --> 00:00:07,490
+Quindi nell'ultima lezione abbiamo aggiunto il nostro middleware, che  un Mitla per il logging in cui
+
+2
+00:00:07,520 --> 00:00:09,800
+emettere qualcosa ogni volta che inviamo un'azione.
+
+3
+00:00:09,800 --> 00:00:15,680
+No, questo  bello e ci consente di ottenere alcune intuizioni sulla nostra storia, ma solo se
+
+4
+00:00:16,310 --> 00:00:20,980
+abbiamo inviato un'azione che sarebbe stata pi utile se avessero potuto esaminare la storia.
+
+5
+00:00:21,050 --> 00:00:27,530
+Ora nella sezione di debug abbiamo imparato a reagire con gli strumenti DAPH in cui possiamo dare un'occhiata a
+
+6
+00:00:27,530 --> 00:00:31,690
+tutti i componenti della componentistica e allo stato di ciascuno di essi.
+
+7
+00:00:31,970 --> 00:00:37,430
+E per il provider, ad esempio, otteniamo il negozio, ma vediamo solo le funzioni di utilit.
+
+8
+00:00:37,430 --> 00:00:40,130
+Non vediamo davvero cosa c' nel negozio.
+
+9
+00:00:40,250 --> 00:00:43,420
+Quindi non  fantastico ora.
+
+10
+00:00:43,490 --> 00:00:45,720
+Ci sono modi per ovviare a questo.
+
+11
+00:00:45,800 --> 00:00:50,400
+Faremo clic sul componente contatore per esempio vediamo il valore corrente del contatore Propp.
+
+12
+00:00:50,600 --> 00:00:56,570
+Ma ancora  difficile se dobbiamo navigare verso un componente che ottiene una certa fetta dello
+
+13
+00:00:56,810 --> 00:01:02,930
+stato solo per vedere quella fetta sarebbe pi bello poter guardare l'intero archivio e persino vedere
+
+14
+00:01:02,930 --> 00:01:06,220
+le azioni che sono state inviate, magari persino riavvolgere.
+
+15
+00:01:06,770 --> 00:01:12,660
+Bene, per quello ci sono strumenti di sviluppo speciali che possiamo installare se cerchi google per gli strumenti di lettura.
+
+16
+00:01:12,740 --> 00:01:14,080
+Troverai due risultati.
+
+17
+00:01:14,090 --> 00:01:19,840
+La seconda  l'estensione degli strumenti di sviluppo ex-staff di lettura o, per essere precisi, la terza, il tool di sviluppo di
+
+18
+00:01:19,850 --> 00:01:21,100
+nichrome di redux dev store.
+
+19
+00:01:21,230 --> 00:01:22,760
+Questa  una cosa interessante
+
+20
+00:01:23,210 --> 00:01:26,060
+Dovresti installare questa estensione su Chrome.
+
+21
+00:01:26,060 --> 00:01:30,340
+Ti dar una bella spina e potrai usarla per guardare nel tuo negozio.
+
+22
+00:01:30,470 --> 00:01:33,510
+Ora puoi leggere pi istruzioni su quel secondo risultato.
+
+23
+00:01:33,560 --> 00:01:39,710
+di estensioni di redux dev tools qui troverai pi istruzioni su come installarlo e configurarlo alla fine
+
+24
+00:01:39,710 --> 00:01:44,420
+ super semplice devi solo scaricare quell'estensione e installarlo e hai praticamente finito.
+
+25
+00:01:44,420 --> 00:01:45,110
+Il repository
+
+26
+00:01:45,110 --> 00:01:46,780
+Un altro passo  richiesto per.
+
+27
+00:01:46,880 --> 00:01:49,820
+Ma ovviamente ti guider anche attraverso i passaggi richiesti.
+
+28
+00:01:49,820 --> 00:01:53,740
+Ora importante non dare un'occhiata al primo risultato qui.
+
+29
+00:01:53,750 --> 00:01:57,930
+Questi sono tutti gli strumenti di sviluppo che puoi implementare a livello di programmazione nella tua app.
+
+30
+00:01:57,980 --> 00:02:00,280
+Vogliamo avere quell'estensione per browser per.
+
+31
+00:02:00,650 --> 00:02:03,410
+Quindi vediamo i passi che dobbiamo applicare.
+
+32
+00:02:03,440 --> 00:02:10,550
+installato gli strumenti def se li apri sono i tuoi strumenti di sviluppo, dovrebbe esserci un'opzione di eliminazione.
+
+33
+00:02:10,550 --> 00:02:12,210
+Ora che hai gi
+
+34
+00:02:13,810 --> 00:02:17,910
+Potrebbe prima tornare alla console.
+
+35
+00:02:17,950 --> 00:02:21,760
+Dovresti vedere gli strumenti di sviluppo redox aprire qui a destra.
+
+36
+00:02:21,760 --> 00:02:27,810
+Ora stiamo dicendo che non  stato trovato nessun negozio perch non abbiamo seguito la seconda fase
+
+37
+00:02:27,810 --> 00:02:35,830
+in cui dobbiamo sostanzialmente informare questa estensione che c' un negozio nella nostra app Web e per questo abbiamo semplicemente bisogno di impostare
+
+38
+00:02:36,160 --> 00:02:43,510
+una variabile speciale qui o passare uno speciale migliorato oppure dovremmo dire al nostro metodo di creazione del negozio dato che
+
+39
+00:02:43,570 --> 00:02:46,470
+stiamo usando il middleware, dobbiamo usare il negozio avanzato.
+
+40
+00:02:46,510 --> 00:02:52,930
+Ma  ancora abbastanza semplice copiare qui la variabile stranamente chiamata sull'oggetto della finestra.
+
+41
+00:02:52,990 --> 00:02:59,140
+L'estensione redux def tool compose thing qui  essenzialmente una variabile che viene iniettata dall'estensione di
+
+42
+00:02:59,140 --> 00:03:05,500
+Chrome nel nostro javascript in fase di runtime, quindi sar disponibile nel nostro codice nel prossimo
+
+43
+00:03:05,530 --> 00:03:06,340
+come segue.
+
+44
+00:03:06,340 --> 00:03:07,690
+Creiamo un negozio.
+
+45
+00:03:07,910 --> 00:03:17,320
+In primo luogo, come da istruzioni, creer una costante personalizzata prima di fare qualsiasi cosa nel negozio, tutti i
+
+46
+00:03:17,320 --> 00:03:27,370
+nomi e comporre e le risposte saranno la nostra variabile speciale o, nel caso in cui non sia possibile trovare,
+
+47
+00:03:27,720 --> 00:03:32,580
+ricadr su una funzione di composizione predefinita fornita da redux.
+
+48
+00:03:32,690 --> 00:03:36,190
+Puoi importarlo dal pacchetto redox.
+
+49
+00:03:36,340 --> 00:03:42,310
+Ora la composizione  un po 'simile ai riduttori combinati I riduttori combinati ci permettono di combinare i
+
+50
+00:03:42,400 --> 00:03:48,880
+riduttori che la compose ci consente di combinare e il middleware di Hans  solo per il medio, mentre
+
+51
+00:03:48,910 --> 00:03:56,500
+se abbiamo potenziatori dell'opera come conservare gli strumenti def dobbiamo usare compose per comporre un serie di risposte sia con le funzionalit degli
+
+52
+00:03:56,500 --> 00:03:59,230
+strumenti di def che con il nostro middleware.
+
+53
+00:03:59,380 --> 00:04:08,360
+Quindi aggiungiamo anche il compositore separato che con noi o che assegniamo il testo si inietta dinamicamente quella variabile baleniera.
+
+54
+00:04:08,380 --> 00:04:14,500
+Ma se non  ancora necessario ricorrere alla soluzione redox nativa che, naturalmente, non ci d
+
+55
+00:04:14,500 --> 00:04:16,030
+sordi per supportare poi.
+
+56
+00:04:16,120 --> 00:04:20,410
+Quindi ora gli enhancer kapos essenzialmente detengono semplicemente una funzione.
+
+57
+00:04:20,440 --> 00:04:22,900
+Torniamo alla documentazione.
+
+58
+00:04:23,080 --> 00:04:28,540
+Vediamo che ora dovremmo creare il nostro negozio e utilizzare questa nuova funzione di potenziamento della
+
+59
+00:04:28,560 --> 00:04:35,420
+composizione che utilizza la funzione di def tool o quella nativamente incorporata per passare il middleware di applicazione ad essa.
+
+60
+00:04:35,490 --> 00:04:37,030
+Quindi lo faremo.
+
+61
+00:04:37,080 --> 00:04:44,750
+Avvolger il middleware di applicazione nel creare un negozio con gli ottimizzatori di composizione.
+
+62
+00:04:45,010 --> 00:04:52,530
+Quindi con questo nome costante qui componi gli enhancer avvolgono il middleware applicativo con esso in modo da passare il middleware di applicazione
+
+63
+00:04:52,540 --> 00:04:54,070
+come una funzione per quello.
+
+64
+00:04:54,250 --> 00:04:58,450
+def perch verranno passati automaticamente se i dati scelti dei dati sono disponibili.
+
+65
+00:04:58,450 --> 00:05:00,620
+Non  necessario passare nulla sugli strumenti
+
+66
+00:05:00,850 --> 00:05:07,330
+Quindi abbiamo un set up in cui dovremmo essere in grado di collegare la nostra estensione del browser al negozio in
+
+67
+00:05:07,330 --> 00:05:08,920
+esecuzione nel nostro codice Javascript.
+
+68
+00:05:09,280 --> 00:05:15,550
+Diamo uno sguardo torniamo all'applicazione di re-act e l dovresti gi vedere che la vista
+
+69
+00:05:15,550 --> 00:05:19,160
+X in lettura qui  piena di vita.
+
+70
+00:05:19,240 --> 00:05:24,230
+Qui vedi tutte le azioni che sono state emesse come l'azione init che accade prima.
+
+71
+00:05:24,340 --> 00:05:27,290
+Contrastare questo per avere una visione diversa su questo.
+
+72
+00:05:27,640 --> 00:05:32,930
+E l vedi per ogni azione che tipo era o quale payload portava effettivamente.
+
+73
+00:05:32,950 --> 00:05:38,390
+Inoltre, oltre a digitare ci che lo stato  in questo momento, come ha cambiato lo stato.
+
+74
+00:05:38,710 --> 00:05:45,610
+E puoi sempre guardare nello stato quindi con questo pulsante di stato in un dato momento.
+
+75
+00:05:45,610 --> 00:05:52,120
+Ora se invio una nuova azione, ad esempio sottraendo 15, vedrai che viene aggiunta qui.
+
+76
+00:05:52,180 --> 00:05:56,780
+E se si fa clic su di esso, vediamo cosa lo stato  dopo Fa azione questo stato qui.
+
+77
+00:05:56,910 --> 00:06:00,280
+Si vede anche il vecchio stato se si fa clic sull'azione sull'azione dell'unit.
+
+78
+00:06:00,400 --> 00:06:06,520
+Quindi vedi lo stato in diversi momenti, vedrai come l'azione di sottrazione  cambiata per
+
+79
+00:06:06,670 --> 00:06:11,820
+indicare che ha rilevato 15 dal contatore e vedrai cosa ha portato l'azione.
+
+80
+00:06:12,280 --> 00:06:13,720
+ abbastanza utile.
+
+81
+00:06:13,720 --> 00:06:19,510
+Ora possiamo aggiungere sempre di pi e possiamo sempre vedere come abbiamo adattato il nostro stato e quale sia il nostro stato
+
+82
+00:06:19,510 --> 00:06:21,910
+attuale e quale fosse il nostro stato nel passato.
+
+83
+00:06:21,910 --> 00:06:28,600
+Quindi gli strumenti di sviluppo di Rydex sono estremamente utili e sicuramente si tuffano nella documentazione che ti ho indicato
+
+84
+00:06:28,850 --> 00:06:31,150
+per saperne di pi su di essi.
+
+85
+00:06:31,150 --> 00:06:36,550
+Ora una caratteristica importante che voglio mostrarvi  il tempo che viaggiano con gli strumenti dev redux.
+
+86
+00:06:36,640 --> 00:06:38,370
+Puoi viaggiare nel tempo.
+
+87
+00:06:38,500 --> 00:06:45,070
+Quindi, ad esempio, ovviamente l'applicazione che vediamo qui riflette lo stato dopo tutte queste azioni.
+
+88
+00:06:45,340 --> 00:06:51,670
+riavvolgere e dire di tornare a quella sottrazione qui puoi fare clic su sottrazione e poi su chump.
+
+89
+00:06:51,670 --> 00:06:52,930
+Ma se vogliamo
+
+90
+00:06:53,170 --> 00:06:57,770
+E ora vedi che sei tornato al punto morto dove hai appena sottratto 50.
+
+91
+00:06:57,930 --> 00:06:59,400
+Ora i vecchi stati non sono persi.
+
+92
+00:06:59,400 --> 00:07:02,810
+Puoi sempre tornare indietro facendo clic nuovamente su di esso.
+
+93
+00:07:03,130 --> 00:07:10,800
+Ma potresti anche tornare indietro e ad esempio saltare questo per aggiornare il tuo stato come se non avessi mai inviato
+
+94
+00:07:10,800 --> 00:07:11,700
+come azione.
+
+95
+00:07:11,740 --> 00:07:13,520
+E naturalmente questo pu anche essere rielaborato.
+
+96
+00:07:13,690 --> 00:07:19,810
+funzionalit estremamente interessante che ti offre molte possibilit di debug e app particolarmente complesse.
+
+97
+00:07:19,810 --> 00:07:21,130
+Questa  una
+
+98
+00:07:21,140 --> 00:07:26,110
+Questo  ottimo per assicurarti che vengano inviate solo le azioni che ti aspetti vengano inviate e
+
+99
+00:07:26,110 --> 00:07:28,290
+per scoprire perch lo stato  attualmente in.
+
+100
+00:07:28,330 --> 00:07:30,100
+Bene, lo stato in cui .
+

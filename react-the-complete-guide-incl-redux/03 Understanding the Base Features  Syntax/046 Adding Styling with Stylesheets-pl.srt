@@ -1,0 +1,288 @@
+1
+00:00:02,270 --> 00:00:05,110
+Dowiedzielimy si ju duo o podstawach reakcji.
+
+2
+00:00:05,120 --> 00:00:10,870
+podczas ostatnich wykadw. Nasze aplikacje wci
+
+3
+00:00:10,870 --> 00:00:20,490
+mog jednak korzysta z dodatkowej stylizacji. Na przykad, te elementy skadowe byyby fajne, gdyby wyglday jak karty,
+
+4
+00:00:20,490 --> 00:00:23,800
+a zatem byyby bardziej jak zamknite obiekty.
+
+5
+00:00:23,840 --> 00:00:29,330
+W tej chwili nie moemy naprawd zobaczy rnic lub nie moemy naprawd zobaczy granic midzy tym
+
+6
+00:00:29,330 --> 00:00:30,740
+komponentem a innymi komponentami.
+
+7
+00:00:31,070 --> 00:00:35,540
+Wic komponowanie stylw jest oczywicie czym bardzo wanym,
+
+8
+00:00:35,750 --> 00:00:40,700
+a teraz s dwa sposoby stylizacji, ktre moemy zaimplementowa,
+
+9
+00:00:40,700 --> 00:00:42,290
+poka wam oba.
+
+10
+00:00:42,500 --> 00:00:45,770
+Przede wszystkim dodajmy osob. plik css do naszego
+
+11
+00:00:45,770 --> 00:00:51,950
+komponentu osoby i podaem to pod t sam nazw co plik javascript, tylko z
+
+12
+00:00:51,950 --> 00:00:53,530
+innym rozszerzeniem. Oczywicie teoretycznie
+
+13
+00:00:53,540 --> 00:00:55,850
+ta nazwa pliku naley do Ciebie.
+
+14
+00:00:56,180 --> 00:01:03,700
+Teraz jedna wana rzecz, w zalenoci od tego, ktry kod css tu pisz, nie jest okrelona dla tej osoby. js component, jest
+
+15
+00:01:03,790 --> 00:01:05,900
+to globalny
+
+16
+00:01:05,890 --> 00:01:07,870
+kod css.
+
+17
+00:01:08,000 --> 00:01:12,340
+Zdefiniuj wic now klas css, ktr nazwabym Person z du liter P,
+
+18
+00:01:12,440 --> 00:01:18,950
+ale mimo to mog j doda w dowolnym miejscu w mojej aplikacji, poniewa jest globalna, ale uywajc mojej
+
+19
+00:01:19,190 --> 00:01:23,630
+nazwy komponentu, mog wykluczy niebezpieczestwo i przypadkowego uycia go gdzie indziej .
+
+20
+00:01:23,630 --> 00:01:26,990
+Wic po prostu przypisz to do mojej div
+
+21
+00:01:26,990 --> 00:01:32,280
+tutaj, nazwa klasy Pamitajcie, nie klasa, nazwa klasy to osoba, osoba cig.
+
+22
+00:01:32,660 --> 00:01:37,820
+Teraz w pliku css mog teraz zmieni styl, by moe nada
+
+23
+00:01:37,820 --> 00:01:46,180
+mu szeroko 60% i margines automatyczny, aby go wyrodkowa. Moe te nada mu
+
+24
+00:01:46,180 --> 00:01:58,070
+granic bryy 1px piksela #eee, jasnoszarego i cienia puda 0 2px 3px
+
+25
+00:01:58,160 --> 00:02:04,650
+i nieco ciemniejszego szarego i dajmy
+
+26
+00:02:04,650 --> 00:02:14,550
+mu dopenienie 16px by moe. Na koniec ustawmy tekst tak, aby wyrodkowa cay tekst na teraz, zapisz ten plik css
+
+27
+00:02:14,550 --> 00:02:16,470
+i zapisz osob. plik js,
+
+28
+00:02:16,470 --> 00:02:19,150
+w ktrym przypisz go jako klas,
+
+29
+00:02:19,360 --> 00:02:20,910
+nic si nie dzieje.
+
+30
+00:02:20,950 --> 00:02:30,380
+Wiesz dlaczego? C, poniewa stworzylimy nasz klas css w naszym pliku css, ale domylnie
+
+31
+00:02:30,470 --> 00:02:36,970
+jest to moe co, czego nie wiesz, poniewa niekoniecznie jest intuicyjne, ale domylnie aden plik nie
+
+32
+00:02:36,970 --> 00:02:42,430
+jest zawarty w twoim projekcie w kodzie tworzonym przez przepyw pracy budowania .
+
+33
+00:02:42,680 --> 00:02:47,240
+Zawsze musisz zaimportowa pliki, aby doda je do gry.
+
+34
+00:02:47,450 --> 00:02:52,390
+Dlatego importujemy komponent osoby do naszej aplikacji. plik js, a my
+
+35
+00:02:52,400 --> 00:02:55,840
+take importujemy aplikacj. plik css tutaj.
+
+36
+00:02:55,960 --> 00:03:02,630
+Teraz moe wyglda dziwnie, gdyby zaimportowa plik css do pliku javascript, ale dziki pakietowi internetowemu, ktry
+
+37
+00:03:02,630 --> 00:03:09,290
+jest narzdziem do budowania, ktre jest w kocu uywane przez ten pakiet skryptw do reagowania, ktry
+
+38
+00:03:09,290 --> 00:03:09,910
+uywamy
+
+39
+00:03:10,220 --> 00:03:17,510
+tutaj domylnie, dziki pakietowi internetowemu moemy faktycznie zaimportowa css do javascript chocia nie bdzie to naprawd scala
+
+40
+00:03:17,510 --> 00:03:19,180
+dwch plikw lub czego
+
+41
+00:03:19,250 --> 00:03:26,240
+podobnego, tylko zostanie poinformowany o tym pliku css i poradzi sobie z tym inaczej, w zasadzie zaimportuje
+
+42
+00:03:26,240 --> 00:03:28,240
+go do naszego pliku html.
+
+43
+00:03:28,460 --> 00:03:30,300
+Wic osobicie. js, dodam
+
+44
+00:03:30,440 --> 00:03:35,170
+rwnie import do osoby z kropk. css i tutaj potrzebujesz
+
+45
+00:03:35,270 --> 00:03:37,670
+rozszerzenia pliku, moesz go
+
+46
+00:03:37,670 --> 00:03:41,130
+pomin tylko dla plikw javascript.
+
+47
+00:03:41,240 --> 00:03:44,690
+Teraz, dodajc to, uwiadomie sobie, e jest
+
+48
+00:03:44,690 --> 00:03:52,400
+to pakiet internetowy, teraz doda go do twojego pliku html, a wic jeli wrcisz, zobaczysz, e mamy
+
+49
+00:03:52,400 --> 00:03:54,130
+dodatkow stylizacj naszych komponentw.
+
+50
+00:03:54,200 --> 00:04:01,370
+Moesz rwnie zobaczy, e jeli sprawdzasz swj kod, mamy tutaj klas osoby i jeli przewiniesz
+
+51
+00:04:01,370 --> 00:04:04,800
+ca drog do sekcji head tutaj, w
+
+52
+00:04:05,000 --> 00:04:13,710
+narzdziach programistycznych, widzisz, e tam, faktycznie mamy te znaczniki stylu, ktrych nie moesz znajd w pliku html w
+
+53
+00:04:13,710 --> 00:04:15,330
+folderze publicznym. Nie mamy
+
+54
+00:04:15,360 --> 00:04:18,180
+adnych tagw stylu w sekcji head,
+
+55
+00:04:18,270 --> 00:04:20,970
+tylko niektre linki do manifestu i
+
+56
+00:04:20,970 --> 00:04:24,030
+tak dalej, wic nawet do plikw css.
+
+57
+00:04:24,030 --> 00:04:28,750
+Powodem tego jest to, e tekst stylu jest wstrzykiwany dynamicznie przez pakiet webowy,
+
+58
+00:04:28,760 --> 00:04:32,920
+jest to cz, ktr miaem na myli, zarzdzajc importowanymi przez ciebie plikami.
+
+59
+00:04:33,270 --> 00:04:38,000
+I ten ostatni tag stylu powinien w rzeczywistoci zawiera klas twojej osoby,
+
+60
+00:04:38,040 --> 00:04:42,340
+a tam wyranie wida, e jest to normalna globalna klasa css.
+
+61
+00:04:42,420 --> 00:04:47,730
+Wida rwnie, e automatyczne prefixowanie jest bardzo wygodne, poniewa gwarantuje, e nie
+
+62
+00:04:47,730 --> 00:04:48,890
+musimy tego robi.
+
+63
+00:04:48,960 --> 00:04:55,650
+Moemy napisa najkrtszy moliwy lub moliwy kod CSS, ktry automatycznie doda go do
+
+64
+00:04:55,680 --> 00:04:58,410
+pracy w jak najwikszej liczbie przegldarek.
+
+65
+00:04:58,920 --> 00:05:00,550
+Wic to jest
+
+66
+00:05:00,600 --> 00:05:07,300
+styl, ktry ustawilimy, moe lepiej dopasujmy go nieco, dodajc tutaj grny i dolny margines.
+
+67
+00:05:07,500 --> 00:05:13,930
+Moe wic ustawimy to na 16 pikseli, ebymy mieli troch rozrnienia midzy naszymi kartami,
+
+68
+00:05:13,980 --> 00:05:15,230
+wyglda znacznie lepiej.
+
+69
+00:05:15,510 --> 00:05:17,250
+Teraz mamy tu osoby,
+
+70
+00:05:17,460 --> 00:05:23,940
+teraz te u ten przycisk i inaczej nadajmy mu styl, poniewa wspomniaem, e istniej dwa
+
+71
+00:05:23,940 --> 00:05:24,910
+sposoby stylizacji,
+
+72
+00:05:24,960 --> 00:05:26,580
+ktre znamy przynajmniej teraz.
+

@@ -1,0 +1,464 @@
+1
+00:00:02,240 --> 00:00:06,970
+Nell'ultima lezione abbiamo fatto in modo che i nostri elementi di navigazione e il logo e
+
+2
+00:00:06,970 --> 00:00:10,010
+tutto ci che sembra buono sia su desktop e dispositivi mobili.
+
+3
+00:00:10,030 --> 00:00:10,890
+Questo  figo.
+
+4
+00:00:11,140 --> 00:00:15,480
+Assicuriamoci di avere uno sfondo dietro a questa barra laterale.
+
+5
+00:00:15,640 --> 00:00:19,830
+E ovviamente voglio anche assicurarmi di poterlo aprire e chiudere in modo dinamico.
+
+6
+00:00:19,840 --> 00:00:26,440
+Iniziamo con lo sfondo in cui lo sfondo deve essere posizionato sul lato del cassetto laterale e abbiamo gi
+
+7
+00:00:26,440 --> 00:00:29,190
+un componente sullo sfondo nella cartella dell'interfaccia utente.
+
+8
+00:00:29,230 --> 00:00:32,480
+Ma come meglio aggiungere al cassetto laterale.
+
+9
+00:00:33,040 --> 00:00:40,560
+Beh, proprio come l'ho aggiunto al motore incluso nel componente modale, sono andato a includerlo nel sito
+
+10
+00:00:40,560 --> 00:00:44,360
+anche per componente perch appartiene al cassetto laterale.
+
+11
+00:00:44,410 --> 00:00:54,720
+Quindi per quello importer lo sfondo nella mia parte disegnare un file componente in modo da importare lo sfondo da.
+
+12
+00:00:54,810 --> 00:01:01,420
+E ora saliamo di 2 livelli nella cartella dell'interfaccia utente nella cartella dello sfondo e importati
+
+13
+00:01:01,420 --> 00:01:03,480
+dal file js dello sfondo.
+
+14
+00:01:03,790 --> 00:01:07,490
+E aggiungiamo uno sfondo qui nel cassetto laterale.
+
+15
+00:01:07,510 --> 00:01:15,130
+che sostanzialmente Stahl  il mio cassetto laterale e il non modale dovrebbe stare fuori dal suo lato,  saggio che sarebbe contenuto nel
+
+16
+00:01:15,130 --> 00:01:20,470
+cassetto laterale e questo ovviamente non  esattamente ci che voglio al di fuori di esso.
+
+17
+00:01:20,470 --> 00:01:22,900
+Ora hai questo elemento di avvolgimento con D
+
+18
+00:01:22,900 --> 00:01:29,400
+Vedrai il problema che abbiamo elementi GSX adiacenti, ma possiamo semplicemente importare il nostro componente
+
+19
+00:01:29,710 --> 00:01:31,730
+ausiliario per poterlo fare ancora.
+
+20
+00:01:31,960 --> 00:01:38,700
+Quindi andiamo fino alla cartella HLC e importiamo il componente ausiliario dalla catena di ox
+
+21
+00:01:38,700 --> 00:01:39,700
+come archiviato.
+
+22
+00:01:40,060 --> 00:01:48,760
+Ora aggiungerei semplicemente la componente ascellare come involucro attorno a questo componente e dovrebbe ora funzionare e modale,
+
+23
+00:01:49,760 --> 00:01:51,260
+naturalmente,  sbagliato.
+
+24
+00:01:51,260 --> 00:01:52,550
+Questo  lo sfondo qui.
+
+25
+00:01:53,670 --> 00:01:59,610
+In questo modo si ottiene uno sfondo come parte dei sidewards se ricarichiamo l'applicazione.
+
+26
+00:01:59,610 --> 00:02:02,400
+Non lo vediamo, per, dov' lo sfondo.
+
+27
+00:02:02,850 --> 00:02:08,820
+Bene, se ispezionate lo sfondo, naturalmente comprendete che ha mostrato propriet che devono essere
+
+28
+00:02:08,820 --> 00:02:10,570
+vere per visualizzarlo effettivamente.
+
+29
+00:02:10,590 --> 00:02:16,230
+Quindi, ovviamente, possiamo semplicemente impostare uno show come questo e dato che  una propriet booleana non 
+
+30
+00:02:16,230 --> 00:02:22,210
+necessario assegnare un valore semplicemente aggiungendolo sar impostato su true se non  presente come prima sar impostato su false.
+
+31
+00:02:22,230 --> 00:02:24,810
+Quindi ora vediamo lo sfondo bello.
+
+32
+00:02:24,960 --> 00:02:31,360
+Ovviamente questo non dovrebbe essere sempre visibile anche se a volte le barre laterali dovrebbero essere mostrate.
+
+33
+00:02:31,410 --> 00:02:35,310
+Una volta che si fa clic sul pulsante del menu in sostanza e dovrebbe anche essere chiuso.
+
+34
+00:02:35,310 --> 00:02:37,380
+Una volta che fai clic sullo sfondo.
+
+35
+00:02:37,730 --> 00:02:41,140
+Quindi per questo dobbiamo registrare un listener di clic sullo sfondo.
+
+36
+00:02:41,460 --> 00:02:44,020
+E in realt ne abbiamo gi uno.
+
+37
+00:02:44,160 --> 00:02:49,880
+Abbiamo fatto clic su quel listener di clic che pu attivare qualsiasi metodo che vogliamo attivare.
+
+38
+00:02:50,000 --> 00:02:55,980
+Quindi l'obiettivo  ora essere in grado di gestire questo metodo nel cassetto laterale.
+
+39
+00:02:56,180 --> 00:03:06,380
+Ora nel motore ci limitiamo a propagarlo, fino a raggiungere il nostro contenitore qui nel cassetto
+
+40
+00:03:06,390 --> 00:03:07,050
+laterale.
+
+41
+00:03:07,220 --> 00:03:14,900
+Voglio anche fare ci che potremmo avere tutti da parte o in un componente completo di stato e gestire il clic
+
+42
+00:03:14,900 --> 00:03:19,030
+qui con un metodo e con uno stato che passiamo dallo show.
+
+43
+00:03:19,160 --> 00:03:25,680
+Quindi da vero a falso e cos via e non ci sarebbe nulla di sbagliato in questo, ma alla fine avremo
+
+44
+00:03:25,680 --> 00:03:30,820
+anche attivato un cassetto laterale dalla barra degli strumenti perch ci sar il suo pulsante di menu.
+
+45
+00:03:31,070 --> 00:03:36,500
+Quindi, alla fine, dobbiamo anche creare una connessione dalla barra degli strumenti al cassetto laterale e abbiamo
+
+46
+00:03:36,500 --> 00:03:37,390
+gi quella connessione.
+
+47
+00:03:37,460 --> 00:03:38,910
+ il componente di layout.
+
+48
+00:03:39,160 --> 00:03:40,980
+Questo  dove usiamo entrambi.
+
+49
+00:03:41,000 --> 00:03:46,700
+Quindi, a mio parere, ha pi senso trasformare il componente di layout in un componente di classe
+
+50
+00:03:46,730 --> 00:03:53,800
+in cui possiamo implementare il metodo in modo da poter ascoltare entrambi i lati o chiudersi facendo clic sullo sfondo e
+
+51
+00:03:54,200 --> 00:03:59,130
+sulla barra degli strumenti che apre il lato o facendo clic su quel bottone.
+
+52
+00:03:59,210 --> 00:04:01,400
+Quindi, questo  il prossimo passo.
+
+53
+00:04:01,610 --> 00:04:09,950
+Modifica il mio layout qui in un layout di classe e dovresti estendere un componente, in modo tale che
+
+54
+00:04:10,430 --> 00:04:16,760
+il componente di importazione reagisca e tu venga semplicemente esteso con la parola chiave extents.
+
+55
+00:04:16,760 --> 00:04:20,650
+Ora all'interno di quel layout la classe-B ha bisogno di renderizzare il metodo come hai imparato.
+
+56
+00:04:20,750 --> 00:04:24,620
+E poi dovremmo restituire qualche j come X e otteniamo il J come x anno.
+
+57
+00:04:24,620 --> 00:04:27,480
+Quindi, taglia semplicemente e inseriscilo qui.
+
+58
+00:04:27,500 --> 00:04:32,540
+Rimuovi quella roba laggi e ora  possibile accedere ai prop's con questo oggetto come hai imparato.
+
+59
+00:04:32,630 --> 00:04:36,250
+Questo  il caso per tutti i componenti basati su classi.
+
+60
+00:04:36,290 --> 00:04:40,130
+Ora il nome cambia in latino per la convenzione di denominazione LTTE Kapolei.
+
+61
+00:04:40,250 --> 00:04:43,200
+Quindi prendiamo tutti l'esportazione laggi.
+
+62
+00:04:43,310 --> 00:04:46,810
+Ora con ci abbiamo cambiato il nostro componente di etichetta.
+
+63
+00:04:46,810 --> 00:04:48,210
+Ora  una classe.
+
+64
+00:04:48,230 --> 00:04:57,790
+Ora possiamo implementare un metodo qui e chiamer questo metodo per disegnare il nostro gestore chiuso.
+
+65
+00:04:57,790 --> 00:04:59,690
+Ovviamente potresti prendere qualsiasi nome tu voglia.
+
+66
+00:05:00,010 --> 00:05:07,720
+User questa sintassi dove assegner la tua funzione a 6 frecce a una propriet in modo tale che questa parola chiave
+
+67
+00:05:07,960 --> 00:05:11,950
+all'interno di questo metodo far riferimento alla classe in ogni momento.
+
+68
+00:05:12,220 --> 00:05:18,160
+E abbiamo anche bisogno di gestire qualche stato nel tuo stato che configurer il tuo dovrebbe contenere
+
+69
+00:05:18,160 --> 00:05:18,860
+essenzialmente informazioni.
+
+70
+00:05:18,890 --> 00:05:22,440
+Se il sito o  weazel o no, allora sei tutto pronto.
+
+71
+00:05:22,440 --> 00:05:27,020
+Mostra il cassetto laterale e imposta questo in modo che cada inizialmente, forse.
+
+72
+00:05:27,090 --> 00:05:30,070
+Impostiamolo su true per i test in modo che possiamo vederlo.
+
+73
+00:05:30,520 --> 00:05:32,380
+E dentro il nostro handler chiuso.
+
+74
+00:05:32,410 --> 00:05:39,300
+Chiamer questo set-set e set show sightseer o due campi ovviamente come questo.
+
+75
+00:05:39,310 --> 00:05:48,820
+Quindi ora ho bisogno di passare questo metodo di gestione degli eventi qui al mio cassetto laterale e lo chiamer chiuso l
+
+76
+00:05:48,850 --> 00:05:52,680
+che vogliamo eseguire questo lato disegnare un gestore chiuso.
+
+77
+00:05:52,690 --> 00:05:58,840
+Quindi ora dobbiamo usare quella propriet vicina nel cassetto laterale e quindi usarla per
+
+78
+00:05:58,840 --> 00:06:06,360
+passarla semplicemente sullo sfondo in cui ho questa propriet cliccata che semplicemente mi passer fondamentalmente l'evento on-click.
+
+79
+00:06:06,490 --> 00:06:10,420
+Quindi, voglio passare gli oggetti di scena chiusi.
+
+80
+00:06:10,470 --> 00:06:16,060
+in cui passo il riferimento al metodo in cui gestisco il clic alla fine.
+
+81
+00:06:16,060 --> 00:06:17,990
+Quindi, semplicemente impostando questa catena
+
+82
+00:06:18,000 --> 00:06:22,140
+Quindi con questo spettacolo, naturalmente, tutto  vincolato dinamicamente.
+
+83
+00:06:22,140 --> 00:06:30,520
+Gli show dovrebbero essere obbligati a permettere che qualunque cosa tu voglia nominare lasci dire allo show di ci che ha senso
+
+84
+00:06:30,550 --> 00:06:32,620
+ma non confuso con questo spettacolo.
+
+85
+00:06:32,740 --> 00:06:34,640
+Diciamolo aperto.
+
+86
+00:06:34,960 --> 00:06:38,530
+Quindi questa propriet aperta che deve essere impostata sul cassetto laterale.
+
+87
+00:06:38,680 --> 00:06:46,030
+Quindi, tornando alla barra degli strumenti,  necessario riportarmi al layout necessario per aprire la propriet sul lato
+
+88
+00:06:46,040 --> 00:06:47,040
+o ad ora.
+
+89
+00:06:47,260 --> 00:06:53,560
+E quello dovrebbe essere il cassetto laterale di questo spettacolo perch questo terr l'informazione se la
+
+90
+00:06:53,560 --> 00:06:56,230
+porta laterale debba essere aperta o meno.
+
+91
+00:06:56,230 --> 00:07:01,940
+Con queste aggiunte se ora salviamo tutti i file e torniamo dovremmo avere uno sfondo.
+
+92
+00:07:01,960 --> 00:07:05,650
+Ma se lo clicchiamo dovrebbe chiudere lo sfondo.
+
+93
+00:07:05,650 --> 00:07:10,900
+Non rifiuta ancora il sito Drori perch non abbiamo aggiunto alcuna logica per farlo.
+
+94
+00:07:11,500 --> 00:07:19,270
+Aggiungiamo ora questa logica e nel cassetto laterale ricordiamo che ho aggiunto questo C S S Class aperto e chiuso all'interno
+
+95
+00:07:19,510 --> 00:07:21,560
+dei cassetti C S S file.
+
+96
+00:07:21,730 --> 00:07:26,980
+pagina o all'interno di essa e riprodurranno un'animazione grazie alla propriet di transizione qui.
+
+97
+00:07:26,980 --> 00:07:32,730
+Voglio associare queste classi in modo condizionale perch in pratica si spostano all'esterno o all'esterno della
+
+98
+00:07:33,190 --> 00:07:38,570
+Quindi, quindi, dobbiamo attaccarti condizionatamente all'apertura o alla chiusura come classi.
+
+99
+00:07:38,800 --> 00:07:43,750
+E poi il componente laterale che  la parte che voglio fare prima di restituire il codice qui.
+
+100
+00:07:43,780 --> 00:07:51,540
+Prima di restituire J come X, desidero creare un costante nome di Witchell associato alle classi e l
+
+101
+00:07:51,630 --> 00:07:55,160
+dovrebbe sempre contenere il mio sidro o Clauss.
+
+102
+00:07:55,350 --> 00:07:59,240
+Ma il prossimo elemento in desire di default potrebbe essere quello di chiudere la classe.
+
+103
+00:07:59,400 --> 00:08:02,050
+Quindi le lezioni chiudono.
+
+104
+00:08:02,160 --> 00:08:06,100
+Ovviamente si riferisce a questo Colloseum S-Class.
+
+105
+00:08:06,240 --> 00:08:11,540
+Ora riaprire la classe dovrebbe essere a esso quando si apre quella propriet  vera.
+
+106
+00:08:12,440 --> 00:08:15,660
+Quindi controller se il puntello  aperto.
+
+107
+00:08:15,830 --> 00:08:22,490
+Se questo  vero, le clausole di collegamento non dovrebbero in realt chiudere la classe ma la classe aperta.
+
+108
+00:08:22,750 --> 00:08:25,370
+In questo modo il ritorno passa da una costante a una variabile.
+
+109
+00:08:25,520 --> 00:08:33,620
+Quindi possono resettare le clausole allegate all'anno, ora dovrebbero essere un array dove ho la mia porta laterale, ma abbiamo anche
+
+110
+00:08:33,680 --> 00:08:40,280
+la mia classe aperta e ora posso usare il basso qui dove assegno un nome di classe.
+
+111
+00:08:40,430 --> 00:08:45,150
+Non assegner classi cyder o assegner invece le mie classi attach.
+
+112
+00:08:45,350 --> 00:08:50,450
+una singola stringa, tutta la scelta che una stringa in una singola stringa con spazi vuoti  tra gli elementi.
+
+113
+00:08:50,450 --> 00:08:53,890
+E dato che non possiamo passare qui una serie di stringhe, ma dovremmo passare
+
+114
+00:08:53,900 --> 00:09:01,130
+Quindi tra le mie lezioni di siesta ora se pap dovremmo avere un sorteggio che in realt pu scomparire non
+
+115
+00:09:01,130 --> 00:09:03,870
+appena facciamo clic sullo sfondo e lo fa.
+
+116
+00:09:04,130 --> 00:09:09,260
+Il passo successivo  quello di creare questo obiettivo, ma devi spostarti di uno zoom dopo aver fatto clic su quel pulsante.
+

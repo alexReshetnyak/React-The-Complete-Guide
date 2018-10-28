@@ -1,0 +1,104 @@
+1
+00:00:02,170 --> 00:00:07,210
+Dodajmy nasz skadnik dostawcy, a wic na pocztek.
+
+2
+00:00:07,400 --> 00:00:12,000
+To nazwany dostawca z reduktora re-act.
+
+3
+00:00:12,000 --> 00:00:15,430
+I tak jak powiedziaem, musimy zawin komponent aplikacji.
+
+4
+00:00:15,430 --> 00:00:20,330
+Pytanie brzmi: czy wczamy router przegldarki, czy nie.
+
+5
+00:00:21,350 --> 00:00:23,640
+Dions lub jest dostawc.
+
+6
+00:00:23,660 --> 00:00:25,250
+Powinien owin wszystko.
+
+7
+00:00:25,250 --> 00:00:28,420
+Dlatego umieszczamy go poza routerem przegldarki.
+
+8
+00:00:28,430 --> 00:00:36,000
+Wszystko to zostaje zapakowane przez komponent dostawcy, tak jak konfiguracja, ktrej chcemy uy i jest
+
+9
+00:00:36,000 --> 00:00:41,630
+co specjalnego w tym, e uycie reaguje reaguje z reaktywnym routerem.
+
+10
+00:00:41,780 --> 00:00:44,480
+I wrc do taty i jak to naprawimy.
+
+11
+00:00:44,490 --> 00:00:51,890
+Zasadniczo ma to zwizek z upewnieniem si, e czysz funkcjonalno, a funkcje routingu wspdziaaj
+
+12
+00:00:51,940 --> 00:00:57,300
+dobrze, poniewa zarwno niejawnie konfiguruj niektre rekwizyty na komponencie owijajcym.
+
+13
+00:00:57,420 --> 00:01:00,530
+Musimy si upewni, e wszystko na razie dziaa.
+
+14
+00:01:00,540 --> 00:01:02,230
+Stwrzmy jednak nasz sklep.
+
+15
+00:01:02,400 --> 00:01:10,980
+Zaimportujmy tworzenie sklepu z redox i nastpnego dnia jako jesie, a to wszystko do importu, aby zaimportowa
+
+16
+00:01:11,010 --> 00:01:12,270
+nasz reduktor.
+
+17
+00:01:12,340 --> 00:01:15,120
+Wic reduktor importu z.
+
+18
+00:01:15,360 --> 00:01:21,440
+A teraz musimy przej do folderu sklepu i s one importowane z pliku reduktora.
+
+19
+00:01:21,600 --> 00:01:28,250
+Moemy wtedy stworzy nasz sklep i przechowywa go w zmiennej lub w staej, aby by precyzyjnie nazwanym sklepem,
+
+20
+00:01:28,680 --> 00:01:34,990
+by moe stworzylimy za pomoc metody create store, ktr importujemy z redox i oczywicie przekazujemy do niego reduktor.
+
+21
+00:01:35,160 --> 00:01:42,150
+Dziki temu moemy ustawi waciwo sklepu na komponencie dostawcy i przekaza nasz stworzony sklep,
+
+22
+00:01:42,210 --> 00:01:50,610
+ktry jest przechowywany w magazynie staym, ale jest duo sklepw i przekazuje to do tej waciwoci sklepu.
+
+23
+00:01:50,610 --> 00:01:56,840
+Teraz czymy nasz sklep, ktry jest tworzony przez redox z nasz aplikacj ponownie.
+
+24
+00:01:56,880 --> 00:02:00,660
+Oczywicie nie bdzie to miao wikszego znaczenia w nastpnym wykadzie.
+
+25
+00:02:00,660 --> 00:02:08,010
+Pracujmy nad naszym reduktorem i upewnijmy si, e mamy tutaj pewn logik, aby zarzdza
+
+26
+00:02:08,030 --> 00:02:08,490
+pynami.
+

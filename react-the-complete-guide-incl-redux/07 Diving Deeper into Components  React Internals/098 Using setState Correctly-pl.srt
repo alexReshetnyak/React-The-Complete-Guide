@@ -1,0 +1,204 @@
+1
+00:00:02,270 --> 00:00:07,340
+Opumy na razie wiat komponentw wyszego rzdu i wrmy do naszego projektu demonstracyjnego i
+
+2
+00:00:07,340 --> 00:00:12,980
+zanurzmy si w kilka innych przydatnych rzeczy, o ktrych naley pamita, budujc aplikacje reagujce, poniewa
+
+3
+00:00:12,980 --> 00:00:14,760
+mog one sta si wane.
+
+4
+00:00:15,110 --> 00:00:20,780
+Jednym z wanych zada, ktre chciabym mie, jest ustalenie stanu zestawu.
+
+5
+00:00:21,020 --> 00:00:26,570
+Nazywamy to duo w naszej aplikacji w aplikacji. Plik js tylko ze wzgldu na sposb, w
+
+6
+00:00:26,570 --> 00:00:30,440
+jaki powiniene uywa stanu, uywaj go tylko w kilku wybranych komponentach
+
+7
+00:00:30,590 --> 00:00:33,220
+i tam zawsze uywamy go w niezmienny sposb.
+
+8
+00:00:33,230 --> 00:00:39,410
+Jeli wic przypiszemy tablic osb, tworzymy kopi tej tablicy, aby nie zmutowa oryginau,
+
+9
+00:00:39,410 --> 00:00:45,200
+a nastpnie zmutowa t kopi i przypisa zmienion kopi jako nowy stan, dokadnie
+
+10
+00:00:45,410 --> 00:00:47,660
+tak, jak naley to zrobi.
+
+11
+00:00:47,870 --> 00:00:54,560
+Czasami masz aktualizacj stanu, ktra zaley od starego stanu i jest nieco bardziej banalna.
+
+12
+00:00:54,890 --> 00:00:59,060
+Powiedzmy, e chcemy mie licznik, jak czsto klikamy przycisk przeczania,
+
+13
+00:00:59,090 --> 00:01:00,560
+wic to. togglePersonsHandler, jak
+
+14
+00:01:00,560 --> 00:01:06,890
+czsto byo to wykonywane w zasadzie? W naszym stanie, ktry teraz zainicjujemy
+
+15
+00:01:06,890 --> 00:01:09,700
+w konstruktorze od czasu wykadw
+
+16
+00:01:09,740 --> 00:01:15,110
+cyklu ycia, moemy mie licznik kliknicia przeczanego, ktry pocztkowo wynosi 0.
+
+17
+00:01:15,170 --> 00:01:24,940
+Teraz w naszym programie obsugi przecznika nazywamy stanem ustawionym, a teraz oczywicie rwnie zaktualizujemy kliknicie przecznika, a warto
+
+18
+00:01:24,950 --> 00:01:32,030
+oczywicie zaley od starej wartoci przeczania klikni, poniewa powinna to by stara warto
+
+19
+00:01:32,030 --> 00:01:33,350
+plus jedna.
+
+20
+00:01:33,620 --> 00:01:40,430
+Wic moemy to powiedzie. stan. toggleClicked plus jeden to nowy stan.
+
+21
+00:01:40,430 --> 00:01:46,820
+Teraz, jeli zapiszemy to, aby zobaczy, czy tak jest, moemy uy narzdzi programistycznych
+
+22
+00:01:46,820 --> 00:01:54,110
+reakcji, wic otworz narzdzia programistw reagowania w moich narzdziach programistycznych Chrome, a teraz przejd do
+
+23
+00:01:54,530 --> 00:01:58,270
+komponentu aplikacji, gdzie mog sprawdzi stan, toggleClicked 0,
+
+24
+00:01:58,280 --> 00:02:01,190
+Teraz jest 1, 2, 3, dziaa
+
+25
+00:02:01,220 --> 00:02:07,940
+poprawnie i nadal robi nieprawidowy sposb. Poniewa stanem rzeczywistym jest metoda wykonywana asynchronicznie
+
+26
+00:02:07,940 --> 00:02:17,630
+przez reakcj, co oznacza, e nie mona na niej polega. stan nazywa si wewntrz ustawionym stanem tak, aby
+
+27
+00:02:17,630 --> 00:02:24,260
+rzeczywicie odzwierciedla najnowsz wersj stanu. Jeli wywoasz stan zestawu gdzie indziej w aplikacji, zasadniczo w
+
+28
+00:02:24,260 --> 00:02:25,530
+tym samym czasie, inne
+
+29
+00:02:25,700 --> 00:02:32,510
+zestawienie stanu moe zakoczy si przed tym, wic to. Stan tutaj moe
+
+30
+00:02:32,540 --> 00:02:36,070
+nie by poprawny.
+
+31
+00:02:36,140 --> 00:02:39,720
+Wic istnieje lepsza skadnia do
+
+32
+00:02:39,830 --> 00:02:47,950
+wywoywania tego stanu zestawu, jeli planujesz uywa tego stanu wewntrz, a to
+
+33
+00:02:47,990 --> 00:02:56,370
+jest forma funkcjonalna, skadnia funkcji tego. Wyglda to tak, ustaw stan nastpnie przyjmuje funkcj i uyj funkcji strzaki,
+
+34
+00:02:56,370 --> 00:02:57,390
+a tam dostaniesz
+
+35
+00:02:57,390 --> 00:03:01,190
+dwa argumenty, poprzedni stan, do ktrego moesz bezpiecznie uzyska dostp, poniewa
+
+36
+00:03:01,200 --> 00:03:04,940
+to z pewnoci jest ostatnim stanem jaki mia w tym momencie
+
+37
+00:03:05,370 --> 00:03:07,360
+i wszelkie rekwizyty, ktre moesz mie.
+
+38
+00:03:07,890 --> 00:03:14,970
+A nastpnie ciao funkcji, musisz zwrci obiekt, ktry jest twoim zaktualizowanym stanem.
+
+39
+00:03:15,230 --> 00:03:22,950
+Wic teraz wstawie stary kod, ktry mielimy, ale nie mamy ju do niego dostpu. stan. toggleClicked, poprzedni
+
+40
+00:03:23,370 --> 00:03:30,420
+przecznik stanu kliknity. Jak ju powiedziaem, dostp do sejfu jest teraz bezpieczny, poniewa
+
+41
+00:03:30,530 --> 00:03:33,170
+poprzedniego stanu nie mona zmutowa nigdzie indziej
+
+42
+00:03:33,270 --> 00:03:36,360
+w aplikacji, gdy jestemy przy tym ustawionym poczeniu.
+
+43
+00:03:36,660 --> 00:03:42,960
+A wic teraz, jeli przeaduj aplikacj, przejd do narzdzi programistycznych i wybierz aplikacj. Teraz,
+
+44
+00:03:43,290 --> 00:03:50,070
+jeli klikam, przeczam osoby, dziaa to tak jak poprzednio i bdzie dziaao z bdnym podejciem
+
+45
+00:03:50,070 --> 00:03:51,450
+w wielu innych
+
+46
+00:03:51,690 --> 00:03:59,340
+przypadkach, ale w najlepszym przypadku stanu mutacji, jeli opierasz si na poprzednim stanie, tak jak tu robimy,
+
+47
+00:03:59,340 --> 00:04:01,480
+przez wywoanie poprzedniego stanu tutaj.
+
+48
+00:04:01,560 --> 00:04:09,060
+To tylko odbir i lepszy sposb mutowania stanu, jeli istnieje niebezpieczestwo
+
+49
+00:04:09,060 --> 00:04:14,960
+ingerencji w inne wersje pastwowe. Oczywicie nie mielibymy tutaj niebezpieczestwa, poniewa nie zmienimy
+
+50
+00:04:14,960 --> 00:04:16,040
+metody toggleClick z
+
+51
+00:04:16,230 --> 00:04:19,490
+nigdzie indziej, ale jeli tak, to jest to lepsze podejcie.
+

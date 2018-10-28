@@ -1,0 +1,216 @@
+1
+00:00:02,190 --> 00:00:06,240
+Come reagisce aggiornare il dormitorio reale e il browser.
+
+2
+00:00:06,240 --> 00:00:13,950
+Intendo dire che il metodo di rendering che viene chiamato non lo rende immediatamente visibile al vero Dom il
+
+3
+00:00:14,040 --> 00:00:15,740
+nome pu essere fuorviante.
+
+4
+00:00:15,750 --> 00:00:23,070
+Questo non significa che lo rende all'alba rendere pi un suggerimento su cosa D. H. le femmine dovrebbero apparire alla
+
+5
+00:00:23,070 --> 00:00:31,170
+fine ma il rendering pu benissimo essere chiamato e portare allo stesso risultato gi visualizzato e questo 
+
+6
+00:00:31,770 --> 00:00:38,770
+parte del motivo per cui usiamo l'aggiornamento dei componenti per evitare chiamate di rendering non necessarie.
+
+7
+00:00:39,120 --> 00:00:46,440
+Ma anche se non prendiamo una chiamata di rendering non necessaria, forse un oggetto  cambiato e tuttavia dovremmo
+
+8
+00:00:46,440 --> 00:00:49,370
+rendere lo stesso risultato per qualsiasi motivo.
+
+9
+00:00:49,650 --> 00:00:57,600
+Anche allora questo non significa che colpisce immediatamente il vero Dom e inizia a renderlo,
+
+10
+00:00:57,600 --> 00:01:00,490
+ma prima di tutto fa qualcos'altro.
+
+11
+00:01:00,660 --> 00:01:03,460
+Paragona la parola ai dormitori.
+
+12
+00:01:03,750 --> 00:01:11,930
+Ha una vecchia parola dormitorio freddo e un pre-rendering o un futuro in cui i bambini reagiscono prende la sua parola non si
+
+13
+00:01:11,970 --> 00:01:14,920
+avvicinano perch  pi veloce della vera alba.
+
+14
+00:01:14,940 --> 00:01:20,250
+Ora una parola fredda Dom  semplicemente un Dom o una presentazione in javascript.
+
+15
+00:01:20,280 --> 00:01:29,580
+Ovviamente puoi rappresentare tutti gli HVM L e quindi gli elementi DOM e gli oggetti in puro javascript quindi
+
+16
+00:01:29,580 --> 00:01:31,810
+senza rendere nulla al browser.
+
+17
+00:01:32,040 --> 00:01:37,620
+E questo  quello che succede qui e reagisce fondamentalmente mantenendo due copie del dong.
+
+18
+00:01:37,650 --> 00:01:43,860
+Ha la vecchia parola Dom e quindi il re rendering un giorno  reso uno  quello che viene creato quando
+
+19
+00:01:43,860 --> 00:01:45,710
+viene chiamato il metodo di rendering.
+
+20
+00:01:45,720 --> 00:01:50,760
+Ora, come ho detto, il rendering o la chiamata al rendering non aggiorna immediatamente la vera alba.
+
+21
+00:01:50,940 --> 00:01:52,910
+Invece re-act fa un confronto.
+
+22
+00:01:53,130 --> 00:01:58,650
+Confronta il vecchio dom virtuale con quello nuovo e controlla se ci sono differenze.
+
+23
+00:01:59,010 --> 00:02:06,300
+Se  in grado di rilevare le differenze, raggiunge il vero Dom e lo aggiorna, e anche in questo
+
+24
+00:02:06,300 --> 00:02:09,090
+caso non rende completamente il vero Dom.
+
+25
+00:02:09,090 --> 00:02:13,510
+Lo cambia solo nei luoghi in cui sono state rilevate differenze.
+
+26
+00:02:13,560 --> 00:02:19,890
+Ad esempio, se un testo di un pulsante  stato modificato, aggiorner solo quel testo e non verr
+
+27
+00:02:20,020 --> 00:02:26,960
+reso l'intero pulsante che lasci da solo l'intero dannato se non sono state trovate differenze che non tocchino il vero
+
+28
+00:02:26,970 --> 00:02:28,210
+renderer di Dom eseguito.
+
+29
+00:02:28,260 --> 00:02:34,020
+Il confronto  stato fatto ed  per questo che dovrebbe essere calcolato l'aggiornamento potrebbe aver senso impedire questo se
+
+30
+00:02:34,020 --> 00:02:34,740
+non  necessario.
+
+31
+00:02:34,760 --> 00:02:39,990
+Il costo  ovviamente gi tutti i costi e le risorse, ma ci nonostante la vera domus non  mai stata toccata.
+
+32
+00:02:39,990 --> 00:02:41,250
+Puoi fare affidamento su questo.
+
+33
+00:02:41,350 --> 00:02:45,110
+Il vero Dom sar toccato solo se ci sono delle vere differenze.
+
+34
+00:02:45,270 --> 00:02:51,400
+E questo ovviamente  importante perch, come saprai, l'accesso al DOM  molto lento.
+
+35
+00:02:51,420 --> 00:02:58,650
+Questo  qualcosa che si vuole fare il meno possibile e quindi reagire  possibile. L'idea di Dom  paragonabile
+
+36
+00:02:58,650 --> 00:03:04,860
+a quella dei doni virtuali e fa in modo che il vero Dom venga solo toccato se necessario.
+
+37
+00:03:04,860 --> 00:03:10,350
+Questo  ci che accade dietro le quinte e questo  ci che possiamo vedere nella nostra applicazione
+
+38
+00:03:10,350 --> 00:03:11,840
+per l'utilizzo di questa applicazione.
+
+39
+00:03:11,850 --> 00:03:17,880
+Ovviamente abbiamo tutti i nostri controlli in atto dove dovremmo comportarci nell'aggiornamento.
+
+40
+00:03:18,450 --> 00:03:25,680
+ancora vedere  che se ispezioniamo qualcosa qui e abbiamo fatto clic su persone hogger chiaramente difficili da leggere, leggerlo.
+
+41
+00:03:25,690 --> 00:03:27,020
+Ma quello che possiamo
+
+42
+00:03:27,090 --> 00:03:28,980
+Li hai visti lampeggiare.
+
+43
+00:03:28,980 --> 00:03:37,060
+Ma se osservi da vicino il pulsante e il cockpit se fa clic qui, questo non lampeggia mai perch
+
+44
+00:03:37,060 --> 00:03:38,650
+non viene reso nuovamente.
+
+45
+00:03:38,800 --> 00:03:40,050
+Questo  quello che intendevo.
+
+46
+00:03:40,060 --> 00:03:46,840
+In realt non cambia ancora, ma lo stile  cambiato, ma la parte sopra il pulsante come questo paragrafo
+
+47
+00:03:46,850 --> 00:03:52,060
+qui vede l'armadio il pulsante cambiato, ma il paragrafo N-esimo un tag sulla destra.
+
+48
+00:03:52,060 --> 00:03:55,050
+DS non lampeggia mai perch non sono mai cambiati.
+
+49
+00:03:55,120 --> 00:03:59,080
+Quindi non sono pre-resi, non vengono toccati da nessuna reazione.
+
+50
+00:03:59,080 --> 00:04:00,380
+Fa quello che intendo.
+
+51
+00:04:00,640 --> 00:04:07,510
+Il metodo di rendering per il cockpit  stato eseguito altrimenti la classe del pulsante non sarebbe stata aggiornata.
+
+52
+00:04:07,510 --> 00:04:13,720
+Ma ancora questo non ha pre-reso tutto ci che ha fatto, quindi in futuro erano bambini, ma non
+
+53
+00:04:13,720 --> 00:04:21,840
+lo ha fatto nella realt, perch si rapporta al futuro Wortzel gi a quello vecchio e ha solo toccato il vero dominio in
+
+54
+00:04:21,840 --> 00:04:25,170
+i luoghi in cui sono state trovate le differenze.
+

@@ -1,0 +1,128 @@
+1
+00:00:02,230 --> 00:00:08,900
+Quindi, durante le ultime lezioni, introduciamo tre atti e stiamo gestendo tutto lo stato fondamentale della nostra
+
+2
+00:00:08,900 --> 00:00:09,890
+applicazione ora.
+
+3
+00:00:10,120 --> 00:00:17,470
+Bene molti container di ordini e non gestiamo gli ordini di cibo in questo momento perch gli ordini sono
+
+4
+00:00:17,470 --> 00:00:25,030
+realmente correlati al codice asincrono e vogliono gestire il recupero dei dati e la gestione di azioni asincrone con
+
+5
+00:00:25,030 --> 00:00:32,080
+redux prima nel prossimo modulo prima di usare anche redox su questo quindi lo stesso  un po
+
+6
+00:00:32,080 --> 00:00:36,950
+'vero per l'hamburger Boulder, dove in precedenza abbiamo recuperato gli ingredienti dal server.
+
+7
+00:00:37,000 --> 00:00:38,440
+Non lo stiamo facendo adesso.
+
+8
+00:00:38,440 --> 00:00:42,720
+Reintrodurr Eustice durante la prossima lezione nei prossimi moduli.
+
+9
+00:00:42,820 --> 00:00:51,050
+Ma quello che stiamo facendo  gestire gli ingredienti principali attraverso il relax, quello che ho gi detto  che
+
+10
+00:00:51,410 --> 00:00:57,470
+per esempio i dati dei contatti abbiamo ancora molto stato nella nostra propriet statale.
+
+11
+00:00:57,470 --> 00:00:59,270
+L'intero forum  l dentro.
+
+12
+00:00:59,270 --> 00:01:01,370
+La validit dei nostri controlli.
+
+13
+00:01:01,460 --> 00:01:07,630
+E voglio davvero evidenziare che puoi gestire tutto ci attraverso i reindirizzamenti.
+
+14
+00:01:07,760 --> 00:01:09,110
+Ce la puoi fare.
+
+15
+00:01:09,110 --> 00:01:16,120
+la logica che hai in quel contenitore qui in read X in modo da verificare la validit
+
+16
+00:01:16,130 --> 00:01:24,890
+dei controlli in Rydex che aggiorni i valori di controllo del form per i reindirizzamenti che hai letto X per tutto .
+
+17
+00:01:24,890 --> 00:01:29,210
+Puoi inviare l'azione su ogni tasto premuto dall'utente e mettere tutta
+
+18
+00:01:29,360 --> 00:01:31,510
+Puoi assolutamente farlo.
+
+19
+00:01:31,700 --> 00:01:38,640
+E se vuoi farlo dipende molto dallo stile che vuoi avere nella tua applicazione.
+
+20
+00:01:39,650 --> 00:01:43,250
+Vuoi avere componenti molto snelli in contenitori.
+
+21
+00:01:43,460 --> 00:01:49,610
+Ce n' uno qui, ovviamente, non  che devi mettere tutto in Rydex
+
+22
+00:01:49,610 --> 00:01:53,590
+vuoi avere una gestione dello stato posizionata dove appartiene.
+
+23
+00:01:53,720 --> 00:01:56,960
+Quindi dimmi che sei proprio uno stato glaciale.
+
+24
+00:01:56,960 --> 00:01:58,520
+ rilevante solo
+
+25
+00:01:58,550 --> 00:02:06,590
+ componente e non dovrebbe influire su nessuno dei componenti che potresti conservare in questo contenitore
+
+26
+00:02:06,590 --> 00:02:07,280
+qui.
+
+27
+00:02:07,640 --> 00:02:11,920
+Quindi questo  davvero qualcosa che devi decidere che Bopha sia corretto.
+
+28
+00:02:11,930 --> 00:02:18,380
+Vale certamente la pena di esercitarsi per allenare a mettere tutto quello stato in Leggi Leggi con la
+
+29
+00:02:18,380 --> 00:02:19,770
+conoscenza che hai finora.
+
+30
+00:02:19,850 --> 00:02:23,930
+Ma per me sono contento dello stato attuale dell'applicazione.
+
+31
+00:02:24,110 --> 00:02:30,590
+Voglio spostare il nostro prossimo modulo di corso immergendoci in queste cose pi avanzate sul redux come
+
+32
+00:02:30,590 --> 00:02:36,770
+il codice asincrono di Headly e poi tornando a questa applicazione per migliorarlo ancora di pi.
+

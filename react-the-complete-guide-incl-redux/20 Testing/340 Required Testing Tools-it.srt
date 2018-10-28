@@ -1,0 +1,108 @@
+1
+00:00:02,070 --> 00:00:05,220
+Quindi abbiamo appreso che il test poteva avere
+
+2
+00:00:05,220 --> 00:00:07,170
+senso, come possiamo testarlo allora?
+
+3
+00:00:07,530 --> 00:00:13,370
+Abbiamo bisogno di due strumenti per scrivere buoni test ed essere in grado di testare la nostra risposta.
+
+4
+00:00:13,410 --> 00:00:16,270
+Il primo strumento  il test runner, questo
+
+5
+00:00:16,350 --> 00:00:20,690
+ fondamentalmente uno strumento che  responsabile dell'esecuzione dei nostri test quindi
+
+6
+00:00:20,730 --> 00:00:27,720
+per eseguire il codice, il codice di test e fornire una libreria di validazione che alla fine  una libreria
+
+7
+00:00:27,720 --> 00:00:31,610
+che ci permette di fare comparazioni e potenzialmente lanciare qualche errori.
+
+8
+00:00:31,650 --> 00:00:38,700
+L'idea alla base dei test unitari  che non vengono eseguiti nel browser ma invece con nodeJS anche se spesso emulati per
+
+9
+00:00:38,760 --> 00:00:45,530
+essere in un ambiente browser con l'aiuto di specifici pacchetti javascript. Il test runner  quindi lo strumento principale che
+
+10
+00:00:45,580 --> 00:00:50,360
+esegue semplicemente il nostro codice utilizzando quell'ambiente e la cosa buona 
+
+11
+00:00:50,520 --> 00:00:55,140
+creare un'app di reazione gi fornita con un ambiente di test preconfigurato
+
+12
+00:00:55,140 --> 00:00:56,510
+su cui possiamo costruire.
+
+13
+00:00:56,850 --> 00:01:02,490
+Questo  il test runner e useremo il jest in questo corso, jest  gi installato
+
+14
+00:01:02,490 --> 00:01:08,460
+nell'app creata con create react app ed  un popolare strumento di test javascript che non si
+
+15
+00:01:08,490 --> 00:01:15,450
+limita a reagire ma spesso viene utilizzato nelle app di reazione. Ora eseguire il test  una cosa, quando si lavora
+
+16
+00:01:15,450 --> 00:01:22,380
+con la reazione di componenti, abbiamo anche bisogno di un modo per emulare questi componenti, quindi fondamentalmente montarli su dom
+
+17
+00:01:22,380 --> 00:01:28,350
+inesistenti che si possono dire e poi attraversare i nostri componenti e vogliamo farlo in un modo
+
+18
+00:01:28,350 --> 00:01:34,340
+rapido ed efficiente senza dover effettivamente creare quell'intero albero componente che potrebbe anche introdurre alcuni effetti collaterali.
+
+19
+00:01:34,680 --> 00:01:42,030
+Per questo, abbiamo bisogno di testare le utilit che ci aiutano con i test e l, abbiamo specificamente bisogno della
+
+20
+00:01:42,030 --> 00:01:48,510
+guida appena descritta per simulare l'app di reazione, montare componenti e scavare nella dom creata con la reazione.
+
+21
+00:01:49,230 --> 00:01:55,680
+In questo corso potremmo reagire come test user, questo  lo strumento di utilit ufficiale, ma c' un
+
+22
+00:01:55,680 --> 00:02:01,160
+altro strumento che  diventato sempre pi importante e interessante ed  anche suggerito dal
+
+23
+00:02:01,260 --> 00:02:04,980
+team reattivo che  l'enzima. Enzyme  uno strumento sviluppato
+
+24
+00:02:04,980 --> 00:02:11,400
+da AirBnB, usa reagire in molti dei loro progetti e condivide questo strumento che facilita il montaggio dei
+
+25
+00:02:11,610 --> 00:02:13,480
+componenti e quindi la loro
+
+26
+00:02:13,530 --> 00:02:18,710
+navigazione e ovviamente mostrer come utilizzare entrambi gli strumenti, il jest e l'enzima in questo corso.
+
+27
+00:02:18,720 --> 00:02:24,450
+Quindi questi sono gli strumenti di test, che ci lascia solo con una domanda, cosa dovremmo testare?
+

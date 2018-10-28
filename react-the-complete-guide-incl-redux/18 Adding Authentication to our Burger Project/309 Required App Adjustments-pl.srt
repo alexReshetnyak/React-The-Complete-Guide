@@ -1,0 +1,40 @@
+1
+00:00:02,210 --> 00:00:07,970
+Mamy projekt budowniczego burgerw i s pewne rzeczy, ktre dostosujemy w tym module. Musimy doda nowy widok, rejestracj i
+
+2
+00:00:07,970 --> 00:00:14,390
+logowanie. Pocz go w jednym widoku, w ktrym bdziemy mogli tworzy nowych uytkownikw
+
+3
+00:00:14,390 --> 00:00:15,830
+lub logowa uytkownikw.
+
+4
+00:00:16,010 --> 00:00:21,740
+Chcemy rwnie zabezpieczy niektre trasy na interfejsie, pilnowa ich, aby np. Nie mielimy dostpu
+
+5
+00:00:21,740 --> 00:00:24,850
+do trasy zamwie, jeli nie bdziemy uwierzytelnieni.
+
+6
+00:00:25,160 --> 00:00:33,070
+I dodatkowo chc przekaza ten token, ktry otrzymamy na zapleczu, za proby o ochron
+
+7
+00:00:33,090 --> 00:00:37,850
+zasobw, abymy mogli upewni si, e to nie zadziaa.
+
+8
+00:00:37,880 --> 00:00:43,480
+S to poprawki, ktre musimy wprowadzi na naszym interfejsie i aby je
+
+9
+00:00:43,500 --> 00:00:49,100
+wprowadzi, najpierw zaczniemy od rejestracji i logowania, poniewa bez posiadania uytkownikw wszystkie
+
+10
+00:00:49,100 --> 00:00:51,640
+inne rzeczy s trudne do zrobienia.
+

@@ -1,0 +1,172 @@
+1
+00:00:02,110 --> 00:00:05,560
+Entonces ahora estaban pasando parmetros con xito y usndolos.
+
+2
+00:00:05,690 --> 00:00:09,380
+Permtanme volver al componente de ese Post nuevamente.
+
+3
+00:00:09,650 --> 00:00:15,830
+En este momento estamos usando un enlace para cargar una sola publicacin y navegar a su pgina y no hay
+
+4
+00:00:15,830 --> 00:00:17,190
+nada de malo en eso.
+
+5
+00:00:17,210 --> 00:00:24,320
+Sin embargo, ahora quiero mostrarte una alternativa y para esto o comentar el corazn del enlace aqu con un
+
+6
+00:00:24,320 --> 00:00:30,470
+comentario normal porque no estoy dentro de GSX aqu, as que no lo hago en un enlace.
+
+7
+00:00:30,480 --> 00:00:36,520
+Por lo tanto, necesito agregar la clave para publicar nuevamente porque ahora la publicacin vuelve a ser el elemento superior en nuestra
+
+8
+00:00:36,520 --> 00:00:37,770
+matriz que estamos devolviendo.
+
+9
+00:00:38,090 --> 00:00:40,490
+Pero ahora ya no estoy usando el enlace.
+
+10
+00:00:40,820 --> 00:00:46,760
+Y, por lo tanto, puedo eliminar la importacin y realmente eliminar toda la declaracin de importacin.
+
+11
+00:00:46,760 --> 00:00:50,220
+Debo encontrar alguna otra forma de ir a esa publicacin.
+
+12
+00:00:50,390 --> 00:00:56,150
+Y recuerde que tenemos este oyente cliqueado donde ejecutamos este controlador post-seleccionado donde
+
+13
+00:00:56,150 --> 00:00:57,960
+tambin pasamos el ID.
+
+14
+00:00:58,370 --> 00:00:59,710
+Podemos usar ese mtodo.
+
+15
+00:00:59,720 --> 00:01:01,950
+Y aqu no quiero usar el estado en su lugar.
+
+16
+00:01:01,960 --> 00:01:04,230
+Quiero navegar programticamente.
+
+17
+00:01:04,490 --> 00:01:10,070
+Y lo estaba mostrando aqu como una demostracin, por supuesto, usar el enlace estara bien para este caso de uso,
+
+18
+00:01:10,070 --> 00:01:16,640
+pero a veces tambin tiene casos de uso en los que desea navegar despus de que algo finaliz despus de que se envi la
+
+19
+00:01:16,640 --> 00:01:17,060
+solicitud HTP.
+
+20
+00:01:17,060 --> 00:01:20,080
+Por ejemplo, veremos esto de nuevo ms tarde.
+
+21
+00:01:20,090 --> 00:01:25,770
+Ahora para hacer esto podemos aprovechar ese objeto de historia que recibimos en los accesorios.
+
+22
+00:01:25,850 --> 00:01:32,600
+Recuerda aqu en los accesorios tenemos historia y all tenemos algunas funciones en las que podemos ejecutar funciones
+
+23
+00:01:32,720 --> 00:01:38,690
+para navegar, retroceder o avanzar, que hacen exactamente lo que parecen, bsicamente hacen lo mismo que
+
+24
+00:01:38,690 --> 00:01:41,910
+tienes con los botones hacia delante y hacia atrs.
+
+25
+00:01:41,960 --> 00:01:50,360
+Tambin existe este mtodo de insercin que le permite insertar una nueva pgina en la pila de pginas porque la navegacin
+
+26
+00:01:50,600 --> 00:01:53,860
+bsicamente se trata de una pila de pginas.
+
+27
+00:01:53,900 --> 00:01:59,420
+Es por eso que los botones Atrs y Adelante funcionan en el navegador porque puede volver a la
+
+28
+00:01:59,450 --> 00:02:05,100
+ltima pgina en la pila o reenviarla a esa pgina en la pila que tiene en la parte superior.
+
+29
+00:02:05,120 --> 00:02:07,330
+Antes de que regresaras.
+
+30
+00:02:07,340 --> 00:02:12,160
+Entonces, podemos usar el empuje histrico de este puntal.
+
+31
+00:02:12,530 --> 00:02:23,690
+Y luego una cadena o tambin un objeto tan esencialmente el mismo que usamos en el enlace del enrutador en las dos
+
+32
+00:02:24,200 --> 00:02:27,080
+propiedades para navegar a una pgina.
+
+33
+00:02:27,110 --> 00:02:36,300
+As que all podramos navegar a un objeto javascript donde dicho nombre lbf para recortar y luego ms la ID.
+
+34
+00:02:36,410 --> 00:02:41,650
+Y esto es lo mismo que tena all con el enlace para simplemente usar la notacin de objeto.
+
+35
+00:02:41,720 --> 00:02:48,350
+Pero una vez ms, la alternativa que voy a comentar sera ir a slash plus ID.
+
+36
+00:02:48,350 --> 00:02:52,220
+As que solo pasa una cadena para que ambos funcionen ahora.
+
+37
+00:02:52,680 --> 00:02:53,560
+Y con.
+
+38
+00:02:53,600 --> 00:02:59,910
+Si regreso a mi aplicacin a casa y hago clic en una publicacin que todava funciona.
+
+39
+00:02:59,960 --> 00:03:07,430
+Ahora bien, programticamente y chust demuestran que funciona incluso con la notacin Aberg, permtanme
+
+40
+00:03:07,430 --> 00:03:09,690
+comentarlo de esta manera.
+
+41
+00:03:09,710 --> 00:03:15,000
+Ahora si vuelvo a casa y hago clic en una publicacin, seguimos yendo a esa publicacin.
+
+42
+00:03:15,070 --> 00:03:21,950
+As que ahora estamos navegando por un programa mgico, que puede ser importante de vez en cuando y se usa principalmente despus
+
+43
+00:03:22,040 --> 00:03:23,730
+de que una operacin determinada finaliza.
+

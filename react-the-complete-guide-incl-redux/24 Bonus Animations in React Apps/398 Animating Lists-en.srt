@@ -1,0 +1,320 @@
+1
+00:00:02,140 --> 00:00:08,390
+Over the last lectures we spend a lot of talking about transition and css transition because it's
+
+2
+00:00:08,390 --> 00:00:16,850
+really super important. What however about our list? In this list we're also of course adding and removing
+
+3
+00:00:16,850 --> 00:00:23,780
+items and it would be nice if we could animate that too because right now, if I add an item it's just there
+
+4
+00:00:23,810 --> 00:00:25,930
+and if I remove it, it's just gone.
+
+5
+00:00:26,030 --> 00:00:29,320
+What if we actually wanted to animate this?
+
+6
+00:00:29,390 --> 00:00:30,780
+Well we can do that,
+
+7
+00:00:30,800 --> 00:00:35,190
+we can't do it with transition and CSSTtansition alone though,
+
+8
+00:00:35,270 --> 00:00:37,310
+this wouldn't work,
+
+9
+00:00:37,310 --> 00:00:45,690
+instead we'll have to use an additional component we can import from the react transition group package,
+
+10
+00:00:46,160 --> 00:00:55,490
+this component is called TransitionGroup from react transition group, like this /transition
+
+11
+00:00:55,760 --> 00:00:57,350
+group is the subpackage.
+
+12
+00:00:57,590 --> 00:01:06,200
+Now transition group can be used in places where you output lists so where you have a dynamic list
+
+13
+00:01:06,230 --> 00:01:10,690
+of elements, like here in our unordered list. There
+
+14
+00:01:10,730 --> 00:01:16,400
+we can replace the unordered list element with transition group,
+
+15
+00:01:16,580 --> 00:01:20,840
+of course also for the closing tag, like this
+
+16
+00:01:21,160 --> 00:01:25,020
+and then by default this would render a div in its place.
+
+17
+00:01:25,030 --> 00:01:30,910
+So we can define the component property there conveniently to still render an unordered list element
+
+18
+00:01:31,030 --> 00:01:33,220
+so that we work with that
+
+19
+00:01:33,220 --> 00:01:39,140
+but then it will replace itself with this unordered list and still wrap our list items semantically correct.
+
+20
+00:01:39,490 --> 00:01:47,410
+And then of course we had our list class we can also still add this by simply adding class name as on any
+
+21
+00:01:47,650 --> 00:01:56,140
+element which should be list. With that if we save this and we go back, we see that it still works but
+
+22
+00:01:56,140 --> 00:01:57,840
+we get a couple of warnings here,
+
+23
+00:01:58,090 --> 00:02:03,790
+unknown event handler on exited receive true for non-booleaan attribute in.
+
+24
+00:02:04,000 --> 00:02:09,790
+Well we're getting all these warnings because right now with our transition group, we're still wrapping
+
+25
+00:02:09,790 --> 00:02:17,050
+a list of list items and transition group can be used for animating lists but only in conjunction
+
+26
+00:02:17,050 --> 00:02:21,170
+with the transition or CSSTransition component,
+
+27
+00:02:21,220 --> 00:02:24,290
+they then both work as you learned it.
+
+28
+00:02:24,790 --> 00:02:32,350
+So here we now can import let's say css transition to take advantage of these automatically generated
+
+29
+00:02:32,350 --> 00:02:38,920
+css classes from react transition group, CSSTransition, like this
+
+30
+00:02:39,710 --> 00:02:46,230
+and now we can use that to wrap our list items.
+
+31
+00:02:46,300 --> 00:02:48,980
+So here in my list items array,
+
+32
+00:02:49,000 --> 00:02:53,880
+I can use css transition just like that,
+
+33
+00:02:55,070 --> 00:02:57,510
+wrap my list item with it
+
+34
+00:02:59,250 --> 00:03:07,150
+like this, now I need to move the key to the CSSTransition element here because that's now actually the
+
+35
+00:03:07,150 --> 00:03:08,830
+item we're looping through
+
+36
+00:03:09,670 --> 00:03:16,810
+and now with that if I save this, you see that we get different warnings now that we don't have a time
+
+37
+00:03:16,850 --> 00:03:17,880
+out
+
+38
+00:03:18,110 --> 00:03:26,310
+and if I click this, that it can't find enter, the enter class it essentially tries to add to the css
+
+39
+00:03:26,360 --> 00:03:28,390
+class. Now the reason for all these errors
+
+40
+00:03:28,400 --> 00:03:31,850
+is that CSSTransition isn't configured correctly,
+
+41
+00:03:31,880 --> 00:03:34,730
+we need to pass classNames,
+
+42
+00:03:34,760 --> 00:03:39,510
+let's say fade and we all need to pass a timeout
+
+43
+00:03:39,530 --> 00:03:42,920
+let's say here we just hardcode 300 milliseconds.
+
+44
+00:03:43,280 --> 00:03:51,290
+If we now set up CSSTransition correctly, now it's actually doing something, it's animating something
+
+45
+00:03:51,290 --> 00:03:55,270
+well it's not animating anything but it's not throwing errors anymore
+
+46
+00:03:55,520 --> 00:04:01,190
+and the important thing is that now we can start animating this.
+
+47
+00:04:01,190 --> 00:04:10,530
+Now you might miss the in property we used before to control the state of our transition,
+
+48
+00:04:10,600 --> 00:04:17,750
+the special thing about transition group and essentially the only thing it does is it's able to handle
+
+49
+00:04:17,750 --> 00:04:19,460
+multiple items,
+
+50
+00:04:19,490 --> 00:04:26,840
+it determines whenever one element in the list changes if it's removed or added and it will then manually
+
+51
+00:04:27,170 --> 00:04:31,300
+set the in property on the wrapped transition
+
+52
+00:04:31,310 --> 00:04:37,670
+or CSSTransition component so that you don't have to control the in property because you of course can't
+
+53
+00:04:37,670 --> 00:04:38,310
+do that,
+
+54
+00:04:38,390 --> 00:04:41,120
+you're handling a dynamic list in the end.
+
+55
+00:04:41,120 --> 00:04:46,950
+Now with that, the management of the in property is the main difference
+
+56
+00:04:47,180 --> 00:04:53,900
+so now we can define our fade animation since I set up fade as the trunk here and let's say the list.css
+
+57
+00:04:53,900 --> 00:04:57,000
+file and I'll add fade-enter,
+
+58
+00:04:57,470 --> 00:05:02,290
+let's say this is my starting configuration where I set the opacity to 0,
+
+59
+00:05:02,660 --> 00:05:05,200
+then I'll say fade-enter-active
+
+60
+00:05:05,300 --> 00:05:13,320
+so whilst the animation is running, I want to animate to an opacity of 1 and I'll do this with a css transition
+
+61
+00:05:13,520 --> 00:05:21,310
+so set in transition here for opacity over let's say .3 seconds since I defined a time out of 300
+
+62
+00:05:21,320 --> 00:05:21,980
+here,
+
+63
+00:05:22,160 --> 00:05:32,120
+over .3seconds with ease-out timing function. I'll then add fade-exit and there we start at
+
+64
+00:05:32,120 --> 00:05:38,920
+opacity of 1 still and then fade-exit-active,
+
+65
+00:05:39,020 --> 00:05:40,160
+there I'll set
+
+66
+00:05:40,160 --> 00:05:42,020
+my opacity to zero
+
+67
+00:05:42,060 --> 00:05:50,490
+and I also want to add a transition here to animate this. With all these changes if we save that file,
+
+68
+00:05:50,700 --> 00:05:56,470
+if I now reload my application and add an item, you see it's animated in,
+
+69
+00:05:56,480 --> 00:06:00,910
+we have this fade effect and the same for removing it,
+
+70
+00:06:01,070 --> 00:06:07,850
+there it's also animating an element out, just well the wrong one here due to the way we manage this
+
+71
+00:06:07,850 --> 00:06:12,500
+list with this key which really is just the index.
+
+72
+00:06:12,950 --> 00:06:15,540
+But still you can see the animation works
+
+73
+00:06:15,650 --> 00:06:22,520
+and if you have a list where you have a better key, it would also not update this incorrectly.
+
+74
+00:06:22,520 --> 00:06:28,670
+So this actually works, it's animating the list items out to as well as in, as you can clearly tell
+
+75
+00:06:28,670 --> 00:06:29,310
+here.
+
+76
+00:06:29,330 --> 00:06:32,120
+So this is the transition group component,
+
+77
+00:06:32,300 --> 00:06:39,260
+in the end just a helper, automatically setting the in property on CSSTransition or just transition
+
+78
+00:06:39,470 --> 00:06:44,900
+and then you work with these transition, CSSTransition components just as you've learned over
+
+79
+00:06:44,900 --> 00:06:46,150
+the last lectures.
+
+80
+00:06:46,160 --> 00:06:51,140
+And with that, you got a powerful way of animating lists and here, import it too.
+

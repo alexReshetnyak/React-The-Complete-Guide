@@ -1,0 +1,368 @@
+1
+00:00:02,190 --> 00:00:07,650
+We got the token and all that information when signing up and signing in, obviously we want to store
+
+2
+00:00:07,650 --> 00:00:16,290
+this to be able in the future to also access resources on our server which are protected. To store that token,
+
+3
+00:00:16,350 --> 00:00:23,210
+I will now go into my reducers folder and create a new reducer file auth.js,
+
+4
+00:00:23,230 --> 00:00:29,360
+there I want to handle these auth actions and my auth state. For that, I'll
+
+5
+00:00:29,400 --> 00:00:36,330
+first of all import all my action types here from the actions folder and there, from action types
+
+6
+00:00:36,330 --> 00:00:43,890
+because I need them in my switch case statement and then I will create my reducer function, as always
+
+7
+00:00:43,890 --> 00:00:51,430
+receiving the state and the action, I will export this as the default of this file.
+
+8
+00:00:51,710 --> 00:01:01,070
+I'll also set up an initial state, so initial state should be a javascript object and there in this javascript
+
+9
+00:01:01,130 --> 00:01:07,520
+object, I want to have my token which is null initially,
+
+10
+00:01:07,520 --> 00:01:12,660
+I want to also maybe store my user ID which is null initially,
+
+11
+00:01:12,860 --> 00:01:20,720
+we can also store an error here initially null and maybe also loading which is false.
+
+12
+00:01:20,720 --> 00:01:26,490
+Now in my reducer, I'll add this switch case statement, I'll switch the action type
+
+13
+00:01:26,720 --> 00:01:29,570
+and there, I'll check my cases now,
+
+14
+00:01:29,900 --> 00:01:36,600
+the first case is actionTypes.AUTH_START and in there
+
+15
+00:01:36,620 --> 00:01:44,550
+I just want to return my state and now we can of course use our utility function to update an object,
+
+16
+00:01:44,780 --> 00:01:56,270
+so I'll import that here too, I'll import updateObject from the utility file to return the updated state
+
+17
+00:01:56,690 --> 00:02:05,560
+with updateObject passing the old state and update only the error, set it to null again in case it changed
+
+18
+00:02:05,600 --> 00:02:13,030
+and loading, set it to true here because we just started loading here obviously.
+
+19
+00:02:13,370 --> 00:02:17,320
+We also need to set up a default case already to get rid of this IDE error,
+
+20
+00:02:17,460 --> 00:02:20,460
+there I will just return my state, like this.
+
+21
+00:02:20,510 --> 00:02:25,060
+Now we optimized all the other reducers to have lean switch case statements,
+
+22
+00:02:25,050 --> 00:02:26,380
+let's do this here too.
+
+23
+00:02:26,480 --> 00:02:34,160
+I'll create a new function here which I'll name authStart where I get state and action and where I simply
+
+24
+00:02:34,160 --> 00:02:44,030
+want to return this code here, so return my updated state object so that for this case here I can just
+
+25
+00:02:44,030 --> 00:02:51,900
+call authStart, return it to be precise because I still need to return a state here in my reducer,
+
+26
+00:02:51,910 --> 00:02:54,950
+authStart and pass on state and action.
+
+27
+00:02:55,510 --> 00:03:03,040
+Now I'll add another function to my auth reducer, authSuccess, here
+
+28
+00:03:03,040 --> 00:03:12,600
+we also expect state and action of course and there, I will also return an updated object so I'll call
+
+29
+00:03:12,660 --> 00:03:17,440
+updateObject here and return it for my state.
+
+30
+00:03:17,460 --> 00:03:22,790
+Now what needs to change on a state in a success case? In a success case,
+
+31
+00:03:22,920 --> 00:03:28,020
+I want to set the token and user ID and error and loading, so everything.
+
+32
+00:03:28,440 --> 00:03:35,370
+So in a success case, I'll set token to let's say action ID token,
+
+33
+00:03:35,370 --> 00:03:38,620
+I expect to get this property on my action
+
+34
+00:03:38,640 --> 00:03:42,680
+User ID to action user ID,
+
+35
+00:03:42,680 --> 00:03:47,080
+I also expect to get this, error to
+
+36
+00:03:47,100 --> 00:03:53,190
+null and loading to false because we're done. Now
+
+37
+00:03:53,200 --> 00:03:57,650
+I'll also create another function, authFail,
+
+38
+00:03:58,040 --> 00:04:06,550
+there I also receive state and action and here, I will return updateObject state
+
+39
+00:04:06,770 --> 00:04:14,630
+and here I will then set error to action error which I expect to get and still loading to false
+
+40
+00:04:14,630 --> 00:04:16,100
+of course.
+
+41
+00:04:16,100 --> 00:04:23,600
+Now these two actions of course need to be handled with cases so let's add a case actionTypes.AUTH_SUCCESS,
+
+42
+00:04:23,640 --> 00:04:33,620
+whoops, AUTH_SUCCESS, here I want to return the result of authSuccess function I just created, pass on state
+
+43
+00:04:33,620 --> 00:04:39,890
+and action of course and case actionTypes.AUTH_FAIL,
+
+44
+00:04:40,100 --> 00:04:43,660
+here I want to return the result of my authFail function
+
+45
+00:04:43,670 --> 00:04:46,080
+where I also pass state and action,
+
+46
+00:04:46,190 --> 00:04:52,880
+so these are two functions I just created. With that I get a nice auth reducer which should be able to
+
+47
+00:04:52,880 --> 00:04:55,080
+do something with my data,
+
+48
+00:04:55,220 --> 00:04:59,470
+now of course I want to combine it with my other reducers
+
+49
+00:04:59,540 --> 00:05:11,460
+so in my main index.js file, I'll import the auth reducer from ./store reducers auth, like this
+
+50
+00:05:12,310 --> 00:05:14,790
+and add it to combine reducers
+
+51
+00:05:14,830 --> 00:05:23,230
+on the auth domain, so on a property named auth. With that we added to our global root reducer,
+
+52
+00:05:23,650 --> 00:05:27,890
+we won't get all the information we want though, ID token, user ID,
+
+53
+00:05:27,920 --> 00:05:33,180
+I extract all of that from the action, right now if we have a look in our action here,
+
+54
+00:05:33,250 --> 00:05:40,030
+we're not really passing on that data. So let's inspect the response we get back to see how we extract
+
+55
+00:05:40,030 --> 00:05:44,980
+the data we want to pass on to authSuccess and so on.
+
+56
+00:05:44,980 --> 00:05:53,170
+So let's go back to our application and reload it and get this error because in the reducer for authentication,
+
+57
+00:05:53,180 --> 00:05:55,160
+I forgot one important thing,
+
+58
+00:05:55,270 --> 00:06:01,020
+the state of course has to be set to the initial state otherwise it's undefined at the beginning.
+
+59
+00:06:01,200 --> 00:06:07,810
+So now with that, it's working again and let's now try to sign in, sign in because this e-mail address is already
+
+60
+00:06:07,810 --> 00:06:09,340
+taken,
+
+61
+00:06:09,340 --> 00:06:16,660
+there we get back a response and now here we see we get the local ID which is user ID and we get the
+
+62
+00:06:16,660 --> 00:06:17,400
+ID token,
+
+63
+00:06:17,410 --> 00:06:18,980
+that's also interesting to me.
+
+64
+00:06:19,360 --> 00:06:23,380
+So these are two things I'll save, I'll not save the refresh token,
+
+65
+00:06:23,470 --> 00:06:26,270
+so refreshing the token won't be possible here,
+
+66
+00:06:26,290 --> 00:06:32,020
+this is something you would have to do if you want to ensure that tokens don't expire after 1 hour,
+
+67
+00:06:32,200 --> 00:06:36,450
+in my app, people will need to log in again after one hour.
+
+68
+00:06:36,760 --> 00:06:42,110
+So to save that data on local ID and ID token,
+
+69
+00:06:42,340 --> 00:06:51,010
+I get that in my auth file in the actions folder, here where we post our authentication request and get
+
+70
+00:06:51,010 --> 00:06:53,870
+back a response, in response data,
+
+71
+00:06:54,040 --> 00:07:02,380
+we have the ID token and local ID field and I need to pass this onto authSuccess because authSuccess
+
+72
+00:07:02,400 --> 00:07:07,640
+then needs to pass it on, by passing on let's say the token,
+
+73
+00:07:07,660 --> 00:07:16,870
+so I expect to get my token and the user ID here so that I can pass on token and user ID as props which I
+
+74
+00:07:16,870 --> 00:07:19,860
+then try to extract in my reducer.
+
+75
+00:07:19,960 --> 00:07:26,050
+There I try to extract token, ID token and user id, so its ID token
+
+76
+00:07:26,230 --> 00:07:34,650
+let's rename it to that in our auth action file, should be a property named ID token and for the error, it's
+
+77
+00:07:34,690 --> 00:07:42,430
+named error, that is already what I try to extract so that will work. With that we need to go back to the
+
+78
+00:07:42,550 --> 00:07:50,130
+auth file here and I do expect to get my token and user ID in the authSuccess function,
+
+79
+00:07:50,200 --> 00:07:57,330
+that of course means that when I dispatch this function here, in the success case, I need to pass it on,
+
+80
+00:07:57,400 --> 00:08:04,450
+so I need to pass on response data and then it was called ID token and as a second argument, response
+
+81
+00:08:04,450 --> 00:08:11,260
+data and the user ID was stored in a local ID property and you can always verify this in the console
+
+82
+00:08:11,260 --> 00:08:11,750
+log,
+
+83
+00:08:11,800 --> 00:08:16,960
+ID token and local ID. With that I'm saving that data
+
+84
+00:08:17,320 --> 00:08:19,060
+and now let's see if this works,
+
+85
+00:08:19,070 --> 00:08:23,150
+let's send this data one more time, switch to sign in,
+
+86
+00:08:23,150 --> 00:08:30,780
+go to redux and hit submit and on success if we now inspect the state,
+
+87
+00:08:31,050 --> 00:08:37,110
+we see that in auth we indeed have the token and we have the user id here stored,
+
+88
+00:08:37,110 --> 00:08:44,310
+so that worked all. With that we're storing the authentication status, what we're not doing is we're not
+
+89
+00:08:44,310 --> 00:08:45,310
+showing a spinner
+
+90
+00:08:45,320 --> 00:08:47,140
+whilst we are authenticating.
+
+91
+00:08:47,400 --> 00:08:54,600
+Let's add this as well as error handling before we then continue and make use of that token when trying
+
+92
+00:08:54,600 --> 00:08:58,230
+to access resources we otherwise would not be able to access.
+

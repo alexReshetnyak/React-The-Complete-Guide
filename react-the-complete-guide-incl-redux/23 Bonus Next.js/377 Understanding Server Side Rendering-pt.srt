@@ -1,0 +1,152 @@
+1
+00:00:02,130 --> 00:00:09,390
+Vamos comear com nextjs, voc pode simplesmente procurar pelo nextjs e depois escolher o link do
+
+2
+00:00:09,390 --> 00:00:14,990
+repositrio do github que voc encontrar. Nesta pgina voc encontrar instrues detalhadas sobre como us-lo,
+
+3
+00:00:15,180 --> 00:00:20,190
+um link que leva a outra pgina onde voc pode mergulhar ainda mais fundo e tambm instrues
+
+4
+00:00:20,190 --> 00:00:21,120
+sobre como instal-lo.
+
+5
+00:00:21,240 --> 00:00:22,740
+Mas o que vem a seguir?
+
+6
+00:00:22,740 --> 00:00:30,240
+Aqui est dizendo nextjs  uma estrutura minimalista para um servidor renderizado reage aplicativos.
+
+7
+00:00:30,240 --> 00:00:34,890
+Agora, a renderizao do lado do servidor  um conceito
+
+8
+00:00:34,890 --> 00:00:38,320
+bastante avanado, h, portanto, cursos focados inteiramente nisso.
+
+9
+00:00:38,640 --> 00:00:45,450
+Em suma, a renderizao do lado do servidor significa simplesmente que, quando um usurio insere uma URL que
+
+10
+00:00:45,450 --> 00:00:52,620
+leva ao seu aplicativo reagente ou a uma de suas pginas do aplicativo reagir, ele pr-renderiza essa pgina no
+
+11
+00:00:52,620 --> 00:00:57,330
+servidor para que o servidor retorne aquela pr-renderizada. cdigo html, deixe-me mostrar
+
+12
+00:00:57,330 --> 00:00:58,840
+o que quero dizer.
+
+13
+00:00:58,890 --> 00:01:00,730
+Se dermos uma olhada em
+
+14
+00:01:00,750 --> 00:01:02,520
+nossa configurao normal, temos um
+
+15
+00:01:02,640 --> 00:01:08,760
+servidor e um cliente e, claro, nosso cdigo de aplicativo reagente e, com isso, quero dizer tanto
+
+16
+00:01:08,790 --> 00:01:16,330
+o cdigo de compilao nesta pasta de compilao que criamos o aplicativo de aplicativo reagente cdigo na sua pasta de origem.
+
+17
+00:01:16,410 --> 00:01:22,430
+Se voc agora visitar seu servidor pela primeira vez, para carregar a pgina pela primeira vez,
+
+18
+00:01:22,440 --> 00:01:28,980
+o servidor normalmente enviaria o ndice para voc. arquivo html e seu cdigo e, em seguida, voc iria carreg-lo como um
+
+19
+00:01:28,980 --> 00:01:30,620
+aplicativo de pgina nica no seu cliente.
+
+20
+00:01:30,630 --> 00:01:39,390
+O problema pode ser que, se sua pgina precisar ser rastrevel pelos mecanismos de pesquisa, rastreadores como o rastreador do
+
+21
+00:01:39,420 --> 00:01:46,320
+Google podem no entender ou ler a pgina corretamente, especialmente se voc estiver usando um cdigo
+
+22
+00:01:46,320 --> 00:01:48,990
+assncrono para carregar o contedo inicial.
+
+23
+00:01:49,230 --> 00:01:54,780
+Ento, se voc tem uma pgina onde a primeira coisa que voc faz em JavaScript  chegar a
+
+24
+00:01:54,780 --> 00:01:57,560
+um servidor e renderizar os resultados para a tela
+
+25
+00:01:57,780 --> 00:02:04,650
+quando os dados esto de volta, isso pode acontecer rpido demais para o usurio, mas o rastreador s ver o spinner ou o
+
+26
+00:02:04,650 --> 00:02:07,520
+que voc est mostrando at que os dados estejam l.
+
+27
+00:02:07,680 --> 00:02:13,360
+Agora, com a renderizao do lado do servidor, para o carregamento da primeira pgina, que  sempre
+
+28
+00:02:13,530 --> 00:02:19,200
+o que o rastreador v, o servidor buscar e renderizar o aplicativo reagente para que ele no
+
+29
+00:02:19,200 --> 00:02:26,820
+apenas o obtenha e retorne, ele tambm renderiza para a pgina visitada e depois ele retorna essa pgina pr-renderizada junto com o pacote
+
+30
+00:02:26,820 --> 00:02:32,420
+de aplicativos reagir, de modo que, a partir desse momento, voc ainda ter um aplicativo de pgina
+
+31
+00:02:32,430 --> 00:02:34,580
+nica para continuar trabalhando como antes.
+
+32
+00:02:34,650 --> 00:02:41,940
+ basicamente sobre a carga inicial da pgina, agora nextjs  um pacote que ajuda voc com a renderizao do lado
+
+33
+00:02:41,940 --> 00:02:44,860
+do servidor, porque isso  muito difcil de configurar.
+
+34
+00:02:44,970 --> 00:02:51,380
+E alm de apenas ajud-lo com isso, voc tem um costume ou uma estrutura especfica para trabalhar.
+
+35
+00:02:51,390 --> 00:02:58,570
+Essa estrutura tira proveito da imposio de uma estrutura de pastas rgida que voc precisa usar,
+
+36
+00:02:58,680 --> 00:03:05,700
+mas estamos falando apenas de uma pasta, que precisa ser nomeada de uma determinada maneira, para
+
+37
+00:03:05,700 --> 00:03:10,170
+que todas as rotas de sua aplicao sejam geradas automaticamente.
+
+38
+00:03:10,350 --> 00:03:16,560
+Deixe-me mostrar-lhe o que quero dizer e como comeamos um projeto to prximo nas prximas palestras.
+

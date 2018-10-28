@@ -1,0 +1,168 @@
+1
+00:00:02,060 --> 00:00:06,620
+So now that we know which tools we use and why testing in general is a good idea,
+
+2
+00:00:06,620 --> 00:00:13,010
+we of course have to find out what we should test and there, the answer is straightforward.
+
+3
+00:00:13,040 --> 00:00:19,760
+Actually writing good tests is quite complex and requires a lot of practice which is also one of the
+
+4
+00:00:19,760 --> 00:00:22,520
+reasons why this is no complete testing guide,
+
+5
+00:00:22,580 --> 00:00:23,700
+not at all.
+
+6
+00:00:24,050 --> 00:00:27,450
+So in general, here are some things you would not want to test,
+
+7
+00:00:27,470 --> 00:00:29,220
+you don't want to test the library,
+
+8
+00:00:29,240 --> 00:00:33,340
+you don't want to test react or axios or redux itself,
+
+9
+00:00:33,590 --> 00:00:38,270
+these are third party libraries which already were tested by the developers.
+
+10
+00:00:38,270 --> 00:00:40,400
+You don't need to test if they work correctly,
+
+11
+00:00:40,460 --> 00:00:44,610
+you don't need to test if the store, the redux store is working correctly,
+
+12
+00:00:44,720 --> 00:00:45,940
+you want to test the code
+
+13
+00:00:45,980 --> 00:00:51,520
+you add to your application and there you want to test the code which does not use that library.
+
+14
+00:00:51,530 --> 00:00:57,830
+So for example, if you're sending an axios post request, you don't need to test if that is sent successfully,
+
+15
+00:00:58,040 --> 00:01:04,100
+if it fails you probably have no internet connection, it's not the axios library. You typically want
+
+16
+00:01:04,100 --> 00:01:10,700
+to fake data you get back from my server in such a use case and just test what you are doing with such returned
+
+17
+00:01:10,700 --> 00:01:11,300
+data
+
+18
+00:01:11,420 --> 00:01:14,360
+so that's the idea behind testing.
+
+19
+00:01:14,360 --> 00:01:19,580
+Additionally you don't want to test too complex connections especially in react,
+
+20
+00:01:19,580 --> 00:01:24,770
+there is the danger of testing that you click a button in one component and you change something in
+
+21
+00:01:24,770 --> 00:01:26,770
+a totally different component.
+
+22
+00:01:26,780 --> 00:01:33,050
+Now you don't have to test if react is able to use the concept of props to emit an event and pass that
+
+23
+00:01:33,050 --> 00:01:33,660
+on,
+
+24
+00:01:33,920 --> 00:01:39,080
+you would be interested in testing if the button click in your react triggers a specific prop in the
+
+25
+00:01:39,080 --> 00:01:40,160
+first place
+
+26
+00:01:40,310 --> 00:01:46,790
+or if the change in data you receive via props in one component leads to a different result being rendered,
+
+27
+00:01:46,850 --> 00:01:48,570
+that is what you want to test.
+
+28
+00:01:48,590 --> 00:01:55,320
+There are some testing guides which goes so far to say for react components, you only need to test if
+
+29
+00:01:55,320 --> 00:01:58,310
+a react component itself is rendered correctly.
+
+30
+00:01:58,310 --> 00:02:04,250
+Now I will show you how to test different thing with react components but definitely keep in mind, don't
+
+31
+00:02:04,250 --> 00:02:06,830
+test too complex connections.
+
+32
+00:02:06,890 --> 00:02:08,980
+So these are the things you don't want to test,
+
+33
+00:02:09,110 --> 00:02:14,210
+what are you going to test then? Typical examples are isolated units,
+
+34
+00:02:14,210 --> 00:02:17,160
+you want to test that reducer function you created,
+
+35
+00:02:17,270 --> 00:02:20,660
+you want to test that component function you created,
+
+36
+00:02:20,660 --> 00:02:23,860
+you also want to test conditional output
+
+37
+00:02:23,960 --> 00:02:31,160
+if your component has a property which leads to something being rendered if that property is true, then
+
+38
+00:02:31,160 --> 00:02:33,430
+you want to test if this really happens.
+
+39
+00:02:33,590 --> 00:02:36,790
+What happens if some property changes in your component?
+
+40
+00:02:36,890 --> 00:02:39,150
+Does that affect the output correctly?
+
+41
+00:02:39,350 --> 00:02:42,980
+These are things you want to test in your unit tests.
+
+42
+00:02:42,980 --> 00:02:48,330
+Now with that knowledge gained, let's learn how we actually write unit tests in a react app.
+

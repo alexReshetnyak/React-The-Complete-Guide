@@ -1,0 +1,104 @@
+1
+00:00:02,290 --> 00:00:09,700
+Son derslerin ayarlamalar ile azalttmz veya azalttmzda genel olarak drcler zerindeki eylemlerimizi bir hayran
+
+2
+00:00:09,700 --> 00:00:16,570
+kitlesi arasnda bltrdk ve kk bir proje iin burada bir hayli kullanl kod
+
+3
+00:00:16,570 --> 00:00:16,970
+hazrladk.
+
+4
+00:00:16,990 --> 00:00:23,160
+Bu aka acyor ama ayn zamanda size ne yapabileceinizi gstermeme izin veriyor ve daha byk
+
+5
+00:00:23,410 --> 00:00:25,510
+uygulamalar olutururken bu nem kazanacak.
+
+6
+00:00:25,540 --> 00:00:31,060
+Bergere Boulder uygulamasnda tekrar bir sonraki ders modlnde alacak baz
+
+7
+00:00:31,060 --> 00:00:32,280
+avantajlar greceiz.
+
+8
+00:00:32,440 --> 00:00:39,610
+olduunca tepki verebilmen iin bu olas gelimeleri veya yeniden yaplanmalar vurgulamak istedim.
+
+9
+00:00:39,610 --> 00:00:46,300
+Yaln ve anlalabilir redksiyon eylemcileri olarak binmeye ve uygulamalar genel olarak mmkn
+
+10
+00:00:46,300 --> 00:00:53,110
+imdi hzla dal etmek istediim baka bir ey alternatif bir klasr yaps.
+
+11
+00:00:53,170 --> 00:00:59,110
+imdi klasr yaps gerekten binlerce farkl yaklam bulabileceiniz bir ey.
+
+12
+00:00:59,110 --> 00:01:04,360
+Bu derste setiim yaklam, en sk tekrarlanan projeleri greceksiniz.
+
+13
+00:01:04,450 --> 00:01:09,760
+Kaplar ve bileenler farkllamas ve daha sonra maaza ile olduka iyi.
+
+14
+00:01:09,940 --> 00:01:16,480
+imdi maazanz bydke giderek daha fazla eylem ekleyebilir ve azaltabilir veya debilir
+
+15
+00:01:16,480 --> 00:01:22,510
+ve redktr dosyalarndan bazlarnn baz kaplar, Faas' baka bir kapta azalttn greceksiniz.
+
+16
+00:01:22,510 --> 00:01:30,910
+klasr oluturabilir ve sadece indirgeyiciyi ve l olarak verilen konteyner iin eylemleri o maazaya ekleyebilirsiniz.
+
+17
+00:01:31,270 --> 00:01:39,060
+Bu sebeple ve alternatif bir proje yaps iin, her konteynerde bir depo alt
+
+18
+00:01:39,100 --> 00:01:45,010
+Ve daha fazla konteyneriniz olsayd her konteyner klasrnde bir maaza klasr vard, bu genel
+
+19
+00:01:45,010 --> 00:01:50,560
+maaza klasrnz olmazd ve her bir konteyner iin redktrlerde bir sr ilem gerekletirdikten
+
+20
+00:01:50,560 --> 00:01:54,140
+sonra yine de dizin caznzda Faldo'yu bir araya getirirsiniz.
+
+21
+00:01:54,160 --> 00:01:55,970
+Yani bu bir alternatif.
+
+22
+00:01:56,050 --> 00:02:02,080
+Deaderick, insanlar bulabileceiniz ve bir ok dnceyle bir sr makaleyi okuyabileceiniz bir eydir; ayrca,
+
+23
+00:02:02,460 --> 00:02:08,240
+ihtiyacnz olabilecek baz kresel veya paylaml ilemler iin global bir maazayla birlikte kullanabilirsiniz.
+
+24
+00:02:08,440 --> 00:02:11,950
+Pek ok proje iin beendiiniz yaklam bulun.
+
+25
+00:02:11,950 --> 00:02:16,800
+Burada bir merkezi maaza klasr ile gsterilen yaklam iyi olmaldr.
+
+26
+00:02:16,870 --> 00:02:20,810
+Ancak, ihtiya duyulduunda ondan ayrlmak iin serbest olduunuzun farknda olun.
+

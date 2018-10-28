@@ -1,0 +1,144 @@
+1
+00:00:02,140 --> 00:00:04,680
+Dlatego teraz chcemy skonfigurowa nasz projekt, a
+
+2
+00:00:04,750 --> 00:00:08,350
+przede wszystkim skonfigurowa struktur projektu, z ktr chc pracowa.
+
+3
+00:00:08,470 --> 00:00:15,670
+Teraz nie bd odtwarza dokadnie struktury tworzonej aplikacji, ale do podobnej, utworz folder rdowy w naszym folderze
+
+4
+00:00:15,670 --> 00:00:22,010
+gwnym iw tym folderze rdowym dodam mj indeks. plik html, wic ta pojedyncza
+
+5
+00:00:22,030 --> 00:00:27,700
+strona zostanie dostarczona na kocu. W tym pliku moemy uruchomi html
+
+6
+00:00:27,730 --> 00:00:30,370
+i kod visual studio, teraz
+
+7
+00:00:30,400 --> 00:00:37,020
+otrzymuj ten fragment, ktrego mog uy, wybierajc ten fragment kodu HTML5 i wciskajc
+
+8
+00:00:37,180 --> 00:00:40,230
+Enter, otrzymuj z pudeka szablon HTML5,
+
+9
+00:00:40,300 --> 00:00:42,670
+mona oczywicie napisa to rcznie.
+
+10
+00:00:42,760 --> 00:00:46,760
+Powinien to by pocztkowy plik HTML, z ktrym
+
+11
+00:00:46,960 --> 00:00:55,470
+wsppracujemy, jeli masz import z CDN-w czcionek lub stylw, moesz to doda w sekcji head, skrypty
+
+12
+00:00:55,540 --> 00:01:03,160
+i wszelkie inne importowane generowane przez workflow bd automatycznie wstrzykiwane do tego pliku , dodamy
+
+13
+00:01:03,250 --> 00:01:07,120
+konfiguracj, ktra zrobi to w naszej konfiguracji.
+
+14
+00:01:07,450 --> 00:01:14,710
+Dziki temu dodam teraz div do tego ciaa, ktre powinno otrzyma konkretny root, bdzie to
+
+15
+00:01:15,010 --> 00:01:19,550
+div, w ktrym pniej zamontujemy nasz aplikacj do reagowania.
+
+16
+00:01:19,630 --> 00:01:22,690
+Z tym indeksem. Plik HTML jest gotowy,
+
+17
+00:01:22,690 --> 00:01:26,840
+teraz skonfiguruj inne czci tego projektu. W folderze rdowym chc
+
+18
+00:01:26,860 --> 00:01:32,140
+mie folder zasobw, w ktrym moglibymy przechowywa obrazy lub co w
+
+19
+00:01:32,230 --> 00:01:38,120
+tym rodzaju, ktrego uywamy, chc rwnie skonfigurowa folder komponentw i folder kontenera,
+
+20
+00:01:38,230 --> 00:01:43,540
+wic w zasadzie to samo ustawienie, ktre wykorzystaem w moim drugim
+
+21
+00:01:43,540 --> 00:01:51,450
+projekcie w projekt w tym kursie. Teraz chc rwnie stworzy aplikacj reagowania, dla ktrej utworz indeks. plik js w
+
+22
+00:01:51,490 --> 00:01:59,130
+folderze rdowym i indeksie. plik css, ktrego chc uy do jakiej globalnej
+
+23
+00:01:59,260 --> 00:02:06,990
+stylizacji, wic zostanie zaimportowany do indeksu. js, tam zaimportuj ten indeks. plik css, w ktrym mog
+
+24
+00:02:07,210 --> 00:02:14,180
+ustawi reguy ciaa, aby usun margines ciaa, dowolne wypenienie, ktre moemy mie, a
+
+25
+00:02:14,380 --> 00:02:20,020
+take ustawi rodzin czcionek, po prostu ustawmy j na sans-serif tutaj.
+
+26
+00:02:20,050 --> 00:02:22,200
+Jest to wic podstawowa
+
+27
+00:02:22,210 --> 00:02:28,480
+konfiguracja, teraz chc te doda aplikacj. Plik js, ktry powinien by moim gwnym skadnikiem,
+
+28
+00:02:28,480 --> 00:02:30,820
+a nastpnie tak, abymy mogli zobaczy,
+
+29
+00:02:30,850 --> 00:02:37,090
+e wszystko to dziaa, chc skonfigurowa podstawowy projekt reagowania, ktry nie jest super niesamowity, ale ktry
+
+30
+00:02:37,090 --> 00:02:43,540
+uywa routingu i leniwego adowania, abymy mogli zobaczy, czy ktry dziaa i ktry symuluje wiele funkcji, ktre
+
+31
+00:02:43,540 --> 00:02:44,800
+moemy wykorzysta w
+
+32
+00:02:44,830 --> 00:02:51,770
+typowej aplikacji reagujcej, na przykad powinien rwnie zawiera obraz. Teraz skonfiguruj projekt dotyczcy reakcji na demo w nastpnym
+
+33
+00:02:51,910 --> 00:02:57,760
+wykadzie, moesz rwnie pomin to, jeli chcesz zobaczy konfiguracj przepywu pracy, dostarcz gotowy projekt pod
+
+34
+00:02:57,760 --> 00:03:00,940
+koniec ostatniego wykadu lub docz do nastpnego wykadu,
+
+35
+00:03:01,120 --> 00:03:07,640
+ale jeli chcesz to zobaczy, przejd przez to w szczegach, tak abymy skonfigurowali tutaj aplikacj od zera.
+
+36
+00:03:07,800 --> 00:03:09,970
+Zrbmy to w nastpnym wykadzie.
+

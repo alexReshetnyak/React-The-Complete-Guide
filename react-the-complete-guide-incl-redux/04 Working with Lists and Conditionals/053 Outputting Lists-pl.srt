@@ -1,0 +1,268 @@
+1
+00:00:02,200 --> 00:00:05,460
+Zacznijmy wic od pominicia tej faktycznej listy.
+
+2
+00:00:05,620 --> 00:00:11,510
+Jeli spojrzymy, otrzymamy trzy elementy w tablicy tej osoby na naszym stanie.
+
+3
+00:00:11,560 --> 00:00:17,000
+Teraz znowu w innych strukturach, ktre moesz zna, jeli tego nie robisz, nie ma problemu, tutaj
+
+4
+00:00:17,050 --> 00:00:18,530
+i tak jest inaczej.
+
+5
+00:00:18,650 --> 00:00:26,920
+W innych strukturach, takich jak w Vue, miaby dyrektyw v-for lub in Angular ngFor. Teraz reagujesz, nie masz tego,
+
+6
+00:00:26,920 --> 00:00:28,900
+bo zgadnij co?
+
+7
+00:00:29,120 --> 00:00:31,760
+Wszystko jest javascript tutaj, jak si nauczye.
+
+8
+00:00:32,170 --> 00:00:39,760
+Podobnie jak w przypadku zawartoci warunkowej, ktr obsugujemy tutaj z normalnym javascriptem, obsugujemy rwnie listy
+
+9
+00:00:39,760 --> 00:00:40,950
+z domylnymi
+
+10
+00:00:40,990 --> 00:00:45,240
+narzdziami, ktre javascript zapewnia nam do pracy z listami.
+
+11
+00:00:45,340 --> 00:00:47,070
+Jak by to
+
+12
+00:00:47,140 --> 00:00:55,820
+wygldao w naszym przypadku tutaj, gdzie mamy osoby? C, ponownie uywalibymy pojedynczych nawiasw klamrowych, aby renderowa co dynamicznego
+
+13
+00:00:55,820 --> 00:00:58,400
+w naszym kodzie jsx, a nastpnie
+
+14
+00:00:58,760 --> 00:01:07,220
+chcemy renderowa tablice osb w stanie tak. stan. osoby po prostu odnoszce si
+
+15
+00:01:07,220 --> 00:01:09,170
+do tej tablicy.
+
+16
+00:01:09,170 --> 00:01:10,860
+Teraz to samo nie
+
+17
+00:01:10,940 --> 00:01:15,190
+zaatwi sprawy, ktra jest zbiorem obiektw javascript, a nie czym, co
+
+18
+00:01:15,260 --> 00:01:18,780
+moemy przekonwertowa na html, a nie co, co zareaguje tutaj.
+
+19
+00:01:19,130 --> 00:01:24,930
+Musimy wic przekonwertowa t tablic javascript, ktra nie
+
+20
+00:01:24,950 --> 00:01:25,460
+jest
+
+21
+00:01:25,480 --> 00:01:34,310
+prawidowym jsx na poprawny jsx. I javascript, vanilla javascript oferuje nam funkcj
+
+22
+00:01:34,520 --> 00:01:42,500
+konwertowania tablic, jest to funkcja map. Mapa po prostu odwzorowuje kady element z danej tablicy, na przykad
+
+23
+00:01:42,980 --> 00:01:45,070
+nasz tablic osb, na co innego.
+
+24
+00:01:45,320 --> 00:01:50,720
+Robi to, wykonujc metod dla kadego elementu w danej tablicy,
+
+25
+00:01:50,720 --> 00:01:58,410
+wic na tej tablicy w tym przypadku. Ta metoda lub ta funkcja jest przekazywana do metody
+
+26
+00:01:58,820 --> 00:02:02,040
+mapy tutaj, pobiera element tablicy jako dane wejciowe,
+
+27
+00:02:02,060 --> 00:02:05,950
+wic jedna osoba, nazwa tego argumentu zaley cakowicie od Ciebie.
+
+28
+00:02:05,960 --> 00:02:11,580
+Po prostu pisz anonimow funkcj tutaj i faktycznie pisz tu funkcj strzaki.
+
+29
+00:02:11,750 --> 00:02:18,590
+Jest to wic funkcja strzaki ES6, ktr przechodz do metody mapowania, moe wyglda dziwnie, ale
+
+30
+00:02:18,590 --> 00:02:25,070
+jest to waciwie vanilla javascript, ES6, ale javascript, a nie jsx, nic takiego, dlatego
+
+31
+00:02:25,100 --> 00:02:28,070
+znajduje si wewntrz pojedynczych nawiasw klamrowych.
+
+32
+00:02:28,670 --> 00:02:36,110
+Tak wic ta funkcja, ktr przekazuj jako anonimow funkcj do metody mapy, jest wykonywana na kadym elemencie
+
+33
+00:02:36,170 --> 00:02:43,250
+w tablicy osb, a javascript automatycznie podaje nam kady element jako dane wejciowe do funkcji, ktr
+
+34
+00:02:43,340 --> 00:02:45,310
+wykonujemy na kadym elemencie.
+
+35
+00:02:45,320 --> 00:02:47,250
+Wic w tym przypadku to
+
+36
+00:02:47,270 --> 00:02:53,180
+nasza osoba, znowu moesz nazwa, co chcesz, ale poniewa jest to szereg osb, osoba prawdopodobnie ma sens.
+
+37
+00:02:53,570 --> 00:02:55,670
+A teraz musisz co
+
+38
+00:02:55,910 --> 00:03:01,010
+zwrci, powiniene zwrci to, na co chcesz zmapowa ten element.
+
+39
+00:03:01,010 --> 00:03:03,850
+Mamy zatem szereg obiektw javascript i osb,
+
+40
+00:03:03,870 --> 00:03:05,080
+tutaj jeden obiekt
+
+41
+00:03:05,090 --> 00:03:10,530
+to dwa obiekty, trzy obiekty i chcemy go przekonwertowa na co innego.
+
+42
+00:03:10,580 --> 00:03:15,830
+Metoda mapy, ktrej tutaj uywamy, po prostu zwraca now tablic, a
+
+43
+00:03:16,010 --> 00:03:24,290
+poniewa po prostu wypisuj t now tablic w ten sposb wewntrz jsx, reagowanie bdzie po prostu prbowa
+
+44
+00:03:24,290 --> 00:03:28,700
+wzi poszczeglne elementy tej nowej tablicy i renderowa je
+
+45
+00:03:28,850 --> 00:03:31,490
+do domingu, jeli s prawidowe jsx.
+
+46
+00:03:31,520 --> 00:03:38,270
+Wic naszym celem jest po prostu zwrci jsx tutaj, aby kady element tablicy danej osoby
+
+47
+00:03:38,390 --> 00:03:41,230
+zosta zmapowany na przedstawiciela jsx tego.
+
+48
+00:03:41,540 --> 00:03:49,940
+Tak wic chc umieci go w kocu w komponencie osoby, poniewa obiekt javascript kadej osoby moe by tutaj
+
+49
+00:03:49,940 --> 00:03:56,330
+reprezentowany jako komponent osoby w moim projekcie. A potem po prostu przypiszemy nazw ponownie i
+
+50
+00:03:56,480 --> 00:03:59,950
+tutaj moemy uy osoby, ktr otrzymamy jako dane wejciowe.
+
+51
+00:04:00,080 --> 00:04:07,730
+Tak wic pojedynczy element, dla ktrego ta funkcja jest wykonywana i tam mamy wasno nazwy, i to oczywicie oczywicie
+
+52
+00:04:07,730 --> 00:04:15,200
+dla wieku, w ktrym moe teraz doda wiek tej osoby. Podziel to na wiele linii, aby uatwi
+
+53
+00:04:15,200 --> 00:04:15,930
+czytanie
+
+54
+00:04:16,160 --> 00:04:18,460
+i to w rzeczywistoci jest.
+
+55
+00:04:18,560 --> 00:04:25,410
+Dziki temu mog pozby si wszystkich innych osb i usun je na razie, a teraz
+
+56
+00:04:25,520 --> 00:04:33,290
+to, co doprowadzi do tego, e nadal bdzie drukowa list osb, klikajc na nie i zmiana nazwy
+
+57
+00:04:33,290 --> 00:04:37,040
+nie bdzie dziaa dla teraz, poniewa usunem procedury
+
+58
+00:04:37,820 --> 00:04:44,990
+obsugi, dodamy je wkrtce i po prostu robi to poprzez mapowanie tablicy javascript na tablic
+
+59
+00:04:45,050 --> 00:04:51,820
+javascript, ale tablica zawierajca obiekty jsx, ktre reaguj, automatycznie wycignie i wyrenderuje na ekranie.
+
+60
+00:04:52,190 --> 00:04:59,460
+Zapiszmy plik i zobacz wynik, jeli przecz moje osoby tutaj, widzimy wszystkie osoby.
+
+61
+00:04:59,780 --> 00:05:06,460
+Otrzymujemy rwnie nowe ostrzeenie oprcz tego, o ktrym ju wiemy, e powinnimy przypisa kluczow waciwo, teraz
+
+62
+00:05:06,550 --> 00:05:08,560
+na pewno wrc do tego,
+
+63
+00:05:08,570 --> 00:05:10,050
+to jest bardzo wane.
+
+64
+00:05:10,070 --> 00:05:13,710
+Ju widzimy, e w zasadzie dziaa,
+
+65
+00:05:13,760 --> 00:05:19,910
+renderuje t list elementw, mapujc nasz tablic na co innego.
+
+66
+00:05:19,910 --> 00:05:25,610
+Teraz zagbmy si w t list i dowiedzmy si, co dzieje si z tym kluczem i jak moemy
+
+67
+00:05:25,610 --> 00:05:30,390
+zareagowa na zmiany w naszej tablicy i jak moemy to zmieni za pomoc naszych detektorw zdarze.
+

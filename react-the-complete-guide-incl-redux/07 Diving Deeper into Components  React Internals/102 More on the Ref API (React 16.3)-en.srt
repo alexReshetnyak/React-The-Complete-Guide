@@ -1,0 +1,424 @@
+1
+00:00:02,350 --> 00:00:09,060
+So in this module we learned a lot about react and some of its core component features.
+
+2
+00:00:09,220 --> 00:00:15,910
+Since I recorded this course, react 16.3 was released and it offers a couple of nice additions
+
+3
+00:00:16,210 --> 00:00:17,850
+which I want to walk you through.
+
+4
+00:00:17,860 --> 00:00:23,090
+They fit best into this course module because they affect how we work with components.
+
+5
+00:00:23,110 --> 00:00:28,790
+Now none of these change is breaking, everything you learned will continue working as you learned it,
+
+6
+00:00:28,810 --> 00:00:30,340
+it is still correct,
+
+7
+00:00:30,340 --> 00:00:32,980
+these are simply just some additional features.
+
+8
+00:00:32,980 --> 00:00:35,130
+Let's start with references,
+
+9
+00:00:35,170 --> 00:00:41,170
+we use them here in the person component, there we are creating a reference with this ref property on
+
+10
+00:00:41,170 --> 00:00:45,450
+the input element and we're using this ref property to set the focus.
+
+11
+00:00:45,520 --> 00:00:47,320
+We can see this in effect in our app,
+
+12
+00:00:47,410 --> 00:00:52,290
+once I click show persons, we see that the first input here is focused.
+
+13
+00:00:52,290 --> 00:00:57,090
+Now if we're working with refs, react now has an easier way. For this,
+
+14
+00:00:57,090 --> 00:01:01,130
+we need to make sure that we're using react version of 16.3 or higher though
+
+15
+00:01:01,180 --> 00:01:07,540
+so make sure to update this in your package.json file, save it thereafter and rerun npm install to
+
+16
+00:01:07,540 --> 00:01:12,290
+install these updated package versions in case your project doesn't use that yet.
+
+17
+00:01:12,460 --> 00:01:15,520
+Once this is done, you can restart your development server
+
+18
+00:01:15,670 --> 00:01:19,870
+and now let's use that easier way of creating references.
+
+19
+00:01:20,230 --> 00:01:28,830
+We do that in the constructor by creating a new class property by simply saying this.inputElementRef
+
+20
+00:01:28,830 --> 00:01:35,530
+for example or just inputElement as we named it before, we do this here in the callback.
+
+21
+00:01:35,560 --> 00:01:44,910
+Now we simply use react create ref, that's a new method provided by react in the version 16.3
+
+22
+00:01:45,180 --> 00:01:47,190
+and now we're creating that reference,
+
+23
+00:01:47,190 --> 00:01:52,160
+now we just need to inform react which element to connect us to.
+
+24
+00:01:52,230 --> 00:01:59,430
+And we do that by going down to our ref property here and instead of using this function callback syntax,
+
+25
+00:01:59,790 --> 00:02:02,640
+we simply say this.inputElement.
+
+26
+00:02:02,640 --> 00:02:08,200
+So we use that property we just created which holds the reference created with react create ref
+
+27
+00:02:08,460 --> 00:02:09,570
+and that's almost all,
+
+28
+00:02:09,600 --> 00:02:11,820
+now this reference is stored.
+
+29
+00:02:11,820 --> 00:02:16,550
+Now there is one difference when we use it, instead of accessing the elements like this,
+
+30
+00:02:16,620 --> 00:02:23,280
+we instead have to use access the current property on it because this turns out to be a wrapper component
+
+31
+00:02:23,280 --> 00:02:29,410
+or element provided by react and current gives us access to the underlying dom element.
+
+32
+00:02:29,470 --> 00:02:32,140
+With that we can save the entire code
+
+33
+00:02:32,280 --> 00:02:38,310
+and now if we reload our app and click show persons, it's still focused but now we're using this easier
+
+34
+00:02:38,310 --> 00:02:41,740
+reference syntax. React 16.3
+
+35
+00:02:41,750 --> 00:02:45,210
+also introduce a support for forwarded references.
+
+36
+00:02:45,210 --> 00:02:51,200
+This means that we actually get a reference from outside of a component, through that component.
+
+37
+00:02:51,240 --> 00:02:57,350
+This is especially helpful when working with wrapper classes like the withClass component,
+
+38
+00:02:57,360 --> 00:03:03,930
+so when working with higher order components I wanted to say. So person for example is wrapped by the with
+
+39
+00:03:03,930 --> 00:03:10,800
+class higher order component and we can actually get access to the person component from the parent
+
+40
+00:03:10,800 --> 00:03:14,830
+components or from persons even though person is wrapped
+
+41
+00:03:14,880 --> 00:03:16,530
+but let's's do this step by step.
+
+42
+00:03:16,530 --> 00:03:21,930
+How do we get a reference by default, in the persons.js file,
+
+43
+00:03:21,930 --> 00:03:26,340
+let's say we want to get a reference to the last person we're creating.
+
+44
+00:03:26,460 --> 00:03:34,690
+So I'll add my last person ref here with react create ref, just as we did with the native html element
+
+45
+00:03:35,350 --> 00:03:40,840
+and now I want to assign the last person we are creating here to this reference.
+
+46
+00:03:40,980 --> 00:03:46,140
+The last one simply because we're looping through all persons and if we assign a reference to each of
+
+47
+00:03:46,140 --> 00:03:51,120
+them, only the last one will persist because we're constantly overwriting the same reference.
+
+48
+00:03:51,270 --> 00:03:56,730
+We could of course store it in an array but for simplicity, let's simply say we want to store a reference
+
+49
+00:03:56,730 --> 00:03:57,240
+here
+
+50
+00:03:57,570 --> 00:04:02,150
+in our this.lastPersonRef property.
+
+51
+00:04:02,310 --> 00:04:07,230
+So we assign the ref property to the person and we store that reference to our own component.
+
+52
+00:04:07,230 --> 00:04:13,350
+Now let's say in our person component here we add a new function,
+
+53
+00:04:13,650 --> 00:04:19,580
+the focus method which we then could call from outside through the reference
+
+54
+00:04:19,830 --> 00:04:25,700
+and here, we actually use our reference in that component to focus it.
+
+55
+00:04:25,830 --> 00:04:32,430
+So now what this should theoretically do is for the last person, we want to call focus to put the focus
+
+56
+00:04:32,460 --> 00:04:36,090
+on its input rather than the first one.
+
+57
+00:04:36,120 --> 00:04:38,480
+So let's go back to persons,
+
+58
+00:04:38,490 --> 00:04:41,520
+we got our last person reference here.
+
+59
+00:04:41,550 --> 00:04:51,180
+Now we could go to componentDidMount and use it here and use last person ref current focus.
+
+60
+00:04:51,180 --> 00:04:57,790
+If we do this and we save that, if we reload our app and click on show persons, we actually get an
+
+61
+00:04:57,910 --> 00:05:03,180
+error that focus is not a function at persons componentDidMount
+
+62
+00:05:03,190 --> 00:05:11,170
+Now the problem here is that we got the withClass higher order component in between, if I temporarily remove
+
+63
+00:05:11,170 --> 00:05:13,150
+that in my person component,
+
+64
+00:05:13,180 --> 00:05:20,720
+so if I just export person without that wrapping higher order component,
+
+65
+00:05:21,300 --> 00:05:23,100
+if I do that and I reload
+
+66
+00:05:23,220 --> 00:05:28,530
+and now I click show person, now it actually works fine and we're focusing the last input because we're
+
+67
+00:05:28,530 --> 00:05:31,840
+now calling the focus method in the person component
+
+68
+00:05:31,950 --> 00:05:37,690
+for the last person in our array of persons, we do that with a reference to our own component,
+
+69
+00:05:37,710 --> 00:05:38,960
+this works fine.
+
+70
+00:05:39,180 --> 00:05:45,660
+However the problem is we do have that wrapper higher order component and this is actually not forward
+
+71
+00:05:45,780 --> 00:05:51,800
+the outer reference, this is just how react works. The ref property is a special property and it's not forwarded
+
+72
+00:05:51,800 --> 00:05:57,960
+even though in withClass, we do distribute all our props on the wrap component.
+
+73
+00:05:58,170 --> 00:06:03,230
+Now we can fix this issue in our higher order component, for the wrapped component
+
+74
+00:06:03,360 --> 00:06:08,220
+we have to forward the reference, so we have to set the ref attribute here because this wrapped component
+
+75
+00:06:08,220 --> 00:06:10,620
+will be our Person component in the end.
+
+76
+00:06:10,770 --> 00:06:15,880
+For this however we need to get that reference from outside, we want to forward it
+
+77
+00:06:15,900 --> 00:06:21,750
+so we want to get that reference, we're assigning in a persons component in our case. To do this, we
+
+78
+00:06:21,750 --> 00:06:27,750
+need to get access to these forwarded reference and we can simply assume that on our prop, we have
+
+79
+00:06:27,780 --> 00:06:30,680
+let's say a forwarded ref,
+
+80
+00:06:30,810 --> 00:06:32,710
+this name is totally up to you though.
+
+81
+00:06:34,000 --> 00:06:36,290
+And this should be this.props, of course.
+
+82
+00:06:36,540 --> 00:06:37,810
+Now we're accessing this,
+
+83
+00:06:37,840 --> 00:06:42,040
+however we won't have this property on our props.
+
+84
+00:06:42,080 --> 00:06:44,520
+To ensure that we got it,
+
+85
+00:06:44,710 --> 00:06:51,250
+we simply go to our persons component where we are passing ref and instead of passing ref, we now pass
+
+86
+00:06:51,640 --> 00:06:54,200
+forwarded ref.
+
+87
+00:06:54,250 --> 00:06:56,020
+Now you could think this is it,
+
+88
+00:06:56,020 --> 00:07:01,260
+so if we save this and we reload and click show persons, it does indeed work.
+
+89
+00:07:01,630 --> 00:07:07,330
+It is however inconvenient that we have to manually set forwarded ref here in the persons component, would
+
+90
+00:07:07,330 --> 00:07:13,660
+be nice if we could still use ref. And then we go to our withClass higher order component and in there
+
+91
+00:07:13,660 --> 00:07:20,570
+we can use the new forward ref API react 16.3 introduced. Instead of returning the class
+
+92
+00:07:20,560 --> 00:07:26,750
+here, we can first of all store it in a component withClass
+
+93
+00:07:26,810 --> 00:07:30,540
+for example in a constant excuse me and we want to return that,
+
+94
+00:07:30,590 --> 00:07:40,510
+however what we'll actually return here is we'll return a call to react forward ref like this and
+
+95
+00:07:40,510 --> 00:07:47,330
+this in turn receives an argument which is a function that gets the props and the reference argument
+
+96
+00:07:48,510 --> 00:07:59,050
+and will then here return withClass, distribute our props into it and also set that forwarded
+
+97
+00:07:59,060 --> 00:08:03,290
+ref equal to the ref we're receiving.
+
+98
+00:08:03,520 --> 00:08:07,300
+Now his entire logic is contained in our higher order component.
+
+99
+00:08:07,300 --> 00:08:14,410
+If I saved this and I reload and click show persons it still works as before and it's not an issue for
+
+100
+00:08:14,410 --> 00:08:17,590
+components where we used that higher order component without setting a ref
+
+101
+00:08:17,600 --> 00:08:25,540
+by the way but we don't have to set the forwarded ref property in our other components, it's all
+
+102
+00:08:25,540 --> 00:08:32,650
+included in that withClass component which of course is way more convenient than having to manually
+
+103
+00:08:32,650 --> 00:08:34,300
+adjust all the names.
+
+104
+00:08:34,300 --> 00:08:41,890
+So this is how we can work with refs, how we can simply use that easier syntax with just create ref and
+
+105
+00:08:41,980 --> 00:08:44,010
+how we can also forward references.
+
+106
+00:08:44,020 --> 00:08:48,370
+This is something you might not need that often but if you need it, it's really useful.
+

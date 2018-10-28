@@ -1,0 +1,340 @@
+1
+00:00:02,250 --> 00:00:07,680
+Knouted abbiamo avuto uno sguardo cos ravvicinato sullo stato completo e sullo stato meno componenti.
+
+2
+00:00:07,700 --> 00:00:13,100
+Dovremmo dare un'occhiata al ciclo di vita dei componenti, qualcosa che ho menzionato, ma non abbiamo dato un'occhiata pi
+
+3
+00:00:13,100 --> 00:00:13,550
+da vicino.
+
+4
+00:00:13,730 --> 00:00:15,990
+Quindi qual  il ciclo di vita dei componenti.
+
+5
+00:00:16,280 --> 00:00:22,580
+Alla fine quando reagiamo a Yates un componente per noi che significa istanze e renderer
+
+6
+00:00:23,180 --> 00:00:31,840
+che per noi attraversa pi fasi del ciclo di vita e possiamo definire metodi in un componente a stato completo solo
+
+7
+00:00:31,840 --> 00:00:38,840
+in componenti a stato completo perch non  possibile definire metodi e componenti funzionali possiamo trovare metodi
+
+8
+00:00:39,110 --> 00:00:46,170
+che reagiscono all'esecuzione che ci consente di eseguire codice durante alcune di queste fasi del ciclo di vita.
+
+9
+00:00:46,490 --> 00:00:53,940
+Diamo un'occhiata a tutti questi metodi del ciclo di vita dei componenti e vediamo quando quale di questi viene eseguito.
+
+10
+00:00:54,500 --> 00:01:01,790
+Importante, come ho appena detto questi sono solo i componenti a pieno stato disponibili non nello stato meno componenti.
+
+11
+00:01:01,930 --> 00:01:04,930
+E l abbiamo i seguenti metodi.
+
+12
+00:01:04,930 --> 00:01:09,370
+Ora questi sono molti come puoi vedere montare il componente del costruttore.
+
+13
+00:01:09,370 --> 00:01:12,060
+Aggiorner il rendering mount.
+
+14
+00:01:12,280 --> 00:01:18,640
+Potresti sapere che alcuni di questi potrebbero essere piuttosto intuitivi quando vengono eseguiti,
+
+15
+00:01:18,640 --> 00:01:23,370
+ma  ancora Analizzato quando viene eseguito il metodo.
+
+16
+00:01:23,770 --> 00:01:27,280
+E diamo prima un'occhiata alla creazione del componente.
+
+17
+00:01:27,640 --> 00:01:34,540
+Non tutti questi hook del ciclo di vita vengono eseguiti, non tutti questi metodi vengono eseguiti durante la creazione.
+
+18
+00:01:34,660 --> 00:01:37,210
+Solo questi metodi sono eseguiti.
+
+19
+00:01:37,420 --> 00:01:42,400
+Il costruttore monter la montatura e il rendering.
+
+20
+00:01:42,400 --> 00:01:47,520
+Ora diamo un'occhiata pi da vicino al processo del ciclo di vita dei componenti della creazione.
+
+21
+00:01:47,590 --> 00:01:55,060
+Prima di tutto viene eseguito il costruttore e il costruttore  in realt una funzione predefinita di sei
+
+22
+00:01:55,060 --> 00:01:55,600
+classi.
+
+23
+00:01:55,600 --> 00:02:03,310
+Non  un metodo definito dal re-act che cosa fa il re-act anche se crea un componente alla fine.
+
+24
+00:02:03,310 --> 00:02:09,940
+Quindi lo istanzia e passa a qualsiasi problema che questo componente riceve al costruttore.
+
+25
+00:02:09,970 --> 00:02:15,790
+Pertanto, se implementiamo questo metodo di costruzione e non abbiamo fino ad ora nel nostro progetto demo, non
+
+26
+00:02:15,790 --> 00:02:16,580
+lo abbiamo fatto.
+
+27
+00:02:16,870 --> 00:02:24,290
+Se implementiamo il metodo del costruttore, dobbiamo chiamare super e passare le chiamate a questo costruttore al
+
+28
+00:02:24,290 --> 00:02:26,180
+costruttore della classe genitore.
+
+29
+00:02:26,350 --> 00:02:33,310
+E dato che possiamo implementare questo metodo solo in componenti stateful, la classe genitore  questo oggetto
+
+30
+00:02:33,550 --> 00:02:41,680
+componente che abbiamo importato da reagire e chiamando super e passando cose di tipo prop come questi oggetti di scena
+
+31
+00:02:41,680 --> 00:02:47,470
+che poi dobbiamo usare in qualsiasi altra parte del componente popolata o gestita da reagire.
+
+32
+00:02:47,500 --> 00:02:54,700
+e trasmetti i materiali di scena se implementi il costruttore, cos'altro potresti fare qui e ovviamente  facoltativo.
+
+33
+00:02:54,820 --> 00:02:56,430
+Quindi chiama sempre super
+
+34
+00:02:56,710 --> 00:03:00,040
+ possibile inizializzare lo stato nel costruttore.
+
+35
+00:03:00,040 --> 00:03:04,010
+Lo abbiamo fatto semplicemente definendo una propriet statale.
+
+36
+00:03:04,090 --> 00:03:10,390
+Ma potresti anche definire questa propriet qui nel costruttore e in snippet di codice pi vecchi che hanno
+
+37
+00:03:10,390 --> 00:03:13,460
+accesso alle nuove funzionalit di javascript che stavamo usando.
+
+38
+00:03:13,570 --> 00:03:14,820
+Hai visto quel commento.
+
+39
+00:03:14,890 --> 00:03:18,270
+Stato di inizializzazione nel costruttore.
+
+40
+00:03:18,490 --> 00:03:22,950
+Quello che non dovresti mai fare l  causa di effetti collaterali.
+
+41
+00:03:23,170 --> 00:03:27,600
+Quali sono gli effetti collaterali, ad esempio raggiungere un server web.
+
+42
+00:03:27,730 --> 00:03:34,540
+Quindi richieste che ritornano e quindi modificano lo stato dei dati dell'applicazione. Vedere l'effetto collaterale.
+
+43
+00:03:34,540 --> 00:03:40,180
+Non dovresti farlo nel costruttore perch questo potrebbe portare a un rendering reale della tua applicazione e
+
+44
+00:03:40,330 --> 00:03:42,310
+quindi a due problemi di prestazioni.
+
+45
+00:03:42,310 --> 00:03:50,240
+Potrebbe anche portare al tuo stato di diventare imprevedibile offrendo al costruttore un numero di funzioni che
+
+46
+00:03:50,240 --> 00:03:55,520
+viene eseguito questa funzione  il componente che monter il metodo.
+
+47
+00:03:55,670 --> 00:04:01,430
+un metodo definito da react ed  un modo labiale perch estendiamo quel
+
+48
+00:04:01,430 --> 00:04:09,710
+componente dal componente della libreria re-act che verr montato per ragioni storiche principalmente Non lo usi pi cos spesso.
+
+49
+00:04:09,710 --> 00:04:11,080
+Ora questo 
+
+50
+00:04:11,330 --> 00:04:14,090
+Se lo usi non lo useresti per aggiornare il tuo stato.
+
+51
+00:04:14,120 --> 00:04:19,840
+Stai facendo alcune ottimizzazioni di Lassman ma non dovresti causare effetti collaterali qui.
+
+52
+00:04:19,850 --> 00:04:21,580
+Non dovresti raggiungere il Web.
+
+53
+00:04:21,740 --> 00:04:25,110
+Ora come ho detto, non lo usi pi cos spesso.
+
+54
+00:04:25,160 --> 00:04:32,740
+Esiste ancora, ma  probabile che non lo implementerai nel componente di offerta dell'applicazione che verr montato.
+
+55
+00:04:32,990 --> 00:04:34,880
+Il componente render.
+
+56
+00:04:34,980 --> 00:04:41,980
+Ora l'esecuzione del metodo di rendering non significa che acceda al vero Dom.
+
+57
+00:04:42,050 --> 00:04:50,460
+Torner su come esattamente recitare render di nuovo il vero Dom e gli aggiornamenti a Don in questo modulo.
+
+58
+00:04:50,540 --> 00:04:56,960
+Per ora dovresti sapere che il rendering dell'esecuzione del metodo di rendering dona un'idea reattiva di ci
+
+59
+00:04:56,960 --> 00:04:58,780
+che dovrebbe rendere come sarebbe.
+
+60
+00:04:58,880 --> 00:05:02,920
+Se poi raggiunge il vero Dom e lo manipola.
+
+61
+00:05:02,990 --> 00:05:06,590
+Dipende da come si presenta il vero Dom.
+
+62
+00:05:06,680 --> 00:05:11,290
+Se non  necessario apportare modifiche, non procede e viene comunque pre-renderizzato.
+
+63
+00:05:11,600 --> 00:05:17,690
+Ma il metodo di rendering  un passo importante perch definisce chiaramente come la tua applicazione o come dovrebbe apparire questo
+
+64
+00:05:17,690 --> 00:05:21,380
+componente da un H. T. prospettiva maschile.
+
+65
+00:05:21,650 --> 00:05:28,400
+Quindi  nel metodo di rendering in cui si prepara e si struttura il codice GSX che definisce quale contenuto
+
+66
+00:05:28,400 --> 00:05:30,800
+viene sottoposto a rendering per questo componente.
+
+67
+00:05:30,890 --> 00:05:37,580
+Ora sono pronti a rifare tutto in quei componenti figlio di questo componente perch alla fine, una volta
+
+68
+00:05:37,580 --> 00:05:44,150
+chiamato il rendering e per trovare il tuo codice GSX, sa anche quali componenti hai incluso l come
+
+69
+00:05:44,150 --> 00:05:47,340
+la componente della persona nel nostro progetto dimostrativo .
+
+70
+00:05:47,480 --> 00:05:51,260
+Quindi andremo avanti e renderizzeremo tutti questi componenti figlio.
+
+71
+00:05:51,260 --> 00:05:58,760
+Fondamentalmente l'esecuzione di questo processo per ogni componente figlio e successivamente chiamer il componente ha fatto
+
+72
+00:05:58,760 --> 00:06:04,730
+la somma per dire che questo componente  stato montato con successo.
+
+73
+00:06:04,730 --> 00:06:07,110
+Ora c' il componente mount.
+
+74
+00:06:07,280 --> 00:06:09,330
+Puoi causare effetti collaterali.
+
+75
+00:06:09,390 --> 00:06:14,540
+Questo  il momento in cui si desidera raggiungere il Web, ad esempio per recuperare alcuni dati.
+
+76
+00:06:14,810 --> 00:06:20,880
+Quello che non dovresti fare qui  aggiornare lo stato anche perch questo attiver un dato pre-renderizzato, qualcosa
+
+77
+00:06:20,900 --> 00:06:22,660
+che devi tenere a mente.
+
+78
+00:06:22,700 --> 00:06:26,480
+Non chiamare questo stato impostato nel componente che monta.
+
+79
+00:06:26,600 --> 00:06:32,390
+attiver un rendering reale e se ti stai chiedendo quanto sarebbe esatto raggiungere
+
+80
+00:06:32,390 --> 00:06:38,510
+il Web e usare la risoluzione di quell'accesso web far qualcosa in questo corso.
+
+81
+00:06:38,510 --> 00:06:39,140
+Questo
+
+82
+00:06:39,140 --> 00:06:46,790
+Una volta che iniziamo ad aggiungere l'accesso Web alle nostre applicazioni, ora  bello vedere questo diagramma qui, ma
+
+83
+00:06:46,790 --> 00:06:48,390
+ ancora molto astratto.
+
+84
+00:06:48,460 --> 00:06:54,350
+Quindi torniamo al nostro progetto e implementiamo questi hook e forse blocchiamo qualcosa alla console in
+
+85
+00:06:54,620 --> 00:06:58,230
+modo che possiamo veramente vedere il flusso della nostra applicazione.
+

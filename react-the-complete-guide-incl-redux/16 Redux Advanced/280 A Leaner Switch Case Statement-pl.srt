@@ -1,0 +1,160 @@
+1
+00:00:02,500 --> 00:00:09,410
+Zakocz ostatni wykad, w ktrym ju korzystalimy z naszego obiektu aktualizacji funkcji narzdziowej, aby zmniejszy nasze reduktory
+
+2
+00:00:09,710 --> 00:00:11,510
+poprzez outsourcing naszego wsplnego kroku.
+
+3
+00:00:11,510 --> 00:00:15,770
+Powtarzamy to w caym miejscu w funkcj uytecznoci.
+
+4
+00:00:15,770 --> 00:00:23,870
+Teraz nasze przypadki reduktorw s w rzeczywistoci adne Linville, ktre w opowiadaniu REDUCE-IT mog by znacznie lejsze i
+
+5
+00:00:24,580 --> 00:00:30,240
+s solidnym producentem, mamy przynajmniej jeden z przypadkw z dodatkowym krokiem, w ktrym
+
+6
+00:00:30,240 --> 00:00:31,160
+aktualizujemy tablic.
+
+7
+00:00:31,640 --> 00:00:37,720
+Niektrzy programici nie wszyscy, ale niektrzy lubi mie bardzo szczupe przypadki, w ktrych zasadniczo
+
+8
+00:00:37,850 --> 00:00:40,750
+masz dwukropek i jedn funkcj, ktr wywoujesz.
+
+9
+00:00:40,850 --> 00:00:47,640
+Oczywicie nadal musimy uruchamia nasz logik, ale lubi zleca t funkcj do funkcji, dziki czemu instrukcja switch
+
+10
+00:00:47,660 --> 00:00:49,490
+case jest bardzo szczupa.
+
+11
+00:00:49,520 --> 00:00:54,960
+Czy ma jedn istotn zalet, jeli w kontrolerze licznika wyglda jak w przypadku instrukcji switch case?
+
+12
+00:00:55,100 --> 00:01:00,650
+Moemy szybko zobaczy, co dzieje si u kadego producenta lub przynajmniej tam, gdzie co obsugujemy.
+
+13
+00:01:00,710 --> 00:01:08,300
+Widzimy wic wszystkie przypadki na jednej stronie, aby powiedzie o wynikach tej jesieni, co oznaczaoby, e
+
+14
+00:01:08,330 --> 00:01:11,920
+mona zleci t logik tutaj na wasn funkcj.
+
+15
+00:01:12,110 --> 00:01:14,660
+Ta funkcja trafia do tego samego pliku.
+
+16
+00:01:14,870 --> 00:01:20,100
+Tak wic po prostu dodaj now funkcj poza funkcj reduktora.
+
+17
+00:01:20,110 --> 00:01:24,060
+Oczywicie, a ja nazw go usun.
+
+18
+00:01:24,160 --> 00:01:25,110
+Wynik.
+
+19
+00:01:25,220 --> 00:01:32,270
+Konwencj powinno by uywanie typu dziaania jako nazwy, chocia nie we wszystkich wersjach, ale w przypadku wielbda.
+
+20
+00:01:32,450 --> 00:01:38,150
+Wic dosowna sl i tam dostaj mj stan i potrzebuj dosta moje dziaanie.
+
+21
+00:01:38,150 --> 00:01:41,880
+Zasadniczo te same dane, ktre otrzymuj w reduktorze.
+
+22
+00:01:41,930 --> 00:01:48,580
+Teraz tutaj chc uy go jako skadni funkcji 6 strzaek, wic to zrobi.
+
+23
+00:01:48,960 --> 00:01:54,400
+I w tej funkcji teraz wykonuj w zasadzie to, co robiem wczeniej w instrukcji zmiany przecznika.
+
+24
+00:01:54,620 --> 00:02:02,300
+Tak wic w moim przypadku wszystkie aktualizuj tablic umieszczenia tamtej metody lub kodu tam do
+
+25
+00:02:02,300 --> 00:02:04,040
+funkcji usuwania wynikw.
+
+26
+00:02:04,080 --> 00:02:10,530
+Teraz na kocu tutaj w tej funkcji musz oczywicie zwrci stan zaktualizowany.
+
+27
+00:02:10,760 --> 00:02:18,950
+Wic te pomkn ten kod z mojego przypadku usunicia ataku i zadzwoni do zaktualizowanego obiektu ze stanem.
+
+28
+00:02:19,190 --> 00:02:23,270
+Zasadniczo robi to samo, co poprzednio w przypadku instrukcji switch case.
+
+29
+00:02:23,540 --> 00:02:26,320
+I to jest wanie idea jego pomocy lub funkcji.
+
+30
+00:02:26,360 --> 00:02:31,930
+Woye w nie swj stary kod, a potem nie mog po prostu zadzwoni do pre-salt i zwrci danych tutaj.
+
+31
+00:02:32,090 --> 00:02:34,750
+Skoro wic usu Rosola, zwraca map, ktra miaa obiekt.
+
+32
+00:02:34,760 --> 00:02:38,100
+Mog po prostu zwrci tutaj wynik usunicia.
+
+33
+00:02:38,150 --> 00:02:39,410
+Po prostu tak to nazywasz.
+
+34
+00:02:39,410 --> 00:02:44,780
+I oczywicie musz przej do stanu i dziaania, poniewa oba s potrzebne w tej funkcji.
+
+35
+00:02:46,280 --> 00:02:52,490
+Z tym mamy szczuplejszy reduktor tutaj, aby pozwoli mi usun komentarze nie jest mniejszy ni to.
+
+36
+00:02:52,490 --> 00:02:58,100
+Moemy teraz napisa to rwnie w linii obok dwukropka, jeli chcemy, aby by naprawd szczupy i ma
+
+37
+00:02:58,100 --> 00:02:59,950
+tylko jeden przypadek na lini.
+
+38
+00:03:00,170 --> 00:03:01,600
+I to wszystko jest opcjonalne.
+
+39
+00:03:01,670 --> 00:03:07,700
+Jest to sposb na tworzenie bardzo przejrzystych instrukcji dotyczcych przecznikw, ktre uatwiaj sprawdzenie, ktre
+
+40
+00:03:07,700 --> 00:03:12,660
+przypadki obsugujesz w danym reduktorze i ktre mog by zalet tego podejcia.
+

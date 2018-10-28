@@ -1,0 +1,364 @@
+1
+00:00:02,230 --> 00:00:06,720
+Ento, observamos que ns tnhamos uma olhada no bsico de re-agir sobre o que o reator est a respeito.
+
+2
+00:00:06,760 --> 00:00:11,350
+Deixe-me explicar o que  esse curso e o que vamos abordar neste curso.
+
+3
+00:00:11,380 --> 00:00:16,690
+Estamos quase pronto comeando apenas um par de mais palavras que eu quero gastar
+
+4
+00:00:16,690 --> 00:00:23,920
+em como voc aproveita ao mximo esse curso e ento iremos deixar este mdulo l depois de voc encontrar
+
+5
+00:00:23,920 --> 00:00:26,980
+um segundo mdulo opcional neste opcional mdulo.
+
+6
+00:00:26,980 --> 00:00:31,790
+Eu o guiarei pelas caractersticas de javascript mais importantes da prxima gerao.
+
+7
+00:00:31,870 --> 00:00:37,570
+Ns vamos usar neste curso ao escrever aplicativos de reao, voc geralmente usa muitos
+
+8
+00:00:37,570 --> 00:00:42,830
+desses recursos de prxima gerao, como as funes ou classes da Aero.
+
+9
+00:00:42,910 --> 00:00:48,790
+Voc faz isso porque isso permite que voc escreva um cdigo de reativao mais limpo e  um padro de fato
+
+10
+00:00:48,790 --> 00:00:53,970
+para usar todos esses recursos se voc j se sentir confortvel usando os recursos de javascript da prxima gerao.
+
+11
+00:00:53,980 --> 00:00:55,190
+Ento, se voc j sabe.
+
+12
+00:00:55,210 --> 00:00:55,720
+Sim.
+
+13
+00:00:55,770 --> 00:00:57,070
+6 e assim por diante.
+
+14
+00:00:57,220 --> 00:01:01,290
+Ento voc pode ignorar o prximo mdulo e vou mencionar isso tambm.
+
+15
+00:01:01,360 --> 00:01:06,850
+voc tenha fundamentos slidos sobre todos esses recursos que estamos prestes a usar e voc sempre pode voltar a
+
+16
+00:01:06,850 --> 00:01:11,620
+esse mdulo se Voc mais tarde no curso encontrar algo que parece estranho ou novo para voc.
+
+17
+00:01:11,620 --> 00:01:16,860
+Caso contrrio, voc tem um bom mdulo, todos ns garantimos que estamos todos na mesma pgina e que
+
+18
+00:01:17,320 --> 00:01:24,640
+Aps este mdulo opcional, o mdulo de segundo real  o mdulo onde mergulhamos nos conceitos bsicos de reao.
+
+19
+00:01:24,670 --> 00:01:31,210
+Esse , naturalmente, um mdulo super importante, voc aprender como voc pode criar componentes re-agir que h mais do
+
+20
+00:01:31,210 --> 00:01:35,820
+que uma maneira de faz-lo e como voc pode se comunicar entre os componentes.
+
+21
+00:01:35,890 --> 00:01:42,130
+Como na aplicao de reao  geralmente construda, mas esta seo tambm inclui coisas como como
+
+22
+00:01:42,160 --> 00:01:49,280
+podemos produzir listas ou como podemos renderizar algum contedo condicionalmente l depois que  hora de mergulhar na
+
+23
+00:01:49,450 --> 00:01:51,730
+depurao porque todos cometemos erros.
+
+24
+00:01:51,790 --> 00:01:54,400
+Voc escrever cdigo que falha.
+
+25
+00:01:54,400 --> 00:01:56,610
+Isso  natural que acontece com todos.
+
+26
+00:01:56,800 --> 00:02:03,280
+ super importante que voc no saiba como recuperar como depurar sua aplicao como encontrar esse
+
+27
+00:02:03,340 --> 00:02:03,960
+erro.
+
+28
+00:02:04,090 --> 00:02:06,090
+Isso faz com que seu programa falhe.
+
+29
+00:02:06,160 --> 00:02:10,980
+Vamos dar uma olhada nesta depurao de oferta de mdulo de depurao interminvel.
+
+30
+00:02:11,050 --> 00:02:13,090
+Vamos mergulhar no estilo.
+
+31
+00:02:13,090 --> 00:02:19,690
+Como podemos modelar nossos componentes de re-atuao e como podemos garantir que o estilo que aplicamos a um
+
+32
+00:02:20,140 --> 00:02:24,880
+componente somente seja aplicado a esse componente e no aos componentes mdios tambm.
+
+33
+00:02:24,880 --> 00:02:27,410
+Vamos ver isso nesse modelo.
+
+34
+00:02:27,430 --> 00:02:34,600
+Depois disso, mergulhamos mais profundamente nos componentes que j teremos aprendido muito sobre eles, mas aqui vamos aprender qual o
+
+35
+00:02:34,600 --> 00:02:36,850
+ciclo de vida que eles seguem.
+
+36
+00:02:37,060 --> 00:02:43,870
+Ns aprenderemos como podemos controlar habilmente o Webber reagir para verificar atualizaes freqentemente componentes ou no.
+
+37
+00:02:43,990 --> 00:02:50,440
+E muito mais, ento esse  realmente um mdulo importante que assegurar que voc entenda os internos
+
+38
+00:02:50,470 --> 00:02:57,170
+de reagir e que voc tenha as ferramentas necessrias para aplicativos maiores ou mais avanados de reao.
+
+39
+00:02:57,360 --> 00:03:03,790
+Que voc ter aprendido muito sobre componentes, mas estava longe de ser feito bem, ento mergulhe
+
+40
+00:03:03,790 --> 00:03:05,210
+em pedidos de HTP.
+
+41
+00:03:05,260 --> 00:03:09,100
+Como podemos conectar nosso aplicativo de re-ao ao mundo exterior.
+
+42
+00:03:09,130 --> 00:03:13,510
+Como podemos buscar dados de um servidor ou ascender a esse servidor.
+
+43
+00:03:13,780 --> 00:03:21,130
+Como podemos fazer tudo isso em uma nica pgina ou em um aplicativo de vrias pginas com
+
+44
+00:03:21,370 --> 00:03:28,720
+solicitaes de HTP sncrono, o Ajax que ser examinado neste mdulo e, depois disso, mergulhamos no roteamento,
+
+45
+00:03:28,720 --> 00:03:35,540
+o roteamento  um recurso principal ao construir um nico porque, com o roteamento, podemos
+
+46
+00:03:35,540 --> 00:03:44,590
+realmente lidar com uma viso diferente ou, assim, usar o usurio Slash e cortar produtos e renderizar pginas diferentes, embora tecnicamente
+
+47
+00:03:44,590 --> 00:03:52,600
+ns possamos apenas um HVM nossa pgina e simplesmente analisamos durl com javascript e partes pr-renderizadas do dom
+
+48
+00:03:52,600 --> 00:03:57,190
+que precisam para ser pr-renderizado para exibir uma nova pgina.
+
+49
+00:03:57,190 --> 00:04:03,520
+Isso parece muito complexo e  por isso que usaremos um pacote para esse roteamento  um
+
+50
+00:04:03,520 --> 00:04:05,670
+mdulo importante e importante deste curso.
+
+51
+00:04:05,660 --> 00:04:13,330
+Portanto, agora, uma nota importante neste ponto, todos esses conceitos so sempre ensinados em teoria e com
+
+52
+00:04:13,330 --> 00:04:15,030
+pequenos projetos de demonstrao.
+
+53
+00:04:15,280 --> 00:04:22,150
+Tambm teremos um projeto de curso abrangente, o Berger Boler e elegveis regularmente retornaremos a esse projeto
+
+54
+00:04:22,150 --> 00:04:27,830
+e aplicaremos os recursos que voc aprendeu no mdulo anterior ao projeto do Curso.
+
+55
+00:04:27,850 --> 00:04:33,190
+comear por planej-lo e cri-lo, ento, usaremos conceitos de componentes avanados, aplicaremos o estilo
+
+56
+00:04:33,190 --> 00:04:40,210
+e tambm aplicaremos o encaminhamento para que possamos ver gradualmente o nosso produto se tornar melhor e melhor.
+
+57
+00:04:40,210 --> 00:04:40,930
+Ento, vamos
+
+58
+00:04:40,930 --> 00:04:47,380
+E para que voc sempre tenha uma tima maneira de ver todas essas coisas no apenas em teoria ou
+
+59
+00:04:47,380 --> 00:04:50,630
+em pequenos projetos de demonstrao, mas em um projeto real.
+
+60
+00:04:50,650 --> 00:04:54,460
+Ento, as coisas que mencionei aqui so apenas os tpicos abrangentes.
+
+61
+00:04:54,490 --> 00:04:59,860
+O Discours realmente possui mais mdulos porque, no entanto, temos todos esses mdulos orientados para
+
+62
+00:05:00,250 --> 00:05:01,500
+a prtica entre ambos.
+
+63
+00:05:02,030 --> 00:05:07,600
+Aps o roteamento, mergulhamos em fruns e validao em quase qualquer aplicativo da Web que voc crie.
+
+64
+00:05:07,640 --> 00:05:12,770
+validar a entrada do usurio e, posteriormente,  hora de redox redux e mais relaxar.
+
+65
+00:05:12,770 --> 00:05:19,410
+Voc precisa buscar a entrada do usurio e este mdulo, vou mostrar-lhe como fazer isso de forma dinmica e como
+
+66
+00:05:19,460 --> 00:05:25,850
+Vamos mergulhar profundamente em redux, que  a biblioteca independente de terceiros, mas,  claro,  usado em
+
+67
+00:05:25,880 --> 00:05:32,090
+muitos projetos de re-atuao comear no bsico. Ns aprenderemos porque  que queremos usar relaxar e ento
+
+68
+00:05:32,090 --> 00:05:38,240
+aprenderemos um uso mais avanado casos como o uso de aes assncronas em redox e muito mais.
+
+69
+00:05:38,240 --> 00:05:42,280
+Este  um mdulo importante e no posso esperar para mergulhar nisso.
+
+70
+00:05:42,320 --> 00:05:49,130
+E, em seguida, aplicar ao projeto do Curso junto com voc depois de ler o X ir mergulhar na autenticao.
+
+71
+00:05:49,130 --> 00:05:55,070
+Provavelmente, todas as aplicaes web possuem algum tipo de autenticao que permite que os usurios se inscrevam e faam login
+
+72
+00:05:55,430 --> 00:05:55,850
+aqui.
+
+73
+00:05:55,880 --> 00:05:57,810
+Vou mostrar-lhe como implementar isso.
+
+74
+00:05:57,830 --> 00:06:01,750
+Eu sempre pedirei e todos esses mdulos se concentraro no lado do cliente.
+
+75
+00:06:01,790 --> 00:06:05,000
+Ento, no lado da reao e no no lado do servidor.
+
+76
+00:06:05,180 --> 00:06:11,690
+Mas  claro que vou explicar como implementar a autenticao para que ele funcione com qualquer backend que
+
+77
+00:06:11,690 --> 00:06:17,380
+oferea suporte a esse tipo de autenticao, claro, tambm aplicar isso ao projeto do Curso.
+
+78
+00:06:17,380 --> 00:06:24,560
+voc pode criar contedo suficiente sobre testes para preencher um curso inteiro, mas eu quero apresent-lo como seu teste reage os
+
+79
+00:06:24,560 --> 00:06:31,160
+aplicativos que ferramentas voc use e como pensar em testar aplicativos de reagem depois do teste,  claro que
+
+80
+00:06:31,160 --> 00:06:37,280
+todos aprendero a implantar e reagir o aplicativo, de modo a enviar o mesmo para um servidor real.
+
+81
+00:06:38,000 --> 00:06:43,400
+Depois de todas as indicaes, mergulhamos em testar apenas uma introduo para ser sincero porque o
+
+82
+00:06:43,430 --> 00:06:44,910
+teste  suficiente, onde
+
+83
+00:06:45,200 --> 00:06:45,980
+E h.
+
+84
+00:06:46,030 --> 00:06:53,750
+Eu consegui um monte de contedo extra, por exemplo, um mdulo inteiro sobre a animao de locais de reator possveis prximos passos
+
+85
+00:06:53,750 --> 00:06:57,140
+onde voc poderia mergulhar depois de terminar este mdulo.
+
+86
+00:06:57,140 --> 00:07:04,100
+Um mdulo sobre o prximo J. S. que , basicamente, uma biblioteca que se acumula
+
+87
+00:07:04,100 --> 00:07:11,480
+em reagir e fazendo com que o suicdio renderize aplicativos um mdulo de brisa onde construiremos nosso prprio fluxo de trabalho, nosso prprio projeto a partir do
+
+88
+00:07:11,480 --> 00:07:15,310
+zero com o Pech da Web e algumas ferramentas de compilao e muito mais.
+
+89
+00:07:15,350 --> 00:07:18,080
+Ento, muito contedo neste curso.
+
+90
+00:07:18,080 --> 00:07:23,030
+Tem o comprimento que tem por um motivo e o fim e eu no posso esperar para mergulhar nisso junto com voc.
+
+91
+00:07:23,030 --> 00:07:26,480
+Ento, por que no fazemos isso e apenas comece com o curso.
+

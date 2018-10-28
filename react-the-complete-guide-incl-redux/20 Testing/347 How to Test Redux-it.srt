@@ -1,0 +1,252 @@
+1
+00:00:02,000 --> 00:00:08,070
+Abbiamo imparato a testare i contenitori e ho detto che la parte importante  che non
+
+2
+00:00:08,070 --> 00:00:09,060
+testate la connessione
+
+3
+00:00:09,270 --> 00:00:12,630
+a Redux, come fate a testare nuovamente, quindi testate?
+
+4
+00:00:12,630 --> 00:00:17,340
+La risposta  s, lo testiamo ma dobbiamo stare attenti a ci che testiamo.
+
+5
+00:00:17,340 --> 00:00:24,100
+Probabilmente non vogliamo testare catene molto complesse di azioni e riduttori e dichiarare, alla fine
+
+6
+00:00:24,100 --> 00:00:30,540
+i riduttori sono la carne che vogliamo testare soprattutto se seguiamo il modello di non
+
+7
+00:00:30,540 --> 00:00:36,740
+mettere troppa logica nei creatori di azioni. Quindi testare i riduttori  semplicissimo, c'
+
+8
+00:00:36,840 --> 00:00:42,000
+sincrono quindi non abbiamo a che fare con il codice asincrono e
+
+9
+00:00:42,000 --> 00:00:43,260
+ci sono solo
+
+10
+00:00:43,410 --> 00:00:48,110
+funzioni, passiamo qualcosa, otteniamo qualcosa come ad esempio per l'autenticazione, diciamo
+
+11
+00:00:48,180 --> 00:00:50,600
+che vogliamo scrivere un test per Questo.
+
+12
+00:00:50,640 --> 00:00:57,510
+Quindi aggiungi un'autenticazione. test. js file, qui non abbiamo nemmeno bisogno di
+
+13
+00:00:57,510 --> 00:00:58,230
+enzima perch
+
+14
+00:00:58,230 --> 00:01:05,820
+non testiamo alcun componente di reazione, non abbiamo bisogno di renderizzare nulla, testiamo solo il normale codice javascript, testiamo le funzioni, la funzione di riduttore.
+
+15
+00:01:06,270 --> 00:01:16,230
+Quindi quello che faccio qui  nel file di test, in primo luogo importa la funzione di riduttore da. / Auth. js in questo file, in questo caso in questo
+
+16
+00:01:16,230 --> 00:01:20,790
+modo e ora ho anche bisogno di importare i tipi di azione
+
+17
+00:01:20,910 --> 00:01:26,970
+come tipi di azione, ne importa tutto da. / azioni tipi di azione
+
+18
+00:01:26,970 --> 00:01:28,810
+e ora basta
+
+19
+00:01:29,010 --> 00:01:30,730
+scrivere il test.
+
+20
+00:01:30,900 --> 00:01:32,680
+Quindi, di nuovo, abbiamo
+
+21
+00:01:33,030 --> 00:01:39,730
+descritto, ora fornisco una descrizione chiara che possiamo vedere nella console come l'auth reducer e quindi
+
+22
+00:01:40,170 --> 00:01:44,200
+nella funzione qui, possiamo scrivere i numerosi test che abbiamo.
+
+23
+00:01:44,340 --> 00:01:49,140
+Ovviamente possiamo ancora usare prima di fare qualche configurazione generale, se
+
+24
+00:01:49,440 --> 00:01:51,730
+ necessario, ma voglio che
+
+25
+00:01:51,810 --> 00:01:52,800
+inizi con
+
+26
+00:01:52,800 --> 00:01:59,550
+i test, quindi ora vediamo cosa testiamo, proviamo ad esempio che otteniamo il giusto stato
+
+27
+00:01:59,550 --> 00:02:02,680
+iniziale se effettivamente passare un tipo di
+
+28
+00:02:02,730 --> 00:02:08,340
+azione non valido ad esso, quindi dovrebbe restituire lo stato iniziale, potrebbe
+
+29
+00:02:08,340 --> 00:02:09,920
+essere la descrizione qui.
+
+30
+00:02:10,620 --> 00:02:18,060
+E poi ho passato la mia funzione javascript e l, ora mi aspetto il mio riduttore se lo eseguo
+
+31
+00:02:18,240 --> 00:02:19,350
+cos ora mi
+
+32
+00:02:19,350 --> 00:02:25,140
+aspetto, eseguo semplicemente il codice che voglio testare, proprio come prima con wrapper ma ora
+
+33
+00:02:25,140 --> 00:02:31,860
+con una normale funzione javascript e lo far in realt passiamo indefiniti qui come uno stato iniziale,
+
+34
+00:02:31,860 --> 00:02:39,840
+questo  il caso in cui lo stato  appena impostato all'inizio della nostra app e l'azione  solo un
+
+35
+00:02:39,850 --> 00:02:42,250
+oggetto vuoto, quindi nessuna azione specifica.
+
+36
+00:02:42,270 --> 00:02:47,470
+Quindi in questo caso mi aspetto che il mio stato sia
+
+37
+00:02:47,730 --> 00:02:53,910
+uguale e ora dovrebbe eguagliare il mio stato iniziale definito nella funzione riduttore,
+
+38
+00:02:54,000 --> 00:02:56,660
+quindi questo oggetto javascript, che 
+
+39
+00:02:56,880 --> 00:02:58,550
+esattamente ci per cui
+
+40
+00:02:58,560 --> 00:03:01,560
+cerco, dovrebbe essere uguale a quell'oggetto.
+
+41
+00:03:01,560 --> 00:03:05,080
+Ora se salviamo quel file, anche questo dovrebbe essere eseguito,
+
+42
+00:03:05,220 --> 00:03:08,060
+ed  auth. test. js  eseguito cos l,
+
+43
+00:03:08,370 --> 00:03:13,710
+ora vediamo che questo ha successo ed  cos facile testare un riduttore. Ovviamente puoi anche testare casi
+
+44
+00:03:13,710 --> 00:03:21,030
+specifici, quindi possiamo scrivere un altro test in cui dovrebbe archiviare il token
+
+45
+00:03:21,170 --> 00:03:23,760
+al momento del login
+
+46
+00:03:23,760 --> 00:03:34,340
+e ora, con questa funzione, mi aspetto di eseguire una funzione di riduzione con, diciamo, lo stato iniziale
+
+47
+00:03:34,340 --> 00:03:38,920
+e potremmo impostare questo su prima di tutti.
+
+48
+00:03:39,110 --> 00:03:39,460
+Quindi
+
+49
+00:03:39,470 --> 00:03:48,190
+eseguo la funzione di riduzione con lo stato iniziale e con un'azione in cui il tipo  actionTypes. AUTH_SUCCESS e ora ovviamente abbiamo bisogno di passare il payload
+
+50
+00:03:48,200 --> 00:03:54,360
+corretto con quell'azione anche qui, quindi non solo il tipo ma anche il carico utile
+
+51
+00:03:54,500 --> 00:03:58,570
+di quell'azione e possiamo vedere che il payload ovviamente nel
+
+52
+00:03:58,750 --> 00:04:03,710
+nostro file dei creatori di azioni. In AUTH_SUCCESS, passiamo anche il token
+
+53
+00:04:03,770 --> 00:04:07,890
+ID e l'id utente, quindi  qualcosa che dovremmo trasmettere
+
+54
+00:04:07,890 --> 00:04:17,120
+anche qui e che potrebbe essere un token, il valore esatto naturalmente non ha importanza per il test e qualche ID utente.
+
+55
+00:04:17,500 --> 00:04:21,040
+Questa  la funzione del riduttore, come la eseguiamo.
+
+56
+00:04:21,040 --> 00:04:27,490
+Ora ci aspettiamo che sputi uno stato aggiornato che rispetti questo token e id utente, quindi lo
+
+57
+00:04:27,490 --> 00:04:37,270
+stato aggiornato dovrebbe essere uguale al nostro stato iniziale in generale ma il token ovviamente dovrebbe essere un token e qui, che deve essere il valore
+
+58
+00:04:37,270 --> 00:04:42,650
+esatto qui, se non fosse allora qualcosa sarebbe sbagliato all'interno del nostro riduttore, questa
+
+59
+00:04:42,790 --> 00:04:44,610
+ l'idea alla base del
+
+60
+00:04:45,620 --> 00:04:48,910
+test, l'ID utente dovrebbe quindi essere un qualche ID utente.
+
+61
+00:04:48,960 --> 00:04:57,600
+Ora se lo salviamo, anche questo passa e non appena cambio il valore atteso per qualche utente, fallisce
+
+62
+00:04:57,840 --> 00:05:00,020
+perch ora abbiamo valori diversi.
+
+63
+00:05:00,360 --> 00:05:07,410
+Cos  anche possibile testare i riduttori, sono funzioni pure e quindi molto semplici da testare.
+

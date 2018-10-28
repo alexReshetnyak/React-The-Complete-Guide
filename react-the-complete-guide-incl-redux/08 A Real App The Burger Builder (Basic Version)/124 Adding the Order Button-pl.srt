@@ -1,0 +1,504 @@
+1
+00:00:02,230 --> 00:00:08,000
+Tak wic duo ju obrobilimy i mamy nasz wbudowan konfiguracj sterowania i czy Bullah
+
+2
+00:00:08,020 --> 00:00:16,030
+Berger pozwala stworzy ten modal, ktry pozwala nam wywietli zamwienie, a modulator disommododokresu powinien zosta pokazany po klikniciu przycisku
+
+3
+00:00:16,030 --> 00:00:20,330
+Check out, ktry musimy rwnie doda poniej lub zbudowa sterownica.
+
+4
+00:00:20,620 --> 00:00:27,540
+Wic to s rzeczy, ktre chc robi dalej, jak przycisk check out do budowania kontroli, a add
+
+5
+00:00:27,580 --> 00:00:34,750
+to modal, ktry powinien w zasadzie zawrze si w jakim podsumowaniu zlecenia, ktre prawdopodobnie powinno rwnie przej
+
+6
+00:00:34,750 --> 00:00:36,560
+do jego wasnego komponentu.
+
+7
+00:00:36,580 --> 00:00:40,150
+Zrbmy to krok po kroku i zacznijmy od tego.
+
+8
+00:00:40,150 --> 00:00:42,310
+Sprawd BOTTEN dla taty.
+
+9
+00:00:42,310 --> 00:00:47,560
+Przejdmy do kontrolek odzi, poniewa chc doda do przycisku wyboru na dole tych kontrolek.
+
+10
+00:00:47,740 --> 00:00:54,160
+I tam moemy po prostu doda rwnie ten przycisk na kocu, ktry powinien pokaza ten model
+
+11
+00:00:54,160 --> 00:00:54,770
+na kocu.
+
+12
+00:00:55,070 --> 00:01:02,140
+Tak wic kady rok jest normalnym przyciskiem zwykego elementu przycisku HGL lub J jako X, poniewa zawsze jest tutaj.
+
+13
+00:01:02,160 --> 00:01:06,870
+Ale wiesz, co mam na myli z chemi, a to powinno oznacza porzdek.
+
+14
+00:01:06,880 --> 00:01:12,320
+Teraz zamierzam umieci ten podpis pod wszystkimi literami, ale oczywicie jest to opcjonalne.
+
+15
+00:01:12,370 --> 00:01:18,970
+Moesz ustawi ten przycisk i tekst na przycisku w dowolny sposb.
+
+16
+00:01:19,000 --> 00:01:20,110
+Teraz przycisk.
+
+17
+00:01:20,110 --> 00:01:24,180
+Mwic o przecigniciu, naley oczywicie rwnie uzyska pewne style.
+
+18
+00:01:24,430 --> 00:01:29,030
+Otwrzmy wic obie kontrolki i docz do tego pliku.
+
+19
+00:01:29,050 --> 00:01:32,550
+Znajdziesz kod s do tego przycisku.
+
+20
+00:01:33,680 --> 00:01:37,720
+Tutaj po prostu dodaj przycisk zamwienia Zia's S class.
+
+21
+00:01:37,880 --> 00:01:45,710
+Nastpnie dodaem nieaktywny aktywny nieaktywny styl Stahla, ktry chcemy zastosowa, gdy QAnd zamwi
+
+22
+00:01:45,710 --> 00:01:53,660
+hamburgera, poniewa nie dodalimy adnych skadnikw i Elham, ktry po prostu wykonaby przycisk.
+
+23
+00:01:53,660 --> 00:01:58,280
+Kiedy staje si teraz aktywne, takie nastawienie jest postrzegane jako faul.
+
+24
+00:01:58,280 --> 00:02:02,740
+Upewnij si, e zaktualizowae zaktualizowane sterowanie rubami C-s w nastpujcy sposb.
+
+25
+00:02:02,900 --> 00:02:09,340
+A teraz moemy doda nasz nazw klasy do tego przycisku i tam jest to nazwa klasy.
+
+26
+00:02:09,350 --> 00:02:12,010
+Po prostu dodaj go do C S jako.
+
+27
+00:02:12,380 --> 00:02:18,210
+Przycisk zamwienia i po prostu sprawd plik, aby potwierdzi ten przycisk zamwienia.
+
+28
+00:02:18,230 --> 00:02:20,400
+To jest klasa s.
+
+29
+00:02:20,720 --> 00:02:25,200
+Tak samo teraz wyglda styl przycisku, aby wyczy ten przycisk.
+
+30
+00:02:25,220 --> 00:02:32,270
+Musimy sprawdzi, gdzie wszystkie skadniki maj warto 0 lub jeli przynajmniej jeden ze skadnikw ma
+
+31
+00:02:32,330 --> 00:02:38,450
+warto 1, co spowodowaoby aktywacj tego przycisku, poniewa wtedy moglibymy oczywicie go klikn.
+
+32
+00:02:38,480 --> 00:02:46,310
+Tak wic logika do sprawdzenia, gdziekolwiek jest, ale statek jest aktywny, wic gdzie moemy ciga burgera, czy te nie,
+
+33
+00:02:46,640 --> 00:02:52,460
+oczywicie, naley go zarzdza, a take pojemnik Boulder z burgerami, poniewa to jest miejsce,
+
+34
+00:02:52,460 --> 00:02:57,820
+w ktrym musimy stwierdzi, e wiemy, ile kadego skadnika chcemy doda do tego burgera.
+
+35
+00:02:57,920 --> 00:03:02,800
+To, co musimy tutaj wiedzie, to cakowita ilo wszystkich skadnikw.
+
+36
+00:03:02,840 --> 00:03:09,110
+Wic w zasadzie suma wszystkich skadnikw i po prostu dodam now waciwo, gdzie powiem na stole
+
+37
+00:03:09,680 --> 00:03:13,440
+Shea, a ja ustawi to na si na pocztku.
+
+38
+00:03:13,480 --> 00:03:16,740
+Teraz do kupienia powinno po prostu sta si prawd.
+
+39
+00:03:16,770 --> 00:03:25,640
+Kiedy bdziemy mogli kupi to moliwe do kupienia, gdy bdziemy mogli kupi jego hamburgera, wic gdy przynajmniej jeden skadnik bdzie jednym
+
+40
+00:03:25,640 --> 00:03:26,490
+lub wicej.
+
+41
+00:03:26,660 --> 00:03:34,550
+Teraz dodam now metod do daty aktualizacji budowniczego burgera na stan chase.
+
+42
+00:03:34,550 --> 00:03:39,050
+Kade imi, ktre lubisz, robi to tutaj i chc nazwa t metod.
+
+43
+00:03:39,050 --> 00:03:46,720
+Na kocu skadnika i usuwajc mediany do gsty po prostu sprawd, czy potrzebujemy dwch,
+
+44
+00:03:46,730 --> 00:03:51,980
+czy te powinnimy skoni do zakupu do Prawda czy fasz.
+
+45
+00:03:52,130 --> 00:04:00,020
+Dlatego tutaj chc sprawdzi skadniki, ktre mam w moim stanie, dlatego utworz tu nowy obiekt,
+
+46
+00:04:00,110 --> 00:04:02,740
+aby utworzy kopi tego stanu.
+
+47
+00:04:02,750 --> 00:04:04,260
+Skadniki.
+
+48
+00:04:04,310 --> 00:04:09,770
+Teraz musz podsumowa wszystkie wartoci tutaj.
+
+49
+00:04:09,770 --> 00:04:15,800
+Teraz jest bardzo atwe do zrobienia, co musz zrobi, to musz ponownie przeksztaci
+
+50
+00:04:15,860 --> 00:04:20,420
+ten obiekt tutaj w tablic w tablic tych wartoci.
+
+51
+00:04:20,420 --> 00:04:31,490
+Teraz mog zrobi, e mog stworzy pewne stae miejsce, w ktrym bior obiekt obiektu javascript i tam
+
+52
+00:04:31,490 --> 00:04:36,950
+ponownie uywam klawiszy i przesyam do niego moje skadniki.
+
+53
+00:04:37,070 --> 00:04:42,390
+I to znowu stworzy tablic cigw i.
+
+54
+00:04:42,600 --> 00:04:46,140
+Saatka z boczkiem i tak dalej.
+
+55
+00:04:46,160 --> 00:04:54,170
+Teraz powiedziaem, e potrzebuj tutaj tych wartoci, wic iloci skadnikw nie s imionami.
+
+56
+00:04:54,500 --> 00:04:57,800
+C, moemy po prostu zamapowa t tablic na tablic.
+
+57
+00:04:57,800 --> 00:05:04,610
+Musimy zaprojektowa now lini, aby uatwi odczytanie metody mapy, oczywicie, e nadal otrzymujemy klucz, a
+
+58
+00:05:04,910 --> 00:05:07,810
+nastpnie jest on uywany w programie Word.
+
+59
+00:05:08,000 --> 00:05:13,460
+Funkcja, ktr przekazalimy do metody mapy otrzymaa Sakia powinna powiedzie, a nastpnie moemy jej uy,
+
+60
+00:05:13,850 --> 00:05:21,390
+aby zwrci now warto i zastpi star warto, ktra bya nazw saatki nazwy i tak dalej z t now wartoci.
+
+61
+00:05:21,740 --> 00:05:30,610
+I tutaj po prostu chciaem zwrci skadniki i tam warto dla danego klucza.
+
+62
+00:05:30,720 --> 00:05:37,500
+I to bdzie ilo ze wzgldu na skadniki i ta notacja Mam dostp do pewnej waciwoci
+
+63
+00:05:37,500 --> 00:05:42,230
+w obiekcie skadnikw klucza IGY jest pieczenie saatek i tak dalej.
+
+64
+00:05:42,330 --> 00:05:47,870
+Wic w zasadzie otrzymuj te wartoci liczb i to jest to, co zwracam dla kadego klucza.
+
+65
+00:05:47,910 --> 00:05:50,990
+Teraz mam szereg wartoci.
+
+66
+00:05:51,000 --> 00:05:55,250
+Teraz wszystko, co musz zrobi, to wywoa funkcj redukcji, aby ponownie zmniejszy desir.
+
+67
+00:05:55,300 --> 00:06:00,210
+W tym czasie nie spaszcza tablicy, ale zmieni j w jedn liczb.
+
+68
+00:06:00,240 --> 00:06:06,990
+Suma wszystkich skadnikw dla tego bdzie miaa numer pocztkowy rwny 0, a nastpnie mamy funkcj, ktra
+
+69
+00:06:06,990 --> 00:06:11,730
+jest wykonywana na kadym elemencie w tablicy zmapowanych w tej funkcji.
+
+70
+00:06:11,730 --> 00:06:19,770
+Dostaj nowy, indywidualny element i pamitam, e po prostu jest on stale aktualizowany.
+
+71
+00:06:19,800 --> 00:06:24,870
+Aktualne podsumowanie do aktualnej iteracji, w ktrej wykonano dysfunkcje.
+
+72
+00:06:24,960 --> 00:06:31,620
+A gdy funkcja zostanie wykonana na wszystkich elementach tablicy, suma jest wynikiem kocowym, a tutaj po prostu
+
+73
+00:06:31,620 --> 00:06:37,960
+zwracana jest obecna suma plus element i pamitamy, e element jest liczb, poniewa jest to warto-warto,
+
+74
+00:06:38,040 --> 00:06:39,380
+do ktrej mamy dostp.
+
+75
+00:06:39,660 --> 00:06:47,280
+Otrzymuj sta sta, ktra wynosi zero, jeli nie mamy dodanych skadnikw lub jakiejkolwiek innej liczby reprezentujcej
+
+76
+00:06:47,370 --> 00:06:49,090
+cakowit ilo skadnikw.
+
+77
+00:06:49,740 --> 00:06:54,320
+Dziki temu mog po prostu zadzwoni do ustawionego stanu i ustawi j.
+
+78
+00:06:54,350 --> 00:06:56,810
+Jest w stanie.
+
+79
+00:06:57,080 --> 00:07:00,650
+A teraz to zaley od tego, kto ma wicej ni zero.
+
+80
+00:07:00,650 --> 00:07:04,130
+Wic ustawimy to na wiksze 0 0.
+
+81
+00:07:04,130 --> 00:07:05,680
+PRAWDA CZY FASZ.
+
+82
+00:07:05,840 --> 00:07:09,950
+I prawd jest, e jeli mamy co najmniej jeden skadnik, wwczas mona go kupi.
+
+83
+00:07:10,040 --> 00:07:12,710
+I wanie takie zachowanie chc.
+
+84
+00:07:12,710 --> 00:07:18,940
+Teraz moemy to kupi i moemy teraz przekaza to sterowanie paskiem.
+
+85
+00:07:19,070 --> 00:07:25,820
+Dodajmy wic now waciwo, nazwijmy take moliw do kupienia waciwo, ktra wie waciwo
+
+86
+00:07:25,820 --> 00:07:27,140
+z tym stanem.
+
+87
+00:07:27,140 --> 00:07:28,430
+Zakup.
+
+88
+00:07:28,700 --> 00:07:34,490
+I przekazalimy informacj, czy moemy sprawdzi tego burgera i zapaci za niego, czy
+
+89
+00:07:34,490 --> 00:07:35,020
+nie.
+
+90
+00:07:35,150 --> 00:07:41,720
+W d do kontrolowanych obiektw, w ktrych mog teraz wzi te informacje, aby wyczy ten przycisk lub
+
+91
+00:07:41,720 --> 00:07:42,530
+wczy go.
+
+92
+00:07:42,560 --> 00:07:49,490
+Wic pozwl mi podzieli to przez linie modelu i powiza wyczone oft jest elementem przycisku HVM l.
+
+93
+00:07:49,490 --> 00:07:52,770
+Ponownie jest to GSX, ale w kocu wyrenderuje przycisk.
+
+94
+00:07:53,060 --> 00:07:56,260
+Poczmy te dwa rekwizyty i oto jest.
+
+95
+00:07:56,270 --> 00:07:58,860
+Kupuj to, co wanie skonfigurowalimy.
+
+96
+00:07:59,090 --> 00:08:04,760
+Teraz, jeli to zapiszemy i wrcimy do dziaajcej aplikacji, mamy teraz przycisk
+
+97
+00:08:05,270 --> 00:08:14,570
+"teraz", ale jest wczony tutaj i nie powinien by tak kupowalny, poniewa w jaki sposb nie jest przekazywany poprawnie.
+
+98
+00:08:14,570 --> 00:08:17,370
+Pozwl mi szybko rzuci okiem na to, co jest nie tak.
+
+99
+00:08:17,400 --> 00:08:25,140
+Zidentyfikowalimy problem, ktry mona kupi, oczywicie, jeli przycisk na burgera jest do
+
+100
+00:08:25,230 --> 00:08:28,250
+kupienia. m. powinien by ustawiony na True, ale jeli nie jest moliwy do kupienia.
+
+101
+00:08:28,350 --> 00:08:30,480
+Musimy wic po prostu powiedzie to tutaj.
+
+102
+00:08:30,690 --> 00:08:35,820
+Dodaj wic wykrzyknik przed props do kupienia, a teraz przycisk powinien by wyczony.
+
+103
+00:08:35,820 --> 00:08:41,220
+Oczywicie nigdy nie staje si aktywny, poniewa nigdy nie nazywamy przyjemnej metody pomocnika.
+
+104
+00:08:41,220 --> 00:08:44,760
+Stworzylimy t aktualizacj na metod stanu chase.
+
+105
+00:08:44,880 --> 00:08:48,790
+Nigdy tego nie nazywamy, powinnimy to nazwa po uruchomieniu.
+
+106
+00:08:48,810 --> 00:08:55,890
+Ed Ingredion handler lub usunicie handlarza Reagena, aby mogli nastpnie wykona t aktualizacj w
+
+107
+00:08:55,890 --> 00:09:02,650
+ramach stanu chase tego samego na kocu usuwanego moduu Ingredion i dodanego dugu.
+
+108
+00:09:02,730 --> 00:09:05,180
+Jeli teraz to uratujemy, powinnimy to zobaczy.
+
+109
+00:09:05,190 --> 00:09:10,860
+Ale robi to, gdy dodaj jeden skadnik, ktry pozostaje wyczony.
+
+110
+00:09:10,980 --> 00:09:13,710
+Tylko raz, gdy miaem drugi, staje si aktywny.
+
+111
+00:09:13,710 --> 00:09:16,330
+Dlaczego wanie zauwaye bd?
+
+112
+00:09:16,650 --> 00:09:25,290
+Ma to co wsplnego z metodami pre-Chase aktualizacji. Problem polega na tym, e analizowane przeze
+
+113
+00:09:25,300 --> 00:09:35,670
+mnie skadniki s oczywicie moim starym stanem tutaj, ze wzgldu na sposb ustawienia stanu, kiedy uruchamiamy aktualizacj na
+
+114
+00:09:35,670 --> 00:09:43,710
+stan, w ktrym nie moemy uzyska zaktualizowane skadniki, a zatem po skopiowaniu skadnikw i
+
+115
+00:09:43,710 --> 00:09:47,940
+przeanalizowaniu ich moemy po prostu uzyska nieaktualne sowo.
+
+116
+00:09:48,040 --> 00:09:55,560
+Teraz moemy po prostu to naprawi, przekazujc zaktualizowane skadniki, ktre mamy w dodatku i usuwamy
+
+117
+00:09:55,560 --> 00:09:56,810
+skadnik hndler.
+
+118
+00:09:57,030 --> 00:10:03,580
+Q Metoda aktualizacji stanu na chase i spodziewa si tam skadnikw.
+
+119
+00:10:03,600 --> 00:10:11,650
+Wic skadniki i teraz moemy po prostu uy tych skadnikw w tej metodzie zamiast kopiowa
+
+120
+00:10:11,650 --> 00:10:12,980
+ze stanu.
+
+121
+00:10:13,000 --> 00:10:20,650
+Teraz, jeli zapiszemy to prawo na pierwszym elemencie, dodamy, e staje si aktywny i musimy usun wszystkie skadniki,
+
+122
+00:10:20,650 --> 00:10:22,400
+aby ponownie wyczy przycisk.
+
+123
+00:10:22,480 --> 00:10:25,080
+I tam widzisz t fajn animacj.
+
+124
+00:10:25,270 --> 00:10:27,440
+Wic dolny krok numer jeden.
+
+125
+00:10:27,460 --> 00:10:34,670
+Teraz w kolejnym kroku chc rwnie doda modal, aby wywietli podsumowanie zamwienia, a nie tylko pokaza przycisk.
+
+126
+00:10:34,840 --> 00:10:37,400
+Przejdmy do tego w nastpnym wykadzie.
+

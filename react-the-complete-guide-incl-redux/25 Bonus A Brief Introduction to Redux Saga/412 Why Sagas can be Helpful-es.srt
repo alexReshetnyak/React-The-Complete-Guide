@@ -1,0 +1,64 @@
+1
+00:00:02,160 --> 00:00:09,840
+En las ltimas conferencias, movimos todo el cdigo asncrono y puedo eliminar la importacin de axios del archivo del
+
+2
+00:00:09,840 --> 00:00:12,100
+creador de la accin de pedido.
+
+3
+00:00:12,210 --> 00:00:18,300
+As que movimos todo el cdigo asncrono e incluso el cdigo de efecto secundario sincrnico desde nuestros
+
+4
+00:00:18,300 --> 00:00:21,270
+archivos de creador de accin a nuestras sagas.
+
+5
+00:00:21,660 --> 00:00:26,900
+La ventaja entre comillas porque no es necesariamente mejor, depende
+
+6
+00:00:26,940 --> 00:00:28,700
+de lo que prefiera.
+
+7
+00:00:28,920 --> 00:00:33,990
+Entonces, la ventaja puede ser que nuestros creadores de acciones son muy delgados,
+
+8
+00:00:34,110 --> 00:00:36,030
+realmente hacen una sola cosa,
+
+9
+00:00:36,030 --> 00:00:37,600
+crean una accin, no
+
+10
+00:00:37,650 --> 00:00:45,750
+ejecutan ningn otro cdigo y todos nuestros cdigos de efectos secundarios, por lo que el cdigo que no est relacionado reduce
+
+11
+00:00:45,810 --> 00:00:49,250
+o a las acciones est en nuestras sagas.
+
+12
+00:00:49,260 --> 00:00:55,500
+Aqu es donde tenemos nuestras llamadas API, nuestras llamadas de almacenamiento local donde incluso podramos cambiar la ruta
+
+13
+00:00:55,530 --> 00:00:57,470
+en la que nos encontramos actualmente.
+
+14
+00:00:57,470 --> 00:01:03,240
+Este es un patrn que no tienes que usar pero te lleva a creadores de acciones ms magros.
+
+15
+00:01:03,240 --> 00:01:10,650
+Ahora hay un par de cosas ms que quiero mostrarte con la saga redux, que tambin debes tener
+
+16
+00:01:11,160 --> 00:01:15,430
+en cuenta y que te permita crear aplicaciones realmente potentes.
+

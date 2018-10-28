@@ -1,0 +1,212 @@
+1
+00:00:02,230 --> 00:00:04,030
+Bylece gerek yaratcy yarattk.
+
+2
+00:00:04,060 --> 00:00:08,830
+imdi iletiim verileri konteynerize balanalm.
+
+3
+00:00:08,830 --> 00:00:11,150
+Orada ileyici yntemini sipari etmeliyiz.
+
+4
+00:00:11,260 --> 00:00:13,570
+Ve onu burada brakacam, nk yine de ihtiyacm var.
+
+5
+00:00:13,570 --> 00:00:20,020
+Sipari dmesini tkladmzda yrtlmelidir ancak buradan yklemeyi artk istemiyorum,
+
+6
+00:00:20,020 --> 00:00:28,500
+bylece ykleme ileminin kald yerden kaldrlacak ve artk burada sipari vermek istemiyorum.
+
+7
+00:00:28,510 --> 00:00:34,150
+Yapmak istediim bilgiye erimek iin kodu elden karmaya balamtm.
+
+8
+00:00:34,420 --> 00:00:35,690
+Eriimden ayrlmak istiyorum.
+
+9
+00:00:35,700 --> 00:00:37,760
+thalatnz buraya yaptrn.
+
+10
+00:00:37,900 --> 00:00:40,900
+Aslnda daha nce baka bir ey yapmadm.
+
+11
+00:00:40,900 --> 00:00:49,450
+Yksek sipari bileeni klasrmdeki yksek sipari bileeni hata ileyicisi ile almak istiyorum.
+
+12
+00:00:49,660 --> 00:00:54,550
+Redux'la ilgisi olmadn, ancak burada kullanacamdan emin olmak istiyorum.
+
+13
+00:00:54,550 --> 00:01:00,700
+Q Sanayiyi alt kattaki Bergere kayalarnda kullandm gibi katman yazlmn balamak iin sarlyorum
+
+14
+00:01:00,980 --> 00:01:03,990
+ve bu hatann da buraya dmesini istiyorum.
+
+15
+00:01:04,090 --> 00:01:11,390
+da aktarmak iin, bir baka yksek sipari bileeni ile tm sarg iletiim verisi hata ileyicisine sahip yksek sipari
+
+16
+00:01:11,390 --> 00:01:17,510
+bileeni yazm yalnzca iletiim verilerini deil ayn zamanda kk bir ey olan eriimi de iletir.
+
+17
+00:01:17,680 --> 00:01:20,660
+Yani ok altndaki iletiim verilerinde, her eyi
+
+18
+00:01:20,720 --> 00:01:28,400
+nemli olan, konteyneri burada oluturduum yeni eylemlerime balamak iin bir kez ekleyin ve bu
+
+19
+00:01:28,610 --> 00:01:32,230
+nedenle eylemlerin gnderilmesine kendimi balamam gerekiyor.
+
+20
+00:01:32,270 --> 00:01:37,610
+Bu yzden daha nce sahip olmadmz sabit bir harita gnderimi ekleyeceim.
+
+21
+00:01:38,390 --> 00:01:46,540
+Ve burada sipari burgeri veya orada holandnz herhangi bir ad zerinde yaratmak istediim bir mlk var.
+
+22
+00:01:46,550 --> 00:01:54,080
+Gerekten eylem yaratanm eylem yaratcs gnderdiim anonim bir ilev yrtrm.
+
+23
+00:01:54,080 --> 00:01:57,470
+Satn alma sonbaharnda Burger balangcnda dzenleme yapyorum.
+
+24
+00:01:57,470 --> 00:01:59,170
+Gerek yaratc budur.
+
+25
+00:01:59,420 --> 00:02:07,520
+Dizinime Chia'nn eylemler klasrnde dmesini bylece dier dosyalardan alabilmelerini ve Arafa'y
+
+26
+00:02:08,280 --> 00:02:12,510
+iletiim verileri kapsaycsndan okumak istedim.
+
+27
+00:02:12,590 --> 00:02:21,450
+imdi ithal edildi, bu nedenle her eyi, eylemler gibi ie aktarn.
+
+28
+00:02:21,610 --> 00:02:27,050
+Ve imdi hepsi orada eylemleri depolamak iin hareket ediyor.
+
+29
+00:02:27,100 --> 00:02:28,760
+ndeks j aadaki gibidir.
+
+30
+00:02:29,210 --> 00:02:33,110
+Ve bununla konteynrn altndaki konteynerde sevk edebilirim.
+
+31
+00:02:33,230 --> 00:02:41,290
+Harekat gnderebilirim ve burada burada satn alma hrszlar balyor, burada bir tartma beklemeyi
+
+32
+00:02:41,290 --> 00:02:41,920
+umuyorum.
+
+33
+00:02:42,100 --> 00:02:44,200
+Sipari verileri.
+
+34
+00:02:44,500 --> 00:02:51,100
+Bu yzden onu anonim bir ileve alyorum ve onu eylem yaratcya gnderiyorum.
+
+35
+00:02:51,100 --> 00:02:56,380
+nk burada eylem oluturulan verilerin imdi temas verilerinde olmasn bekliyorum.
+
+36
+00:02:56,390 --> 00:02:58,600
+Elbette bu mlk kullanmak istiyorum.
+
+37
+00:02:58,810 --> 00:03:04,880
+Bu yzden sipari bir burger sipari burger ileyici olarak arlmaldr.
+
+38
+00:03:05,320 --> 00:03:11,540
+Sipari ileyicisine gidelim ve sipari verilerini hazrlyoruz.
+
+39
+00:03:12,010 --> 00:03:17,140
+imdi bu sahne idamn yapabiliriz.
+
+40
+00:03:17,140 --> 00:03:23,600
+Unutmayn, gnderim eylemlerimizi sipari burgeri sahas olarak alyoruz.
+
+41
+00:03:23,830 --> 00:03:26,260
+Ve emrimi gemek istiyorum.
+
+42
+00:03:26,380 --> 00:03:32,890
+Ve bu, srpriz maddeleri ieriyor ve sipari verileriniz, kullancnn forma girdii ayrntlar
+
+43
+00:03:32,890 --> 00:03:34,420
+veya verilerden oluuyor.
+
+44
+00:03:34,630 --> 00:03:41,350
+Bununla birlikte, bir tklamayla gnderilebiliyoruz, ancak artk beklenen ekilde almayacak birka
+
+45
+00:03:41,350 --> 00:03:42,640
+ey var.
+
+46
+00:03:42,640 --> 00:03:51,520
+rnein, render ynteminde tm iletiim verileri bileeni burada, sonuta Espen'i grntlemek iin yklenip yklenmediimizi kontrol
+
+47
+00:03:51,520 --> 00:03:54,680
+eder veya formun yerine geeriz.
+
+48
+00:03:54,970 --> 00:03:56,310
+imdi yklyoruz.
+
+49
+00:03:56,380 --> 00:04:01,880
+Sipari dmesini tklarsa, redock deponuzda bu ykleme durumunu ele almamz gerekir.
+
+50
+00:04:01,890 --> 00:04:10,120
+Bu nedenle, yapabilmek iin redoksa tm sipari verme srecini koyduk, u an olduka bo olan
+
+51
+00:04:10,120 --> 00:04:12,660
+redktr zerinde almamz gerekiyor.
+
+52
+00:04:12,700 --> 00:04:14,110
+te bu bir sonraki hedef.
+
+53
+00:04:14,110 --> 00:04:16,090
+Sipari indirgeciyle alalm.
+

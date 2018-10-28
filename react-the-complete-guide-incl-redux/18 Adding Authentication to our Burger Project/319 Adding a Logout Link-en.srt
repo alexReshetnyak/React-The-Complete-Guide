@@ -1,0 +1,380 @@
+1
+00:00:02,170 --> 00:00:07,820
+In the last lecture, we made sure that we update the UI depending on our authentication state
+
+2
+00:00:07,900 --> 00:00:13,180
+and of course the same logic we used there can be used anywhere in your application if you need to change
+
+3
+00:00:13,180 --> 00:00:15,010
+something depending on the auth state,
+
+4
+00:00:15,040 --> 00:00:17,800
+we'll also do that in one of the next lectures
+
+5
+00:00:18,070 --> 00:00:21,230
+but for now, I want to make sure that the logout link works
+
+6
+00:00:21,250 --> 00:00:22,990
+Now logout leads to
+
+7
+00:00:22,990 --> 00:00:24,860
+/logout obviously
+
+8
+00:00:25,060 --> 00:00:27,600
+and I want to do something upon a logout,
+
+9
+00:00:27,790 --> 00:00:33,880
+I want to clear my token and we do have an action for that, if we check the store actions folder auth,
+
+10
+00:00:34,420 --> 00:00:38,110
+there we do have that logout action creator
+
+11
+00:00:38,110 --> 00:00:43,050
+so I want to dispatch that and I then of course also want to redirect,
+
+12
+00:00:43,240 --> 00:00:48,400
+for example if we click logout, I always want to redirect back to the starting page so that if we
+
+13
+00:00:48,400 --> 00:00:52,600
+were on orders, we're not staying there because we're not authenticated anymore,
+
+14
+00:00:52,990 --> 00:00:57,450
+so that's the idea, redirect and dispatch this logout action.
+
+15
+00:00:57,460 --> 00:00:59,910
+Now there are different ways you can achieve this,
+
+16
+00:00:59,920 --> 00:01:07,180
+one possibility would be to go to your navigation items here and make sure that you create a separate
+
+17
+00:01:07,450 --> 00:01:12,210
+kind of navigation item which isn't a link but actually a button
+
+18
+00:01:12,370 --> 00:01:17,980
+and then you could register some action prop which in the end is a link to a method you want to call to
+
+19
+00:01:18,040 --> 00:01:19,330
+dispatch,
+
+20
+00:01:19,330 --> 00:01:23,200
+that would be a way to handle this situation.
+
+21
+00:01:23,200 --> 00:01:29,190
+I want to show you this way with linking to a page which then just redirects and logs you out,
+
+22
+00:01:29,200 --> 00:01:35,800
+so what I'll do is I'll go to my containers folder and in the auth folder, I'll add a new subfolder, logout
+
+23
+00:01:36,160 --> 00:01:38,990
+there I'll add a logout.js file.
+
+24
+00:01:39,190 --> 00:01:48,570
+This will be a class based component so I'll import react and component from react and I'll create a class
+
+25
+00:01:48,570 --> 00:01:53,010
+which I'll name logout which extends the component, of course.
+
+26
+00:01:53,010 --> 00:01:55,070
+Now there I'll have my render method
+
+27
+00:01:55,380 --> 00:01:57,600
+and there I will return some jsx
+
+28
+00:01:57,780 --> 00:02:02,070
+and of course I'll export this logout class as the default.
+
+29
+00:02:02,070 --> 00:02:04,100
+Now I want to do two things,
+
+30
+00:02:04,260 --> 00:02:07,030
+dispatch that action and redirect,
+
+31
+00:02:07,230 --> 00:02:10,080
+let's start with dispatching the action. Here
+
+32
+00:02:10,110 --> 00:02:15,080
+I will add a new const, mapDispatchToProps,
+
+33
+00:02:15,130 --> 00:02:19,120
+this should hold a function where we get the dispatch function as an argument
+
+34
+00:02:19,210 --> 00:02:24,320
+and where I'll return this well-known javascript object mapping props to dispatch methods.
+
+35
+00:02:24,580 --> 00:02:32,760
+So here, I'll add onLogout prop and this will hold a function which in the end calls dispatch and which
+
+36
+00:02:32,760 --> 00:02:34,090
+now should well
+
+37
+00:02:34,090 --> 00:02:37,740
+be able to dispatch that action from my action creators file.
+
+38
+00:02:37,930 --> 00:02:41,910
+So I'll import everything as actions from
+
+39
+00:02:41,950 --> 00:02:48,670
+and now I go up to the top, into the store folders, into the actions folders to the index.js file as in all
+
+40
+00:02:48,670 --> 00:02:55,180
+my other containers too so that here what I can do is I can call actions and then there I need to log
+
+41
+00:02:55,180 --> 00:02:56,170
+out action.
+
+42
+00:02:56,170 --> 00:03:01,680
+So to be able to access it, I first of all need to export it in that index.js file in the actions
+
+43
+00:03:01,690 --> 00:03:02,930
+folder there,
+
+44
+00:03:02,950 --> 00:03:04,920
+right now I only export auth
+
+45
+00:03:05,080 --> 00:03:10,310
+I will now also export logout from the auth file in there. With that exported here
+
+46
+00:03:10,380 --> 00:03:16,600
+too, I can go back to the logout container and call actions logout here as a function.
+
+47
+00:03:16,930 --> 00:03:24,160
+So this is the onLogout prop which I can call as a function to dispatch this action and I want to do
+
+48
+00:03:24,160 --> 00:03:25,510
+this right at the start
+
+49
+00:03:25,510 --> 00:03:27,310
+when we enter this page.
+
+50
+00:03:27,310 --> 00:03:36,310
+So here what I can do is I can add componentDidMount and I can then call this.props.onLogout and
+
+51
+00:03:36,310 --> 00:03:40,870
+this will then be the first thing I do when rendering this component.
+
+52
+00:03:40,870 --> 00:03:43,180
+Then as I said, I also want to redirect
+
+53
+00:03:43,300 --> 00:03:46,200
+and now we have two different ways of doing that,
+
+54
+00:03:46,300 --> 00:03:52,560
+one would be to forward the props of this component which will be loaded via the router,
+
+55
+00:03:52,750 --> 00:03:58,480
+so therefore we could forward this props history and on that history object of the router,
+
+56
+00:03:58,600 --> 00:04:00,900
+we would have the push method.
+
+57
+00:04:00,910 --> 00:04:04,960
+Now what I want to do instead is I want to redirect declaratively,
+
+58
+00:04:05,150 --> 00:04:12,600
+So I'll import redirect, the redirect component from react-router-dom,
+
+59
+00:04:12,610 --> 00:04:15,220
+that's a very elegant way of redirecting.
+
+60
+00:04:15,220 --> 00:04:21,970
+And then the only thing I return as part of this component is that redirect component here which means
+
+61
+00:04:21,970 --> 00:04:29,110
+whenever this container is loaded, it just redirects me, of course a very easy way of redirecting the user.
+
+62
+00:04:29,470 --> 00:04:32,030
+I then want to redirect to just slash, let's say
+
+63
+00:04:32,050 --> 00:04:38,230
+and with that, I now got a logic to well instantly redirect me. So with that, the only thing that's left to
+
+64
+00:04:38,230 --> 00:04:42,990
+do is make sure that the logout container gets loaded for /logout,
+
+65
+00:04:43,090 --> 00:04:48,350
+I do this in my app.js file on the root level where I have all my routes,
+
+66
+00:04:48,520 --> 00:04:56,940
+I'll simply add one more route where I load /logout, like this and there I don't want to load
+
+67
+00:04:56,970 --> 00:04:59,550
+the auth component, instead here,
+
+68
+00:04:59,610 --> 00:05:07,290
+I want to load the logout component which can be found in the auth folder but there in the logout subfolder
+
+69
+00:05:07,380 --> 00:05:15,030
+and there of course, in the logout file and now logout is what I assign to this route. With that if I save this,
+
+70
+00:05:15,030 --> 00:05:19,000
+let's go back to the application and see if this all works as it should.
+
+71
+00:05:19,140 --> 00:05:20,440
+It doesn't
+
+72
+00:05:20,610 --> 00:05:27,150
+and this makes sense because if I have a look at my logout container, there's one thing I forgot. I do have
+
+73
+00:05:27,150 --> 00:05:31,100
+mapDispatchToProps but I don't call connect
+
+74
+00:05:31,200 --> 00:05:33,930
+so this prop is actually not available yet.
+
+75
+00:05:34,320 --> 00:05:35,910
+That's of course a common gotcha
+
+76
+00:05:35,910 --> 00:05:45,510
+so let's quickly import connect from react-redux, like this and wrap our logout function with it
+
+77
+00:05:45,510 --> 00:05:48,120
+or with the function it returns to be precise.
+
+78
+00:05:48,330 --> 00:05:51,430
+So let's pass mapDispatchToProps,
+
+79
+00:05:51,450 --> 00:05:58,260
+the first argument therefore should be null and then we wrap the logout container with the result
+
+80
+00:05:58,260 --> 00:05:59,820
+of the connect function call,
+
+81
+00:05:59,820 --> 00:06:02,640
+now this prop should be available.
+
+82
+00:06:02,790 --> 00:06:03,180
+It is,
+
+83
+00:06:03,180 --> 00:06:04,970
+we load this app correctly.
+
+84
+00:06:05,040 --> 00:06:11,730
+Let's go to authenticate and quickly sign in with our user here, switch to sign in and submit, we are
+
+85
+00:06:11,950 --> 00:06:13,110
+authenticated.
+
+86
+00:06:13,110 --> 00:06:20,520
+Now let's go to orders, that works and now let's click onLogout and you see we are immediately redirected
+
+87
+00:06:20,940 --> 00:06:23,910
+and we do see auth logout here
+
+88
+00:06:23,910 --> 00:06:26,640
+so this action was dispatched,
+
+89
+00:06:26,640 --> 00:06:27,840
+that's great.
+
+90
+00:06:27,870 --> 00:06:33,250
+Now with that implemented, I want to work more on the UI, I want to make sure we don't even see the orders
+
+91
+00:06:33,270 --> 00:06:37,890
+button if we're not authenticated and I want to make sure that when we build a burger, that this
+
+92
+00:06:37,980 --> 00:06:44,630
+is available when we're not authenticated but that the order now button actually is a sign up to order or
+
+93
+00:06:44,710 --> 00:06:46,290
+or something like this button
+
+94
+00:06:46,410 --> 00:06:48,230
+when we are not authenticated.
+
+95
+00:06:48,390 --> 00:06:50,940
+So let's continue with that in the next lectures.
+

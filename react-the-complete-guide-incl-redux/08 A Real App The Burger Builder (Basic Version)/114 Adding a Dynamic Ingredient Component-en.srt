@@ -1,0 +1,400 @@
+1
+00:00:02,200 --> 00:00:07,070
+In the last lecture, we implemented or we started implementing the burger builder
+
+2
+00:00:07,200 --> 00:00:09,020
+but a lot is missing.
+
+3
+00:00:09,090 --> 00:00:16,020
+It's now time to continue our work there and make sure that we do add the burger related components and
+
+4
+00:00:16,020 --> 00:00:22,410
+especially the burger ingredients. For that, I'll go to the components folder and I'll create a new subfolder
+
+5
+00:00:22,410 --> 00:00:23,020
+which I'll name
+
+6
+00:00:23,020 --> 00:00:23,730
+burger,
+
+7
+00:00:23,910 --> 00:00:26,870
+everything burger related shall go in there.
+
+8
+00:00:27,240 --> 00:00:34,050
+And again this is a good way of structuring your project because as you might imagine, in bigger projects,
+
+9
+00:00:34,050 --> 00:00:41,040
+in very big projects, it can get hard to manage all these components since it is a good practice in
+
+10
+00:00:41,040 --> 00:00:46,440
+react to create granular components and not big chunks.
+
+11
+00:00:46,440 --> 00:00:51,840
+Now if you have a lot of components, you have a lot of files and to keep these files manageable, you want
+
+12
+00:00:51,840 --> 00:00:58,530
+to create a folder structure which is not only divided in components and containers but where inside
+
+13
+00:00:58,650 --> 00:01:00,140
+the components and containers,
+
+14
+00:01:00,240 --> 00:01:06,510
+you also divide it up by feature area so that you quickly know okay if I need to work on the burger side,
+
+15
+00:01:06,840 --> 00:01:10,140
+I have to go into the burger folder. Now in there,
+
+16
+00:01:10,140 --> 00:01:12,660
+we will add a couple of subcomponents,
+
+17
+00:01:12,660 --> 00:01:21,060
+for example there, I will add the burger.js file which should be the burger we really are rendering to
+
+18
+00:01:21,060 --> 00:01:22,180
+the screen.
+
+19
+00:01:22,650 --> 00:01:26,510
+Now I can already say that the burger alone won't do the trick though,
+
+20
+00:01:26,700 --> 00:01:34,100
+we need ingredients in that burger like bread, the salad, the meat, the cheese, the bacon,
+
+21
+00:01:34,470 --> 00:01:37,390
+so for that, I'll create another subfolder here,
+
+22
+00:01:37,560 --> 00:01:39,940
+the burger ingredient.
+
+23
+00:01:40,200 --> 00:01:44,150
+And in there, I'll add a BurgerIngredient.js
+
+24
+00:01:44,340 --> 00:01:50,610
+file and actually I want to start with that ingredient because well that is actually what we need
+
+25
+00:01:50,820 --> 00:01:53,170
+to render something to the screen.
+
+26
+00:01:53,580 --> 00:01:58,040
+Now for the burger ingredients, I prepared a css file
+
+27
+00:01:58,050 --> 00:02:05,700
+you can find attach to this video which contains a lot of css code to render burger ingredients with
+
+28
+00:02:05,730 --> 00:02:09,890
+css only without importing any image which of course is great
+
+29
+00:02:09,890 --> 00:02:18,540
+from a file size perspective, it means not that much code or content has to be downloaded by the end user.
+
+30
+00:02:18,570 --> 00:02:24,850
+Now feel free to download that css code and paste it into a newly created file,
+
+31
+00:02:24,870 --> 00:02:28,070
+the burger ingredient css file.
+
+32
+00:02:28,110 --> 00:02:33,270
+Once you've copied in what I just shared, you have all the css fies you need to render burger
+
+33
+00:02:33,270 --> 00:02:36,840
+ingredients but that alone of course won't do anything,
+
+34
+00:02:36,840 --> 00:02:40,440
+we also need to fill the burger ingredient component with life.
+
+35
+00:02:40,770 --> 00:02:43,010
+That as always shall be a function
+
+36
+00:02:43,050 --> 00:02:50,610
+so a stateless component and I'll name it BurgerIngredient and I expect to get some props and I want
+
+37
+00:02:50,610 --> 00:02:56,190
+to return something and I will use the curly braces because I actually want to run some logic before
+
+38
+00:02:56,190 --> 00:02:56,880
+I return
+
+39
+00:02:56,890 --> 00:03:03,650
+jsx. I will also import react here because I will write some jsx in the end
+
+40
+00:03:03,960 --> 00:03:07,610
+and of course, I will export this as the default,
+
+41
+00:03:07,770 --> 00:03:16,050
+this function and you may very well write a snippet for your editor for creating a stateless component
+
+42
+00:03:16,320 --> 00:03:18,070
+because it always looks like this
+
+43
+00:03:18,120 --> 00:03:21,240
+react import, a function and the export,
+
+44
+00:03:21,300 --> 00:03:24,410
+feel free to write a snippet for your editor.
+
+45
+00:03:24,420 --> 00:03:32,370
+Now back to our component though, we got our burger ingredient and I said that I would need some logic
+
+46
+00:03:32,700 --> 00:03:35,450
+to render the jsx code.
+
+47
+00:03:35,520 --> 00:03:42,150
+This logic is required because there are different types of ingredients and I expect to get the information
+
+48
+00:03:42,150 --> 00:03:44,290
+about which ingredient to render
+
+49
+00:03:44,340 --> 00:03:51,660
+via props. Now here, I will create an ingredient variable and set it to null initially,
+
+50
+00:03:51,720 --> 00:03:54,110
+so initially we won't render anything,
+
+51
+00:03:54,120 --> 00:04:02,700
+for example if something invalid is passed in. Now I will switch, normal javascript switch statement and
+
+52
+00:04:02,730 --> 00:04:09,260
+analyze the type of my ingredient so type is a property I expect to receive
+
+53
+00:04:09,930 --> 00:04:12,430
+and now, we have a couple of different cases,
+
+54
+00:04:12,510 --> 00:04:14,790
+for example, bread-bottom.
+
+55
+00:04:15,000 --> 00:04:18,230
+You are free to define this case as you want,
+
+56
+00:04:18,240 --> 00:04:20,320
+just make sure to then use it throughout
+
+57
+00:04:20,340 --> 00:04:22,830
+the application if you plan on passing.
+
+58
+00:04:22,920 --> 00:04:28,730
+well the bottom bread of your burger. CSS classes for all these things were defined here
+
+59
+00:04:28,770 --> 00:04:33,850
+we will apply them soon and these will apply the correct stylings.
+
+60
+00:04:33,960 --> 00:04:40,610
+So let's say we got a case of bread-bottom, then my ingredient should actually be a
+
+61
+00:04:40,750 --> 00:04:44,670
+div with the following class name.
+
+62
+00:04:44,800 --> 00:04:51,610
+Now for that, I need to import my classes so I will quickly add that, import classes from the burger
+
+63
+00:04:51,610 --> 00:04:58,810
+ingredient css file and then I want to assign classes bread-bottom here
+
+64
+00:04:59,020 --> 00:05:01,300
+and you can see that class in the css file
+
+65
+00:05:01,310 --> 00:05:02,700
+here, bread-bottom.
+
+66
+00:05:02,710 --> 00:05:04,380
+We also have bread-top,
+
+67
+00:05:04,510 --> 00:05:11,710
+we have seeds for on the bread and then we got meat, cheese, salad and bacon.
+
+68
+00:05:11,800 --> 00:05:16,460
+So here we create the bottom-bread just like that,
+
+69
+00:05:16,490 --> 00:05:20,960
+let me add a semi-colon and then break.
+
+70
+00:05:20,960 --> 00:05:23,000
+Now let's add another case,
+
+71
+00:05:23,300 --> 00:05:28,520
+the second case I want to check for is that we have bread-top.
+
+72
+00:05:28,520 --> 00:05:35,780
+This actually requires a bit of a different ingredient not just a single div but on the top bread,
+
+73
+00:05:35,840 --> 00:05:38,100
+there shall be some seeds.
+
+74
+00:05:38,120 --> 00:05:48,220
+So here I actually return some multi-line jsx where the outer div also receives class name and then
+
+75
+00:05:49,000 --> 00:05:51,660
+classes.BreadTop.
+
+76
+00:05:52,450 --> 00:05:58,630
+But inside there, I need two other divs which represent the seeds,
+
+77
+00:05:58,630 --> 00:06:08,870
+so on the first div, I'll add class name and then I have classes.Seeds1 and I'll duplicate this to
+
+78
+00:06:08,870 --> 00:06:11,980
+also have a div with seeds2.
+
+79
+00:06:12,020 --> 00:06:14,090
+So this is the alternative,
+
+80
+00:06:14,090 --> 00:06:24,080
+let's also break here and now we can continue. The next case is that we have meat let's say, if
+
+81
+00:06:24,080 --> 00:06:28,590
+we have meat then ingredient should be a div
+
+82
+00:06:28,970 --> 00:06:36,950
+and on that div, we will use class name and you guessed it classes.Meat. Now
+
+83
+00:06:37,000 --> 00:06:44,140
+feel free to complete this for all the other ingredients, you can see which these are in the css file
+
+84
+00:06:44,860 --> 00:06:50,570
+and simply create all cases for all ingredients you can identify here.
+
+85
+00:06:50,620 --> 00:06:55,040
+I'll give you a chance to pause the video and try this on your own and then we'll do it together.
+
+86
+00:06:57,870 --> 00:07:01,050
+Were you successful? Let's now complete this together.
+
+87
+00:07:01,320 --> 00:07:03,320
+It's actually pretty straightforward,
+
+88
+00:07:03,510 --> 00:07:11,640
+We can now just copy the meat and enter it a couple of times here to also have cases for the cheese where
+
+89
+00:07:11,640 --> 00:07:20,230
+we apply the classes cheese class, then the bacon where we apply the bacon class
+
+90
+00:07:20,400 --> 00:07:25,640
+and then finally the salad where we apply the salad class
+
+91
+00:07:25,800 --> 00:07:31,680
+and by the way if you want to implement this differently, and there certainly are alternatives to this
+
+92
+00:07:31,680 --> 00:07:36,280
+big switch case, you are of course more than free to do so.
+
+93
+00:07:36,360 --> 00:07:41,520
+Now let's also set up a default case here in case something incorrect is passed in
+
+94
+00:07:41,520 --> 00:07:50,430
+and there again, ingredient shall be null. Now after this gigantic switch statement here, we can safely return
+
+95
+00:07:50,910 --> 00:07:56,510
+the ingredient here and ingredient is either null or one of our many divs.
+
+96
+00:07:56,520 --> 00:08:04,230
+Now here's a thing we can do and we will actually do in the next lecture, we can add prop type validation
+
+97
+00:08:04,230 --> 00:08:10,970
+to it because we want to make sure that we do receive a type property.
+
+98
+00:08:11,040 --> 00:08:12,720
+Now try this on your own,
+
+99
+00:08:12,720 --> 00:08:19,350
+feel free to try this on your own. In the next lecture, we'll together add the prop types package and add
+
+100
+00:08:19,350 --> 00:08:26,110
+a prop type to verify that the type property really is passed into this component.
+

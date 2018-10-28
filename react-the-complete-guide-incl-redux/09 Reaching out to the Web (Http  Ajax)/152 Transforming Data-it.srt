@@ -1,0 +1,124 @@
+1
+00:00:02,060 --> 00:00:08,210
+Nell'ultima lezione abbiamo recuperato alcuni dati del post e possiamo renderlo sullo schermo aggiornando il nostro stato.
+
+2
+00:00:08,550 --> 00:00:14,990
+Ma ovviamente stiamo recuperando troppi post qui ora per una vera applicazione.
+
+3
+00:00:15,000 --> 00:00:20,280
+Probabilmente puoi inviare alcuni parametri di query alla tua parte posteriore e limitare la quantit
+
+4
+00:00:20,280 --> 00:00:22,880
+di dati che desideri recuperare in pratica dall'impaginazione.
+
+5
+00:00:23,160 --> 00:00:26,370
+Ma ovviamente possiamo trasformare tutti i dati una volta ottenuto.
+
+6
+00:00:26,370 --> 00:00:29,160
+Quindi qui aggiunger un nuovo post costante.
+
+7
+00:00:29,190 --> 00:00:36,300
+Sono ora nel blocco furgone del componente che monta e firma qui i dati di risposta.
+
+8
+00:00:36,540 --> 00:00:43,380
+metodo slice su quell'array e otterr solo gli elementi da 1 a 4 per recuperare solo i primi quattro post.
+
+9
+00:00:43,380 --> 00:00:44,600
+Ora chiamer il
+
+10
+00:00:44,610 --> 00:00:51,360
+In realt l'ho scaricato tutto, ma ne conservo solo 4 in quella costante di post che creano
+
+11
+00:00:51,360 --> 00:00:57,290
+un secondo post costantemente aggiornato anche perch voglio aggiungere un campo terribile ai miei post.
+
+12
+00:00:57,300 --> 00:01:02,540
+Ora, in genere, si otterrebbe questo dal tuo back-end, ma  falso indietro e non ce l'ha.
+
+13
+00:01:02,700 --> 00:01:08,010
+Quindi ho semplicemente aggiunto qui a tutti per mostrarti che, naturalmente, puoi modificare i dati recuperati dal server.
+
+14
+00:01:08,010 --> 00:01:13,090
+Stiamo lavorando con javascript alla fine, quindi possiamo aggiungere qualsiasi codice javascript che vogliamo.
+
+15
+00:01:13,470 --> 00:01:22,920
+Quindi qui prender i miei post chiamati un metodo map su di essi e per ogni post voglio restituire un nuovo oggetto
+
+16
+00:01:22,950 --> 00:01:30,610
+javascript dove distribuisco la propriet dal post in modo sostanziale le propriet che abbiamo ottenuto dal server.
+
+17
+00:01:30,990 --> 00:01:38,640
+E poi aggiungere anche una nuova propriet di offerta che tutti i codici di sicurezza con il massimo di dati ottengono i post aggiornati
+
+18
+00:01:38,650 --> 00:01:42,660
+ora e io imposter i post sul mio stato stazionario a loro.
+
+19
+00:01:42,660 --> 00:01:49,890
+Ora i dati che torniamo dal server sono stati accorciati e trasformati in quanto abbiamo aggiunto il campo dell'offerta e questo,
+
+20
+00:01:50,280 --> 00:01:55,170
+naturalmente,  solo un esempio di trasformazione per mostrare che  possibile lavorare con
+
+21
+00:01:55,170 --> 00:02:00,270
+i dati che si otterranno prima di impostarli sul dichiari con quel cambiamento sul posto.
+
+22
+00:02:00,270 --> 00:02:05,990
+Ora abbiamo capito che tutto  un campo di un output in quell'elemento post.
+
+23
+00:02:06,210 --> 00:02:08,380
+Quindi l mi aspetto di ottenere.
+
+24
+00:02:08,820 --> 00:02:10,410
+Offrire Propp.
+
+25
+00:02:10,500 --> 00:02:14,100
+Ora posso impostare questo prob nel contenitore del blocco qui.
+
+26
+00:02:14,220 --> 00:02:14,710
+Io posso.
+
+27
+00:02:14,740 --> 00:02:25,080
+Tutto il pastis questa offerta dovrebbe essere offerta post che campo di offerta che abbiamo appena aggiunto a ogni oggetto che memorizziamo
+
+28
+00:02:25,080 --> 00:02:26,230
+nello stato.
+
+29
+00:02:26,370 --> 00:02:31,960
+Salviamo questo ora vediamo l'offerta qui e vediamo solo quattro post.
+
+30
+00:02:32,010 --> 00:02:37,590
+In questo modo  possibile trasformare i dati come si pu lavorare con i dati nel componente MT.
+
+31
+00:02:37,590 --> 00:02:38,520
+In questo esempio.
+

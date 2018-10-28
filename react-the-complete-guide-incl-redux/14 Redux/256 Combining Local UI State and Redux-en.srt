@@ -1,0 +1,312 @@
+1
+00:00:02,190 --> 00:00:10,740
+So we have the assignment where we can create a person and we populate name and age randomly or the
+
+2
+00:00:10,740 --> 00:00:12,070
+age randomly,
+
+3
+00:00:12,120 --> 00:00:15,620
+the name is hard coded in the reducer.
+
+4
+00:00:16,080 --> 00:00:23,550
+Of course it would be a typical use case to have input fields for the user to use to specify these values,
+
+5
+00:00:23,550 --> 00:00:24,890
+how would that work?
+
+6
+00:00:26,820 --> 00:00:34,410
+It's a typical case of local UI state, you did of course learn over the last modules in this course
+
+7
+00:00:34,410 --> 00:00:43,160
+that for user input, we also handle this with set state and in the state in general and for that,
+
+8
+00:00:43,560 --> 00:00:49,150
+we don't need to use redux just to store the value the user input, we need it
+
+9
+00:00:49,150 --> 00:00:54,690
+then if we want to create a person with that input but just to handle each keystroke and use two-way
+
+10
+00:00:54,690 --> 00:00:58,270
+binding, we don't necessarily use redux.
+
+11
+00:00:58,530 --> 00:01:07,380
+So in addPerson where we have our button, let's say we now also add inputs and I'll make this very simple,
+
+12
+00:01:07,400 --> 00:01:17,400
+I'll add an input of type text with a placeholder of name and then a second one with age,
+
+13
+00:01:18,830 --> 00:01:21,070
+and this will be of type number,
+
+14
+00:01:21,470 --> 00:01:27,340
+so super simple input fields here which allow us to add a person.
+
+15
+00:01:27,650 --> 00:01:35,330
+Now we can turn AddPerson into a component using the class keyword to manage the state of these inputs,
+
+16
+00:01:35,480 --> 00:01:44,390
+let's simply do that, I'll add components here into the import and turn this into a class, class addPerson with
+
+17
+00:01:44,390 --> 00:01:54,150
+a capital character extends the component and in the class body, we'll have the render method where we
+
+18
+00:01:54,150 --> 00:01:58,870
+in the end return some jsx and that is the jsx we used before.
+
+19
+00:01:59,220 --> 00:02:00,660
+So I'll paste it in there,
+
+20
+00:02:00,690 --> 00:02:03,000
+get rid of the part down there
+
+21
+00:02:03,740 --> 00:02:10,770
+and we're almost good to go, props now becomes this.props though because we're inside a class.
+
+22
+00:02:11,500 --> 00:02:13,670
+So thus far, this should work as before,
+
+23
+00:02:13,690 --> 00:02:18,000
+well we also need to adjust the export here to capitalize the A,
+
+24
+00:02:18,070 --> 00:02:20,160
+so this should work as before.
+
+25
+00:02:20,290 --> 00:02:27,460
+Now I can use or set up the local UI state so the same state we used before in the entire course
+
+26
+00:02:27,790 --> 00:02:34,450
+and there I'll have my name which is an empty string let's say initially and my age which could be null
+
+27
+00:02:34,540 --> 00:02:38,480
+initially and then I'll add my method,
+
+28
+00:02:38,680 --> 00:02:48,040
+the nameChangedHandler where I get my event object and where I then simply call this.setState to
+
+29
+00:02:48,040 --> 00:02:51,280
+update the name to event.target.value
+
+30
+00:02:51,310 --> 00:02:58,690
+and the goal is to execute the nameChangedHandler on every keystroke and I'll have my ageChangedHandler
+
+31
+00:02:58,690 --> 00:03:05,030
+where I get the event where the target is to call this.setState
+
+32
+00:03:05,230 --> 00:03:11,740
+and of course set the age to event.target.value on every keystroke.
+
+33
+00:03:11,740 --> 00:03:21,460
+And now we can bind our inputs at the onChange handler, bind it to this nameChangedHandler for the
+
+34
+00:03:21,460 --> 00:03:27,230
+name input, I'll simply distribute this over multiple lines to make it easier to read.
+
+35
+00:03:27,310 --> 00:03:34,240
+We now also need to bind the value to have two binding so that our type, our keystrokes are actually reflected
+
+36
+00:03:34,240 --> 00:03:35,570
+in the input, so I'll
+
+37
+00:03:35,560 --> 00:03:38,100
+bind this to this state name
+
+38
+00:03:38,560 --> 00:03:47,110
+and now for a second input, also over multiple lines, I'll add onChange, bind this to this
+
+39
+00:03:47,290 --> 00:03:58,660
+ageChangedHandler and the value is equal to, whoops, this.state.age, just like that. So far that is all the stuff
+
+40
+00:03:58,660 --> 00:04:00,570
+we learn before this module,
+
+41
+00:04:00,570 --> 00:04:02,950
+it has nothing to do with redux,
+
+42
+00:04:02,950 --> 00:04:07,140
+we are managing the state of this component in itself,
+
+43
+00:04:07,150 --> 00:04:12,850
+so inside the component. And that is what I meant on that slide where I talked about different types
+
+44
+00:04:12,850 --> 00:04:19,930
+of state, this is a typical use case of a local UI state you could say, whatever the user entered into the
+
+45
+00:04:19,930 --> 00:04:24,380
+inputs here probably isn't relevant to the entire application,
+
+46
+00:04:24,400 --> 00:04:28,300
+there is no need to store this in the global redux store.
+
+47
+00:04:28,300 --> 00:04:34,970
+You can absolutely store it in the state of that component because it only matters to that component,
+
+48
+00:04:35,020 --> 00:04:37,440
+it does matter to the other components
+
+49
+00:04:37,600 --> 00:04:46,650
+as soon as this button is clicked, so here we'll pass an anonymous function so that we can pass some data
+
+50
+00:04:46,650 --> 00:04:48,450
+along to the props here,
+
+51
+00:04:48,450 --> 00:04:55,860
+so to person added, to whichever method we get here. I want to pass this.state.name and this.state.age
+
+52
+00:04:55,920 --> 00:04:57,290
+along with it
+
+53
+00:04:57,660 --> 00:05:04,920
+so that in the container where we handle the person, add a prop where we connect a method to it, where
+
+54
+00:05:04,920 --> 00:05:13,380
+we previously added on addPerson and executed this, that there, we now actually take advantage of
+
+55
+00:05:13,410 --> 00:05:15,510
+the arguments we receive.
+
+56
+00:05:15,780 --> 00:05:23,170
+So on addPerson of course refers to this method or this function we use to dispatch an action,
+
+57
+00:05:23,250 --> 00:05:32,630
+well we now know that we get the name and age as arguments, so we should use that in the container, here
+
+58
+00:05:32,800 --> 00:05:35,520
+we get name and age in the end.
+
+59
+00:05:35,770 --> 00:05:43,300
+So when we dispatch something, we can add name,set this is equal to name and age, set this is equal to age or
+
+60
+00:05:43,480 --> 00:05:50,710
+one single property which we could name personData or payload or whatever you want which then hold name
+
+61
+00:05:50,980 --> 00:05:55,660
+and age mapped to the respective argument.
+
+62
+00:05:55,750 --> 00:06:02,040
+And now with that, we can go into our reducer and extract the value the user entered,
+
+63
+00:06:02,320 --> 00:06:05,350
+so for the name, we would get action
+
+64
+00:06:05,620 --> 00:06:09,490
+and then I used a key named personData
+
+65
+00:06:09,640 --> 00:06:13,250
+and that would hold an object with name and age as keys,
+
+66
+00:06:13,390 --> 00:06:22,990
+so I would access action.personData.name for the name and for the age, it would be action.person
+
+67
+00:06:22,990 --> 00:06:25,190
+Data.age.
+
+68
+00:06:25,230 --> 00:06:36,520
+And now if we save all files and fix this error by going back to addPerson and setting age not to null but
+
+69
+00:06:36,520 --> 00:06:39,070
+to an empty string, typing mistake on my side,
+
+70
+00:06:39,150 --> 00:06:43,510
+so to an empty string. If we do this,
+
+71
+00:06:43,700 --> 00:06:54,120
+now we can enter Max 28 here, add person and we get Max 28 and if we change it, you'll see that's reflected
+
+72
+00:06:54,210 --> 00:07:02,550
+in our components which we still can delete here but now we're combining both, local UI state to
+
+73
+00:07:02,550 --> 00:07:09,300
+handle the input and then still redux to handle the created person which affects broader parts of
+
+74
+00:07:09,300 --> 00:07:10,650
+our application.
+
+75
+00:07:10,650 --> 00:07:17,550
+And I wanted to show you this, how to handle user input, how to handle that in a redux world and how to
+
+76
+00:07:17,730 --> 00:07:23,880
+differentiate between local UI state as we use it here for information that really is only relevant
+
+77
+00:07:23,880 --> 00:07:31,440
+to this component and to global state managed through redux for information which is important for our entire
+
+78
+00:07:31,440 --> 00:07:32,450
+application.
+

@@ -1,0 +1,72 @@
+1
+00:00:02,160 --> 00:00:05,190
+Oto moja pierwsza rada dla ciebie, zareaguj. Skay, to
+
+2
+00:00:05,250 --> 00:00:07,740
+strona internetowa, na
+
+3
+00:00:07,950 --> 00:00:11,820
+ktrej odbywa si wiele projektw.
+
+4
+00:00:11,820 --> 00:00:18,600
+Moesz rwnie wyszukiwa pewne rzeczy tam, na przykad dla sw kluczowych, takich jak redux, a nastpnie
+
+5
+00:00:18,600 --> 00:00:21,370
+znajdziesz kilka projektw, ktre moesz sprawdzi.
+
+6
+00:00:21,390 --> 00:00:23,520
+S to wszystkie otwarte rda, moesz
+
+7
+00:00:23,520 --> 00:00:29,880
+je klikn, tak jak na klonie strony docelowej filmu w serwisie Netflix, a nastpnie znale link do
+
+8
+00:00:29,880 --> 00:00:32,170
+prezentacji, w ktrym powiniene mie moliwo
+
+9
+00:00:32,170 --> 00:00:36,550
+podgldu projektu, chocia niektre projekty s wyczone, ale zawsze powiniene znale link
+
+10
+00:00:36,660 --> 00:00:42,930
+do kodu, przez wikszo czasu prowadzcy do github, moesz sprawdzi ten projekt i to jest fajne.
+
+11
+00:00:42,930 --> 00:00:49,800
+Moesz sprawdzi te projekty i zanurkowa w kodzie napisanym przez innych programistw.
+
+12
+00:00:49,800 --> 00:00:56,160
+Teraz jedna wana rzecz, e kod nie musi by w 100% poprawny lub najlepsza praktyka, ale
+
+13
+00:00:56,190 --> 00:01:03,270
+powinien da ci kilka pomysw na temat tego, jak moesz zoptymalizowa kod lub jak rozwiza niektre problemy, lub
+
+14
+00:01:03,330 --> 00:01:05,870
+po prostu we jeden z tych
+
+15
+00:01:05,910 --> 00:01:11,880
+projektw. zajrzyj do kodu, a zamiast tego sprbuj zbudowa go na wasn rk, a nastpnie
+
+16
+00:01:12,240 --> 00:01:14,610
+porwnaj swoje rozwizanie z rozwizaniem oryginalnej oferty.
+
+17
+00:01:14,610 --> 00:01:18,210
+Wic zdecydowanie kopnij w reaktywne kontrole. com, jest to wietny zasb,
+
+18
+00:01:18,210 --> 00:01:22,590
+aby znale kilka fajnych projektw, aby dowiedzie si wicej o reakcji.
+

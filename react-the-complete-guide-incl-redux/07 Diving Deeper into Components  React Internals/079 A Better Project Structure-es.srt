@@ -1,0 +1,324 @@
+1
+00:00:02,190 --> 00:00:07,100
+De vuelta en nuestro proyecto inicial, trabajamos para mejorar este proyecto.
+
+2
+00:00:07,140 --> 00:00:13,620
+Hasta ahora, solo usamos dos componentes, el componente de la aplicacin, nuestro componente principal y el
+
+3
+00:00:13,620 --> 00:00:22,200
+contenedor, que contiene nuestro estado y el componente funcional del componente de la persona que simplemente genera una sola persona con
+
+4
+00:00:22,290 --> 00:00:24,050
+estos dos componentes juntos.
+
+5
+00:00:24,150 --> 00:00:28,290
+Obtenemos esta salida aqu y no hay nada de malo en esta salida.
+
+6
+00:00:28,290 --> 00:00:30,060
+Definitivamente est funcionando bien.
+
+7
+00:00:30,240 --> 00:00:35,520
+Pero, por supuesto, detrs de la escena an podemos modificar un poco los Estados Unidos.
+
+8
+00:00:35,550 --> 00:00:40,970
+Por ejemplo, normalmente dividira esta aplicacin en ms componentes que eso.
+
+9
+00:00:40,980 --> 00:00:44,910
+La pregunta siempre es qu debera entrar en su propio componente.
+
+10
+00:00:45,150 --> 00:00:51,870
+Y qu se agrupa en un componente superior en el componente raz, por ejemplo.
+
+11
+00:00:51,870 --> 00:00:58,810
+Ahora, si analizamos nuestros componentes existentes, vemos que el componente de persona est bastante enfocado.
+
+12
+00:00:58,830 --> 00:01:03,150
+Muestra la tarjeta de una persona la informacin de una persona.
+
+13
+00:01:03,270 --> 00:01:05,820
+Hace un clic en esa tarjeta.
+
+14
+00:01:05,850 --> 00:01:12,810
+Por lo tanto, este componente no necesita dividir lo que usted pone en su propio componente.
+
+15
+00:01:12,810 --> 00:01:16,280
+Puede externalizar la entrada en su propio componente.
+
+16
+00:01:16,410 --> 00:01:22,650
+desea crear un componente de entrada genrico en su aplicacin donde realmente solo cambie el estilo.
+
+17
+00:01:22,650 --> 00:01:24,860
+Eso podra tener sentido si
+
+18
+00:01:25,020 --> 00:01:30,500
+Pero si ese no es el objetivo de poner entrada en su propio componente no tiene mucho sentido.
+
+19
+00:01:30,510 --> 00:01:33,340
+Entonces para nosotros definitivamente podemos dejarlo aqu.
+
+20
+00:01:33,630 --> 00:01:41,010
+Y lo mismo para los prrafos si desea crear un componente de Rapparee de prrafo personalizado que proporcione
+
+21
+00:01:41,020 --> 00:01:48,360
+a todos sus prrafos un estilo y comportamiento especficos que le gustara incluir en su propio componente.
+
+22
+00:01:48,630 --> 00:01:56,010
+Si solo se trata de un estilo global, utilcelo para disear hojas de estilos globales de los ndices como archivos
+
+23
+00:01:56,010 --> 00:02:01,290
+y simplemente configure sus estilos all para que el componente de persona realmente est terminado.
+
+24
+00:02:01,290 --> 00:02:04,060
+Probablemente no necesitemos hacer mucho ms aqu.
+
+25
+00:02:04,140 --> 00:02:11,960
+Podemos dividir nuestro archivo js de la aplicacin, aunque logramos establecer que realmente hacemos muchas cosas all.
+
+26
+00:02:12,120 --> 00:02:18,810
+Si echamos un vistazo a nuestro mtodo de renderizado, dnt decide para qu es responsable
+
+27
+00:02:18,810 --> 00:02:19,620
+este componente.
+
+28
+00:02:19,830 --> 00:02:28,050
+Vemos que presentamos una lista de personas aqu, pero luego, por supuesto, todos tenemos este botn de alternar.
+
+29
+00:02:28,050 --> 00:02:35,220
+Ahora, por lo general, los componentes del contenedor como el componente de captura, por lo que los componentes que tambin
+
+30
+00:02:35,790 --> 00:02:39,740
+administran el estado no deberan involucrarse con la representacin demasiado grande.
+
+31
+00:02:40,020 --> 00:02:47,890
+Ponga una cantidad de palabras all, haga que Meffert enve a Shippey crudo y no contenga demasiado GSX.
+
+32
+00:02:47,970 --> 00:02:55,590
+componente de aplicacin, especialmente para una aplicacin pequea como esta, an podramos dividir esto en ms componentes.
+
+33
+00:02:55,590 --> 00:03:01,490
+Entonces, si bien no es necesariamente la peor prctica tener este tipo de
+
+34
+00:03:01,530 --> 00:03:07,680
+Por ejemplo, podra tener sentido crear un componente de lista de personas o el componente de una persona es
+
+35
+00:03:07,680 --> 00:03:08,730
+cmo podramos nombrarlo.
+
+36
+00:03:08,850 --> 00:03:16,230
+Entonces podramos simplemente pasar una serie de personas a este componente y dentro del componente de esa persona
+
+37
+00:03:16,530 --> 00:03:19,580
+haramos el mapeo y rendiramos una lista.
+
+38
+00:03:19,620 --> 00:03:26,340
+Esto nos permitira externalizar todo este cdigo y, al final, importar personas en nuestro
+
+39
+00:03:26,610 --> 00:03:31,400
+componente y presentarlo si Show persons es verdadero o no.
+
+40
+00:03:31,430 --> 00:03:37,950
+luego un componente de cabina y un componente de la persona como siempre en la vida, es opcional.
+
+41
+00:03:37,950 --> 00:03:44,320
+As que esta es una mejora y una mejora numrica que podemos hacer y por supuesto es puramente
+
+42
+00:03:44,340 --> 00:03:52,710
+opcional externalizar nuestra cabina en su propio componente para que al final nuestro componente de aplicacin realmente solo tenga este div envoltorio y
+
+43
+00:03:52,710 --> 00:03:59,010
+Sin embargo, es una buena prctica ya que har que nuestro componente de aplicacin est ms enfocado y nos brinda estos
+
+44
+00:03:59,010 --> 00:04:05,070
+otros componentes que tambin tienen un enfoque claro en lugar de tener todo mezclado en el componente de la aplicacin.
+
+45
+00:04:05,370 --> 00:04:13,220
+As que vamos a crear estos nuevos componentes para eso en la carpeta fuente o creemos la carpeta de archivos de una persona disclpeme
+
+46
+00:04:13,230 --> 00:04:18,830
+y all una persona comienza J. S. archivo componente.
+
+47
+00:04:18,900 --> 00:04:25,080
+carpeta de la persona para tener este tipo de anidacin porque una persona realmente es solo un elemento
+
+48
+00:04:25,080 --> 00:04:31,770
+del que vamos a hacer una lista en el componente de la persona. De todos modos, esto es puramente opcional.
+
+49
+00:04:31,770 --> 00:04:36,720
+Ahora, en mi opinin, tambin tiene sentido mover la carpeta de personas a la
+
+50
+00:04:36,750 --> 00:04:43,020
+Pero tener este tipo de estructura definitivamente tiene sentido, podemos mejorar esto an ms en nuestra carpeta
+
+51
+00:04:43,020 --> 00:04:43,670
+de origen.
+
+52
+00:04:43,680 --> 00:04:48,830
+Tambin podramos agregar elementos como la carpeta de activos que contiene imgenes o cosas por el estilo.
+
+53
+00:04:49,050 --> 00:04:56,970
+Por lo tanto, podra tener sentido crear una carpeta de componentes en la carpeta de origen que contenga todos nuestros componentes, como
+
+54
+00:04:57,150 --> 00:05:02,820
+el componente de la persona, para que podamos ver claramente que esa computadora entra all.
+
+55
+00:05:02,820 --> 00:05:09,130
+Tambin podramos tener la carpeta de activos como mencion, que contiene imgenes que incluimos, etc.
+
+56
+00:05:09,510 --> 00:05:18,510
+tener en la carpeta fuente la carpeta de contenedores que contiene todos nuestros contenedores como la U.
+
+57
+00:05:18,870 --> 00:05:21,650
+Tambin podramos S. y su respectiva sede es la siguiente.
+
+58
+00:05:21,870 --> 00:05:25,900
+Para que podamos mover los datos a la carpeta de contenedores, todos pasan a las carpetas de prueba.
+
+59
+00:05:25,920 --> 00:05:28,200
+Aunque todava no hemos trabajado con eso.
+
+60
+00:05:28,380 --> 00:05:34,260
+Entonces, ahora hemos reestructurado nuestra aplicacin para que las acciones del ndice caigan directamente en la carpeta fuente, luego
+
+61
+00:05:34,740 --> 00:05:40,330
+tengamos una lista de los contenedores que conocemos y luego tengamos una lista de los componentes que conocemos.
+
+62
+00:05:40,440 --> 00:05:44,850
+Por supuesto, esto romper la aplicacin por ahora porque todas nuestras importaciones estn equivocadas ahora.
+
+63
+00:05:45,030 --> 00:05:51,660
+Entonces, el objetivo ahora es corregir estas importaciones antes de que en las prximas conferencias sigamos trabajando en el componente de
+
+64
+00:05:51,660 --> 00:05:52,410
+esa persona.
+
+65
+00:05:52,560 --> 00:05:56,520
+Y ya lo mencion en ese componente de la cabina.
+
+66
+00:05:56,670 --> 00:05:57,970
+As que carlinga.
+
+67
+00:05:58,270 --> 00:06:05,260
+J. S. Supongo que esto tiene sentido, as que arreglemos las importaciones antes de
+
+68
+00:06:05,260 --> 00:06:08,820
+seguir adelante con la carne real de una cabina y el componente de Pearse en la prxima conferencia.
+
+69
+00:06:08,820 --> 00:06:15,060
+En cuanto a las importaciones en aplicaciones, necesitamos llegar al componente de persona.
+
+70
+00:06:15,060 --> 00:06:22,650
+luego dejaremos la carpeta de contenedores y volvemos a la carpeta de origen y luego de subir un nivel
+
+71
+00:06:22,650 --> 00:06:29,310
+queremos ir a la carpeta de componentes y all en la carpeta de la persona y
+
+72
+00:06:29,310 --> 00:06:38,160
+luego persona persona hace lo que el nuevo POV cmo llegar al archivo de sillas de persona de nuestro archivo Apogees.
+
+73
+00:06:38,160 --> 00:06:42,110
+Por ahora, vamos a eliminarlo pronto subiendo un nivel porque
+
+74
+00:06:42,240 --> 00:06:50,320
+Deep-Sea es como antes de que Potthast tenga razn porque todava est sentado junto a Apogees en el archivo JSA, tambin
+
+75
+00:06:50,560 --> 00:06:54,680
+tenemos que ajustar la importacin que apunta a Epicharmus all.
+
+76
+00:06:54,730 --> 00:06:57,090
+Ya no est sentado en la misma carpeta.
+
+77
+00:06:57,100 --> 00:07:01,590
+En su lugar, tenemos que ir a la carpeta de contenedores y all encontraremos la apertura.
+
+78
+00:07:01,620 --> 00:07:01,960
+Falso.
+
+79
+00:07:01,990 --> 00:07:07,460
+Necesitamos ajustar esta importacin y hacerlo por ahora.
+
+80
+00:07:07,470 --> 00:07:14,730
+supuesto, pero tenemos que llenarlos de vida y luego realmente podemos ver una estructura de componentes mejorada y enfocada.
+
+81
+00:07:14,730 --> 00:07:22,210
+Luego tenemos que crear el archivo JSM de la persona, el archivo Achebe de la cabina, o se crearon, por
+

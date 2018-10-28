@@ -1,0 +1,216 @@
+1
+00:00:02,190 --> 00:00:06,240
+Reaksiyon yurt ve taraycdaki gerek yurt nasl gncelleir?
+
+2
+00:00:06,240 --> 00:00:13,950
+Demek istediim, arlan render yntemi derhal de bunu gerek Dom'a sunmaz;
+
+3
+00:00:14,040 --> 00:00:15,740
+ad yanltc olabilir.
+
+4
+00:00:15,750 --> 00:00:23,070
+Bu, afak izimine, D'nin daha nermesi olarak gsterdii anlamna gelmez. H. Diiler sonunda gibi grnmelidir
+
+5
+00:00:23,070 --> 00:00:31,170
+ancak render ok iyi arlabilir ve gsterilenle ayn sonuca gtrr ve gereksiz render
+
+6
+00:00:31,770 --> 00:00:38,770
+arlarn nlemek iin bileen gncellemesi gerektiinde kullanmamzn bir nedeni de budur.
+
+7
+00:00:39,120 --> 00:00:46,440
+Fakat gereksiz bir render ars yapmasak bile, bir pervane deiti ve yine de ayn
+
+8
+00:00:46,440 --> 00:00:49,370
+sonuca ne olursa olsun verirdik.
+
+9
+00:00:49,650 --> 00:00:57,600
+O zaman bile bu, gerek Dom'a arpt anlamna gelir ve ncelikle Dom'a balar ve bunun yerine her
+
+10
+00:00:57,600 --> 00:01:00,490
+eyden nce baka bir ey yapar.
+
+11
+00:01:00,660 --> 00:01:03,460
+Kelime shole yurtlarn karlatryor.
+
+12
+00:01:03,750 --> 00:01:11,930
+Eski bir kelime soutucu yurdu ve nceden oluturulmu ya da ocuklarn tepki gsterdii bir gelecek var, nk onun
+
+13
+00:01:11,970 --> 00:01:14,920
+sz yaklamyor, gerek afaktan daha hzl.
+
+14
+00:01:14,940 --> 00:01:20,250
+imdi bir kelime souk Dom sadece bir Dom veya javascript bir sunum.
+
+15
+00:01:20,280 --> 00:01:29,580
+Elbette tm HVM L'yi ve dolaysyla DOM elerini ve nesneleri saf javascript iinde temsil edebileceksiniz, bylece taraycya
+
+16
+00:01:29,580 --> 00:01:31,810
+herhangi bir ey vermeyeceksiniz.
+
+17
+00:01:32,040 --> 00:01:37,620
+Ve burada olan budur ve tepki temelde dongun iki kopyasn tutar.
+
+18
+00:01:37,650 --> 00:01:43,860
+Dom eski szc vardr ve daha sonra render yntemi yeniden arldnda
+
+19
+00:01:43,860 --> 00:01:45,710
+bir gn oluturulur.
+
+20
+00:01:45,720 --> 00:01:50,760
+imdi bahsettiim gibi render veya render armak gerek afa hemen gncellemiyor olsa da.
+
+21
+00:01:50,940 --> 00:01:52,910
+Bunun yerine re-act bir karlatrma yapar.
+
+22
+00:01:53,130 --> 00:01:58,650
+Eski sanal Dom'u yenisiyle karlatrr ve herhangi bir farkllk olup olmadn kontrol eder.
+
+23
+00:01:59,010 --> 00:02:06,300
+Farkllklar alglarsa, gerek Dom'a ular ve onu gnceller ve hatta o zaman
+
+24
+00:02:06,300 --> 00:02:09,090
+gerek Dom'u tamamen oluturmaz.
+
+25
+00:02:09,090 --> 00:02:13,510
+Sadece farklar tespit edilen yerlerde deitirir.
+
+26
+00:02:13,560 --> 00:02:19,890
+rnein bir dme metni deitiinde yalnzca bu metni gnceller ve gerek
+
+27
+00:02:20,020 --> 00:02:26,960
+Dom oluturucusuna dokunmayan hibir farkllk bulunmad takdirde tek bana tm dmeyi braktnz
+
+28
+00:02:26,970 --> 00:02:28,210
+tm dmeyi ilersiniz.
+
+29
+00:02:28,260 --> 00:02:34,020
+Karlatrma yapld ve hesaplanan gncelletirme gerektiinde bunu nlemek mantkl olabilir nedeni
+
+30
+00:02:34,020 --> 00:02:34,740
+budur.
+
+31
+00:02:34,760 --> 00:02:39,990
+Maliyet tabii ki zaten tm masraf ve kaynaklardr, ancak yine de gerek domuz hi dokunulmamtr.
+
+32
+00:02:39,990 --> 00:02:41,250
+Buna gvenebilirsiniz.
+
+33
+00:02:41,350 --> 00:02:45,110
+Gerek Dom'a yalnzca gerek farkllklar varsa dokunulacak.
+
+34
+00:02:45,270 --> 00:02:51,400
+Ve tabii ki bu nemlidir, nk DOM'ya erimenin gerekten yava olduunu bilirsiniz.
+
+35
+00:02:51,420 --> 00:02:58,650
+Bu, mmkn olduunca az yapmak istediiniz bir eydir ve dolaysyla reac testi uygulanabilir niteliktedir Dom
+
+36
+00:02:58,650 --> 00:03:04,860
+fikri, sanal danslarla kyaslar ve gerek Dom'a yalnzca ihtiya duyulduunda dokunulmasn salar.
+
+37
+00:03:04,860 --> 00:03:10,350
+Sahnelerin arkasnda olan budur ve bu bavurudaki antaya bavurumuzda
+
+38
+00:03:10,350 --> 00:03:11,840
+grebildiimiz ey budur.
+
+39
+00:03:11,850 --> 00:03:17,880
+Elbette, gncellemeyi nerede tamamlamamz gerektii konusunda tm kontrollerimizi yapm durumdayz.
+
+40
+00:03:18,450 --> 00:03:25,680
+de grebildiimiz, burada bir ey incelemek ve hogger'lar tklattysak, diee diffs bunu okumu olsayd.
+
+41
+00:03:25,690 --> 00:03:27,020
+Ancak yine
+
+42
+00:03:27,090 --> 00:03:28,980
+Onlar fla grdn.
+
+43
+00:03:28,980 --> 00:03:37,060
+Ancak, dmeyi yakndan izlerseniz ve kokpit buraya tklasayd, bu hi yanp snmez nk
+
+44
+00:03:37,060 --> 00:03:38,650
+yeniden oluturulmaz.
+
+45
+00:03:38,800 --> 00:03:40,050
+Benim demek istediim buydu.
+
+46
+00:03:40,060 --> 00:03:46,840
+Gerekten henz deimiyor ancak stil deiti ancak dmenin zerindeki bu paragraf gibi blmde,
+
+47
+00:03:46,850 --> 00:03:52,060
+dmenin dolaba dnt ancak sadaki paragrafn Ninci paragraf deitiini gryor.
+
+48
+00:03:52,060 --> 00:03:55,050
+DS hibir zaman deimedii iin asla yanp snmedi.
+
+49
+00:03:55,120 --> 00:03:59,080
+Dolaysyla, tepki vermedii iin dokunmadklar nceden ilenmi deildir.
+
+50
+00:03:59,080 --> 00:04:00,380
+Ne demek istediimi yapyor mu
+
+51
+00:04:00,640 --> 00:04:07,510
+Kokpit iin render yntemi uyguland, aksi takdirde dme snf gncellenmeyecektir.
+
+52
+00:04:07,510 --> 00:04:13,720
+Fakat yine de bu, gelecekte yapaca her eyi nceden ocuklar yapmamtr,
+
+53
+00:04:13,720 --> 00:04:21,840
+ancak gerek dom'da bunu yapmamtr; nk, gelecekteki Wortzel'le eski olana kyasla yeniden hareket, gerek
+
+54
+00:04:21,840 --> 00:04:25,170
+dnyaya dokunmutur. Farkllklarn bulunduu yerler.
+

@@ -1,0 +1,52 @@
+1
+00:00:02,190 --> 00:00:05,040
+Ns adicionamos muita lgica neste mdulo.
+
+2
+00:00:05,220 --> 00:00:12,120
+Ns realmente temos uma pesquisa avanada de redux com redutores refratados com o Lean's, cujas afirmaes de
+
+3
+00:00:12,520 --> 00:00:20,730
+casos estavam lidando com cdigo assncrono com criadores de ao que estamos aplicando middleware em nosso ndice apenas para ler o
+
+4
+00:00:20,730 --> 00:00:25,230
+X funk sendo adicionado para poder ter criadores de ao assncronos.
+
+5
+00:00:25,230 --> 00:00:29,440
+Estamos fazendo muitas coisas com relaxar e ns ainda e isso  tudo importante.
+
+6
+00:00:29,460 --> 00:00:34,140
+No faa tudo com isso porque no temos que administrar tudo com redux como eu mostrei.
+
+7
+00:00:34,200 --> 00:00:39,430
+ bom ainda gerenciar algum estado como um modal se ele deve ser exibido ou no atravs do
+
+8
+00:00:39,450 --> 00:00:40,670
+estado de UI local.
+
+9
+00:00:40,680 --> 00:00:43,810
+Eu gosto de como nossos aplicativos funcionam.
+
+10
+00:00:43,830 --> 00:00:46,820
+O prximo passo  adicionar autenticao a ele.
+
+11
+00:00:46,980 --> 00:00:50,470
+Uma vez que este nunca  um recurso central, muitos aplicativos so usados.
+
+12
+00:00:50,610 --> 00:00:53,990
+E eu quero mostrar-lhe como editar a maneira d reagir.
+
+13
+00:00:54,090 --> 00:00:55,080
+Ento vamos mudar isso.
+

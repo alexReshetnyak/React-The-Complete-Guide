@@ -1,0 +1,96 @@
+1
+00:00:02,180 --> 00:00:04,070
+We added a lot of functionality,
+
+2
+00:00:04,160 --> 00:00:10,220
+let's now see if that really all works. I'll build a new burger, the bacon cheese killer burger maybe,
+
+3
+00:00:10,610 --> 00:00:11,810
+no salad.
+
+4
+00:00:11,810 --> 00:00:12,390
+So let's click
+
+5
+00:00:12,470 --> 00:00:13,430
+continue here,
+
+6
+00:00:13,550 --> 00:00:18,410
+continue here and enter some contact data and I don't care about the data which is why I'm just rolling
+
+7
+00:00:18,410 --> 00:00:19,470
+over my keyboard.
+
+8
+00:00:19,760 --> 00:00:22,820
+So let's quickly add all that data
+
+9
+00:00:22,830 --> 00:00:26,470
+here, cheapest, click order.
+
+10
+00:00:26,560 --> 00:00:29,500
+So that is all working, let's click the orders page,
+
+11
+00:00:29,620 --> 00:00:34,080
+that looks a lot like the burger we just created, so that is all looking good.
+
+12
+00:00:34,390 --> 00:00:37,550
+Let's also scan that, we don't see any errors here
+
+13
+00:00:37,870 --> 00:00:45,520
+and if we have a look at firebase, there we also see both orders being placed, the order data also looks
+
+14
+00:00:45,520 --> 00:00:46,450
+good to me,
+
+15
+00:00:46,600 --> 00:00:47,280
+picks up what
+
+16
+00:00:47,290 --> 00:00:52,420
+we entered, the ingredients obviously are correct since we can see them on the orders page and this is
+
+17
+00:00:52,420 --> 00:00:54,390
+coming from the server.
+
+18
+00:00:54,430 --> 00:00:56,720
+So this is all working fine,
+
+19
+00:00:56,740 --> 00:00:58,750
+we got a nice working application.
+
+20
+00:00:58,750 --> 00:01:05,050
+Now you can definitely go ahead and and enhance this even more, you could add a delete button to get rid
+
+21
+00:01:05,110 --> 00:01:06,100
+of orders
+
+22
+00:01:06,310 --> 00:01:13,540
+but I want to focus on code enhancements and implement some of the things I touched on in the last module,
+
+23
+00:01:13,750 --> 00:01:19,130
+for example how we can make our reducers a bit leaner without splitting them up even more.
+
+24
+00:01:19,150 --> 00:01:21,610
+Let's focus on that over the next lectures.
+

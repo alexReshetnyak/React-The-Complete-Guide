@@ -1,0 +1,340 @@
+1
+00:00:02,120 --> 00:00:05,570
+Nell'ultima lezione abbiamo aggiunto la logica per recuperare gli ordini.
+
+2
+00:00:05,660 --> 00:00:09,050
+Passiamo ora al loro loop e li stampiamo.
+
+3
+00:00:09,050 --> 00:00:18,000
+Ora qui ci sono DUDAS in linea per raggiungere tutti gli ordini di stato e mappare questo array e poi mentre
+
+4
+00:00:18,000 --> 00:00:21,650
+lo si conosce nella serie di elementi GSX.
+
+5
+00:00:21,690 --> 00:00:29,130
+Quindi qui ho ricevuto il mio ordine individuale che dovrebbe essere convertito in un oggetto ordine come
+
+6
+00:00:29,130 --> 00:00:29,600
+questo.
+
+7
+00:00:29,670 --> 00:00:31,020
+Questo  tutto per ora.
+
+8
+00:00:31,350 --> 00:00:36,730
+Salviamo questo, dovremmo ottenere tanti oggetti quanti abbiamo ordini e firebase.
+
+9
+00:00:36,870 --> 00:00:39,730
+Come sempre, dobbiamo anche aggiungere che mantenere Propp qui.
+
+10
+00:00:39,750 --> 00:00:44,110
+Quindi aggiungiamo la chiave e impostiamo questo.
+
+11
+00:00:44,490 --> 00:00:51,270
+Bene, ora possiamo usare l'ID ordine perch ci sar una propriet id che render l'ID firebase
+
+12
+00:00:51,270 --> 00:00:53,160
+che rende la chiave perfetta.
+
+13
+00:00:53,160 --> 00:00:58,350
+Ora, se possiamo salvarlo e ricevere gli ordini dalla base del fuoco, ovviamente non stiamo usando
+
+14
+00:00:58,350 --> 00:00:59,150
+svalutazioni da l.
+
+15
+00:00:59,320 --> 00:01:01,100
+Questa  la prossima cosa che voglio fare.
+
+16
+00:01:01,350 --> 00:01:04,690
+Riceviamo gli ordini che rendiamo l'ordine.
+
+17
+00:01:04,710 --> 00:01:10,800
+Ora ovviamente sarebbe sensato passare anche le informazioni sull'ordine a quel componente dell'ordine in modo che
+
+18
+00:01:10,800 --> 00:01:12,490
+possiamo rendere qualcosa l.
+
+19
+00:01:12,810 --> 00:01:15,190
+Vogliamo trasmettere gli ingredienti.
+
+20
+00:01:15,210 --> 00:01:23,720
+Cos l passer sugli ingredienti dell'ordine e voglio anche passare il prezzo.
+
+21
+00:01:23,760 --> 00:01:29,740
+Ora, se esaminiamo l'oggetto Firebase, il prezzo viene memorizzato in un prezzo adeguato l.
+
+22
+00:01:29,910 --> 00:01:31,410
+Quindi questo  ci che voglio trasmettere.
+
+23
+00:01:31,410 --> 00:01:39,300
+Q prezzo Prezzo dell'ordine Shelby che stiamo passando le informazioni per ordinare.
+
+24
+00:01:39,330 --> 00:01:44,940
+Facciamo ora l'output l nel componente dell'ordine il prezzo  semplice.
+
+25
+00:01:44,940 --> 00:01:52,410
+Usa semplicemente l'output di contenuto dinamico con le parentesi graffe e produciamo il prezzo dell'elica in questo modo.
+
+26
+00:01:52,440 --> 00:01:55,190
+Quindi ora dovremmo vedere il prezzo reale qui.
+
+27
+00:01:55,350 --> 00:02:04,590
+E vediamo anche che qui vogliamo usare il prezzo da fissare con 2 cifre decimali.
+
+28
+00:02:04,650 --> 00:02:09,360
+Questo funzioner solo su un numero e per impostazione predefinita si tratta di una stringa.
+
+29
+00:02:09,360 --> 00:02:21,570
+Quindi, quello che posso fare  semplicemente chiamare number parse float per convertire una stringa in un numero o, naturalmente, aggiungere un segno pi nel
+
+30
+00:02:21,600 --> 00:02:29,400
+momento in cui lo passi qui nel componente ordini aggiungendo un posto davanti all'ordine non il
+
+31
+00:02:29,400 --> 00:02:32,460
+prezzo dovrebbe tutti fare il trucco.
+
+32
+00:02:32,460 --> 00:02:39,780
+gli ingredienti come cos spesso sono un oggetto e abbiamo bisogno di un'area che li attraversi e li produca.
+
+33
+00:02:39,810 --> 00:02:46,370
+Entrambi dovrebbero funzionare e dovrebbero produrre un prezzo, non i trattamenti sono un po 'pi complessi perch
+
+34
+00:02:46,620 --> 00:02:53,070
+Quindi nell'anno componente dell'ordine in cui voglio che l'output sia formiche avide, ora ho bisogno di trasformare il
+
+35
+00:02:53,520 --> 00:03:00,990
+mio lenience in un array e tu puoi fare quella conversione nel contenitore degli ordini o qui nel componente dell'ordine.
+
+36
+00:03:01,170 --> 00:03:03,680
+Lo far qui nel componente dell'ordine.
+
+37
+00:03:04,070 --> 00:03:11,880
+Quindi per quello tutto ha cambiato la mia funzione di ordine per non solo restituire JS X ma abbiamo un vero corpo funzione in
+
+38
+00:03:11,880 --> 00:03:16,920
+cui Denn ha restituito tutto X, ovviamente, ma dove posso eseguire del codice prima di farlo.
+
+39
+00:03:17,160 --> 00:03:19,900
+Quindi facciamolo cos.
+
+40
+00:03:20,010 --> 00:03:23,990
+E ora aggiungiamo il codice per trasformare i miei ingredienti.
+
+41
+00:03:24,270 --> 00:03:28,300
+Quindi qui tutti aggiungono ingredienti che dovrebbero essere e matrice di ingredienti.
+
+42
+00:03:28,590 --> 00:03:34,150
+E abbiamo avuto la logica per trasformare questo prima nel componente Bergere qui.
+
+43
+00:03:34,180 --> 00:03:36,180
+Gli ingredienti trasformati.
+
+44
+00:03:36,180 --> 00:03:43,870
+Questa  in realt la logica che possiamo usare per trasformare i nostri ingredienti in una serie di ingredienti.
+
+45
+00:03:44,190 --> 00:03:46,350
+Voglio mostrarti un'alternativa per.
+
+46
+00:03:46,590 --> 00:03:50,030
+Quindi qui gli ingredienti sono solo una matrice per ora un array vuoto.
+
+47
+00:03:50,250 --> 00:03:57,600
+Quindi user un ciclo for per il nome dell'ingrediente negli ingredienti del prop.
+
+48
+00:03:57,600 --> 00:04:00,170
+Questo  quello che posso fare perch in un ciclo for.
+
+49
+00:04:00,330 --> 00:04:03,580
+L'elemento variabile sar il nome della propriet.
+
+50
+00:04:03,600 --> 00:04:09,330
+E poich le mie propriet sono semplicemente rappresentazioni di Ingredion, il nome dell'ingrediente ha senso per
+
+51
+00:04:09,330 --> 00:04:10,500
+me come nome.
+
+52
+00:04:10,500 --> 00:04:19,100
+Quindi qui posso quindi usare la mia matrice di ingredienti e spingere questo ingrediente su di essa.
+
+53
+00:04:19,360 --> 00:04:26,490
+Quindi qui posso quindi raggiungere gli ingredienti del prop e accedere all'ingrediente con il nome dell'ingrediente.
+
+54
+00:04:26,500 --> 00:04:30,600
+Questo  il de-value dell'ingrediente 0 1 2 e cos via.
+
+55
+00:04:30,940 --> 00:04:39,610
+Voglio spingere un oggetto javascript anche se ovviamente ho anche l'importo ma il per memorizzare
+
+56
+00:04:39,610 --> 00:04:40,500
+l'importo.
+
+57
+00:04:40,540 --> 00:04:46,540
+Voglio anche memorizzare il nome dell'ingrediente e che il nome dell'ingrediente del nome chiave  qui.
+
+58
+00:04:46,600 --> 00:04:53,290
+Quindi questo  l'oggetto su cui sto ora spingendo e reintegrare una trasformazione molto semplice
+
+59
+00:04:53,290 --> 00:04:58,860
+sicuramente un po 'pi breve dell'altro, ecco perch volevo anche mostrare questa alternativa.
+
+60
+00:04:59,200 --> 00:05:07,420
+Ora, con l'essere spinto ad arrabbiarsi, posso mappare fondamentalmente gli ingredienti con il testo.
+
+61
+00:05:07,900 --> 00:05:16,950
+Quindi tutti quindi creano una nuova variabile qui o una nuova costante proprio come questa  una costante che chiamer.
+
+62
+00:05:16,950 --> 00:05:24,240
+L'outport dell'ingrediente e l'outport di un ingrediente dovrebbero essere gli ingredienti mappati man mano che l'hai imparato.
+
+63
+00:05:24,280 --> 00:05:30,670
+dove emetter ig whips con parentesi graffe nome IGY e poi tra parentesi e
+
+64
+00:05:31,620 --> 00:05:42,090
+quindi in parentesi graffe per l'output dinamico IGY l'intervallo di chiusura di quantit come questo ora fa uscire l'output di Ingredion laggi.
+
+65
+00:05:42,230 --> 00:05:51,310
+Otteniamo l'ingrediente individuale e vogliamo restituire alcuni atti jazz qui e qui torner uno span tutti gli assegner un po
+
+66
+00:05:51,340 --> 00:05:52,870
+'di classe presto
+
+67
+00:05:53,740 --> 00:05:58,730
+Ti piace questo e diamo un'occhiata a questo output qui.
+
+68
+00:05:59,050 --> 00:06:01,230
+Ottieni il buon vecchio errore chiave qui.
+
+69
+00:06:01,240 --> 00:06:03,910
+Ma vediamo decine in generale che funzionano.
+
+70
+00:06:03,910 --> 00:06:11,170
+Ora per quanto riguarda la chiave in realt posso usare il nome dell'ingrediente come chiave in quanto 
+
+71
+00:06:11,170 --> 00:06:19,930
+unico qui, quindi posso usare il nome come una chiave univoca e ora voglio disegnare questa span e lo modeller semplicemente con
+
+72
+00:06:19,930 --> 00:06:24,470
+uno stile in linea qui cos io Assegner un oggetto javascript.
+
+73
+00:06:24,700 --> 00:06:28,330
+Usa la trasformazione del testo per rendere maiuscola la prima lettera.
+
+74
+00:06:28,480 --> 00:06:34,590
+Quindi capitalizzare fa esattamente se salviamo che vediamo che inizia con la lettera iniziale ora.
+
+75
+00:06:35,050 --> 00:06:42,630
+E voglio anche mettere delle battute in piccole scatole in modo che si distinguano l'una dall'altra.
+
+76
+00:06:42,970 --> 00:06:51,600
+Quindi mi occuper di questo anno Optix javascript su pi righe da visualizzare in linea.
+
+77
+00:06:52,600 --> 00:06:59,590
+BLOCCA aggiungi un po 'di margine sinistro e destro zero in alto e in basso anche se
+
+78
+00:06:59,590 --> 00:07:11,480
+solo 8 pixel a sinistra e a destra 0 8 pixel e aggiungi un bordo forse un pixel grigio solido e un po' di padding come 5 pixel e
+
+79
+00:07:11,500 --> 00:07:15,370
+potresti ovviamente usa anche una classe CSS per questo.
+
+80
+00:07:15,470 --> 00:07:17,310
+Questo  il modo in cui voglio produrlo.
+
+81
+00:07:17,320 --> 00:07:19,330
+Questi sono i miei ingredienti  il mio prezzo.
+
+82
+00:07:19,360 --> 00:07:21,450
+Questi sono i miei ordini
+
+83
+00:07:21,460 --> 00:07:23,590
+Ora possiamo aggiungere altro agli ordini.
+
+84
+00:07:23,620 --> 00:07:29,660
+Possiamo aggiungere la logica per eliminare un ordine o per il mercato come realizzato.
+
+85
+00:07:29,890 --> 00:07:32,670
+Per ora questo  il modo in cui voglio produrli.
+

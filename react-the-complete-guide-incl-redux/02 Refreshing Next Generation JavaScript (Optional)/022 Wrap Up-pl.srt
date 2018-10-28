@@ -1,0 +1,56 @@
+1
+00:00:01,980 --> 00:00:07,780
+Chciabym zakoczy ten modu. Nauczylimy si duo o javascript nastpnej generacji
+
+2
+00:00:07,780 --> 00:00:09,580
+i kilku wanych pojciach javascript.
+
+3
+00:00:09,580 --> 00:00:15,430
+Generalnie spotkasz wiele rzeczy, o ktrych dowiesz si w tym module podczas caego kursu.
+
+4
+00:00:15,460 --> 00:00:16,790
+Nie dajcie si zwie temu.
+
+5
+00:00:16,840 --> 00:00:18,330
+Nadal jest javascript.
+
+6
+00:00:18,490 --> 00:00:21,070
+Wystarczy uy bardziej nowoczesnych funkcji.
+
+7
+00:00:21,070 --> 00:00:23,740
+Tak wanie piszemy React apps.
+
+8
+00:00:23,890 --> 00:00:26,760
+Nastpny modu rozpocznie si teraz od React.
+
+9
+00:00:26,770 --> 00:00:32,300
+Teraz poka ci, jak szybko utworzy konfiguracj projektu, w ktrej bdziemy mogli korzysta z
+
+10
+00:00:32,340 --> 00:00:36,360
+wszystkich tych funkcji, jednoczenie wysyajc kod dziaajcy rwnie w starszych przegldarkach.
+
+11
+00:00:36,440 --> 00:00:38,200
+Dziki temu jeste dobrze przygotowany.
+
+12
+00:00:38,200 --> 00:00:43,660
+Zawsze moesz wrci do tego moduu i rzuci okiem na dan funkcj, jeli zapomniae, jak to dziaa,
+
+13
+00:00:43,660 --> 00:00:47,640
+a ty spotkasz si z ni na kursie i chcesz odwiey swoj wiedz.
+
+14
+00:00:47,710 --> 00:00:50,080
+I z tym zagbimy si w React.
+

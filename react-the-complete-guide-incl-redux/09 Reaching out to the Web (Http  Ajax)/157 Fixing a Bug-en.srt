@@ -1,0 +1,28 @@
+1
+00:00:02,260 --> 00:00:06,800
+So over the last lectures, I introduced you to how you send requests to axios.
+
+2
+00:00:06,870 --> 00:00:10,470
+Now I found a little bug which I didn't recognize earlier,
+
+3
+00:00:10,480 --> 00:00:16,930
+we of course don't see the body here for a chosen post, that simply happens because in the full post
+
+4
+00:00:16,930 --> 00:00:22,120
+component, I try to load content here but body would be correct.
+
+5
+00:00:22,210 --> 00:00:28,180
+So exchange content with body and you will see the post body. Of course everything else still works as
+
+6
+00:00:28,210 --> 00:00:30,530
+before, that just is a tiny fix
+
+7
+00:00:30,580 --> 00:00:31,570
+I want to apply.
+

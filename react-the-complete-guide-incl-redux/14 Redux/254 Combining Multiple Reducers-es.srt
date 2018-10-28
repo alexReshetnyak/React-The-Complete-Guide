@@ -1,0 +1,476 @@
+1
+00:00:02,180 --> 00:00:05,330
+The Last Lecture externalizamos nuestros tipos de accin.
+
+2
+00:00:05,450 --> 00:00:14,720
+Hay algo ms que hacemos mucho a medida que crece nuestra aplicacin y que es usar reductores mltiples.
+
+3
+00:00:14,810 --> 00:00:22,310
+Ahora s dije que solo tenemos un usuario con redox y este es el caso de que todas las acciones
+
+4
+00:00:22,310 --> 00:00:30,560
+al final se canalicen a travs de un productor, pero relajar el paquete nos da un mtodo de utilidad que podemos usar
+
+5
+00:00:30,560 --> 00:00:38,360
+para combinar mltiples recusaciones de Cirus en uno para que an podamos sigue el patrn de tener solo un productor detrs
+
+6
+00:00:38,360 --> 00:00:39,520
+de escena.
+
+7
+00:00:39,530 --> 00:00:46,880
+uno. El introductor se imagina cmo crecer el usuario de reutilizacin a medida que aadimos ms y ms tipos de
+
+8
+00:00:47,090 --> 00:00:53,270
+acciones que queremos manejar, pero que podemos dividirlo por caractersticas. en nuestra aplicacin de demostracin ordenada.
+
+9
+00:00:53,270 --> 00:00:58,290
+Pero para nosotros, como programadores, podemos dividir nuestro cdigo lgicamente para que no tengamos
+
+10
+00:00:58,340 --> 00:01:05,360
+Puede tener sentido tener un reductor que maneje para contrarrestar y otro que maneje los resultados aunque
+
+11
+00:01:05,360 --> 00:01:07,420
+estn relacionados de alguna manera.
+
+12
+00:01:07,580 --> 00:01:14,750
+Tcnicamente son diferentes o administran diferentes partes de la aplicacin, por lo que dividirla podra tener
+
+13
+00:01:14,750 --> 00:01:15,280
+sentido.
+
+14
+00:01:15,290 --> 00:01:18,020
+Y esto es exactamente lo que vamos a hacer.
+
+15
+00:01:18,050 --> 00:01:25,520
+As que dividamos a nuestro productor aqu en dos reductores, uno para contar las partes relacionadas de las declaraciones
+
+16
+00:01:25,520 --> 00:01:28,800
+de maysculas y otra para los resultados relacionados.
+
+17
+00:01:28,820 --> 00:01:36,830
+As que para eso simplemente agregar aqu en la carpeta de la tienda Moine en una nueva carpeta de
+
+18
+00:01:36,830 --> 00:01:45,080
+reductores y luego agregar una cada que nombrar como el contador S y una que dar como resultado Daut Julius.
+
+19
+00:01:45,150 --> 00:01:51,660
+Ahora copiar todo el cdigo de mi productor el otoo pasado y lo pondr en el contador J como otoo.
+
+20
+00:01:51,690 --> 00:01:58,320
+Necesito ajustar el pago a mis acciones por ahora simplemente subiendo un nivel y luego aqu estamos
+
+21
+00:01:58,320 --> 00:02:01,200
+en la carpeta donde solo est la accin.
+
+22
+00:02:01,760 --> 00:02:02,610
+El estado inicial.
+
+23
+00:02:02,610 --> 00:02:07,590
+Ahora, aqu en este otoo, ya no es necesario saber sobre los resultados, o simplemente se trata del mostrador que
+
+24
+00:02:07,670 --> 00:02:09,250
+se encontr con la culpa de Julia.
+
+25
+00:02:09,400 --> 00:02:15,360
+Su funcin reducida todava se ve como estado anterior que se asigna al estado inicial y
+
+26
+00:02:15,360 --> 00:02:16,550
+recibimos una accin.
+
+27
+00:02:16,560 --> 00:02:22,380
+Me deshago de los casos relacionados con la sal aqu para hacer esto un poco ms delgado.
+
+28
+00:02:22,410 --> 00:02:25,320
+Este ya es mi productor terminado.
+
+29
+00:02:25,320 --> 00:02:29,280
+Podemos nombrar tu contador reduce su disfuncin?
+
+30
+00:02:29,280 --> 00:02:33,000
+Todos podemos dejarlo con el nombre de reductor o lo que quieras.
+
+31
+00:02:33,000 --> 00:02:38,610
+Ahora voy a copiar nuevamente el cdigo de la cada del reductor Jr y ponerlo en mis resultados.
+
+32
+00:02:38,620 --> 00:02:44,790
+como est, pero elimino todos los casos relacionados, de modo que solo los relacionados con la tienda son ah.
+
+33
+00:02:44,790 --> 00:02:52,080
+Chase vuelve a caer solo en el punto de vista del archivo actual y ahora voy a deshacerme del contrapropietario de mi
+
+34
+00:02:52,140 --> 00:02:54,910
+reductor de estado inicial, y luego se mantiene
+
+35
+00:02:54,930 --> 00:03:03,690
+Tenga en cuenta que X-ists declara el IED de contador aqu porque al final los dos reductores
+
+36
+00:03:03,690 --> 00:03:07,230
+se fusionarn en un solo estado global.
+
+37
+00:03:07,470 --> 00:03:12,330
+As que todava habr un estado de contador all.
+
+38
+00:03:12,330 --> 00:03:15,980
+Todava podramos necesitar actualizar esto ms tarde, pero ya veremos.
+
+39
+00:03:16,410 --> 00:03:19,010
+Entonces an exportar mi reductor aqu.
+
+40
+00:03:19,260 --> 00:03:24,500
+Y esto me permite deshacerme de mi reducido o simplemente caer en la carpeta de la tienda.
+
+41
+00:03:24,520 --> 00:03:26,940
+Ahora, por supuesto, un ndice s.
+
+42
+00:03:27,010 --> 00:03:28,900
+Ya no tengo una importacin vlida.
+
+43
+00:03:28,900 --> 00:03:31,120
+Tu deseo de usar o no existe.
+
+44
+00:03:31,120 --> 00:03:33,140
+En cambio, ahora tengo dos reductores.
+
+45
+00:03:33,220 --> 00:03:35,080
+As que vamos a importarlos.
+
+46
+00:03:35,080 --> 00:03:43,810
+Vamos a la carpeta de la tienda en la carpeta de reductores y a importar el contador J como un reductor de cdigo fuente
+
+47
+00:03:43,900 --> 00:03:45,080
+sin nombre aqu.
+
+48
+00:03:45,250 --> 00:03:51,570
+Duplicar la importacin a dentales importando el reductor de resultados de la tienda.
+
+49
+00:03:51,580 --> 00:03:55,990
+Los resultados de los reductores son la cada ms rpida.
+
+50
+00:03:56,080 --> 00:04:01,640
+Ahora para combinarlos necesito importar una funcin auxiliar del paquete Rydex.
+
+51
+00:04:01,720 --> 00:04:06,040
+Se llama reductores de combinacin ya que los nombres son gests.
+
+52
+00:04:06,070 --> 00:04:14,290
+Esta es una funcin que toma un objeto javascript mapeando a nuestros productores en diferentes sectores de
+
+53
+00:04:14,290 --> 00:04:21,510
+nuestro estado como entrada y fusiona todo en un estado y un productor para nosotros.
+
+54
+00:04:21,510 --> 00:04:26,680
+As que aqu antes de crear la tienda modific una nueva constante local en el nombre de
+
+55
+00:04:26,680 --> 00:04:30,000
+raz reductora, el nombre depende de usted y llamar reductores combinados.
+
+56
+00:04:30,040 --> 00:04:38,500
+crear secciones de nuestro Apso para decir cualquier nombre que desee contrarrestar o solo CTE sea lo que usted quiera.
+
+57
+00:04:38,710 --> 00:04:45,850
+Ahora que acabo de configurar esta funcin, tomo un objeto javascript como entrada y all simplemente podemos
+
+58
+00:04:45,850 --> 00:04:53,650
+Lo nombrar ciudad est aqu y el mapa para contrarrestarla lo redujo y luego agregar mi rea
+
+59
+00:04:53,650 --> 00:04:56,710
+de direccin con el reductor de resultados.
+
+60
+00:04:56,730 --> 00:05:03,750
+As que ahora le estamos diciendo a Rydex al final hey tengo dos reas de funciones diferentes en mi aplicacin.
+
+61
+00:05:03,780 --> 00:05:05,400
+Asegure nuestra direccin
+
+62
+00:05:05,630 --> 00:05:12,860
+Utilice DS reductores para cada uno de ellos y combine todo en una sola tienda en
+
+63
+00:05:12,960 --> 00:05:14,980
+un estado en un reductor.
+
+64
+00:05:15,020 --> 00:05:21,890
+pasamos el reductor de raz aqu para crear la tienda y guardar todos los archivos, no deberamos obtener un error all.
+
+65
+00:05:21,890 --> 00:05:22,640
+Si ahora
+
+66
+00:05:22,670 --> 00:05:29,560
+Somos NPM start runs en la aplicacin, aunque si lo volvemos a cargar obtendremos un error.
+
+67
+00:05:29,750 --> 00:05:32,930
+Ese mapa no se puede ejecutar en el hallazgo.
+
+68
+00:05:33,380 --> 00:05:40,430
+Y bsicamente aqu el problema es que los resultados almacenados donde mapeamos a travs de todos los
+
+69
+00:05:40,490 --> 00:05:49,370
+resultados almacenados no funcionarn porque los resultados almacenados ahora se refieren a los resultados no definidos y no a una matriz
+
+70
+00:05:49,370 --> 00:05:50,320
+de resultados.
+
+71
+00:05:50,480 --> 00:05:53,510
+Esto nos sucede a nosotros combinando reductores.
+
+72
+00:05:53,510 --> 00:06:02,240
+pero para evitar conflictos de nombres, redux agrega un nivel de anidacin donde tiene un objeto de estado.
+
+73
+00:06:02,600 --> 00:06:05,760
+Ahora tendremos un estado al final,
+
+74
+00:06:05,900 --> 00:06:13,400
+Pero bsicamente con las claves DS aqu en reductores combinados como propiedades que nos dan acceso a
+
+75
+00:06:13,400 --> 00:06:21,740
+estos estados CEP para estas reas de caractersticas, podramos decir que en la cada del contador geolgico si queremos
+
+76
+00:06:22,430 --> 00:06:30,200
+acceder al contador tenemos que acceder al estado global DOT city nuestro DOT counter dot City Art.
+
+77
+00:06:30,410 --> 00:06:38,170
+Dado que este es el nombre que le dimos a este trozo de nuestro estado global y reenviar el resultado, sera dot.
+
+78
+00:06:38,270 --> 00:06:43,130
+As que aqu est el estado de las victorias de DOT as.
+
+79
+00:06:43,160 --> 00:06:47,030
+Ahora si guardamos esto, la aplicacin ya no est rota.
+
+80
+00:06:47,360 --> 00:06:52,180
+Y si ahora hago clic en un botn, funciona igual para almacenar los resultados.
+
+81
+00:06:52,220 --> 00:06:59,520
+Entonces aqu vemos que agrega resultados pero de alguna manera no los est agregando realmente.
+
+82
+00:06:59,660 --> 00:07:02,250
+No realmente mostrarlos aqu.
+
+83
+00:07:02,270 --> 00:07:09,740
+La razn es que el resultado almacenado en realidad no est definido porque el productor
+
+84
+00:07:09,740 --> 00:07:20,040
+de resultados que almacenamos aqu una instantnea para el disco publicitario de contador STATE no funciona porque este contador de estado
+
+85
+00:07:20,700 --> 00:07:29,160
+ahora no se conoce porque este reductor de ndice de estado inicial local no tiene una propiedad contraria.
+
+86
+00:07:29,160 --> 00:07:35,250
+Ahora puedes pensar que simplemente agregas el contador estatal de la ciudad si haces esto y guardas todo, haz clic en
+
+87
+00:07:35,250 --> 00:07:42,590
+el resultado de la tienda a las 10 en punto; obtendrs un error a pesar de que el contador de propiedades econmicas no est definido.
+
+88
+00:07:42,590 --> 00:07:49,020
+funcin, bsicamente no tiene acceso al estado global solo para ese estado que a menudo se reduce o funciona.
+
+89
+00:07:49,410 --> 00:07:52,680
+La razn de esto es que la visin reduce la
+
+90
+00:07:52,680 --> 00:07:57,820
+Eso es diferente al componente de Kountry en el que conectamos nuestro componente de reaccin al estado global.
+
+91
+00:07:57,960 --> 00:08:02,130
+Ah podemos acceder a las diferentes piezas del estado para nuestras rebanadas.
+
+92
+00:08:02,130 --> 00:08:03,230
+Configuramos un ndice.
+
+93
+00:08:03,300 --> 00:08:03,890
+S.
+
+94
+00:08:04,020 --> 00:08:08,060
+Esto no funciona dentro de los reductores.
+
+95
+00:08:08,160 --> 00:08:17,750
+Entonces, si estamos en un reductor donde necesitamos obtener un valor del estado global, simplemente deberamos obtenerlo como una
+
+96
+00:08:18,260 --> 00:08:20,500
+carga til de accin.
+
+97
+00:08:20,630 --> 00:08:23,590
+Y as es como generalmente funcionan los reductores.
+
+98
+00:08:23,600 --> 00:08:32,740
+La mayora de las veces es el estado antiguo ms la accin ms los datos de accin opcionales y usted regresa y declara.
+
+99
+00:08:33,080 --> 00:08:39,950
+As que aqu espero obtener la misma propiedad de resultado en mi accin entrante y para recibir eso
+
+100
+00:08:39,950 --> 00:08:45,090
+necesito ajustar mi archivo counter js all donde lo ejecuto en la tienda.
+
+101
+00:08:45,110 --> 00:08:50,510
+Resultado aqu solo necesito obtener mi resultado.
+
+102
+00:08:50,780 --> 00:09:00,480
+As que espero obtener mi resultado aqu como argumento y luego simplemente puedo pasar esto junto con el tipo usado para
+
+103
+00:09:00,480 --> 00:09:01,170
+la clave.
+
+104
+00:09:01,250 --> 00:09:02,730
+Eliges usar aqu.
+
+105
+00:09:03,590 --> 00:09:05,040
+Resultado de la accin
+
+106
+00:09:05,100 --> 00:09:07,660
+Entonces deberamos tener una propiedad resuelta aqu.
+
+107
+00:09:07,660 --> 00:09:16,870
+Q En el Optik que enviamos, vinculamos o establecemos el valor del argumento del resultado que esperamos obtener aqu.
+
+108
+00:09:17,120 --> 00:09:24,110
+Y ahora para obtenerlo igual que los cuatro con la funcin principal que ejecutamos este ao en el botn como una funcin
+
+109
+00:09:24,110 --> 00:09:29,750
+annima para que podamos pasar algunos datos aqu en el asalto a la tienda ahora debera ser as.
+
+110
+00:09:29,760 --> 00:09:33,040
+Props C-T Argives dice acceso al mostrador.
+
+111
+00:09:33,230 --> 00:09:36,950
+Y ese es realmente el valor que queremos almacenar.
+
+112
+00:09:37,040 --> 00:09:44,960
+la tienda muy rpido despus de cada anuncio, obtendrs este error simplemente porque el ID que asignamos es la fecha actual.
+
+113
+00:09:44,960 --> 00:09:52,210
+Ahora, si volvemos y hago clic en 10, puedo almacenar 10 de nuevo, por cierto, si golpeas el asalto de
+
+114
+00:09:52,370 --> 00:09:58,160
+Y si aciertas esto muy rpidamente, simplemente habr la misma fecha asignada dos veces lo que conduce a
+
+115
+00:09:58,160 --> 00:09:58,780
+este error.
+
+116
+00:09:58,820 --> 00:10:03,590
+Por supuesto, es solo una solucin de identificacin temporal que no es uno que usara y producira.
+
+117
+00:10:03,590 --> 00:10:05,750
+Entonces para m aqu no importa.
+
+118
+00:10:05,750 --> 00:10:12,200
+El punto central es cmo puede dividir a sus productores en diferentes sectores y cmo usted y an as
+
+119
+00:10:12,200 --> 00:10:16,670
+asegurarse de obtener los datos que necesita en cada uno de estos sectores.
+

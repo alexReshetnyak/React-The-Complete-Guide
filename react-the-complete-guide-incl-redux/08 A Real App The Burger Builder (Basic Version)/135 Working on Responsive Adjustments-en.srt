@@ -1,0 +1,216 @@
+1
+00:00:02,150 --> 00:00:04,200
+In the last lecture, we added the sideDrawer
+
+2
+00:00:04,250 --> 00:00:09,680
+and of course this is looking horrible because logo and navigation items need to be adjusted to look good
+
+3
+00:00:10,070 --> 00:00:12,200
+on mobile devices.
+
+4
+00:00:12,200 --> 00:00:14,500
+Let's start with the logo, it
+
+5
+00:00:14,600 --> 00:00:21,470
+right now is so big because the logo height is set to 80% and 80% in the sideDrawer means
+
+6
+00:00:21,830 --> 00:00:25,480
+80% of the full sizeDrawer height here,
+
+7
+00:00:25,550 --> 00:00:29,150
+that of course is a little bit too much.
+
+8
+00:00:29,150 --> 00:00:35,080
+Now how can we adjust this? We could add some responsive design to the logo.css
+
+9
+00:00:35,220 --> 00:00:41,900
+file, we could set the default to something like 11% and add a media query to wrap this up
+
+10
+00:00:41,900 --> 00:00:43,970
+to 80% for bigger screens
+
+11
+00:00:43,970 --> 00:00:47,990
+but that would make our logo harder to reuse. Instead
+
+12
+00:00:48,020 --> 00:00:55,790
+I'm a fan of controlling the logo height in the place where we embed it instead of in the logo component.
+
+13
+00:00:55,790 --> 00:01:02,150
+So I actually will even set the logo height back to 100% and we should restrict its height in the
+
+14
+00:01:02,150 --> 00:01:07,560
+toolbar and in the sideDrawer to fit the specific needs of these components.
+
+15
+00:01:07,580 --> 00:01:09,370
+So let's start with the toolbar,
+
+16
+00:01:09,410 --> 00:01:13,220
+as I said, the logo should only be 80% high here,
+
+17
+00:01:13,460 --> 00:01:21,650
+we can achieve this in two ways. We could add a prop to actually set the height dynamically so we could
+
+18
+00:01:21,710 --> 00:01:28,430
+add something like height here which we could set to let's say 80%
+
+19
+00:01:28,700 --> 00:01:31,610
+and then in the logo, we can accept this,
+
+20
+00:01:31,610 --> 00:01:38,480
+we do accept props here and we could set inline styles here to overwrite the css class settings, to
+
+21
+00:01:38,510 --> 00:01:43,850
+basically assign a javascript object here where we set height to props.height.
+
+22
+00:01:44,240 --> 00:01:53,270
+If we save this, it should now look good in the toolbar still and if we do that in the sideDrawer too, there
+
+23
+00:01:53,270 --> 00:01:56,790
+we would also now simply pass a height to the logo,
+
+24
+00:01:56,930 --> 00:01:59,220
+let's say not props,
+
+25
+00:01:59,320 --> 00:02:03,160
+height should be 11% here,
+
+26
+00:02:03,380 --> 00:02:06,280
+now it should look good in a sideDrawer too.
+
+27
+00:02:06,290 --> 00:02:12,680
+This is one clever way of adjusting this, setting the height as a property where we simply pass the percentage
+
+28
+00:02:12,680 --> 00:02:19,580
+height to the logo component and in the component, assign it dynamically via inline styles.
+
+29
+00:02:19,580 --> 00:02:22,850
+Nothing wrong with this approach, it should work fine,
+
+30
+00:02:23,210 --> 00:02:25,520
+I want to show you an alternative to that though.
+
+31
+00:02:25,850 --> 00:02:29,960
+I'll actually leave that property set up here so that we could use that
+
+32
+00:02:30,200 --> 00:02:32,130
+but I will not use it,
+
+33
+00:02:32,270 --> 00:02:41,930
+I will instead follow a different approach and wrap logo into a div in the sideDrawer and also in the
+
+34
+00:02:42,420 --> 00:02:43,190
+toolbar,
+
+35
+00:02:43,280 --> 00:02:50,360
+so let's wrap logo into a div in both components and not use this.height property which again just to
+
+36
+00:02:50,360 --> 00:02:53,270
+highlight this would not have been a bad approach at all.
+
+37
+00:02:53,420 --> 00:02:58,070
+And now these divs which wrap the logo, they should control the height,
+
+38
+00:02:58,070 --> 00:03:03,500
+we can do this with inline styles or with a css class like
+
+39
+00:03:03,500 --> 00:03:10,270
+for example here in the toolbar classes logo and the cool thing is I can now use the logo class here
+
+40
+00:03:10,280 --> 00:03:17,060
+the toolbar component even though I'm already using it in the logo component because due to css modules,
+
+41
+00:03:17,120 --> 00:03:17,870
+it will convert
+
+42
+00:03:17,870 --> 00:03:25,190
+my css class names into different names and to scope names, so that even though I write two identical
+
+43
+00:03:25,190 --> 00:03:32,210
+classes in the development mode here, it actually converts that to two different css classes which
+
+44
+00:03:32,210 --> 00:03:35,100
+get assigned so that they don't interfere.
+
+45
+00:03:35,420 --> 00:03:45,040
+So now I can define that logo class in my toolbar and there, I can set height to 80% and I can now
+
+46
+00:03:45,040 --> 00:03:52,930
+go to the sideDrawer and there, I can also define a logo class and set the height to 11% here.
+
+47
+00:03:53,470 --> 00:03:59,860
+And now I can use that here in the sideDrawer and assign my class name there too
+
+48
+00:03:59,980 --> 00:04:06,760
+so also set classes.Logo here. And again, I do have that logo class defined in three different files
+
+49
+00:04:06,850 --> 00:04:13,630
+but due to css modules, this is actually converted to three different css classes so that they don't interfere.
+
+50
+00:04:14,320 --> 00:04:15,810
+With all these changes saved,
+
+51
+00:04:15,940 --> 00:04:19,820
+we have a nice looking logo here in the sideDrawer and in the toolbar.
+
+52
+00:04:19,900 --> 00:04:25,630
+So you saw different approaches of adjusting this dynamically and making sure that it looks good on
+
+53
+00:04:25,690 --> 00:04:27,960
+all the devices we need to support.
+
+54
+00:04:28,000 --> 00:04:32,350
+Let's next work on the navigation items then.
+

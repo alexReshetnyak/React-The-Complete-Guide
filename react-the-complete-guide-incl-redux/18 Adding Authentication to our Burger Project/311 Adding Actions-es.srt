@@ -1,0 +1,284 @@
+1
+00:00:02,150 --> 00:00:05,970
+As que asegurmonos de que algo til ocurra cuando se presione
+
+2
+00:00:06,110 --> 00:00:11,990
+este botn, para eso, agregar creadores de accin porque, por supuesto, quiero enviar una accin cuando se
+
+3
+00:00:12,590 --> 00:00:14,870
+presione. Por lo tanto, en la carpeta
+
+4
+00:00:14,870 --> 00:00:22,940
+de acciones de mi tienda, agregar un nuevo archivo auth . js y all quiero configurar acciones relacionadas con la
+
+5
+00:00:23,000 --> 00:00:29,720
+autenticacin, ahora tambin establecer algunos tipos de accin en el archivo de tipos de accin.
+
+6
+00:00:29,720 --> 00:00:30,510
+Los exportar
+
+7
+00:00:30,590 --> 00:00:38,610
+y agregar un tipo de accin AUTH_START, identificador por lo tanto tambin es AUTH_START y luego lo har
+
+8
+00:00:38,750 --> 00:00:42,210
+duplquelo dos veces para crear tambin un tipo
+
+9
+00:00:42,230 --> 00:00:45,640
+de accin AUTH_SUCCESS y un tipo de
+
+10
+00:00:45,710 --> 00:00:50,340
+accin AUTH_FAIL porque, obviamente, la autenticacin tambin puede fallar.
+
+11
+00:00:50,930 --> 00:00:51,390
+&nbsp;
+
+12
+00:00:51,400 --> 00:01:01,480
+Ahora en auth. js, importar todos los tipos de accin de modo que los tipos de accin de. / actionTypes y luego quiero crear un
+
+13
+00:01:01,480 --> 00:01:05,540
+par de creadores de acciones, los exportar todos.
+
+14
+00:01:05,680 --> 00:01:10,410
+El primero es el creador de acciones AUTH_START, har de esto una
+
+15
+00:01:10,450 --> 00:01:12,870
+funcin por supuesto, en realidad no
+
+16
+00:01:12,970 --> 00:01:16,960
+solicito ni solicito ninguna entrada aqu, solo quiero devolver un
+
+17
+00:01:17,020 --> 00:01:24,580
+objeto javascript donde el tipo es de tipo actionTypes. AUTH_START, no transfiero ninguna carga aqu,
+
+18
+00:01:24,730 --> 00:01:27,040
+esencialmente usar esta accin
+
+19
+00:01:27,070 --> 00:01:34,710
+para establecer un estado de carga y potencialmente mostrar un spinner si quiero.
+
+20
+00:01:34,750 --> 00:01:39,120
+A continuacin agregar un const, authSuccess, esta funcin
+
+21
+00:01:39,150 --> 00:01:45,150
+aqu obtendr datos, datos de autenticacin y aqu tambin quiero devolver
+
+22
+00:01:45,490 --> 00:01:52,530
+un objeto javascript, el tipo ser de tipo AUTH_SUCCESS, por supuesto, y transmitir
+
+23
+00:01:52,900 --> 00:01:55,480
+los datos de autenticacin ,
+
+24
+00:01:55,510 --> 00:02:01,920
+veremos qu es esto ms tarde. Ahora necesitamos otro creador de
+
+25
+00:02:02,010 --> 00:02:04,230
+acciones aqu, AUTH_FAIL,
+
+26
+00:02:04,290 --> 00:02:10,420
+aqu obtenemos un error potencial y aqu tambin devolveremos
+
+27
+00:02:10,680 --> 00:02:19,880
+un objeto javascript, el tipo ser actionTypes. AUTH_FAIL y yo transmitiremos
+
+28
+00:02:19,890 --> 00:02:27,400
+el error, como tal. Finalmente agregar un ltimo tipo de accin, que ser
+
+29
+00:02:27,400 --> 00:02:28,680
+el que tenga
+
+30
+00:02:28,690 --> 00:02:30,930
+el cdigo asincrnico haciendo la
+
+31
+00:02:30,960 --> 00:02:37,840
+autenticacin, solo lo llamar auth, aqu espero recibir el correo electrnico y la contrasea, y luego
+
+32
+00:02:37,840 --> 00:02:40,810
+devolver el despacho, por lo que funcin
+
+33
+00:02:40,870 --> 00:02:47,880
+que obtiene dispatch como argumento gracias a redux-thunk y all, ahora quiero autenticar al usuario.
+
+34
+00:02:47,890 --> 00:02:55,370
+Ahora, por ahora, simplemente enviar authStart aqu para al menos establecer este estado, ahora con eso, por supuesto, necesitamos
+
+35
+00:02:55,580 --> 00:03:02,210
+conectar nuestras acciones a nuestros contenedores para que podamos despacharlos, as que me dirigir al contenedor
+
+36
+00:03:02,690 --> 00:03:09,100
+de autenticacin y all, quiero importar mis acciones. Para hacerlo, agregar mis creadores de acciones
+
+37
+00:03:09,110 --> 00:03:13,260
+de autenticacin al ndice. js archivo donde agrupo
+
+38
+00:03:13,300 --> 00:03:17,790
+todas mis exportaciones desde esa carpeta de acciones.
+
+39
+00:03:18,140 --> 00:03:24,520
+As que exportar todo lo que necesito. / auth sin la extensin de archivo
+
+40
+00:03:24,620 --> 00:03:27,350
+y ahora mismo, realmente es solo
+
+41
+00:03:27,540 --> 00:03:31,130
+el mtodo de autenticacin en s mismo.
+
+42
+00:03:31,130 --> 00:03:37,130
+Ahora con eso, podemos volver al contenedor de autenticacin e importar todas las acciones aqu,
+
+43
+00:03:37,340 --> 00:03:40,680
+as que importe todo como acciones desde y
+
+44
+00:03:40,730 --> 00:03:49,970
+ahora vayamos a la tienda, a las acciones y al ndice. js file y ahora podemos agregar nuestra buena
+
+45
+00:03:49,970 --> 00:03:59,100
+vieja const mapDispatchToProps constante para poder enviar algo aqu a travs de accesorios en este componente.
+
+46
+00:03:59,820 --> 00:04:07,340
+Entonces, como siempre, devolver un objeto javascript y all quiero crear un apuntador onAuth que pueda usar
+
+47
+00:04:07,340 --> 00:04:15,660
+como un mtodo que, por lo tanto, contiene una referencia a un mtodo donde eventualmente enviar mi accin
+
+48
+00:04:15,870 --> 00:04:19,020
+y deseo enviar la accin auth .
+
+49
+00:04:19,050 --> 00:04:24,240
+Ahora, como lo vio cuando configuramos esto, la accin de autenticacin requiere
+
+50
+00:04:24,240 --> 00:04:31,140
+un correo electrnico y una contrasea, as que espero obtener esto aqu cuando ejecutemos esta propiedad
+
+51
+00:04:31,140 --> 00:04:38,410
+bsicamente, para poder pasarlo cuando ejecute la autenticacin. mapDispatchToProps solo tiene sentido si lo conectamos a este
+
+52
+00:04:38,700 --> 00:04:43,490
+contenedor, por lo que ahora importaremos connect de react-redux para que
+
+53
+00:04:43,740 --> 00:04:52,400
+podamos hacer eso, as que importa connect from react-redux, as. Con eso podemos volver al final del archivo y
+
+54
+00:04:52,400 --> 00:05:00,280
+ahora ejecutar connect y pasar null para mapStateToProps porque an no tenemos eso y mapDispatchToProps como el
+
+55
+00:05:00,280 --> 00:05:02,710
+segundo argumento y tambin voy
+
+56
+00:05:02,960 --> 00:05:06,170
+a envolver mi contenedor de autenticacin, por supuesto.
+
+57
+00:05:06,500 --> 00:05:12,710
+Con eso, podemos ejecutar onAuth en nuestros accesorios en este contenedor y quiero hacer esto siempre que se
+
+58
+00:05:12,710 --> 00:05:13,760
+enve el formulario.
+
+59
+00:05:14,090 --> 00:05:22,200
+As que agregar un controlador onSubmit aqu y ejecutar este controlador de envo.
+
+60
+00:05:22,250 --> 00:05:25,420
+Agregar este mtodo a este
+
+61
+00:05:25,610 --> 00:05:33,650
+contenedor, el controlador de envo. Espero tener el evento all porque primero necesito llamar al evento. Prevea el Predeterminado para evitar que se
+
+62
+00:05:33,710 --> 00:05:42,590
+vuelva a cargar la pgina y, a continuacin, deseo llamar a estos accesorios, enAuth y ejecutarlos y, por supuesto, necesito pasar el
+
+63
+00:05:42,590 --> 00:05:43,470
+correo electrnico
+
+64
+00:05:43,490 --> 00:05:46,010
+y la contrasea, as que me
+
+65
+00:05:46,160 --> 00:05:56,130
+pondr en contacto con esto. estado. controla el valor del correo electrnico y esto. estado. controla el valor de la contrasea
+
+66
+00:05:57,610 --> 00:06:02,070
+Con eso, guardemos esto y veamos si esto funciona.
+
+67
+00:06:02,110 --> 00:06:10,080
+De vuelta en nuestro proyecto, puedo ingresar aqu una direccin de correo electrnico y una contrasea, si hago clic
+
+68
+00:06:10,080 --> 00:06:15,060
+en enviar e inspecciono redux, vemos que authStart se envi con xito.
+
+69
+00:06:15,060 --> 00:06:18,200
+As que eso est funcionando pero, por supuesto, nada ms funciona todava.
+
+70
+00:06:18,240 --> 00:06:24,480
+El siguiente paso es ejecutar un cdigo asncrono que realmente nos autentique y, como
+
+71
+00:06:24,480 --> 00:06:26,550
+dije, haremos esto usando firebase.
+

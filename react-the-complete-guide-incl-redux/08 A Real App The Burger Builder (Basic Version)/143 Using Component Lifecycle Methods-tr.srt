@@ -1,0 +1,104 @@
+1
+00:00:02,300 --> 00:00:08,360
+Son dersimizde, herhangi bir bileen gncellemediinden emin olmak iin
+
+2
+00:00:08,420 --> 00:00:14,050
+gereksiz yere gmlek bileen gncellemeleri ekleyerek uygulamanz biraz gelitirdik.
+
+3
+00:00:14,060 --> 00:00:21,620
+imdi, bileen gibi yaam dngs yntemleri hakknda ne mount veya component update yaptnz ve
+
+4
+00:00:21,620 --> 00:00:22,430
+bunlar yaptnz.
+
+5
+00:00:22,430 --> 00:00:24,010
+Neden bunlardan hibirini kullanmiyoruz.
+
+6
+00:00:24,050 --> 00:00:25,910
+Onlar ne zaman kullanrdk.
+
+7
+00:00:25,910 --> 00:00:33,230
+Aslnda, son koro modlndeki slaytlarda grdnz gibi HTP'yi ekledikten sonra bir ksmnn
+
+8
+00:00:33,230 --> 00:00:34,640
+kullanldn greceksiniz.
+
+9
+00:00:34,640 --> 00:00:39,710
+Taklan bileen ve bileen gncelleme mr kancalar, yan etkilere neden olmak iin
+
+10
+00:00:39,710 --> 00:00:40,830
+son derece nemlidir.
+
+11
+00:00:40,940 --> 00:00:46,130
+Tuhaf geliyor, ama yine de sadece bir web hizmetine ulap oradan veri
+
+12
+00:00:46,130 --> 00:00:47,610
+getirmek gibi eyler oluyor.
+
+13
+00:00:47,630 --> 00:00:52,370
+imdi bunu henz yapmyoruz ve uygulama bileenlerimizde yapmamz gereken fazla
+
+14
+00:00:52,370 --> 00:00:53,230
+balatma deil.
+
+15
+00:00:53,270 --> 00:00:59,720
+Bu yzden Yaam dngsne ihtiyacmz yok, Will gncellemesi gibi dier sahtekarlara kanca taklyor ve bylece
+
+16
+00:00:59,720 --> 00:01:01,620
+burada oturum amamak dnda kullanmyoruz.
+
+17
+00:01:01,820 --> 00:01:05,110
+Genellikle sk sk Steese kullanmazsnz.
+
+18
+00:01:05,240 --> 00:01:12,120
+Dardan aldnz baz aksesuarlara dayal olarak bileen durumunuzu ayarlamanz gereken baz
+
+19
+00:01:12,120 --> 00:01:13,170
+durumlar olabilir.
+
+20
+00:01:13,460 --> 00:01:19,940
+Ve kesinlikle daha byk tekrar eylemler uygulamalarnda ortaya kabilir ancak ayn zamanda bileen belki
+
+21
+00:01:19,940 --> 00:01:26,830
+gncelleme haricinde l saysz yaam dngs kancalar kullanmadnz tekrar eyleme sahip uygulamalar iin nadir deildir.
+
+22
+00:01:26,870 --> 00:01:30,520
+Bu yzden bunlarn ounun kullanlmakta olduunu grmyorsunuzdur.
+
+23
+00:01:30,530 --> 00:01:32,780
+HTP eriimi ekledikten sonra daha fazla olacaktr.
+
+24
+00:01:32,780 --> 00:01:37,220
+Bahsettiim gibi ancak u an iin uygulama bu ekilde iliyor ve grnyor.
+
+25
+00:01:37,220 --> 00:01:43,680
+Reaktantn ok sayda zelliklerini en iyi uygulamalar gsteren ok iyi bir uygulamadr.
+
+26
+00:01:43,910 --> 00:01:47,070
+O halde imdi onu bir sonraki derste zetleyelim.
+

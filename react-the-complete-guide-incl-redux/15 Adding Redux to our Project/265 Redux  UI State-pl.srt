@@ -1,0 +1,200 @@
+1
+00:00:02,180 --> 00:00:08,810
+W naszej aplikacji moemy zaktualizowa cen, co jest w porzdku, moemy podnie skadniki, ale teraz zamwienie, ale
+
+2
+00:00:08,810 --> 00:00:10,160
+nigdy nie zostanie odblokowane.
+
+3
+00:00:11,000 --> 00:00:18,420
+Powodem tego jest to, e waciwo okrelajca, czy jest ona odblokowana, czy nie, jest waciwoci do
+
+4
+00:00:18,440 --> 00:00:21,700
+kupna, w ktrej ustawiono wbudowane elementy sterujce.
+
+5
+00:00:21,980 --> 00:00:25,120
+Moemy to sprawdzi, po prostu zanurzajc si w obu kontrolkach.
+
+6
+00:00:25,150 --> 00:00:27,730
+Tam widzimy, e przycisk jest wyczony.
+
+7
+00:00:27,830 --> 00:00:31,310
+Jeli props do zakupu jest faszywy.
+
+8
+00:00:31,580 --> 00:00:37,750
+Musimy wic zaktualizowa kupowalny propp, gdy tylko ulegn zmianie nasze skadniki.
+
+9
+00:00:38,690 --> 00:00:45,990
+W Bergere Boulder do tej pory udao nam si kupi w stanie.
+
+10
+00:00:46,040 --> 00:00:47,710
+Teraz moemy go std usun.
+
+11
+00:00:47,720 --> 00:00:54,200
+Nie chc ju tu zarzdza i dlatego te mog przenie aktualizacj wedug metody
+
+12
+00:00:54,740 --> 00:00:55,520
+pastwa Che.
+
+13
+00:00:55,520 --> 00:01:00,890
+Na razie chc zostawi to tutaj, poniewa mamy tak fajn logik, aby okreli, kiedy to zaktualizowa.
+
+14
+00:01:00,890 --> 00:01:03,910
+Tutaj mamy dwie opcje.
+
+15
+00:01:03,950 --> 00:01:11,760
+Moemy opuci metod i po prostu doda tylko odrobin, aby powrci do wyniku naszego sprawdzenia
+
+16
+00:01:11,760 --> 00:01:12,550
+boolowskiego tutaj.
+
+17
+00:01:13,250 --> 00:01:21,850
+Tak wic niektre wiksze s rwne 0 i nadal obliczamy tutaj sum skadnikw, ktre przechodzimy, aby zaktualizowa
+
+18
+00:01:21,860 --> 00:01:23,540
+stan na chase.
+
+19
+00:01:23,540 --> 00:01:26,410
+Moglibymy wtedy przej do naszej metody Rednera.
+
+20
+00:01:27,170 --> 00:01:34,640
+I tam, gdzie mijalimy do kupienia, po prostu nie moglimy dotrze do St. dobra do kupienia, poniewa ju
+
+21
+00:01:34,640 --> 00:01:36,370
+tego nie mamy.
+
+22
+00:01:36,680 --> 00:01:46,200
+Ale dla naszej aplikacji metoda "per chase", ktra teraz po prostu zwraca TRUE lub FALSE, Edward przekrci
+
+23
+00:01:46,200 --> 00:01:47,860
+wynik tej funkcji.
+
+24
+00:01:47,970 --> 00:01:51,340
+Tak wic moglibymy to nazwa stanem Paperchase.
+
+25
+00:01:51,360 --> 00:01:56,570
+Tutaj musimy to wykona, poniewa chcemy wykona to, gdy kiedykolwiek zostanie
+
+26
+00:01:56,580 --> 00:02:02,510
+wyrenderowany, aby pobra zaktualizowany wynik i musimy teraz przekaza nasze skadniki jako argument.
+
+27
+00:02:02,640 --> 00:02:05,840
+Moemy po prostu przekaza to elazo podpory.
+
+28
+00:02:06,180 --> 00:02:13,590
+Alternatywnie oczywicie moglibymy rwnie pobra nasze skadniki bezporednio z tej nieruchomoci i zaktualizowa stan pre-Chase,
+
+29
+00:02:13,590 --> 00:02:18,330
+nie spodziewajc si ktni, ale uzyskujc dostp do tych rekwizytw.
+
+30
+00:02:18,450 --> 00:02:24,070
+Ona jest tutaj w tej samej klasie, po tym wszystkim, co robimy i wszystko ratujemy.
+
+31
+00:02:24,090 --> 00:02:32,550
+Teraz zobaczysz, e przycisk wcza si i wycza ponownie, poniewa teraz stale otrzymujemy informacje tam, gdzie moliwe do
+
+32
+00:02:32,580 --> 00:02:34,720
+kupienia s prawdziwe lub faszywe.
+
+33
+00:02:34,770 --> 00:02:38,160
+Dla tej metody jest to jeden ze sposobw robienia tego.
+
+34
+00:02:38,170 --> 00:02:42,870
+To absolutnie w porzdku, poniewa moesz uzna to za stan lokalnego interfejsu uytkownika.
+
+35
+00:02:42,900 --> 00:02:48,390
+Mona oczywicie powiedzie "nie", to jest co, co chc zarzdza w moim stanie Rydex.
+
+36
+00:02:48,390 --> 00:02:55,020
+I zawsze masz takie przypadki i czsto nie ma wyranego, waciwego lub niewaciwego uycia, ktre wydaje Ci si
+
+37
+00:02:55,110 --> 00:02:58,890
+atwiejsze, co sprawia, e twoja aplikacja jest dla ciebie lepsza.
+
+38
+00:02:59,130 --> 00:03:07,470
+Wic moesz oczywicie rwnie zarzdza pastwem, w ktrym moesz kupi produkt, dodajc
+
+39
+00:03:07,470 --> 00:03:14,730
+co, co mona kupi, a nastpnie zaktualizowa, gdy skadniki si zmieni.
+
+40
+00:03:14,740 --> 00:03:20,000
+Teraz pozostan przy podejciu, ktre wanie pokazaem, stosujc metod aktualizacji stanu na chase w burg
+
+41
+00:03:20,000 --> 00:03:23,400
+w Boulder i wywoujc j z naszej metody kapitulacji Juliasa.
+
+42
+00:03:23,650 --> 00:03:27,820
+Ale chciaem zwrci nasz uwag, e moesz uy obu.
+
+43
+00:03:27,820 --> 00:03:35,170
+Mimo to robimy duo na temat naszych skadnikw i widzimy, e nasz stan bardzo si skurczy.
+
+44
+00:03:35,170 --> 00:03:38,320
+Teraz kupujemy tylko adowanie bdu.
+
+45
+00:03:38,320 --> 00:03:45,730
+I jak wspomniaem na pocztku tego moduu, s to wszystkie stany, w ktrych waciwo stanu
+
+46
+00:03:45,730 --> 00:03:52,700
+jest raczej ni dla naszego stanu oczu tylko wtedy, gdy wywietlimy modalny komunikat bdu.
+
+47
+00:03:52,720 --> 00:03:56,890
+Nic, co koniecznie musimy zarzdza w naszym globalnym sklepie czytelniczym.
+
+48
+00:03:56,890 --> 00:03:59,080
+Dlatego zostawiam ich tutaj.
+
+49
+00:03:59,290 --> 00:04:02,440
+Mog wspistnie z Rydex.
+
+50
+00:04:02,440 --> 00:04:05,950
+Moesz umieci wszystko w czytaniu X, ale nie musisz tego robi.
+

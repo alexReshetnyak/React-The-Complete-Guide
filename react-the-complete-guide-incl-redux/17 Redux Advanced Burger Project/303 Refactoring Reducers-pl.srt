@@ -1,0 +1,408 @@
+1
+00:00:02,200 --> 00:00:09,040
+Wic w ostatnim module pokazaem ci kilka sposobw refaktoryzacji twoich reduktorw i wzmiank, e te sposoby lub
+
+2
+00:00:09,040 --> 00:00:15,280
+te metody s opcjonalne i nadal chc je tu wykorzysta, aby oczyci ten reduktor i
+
+3
+00:00:15,280 --> 00:00:19,140
+zrobi z niego instrukcj case case cleaner powinienem powiedzie.
+
+4
+00:00:19,420 --> 00:00:25,780
+Na przykad dodam metod wygodnego aktualizowania obiektu, ktra sprawia, e aktualizowanie obiektw odbywa si tak jak w
+
+5
+00:00:25,780 --> 00:00:30,130
+przypadku caego stanu, ale wtedy wszystkie skadniki Optik na przykad s atwiejsze.
+
+6
+00:00:30,610 --> 00:00:39,030
+W tym celu dodajmy szybko now funkcj, a dodam j do narzdzia folderu dord genius, ktre nie jest napisane w
+
+7
+00:00:39,040 --> 00:00:39,990
+ten sposb.
+
+8
+00:00:40,120 --> 00:00:41,320
+To jest poprawne.
+
+9
+00:00:41,350 --> 00:00:46,870
+A gdy s eksportowane, nowa staa, ktr nazw obiekt aktualizacji.
+
+10
+00:00:46,870 --> 00:00:48,520
+Tak wic funkcja strzaki.
+
+11
+00:00:49,210 --> 00:00:58,160
+I w tej funkcji oczekuj, e otrzymam mj stary obiekt i zaktualizowane waciwoci lub cokolwiek innego,
+
+12
+00:00:58,160 --> 00:01:00,920
+co chcesz nazwa nowymi waciwociami.
+
+13
+00:01:01,040 --> 00:01:05,270
+A potem jest ta sama funkcja, ktr napisaem w ostatnich moduach.
+
+14
+00:01:05,510 --> 00:01:08,530
+Po prostu zwrc nowy obiekt javascript.
+
+15
+00:01:08,540 --> 00:01:10,220
+Taki jest cay pomys.
+
+16
+00:01:10,250 --> 00:01:17,480
+Nowy obiekt dystrybuuje waciwoci starego obiektu, a nastpnie dystrybuuje waciwoci
+
+17
+00:01:17,540 --> 00:01:22,480
+zaktualizowanych waciwoci, ktre powinny by obiektem.
+
+18
+00:01:22,560 --> 00:01:26,030
+Teraz mog uy tej funkcji obiektu aktualizacji w moich reduktorach.
+
+19
+00:01:26,220 --> 00:01:35,970
+Tak wic zaimportuj go w gwnym obiekcie aktualizacji importu o nazwie export i potrzebujemy nawiasw
+
+20
+00:01:36,540 --> 00:01:39,490
+klamrowych od przesuwania pliku narzdzia.
+
+21
+00:01:39,490 --> 00:01:45,170
+A teraz mog wywoa obiekt aktualizacji za kadym razem, gdy mam taki kod, w ktrym rozprowadzam niektre rekwizyty.
+
+22
+00:01:45,540 --> 00:01:54,090
+Tak wic w tym przypadku tutaj bd mia moje zaktualizowane skadniki, ktre bd teraz wezwaniem do aktualizacji
+
+23
+00:01:54,600 --> 00:01:58,260
+obiektu, w ktrym przechodz stare skadniki Sodhi.
+
+24
+00:01:58,260 --> 00:02:05,590
+Wic teraz replikuj t cz i gdzie przekazuj moje nowe skadniki tej czci.
+
+25
+00:02:05,640 --> 00:02:11,880
+Wic wszyscy tworzysz moj now koncepcj tylko po to, aby podzieli j na wiele linii i nie ustawi
+
+26
+00:02:11,880 --> 00:02:13,470
+tego wszystkiego w jednym wyraeniu.
+
+27
+00:02:13,500 --> 00:02:17,830
+Wic tutaj bd mia mj zaktualizowany skadnik.
+
+28
+00:02:18,450 --> 00:02:25,140
+Powinien to by obiekt Java, w ktrym mam tylko martw par kluczy, poda nazw dynamiczn skadnika,
+
+29
+00:02:25,410 --> 00:02:31,950
+a nastpnie zaktualizowan warto, ktra jest inkrementowana, a nastpnie caa przeszo jest aktualizowana jako drugi argument
+
+30
+00:02:31,980 --> 00:02:33,450
+dla obiektu Apptd.
+
+31
+00:02:33,510 --> 00:02:38,880
+I to musi by obiekt zaktualizowany skadnik musi by obiektem, poniewa tego
+
+32
+00:02:38,880 --> 00:02:39,990
+oczekuje funkcja uytecznoci.
+
+33
+00:02:40,050 --> 00:02:42,720
+W przeciwnym razie nie bdzie dziaa zgodnie z oczekiwaniami.
+
+34
+00:02:42,720 --> 00:02:45,820
+Tak wic mam zaktualizowane skadniki.
+
+35
+00:02:45,890 --> 00:02:48,540
+To wanie teraz przypisuj skadnikom.
+
+36
+00:02:48,990 --> 00:02:53,420
+Ale oczywicie cay pomys polega na tym, e zawsze zastpuj t cz.
+
+37
+00:02:53,610 --> 00:02:58,500
+Tak wic wszyscy tworz now tre, ktra bdzie nazywa zaktualizowany stan.
+
+38
+00:02:58,500 --> 00:03:07,060
+Moe to powinien by obiekt javascript, w ktrym mam teraz moje skadniki i tak cen.
+
+39
+00:03:07,350 --> 00:03:15,900
+I na koniec tutaj mog zatem wywoa ten obiekt aktualizacji i przekaza stary stan, ktry jest Optikiem, ktry
+
+40
+00:03:15,920 --> 00:03:20,360
+chc zaktualizowa Chc tu wrci i przekaza zaktualizowany stan.
+
+41
+00:03:20,360 --> 00:03:25,340
+Wic wci wiele linii jest nieco bardziej uporzdkowanych i uywa tej funkcji uytecznoci.
+
+42
+00:03:25,430 --> 00:03:27,610
+I chciaem tylko pokaza, jak to wdroy.
+
+43
+00:03:27,740 --> 00:03:33,480
+Moglibymy wycisn to wszystko w jedn lini, ale byoby troch trudniej nady.
+
+44
+00:03:33,510 --> 00:03:35,660
+Dlatego napisaem to w wielu linijkach.
+
+45
+00:03:36,020 --> 00:03:41,630
+Teraz skopiuj cay ten kod, poniewa po usuniciu skadnika jest to w zasadzie ta
+
+46
+00:03:41,900 --> 00:03:48,110
+sama historia, ale oczywicie rnica polega na tym, e musimy zmniejszy nasz skadnik o jeden.
+
+47
+00:03:48,440 --> 00:03:56,000
+I chocia jest to w instrukcji switch case, to podoba mi si fakt, e ponownie przypisuj sta, nie
+
+48
+00:03:56,360 --> 00:03:59,370
+rozpoznaj, e nie mog osign tego kodu.
+
+49
+00:03:59,480 --> 00:04:03,030
+Wic zrobi tylko zmieni nazwy tych Constans.
+
+50
+00:04:03,050 --> 00:04:08,760
+Nie idealne, ale niestety musi by zrobione zaktualizowane.
+
+51
+00:04:09,170 --> 00:04:16,510
+By moe dlatego, e jest to ponownie konieczne ze wzgldu na fakt, e ID nie odbiera staych staych DS,
+
+52
+00:04:16,550 --> 00:04:18,380
+nigdy nie mona ponownie przypisa.
+
+53
+00:04:18,410 --> 00:04:21,270
+Tak wic wykorzystajmy zaktualizowane skadniki.
+
+54
+00:04:21,290 --> 00:04:30,140
+Oto ta nowa staa, ktr wanie stworzyem i zaktualizowaem tutaj, a nastpnie zaktualizowaem j.
+
+55
+00:04:30,140 --> 00:04:33,690
+Teraz dla zestaww skadnikw jest tam nieco atwiej.
+
+56
+00:04:33,710 --> 00:04:39,750
+Chc rwnie zwrci wywoanie, aby zaktualizowa obiekt do funkcji, ktr importujemy.
+
+57
+00:04:39,750 --> 00:04:45,810
+Przeszedem oczywicie, a drugim argumentem powinien by obiekt javascript, w ktrym teraz po prostu kopiuj cay
+
+58
+00:04:45,810 --> 00:04:49,040
+kod, ktry poprzednio rwnie przekazaem do tego nowego obiektu.
+
+59
+00:04:49,270 --> 00:04:56,600
+Teraz uywam tutaj mojej funkcji uytecznoci, aby zaktualizowa stan i oczywicie tutaj na dole,
+
+60
+00:04:56,600 --> 00:04:58,220
+aby znale bd.
+
+61
+00:04:58,230 --> 00:05:06,500
+Chc rwnie wywoa stan aktualizacji, takich jak ten obiekt aktualizacji mam na myli.
+
+62
+00:05:06,550 --> 00:05:07,940
+Tak jak zawsze zaktualizuj.
+
+63
+00:05:07,960 --> 00:05:16,380
+Gwat na obiekcie musi okrela, a nastpnie Optik, gdzie wspomniany bd lub jest zbyt prawdziwy.
+
+64
+00:05:16,490 --> 00:05:22,750
+Wic ten skadnik, ktrego uywamy, jest aktualizowany nasz funkcj uytecznoci.
+
+65
+00:05:22,760 --> 00:05:25,790
+Zrbmy to samo dla tego reduktora zamwienia.
+
+66
+00:05:25,790 --> 00:05:36,020
+Istnieje rwnie import jako wymieniony obiekt aktualizacji eksportu z narzdzia, dla ktrego moemy znale jeden poziom powyej wszystkich folderw reduktorw
+
+67
+00:05:36,020 --> 00:05:40,000
+i nie ma opcji aktualizacji optycznej do uycia.
+
+68
+00:05:40,010 --> 00:05:46,150
+Tak wic obiekt aktualizacji przekazany do stanu i przekazanie obiektu javascript by cigany jest ustawiony na false.
+
+69
+00:05:46,220 --> 00:05:50,250
+Moesz usun ten kod, a nastpnie to samo tutaj.
+
+70
+00:05:50,600 --> 00:05:58,290
+Zaktualizuj przekazanie obiektu, aby przywrci stan przywracania obiektu do wartoci faszywej.
+
+71
+00:05:58,340 --> 00:05:59,390
+Usu ten kod.
+
+72
+00:06:00,220 --> 00:06:05,840
+A take, gdy otrzymujemy przypadek sukcesu, my oczywicie wszyscy chcemy zaktualizowa obiekt.
+
+73
+00:06:05,860 --> 00:06:17,850
+Tak wic tutaj zaktualizuj obiekt tu po stanie oczywicie, a nastpnie wszystkie te rzeczy tutaj jako waciwoci obiektu javascript
+
+74
+00:06:17,880 --> 00:06:21,430
+mog pozby si kodu po nim.
+
+75
+00:06:21,660 --> 00:06:23,880
+I oczywicie aktualizujemy numer Optik tutaj.
+
+76
+00:06:23,910 --> 00:06:25,150
+Nowe zamwienie.
+
+77
+00:06:25,170 --> 00:06:28,260
+Tam te aktualizujemy obiekt.
+
+78
+00:06:28,260 --> 00:06:32,720
+Dostajemy D. S. uporzdkuj dane tutaj jako obiekt.
+
+79
+00:06:32,760 --> 00:06:43,110
+I chc przekaza mu now waciwo id, ktra powinna by identyfikatorem zlecenia akcji i tym si nie
+
+80
+00:06:43,110 --> 00:06:45,200
+mog pozby tutaj.
+
+81
+00:06:45,450 --> 00:06:48,970
+Wic teraz mamy to za pomoc naszej aplikacji, ktra rwnie jest funkcj optyczn.
+
+82
+00:06:49,350 --> 00:06:51,090
+I zbliamy si do koca.
+
+83
+00:06:51,090 --> 00:06:57,870
+Zrbmy to rwnie w przypadku zakupu Forgan Berger FAIL FAIL do stanu tutaj adujcego zbiory do false.
+
+84
+00:06:58,020 --> 00:07:07,640
+Dlatego te uywaj funkcji aktualizacji Optik lub szybko j zduplikuj, aby rozpocz pobieranie z wyjtkiem
+
+85
+00:07:07,910 --> 00:07:09,450
+dzisiejszych dni.
+
+86
+00:07:09,730 --> 00:07:17,500
+Jak widzisz, chc ustawi adowanie na warto true, a dla pomylnego wykonania zamwienia wywoaj, e obiekt rwnie zostanie
+
+87
+00:07:17,510 --> 00:07:24,950
+przekazany do stanu, a nastpnie wszystkie bd miay zamwienia i adowanie ustawione na warto false jako waciwoci, ktre
+
+88
+00:07:25,250 --> 00:07:28,600
+kiedy przekazaem jako obiekt javascript, taki jak e.
+
+89
+00:07:29,620 --> 00:07:33,650
+A teraz ostatni obiekt aktualizacji wywoywany tam w celu pobrania zamwie koczy si niepowodzeniem.
+
+90
+00:07:33,740 --> 00:07:40,720
+Okropne podanie istniejcego stanu, ktry ma zosta zaktualizowany, a wszystkie partykularyzacje adoway si do wartoci false.
+
+91
+00:07:40,730 --> 00:07:43,120
+Znowu wszystko to jest opcjonalne.
+
+92
+00:07:43,360 --> 00:07:45,820
+Ale zmniejsza to funkcj uytecznoci.
+
+93
+00:07:45,820 --> 00:07:50,200
+A jeli kiedykolwiek zmienisz logik, ktrej uywasz do aktualizacji obiektu, musisz to zrobi
+
+94
+00:07:50,200 --> 00:07:51,400
+tylko w jednym miejscu.
+
+95
+00:07:51,430 --> 00:07:56,380
+Teraz zobaczmy szybko, czy to wszystko dziaa adowanie dziaa.
+
+96
+00:07:56,380 --> 00:07:58,570
+Zarzdzanie hamburgerem wydaje si dziaa.
+
+97
+00:07:58,570 --> 00:08:01,450
+Myl, e to wszystko jest dobre.
+
+98
+00:08:01,660 --> 00:08:04,300
+Szybko przejdmy do strony kasy.
+
+99
+00:08:04,300 --> 00:08:05,560
+Wic to dobrze wyglda.
+
+100
+00:08:05,560 --> 00:08:06,520
+Wydaje si dziaa.
+
+101
+00:08:06,550 --> 00:08:07,510
+Co jeszcze moemy zrobi.
+
+102
+00:08:07,520 --> 00:08:09,120
+Spjrzmy na nastpny wykad.
+

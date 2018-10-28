@@ -1,0 +1,464 @@
+1
+00:00:02,240 --> 00:00:06,970
+In the last lecture we made sure that our navigation items and the logo and everything looks good on
+
+2
+00:00:06,970 --> 00:00:10,010
+both desktop and mobile devices,
+
+3
+00:00:10,030 --> 00:00:10,890
+that's cool.
+
+4
+00:00:11,140 --> 00:00:15,480
+Let's make sure we all have a backdrop behind the sidebar
+
+5
+00:00:15,640 --> 00:00:19,830
+and I also of course want to ensure that we can open and close it dynamically.
+
+6
+00:00:19,840 --> 00:00:26,440
+Let's start with the backdrop, the backdrop should be behind to sideDrawer and we already have a backdrop
+
+7
+00:00:26,440 --> 00:00:29,190
+component in the UI folder
+
+8
+00:00:29,230 --> 00:00:32,480
+but how do we best add it to the sideDrawer?
+
+9
+00:00:33,040 --> 00:00:40,560
+Well just as I added it to the modal, I included it in the modal component, I want to include it in the
+
+10
+00:00:40,560 --> 00:00:44,360
+sideDrawer component too because it belongs to the sideDrawer.
+
+11
+00:00:44,410 --> 00:00:54,720
+So for that, I will import the backdrop in my sideDrawer component file, so import backdrop from
+
+12
+00:00:54,810 --> 00:01:01,420
+and now let's go up 2 levels, then into the UI folder, into the backdrop folder and import it from the
+
+13
+00:01:01,420 --> 00:01:03,480
+backdrop.js file
+
+14
+00:01:03,790 --> 00:01:07,490
+and let's add backdrop here in the sideDrawer.
+
+15
+00:01:07,510 --> 00:01:15,130
+Now you got this wrapping element with the which basically styles my sideDrawer and the modal should
+
+16
+00:01:15,130 --> 00:01:20,470
+sit outside of it otherwise it would be contained inside the sideDrawer and that's of course exactly
+
+17
+00:01:20,470 --> 00:01:22,900
+not what I want. Outside of it,
+
+18
+00:01:22,900 --> 00:01:29,400
+use the problem that we have adjacent jsx elements but we can simply import our auxiliary component
+
+19
+00:01:29,710 --> 00:01:31,730
+to still be able to do that.
+
+20
+00:01:31,960 --> 00:01:38,700
+So let's navigate all the way up to the hoc folder and import the auxiliary component from the aux.js
+
+21
+00:01:38,700 --> 00:01:39,700
+file,
+
+22
+00:01:40,060 --> 00:01:48,760
+now I will simply add the axillary component as a wrapper around this component and it should now work
+
+23
+00:01:49,760 --> 00:01:51,260
+and modal of course is wrong,
+
+24
+00:01:51,260 --> 00:01:52,550
+this is backdrop here.
+
+25
+00:01:53,670 --> 00:01:59,610
+So now that we get a backdrop as part of the sideDrawer too, if we reload the application
+
+26
+00:01:59,610 --> 00:02:02,400
+we don't see that though. Where is the backdrop?
+
+27
+00:02:02,850 --> 00:02:08,820
+Well if you inspect the backdrop, you of course realize it has this show property which needs to be true
+
+28
+00:02:08,820 --> 00:02:10,570
+to actually display it.
+
+29
+00:02:10,590 --> 00:02:16,230
+So of course we can simply set show like this and since it is a boolean property, we don't need to assign
+
+30
+00:02:16,230 --> 00:02:22,210
+a value. Just by adding it, it will be set to true, if it's not present like before, it will be set to false.
+
+31
+00:02:22,230 --> 00:02:24,810
+So now we get the backdrop, looks nice.
+
+32
+00:02:24,960 --> 00:02:31,360
+Of course this should not always be visible though, the sideDrawer should only be shown sometimes
+
+33
+00:02:31,410 --> 00:02:35,310
+once you click the menu button essentially and it should also be closed
+
+34
+00:02:35,310 --> 00:02:37,380
+once you click the backdrop.
+
+35
+00:02:37,730 --> 00:02:41,140
+So for that, we need to register a click listener on the backdrop
+
+36
+00:02:41,460 --> 00:02:44,020
+and actually we already have one.
+
+37
+00:02:44,160 --> 00:02:49,880
+We have that click listener, clicked, which can fire any method we want to fire,
+
+38
+00:02:50,000 --> 00:02:55,980
+so the goal is to now be able to handle this method in the sideDrawer.
+
+39
+00:02:56,180 --> 00:03:06,380
+Now in the modal we simply propagate it, this click up so up to our holding container. Here in the
+
+40
+00:03:06,390 --> 00:03:07,050
+sideDrawer,
+
+41
+00:03:07,220 --> 00:03:14,900
+I also want to do this. We could also have turned the sideDrawer into a stateful component and handle the
+
+42
+00:03:14,900 --> 00:03:19,030
+click in here with a method and with a state which we switch from show
+
+43
+00:03:19,160 --> 00:03:25,680
+so from true to false and so on and there would be nothing wrong with that but we will also trigger
+
+44
+00:03:25,680 --> 00:03:30,820
+the sideDrawer from the toolbar at the end because there we'll have this menu button.
+
+45
+00:03:31,070 --> 00:03:36,500
+So in the end we also need to create a connection from toolbar to sideDrawer and we have that connection
+
+46
+00:03:36,500 --> 00:03:37,390
+already,
+
+47
+00:03:37,460 --> 00:03:38,910
+it's the layout component,
+
+48
+00:03:39,160 --> 00:03:40,980
+this is where we use both.
+
+49
+00:03:41,000 --> 00:03:46,700
+So in my opinion, it makes more sense to turn the layout component into a class component where we can
+
+50
+00:03:46,730 --> 00:03:53,800
+implement the method so that we can listen to both the sideDrawer closing itself by clicking on the backdrop
+
+51
+00:03:54,200 --> 00:03:59,130
+as well as toolbar opening the sideDrawer by clicking on that toggle button.
+
+52
+00:03:59,210 --> 00:04:01,400
+So therefore this is the next step,
+
+53
+00:04:01,610 --> 00:04:09,950
+I'll turn my layout here into a class, class Layout and it should extend a component therefore so import
+
+54
+00:04:10,430 --> 00:04:16,760
+component from react and here simply extended with the extends keyword.
+
+55
+00:04:16,760 --> 00:04:20,650
+Now inside that layout class, we needs to render method as you learned
+
+56
+00:04:20,750 --> 00:04:24,620
+and then we should return some jsx and we get the jsx here.
+
+57
+00:04:24,620 --> 00:04:27,480
+So let's simply cut it and enter it here,
+
+58
+00:04:27,500 --> 00:04:32,540
+remove that stuff down there and props can now be accessed with this.props as you learned,
+
+59
+00:04:32,630 --> 00:04:36,250
+that's the case for all class based components.
+
+60
+00:04:36,290 --> 00:04:40,130
+Now the name change to Layout with a capital L due to the naming convention
+
+61
+00:04:40,250 --> 00:04:43,200
+so let's also adjust the export down there.
+
+62
+00:04:43,310 --> 00:04:46,810
+Now with that we got our Layout component changed,
+
+63
+00:04:46,810 --> 00:04:48,210
+it's now a class.
+
+64
+00:04:48,230 --> 00:04:57,790
+Now we can implement a method here and I will call this method sideDrawerClosedHandler,
+
+65
+00:04:57,790 --> 00:04:59,690
+you could of course take any name you want.
+
+66
+00:05:00,010 --> 00:05:07,720
+I'll use this syntax where I assign an ES6 arrow function to a property so that the this keyword
+
+67
+00:05:07,960 --> 00:05:11,950
+inside this method will refer to the class at all times.
+
+68
+00:05:12,220 --> 00:05:18,160
+And we also need to manage some state in here, state which I'll set up here should essentially contain
+
+69
+00:05:18,160 --> 00:05:18,860
+information
+
+70
+00:05:18,890 --> 00:05:22,440
+if the sideDrawer is visible or not. So here I'll set up
+
+71
+00:05:22,440 --> 00:05:27,020
+showSideDrawer and set this to false initially maybe.
+
+72
+00:05:27,090 --> 00:05:30,070
+Now let's set it to true for testing so that we can see it
+
+73
+00:05:30,520 --> 00:05:32,380
+and in sideDrawerClosedHandler
+
+74
+00:05:32,410 --> 00:05:39,300
+I'll call this.setState and set showSideDrawer to false of course, like this.
+
+75
+00:05:39,310 --> 00:05:48,820
+So now I need to pass this event handler method here to my sideDrawer and I'll name it closed. There
+
+76
+00:05:48,850 --> 00:05:52,680
+we want to execute this sideDrawerClosedHandler,
+
+77
+00:05:52,690 --> 00:05:58,840
+so now we have to use that closed property in the sideDrawer and there I'll use it to simply pass it onto
+
+78
+00:05:58,840 --> 00:06:06,360
+the backdrop where I have this clicked property which will simply pass me the onClick event basically.
+
+79
+00:06:06,490 --> 00:06:10,420
+So there I want to pass on props.closed,
+
+80
+00:06:10,470 --> 00:06:16,060
+so simply setting up this chain where I pass down the method reference to the place where I handle the
+
+81
+00:06:16,060 --> 00:06:17,990
+click in the end.
+
+82
+00:06:18,000 --> 00:06:22,140
+So with that, show of course should also be bound dynamically,
+
+83
+00:06:22,140 --> 00:06:30,520
+show should be bound to whatever you want to name it, lets say props.show what makes sense
+
+84
+00:06:30,550 --> 00:06:32,620
+but to not confuse it with this.show,
+
+85
+00:06:32,740 --> 00:06:34,640
+let's name it open.
+
+86
+00:06:34,960 --> 00:06:38,530
+So this open property then needs to be set on the sideDrawer,
+
+87
+00:06:38,680 --> 00:06:46,030
+so back to the toolbar, we need to pass, excuse me, back to the Layout, we need to pass the open property to the
+
+88
+00:06:46,040 --> 00:06:47,040
+sideDrawer to now
+
+89
+00:06:47,260 --> 00:06:53,560
+and that should be this.state.showSideDrawer because this will hold the information whether the
+
+90
+00:06:53,560 --> 00:06:56,230
+sideDrawer should be opened or not.
+
+91
+00:06:56,230 --> 00:07:01,940
+With these additions, if we now save all the files and we go back, we should still have the backdrop
+
+92
+00:07:01,960 --> 00:07:05,650
+but if we click it, it should dismiss the backdrop,
+
+93
+00:07:05,650 --> 00:07:10,900
+it doesn't dismiss the sideDrawer yet because we haven't added any logic to do so.
+
+94
+00:07:11,500 --> 00:07:19,270
+Let's add this logic now and in this sideDrawer, remember that I added this open and close css class
+
+95
+00:07:19,510 --> 00:07:21,560
+in the sideDrawer css file.
+
+96
+00:07:21,730 --> 00:07:26,980
+I want to attach these classes conditionally because they will basically move the sideDrawer out of the
+
+97
+00:07:26,980 --> 00:07:32,730
+page or into it and they will play an animation with it due to that transition property here.
+
+98
+00:07:33,190 --> 00:07:38,570
+So therefore we need to conditionally attached the open or close css classes
+
+99
+00:07:38,800 --> 00:07:43,750
+and then the sideDrawer component, that is the part I want to do before I return code here,
+
+100
+00:07:43,780 --> 00:07:51,540
+before I return jsx. I want to create a constant which I'll name attachedClasses and there, that should
+
+101
+00:07:51,630 --> 00:07:55,160
+always contain my sideDrawer class
+
+102
+00:07:55,350 --> 00:07:59,240
+but the next element in this array by default could be the closed class,
+
+103
+00:07:59,400 --> 00:08:02,050
+so Classes.close,
+
+104
+00:08:02,160 --> 00:08:06,100
+that's of course referring to that close css class
+
+105
+00:08:06,240 --> 00:08:11,540
+Now the open class should be added when open, that property is true.
+
+106
+00:08:12,440 --> 00:08:15,660
+So I will then check if props.open,
+
+107
+00:08:15,830 --> 00:08:22,490
+if this is true, the attachedClasses should actually not have to Close class but the Open Class
+
+108
+00:08:22,750 --> 00:08:25,370
+so that return this from a constant to a variable
+
+109
+00:08:25,520 --> 00:08:33,620
+so they can reset it here. attachedClasses should now be an array where I do have my sideDrawer but where I
+
+110
+00:08:33,680 --> 00:08:40,280
+also have my open class and now I can use the down here where I assign a class name.
+
+111
+00:08:40,430 --> 00:08:45,150
+I won't assign classes sideDrawer, I will assign my attachedClasses instead
+
+112
+00:08:45,350 --> 00:08:50,450
+and since we can't pass an array of strings here but should pass a single string, I'll join that string
+
+113
+00:08:50,450 --> 00:08:53,890
+into a single string with whitespaces in between the items,
+
+114
+00:08:53,900 --> 00:09:01,130
+so in between my css classes. Now with that, we should have a drawer which actually can disappear as soon
+
+115
+00:09:01,130 --> 00:09:03,870
+as we click the backdrop and it does.
+
+116
+00:09:04,130 --> 00:09:09,260
+Next step is to create this toggle button here to also move it in once we click that button.
+

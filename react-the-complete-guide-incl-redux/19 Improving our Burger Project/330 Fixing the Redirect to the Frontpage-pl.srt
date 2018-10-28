@@ -1,0 +1,288 @@
+1
+00:00:02,210 --> 00:00:03,980
+Oto nasza aplikacja
+
+2
+00:00:04,040 --> 00:00:06,100
+i oglnie dziaa dobrze.
+
+3
+00:00:06,110 --> 00:00:09,690
+Teraz mamy may problem, gdy skadamy
+
+4
+00:00:09,920 --> 00:00:17,240
+nowe zamwienie, jeli przejrzysz swj plik reduktora zamwie, zobaczysz to przy zakupieBurgerStart, ktry
+
+5
+00:00:17,330 --> 00:00:20,750
+oczywicie jest wysyany po klikniciu zamwienia,
+
+6
+00:00:20,750 --> 00:00:23,200
+kiedy wysyamy zamwienie na
+
+7
+00:00:23,570 --> 00:00:26,330
+serwer, ustawiamy adowanie do faszywego.
+
+8
+00:00:26,330 --> 00:00:33,470
+Teraz to nie ma adnego sensu, poniewa tutaj chcemy ustawi adowanie na warto true i mielimy ustawione
+
+9
+00:00:33,470 --> 00:00:35,440
+na true wczeniej w tym
+
+10
+00:00:35,540 --> 00:00:38,310
+kursie, zawiediem to podczas refaktoryzacji reduktora.
+
+11
+00:00:38,390 --> 00:00:44,270
+To oczywicie powinno by prawd, chcemy pokaza spinner, jeli zastosujemy t funkcjonalno
+
+12
+00:00:44,270 --> 00:00:47,680
+w naszym komponencie, kiedy wysyamy to na
+
+13
+00:00:47,930 --> 00:00:51,160
+serwer, wic jest to pierwsza niewielka poprawa.
+
+14
+00:00:51,190 --> 00:00:53,190
+Teraz jest jeszcze jedna
+
+15
+00:00:53,420 --> 00:00:58,070
+poprawa, jeli mwimy o skadaniu zamwienia, zbudujmy tam burgera.
+
+16
+00:00:58,070 --> 00:01:07,020
+Teraz zaloguj si jako pierwszy, przelij to i przekierowujemy tutaj z powrotem na nasz pierwsz stron.
+
+17
+00:01:07,050 --> 00:01:14,130
+Teraz to nie powinno si zdarzy, naprawiamy to w sekcji uwierzytelniania, e powinnimy zosta
+
+18
+00:01:14,130 --> 00:01:14,970
+przekierowani do
+
+19
+00:01:15,000 --> 00:01:22,800
+kasy i bylimy tam przez uamek sekundy, ale jako postanowilimy przekierowa nas z powrotem na pierwsz
+
+20
+00:01:22,800 --> 00:01:23,600
+stron.
+
+21
+00:01:23,640 --> 00:01:30,000
+Tak wic poprawnie dopasowalimy ustawienie przekierowania auth, ale mimo to zdecydowalimy, e dobrym miejscem dla nas bdzie strona gwna,
+
+22
+00:01:30,000 --> 00:01:31,290
+wic jest to co,
+
+23
+00:01:31,290 --> 00:01:33,730
+co chc naprawi. Teraz powodem
+
+24
+00:01:33,750 --> 00:01:41,100
+tego problemu z tym bdnym przekierowaniem jest to, e przekierowujemy w kontenerze auth tutaj
+
+25
+00:01:41,150 --> 00:01:46,410
+ten kod, tam ustawiamy lub uywamy naszej przekierowania do przekierowania uytkownika.
+
+26
+00:01:46,410 --> 00:01:53,130
+Problem polega na tym, e dzieje si to w kontenerze auth i kontenerze aplikacji, w naszym
+
+27
+00:01:53,160 --> 00:01:59,670
+komponencie aplikacji root, w ktrym renderujemy rne trasy dla rnych statusw uwierzytelniania, tam gdzie jestemy
+
+28
+00:01:59,970 --> 00:02:02,400
+uwierzytelnieni, nie renderujemy ju komponentu auth.
+
+29
+00:02:02,400 --> 00:02:07,860
+W zwizku z tym kod w skadniku auth, ktry przekieruje nas poprawnie do strony realizacji transakcji, nigdy
+
+30
+00:02:07,860 --> 00:02:08,920
+nie bdzie uywany.
+
+31
+00:02:09,330 --> 00:02:18,780
+Aby to naprawi, moemy ponownie wprowadzi auth route do naszego zestawu tras w stanie uwierzytelnienia, teraz oczywicie wad jest
+
+32
+00:02:18,780 --> 00:02:24,990
+to, e teraz uwierzytelnieni uytkownicy mog odwiedza stron auth, z drugiej strony, nie
+
+33
+00:02:24,990 --> 00:02:26,790
+mog tam zaszkodzi .
+
+34
+00:02:26,910 --> 00:02:31,440
+Oczywicie moesz te znale inne rozwizania do przekierowania w dowolnym miejscu,
+
+35
+00:02:31,440 --> 00:02:37,110
+ale jest to szybkie i atwe i bezpieczne rozwizanie, aby powrci do pierwotnego zachowania.
+
+36
+00:02:37,110 --> 00:02:44,100
+Kolejnym problemem, ktry napotykamy, jest to, e jeli zbuduj hamburgera i jestem tu zalogowany, w tym budowniczym
+
+37
+00:02:44,460 --> 00:02:50,080
+burgeru, zobaczysz, e na niektrych rozmiarach ekranu burger jest nieprawidowo ustawiony, nie jest wyrodkowany.
+
+38
+00:02:50,110 --> 00:02:55,230
+Powodem tego jest to, e burger ma szeroko, ktra jest dostosowana do widocznego
+
+39
+00:02:55,230 --> 00:02:59,830
+obszaru, ale zawsze znajduje si wewntrz elementu div, ktry zajmuje 100% szerokoci
+
+40
+00:03:00,000 --> 00:03:01,570
+jego elementu owijajcego i
+
+41
+00:03:01,770 --> 00:03:07,920
+ktry byby to div, ktry rwnie dyktuje pewn szeroko, 80% w w tym przypadku checkoutSummary.
+
+42
+00:03:07,920 --> 00:03:16,410
+Tak wic checkoutSummary tutaj dyktuje pewn szeroko dla naszego burgera i to wpywa na to, jak
+
+43
+00:03:16,410 --> 00:03:18,990
+wywietla si tu nasz burger.
+
+44
+00:03:19,230 --> 00:03:26,430
+Aby to naprawi, moemy przej do naszych komponentw, do kasy. Podsumowanie moemy znale pod
+
+45
+00:03:26,430 --> 00:03:33,520
+zamwienie, podsumowanie kasy i tam, gdzie ustawiamy szeroko na 500px dla szerszych wywietlaczy.
+
+46
+00:03:33,840 --> 00:03:35,770
+W kocu nie chc tego
+
+47
+00:03:35,820 --> 00:03:42,990
+robi, chc trzyma si 80%, ktre mam domylnie, a teraz z tym, jeli wrcimy do aplikacji i zbudujemy
+
+48
+00:03:43,200 --> 00:03:46,700
+nowego burgera, jestem tu ju zalogowany, to burger powinien
+
+49
+00:03:46,820 --> 00:03:53,510
+teraz by adnie wyrodkowany na wszystkich ekranach urzdze, wic teraz wyglda on znacznie lepiej, wic teraz burger
+
+50
+00:03:53,530 --> 00:03:58,590
+wyglda dobrze przez cay czas, bez wzgldu na to, gdzie go ogldamy.
+
+51
+00:03:58,620 --> 00:04:04,770
+Teraz jest jeszcze jedna wizualna usterka, ktr chc si pozby, i to jest na maych
+
+52
+00:04:04,770 --> 00:04:11,850
+urzdzeniach, jeli otworzymy nasz nawigacj po stronie i klikn link, porusza si tam poprawnie bez bdw, ale
+
+53
+00:04:11,850 --> 00:04:12,690
+nie zamyka
+
+54
+00:04:12,690 --> 00:04:15,150
+bocznej nawigacji, mam rcznie to zrobi.
+
+55
+00:04:15,160 --> 00:04:19,420
+Oczywicie powinien zamkn boczn nawigacj za kadym razem, gdy klikniemy link tutaj.
+
+56
+00:04:19,770 --> 00:04:26,520
+Aby to naprawi, musimy wej na nasz stronDrawer, gdzie w kocu mamy naszego sideDrawera, tu i
+
+57
+00:04:26,520 --> 00:04:28,500
+tam mamy elementy nawigacyjne i
+
+58
+00:04:28,890 --> 00:04:35,370
+teraz chcemy upewni si, e za kadym razem, gdy klikniemy element nawigacji, zamykamy t szuflad.
+
+59
+00:04:35,610 --> 00:04:43,820
+Wic zasadniczo chcemy emitowa lub wykonywa t zamknit metod, metod, ktr otrzymujemy na zamknitym
+
+60
+00:04:43,840 --> 00:04:46,960
+rekwiycie w tym elemencie siderawler.
+
+61
+00:04:47,040 --> 00:04:54,180
+Teraz, aby to zrobi, moglibymy na przykad posucha kliknicia w dowolnym miejscu na stronieDrawer, teraz oczywicie oznaczaoby to,
+
+62
+00:04:54,180 --> 00:05:00,510
+e nie tylko kliknicie czy spowodowaoby jej zamknicie. Moglibymy rwnie wej do elementw nawigacyjnych
+
+63
+00:05:00,690 --> 00:05:07,050
+i sprbowa zarejestrowa tam rwnie suchaczaKlienta, omwi tutaj ogln strategi zamykania.
+
+64
+00:05:07,170 --> 00:05:15,990
+Tak wic, po klikniciu sideDrawer w oglnoci, sprbujmy dotrze do rekwizytw. zamknite, ktre naley obsuy w komponencie
+
+65
+00:05:16,170 --> 00:05:21,320
+macierzystym tego komponentu i zamkn to menu boczne.
+
+66
+00:05:21,450 --> 00:05:26,910
+Po wprowadzeniu tej zmiany otwrzmy sideDrawer, jeli klikn gdziekolwiek na niej, to si zamknie, ale
+
+67
+00:05:26,910 --> 00:05:28,270
+powinno by dobrze, jeli
+
+68
+00:05:28,420 --> 00:05:31,000
+klikam zamwienia, to rwnie si zamyka.
+
+69
+00:05:31,260 --> 00:05:37,320
+Tak wic otrzymalimy sideDrawer, ktry dziaa tak, jak oczekiwalibymy, e zamknie si, gdy
+
+70
+00:05:37,320 --> 00:05:38,130
+bdziemy nawigowa.
+
+71
+00:05:38,220 --> 00:05:43,920
+To byy wizualne usterki, ktre mielimy i naprawilimy, aby teraz nasza aplikacja wygldaa i zachowywaa si
+
+72
+00:05:43,980 --> 00:05:46,340
+milej i bardziej, jak bymy tego oczekiwali.
+

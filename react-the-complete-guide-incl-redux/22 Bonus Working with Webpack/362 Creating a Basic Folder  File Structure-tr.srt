@@ -1,0 +1,144 @@
+1
+00:00:02,140 --> 00:00:04,680
+imdi projemizi kurmak istiyoruz ve her
+
+2
+00:00:04,750 --> 00:00:08,350
+eyden nce birlikte almak istediim proje yapsn kuracam.
+
+3
+00:00:08,470 --> 00:00:15,670
+imdi tepki reaksiyonu oluturma uygulamasnn tam yapsn yeniden oluturmayacam ama olduka benzer bir yap, kk klasrmzde bir kaynak
+
+4
+00:00:15,670 --> 00:00:22,010
+klasr oluturacam ve bu kaynak klasrnde dizinimi ekleyeceim. html dosyas bu yzden
+
+5
+00:00:22,030 --> 00:00:27,700
+sonuta sunulan tek sayfa. Bu dosyada html ve grsel
+
+6
+00:00:27,730 --> 00:00:30,370
+stdyo kodu altrabiliriz, imdi
+
+7
+00:00:30,400 --> 00:00:37,020
+bu HTML5 paracn seip enter tuuna basarak kullanabileceim bu parac alyorum,
+
+8
+00:00:37,180 --> 00:00:40,230
+kutudan bir HTML5 boilerplate alyorum,
+
+9
+00:00:40,300 --> 00:00:42,670
+elbette bunu elle yazabilirsiniz.
+
+10
+00:00:42,760 --> 00:00:46,760
+Bu, birlikte altmz balang html dosyas olmal,
+
+11
+00:00:46,960 --> 00:00:55,470
+eer yaz tipi veya stilleri CDN'lerinden herhangi bir ithalat aldysanz, ba ksmnda bunu ekleyebilirsiniz, i
+
+12
+00:00:55,540 --> 00:01:03,160
+ak tarafndan oluturulan komut dosyalar ve dier tm aktarmlar otomatik olarak bu dosyaya enjekte
+
+13
+00:01:03,250 --> 00:01:07,120
+edilecektir. Bunu kurulumumuza yapan bir yaplandrma ekleyeceiz.
+
+14
+00:01:07,450 --> 00:01:14,710
+Bununla birlikte, belirli bir kimlik kk almas gereken bu bedene bir div ekleyeceim, bu
+
+15
+00:01:15,010 --> 00:01:19,550
+daha sonra reaksiyon uygulamamz monte edeceimiz div olacaktr.
+
+16
+00:01:19,630 --> 00:01:22,690
+Bu endeksle. html dosyas tamamland, imdi
+
+17
+00:01:22,690 --> 00:01:26,840
+bu projenin dier blmlerini ayarlayalm. Kaynak klasrde, kullandmz
+
+18
+00:01:26,860 --> 00:01:32,140
+gibi bir resim veya herhangi bir ey
+
+19
+00:01:32,230 --> 00:01:38,120
+depolayabileceimiz varlk klasrne sahip olmak istiyorum. Ayrca, bir
+
+20
+00:01:38,230 --> 00:01:43,540
+bileen klasrn ve bir kapsayc klasrn kurmak
+
+21
+00:01:43,540 --> 00:01:51,450
+istiyorum. Bu derste proje. imdi de bir tepki uygulamas oluturmak istiyorum, bunun iin bir indeks oluturacam. js dosyas,
+
+22
+00:01:51,490 --> 00:01:59,130
+kaynak klasrde ve dizinde. Baz global stiller iin kullanmak istediim css dosyas,
+
+23
+00:01:59,260 --> 00:02:06,990
+bu dizin iinde ie aktarlacak. js dosyas, o dizini alacam. Css dosyas daha sonra
+
+24
+00:02:07,210 --> 00:02:14,180
+vcudun kenar boluunu kaldrabilmek iin vcut kurallarn ayarlayabildiimiz herhangi bir dolgu
+
+25
+00:02:14,380 --> 00:02:20,020
+ve ayrca yaz tipi ailesini ayarlayalm, hadi bunu sans-serif'e ayarlayalm.
+
+26
+00:02:20,050 --> 00:02:22,200
+Yani buradaki temel bir
+
+27
+00:02:22,210 --> 00:02:28,480
+kurulum, imdi de bir uygulama eklemek istiyorum. Benim root bileenim olmas gereken js dosyas
+
+28
+00:02:28,480 --> 00:02:30,820
+ve tm bunlarn gerekten altn
+
+29
+00:02:30,850 --> 00:02:37,090
+grebilmemiz iin sper artc olmayan ama ynlendirme ve tembel ykleme kullanan temel bir
+
+30
+00:02:37,090 --> 00:02:43,540
+tepki projesi kurmak istiyorum. Bu, tipik bir tepki uygulamasnda kullanabileceimiz pek ok zellii simle
+
+31
+00:02:43,540 --> 00:02:44,800
+eden ve bunun
+
+32
+00:02:44,830 --> 00:02:51,770
+da bir grnt iermesi gerektii anlamna gelir. imdi bir sonraki derste bu demo tepki
+
+33
+00:02:51,910 --> 00:02:57,760
+projesini kuracam, sadece i akn grmek istiyorsanz bunu atlayabilirsiniz, son dersin sonunda
+
+34
+00:02:57,760 --> 00:03:00,940
+bitmi projeyi veya sonraki derse ekleyeceim ama
+
+35
+00:03:01,120 --> 00:03:07,640
+Bunu grmek isterseniz, tm detaylaryla birlikte yryeceim, bylece burada bir tepki uygulamas kuralm. Bir
+
+36
+00:03:07,800 --> 00:03:09,970
+sonraki derste bunu yapalm.
+

@@ -1,0 +1,184 @@
+1
+00:00:02,220 --> 00:00:08,340
+In the last lecture you'll learn that in react 16, you can actually return adjacent elements in some
+
+2
+00:00:08,340 --> 00:00:13,800
+circumstances. For one of the circumstances props children,
+
+3
+00:00:13,860 --> 00:00:16,110
+we created this auxiliary component
+
+4
+00:00:16,200 --> 00:00:22,500
+and I told you that it's a higher order component called like this because all it does is it basically
+
+5
+00:00:22,500 --> 00:00:29,320
+wraps another component, doesn't really do much else but does something with that wrapping component,
+
+6
+00:00:29,400 --> 00:00:35,940
+in this case simply output it with props children so that we can use this advantage or take advantage
+
+7
+00:00:35,940 --> 00:00:38,800
+of this new feature of react 16.
+
+8
+00:00:38,850 --> 00:00:44,520
+Now you can also create higher order components and by the way you will often use some when using third
+
+9
+00:00:44,520 --> 00:00:46,040
+party packages
+
+10
+00:00:46,050 --> 00:00:52,860
+that add a certain logic to a component. Some logic you might need in multiple components which you don't
+
+11
+00:00:52,860 --> 00:00:54,410
+want to write into each of them,
+
+12
+00:00:54,630 --> 00:01:01,120
+for example share a logged in user, you will see some higher order components throughout this course,
+
+13
+00:01:01,350 --> 00:01:07,050
+let's add one for our demo project here though. For the person.js component,
+
+14
+00:01:07,170 --> 00:01:17,290
+we wrap it in a div with classes, person as a class name, in app.js we do the same, a div with classes
+
+15
+00:01:17,320 --> 00:01:18,490
+app
+
+16
+00:01:18,870 --> 00:01:23,490
+but it would be cool if we could use a higher order component which does that,
+
+17
+00:01:23,630 --> 00:01:31,990
+now there are actually two approaches we could take, I'll show both. The first one is the maybe with class.js
+
+18
+00:01:32,060 --> 00:01:40,270
+file which is a constant withClass equal to
+
+19
+00:01:41,050 --> 00:01:51,270
+function of course where all we do is we return some jsx where we have this wrapping div and there,
+
+20
+00:01:51,840 --> 00:01:59,640
+we might set a class name, receive props classes, this is the expectation of this component and then output
+
+21
+00:02:00,150 --> 00:02:04,510
+props children in between.
+
+22
+00:02:04,520 --> 00:02:11,520
+Next we of course need to import react from react because this will be transformed to react create
+
+23
+00:02:11,580 --> 00:02:16,730
+element and then export default withClass.
+
+24
+00:02:16,740 --> 00:02:19,640
+Now we can use the with Class wrapper here,
+
+25
+00:02:19,680 --> 00:02:30,780
+for example in the app.js file, let's quickly import it, let's import with class from up one level hoc with
+
+26
+00:02:30,780 --> 00:02:31,830
+class
+
+27
+00:02:31,950 --> 00:02:33,910
+and now, let's wrap it.
+
+28
+00:02:34,110 --> 00:02:39,490
+So let's wrap our component with the withClass component, here
+
+29
+00:02:39,630 --> 00:02:45,220
+we now have withClass and close with class.
+
+30
+00:02:45,250 --> 00:02:47,140
+So we replace the div with it
+
+31
+00:02:47,320 --> 00:02:54,310
+and as we configured withClass, we expect to get classes as a property.
+
+32
+00:02:54,610 --> 00:02:59,530
+So we should pass this, props children of course is the part we passed between the opening and closing
+
+33
+00:02:59,530 --> 00:03:08,670
+tags, so this part, but we need the class property and this should of course be classes app.
+
+34
+00:03:08,680 --> 00:03:14,840
+So we basically replaced the div which has class name with withClass which is classes so we saved
+
+35
+00:03:14,860 --> 00:03:17,980
+a few characters which we then spanned instead of the div.
+
+36
+00:03:18,070 --> 00:03:23,300
+Still it's a nice example for one possible higher order of component,
+
+37
+00:03:23,320 --> 00:03:28,900
+it doesn't do anything than wrap the content in a div and assign this css class.
+
+38
+00:03:29,260 --> 00:03:37,420
+If we now save this, get the same styling and behavior as before with withClasses and of course we can also
+
+39
+00:03:37,420 --> 00:03:42,600
+add this to person where we have the same behavior,
+
+40
+00:03:42,790 --> 00:03:44,130
+a wrapping div.
+
+41
+00:03:44,440 --> 00:03:48,160
+Let's quickly do this, let's import withClass here too,
+
+42
+00:03:48,370 --> 00:03:51,370
+let's go up a couple of levels until we reach the top level,
+
+43
+00:03:51,370 --> 00:03:58,120
+go to hoc, import with class and then again as before in the app.js file,
+
+44
+00:03:58,210 --> 00:04:03,730
+replace this div here with withClass and class name
+
+45
+00:04:03,720 --> 00:04:08,030
+now with classes because it is the property withClass expects.
+
+46
+00:04:08,030 --> 00:04:13,870
+And now with that, if we relaod this, get the same styling as before with our custom higher order component.
+

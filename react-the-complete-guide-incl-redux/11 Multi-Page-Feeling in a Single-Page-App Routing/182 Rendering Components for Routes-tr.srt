@@ -1,0 +1,84 @@
+1
+00:00:02,080 --> 00:00:07,210
+Son dersimizde baz GSX kodunu oluturmak iin ynlendirici kullanyoruz.
+
+2
+00:00:07,210 --> 00:00:13,840
+Ve ayrca exect hakknda rendin ve istediin kadar Routier ileyebilirsin.
+
+3
+00:00:13,870 --> 00:00:20,980
+imdi bu dersin iinde herkesin yorumlad ve J.'ye yorum yapma eklinize gre adalet istiyorum. S. X, Slash yldzyla bir blok
+
+4
+00:00:20,980 --> 00:00:27,670
+yorumu kullanarak ve bunu kvrck parantez iine sarmalayp imdi hepsini eik izgi olarak ayrtrmak
+
+5
+00:00:27,670 --> 00:00:29,690
+iin baka bir yol ekleyin.
+
+6
+00:00:29,710 --> 00:00:38,260
+Kesin bir eleme aryorum ve imdi render' kullanmak istemiyorum ancak geebileceim farkl bir zellik
+
+7
+00:00:38,380 --> 00:00:39,950
+kullanmak istiyorum.
+
+8
+00:00:40,060 --> 00:00:46,420
+anlalaca zere bu, bu rota yerine getirilmesi gereken bir bileene izin vermemize izin veriyor.
+
+9
+00:00:46,420 --> 00:00:49,390
+Component zellii kullanmak istiyorum ve adndan da
+
+10
+00:00:49,390 --> 00:00:55,260
+imdi bileen bir dize deil, bu nedenle ie yaramayacak ileti yazmayacaz.
+
+11
+00:00:55,330 --> 00:01:02,180
+Bileenin, kullanmak istediiniz ileve veya snfla ilgili bir referans olmas gerekir.
+
+12
+00:01:02,200 --> 00:01:09,910
+Dolaysyla, basite J'de daha nce direk olarak X olarak kullandmz post bileeninden aldmz eylere basite
+
+13
+00:01:10,690 --> 00:01:14,060
+bunu aktardk ve parantezleri byle ardk.
+
+14
+00:01:14,110 --> 00:01:21,610
+Ve u anda bir kasa ve bavurumuza baktmzda ve sadece eik izgiye geri dndmzde,
+
+15
+00:01:21,700 --> 00:01:24,280
+burada tm yazlarn yklendiini greceiz.
+
+16
+00:01:24,580 --> 00:01:32,020
+aka bu, muhtemelen kullanacanz kullanm durumunda, iletilerde beklenen en nemli eydir.
+
+17
+00:01:32,580 --> 00:01:38,380
+Dolaysyla bu imdi, render gibi bileenleri nasl ykleyebildiimizi gsteriyor
+
+18
+00:01:38,380 --> 00:01:40,570
+ancak bileen mlkyle
+
+19
+00:01:40,570 --> 00:01:45,640
+Teknik olarak bunu yapabilmenize ramen gerekten btn bir bileen kodunu burada
+
+20
+00:01:45,670 --> 00:01:52,360
+gstermemelisiniz, ancak kodunuzun dalmasna neden olacak, ancak korumak ancak bu yl gibi ok fazla
+
+21
+00:01:52,360 --> 00:01:55,330
+kullanacak varsaylan durumda bileenleri yklemeyi zorlatracaktr.
+

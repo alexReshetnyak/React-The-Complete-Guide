@@ -1,0 +1,408 @@
+1
+00:00:02,200 --> 00:00:09,190
+En la ltima conferencia, aprendemos cmo actualizar nuestro estado inmemorialmente y tambin administrar una matriz aqu,
+
+2
+00:00:09,280 --> 00:00:16,870
+que es como Optix especial debido a los tipos de referencia que se encuentran en javascript y aprendes
+
+3
+00:00:16,870 --> 00:00:20,250
+que debes trabajar con ella utilizando Kong cat.
+
+4
+00:00:20,350 --> 00:00:24,270
+Ahora quiero manejar el caso de que elimine un resultado.
+
+5
+00:00:24,400 --> 00:00:26,650
+Y para eso enviamos eliminar.
+
+6
+00:00:26,650 --> 00:00:27,690
+Resultado aqu.
+
+7
+00:00:28,550 --> 00:00:35,890
+Ahora, en el reductor, la parte fcil, por supuesto, es simplemente agregar un caso para eso despus de eliminar el
+
+8
+00:00:36,710 --> 00:00:41,490
+presal y luego devolver un objeto javascript donde primero copiamos el estado anterior.
+
+9
+00:00:41,720 --> 00:00:42,480
+Y ahora qu.
+
+10
+00:00:42,480 --> 00:00:49,600
+Qu hacemos cuando Russels agrega un elemento inmutablemente a lo que es posible con Concat?
+
+11
+00:00:49,640 --> 00:00:55,610
+Ahora normalmente elimina elementos de una matriz obteniendo el ndice del artculo que desea eliminar.
+
+12
+00:00:55,610 --> 00:01:01,940
+As que digamos que lo tenemos aqu, podra ser que lo obtendrs dinmicamente pronto, por ahora solo
+
+13
+00:01:01,940 --> 00:01:02,750
+hazlo as.
+
+14
+00:01:02,750 --> 00:01:08,420
+Y luego podramos usar los resultados de nuestra tienda de arreglos y el empalme de cdigos.
+
+15
+00:01:08,420 --> 00:01:14,120
+Si luego pasamos la idea de que queremos comenzar en el primer argumento y la cantidad de elementos
+
+16
+00:01:14,120 --> 00:01:14,950
+que queremos eliminar.
+
+17
+00:01:14,990 --> 00:01:20,210
+El segundo argumento saca estos elementos de la matriz.
+
+18
+00:01:20,270 --> 00:01:25,040
+Sin embargo, esto muta la matriz original y, por lo tanto, no es cmo deberamos hacerlo.
+
+19
+00:01:25,040 --> 00:01:26,720
+No es inmutable.
+
+20
+00:01:26,720 --> 00:01:31,590
+Entonces, cmo hacemos esto de una manera inmutable que hay un par de maneras.
+
+21
+00:01:31,620 --> 00:01:33,100
+Les mostrar dos.
+
+22
+00:01:33,180 --> 00:01:42,960
+La primera es que crees una copia de tu matriz para que la nueva matriz pueda ser una nueva matriz que crees y luego
+
+23
+00:01:42,960 --> 00:01:50,960
+uses el operador de distribucin para distribuir todos los elementos en los resultados del estado en una nueva matriz.
+
+24
+00:01:51,030 --> 00:01:58,380
+objetos, ya que en realidad son los mismos objetos que an apuntan a los mismos objetos que antes.
+
+25
+00:01:58,590 --> 00:02:06,690
+Con eso creaste una copia para agregar nuevos elementos importantes a la matriz y los resultados del estado eran
+
+26
+00:02:06,960 --> 00:02:10,700
+Entonces, si cambia una propiedad en uno de los elementos.
+
+27
+00:02:10,890 --> 00:02:18,270
+Simplemente crear una nueva matriz como esta no es suficiente si solo planeas quitar un objeto, eso est bien
+
+28
+00:02:18,260 --> 00:02:23,070
+porque no tocars el objeto que acabas de eliminar de la matriz.
+
+29
+00:02:23,070 --> 00:02:24,250
+Esa es una diferencia.
+
+30
+00:02:24,750 --> 00:02:33,240
+As que obtenemos una copia de la nueva matriz aqu y luego podramos simplemente usar esa nueva matriz aqu en nuestra operacin
+
+31
+00:02:33,240 --> 00:02:41,640
+de empalme y luego regresar el estado donde establecemos resultados iguales a la nueva matriz, que es una copia de la matriz
+
+32
+00:02:41,640 --> 00:02:43,040
+anterior, pero actualizada.
+
+33
+00:02:43,190 --> 00:02:46,150
+Y como lo copiamos, nunca tocamos la matriz anterior.
+
+34
+00:02:46,320 --> 00:02:48,180
+Entonces esta es una forma de hacerlo.
+
+35
+00:02:48,210 --> 00:02:54,980
+Voy a comentarlo, aunque la forma en que ve ms a menudo es usar el mtodo de carpeta.
+
+36
+00:02:55,090 --> 00:03:02,250
+Ahora bien, para esto simplemente no puede crear una nueva constante que sea tal vez la matriz actualizada como quiera
+
+37
+00:03:02,250 --> 00:03:02,670
+nombrarla.
+
+38
+00:03:02,670 --> 00:03:07,610
+Tambin podra nombrar una nueva matriz de curso y all tomar su original o.
+
+39
+00:03:07,710 --> 00:03:11,030
+Indique los resultados y llame al mtodo de filtro.
+
+40
+00:03:11,310 --> 00:03:18,930
+devuelve una nueva matriz, no toca la anterior devuelve una nueva filtrada toma una funcin como entrada.
+
+41
+00:03:18,930 --> 00:03:20,190
+Si el filtro
+
+42
+00:03:20,190 --> 00:03:28,620
+La funcin se ejecuta en cada elemento de la matriz, determina si este elemento acelerar completamente alguna condicin
+
+43
+00:03:28,620 --> 00:03:33,850
+para convertirla en la nueva matriz que devuelve faulter o no.
+
+44
+00:03:33,870 --> 00:03:39,610
+As que obtenemos el elemento individual como entrada aqu el elemento o una hora de basalto de Hastey podramos
+
+45
+00:03:40,140 --> 00:03:42,790
+nombrarlo y luego tenemos que devolver verdadero o falso.
+
+46
+00:03:43,020 --> 00:03:49,290
+Si simplemente devolvemos el valor verdadero y solo utilizamos la sintaxis de acceso directo para una funcin de flecha, si
+
+47
+00:03:49,290 --> 00:03:51,890
+escribe una lnea, puede omitir la palabra clave return.
+
+48
+00:03:52,350 --> 00:03:57,810
+si devuelve verdadero, el retorno lo hace para cada elemento y, por lo tanto, acaba de crear una copia de la matriz anterior.
+
+49
+00:03:57,810 --> 00:03:58,530
+Por lo tanto,
+
+50
+00:03:58,530 --> 00:04:01,130
+Entonces solo una forma ms larga de la sintaxis.
+
+51
+00:04:01,440 --> 00:04:06,680
+Por supuesto, no siempre quiere volver a solo 40 elementos que deberan incluirse en la nueva matriz.
+
+52
+00:04:07,050 --> 00:04:14,160
+Entonces, dado que queremos eliminar el elemento aqu, devolvemos el valor verdadero para cada elemento que no tenga
+
+53
+00:04:14,220 --> 00:04:19,020
+un determinado ID o que no est en un determinado ndice aqu.
+
+54
+00:04:19,140 --> 00:04:23,930
+Entonces, si tenemos el ndice del elemento en la matriz, tomaremos un segundo argumento.
+
+55
+00:04:23,940 --> 00:04:28,870
+Llegamos aqu en esta funcin de devolucin de llamada al ndice del elemento para recurrentemente en.
+
+56
+00:04:28,890 --> 00:04:36,510
+simplemente decir return true si el ndice muerto est igual al ndice del elemento al que queremos eliminarlo.
+
+57
+00:04:36,680 --> 00:04:40,200
+Entonces, en qu disfunciones se ejecutaron y podramos
+
+58
+00:04:40,200 --> 00:04:48,780
+Entonces, si estamos hablando de ndices de los elementos ahora en nuestro caso, aqu tenemos un estado de objetos de
+
+59
+00:04:48,780 --> 00:04:56,120
+elementos ORU donde tenemos elementos de esta forma, un valor y una ID nica para cada elemento.
+
+60
+00:04:56,430 --> 00:05:00,510
+Entonces recibiremos una identificacin y podemos tomar esta idea.
+
+61
+00:05:00,530 --> 00:05:03,590
+Entonces NO el ndice no la posicin en la matriz.
+
+62
+00:05:03,630 --> 00:05:09,930
+Esta es una idea del elemento y como esta funcin aqu se ejecuta en cada elemento, no necesitamos
+
+63
+00:05:09,930 --> 00:05:13,380
+obtener informacin sobre en qu ndice se encuentra este elemento.
+
+64
+00:05:13,380 --> 00:05:21,550
+No podemos decir que volvemos verdaderos si la ID del elemento en la matriz estuviese mirando actualmente.
+
+65
+00:05:21,580 --> 00:05:24,660
+Estamos accediendo a esta propiedad de id en cada elemento.
+
+66
+00:05:24,660 --> 00:05:33,410
+Por lo tanto, si hay una igual a la ID, disclpeme que no es igual a la ID que obtenemos con esta accin.
+
+67
+00:05:33,420 --> 00:05:41,840
+Entonces, para su accin, espero obtener una carga til de ID de elemento de resultado o lo que sea que queramos nombrar.
+
+68
+00:05:42,000 --> 00:05:46,530
+Hay un nombre muy largo que podra usar ID, pero quiero dejar muy claro
+
+69
+00:05:46,530 --> 00:05:47,700
+de dnde viene esto.
+
+70
+00:05:47,700 --> 00:05:50,350
+Entonces esta es una carga de esta accin.
+
+71
+00:05:50,370 --> 00:05:52,480
+Por supuesto, cundo pasar esta carga til.
+
+72
+00:05:52,680 --> 00:05:58,750
+Pero ante todo usemos esta matriz actualizada para que Dennis diga que como resultados aqu en el estado regresamos.
+
+73
+00:05:58,980 --> 00:06:05,640
+Es una matriz de un hilo totalmente nuevo que falla y que devuelve verdadero para todos los elementos donde el ID no
+
+74
+00:06:05,670 --> 00:06:08,510
+es igual al ID que pasamos con la accin.
+
+75
+00:06:08,520 --> 00:06:10,850
+Entonces, pasemos una identificacin con la accin entonces.
+
+76
+00:06:11,040 --> 00:06:15,260
+Vayamos al contenedor del contador y eliminemos el ataque de eliminacin.
+
+77
+00:06:15,300 --> 00:06:19,430
+Ahora deberamos establecer una propiedad con el mismo nombre cuando accedemos a introducer.
+
+78
+00:06:19,530 --> 00:06:21,770
+Entonces resultado l id.
+
+79
+00:06:21,870 --> 00:06:29,500
+Esa es la propiedad a la que estoy accediendo aqu en mi realidad. Ahora esto debera ser simplemente la idea del elemento en
+
+80
+00:06:29,530 --> 00:06:33,140
+el que hicimos clic ahora para obtener la identificacin de pap.
+
+81
+00:06:33,250 --> 00:06:37,010
+Necesitamos tener esto en esta funcin aqu.
+
+82
+00:06:37,120 --> 00:06:41,140
+As que me atrevo a necesitar de alguna manera esta informacin.
+
+83
+00:06:41,470 --> 00:06:47,890
+As que aqu espero obtener el ID pasado a esta funcin annima aqu.
+
+84
+00:06:48,020 --> 00:06:55,060
+Cualquier nombre de argumento arbitrario que pueda elegir y quiero enviarlo junto con mi accin, por
+
+85
+00:06:55,060 --> 00:07:01,140
+supuesto, para recibir su palabra, usaremos esta propiedad aqu en el resultado de Leite.
+
+86
+00:07:01,210 --> 00:07:03,350
+Ah ahora necesitamos pasar esa identificacin.
+
+87
+00:07:03,400 --> 00:07:06,160
+As que aqu estn ejecutan esto como una funcin annima.
+
+88
+00:07:07,420 --> 00:07:15,340
+se ejecutar en el momento en que este componente representa porque est mapeado o envuelto dentro de esta funcin annima.
+
+89
+00:07:15,370 --> 00:07:20,230
+Y cuando las disfunciones se ejecuten, se ejecutar la disfuncin y ahora
+
+90
+00:07:20,230 --> 00:07:23,230
+puedo agregar parntesis aqu porque ahora no
+
+91
+00:07:23,290 --> 00:07:30,440
+Y aqu puedo almacenar ID de resultados anteriores refirindome a esa nueva instantnea de fecha.
+
+92
+00:07:30,790 --> 00:07:38,560
+Ahora con eso, si guardamos todo eso, comenzamos a agregar algunos resultados aqu y hacemos clic en el 30
+
+93
+00:07:38,560 --> 00:07:39,700
+que se elimina.
+
+94
+00:07:39,880 --> 00:07:44,800
+Igual, por supuesto, para los resultados si hacemos clic en ellos, pero de una manera inmutable an.
+
+95
+00:07:44,980 --> 00:07:51,460
+cmo pasar acciones desde su UI a una accin al esperar que su argumento llegue desde
+
+96
+00:07:51,460 --> 00:07:59,620
+la interfaz de usuario en el envo de MAP a los accesorios y luego pasarlo junto con la accin.
+
+97
+00:07:59,620 --> 00:08:06,260
+Y aqu hay muchas cosas importantes que aprendi a eliminar elementos inmutables con filtro y aprendi
+
+98
+00:08:06,370 --> 00:08:13,780
+Y, por supuesto, al pasar ese argumento que espera que est dentro de su UI al envolver
+
+99
+00:08:13,990 --> 00:08:21,940
+este puntal, lo ejecutar en una funcin annima que le permite pasar datos junto con la llamada a
+
+100
+00:08:21,940 --> 00:08:22,890
+la funcin.
+
+101
+00:08:22,900 --> 00:08:30,670
+Esto es sper importante y otros bloques de creacin de registros funcionan de forma inmutable en el Leitz y transmiten cargas tiles de
+
+102
+00:08:30,760 --> 00:08:37,120
+accin desde la interfaz de usuario a travs de un envo de mapas a los accesorios de la tienda.
+

@@ -1,0 +1,128 @@
+1
+00:00:02,060 --> 00:00:04,790
+Nell'ultima lezione abbiamo imparato il reindirizzamento.
+
+2
+00:00:04,790 --> 00:00:08,130
+Ora lascia che ti mostri un numero di utilizzo del reindirizzamento.
+
+3
+00:00:08,130 --> 00:00:13,790
+In realt nel nuovo componente del post osiamo probabilmente reindirizzare.
+
+4
+00:00:13,800 --> 00:00:21,600
+Una volta che abbiamo fatto clic sul pulsante di invio, e una volta che abbiamo fatto la nostra richiesta HDP, spesso non vogliamo
+
+5
+00:00:21,600 --> 00:00:26,490
+cambiare la pagina e non rimanere su quella pagina usando il componente di reindirizzamento.
+
+6
+00:00:26,490 --> 00:00:27,940
+Possiamo farlo facilmente.
+
+7
+00:00:28,230 --> 00:00:36,470
+Possiamo importare leggere direttamente dal re-act del router Dom proprio come prima.
+
+8
+00:00:36,570 --> 00:00:43,320
+di fuori di un'istruzione switch, dobbiamo sempre reindirizzare con le due propriet sebbene non possiamo utilizzare da.
+
+9
+00:00:43,320 --> 00:00:46,970
+Ora se inseriamo il reindirizzamento in GSX qui al
+
+10
+00:00:46,980 --> 00:00:50,240
+Quindi qui potremmo reindirizzare per tagliare i post.
+
+11
+00:00:50,250 --> 00:00:57,690
+Ad esempio, il problema con questo ovviamente  ora se salvi il codice in questo modo se clicchiamo su un
+
+12
+00:00:58,290 --> 00:01:04,190
+nuovo post, veniamo immediatamente reindirizzati ai post perch il componente di reindirizzamento  reso e ogni
+
+13
+00:01:04,190 --> 00:01:06,600
+volta che questo viene reso ci reindirizza.
+
+14
+00:01:06,600 --> 00:01:09,480
+Quindi non abbiamo alcuna possibilit di inserire contenuti.
+
+15
+00:01:09,600 --> 00:01:12,500
+Quindi dobbiamo renderlo condizionatamente.
+
+16
+00:01:12,750 --> 00:01:20,130
+questo router di re-act, dobbiamo solo renderlo in modo condizionale mentre rendiamo qualsiasi altro contenuto in modo condizionale.
+
+17
+00:01:20,400 --> 00:01:23,400
+E poich  un componente normale come tutto
+
+18
+00:01:23,400 --> 00:01:25,500
+Quindi potremmo aggiungere un nuovo stato qui.
+
+19
+00:01:25,580 --> 00:01:31,590
+Forse inviato che inizialmente  falso e poi viene impostato su true.
+
+20
+00:01:31,710 --> 00:01:40,210
+Una volta effettuata la richiesta HTP, l'alcol ha dichiarato lo stato e ha dichiarato true.
+
+21
+00:01:40,220 --> 00:01:45,180
+Ora posso utilizzare inviato per determinare se eseguire il reindirizzamento o meno.
+
+22
+00:01:45,450 --> 00:01:51,060
+Quindi nel metodo di rendering potrei avere una variabile di reindirizzamento che  nullo di default.
+
+23
+00:01:51,440 --> 00:01:59,390
+questo stato inviato  vero e se  allora il reindirizzamento  uguale a quel componente di reindirizzamento e quindi restituisco
+
+24
+00:01:59,390 --> 00:02:06,290
+J come X che include quella variabile di reindirizzamento che  presente anche ora o si reindirizza il componente.
+
+25
+00:02:06,290 --> 00:02:07,850
+Ma poi verificherei se
+
+26
+00:02:07,850 --> 00:02:16,640
+Se salviamo il codice dat, possiamo andare con successo a un nuovo post ma non appena invio un
+
+27
+00:02:16,640 --> 00:02:21,840
+post e il server viene reindirizzato con un reindirizzamento condizionale.
+
+28
+00:02:21,860 --> 00:02:26,310
+Ora questo  il nostro modo di usare il reindirizzamento al di fuori di noi quale affermazione.
+
+29
+00:02:26,390 --> 00:02:30,460
+Non con Thrawn ma invece  decondizionato.
+
+30
+00:02:30,470 --> 00:02:37,700
+ successo qualcosa per cui voglio rendere questo componente e poi lo rendiamo solo quando
+
+31
+00:02:37,700 --> 00:02:38,750
+vogliamo reindirizzare.
+
+32
+00:02:38,810 --> 00:02:45,440
+Potrebbe sembrare strano in un primo momento che si esegue il rendering di un componente per lasciare la pagina, ma questo  solo il modo in cui funziona.
+

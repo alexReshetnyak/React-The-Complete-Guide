@@ -1,0 +1,76 @@
+1
+00:00:02,240 --> 00:00:05,200
+Indietro siamo a un'ora Bergere progetto.
+
+2
+00:00:05,200 --> 00:00:12,460
+ tempo di aggiungere un po 'di routing e utilizzare le cose che abbiamo appreso nell'ultimo modulo del corso in
+
+3
+00:00:12,460 --> 00:00:14,150
+una vera applicazione di re-act.
+
+4
+00:00:14,350 --> 00:00:20,560
+Ora sentitevi liberi di saltare avanti di volta in volta con video e implementare alcune funzionalit.
+
+5
+00:00:20,560 --> 00:00:24,580
+Sto per mostrarti di esercitarti usando il router.
+
+6
+00:00:25,060 --> 00:00:32,760
+Voglio iniziare aggiungendo una pagina che ci permette di controllare effettivamente il nostro Bergere senza leggere il check-out che assomiglia
+
+7
+00:00:32,760 --> 00:00:33,550
+a questo.
+
+8
+00:00:33,550 --> 00:00:39,700
+Continua e quindi inviamo gi la richiesta al retro e per inviare quell'hamburger e salvarlo l.
+
+9
+00:00:39,700 --> 00:00:43,890
+Aggiungiamo un ingrediente su cui facciamo clic, ora facciamo clic su
+
+10
+00:00:43,960 --> 00:00:50,980
+Ora mi piacerebbe cambiare questo in modo che devo inserire alcune informazioni in un check out
+
+11
+00:00:51,220 --> 00:00:54,000
+per lui prima di salvare davvero l'hamburger.
+
+12
+00:00:54,250 --> 00:00:59,130
+Quindi questa dovrebbe essere la prima pagina che voglio avere alla pagina di checkout.
+
+13
+00:00:59,140 --> 00:01:05,630
+Ho anche un link qui in alto che potrebbe permetterci di navigare l, anche se probabilmente ci sostituiremo
+
+14
+00:01:05,630 --> 00:01:10,620
+per questo modulo con la mia pagina degli ordini perch questo ha pi senso.
+
+15
+00:01:10,630 --> 00:01:16,840
+Ma iniziamo con il componente checkout e iniziamo con il debito di Boulding nella prossima lezione.
+
+16
+00:01:16,840 --> 00:01:21,610
+il componente stesso  una buona pratica ma non  strettamente correlato al routing .
+
+17
+00:01:21,610 --> 00:01:27,520
+Sicuramente sentitevi liberi di saltare avanti e fare cazzate da soli, ma sentitevi liberi di farlo insieme a me
+
+18
+00:01:27,520 --> 00:01:32,330
+perch ovviamente ci sono molti modi diversi per creare il componente di check-out e creare
+
+19
+00:01:32,380 --> 00:01:33,700
+Ci vediamo nella prossima lezione.
+

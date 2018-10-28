@@ -1,0 +1,200 @@
+1
+00:00:02,260 --> 00:00:05,730
+De modo que se han optimizado muchas cosas en nuestra aplicacin
+
+2
+00:00:05,830 --> 00:00:09,790
+y, como dije antes, es posible que encuentres ms potencial, por supuesto.
+
+3
+00:00:09,790 --> 00:00:13,440
+Ahora volvamos la cabeza hacia la salida de nuestra terminal aqu, no tenemos muchas
+
+4
+00:00:13,570 --> 00:00:18,850
+advertencias, pero hay una, eso en el proceso de pago. js en nuestra carpeta de
+
+5
+00:00:18,850 --> 00:00:22,820
+contenedores, que hay una importacin que nunca usamos.
+
+6
+00:00:22,900 --> 00:00:24,310
+Echemos un vistazo,
+
+7
+00:00:24,310 --> 00:00:25,680
+contenedor de pago,
+
+8
+00:00:25,780 --> 00:00:28,390
+all importamos acciones y, de hecho,
+
+9
+00:00:28,600 --> 00:00:33,920
+en este archivo, nunca despachamos ninguna accin, as que simplemente podemos deshacernos de eso.
+
+10
+00:00:34,090 --> 00:00:36,880
+Y eso es en general algo importante, eche un
+
+11
+00:00:36,880 --> 00:00:40,550
+vistazo a la salida de la consola, no muestre ninguna advertencia,
+
+12
+00:00:40,570 --> 00:00:45,820
+elimine las importaciones innecesarias para evitar que se hinche el tamao del paquete final y hablando
+
+13
+00:00:45,820 --> 00:00:49,310
+de la salida de la consola, esta ahora est limpia, pero
+
+14
+00:00:49,330 --> 00:00:54,490
+si tenemos una mira la consola de nuestra aplicacin en ejecucin, notamos que tenemos muchas instrucciones
+
+15
+00:00:54,490 --> 00:01:00,620
+de registro de consola, en el modal, en la hamburguesa, en el generador de hamburguesas, probablemente en otro lugar.
+
+16
+00:01:00,700 --> 00:01:06,400
+Tambin es una buena idea limpiar su aplicacin, no porque estas instrucciones de registro de la consola sean
+
+17
+00:01:06,400 --> 00:01:12,590
+tan malas, pero tambin estarn all en produccin y le darn una idea de su aplicacin y adems de
+
+18
+00:01:12,610 --> 00:01:17,770
+eso, realmente no necesita enviar correo no deseado. consola con salida que ya no te importa
+
+19
+00:01:17,980 --> 00:01:21,460
+As que vamos a visitar estos tres archivos aqu para comenzar con la limpieza, echar un
+
+20
+00:01:21,490 --> 00:01:23,280
+vistazo a la hamburguesa. js en
+
+21
+00:01:23,440 --> 00:01:29,360
+la carpeta de componentes y encuentre la declaracin de registro de la consola all,
+
+22
+00:01:29,410 --> 00:01:32,140
+aqu donde generamos accesorios, eliminemos eso.
+
+23
+00:01:32,500 --> 00:01:39,520
+Se puede encontrar otro ms si vamos al generador de hamburguesas, en los archivos del generador de hamburguesas en el contenedor del generador
+
+24
+00:01:39,520 --> 00:01:47,530
+de hamburguesas, tambin visitamos este archivo y echemos un vistazo a dnde usamos el registro de la consola aqu en componentDidMount, tambin eliminemos eso y el
+
+25
+00:01:47,530 --> 00:01:47,960
+otro
+
+26
+00:01:47,960 --> 00:01:50,990
+estaba en el modo modal, as que tambin vamos a
+
+27
+00:01:51,010 --> 00:01:57,370
+visitarlo en la carpeta UI, en la carpeta de componentes, all iniciamos sesin en el componenteWillUpdate y puedo eliminar este bloque
+
+28
+00:01:57,370 --> 00:02:02,770
+completo ya que no hacemos nada ms all. Hicimos esto en el pasado para
+
+29
+00:02:02,770 --> 00:02:04,880
+obtener algunas ideas cuando
+
+30
+00:02:04,900 --> 00:02:11,260
+esto se dispara, ya no nos interesa. Usted ve que tambin hacemos un registro en orderSummary
+
+31
+00:02:11,260 --> 00:02:12,320
+cuando agregamos y
+
+32
+00:02:12,380 --> 00:02:20,230
+eliminamos ingredientes, as que visite el orderSummary tambin, podemos encontrar que en la parte de hamburguesas de nuestros componentes, all tenemos el
+
+33
+00:02:20,230 --> 00:02:24,460
+componente de resumen de la orden y all, si tenemos una mira,
+
+34
+00:02:24,520 --> 00:02:30,110
+encontramos la declaracin del registro de la consola en componentWillUpdate para que podamos eliminar esto tambin.
+
+35
+00:02:30,580 --> 00:02:37,330
+Y con eso, tambin podramos convertir esto de nuevo en un componente funcional porque todo lo
+
+36
+00:02:37,330 --> 00:02:42,670
+que hacemos es simplemente renderizar algo. Ahora lo dejar aqu, basado en una clase,
+
+37
+00:02:42,670 --> 00:02:47,530
+pero podras convertirlo fcilmente para optimizarlo an ms. Con eso veamos, dnde ms obtenemos las sentencias del registro
+
+38
+00:02:47,620 --> 00:02:56,160
+de la consola, continuemos y suscribmonos rpidamente, cambie para iniciar sesin y obtengamos resultados aqu en auth. js, ese es nuestro archivo
+
+39
+00:02:56,280 --> 00:02:59,100
+creador de acciones.
+
+40
+00:02:59,340 --> 00:03:01,740
+Veamos si obtenemos algn resultado en otro
+
+41
+00:03:01,740 --> 00:03:11,090
+lugar, si solo ingreso algunos valores arbitrarios aqu en el campo de orden y hago clic en el pedido, tambin obtenemos uno del archivo de acciones
+
+42
+00:03:11,090 --> 00:03:13,150
+del pedido, as que vamos a
+
+43
+00:03:13,160 --> 00:03:20,700
+visitar estos archivos tambin en la carpeta de acciones, auth. js tena una declaracin de registro de consola, as
+
+44
+00:03:20,720 --> 00:03:26,630
+que deshagmonos de eso y eliminemos la declaracin de registro de la consola en el
+
+45
+00:03:26,950 --> 00:03:27,360
+archivo
+
+46
+00:03:27,380 --> 00:03:28,440
+de pedido en
+
+47
+00:03:28,490 --> 00:03:36,370
+la misma carpeta, all registro de consola, eliminemos eso tambin. Ahora podemos tener ms declaraciones de registro de consola en alguna parte de nuestra aplicacin, pero creo
+
+48
+00:03:36,370 --> 00:03:40,280
+que elimin la mayora, puede quitar cualquier otra. Una vez ms, ciertamente no es
+
+49
+00:03:40,330 --> 00:03:43,160
+tan daino si los dejas all pero es mejor
+
+50
+00:03:43,180 --> 00:03:44,990
+si te deshaces de ellos.
+

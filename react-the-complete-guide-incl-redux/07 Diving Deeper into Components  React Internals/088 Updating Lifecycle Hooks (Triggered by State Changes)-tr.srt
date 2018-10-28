@@ -1,0 +1,172 @@
+1
+00:00:02,220 --> 00:00:07,230
+Propst deiiklikleri tarafndan dardan tetiklenen gncellemeye baktmz iin yaam dngleri
+
+2
+00:00:07,470 --> 00:00:08,970
+bitti neredeyse bitti.
+
+3
+00:00:09,060 --> 00:00:14,760
+Temelde var olan durumdan dolay dahili deiiklikler iin gncelleme yaam dngs srecine bir gz
+
+4
+00:00:15,300 --> 00:00:15,710
+atalm.
+
+5
+00:00:15,750 --> 00:00:20,340
+Bileen almaya balayacaz nk sahne alacaksnz alacanz iin sahne alacaksnz.
+
+6
+00:00:20,340 --> 00:00:25,320
+Bunun yerine bileen gncellemesi gereken hemen balyoruz ve sonraki pervanenin bir sonraki aamasn ya da ikisini elde ediyoruz.
+
+7
+00:00:25,440 --> 00:00:30,960
+Ve daha nce olduu gibi burada ve ncesinde olduu gibi gncelleme ilemini iptal edebiliriz ve devam
+
+8
+00:00:30,960 --> 00:00:32,000
+etmemeye karar vermeliyiz.
+
+9
+00:00:32,100 --> 00:00:33,870
+Yan etkilere neden olmamalyz.
+
+10
+00:00:33,870 --> 00:00:36,580
+Yani mantk burada daha nce olduu gibi.
+
+11
+00:00:36,740 --> 00:00:43,620
+Bundan sonra bileene iyi monte edilmi halde ularz ve mantk nceki blmdeki ile ayndr ve
+
+12
+00:00:43,620 --> 00:00:47,490
+sonra tm alt bileenleri ve sonunda bu gncellemeyi oluturduk.
+
+13
+00:00:47,730 --> 00:00:53,680
+Ve abucak yrmekte olup, temelde harici bir deiim iin olduu gibi ayn ilemdir.
+
+14
+00:00:53,730 --> 00:00:55,260
+Harici tetikleyici.
+
+15
+00:00:55,500 --> 00:01:01,320
+Tek fark, ilk yaam dngs kancasnn buradaki kayplarn alacadr.
+
+16
+00:01:01,320 --> 00:01:07,080
+yntemler eklememizi veya uygulamamz gerekmiyor nk zaten tm bu yntemleri kullanm bulunuyoruz.
+
+17
+00:01:07,080 --> 00:01:08,770
+Dolaysyla, artk projemize yeni
+
+18
+00:01:09,090 --> 00:01:10,710
+Yine de onlar uygulayacam.
+
+19
+00:01:10,740 --> 00:01:15,730
+Aslnda evet, burada grebilmemiz iin devlete dntmz yerdir.
+
+20
+00:01:15,740 --> 00:01:18,630
+S Sonra MT gibi eyler yaptnz m?
+
+21
+00:01:18,690 --> 00:01:23,520
+Kalkan bileeni gncelleme yntemlerini uygulamak istiyorum.
+
+22
+00:01:23,790 --> 00:01:30,400
+Bu yzden onlar insanlarn satranlarndan kopyalayp, aslnda bileenlerin ska balanaca yere tayacam.
+
+23
+00:01:30,600 --> 00:01:39,480
+Ve elbette ki gzleri orada referans olacak ekilde ayarlamal ve konsol logundaki referans olarak
+
+24
+00:01:39,540 --> 00:01:41,960
+tm insanlar J'yi deitirmeli.
+
+25
+00:01:41,960 --> 00:01:46,200
+te Apicius ve burada bir gncelleme olmal.
+
+26
+00:01:46,200 --> 00:01:49,170
+Ben de imdilik bunun hakkn koyacam.
+
+27
+00:01:49,170 --> 00:01:53,960
+imdi bunu kaydedelim ve imdi uygulamamzn bu etkisinin nasl yeniden yklendiini grelim.
+
+28
+00:01:54,180 --> 00:01:57,300
+Burada herhangi bir gncelleme yntemi gremiyoruz.
+
+29
+00:01:57,390 --> 00:02:03,030
+Bunu temizleyeyim ve hemen banda greceiniz herhangi bir bildirim deiiklii dmesini tklayn.
+
+30
+00:02:03,060 --> 00:02:08,850
+Gncellemeyiz aslnda bileen gncelleme tetikleyicisidir ve bu mantkldr nk bu
+
+31
+00:02:08,850 --> 00:02:15,410
+dmeyi tklamak tek bana set durumunu arr ve bu bileenin gncellenmesini tetikler.
+
+32
+00:02:15,720 --> 00:02:22,050
+gncelleme srecini tetiklemesinden nce, alt bileenleri deitirebilmek iin durumun gncelletirilmesi gerektii iin.
+
+33
+00:02:22,410 --> 00:02:26,570
+Belli ki sahne deitirmeden nce ve alt bileenlerdeki
+
+34
+00:02:26,970 --> 00:02:33,530
+Dolaysyla gncellemeyi tamamlamal ve daha sonra bileen gncellenecek ve bundan sonra da render edecektir.
+
+35
+00:02:33,630 --> 00:02:37,200
+Ve imdi normal sreci terk ediyoruz.
+
+36
+00:02:37,320 --> 00:02:43,440
+Sonunda, ierdeki bileen Geass uygulamas iin gncelleme yaptn gryoruz.
+
+37
+00:02:43,440 --> 00:02:44,630
+Bu yzden bu nemlidir.
+
+38
+00:02:44,790 --> 00:02:50,070
+Evet, ileri ilk nce gncelliyor nk aka gerekleen ilk ey olan
+
+39
+00:02:50,070 --> 00:02:52,190
+bir devlet deiiklii zerine tetikleniyor.
+
+40
+00:02:52,260 --> 00:02:54,480
+Bunlarn hepsi yaam dngs kancalar.
+
+41
+00:02:54,480 --> 00:03:00,420
+imdi, bileen gncellemesine geri dnelim ve onunla uygulamanzn performansn nasl artrabileceimizi
+
+42
+00:03:00,420 --> 00:03:01,070
+dnelim.
+
+43
+00:03:01,080 --> 00:03:02,530
+Sana bir rnek gstereceim.
+

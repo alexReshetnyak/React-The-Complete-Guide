@@ -1,0 +1,572 @@
+1
+00:00:02,170 --> 00:00:09,790
+So now that we implemented auto logout when our token expires and no worries, we'll turn our heads towards
+
+2
+00:00:09,820 --> 00:00:13,900
+adjusting the layout depending on the authentication state later too,
+
+3
+00:00:14,040 --> 00:00:16,190
+now that we get the auto logout implemented,
+
+4
+00:00:16,200 --> 00:00:22,690
+let's turn our heads towards using that token to make requests to protected resources.
+
+5
+00:00:22,690 --> 00:00:28,810
+That's of course a typical use case, you have a backend with certain API endpoints which should only
+
+6
+00:00:28,810 --> 00:00:31,020
+be usable by authenticated users,
+
+7
+00:00:31,150 --> 00:00:35,520
+right now in our demo backend with firebase, that's not the case though.
+
+8
+00:00:35,750 --> 00:00:42,820
+If we have a look at database which gives us our endpoints in the end, all the endpoints so all requests
+
+9
+00:00:42,820 --> 00:00:48,940
+being sent to that URL and then any nodes nested beyond that are basically available to everyone.
+
+10
+00:00:49,120 --> 00:00:56,710
+That is the case because earlier in the course, we changed our rules here to grant read and write access
+
+11
+00:00:56,710 --> 00:00:59,500
+to everyone here by setting this to true,
+
+12
+00:00:59,890 --> 00:01:04,890
+we did this to be able to use that database without having authentication,
+
+13
+00:01:04,960 --> 00:01:08,160
+well now we got authentication so we can finally change this back.
+
+14
+00:01:08,170 --> 00:01:13,670
+Now of course this is firebase specific that you do it with the rules set up, for your own backend
+
+15
+00:01:13,670 --> 00:01:15,940
+where you write your own API code,
+
+16
+00:01:15,970 --> 00:01:21,700
+you probably have some if check where you check if some valid token is attached to the request and you
+
+17
+00:01:21,700 --> 00:01:23,920
+simply return a 403 answer
+
+18
+00:01:23,950 --> 00:01:29,980
+if that's not the case. Here however we do have these rules and in the simplest case, we can set this
+
+19
+00:01:29,980 --> 00:01:37,120
+to auth unequal null which simply means if auth is not equal to null, then read access is granted.
+
+20
+00:01:37,470 --> 00:01:41,860
+But in other words that means if you're not authenticated, then auth is null,
+
+21
+00:01:41,920 --> 00:01:43,560
+therefore this returns false
+
+22
+00:01:43,660 --> 00:01:45,350
+and you don't get read access,
+
+23
+00:01:45,370 --> 00:01:47,910
+the same can be done for write access.
+
+24
+00:01:48,280 --> 00:01:54,290
+If we set it up like this, this is applied to the entire database, to all the data that's in there,
+
+25
+00:01:54,460 --> 00:02:01,870
+now actually I want to give access to ingredients for everyone and just make access to orders only available
+
+26
+00:02:02,080 --> 00:02:04,150
+to authenticated users.
+
+27
+00:02:04,180 --> 00:02:10,510
+So for firebase what we can do is, we can fine tune our rules and we can say yes in general you got
+
+28
+00:02:10,600 --> 00:02:16,250
+read and write access but then we can add a rule here,
+
+29
+00:02:16,270 --> 00:02:23,380
+nest this and say for the orders node and you have to name it exactly as the node is named, there
+
+30
+00:02:23,430 --> 00:02:26,690
+I have a specific set of rules, there
+
+31
+00:02:26,770 --> 00:02:31,650
+read access is granted only if auth is unequal to null
+
+32
+00:02:31,650 --> 00:02:38,980
+so if you are authenticated and the same for write access, that should also only be granted if it's
+
+33
+00:02:39,060 --> 00:02:48,310
+unequal to null. So with that, we can publish these rules and that will now ensure that we do indeed only grant
+
+34
+00:02:48,400 --> 00:02:53,170
+write and read access to the ingredients to everyone but not to the orders.
+
+35
+00:02:53,170 --> 00:02:58,880
+However if we do it like this, our top level read and write rules will still overwrite this for any nested
+
+36
+00:02:58,900 --> 00:03:06,400
+nodes so I actually have to get rid of that and instead I'll add a separate rule here for my ingredients
+
+37
+00:03:06,910 --> 00:03:09,830
+and there I'll still set to read and write to true
+
+38
+00:03:10,000 --> 00:03:16,270
+but that means that only the ingredients now have read and write access or are open to everyone I should
+
+39
+00:03:16,270 --> 00:03:21,100
+say, orders is only available to authenticated users
+
+40
+00:03:21,580 --> 00:03:26,670
+and I should add a comma here after the curly brace of ingredients. With that we can test it,
+
+41
+00:03:26,670 --> 00:03:31,500
+if I go back to my application, reload it and go to orders, we get an error,
+
+42
+00:03:31,660 --> 00:03:34,600
+if I go to the burger builder though, that still works.
+
+43
+00:03:34,610 --> 00:03:36,370
+So the ingredients were still loaded,
+
+44
+00:03:36,460 --> 00:03:40,690
+I only get an unauthorized error if I visit orders here.
+
+45
+00:03:41,080 --> 00:03:42,820
+Now that is good,
+
+46
+00:03:42,820 --> 00:03:44,440
+that is exactly what I want
+
+47
+00:03:44,550 --> 00:03:52,460
+and with that, we can now make sure that we can still reach orders if we are authenticated and have a token. To do that,
+
+48
+00:03:52,480 --> 00:03:59,170
+I need to go to the place where we actually send this orders request and that of course is the action creators
+
+49
+00:03:59,460 --> 00:04:02,780
+in the orders file in the actions folder.
+
+50
+00:04:02,920 --> 00:04:09,790
+There we have to purchaseBurger action and we also have the fetchOrders action, let's work on this one
+
+51
+00:04:09,790 --> 00:04:10,600
+first.
+
+52
+00:04:10,900 --> 00:04:18,850
+Here we essentially have to add our token, our token we got back from firebase when authenticating
+
+53
+00:04:19,360 --> 00:04:22,920
+and then we can attach this token to this request.
+
+54
+00:04:23,050 --> 00:04:30,730
+The authentication is very simple then, we just have to add a query param questionmark auth equals to the
+
+55
+00:04:30,790 --> 00:04:37,720
+URL we're making the request to which requires a token and then we have to pass the token. Now the token
+
+56
+00:04:37,720 --> 00:04:42,540
+of course here is the special thing, the token is stored in our redux store,
+
+57
+00:04:42,670 --> 00:04:44,130
+how do we get it here
+
+58
+00:04:44,200 --> 00:04:47,700
+inside our fetchOrders action creator?
+
+59
+00:04:47,710 --> 00:04:51,890
+Of course we could receive getState, you learned about this,
+
+60
+00:04:51,940 --> 00:04:58,210
+you can not only get your dispatch action, you can also get the getState function here which you can
+
+61
+00:04:58,210 --> 00:05:00,730
+execute to get access to the state.
+
+62
+00:05:00,730 --> 00:05:06,360
+I also taught you that I'm not recommending using that a lot and I don't want to use it here, though
+
+63
+00:05:06,400 --> 00:05:11,350
+I see that this could be a case where it makes sense to get this information which doesn't really matter
+
+64
+00:05:11,350 --> 00:05:12,390
+to your view
+
+65
+00:05:12,400 --> 00:05:12,720
+right
+
+66
+00:05:12,730 --> 00:05:17,980
+in the action creator. Still, I want to get it in the place where we dispatch the fetchOrders
+
+67
+00:05:17,980 --> 00:05:22,110
+action and then simply pass it as an argument to this action creator.
+
+68
+00:05:22,120 --> 00:05:27,990
+So I expect to get a token argument in this function and then I attach the token here to my request,
+
+69
+00:05:28,090 --> 00:05:33,850
+so the missing piece is to make sure that we received the token here when dispatching fetchOrders, fetch
+
+70
+00:05:33,880 --> 00:05:37,720
+orders is of course dispatched in my orders container,
+
+71
+00:05:37,850 --> 00:05:43,750
+there at the bottom, we have onFetchOrders and here again, I now need to pass on some token.
+
+72
+00:05:43,900 --> 00:05:49,960
+So this token will have to be passed to this anonymous function we execute here and then passed on to
+
+73
+00:05:49,960 --> 00:05:51,260
+the action creator
+
+74
+00:05:51,490 --> 00:05:58,410
+so finally we have to get the token in the place where we call onFetchOrders, onFetchOrders is called
+
+75
+00:05:58,420 --> 00:06:04,870
+here in the componentDidMount method and now we need to make sure that we have the token when we
+
+76
+00:06:04,930 --> 00:06:07,060
+call that. Now the token
+
+77
+00:06:07,060 --> 00:06:15,390
+as I said as stored in our redux store of course, we store it in our auth state slice here, the token.
+
+78
+00:06:15,430 --> 00:06:22,550
+So all we need to do is in our orders container where we already have mapStateToProps I now also
+
+79
+00:06:22,600 --> 00:06:25,180
+need to get the token from my state.
+
+80
+00:06:25,390 --> 00:06:33,190
+So I'll name the prop token and I want to access state and now not .order because I'm not interested
+
+81
+00:06:33,190 --> 00:06:36,390
+in the order related slice of my state
+
+82
+00:06:36,400 --> 00:06:42,970
+instead if we have a look at the index.js file where we combine the reducers, the auth reducer which sets
+
+83
+00:06:42,970 --> 00:06:48,070
+up the state for the token, the auth reducer can be found on an auth property,
+
+84
+00:06:48,070 --> 00:06:49,870
+so this is what we should access.
+
+85
+00:06:50,110 --> 00:06:55,330
+So in orders, I should access state.auth.token, like this.
+
+86
+00:06:55,330 --> 00:07:01,450
+And now with that, we're making the token available on the token prop, I can now simply pass this on here with
+
+87
+00:07:01,450 --> 00:07:06,150
+this.props.token and it will emphasize that this is only one way of doing it,
+
+88
+00:07:06,160 --> 00:07:12,550
+the alternative would have been to use getState in the order action creator.
+
+89
+00:07:12,550 --> 00:07:16,210
+With that though we should get the token and pass on here.
+
+90
+00:07:16,540 --> 00:07:22,930
+So now if we save all our code and go back, it was still fail here because obviously when the app reloads
+
+91
+00:07:22,960 --> 00:07:24,700
+all tokens are lost.
+
+92
+00:07:24,700 --> 00:07:31,400
+So let's switch to sign in and quickly sign in with the user recreated a while ago, hit submit
+
+93
+00:07:31,420 --> 00:07:37,660
+now we can verify on redux that we have a successful authentication and that in the auth state, we have
+
+94
+00:07:37,660 --> 00:07:38,600
+a token,
+
+95
+00:07:38,920 --> 00:07:40,810
+let's now head over to orders
+
+96
+00:07:40,990 --> 00:07:45,900
+and as you can see we now successfully load the orders here again without an error,
+
+97
+00:07:46,090 --> 00:07:51,160
+this error here on the right is an old one because now we successfully send the request with the
+
+98
+00:07:51,160 --> 00:07:52,320
+token attached.
+
+99
+00:07:52,600 --> 00:07:58,510
+And you can actually see this if you open the network tab in your browser dev tools, there you can see
+
+100
+00:07:58,960 --> 00:08:05,650
+that if I go back to orders again, here's the request being sent where the token is attached, this is the very
+
+101
+00:08:05,650 --> 00:08:08,710
+long URL but because the token is part of the URL,
+
+102
+00:08:08,830 --> 00:08:12,900
+that is how we have to authenticate and how we can send our token to the backend.
+
+103
+00:08:12,900 --> 00:08:19,120
+So this is now how we can use the token to access protected resources,
+
+104
+00:08:19,300 --> 00:08:24,530
+of course the same is relevant when we make an order here, purchaseBurger,
+
+105
+00:08:24,710 --> 00:08:29,670
+there we also need to get that token as an argument in the action creator
+
+106
+00:08:29,780 --> 00:08:34,040
+and then add it as a query param to the URL we're sending the request to,
+
+107
+00:08:34,180 --> 00:08:41,080
+so auth also should use the token here or the auth query param should be the token argument we're receiving
+
+108
+00:08:41,080 --> 00:08:41,620
+here
+
+109
+00:08:41,740 --> 00:08:46,190
+and for that, we of course have to make sure that we do receive a token here too.
+
+110
+00:08:46,480 --> 00:08:52,420
+So we have to go to the place where we dispatch purchaseBurger and that of course happens in contact
+
+111
+00:08:52,510 --> 00:08:53,320
+data,
+
+112
+00:08:53,620 --> 00:09:01,890
+there we got our method for making an order, the orderHandler where we have onOrderBurger which
+
+113
+00:09:01,890 --> 00:09:08,130
+in the end dispatches this action creator, so there, purchaseBurger is dispatched.
+
+114
+00:09:08,130 --> 00:09:11,540
+Now here we need to pass that token, for that
+
+115
+00:09:11,550 --> 00:09:17,760
+we need to receive it in our list of arguments of this method we're mapping in the prop and for that
+
+116
+00:09:17,760 --> 00:09:21,650
+we need to make the token available as a prop in that container too.
+
+117
+00:09:21,900 --> 00:09:28,290
+So just as in the orders container, I'll map a token property to state.auth.token
+
+118
+00:09:28,560 --> 00:09:34,020
+and now we can go to the place where we do dispatch this, where we call the prop dispatching the action
+
+119
+00:09:34,320 --> 00:09:39,200
+onOrderBurger and also pass on this props token here.
+
+120
+00:09:39,360 --> 00:09:44,430
+And with that, we're making sure that we are having a token and sending it,
+
+121
+00:09:44,430 --> 00:09:48,590
+now here we get an error because the application reloaded hence the token is lost.
+
+122
+00:09:48,630 --> 00:09:55,570
+But if I do sign in again and we'll take care about this auto logout we're having here soon,
+
+123
+00:09:55,770 --> 00:09:58,310
+if I log in again I go to burger builder,
+
+124
+00:09:58,470 --> 00:10:01,250
+if I now build a burger here, order now,
+
+125
+00:10:01,290 --> 00:10:02,240
+continue,
+
+126
+00:10:02,430 --> 00:10:04,500
+let me clear the network tab,
+
+127
+00:10:04,530 --> 00:10:05,350
+continue here
+
+128
+00:10:05,350 --> 00:10:09,460
+too and now let's quickly enter some data, like this.
+
+129
+00:10:09,710 --> 00:10:14,880
+If I now click order here, you'll see that was successful because it sends the orders request
+
+130
+00:10:14,970 --> 00:10:17,250
+and don't be confused by two requests being sent here,
+
+131
+00:10:17,250 --> 00:10:22,620
+the first one is just an options request which Chrome always sends if you're sending a post request.
+
+132
+00:10:22,620 --> 00:10:27,810
+This is the relevant one, this post request with the token and indeed we can verify in our database
+
+133
+00:10:27,960 --> 00:10:32,910
+that we got a new order here with the burger we just configured.
+
+134
+00:10:32,910 --> 00:10:39,080
+So this is now working, now we are using that token to reach protected resources
+
+135
+00:10:39,240 --> 00:10:44,520
+and as you can see when you reload the app and visit orders for example, it's not working if you don't
+
+136
+00:10:44,520 --> 00:10:45,530
+have a token.
+
+137
+00:10:45,660 --> 00:10:48,430
+Of course it's not the greatest user experience to
+
+138
+00:10:48,430 --> 00:10:51,060
+well just visit a page and then fail.
+
+139
+00:10:51,180 --> 00:10:56,280
+It would be better if we can't visit pages where we need to be authenticated in the first place, of
+
+140
+00:10:56,280 --> 00:11:01,620
+course it would also be better if the UI would show us if we are authenticated and it would be best if we
+
+141
+00:11:01,620 --> 00:11:08,150
+could also log the user in if there theoretically still is a valid token so that we don't lose our
+
+142
+00:11:08,280 --> 00:11:11,910
+authentication state whenever we reload the application.
+
+143
+00:11:11,910 --> 00:11:15,060
+These are all things we're going to tackle over the next lectures.
+

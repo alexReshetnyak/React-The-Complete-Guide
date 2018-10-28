@@ -1,0 +1,168 @@
+1
+00:00:02,260 --> 00:00:06,170
+We worked a bit on the order reducer and the order actions
+
+2
+00:00:06,310 --> 00:00:12,130
+and before we even combined our reducers, we get an error when visiting contact data like this on
+
+3
+00:00:12,130 --> 00:00:13,550
+the checkout page.
+
+4
+00:00:13,690 --> 00:00:19,480
+The reason for this is that on the checkout page in the checkout summary, we of course show a preview
+
+5
+00:00:19,480 --> 00:00:21,630
+of our burger with the ingredients we have
+
+6
+00:00:21,760 --> 00:00:28,330
+and initially before we loaded the ingredients, ingredients is null and therefore it fails if we try
+
+7
+00:00:28,330 --> 00:00:30,130
+to loop through our ingredients.
+
+8
+00:00:30,460 --> 00:00:33,630
+Now there are a couple of ways of solving this, an
+
+9
+00:00:33,670 --> 00:00:35,960
+easy way is to simply not load
+
+10
+00:00:35,980 --> 00:00:42,040
+the checkout summary if ingredients aren't loaded yet, we can either show a spinner until they are there
+
+11
+00:00:42,310 --> 00:00:48,940
+but since in our application at least, the only time when the ingredients are not there is at startup,
+
+12
+00:00:49,300 --> 00:00:54,870
+we could also simply redirect the user if no ingredients are loaded because if no ingredients are there,
+
+13
+00:00:55,000 --> 00:00:58,970
+well then it doesn't make any sense to be on a checkout page.
+
+14
+00:00:59,080 --> 00:01:04,450
+So that is the route I'll take here but be aware that you could of course also show a spinner instead
+
+15
+00:01:04,450 --> 00:01:05,560
+of the summary here
+
+16
+00:01:05,560 --> 00:01:07,210
+if you wanted to do that.
+
+17
+00:01:07,660 --> 00:01:13,710
+So what I'll do is I'll import something from react router dom and that's going to be the redirect component.
+
+18
+00:01:13,750 --> 00:01:22,020
+We saw that in the routing section and in the render method, I'll create a new constant summary and this
+
+19
+00:01:22,030 --> 00:01:25,830
+summary by default should be the redirect,
+
+20
+00:01:25,830 --> 00:01:26,590
+let's say.
+
+21
+00:01:26,800 --> 00:01:31,900
+So here, I'll redirect and I'll simply redirect to slash,
+
+22
+00:01:31,990 --> 00:01:38,680
+so to my root page, to the burger builder. On the burger builder page, I have a loader as long as no ingredients
+
+23
+00:01:38,690 --> 00:01:39,460
+were loaded.
+
+24
+00:01:40,530 --> 00:01:44,090
+Now the summary should of course not be redirecting,
+
+25
+00:01:44,280 --> 00:01:47,370
+if instead this.props.ings,
+
+26
+00:01:47,490 --> 00:01:53,280
+so ings, the ingredients is available, we get that from our redux state and it is available once it has
+
+27
+00:01:53,280 --> 00:01:54,150
+been loaded.
+
+28
+00:01:54,510 --> 00:02:02,400
+Once that is the case, I of course want to render and therefore this should not be a concept but a variable
+
+29
+00:02:02,400 --> 00:02:03,190
+with Let,
+
+30
+00:02:03,240 --> 00:02:06,390
+I want to render the summary we showed before
+
+31
+00:02:06,600 --> 00:02:08,720
+So I'll put the summary code in there.
+
+32
+00:02:08,820 --> 00:02:12,220
+Now we can use that summary variable and output it here
+
+33
+00:02:12,390 --> 00:02:15,610
+so I'll simply output summary.
+
+34
+00:02:15,750 --> 00:02:20,370
+And we also don't need to show the route to the contact data
+
+35
+00:02:20,480 --> 00:02:30,750
+so I can simply put this into my checkout, in my summary code here to wrap it with the div due to having
+
+36
+00:02:30,780 --> 00:02:32,530
+adjacent elements here
+
+37
+00:02:32,680 --> 00:02:39,450
+and that actually also allows me to just get rid of the div here and just return summary, which either is
+
+38
+00:02:39,450 --> 00:02:43,170
+simply a redirect or the code we previously saw.
+
+39
+00:02:43,170 --> 00:02:50,580
+Now if I save that updated checkout container, you see if I go to the checkout page by clicking on
+
+40
+00:02:50,640 --> 00:02:57,770
+order now, this all works but if I reload it by just hitting enter or refresh, I'm redirected.
+
+41
+00:02:58,020 --> 00:03:02,100
+So this is the error fixed with this tiny adjustment,
+
+42
+00:03:02,100 --> 00:03:06,230
+now let's make sure that we actually combine our reducers.
+

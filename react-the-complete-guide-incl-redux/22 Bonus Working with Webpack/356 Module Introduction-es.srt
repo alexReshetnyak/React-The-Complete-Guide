@@ -1,0 +1,56 @@
+1
+00:00:02,210 --> 00:00:09,800
+Bienvenido a este mdulo, a lo largo de este curso usamos la aplicacin create reaccionar y el proyecto creado con
+
+2
+00:00:09,860 --> 00:00:14,690
+ella para trabajar en nuestra aplicacin reaccionar, para construir nuestra aplicacin reaccionar.
+
+3
+00:00:14,690 --> 00:00:21,690
+Recomiendo encarecidamente usar la aplicacin create reaccionar especialmente para aplicaciones de una sola pgina, para aplicaciones de
+
+4
+00:00:21,710 --> 00:00:26,660
+varias pginas creando mltiples aplicaciones para las diferentes piezas, aunque es viable,
+
+5
+00:00:26,720 --> 00:00:33,920
+pero de todos modos puede tener su antiguo flujo de trabajo integrado profundamente en su proyecto completo.
+
+6
+00:00:34,070 --> 00:00:40,310
+Pero para las aplicaciones de una sola pgina, la aplicacin createrea le ofrece un excelente flujo de trabajo con muchas caractersticas de prxima generacin
+
+7
+00:00:40,310 --> 00:00:47,780
+que puede usar, mejores prcticas a la hora de optimizar su cdigo y mucho ms. An as, para comprender lo que ocurre entre bastidores y
+
+8
+00:00:47,810 --> 00:00:53,390
+obtener una comprensin ms profunda de lo que el flujo de trabajo hace por
+
+9
+00:00:53,390 --> 00:00:55,000
+usted, quiero configurar un
+
+10
+00:00:55,010 --> 00:00:58,910
+flujo de trabajo bsico junto con usted en este mdulo.
+
+11
+00:00:59,150 --> 00:01:05,450
+Te presentar un paquete web, la herramienta de compilacin central que se utiliza detrs de escena y estableceremos
+
+12
+00:01:05,720 --> 00:01:13,400
+un proyecto que realmente admita el mismo cdigo que escribimos con la aplicacin de aplicacin create reaccionar en nuestra configuracin aqu.
+
+13
+00:01:13,580 --> 00:01:18,480
+As que profundicemos en eso y empecemos por entender qu es exactamente el paquete web,
+
+14
+00:01:18,500 --> 00:01:22,170
+ya que parece desempear un papel crucial en la prxima conferencia.
+

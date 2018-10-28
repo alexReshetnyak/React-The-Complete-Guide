@@ -1,0 +1,444 @@
+1
+00:00:02,230 --> 00:00:07,980
+Son derslerde ok ilevsellik elde ettik ve hepsi bir sipari verdikten
+
+2
+00:00:07,980 --> 00:00:10,440
+sonra asla ynlendirilmeyeceimiz dnda alyordu.
+
+3
+00:00:10,440 --> 00:00:14,110
+imdi yeniden ynlendirme uygulamak iin eitli yollar var.
+
+4
+00:00:14,130 --> 00:00:21,990
+Bir ey, bu ynlendiriciye, sipari eylem yaratcnza gemii salayan bir referans iletebilir ve Bergere baarsn
+
+5
+00:00:22,260 --> 00:00:27,870
+gnderirken veya en azndan eriilen durumda baarsz olursanz, o zaman bunu
+
+6
+00:00:27,870 --> 00:00:32,890
+bu ileve bir argman olarak zerinde push yntemini arn.
+
+7
+00:00:33,000 --> 00:00:35,770
+Bu yaklam ok fazla sevmiyorum.
+
+8
+00:00:35,850 --> 00:00:37,920
+Ancak bunu kesinlikle yapabilirsin.
+
+9
+00:00:38,100 --> 00:00:41,510
+imdi kullanacam yaklam redktif bir yaklam.
+
+10
+00:00:41,700 --> 00:00:48,630
+Eylem trleri dosyasna yeni bir eylem tr ekleyeceim, bu yzden yeni bir Konst verelim ve
+
+11
+00:00:48,630 --> 00:00:51,090
+aslnda onun iine yer imi koyacam.
+
+12
+00:00:52,090 --> 00:00:59,940
+Elbette ki tm Chase ncesi kullanr ve check-out sayfasn yklediimizde her kovalamaca init
+
+13
+00:00:59,940 --> 00:01:02,910
+iin bir dize tanmlaycs gnderilir.
+
+14
+00:01:02,910 --> 00:01:06,310
+imdi onun iin yaratlan yaratlarm yaratacam.
+
+15
+00:01:06,420 --> 00:01:07,810
+Durum nemsiz.
+
+16
+00:01:07,870 --> 00:01:10,470
+Satn aldklar sabit gibi.
+
+17
+00:01:11,290 --> 00:01:18,700
+Ve bu hibir argman almaz ve sadece bir eylem dndrr, bylece yazn Che'nin
+
+18
+00:01:18,700 --> 00:01:23,230
+her eylem tr olacak bir javascript nesnesi dndrr.
+
+19
+00:01:23,230 --> 00:01:27,200
+imdi Despard Chase'i dizinimdeki bir ileve da aktarmam gerekiyor.
+
+20
+00:01:27,290 --> 00:01:28,240
+Gidelim
+
+21
+00:01:28,420 --> 00:01:36,910
+Bu yzden iinde satn almak iin sipari var ve sonra benim konteyner konteyner zerine ba
+
+22
+00:01:37,300 --> 00:01:43,760
+ve ben orada bileen eklemek istedim mount ve bileen monte yaptm.
+
+23
+00:01:43,780 --> 00:01:49,150
+Bu eylemi veya redktrde bu eylemi gndermek istiyorum.
+
+24
+00:01:49,180 --> 00:01:57,070
+yeni bir mlk eklemek istemiyorum; bu, Chase ncesi bittikten sonra doru hale getirildi, bylece ynlendirdik.
+
+25
+00:01:57,070 --> 00:02:02,140
+Satn alma gibi bir eyi false olarak ayarladm bir devlete
+
+26
+00:02:02,140 --> 00:02:12,550
+Bu yzden mant buraya, harita gnderme fonksiyonunu Konst harita gndermeye ekleyerek de eklememe izin verin, buradaki
+
+27
+00:02:12,610 --> 00:02:16,880
+gnderme fonksiyonunu alp bir harita dndr.
+
+28
+00:02:17,050 --> 00:02:28,350
+Her zaman olduu gibi Chase iin de, rnein bir gnderimin olduu anonim bir ileve sahip olduunuz ve u anda eylem dosyasndan
+
+29
+00:02:28,350 --> 00:02:33,740
+ie aktarmam gereken bir ey gnderdiim bu haritada olduu gibi.
+
+30
+00:02:33,870 --> 00:02:43,730
+Yani her eyi, maaza eylemleri klasrndeki bu dizin dosyasndaki eylemler olarak ie aktarn ve gnderme
+
+31
+00:02:43,760 --> 00:02:45,360
+eylemi istiyorum.
+
+32
+00:02:45,370 --> 00:02:51,890
+Tepkileriniz bu eylemde kovaland ve tartmalara gerek yok.
+
+33
+00:02:51,890 --> 00:02:59,810
+imdi, bileimimin ncesi bir Chase zerinde yrtebileceim Mount yntemini kullanyorum, bylece bu pervaneyi byle
+
+34
+00:03:00,590 --> 00:03:03,080
+bir Chase ncesi olarak arayacam.
+
+35
+00:03:03,850 --> 00:03:11,630
+Aslnda, Lapsang'n dk bakma ihtiyac olacak ve imdi sevkyatm yapyorum.
+
+36
+00:03:11,640 --> 00:03:21,050
+imdi sipari redksiyon takmma gidebilirim ve Che'nin init'ine eklediim yeni bir vaka eylemi trleri ekleyeceim
+
+37
+00:03:21,060 --> 00:03:25,800
+ve orada yeni bir durum nesnesi dndreceim.
+
+38
+00:03:25,830 --> 00:03:32,980
+Takip ettiim her eyalete yeni bir mlk ekleyeceim ve balangta yanl olarak ayarlayacam ve ya satn aldm
+
+39
+00:03:32,990 --> 00:03:37,700
+iddia edeceim ve balangta satn alm init'te sahte olduu iin zr dilerim.
+
+40
+00:03:37,770 --> 00:03:44,270
+Mevcut durumu kopyalayacam ve daha sonra bana kovaladm da burada yanl olarak ayarlayacam.
+
+41
+00:03:44,670 --> 00:03:49,210
+Ama baaryla sonulanr ve u anda baarda olan en ilgin ey budur.
+
+42
+00:03:49,290 --> 00:03:52,210
+Tm set doru olarak satn alnd.
+
+43
+00:03:52,560 --> 00:03:56,840
+imdi, Chase'i baaryla kurduktan sonra deiiklikleri takip ediyoruz.
+
+44
+00:03:56,910 --> 00:04:03,270
+Ancak, her zaman olduu gibi sfrlanrken deme konteyneri tekrar gzden geirilir ve artk bir
+
+45
+00:04:03,450 --> 00:04:08,110
+ey satn aldnzda baarl bir ekilde deme konteynerine gidebilir ve ynlendirebilirsiniz.
+
+46
+00:04:08,400 --> 00:04:14,370
+Bu nedenle, render ynteminin zetine gidebilirim, neden zaten temelde imdi hibir katk maddesi
+
+47
+00:04:14,370 --> 00:04:18,770
+bulunmadna veya say sabiti eklememize izin verdiim yerden izin verin.
+
+48
+00:04:18,780 --> 00:04:30,260
+Her dal ynlendirmeyi adlandracam bu durum yalnzca sahne alm ile alakalysa geerlidir.
+
+49
+00:04:30,290 --> 00:04:32,710
+Bu yzden burada ifa edeceiz.
+
+50
+00:04:33,660 --> 00:04:37,790
+Ve hepsi bu ekilde yeniden ynlendirme eittir.
+
+51
+00:04:37,840 --> 00:04:44,770
+Ev iin diyelim ya da bunun iin l bir ifadeye ihtiyacm var.
+
+52
+00:04:44,800 --> 00:04:46,950
+Ynlendirmemeye ayarlayacam.
+
+53
+00:04:46,960 --> 00:04:50,660
+imdi ynlendirilen doruysa ynlendirmek istiyorum.
+
+54
+00:04:50,920 --> 00:04:58,240
+harita aamasnda pervane ncesi Chase pervanesine hayran kaldm ve devlet emrine ulatk ve hepsi de bir kt kovaland,
+
+55
+00:04:58,240 --> 00:05:05,320
+bir pervane oldu Sadece redktr ekledik ve daha sonra bu n -Chase prob hepsi burada bu sahtelerin
+
+56
+00:05:05,320 --> 00:05:12,970
+kovalandn kontrol etmek iin kullanyoruz Bu bir kabadayz ve bu doruysa o zaman redirect yapacaz, nk iimiz bitti.
+
+57
+00:05:12,970 --> 00:05:16,120
+Bunun iin bir pervane haritas yapmamz gerekiyor. 8'li
+
+58
+00:05:16,120 --> 00:05:17,470
+Sayfadan ayrlmak istiyorum.
+
+59
+00:05:17,470 --> 00:05:20,230
+Aksi takdirde, hl satn alma srecindeyiz.
+
+60
+00:05:20,230 --> 00:05:27,280
+Bu yzden bunu boa ayarlayacam ve imdi Dith ylmzda Chase nyklemesi yapabilir ve para
+
+61
+00:05:27,280 --> 00:05:29,650
+yk matlatrlacak ve bizi ynlendirecek.
+
+62
+00:05:30,100 --> 00:05:33,490
+Btn dosyalar saklayalm ve bu iin hayal grp grmediini greceiz.
+
+63
+00:05:33,610 --> 00:05:41,360
+Bavurumuzu burada aarsak, sipari zerine bir burger tklamas yapalm devam edelim.
+
+64
+00:05:41,620 --> 00:05:43,770
+Ve sevmedii gibi Chase ncesi de.
+
+65
+00:05:43,770 --> 00:05:47,740
+O halde bununla ilgili neyin yanl gittiine bir gz atalm.
+
+66
+00:05:47,740 --> 00:05:55,510
+Pre-Chase burada bir ileve bir referans tutar, ancak ilevi connect ilevi arsna eklemediimiz takdirde
+
+67
+00:05:55,510 --> 00:05:57,170
+elimizdeki deere demez.
+
+68
+00:05:57,190 --> 00:06:00,220
+Dolaysyla pervane harita gnderimi orada olmal.
+
+69
+00:06:00,460 --> 00:06:01,650
+imdi tekrar deneyelim.
+
+70
+00:06:01,660 --> 00:06:03,820
+Gzel bir hamburger yapalm.
+
+71
+00:06:03,910 --> 00:06:04,970
+Devam et.
+
+72
+00:06:05,140 --> 00:06:06,790
+Evet devam et.
+
+73
+00:06:06,880 --> 00:06:08,560
+Bu formu hzl bir ekilde dolduralm.
+
+74
+00:06:08,650 --> 00:06:17,710
+Sokakta baz rasgele kodlar bir e-posta adresiyle test edin ve tklayn emrini verelim ve iimiz bittiinde
+
+75
+00:06:17,710 --> 00:06:18,250
+ynlendiriliriz.
+
+76
+00:06:18,330 --> 00:06:24,800
+imdi yeni bir burger eklersek ve imdi sipari ver ve devam ettirirsek, tekrar ynlendiriliriz.
+
+77
+00:06:24,820 --> 00:06:25,850
+Chase'in pre-Chase
+
+78
+00:06:29,150 --> 00:06:35,890
+bileeninde neden ardmz yerimizle ilikili olduunu biliyor musunuz, kontrat konteyneri
+
+79
+00:06:35,900 --> 00:06:37,130
+ok ge.
+
+80
+00:06:37,160 --> 00:06:44,510
+aldmz eski sahne sunumunu engelledii gibi, sahne bana eski sahne hala doru.
+
+81
+00:06:44,510 --> 00:06:47,480
+Kalp altrmadan nce altrmak istiyor,
+
+82
+00:06:47,810 --> 00:06:50,680
+Bu nedenle, bu yl para sevkiyatmz gerekletiremeyiz.
+
+83
+00:06:50,840 --> 00:06:51,470
+Kurtulacam
+
+84
+00:06:51,470 --> 00:06:53,570
+Bu sayfay iki sahne takmn tamamen buraya eleyin.
+
+85
+00:06:53,630 --> 00:06:55,380
+Buraya sevk etmene gerek yok.
+
+86
+00:06:55,580 --> 00:06:59,860
+Bunun yerine Bergere Boulder'daki Chase ncesi yapmak istersiniz.
+
+87
+00:06:59,870 --> 00:07:02,370
+Tkladmzda imdi sipari dmesi.
+
+88
+00:07:02,510 --> 00:07:07,970
+Dolaysyla, n-Chase, deme sayfasna gitmeden hemen nce devam etti.
+
+89
+00:07:07,970 --> 00:07:10,840
+Chase'i hazrlamak istediimiz yer buras.
+
+90
+00:07:11,060 --> 00:07:13,960
+Bunu yapmak iin sadece yeni bir ey ekleyeceim.
+
+91
+00:07:13,960 --> 00:07:18,740
+Aslnda kovalamaca her yere gnderebilirim.
+
+92
+00:07:19,040 --> 00:07:24,330
+Bu delik, isimsiz bir ilevi ve eylemleri gnderir.
+
+93
+00:07:24,470 --> 00:07:29,120
+Veya buraya kprlenebilir veya eylemler denir. Bunu yeniden adlandrmalym, nk gerekten sadece Bergere cesur
+
+94
+00:07:29,120 --> 00:07:30,090
+eylemlerinden daha fazlasdr.
+
+95
+00:07:30,350 --> 00:07:34,440
+yleyse hepsini, ithalatta ve orada aada iki ilem okumalm.
+
+96
+00:07:34,640 --> 00:07:39,910
+Yani eylemler ve daha sonra iinde Che var.
+
+97
+00:07:40,040 --> 00:07:46,700
+Bununla bu balatma eylemini burger bowlingisine gnderiyoruz veya en azndan imdi
+
+98
+00:07:46,700 --> 00:07:48,100
+gndermeye hazrz.
+
+99
+00:07:48,110 --> 00:07:53,030
+nceden Chase'i aramalym ve daha sonra gezinmeden nce aramam lazm.
+
+100
+00:07:53,090 --> 00:07:58,980
+Yani bu pervane, Chase'in nndeki bu deiiklikle burada yrd.
+
+101
+00:07:58,980 --> 00:08:02,250
+imdi bunun uygulamann ie yarayp yaramayacan grmek istiyoruz.
+
+102
+00:08:02,420 --> 00:08:06,840
+Bir burger ina edebilirim veya burada da devam edebilirim.
+
+103
+00:08:07,040 --> 00:08:09,060
+Ve onun iin ok gzel.
+
+104
+00:08:09,150 --> 00:08:13,450
+Fakat soka test edelim sopa dzeni.
+
+105
+00:08:13,520 --> 00:08:14,570
+Ynlendirildik.
+
+106
+00:08:14,750 --> 00:08:16,970
+imdi geri dnelim ve tekrar tklayn.
+
+107
+00:08:17,090 --> 00:08:20,480
+Ve imdi bir kez daha ynlendirilmeden oraya gidebiliriz.
+
+108
+00:08:20,480 --> 00:08:21,850
+Bir katmz var.
+
+109
+00:08:21,890 --> 00:08:24,820
+Deil emin eer burger bowling ama fark ettiniz.
+
+110
+00:08:24,860 --> 00:08:28,090
+Yeniden ynlendirmeden sonra fiyatmz asla sfrlanmaz.
+
+111
+00:08:28,130 --> 00:08:32,640
+Dolaysyla, bu sonraki dersimde yapacam ya da ilgilenebileceim bir ey.
+

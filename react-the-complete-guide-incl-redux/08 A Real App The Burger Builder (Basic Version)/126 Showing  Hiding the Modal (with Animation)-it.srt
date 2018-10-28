@@ -1,0 +1,348 @@
+1
+00:00:02,200 --> 00:00:07,690
+Abbiamo il motore per assicurarci di visualizzarlo solo se stiamo effettivamente comprando qualcosa se ha
+
+2
+00:00:07,690 --> 00:00:09,800
+fatto clic sul pulsante Ordina ora.
+
+3
+00:00:09,910 --> 00:00:15,820
+Quindi il modem  incluso nel generatore di hamburger e ci  positivo perch il masso Boulder  effettivamente
+
+4
+00:00:15,820 --> 00:00:21,160
+il nostro stato ed  qui che possiamo anche determinare se  stato fatto clic o meno
+
+5
+00:00:21,160 --> 00:00:22,510
+sul pulsante Ordina ora.
+
+6
+00:00:22,510 --> 00:00:24,440
+In realt non possiamo farlo adesso.
+
+7
+00:00:24,490 --> 00:00:27,270
+Ma possiamo facilmente aggiungere la logica per farlo.
+
+8
+00:00:27,480 --> 00:00:30,550
+Per questo prima di tutto aggiungo qualcosa al mio stato.
+
+9
+00:00:30,820 --> 00:00:35,970
+Non ho solo bisogno di sapere se  acquistabile, ma se  stato fatto clic sul pulsante ordine ora.
+
+10
+00:00:36,130 --> 00:00:39,830
+Quindi se sei in modalit di acquisto o qualcosa del genere.
+
+11
+00:00:40,180 --> 00:00:46,140
+Quindi quello che voglio fare  impostare l'inseguimento su falso.
+
+12
+00:00:46,220 --> 00:00:52,890
+E ovviamente l'inseguimento dovrebbe essere cambiato in falso una volta che l'ordine ora  stato premuto un pulsante.
+
+13
+00:00:53,000 --> 00:01:03,740
+Quindi aggiunger un nuovo gestore un nuovo metodo Lo chiamer per il gestore di Chase per gestore di inseguimenti un metodo normale
+
+14
+00:01:04,310 --> 00:01:10,130
+e dovrebbe essere attivato ogni volta che clicchiamo su questo pulsante ora
+
+15
+00:01:10,130 --> 00:01:23,860
+in l ci che far  che imposter lo stato di per cheesing per vero proprio cos e ho bisogno di passare questo per costruire controlli c' ordine
+
+16
+00:01:24,030 --> 00:01:25,710
+pulsante ora alla fine.
+
+17
+00:01:25,710 --> 00:01:29,060
+Iniziamo con il controller costruito.
+
+18
+00:01:29,160 --> 00:01:35,220
+Quindi, con i controlli bulled costruiti qui controlli otteniamo questo pulsante e voglio aggiungere un click listener al pulsante
+
+19
+00:01:35,220 --> 00:01:41,320
+in modo da fare clic su che solo un listener di clic predefinito poich questo  un pulsante predefinito l.
+
+20
+00:01:41,340 --> 00:01:46,710
+Voglio eseguire un metodo che ricevo dagli oggetti di scena e possiamo scegliere qualsiasi oggetto che vogliamo.
+
+21
+00:01:46,710 --> 00:01:49,580
+Qui abbiamo ragione su come impostare questo.
+
+22
+00:01:49,590 --> 00:01:54,230
+Quindi chiamiamolo semplicemente per ordinarlo.
+
+23
+00:01:54,250 --> 00:01:55,730
+O qualcosa di simile.
+
+24
+00:01:55,760 --> 00:01:57,580
+Quindi voglio eseguire questo.
+
+25
+00:01:57,650 --> 00:02:03,450
+E ora torniamo al Builder Burgert che  il luogo in cui dobbiamo passare
+
+26
+00:02:03,450 --> 00:02:12,710
+oggetti di scena per costruire i controlli ei controlli on put sono ordinati correttamente, basta aggiungerlo e associarlo a questo gestore acquisti in
+
+27
+00:02:12,860 --> 00:02:15,470
+modo che questo metodo venga eseguito.
+
+28
+00:02:15,530 --> 00:02:21,320
+Quando abbiamo fatto clic sul pulsante "Ordina ora", naturalmente,  bello che abbiamo modificato un caccia al soldato di stato.
+
+29
+00:02:21,320 --> 00:02:25,300
+Questo da solo non cambier il modo in cui vediamo il modale.
+
+30
+00:02:25,730 --> 00:02:31,780
+Ora potrei essere reso condizionalmente come modale, potremmo aggiungere del codice per mostrare o nascondere in modo condizionale la
+
+31
+00:02:31,790 --> 00:02:32,070
+modalit.
+
+32
+00:02:32,070 --> 00:02:39,230
+con la transizione di traduzione, vedendoci come propriet semplicemente su Qualsiasi fatto quando questo modello viene mostrato.
+
+33
+00:02:39,230 --> 00:02:46,520
+Questo sarebbe sicuramente un modo ancora pi bello se potessimo giocare un minimo qualsiasi sul modale nel modale
+
+34
+00:02:46,560 --> 00:02:49,340
+C-s come file che ho gi preparato
+
+35
+00:02:49,340 --> 00:02:53,270
+Quindi, poich  pronto, dovremmo approfittarne tutti.
+
+36
+00:02:53,810 --> 00:03:00,350
+Se aggiungiamo o rimuoviamo il modal da o all'alba non vedremo un'animazione, anche se dobbiamo cambiare qualche
+
+37
+00:03:00,350 --> 00:03:04,810
+C come propriet per mostrarlo o nasconderlo per poterlo animare morto.
+
+38
+00:03:05,120 --> 00:03:11,420
+Passiamo quindi a una propriet per spostare la propriet show, quindi  possibile scegliere qualsiasi nome
+
+39
+00:03:12,080 --> 00:03:19,130
+desiderato e associarlo allo stato dell'acquisto perch solo se l'acquisto  true il motore dovrebbe essere visibile.
+
+40
+00:03:19,640 --> 00:03:27,230
+Ora con questo andiamo al motore e decifichiamo solo l per cambiare il modello.
+
+41
+00:03:27,280 --> 00:03:32,380
+In attesa della propriet show abbiamo gi una lezione qui.
+
+42
+00:03:32,560 --> 00:03:35,190
+Vuoi cambiare qualche stile in linea per.
+
+43
+00:03:35,210 --> 00:03:42,220
+ anche possibile aggiungere una nuova classe A C S S e aggiungere questa classe in modo condizionale come facciamo gi
+
+44
+00:03:42,230 --> 00:03:44,130
+in altre parti di questa applicazione.
+
+45
+00:03:44,190 --> 00:03:49,100
+Sei totalmente libero di scegliere l'approccio che desideri ma anche praticare alcuni stili in linea.
+
+46
+00:03:49,310 --> 00:03:55,940
+Leghiamo qui lo stile a qualcosa di dinamico che le cose dinamiche dovrebbero essere un oggetto
+
+47
+00:03:56,030 --> 00:04:01,740
+javascript e vogliono inviare o impostare la propriet di trasformazione se Mostra  vero.
+
+48
+00:04:02,000 --> 00:04:04,270
+User l'espressione di Tournay qui.
+
+49
+00:04:04,460 --> 00:04:12,170
+Se  vero allora quella condizione viene dopo che il punto interrogativo  stato impostato su transform per tradurre.
+
+50
+00:04:12,170 --> 00:04:16,450
+Perch sirrah quale  la posizione che ho definito in C S S.
+
+51
+00:04:16,490 --> 00:04:21,100
+Quindi la posizione D dovrebbe avere davvero se show non  vero per.
+
+52
+00:04:21,410 --> 00:04:22,000
+Tutto stabilito.
+
+53
+00:04:22,000 --> 00:04:32,180
+Converti da y a minus 100 h be h  un'unit speciale che si riferisce all'altezza del viewport, quindi lo
+
+54
+00:04:32,180 --> 00:04:35,100
+far semplicemente scorrere fuori dallo schermo.
+
+55
+00:04:35,570 --> 00:04:42,910
+Voglio anche animare il tuo Pasotti Quindi lascia che tutti impostino il tuo Pasotti su qualcosa se lo show di prop  vero.
+
+56
+00:04:42,950 --> 00:04:44,340
+Dovrebbe essere uno.
+
+57
+00:04:44,510 --> 00:04:46,110
+Se non  vero.
+
+58
+00:04:46,190 --> 00:04:49,120
+Quindi se  falso dovrebbe essere 0 quindi dovrebbe essere opaco.
+
+59
+00:04:49,130 --> 00:04:51,560
+Dovrebbe essere non vincibile dovrebbe essere trasparente.
+
+60
+00:04:51,560 --> 00:04:53,800
+Voglio dire che non dovrebbe essere risibile.
+
+61
+00:04:54,170 --> 00:04:58,790
+Quindi con quello abbiamo ottenuto e sfruttiamo la propriet dello show.
+
+62
+00:04:58,910 --> 00:05:01,930
+Salva tutti i file e vediamo se funziona.
+
+63
+00:05:02,000 --> 00:05:03,260
+Il modalista andato.
+
+64
+00:05:03,290 --> 00:05:05,920
+Aggiungiamo alcuni ingredienti e fare clic su ordine ora.
+
+65
+00:05:06,880 --> 00:05:13,880
+Qui abbiamo un errore, non possiamo leggere le propriet impostando lo stato di Ladd sul generatore di
+
+66
+00:05:13,930 --> 00:05:16,600
+hamburger e sulla data dell'insediamento dell'inseguitore.
+
+67
+00:05:16,630 --> 00:05:19,970
+E hai un'idea del perch questo non funziona.
+
+68
+00:05:20,200 --> 00:05:25,330
+Sto eseguendo questo set direttamente qui esattamente come uso anche in altri modi.
+
+69
+00:05:25,360 --> 00:05:27,310
+Perch questo errore pu fallire
+
+70
+00:05:30,150 --> 00:05:34,650
+a causa del modo in cui sto creando questo metodo.
+
+71
+00:05:34,650 --> 00:05:41,610
+Io uso la stessa sintassi del metodo che uso per il rendering ma forse ricorderai che in
+
+72
+00:05:41,610 --> 00:05:46,290
+precedenza nel corso ho menzionato che la sintassi non funzioner correttamente.
+
+73
+00:05:46,350 --> 00:05:53,310
+Almeno se proviamo a usare la parola chiave qui se il metodo  attivato da un
+
+74
+00:05:53,310 --> 00:06:00,930
+evento a causa del modo in cui questa parola chiave funziona in Javascript, non far riferimento alla classe.
+
+75
+00:06:00,930 --> 00:06:06,930
+Questo non  il caso di rimuovere e aggiungere il gestore di Reagen perch io uso una sintassi leggermente
+
+76
+00:06:06,930 --> 00:06:07,520
+diversa l.
+
+77
+00:06:07,710 --> 00:06:12,330
+Ho impostato questi metodi in quanto alle propriet sono state assegnate funzioni aerodinamiche.
+
+78
+00:06:12,480 --> 00:06:19,110
+Alla fine questi sono ancora metodi, ma internamente sfruttano le funzioni aerodinamiche che contengono fondamentalmente lo stato
+
+79
+00:06:19,110 --> 00:06:27,420
+o il contesto di questo in modo che possiamo facilmente risolvere questo impostando per gestore di inseguimento uguale a una funzione
+
+80
+00:06:27,420 --> 00:06:32,210
+di freccia e usare la sintassi di stat per creare il metodo .
+
+81
+00:06:32,520 --> 00:06:36,690
+Ora con quello se salviamo questo il messaggio di errore non dovrebbe pi apparire.
+
+82
+00:06:36,870 --> 00:06:40,010
+Se ora facciamo clic su Ordina ora, la modale scorre in.
+
+83
+00:06:40,020 --> 00:06:41,090
+Quindi sembra buono.
+
+84
+00:06:41,100 --> 00:06:43,570
+Mostra anche correttamente lo stato.
+
+85
+00:06:43,830 --> 00:06:51,010
+Ora ovviamente sarebbe bello se avessimo anche uno sfondo e se avessimo cliccato come sfondo.
+
+86
+00:06:51,090 --> 00:06:54,630
+Se poi rimuovesse o eliminasse il modale.
+
+87
+00:06:54,780 --> 00:06:57,340
+Lavoriamo su questo argomento nelle prossime lezioni.
+

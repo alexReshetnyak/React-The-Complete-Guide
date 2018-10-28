@@ -1,0 +1,384 @@
+1
+00:00:02,240 --> 00:00:07,110
+W ostatnim filmie przedstawiamy twrcw akcji synchronicznych.
+
+2
+00:00:07,310 --> 00:00:13,670
+Teraz chcc wykorzysta je do obsugi asynchronicznego kodu i obsugi asynchronicznego kodu, musimy doda
+
+3
+00:00:13,670 --> 00:00:16,660
+specjalne oprogramowanie porednie do naszego projektu redux.
+
+4
+00:00:16,730 --> 00:00:24,130
+Trzecia biblioteka, ktr moemy doda nazywa si redux phunk tutaj Jestem na stronie Get up po prostu google dla redox
+
+5
+00:00:24,140 --> 00:00:29,630
+funk Ripp tak, aby j znale tutaj moesz znale wicej instrukcji na ten temat.
+
+6
+00:00:29,630 --> 00:00:36,740
+Zasadniczo jest to biblioteka, ktra, jak powiedziaem, dodaje do twojego projektu oprogramowanie porednie,
+
+7
+00:00:36,740 --> 00:00:45,740
+ktre pozwala twoim dziaaniom nie na to, gdzie twoi prawdziwi twrcy s precyzyjni, aby nie zwracali akcji,
+
+8
+00:00:45,740 --> 00:00:52,460
+ale zwracaj funkcj, ktra w kocu wyle akcj z t ma sztuczk.
+
+9
+00:00:52,550 --> 00:00:57,390
+Nadra sam wytrca akcj, ale funkcj, ktra nastpnie j wyle.
+
+10
+00:00:57,410 --> 00:01:05,910
+Moemy uruchomi kod asynchroniczny, poniewa ostatecznie wysyamy jedn cz, ktra moe dziaa asynchronicznie.
+
+11
+00:01:05,900 --> 00:01:08,500
+Stanie si janiejszy po dodaniu.
+
+12
+00:01:08,570 --> 00:01:15,160
+Aby go doda, zatrzymajmy si lub zakoczmy NPM start, a zainstalujmy nowy pakiet z
+
+13
+00:01:15,170 --> 00:01:21,460
+zainstalowanym NPM Dash Dash, zapisz nazw jako read X dash phunk tak napisan.
+
+14
+00:01:21,530 --> 00:01:24,410
+Teraz to zostanie pobrane i zapisane.
+
+15
+00:01:24,440 --> 00:01:29,800
+Jak zwykle moemy zarejestrowa to jako oprogramowanie porednie do naszego projektu.
+
+16
+00:01:29,810 --> 00:01:33,580
+Szczegowe instrukcje mona zawsze znale, a my otrzymamy oczywicie stron.
+
+17
+00:01:33,590 --> 00:01:34,670
+Widzisz to.
+
+18
+00:01:34,670 --> 00:01:39,790
+Po zainstalowaniu go w kocu wanie dodalimy za pomoc Apply middleware.
+
+19
+00:01:40,130 --> 00:01:47,330
+Wrmy wic do naszych chipw indeksowych, gdzie powstaje sklep i dodajemy oprogramowanie porednie, a
+
+20
+00:01:47,330 --> 00:01:49,880
+teraz importujemy ten nowy pakiet.
+
+21
+00:01:50,020 --> 00:01:59,010
+Wic zaimportuj co z funkcji redox i e co mona znale na ich stronie.
+
+22
+00:01:59,030 --> 00:02:01,710
+W rzeczywistoci maj domylny eksport, a my nie.
+
+23
+00:02:01,740 --> 00:02:05,180
+Rwnie solidnie, moemy nada mu dowoln nazw.
+
+24
+00:02:05,180 --> 00:02:08,420
+Bd trzyma si phunk, ale moesz zmieni jego nazw na cokolwiek chcesz.
+
+25
+00:02:08,540 --> 00:02:11,490
+Ten pakiet zasadniczo wykorzystuje oprogramowanie porednie.
+
+26
+00:02:11,660 --> 00:02:13,250
+Teraz to ju jest middleware.
+
+27
+00:02:13,280 --> 00:02:19,550
+Tak wic za kulisami wyglda to na nasz zwyczaj z kilkoma sowami zagniedonych wywoa funkcji i dlatego
+
+28
+00:02:19,550 --> 00:02:21,530
+moemy doda go teraz tutaj.
+
+29
+00:02:21,560 --> 00:02:22,720
+Teraz zastosuj oprogramowanie porednie.
+
+30
+00:02:22,810 --> 00:02:23,670
+Dodam to.
+
+31
+00:02:23,780 --> 00:02:30,520
+Po duszym odcinku Wic obiekt, ktry wanie zaimportowalimy t funkcj, jest dokadny.
+
+32
+00:02:30,680 --> 00:02:36,260
+Wic tym razem z tymi, do ktrych dodalimy, moemy wrci do naszych
+
+33
+00:02:36,440 --> 00:02:44,780
+rzeczywistych twrcw, a rzeczywisty spadek SJS i powiedzmy, e w rzeczywistoci chcemy wykona set timeout i dopiero
+
+34
+00:02:44,810 --> 00:02:47,660
+po 2 sekundach chcemy zapisa wynik.
+
+35
+00:02:47,660 --> 00:02:56,000
+A wic w tej funkcji, ktra zostanie jako zrealizowana w tym miejscu, chcemy zwrci t akcj po dwch sekundach,
+
+36
+00:02:56,000 --> 00:03:03,230
+aby zasymulowa, e poprzednio lub przed t akcj dotarlimy do serwera, aby j tam przechowywa i aktualizowa
+
+37
+00:03:03,320 --> 00:03:10,160
+tylko nasz stan, gdy to si uda na przykad teraz z tat z obecnymi ustawieniami tutaj
+
+38
+00:03:10,160 --> 00:03:11,710
+to nie zadziaa.
+
+39
+00:03:12,040 --> 00:03:19,460
+Ale dziki oprogramowaniu poredniczcemu phunk dodajmy, co moemy zrobi, to moemy zmieni zdanie return tutaj, a ja to zrobi tu
+
+40
+00:03:19,460 --> 00:03:23,560
+przed tym czasem, gdy nadaj si do formowania reszt tutaj wkrtce.
+
+41
+00:03:23,810 --> 00:03:29,480
+Dodam wic now instrukcj return, ktra zwrci funkcj, ktra jest wana.
+
+42
+00:03:29,480 --> 00:03:31,910
+Teraz moesz ponownie uy sowa kluczowego function.
+
+43
+00:03:31,910 --> 00:03:36,980
+Ta funkcja odbiera wysyk jako argument do wysyki akcji.
+
+44
+00:03:36,980 --> 00:03:39,000
+Teraz mamy wysyk tutaj.
+
+45
+00:03:39,190 --> 00:03:47,510
+Z powodu funkcji redux powiedziaem, e oprogramowanie porednie dziaa midzy wysaniem akcji a momentem, w ktrym
+
+46
+00:03:47,510 --> 00:03:49,800
+akcja dotrze do producenta.
+
+47
+00:03:50,120 --> 00:03:56,150
+Teraz to, co robimy, to nadal wysyamy akcj, ale Rydex phunk, w ktrej oprogramowanie
+
+48
+00:03:56,300 --> 00:03:59,470
+porednie wchodzi w etap, ma dostp do akcji.
+
+49
+00:03:59,720 --> 00:04:06,530
+Zasadniczo blokuje star akcj, ktr moglibymy powiedzie, i odsya j ponownie w przyszoci.
+
+50
+00:04:06,530 --> 00:04:13,790
+Teraz nowy X dotrze do producenta, ale w midzyczasie redux func moe czeka, poniewa moe wysa
+
+51
+00:04:13,790 --> 00:04:15,890
+akcj, co tylko zechce.
+
+52
+00:04:15,890 --> 00:04:21,860
+Jest to cz asynchroniczna, ktra pozwala nam na wykonanie asynchronicznego kodu wewntrz
+
+53
+00:04:21,860 --> 00:04:22,930
+tej funkcji.
+
+54
+00:04:22,980 --> 00:04:29,360
+Oczywicie moemy tutaj rwnie uy dobrej starej skadni erro ESX.
+
+55
+00:04:29,570 --> 00:04:36,850
+Tak wic kod wewntrz tej funkcji wysyki jest tutaj wykonywany, a teraz wewntrz ustawionego limitu czasu.
+
+56
+00:04:36,890 --> 00:04:45,500
+Wewntrz tej funkcji przekazanej do ustawionego limitu czasu moemy wykona t poprawk, aby teraz wyeksportowa dowoln
+
+57
+00:04:45,650 --> 00:04:47,480
+akcj, ktr chcemy wysa.
+
+58
+00:04:47,480 --> 00:04:55,090
+Teraz oczywicie potraktowalibymy nieskoczon ptl, gdybymy ponownie wysali wynik sklepu tutaj lub twrc akcji.
+
+59
+00:04:55,550 --> 00:05:02,030
+Zazwyczaj tworzymy asynchronicznych twrcw akcji, ktrych Indie wysyaj akcje tworzone
+
+60
+00:05:02,030 --> 00:05:03,680
+przez synchroniczne.
+
+61
+00:05:03,680 --> 00:05:10,180
+Wic to, co zrobi, to szybko stworzy nowego twrc ect i wyeksportowa go lub zada zapisania wyniku.
+
+62
+00:05:10,210 --> 00:05:17,420
+To bdzie nadal twrca akcji, jaki mielimy przed otrzymaniem wyniku, i zwracaj akcj,
+
+63
+00:05:17,780 --> 00:05:21,780
+ktrej uywamy poprzednio, z wynikiem zapisu typu.
+
+64
+00:05:23,220 --> 00:05:28,740
+Tata jest moim dziaaniem synchronizujcym Kreator w wynikach sklepu.
+
+65
+00:05:28,750 --> 00:05:37,440
+Jednak teraz wyl dokadnie tego twrc akcji szturmowej Savery, ktry zwrci mi t akcj, ktra faktycznie aktualizuje
+
+66
+00:05:37,530 --> 00:05:42,960
+stan i sklep, poniewa jest to dziaanie typu, ktry obsugujemy
+
+67
+00:05:42,960 --> 00:05:43,990
+w reduktorze.
+
+68
+00:05:44,040 --> 00:05:47,370
+Teraz zanim zobaczymy to w dziaaniu, ktre powinno uczyni przepyw wyraniejszym.
+
+69
+00:05:47,640 --> 00:05:53,580
+Jedn z rzeczy, o ktrej musimy pamita, jest niezapisany atak, gdy zwrcimy t funkcj, ktra
+
+70
+00:05:53,580 --> 00:05:59,310
+zostanie wykonana przez redux funk i gdzie ustalilimy czas, w ktrym dentysta zaata akcj,
+
+71
+00:05:59,310 --> 00:06:01,940
+ktra powinna dziaa synchronicznie i aktualizowa histori.
+
+72
+00:06:02,190 --> 00:06:09,130
+Musimy wykona atak Savery'ego, ktry jest twrc tego dziaania w zalenoci od kursu i przekaza go
+
+73
+00:06:09,150 --> 00:06:09,780
+dalej.
+
+74
+00:06:09,780 --> 00:06:13,480
+Wic nie przerabiaj za adunek do sklepu z martwymi.
+
+75
+00:06:13,500 --> 00:06:20,910
+Upewnij si, e wszystkie spadki, w tym licznik, po prostu spadn, a nastpnie ponownie uruchom NPM, aby sprawdzi, czy
+
+76
+00:06:20,910 --> 00:06:21,790
+to dziaa.
+
+77
+00:06:21,840 --> 00:06:31,190
+A take, aby zobaczy przepyw wydarze w naszych narzdziach do redoks, wic aplikacja zaadowana, moemy nadal manipulowa
+
+78
+00:06:31,190 --> 00:06:34,780
+naszym kontrapunktem lub sklepem alkoholowym tutaj.
+
+79
+00:06:35,000 --> 00:06:40,760
+Widzisz, e wydrukowanie wyniku sklepu trwao dwie sekundy.
+
+80
+00:06:40,880 --> 00:06:42,250
+Teraz to jest interesujce.
+
+81
+00:06:42,320 --> 00:06:44,840
+Nigdy nie widziae tego innego twrcy ect.
+
+82
+00:06:44,840 --> 00:06:48,350
+Musimy ustawi czas w rodku, co prowadzi do dowolnego wyjcia.
+
+83
+00:06:48,480 --> 00:06:54,010
+Faktyczny wynik sklepu nic si nie dzieje natychmiast po dwch sekundach, gdy mamy wynik C-sklepu.
+
+84
+00:06:54,210 --> 00:07:00,830
+Tak wic tylko akcja wysana tam po dwch sekundach pozostawia lad, poniewa jest to
+
+85
+00:07:00,830 --> 00:07:08,900
+nasza synchroniczna akcja i tylko synchroniczne akcje mog zosta dodane do przechowywania innych twrcw akcji, takich jak wynik
+
+86
+00:07:08,930 --> 00:07:11,630
+sklepu, ktry uruchamia jaki asynchroniczny kod.
+
+87
+00:07:11,780 --> 00:07:16,410
+Nasz jedyny moliwy youtoo redux func i jeste przyapany pomidzy.
+
+88
+00:07:16,670 --> 00:07:18,760
+Nigdy nie dotarli do reduktora.
+
+89
+00:07:18,800 --> 00:07:27,050
+Uywamy ich tylko jako narzdzia poredniego, aby uruchomi nasz asynchroniczny kod, ktry jest wymagany do uruchomienia
+
+90
+00:07:27,050 --> 00:07:33,860
+na wielu akcjach, a nastpnie wywoa synchroniczn akcj, aby zmieni stan w sklepie.
+
+91
+00:07:33,860 --> 00:07:36,150
+Kiedy ju jestemy pewni, e wiemy, co tam robi.
+
+92
+00:07:36,170 --> 00:07:41,780
+Tak wic po zakoczeniu naszego asynchronicznego kodu, dlaczego widzimy to tutaj, w
+
+93
+00:07:42,190 --> 00:07:49,160
+konsoli wystarczajco interesujcej, gdzie mamy nasze oprogramowanie poredniczce dla rejestratora, jasne, e zobaczysz, e otrzymujemy
+
+94
+00:07:49,280 --> 00:07:56,630
+wicej wynikw, poniewa duej rejestruje wszystko, co dociera do cieki akcji, i ktre obejmuje nasze funkcja
+
+95
+00:07:56,630 --> 00:08:03,820
+zwracana przez asynchroniczn akcj, ktrej nigdy nie dodalimy tutaj, poniewa blokuje j funkcja redux func.
+
+96
+00:08:03,890 --> 00:08:11,890
+W ten sposb moemy wsppracowa z twrcami akcji w celu obsugi kodu asynchronicznego w naszym sklepie redux.
+

@@ -1,0 +1,152 @@
+1
+00:00:02,050 --> 00:00:09,660
+In the last lecture we added code to pass route parameters and I mentioned that you simply do this by
+
+2
+00:00:09,660 --> 00:00:16,860
+wrapping your element in a link as we do it. There we then use to, we turn that into an absolute path
+
+3
+00:00:17,160 --> 00:00:23,680
+and we pass post.id which we are able to receive because we set up a flexible path here.
+
+4
+00:00:23,790 --> 00:00:27,560
+However we now need to retrieve that parameter too.
+
+5
+00:00:27,600 --> 00:00:30,030
+So in the full post component there,
+
+6
+00:00:30,120 --> 00:00:33,220
+now this.props id doesn't work anymore.
+
+7
+00:00:33,810 --> 00:00:34,800
+I print the
+
+8
+00:00:34,800 --> 00:00:36,080
+props to the console
+
+9
+00:00:36,090 --> 00:00:38,710
+earlier though. If we inspect it,
+
+10
+00:00:38,830 --> 00:00:40,430
+this is four different components
+
+11
+00:00:40,440 --> 00:00:43,310
+but the object always has the same structure.
+
+12
+00:00:43,380 --> 00:00:45,140
+You see that under match
+
+13
+00:00:45,270 --> 00:00:47,870
+there actually is this params object
+
+14
+00:00:48,270 --> 00:00:59,580
+and if we print console log this props in our full post component there, and important also turn componentDidUpdate
+
+15
+00:00:59,580 --> 00:01:05,420
+into componentDidMount because now we're not updating this,
+
+16
+00:01:05,580 --> 00:01:08,850
+it's getting added or removed to and from the dom,
+
+17
+00:01:08,850 --> 00:01:18,260
+so this needs to be a componentDidMount. if we do that then we see the object in our post component
+
+18
+00:01:18,620 --> 00:01:23,250
+and they're under match, we see that in params, we have the ideal param
+
+19
+00:01:23,540 --> 00:01:30,950
+and it's called ID because that is the name we set up as the name for this flexible element in this
+
+20
+00:01:30,950 --> 00:01:34,590
+route definition in the blog component.
+
+21
+00:01:35,120 --> 00:01:37,880
+Now of course that allows us to extract this then
+
+22
+00:01:37,940 --> 00:01:45,530
+so here we can not only log it we can also access this.props.match.params.id and we know it will
+
+23
+00:01:45,530 --> 00:01:52,750
+be there because this component is only loaded through this route which defines this id param.
+
+24
+00:01:53,060 --> 00:02:01,060
+So now if we save this, you see we get an error here so something is better, the error we do get is that
+
+25
+00:02:01,060 --> 00:02:06,080
+somehow we still access the wrong ID, the wrong post ID we're sending.
+
+26
+00:02:06,220 --> 00:02:12,610
+Well the reason for that simply is to add in the full post, we are making it to the HTTP request but there
+
+27
+00:02:12,610 --> 00:02:14,840
+we still access this.props.id
+
+28
+00:02:14,840 --> 00:02:21,970
+This now of course also has to be this.props.match.params.id, and with data if we save everything and we
+
+29
+00:02:21,970 --> 00:02:28,480
+reload the app, now it successfully loads post number three or if we exchange this with four, post number
+
+30
+00:02:28,480 --> 00:02:29,070
+four
+
+31
+00:02:29,110 --> 00:02:32,130
+and of course also if we click on them here.
+
+32
+00:02:32,530 --> 00:02:39,850
+So now we really have an application where we have a dynamic element because we are successfully passing
+
+33
+00:02:39,850 --> 00:02:42,770
+route parameters and extracting them.
+
+34
+00:02:42,790 --> 00:02:46,840
+Now there are still a couple of things which don't exactly work the same way we want it to work.
+
+35
+00:02:46,870 --> 00:02:53,440
+For example if you click on new post, we are loading the new posts form but if we also load that single
+
+36
+00:02:53,440 --> 00:02:54,580
+post.
+
+37
+00:02:54,580 --> 00:02:57,560
+Now do you know why this happens?
+
+38
+00:02:57,730 --> 00:03:01,360
+Let's take a closer look at this issue and how to fix it in the next lecture.
+

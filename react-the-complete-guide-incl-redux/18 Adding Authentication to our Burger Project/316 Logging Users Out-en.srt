@@ -1,0 +1,300 @@
+1
+00:00:02,140 --> 00:00:07,720
+Now before we continue using that token we store in our redux store,
+
+2
+00:00:08,140 --> 00:00:13,970
+you might remember that when we do sign in and we inspect the data we get back
+
+3
+00:00:13,990 --> 00:00:18,240
+so let me quickly do this, switch to sign in, there
+
+4
+00:00:18,250 --> 00:00:21,410
+we also get this expiresIn value.
+
+5
+00:00:21,520 --> 00:00:25,880
+So the token is only valid for 60 minutes, after that
+
+6
+00:00:25,880 --> 00:00:32,440
+whenever we send it to any resource which requires a token, the request will fail as if we had sent no
+
+7
+00:00:32,440 --> 00:00:34,220
+token at all.
+
+8
+00:00:34,220 --> 00:00:36,400
+Now this is not the best user experience,
+
+9
+00:00:36,400 --> 00:00:41,970
+we probably want to actively log the user out after this hour.
+
+10
+00:00:42,220 --> 00:00:48,940
+As a side note, if the user reloads the application the state is lost anyway because that clears the
+
+11
+00:00:48,940 --> 00:00:52,200
+redux store since the entire application reloads,
+
+12
+00:00:52,360 --> 00:00:58,390
+so there, we can then change the UI anyways which we'll do in the future to show that we're not logged
+
+13
+00:00:58,390 --> 00:01:05,020
+in but it is the state that we are logged in and don't reload the page for an hour where we can get in
+
+14
+00:01:05,020 --> 00:01:10,760
+this strange spot of having a token which is not valid anymore without us seeing that.
+
+15
+00:01:10,840 --> 00:01:20,740
+For that reason what I want to do is, I want to add some code to invalidate that token after one hour
+
+16
+00:01:21,040 --> 00:01:24,070
+so that we then can also update our UI
+
+17
+00:01:24,190 --> 00:01:33,490
+once the token is no longer there. To do that, I'll go into my auth actions file and I'll add a new constant,
+
+18
+00:01:33,730 --> 00:01:41,240
+a new function essentially which I'll name checkAuthTimeout, there
+
+19
+00:01:41,270 --> 00:01:51,050
+I expect to get the expiration time and in there, I will return this function where I get dispatch as
+
+20
+00:01:51,050 --> 00:01:54,350
+an argument because I want to run some async code.
+
+21
+00:01:54,860 --> 00:02:02,280
+I will dispatch this checkAuthTimeout action when we get back a success response,
+
+22
+00:02:02,360 --> 00:02:07,870
+so where I'll also dispatch authSuccess, I'll also dispatch checkAuthTimeout
+
+23
+00:02:08,030 --> 00:02:11,110
+and I will pass on response data
+
+24
+00:02:11,420 --> 00:02:13,420
+and there, it's this
+
+25
+00:02:13,460 --> 00:02:17,570
+expiresIn property you saw, expiresIn,
+
+26
+00:02:17,660 --> 00:02:22,660
+you can quickly see that if we log in again, switch to sign in,
+
+27
+00:02:22,910 --> 00:02:28,860
+I'm talking about this property expiresIn. That holds a value,
+
+28
+00:02:28,860 --> 00:02:35,370
+a number or to be precise, a string but which can be parsed as a number and I get this here,
+
+29
+00:02:35,660 --> 00:02:43,960
+there I now want to call setTimeout and execute a function after a certain amount of time
+
+30
+00:02:43,970 --> 00:02:48,490
+and you can probably guess which amount of time, the expiration time here.
+
+31
+00:02:48,680 --> 00:02:56,230
+Now here in setTimeout, I want to do something and I simply want to call logout,
+
+32
+00:02:56,280 --> 00:02:58,540
+this is a new action I need anyway.
+
+33
+00:02:58,690 --> 00:03:00,460
+So I'll export a constant which I'll name
+
+34
+00:03:00,470 --> 00:03:08,130
+logout here, will be an action which doesn't take any input, will be a synchronous action creator,
+
+35
+00:03:08,300 --> 00:03:11,820
+I'll set the type to a type I have yet to create
+
+36
+00:03:11,840 --> 00:03:20,150
+so let's create it now, in action types I'll export a constant AUTH_LOGOUT with the identifier AUTH_LOGOUT
+
+37
+00:03:20,150 --> 00:03:30,630
+and now with that, I can dispatch this action so here the type will be actionTypes.AUTH_LOGOUT and this
+
+38
+00:03:30,810 --> 00:03:38,100
+logout action, this action creator here will also be used in setTimeout of checkAuthTimeout.
+
+39
+00:03:38,400 --> 00:03:46,920
+So here I would call dispatch after the expiration time to call the logout action, like this, always
+
+40
+00:03:46,920 --> 00:03:52,690
+execute these functions because that then returns the action which is actually dispatched.
+
+41
+00:03:52,740 --> 00:04:00,480
+So now with that, we execute or we dispatch the logout function after that time span and that allows
+
+42
+00:04:00,480 --> 00:04:04,790
+me to now go into my reducer and there, handle the logout case.
+
+43
+00:04:04,950 --> 00:04:13,940
+So I'll add a new function in there which I'll name authLogout, I get state and action here
+
+44
+00:04:14,700 --> 00:04:23,370
+and in the function, I'll return an updated javascript object and that updated javascript object here
+
+45
+00:04:24,150 --> 00:04:26,550
+will of course be created with updateObject
+
+46
+00:04:26,610 --> 00:04:35,400
+is my old state where I set the token to null and the user id to null so that I am essentially logged
+
+47
+00:04:35,400 --> 00:04:41,790
+out because all that core information that made up a logged in user is now lost again. And I need to
+
+48
+00:04:41,790 --> 00:04:51,580
+handle that of course here, case actionTypes.AUTH_LOGOUT, there I want to return the result of the auth
+
+49
+00:04:51,610 --> 00:05:00,130
+logout function where I pass state and action as arguments and with that, we got this timer in place
+
+50
+00:05:00,400 --> 00:05:07,060
+in our action creator's file in checkAuthTimeout which will fire after whatever firebase returns
+
+51
+00:05:07,060 --> 00:05:11,660
+us and which will then ensure that the user is logged out.
+
+52
+00:05:11,690 --> 00:05:14,740
+And for now, this will clear the store and not do much else,
+
+53
+00:05:14,740 --> 00:05:20,410
+it won't show any visual feedback but we will implement something to happen when the user logs out
+
+54
+00:05:20,500 --> 00:05:26,570
+including when he deliberately logs out to give the user a clue that he's not logged in anymore.
+
+55
+00:05:26,890 --> 00:05:34,700
+For now, let's see if that dispatching all works, switch to sign in and submit, let's have a look at redux,
+
+56
+00:05:35,740 --> 00:05:36,240
+there
+
+57
+00:05:36,280 --> 00:05:38,660
+I'm actually immediately logged out
+
+58
+00:05:38,980 --> 00:05:42,400
+so somehow, this fired a bit too early.
+
+59
+00:05:42,400 --> 00:05:47,110
+The reason of course is expiration time is 3600
+
+60
+00:05:47,260 --> 00:05:50,190
+but setTimeout expects to get milliseconds
+
+61
+00:05:50,200 --> 00:05:53,090
+so it was only 3.6 seconds.
+
+62
+00:05:53,140 --> 00:05:54,250
+It's a good practice,
+
+63
+00:05:54,250 --> 00:05:59,960
+now we can at least see that authLogout is dispatched and that it did clear the tokens and user ID
+
+64
+00:06:00,370 --> 00:06:08,310
+but of course, I want to multiply this value with one thousand to turn my milliseconds to real seconds,
+
+65
+00:06:08,350 --> 00:06:10,410
+so now it should be one hour.
+
+66
+00:06:10,420 --> 00:06:16,810
+Now if I save this and do this exercise again, log in, switch to sign in,
+
+67
+00:06:16,840 --> 00:06:22,240
+now we shouldn't see authLogout because now we could wait for an hour, I'm not going to do that here,
+
+68
+00:06:22,240 --> 00:06:23,760
+feel free to do so of course.
+
+69
+00:06:24,130 --> 00:06:25,610
+We can now continue
+
+70
+00:06:25,660 --> 00:06:32,170
+and now finally take advantage of our token to protect some of the resources on our backend in the
+
+71
+00:06:32,170 --> 00:06:34,770
+first place then still reach them
+
+72
+00:06:34,810 --> 00:06:40,660
+and then of course also update our UI to for example add a logout button to allow the user to logout
+
+73
+00:06:41,050 --> 00:06:42,760
+and stuff like that.
+
+74
+00:06:42,820 --> 00:06:46,540
+So these will be the next steps I'll work on,
+
+75
+00:06:46,660 --> 00:06:48,970
+let's do that in the next lectures.
+

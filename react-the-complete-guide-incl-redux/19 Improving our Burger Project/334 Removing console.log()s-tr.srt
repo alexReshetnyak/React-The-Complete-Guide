@@ -1,0 +1,200 @@
+1
+00:00:02,260 --> 00:00:05,730
+Bu yzden zaten bizim uygulamalarmzda bir ok ey optimize
+
+2
+00:00:05,830 --> 00:00:09,790
+edildi ve daha nce sylediim gibi, daha fazla potansiyel bulabilirsin.
+
+3
+00:00:09,790 --> 00:00:13,440
+imdi bamz buraya terminal kmza evirelim, ok fazla uyarmz
+
+4
+00:00:13,570 --> 00:00:18,850
+yok, ama bir tane var, kasada. js dosyas bizim konteynerler
+
+5
+00:00:18,850 --> 00:00:22,820
+klasrnde, hi kullanmadmz bir ithalat var.
+
+6
+00:00:22,900 --> 00:00:24,310
+Bakalm bir konteynr,
+
+7
+00:00:24,310 --> 00:00:25,680
+konteynr konteynr,
+
+8
+00:00:25,780 --> 00:00:28,390
+orada eylemler alrz ve aslnda
+
+9
+00:00:28,600 --> 00:00:33,920
+bu dosyada hibir eylem gndermeziz, bylece sadece bundan kurtulabiliriz.
+
+10
+00:00:34,090 --> 00:00:36,880
+Ve bu genel olarak nemli bir
+
+11
+00:00:36,880 --> 00:00:40,550
+eydir, konsol ktnza bir gz atn, herhangi bir
+
+12
+00:00:40,570 --> 00:00:45,820
+uyar gstermemeli, nihai paket boyutunun iirilmesini engellemek iin gereksiz ithalata neden
+
+13
+00:00:45,820 --> 00:00:49,310
+olmamal ve konsol ktsn konuturalm, imdi bu
+
+14
+00:00:49,330 --> 00:00:54,490
+bir temiz Bizim alan uygulama konsolu baktmzda biz hamburger, burger oluturucu,
+
+15
+00:00:54,490 --> 00:01:00,620
+muhtemelen baka bir yerde, modal, konsol konsolu bir ok ey var dikkat edin.
+
+16
+00:01:00,700 --> 00:01:06,400
+Ayrca, bu konsol gnl beyanlarnn o kadar kt olabileceini deil, ayn
+
+17
+00:01:06,400 --> 00:01:12,590
+zamanda retimde de orada olacaklarn ve uygulamanzla ilgili igrler sunacaklarn ve bununla
+
+18
+00:01:12,610 --> 00:01:17,770
+birlikte, gerekten de Artk sizin iin nemli olmayan kt ile konsol.
+
+19
+00:01:17,980 --> 00:01:21,460
+O zaman bu  dosyay burada temizlemeye balamak iin ziyaret edelim,
+
+20
+00:01:21,490 --> 00:01:23,280
+burgere bir bakacam. bileenleri klasrnde
+
+21
+00:01:23,440 --> 00:01:29,360
+js dosyas ve burada konsol ktsn bul, burada ktsn aldmz
+
+22
+00:01:29,410 --> 00:01:32,140
+yerde, hadi bunu kaldralm.
+
+23
+00:01:32,500 --> 00:01:39,520
+Burger oluturucu kapsaycda burger reticisi dosyalarna gidersek, bu dosyay da ziyaret edelim ve
+
+24
+00:01:39,520 --> 00:01:47,530
+burada componentDidMount'ta konsol gnln kullandmz yere bir bakalm, baka bir tane de bulabiliriz. modalda olduu
+
+25
+00:01:47,530 --> 00:01:47,960
+iin,
+
+26
+00:01:47,960 --> 00:01:50,990
+UI klasrnde, bileenler klasrnde bunu
+
+27
+00:01:51,010 --> 00:01:57,370
+ziyaret edelim, orada componentWillUpdate'de oturum ayoruz ve bu blou kaldrabiliriz nk orada
+
+28
+00:01:57,370 --> 00:02:02,770
+baka bir ey yapmyoruz. Bunu, iten kovulduunda baz anlaylar
+
+29
+00:02:02,770 --> 00:02:04,880
+elde etmek iin gemite
+
+30
+00:02:04,900 --> 00:02:11,260
+yaptk, artk bizim iin ilgin deil. Ayrca, sipari eklediimiz ve kardmz
+
+31
+00:02:11,260 --> 00:02:12,320
+orderSummary'da da
+
+32
+00:02:12,380 --> 00:02:20,230
+baz giriler yaptmz gryoruz, bu yzden orderSummary' da ziyaret edelim, bileenlerin burger blmnde,
+
+33
+00:02:20,230 --> 00:02:24,460
+sipari zeti bileenine sahip olduumuzu ve bak,
+
+34
+00:02:24,520 --> 00:02:30,110
+biz de bunu kaldrabilirsiniz, bylece componentWillUpdate konsol log deyim bulabilirsiniz.
+
+35
+00:02:30,580 --> 00:02:37,330
+Ve bununla birlikte, bunu tekrar ilevsel bir bileene dntrebiliriz, nk tek
+
+36
+00:02:37,330 --> 00:02:42,670
+yaptmz ey sadece bir eydir. imdi buna bir snf tabanl bir tane brakacam, ancak
+
+37
+00:02:42,670 --> 00:02:47,530
+bunu daha da optimize etmek iin bunu kolayca dntrebilirsiniz. Bununla birlikte, konsol oturum ama ifadelerini
+
+38
+00:02:47,620 --> 00:02:56,160
+baka nerede bulabiliriz, hadi devam edelim ve kendimizi hzlca imzalayalm. js, bu bizim eylem
+
+39
+00:02:56,280 --> 00:02:59,100
+yaratcs dosyamz.
+
+40
+00:02:59,340 --> 00:03:01,740
+Bakalm baka bir yerde bir
+
+41
+00:03:01,740 --> 00:03:11,090
+k elde edersek, sipari alannda sadece baz keyfi deerleri girer ve siparii tklarsam, o zaman da sipari eylemi dosyasndan bir
+
+42
+00:03:11,090 --> 00:03:13,150
+tane alrz, bu yzden
+
+43
+00:03:13,160 --> 00:03:20,700
+bu dosyalar da eylemler klasrnde ziyaret edelim. auth. js bir konsol log deyim vard,
+
+44
+00:03:20,720 --> 00:03:26,630
+bu yzden ondan kurtulmak ve ayn klasrdeki sipari dosyasnda konsol
+
+45
+00:03:26,950 --> 00:03:27,360
+log
+
+46
+00:03:27,380 --> 00:03:28,440
+deyiminden kurtulmak
+
+47
+00:03:28,490 --> 00:03:36,370
+izin var, konsol gnl, bunu da kaldralm. Artk uygulamamzn bir yerinde daha fazla konsol gnl bildirimine sahip olabiliriz, ancak ounu
+
+48
+00:03:36,370 --> 00:03:40,280
+kaldrdm dnyorum, dierlerini de kaldrmaktan ekinmeyin. Yine, eer onlar orada
+
+49
+00:03:40,330 --> 00:03:43,160
+brakrsanz zararl deildir, ama onlardan
+
+50
+00:03:43,180 --> 00:03:44,990
+kurtulursanz daha iyidir.
+

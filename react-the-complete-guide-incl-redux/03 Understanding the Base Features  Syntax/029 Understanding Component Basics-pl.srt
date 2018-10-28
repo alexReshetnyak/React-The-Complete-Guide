@@ -1,0 +1,276 @@
+1
+00:00:02,380 --> 00:00:07,900
+W ostatnim wykadzie przeprowadziem ci przez struktur folderw, ktra zostaa stworzona przez aplikacj create react.
+
+2
+00:00:08,020 --> 00:00:09,650
+I edytowalimy nasz aplikacj. plik js.
+
+3
+00:00:09,670 --> 00:00:10,730
+Przejdmy teraz gbiej
+
+4
+00:00:10,840 --> 00:00:13,620
+w to, co widzimy tutaj, widzimy skadnik reagujcy. Jak wyjaniem, reakcja polega na tworzeniu komponentw, w zasadzie niestandardowych
+
+5
+00:00:13,690 --> 00:00:21,190
+elementw html, ktre mona powiedzie, a ktre nastpnie mona wykorzysta do skonstruowania aplikacji.
+
+6
+00:00:21,400 --> 00:00:26,200
+Ten skadnik aplikacji jest faktycznie uywany w indeksie. plik js, w ktrym renderujesz go
+
+7
+00:00:26,200 --> 00:00:33,280
+w miejsce tego elementu gwnego.
+
+8
+00:00:33,340 --> 00:00:34,030
+I moglibymy
+
+9
+00:00:34,210 --> 00:00:39,450
+renderowa normalny element html, aby przetestowa na przykad, to by dziaao, to nie jest teraz
+
+10
+00:00:39,480 --> 00:00:40,240
+komponent reagujcy.
+
+11
+00:00:40,240 --> 00:00:42,570
+Jeli to zapisz, widz ten znacznik h1,
+
+12
+00:00:42,610 --> 00:00:45,640
+ale oczywicie wtedy nie mamy rzeczywistej aplikacji reagowania, renderujemy
+
+13
+00:00:46,000 --> 00:00:49,360
+normalny element html, ale nie renderujemy naszego wasnego komponentu reagujcego.
+
+14
+00:00:49,470 --> 00:00:55,860
+Teraz moesz oczywicie uy wielu reakcji na render i renderowa cay kod
+
+15
+00:00:55,870 --> 00:01:02,800
+HTML, ktry chcesz uy w swojej aplikacji, ale tak naprawd nie tworzysz swoich
+
+16
+00:01:02,860 --> 00:01:03,940
+aplikacji reagowania.
+
+17
+00:01:04,030 --> 00:01:07,530
+Zazwyczaj renderujesz jeden skadnik gwny, skadnik aplikacji, ale moesz go nazwa, jak chcesz. Jeden skadnik gwny, w naszym przypadku jest
+
+18
+00:01:07,810 --> 00:01:15,760
+to skadnik aplikacji o nazwie app, a tam
+
+19
+00:01:15,820 --> 00:01:16,840
+zagniedono wszystkie
+
+20
+00:01:16,840 --> 00:01:24,150
+inne komponenty, ktrych moe potrzebowa twoja aplikacja i oczywicie te komponenty mog by rwnie zagniedone
+
+21
+00:01:24,150 --> 00:01:30,050
+w sobie nawzajem, ale a do samego pocztku , masz tylko jeden skadnik root. Moesz dotrze do wielu wzw w pliku html i zamontowa rne
+
+22
+00:01:30,250 --> 00:01:37,300
+komponenty gwne dla rnych aplikacji reagowania w
+
+23
+00:01:37,330 --> 00:01:45,010
+tym samym projekcie, co byoby moliwe, ale nie jest to to, co robimy tutaj.
+
+24
+00:01:45,010 --> 00:01:47,950
+Na koniec moesz oczywicie po prostu powieli to, czego
+
+25
+00:01:47,980 --> 00:01:52,810
+si nauczysz w tym kursie dla wielu aplikacji w jednym z tych samych plikw html.
+
+26
+00:01:52,930 --> 00:01:55,270
+Ale trzymajmy si oglnego lub typowego uycia reakcji.
+
+27
+00:01:55,540 --> 00:01:59,170
+Mamy ten komponent aplikacji, ktry jest zdefiniowany w aplikacji. js, widzimy jeden sposb, jeden z
+
+28
+00:01:59,170 --> 00:02:04,450
+dwch sposobw definiowania komponentu reagujcego. Tworzymy klas javascript ze sowem kluczowym
+
+29
+00:02:04,450 --> 00:02:11,140
+class, a nastpnie uywamy sowa kluczowego extends
+
+30
+00:02:11,140 --> 00:02:18,730
+do dziedziczenia z tego obiektu lub klasy komponentu, aby byo precyzyjnie zaimportowane tutaj z biblioteki reagowania.
+
+31
+00:02:18,730 --> 00:02:25,120
+Waciwie importujemy dwie rzeczy, reagujemy, ktre s odpowiedzialne lub wymagane
+
+32
+00:02:25,120 --> 00:02:33,250
+do renderowania czegokolwiek, czegokolwiek do dom, zawsze musimy zaimportowa to w pliku, w
+
+33
+00:02:33,250 --> 00:02:34,030
+ktrym
+
+34
+00:02:34,030 --> 00:02:37,750
+definiujemy komponent i oczywicie sam klas komponentu. Wkrtce poka wam inny
+
+35
+00:02:38,080 --> 00:02:43,300
+sposb tworzenia komponentw.
+
+36
+00:02:43,330 --> 00:02:44,370
+Teraz ta klasa
+
+37
+00:02:44,470 --> 00:02:46,800
+ma jedn metod - metod renderowania.
+
+38
+00:02:46,930 --> 00:02:48,130
+Musi to mie, poniewa reakcja wywoa t metod, aby wyrenderowa co na ekranie.
+
+39
+00:02:48,220 --> 00:02:54,940
+Jest jedna wana praca, ktr musi wykona kady komponent
+
+40
+00:02:55,230 --> 00:02:57,400
+reagujcy, musi ona
+
+41
+00:02:57,580 --> 00:03:06,370
+zwrci lub wyrenderowa kod HTML, ktry mona wyrenderowa na dom na ekranie.
+
+42
+00:03:06,440 --> 00:03:08,240
+Moesz tam take robi
+
+43
+00:03:08,470 --> 00:03:12,160
+inne rzeczy, siga do internetu, wykonywa obliczenia, sucha
+
+44
+00:03:12,160 --> 00:03:17,320
+wydarze, czegokolwiek potrzebujesz w aplikacji, zobaczymy to wszystko w tym kursie, ale
+
+45
+00:03:17,320 --> 00:03:25,020
+zawsze musisz te renderowa jaki HTML do domu , jest to o tyle wane, o czym naley pamita.
+
+46
+00:03:25,030 --> 00:03:28,140
+Nastpnie eksportujemy t klas aplikacji jako domylny
+
+47
+00:03:28,330 --> 00:03:34,440
+eksport tego pliku, jest to funkcja ES6 i po prostu oznacza, e jeli
+
+48
+00:03:34,510 --> 00:03:41,020
+zaimportujesz ten cay plik, po prostu zaimportujesz t klas, poniewa jest to domylny eksport.
+
+49
+00:03:41,020 --> 00:03:43,280
+Uywamy tego w indeksie. plik js, w ktrym importujemy aplikacj z pliku aplikacji, ponownie
+
+50
+00:03:43,660 --> 00:03:50,210
+pomijajc to rozszerzenie, poniewa jest on dodawany automatycznie przez nasz przepyw pracy dla plikw javascript.
+
+51
+00:03:50,230 --> 00:03:56,840
+Ta nazwa aplikacji jest wybierana dowolnie, ale zazwyczaj uywasz nazwy komponentu, ktrego uywasz
+
+52
+00:03:57,260 --> 00:04:02,910
+rwnie w pliku, a nastpnie uywasz jej rwnie jako nazwy pliku.
+
+53
+00:04:02,980 --> 00:04:08,140
+Jedna uwaga, moesz rwnie zobaczy te
+
+54
+00:04:08,140 --> 00:04:09,320
+komponenty. jsx jako rozszerzenie
+
+55
+00:04:09,400 --> 00:04:16,890
+pliku zamiast js, powodem tego jest tutaj kod.
+
+56
+00:04:16,930 --> 00:04:19,970
+Odniosem si do tego jako HTML, ktry jest zwracany.
+
+57
+00:04:20,260 --> 00:04:24,410
+Ale w kocu to nie jest html, wyglda na
+
+58
+00:04:24,760 --> 00:04:27,250
+to, ale to jest jsx,
+
+59
+00:04:27,310 --> 00:04:32,880
+wic to javascript wyglda troch inaczej, i to moe by mylce na
+
+60
+00:04:32,980 --> 00:04:39,340
+pocztku, gdy uczysz si reagowa, to moe by jedna z najbardziej zagmatwanych rzeczy . Wane jest to, e jest to po prostu syntaktyczny cukier, zosta on w zasadzie wymylony
+
+61
+00:04:39,340 --> 00:04:46,720
+przez zesp reagujcy i moemy zapisa go w naszych
+
+62
+00:04:46,720 --> 00:04:52,630
+plikach javascript z powodu przepywu pracy, ktrego uywamy tutaj, w zasadzie automatycznie przeniesie go
+
+63
+00:04:52,630 --> 00:04:54,330
+do poprawnego javascript w koniec.
+
+64
+00:04:54,340 --> 00:04:58,940
+Nie jest poczone z uywanym rozszerzeniem, dziaa. js i. Pliki jsx i konwencja w dzisiejszych czasach
+
+65
+00:04:59,350 --> 00:05:07,190
+s prawie zawsze uyteczne. Pliki js, dlatego te robimy to tutaj.
+
+66
+00:05:07,330 --> 00:05:12,660
+A to po prostu kod
+
+67
+00:05:13,030 --> 00:05:22,600
+lub skadnia, ktrej moemy uy do napisania html w cudzysowie, a na koniec nie piszemy go. Brzmi mylco, pozwl mi pokaza, co to jest waciwie zestawione w
+
+68
+00:05:22,660 --> 00:05:25,310
+nastpnym wykadzie.
+
+69
+00:05:25,420 --> 00:05:29,890
+&nbsp;
+

@@ -1,0 +1,536 @@
+1
+00:00:02,170 --> 00:00:05,240
+En la ltima conferencia nos aseguramos de que podamos manejar los errores.
+
+2
+00:00:05,310 --> 00:00:12,030
+Y con eso obtenemos una aplicacin robusta que nos permite publicar nuestros pedidos en nuestro backend que ya
+
+3
+00:00:12,030 --> 00:00:12,750
+es mucho.
+
+4
+00:00:12,750 --> 00:00:14,810
+Ahora bien, hay una cosa ms que quiero hacer.
+
+5
+00:00:15,000 --> 00:00:18,460
+Tambin quiero poder obtener algunos datos del back-end.
+
+6
+00:00:18,900 --> 00:00:23,000
+Y por qu no obtenemos nuestros ingredientes desde all.
+
+7
+00:00:23,040 --> 00:00:25,960
+Entonces los ingredientes que armamos as.
+
+8
+00:00:26,040 --> 00:00:33,120
+dinmicamente desde la parte de atrs para eso vamos al bosque de firebase y vamos a cerrar el nodo orders?
+
+9
+00:00:33,460 --> 00:00:35,620
+Por qu no obtenemos los ingredientes
+
+10
+00:00:35,640 --> 00:00:41,160
+Ahora agreguemos una nueva nota haciendo clic en el signo ms directamente al lado de su nombre de raz aqu.
+
+11
+00:00:41,160 --> 00:00:50,400
+Y vamos a ponerle un nombre a estos ingredientes, luego agregue esto ms su a la derecha para agregar un elemento anidado
+
+12
+00:00:50,400 --> 00:00:54,740
+y, en realidad, debera haber solo nuestros pares clave de valores.
+
+13
+00:00:54,750 --> 00:00:57,870
+Entonces, podramos haberlo vendido con un valor de cero.
+
+14
+00:00:57,870 --> 00:01:03,760
+Haga clic en este botn para agregar y luego agregue ms y agreguemos carne con un valor de cero.
+
+15
+00:01:04,080 --> 00:01:08,010
+Vamos a agregar tocino con un valor de cero.
+
+16
+00:01:08,010 --> 00:01:11,760
+As que estoy usando los mismos ingredientes que antes porque solo los apoyo.
+
+17
+00:01:11,850 --> 00:01:16,600
+Pero, por supuesto, ahora puede agregar ms a su cdigo frontal y su back-end.
+
+18
+00:01:17,130 --> 00:01:20,490
+Y djame agregar que ella est aqu.
+
+19
+00:01:21,450 --> 00:01:24,480
+Y, por supuesto, tambin podra configurar diferentes valores iniciales.
+
+20
+00:01:24,480 --> 00:01:28,240
+As que ahora tenemos esa nota de ingrediente aqu SD Se te ha agregado.
+
+21
+00:01:28,320 --> 00:01:32,510
+Sin embargo, necesitars agregar el punto Jason a X en realidad.
+
+22
+00:01:32,610 --> 00:01:39,630
+Y ahora el objetivo es inicializar nuestros ingredientes aqu con los ingredientes que acabamos de almacenar en la base de fuego.
+
+23
+00:01:39,840 --> 00:01:42,070
+As que an en el componente Bolar hamburguesa.
+
+24
+00:01:42,210 --> 00:01:48,210
+una vez que configur el estado dinmicamente, descubri que un buen lugar para obtener datos es la fecha del componente.
+
+25
+00:01:48,310 --> 00:01:48,740
+Y
+
+26
+00:01:48,760 --> 00:01:51,340
+MT Entonces este es el mtodo que quiero usar.
+
+27
+00:01:51,450 --> 00:01:58,990
+As que agrgalo a tu componente montado de esta manera y ahora quiero llegar con xes.
+
+28
+00:01:59,010 --> 00:02:04,740
+As que estoy usando Access con una solicitud de obtencin y me dirijo a ella para informarle que est enfermo y que acaba de copiar con Dot
+
+29
+00:02:04,740 --> 00:02:05,480
+Jason al final.
+
+30
+00:02:05,910 --> 00:02:12,600
+As que ahora enviaremos la solicitud para obtener nuestros ingredientes y luego agregaremos y luego bloquearemos tu
+
+31
+00:02:12,600 --> 00:02:18,210
+para manejar la respuesta que recibamos y esa respuesta debera contener nuestro objeto de ingredientes.
+
+32
+00:02:18,210 --> 00:02:25,210
+Entonces, ahora el objetivo es establecer nuestro estado aqu ingredientes para ese objeto.
+
+33
+00:02:25,230 --> 00:02:31,130
+As que en realidad voy a configurar esto para anular inicialmente aqu porque ahora estamos obtenindolo de la base de datos.
+
+34
+00:02:31,530 --> 00:02:40,680
+Y all ahora llamar a este estado establecido y establecer ingredientes iguales a la respuesta.
+
+35
+00:02:40,680 --> 00:02:45,860
+Y all habr un objeto de datos que en realidad contiene los datos que hemos obtenido.
+
+36
+00:02:45,960 --> 00:02:53,970
+Ahora si guardamos eso y volvemos a nuestra aplicacin aqu, ver que obtenemos un error porque ahora, cuando tratamos de buscar nuestros
+
+37
+00:02:53,970 --> 00:03:00,420
+ingredientes al inicio de la aplicacin, por supuesto, falla porque inicialmente ahora sabemos que realmente lo estamos buscando.
+
+38
+00:03:00,630 --> 00:03:07,110
+el inicio, y ese es un caso de uso tpico en las aplicaciones que se obtienen datos cuando
+
+39
+00:03:07,110 --> 00:03:08,220
+se carga.
+
+40
+00:03:08,400 --> 00:03:13,490
+Por lo tanto, partes de la IU que dependen de los datos fallarn.
+
+41
+00:03:13,830 --> 00:03:21,000
+Ahora, por supuesto, esto puede ser fcilmente al comprobar si tenemos ingredientes antes de procesar cualquier cosa que dependa
+
+42
+00:03:21,000 --> 00:03:27,420
+de ingredientes como la hamburguesa, sabes que hay un par de formas en que podemos manejar esto.
+
+43
+00:03:27,630 --> 00:03:29,940
+Quiero manejarlo aqu en mi contenedor.
+
+44
+00:03:29,970 --> 00:03:37,140
+Quiero mostrar una ruleta en lugar de la hamburguesa y en lugar de los controles enmarcados mientras espero
+
+45
+00:03:37,140 --> 00:03:39,240
+que los ingredientes se carguen.
+
+46
+00:03:39,240 --> 00:03:49,220
+As que para hacer eso agregar otra variable aqu que nombrar hamburguesa y esta ser la hamburguesa y los controles en
+
+47
+00:03:49,220 --> 00:03:54,270
+negrita, as que crtalo desde all y asgnalo a esa variable.
+
+48
+00:03:54,320 --> 00:04:02,720
+por supuesto, esto fracasar debido a que tenemos elementos adyacentes aqu en JS X que no son del agrado por defecto.
+
+49
+00:04:02,720 --> 00:04:03,350
+Y ahora,
+
+50
+00:04:03,350 --> 00:04:11,060
+Como aprendiste, pero siempre puedes devolver una matriz o usar nuestro componente de ayudante de alks aqu esencialmente.
+
+51
+00:04:11,180 --> 00:04:13,250
+As que lo envolver con eso.
+
+52
+00:04:13,250 --> 00:04:17,570
+Tenga en cuenta que no est renderizando nada en la pantalla, por lo que no estamos destruyendo nuestro diseo.
+
+53
+00:04:17,870 --> 00:04:24,220
+Pero, por supuesto, Burger debera ser solo eso, si tenemos los ingredientes, as que
+
+54
+00:04:24,220 --> 00:04:31,500
+sobreescribir el buger variable que se prepar antes de esa hamburguesa donde usar el Spener y
+
+55
+00:04:31,500 --> 00:04:37,560
+luego solo quiero anularlo si los ingredientes de este estado son bsicamente no nulo.
+
+56
+00:04:37,620 --> 00:04:40,310
+Entonces solo habr el caso si fue cargado.
+
+57
+00:04:40,350 --> 00:04:46,430
+As que mueva mi cdigo donde sobrescribo la variable del programa dentro de esta declaracin if.
+
+58
+00:04:46,440 --> 00:04:49,750
+Entonces, de forma predeterminada, la hamburguesa es solo un spinner.
+
+59
+00:04:49,950 --> 00:04:56,460
+Y ahora puede emitirlo aqu debajo de la salida modal Bergere con llamada nica de Brace.
+
+60
+00:04:56,520 --> 00:05:02,280
+Sin embargo, con todo el problema de la cara y el nmero, el resumen de la orden tambin usar los ingredientes y, por
+
+61
+00:05:02,280 --> 00:05:03,050
+lo tanto, fallar.
+
+62
+00:05:03,090 --> 00:05:10,510
+Entonces aqu simplemente deberamos agregar algo en dicho resumen de orden a no por defecto.
+
+63
+00:05:10,890 --> 00:05:16,650
+Y luego, con el mismo control, en realidad ya tenemos ese control, por supuesto, donde anulamos esa
+
+64
+00:05:16,710 --> 00:05:21,810
+variable de resumen de orden con el resumen de orden si se establecen los ingredientes.
+
+65
+00:05:21,810 --> 00:05:25,210
+As que agreguemos, hace el cdigo de Bruegel aqu quizs?
+
+66
+00:05:25,380 --> 00:05:30,380
+As que ahora estamos sobrescribiendo el resumen de la orden en la misma declaracin if que intercambiamos hace un segundo.
+
+67
+00:05:30,660 --> 00:05:34,460
+Por supuesto, tambin quiero asegurarme de anular esto.
+
+68
+00:05:34,460 --> 00:05:41,880
+Nuevamente, si se configur la carga, entonces s lo hace si Stape y dnde verificamos los ingredientes o ADD si es antigua, en la
+
+69
+00:05:41,880 --> 00:05:47,040
+que verificamos que el estado de carga anule el resumen de la orden cuando sea necesario.
+
+70
+00:05:47,040 --> 00:05:52,080
+As que ahora cuando guardamos esto y volvemos a la aplicacin, usted vio esa ruleta por una fraccin de segundo y
+
+71
+00:05:52,320 --> 00:05:53,220
+estn detrs de usted.
+
+72
+00:05:53,340 --> 00:05:59,600
+Puedes ponerte en marcha y puedes crear esa hamburguesa que puedes ver que todava se maneja correctamente.
+
+73
+00:05:59,640 --> 00:06:01,110
+Entonces todo esto funciona
+
+74
+00:06:01,140 --> 00:06:06,810
+Lo mejor de todo es que vayamos a Firebase y actualizaremos nuestros ingredientes para que, por
+
+75
+00:06:07,110 --> 00:06:08,720
+ejemplo, comencemos siempre con carne.
+
+76
+00:06:09,000 --> 00:06:13,850
+Podemos simplemente poner la carne en un ao y confirmar con enter y luego volver a nuestra hamburguesa.
+
+77
+00:06:13,860 --> 00:06:17,920
+Y si ahora volvemos a cargar, vers que ya comenzamos con una sola carne.
+
+78
+00:06:17,940 --> 00:06:19,550
+As que eso es genial.
+
+79
+00:06:19,560 --> 00:06:22,560
+As que ahora tambin estamos obteniendo esto desde el back-end.
+
+80
+00:06:22,740 --> 00:06:28,770
+Y ahora realmente hemos mejorado nuestra aplicacin y tenemos tanto una solicitud como una solicitud de obtencin.
+
+81
+00:06:28,800 --> 00:06:36,660
+Ahora lo bueno es que estamos mostrando el repuesto, pero si ahora estamos eliminando a Jason muerto y ests fuera de tu
+
+82
+00:06:36,660 --> 00:06:43,920
+todo lo que tenemos la experiencia como un ejemplo si estamos eliminando la muerte y volvemos no lo hacemos obtener
+
+83
+00:06:43,950 --> 00:06:46,590
+el error o Modelo que no es genial.
+
+84
+00:06:46,590 --> 00:06:51,140
+Por qu no estamos obteniendo eso que puede ser difcil de detectar?
+
+85
+00:06:51,290 --> 00:06:57,350
+La razn por la que en realidad se pueden encontrar en nuestra funcin con controlador de aire estamos configurando nuestros centros
+
+86
+00:06:57,350 --> 00:06:58,030
+de inters.
+
+87
+00:06:58,060 --> 00:07:06,020
+Cualquier componente hizo montaje gancho y funcion muy bien para la solicitud posterior, pero piense en ese diagrama del
+
+88
+00:07:06,020 --> 00:07:07,350
+ciclo de vida.
+
+89
+00:07:07,610 --> 00:07:14,570
+Ah ve que el componente did mount se llama en realidad despus de que se han procesado todos los componentes
+
+90
+00:07:14,570 --> 00:07:19,960
+secundarios, lo que significa que despus de que se complet un componente en los componentes secundarios.
+
+91
+00:07:19,970 --> 00:07:24,590
+Ahora piensa en nuestro con controlador de errores aqu.
+
+92
+00:07:24,590 --> 00:07:30,180
+Estamos envolviendo este componente de envoltura, que es nuestro contenedor de Bergere Boulder, por ejemplo, porque
+
+93
+00:07:30,260 --> 00:07:33,920
+all estamos usando el controlador de aire en la exportacin.
+
+94
+00:07:34,130 --> 00:07:40,250
+As que bsicamente estamos envolviendo el Bergere Boulder y que por supuesto tiene un componente de
+
+95
+00:07:40,250 --> 00:07:47,960
+aplicacin, el montaje con Indy solo se llamar una vez que el componente se haya llamado aqu y desde que
+
+96
+00:07:47,960 --> 00:07:54,800
+llegamos a la web en el componente se mont el componente de envoltura nunca instalamos nuestros interceptores
+
+97
+00:07:54,830 --> 00:07:58,950
+La solucin es simple, usamos el componente se montar.
+
+98
+00:07:59,090 --> 00:08:05,020
+Se llamar a esto antes de que se muestren los componentes secundarios y no estamos causando efectos secundarios aqu.
+
+99
+00:08:05,120 --> 00:08:11,420
+Solo estamos registrando los interceptores y queremos hacerlo antes de que se muestren los componentes secundarios.
+
+100
+00:08:11,420 --> 00:08:18,530
+Ahora si pap, si guardamos esto y volvemos a cargar la aplicacin, obtenemos ese error o
+
+101
+00:08:18,530 --> 00:08:23,360
+movilidad. Pero luego recibimos otro error que no establece nuestro estado.
+
+102
+00:08:23,420 --> 00:08:30,680
+La razn de esto es que el bloque entonces se ejecuta en nuestro Bergere Boulder a pesar de que
+
+103
+00:08:30,680 --> 00:08:31,750
+tenemos un error.
+
+104
+00:08:32,090 --> 00:08:38,630
+la muerte simplemente es que no estamos teniendo un mtodo de captura aqu en el componente de Mount Bergere Boulder.
+
+105
+00:08:38,630 --> 00:08:39,850
+Ahora la razn de
+
+106
+00:08:40,250 --> 00:08:47,570
+Si detectamos un error all y simplemente no hacemos nada con l, por ejemplo,
+
+107
+00:08:47,570 --> 00:08:53,960
+ya no lo conseguiremos porque ahora ya no estamos llamando al bloqueo.
+
+108
+00:08:53,960 --> 00:08:58,480
+Todava podemos descartar el error de red y nuestra aplicacin ahora est rota.
+
+109
+00:08:58,520 --> 00:09:06,730
+Entonces, probablemente querramos manejar ese caso de error especfico aqu para esta pgina especfica, por ejemplo,
+
+110
+00:09:06,740 --> 00:09:08,890
+tambin configurando DUI aqu.
+
+111
+00:09:09,050 --> 00:09:13,740
+Entonces, tambin podramos establecer algn estado de error.
+
+112
+00:09:13,790 --> 00:09:22,830
+y luego aqu dentro si obtenemos un error si detectamos esto, entonces llamamos a establecer estado y establecer error o.
+
+113
+00:09:22,890 --> 00:09:29,410
+As que ahora en el Bergere Boulder que es nulo inicialmente o fallas, tal vez
+
+114
+00:09:29,550 --> 00:09:30,490
+Cierto.
+
+115
+00:09:30,830 --> 00:09:35,880
+Ahora con eso podemos ir al mtodo de renderizado y queremos generar un mensaje de error para el
+
+116
+00:09:35,880 --> 00:09:38,480
+caso del disco para que nuestra aplicacin se vuelva inutilizable.
+
+117
+00:09:38,490 --> 00:09:40,200
+Aqu establecemos Bergere para Spener.
+
+118
+00:09:40,200 --> 00:09:45,650
+Ahora, en realidad, no queremos mostrar la ruleta, pero nuestra aplicacin no se puede usar en absoluto.
+
+119
+00:09:45,750 --> 00:09:50,520
+Mensaje de error si tenemos D error o es igual a verdadero.
+
+120
+00:09:50,700 --> 00:09:56,640
+cierto y si realmente queremos mostrar un prrafo o si dijimos que no se pueden cargar los ingredientes.
+
+121
+00:09:56,640 --> 00:10:00,800
+Entonces, podramos verificar si este error de estado o si eso es
+
+122
+00:10:01,070 --> 00:10:03,140
+Este es nuestro peor escenario.
+
+123
+00:10:03,180 --> 00:10:07,360
+De lo contrario, le mostraremos el spinner o lo sobreescribiremos con ingredientes si los tenemos.
+
+124
+00:10:07,410 --> 00:10:11,640
+Entonces, si guardamos esto, obtenemos la ruleta y luego vemos que los ingredientes se pueden cargar.
+
+125
+00:10:11,640 --> 00:10:15,000
+Ahora nuestra aplicacin no funciona, pero al menos se la mostramos al usuario.
+
+126
+00:10:15,120 --> 00:10:20,840
+Por supuesto, una vez que arreglemos ese enlace agregando el punto Jason al final otra vez.
+
+127
+00:10:20,850 --> 00:10:23,760
+Ahora, por supuesto, los ingredientes se cargarn.
+
+128
+00:10:23,970 --> 00:10:29,260
+fraccin de segundo, los ingredientes estn all y podemos seguir usando nuestra aplicacin muy bien.
+
+129
+00:10:29,260 --> 00:10:32,360
+Como puede ver aqu, vemos la ruleta por una
+
+130
+00:10:32,460 --> 00:10:34,320
+Entonces ahora todo est funcionando.
+
+131
+00:10:34,320 --> 00:10:40,290
+Ahora obtenemos una aplicacin realmente slida en la que almacenamos pedidos y buscamos contenido.
+
+132
+00:10:40,290 --> 00:10:46,930
+Ahora, por supuesto, tambin podramos implementar cdigo para obtener los pedidos desde nuestra base de datos desde nuestro back end aqu.
+
+133
+00:10:46,950 --> 00:10:53,430
+Entonces, los datos son algo que queremos trabajar en el prximo enrutamiento, ya que podemos cambiar de pgina aunque tcnicamente solo
+
+134
+00:10:53,700 --> 00:10:56,910
+tenemos una pgina en esa aplicacin de una sola pgina.
+

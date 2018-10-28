@@ -1,0 +1,200 @@
+1
+00:00:02,260 --> 00:00:05,730
+Molto  stato gi ottimizzato nella nostra applicazione
+
+2
+00:00:05,830 --> 00:00:09,790
+e, come ho detto prima, potreste trovare pi potenziale, naturalmente.
+
+3
+00:00:09,790 --> 00:00:13,440
+Ora giriamo le nostre teste verso il nostro output del terminale qui, non
+
+4
+00:00:13,570 --> 00:00:18,850
+abbiamo molti avvertimenti ma ce n' uno, quello alla cassa. js nella nostra cartella contenitori,
+
+5
+00:00:18,850 --> 00:00:22,820
+che esiste un'importazione che non usiamo mai.
+
+6
+00:00:22,900 --> 00:00:24,310
+Diamo un'occhiata, checkout
+
+7
+00:00:24,310 --> 00:00:25,680
+container, l importiamo
+
+8
+00:00:25,780 --> 00:00:28,390
+azioni e in effetti in
+
+9
+00:00:28,600 --> 00:00:33,920
+questo file non effettuiamo mai alcuna azione, quindi potremmo semplicemente sbarazzarcene.
+
+10
+00:00:34,090 --> 00:00:36,880
+E in generale  una cosa importante, dai
+
+11
+00:00:36,880 --> 00:00:40,550
+un'occhiata all'output della tua console, non dovrebbe mostrare alcun avvertimento, rimuovere
+
+12
+00:00:40,570 --> 00:00:45,820
+le importazioni non necessarie per evitare il gonfiore delle dimensioni del bundle finale e parlare
+
+13
+00:00:45,820 --> 00:00:49,310
+dell'output della console, questo  pulito ora, ma se abbiamo
+
+14
+00:00:49,330 --> 00:00:54,490
+un guardiamo la console della nostra applicazione in esecuzione e notiamo che abbiamo un sacco
+
+15
+00:00:54,490 --> 00:01:00,620
+di istruzioni per i log della console, nel modale, nel burger, nel burger builder, probabilmente da qualche altra parte.
+
+16
+00:01:00,700 --> 00:01:06,400
+ anche una buona idea ripulire la tua applicazione non perch queste istruzioni del log della console
+
+17
+00:01:06,400 --> 00:01:12,590
+sarebbero cos male, ma saranno anche l in produzione e daranno informazioni sulla tua applicazione e oltre a
+
+18
+00:01:12,610 --> 00:01:17,770
+questo, non hai davvero bisogno di spam console con output che non ti interessa pi.
+
+19
+00:01:17,980 --> 00:01:21,460
+Quindi andiamo a visitare questi tre file qui per iniziare con la pulizia, dar
+
+20
+00:01:21,490 --> 00:01:23,280
+un'occhiata al burger. js file
+
+21
+00:01:23,440 --> 00:01:29,360
+nella cartella components e trova l'istruzione del log della console l, qui dove usiamo
+
+22
+00:01:29,410 --> 00:01:32,140
+gli oggetti di scena, rimuoviamo quello.
+
+23
+00:01:32,500 --> 00:01:39,520
+Un altro si pu trovare se andiamo al generatore di hamburger, nei file di builder di hamburger nel contenitore
+
+24
+00:01:39,520 --> 00:01:47,530
+del generatore di hamburger, lasciamo visitare anche questo file e diamo un'occhiata a dove usiamo il log della console qui in componentDidMount,
+
+25
+00:01:47,530 --> 00:01:47,960
+rimuoviamo
+
+26
+00:01:47,960 --> 00:01:50,990
+anche quello e l'altro era nel modale quindi
+
+27
+00:01:51,010 --> 00:01:57,370
+visitiamolo anche nella cartella dell'interfaccia utente, nella cartella dei componenti, ci colleghiamo al componenteWillUpdate e posso rimuovere
+
+28
+00:01:57,370 --> 00:02:02,770
+l'intero blocco poich non facciamo altro l. L'abbiamo fatto in passato per ottenere
+
+29
+00:02:02,770 --> 00:02:04,880
+alcuni spunti quando questo viene
+
+30
+00:02:04,900 --> 00:02:11,260
+licenziato, non  pi interessante per noi. Vediamo che facciamo anche il logging in orderSummary quando
+
+31
+00:02:11,260 --> 00:02:12,320
+aggiungiamo e rimuoviamo
+
+32
+00:02:12,380 --> 00:02:20,230
+gli ingredienti, quindi andiamo a visitare anche l'order sumum, possiamo trovare che nella parte burger dei nostri componenti, ci sia il
+
+33
+00:02:20,230 --> 00:02:24,460
+componente di riepilogo dell'ordine e l, se abbiamo un guarda, troviamo
+
+34
+00:02:24,520 --> 00:02:30,110
+la dichiarazione del log della console in componentWillUpdate in modo che possiamo rimuovere anche questo.
+
+35
+00:02:30,580 --> 00:02:37,330
+E con quello, potremmo anche convertirlo nuovamente in un componente funzionale perch tutto ci
+
+36
+00:02:37,330 --> 00:02:42,670
+che facciamo  solo rendere qualcosa. Ora lo lascer qui in una classe,
+
+37
+00:02:42,670 --> 00:02:47,530
+ma potresti facilmente convertirlo per ottimizzarlo ulteriormente. Dopodich, in quale altro caso otteniamo le istruzioni del registro
+
+38
+00:02:47,620 --> 00:02:56,160
+della console, continuiamo e registriamo rapidamente noi stessi, passiamo all'accesso in modo da ottenere l'output qui in auth. js, questo  il nostro
+
+39
+00:02:56,280 --> 00:02:59,100
+file creatore di azioni.
+
+40
+00:02:59,340 --> 00:03:01,740
+Vediamo se otteniamo qualche output da
+
+41
+00:03:01,740 --> 00:03:11,090
+qualche altra parte, se inserisco solo alcuni valori arbitrari qui nel campo dell'ordine e faccio clic sull'ordine, quindi ne riceviamo anche uno
+
+42
+00:03:11,090 --> 00:03:13,150
+dal file delle azioni dell'ordine,
+
+43
+00:03:13,160 --> 00:03:20,700
+quindi visitiamo anche questi file nella cartella azioni, auth. js aveva un'istruzione di log della console, quindi
+
+44
+00:03:20,720 --> 00:03:26,630
+sbarazziamoci di questa e sbarazziamoci dell'istruzione del log della console nel file degli
+
+45
+00:03:26,950 --> 00:03:27,360
+ordini
+
+46
+00:03:27,380 --> 00:03:28,440
+nella stessa
+
+47
+00:03:28,490 --> 00:03:36,370
+cartella, nel log della console, rimuoviamo anche quello. Ora potremmo avere pi istruzioni del registro della console da qualche parte nella nostra applicazione, ma penso di aver rimosso la
+
+48
+00:03:36,370 --> 00:03:40,280
+maggior parte di esse, sentitevi liberi di rimuovere qualsiasi altra. Di nuovo, certamente non 
+
+49
+00:03:40,330 --> 00:03:43,160
+dannoso se li lasci l ma  meglio
+
+50
+00:03:43,180 --> 00:03:44,990
+se ti sbarazzi di loro.
+

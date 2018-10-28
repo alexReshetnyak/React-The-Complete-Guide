@@ -1,0 +1,280 @@
+1
+00:00:02,110 --> 00:00:06,990
+Quindi nelle ultime lezioni abbiamo ristrutturato il nostro progetto per avere pagine diverse.
+
+2
+00:00:07,180 --> 00:00:10,780
+No, non voglio pi rendere i post tutto il tempo.
+
+3
+00:00:10,780 --> 00:00:18,820
+Voglio caricare questo piccolo chimicamente in attesa sul percorso che abbiamo in U R L e per niente Slash.
+
+4
+00:00:18,820 --> 00:00:26,110
+Quindi per essenzialmente localhost 3000 slash nel nostro caso qui o in qualsiasi altro dominio,
+
+5
+00:00:26,110 --> 00:00:29,190
+alla fine voglio caricare il componente post.
+
+6
+00:00:29,260 --> 00:00:35,430
+Ora abbiamo gi attivato il routing e le varie cadono avvolgendo tutto con il router del browser.
+
+7
+00:00:35,650 --> 00:00:42,670
+Ora nel componente di blocco in cui voglio caricare le mie diverse pagine ho bisogno di importare qualcos'altro
+
+8
+00:00:42,670 --> 00:00:44,270
+dal pacchetto del router.
+
+9
+00:00:44,270 --> 00:00:46,880
+Quindi dal re-act router Dom.
+
+10
+00:00:46,900 --> 00:00:56,980
+Anche in questo caso, poich  correlato al rendering da l, voglio caricare l'oggetto del percorso in modo che il componente del
+
+11
+00:00:56,980 --> 00:00:58,110
+percorso sia preciso.
+
+12
+00:00:58,330 --> 00:01:04,400
+Ora lo usiamo come qualsiasi altro componente nel nostro J  il codice X ed  un componente a chiusura automatica.
+
+13
+00:01:04,760 --> 00:01:12,460
+Il percorso ha bisogno di qualche configurazione sebbene il percorso abbia bisogno di una propriet del percorso e tutti questi oggetti di scena qui
+
+14
+00:01:12,460 --> 00:01:18,910
+che sto configurando sono ovviamente parole riservate, di cui ci si aspetta che vengano nominati in questo modo da questo componente.
+
+15
+00:01:18,970 --> 00:01:24,140
+Quindi non  possibile modificare il nome e paff  semplicemente una stringa.
+
+16
+00:01:24,220 --> 00:01:31,720
+Qui trovi il percorso per il quale questa rotta dovrebbe diventare attiva qualcosa come la barra di Poth.
+
+17
+00:01:31,720 --> 00:01:36,880
+Quindi  necessario definire cosa dovrebbe accadere quando fa un atto di potere ISDE.
+
+18
+00:01:36,970 --> 00:01:46,470
+Quindi quando re-act router scopre che questo  DIAK. Il percorso ora nella sua forma pi semplice ora puoi aggiungere un puntello
+
+19
+00:01:46,590 --> 00:01:53,800
+di rendering che in realt contiene un riferimento a una funzione e puoi passare una funzione anonima
+
+20
+00:01:53,800 --> 00:01:55,510
+alla funzione freccia qui.
+
+21
+00:01:55,530 --> 00:01:59,910
+Quindi qui la disfunzione deve restituire J come X che dovrebbe essere reso.
+
+22
+00:02:00,150 --> 00:02:05,600
+Quindi potresti semplicemente rendere qualcosa come il tag H-1 dove dici casa.
+
+23
+00:02:05,700 --> 00:02:11,970
+E naturalmente puoi anche renderizzare un anno GSX strutturato avvolgendolo tra parentesi e scrivendo multi-linea proprio
+
+24
+00:02:12,150 --> 00:02:13,140
+come scrivi tu.
+
+25
+00:02:13,170 --> 00:02:13,630
+S x.
+
+26
+00:02:13,650 --> 00:02:15,020
+Da qualsiasi altra parte.
+
+27
+00:02:15,300 --> 00:02:21,170
+Se salvi quel codice e torni alla tua applicazione, in realt qui vedi casa.
+
+28
+00:02:21,390 --> 00:02:29,160
+Si vede anche che se si ha una zappa nuova e si pubblica il motivo, si tratta di un router dead-act per determinare
+
+29
+00:02:29,370 --> 00:02:31,640
+il percorso in cui ci si trova.
+
+30
+00:02:31,670 --> 00:02:36,270
+CS se il percorso corrente inizia con questo percorso.
+
+31
+00:02:36,300 --> 00:02:43,240
+Quindi se questo  un prefisso puoi sovrascrivere questo comportamento aggiungendo un altro Propp che  esatto.
+
+32
+00:02:43,320 --> 00:02:47,380
+Questo  un Propp booleano Quindi aggiungerlo in questo modo lo rende vero.
+
+33
+00:02:47,450 --> 00:02:48,840
+Predefinito quando non lo .
+
+34
+00:02:48,840 --> 00:02:50,580
+Ed  falso.
+
+35
+00:02:50,730 --> 00:02:58,950
+Ora, tranne che per i nuovi post, non  pi possibile vedere a casa il seme di Yoli per la home page,
+
+36
+00:02:59,010 --> 00:03:01,420
+dove effettivamente il percorso completo  tagliato.
+
+37
+00:03:01,560 --> 00:03:04,090
+Quindi c' gi un importante take away.
+
+38
+00:03:04,170 --> 00:03:08,110
+Utilizzi il POF qui per dire al router di re-act.
+
+39
+00:03:08,160 --> 00:03:13,900
+Il mio percorso non parte da questo tranne per il caso che definisci esatto.
+
+40
+00:03:13,920 --> 00:03:15,510
+Quindi la domanda sarebbe.
+
+41
+00:03:15,510 --> 00:03:18,420
+ il mio percorso completo come questo.
+
+42
+00:03:18,420 --> 00:03:24,990
+E poi il tuo renderer determina ci che il tuo router dovrebbe mostrare allo schermo in questo componente, mentre
+
+43
+00:03:24,990 --> 00:03:28,710
+il percorso della tua cella si sostituisce semplicemente a se stesso.
+
+44
+00:03:28,710 --> 00:03:36,120
+Puoi dire con il contenuto che definisci qui e puoi ovviamente usare percorsi multipli anche per
+
+45
+00:03:36,120 --> 00:03:37,460
+lo stesso percorso.
+
+46
+00:03:37,470 --> 00:03:41,410
+Quindi qui ho semplicemente duplicato e reso qualcosa di diverso.
+
+47
+00:03:41,440 --> 00:03:48,250
+E ora, se salvi questo, rendiamo sia casa che casa Neefe a vicenda.
+
+48
+00:03:48,360 --> 00:03:52,800
+Quindi puoi usare la rotta ovunque ti serva l'una per l'altra.
+
+49
+00:03:52,800 --> 00:03:55,790
+Puoi anche nidificare la seconda via in un div.
+
+50
+00:03:55,980 --> 00:03:59,080
+Puoi utilizzare tanti percorsi sulla stessa pagina che desideri.
+
+51
+00:03:59,220 --> 00:04:00,730
+Riattivi Roger Wilfer.
+
+52
+00:04:00,780 --> 00:04:05,100
+Ognuno di loro controlla se questo criterio  soddisfatto.
+
+53
+00:04:05,100 --> 00:04:06,880
+Quindi se questo criterio  tuo Asmat.
+
+54
+00:04:06,900 --> 00:04:15,360
+Se POF  il percorso corrente o se non si specifica esatto se  il prefisso del percorso corrente e
+
+55
+00:04:15,360 --> 00:04:18,680
+quindi si esegue il rendering di questo contenuto.
+
+56
+00:04:18,680 --> 00:04:22,560
+Questa  la funzionalit principale del router fino ad ora.
+
+57
+00:04:22,560 --> 00:04:26,450
+E qui, ad esempio, dove ho rimosso exec su una seconda rotta.
+
+58
+00:04:26,610 --> 00:04:29,620
+Se salviamo questo, vediamo ancora entrambi.
+
+59
+00:04:29,760 --> 00:04:37,530
+Ma se andiamo a New post, vediamo solo home 2 perch il primo elemento home ha exect e quindi il
+
+60
+00:04:37,530 --> 00:04:41,990
+percorso completo ha accesso e quindi viene valutato il percorso completo.
+
+61
+00:04:42,090 --> 00:04:44,350
+Che ovviamente  New post now.
+
+62
+00:04:44,550 --> 00:04:51,810
+Il secondo percorso, tuttavia, non usa esattamente Sodor POV, ma deve iniziare con Slash e ogni percorso inizia
+
+63
+00:04:51,810 --> 00:04:52,650
+con Slash.
+
+64
+00:04:52,650 --> 00:04:55,100
+Quindi questo sar sempre reso.
+
+65
+00:04:55,320 --> 00:04:58,020
+Quindi questa  la funzionalit principale del router.
+
+66
+00:04:58,080 --> 00:05:04,140
+Ovviamente non vogliamo rendere GSX nel nostro caso, anche se questo potrebbe ovviamente essere quello che vuoi
+
+67
+00:05:04,140 --> 00:05:05,410
+fare in alcuni casi.
+
+68
+00:05:05,670 --> 00:05:08,730
+Vogliamo caricare uno dei nostri componenti.
+
+69
+00:05:08,910 --> 00:05:12,210
+Il componente Post per solo percorso.
+
+70
+00:05:12,210 --> 00:05:16,730
+Quindi assicuriamoci di caricare questo componente nella prossima lezione.
+

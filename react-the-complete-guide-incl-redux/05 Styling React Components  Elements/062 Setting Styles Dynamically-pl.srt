@@ -1,0 +1,160 @@
+1
+00:00:02,200 --> 00:00:08,410
+Tak wic z problemami opisanymi w ostatnim wykadzie, dynamicznie dostosowujemy styl przyciskw w zalenoci od
+
+2
+00:00:08,410 --> 00:00:11,580
+tego, czy zamierzamy pokazywa osoby, czy nie.
+
+3
+00:00:11,620 --> 00:00:17,920
+Teraz ju obejrzelimy, jak moemy dynamicznie renderowa tre, jak tutaj, za pomoc instrukcji if,
+
+4
+00:00:17,920 --> 00:00:25,400
+w ktrej przechowujemy jsx w zmiennej, a nastpnie wyprowadzamy t zmienn w naszym szablonie lub w naszej
+
+5
+00:00:25,400 --> 00:00:26,660
+funkcji return tutaj.
+
+6
+00:00:26,910 --> 00:00:30,910
+Teraz jak zawsze wszystko tutaj jest javascript, wic
+
+7
+00:00:31,000 --> 00:00:38,680
+jeli przypiszemy styl do przycisku tutaj, ta cz pomidzy nawiasami klamrowymi moe by dowolnym
+
+8
+00:00:38,680 --> 00:00:39,740
+wyraeniem javascript.
+
+9
+00:00:39,940 --> 00:00:46,330
+Po pierwsze, moglibymy oczywicie przekaza obiekt javascript, w ktrym definiujemy style lub oczywicie moemy dotrze
+
+10
+00:00:46,330 --> 00:00:48,600
+do waciwoci stylu, przepraszam, zmienna,
+
+11
+00:00:48,670 --> 00:00:51,080
+ktr powinienem powiedzie tak jak my.
+
+12
+00:00:51,160 --> 00:00:54,350
+i dlatego moemy
+
+13
+00:00:54,350 --> 00:01:03,170
+dynamicznie zmienia t zmienn stylu. Zasadniczo tutaj, ten stan showPersons, jeli to prawda, oznacza to, e mona zobaczy osoby.
+
+14
+00:01:03,190 --> 00:01:10,030
+Tak jak nakreliem na ostatnim wykadzie przycisk powinien mie czerwone to, poniewa
+
+15
+00:01:10,030 --> 00:01:12,780
+kliknicie usunie osoby. Z drugiej strony,
+
+16
+00:01:12,910 --> 00:01:18,500
+domylne ustawienie powinno polega na tym, aby nie mie biaego ta, ale zielonego, a
+
+17
+00:01:18,790 --> 00:01:25,680
+by moe chcemy ustawi kolor tekstu na biay, tak aby wyrnia si on z normaln waciwoci koloru.
+
+18
+00:01:25,690 --> 00:01:29,860
+Teraz, jeli to stwierdz, mamy zielony kolor ta,
+
+19
+00:01:29,980 --> 00:01:32,350
+jeli go klikn, widzimy osoby.
+
+20
+00:01:32,490 --> 00:01:37,730
+Teraz, gdy osoby s widoczne, powinno to uzyska czerwony kolor ta.
+
+21
+00:01:37,750 --> 00:01:44,110
+To, co moemy zrobi, to w naszym stwierdzeniu, ktre ju mamy, gdzie ustawiamy zmienn osoby, moemy
+
+22
+00:01:44,110 --> 00:01:51,810
+oczywicie zrobi wicej poza ustawieniem zmiennej tej osoby tutaj. Po wykonaniu tej czynnoci mog rwnie
+
+23
+00:01:51,820 --> 00:01:58,630
+wybra styl i ustawi waciwo koloru ta, ktra wyranie ma obiekt
+
+24
+00:01:58,630 --> 00:02:03,640
+stylu, ustawilimy go tutaj na czerwono, po prostu tak.
+
+25
+00:02:03,970 --> 00:02:07,380
+Wic po prostu wchodzimy w ten obiekt stylu,
+
+26
+00:02:07,510 --> 00:02:10,900
+nie przypisujemy nowej wartoci, wic wci jest staa,
+
+27
+00:02:11,200 --> 00:02:15,610
+ale przypisujemy now warto jednej z jej waciwoci, kolorowi ta
+
+28
+00:02:16,060 --> 00:02:20,980
+i przy tej niewielkiej zmianie w miejscu mamy ju dynamiczne stylizacja.
+
+29
+00:02:21,070 --> 00:02:22,880
+Pozwl mi ponownie zaadowa
+
+30
+00:02:23,050 --> 00:02:27,770
+t aplikacj, zielony przycisk, czerwony przycisk, zielony przycisk i tak dalej.
+
+31
+00:02:28,210 --> 00:02:34,870
+To pokazuje jedn kluczow rzecz, ktr naprawd musisz owin sobie gow,
+
+32
+00:02:34,870 --> 00:02:36,580
+jeli jeszcze nie,
+
+33
+00:02:36,640 --> 00:02:45,800
+wszystko jest javascript, myl, e powiedziaem to wczeniej. Dynamicznie zmieniamy styl, gdy dynamicznie zmieniamy t zmienn osoby,
+
+34
+00:02:46,090 --> 00:02:50,530
+tak jak zmieniamy co dynamicznie, mwimy tu o javascript.
+
+35
+00:02:50,620 --> 00:02:56,230
+Moesz manipulowa obiektem stylu dowolnym kodem javascript, ktry chcesz, a na koniec, kiedy go tutaj
+
+36
+00:02:56,230 --> 00:03:01,360
+powiesz, to po prostu zastosuje to bez wzgldu na to, jak je edytowae.
+
+37
+00:03:01,390 --> 00:03:06,850
+To bardzo wane, a to pokazuje, jak moesz dynamicznie przypisywa komrki,
+
+38
+00:03:06,850 --> 00:03:09,010
+a co z nazwami klas?
+
+39
+00:03:09,040 --> 00:03:14,030
+Czy moemy te ustawi je dynamicznie, czy moemy przekaza list nazw klas?
+
+40
+00:03:14,230 --> 00:03:18,030
+Tak, moemy i poka ci, jak to dziaa w nastpnym wykadzie.
+

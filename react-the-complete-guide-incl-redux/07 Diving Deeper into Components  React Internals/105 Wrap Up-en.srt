@@ -1,0 +1,76 @@
+1
+00:00:02,440 --> 00:00:04,860
+In this module, we covered a lot,
+
+2
+00:00:04,900 --> 00:00:11,110
+a lot of theory, a lot of behind the scenes stuff, a lot of important things you have to know.
+
+3
+00:00:11,170 --> 00:00:15,800
+Now don't be shocked if that is not something you know by heart right now,
+
+4
+00:00:15,820 --> 00:00:22,570
+this was a lot of stuff and a lot of theory. It is important though because we're next going to dive
+
+5
+00:00:22,570 --> 00:00:27,740
+into our course project and we're using a lot of the things you learn thus far
+
+6
+00:00:27,940 --> 00:00:32,210
+and therefore it's so important that you understand how it's working behind the scenes.
+
+7
+00:00:32,440 --> 00:00:35,830
+Feel free to go back to some of the videos from this module.
+
+8
+00:00:35,980 --> 00:00:42,680
+It's perfectly fine if you need to go through some of them again and again to be sure about how this
+
+9
+00:00:42,690 --> 00:00:47,860
+shouldComponentUpdate thing worked, how the lifecycle works for updating
+
+10
+00:00:47,860 --> 00:00:51,970
+and don't be afraid of seeing all these concepts,
+
+11
+00:00:52,150 --> 00:00:53,740
+you might not use them all,
+
+12
+00:00:53,800 --> 00:00:57,730
+you might only use a few of them. But you get better and better
+
+13
+00:00:57,730 --> 00:01:02,320
+the more you learn about that and the more you question the approaches you use.
+
+14
+00:01:02,320 --> 00:01:08,500
+Maybe there are some advanced concepts you may use like a well-placed high order component or a pure
+
+15
+00:01:08,500 --> 00:01:09,370
+component.
+
+16
+00:01:09,700 --> 00:01:15,040
+And again, there is a course project into which will dive next where you will also see a lot of the things
+
+17
+00:01:15,040 --> 00:01:21,310
+you've learned thus far being used and hence there, you should also get a feeling for when to use what.
+
+18
+00:01:21,310 --> 00:01:27,460
+So with that let's dive into the course project and let's see more of these things in a bigger project
+
+19
+00:01:27,640 --> 00:01:30,220
+than the demo project we worked on thus far.
+

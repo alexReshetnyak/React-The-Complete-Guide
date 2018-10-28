@@ -1,0 +1,280 @@
+1
+00:00:02,180 --> 00:00:05,520
+So I talked a lot about how we can use redux saga,
+
+2
+00:00:05,720 --> 00:00:11,540
+let's now use it to get a feeling for how it actually works. With redux saga,
+
+3
+00:00:11,570 --> 00:00:21,050
+you create so-called sagas which are essentially kind of functions which you run up on certain actions
+
+4
+00:00:21,130 --> 00:00:28,460
+and which handle all your side effect logic and a side effect simply is something like accessing
+
+5
+00:00:28,460 --> 00:00:36,280
+local storage, reaching out to a server, maybe changing the route or executing a timer like this here.
+
+6
+00:00:36,290 --> 00:00:41,930
+These are all side effects because they don't directly manipulate your redux store,
+
+7
+00:00:41,930 --> 00:00:47,330
+they might do something which leads to a different state which in the end is stored in your redux store
+
+8
+00:00:47,660 --> 00:00:51,450
+but they don't directly are consumed by the reducer.
+
+9
+00:00:51,890 --> 00:00:56,700
+So for that, I'll create a new subfolder in the store folder and I'll name it sagas,
+
+10
+00:00:56,870 --> 00:00:59,970
+the name is up to you but this is something you will see quite a lot.
+
+11
+00:01:00,170 --> 00:01:05,290
+Now in sagas, I will create different files for the different types of sagas
+
+12
+00:01:05,300 --> 00:01:08,800
+and why don't we start with the auth saga here.
+
+13
+00:01:08,990 --> 00:01:18,170
+So I'll create a new file, auth.js in the sagas folder, now in here, I want to create my redux sagas,
+
+14
+00:01:18,260 --> 00:01:22,100
+the question just is how do we create such a saga,
+
+15
+00:01:22,100 --> 00:01:25,010
+what is it actually? In its core,
+
+16
+00:01:25,040 --> 00:01:31,280
+it's kind of a function and I'm saying kind of because there's a little twist to it which I will show
+
+17
+00:01:31,280 --> 00:01:32,280
+you soon.
+
+18
+00:01:32,660 --> 00:01:35,900
+So first of all let's create a function in here,
+
+19
+00:01:36,100 --> 00:01:39,490
+I'll use the function keyword and I'll name it
+
+20
+00:01:39,530 --> 00:01:46,820
+let's say we want to replace the saga for logging out, where we clear it in the local storage,
+
+21
+00:01:46,850 --> 00:01:52,580
+so no asynchronous code in there, just some side effect which happens synchronously actually.
+
+22
+00:01:52,730 --> 00:01:54,550
+So I'll name the function here
+
+23
+00:01:54,710 --> 00:01:55,880
+logout,
+
+24
+00:01:55,880 --> 00:02:01,880
+now on this function, I can accept an argument which I will again get automatically, I'll of course show
+
+25
+00:02:01,880 --> 00:02:04,370
+you how to wire up such sagas,
+
+26
+00:02:04,370 --> 00:02:07,020
+the argument would be the action
+
+27
+00:02:07,070 --> 00:02:12,820
+so the action which was dispatched because sagas are related to actions, I'll come back to this.
+
+28
+00:02:12,860 --> 00:02:18,660
+Now I said this would not be a function, I said kind of a function,
+
+29
+00:02:19,070 --> 00:02:25,350
+let's add a star after the function keyword and this star here is important,
+
+30
+00:02:25,580 --> 00:02:28,820
+it's not part of the function name,
+
+31
+00:02:28,820 --> 00:02:34,480
+it's actually turning this function into a so-called generator. Generators
+
+32
+00:02:34,480 --> 00:02:42,830
+are next generation javascript features which are functions which can be executed incrementally, so you
+
+33
+00:02:42,830 --> 00:02:49,490
+can kind of call them and they don't run from start to end immediately but you can pause during function
+
+34
+00:02:49,490 --> 00:02:56,780
+execution, for example to wait for asynchronous code to finish and that is exactly what redux saga takes
+
+35
+00:02:56,780 --> 00:02:57,760
+advantage of.
+
+36
+00:02:57,950 --> 00:03:03,470
+And if you have synchronous code, well then you can just execute it from start to end immediately, I
+
+37
+00:03:03,470 --> 00:03:06,860
+will show you how both works in this module.
+
+38
+00:03:06,860 --> 00:03:11,600
+So we have this generator function here, now in logout
+
+39
+00:03:11,600 --> 00:03:17,870
+I obviously want to do the same I do with my logout action creator so I'll copy the three local storage
+
+40
+00:03:17,870 --> 00:03:23,900
+calls here and paste it into my logout saga generator here.
+
+41
+00:03:23,900 --> 00:03:26,780
+Now you already see my IDE doesn't like this,
+
+42
+00:03:26,860 --> 00:03:33,710
+it's saying that this generator doesn't have a yield function or a yield, any yield keyword,
+
+43
+00:03:33,770 --> 00:03:36,800
+now we'll take care of this and I will explain what yield does.
+
+44
+00:03:36,800 --> 00:03:39,460
+For now we're cleaning up the local storage here,
+
+45
+00:03:39,710 --> 00:03:48,260
+now with the local storage removing items here, we can have a look at the auth.js action creator and
+
+46
+00:03:48,260 --> 00:03:54,410
+we see that there at the end, we returned this action object which essentially would lead to this
+
+47
+00:03:54,410 --> 00:03:55,860
+being dispatched.
+
+48
+00:03:56,210 --> 00:04:03,620
+So we want to do the same here and in a saga, we actually do this with a special function we get from
+
+49
+00:04:03,620 --> 00:04:05,870
+the package we just installed,
+
+50
+00:04:06,170 --> 00:04:16,610
+so I'll import something from redux saga and there actually from the effects subpackage. There,
+
+51
+00:04:16,620 --> 00:04:24,960
+I want to import the put function, now put in the end will just dispatch a new action,
+
+52
+00:04:25,480 --> 00:04:32,370
+so we execute put here and now I will simply copy the same action definition I used in the action
+
+53
+00:04:32,370 --> 00:04:36,220
+creator, with action types of logout,
+
+54
+00:04:36,220 --> 00:04:40,830
+so there I'll put this action. Of course for this to work,
+
+55
+00:04:40,840 --> 00:04:49,320
+I also need to import my action type, so I'll import everything as action types from actions like this.
+
+56
+00:04:49,330 --> 00:04:57,780
+So just as we did it in the auth.js file and there from the action types file.
+
+57
+00:04:58,020 --> 00:05:04,170
+So now we're putting this and still I got all these errors because this is no normal function but a
+
+58
+00:05:04,170 --> 00:05:06,580
+generator, and in a generator,
+
+59
+00:05:06,690 --> 00:05:09,150
+we should prefix, prepend
+
+60
+00:05:09,360 --> 00:05:17,060
+each step we execute with the yield keyword. This simply means that this step should be executed and
+
+61
+00:05:17,060 --> 00:05:19,380
+then it will wait for it to finish
+
+62
+00:05:19,380 --> 00:05:25,030
+so if it were an asynchronous action, it wouldn't continue before the step is done,
+
+63
+00:05:25,110 --> 00:05:26,180
+the same here.
+
+64
+00:05:26,400 --> 00:05:34,200
+So we yield all these steps here and that now will execute this step, this step, this step
+
+65
+00:05:34,200 --> 00:05:36,590
+and then finally call put which
+
+66
+00:05:36,600 --> 00:05:41,750
+in the end behind the scenes will just dispatch this action.
+
+67
+00:05:41,910 --> 00:05:47,950
+Now this is a redux saga and it looks like a more complicated way of creating an action creator, right?
+
+68
+00:05:48,000 --> 00:05:54,660
+Well the idea is of having your separate area in the application where you deal with that, we have our
+
+69
+00:05:54,660 --> 00:06:01,860
+logout generator and now we only kind of need to hook it up to our store to be able to use it.
+
+70
+00:06:01,860 --> 00:06:04,960
+Now let's see how that works in the next lecture.
+

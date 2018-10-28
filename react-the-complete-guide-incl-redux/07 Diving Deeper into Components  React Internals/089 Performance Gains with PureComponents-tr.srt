@@ -1,0 +1,524 @@
+1
+00:00:02,260 --> 00:00:07,840
+Bileen gncelleme ve nemli olduunu gstermek iin tekrar gelmeme izin verin ve
+
+2
+00:00:08,490 --> 00:00:15,450
+niin kullanmak istersiniz? Uygulamamz biraz ablonumuz olarak dzenleyelim, bylece demo kullanm durumumuz var ya
+
+3
+00:00:15,460 --> 00:00:24,360
+da yeni bir yavru ekleyelim Bu KULLANIM'A KOKTEN KOKLAYINIZ Leboeuf Kiinin hedefe olan farkn gsterin, ancak o zaman
+
+4
+00:00:24,360 --> 00:00:26,190
+bir kokpit de deitirmez.
+
+5
+00:00:26,220 --> 00:00:27,730
+Onlar grnrlerse sakla.
+
+6
+00:00:27,750 --> 00:00:30,520
+Kullanlabilir olup olmadklarn gsterin, ancak her zaman gsterin.
+
+7
+00:00:30,570 --> 00:00:35,620
+Ve zaten salam olduklar takdirde hibir ey yapmaz ya da dndnz gibi olur.
+
+8
+00:00:36,060 --> 00:00:44,810
+yeni bir yntem ileyicisi yaratmayacam, hepsini buraya tklatarak altrlan ok ilevi ile birlikte tamamlayn.
+
+9
+00:00:44,810 --> 00:00:50,350
+Bylece unclick dinleyicisini sizin tarafnzdan ekleyelim ve ksaca ksaca,
+
+10
+00:00:50,370 --> 00:00:56,760
+Elbette ki iki veya daha fazla satrda bu set durumunu aracam ve ov sanatlarn doruya syledim.
+
+11
+00:00:56,910 --> 00:00:58,140
+Her zaman dorudur.
+
+12
+00:00:58,140 --> 00:01:05,560
+Yine hibir hedefleme her zaman dorudur ancak irkin grnecek, ancak burada hneri yapacaktr.
+
+13
+00:01:05,580 --> 00:01:09,930
+imdi gncellenecek kadar her yolu yapmama izin verin.
+
+14
+00:01:09,930 --> 00:01:13,410
+Ve orada doruyu salamalyz.
+
+15
+00:01:13,530 --> 00:01:15,270
+Herzaman doru.
+
+16
+00:01:15,270 --> 00:01:22,820
+imdi Paris'e gidelim ve buradaki ekimizi takip edip yorumlayalm ve burada da burada tekrar dnelim.
+
+17
+00:01:22,920 --> 00:01:26,820
+Bileeni gncelletirmesi gerekirse uygulama yapmazsak, hangisi olurdu.
+
+18
+00:01:27,000 --> 00:01:30,050
+imdi orada bizim bavurumuza geri dnelim.
+
+19
+00:01:30,130 --> 00:01:31,360
+Yklendiyse.
+
+20
+00:01:31,730 --> 00:01:36,400
+ahs gster'i tkladmzda tm insan grdmz ve daha nce olduu gibi davrandn grelim.
+
+21
+00:01:36,470 --> 00:01:39,810
+imdi hepsi iptal etmek iin temizlendi, ancak sayfay yeniden yklemedim.
+
+22
+00:01:40,060 --> 00:01:42,810
+Bana tekrar Kiileri Gster'i tklataym.
+
+23
+00:01:42,940 --> 00:01:49,330
+imdi grdnz ey, diyaframn bileen gncellemesi gerekirse, tm bu mr devrini tekrar
+
+24
+00:01:49,360 --> 00:01:56,770
+yaamak olduumuz. Elimizden geleni render edeceiz, aldracamz gncellemeyi geree dntn gstererek devam edecektir.
+
+25
+00:01:56,770 --> 00:02:04,600
+Gncelleme Will render tm kii bileeni iin re-act gider tam componentry ve tm render
+
+26
+00:02:04,600 --> 00:02:07,870
+yntemleri olsa bile hibir ey deiti.
+
+27
+00:02:07,900 --> 00:02:10,150
+antalar deimedi diziyi deimedi.
+
+28
+00:02:10,210 --> 00:02:12,070
+Hibirey deimedi.
+
+29
+00:02:12,260 --> 00:02:19,220
+imdi, tarayc yurtnn gerek yurduna yeniden girilmesi iin bunu yanl anlamayn.
+
+30
+00:02:19,270 --> 00:02:20,780
+Bunu yapmad.
+
+31
+00:02:20,800 --> 00:02:29,140
+Elemanlara giderek bunu dorulayabilir ve oradaki seeneklere giderseniz oradaki daha fazla alet
+
+32
+00:02:29,140 --> 00:02:33,050
+ve daha sonra da ileme hazrlanr.
+
+33
+00:02:33,190 --> 00:02:40,710
+Yeniden boyanmas gereken alanlar grmek iin yanp snen boya aabilirsiniz.
+
+34
+00:02:41,050 --> 00:02:47,030
+Bunu yaparsanz ve Kullanclar Gster'i tklatrsanz, yalnzca hedef kiiye ait dmenin yeniden boyanmas gerektiini grrsnz.
+
+35
+00:02:47,230 --> 00:02:54,540
+Bir sr boyanm grrsnz, ancak gsteri insanlar iin bu olmaz, bylece gerek yurt
+
+36
+00:02:54,540 --> 00:02:55,220
+dokunmaz.
+
+37
+00:02:55,290 --> 00:02:57,930
+Yalnzca ve bunun nedeni, zerinde gezinmesi oldu.
+
+38
+00:02:57,930 --> 00:03:00,230
+Bu arada ve tekrar devre d brakacam.
+
+39
+00:03:00,300 --> 00:03:03,490
+Sadece dokundu ama gerek dom'a dokunmad.
+
+40
+00:03:03,810 --> 00:03:08,690
+Ve nasl tepki vereceim geriye dnp gereye dokunmaya karar verip vermediine karar vereceim.
+
+41
+00:03:08,700 --> 00:03:15,150
+Gelecekteki derslerde ancak bunun imdilik, gerek Dom'a ancak yalnzca render
+
+42
+00:03:15,150 --> 00:03:18,960
+yntemlerinde grlenlerle farklar alglarsa, dokunmadn biliyoruz.
+
+43
+00:03:19,080 --> 00:03:22,520
+Ancak elbette bunun iin yntemler retmek gerekiyor.
+
+44
+00:03:22,620 --> 00:03:25,330
+Konsolda da grebileceiniz gibi bunu yapt.
+
+45
+00:03:25,380 --> 00:03:27,150
+Tm ileme yntemlerini uygulad.
+
+46
+00:03:27,390 --> 00:03:30,820
+Bu elbette zellikle byk uygulamalar iin biraz verimsizdir.
+
+47
+00:03:30,840 --> 00:03:37,090
+Burada bize ok fazla maliyet demedi; ancak bir sr ocuunuz varsa hayr ok uzun bir liste
+
+48
+00:03:37,530 --> 00:03:41,760
+var, hibir ey deimedi olsa bile tm ileme yntemlerine gidiyor olabilir.
+
+49
+00:03:41,910 --> 00:03:44,820
+Gerekten bir performans sorunu olabilir.
+
+50
+00:03:44,970 --> 00:03:46,830
+Bu yzden zel bir borcunuz var.
+
+51
+00:03:46,950 --> 00:03:52,450
+Bileen gncellemesinin yaplmas gerektiini kontrol etmek zorundaydk ve kiiler tekrar doru davranp
+
+52
+00:03:52,450 --> 00:03:53,620
+yeniden borland.
+
+53
+00:03:53,700 --> 00:03:59,880
+imdi burada gerekten insanlar arasnda bir fark olup olmadn denetler ve bu fark
+
+54
+00:03:59,880 --> 00:04:01,790
+alglarsa nceden oluturulmu olur.
+
+55
+00:04:01,830 --> 00:04:07,010
+Elbette dier tm zelliklerin kontroln de ekleyebilirsiniz.
+
+56
+00:04:07,260 --> 00:04:16,820
+farklysa veya bir sonraki pervanenin say mlk deitirilmise, nceki uygulamanzla olan farkn deitirdiniz.
+
+57
+00:04:16,860 --> 00:04:19,670
+Bir sonraki uygun deiiklik
+
+58
+00:04:19,890 --> 00:04:27,670
+Yani bu eit deilse Propst deiti ve nihayet bir sonraki problar iin de ayn.
+
+59
+00:04:27,790 --> 00:04:30,980
+Veriler bu pervaneye eit deilse toplayn.
+
+60
+00:04:30,990 --> 00:04:35,430
+Dolaysyla ilgili pervane deiiklikleri varsa gncelleme ilemine devam ediyoruz.
+
+61
+00:04:35,670 --> 00:04:39,270
+Ancak herhangi bir mlkiyet deimediyse oraya da gitmiyoruz.
+
+62
+00:04:39,540 --> 00:04:44,160
+Grdnz gibi yeniden ykle butonuna tklayn.
+
+63
+00:04:44,310 --> 00:04:49,920
+tm mantksal render yntemlerini kullanacaz, nk mantkl geliyor, zira
+
+64
+00:04:49,960 --> 00:04:55,920
+btn sanki gsteri ovlarn temizlediysek, bileen gncellemesi yapmamz gerektiini greceksin.
+
+65
+00:04:55,950 --> 00:04:56,420
+Elbette
+
+66
+00:04:56,430 --> 00:04:59,820
+Aslnda evet gncelleyecektir aslnda eps oluturmutur.
+
+67
+00:04:59,850 --> 00:05:06,630
+Evet, nk her zaman doruyu veriyoruz ve bileeni orada gncellemeliyiz ama sonra kovalayan
+
+68
+00:05:06,630 --> 00:05:10,950
+kiiler iin pabucun bileeni gncellemesi alacak ve bitti.
+
+69
+00:05:10,950 --> 00:05:12,120
+Devam etmiyoruz.
+
+70
+00:05:12,120 --> 00:05:19,070
+Prop 4'n aslnda deimediini belirten kiilerin hesaplanmasn gerektiren gncellemeleri tespit ettiimiz iin
+
+71
+00:05:19,080 --> 00:05:24,190
+render 4 kiileri ve bireysel kii bileenlerini aramyoruz.
+
+72
+00:05:24,540 --> 00:05:31,460
+Dolaysyla, Buradaki Tklama, gerek bir ileme veya bu bileenlerin tamamnda bir oluturucu ars yapmad.
+
+73
+00:05:31,500 --> 00:05:37,780
+Elbette kiileri durdurdunuz, ayn eyi Aperture Yes'de her zaman yerine dnmek yerine yapabilirsiniz.
+
+74
+00:05:37,980 --> 00:05:41,120
+Durumumuzda bir eylerin gerekten deiip deimediini kontrol edebiliriz.
+
+75
+00:05:41,400 --> 00:05:50,510
+Eer bir sonraki devlet grevlimiz eyaletlerimizden biriyse, eyaletimizin ve ov edenlerin yanmzdadr.
+
+76
+00:05:50,710 --> 00:06:01,750
+Bir sonraki devlet cezaevleri bu eyalet hapishanelerine eit deilse ya da bir sonraki devlet gsterisi hapishaneleri bu duruma eit deilse,
+
+77
+00:06:01,750 --> 00:06:11,460
+bu kontrol yaptran kiilere unu gsterelim ki ahitlik Et'i tklarsam tm admlar doru bir ekilde uyguladmz grm olmalyz
+
+78
+00:06:11,460 --> 00:06:17,630
+Onu yine de iptal etmeyi unutmayn ve Kiiyi tekrar gster'i tklayn.
+
+79
+00:06:17,910 --> 00:06:23,640
+Sadece bileen gncellemesi gerektiini okuyoruz, nk bu, hibir eyin deimediini tespit ediyor.
+
+80
+00:06:23,640 --> 00:06:25,210
+Devam etmek zorunda deilim.
+
+81
+00:06:25,770 --> 00:06:31,020
+Bir kiiyi kaldrrsam, doru yaparsa ve tm bu admlar atarsan.
+
+82
+00:06:31,110 --> 00:06:37,740
+Dolaysyla u anda bunu halledebilmemizin mmkn olan en iyi yolu bu nk bunu yapmamz
+
+83
+00:06:37,740 --> 00:06:43,720
+gerekiyorsa yalnzca gncelleme ilemi iin altmzdan ve gereksiz almalar atladmzdan emin olalm.
+
+84
+00:06:43,980 --> 00:06:46,440
+Ve elbette bunlar performans vurular iindir.
+
+85
+00:06:46,560 --> 00:06:52,710
+Propst'in deimediini bildiimiz iin gerekten gncelleme yapmamz gerekmiyorsa, bunlarn hepsini yapmak
+
+86
+00:06:52,710 --> 00:06:53,830
+zorunda deilsiniz.
+
+87
+00:06:53,970 --> 00:06:58,200
+imdi bir disk iin durum zelliklerini nereden grdmz kontrol edin.
+
+88
+00:06:58,320 --> 00:07:03,100
+Devletimizdeki tm zellikler veya pervane zellikleri.
+
+89
+00:07:03,240 --> 00:07:07,850
+Dolaysyla, eer bu deiikliklerden herhangi biri kontrol edilirse, pervanenin nesnesindeki herhangi bir zellik kontrol edilir.
+
+90
+00:07:07,860 --> 00:07:10,980
+Yapmak istediimiz de buysa, kendi bamza binmek zorunda deiliz.
+
+91
+00:07:11,040 --> 00:07:17,880
+S karlatrma yapn ve s diyorum derim nk bu nesneleri derinden kontrol etmez.
+
+92
+00:07:18,000 --> 00:07:23,540
+Farklar alglar, nk nemli olan deimez bir ekilde gncelleriz.
+
+93
+00:07:23,910 --> 00:07:30,870
+Bu yzden, bu s kontrol yapmak istiyorsan, bileen gncellemesini uygulamamz gerekmez.
+
+94
+00:07:31,140 --> 00:07:38,740
+Bunun yerine, bunu yorumlayabilir ve farkl bir bileenden saf bir bileen miras alrz.
+
+95
+00:07:39,030 --> 00:07:45,350
+Bu, yeniden aktr kitapl tarafndan aa kan farkl bir cisimdir ve normal bileenle
+
+96
+00:07:45,900 --> 00:07:50,880
+ayndr ancak zaten oluturulmu bu trden shoat bileen gncelleme kontrolne sahiptir.
+
+97
+00:07:50,970 --> 00:07:56,640
+Esas olarak sahadaki tm zellikleri inceleyecek ve onlar eski ibadetlerle karlatracak ve
+
+98
+00:07:57,030 --> 00:08:02,320
+yalnzca farklar bulursa gncellemeye devam edecek ve devlet iin ayn eyi yapacaktr.
+
+99
+00:08:02,430 --> 00:08:07,080
+Bu nedenle, aslnda bileeninize gre de ayn eyi yapabilirsiniz.
+
+100
+00:08:07,410 --> 00:08:13,450
+yleyse, bileeninizi oradaki bir bileenle ieri alalm.
+
+101
+00:08:13,620 --> 00:08:14,940
+Hadi bunu deneyelim.
+
+102
+00:08:16,400 --> 00:08:17,380
+Ve henz.
+
+103
+00:08:17,390 --> 00:08:18,890
+Hata mesaj iin teekkr ederiz.
+
+104
+00:08:18,890 --> 00:08:22,400
+Daha sonra bileen gncellemesini saf bir bileende kaldrmalyz.
+
+105
+00:08:22,490 --> 00:08:24,910
+nk bu yine tepki ile halledilir.
+
+106
+00:08:25,280 --> 00:08:28,490
+Bu ovdaki kiilerin almasn tekrar deneyelim.
+
+107
+00:08:28,700 --> 00:08:33,110
+Tekrar tkladmzda konsol kilidini grmyoruz, nk kendi kabuk bileen gncelleme
+
+108
+00:08:33,110 --> 00:08:39,040
+yntemimiz yok, ancak bir ey deitirirsek kantlayabildiimiz kadar tm gncellemelerin konsol gnlklerini grrdk.
+
+109
+00:08:39,170 --> 00:08:45,290
+Dolaysyla, daha nce olduu gibi ayn davran alyor, ancak u an bileen gncellemesinin bu otomatik
+
+110
+00:08:45,320 --> 00:08:47,300
+uygulanmasyla tepki gstererek optimize edilmitir.
+
+111
+00:08:47,300 --> 00:08:51,580
+Ardndan da uygulamanzn tamam iin saf bileenleri kullanmanz gerekir mi.
+
+112
+00:08:51,800 --> 00:08:57,590
+kullanamayacanz mmkn olduu kadar sk ilevsel bileenleri kullanmanz sylersem bunun anlam nasl olur.
+
+113
+00:08:57,590 --> 00:09:00,770
+Ve eer bir ey geniletmediiniz iin bunu
+
+114
+00:09:01,080 --> 00:09:05,540
+Yant, uygulamanzda bileeninizi her yerde kullanmamalsnz.
+
+115
+00:09:05,720 --> 00:09:11,740
+Gncellemelerin gerekli olmayabileceini biliyorsanz kullanmalsnz.
+
+116
+00:09:11,810 --> 00:09:16,620
+te yandan yalnzca bir veya iki sahne kullanan bileenlere sahipsiniz.
+
+117
+00:09:16,790 --> 00:09:21,620
+Ve updaters bu bileeni tetiklediinde onu gncellemek isterim biliyorsun, belki de
+
+118
+00:09:21,620 --> 00:09:29,270
+bu bileendeki en st sralarda herhangi bir alt bileen gncellemesini engelleyen saf bileenlerden birka tane var bu
+
+119
+00:09:29,270 --> 00:09:35,090
+yzden her eyi saf bir bileen haline getirmeyin nk gncellemek istiyorum sonunda bir
+
+120
+00:09:35,150 --> 00:09:36,730
+performans elde edebilirsiniz.
+
+121
+00:09:36,770 --> 00:09:39,380
+Bu uygulamann sizin iin bileen gncellemesi olmas gerekir.
+
+122
+00:09:39,530 --> 00:09:43,880
+Ve tm eski sahne ve devletleri yeni sahne ve devletlerle karlatryor.
+
+123
+00:09:43,880 --> 00:09:46,860
+Tabii ki de biraz performans alyor.
+
+124
+00:09:47,060 --> 00:09:52,850
+Ve bunu, bu bileenin daha yksek bir noktasnda zaten yaptnz
+
+125
+00:09:52,840 --> 00:09:59,350
+iin her zaman baarl olaca bir yere uygularsanz, gerekten uygulamanz incitiyorsunuz demektir.
+
+126
+00:09:59,360 --> 00:10:01,730
+Yani her ey saf bir bileen olmamal.
+
+127
+00:10:01,940 --> 00:10:06,300
+Baz stratejik olarak yerletirilmi saf bileenler olsa mantkl geliyor.
+
+128
+00:10:06,510 --> 00:10:09,010
+imdi bunlar nereye yerletireceinizi renmek iin.
+
+129
+00:10:09,140 --> 00:10:15,860
+Yeniden hareketin bileenimiz boyunca nasl yrdne ve gerek afa gerekten nasl gncellemeye karar verdiiniz
+
+130
+00:10:15,860 --> 00:10:19,420
+hakknda daha iyi bir fikir edinmemiz gerekiyor.
+
+131
+00:10:19,430 --> 00:10:21,430
+Bir sonraki derste buna bir gz atalm.
+

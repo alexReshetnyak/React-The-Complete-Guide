@@ -1,0 +1,136 @@
+1
+00:00:02,150 --> 00:00:11,200
+Zarzdzanie pastwem moe by bardzo skomplikowanym reaktorem, ktry reaguje na zmiany stanu i odpowiednio aktualizuje D-y.
+
+2
+00:00:11,360 --> 00:00:16,450
+Ale zarzdzanie tym pastwem moe sta si bardzo trudne, poniewa nasza aplikacja ronie.
+
+3
+00:00:16,490 --> 00:00:22,730
+Oczywicie Riak daje nam wbudowan wasno pastwow, ktrej uywamy do tej pory, ale moglimy ju zobaczy
+
+4
+00:00:22,730 --> 00:00:29,750
+w naszym brokerze projekt, w ktrym przekazywanie skadnikw z komponentu do skadnika B moe by bardzo trudne.
+
+5
+00:00:29,930 --> 00:00:33,230
+I musielimy uy parametrw routingu dla martwych.
+
+6
+00:00:33,440 --> 00:00:36,840
+Z pewnoci obejcie, ale niezbyt eleganckie.
+
+7
+00:00:36,860 --> 00:00:39,750
+Dlatego zarzdzanie pastwem powinno by atwiejsze.
+
+8
+00:00:39,770 --> 00:00:45,980
+Przykad z Burga Buller jest klasycznym przykadem nic specjalnej zgody lub aplikacji, ktra nie
+
+9
+00:00:46,160 --> 00:00:47,870
+jest t, ktr zbudowalimy.
+
+10
+00:00:47,980 --> 00:00:54,090
+Jest to aplikacja z gwnym skadnikiem aplikacji, a nastpnie uytkownik znajduje si w kontenerze produktu i podskadnikach.
+
+11
+00:00:54,440 --> 00:01:00,890
+Teraz zamy, e do tej aplikacji dodano uwierzytelnianie, aby uytkownicy mogli si zarejestrowa i zalogowa X na
+
+12
+00:01:00,890 --> 00:01:06,800
+pulpicie nawigacyjnym i obszarze uytkownikw, potrzebujemy sprawdzi, czy uytkownik jest zalogowany i przyzna dostp tylko
+
+13
+00:01:06,800 --> 00:01:08,670
+wtedy, gdy rozwizuje on PRAWDA.
+
+14
+00:01:08,930 --> 00:01:14,570
+Teraz sprawdzenie, czy nie jest to zbyt trudne, poniewa prawdopodobnie zarzdzamy stanem
+
+15
+00:01:14,590 --> 00:01:16,540
+uwierzytelnienia i podziaem komponentu.
+
+16
+00:01:16,550 --> 00:01:22,130
+Problem polega na tym, e jeli wszyscy potrzebujemy tych informacji w zupenie innym
+
+17
+00:01:22,130 --> 00:01:28,160
+obszarze naszej aplikacji, jak w Bergere Buller, gdzie potrzebujemy skadnikw w zupenie innym obszarze
+
+18
+00:01:28,160 --> 00:01:34,670
+w kasie, jeli potrzebujemy informacji, musimy jako stworzy poczenie midzy komponentem wyczonym a komponentem karty
+
+19
+00:01:34,700 --> 00:01:35,720
+tutaj.
+
+20
+00:01:35,900 --> 00:01:42,260
+C, to jest super skomplikowany i bardzo dugi acuch rodzicw rekwizytw lub Querreya, ale
+
+21
+00:01:42,260 --> 00:01:44,240
+udao nam si przekaza dane.
+
+22
+00:01:44,300 --> 00:01:50,780
+Szkoda, e jest to trudne, poniewa w kocu piszemy javascript, a my mamy doczony
+
+23
+00:01:50,840 --> 00:01:54,830
+plik javascript jako plik wyjciowy lub kilka pakietw.
+
+24
+00:01:54,830 --> 00:01:56,300
+Jeli uywamy leniwego adowania.
+
+25
+00:01:56,630 --> 00:02:03,560
+W kocu dlaczego nie moemy po prostu ustawi jakiej zmiennej globalnej, ktra jest obiektem javascript, ktry przechowuje cay nasz
+
+26
+00:02:03,560 --> 00:02:07,130
+stan aplikacji i do ktrego mamy dostp z dowolnego miejsca.
+
+27
+00:02:07,130 --> 00:02:10,630
+Dlaczego musimy wzi skomplikowan tras z parametrami zapytania.
+
+28
+00:02:10,730 --> 00:02:18,770
+Jeli wszystko, co robimy, po prostu uywamy javascriptu, to dlatego, e system reagowania reaguje nie
+
+29
+00:02:18,800 --> 00:02:21,940
+na zmiany w okrelonej zmiennej lokalnej.
+
+30
+00:02:22,280 --> 00:02:23,790
+I dobrze, e tak nie jest.
+
+31
+00:02:23,840 --> 00:02:25,610
+To sprawia, e jest tak wydajny.
+
+32
+00:02:26,030 --> 00:02:33,320
+Jednak to, e to zrobi, bdzie brzmiao bardzo interesujco i wanie o to chodzi w reduxie, jak si
+
+33
+00:02:33,350 --> 00:02:34,150
+tego nauczysz.
+
+34
+00:02:34,340 --> 00:02:40,390
+Przyjrzyjmy si zatem redoksowi zanim Denne zaimplementuje, aby zobaczy, jak dziaa w akcji.
+

@@ -1,0 +1,44 @@
+1
+00:00:00,170 --> 00:00:06,330
+Neste mdulo, tivemos que ver como podemos ler reagir, nossa mensagem aqui  que eles podem ser bastante
+
+2
+00:00:06,330 --> 00:00:11,520
+teis que no devemos ficar chocados se os vejamos e que sempre devemos verificar os
+
+3
+00:00:11,550 --> 00:00:13,810
+nmeros de linha que vemos nas mensagens.
+
+4
+00:00:13,830 --> 00:00:20,610
+Voc tambm aprendeu a depurar erros lgicos sem a ajuda de mapas de origem e as ferramentas de desenvolvimento do Chrome, onde
+
+5
+00:00:20,610 --> 00:00:24,630
+voc pode colocar pontos de interrupo e passar por cima do seu cdigo.
+
+6
+00:00:24,720 --> 00:00:26,880
+Voc tambm aprendeu a usar voc reage.
+
+7
+00:00:26,880 --> 00:00:34,680
+vai aprender a usar o limite da seta aqui para envolver o cdigo que pode falhar no tempo de execuo que voc pode prevenir
+
+8
+00:00:34,680 --> 00:00:41,670
+e, em seguida, mostrar uma mensagem de erro personalizada ou alguma pgina de retorno ou contedo don ' Sobre eles, use-os.
+
+9
+00:00:41,700 --> 00:00:46,100
+Def ferramentas para obter informaes sobre o estado do seu aplicativo e voc
+
+10
+00:00:46,230 --> 00:00:55,020
+Mas com todas essas ferramentas, voc deve ter um conjunto de ferramentas ricas para criar aplicativos de reao
+
+11
+00:00:55,290 --> 00:00:57,090
+auturos endurecidos e seguros.
+

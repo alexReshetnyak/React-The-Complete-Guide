@@ -1,0 +1,220 @@
+1
+00:00:02,170 --> 00:00:09,160
+Na ltima palestra, comeamos a construir o container ou ns realmente o construmos.
+
+2
+00:00:09,420 --> 00:00:17,220
+Mas agora, uma vez carregado com o roteamento, desistirei do processo de incio porque vou instalar um novo pacote com as guias das
+
+3
+00:00:17,310 --> 00:00:24,690
+guias das tabelas de instalao do NPM para salvar a entrada na base do pacote e cair e, em seguida,  re-agir
+
+4
+00:00:24,690 --> 00:00:26,080
+no dormitrio do roteador.
+
+5
+00:00:26,100 --> 00:00:35,230
+Agora, como mencionado em um artigo no mdulo de roteador de reativao, voc pode instalar um reator de roteador de reao, o
+
+6
+00:00:35,250 --> 00:00:39,100
+Dawn faz Rapide e o possui como uma dependncia.
+
+7
+00:00:39,210 --> 00:00:40,610
+Mas voc no precisa.
+
+8
+00:00:40,650 --> 00:00:45,880
+Ns s trabalharemos com o reator Dohm, ento isso  tudo o que precisamos instalar.
+
+9
+00:00:45,930 --> 00:00:49,090
+Continuar a instalar o pacote tambm no ir prejudic-lo.
+
+10
+00:00:49,110 --> 00:00:52,430
+No est aumentando o tamanho dos fardos ou algo assim.
+
+11
+00:00:52,470 --> 00:00:56,530
+Voc pode det-lo explicitamente, mas voc no precisa.
+
+12
+00:00:56,540 --> 00:01:00,830
+Ento, com isso, deixe-me agora executar o NPM novamente.
+
+13
+00:01:01,630 --> 00:01:08,390
+E agora que o roteamento est configurado ou que o roteador foi instalado, eu quero
+
+14
+00:01:08,390 --> 00:01:13,250
+tirar proveito dele para carregar o Bergere Buller ou o checkout.
+
+15
+00:01:13,250 --> 00:01:19,460
+Agora, como voc aprende por isso, precisamos embrulhar tudo onde queremos usar o roteamento com o roteador
+
+16
+00:01:20,150 --> 00:01:23,680
+do navegador e farei isso na culpa do ndice jr.
+
+17
+00:01:23,810 --> 00:01:27,160
+Embora voc pudesse faz-lo na abertura como Faltu.
+
+18
+00:01:27,530 --> 00:01:30,590
+Eu quero embrulhar meu aplicativo inteiro, ento eu vou fazer isso aqui.
+
+19
+00:01:30,650 --> 00:01:32,890
+E este  um bom lugar para faz-lo,  claro.
+
+20
+00:01:33,630 --> 00:01:42,810
+Para isso, vou adicionar uma nova importao no asfalto do roteador de reimpresso Daum. E o que eu quero
+
+21
+00:01:43,470 --> 00:01:46,260
+importar  o roteador do navegador.
+
+22
+00:01:46,680 --> 00:01:49,050
+Agora, crie uma nova constante, que eu vou simplesmente nomear.
+
+23
+00:01:49,090 --> 00:01:50,440
+Aplicativo.
+
+24
+00:01:50,580 --> 00:01:57,210
+de discusso e a tag de fechamento, e no meio vou colocar meu aplicativo assim.
+
+25
+00:01:57,210 --> 00:02:04,290
+Eu usarei parnteses para poder escrever o cdigo GSX multi-line e depois usarei o navegador
+
+26
+00:02:04,480 --> 00:02:13,440
+E agora vou usar a constante do aplicativo, eu apenas crio isso l como um argumento para pass-lo aqui
+
+27
+00:02:13,450 --> 00:02:15,290
+em Re-Act Tom render.
+
+28
+00:02:15,300 --> 00:02:18,030
+Agora, podemos usar a rota em nosso pacote.
+
+29
+00:02:18,080 --> 00:02:20,320
+Esse roteamento foi ativado.
+
+30
+00:02:20,340 --> 00:02:26,040
+Agora vamos configurar algumas rotas e vamos fazer isso e ele realmente seguiu onde eu atualmente carrego
+
+31
+00:02:26,130 --> 00:02:29,610
+tanto o Burgert Boulder quanto o checkout para configurar o roteamento.
+
+32
+00:02:29,670 --> 00:02:39,500
+como se estivesse codificado com ou seja, rooteie com um pop e depois com o componente para renderizar algum componente aqui.
+
+33
+00:02:39,560 --> 00:02:48,810
+Vou importar o componente de rotas de re-agir roteador DOM como este e agora, em vez de usar o
+
+34
+00:02:48,810 --> 00:02:50,150
+Berbel ou check-out,
+
+35
+00:02:50,270 --> 00:02:55,130
+ um componente de fechamento automtico porque voc no precisa passar nada entre abrir e fechar tag.
+
+36
+00:02:55,130 --> 00:02:56,960
+Na verdade eu no posso.
+
+37
+00:02:56,960 --> 00:03:08,180
+Ento, aqui para obter uma recompensa por apenas cortar, ento, para o caminho de Drood. Eu quero carregar o meu componente de hambrguer
+
+38
+00:03:08,210 --> 00:03:17,710
+Baldor e, em seguida, duplicar isso, porque para o corte de caixa, eu quero carregar o componente de seleo.
+
+39
+00:03:18,080 --> 00:03:23,200
+Agora, com a configurao atual ambos seriam carregados porque POF  tratado como um prefixo.
+
+40
+00:03:23,240 --> 00:03:27,440
+Ento, isso sempre seria um sucesso e para o pagamento, isso tambm seria um sucesso.
+
+41
+00:03:27,470 --> 00:03:32,810
+Ento, para fazer check-out, Bouffe seria carregado para Bergere Boulder, o disco seria carregado, mas ns
+
+42
+00:03:32,810 --> 00:03:34,950
+sempre carregaremos isso por causa disso.
+
+43
+00:03:34,970 --> 00:03:42,680
+Trate-me como um prefixo padro, podemos adicionar a propriedade exec para evitar isso ou usamos para alternar o componente
+
+44
+00:03:42,680 --> 00:03:44,390
+para envolver nossas rotas.
+
+45
+00:03:44,470 --> 00:03:51,890
+Voc s obtm um hit, mas tambm precisamos alterar a ordem com a ordem exata, no importa aqui,
+
+46
+00:03:51,920 --> 00:03:59,000
+porque no  tratado como um prefixo. No est pegando tudo, sem a ordem exata importaria, ento
+
+47
+00:03:59,270 --> 00:04:06,650
+vou mudar a ordem e usar SFC e Use a opo para mostrar tudo, porm isso no 
+
+48
+00:04:06,650 --> 00:04:09,470
+necessrio para esta configurao pelo menos.
+
+49
+00:04:09,470 --> 00:04:14,760
+Ento, eu continuarei rpido com o switch, ento s carregamos uma dessas rotas.
+
+50
+00:04:14,780 --> 00:04:18,300
+O primeiro que corresponde ao caminho do caminho dado.
+
+51
+00:04:18,710 --> 00:04:22,880
+Ento, agora s devemos ver o hambrguer Baldor novamente e ns fazemos.
+
+52
+00:04:22,880 --> 00:04:25,890
+No h outra parte carregada.
+
+53
+00:04:26,120 --> 00:04:33,500
+O prximo passo,  claro,  garantir que, quando clicamos em continuar neste Modal, ns tambm navegaremos para cortar checkouts para
+
+54
+00:04:33,530 --> 00:04:37,160
+que possamos ver a rota da morte em vez disso.
+
+55
+00:04:37,220 --> 00:04:39,210
+Vamos fazer isso na prxima palestra.
+

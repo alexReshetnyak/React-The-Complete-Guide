@@ -1,0 +1,368 @@
+1
+00:00:02,190 --> 00:00:07,650
+mza ve imzalama srasnda tm bu bilgileri aldk ve imzaladk, ak bir ekilde
+
+2
+00:00:07,650 --> 00:00:16,290
+bunu korumak iin sunucumuzda korunan kaynaklara eriebilmek iin bunu saklamak istiyoruz. Bu belirteci saklamak iin artk redktrler klasrne
+
+3
+00:00:16,350 --> 00:00:23,210
+gidip yeni bir redktr dosyas oluturuyorum. js, ben bu auth eylemlerini ve
+
+4
+00:00:23,230 --> 00:00:29,360
+auth durumumu ele almak istiyorum. Bunun iin ncelikle eylemlerim
+
+5
+00:00:29,400 --> 00:00:36,330
+klasrndeki tm eylem trlerimi buradan ie aktaracam ve orada,
+
+6
+00:00:36,330 --> 00:00:43,890
+eylem trlerinden, anahtar durum bildirimde ihtiyacm var ve daha sonra
+
+7
+00:00:43,890 --> 00:00:51,430
+reddetme ilevimi yaratacam. eylem, bu dosyann varsaylan deeri olarak vereceim.
+
+8
+00:00:51,710 --> 00:01:01,070
+Ayrca bir balang durumu kuracam, bu yzden balang durumu bir javascript nesnesi olmal ve bu
+
+9
+00:01:01,130 --> 00:01:07,520
+javascript nesnesinde, balangta null olan belirteimi almak istiyorum, ayrca balangta
+
+10
+00:01:07,520 --> 00:01:12,660
+null olan kullanc kimliimi de saklamak istiyorum Ayrca
+
+11
+00:01:12,860 --> 00:01:20,720
+burada bir hatay ilk nce sfrlayabiliriz ve belki de yanl olanlar da ykleyebiliriz.
+
+12
+00:01:20,720 --> 00:01:26,490
+imdi redktrmde bu anahtar durumu ekleyeceim, ben eylem tipini
+
+13
+00:01:26,720 --> 00:01:29,570
+deitireceim ve orada imdi durumlarm
+
+14
+00:01:29,900 --> 00:01:36,600
+kontrol edeceim, ilk vaka actionTypes. AUTH_START ve orada sadece benim
+
+15
+00:01:36,620 --> 00:01:44,550
+durumumu geri vermek istiyorum ve imdi bir nesneyi gncellemek iin yardmc
+
+16
+00:01:44,780 --> 00:01:56,270
+fonksiyonumuzu kullanabiliriz, bu yzden ben de onu buraya alrz, gncellenmi durumu dndrmek iin updateObject'i yardmc programdan
+
+17
+00:01:56,690 --> 00:02:05,560
+alrz updateObject eski durumu geirir ve sadece hatay gnceller, deitiinde ve yklendiinde onu
+
+18
+00:02:05,600 --> 00:02:13,030
+tekrar null olarak ayarlar, burada doruya ayarladmzdan, burada aka yklemeye baladk.
+
+19
+00:02:13,370 --> 00:02:17,320
+Bu IDE hatasndan kurtulmak iin halihazrda varsaylan bir durum belirlememiz gerekiyor,
+
+20
+00:02:17,460 --> 00:02:20,460
+ben de buna benzer bir ekilde devletimi geri getireceim.
+
+21
+00:02:20,510 --> 00:02:25,060
+imdi, dier tm redktrleri, yaln anahtar durum bildirimlerine sahip olacak ekilde optimize ettik,
+
+22
+00:02:25,050 --> 00:02:26,380
+bunu da burada yapalm.
+
+23
+00:02:26,480 --> 00:02:34,160
+Burada authStart ismini vereceim yeni bir ilev oluturacam, burada eyaleti ve eylemi alyorum ve
+
+24
+00:02:34,160 --> 00:02:44,030
+sadece buraya bu kodu iade etmek istiyorum, bylece gncellenmi durum nesnesini dndr, bylece bu durumda burada authStart' arayabilirim,
+
+25
+00:02:44,030 --> 00:02:51,900
+geri dn Kesin olmak gerekirse, yine de burada bir devleti redktrmde geri vermem gerekiyor,
+
+26
+00:02:51,910 --> 00:02:54,950
+authStart ve devlet ve eylemden geiyorum.
+
+27
+00:02:55,510 --> 00:03:03,040
+imdi authSuccess adresime bir baka ilev ekleyeceim, burada ayrca devlet
+
+28
+00:03:03,040 --> 00:03:12,600
+ve eylemin de olmasn bekleriz ve orada gncellenmi bir nesne de gnderirim bylece
+
+29
+00:03:12,660 --> 00:03:17,440
+updateObject'i burada arayarak durumum iin dndrrm.
+
+30
+00:03:17,460 --> 00:03:22,790
+imdi bir baar durumunda bir devlet zerinde ne deimeli? Baarl bir durumda, belirteci ve
+
+31
+00:03:22,920 --> 00:03:28,020
+kullanc kimliini ve hata ve ykleme, yani her eyi ayarlamak istiyorum.
+
+32
+00:03:28,440 --> 00:03:35,370
+Yani baarl bir durumda, ben eylem kimlii belirteci diyelim, bu eylemi
+
+33
+00:03:35,370 --> 00:03:38,620
+kullanc kimlii eylemi eylemi kullanc
+
+34
+00:03:38,640 --> 00:03:42,680
+kimlii iin almak iin beklemek iin belirte
+
+35
+00:03:42,680 --> 00:03:47,080
+ayarlayacam, ayrca bunu almay bekliyorum, hata null
+
+36
+00:03:47,100 --> 00:03:53,190
+ve ykleme yanl nk bitti. imdi baka bir ilev
+
+37
+00:03:53,200 --> 00:03:57,650
+de oluturacam, authFail, orada da durum
+
+38
+00:03:58,040 --> 00:04:06,550
+ve eylem aldm ve burada, updateObject durumunu dndreceim ve burada hata
+
+39
+00:04:06,770 --> 00:04:14,630
+alp almay beklediim hataya ayarlayacam ve yine de yanl yklemeye
+
+40
+00:04:14,630 --> 00:04:16,100
+devam ediyorum.
+
+41
+00:04:16,100 --> 00:04:23,600
+imdi bu iki eylemin elbette davalarla ele alnmas gerekiyor, bu yzden bir dava actionTypes ekleyelim. AUTH_SUCCESS, whoops, AUTH_SUCCESS, burada
+
+42
+00:04:23,640 --> 00:04:33,620
+yeni oluturduum authSuccess ilevinin sonucunu dndrmek istiyorum, tabii ki durum ve eylem
+
+43
+00:04:33,620 --> 00:04:39,890
+ve durum eylemlerini iletin. AUTH_FAIL, burada da durum ve
+
+44
+00:04:40,100 --> 00:04:43,660
+eylemi de geirdiim authFail ilevimin sonucunu
+
+45
+00:04:43,670 --> 00:04:46,080
+dndrmek istiyorum, bu yzden
+
+46
+00:04:46,190 --> 00:04:52,880
+yeni oluturduum iki ilev var. Bununla birlikte, verilerimle bir eyler
+
+47
+00:04:52,880 --> 00:04:55,080
+yapabilmem iin gzel bir
+
+48
+00:04:55,220 --> 00:04:59,470
+auth indirgeyici alyorum, imdi elbette bunu dier
+
+49
+00:04:59,540 --> 00:05:11,460
+redktrlerimle birletirmek istiyorum, bylece ana dizinimde. js dosyas, auth redktrn ithal edeceim. / redktrleri auth, bunun gibi
+
+50
+00:05:12,310 --> 00:05:14,790
+ve auth alan
+
+51
+00:05:14,830 --> 00:05:23,230
+adndaki redkleyicileri birletirmek iin ekleyelim. Kresel kk drcmze eklediimizde, istediimiz tm bilgileri
+
+52
+00:05:23,650 --> 00:05:27,890
+alamayz, ID jetonu, kullanc kimlii, tm bunlar
+
+53
+00:05:27,920 --> 00:05:33,180
+eylemden aykladm, u an buradaki eylemimize bir gz
+
+54
+00:05:33,250 --> 00:05:40,030
+atabilirsek, Bu verilerden gerekten gemiyor. Bu yzden, authSuccess'a gemek istediimiz verileri
+
+55
+00:05:40,030 --> 00:05:44,980
+nasl kardmz grmek iin geri dndmz yant inceleyelim.
+
+56
+00:05:44,980 --> 00:05:53,170
+Bu yzden, uygulamamza geri dnelim ve yeniden ykleyelim ve bu hatay aldk nk kimlik dorulama
+
+57
+00:05:53,180 --> 00:05:55,160
+iin redktrde nemli bir
+
+58
+00:05:55,270 --> 00:06:01,020
+eyi unuttum, tabii ki balang durumuna ayarlanmal, aksi halde balangta tanmlanmam.
+
+59
+00:06:01,200 --> 00:06:07,810
+imdi bununla birlikte, tekrar alyor ve imdi oturum amaya alalm, oturum amaya alalm, nk bu
+
+60
+00:06:07,810 --> 00:06:09,340
+e-posta adresi zaten
+
+61
+00:06:09,340 --> 00:06:16,660
+alnd, orada bir cevap alp imdi burada kullanc kimlii olan yerel kimlii aldmz gryoruz. Kimlik jetonu
+
+62
+00:06:16,660 --> 00:06:17,400
+al, bu
+
+63
+00:06:17,410 --> 00:06:18,980
+da benim iin ilgin.
+
+64
+00:06:19,360 --> 00:06:23,380
+Yani bunlar kurtaracam iki ey, yenileme tokenini kaydetmeyeceim, bu
+
+65
+00:06:23,470 --> 00:06:26,270
+yzden tokunun yenilenmesi mmkn olmayacak, bu
+
+66
+00:06:26,290 --> 00:06:32,020
+tokenlerin sresinin sona ermesinden emin olmak iin yapmanz gereken bir ey. Uygulamamda 1
+
+67
+00:06:32,200 --> 00:06:36,450
+saat sonra, kiilerin bir saat sonra tekrar giri yapmalar gerekecek.
+
+68
+00:06:36,760 --> 00:06:42,110
+Bu verileri yerel kimlik ve kimlik belirtecine kaydetmek
+
+69
+00:06:42,340 --> 00:06:51,010
+iin, kimlik dorulama isteimizi gnderdiimiz ve yant yantn geri aldmz eylemler klasrndeki kimlik
+
+70
+00:06:51,010 --> 00:06:53,870
+dorulama dosyasnda bunu kimlik
+
+71
+00:06:54,040 --> 00:07:02,380
+no'lar ve yerel kimlik alan var. ve bunu authSuccess'a aktarmam gerekiyor nk
+
+72
+00:07:02,400 --> 00:07:07,640
+authSuccess daha sonra iletmek zorundadr, geerek syleyelim, bu
+
+73
+00:07:07,660 --> 00:07:16,870
+yzden jetonu ve kullanc kimliini almay bekliyorum, bylece bende jetonu ve kullanc kimliini Daha
+
+74
+00:07:16,870 --> 00:07:19,860
+sonra redktrmde karmaya alyorum.
+
+75
+00:07:19,960 --> 00:07:26,050
+Orada belirte, ID jetonu ve kullanc kimliini ayklamaya alyorum, bu yzden kimlii
+
+76
+00:07:26,230 --> 00:07:34,650
+belirteci bunu auth eylem dosyamzda yeniden adlandralm, ID jetonu ad verilen bir zellik olmal ve hata iin,
+
+77
+00:07:34,690 --> 00:07:42,430
+isimlendirilmi hata, zaten denediim ey budur bylece ayklanacak. Bununla birlikte, buradaki auth dosyasna geri dnmemiz gerekiyor
+
+78
+00:07:42,550 --> 00:07:50,130
+ve ben authSuccess ilevinde jetonu ve kullanc kimliimi almay bekliyorum, elbette ki bu ilevi buraya
+
+79
+00:07:50,200 --> 00:07:57,330
+gnderdiimde, baar durumunda, onu gemem gerekiyor demektir. Ak, bu yzden yant verisini gemem gerekiyor
+
+80
+00:07:57,400 --> 00:08:04,450
+ve daha sonra ID belirteci olarak adlandrld ve ikinci bir argman olarak yant verileri
+
+81
+00:08:04,450 --> 00:08:11,260
+ve kullanc kimlii bir yerel ID zelliinde sakland ve bunu her zaman konsol
+
+82
+00:08:11,260 --> 00:08:11,750
+gnlnde,
+
+83
+00:08:11,800 --> 00:08:16,960
+kimlik belirtecinde ve yerel kimlik. Bu verileri saklyorum ve imdi
+
+84
+00:08:17,320 --> 00:08:19,060
+bunun ie yarayp
+
+85
+00:08:19,070 --> 00:08:23,150
+yaramadn grelim, bu verileri bir kez daha
+
+86
+00:08:23,150 --> 00:08:30,780
+gnderelim, oturum amaya geelim, redux'a gidelim ve gnderim yaptk ve imdi durumu incelersek baarya
+
+87
+00:08:31,050 --> 00:08:37,110
+ularz. bizde gerekten de bir kodumuz var ve burada saklanan kullanc
+
+88
+00:08:37,110 --> 00:08:44,310
+kimliine sahibiz, bylece hepsi ie yarad. Kimlik dorulama durumunu sakladmzdan, ne yaptmz deil, biz
+
+89
+00:08:44,310 --> 00:08:45,310
+kimlik dorulamas
+
+90
+00:08:45,320 --> 00:08:47,140
+yaparken bir spiker gstermiyoruz.
+
+91
+00:08:47,400 --> 00:08:54,600
+Buna devam etmeden nce, hata ileme ileminin yan sra devam edelim ve aksi takdirde eriemeyeceimiz
+
+92
+00:08:54,600 --> 00:08:58,230
+kaynaklara erimeye alrken o jetonu kullanmaya devam edelim.
+

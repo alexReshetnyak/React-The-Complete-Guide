@@ -1,0 +1,288 @@
+1
+00:00:02,270 --> 00:00:05,110
+Yeniden hareket temelleri hakknda daha nce ok ey rendik.
+
+2
+00:00:05,120 --> 00:00:10,870
+Son derslerimiz boyunca uygulamalarmz halen ekstra bir stil kullanabilir.
+
+3
+00:00:10,870 --> 00:00:20,490
+rnein, bu kiiler bileenlerinin kartlara benzeyecekleri ve daha ok kapal nesneler gibi olmasna
+
+4
+00:00:20,490 --> 00:00:23,800
+cesaret ederse gzel olacaklarn syleyebilirim.
+
+5
+00:00:23,840 --> 00:00:29,330
+u an farklar gremiyoruz ya da bu bileen ile ok bileenleri arasndaki
+
+6
+00:00:29,330 --> 00:00:30,740
+snrlar gerekten gremiyoruz.
+
+7
+00:00:31,070 --> 00:00:35,540
+ylesine ekillendirici bileenler belli ki ok nemli bir eydir.
+
+8
+00:00:35,750 --> 00:00:40,700
+Ve u anda uygulayabileceimiz iki stil ekli var.
+
+9
+00:00:40,700 --> 00:00:42,290
+Ikinizi de gstereceim
+
+10
+00:00:42,500 --> 00:00:45,770
+ncelikle Cs S'nin dt bir kiiyi ekleyelim.
+
+11
+00:00:45,770 --> 00:00:51,950
+Q u anki bileeni ve ben de bu izlemeyi javascript dosyas ile ayn tablonun sadece farkl
+
+12
+00:00:51,950 --> 00:00:53,530
+bir uzants ile verdim.
+
+13
+00:00:53,540 --> 00:00:55,850
+Teorik olarak bu yaz tipi ad size kalmtr.
+
+14
+00:00:56,180 --> 00:01:03,700
+imdi, bizi burada yazdm kod olarak gren nemli bir ey dalmaya ynelik deildir.
+
+15
+00:01:03,790 --> 00:01:05,900
+J. S. bileeni globaltir.
+
+16
+00:01:05,890 --> 00:01:07,870
+C s kodu.
+
+17
+00:01:08,000 --> 00:01:12,340
+Bylece tanmlayacam ve sermayesi P olan kiiyi adlandrdm snf olarak gryorsunuz.
+
+18
+00:01:12,440 --> 00:01:18,950
+Yine de, bunu kresel olduu iin uygulamann herhangi bir yerinde ekleyebilirim, ancak bileen adm
+
+19
+00:01:19,190 --> 00:01:23,630
+kullanarak tehlikeyi ekarte edip yanllkla baka bir yerde kullanabilirim.
+
+20
+00:01:23,630 --> 00:01:26,990
+Bu yzden snf adn lmme atayacam.
+
+21
+00:01:26,990 --> 00:01:32,280
+Unutmayn snf snf ismi Kii A dize kiidir.
+
+22
+00:01:32,660 --> 00:01:37,820
+imdi orada C S S dosyasnda imdi ekillendirme moduna geebilirim.
+
+23
+00:01:37,820 --> 00:01:46,180
+Belki de yzde 60 genilii ve otomatik kenar boluu verildiinde verilebilir.
+
+24
+00:01:46,180 --> 00:01:58,070
+3 piksel kutu glgesi ve biraz daha koyu gri bir kenarlk verin ve ona bir 16 piksellik dolgu verelim.
+
+25
+00:01:58,160 --> 00:02:04,650
+Ayrca bir piksel kat, yani ak gri ve 0 2 piksel
+
+26
+00:02:04,650 --> 00:02:14,550
+Belki sonunda, metni, gvenli gnlerdeki SEUS dosyas iin merkezin ortasna hizalayarak ayarlayalm ve JS takipisi
+
+27
+00:02:14,550 --> 00:02:16,470
+olan kiiyi kurtaralm.
+
+28
+00:02:16,470 --> 00:02:19,150
+Onu kapanm olarak atadm.
+
+29
+00:02:19,360 --> 00:02:20,910
+Hibir ey olmuyor.
+
+30
+00:02:20,950 --> 00:02:30,380
+Niin iyi biliyor musunuz, nk bu yln ABD dosyamzda gerekten henz snfmzdayz ancak varsaylan olarak ve bilmediiniz
+
+31
+00:02:30,470 --> 00:02:36,970
+bir ey bu, mutlaka sezgisel olmad iin, ancak varsaylan olarak hibir dosyann
+
+32
+00:02:36,970 --> 00:02:42,430
+projenize dahil edilmedii koda dahil edilmitir. Bitetirilmi i ak oluturulur.
+
+33
+00:02:42,680 --> 00:02:47,240
+Onlar oyuna eklemek iin dosyalar her zaman ieri aktarmanz gerekir.
+
+34
+00:02:47,450 --> 00:02:52,390
+Bu yzden yakalama dosyamzda kii bileeni iin yalvarlm bulunuyoruz.
+
+35
+00:02:52,400 --> 00:02:55,840
+Ayrca C S S dosyasnn dosyasn da buraya aktaryoruz.
+
+36
+00:02:55,960 --> 00:03:02,630
+imdi, byle bir javascript dosyasna bir C SS dosyas girmek garip gelebilir ama Sindhi'yi ve
+
+37
+00:03:02,630 --> 00:03:09,290
+bu yeniden aktarmal komut paketi tarafndan kullanlan arac oluturmak iin slak Pech sayesinde dolayl olarak
+
+38
+00:03:09,290 --> 00:03:09,910
+burada kullanyoruz.
+
+39
+00:03:10,220 --> 00:03:17,510
+Gerekten iki dosyay veya byle bir eyi birletiremeyecek olsa da, web kafes sayesinde CSSA'y
+
+40
+00:03:17,510 --> 00:03:19,180
+javascript iine alabiliriz.
+
+41
+00:03:19,250 --> 00:03:26,240
+Sadece dosyann C S'sinin farkndadr ve farkl ekilde temel olarak HVM
+
+42
+00:03:26,240 --> 00:03:28,240
+Al dosyasna aktarlacaktr.
+
+43
+00:03:28,460 --> 00:03:30,300
+Yani ahsen J J. S. Ayrca noktal eik izgi ahsa C S S.'ye ie aktarma da ekleyeceim.
+
+44
+00:03:30,440 --> 00:03:35,170
+Ve burada dosya uzantsna ihtiyacn var.
+
+45
+00:03:35,270 --> 00:03:37,670
+Sadece javascript dosyalar iin atlanabilir.
+
+46
+00:03:37,670 --> 00:03:41,130
+imdi bunu ekledike WePay'n farknda oldu.
+
+47
+00:03:41,240 --> 00:03:44,690
+Artk HDMI dosyanza eklenecektir ve
+
+48
+00:03:44,690 --> 00:03:52,400
+dolaysyla imdi geri dndnzde, bileenlerimiz zerinde ekstra bir tasarma sahip olduumuzu gryorsunuz.
+
+49
+00:03:52,400 --> 00:03:54,130
+Ayrca, kodunuzu incelerseniz
+
+50
+00:03:54,200 --> 00:04:01,370
+burada kii snfmz olduunu ve ba blmne kadar ilerleyip gelitirici aralarnda olduunuzu grebilirsiniz.
+
+51
+00:04:01,370 --> 00:04:04,800
+Gryorsunuz ki orada H tarznda bulabileceiniz DS stili metinleri var. E. posta dosyasn oradaki
+
+52
+00:04:05,000 --> 00:04:13,710
+ortak klasrde saklayn.
+
+53
+00:04:13,710 --> 00:04:15,330
+Ba blmlerinde stil etiketleri yok.
+
+54
+00:04:15,360 --> 00:04:18,180
+Tezahr etmeye devam eden baz balantlar vb.
+
+55
+00:04:18,270 --> 00:04:20,970
+Yani SS dosyalarn bile grmemelisin.
+
+56
+00:04:20,970 --> 00:04:24,030
+Bunun nedeni, stil metninin Pech web tarafndan dinamik olarak enjekte edilmesidir.
+
+57
+00:04:24,030 --> 00:04:28,750
+Eklediiniz ithalatlar ynettii anlamna gelen budur.
+
+58
+00:04:28,760 --> 00:04:32,920
+Ve burada geen son stil etiketi aslnda antanz snfta tutmal.
+
+59
+00:04:33,270 --> 00:04:38,000
+Ve burada normal bir kresel hizmetler snf olduunu grebilirsiniz.
+
+60
+00:04:38,040 --> 00:04:42,340
+Otomatik nek senkronizasyonunun da ok uygun olduunu
+
+61
+00:04:42,420 --> 00:04:47,730
+gryorsunuz nk bunu yapmak zorunda kalmamz mmkn olmaktadr.
+
+62
+00:04:47,730 --> 00:04:48,890
+C'nin mmkn olan veya
+
+63
+00:04:48,960 --> 00:04:55,650
+gerekli olan kodunu ksa olarak yazabiliriz ve ASP'yi mmkn olduunca herhangi bir taraycda alacak ekilde otomatik olarak n ek olarak alacaktr.
+
+64
+00:04:55,680 --> 00:04:58,410
+Bu yzden kurduumuz tarz budur.
+
+65
+00:04:58,920 --> 00:05:00,550
+Belki burada bir st ve alt kenar boluu ekleyerek biraz daha ince ayar yapalm.
+
+66
+00:05:00,600 --> 00:05:07,300
+Bu yzden kartlar arasnda bir miktar ayrm yaplmasn salamak iin bunu 16 piksele ayarlayalm.
+
+67
+00:05:07,500 --> 00:05:13,930
+ok daha iyi grnyor.
+
+68
+00:05:13,980 --> 00:05:15,230
+imdi burada insanlar var.
+
+69
+00:05:15,510 --> 00:05:17,250
+imdi de bir dme
+
+70
+00:05:17,460 --> 00:05:23,940
+tarz var ve stili farkl klmasna izin verdim nk iki ekillendirme yolu var dedim.
+
+71
+00:05:23,940 --> 00:05:24,910
+u anda en azndan biliyoruz.
+
+72
+00:05:24,960 --> 00:05:26,580
+&nbsp;
+

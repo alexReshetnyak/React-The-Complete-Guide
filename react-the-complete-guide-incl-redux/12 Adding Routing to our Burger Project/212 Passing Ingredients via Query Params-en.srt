@@ -1,0 +1,240 @@
+1
+00:00:02,300 --> 00:00:09,590
+Let's implement the logic to pass the real ingredients we picked on the checkout container. I'll do this
+
+2
+00:00:09,590 --> 00:00:16,390
+here in my burger builder component obviously where I push to the checkout page. There
+
+3
+00:00:16,430 --> 00:00:19,520
+I now want to push a javascript object
+
+4
+00:00:19,610 --> 00:00:27,320
+where I'll set path name to /Checkout but where I then can specify a search parameter, a search query
+
+5
+00:00:27,860 --> 00:00:30,880
+which is how I want to pass the ingredients.
+
+6
+00:00:30,890 --> 00:00:38,570
+Now for that I of course somehow need to encode my ingredients into such a search query,
+
+7
+00:00:38,570 --> 00:00:39,780
+how can I do that?
+
+8
+00:00:41,250 --> 00:00:46,840
+I will create a new constant which I'll name queryParams, the name is up to you of course and this will be an
+
+9
+00:00:46,840 --> 00:00:49,020
+empty array initially but
+
+10
+00:00:49,130 --> 00:01:00,130
+then I want to add elements to that array, I'll do this with a for loop and i'll loop through all the properties
+
+11
+00:01:00,160 --> 00:01:06,470
+in this.state.ingredients so in the ingredients I have. Now I will push
+
+12
+00:01:06,730 --> 00:01:09,710
+each ingredient to this queryParams array
+
+13
+00:01:10,730 --> 00:01:16,640
+but there I will use a little helper method which is provided by javascript, encodeURIComponent,
+
+14
+00:01:16,640 --> 00:01:23,340
+which simply encodes my elements such that they can be used in the URL,
+
+15
+00:01:23,360 --> 00:01:26,820
+this is relevant for whitespace and so on.
+
+16
+00:01:26,950 --> 00:01:34,130
+There I'll use the property name I, which wouldn't need encoding in my case because it will work like
+
+17
+00:01:34,130 --> 00:01:35,270
+that salad and so on,
+
+18
+00:01:35,270 --> 00:01:38,110
+these are all non-critical elements.
+
+19
+00:01:38,480 --> 00:01:46,130
+Then add an equal sign because we have key equals something in queryParams and then I'll also encode the
+
+20
+00:01:46,130 --> 00:01:47,010
+value. Again,
+
+21
+00:01:47,030 --> 00:01:52,910
+this wouldn't really be needed here because the value is just a number which is non-critical
+
+22
+00:01:53,180 --> 00:01:59,530
+but here I'll then use this state ingredients for the key we're currently at.
+
+23
+00:01:59,570 --> 00:02:05,000
+So i is the key, these are the property names in my ingredients in the end just
+
+24
+00:02:05,090 --> 00:02:11,840
+and here I'm setting property name equal to well the value for that property name.
+
+25
+00:02:11,960 --> 00:02:19,040
+So this is an array which now just has a couple of strings which is property name equal property value.
+
+26
+00:02:19,070 --> 00:02:23,960
+Now this array of strings is what I want to join with the & sign.
+
+27
+00:02:24,080 --> 00:02:30,650
+So I'll add a queryString constant here where I'll use my queryParams array, call the join method
+
+28
+00:02:30,680 --> 00:02:40,120
+and join it with an & sign and then finally, I want to attach it here with ? and then
+
+29
+00:02:40,690 --> 00:02:48,100
+my queryString which is just my string of well ingredients. Let me save this and let's see if that works,
+
+30
+00:02:48,220 --> 00:02:50,130
+if I go back to the burger builder
+
+31
+00:02:50,290 --> 00:02:56,210
+and yes the links aren't good links, they are still the old links which reload the app but it's fine for now.
+
+32
+00:02:56,440 --> 00:03:00,860
+So let's build a burger now, click order now and click continue
+
+33
+00:03:01,060 --> 00:03:06,350
+and you can see that I do pass it on like this in the URL.
+
+34
+00:03:06,430 --> 00:03:12,100
+Now of course I need to parse this in the checkout component and then I'll do this in
+
+35
+00:03:12,100 --> 00:03:12,920
+componentDidMount
+
+36
+00:03:13,210 --> 00:03:19,900
+I won't use componentDidUpdate or anything like that because whenever I load this component, it will
+
+37
+00:03:19,900 --> 00:03:20,770
+mount itself,
+
+38
+00:03:20,770 --> 00:03:27,180
+there is no way I can route to it without it being mounted again because it's not nested in some other
+
+39
+00:03:27,190 --> 00:03:29,360
+page or anything like that.
+
+40
+00:03:29,360 --> 00:03:36,400
+Now in there I will want to use the code you saw before to extract the query parameters. I'll create a new
+
+41
+00:03:36,400 --> 00:03:43,010
+constant which I'll name query where I used the URLSearchParams constructor,
+
+42
+00:03:43,140 --> 00:03:51,700
+pass this.props.location.search which includes the ? and so on but with URL search
+
+43
+00:03:51,700 --> 00:03:54,020
+purpose, I can basically extract that.
+
+44
+00:03:54,190 --> 00:04:01,910
+Then I'll add a new ingredients object here because I want to store an ingredients object in this form
+
+45
+00:04:01,930 --> 00:04:09,070
+here, in the state and then I will use for let param of query.entries
+
+46
+00:04:09,070 --> 00:04:14,410
+as you learned, to loop through the different queryParams and I said that
+
+47
+00:04:14,440 --> 00:04:22,230
+each entry will have this format, the key like salad and then the value like one.
+
+48
+00:04:22,240 --> 00:04:31,490
+Now of course I want to turn this into this object format so I will simply say ingredient param element
+
+49
+00:04:31,580 --> 00:04:37,430
+0 which is just a name like this, which is then used as a property name and add it to that ingredient
+
+50
+00:04:37,460 --> 00:04:40,330
+object should be equal to
+
+51
+00:04:40,370 --> 00:04:48,080
+And now comes to value which is just param element one, this value, and we can convert this into a
+
+52
+00:04:48,080 --> 00:04:50,170
+number by adding a plus
+
+53
+00:04:50,210 --> 00:04:55,610
+and of course there should be ingredients here using this javascript object.
+
+54
+00:04:55,610 --> 00:05:02,330
+Now once this is done I can call this set state and hopefully successfully set my ingredients to the
+
+55
+00:05:02,330 --> 00:05:05,130
+ingredients I created and extracted here.
+
+56
+00:05:05,510 --> 00:05:08,240
+Let's save this, let's see if it works,
+
+57
+00:05:08,360 --> 00:05:10,880
+looks pretty good. If I now manually change
+
+58
+00:05:10,900 --> 00:05:16,680
+let's say the cheese to 2 in the query parameter, we extract and load this successfully.
+
+59
+00:05:16,700 --> 00:05:21,940
+So now we're able to pass the data with queryParams, a huge advancement of course.
+
+60
+00:05:22,010 --> 00:05:25,310
+Let's next work on that contact data.
+

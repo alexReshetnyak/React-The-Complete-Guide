@@ -1,0 +1,264 @@
+1
+00:00:02,150 --> 00:00:06,920
+W ostatnim wykadzie przeprowadziem ci przez ten komponent i jak oglnie jest zorganizowany.
+
+2
+00:00:07,020 --> 00:00:08,610
+Teraz zanurzmy
+
+3
+00:00:08,680 --> 00:00:17,160
+si gbiej w t rzecz jsx. W tym celu skomentuj ten blok tutaj, aby nie by
+
+4
+00:00:17,730 --> 00:00:23,310
+ju uywany i zwrc co innego, mog uy obiektu reakcji, ktry tutaj importujemy i
+
+5
+00:00:23,370 --> 00:00:30,690
+wywoa na nim metod, utworzy element, przez sposb jest rwnie powodem, dla ktrego musimy importowa reagowa, poniewa ten
+
+6
+00:00:31,050 --> 00:00:33,720
+kod tutaj nie jest jeszcze skompilowany do
+
+7
+00:00:33,810 --> 00:00:40,260
+tego, co tu piszemy, chocia tego nie widzimy. Utwrz element jest metod i przyjmuje trzy argumenty,
+
+8
+00:00:40,260 --> 00:00:48,240
+w rzeczywistoci zajmuje nieskoczon liczb argumentw, ale co najmniej trzy. Pierwszym z nich jest element, ktry chcemy renderowa do
+
+9
+00:00:48,240 --> 00:00:48,840
+domingu,
+
+10
+00:00:48,840 --> 00:00:54,580
+moe to by element div, moe to by normalny element html, taki jak
+
+11
+00:00:54,660 --> 00:00:58,980
+div, moe to by take wasny komponent, jeli taki istnieje.
+
+12
+00:00:59,160 --> 00:01:04,860
+Nie robimy tego, poniewa jestemy w komponencie, ktrego nie moemy renderowa, moemy renderowa kady
+
+13
+00:01:04,860 --> 00:01:08,390
+inny komponent, ktry importujemy, ale nie mamy takiego komponentu.
+
+14
+00:01:08,400 --> 00:01:13,000
+Drugi argument jest w zasadzie konfiguracj dla tego i tam,
+
+15
+00:01:13,350 --> 00:01:20,460
+przekazalibymy obiekt javascript, jest to opcjonalne, moemy rwnie przekaza warto null, a zrobimy to na
+
+16
+00:01:20,460 --> 00:01:23,140
+razie, poniewa nie chc tego konfigurowa.
+
+17
+00:01:23,280 --> 00:01:30,510
+Trzeci argument tutaj to dowolna ilo dzieci i moemy mie wiele argumentw
+
+18
+00:01:30,510 --> 00:01:31,820
+oddzielonych przecinkami.
+
+19
+00:01:31,890 --> 00:01:35,980
+Dzieci oznaczaj to, co jest zagniedone w tym dziale,
+
+20
+00:01:36,060 --> 00:01:39,450
+teraz w tym przypadku chcemy zagniedzi element h1.
+
+21
+00:01:39,720 --> 00:01:49,650
+Sprbujmy, dodajc h1, a nastpnie jako kolejny argument, dodajmy tutaj ten tekst z wieloma wykrzyknikami i odejdmy od tego
+
+22
+00:01:49,650 --> 00:01:56,310
+cudzysowu z odwrotnym ukonikiem, abymy mogli stwierdzi, e zostao to wykonane za pomoc
+
+23
+00:01:56,310 --> 00:01:58,570
+tej metody elementu create.
+
+24
+00:01:59,410 --> 00:02:05,450
+Teraz z tym, pozwl mi zapisa ten kod, utwrz element z czterema argumentami, div,
+
+25
+00:02:05,500 --> 00:02:13,270
+null, h1 i tekstem, upewnij si, e zapiszesz plik w kodzie visual studio, zobaczysz, e jest on zapisany,
+
+26
+00:02:13,270 --> 00:02:19,300
+jeli zobaczysz krzy tutaj i nie kropka, a nastpnie wrmy do naszej aplikacji.
+
+27
+00:02:19,300 --> 00:02:21,210
+Tutaj widzimy h1, Cze Reaguj
+
+28
+00:02:21,440 --> 00:02:23,610
+na aplikacj i jeli sprawdzimy
+
+29
+00:02:23,650 --> 00:02:28,840
+to w narzdziach programistycznych, w Chrome tutaj w moim przypadku, ktry gorco
+
+30
+00:02:28,840 --> 00:02:29,600
+polecam, zobaczysz,
+
+31
+00:02:29,770 --> 00:02:34,330
+e dostaniemy div z dwoma wzami tekstowymi wewntrz, h1 i Hi
+
+32
+00:02:34,390 --> 00:02:37,340
+Jestem aplikacj reagowania. Tak wic nie
+
+33
+00:02:37,360 --> 00:02:45,370
+wyrenderowalimy elementu h1, wyrenderowalimy tekst i jest to zachowanie domylne, h1 tutaj jest interpretowane
+
+34
+00:02:45,370 --> 00:02:46,010
+jako
+
+35
+00:02:46,120 --> 00:02:52,510
+tekst, nie jest renderowane jako element. Jeli chcemy renderowa kolejny element wewntrz
+
+36
+00:02:52,750 --> 00:03:00,580
+div, musimy zastpi ten kod innym wywoaniem, aby zareagowa element create, aby utworzy nowy
+
+37
+00:03:00,580 --> 00:03:03,290
+element html na kocu.
+
+38
+00:03:03,310 --> 00:03:10,900
+Tutaj przekazujemy teraz h1, a nastpnie null jako konfiguracj, a nastpnie tekst, ktry chcemy renderowa,
+
+39
+00:03:10,900 --> 00:03:15,800
+wic tutaj pomieszmy to i powiedzmy, e teraz to dziaa.
+
+40
+00:03:15,810 --> 00:03:21,690
+Teraz, jeli zapiszemy ten plik i wrcimy do aplikacji, zobaczymy znacznik h1,
+
+41
+00:03:21,690 --> 00:03:25,640
+czy teraz to dziaa. Moemy to rwnie zobaczy, jeli sprawdzimy
+
+42
+00:03:25,780 --> 00:03:27,460
+to w narzdziach programistycznych, otrzymamy
+
+43
+00:03:27,490 --> 00:03:29,900
+element div zawinity w znacznik h1.
+
+44
+00:03:29,950 --> 00:03:38,290
+Teraz nie widzimy, aby styl css zosta zastosowany, poniewa nie widzimy dodawania klasy,
+
+45
+00:03:39,190 --> 00:03:40,770
+w naszym
+
+46
+00:03:40,780 --> 00:03:45,640
+kodzie jsx dodalimy klas css z nazw klasy,
+
+47
+00:03:45,640 --> 00:03:51,680
+a nie klas. Wrc do tego, dlaczego uywamy nazwy klasy w nastpnym wykadzie. Wic dodamy nazw klasy,
+
+48
+00:03:51,690 --> 00:03:55,850
+w naszym wywoaniu elementu create, po prostu nie
+
+49
+00:03:55,920 --> 00:04:01,020
+przekazalibymy null jako konfiguracji, ale obiekt javascript, i tam moemy
+
+50
+00:04:01,530 --> 00:04:07,470
+zdefiniowa nazw klasy i przypisa dowolne klasy css, ktre chcemy doda,
+
+51
+00:04:07,620 --> 00:04:11,930
+na przykad app, ta sama klasa aplikujemy tutaj.
+
+52
+00:04:12,770 --> 00:04:20,710
+Teraz zapisujemy ten plik ponownie, aduje si on i widzimy teraz zaktualizowan stylizacj z tekstem rodkowym, widzimy, e
+
+53
+00:04:20,710 --> 00:04:28,210
+te klasy css s rwnie stosowane tutaj na div. To jest bardzo wane, aby zrozumie, kod,
+
+54
+00:04:28,210 --> 00:04:36,910
+ktry wanie tutaj napisalimy, z reagujcym elementem create, a zagniedony element create elementu jest dokadnym odpowiednikiem
+
+55
+00:04:36,940 --> 00:04:45,310
+tego kodu jsx i tak naprawd do tego kodu ten zostanie skompilowany przez jeden z
+
+56
+00:04:45,340 --> 00:04:46,960
+wielu narzdzi do
+
+57
+00:04:46,960 --> 00:04:54,160
+budowania wyjd z pudeka w tym projekcie. Jest to powd, dla ktrego musimy zaimportowa reakcj, nawet jeli
+
+58
+00:04:54,160 --> 00:04:59,720
+w ogle jej nie uywamy, gdy uywamy tej skadni, poniewa za kulisami uyjemy jej po skompilowaniu.
+
+59
+00:05:00,010 --> 00:05:07,180
+Oczywicie napisanie kodu takiego z elementem create jest naprawd kopotliwe, szczeglnie gdy dodajesz i
+
+60
+00:05:07,180 --> 00:05:10,000
+zagniedasz coraz wicej elementw, dlatego
+
+61
+00:05:10,000 --> 00:05:12,910
+zazwyczaj nie uywamy tego kodu, ale
+
+62
+00:05:13,210 --> 00:05:19,930
+zamiast tego, ten kod zaczynamy od. To jest powd, dla ktrego uywamy jsx,
+
+63
+00:05:19,930 --> 00:05:24,080
+ale bardzo wane jest, aby zrozumie wewntrzne i zrozumie,
+
+64
+00:05:24,130 --> 00:05:31,090
+co to kompiluje, a take, co najwaniejsze, zrozumie, e chocia wyglda jak html, to nie jest.
+
+65
+00:05:31,090 --> 00:05:33,370
+To jest javascript na kocu,
+
+66
+00:05:33,400 --> 00:05:35,960
+zostaje skompilowany do tego kodu.
+

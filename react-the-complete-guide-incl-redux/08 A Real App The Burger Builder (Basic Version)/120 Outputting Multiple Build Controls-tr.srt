@@ -1,0 +1,168 @@
+1
+00:00:02,130 --> 00:00:06,520
+Son derste bireysel cvata kontrol bileenini yarattk.
+
+2
+00:00:06,520 --> 00:00:10,010
+imdi iki kontroln bir iftini kartmak istiyoruz.
+
+3
+00:00:10,480 --> 00:00:18,790
+Ve bunun iin bir sabit oluturacam, devlet deil, bu dosyada sadece say sabiti olan bir
+
+4
+00:00:18,880 --> 00:00:22,930
+mlk deil, kontrol isimlendiren, vermeyeceim bir devlet.
+
+5
+00:00:23,410 --> 00:00:28,540
+Ve bu yalnzca tm denetimleri zor kod istee baldr ancak rahata tm
+
+6
+00:00:28,540 --> 00:00:35,770
+bu yerleik denetimler oluturmak ve bunlar bylece bir ift javascript nesneleri her biri salata gibi bir etiket
+
+7
+00:00:35,770 --> 00:00:44,110
+olmaldr ilemek iin dng iin bir dizi olmasn istiyorsanz ve daha sonra bir tr veya bir salata ama kk
+
+8
+00:00:44,110 --> 00:00:47,560
+bir s ile ve sadece olas bir yaklam.
+
+9
+00:00:47,560 --> 00:00:55,300
+imdi bunu bildiim tm maddeler iin tekrarlayacam biliyorum Bu uygulamada biliyorum pastrma, rnein
+
+10
+00:00:56,140 --> 00:01:05,970
+onun iin Ve bu arada bu trler l gei aamasnda burger bileen bileeninde kontrol ettiiniz trleri karlamal
+
+11
+00:01:06,280 --> 00:01:10,580
+ve siz de ayn muhafaza ve benzerleri.
+
+12
+00:01:10,780 --> 00:01:14,210
+Ve burada Type zellii.
+
+13
+00:01:14,290 --> 00:01:19,000
+imdi bir dizi kontrol saladk ve yine bu rahatlk salamak iin eklendi.
+
+14
+00:01:19,510 --> 00:01:24,170
+Ve fatura kontrol bileenimde kullanmak istiyorum.
+
+15
+00:01:24,250 --> 00:01:30,790
+Her eyden nce kaburga kontrolleri siestas snfn kullanacam, bu yzden
+
+16
+00:01:31,270 --> 00:01:37,630
+CSX kontrolleri altndaki bor snflarna bir liman ekleyip paketlemeye atayacam.
+
+17
+00:01:37,630 --> 00:01:45,070
+Savunmak yerleik mazeretler bana byle kontroller kurmak.
+
+18
+00:01:45,260 --> 00:01:52,280
+Ve imdi div'n iinde tm denetimleri tekrarlamak ve her biri iin bir cvata
+
+19
+00:01:52,280 --> 00:01:53,590
+kontrol yaratmak istiyorum.
+
+20
+00:01:53,630 --> 00:01:59,010
+Bu yzden, nce ithalat yaptklar ikisi de tekil bileenleri kontrol ediyor.
+
+21
+00:01:59,030 --> 00:02:05,480
+Son dersin sonunda, cvata kontrol klasrnde bulabiliriz ve cvata
+
+22
+00:02:05,480 --> 00:02:07,910
+kontrol javascript dosyas var.
+
+23
+00:02:07,940 --> 00:02:16,210
+imdi buraya yerletirmek iin Cauley parantezleri ile bir tuvalet yaratalm, nk burada gerekten eriemediimiz bu dosyann
+
+24
+00:02:16,220 --> 00:02:20,190
+bir paras olan l Kontroller Konseptini alyoruz.
+
+25
+00:02:20,390 --> 00:02:24,060
+nk her zaman burada javascript bulunduunu unutmayn.
+
+26
+00:02:24,110 --> 00:02:27,020
+Tabii ki dosyamzdan bu dosyadan eriebilirsiniz.
+
+27
+00:02:27,530 --> 00:02:37,760
+Dolaysyla, eriim denetimleri haritay orada arar ve her denetimi bu dizinin her bir esini yerleik bir denetime yerletirirsiniz.
+
+28
+00:02:38,060 --> 00:02:46,860
+Bylece, anahtar bulmak iin gereken anahtar ayarladnz kendiliinden kapanan bir etiketi, benzersiz bir tanmlayc olduundan
+
+29
+00:02:46,910 --> 00:02:48,620
+yalnzca etiket olamaz.
+
+30
+00:02:48,650 --> 00:02:59,600
+Hibir zaman bir kereden fazla bir etiketimiz olmad ve daha sonra tm gei etiketi kontrol bileeni oluturuyor.
+
+31
+00:02:59,990 --> 00:03:03,810
+imdi tr sonradan nemli hale gelecektir.
+
+32
+00:03:04,010 --> 00:03:06,800
+imdilik, bir eyler grebilir miyiz greceiz.
+
+33
+00:03:06,860 --> 00:03:12,590
+Bu yzden tm dosyalar kaydettiinizden emin olun ve imdi de iki denetimi veriyoruz.
+
+34
+00:03:12,800 --> 00:03:16,480
+Burger kurucusuna gidelim ve buraya takn.
+
+35
+00:03:16,550 --> 00:03:19,000
+Bu yer tutucunun yerine.
+
+36
+00:03:19,250 --> 00:03:25,190
+O halde buradan st cvata kontrollerine bir liman ekleyelim.
+
+37
+00:03:25,610 --> 00:03:32,180
+Ve imdi components klasrne built controls klasr olan Bergere klasrne gitmeliyiz ve
+
+38
+00:03:32,180 --> 00:03:40,640
+cvata kontrolleri javascript dosyasn setik ve imdi cesur bir yap kendi kapan esini kontrol eden yerinde
+
+39
+00:03:40,700 --> 00:03:42,470
+bir yl kt.
+
+40
+00:03:43,280 --> 00:03:50,540
+denetimleri burgerin altnda grmeniz gerekir ve DS her iki denetimi de henz bir ey yapmaz.
+
+41
+00:03:51,320 --> 00:03:55,450
+imdi, tm dosyalarn kaydedildiinden emin olmak iin bu cesur
+
+42
+00:03:55,610 --> 00:04:01,700
+Ancak biz gerekten bu dmeleri balamaya ve dolaysyla bu burgeri dzenleme konusunda ok yaknz.
+

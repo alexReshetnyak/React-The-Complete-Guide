@@ -1,0 +1,252 @@
+1
+00:00:02,240 --> 00:00:08,730
+Trabalhou nos criadores para encomendas e ns trabalhamos para poder despach-los agora, ns precisamos gerenciar para encomendar o estado para
+
+2
+00:00:08,730 --> 00:00:15,450
+o nosso Produtor,  claro, e para isso eu vou para a ordem cair na pasta de redutores e, antes
+
+3
+00:00:15,690 --> 00:00:22,440
+de mais, eu vou importe meus tipos de ao aqui porque eu preciso deles na minha declarao de caso de mudana,
+
+4
+00:00:22,440 --> 00:00:26,110
+ento eu preciso acessar as aes e seus tipos de ao.
+
+5
+00:00:26,520 --> 00:00:34,010
+Em seguida, crie uma ordem de nome de batalha constante ou apenas um redutor porque  minha funo redutora perto
+
+6
+00:00:34,020 --> 00:00:37,610
+do final e eu farei isso como um redutor normal.
+
+7
+00:00:37,680 --> 00:00:44,270
+Ento, uma funo que recebe duas entradas para o estado e o que voc aprendeu.
+
+8
+00:00:44,310 --> 00:00:49,390
+Agora eu quero configurar um estado inicial para este redutor para nomear essa propriedade.
+
+9
+00:00:49,410 --> 00:00:52,320
+Essa constante me desculpa o estado inicial.
+
+10
+00:00:52,320 --> 00:00:55,190
+Deve ser um objeto javascript e no existe.
+
+11
+00:00:55,200 --> 00:00:58,140
+Preciso de um pouco de informao.
+
+12
+00:00:58,140 --> 00:01:00,460
+Eu certamente quero ter todos os meus pedidos.
+
+13
+00:01:00,480 --> 00:01:02,620
+Poderia ser uma matriz como essa.
+
+14
+00:01:02,700 --> 00:01:11,610
+Eu tambm quero saber se estamos no processo de encomendar ou se estamos concludos para que possamos adicionar uma propriedade
+
+15
+00:01:11,690 --> 00:01:19,760
+ou perseguir ou carregar e configur-lo como falso e deve ser falso inicialmente deve ser definido como verdadeiro.
+
+16
+00:01:19,950 --> 00:01:25,390
+Uma vez que comeamos a ordenar,  claro que nenhuma questo ser enfrentada imediatamente.
+
+17
+00:01:25,530 --> 00:01:29,860
+ isso em nosso criador de eo de ordem.
+
+18
+00:01:29,970 --> 00:01:36,590
+Ns apenas lemos o sucesso e falhamos a ao inicial aqui.
+
+19
+00:01:36,630 --> 00:01:43,410
+Na verdade no envia nada que possamos pegar na leitura X, em vez disso, executamos algum cdigo assncrono
+
+20
+00:01:43,460 --> 00:01:50,610
+para despachar nossas aes, o que  um padro normal, mas como provavelmente queremos atualizar nossa propriedade de carregamento
+
+21
+00:01:50,610 --> 00:01:55,790
+em nosso estado quando comeamos a carregar Precisamos de uma ao adicional que ns Despacho.
+
+22
+00:01:55,830 --> 00:02:01,130
+Ento,  algo que devemos ter em mente e lidaremos na prxima palestra nesta palestra aqui.
+
+23
+00:02:01,230 --> 00:02:03,820
+Vamos trabalhar nas aes que j temos.
+
+24
+00:02:04,140 --> 00:02:10,410
+Ento, no meu redutor, antes eu tinha ratos que eu quis dizer aceitar meu estado igual ao estado inicial.
+
+25
+00:02:10,470 --> 00:02:17,540
+Ento, temos um estado inicialmente e depois adicionarei a minha declarao de caso de mudana, ento mudarei meu tipo de ao.
+
+26
+00:02:17,880 --> 00:02:24,720
+E agora eu quero lidar com meus diferentes casos,  claro, ento eu vou ter um caso aqui, que  tipos de ao
+
+27
+00:02:25,140 --> 00:02:26,310
+e ento est morto.
+
+28
+00:02:26,490 --> 00:02:30,600
+Nossa perseguio conseguiu aqui.
+
+29
+00:02:30,600 --> 00:02:33,680
+Ento quero retornar um determinado estado.
+
+30
+00:02:33,690 --> 00:02:34,820
+Eu trabalharei nisso em breve.
+
+31
+00:02:34,920 --> 00:02:43,860
+O prximo caso  que eu obtive o tipo de ao que o burger de compra falha, ento eu quero retornar
+
+32
+00:02:43,890 --> 00:02:52,310
+um estado diferente obviamente e ento eu tenho meu caso padro onde eu simplesmente quero retornar o estado atual.
+
+33
+00:02:52,350 --> 00:02:56,470
+Isso , de certo, muito importante, j que estamos combinando um par de redutores em breve.
+
+34
+00:02:56,480 --> 00:03:01,890
+Voc,  claro, precisa poder retornar algo se for uma ao que  tratada em um redutor diferente.
+
+35
+00:03:02,150 --> 00:03:07,450
+No final, quero exportar minha funo de redutores aqui como o padro de queda.
+
+36
+00:03:07,460 --> 00:03:11,500
+Agora vamos trabalhar na lgica aps o sucesso.
+
+37
+00:03:11,510 --> 00:03:18,740
+Obviamente, eu quero armazenar esse pedido na minha matriz de pedidos e quero definir o carregamento como falso
+
+38
+00:03:18,740 --> 00:03:19,600
+porque terminamos.
+
+39
+00:03:20,030 --> 00:03:22,760
+Ento, antes de mais, copie o estado antigo.
+
+40
+00:03:22,760 --> 00:03:32,570
+e eu concateno um novo item e, conforme voc aprendeu, concat retorna uma nova matriz e, portanto, adicionamos isso de forma imutvel.
+
+41
+00:03:32,840 --> 00:03:39,860
+Em seguida, carregou dois arquivos e ento eu preciso atualizar meus pedidos agora as ordens Shippey
+
+42
+00:03:39,950 --> 00:03:41,410
+minhas ordens antigas
+
+43
+00:03:41,660 --> 00:03:51,220
+Agora, essa nova ordem que eu quero adicionar aqui  realmente a ordem que recebo da ao Porqu.
+
+44
+00:03:51,260 --> 00:03:54,110
+Voc pode ver isso no criador de ao da ordem.
+
+45
+00:03:54,260 --> 00:03:59,600
+L, recebemos dados de pedidos, mas todos recebemos o ID da ordem em uma propriedade separada.
+
+46
+00:03:59,630 --> 00:04:02,600
+Eu preciso juntar ambos juntos em um objeto aqui.
+
+47
+00:04:02,930 --> 00:04:05,700
+Ento, o que farei na culpa da jr.
+
+48
+00:04:06,000 --> 00:04:14,700
+uma ID de ordem de ao que est se referindo a essa outra propriedade e essa  a ID que retornaremos do servidor.
+
+49
+00:04:15,420 --> 00:04:23,270
+Eu simplesmente adicionarei uma nova constante ao seu novo pedido talvez e eu configurarei isso igual a um objeto javascript onde
+
+50
+00:04:23,280 --> 00:04:32,100
+antes de tudo colo todas as propriedades dos dados da ordem de ao que so os dados da ordem todos ns passamos para o
+
+51
+00:04:32,100 --> 00:04:36,590
+O servidor e eu adicionamos uma nova ID de propriedade que 
+
+52
+00:04:37,720 --> 00:04:42,260
+Com o pai eu tenho uma nova ordem e  isso que eu gostaria de concatenar aqui.
+
+53
+00:04:42,400 --> 00:04:47,530
+Nova ordem agora por falhar.
+
+54
+00:04:47,750 --> 00:04:51,140
+Eu quero retornar o estado antigo.
+
+55
+00:04:51,140 --> 00:04:57,050
+ claro, tambm porque, mesmo que falhasse, ainda fossem concludas e o erro deveria ser tratado a partir
+
+56
+00:04:57,050 --> 00:05:03,770
+desse modelo, pois adicionamos D com o componente de ordem superior do manipulador de erros para entrar em contato dados.
+
+57
+00:05:03,830 --> 00:05:08,390
+Eu certamente no quero limpar minhas ordens, mas eu queria dizer carregando duas quedas,
+
+58
+00:05:08,390 --> 00:05:14,070
+Agora que estamos fazendo isso, tambm estou a ver um erro que fiz aqui, mas vou consertar isso no prximo Lechter
+
+59
+00:05:14,060 --> 00:05:15,170
+junto com voc tambm.
+
+60
+00:05:15,170 --> 00:05:17,520
+Ento, em primeiro lugar, de volta ao usurio.
+
+61
+00:05:17,660 --> 00:05:21,150
+Agora estamos lidando com o sucesso e os casos de falha esto bons.
+
+62
+00:05:21,170 --> 00:05:22,560
+Agora vamos corrigir esse erro.
+
+63
+00:05:22,570 --> 00:05:28,130
+Acabei de ver e vamos nos certificar de que configuramos o carregamento como verdadeiro quando comeamos a buscar um hambrguer.
+

@@ -1,0 +1,212 @@
+1
+00:00:02,230 --> 00:00:04,030
+Wic stworzylimy prawdziwego twrc.
+
+2
+00:00:04,060 --> 00:00:08,830
+Poczmy teraz z kontenerem danych kontaktowych.
+
+3
+00:00:08,830 --> 00:00:11,150
+Tam musimy zamwi metod obsugi.
+
+4
+00:00:11,260 --> 00:00:13,570
+I zostawi to tutaj, poniewa wci go potrzebuj.
+
+5
+00:00:13,570 --> 00:00:20,020
+Powinien zosta wykonany, gdy kliknlimy przycisk zamwienia, ale nie chc ju zajmowa si
+
+6
+00:00:20,020 --> 00:00:28,500
+adowaniem tutaj, wic usun to, co pozostao w tym miejscu i nie chc ju tego robi.
+
+7
+00:00:28,510 --> 00:00:34,150
+Ju zdjem kod, aby dotrze do tego, co chc zrobi.
+
+8
+00:00:34,420 --> 00:00:35,690
+Chc zostawi dostp.
+
+9
+00:00:35,700 --> 00:00:37,760
+Narzu tutaj swj import.
+
+10
+00:00:37,900 --> 00:00:40,900
+A waciwie nigdy wczeniej nie robiem czego innego.
+
+11
+00:00:40,900 --> 00:00:49,450
+Chc zaimportowa z procedur obsugi bdw ten komponent wyszego rzdu z folderu komponentu wyszego rzdu.
+
+12
+00:00:49,660 --> 00:00:54,550
+Nie musz tego robi, nie jest to zwizane z reduxem, ale chc si upewni, e uywam go tutaj.
+
+13
+00:00:54,550 --> 00:01:00,700
+Q Tak samo jak uywam go w gazie Bergere na dole, jest on pakowany, aby poczy oprogramowanie poredniczce
+
+14
+00:01:00,980 --> 00:01:03,990
+i chc, aby ten bd rwnie zosta tutaj usunity.
+
+15
+00:01:04,090 --> 00:01:11,390
+Tak wic w danych kontaktowych na samym dole, gdzie wyeksportowa wszystko, co wszystkie dane kontaktowe zawijaj z jednym dodatkowym
+
+16
+00:01:11,390 --> 00:01:17,510
+komponentem o wysokim zamwieniu, mj z instrukcj obsugi komponentu bdu wyszego rzdu nie tylko przekazuje dane
+
+17
+00:01:17,680 --> 00:01:20,660
+kontaktowe, ale take dostp, ktry jest tylko drobiazgiem.
+
+18
+00:01:20,720 --> 00:01:28,400
+Najwaniejsze to doda jeden raz, aby poczy mj kontener z nowymi dziaaniami, ktre stworzyem i do
+
+19
+00:01:28,610 --> 00:01:32,230
+tego potrzebuj poczy si z wysyk akcji.
+
+20
+00:01:32,270 --> 00:01:37,610
+Wic dodam sta wysyk map do rekwizytw, ktrych wczeniej nie mielimy.
+
+21
+00:01:38,390 --> 00:01:46,540
+I tutaj mam teraz jedn waciwo, ktr chc stworzy na zamwienie burgera lub dowolne imi, ktre ci si podoba.
+
+22
+00:01:46,550 --> 00:01:54,080
+Wykonam anonimow funkcj, w ktrej naprawd i wysyam mojego twrc akcji, twrc akcji.
+
+23
+00:01:54,080 --> 00:01:57,470
+Edytuj w spadku zamwienia kupuj pocztek Burgera.
+
+24
+00:01:57,470 --> 00:01:59,170
+To jest prawdziwy twrca.
+
+25
+00:01:59,420 --> 00:02:07,520
+Chc zaimportowa do indeksu Chia spadek w folderze dziaa, aby mogy dotrze do niego z innych plikw i
+
+26
+00:02:08,280 --> 00:02:12,510
+e Arafa chc go odczyta z kontenera danych kontaktowych.
+
+27
+00:02:12,590 --> 00:02:21,450
+Zostay teraz zaimportowane, wic importuj wszystko jako akcje z.
+
+28
+00:02:21,610 --> 00:02:27,050
+A teraz wszyscy id a do przechowywania akcji tam.
+
+29
+00:02:27,100 --> 00:02:28,760
+Indeks j w nastpujcy sposb.
+
+30
+00:02:29,210 --> 00:02:33,110
+I dziki temu mog wysa na d kontakt w kontenerze.
+
+31
+00:02:33,230 --> 00:02:41,290
+Mog wysa akcje, a tu zaczynaj si teraz wamywacze z zakupami, wic spodziewam si, e tutaj si
+
+32
+00:02:41,290 --> 00:02:41,920
+dowiem.
+
+33
+00:02:42,100 --> 00:02:44,200
+Dane zamwienia.
+
+34
+00:02:44,500 --> 00:02:51,100
+Wchodz wic do mojej anonimowej funkcji i przekazuj j twrcy akcji, poniewa rzeczywicie
+
+35
+00:02:51,100 --> 00:02:56,380
+oczekuj, e dane tutaj w akcji tworz teraz dane kontaktowe.
+
+36
+00:02:56,390 --> 00:02:58,600
+Oczywicie chc rwnie korzysta z tej nieruchomoci.
+
+37
+00:02:58,810 --> 00:03:04,880
+Wic na zamwienie burger powinien zosta wywoany w kolejnoci obsugi burgera.
+
+38
+00:03:05,320 --> 00:03:11,540
+Przewimy do obsugi zamwie i tam przygotowujemy dane zamwienia.
+
+39
+00:03:12,010 --> 00:03:17,140
+Teraz moemy wykona te rekwizyty.
+
+40
+00:03:17,140 --> 00:03:23,600
+Pamitaj, e zawsze otrzymujemy nasze akcje wysykowe tutaj jako rekwizyty na zamwienie burgera.
+
+41
+00:03:23,830 --> 00:03:26,260
+I tam chc przekaza moje zamwienie.
+
+42
+00:03:26,380 --> 00:03:32,890
+I zawiera zaskakujce skadniki, a dane o zamwieniu s po prostu danymi lub danymi wprowadzonymi
+
+43
+00:03:32,890 --> 00:03:34,420
+przez uytkownika do formularza.
+
+44
+00:03:34,630 --> 00:03:41,350
+Dziki temu jestemy w stanie wysa to kliknicie, ale jest kilka rzeczy, ktre nie bd dziaa
+
+45
+00:03:41,350 --> 00:03:42,640
+zgodnie z oczekiwaniami.
+
+46
+00:03:42,640 --> 00:03:51,520
+Na przykad w metodzie renderowania cay komponent danych kontaktowych sprawdzamy, czy adujemy, aby ostatecznie wywietli
+
+47
+00:03:51,520 --> 00:03:54,680
+Espen, czy te jestemy zamiast formularza.
+
+48
+00:03:54,970 --> 00:03:56,310
+Teraz adujemy.
+
+49
+00:03:56,380 --> 00:04:01,880
+Jeli kliknie przycisk zamwienia, musimy zaj si tym stanem zaadowania w naszym magazynie redock.
+
+50
+00:04:01,890 --> 00:04:10,120
+Dlatego, e cay proces zamawiania w redox jest w stanie to zrobi, musimy pracowa nad
+
+51
+00:04:10,120 --> 00:04:12,660
+reduktorem, ktry jest teraz pusty.
+
+52
+00:04:12,700 --> 00:04:14,110
+To nastpny cel.
+
+53
+00:04:14,110 --> 00:04:16,090
+Pracujmy nad tym reduktorem zamwie.
+

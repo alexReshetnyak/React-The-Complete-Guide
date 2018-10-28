@@ -1,0 +1,248 @@
+1
+00:00:02,170 --> 00:00:08,830
+Son dersimizde Bergere bileenimiz zerinde altk ve burger ieriklerinin bir listesini aslnda bir nesne
+
+2
+00:00:08,830 --> 00:00:16,240
+olarak balayan ve daha sonra bir dizi haline dntrecek bir liste k yapabildiimizden emin olduk.
+
+3
+00:00:16,240 --> 00:00:24,580
+imdi ilk nemli adm u anda Ciro'ya ayarlanm tm ieriklerle balayan bir burgerimiz
+
+4
+00:00:24,580 --> 00:00:26,860
+varsa ne olurdu.
+
+5
+00:00:26,870 --> 00:00:30,770
+imdi gryoruz, imdi bu ok iyi.
+
+6
+00:00:30,770 --> 00:00:32,480
+leyecek hibir ieriimiz yok.
+
+7
+00:00:32,510 --> 00:00:38,270
+Bo bir diziye sahip olduumuz iin hata yapmyoruz, ancak baz maddeler eklemeye balamanz
+
+8
+00:00:38,270 --> 00:00:44,820
+veya byle bir ey yapmaya balamamz gibi bir mesaj gstersek daha da iyi olur.
+
+9
+00:00:44,840 --> 00:00:51,560
+imdi bir ey gstermek iin herhangi bir katk maddesi yok diye reneceiz, nk
+
+10
+00:00:51,590 --> 00:00:57,830
+hibir katk maddesi yoksa, imdi dntrlen maddeler her zaman bir dizi olacak.
+
+11
+00:00:57,950 --> 00:01:00,800
+Sadece bir dizi bo dizi.
+
+12
+00:01:00,800 --> 00:01:01,650
+Sonunda.
+
+13
+00:01:02,090 --> 00:01:06,040
+Ancak bize bir eyleri kontrol etmesi zor bir ey veri.
+
+14
+00:01:06,080 --> 00:01:14,290
+Peki, ierdiklerimiz var m yoksa olmadn nasl bilebiliriz? Dntrlen maddeler dizisini azaltabiliriz.
+
+15
+00:01:14,330 --> 00:01:21,050
+u an iin nasl grndne dair bir fikir edinebileceiz, bu hastaln ktmz maddeler diziliminden kurtulduumuz hakknda
+
+16
+00:01:21,570 --> 00:01:28,010
+bir fikir edineceiz ve elbette birka bo diziler ve bu nedenle ie yaramyor veya almyor .
+
+17
+00:01:28,010 --> 00:01:30,560
+imdilik, logoyu konsolla ele alalm, bylece
+
+18
+00:01:30,590 --> 00:01:32,600
+Ama hibir ey gstermiyor.
+
+19
+00:01:32,600 --> 00:01:36,900
+Uzunluu kontrol etmek, hile yapmaz nk uzunluu drttr.
+
+20
+00:01:37,030 --> 00:01:43,910
+Bize ilgin olan bu i diziler, yapabildiimiz ey bu i dizilerin deerlerini
+
+21
+00:01:44,240 --> 00:01:52,070
+karmamz ve yalnzca bu deerleri ieren bir dizi ticaretini salamak iin bu diziyi
+
+22
+00:01:52,070 --> 00:01:53,400
+dzletirmeniz olabilir.
+
+23
+00:01:53,630 --> 00:02:04,850
+Bunu, dntrlm ieriklerimize indirgemeyi ekleyerek yapabiliriz mant, bir diziyi baka bir ey haline
+
+24
+00:02:04,970 --> 00:02:09,240
+dntrmemizi salayan her ilevi azaltr.
+
+25
+00:02:09,410 --> 00:02:14,660
+Bir girdi olarak bir ilev alr ve bu ilev, otomatik olarak javascript tarafndan geirilen iki
+
+26
+00:02:14,660 --> 00:02:15,770
+bamsz deiken alr.
+
+27
+00:02:16,040 --> 00:02:26,780
+Azaltma metodunun nceki deeri ve imdiki deer sadece cana karlk gelen Colback'i burada kabul etmez; burada,
+
+28
+00:02:26,780 --> 00:02:31,410
+kargaann her elementinde idam edilir, burada dndrrz.
+
+29
+00:02:31,430 --> 00:02:34,030
+Ayrca bir balang deeri kabul eder.
+
+30
+00:02:34,100 --> 00:02:35,920
+Bo bir dizi diyelim.
+
+31
+00:02:35,980 --> 00:02:39,080
+Yani indirgenmi deerin balang deeri.
+
+32
+00:02:39,080 --> 00:02:44,360
+imdilik elbette bir ey dndrerek bu dk deeri ayarlamak istiyorsunuz.
+
+33
+00:02:45,160 --> 00:02:52,430
+Ve daha sonra tm eler arasnda dolap basite balang deerlerine adm adm ekler.
+
+34
+00:02:52,770 --> 00:03:00,480
+Dolaysyla, balangtaki deerlerden balayarak gncellenmi deerleri dndrmek isterseniz, burada her ilmekte
+
+35
+00:03:00,480 --> 00:03:03,130
+aldmz ilk argman depolanr.
+
+36
+00:03:03,420 --> 00:03:04,920
+Bu yzden dizin.
+
+37
+00:03:04,950 --> 00:03:10,810
+Argmanm, sonunda dnmek istediim her zaman gncellenmi rota.
+
+38
+00:03:11,190 --> 00:03:18,750
+Dolaysyla basite bu baa bir ey yakalayamayacam. Bu, dndrdm ve bu
+
+39
+00:03:18,750 --> 00:03:22,350
+diziye eklediimiz belirli eyi alacaktr.
+
+40
+00:03:22,350 --> 00:03:25,790
+imdi bunu kurtarrsak bo bir dizi alrz.
+
+41
+00:03:26,070 --> 00:03:35,010
+Ve iki peynir paras gibi yeniden yaynlandm tekrar duyurursak, iki nesne ieren bir dizi elde ederiz ve
+
+42
+00:03:35,010 --> 00:03:41,070
+bu nesnelerin garip grnmesi, bunlarn Jae'nin tepki verdii X eleri olduu
+
+43
+00:03:41,070 --> 00:03:42,000
+gereiyle ilgilidir.
+
+44
+00:03:42,030 --> 00:03:44,330
+Geri grebildiiniz kadaryla.
+
+45
+00:03:44,820 --> 00:03:47,420
+imdi diziyi dzletirdik.
+
+46
+00:03:47,460 --> 00:03:53,790
+Ve eer bu belirsizse, harita ve azaltmak gibi bu varsaylan javascript
+
+47
+00:03:53,850 --> 00:03:57,250
+dizi ilevlerinin belgelerini kontrol etmenizi neririm.
+
+48
+00:03:57,720 --> 00:04:02,430
+Bu durumda bo olan veya X elerini ieren bir dizi var.
+
+49
+00:04:02,670 --> 00:04:09,820
+Ve bo olabileceinden, dntrlm bileenlerin uzunluu sfra eit olup olmadn basite kontrol edebiliriz.
+
+50
+00:04:10,020 --> 00:04:16,950
+Durum buysa, eleri eklemeye baladm diyelim bir paragraf k istiyorum.
+
+51
+00:04:17,060 --> 00:04:18,400
+Bu nedenle sz syleyeceim.
+
+52
+00:04:18,420 --> 00:04:23,980
+Bu, iOS 6'daki bir deikene sabit bir bileen.
+
+53
+00:04:24,000 --> 00:04:26,270
+Bunu bunun iin kullanrz.
+
+54
+00:04:26,880 --> 00:04:35,700
+Ve sonra buraya, dntrlm bileenleri bir paragrafa eit olarak ayarlayacam ve burada unu
+
+55
+00:04:35,790 --> 00:04:40,020
+syleyeceim; byle maddeler eklemeye ltfen balayn.
+
+56
+00:04:40,020 --> 00:04:44,010
+Ve biz hala fakir retim transferi ve ierikler var.
+
+57
+00:04:44,010 --> 00:04:50,100
+Dosyay kaydedin ve artk peynir olmamak iin burgeri Bolar' gncelleyin.
+
+58
+00:04:50,410 --> 00:04:56,490
+Ve imdi bu sray kaydettiyseniz, sadece katk maddeleri eklemeye balamalsnz ve elbette bu
+
+59
+00:04:56,490 --> 00:04:57,400
+da yapmaldr.
+
+60
+00:04:57,420 --> 00:04:59,890
+Bak as ne olursa olsun.
+
+61
+00:05:00,240 --> 00:05:02,500
+Bu nemli bir adm daha.
+
+62
+00:05:02,530 --> 00:05:08,840
+imdi bir sonraki adm, kullancya katk maddeleri ekleyip karmak iin bu denetimleri eklemeye balamaktr.
+

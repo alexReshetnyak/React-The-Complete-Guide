@@ -1,0 +1,244 @@
+1
+00:00:02,250 --> 00:00:08,530
+Son derste bir ierii dinamik olarak koullu olarak nasl ileyeceimizi reneceiz, burada
+
+2
+00:00:08,550 --> 00:00:14,520
+her eyin javascript olduunu ve bu genellikle tepki mantrasn kullandmz syleyip
+
+3
+00:00:14,580 --> 00:00:16,240
+lme kadar srecek.
+
+4
+00:00:16,320 --> 00:00:18,160
+Her ey javascript.
+
+5
+00:00:18,180 --> 00:00:24,600
+Ayrca, burada kullandmz gibi her ifadeyi evirmenin mutlaka optimal olduu anlamna gelmez, burada da mkemmel
+
+6
+00:00:24,600 --> 00:00:25,700
+bir sonu var.
+
+7
+00:00:25,710 --> 00:00:33,930
+Ancak, bavurumuz bydke ve koullar yuvalarlayabildiimiz iin hangi ifadenin ne iin sorumlu olduunu
+
+8
+00:00:33,930 --> 00:00:36,330
+takip etmek zor olabilir.
+
+9
+00:00:36,360 --> 00:00:39,250
+Ve onlar GSX kodumuza yerletirmek iin.
+
+10
+00:00:39,750 --> 00:00:43,830
+Bu nedenle, size bu dersde gstermek istediim daha temiz bir zm var.
+
+11
+00:00:43,830 --> 00:00:48,290
+Kaldrmam salarm brazened l ifade burada.
+
+12
+00:00:48,390 --> 00:00:53,480
+O halde u an iin tm insanlar her zaman yeniden yaratlyor.
+
+13
+00:00:53,590 --> 00:00:59,640
+Afedersiniz, yalnzca lme deil, ifade paralarn kaldrmaya zen gsterin.
+
+14
+00:00:59,790 --> 00:01:04,270
+Bu yzden u anda balang noktasna geri dndk, u anda bunlardan hibirini konuamyoruz.
+
+15
+00:01:04,350 --> 00:01:11,390
+imdi unutmayn ki herey javascript ve sonunda burada J ile yapacamz ey X, sadece ld.
+
+16
+00:01:11,390 --> 00:01:16,790
+Dn ynteminde return deyimi ile dndryoruz.
+
+17
+00:01:16,800 --> 00:01:23,310
+imdi aklnzda bulundurmanz gereken nemli bir nokta da, re-act ekran gncelletirmesi gerektiini kararlatrdnda
+
+18
+00:01:23,310 --> 00:01:31,330
+ekrana bir ey oluturduunda, Methot'un iledii ekranda sadece bir dn ifadesi deil, burada her ey iin bir
+
+19
+00:01:31,390 --> 00:01:32,820
+dn ifadesi deil.
+
+20
+00:01:33,030 --> 00:01:41,640
+Bylece, render yntemi iindeki her ey, tepki re bileeni oluturduunda yrtlr ve bu nedenle
+
+21
+00:01:42,060 --> 00:01:43,790
+bu yntemden faydalanabiliriz.
+
+22
+00:01:43,860 --> 00:01:47,720
+Bir ey dndrmeden nce biraz kod ekleyebiliriz.
+
+23
+00:01:47,730 --> 00:01:52,400
+Burada, NULL olarak ayarlanacak olan kiiler adnda bir deiken ekleyeceim.
+
+24
+00:01:52,470 --> 00:01:54,880
+imdi bu varsaylan olmaldr.
+
+25
+00:01:54,900 --> 00:01:57,650
+Beendiin herhangi bir isim gibi bir hediye verebilirdin.
+
+26
+00:01:57,720 --> 00:02:00,060
+Sonra normal bir IF deyimi ekleyeceim.
+
+27
+00:02:00,120 --> 00:02:03,150
+Bunu ben yapabilirim nk J'nin iinde X deilim. Normal javascript kodum ierisindeyim ve imdi devlet ovlar olup olmadn kontrol etmek istiyorum.
+
+28
+00:02:03,180 --> 00:02:10,500
+Unutmayn ki ov kiileri bir Boolean'dr Dolaysyla bu doru ya da yanl olur.
+
+29
+00:02:10,500 --> 00:02:14,740
+Bunu mutlaka Doru veya Yalanc ile karlatrmamza gerek yoktur.
+
+30
+00:02:14,760 --> 00:02:17,930
+Bunu atlayabiliriz, imdi kontrol etmek zorundayz ve
+
+31
+00:02:17,940 --> 00:02:26,460
+eer bu doruysa, kiisel deikenimizi baz j'ye X kodu olarak ayarlamak ve her zaman aklnzda tutmak istiyorum.
+
+32
+00:02:26,790 --> 00:02:29,850
+GSX'in derledii sonuca ayarlayabilirim.
+
+33
+00:02:29,910 --> 00:02:36,150
+Ayrca sadece onu yeniden yaratma eylemi unsuru
+
+34
+00:02:36,140 --> 00:02:37,050
+imdi kodu buraya saracam.
+
+35
+00:02:37,290 --> 00:02:39,390
+Benimkilerim.
+
+36
+00:02:39,420 --> 00:02:40,860
+indeki kiiyi orada indirip, buraya ekleyeceim.
+
+37
+00:02:41,190 --> 00:02:48,300
+imdi yaptm ey udur:
+
+38
+00:02:48,300 --> 00:02:50,310
+Varsaylan olarak insanlar.
+
+39
+00:02:50,430 --> 00:02:51,450
+Bu deiken bo.
+
+40
+00:02:51,450 --> 00:02:52,970
+GSX kodumda kt alabilirim.
+
+41
+00:02:53,160 --> 00:02:59,800
+Ancak eer bu gsteri kiisi gerekte bu GSX kodunu tutan gerek bir kiiyse ve o kiinin deikenini alp
+
+42
+00:02:59,800 --> 00:03:05,820
+Sonunda dnerim, eer tekli arama parantezi yaparsam ben burada varsaylan
+
+43
+00:03:05,820 --> 00:03:14,400
+olarak Sieber olan kiinin deikenine atfta bulunan kiilere atfta bulunabilir veya ahslar gsterdikleri doru kii
+
+44
+00:03:14,610 --> 00:03:22,230
+olur ve reak bu sayfay tekrar altrmas gerekip gerekmeyeceini kontrol ettiinde soumasn salayabilir.
+
+45
+00:03:22,320 --> 00:03:29,010
+Bu bileen, nceden oluturulmu her gerekletiinde sylemeliyim ki, sahip olduumuz en son
+
+46
+00:03:29,030 --> 00:03:35,300
+durumu gz nne alp, hibir eyi veya insanlara rastlamayacamza emin olun
+
+47
+00:03:35,310 --> 00:03:42,090
+nk bir gncellemeyi tetikleyen iki eyden birinin bir devlet olduunu unutmayn deiiklik.
+
+48
+00:03:42,120 --> 00:03:43,430
+imdi bu dosyay kaydetme ve uygulamaya geri dnmeme izin ver.
+
+49
+00:03:43,500 --> 00:03:49,560
+Orada con'a gidiyoruz. Hatay grmyoruz.
+
+50
+00:03:49,570 --> 00:03:53,040
+Sayfa 2 ile ilgili olarak en son srm kullandmz aka gryorum.
+
+51
+00:03:53,280 --> 00:03:57,410
+Ve imdi, gei yapanlar tklamama izin verin ve ayn davran grmeden nce isteyin.
+
+52
+00:03:57,660 --> 00:04:03,410
+Bu deiimi okuyabiliriz, ancak imdi bu daha k bir ekilde, GSX'den bu
+
+53
+00:04:03,460 --> 00:04:10,080
+kontrol dkurumunu kullanyoruz; bu, artl olarak geri dnmeden nce atadmz bir deikene dnyor.
+
+54
+00:04:10,440 --> 00:04:16,840
+Hl render ilevindeyim.
+
+55
+00:04:16,920 --> 00:04:19,590
+Ama bunu babamla iade etmeden nce D tutuyoruz J. XP dn ve dolaysyla bu
+
+56
+00:04:19,600 --> 00:04:27,560
+bileen iin temel ablonumuzdur.
+
+57
+00:04:27,560 --> 00:04:28,050
+Onu temiz tutacamz syleyebiliriz ve burada yalnzca bu kk referansa sahip olduumuzdan emin olalm.
+
+58
+00:04:28,050 --> 00:04:34,820
+inde bulunan ya biten ya da hibir eye ya da tm kiilere ait olanlar.
+
+59
+00:04:34,830 --> 00:04:40,410
+Aslnda koullu ieriin ktsnn tercih edilen
+
+60
+00:04:40,520 --> 00:04:46,470
+yolu budur ve bunu kullanmam neririz.
+
+61
+00:04:46,470 --> 00:04:46,980
+&nbsp;
+

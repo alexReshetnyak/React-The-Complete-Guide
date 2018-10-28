@@ -1,0 +1,120 @@
+1
+00:00:02,160 --> 00:00:05,730
+Agora, aprendemos a publicar dados na ltima palestra.
+
+2
+00:00:05,730 --> 00:00:10,110
+Deixe-me tambm mostrar-lhe como enviar o pedido de excluso para realmente encerrar isso.
+
+3
+00:00:10,230 --> 00:00:17,520
+Agora, como para publicar a excluso de dados aqui, no excluir todos os dados das costas e ele
+
+4
+00:00:17,520 --> 00:00:22,240
+apenas retroceder os dados que enviamos com a nossa resposta, obtemos basicamente.
+
+5
+00:00:22,320 --> 00:00:27,570
+Mas ainda posso mostrar-lhe como voc o envia e voc o usaria em qualquer outro servidor da mesma maneira.
+
+6
+00:00:27,570 --> 00:00:34,850
+Claro que o servidor precisa aceitar a palavra excluir HTP para um dado, agora o boto de excluso est
+
+7
+00:00:34,850 --> 00:00:36,650
+no componente de postagem completo.
+
+8
+00:00:36,870 --> 00:00:41,560
+Ento eles simplesmente nos enganaram de volta para um mtodo que lida com isso.
+
+9
+00:00:41,580 --> 00:00:42,830
+Vou implementar este mtodo aqui.
+
+10
+00:00:42,840 --> 00:00:51,090
+O manipulador de postagem principal talvez no exija nenhuma entrada e espero que este mtodo atinja seus dois em clique
+
+11
+00:00:51,450 --> 00:00:55,400
+deve executar esse manipulador de mensagens de excluso ou Befort.
+
+12
+00:00:55,500 --> 00:00:57,960
+Ns j importamos o acesso aqui.
+
+13
+00:00:58,200 --> 00:01:05,860
+Ento, agora, simplesmente use X-ists e podemos usar para excluir Meffert para emitir pedidos de excluso e,
+
+14
+00:01:06,080 --> 00:01:08,580
+em seguida, excluir Meffert obscuro.
+
+15
+00:01:08,600 --> 00:01:10,890
+Eu preciso adicionar um sinal de igual.
+
+16
+00:01:10,940 --> 00:01:17,450
+segmentar um post especfico com ele para que possamos simplesmente levar para voc ou ento usamos para buscar uma nica publicao.
+
+17
+00:01:17,450 --> 00:01:20,690
+O mtodo Delete tambm leva um u r l e precisamos
+
+18
+00:01:20,690 --> 00:01:27,230
+ o mesmo o L que precisamos para excluir e no passamos nenhum dado extra porque a sua clula j est com
+
+19
+00:01:27,230 --> 00:01:28,820
+todos os dados que precisamos.
+
+20
+00:01:28,820 --> 00:01:36,870
+Destina-se a um recurso especfico que deve ser excludo e depois alterado porque, novamente, isso  assncrono.
+
+21
+00:01:36,980 --> 00:01:45,560
+Obter uma resposta e, em seguida, posso bloquear a resposta aqui para ver o que aconteceu no servidor.
+
+22
+00:01:45,560 --> 00:01:46,460
+Vamos agora ver aqueles.
+
+23
+00:01:46,460 --> 00:01:49,710
+Vamos carregar uma postagem e clicar em excluir.
+
+24
+00:01:50,660 --> 00:01:55,200
+E voc pode ver que recuperamos uma resposta com sucesso.
+
+25
+00:01:55,250 --> 00:01:56,960
+No temos dados reais aqui.
+
+26
+00:01:56,990 --> 00:02:00,140
+Isso  exatamente o que o manequim volta e nos retorna aqui.
+
+27
+00:02:00,290 --> 00:02:03,780
+Mas o estado matou duzentos indica que foi bem sucedido.
+
+28
+00:02:03,800 --> 00:02:11,960
+Novamente, no foi realmente excludo, mas eu s quero mostrar que o envio de solicitaes de excluso tambm  to simples como
+
+29
+00:02:12,140 --> 00:02:19,100
+trocar um mtodo para obter ou depois troc-lo para excluir e, claro, mtodos comparveis esto disponveis para o
+
+30
+00:02:19,100 --> 00:02:21,690
+patch da porta e assim por diante.
+

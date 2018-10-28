@@ -1,0 +1,340 @@
+1
+00:00:02,230 --> 00:00:06,540
+Knouted otimizamos nosso pequeno aplicativo de demonstrao aqui.
+
+2
+00:00:06,910 --> 00:00:16,120
+Deixe-me mergulhar nesse componente funcional Wurzels com componente ou componente contguo novamente.
+
+3
+00:00:16,150 --> 00:00:21,670
+Ento, basicamente, os componentes definidos com o CLOS que estendem o componente, que  uma maneira
+
+4
+00:00:21,700 --> 00:00:28,510
+de criar um componente e reagir e componentes que so apenas funes como todos os outros componentes neste aplicativo so.
+
+5
+00:00:28,960 --> 00:00:36,300
+Agora, como eu mencionei muito neste curso, voc deve tentar criar componentes funcionais o mais rpido possvel.
+
+6
+00:00:36,360 --> 00:00:37,170
+Por qu.
+
+7
+00:00:38,730 --> 00:00:43,860
+Como esses componentes tm um foco estreito e uma responsabilidade clara.
+
+8
+00:00:43,860 --> 00:00:50,610
+lgica para exibir o GSX corretamente, por exemplo, adicionando algumas classes como fazemos aqui no componente do cockpit.
+
+9
+00:00:50,610 --> 00:00:57,850
+Eles so apenas sobre a apresentao de algo que eles so sobre a renderizao GSX e eles contm alguma
+
+10
+00:00:57,900 --> 00:00:59,110
+Eles no fazem muito mais.
+
+11
+00:00:59,130 --> 00:01:03,980
+E uma coisa que eles definitivamente no fazem e no podem fazer  administrar o estado.
+
+12
+00:01:03,990 --> 00:01:09,630
+E eu menciono muito que a razo pela qual temos essa separao  que
+
+13
+00:01:09,630 --> 00:01:16,230
+queremos ter alguns lugares em nosso aplicativo, onde o estado do aplicativo muda, isso garante que
+
+14
+00:01:16,440 --> 00:01:23,550
+seu aplicativo permanea sustentvel, mesmo que ele cresa porque quanto mais sua aplicao cresce, mais difcil torna-se gerenciar
+
+15
+00:01:23,610 --> 00:01:31,620
+o estado porque, se voc gerencia o estado em cada componente,  super difcil rastrear onde voc editou essa lista
+
+16
+00:01:31,620 --> 00:01:35,040
+de pessoas onde voc criou essa nova postagem.
+
+17
+00:01:35,040 --> 00:01:41,840
+Se voc conseguir alguns contineres onde voc faz isso e, em seguida, simplesmente passar do estado e entregar o resto
+
+18
+00:01:41,850 --> 00:01:42,860
+por nossos adereos.
+
+19
+00:01:42,870 --> 00:01:48,510
+Isso  muito mais fcil de lidar porque voc sempre pode ver no final o estado  alterado
+
+20
+00:01:48,510 --> 00:01:49,590
+aqui no Aptera como.
+
+21
+00:01:49,740 --> 00:01:56,640
+E distribumos referncias para as funes que foram editadas por que um suporte, mas todos os outros
+
+22
+00:01:56,940 --> 00:02:00,360
+componentes, no so capazes de alterar o estado.
+
+23
+00:02:00,360 --> 00:02:05,530
+Este  um dos principais fundamentos de um bom aplicativo de reao.
+
+24
+00:02:05,660 --> 00:02:12,800
+baseados na classe o mnimo possvel, mas, claro, no tenha medo de us-los se tiver sentido.
+
+25
+00:02:12,800 --> 00:02:14,030
+Use os componentes
+
+26
+00:02:14,210 --> 00:02:20,540
+Se voc receber um ponto central na sua aplicao e uma boa diviso geralmente so vrios recursos.
+
+27
+00:02:20,540 --> 00:02:27,200
+Ento, por exemplo, se voc tem um recurso de bloco e recurso de autenticao em seu aplicativo, os
+
+28
+00:02:27,310 --> 00:02:34,760
+componentes raiz desses recursos podem muito bem ser contineres que gerenciam o estado dessa rea de recurso e voc ver
+
+29
+00:02:34,760 --> 00:02:39,650
+isto em ao para os escores quando mergulharmos no projeto de curso maior.
+
+30
+00:02:40,160 --> 00:02:47,930
+Mas todos os nossos componentes mencionados anteriormente devem ser componentes funcionais tambm so mergulhados em uma diferena importante
+
+31
+00:02:47,930 --> 00:02:55,700
+alm da existncia de estado e lidam com a capacidade de mtodos que voc possui em componentes baseados
+
+32
+00:02:55,700 --> 00:02:56,270
+em classe.
+
+33
+00:02:56,270 --> 00:03:01,460
+Eu mergulharei em uma diferena importante entre componentes de classe e componentes funcionais nas
+
+34
+00:03:01,460 --> 00:03:02,200
+prximas palestras.
+
+35
+00:03:02,390 --> 00:03:07,610
+E esse seria o ciclo de vida de um componente antes de mergulhar no ciclo de vida.
+
+36
+00:03:07,820 --> 00:03:14,210
+Vamos comparar o estado menos e o estado dos componentes completos novamente apenas para trazer de volta a mente os componentes completos
+
+37
+00:03:14,210 --> 00:03:14,870
+do estado.
+
+38
+00:03:14,870 --> 00:03:19,380
+Tambm referidos como contineres e indicar menos componentes diferem.
+
+39
+00:03:19,430 --> 00:03:24,620
+Mas, na verdade, esses componentes de estado so criados com a palavra Klasky e estendem
+
+40
+00:03:24,620 --> 00:03:29,060
+o componente, enquanto os menos menos estados so apenas funes que recebem adereos.
+
+41
+00:03:29,120 --> 00:03:32,740
+Agora, as diferenas de importao so, naturalmente, o acesso ao estado.
+
+42
+00:03:32,810 --> 00:03:39,950
+E isso  novo, a existncia de ganchos do ciclo de vida em contineres com estado, podemos acessar o estado e
+
+43
+00:03:39,950 --> 00:03:46,640
+podemos implementar ganchos do ciclo de vida ou voltar para o que est no prximo estado da leitura, o ltimo
+
+44
+00:03:46,910 --> 00:03:52,070
+componente nunca tem acesso a um estado nem pode implementar ganchos do ciclo de vida.
+
+45
+00:03:52,250 --> 00:03:58,260
+E se queremos acessar o estado e adereos em contineres completos de estado, fazemos isso
+
+46
+00:03:58,610 --> 00:04:09,230
+por que adicionar que esta palavra-chave este estado X Y este suporte x y e no ltimo componente do estado fazemos isso, somos apenas adereos x
+
+47
+00:04:09,260 --> 00:04:11,290
+e recebemos adereos como argumento.
+
+48
+00:04:11,540 --> 00:04:18,410
+o estado ou acessar ganchos do ciclo de vida, use menos componentes de estado em todos os casos de Aberg.
+
+49
+00:04:18,410 --> 00:04:23,860
+E, como mencionado, muitas vezes, apenas usa componentes completos de estado, se voc precisa gerenciar
+
+50
+00:04:23,870 --> 00:04:31,040
+E s porque nunca fizemos isso, quero destacar  essa adio de coisas x no estado de todos os componentes.
+
+51
+00:04:31,040 --> 00:04:37,520
+Se considerarmos o nosso nico componente completo de estado, temos aqui, nem sequer usa adereos.
+
+52
+00:04:37,520 --> 00:04:41,840
+S usa um estado, mas tambm teria acesso a adereos.
+
+53
+00:04:41,960 --> 00:04:44,130
+E eu posso demonstrar isso para voc.
+
+54
+00:04:44,300 --> 00:04:46,840
+Deixe-me passar alguns adereos diretamente do ndice.
+
+55
+00:04:46,880 --> 00:04:47,720
+Sim.
+
+56
+00:04:47,870 --> 00:04:58,740
+apenas uma string onde vou dizer impressos relevantes Agora, este pode ser o ttulo de nossa aplicao no Access, que  um continer.
+
+57
+00:04:58,740 --> 00:05:03,910
+Deixe-me passar um suporte de ttulo aqui, o que pode ser
+
+58
+00:05:03,960 --> 00:05:09,540
+Ainda podemos acessar o prop. No  como se no tivesse acesso a adereos aqui.
+
+59
+00:05:09,690 --> 00:05:14,290
+Queremos passar isso para o cockpit para exibi-lo l.
+
+60
+00:05:14,580 --> 00:05:20,300
+Ento, vamos definir um novo ttulo l, uma nova propriedade, pode haver um ttulo apropriado.
+
+61
+00:05:20,310 --> 00:05:23,220
+No confunda com o suporte que estamos prestes a transmitir.
+
+62
+00:05:23,550 --> 00:05:25,880
+E agora sabemos que h escadas.
+
+63
+00:05:25,980 --> 00:05:33,530
+Propriedade do ttulo uma baleia no nosso componente do aplicativo, porque dissemos isso aqui no ndice Jaspal.
+
+64
+00:05:33,540 --> 00:05:36,440
+Agora, claro, no podemos acess-lo assim.
+
+65
+00:05:36,450 --> 00:05:42,230
+No podemos acessar o ttulo do prop, porque o prop  uma varivel indefinida aqui.
+
+66
+00:05:42,240 --> 00:05:44,040
+Estamos dentro do nosso mtodo de renderizao.
+
+67
+00:05:44,160 --> 00:05:49,620
+E dentro deste mtodo, nunca encontramos adereos e este mtodo tambm no recebe suporte como argumento,
+
+68
+00:05:49,920 --> 00:05:51,940
+portanto, o suporte  indefinido aqui.
+
+69
+00:05:52,470 --> 00:05:57,250
+Mas a classe em si tem propriedade de um suporte porque estendemos o componente.
+
+70
+00:05:57,410 --> 00:06:01,800
+E assim como temos acesso a um mtodo de estado definido que nunca nos encontramos.
+
+71
+00:06:02,010 --> 00:06:05,870
+Todos ns temos acesso a uma propriedade adequada que nunca nos definimos.
+
+72
+00:06:06,090 --> 00:06:13,500
+ dado a ns e povoado por reagir e, portanto, podemos acessar esses acessos como este.
+
+73
+00:06:13,800 --> 00:06:15,760
+E, neste caso, simplesmente passamos.
+
+74
+00:06:15,780 --> 00:06:18,980
+Mas  claro que tambm podemos ger-lo aqui neste modelo.
+
+75
+00:06:19,290 --> 00:06:20,950
+Mas desde que passamos isso.
+
+76
+00:06:21,080 --> 00:06:28,050
+Agora vou para o cockpit e lidar com esta nova propriedade, talvez aqui para exibi-lo
+
+77
+00:06:28,360 --> 00:06:36,440
+para o seu ttulo de adeptos aqui novamente, apenas usando adereos porque recebemos adereos como elemento aqui.
+
+78
+00:06:37,420 --> 00:06:45,160
+Com um colega apoiado por adereos como argumento justificado, recebemos por disfuno passada automaticamente por reagir se salvar todos os
+
+79
+00:06:45,160 --> 00:06:52,630
+arquivos agora e voltar para o nosso aplicativo, voc ver relevantes contra um novo ttulo que estamos vendo aqui
+
+80
+00:06:52,630 --> 00:06:58,380
+porque agora estamos configurando isso no prximo arquivo de xadrez e passamos para baixo.
+
+81
+00:06:58,420 --> 00:07:02,030
+E, como voc pode ver, recebemos tropos na nossa fila de continer.
+
+82
+00:07:02,140 --> 00:07:05,720
+Ns no usamos isso antes porque nunca recebemos algo antes.
+
+83
+00:07:05,800 --> 00:07:12,520
+Mas se voc quiser usar adereos aqui, use isso com esses adereos, assim como voc usa esse estado porque voc est em
+
+84
+00:07:12,520 --> 00:07:13,510
+uma classe aqui.
+
+85
+00:07:13,510 --> 00:07:18,520
+Voc no est em uma funo que no est recebendo adereos e declara como argumentos aqui.
+

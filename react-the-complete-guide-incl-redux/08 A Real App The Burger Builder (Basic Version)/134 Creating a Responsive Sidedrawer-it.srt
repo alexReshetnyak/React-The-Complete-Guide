@@ -1,0 +1,352 @@
+1
+00:00:02,150 --> 00:00:06,120
+Nell'ultima lezione modifichiamo gli elementi di navigazione in avanti su una barra degli strumenti.
+
+2
+00:00:06,120 --> 00:00:07,260
+Solo adesso.
+
+3
+00:00:07,500 --> 00:00:12,580
+Quindi  il momento di aggiungere anche alla navigazione per dispositivi mobili per DS.
+
+4
+00:00:12,630 --> 00:00:20,040
+Il loro pulsante di menu qui dovrebbe mostrare un cassetto del sito, quindi un menu laterale che scorre per aggiungere
+
+5
+00:00:20,070 --> 00:00:22,550
+un nuovo componente nella cartella di navigazione.
+
+6
+00:00:22,650 --> 00:00:27,220
+Il sito disegna un componente in un disegno o una cartella laterale.
+
+7
+00:00:27,660 --> 00:00:37,530
+Ora il sorteggio del sito di un anno consister di due componenti che si potrebbe dire il sito per se stesso e quindi il pulsante di
+
+8
+00:00:37,530 --> 00:00:42,320
+attivazione che in questo momento  semplicemente la mano qui con un segnaposto.
+
+9
+00:00:42,390 --> 00:00:46,360
+Il pulsante del menu per tuo padre dovrebbe essere un pulsante che apre la societ o alla fine.
+
+10
+00:00:46,470 --> 00:00:52,670
+E questo pu quindi andare nel suo stesso componente dal momento che teoricamente potremmo voler riutilizzarlo in modo
+
+11
+00:00:52,750 --> 00:01:00,510
+cos alto, ma avremo anche bisogno di un fondale in avanti per un cassetto laterale, ma per fortuna ne abbiamo gi uno
+
+12
+00:01:00,510 --> 00:01:01,750
+quindi riutilizzeremo questo componente.
+
+13
+00:01:02,160 --> 00:01:06,090
+Lavoriamo sul sito per la nostra prima volta e mostriamolo sempre.
+
+14
+00:01:06,180 --> 00:01:08,410
+Quindi parliamo e cos via.
+
+15
+00:01:08,430 --> 00:01:10,430
+Bene, andiamo l passo dopo passo.
+
+16
+00:01:10,680 --> 00:01:19,080
+e restituiamo qualcosa che qualcosa non sar immediatamente il codice Jazz X, ma un vero corpo funzione user qui.
+
+17
+00:01:19,080 --> 00:01:25,820
+Il componente cyder  un normale componente funzionale in cui otteniamo alcuni oggetti di scena
+
+18
+00:01:26,010 --> 00:01:31,950
+Perch prima di restituire J Jay x e l voglio fare qualcosa qui.
+
+19
+00:01:32,130 --> 00:01:39,150
+Fondamentalmente voglio attaccare in modo condizionale differenti come classi per assicurarci di riprodurre qualche animazione quando viene
+
+20
+00:01:39,150 --> 00:01:40,500
+mostrato il disegno.
+
+21
+00:01:40,530 --> 00:01:46,560
+Cos alla Open Class, che lo fa scivolare dentro e un armadio per vestiti che lo
+
+22
+00:01:46,560 --> 00:01:49,980
+fa scivolare fuori, vedrai come implementarlo in un secondo.
+
+23
+00:01:49,980 --> 00:01:55,510
+Ovviamente importiamo anche reagire in modo che il nostro codice GSX possa essere compilato.
+
+24
+00:01:55,800 --> 00:02:01,630
+Esportiamo quindi la funzione di disegno laterale come predefinito del file.
+
+25
+00:02:01,650 --> 00:02:08,160
+Ora, prima di aggiungere qualsiasi clausola condizionale, impostiamo il cassetto laterale e desideriamo semplicemente utilizzare un
+
+26
+00:02:08,280 --> 00:02:09,520
+div come questo.
+
+27
+00:02:09,840 --> 00:02:16,530
+E in quell'anno Dith voglio avere il mio logo e i miei oggetti di navigazione.
+
+28
+00:02:16,590 --> 00:02:27,990
+Quindi importa sia il nostro logo di importazione dalla cartella del logo che il loro file js del logo e importa gli elementi di
+
+29
+00:02:28,290 --> 00:02:34,560
+navigazione dalla cartella degli elementi di navigazione e sono gli elementi di navigazione.
+
+30
+00:02:34,700 --> 00:02:35,330
+Autunno.
+
+31
+00:02:35,370 --> 00:02:39,240
+Quindi qui puoi sempre vedere come riutilizziamo i componenti.
+
+32
+00:02:39,510 --> 00:02:46,530
+E poi aggiunger il logo come componente autochiudente qui e avvolgere gli elementi di navigazione in un elemento naff.
+
+33
+00:02:46,530 --> 00:02:51,180
+E s, si potrebbe anche esternalizzare nav negli elementi di navigazione.
+
+34
+00:02:51,180 --> 00:02:56,540
+Assicurati di aggiustare anche lo stile che hanno fatto perch adesso sto disegnando la barra di Neven.
+
+35
+00:02:56,610 --> 00:03:01,600
+Dovresti spostarlo negli elementi di navigazione, ma ci sarebbe assolutamente possibile.
+
+36
+00:03:01,620 --> 00:03:08,140
+Quindi qui includer elementi di navigazione come elemento di chiusura automatica per ora nel cassetto laterale.
+
+37
+00:03:08,600 --> 00:03:11,840
+E ora ovviamente il lato o ha bisogno anche di uno stile.
+
+38
+00:03:12,090 --> 00:03:17,730
+Quindi tutto ci che crei e vedrai  il seguente accanto a questo lato o al file di Julias.
+
+39
+00:03:17,880 --> 00:03:20,680
+I cassetti laterali vedono questo file l dentro.
+
+40
+00:03:20,700 --> 00:03:28,830
+il lato sar visibile solo sullo schermo del piccolo dispositivo, quindi mi occuper che sia possibile solo aprirlo l.
+
+41
+00:03:28,830 --> 00:03:31,310
+Aggiunger un cassetto laterale Clauss e
+
+42
+00:03:31,320 --> 00:03:36,630
+Quindi impostiamo la posizione per risolvere il problema perch sar sempre sulla pagina, anche se
+
+43
+00:03:36,630 --> 00:03:39,050
+lo scorreremo dovrebbe sembrare un elemento statico.
+
+44
+00:03:39,120 --> 00:03:48,040
+Voglio impostare la larghezza per dire 200 pixel o forse 280 pixel e il massimo con dovrebbe essere del 70 percento.
+
+45
+00:03:48,060 --> 00:03:52,670
+Quindi anche su dispositivi super stretti non supera i bordi.
+
+46
+00:03:52,860 --> 00:03:59,010
+L'altezza deve essere al 100 percento per ottenere l'altezza a schermo intero e la posizione a sinistra dovrebbe essere zero e
+
+47
+00:03:59,040 --> 00:04:04,580
+le posizioni in alto dovrebbero essere pari a zero in modo tale che si posizioni davvero a tutto schermo.
+
+48
+00:04:05,010 --> 00:04:11,040
+pi alto rispetto allo sfondo, ovviamente, dove abbiamo usato 100 perch la porta laterale dovrebbe essere sopra lo sfondo.
+
+49
+00:04:11,130 --> 00:04:15,110
+Dopodich dar un indice fisso di 200 che ha deliberatamente un numero
+
+50
+00:04:15,180 --> 00:04:20,820
+Altrimenti sarebbe difficile usarlo e poi vorremmo dargli un colore di sfondo di bianco in
+
+51
+00:04:20,820 --> 00:04:28,300
+modo che si distingua e che possiamo vedere chiaramente tutto il contenuto del sito o segni sul riempimento diciamo 32
+
+52
+00:04:28,350 --> 00:04:32,180
+pixel da cima a fondo e 16 pixel a sinistra.
+
+53
+00:04:32,310 --> 00:04:37,210
+E naturalmente puoi usare anche qui un buon uso percettivo se preferisci farlo.
+
+54
+00:04:37,590 --> 00:04:44,590
+Gli dar un ridimensionamento della scatola per adattare la dimensione al padding e non  importante aggiungere una
+
+55
+00:04:44,590 --> 00:04:52,150
+propriet di transizione per reagire alle modifiche disattivate per trasformare le propriet e animarle di oltre 300 millisecondi con la
+
+56
+00:04:52,230 --> 00:04:54,500
+funzione di temporizzazione della facilit d'uscita.
+
+57
+00:04:54,510 --> 00:04:58,650
+Questo sar importante per l'apertura e la chiusura del cassetto laterale.
+
+58
+00:04:59,190 --> 00:05:05,630
+Successivamente aggiunger un meteorite all'anno per determinare cosa dovrebbe accadere su dispositivi pi grandi.
+
+59
+00:05:05,970 --> 00:05:14,650
+Se il nostro dispositivo supera i 500 pixel, la classe C S S dovrebbe effettivamente avere una visualizzazione di non.
+
+60
+00:05:14,670 --> 00:05:16,200
+Quindi non  visibile.
+
+61
+00:05:16,230 --> 00:05:19,650
+Quindi non possiamo mai vedere il lato disegnare su dispositivi pi grandi.
+
+62
+00:05:19,650 --> 00:05:24,120
+Ora per il test dovremo passare alla modalit dispositivo mobile nel browser.
+
+63
+00:05:24,120 --> 00:05:32,550
+anche due Nusi come classi aperte e chiuse e queste saranno allegate condizionalmente e sono responsabili
+
+64
+00:05:32,670 --> 00:05:39,690
+della riproduzione di un'animazione per l'offset aperto della propriet trasformata da tradurre x 0.
+
+65
+00:05:39,750 --> 00:05:41,050
+Quindi aggiunger
+
+66
+00:05:41,220 --> 00:05:48,660
+In pratica, questo muter il sidro nella posizione che avrei trovato qui e perclasse tutta la
+
+67
+00:05:48,990 --> 00:05:52,400
+trasformazione impostata per tradurre X al 100%.
+
+68
+00:05:52,500 --> 00:05:54,210
+Questo si sposta a sinistra.
+
+69
+00:05:54,390 --> 00:05:59,910
+E dal momento che passiamo costantemente da una classe all'altra, la trasformazione sar regolata e quindi
+
+70
+00:05:59,970 --> 00:06:03,510
+giocheremo con una transizione di una societ o di una classe.
+
+71
+00:06:03,510 --> 00:06:08,200
+Andiamo ora nel cassetto laterale e importiamo la scala della classe.
+
+72
+00:06:08,340 --> 00:06:17,820
+S e aggiungiamolo al nome della classe di morte qui dovrebbe essere un classificatore con un capitale.
+
+73
+00:06:17,820 --> 00:06:22,590
+Importa Klaas dal sidro o dal file C S
+
+74
+00:06:23,040 --> 00:06:27,240
+Quindi ora decider o un componente  configurato e dovrebbe avere un bell'aspetto.
+
+75
+00:06:27,240 --> 00:06:29,140
+Ora ovviamente vogliamo usarlo.
+
+76
+00:06:29,280 --> 00:06:35,000
+E ci solleva una domanda importante sulla quale dovrebbe essere usato il decisore o il componente.
+
+77
+00:06:35,260 --> 00:06:39,490
+L'India ha effettivamente un file nel file della barra degli strumenti.
+
+78
+00:06:39,570 --> 00:06:44,630
+Naturalmente, nessuno dei due ha il nostro layout e il layout che abbiamo sulla barra degli strumenti.
+
+79
+00:06:44,640 --> 00:06:50,520
+ qui che non dovremmo nemmeno avere un cassetto del sito perch a mio avviso fa parte del nostro layout principale.
+
+80
+00:06:50,700 --> 00:06:58,670
+pap se torniamo all'applicazione e facciamo clic su questa anteprima del dispositivo mobile posso sentire gli strumenti di chrome dev.
+
+81
+00:06:58,710 --> 00:07:07,400
+Quindi importer l'estrazione del sito o un anno da adesso ho bisogno di andare nella cartella di navigazione alla cartella del
+
+82
+00:07:07,650 --> 00:07:15,000
+sito e di decidere per Arjay come file e ora semplicemente importare o aggiungere quest'anno all'anno del sito
+
+83
+00:07:15,000 --> 00:07:17,440
+in questo componente di layout con
+
+84
+00:07:17,640 --> 00:07:23,890
+In alternativa, puoi ridurre le dimensioni dello schermo da un certo punto in poi dovresti vedere il cassetto
+
+85
+00:07:24,180 --> 00:07:30,150
+laterale e dovrebbe sembrare orribile perch il logo  troppo grande e gli elementi di navigazione, ovviamente,
+
+86
+00:07:30,150 --> 00:07:31,080
+sembrano pessimi.
+
+87
+00:07:31,080 --> 00:07:36,570
+Questo ha senso perch abbiamo regolato neber dei due per avere un bell'aspetto sui dispositivi mobili.
+
+88
+00:07:36,600 --> 00:07:42,170
+Quindi pensiamoci su questo prima di Dan sullo sfondo e un pulsante di attivazione / disattivazione funzionante.
+

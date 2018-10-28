@@ -1,0 +1,20 @@
+1
+00:00:02,340 --> 00:00:08,750
+Bienvenido a este mdulo en los ltimos dos mdulos, aprender lo bsico sobre relajacin, aprender qu es
+
+2
+00:00:08,750 --> 00:00:11,660
+y por qu es posible que desee usarlo.
+
+3
+00:00:11,660 --> 00:00:19,010
+Tambin aplicamos eso a nuestro proyecto de buger Boulder en este mdulo. Ahora profundizaremos en la inmersin redox
+
+4
+00:00:19,010 --> 00:00:26,000
+en las caractersticas un poco ms avanzadas y veremos, por ejemplo, cmo podemos ejecutar el cdigo asncrono.
+
+5
+00:00:26,010 --> 00:00:26,840
+Entonces comencemos.
+

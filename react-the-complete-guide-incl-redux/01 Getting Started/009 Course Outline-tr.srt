@@ -1,0 +1,364 @@
+1
+00:00:02,230 --> 00:00:06,720
+Bu yzden, reaktrn ne olduunu yeniden temelleyen temellere bir gz attmz belirtti.
+
+2
+00:00:06,760 --> 00:00:11,350
+Bu derste ne olduunu ve bu derste neleri kapsacamz aklayaym.
+
+3
+00:00:11,380 --> 00:00:16,690
+Bu kurstan en iyi ekilde nasl faydalanabileceinize harcamak istediim birka kelimeyle
+
+4
+00:00:16,690 --> 00:00:23,920
+balamak bitti ve bu istee bal olarak istee bal bir ikinci modl bulabilmenizden sonra
+
+5
+00:00:23,920 --> 00:00:26,980
+bu modl orada terk edeceiz modl.
+
+6
+00:00:26,980 --> 00:00:31,790
+Sizi en yeni jenerasyon javascript zellikleriyle dolaacam.
+
+7
+00:00:31,870 --> 00:00:37,570
+Bu derste, yeniden hareket uygulamalarn yazarken genelde Aero ilevleri
+
+8
+00:00:37,570 --> 00:00:42,830
+veya snflar gibi bu yeni zelliklerin ounu kullanacaz.
+
+9
+00:00:42,910 --> 00:00:48,790
+Bunu yaparsnz, nk daha temiz bir kod yazmanza izin verir ve gelecek nesil javascript
+
+10
+00:00:48,790 --> 00:00:53,970
+zelliklerini kullanmaya zaten rahat hissedecekseniz, tm bu zellikleri kullanmak iin standart olarak standarttr.
+
+11
+00:00:53,980 --> 00:00:55,190
+yleyse zaten biliyorsan.
+
+12
+00:00:55,210 --> 00:00:55,720
+Evet.
+
+13
+00:00:55,770 --> 00:00:57,070
+6 ve benzeri.
+
+14
+00:00:57,220 --> 00:01:01,290
+Sonra bir sonraki modl atlayabilirsin ve ben de bunu orada syleyeceim.
+
+15
+00:01:01,360 --> 00:01:06,850
+zellikler hakknda salam temellere sahip olduunuzdan emin olabilirsiniz ve her zaman bu modle geri
+
+16
+00:01:06,850 --> 00:01:11,620
+dnebilirsiniz. Kursun ilerleyen saatlerinde daha garip veya yeni grnen bir eyle karlarsnz.
+
+17
+00:01:11,620 --> 00:01:16,860
+Aksi halde ho bir modle sahipsiniz, hepimiz ayn sayfada olduumuzdan ve kullanacamz tm bu
+
+18
+00:01:17,320 --> 00:01:24,640
+Bu istee bal modln ardndan gerek ikinci modl, yeniden aktarma temellerine daldmz modldr.
+
+19
+00:01:24,670 --> 00:01:31,210
+Tabii ki ok nemli bir modldr, bunu yapmann birden fazla yolu olduu ve
+
+20
+00:01:31,210 --> 00:01:35,820
+bileenler arasnda nasl iletiim kurabileceiniz yeniden aktive bileenleri oluturabileceinizi reneceksiniz.
+
+21
+00:01:35,890 --> 00:01:42,130
+Yeniden hareket uygulamasnda genel olarak nasl oluturulur, ancak bu blm ayn zamanda listeleri nasl
+
+22
+00:01:42,160 --> 00:01:49,280
+ktrabileceimiz veya baz ierii hata ayklama zamanndan sonra koullu olarak nasl render edebileceimiz gibi eyleri
+
+23
+00:01:49,450 --> 00:01:51,730
+ierir; nk hepimiz hata yapar.
+
+24
+00:01:51,790 --> 00:01:54,400
+Baarsz olan bir kod yazacaksnz.
+
+25
+00:01:54,400 --> 00:01:56,610
+Bu herkese tabi ki doaldr.
+
+26
+00:01:56,800 --> 00:02:03,280
+Uygulamanzn bu hatann nasl bulunaca konusunda hata ayklama ileminin nasl yaplacan bilmemeniz sper
+
+27
+00:02:03,340 --> 00:02:03,960
+nemlidir.
+
+28
+00:02:04,090 --> 00:02:06,090
+Bu, programnz kerttirir.
+
+29
+00:02:06,160 --> 00:02:10,980
+Bu sonsuz hata ayklama modl teklif hata ayklama bakmak gerekir.
+
+30
+00:02:11,050 --> 00:02:13,090
+Stile dalacaz.
+
+31
+00:02:13,090 --> 00:02:19,690
+Yeniden hareketli bileenleri nasl ekillendirebiliriz ve bir bileene uyguladmz stilin yalnzca o
+
+32
+00:02:20,140 --> 00:02:24,880
+bileene uygulandndan ve bileenlerin ortalamasn almamasndan nasl emin olabiliriz?
+
+33
+00:02:24,880 --> 00:02:27,410
+Bu modelde buna bir gz atacaz.
+
+34
+00:02:27,430 --> 00:02:34,600
+Bundan sonra, daha nce reneceimiz ok ey reneceimiz bileenleri derinlemesine inceleyeceiz, ancak burada hangi
+
+35
+00:02:34,600 --> 00:02:36,850
+yaam dngsn uygulayacaklarn reneceiz.
+
+36
+00:02:37,060 --> 00:02:43,870
+Gncellemeleri ounlukla bileen olup olmadn kontrol etmemiz gereken Webber tepkisini akllca nasl kontrol edebileceimizi reneceiz.
+
+37
+00:02:43,990 --> 00:02:50,440
+Ve ok daha fazlas, bu yzden, reaksiyonun i ksmlarn anlamanzdan ve daha byk veya daha gelimi
+
+38
+00:02:50,470 --> 00:02:57,170
+yeniden aktrlk uygulamalar iin ihtiya duyduunuz aralara sahip olduunuzdan emin olmanz salayacak gerekten nemli bir modl.
+
+39
+00:02:57,360 --> 00:03:03,790
+Bileenler hakknda ok ey reneceiniz, ancak HTP isteklerine dalacanzdan ok uzakta
+
+40
+00:03:03,790 --> 00:03:05,210
+olduunuzdan emin olabilirsiniz.
+
+41
+00:03:05,260 --> 00:03:09,100
+Yeniden hareket uygulamamz d dnyaya nasl balayabiliriz.
+
+42
+00:03:09,130 --> 00:03:13,510
+Verileri bir sunucudan nasl alabiliriz veya o sunucuya ykselebiliriz.
+
+43
+00:03:13,780 --> 00:03:21,130
+Btn bunlar tek bir sayfada veya senkronize bir HTP istekleri ile ok sayfal bir
+
+44
+00:03:21,370 --> 00:03:28,720
+uygulamada nasl yapabiliriz? Ajax bu modlde bir gz atacandan bundan sonra ynlendirme ynnde dalacaz
+
+45
+00:03:28,720 --> 00:03:35,540
+tekli modl olutururken temel bir zelliktir nk teknik olarak yalnzca bir HVM sayfamz
+
+46
+00:03:35,540 --> 00:03:44,590
+olduu halde, javascript ve yalnzca ihtiya duyulan domun nceden oluturulmu paralar ile durleysek de, ynlendirme ile Slash
+
+47
+00:03:44,590 --> 00:03:52,600
+kullanc ve eik izgi rnleri gibi farkl grnm veya baka bir ekilde ileyebilir ve farkl
+
+48
+00:03:52,600 --> 00:03:57,190
+sayfalar oluturabiliriz yeni bir sayfa grntlemek iin nceden oluturulmu olmaldr.
+
+49
+00:03:57,190 --> 00:04:03,520
+ok karmak geliyor ve bu yzden bu rota iin bir paket kullanacaz bu dersin
+
+50
+00:04:03,520 --> 00:04:05,670
+nemli ve nemli bir modlyd.
+
+51
+00:04:05,660 --> 00:04:13,330
+Dolaysyla u anda bu noktada nemli bir husus, teoride ve kk demo projeleriyle her zaman
+
+52
+00:04:13,330 --> 00:04:15,030
+bu kavramlarn retilmesidir.
+
+53
+00:04:15,280 --> 00:04:22,150
+Berger Boler'n da kapsad geni kapsaml bir projeye sahip olacaz ve dzenli olarak bu
+
+54
+00:04:22,150 --> 00:04:27,830
+projeye geri dnn ve nceki modl rendiiniz zellikleri Course projesine uygulayn.
+
+55
+00:04:27,850 --> 00:04:33,190
+ve oluturma yoluyla balayacaz; daha sonra, gelimi bileen kavramlarn kullanacaz ve biz
+
+56
+00:04:33,190 --> 00:04:40,210
+de bu noktada yolculuu uygulayacaz bylece rnmzn daha iyi ve daha iyi hale gelebileceini yavaa grebilelim.
+
+57
+00:04:40,210 --> 00:04:40,930
+Bylece, planlama
+
+58
+00:04:40,930 --> 00:04:47,380
+Ve bylece tm bunlar sadece teori iinde veya kk demo projelerinde deil, gerek
+
+59
+00:04:47,380 --> 00:04:50,630
+bir projede grmenin harika bir yolunu bulursunuz.
+
+60
+00:04:50,650 --> 00:04:54,460
+Dolaysyla burada bahsettiim eyler yalnzca temel konular.
+
+61
+00:04:54,490 --> 00:04:59,860
+Diskurlarn aslnda daha fazla modl var, nk btn bunlar arasnda pratik odakl modller
+
+62
+00:05:00,250 --> 00:05:01,500
+anahatlara geri dnd.
+
+63
+00:05:02,030 --> 00:05:07,600
+Ynlendirme yaptktan sonra oluturduunuz neredeyse tm web uygulamalarnda forumlara ve dorulamaya dalacaz.
+
+64
+00:05:07,640 --> 00:05:12,770
+nasl yapacanz gstereceim ve bundan sonra redoks redktr ve daha fazla geveme zaman geldi.
+
+65
+00:05:12,770 --> 00:05:19,410
+Kullanc girdisini getirmeniz gerekiyor ve bu modl bunu nasl dinamik bir ekilde yapacanz ve kullanc girii dorulamay
+
+66
+00:05:19,460 --> 00:05:25,850
+Bamsz nc parti ktphanesi olan redux'e derinlemesine ineceiz, ancak birok tekrar eylem projesinde
+
+67
+00:05:25,880 --> 00:05:32,090
+kullanlan dersler temellerden balayacak elbette gevemek isteyebileceimizi reneceiz ve daha sonra daha
+
+68
+00:05:32,090 --> 00:05:38,240
+ileri kullanmay reneceiz. durumlarda redoks ve daha fazla asenkron eylemleri kullanma gibi.
+
+69
+00:05:38,240 --> 00:05:42,280
+Bu nemli bir modldr ve buna dalmak iin sabrszlanyorum.
+
+70
+00:05:42,320 --> 00:05:49,130
+Ve X'in kimlik dorulamaya dalacan okuduktan sonra birlikte Course projesine de bavurabilirsiniz.
+
+71
+00:05:49,130 --> 00:05:55,070
+Muhtemelen her web uygulamas, kullanclarn kaydolup burada oturum amasna izin veren bir eit kimlik dorulama zelliine
+
+72
+00:05:55,430 --> 00:05:55,850
+sahiptir.
+
+73
+00:05:55,880 --> 00:05:57,810
+Bunu nasl uygulayacanz size gstereceim.
+
+74
+00:05:57,830 --> 00:06:01,750
+Her zaman soracam ve tm bu modllerin mteri tarafnda odaklanacam.
+
+75
+00:06:01,790 --> 00:06:05,000
+Yani tepki tarafnda ve sunucu tarafnda deil.
+
+76
+00:06:05,180 --> 00:06:11,690
+Tabii ki kimlik dorulamay nasl uygulayacam aklayacam, bylece bu tr bir kimlik dorulamay destekleyen
+
+77
+00:06:11,690 --> 00:06:17,380
+herhangi bir arka u ile birlikte alacam elbette bunu Ders projesine de uygulayacak.
+
+78
+00:06:17,380 --> 00:06:24,560
+tamamlamak iin test etme konusunda yeterli ierii oluturabileceiniz yeterli ieriidir, ancak snamanzn, uygulamanzn nasl yeniden uygulandn size
+
+79
+00:06:24,560 --> 00:06:31,160
+tantmak isterim. kullanm ve nasl test edildikten sonra uygulamalarn tekrar aktive olmasn dnmek tabii ki
+
+80
+00:06:31,160 --> 00:06:37,280
+uygulamann nasl kurulacan ve nasl tepki vereceini bylece gerek bir sunucuya nasl gireceini renecektir.
+
+81
+00:06:38,000 --> 00:06:43,400
+Tm gstergelerin ardndan yalnzca drst olmak iin bir giri test etmeye alacaz, nk
+
+82
+00:06:43,430 --> 00:06:44,910
+test, bir dersi
+
+83
+00:06:45,200 --> 00:06:45,980
+Ve var.
+
+84
+00:06:46,030 --> 00:06:53,750
+Bonus ierii bir sr var, rnein, bu modl bitirdikten sonra iine dalabileceiniz sonraki admlar mmkn olan reaktr
+
+85
+00:06:53,750 --> 00:06:57,140
+yerlerine animasyon yapma hakknda tm bir modl.
+
+86
+00:06:57,140 --> 00:07:04,100
+Bir sonraki J. hakkndaki bir modl. S. temel olarak bir tepki zerine kurulmu
+
+87
+00:07:04,100 --> 00:07:11,480
+bir ktphane olan intihar uygulamalarn bir esinti modl haline getirerek, kendi i akmz, web Pech'le sfrdan balayp, birka
+
+88
+00:07:11,480 --> 00:07:15,310
+yap arac ve daha fazlasn kullanarak ina etmemizi salyor.
+
+89
+00:07:15,350 --> 00:07:18,080
+Bu derste ok fazla ierik var.
+
+90
+00:07:18,080 --> 00:07:23,030
+Bir nedenden tr uzunlua sahiptir ve onunla birlikte dalmak iin sabrszlanyorum.
+
+91
+00:07:23,030 --> 00:07:26,480
+Peki neden bunu yapmyoruz ve sadece kurstan balayalm.
+

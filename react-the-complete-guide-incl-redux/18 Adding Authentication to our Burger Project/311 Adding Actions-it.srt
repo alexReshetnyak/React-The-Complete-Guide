@@ -1,0 +1,284 @@
+1
+00:00:02,150 --> 00:00:05,970
+Quindi assicuriamoci che qualcosa di utile accada quando viene premuto
+
+2
+00:00:06,110 --> 00:00:11,990
+questo pulsante, per quello, aggiunger creatori di azioni perch ovviamente voglio inviare un'azione quando viene
+
+3
+00:00:12,590 --> 00:00:14,870
+premuto Quindi nella cartella delle mie
+
+4
+00:00:14,870 --> 00:00:22,940
+azioni del negozio, aggiunger un nuovo file auth . js e l voglio impostare le azioni relative
+
+5
+00:00:23,000 --> 00:00:29,720
+all'autenticazione, ora installer anche alcuni tipi di azione nel file dei tipi di azione
+
+6
+00:00:29,720 --> 00:00:30,510
+che li
+
+7
+00:00:30,590 --> 00:00:38,610
+esporremo e aggiunger un tipo di azione AUTH_START, quindi l'identificatore  anche AUTH_START e poi duplicarlo
+
+8
+00:00:38,750 --> 00:00:42,210
+due volte per creare anche un tipo
+
+9
+00:00:42,230 --> 00:00:45,640
+di azione AUTH_SUCCESS e un tipo di
+
+10
+00:00:45,710 --> 00:00:50,340
+azione AUTH_FAIL poich, ovviamente, anche l'autenticazione pu non riuscire.
+
+11
+00:00:50,930 --> 00:00:51,390
+&nbsp;
+
+12
+00:00:51,400 --> 00:01:01,480
+Ora in auth. js, importer tutti i tipi di azione da cui provengono i tipi di azione. / actionTypes e poi voglio creare un
+
+13
+00:01:01,480 --> 00:01:05,540
+paio di creatori di azioni, li esporter tutti.
+
+14
+00:01:05,680 --> 00:01:10,410
+Il primo  il creatore di azioni AUTH_START, lo render ovviamente
+
+15
+00:01:10,450 --> 00:01:12,870
+una funzione, in realt non richiedo
+
+16
+00:01:12,970 --> 00:01:16,960
+o richiedo alcun input qui, voglio solo restituire un oggetto
+
+17
+00:01:17,020 --> 00:01:24,580
+javascript in cui il tipo  di tipo actionTypes. AUTH_START, non trasferisco alcun payload qui, in
+
+18
+00:01:24,730 --> 00:01:27,040
+pratica user questa azione
+
+19
+00:01:27,070 --> 00:01:34,710
+per impostare uno stato di caricamento e potenzialmente mostrare uno spinner se lo desidero.
+
+20
+00:01:34,750 --> 00:01:39,120
+Successivamente aggiunger un const, authSuccess, questa funzione qui
+
+21
+00:01:39,150 --> 00:01:45,150
+otterr alcuni dati, dati di autenticazione e qui voglio anche restituire
+
+22
+00:01:45,490 --> 00:01:52,530
+un oggetto javascript, il tipo sar di tipo AUTH_SUCCESS, ovviamente e passer i
+
+23
+00:01:52,900 --> 00:01:55,480
+dati di autenticazione , daremo
+
+24
+00:01:55,510 --> 00:02:01,920
+un'occhiata a cosa sar dopo. Ora abbiamo bisogno di un altro
+
+25
+00:02:02,010 --> 00:02:04,230
+creatore di azioni qui,
+
+26
+00:02:04,290 --> 00:02:10,420
+AUTH_FAIL, qui si ottiene un potenziale errore e anche qui restituir
+
+27
+00:02:10,680 --> 00:02:19,880
+un oggetto javascript, il tipo sar actionTypes. AUTH_FAIL e I trasmetteranno quindi
+
+28
+00:02:19,890 --> 00:02:27,400
+l'errore, in questo modo. Infine aggiunger un ultimo tipo di azione, che
+
+29
+00:02:27,400 --> 00:02:28,680
+sar quello in
+
+30
+00:02:28,690 --> 00:02:30,930
+cui il codice asincrono sta
+
+31
+00:02:30,960 --> 00:02:37,840
+eseguendo l'autenticazione, mi limiter a chiamarlo auth, qui mi aspetto di ricevere l'email e la
+
+32
+00:02:37,840 --> 00:02:40,810
+password e quindi restituir la spedizione, quindi
+
+33
+00:02:40,870 --> 00:02:47,880
+funzione che viene inviata come argomento grazie a redux-thunk e l, ora voglio autenticare l'utente.
+
+34
+00:02:47,890 --> 00:02:55,370
+Ora per ora, semplicemente invier authStart qui per impostare almeno questo stato, ora con quello che ovviamente dobbiamo
+
+35
+00:02:55,580 --> 00:03:02,210
+connettere le nostre azioni ai nostri contenitori in modo che possiamo inviarli, quindi andr al contenitore
+
+36
+00:03:02,690 --> 00:03:09,100
+auth e l, voglio importare le mie azioni. Per fare ci, aggiunger i miei creatori
+
+37
+00:03:09,110 --> 00:03:13,260
+di azioni auth all'indice. js file dove impacchetta
+
+38
+00:03:13,300 --> 00:03:17,790
+tutte le mie esportazioni dalla cartella delle azioni.
+
+39
+00:03:18,140 --> 00:03:24,520
+Quindi esporter tutto ci di cui ho bisogno. / auth senza l'estensione del file
+
+40
+00:03:24,620 --> 00:03:27,350
+e al momento, questo 
+
+41
+00:03:27,540 --> 00:03:31,130
+in realt solo il metodo auth stesso.
+
+42
+00:03:31,130 --> 00:03:37,130
+Ora con questo, possiamo tornare al contenitore auth e importare tutte le
+
+43
+00:03:37,340 --> 00:03:40,680
+azioni qui, quindi importare tutto come azioni
+
+44
+00:03:40,730 --> 00:03:49,970
+da e ora andiamo al negozio, alle azioni e all'indice. js file e ora possiamo aggiungere il nostro
+
+45
+00:03:49,970 --> 00:03:59,100
+buon vecchio const mapDispatchToProps per poter inviare qualcosa qui tramite oggetti di scena in questo componente.
+
+46
+00:03:59,820 --> 00:04:07,340
+Quindi, come sempre, restituir un oggetto javascript e l voglio creare un puntello onAuth che posso
+
+47
+00:04:07,340 --> 00:04:15,660
+usare come metodo che quindi contiene un riferimento a un metodo in cui alla fine invier la mia
+
+48
+00:04:15,870 --> 00:04:19,020
+azione e voglio inviare l'azione auth .
+
+49
+00:04:19,050 --> 00:04:24,240
+Ora come hai visto quando lo abbiamo configurato, l'azione di autenticazione richiede un
+
+50
+00:04:24,240 --> 00:04:31,140
+messaggio di posta elettronica e una password, quindi mi aspetto di ottenerla qui quando eseguiamo questa propriet
+
+51
+00:04:31,140 --> 00:04:38,410
+fondamentalmente, in modo che possa passarlo quando eseguo l'autenticazione. mapDispatchToProps ha senso solo se lo colleghiamo a
+
+52
+00:04:38,700 --> 00:04:43,490
+questo contenitore, quindi ora importer i collegamenti da react-redux in modo
+
+53
+00:04:43,740 --> 00:04:52,400
+che possiamo farlo, quindi importare connect da react-redux, come questo. Con ci possiamo tornare alla fine del file e
+
+54
+00:04:52,400 --> 00:05:00,280
+ora eseguire il collegamento e il passaggio null per mapStateToProps perch non lo abbiamo ancora e
+
+55
+00:05:00,280 --> 00:05:02,710
+mapDispatchToProps come secondo argomento e
+
+56
+00:05:02,960 --> 00:05:06,170
+includer anche il mio contenitore di autenticazione.
+
+57
+00:05:06,500 --> 00:05:12,710
+Con questo, possiamo eseguire onAuth sui nostri oggetti di scena in questo contenitore e voglio farlo ogni volta che viene
+
+58
+00:05:12,710 --> 00:05:13,760
+inviato il modulo.
+
+59
+00:05:14,090 --> 00:05:22,200
+Quindi aggiunger un gestore onSubmit qui ed eseguir questo gestore di invio, aggiunger
+
+60
+00:05:22,250 --> 00:05:25,420
+questo metodo a questo contenitore,
+
+61
+00:05:25,610 --> 00:05:33,650
+il gestore di invio. Mi aspetto di ottenere l'evento l perch prima di tutto devo chiamare l'evento. prevenire Default per impedire il
+
+62
+00:05:33,710 --> 00:05:42,590
+ricaricamento della pagina e successivamente, voglio chiamare questo oggetto di puntamento, onAuth ed eseguirlo e, naturalmente, ho
+
+63
+00:05:42,590 --> 00:05:43,470
+bisogno di
+
+64
+00:05:43,490 --> 00:05:46,010
+passare e-mail e password, quindi
+
+65
+00:05:46,160 --> 00:05:56,130
+cercher di raggiungere questo. stato. controlla il valore e-mail e questo. stato. controlla il valore della password.
+
+66
+00:05:57,610 --> 00:06:02,070
+Con ci, salviamo questo e vediamo se questo funziona.
+
+67
+00:06:02,110 --> 00:06:10,080
+Tornando al nostro progetto, posso inserire qui un indirizzo e-mail e una password, se faccio clic su Invia
+
+68
+00:06:10,080 --> 00:06:15,060
+e ispeziona redux, vediamo che authStart  stato inviato con successo.
+
+69
+00:06:15,060 --> 00:06:18,200
+Quindi funziona, ma ovviamente non funziona ancora niente.
+
+70
+00:06:18,240 --> 00:06:24,480
+Il prossimo passo  eseguire un codice asincrono che effettivamente autentica noi stessi e, come ho
+
+71
+00:06:24,480 --> 00:06:26,550
+detto, lo faremo usando firebase.
+

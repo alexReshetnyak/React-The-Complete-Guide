@@ -1,0 +1,216 @@
+1
+00:00:02,150 --> 00:00:04,200
+En la ltima conferencia que tuvimos en la puerta lateral.
+
+2
+00:00:04,250 --> 00:00:09,680
+Y, por supuesto, esto se ve horrible porque los elementos de logotipo y navegacin deben ajustarse para
+
+3
+00:00:10,070 --> 00:00:12,200
+verse bien en los dispositivos mviles.
+
+4
+00:00:12,200 --> 00:00:14,500
+Comencemos con el logo.
+
+5
+00:00:14,600 --> 00:00:21,470
+En este momento es tan grande porque la altura del logo est configurada en 80 por ciento y 80 por ciento en el cajn lateral
+
+6
+00:00:21,830 --> 00:00:25,480
+significa 80 por ciento de la altura de derecho de tamao completo aqu.
+
+7
+00:00:25,550 --> 00:00:29,150
+Eso por supuesto es un poco demasiado.
+
+8
+00:00:29,150 --> 00:00:35,080
+Ahora, cmo podemos ajustarnos ya que podramos agregar alguna respuesta de diseo al logotipo?
+
+9
+00:00:35,220 --> 00:00:41,900
+Ver el archivo de s puede establecer el valor predeterminado en algo as como 11 por ciento y agregar una consulta de medios para ajustar esto hasta
+
+10
+00:00:41,900 --> 00:00:43,970
+el 80 por ciento para pantallas ms grandes.
+
+11
+00:00:43,970 --> 00:00:47,990
+Pero eso hara que nuestro logo sea ms difcil de usar en su lugar.
+
+12
+00:00:48,020 --> 00:00:55,790
+Soy fantico de controlar DILG a Hyatt en el lugar donde lo incorporamos en lugar del componente del logotipo.
+
+13
+00:00:55,790 --> 00:01:02,150
+As que de hecho incluso establecer el logotipo al 100 por ciento y deberamos restringir su altura en la
+
+14
+00:01:02,150 --> 00:01:07,560
+barra de herramientas y en el lateral para adaptarse a las necesidades especficas de estos componentes.
+
+15
+00:01:07,580 --> 00:01:09,370
+Comencemos con la barra de herramientas.
+
+16
+00:01:09,410 --> 00:01:13,220
+Como dije, el logo solo debera tener un 80% de altura aqu.
+
+17
+00:01:13,460 --> 00:01:21,650
+Podemos lograr esto de dos maneras en que podramos agregar un accesorio para establecer la altura de forma dinmica, de modo
+
+18
+00:01:21,710 --> 00:01:28,430
+que podamos agregar algo como la altura aqu, que podramos establecer, digamos, en un 80 por ciento.
+
+19
+00:01:28,700 --> 00:01:31,610
+Y eso en el logo podemos aceptar esto.
+
+20
+00:01:31,610 --> 00:01:38,480
+Aceptamos accesorios aqu y podramos establecer estilos en lnea aqu para anular la configuracin de clase C S S para
+
+21
+00:01:38,510 --> 00:01:43,850
+asignar bsicamente un objeto javascript aqu donde establecemos la altura a la altura de los apoyos.
+
+22
+00:01:44,240 --> 00:01:53,270
+Si guardamos esto, ahora debera quedar bien en la barra de herramientas y si lo hacemos en la sidra o dos all,
+
+23
+00:01:53,270 --> 00:01:56,790
+ahora tambin simplemente pasaramos una altura al logotipo.
+
+24
+00:01:56,930 --> 00:01:59,220
+Digamos que no hay accesorios.
+
+25
+00:01:59,320 --> 00:02:03,160
+Debe ser 11 por ciento por ao.
+
+26
+00:02:03,380 --> 00:02:06,280
+Ahora debera verse bien en un cajn lateral tambin.
+
+27
+00:02:06,290 --> 00:02:12,680
+Esta es una manera ingeniosa de ajustar esta configuracin como una propiedad en la que simplemente pasamos el
+
+28
+00:02:12,680 --> 00:02:19,580
+porcentaje de altura al componente de logotipo y luego el componente lo asigna dinmicamente a los estilos en lnea.
+
+29
+00:02:19,580 --> 00:02:22,850
+No hay nada malo con este enfoque, debera funcionar bien.
+
+30
+00:02:23,210 --> 00:02:25,520
+Sin embargo, quiero mostrarte una alternativa a eso.
+
+31
+00:02:25,850 --> 00:02:29,960
+De hecho, dejar esa propiedad establecida aqu para que podamos usar eso.
+
+32
+00:02:30,200 --> 00:02:32,130
+Pero no lo usar.
+
+33
+00:02:32,270 --> 00:02:41,930
+En su lugar, seguir un enfoque diferente y envolver el logotipo en un div en la barra lateral y tambin en la barra
+
+34
+00:02:42,420 --> 00:02:43,190
+de herramientas.
+
+35
+00:02:43,280 --> 00:02:50,360
+As que envolvemos el logo en un div en ambos componentes y no usamos la propiedad Height, que de nuevo solo
+
+36
+00:02:50,360 --> 00:02:53,270
+para resaltar esto no hubiera sido un mal enfoque.
+
+37
+00:02:53,420 --> 00:02:58,070
+Y ahora estas diferencias que envuelven el logo deben controlar la altura.
+
+38
+00:02:58,070 --> 00:03:03,500
+Podemos hacer esto con estilos en lnea o con mimbres como gustos de clase.
+
+39
+00:03:03,500 --> 00:03:10,270
+Por ejemplo, aqu estn los dos logotipos de las barras de bar y lo bueno es que puedo usar la clase de logotipo
+
+40
+00:03:10,280 --> 00:03:17,060
+aqu, el componente de la barra de herramientas, aunque ya lo estoy usando en el componente de logotipo porque nos ven como mdulos.
+
+41
+00:03:17,120 --> 00:03:17,870
+Funcionar.
+
+42
+00:03:17,870 --> 00:03:25,190
+Mi C es nombres de clase en nombres diferentes y nombres de mbito, de modo que aunque escribo dos clases
+
+43
+00:03:25,190 --> 00:03:32,210
+idnticas en el modo de desarrollo aqu, en realidad puede escribir palabras en dos clases diferentes de C S
+
+44
+00:03:32,210 --> 00:03:35,100
+que se asignan para que no interfieran.
+
+45
+00:03:35,420 --> 00:03:45,040
+As que busco esa clase de logotipo en mi barra de herramientas y all puedo establecer la altura al 80 por ciento y ahora puedo ir al
+
+46
+00:03:45,040 --> 00:03:52,930
+cajn del sitio y all tambin puedo definir una clase de logotipo y establecer la altura al 11 por ciento aqu y
+
+47
+00:03:53,470 --> 00:03:59,860
+ahora puedo usar eso aqu en el cajn lateral y asignar mi nombre de clase all tambin.
+
+48
+00:03:59,980 --> 00:04:06,760
+As que todo el logo de las clases de activos aqu y nuevamente tengo esa clase de logo para encontrar en tres archivos diferentes.
+
+49
+00:04:06,850 --> 00:04:13,630
+Pero debes ver como los mdulos realmente se convierten en diferencias libres como clases para que no interfieran con
+
+50
+00:04:14,320 --> 00:04:15,810
+todos estos cambios guardados.
+
+51
+00:04:15,940 --> 00:04:19,820
+Tenemos un bonito logotipo aqu en el cajn del sitio y en la barra de herramientas.
+
+52
+00:04:19,900 --> 00:04:25,630
+As que viste diferentes enfoques para ajustar esto dinmicamente y asegurndote de que se vea bien
+
+53
+00:04:25,690 --> 00:04:27,960
+en todos los dispositivos que necesitamos.
+
+54
+00:04:28,000 --> 00:04:32,350
+Vamos a seguir trabajando en el elemento de navegacin isten.
+

@@ -1,0 +1,64 @@
+1
+00:00:02,140 --> 00:00:06,220
+Bu modl zerinde redux temelleri hakknda ok ey reneceksiniz.
+
+2
+00:00:06,220 --> 00:00:11,160
+Asenkron kod altran henz bakmadmz baz eyler de var.
+
+3
+00:00:11,320 --> 00:00:17,650
+Her eyden nce temellere dalp ncelikle Bergere Boulder'deki kurs
+
+4
+00:00:17,650 --> 00:00:22,200
+projemize kazandrdmz temel bilgileri kullanmaya balamak nemli.
+
+5
+00:00:22,260 --> 00:00:29,050
+Rydex'in genel olarak redktrle altklarn ve re-act konteynerlerinizi X'i okumak iin baladnz
+
+6
+00:00:29,050 --> 00:00:36,970
+eylemleri nasl altn renirsiniz, bu tek maazay oluturduunuz maazaya, redktrnz kombine redktrlerle birden ok
+
+7
+00:00:36,970 --> 00:00:42,740
+redktre blebileceiniz bir blme sahip olursunuz. sana gsterdiim gibi.
+
+8
+00:00:42,910 --> 00:00:49,100
+Ve verilerinizi istikrarsz bir ekilde deitirmemelisin, maazay hibir zaman dorudan deitirmeyin.
+
+9
+00:00:49,300 --> 00:00:54,710
+Ayrca konteyner ve sunum unsurlaryla hala altmz gryor musunuz.
+
+10
+00:00:54,760 --> 00:01:02,260
+Burada X'e okumak zere balanan iki konteynere sahibiz; burada sahne olarak ya da
+
+11
+00:01:02,290 --> 00:01:09,640
+sahne olarak gnderme eylemleri yapyor ve daha sonra verilerimizi baka bileenlere databiliyoruz.
+
+12
+00:01:09,640 --> 00:01:16,600
+Dolaysyla bu model deimedi ancak tabii ki ihtiya duyduumuz kadar ok kap
+
+13
+00:01:17,140 --> 00:01:23,130
+oluturamyoruz ve bunlar devletimize balayp her bir konteynrmzdaki ilgili dilimleri devlet
+
+14
+00:01:23,260 --> 00:01:30,810
+d hale getirmek iin bugnk sunum unsurlarna datyoruz. konteyner ekirdeinde pheli redux biliyor.
+
+15
+00:01:30,980 --> 00:01:34,880
+Umarm onunla ilgili temel bilgiler ve bunu tekrar kullanma ile nasl kullandnz aktr.
+
+16
+00:01:35,120 --> 00:01:39,880
+Bir sonraki dersimize, Bergere Boulder uygulamamzda redoks kullanalm.
+

@@ -1,0 +1,112 @@
+1
+00:00:02,100 --> 00:00:04,820
+Now in the last lecture, we talked about the timings,
+
+2
+00:00:04,820 --> 00:00:11,480
+now sometimes you want to execute certain code when the state of the animation finishes and not just
+
+3
+00:00:11,480 --> 00:00:14,150
+change what you render to the screen,
+
+4
+00:00:14,300 --> 00:00:21,490
+for that you get various callbacks, you can add functions you can execute to a transition,
+
+5
+00:00:21,770 --> 00:00:26,450
+I'll go back to the app.js file and do this on this transition component
+
+6
+00:00:26,450 --> 00:00:31,430
+we used to wrap this red block. We get six different events
+
+7
+00:00:31,430 --> 00:00:33,870
+we can listen to on this transition component,
+
+8
+00:00:33,980 --> 00:00:42,520
+the first one is onEnter and there, I'll simply execute a function where I console log onEnter so
+
+9
+00:00:42,520 --> 00:00:44,610
+that we can see when this happens,
+
+10
+00:00:44,720 --> 00:00:54,550
+the second one is onEntering so let's print onEntering. The third one is onEntered
+
+11
+00:00:54,590 --> 00:01:00,370
+and you might of course be able to guess when these methods are executed.
+
+12
+00:01:00,740 --> 00:01:10,420
+We also got onExit which should print onExit here and then you might be able to guess that, we got onExiting
+
+13
+00:01:10,490 --> 00:01:16,520
+so let's also print this to the log here and then we got onExited, like this.
+
+14
+00:01:16,520 --> 00:01:21,070
+Now these six different props can be bound to functions as I just did it here
+
+15
+00:01:21,230 --> 00:01:27,980
+and then you can run any kind of code you want and they execute in this order, onEnter is executed
+
+16
+00:01:28,160 --> 00:01:34,940
+right before we enter the entering mode, onEntering is then executed once we entered the entering mode
+
+17
+00:01:35,220 --> 00:01:39,670
+and onEntered is executed once we entered the entered mode,
+
+18
+00:01:39,750 --> 00:01:47,180
+well that's a lot of entering. Exit and so on behaves the same, onExit is used when we start the exiting
+
+19
+00:01:47,180 --> 00:01:54,610
+mode right before it to be precise, onExiting is then executed when we are in the exiting mode and exited
+
+20
+00:01:55,010 --> 00:02:01,210
+once we are in the exited mode. Let me save all of that and let's simply see it in the console log, if I
+
+21
+00:02:01,220 --> 00:02:07,070
+click toggle here for the red button, you see onEnter, onEntering and after this one second it takes,
+
+22
+00:02:07,190 --> 00:02:14,600
+onEntered and the same for removing, onExit, onExiting and onExited. This can be nice to create
+
+23
+00:02:14,600 --> 00:02:20,150
+staggered animations where you want to wait for one animation to finish before you start the next
+
+24
+00:02:20,150 --> 00:02:20,900
+one.
+
+25
+00:02:20,900 --> 00:02:26,570
+With these methods, you got all the control you need to find out what happened, what finished, what
+
+26
+00:02:26,570 --> 00:02:27,370
+started
+
+27
+00:02:27,500 --> 00:02:30,200
+and then time your animations based on that,
+
+28
+00:02:30,200 --> 00:02:31,010
+for example.
+

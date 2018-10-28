@@ -1,0 +1,128 @@
+1
+00:00:02,170 --> 00:00:07,660
+imdi, bileenler nasl iitme yardmclar ie yaryor ve bylece devam ettiklerini anlatan tm
+
+2
+00:00:07,660 --> 00:00:08,350
+teorileri reneceksiniz.
+
+3
+00:00:08,350 --> 00:00:12,760
+Ve hepsi gzel, fakat nasl bir yeniden hareket uygulamas planlyorsunuz.
+
+4
+00:00:12,760 --> 00:00:14,260
+Bu nasl alyor.
+
+5
+00:00:14,260 --> 00:00:18,470
+Artk elbette bunu daha ayrntl admlara ayrp daha sonra cretsiz yapabilirsiniz.
+
+6
+00:00:18,490 --> 00:00:25,840
+Ancak burada  nemli adm var ve bir tekrar uygulama bavurusu planlarken dzenli olarak geiyorum.
+
+7
+00:00:25,930 --> 00:00:30,810
+lk adm, bileen bileen yapsn planlamaktr.
+
+8
+00:00:30,880 --> 00:00:38,620
+kendi bana bir uygulama tasarm oluturmanzdr ve imdi bunu yeniden eyleme bileenlere blmek size aittir.
+
+9
+00:00:38,620 --> 00:00:42,760
+Muhtemelen tasarmc tarafndan tasarlanm olmanz ya da temelde
+
+10
+00:00:42,760 --> 00:00:48,880
+Sonunda elde edeceiniz sonularn, balangta planlanan bileeninizden farkl grnebilecei kesinlikle normaldir,
+
+11
+00:00:48,880 --> 00:00:54,610
+ancak kendi bileenine nelerin girmesi gerektii konusunda bir fikir edinmek
+
+12
+00:00:54,700 --> 00:00:55,950
+son derece nemlidir.
+
+13
+00:00:56,110 --> 00:01:00,640
+Bavurunuzun nemli ksm tabii ki uygulama halidir.
+
+14
+00:01:00,640 --> 00:01:06,820
+rnein, uygulamanzda kullanmay planladnz verilere sahip tm evirmenleri grebilirsiniz ve
+
+15
+00:01:06,830 --> 00:01:11,270
+tabii Bergere bavurunuzdaki bir sonraki derslerde bunu yapacaksnz.
+
+16
+00:01:11,350 --> 00:01:16,600
+bu, ne sunmamz gerektiini ve nihayetinde kullancnn ne demesi gerektiini belirleyecektir.
+
+17
+00:01:16,600 --> 00:01:20,650
+Bir kullancnn ekledii ierikleri takip etmemiz gerekmektedir; nk
+
+18
+00:01:20,650 --> 00:01:27,280
+imdi, uygulamanzn ayrmasn ve yapsn bildikten sonra onu kullanacanza deinmek iin
+
+19
+00:01:27,280 --> 00:01:30,100
+bileenleri konteynerlere gre planlayamazsnz.
+
+20
+00:01:30,190 --> 00:01:35,650
+Bylece uygulamanzdaki hangi bileenlerin stateless veya ilevsel olmas gerektii.
+
+21
+00:01:35,680 --> 00:01:42,690
+Bazen aptal bileenler olarak da adlandrlr ve hangi snfn anahtar szcyle oluturulmu olan
+
+22
+00:01:42,700 --> 00:01:49,030
+devletin tam bileenleri olmas gereken bileenlerin bir ksm ynetilmeli ve onlarn daha
+
+23
+00:01:49,180 --> 00:01:52,910
+az bileenleri halinde kendi iren bileenlerine datlmaldr.
+
+24
+00:01:52,960 --> 00:01:59,360
+Bunlar dzenli olarak getiim  adm ve bunlar gabber ile gemek istediim admlar.
+
+25
+00:01:59,590 --> 00:02:05,890
+Bileen bileenlerimizin yapsn planlayacaz ve sonra hangi dzeye ihtiyacmz olduunu ve bir
+
+26
+00:02:05,890 --> 00:02:10,540
+bileen ve ne olmas gerektiini bir gz atacaz.
+
+27
+00:02:10,540 --> 00:02:13,570
+Sonra da uygulamay oluturmaya balayacaz.
+
+28
+00:02:13,600 --> 00:02:19,570
+Grdnz gibi balangta planladmzdan daha fazla bileen ekleyebiliriz, nk biz daha
+
+29
+00:02:19,570 --> 00:02:21,320
+da ayrlabildiimizi grrz.
+
+30
+00:02:21,370 --> 00:02:22,660
+Veya belki de bu biraz blnmlktr.
+
+31
+00:02:22,660 --> 00:02:27,650
+Plan yaptk, onu uygulamaya baladktan sonra mantkl deil ve bu tamamen normaldir.
+
+32
+00:02:27,730 --> 00:02:29,950
+Ancak tabii ki bir plana sahip olmak ok nemlidir.
+

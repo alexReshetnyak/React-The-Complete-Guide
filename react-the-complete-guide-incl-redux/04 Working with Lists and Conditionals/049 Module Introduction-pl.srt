@@ -1,0 +1,40 @@
+1
+00:00:02,430 --> 00:00:08,960
+Witamy w tym module. W poprzednim module poznalimy podstawow skadni reakcji i nauczye
+
+2
+00:00:08,960 --> 00:00:15,770
+si, jak tworzy aplikacje reagowania, jak komponowa komponenty i jak pracowa z jsx, aby renderowa co na ekranie.
+
+3
+00:00:16,130 --> 00:00:19,380
+W tym module przejdziemy do nastpnego poziomu.
+
+4
+00:00:19,400 --> 00:00:26,380
+Ju obejrzelimy, jak moemy wyprowadza zawarto dynamiczn za pomoc tych pojedynczych nawiasw klamrowych.
+
+5
+00:00:26,620 --> 00:00:32,090
+W tym module dowiemy si, jak moemy rwnie dostarcza treci warunkowo, na
+
+6
+00:00:32,090 --> 00:00:38,750
+przykad, e chcemy renderowa tylko pewn cz twojej domeny, twojego kodu html, jeli pewien warunek
+
+7
+00:00:38,750 --> 00:00:46,280
+jest prawdziwy i jak moemy wyprowadza listy danych. Waciwie mamy ju tak list w naszej aplikacji demo,
+
+8
+00:00:46,310 --> 00:00:53,030
+osoby, ktre tam mamy, wic miaoby sens, gdybymy mogli je tworzy dynamicznie w oparciu o liczb
+
+9
+00:00:53,030 --> 00:00:56,980
+osb, ktre mamy w tej macierzy, ktr zarzdzamy w pastwie.
+
+10
+00:00:57,230 --> 00:01:01,710
+Przyjrzymy si temu wszystkiemu i na co zwrci uwag w tym module.
+

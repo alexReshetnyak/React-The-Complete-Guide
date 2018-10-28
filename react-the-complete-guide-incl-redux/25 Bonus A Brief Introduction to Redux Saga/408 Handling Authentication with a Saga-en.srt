@@ -1,0 +1,492 @@
+1
+00:00:02,130 --> 00:00:08,590
+So in the last lecture, we continued outsourcing content from our action creator file into our auth saga.
+
+2
+00:00:08,670 --> 00:00:17,610
+Let's continue with that and let's move on with our auth.js file in the actions folder, here where we
+
+3
+00:00:17,610 --> 00:00:27,720
+really authenticate, there we dispatch auth start and then we in the end just have our Ajax request here
+
+4
+00:00:27,810 --> 00:00:35,640
+where we try to well authenticate and where we simply try to sign up or sign in,
+
+5
+00:00:35,640 --> 00:00:43,380
+so the goal would be to handle this with a saga now. To do this of course, create a new generator function
+
+6
+00:00:43,380 --> 00:00:53,440
+in there, so a function with the star and we can name this authSaga or authenticateUserSaga, let's name it
+
+7
+00:00:53,440 --> 00:00:56,180
+authUserSaga maybe. There
+
+8
+00:00:56,180 --> 00:01:01,110
+I also get my action and now we can again run code in here.
+
+9
+00:01:01,250 --> 00:01:09,200
+Now in our action creator, what we did is we dispatched auth start and then made our HTTP request, let
+
+10
+00:01:09,200 --> 00:01:14,210
+me copy all that code into the saga and let's replace it step by step in there.
+
+11
+00:01:14,390 --> 00:01:18,610
+First of all, you learned that we don't call dispatch like this in the saga,
+
+12
+00:01:18,860 --> 00:01:21,310
+instead we call put,
+
+13
+00:01:21,320 --> 00:01:30,830
+so the first thing we do is we'll yield put and reach out to actions where I now want to use my auth
+
+14
+00:01:30,920 --> 00:01:33,140
+start action, for this
+
+15
+00:01:33,140 --> 00:01:34,130
+let's go to the index.js
+
+16
+00:01:34,150 --> 00:01:41,060
+file in the actions folder, let's ensure that authStart is exported there so that we can import
+
+17
+00:01:41,060 --> 00:01:41,360
+it
+
+18
+00:01:41,360 --> 00:01:49,850
+in other files, I added this export now and back in the auth.js file in the saga folder, I now can
+
+19
+00:01:49,850 --> 00:01:58,020
+use actions.authStart in here and execute this function to get the action this dispatches.
+
+20
+00:01:58,040 --> 00:02:00,570
+So that's the first thing we put here.
+
+21
+00:02:00,770 --> 00:02:05,900
+Then we create our auth data where we use email and password and so on,
+
+22
+00:02:05,900 --> 00:02:13,330
+now here I should extract the email from the action and the password from the action, this also means
+
+23
+00:02:13,330 --> 00:02:21,280
+that we have to ensure that whenever the authUserSaga is executed, the action actually contains this information,
+
+24
+00:02:21,730 --> 00:02:28,350
+we'll ensure this in the next step, before we do this, let's move on in the code here.
+
+25
+00:02:28,540 --> 00:02:31,290
+We set up a URL and then we have an if check
+
+26
+00:02:31,480 --> 00:02:35,830
+well there, I'll also set action.isSignUp with a check.
+
+27
+00:02:35,830 --> 00:02:40,060
+Then we have our HTTP request where we use axios,
+
+28
+00:02:40,110 --> 00:02:44,190
+now in the auth.js file we import axios from axios,
+
+29
+00:02:44,200 --> 00:02:46,450
+we're not using our custom instance.
+
+30
+00:02:46,450 --> 00:02:52,730
+So let's go to our saga file and simply add that import there too, import axios from axios.
+
+31
+00:02:54,040 --> 00:02:57,530
+Now down in our saga, this doesn't throw an error anymore
+
+32
+00:02:57,760 --> 00:03:04,830
+but now something important is done, I will actually change the way we use this promise
+
+33
+00:03:04,940 --> 00:03:10,490
+post returns us, right now we get the response there and then we do something with the response.
+
+34
+00:03:10,510 --> 00:03:16,780
+I'll change this, I'll create a new constant, response and assign axios post,
+
+35
+00:03:16,840 --> 00:03:22,750
+this would be incorrect though because axios post returns a promise but I will now add the yield keyword
+
+36
+00:03:23,140 --> 00:03:28,990
+which just as a side note is not exposed by redux saga but are next generation javascript features
+
+37
+00:03:29,080 --> 00:03:32,200
+connected to this generator concept.
+
+38
+00:03:32,200 --> 00:03:34,210
+Now by doing this,
+
+39
+00:03:34,210 --> 00:03:37,360
+it will actually not return a promise here anymore
+
+40
+00:03:37,480 --> 00:03:45,330
+but wait for this promise to resolve or reject and then store whatever we get back in this constant,
+
+41
+00:03:45,520 --> 00:03:48,960
+so I no longer need to chain then here.
+
+42
+00:03:49,090 --> 00:03:57,600
+This means that I no longer need then here, I can remove that, we'll also soon remove catch and of course
+
+43
+00:03:57,600 --> 00:04:02,510
+it also means that all the code that depends on response can now be executed
+
+44
+00:04:02,670 --> 00:04:10,390
+kind of synchronously because execution will pause here until this promise is resolved or rejected.
+
+45
+00:04:10,440 --> 00:04:19,560
+So then we extract the expiration date here, keep our calculation just as it is, do the same for the
+
+46
+00:04:19,560 --> 00:04:21,940
+local storage which we access here,
+
+47
+00:04:23,220 --> 00:04:28,400
+so just as we did before and then dispatch new actions.
+
+48
+00:04:28,400 --> 00:04:31,890
+Though you learned we don't redispatch actions here,
+
+49
+00:04:32,120 --> 00:04:43,320
+instead we yield put here and we access actions.authSuccess. For that we need to go to the index.js file in
+
+50
+00:04:43,330 --> 00:04:51,570
+the actions folder and make sure that we export all the actions we want to put from within our saga
+
+51
+00:04:51,570 --> 00:04:56,690
+so that would be authSuccess and eventually we'll also need authFail
+
+52
+00:04:56,820 --> 00:05:01,070
+so let's already export this here, authFail.
+
+53
+00:05:01,930 --> 00:05:08,860
+With that in the saga, I'm now yielding this put here, authSuccess and I will yield
+
+54
+00:05:08,860 --> 00:05:12,630
+another one where I execute actions
+
+55
+00:05:14,330 --> 00:05:16,630
+checkAuthTimeout,
+
+56
+00:05:16,620 --> 00:05:25,090
+now this is a function we also need to export here, checkAuthTimeout, like this.
+
+57
+00:05:25,100 --> 00:05:28,340
+This is what I want to execute here,
+
+58
+00:05:28,640 --> 00:05:34,020
+now we can also add yield statements in front of the local storage calls as we did earlier
+
+59
+00:05:34,070 --> 00:05:40,160
+though local storage is a synchronous action so we don't really need to pause there but we still, we can
+
+60
+00:05:40,160 --> 00:05:40,610
+do that,
+
+61
+00:05:40,610 --> 00:05:48,160
+we can add yield here to have a consistent approach, could also add a yield here in front of new date
+
+62
+00:05:49,870 --> 00:05:56,640
+and now with that, we got our whole function almost finished
+
+63
+00:05:56,850 --> 00:05:59,110
+but what about this error case here?
+
+64
+00:06:00,530 --> 00:06:03,540
+Well we can now handle this in a very elegant way,
+
+65
+00:06:03,950 --> 00:06:09,200
+we extract response here because I said that yield would pause this and wait for
+
+66
+00:06:09,200 --> 00:06:12,140
+the promise to resolve or reject,
+
+67
+00:06:12,140 --> 00:06:18,710
+now we can use a default javascript construct to handle both a success and an error case,
+
+68
+00:06:18,710 --> 00:06:21,750
+we can wrap this with a try block.
+
+69
+00:06:22,070 --> 00:06:25,440
+So we try the following code,
+
+70
+00:06:25,460 --> 00:06:29,640
+wait for the response and then do our success stuff with it.
+
+71
+00:06:30,310 --> 00:06:40,200
+However if that fails, we will actually catch the error and then execute this alternative code instead
+
+72
+00:06:40,840 --> 00:06:45,060
+and there I will grab my dispatch action here
+
+73
+00:06:45,990 --> 00:06:52,590
+and not really dispatch it but yield put authFail and so on,
+
+74
+00:06:52,770 --> 00:06:57,420
+and here I named this error so I should do so here too
+
+75
+00:06:57,690 --> 00:07:01,880
+and use actions.authFail.
+
+76
+00:07:02,010 --> 00:07:10,680
+Now with that, we get the saga way of handling this, using yield to pause execution, to put authStart and
+
+77
+00:07:10,680 --> 00:07:17,690
+then try if we can get a success response and otherwise, dispatch authFail.
+
+78
+00:07:18,210 --> 00:07:24,240
+With all these things changed, the one thing we have to do is we have to make sure that the authUserSaga
+
+79
+00:07:24,240 --> 00:07:30,730
+actually gets executed when we try to create or assign a user in,
+
+80
+00:07:30,900 --> 00:07:34,190
+so for that we need to go back to our auth.js
+
+81
+00:07:34,320 --> 00:07:41,420
+action creator file and there, we have this auth action creator which we dispatch in our code.
+
+82
+00:07:41,430 --> 00:07:49,380
+Now here, we should now no longer execute this old code we had in there before but instead simply return
+
+83
+00:07:49,380 --> 00:07:53,320
+an action and for that, I'll create a new action type here,
+
+84
+00:07:53,760 --> 00:08:04,860
+I'll export it here, export const authUser maybe, authUser and in the auth action creator file,
+
+85
+00:08:05,130 --> 00:08:10,330
+I'll now execute this or I'll return the type actionTypes.authUser,
+
+86
+00:08:10,350 --> 00:08:17,460
+this newly created action type, we'll soon set up a watcher to then use our newly created saga whenever
+
+87
+00:08:17,480 --> 00:08:26,250
+this action occurs and very important, in our authUserSaga function or generator here,
+
+88
+00:08:26,280 --> 00:08:34,260
+we of course extract email, password and of course a sign-up from the action, so we need to pass that information
+
+89
+00:08:34,290 --> 00:08:35,040
+on,
+
+90
+00:08:35,070 --> 00:08:40,040
+we need to pass that information on when we create the action.
+
+91
+00:08:40,140 --> 00:08:43,400
+We get it here as arguments in the action creator
+
+92
+00:08:43,500 --> 00:08:51,870
+so we should simply pass on email on an email property, password on a password property and isSignUp
+
+93
+00:08:51,930 --> 00:08:56,060
+on an isSignUp property, like this.
+
+94
+00:08:56,080 --> 00:08:57,030
+Now with that,
+
+95
+00:08:57,270 --> 00:08:58,900
+this is the saga way,
+
+96
+00:08:58,930 --> 00:09:06,270
+the one thing that's missing is that we hook up our newly generated authUserSaga here with a watcher.
+
+97
+00:09:06,490 --> 00:09:11,980
+So in the index.js file in the sagas folder, I'll add another yield,
+
+98
+00:09:11,990 --> 00:09:14,040
+takeEvery and there
+
+99
+00:09:14,050 --> 00:09:23,890
+I will use actionTypes.authUser and I want to execute my newly added saga which I'll import first of
+
+100
+00:09:23,890 --> 00:09:30,560
+all, which is of course the authUserSaga we just created here,
+
+101
+00:09:30,620 --> 00:09:32,720
+this is what I want to execute here,
+
+102
+00:09:32,810 --> 00:09:38,000
+as always without parentheses, just passing a pointer to this function.
+
+103
+00:09:38,360 --> 00:09:39,420
+Let's now save this,
+
+104
+00:09:39,650 --> 00:09:43,750
+let's go back to our burger builder and reload this page,
+
+105
+00:09:44,150 --> 00:09:45,830
+let's try if this works.
+
+106
+00:09:45,950 --> 00:09:51,960
+I'll try signing in so I'll switch to sign in and hit submit,
+
+107
+00:09:51,960 --> 00:09:57,690
+this works, as you can see we have authSuccess and authCheckTimeout initiated.
+
+108
+00:09:57,840 --> 00:10:04,430
+I'm also logged out after a short period though and this simply happens because I forgot something, in
+
+109
+00:10:04,440 --> 00:10:11,250
+auth.js in the sagas folder where I delay for expiration time, now expiration time is just a data
+
+110
+00:10:11,250 --> 00:10:14,690
+we get back from the response, the expiresIn field
+
+111
+00:10:14,910 --> 00:10:16,720
+and that is in seconds.
+
+112
+00:10:16,770 --> 00:10:19,110
+However delay works with milliseconds,
+
+113
+00:10:19,110 --> 00:10:23,060
+so I simply need to multiply this with 1000.
+
+114
+00:10:23,070 --> 00:10:25,570
+The key thing however is it did work,
+
+115
+00:10:25,590 --> 00:10:28,120
+let's try it again now with this fixed bug,
+
+116
+00:10:28,380 --> 00:10:34,860
+if I go back to authenticate and I log in one more time, this time I shouldn't be logged out that fast
+
+117
+00:10:34,860 --> 00:10:35,450
+again,
+
+118
+00:10:35,580 --> 00:10:36,860
+so let me submit this,
+
+119
+00:10:36,900 --> 00:10:43,050
+you'll see authSuccess and we set up the timer so everything works as before but now using the saga.
+
+120
+00:10:43,290 --> 00:10:49,530
+Well let me log out and let me try to create a new user, so I'll create a new email address here and
+
+121
+00:10:49,620 --> 00:10:52,680
+hit submit and this also works.
+
+122
+00:10:52,830 --> 00:10:58,870
+So we get the same behavior as before but now managing this through the saga,
+
+123
+00:10:58,870 --> 00:11:05,180
+now let's continue putting stuff from the auth.js file in the actions folder into our saga file.
+

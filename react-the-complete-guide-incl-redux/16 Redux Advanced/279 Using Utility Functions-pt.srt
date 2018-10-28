@@ -1,0 +1,384 @@
+1
+00:00:02,230 --> 00:00:10,120
+Ento, ao longo deste mdulo, voc aprender muito sobre as coisas avanadas que voc pode fazer com a Rydex especialmente criadores
+
+2
+00:00:10,120 --> 00:00:17,000
+de ao e coisas de middleware Arkie, uma vez que nos permitem executar cdigo assncrono ao despachar nossas aes.
+
+3
+00:00:17,030 --> 00:00:22,070
+Agora eu quero mergulhar em conjuntos de redutores avanados.
+
+4
+00:00:22,150 --> 00:00:23,640
+Agora, temos dois recusadores.
+
+5
+00:00:23,680 --> 00:00:30,340
+Est um pouco avanado porque j o dividimos e usamos redutores combinados, mas o introdutor ainda possui uma
+
+6
+00:00:30,340 --> 00:00:37,150
+declarao de comutao relativamente longa e, mesmo quando voc rompe seus redutores em vrios arquivos, voc provavelmente ainda
+
+7
+00:00:37,150 --> 00:00:43,060
+tem declaraes relativamente longas para o introdutor, pelo menos se ele lidar com mais do que
+
+8
+00:00:43,060 --> 00:00:44,160
+duas aes.
+
+9
+00:00:44,620 --> 00:00:48,730
+Ento, a limpeza que reduz o Rafal um pouco mais pode ser uma idia.
+
+10
+00:00:48,850 --> 00:00:51,630
+E eu digo que pode ser que no  uma obrigao.
+
+11
+00:00:51,700 --> 00:00:52,990
+ opcional.
+
+12
+00:00:52,990 --> 00:00:55,500
+ uma boa prtica que eu diria.
+
+13
+00:00:55,660 --> 00:00:57,820
+Mas voc no precisa fazer isso.
+
+14
+00:00:57,880 --> 00:01:03,970
+Quero mostrar-lhe algumas maneiras de limpar esses redutores passo a passo para acabar com
+
+15
+00:01:03,970 --> 00:01:05,800
+um redutor muito limpo.
+
+16
+00:01:05,800 --> 00:01:08,270
+Mais uma vez o que eu mostro  opcional.
+
+17
+00:01:08,680 --> 00:01:12,950
+Ento, a primeira coisa que podemos fazer  relacionada  imutabilidade.
+
+18
+00:01:13,330 --> 00:01:18,740
+Atualizamos constantemente um objeto no final sempre que retornamos um novo estado.
+
+19
+00:01:18,940 --> 00:01:26,470
+O que fazemos  que apenas devolvemos um objeto atualizado, devolvemos um objeto que copia as propriedades
+
+20
+00:01:26,470 --> 00:01:30,570
+do estado antigo e, em seguida, substitui uma das propriedades.
+
+21
+00:01:30,910 --> 00:01:37,570
+Agora, obviamente, podemos faz-lo assim, mas podemos criar funes de utilidade para a dvida e o
+
+22
+00:01:37,570 --> 00:01:38,960
+mesmo para atualizar.
+
+23
+00:01:38,970 --> 00:01:46,800
+Erase faz, ento, permitiremos chamar essa funo de utilidade e salvar algum cdigo aqui.
+
+24
+00:01:46,840 --> 00:01:47,960
+Como isso poderia parecer.
+
+25
+00:01:48,070 --> 00:01:49,290
+Bem, deixe-me mostrar-lhe.
+
+26
+00:01:49,420 --> 00:01:57,700
+Para isso, criei um novo arquivo que eu nomearei o utilitrio e irei armazen-lo na pasta da loja.
+
+27
+00:01:57,700 --> 00:02:02,760
+Voc poderia armazen-lo na pasta de redutores, mas no quero ter isso para parecer que era um produtor.
+
+28
+00:02:03,040 --> 00:02:07,010
+E voc pode armazen-lo em alguma outra pasta, mas eu vou usar isso apenas em redux.
+
+29
+00:02:07,060 --> 00:02:09,440
+Ento, para mim, a pasta da loja parece excelente.
+
+30
+00:02:10,300 --> 00:02:14,600
+Todos eles criam uma funo com o estilo de funo E-6.
+
+31
+00:02:14,680 --> 00:02:21,940
+Ento, vou criar uma constante segurando uma funo no final que nomear o objeto de atualizao
+
+32
+00:02:22,180 --> 00:02:27,440
+essa funo novamente usando a sintaxe de seta E6 espera dois argumentos.
+
+33
+00:02:27,550 --> 00:02:36,700
+O objeto antigo que eu quero copiar e atualizar e os valores atualizados nesta funo.
+
+34
+00:02:36,900 --> 00:02:40,220
+Eu simplesmente quero fazer o que eu fiz anteriormente no meu redutor.
+
+35
+00:02:40,440 --> 00:02:43,310
+Quero retornar o objeto atualizado.
+
+36
+00:02:43,350 --> 00:02:48,520
+Ento copie 1 e devolva-a na minha funo de utilidade aqui.
+
+37
+00:02:48,610 --> 00:02:56,640
+Primeiro, tenho que distribuir as propriedades do meu objeto antigo, ento eu criarei um novo objeto com todas as propriedades
+
+38
+00:02:56,640 --> 00:02:59,700
+e valores do objeto antigo dentro dele.
+
+39
+00:03:00,000 --> 00:03:03,080
+E ento h algumas partes que provavelmente sero atualizadas.
+
+40
+00:03:03,270 --> 00:03:07,880
+Agora, eu sabia que seria o contador do reduzido redutor do qual tirei.
+
+41
+00:03:08,010 --> 00:03:15,810
+Aqui esto os valores atualizados e os valores atualizados no final podem ser apenas um objeto javascript com todos os valores
+
+42
+00:03:15,810 --> 00:03:17,450
+que eu quero substituir.
+
+43
+00:03:17,640 --> 00:03:20,780
+Portanto, toda a distribuio obtm valores atualizados.
+
+44
+00:03:20,940 --> 00:03:24,840
+Ento espero que os valores atualizados sejam um objeto Java aqui.
+
+45
+00:03:24,840 --> 00:03:28,800
+Esta  a minha funo de utilidade para atualizar um objeto.
+
+46
+00:03:28,800 --> 00:03:33,740
+Agora, deixe-me mostrar-lhe como voc poderia us-lo no arquivo js do contador.
+
+47
+00:03:33,750 --> 00:03:35,240
+Todos importados.
+
+48
+00:03:35,450 --> 00:03:42,710
+Eu vou importar algo e agora avanar para o utilitrio apenas cair e o algo que eu importo.
+
+49
+00:03:42,750 --> 00:03:47,010
+Claro que a minha atualizao e eu deveramos export-la.
+
+50
+00:03:47,020 --> 00:03:55,440
+Portanto, deixe-me adicionar uma declarao de exportao para que algo que eu quero importar seja minha funo de objeto
+
+51
+00:03:56,040 --> 00:04:02,000
+de atualizao. Posso ento usar isso para basicamente substitu-lo sempre que quiser atualizar algo.
+
+52
+00:04:02,250 --> 00:04:09,300
+Ento, no meu redutor, eu apenas devolvo uma chamada para atualizar o objeto onde passei um estado como o objeto antigo e, em
+
+53
+00:04:10,140 --> 00:04:12,760
+seguida, o objeto com todas as novas propriedades.
+
+54
+00:04:12,810 --> 00:04:19,150
+MIKE HAYES objetiva com a propriedade do contador, onde o novo valor  o contador de estado menos o valor de ao.
+
+55
+00:04:19,560 --> 00:04:27,240
+todos os que tomam o estado e, em seguida, um objeto javascript onde atualizamos o contador e preciso passar um
+
+56
+00:04:27,240 --> 00:04:34,580
+objeto JavaScript porque ele distribua os valores deste objeto atravs do objeto antigo copiado na minha funo de utilidade.
+
+57
+00:04:34,580 --> 00:04:40,320
+E agora  um pouco mais magro voc poderia fazer essa funo de utilidade para
+
+58
+00:04:41,190 --> 00:04:44,690
+fazer todos esses casos, ento, que a Optik cura
+
+59
+00:04:44,710 --> 00:04:48,770
+Deixe-me rapidamente fazer isso por todos os outros usos aqui tambm.
+
+60
+00:04:48,780 --> 00:04:58,080
+Para todos os casos mdios, sempre atualize o estado e passe um objeto javascript com as propriedades atualizadas.
+
+61
+00:04:58,320 --> 00:05:06,960
+Ento, finalmente, a ltima vez que preciso fazer isso, est aqui no meu incremento Mefford, eu uso a abordagem mais
+
+62
+00:05:07,020 --> 00:05:09,680
+longa de atualizar meu estado anteriormente.
+
+63
+00:05:09,750 --> 00:05:16,940
+Agora, todos justificam uma abordagem muito curta e condensada de apenas retornar o objeto de atualizao retornando l.
+
+64
+00:05:17,010 --> 00:05:19,640
+Eu quero incrementar o contador, o ltimo.
+
+65
+00:05:20,010 --> 00:05:26,070
+Vamos salvar rapidamente todos os arquivos, incluindo o novo arquivo japs do utilitrio e vamos ver se isso
+
+66
+00:05:26,070 --> 00:05:27,810
+funciona, clique em 10 prejuzos.
+
+67
+00:05:28,050 --> 00:05:30,660
+Tudo isso parece funcionar para que nosso aplicativo funcione.
+
+68
+00:05:30,690 --> 00:05:34,450
+Pergunte antes tambm pode armazenar como voc v.
+
+69
+00:05:34,590 --> 00:05:36,740
+Mas agora estamos usando a funo de utilidade.
+
+70
+00:05:36,870 --> 00:05:40,470
+Ento, o que estamos usando o objeto de atualizao convenientemente.
+
+71
+00:05:40,590 --> 00:05:42,600
+Bem, todos eles so objetos.
+
+72
+00:05:42,600 --> 00:05:44,530
+Vamos tambm fazer a atualizao.
+
+73
+00:05:44,550 --> 00:05:49,940
+O uso do objeto  implementado no resultado J como o redutor Falzone aberant.
+
+74
+00:05:50,170 --> 00:06:01,420
+Ento, importe o objeto de atualizao para o AUM e agora tambm v at o utilitrio James e ento vamos usar os objetos de
+
+75
+00:06:01,420 --> 00:06:02,610
+atualizao aqui tambm.
+
+76
+00:06:02,810 --> 00:06:10,520
+Para retornar um objeto de atualizao onde passamos o estado asty para ser um objeto atualizado e depois apenas
+
+77
+00:06:10,520 --> 00:06:14,780
+um objeto javascript com as propriedades que devem ser atualizadas.
+
+78
+00:06:15,200 --> 00:06:22,940
+E nos permite ento nos livrar do cdigo antigo que tnhamos l e usado esse mais curto e
+
+79
+00:06:22,940 --> 00:06:26,110
+o mesmo, claro, tambm para excluir o resultado.
+
+80
+00:06:26,120 --> 00:06:28,390
+Agora, estou sempre atualizando uma matriz.
+
+81
+00:06:28,430 --> 00:06:33,950
+No vou escrever uma funo de utilidade para a dvida, uma vez que atualizar uma matriz depende muito do que fazemos
+
+82
+00:06:33,950 --> 00:06:34,650
+com uma matriz.
+
+83
+00:06:34,880 --> 00:06:39,590
+Adicionando um novo elemento funciona com concat remover com pasta por exemplo.
+
+84
+00:06:39,620 --> 00:06:44,770
+Ento, portanto, no  to fcil quanto com o objeto e a funo de utilidade no faz muito sentido
+
+85
+00:06:44,780 --> 00:06:45,710
+por esse motivo.
+
+86
+00:06:45,980 --> 00:06:48,450
+Mas ainda atualizamos um objeto no final.
+
+87
+00:06:48,560 --> 00:06:50,580
+Ns sempre fazemos com o retorno de um novo estado.
+
+88
+00:06:50,810 --> 00:06:56,950
+Ento, ns conseguimos o estado antigo e ento queremos substituir os resultados com nossa matriz atualizada.
+
+89
+00:06:57,080 --> 00:07:02,230
+Ento, vamos passar no objeto javascript do segundo argumento com isso.
+
+90
+00:07:02,330 --> 00:07:03,350
+Vamos salvar tudo isso.
+
+91
+00:07:03,360 --> 00:07:05,320
+Vamos ver tambm mortos em ao agora.
+
+92
+00:07:05,660 --> 00:07:07,130
+Ento tudo isso parece funcionar.
+
+93
+00:07:07,140 --> 00:07:08,490
+Vamos armazenar o resultado.
+
+94
+00:07:09,280 --> 00:07:11,130
+Tambm funciona a excluso tambm funciona.
+
+95
+00:07:11,260 --> 00:07:12,520
+Ento est parecendo bom.
+
+96
+00:07:12,520 --> 00:07:18,730
+O objeto de atualizao faz uma boa funo de utilidade que podemos adicionar para tornar nossos redutores um pouco mais enxutos.
+

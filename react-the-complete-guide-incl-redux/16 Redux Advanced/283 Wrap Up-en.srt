@@ -1,0 +1,48 @@
+1
+00:00:02,180 --> 00:00:03,560
+So you learned a lot about redux
+
+2
+00:00:03,590 --> 00:00:09,650
+over the last lectures and modules. I emphasized that there are alternatives and I showed you some best
+
+3
+00:00:09,650 --> 00:00:14,380
+practices, good practices and ways to optimize your reducers and actions.
+
+4
+00:00:14,630 --> 00:00:21,990
+You learned how to run asynchronous code with action creators like this one, how to use the redux-thunk
+
+5
+00:00:22,080 --> 00:00:23,950
+middleware to do that,
+
+6
+00:00:24,200 --> 00:00:31,100
+you learned how to combine reducers and how to use the redux dev tools to get insights into your store
+
+7
+00:00:31,400 --> 00:00:34,840
+and even travel back in time if you want to.
+
+8
+00:00:34,850 --> 00:00:41,630
+These are all useful tools and redux is an extremely powerful library you'll see in a lot of react
+
+9
+00:00:41,630 --> 00:00:47,310
+applications. We'll now also go back to our burger builder and enhance this a bit more
+
+10
+00:00:47,330 --> 00:00:53,090
+by for example adding asynchronous code and in conjunction with redux, and chances are you'll also work
+
+11
+00:00:53,090 --> 00:00:55,220
+with it in your next project.
+
+12
+00:00:55,250 --> 00:00:58,600
+The basics of this module should have you well prepared.
+

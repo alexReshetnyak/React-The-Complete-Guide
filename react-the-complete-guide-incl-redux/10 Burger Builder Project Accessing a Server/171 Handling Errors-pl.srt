@@ -1,0 +1,560 @@
+1
+00:00:02,130 --> 00:00:07,580
+Podczas ostatniego wykadu upewnilimy si, e pokazujemy spinnerowi adowark dla uytkownika, gdy danie jest ju
+
+2
+00:00:07,580 --> 00:00:08,320
+w drodze.
+
+3
+00:00:08,510 --> 00:00:14,870
+To oczywicie dobra rzecz, poprawia to wygod uytkownika, poniewa uytkownik wyranie widzi, e co si
+
+4
+00:00:14,870 --> 00:00:15,820
+dzieje, jest
+
+5
+00:00:15,830 --> 00:00:22,500
+take ulepszeniem dla uytkownika, jeli wywietlimy komunikaty o bdach na wypadek, gdyby co si nie udawao.
+
+6
+00:00:22,520 --> 00:00:27,810
+I tu znowu s rne miejsca, w ktrych mona wywietli taki komunikat
+
+7
+00:00:27,860 --> 00:00:36,020
+o bdzie, po prostu chc ustawi globalny program obsugi bdw, ktry pokazuje modal z komunikatem o bdzie, ale
+
+8
+00:00:36,020 --> 00:00:43,910
+nie korzysta z modalu tutaj, poniewa nie chc by przyklejone do tego pojemnika, do kontenera budowniczego burgera.
+
+9
+00:00:44,130 --> 00:00:49,550
+Chc mie elastyczny sposb pokazywania bdu bez wzgldu na to, ktry komponent i ktry
+
+10
+00:00:49,640 --> 00:00:50,770
+kontener si pojawia.
+
+11
+00:00:51,020 --> 00:00:59,120
+Tak wic mj modal zostanie dodany do wyszego poziomu w aplikacji i chc mie wyszy
+
+12
+00:00:59,370 --> 00:01:07,910
+poziom aplikacji, wic jaki wyszy komponent to ten kontener budowniczego hamburgera, w ktrym api bdy i
+
+13
+00:01:08,000 --> 00:01:13,610
+gdzie wtedy upewniam si, e mj bd Wywietlany jest modal.
+
+14
+00:01:13,610 --> 00:01:17,390
+Gdzie moemy to ustawi?
+
+15
+00:01:17,390 --> 00:01:19,970
+Jak moemy to kontrolowa?
+
+16
+00:01:19,970 --> 00:01:27,440
+Po prostu chc utworzy komponent wyszego rzdu, za pomoc ktrego mog owija budowniczego hamburgera lub ktrego bd
+
+17
+00:01:27,440 --> 00:01:34,250
+uywa w ten drugi sposb, pokazaem ci uycie komponentw wyszego rzdu, abymy mogli po prostu
+
+18
+00:01:34,250 --> 00:01:40,850
+zawin dowolny komponent, ktry powinien mie ten bd z nim modalnie i moe wygodnie doda
+
+19
+00:01:40,850 --> 00:01:43,490
+do niego funkcj obsugi bdw.
+
+20
+00:01:43,490 --> 00:01:50,480
+W zwizku z tym zamierzam utworzy nowy komponent wyszego rzdu w folderze, ktry nazwabym programem
+
+21
+00:01:50,510 --> 00:01:51,610
+obsugi zdarze.
+
+22
+00:01:51,830 --> 00:02:00,380
+Uywam tej skadni zErrorHandler, poniewa chc uy tego drugiego sposobu tworzenia komponentu wysokiego rzdu, ktry
+
+23
+00:02:00,380 --> 00:02:06,020
+bdzie uywany tutaj przy eksporcie i nie bdzie uywany jako
+
+24
+00:02:06,070 --> 00:02:07,090
+kod jsx.
+
+25
+00:02:07,400 --> 00:02:16,310
+Wic jeli wszystkie s dodane z errorHandler. js plik i ten plik tutaj teraz przyjmie nastpujc
+
+26
+00:02:16,310 --> 00:02:17,380
+form, bdzie
+
+27
+00:02:17,480 --> 00:02:20,810
+to funkcja z obsug bdw i
+
+28
+00:02:20,960 --> 00:02:28,490
+powinna to by funkcja, ktra pobiera zawinity komponent jako dane wejciowe, a nastpnie zwraca
+
+29
+00:02:28,530 --> 00:02:31,370
+funkcj, ktra odbiera rekwizyty i
+
+30
+00:02:31,580 --> 00:02:37,310
+oczywicie po prostu zwraca te , niektre jsx, w tym zawijany skadnik.
+
+31
+00:02:37,460 --> 00:02:42,400
+Musimy wic zaimportowa Reacta z reakcji i teraz tutaj chc oczywicie
+
+32
+00:02:42,590 --> 00:02:49,100
+zwrci zawinity komponent i rozprowadzi wszelkie rekwizyty, ktre ten komponent mgby na nim otrzyma,
+
+33
+00:02:49,100 --> 00:02:54,360
+poniewa nie znam tych rekwizytw, ale zdecydowanie nie chc ich zgubi .
+
+34
+00:02:54,370 --> 00:02:59,790
+Nastpnie chc wyeksportowa to z domyln funkcj ErrHandler, ale teraz chc
+
+35
+00:02:59,990 --> 00:03:03,670
+rwnie uy mojego lub doda mj mod bdu.
+
+36
+00:03:03,670 --> 00:03:05,990
+W tym celu musz zaimportowa dwie
+
+37
+00:03:05,990 --> 00:03:16,170
+rzeczy, modalny skadnik oczywicie z folderu modalnego komponentw UI i jest modalny. js i poniewa chc umieci go
+
+38
+00:03:16,440 --> 00:03:24,880
+obok niego, potrzebuj komponentu Aux z folderu Aux w folderze HOC.
+
+39
+00:03:24,990 --> 00:03:33,100
+Teraz mog zawin to wszystko z takim aux i doda modal obok niego, nie uywaj tutaj samozamykajcego
+
+40
+00:03:33,180 --> 00:03:37,680
+si tagu, poniewa w modalu oczywicie chc co wypisa.
+
+41
+00:03:37,680 --> 00:03:44,220
+Na razie powiem tylko, e co nie dziaa, tak jak teraz Teraz moemy
+
+42
+00:03:44,360 --> 00:03:47,630
+to dopracowa, ale to wanie chc
+
+43
+00:03:47,630 --> 00:03:54,520
+teraz pokaza, zobaczmy teraz, czy to dziaa. Jeli to zapiszemy, mamy teraz nasz komponent wyszego rzdu,
+
+44
+00:03:54,710 --> 00:03:57,100
+uywajmy go teraz na budowniczym hamburgerw.
+
+45
+00:03:57,140 --> 00:03:58,430
+Tam zaimportuj go
+
+46
+00:03:58,460 --> 00:04:04,430
+na pocztku, wic zErrorHandler zaczynajc od maej litery, poniewa nie bdziemy uywa go w jsx, a
+
+47
+00:04:04,430 --> 00:04:13,750
+teraz przejd do mojego folderu HOC i tam do folderu withErrorHandler i withErrorHandler. oczywicie plik js, a nastpnie we
+
+48
+00:04:13,750 --> 00:04:20,710
+to za pomoc funkcji ExrrorHandler, ktr importujemy i
+
+49
+00:04:20,710 --> 00:04:24,820
+zawijamy j w taki sposb.
+
+50
+00:04:24,820 --> 00:04:31,480
+Teraz z tym, jeli wrcimy do funkcji withErrorHandler, ustawmy show tak, eby byo prawdziwe, po prostu na
+
+51
+00:04:31,510 --> 00:04:36,440
+modalu, jeli to zapiszemy i wrcimy, zawsze powinnimy zobaczy, e co nie dziaa.
+
+52
+00:04:36,580 --> 00:04:40,120
+Teraz oczywicie chcemy to pokaza tylko wtedy,
+
+53
+00:04:40,120 --> 00:04:47,910
+gdy mamy bd, wic musimy ustawi show na co innego i e co innego musi pochodzi
+
+54
+00:04:47,920 --> 00:04:49,840
+z zapakowanego komponentu, ktrego potrzebujemy.
+
+55
+00:04:49,990 --> 00:04:56,890
+Jeli nie udao si uzyska tych informacji, powinnimy doda drugi argument do naszej
+
+56
+00:04:56,890 --> 00:04:57,490
+funkcji
+
+57
+00:04:57,720 --> 00:05:05,670
+wyszego rzdu, ktra zostaa uyta, abymy mogli skonfigurowa obsug bdw, globaln procedur obsugi bdw.
+
+58
+00:05:05,830 --> 00:05:13,960
+Teraz, aby uy tej instancji tutaj, zmieni ten komponent funkcjonalny na klasowy, wic tutaj
+
+59
+00:05:14,200 --> 00:05:21,730
+zwrc klas, ktra powinna teraz rozszerzy obiekt komponentu o reakcj, wic musz zaimportowa,
+
+60
+00:05:21,730 --> 00:05:26,830
+e klasa rozszerza komponent, poniewa wida, e jest anonimowy klasa.
+
+61
+00:05:26,830 --> 00:05:30,280
+Nie ustawiam tutaj nazwy, poniewa nigdy nie
+
+62
+00:05:30,280 --> 00:05:31,350
+uywam tej
+
+63
+00:05:31,360 --> 00:05:37,090
+klasy, zwracam j tutaj, jest to fabryka klas zasadniczo, zErrorHandler tworzy te klasy.
+
+64
+00:05:37,460 --> 00:05:44,080
+W tym miejscu wyranie potrzebujemy metody renderowania, w ktrej ostatecznie zwracamy to, co zwracamy w
+
+65
+00:05:44,080 --> 00:05:45,200
+naszym komponencie funkcjonalnym,
+
+66
+00:05:45,310 --> 00:05:52,480
+wic po prostu wr to. Oczywicie rekwizyty to teraz. rekwizyty, odkd zmienilimy
+
+67
+00:05:52,600 --> 00:05:54,040
+je na
+
+68
+00:05:54,040 --> 00:06:03,940
+klas, moemy teraz pozby si tej czci. Teraz moemy doda tutaj componentDidMount oraz w
+
+69
+00:06:03,940 --> 00:06:14,170
+componentDidMount, moemy teraz skonfigurowa nasze nasuchiatory osi. Tak wic na przykadzie Axios moemy teraz skonfigurowa nasz
+
+70
+00:06:14,260 --> 00:06:20,450
+globalny przechwytujcy, ktry rwnie pozwala nam obsugiwa bdy, wic dodam tutaj
+
+71
+00:06:21,300 --> 00:06:28,000
+interpretery, a nastpnie odpowied, a nastpnie z uyciem funkcji, ktrej chc uy.
+
+72
+00:06:28,230 --> 00:06:33,330
+Tak wic ta funkcja dostanie odpowied, a nastpnie co z ni zrobi, ale nie jestem tak naprawd
+
+73
+00:06:33,330 --> 00:06:36,150
+zainteresowany t pierwsz argumentacj, wic bd tutaj podawa warto null.
+
+74
+00:06:36,150 --> 00:06:38,330
+Drugi argument to ten, ktry mnie interesuje, to
+
+75
+00:06:38,430 --> 00:06:42,120
+przypadek bdu, w ktrym pojawia si bd. Tutaj chciabym pokaza mj
+
+76
+00:06:42,150 --> 00:06:44,680
+bd modalny, wic do tego
+
+77
+00:06:44,760 --> 00:06:45,800
+dodam teraz
+
+78
+00:06:45,810 --> 00:06:55,260
+stan, w ktrym po prostu ustawi na pocztku bd, a nastpnie ustawi lub zadzwoni do tego stanu zestawu i
+
+79
+00:06:55,290 --> 00:06:58,660
+ustawi bd na I "Dostaj tu z
+
+80
+00:06:58,780 --> 00:07:06,060
+powrotem z bazy firebase i zdarza si, e jest to obiekt, ktry zawiera rwnie komunikat
+
+81
+00:07:06,060 --> 00:07:08,860
+o bdzie we waciwoci wiadomoci.
+
+82
+00:07:08,880 --> 00:07:14,100
+Moesz po prostu napisa w konsoli ten bd, aby zobaczy, jak wyglda ten obiekt.
+
+83
+00:07:14,190 --> 00:07:16,350
+Wic teraz ustawiam ten bd tutaj.
+
+84
+00:07:16,410 --> 00:07:17,230
+Kiedy ju
+
+85
+00:07:17,260 --> 00:07:19,980
+mamy jeden. Teraz zrobi
+
+86
+00:07:20,010 --> 00:07:26,010
+to, dodam nowy przechwytywacz do dania, wic tam zadzwoni i nie
+
+87
+00:07:26,280 --> 00:07:32,720
+jestem zainteresowany t prob, ale jest jedna rzecz, ktr chc tam zrobi.
+
+88
+00:07:32,790 --> 00:07:40,320
+Chc wywoa ten stan zestawu i usun wszystkie bdy, tak aby zawsze, gdy wysyam danie, nie
+
+89
+00:07:40,320 --> 00:07:44,850
+mam ju ustawionego bdu, tak aby zdecydowanie wyczyci go tutaj.
+
+90
+00:07:45,180 --> 00:07:53,700
+Wic teraz na modalu poka to tylko, jeli ten bd stanu nie jest w zasadzie zerowy
+
+91
+00:07:54,060 --> 00:08:01,830
+i e tam mog wydrukowa ten bd stanu, a nastpnie znowu bdzie waciwo komunikatu
+
+92
+00:08:01,920 --> 00:08:08,260
+na obiekcie bdu zwrconego przez firebase. Jest jeszcze jedna rzecz, ktr musimy zrobi,
+
+93
+00:08:08,450 --> 00:08:15,790
+utworzony przez nas komponent modalny rwnie ujawnia waciwo kliknicia, ktra pojawia si po klikniciu ta, iw
+
+94
+00:08:15,950 --> 00:08:20,980
+tym przypadku, oczywicie, chc rwnie usun bd, poniewa wtedy klikamy modalny
+
+95
+00:08:20,990 --> 00:08:22,600
+, Nie chc
+
+96
+00:08:22,610 --> 00:08:29,620
+tego ju pokazywa, musz si pozby bdu. Tak wic, dodaem tu i tam,
+
+97
+00:08:29,630 --> 00:08:39,060
+klikn tu i tam, wywoaj metod, ktr musz utworzy w moim komponencie withErrorHandler, nazwij j errorConfirmedHandler.
+
+98
+00:08:39,500 --> 00:08:46,500
+To jest po prostu metoda, w ktrej wezw ten stan zestawu i ustawi bd take
+
+99
+00:08:46,970 --> 00:08:51,800
+na zerowy, a ja przypisz to tutaj, ten bd potwierdzi,
+
+100
+00:08:51,800 --> 00:08:56,450
+e teraz z tym zestawem tutaj, jest jeszcze jedna rzecz,
+
+101
+00:08:56,480 --> 00:09:03,740
+ktr chc zrobi, to. stan. bd. komunikat, ktry tu wypisz, spowoduje bd
+
+102
+00:09:03,740 --> 00:09:07,730
+pocztkowo, poniewa komponent modalny jest zawsze obecny, nawet jeli go tam nie pokazujemy.
+
+103
+00:09:08,030 --> 00:09:15,350
+Wic co zrobi, po prostu dodaj potrjne wyraenie, w ktrym powiem to. stan. bd?
+
+104
+00:09:15,410 --> 00:09:16,850
+tylko jeli nie jest to
+
+105
+00:09:16,850 --> 00:09:21,130
+warto null, wtedy wyjd na jaw, w przeciwnym razie wygeneruj warto null, wic nic nie wstawi.
+
+106
+00:09:21,140 --> 00:09:27,710
+Teraz, jeli to zapisz i powrc do aplikacji, otrzymamy nie moemy odczyta przechwyconych wasnoci, co ma
+
+107
+00:09:27,950 --> 00:09:30,930
+sens, poniewa prbujemy uruchomi to na aksjomatach,
+
+108
+00:09:30,930 --> 00:09:35,800
+ale nie otrzymujemy aksjomatw, spodziewamy si, e otrzymamy to jako argument .
+
+109
+00:09:35,870 --> 00:09:41,150
+Ale w budowniczym hamburgerw, z ktrego korzystam zErrorHandler, przechodz tylko przez komponent
+
+110
+00:09:41,420 --> 00:09:42,960
+budujcy burger, zawinity komponent.
+
+111
+00:09:42,980 --> 00:09:50,070
+Tak wic musz po prostu przekaza aksios, ktry tutaj importujemy i ktry jest nasz aksjosow instancj.
+
+112
+00:09:50,110 --> 00:09:55,790
+Teraz musimy zrobi jeszcze jedn rzecz. W naszych przechwytujcych musimy oczywicie zwrci co,
+
+113
+00:09:56,030 --> 00:09:57,170
+wysyajc danie, Musimy
+
+114
+00:09:57,170 --> 00:10:00,860
+zwrci konfiguracj dania, aby danie mogo by kontynuowane.
+
+115
+00:10:01,010 --> 00:10:06,830
+i dla odpowiedzi, rwnie chc zaimplementowa program obsugi odpowiedzi tutaj, gdzie po prostu zwrciem odpowied, jest
+
+116
+00:10:06,950 --> 00:10:09,490
+to najkrtsza moliwa skadnia do zrobienia tego.
+
+117
+00:10:09,500 --> 00:10:14,690
+Teraz z tym, jeli to wszystko zaoszczdzimy, a my wrcimy do aplikacji i dodamy
+
+118
+00:10:14,900 --> 00:10:16,480
+burgera, to powinno jeszcze
+
+119
+00:10:16,580 --> 00:10:17,100
+zadziaa,
+
+120
+00:10:17,120 --> 00:10:19,010
+tak, nadal moemy uratowa burgera.
+
+121
+00:10:19,190 --> 00:10:24,140
+Teraz co zepsu i zobaczmy, czy to te dziaa w kontenerze budowniczego hamburgera,
+
+122
+00:10:24,140 --> 00:10:25,480
+do ktrego wysalimy danie,
+
+123
+00:10:25,700 --> 00:10:32,390
+jeli teraz zmienimy ten URL i moe go usun. json, o ktrym mwiem, jest wan lub
+
+124
+00:10:32,390 --> 00:10:38,490
+wan czci punktu kocowego interfejsu API forward for firebase, do ktrego wysyamy zapytanie.
+
+125
+00:10:38,660 --> 00:10:40,530
+Wic jeli to usuniemy, powinno zawie.
+
+126
+00:10:40,610 --> 00:10:46,910
+Wic jeli sprbujemy przechowywa burgera, rzeczywicie otrzymamy komunikat o bdzie sieci.
+
+127
+00:10:47,210 --> 00:10:50,440
+Teraz zamknicie poprzez kliknicie na to nie dziaa,
+
+128
+00:10:50,450 --> 00:10:53,400
+wic sprawdmy szybko, dlaczego tak si dzieje.
+
+129
+00:10:53,420 --> 00:10:55,350
+Pozwl mi szybko rzuci okiem.
+
+130
+00:10:55,370 --> 00:11:01,580
+Uywam niewaciwej podprki, w modalnym oczywicie kliknitym jest dla ta, ktre podpiera to,
+
+131
+00:11:01,580 --> 00:11:05,920
+a modal uywa modalnego zamknitego. Jest to metoda, ktr
+
+132
+00:11:05,930 --> 00:11:07,470
+prbowalimy wykona tutaj.
+
+133
+00:11:07,520 --> 00:11:09,600
+Jest to waciwo, ktr powinnimy wprowadzi.
+
+134
+00:11:09,710 --> 00:11:12,360
+Wic modalne zamknicie jest poprawn prop Teraz
+
+135
+00:11:12,590 --> 00:11:17,480
+z tym znowu, jeli sprbujemy wysa to z niewaciwym adresem URL, otrzymamy
+
+136
+00:11:17,660 --> 00:11:19,700
+bd, ale moemy go odrzuci.
+
+137
+00:11:19,700 --> 00:11:25,380
+Teraz mamy globaln obsug bdw i poprawi adres URL zamwie, wic teraz zajmujemy si zarwno
+
+138
+00:11:25,610 --> 00:11:30,580
+przypadkiem sukcesu, jak i przypadkiem bdu, pokazujemy program adujcy tak dugo, jak to
+
+139
+00:11:30,650 --> 00:11:37,400
+konieczne, a wraz z nim Zbierz solidn aplikacj z komponentem wyszego rzdu do wielokrotnego uytku, ktr moemy owin
+
+140
+00:11:37,490 --> 00:11:41,140
+wok dowolnego komponentu, ktry uywa osi do obsugi bdw.
+

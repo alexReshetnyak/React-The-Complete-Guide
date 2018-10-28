@@ -1,0 +1,40 @@
+1
+00:00:02,210 --> 00:00:07,970
+Tenemos el proyecto de creacin de hamburguesas y hay algunas cosas que ajustaremos en este mdulo. Necesitamos agregar una nueva vista, la de inicio
+
+2
+00:00:07,970 --> 00:00:14,390
+de sesin y la de inicio de sesin, la combinar en una vista donde podemos crear nuevos
+
+3
+00:00:14,390 --> 00:00:15,830
+usuarios o registrar usuarios.
+
+4
+00:00:16,010 --> 00:00:21,740
+Tambin queremos proteger algunas rutas en la interfaz, protegerlas para que, por ejemplo, no podamos acceder
+
+5
+00:00:21,740 --> 00:00:24,850
+a la ruta de pedidos si no estamos autenticados.
+
+6
+00:00:25,160 --> 00:00:33,070
+Y, adems, tambin quiero pasar ese token que recibiremos en el back-end para solicitudes de proteccin de
+
+7
+00:00:33,090 --> 00:00:37,850
+recursos para que podamos asegurarnos de que esto no funcione.
+
+8
+00:00:37,880 --> 00:00:43,480
+Estos son los ajustes que tenemos que hacer en nuestra interfaz y para hacerlos, en primer
+
+9
+00:00:43,500 --> 00:00:49,100
+lugar comenzaremos con el registro y la vista de inicio de sesin porque sin tener usuarios,
+
+10
+00:00:49,100 --> 00:00:51,640
+todo lo dems es algo difcil de hacer.
+

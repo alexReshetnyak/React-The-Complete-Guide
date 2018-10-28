@@ -1,0 +1,336 @@
+1
+00:00:02,110 --> 00:00:03,700
+Com o ingrediente do hambrguer preparado.
+
+2
+00:00:03,750 --> 00:00:06,800
+Vamos passar pelo componente do hambrguer.
+
+3
+00:00:06,990 --> 00:00:09,490
+E vou tentar isso de forma funcional novamente.
+
+4
+00:00:09,570 --> 00:00:17,220
+Nomeie a funo hambrguer recebendo alguns adereos e l novamente vou usar aparelhos de apoio curly para que eu tambm possa
+
+5
+00:00:17,220 --> 00:00:21,260
+adicionar alguma lgica de javascript antes de retornar J  x.
+
+6
+00:00:21,330 --> 00:00:25,280
+Por enquanto, tudo o que vai fazer, h retornos de JS X.
+
+7
+00:00:25,380 --> 00:00:32,280
+Mas vamos revisar este componente para aprimor-lo e condicionalmente renderizar algo mais tarde.
+
+8
+00:00:32,280 --> 00:00:41,670
+re-agir de reagir porque usamos j como X e vamos exportar um padro da funo do hamburguer,  claro.
+
+9
+00:00:41,670 --> 00:00:43,860
+Por enquanto, vamos importar
+
+10
+00:00:43,860 --> 00:00:45,150
+Agora, o que est l.
+
+11
+00:00:45,230 --> 00:00:52,980
+James x Eu quero exportar seu JS X deve simplesmente usar este componente de ingrediente Bergere.
+
+12
+00:00:53,040 --> 00:00:58,940
+Ns criamos na verdade vrios deles, mas eu tambm quero embrulhar tudo em uma div.
+
+13
+00:00:59,010 --> 00:01:06,780
+Ento, eu uso deliberadamente uma div porque eu quero dar esse invlucro que faz o componente Bergere essencialmente, pois 
+
+14
+00:01:06,780 --> 00:01:09,950
+um invlucro em torno de todos os ingredientes.
+
+15
+00:01:10,150 --> 00:01:15,770
+Quero dar-lhe algum estilo para definir a largura e a altura do nosso Bruer para permitir isso.
+
+16
+00:01:15,780 --> 00:01:17,140
+Vou adicionar uma nova queda.
+
+17
+00:01:17,160 --> 00:01:22,570
+O arquivo Bergere dot C S S e todos eles adicionam o burger Seer's como classe.
+
+18
+00:01:22,650 --> 00:01:24,380
+Nem um para dar a essa classe um cheiro.
+
+19
+00:01:24,420 --> 00:01:28,840
+Digamos 100 por cento e a margem de auto.
+
+20
+00:01:29,100 --> 00:01:34,580
+Mas eu quero limitar a altura para 250 pixels e sinto-me livre para escolher uma altura diferente.
+
+21
+00:01:34,580 --> 00:01:38,840
+Claro que  apenas algo que eu acho que ficar bem.
+
+22
+00:01:39,730 --> 00:01:48,880
+Eu configurarei o transbordamento para rolar, de modo que, mesmo que construamos um hambrguer maior, ento, os 250 pixels, podemos
+
+23
+00:01:48,880 --> 00:01:55,150
+simplesmente rolar e no o possamos sobrepor ou cortar porque limitamos a altura aqui.
+
+24
+00:01:55,150 --> 00:02:00,850
+muito grande, de alguma forma ocuparamos nossa pgina inteira ou mais do que isso e isso no ficaria certo.
+
+25
+00:02:00,850 --> 00:02:03,520
+Se no limitssemos a altura e construssemos um hamburguer
+
+26
+00:02:03,520 --> 00:02:10,220
+Eu tambm adicionarei o texto alinhado o centro para centralizar tudo e achar onde ele deve ser construdo.
+
+27
+00:02:10,300 --> 00:02:14,480
+Ns ainda no imprimimos nenhum texto, mas o faremos no futuro.
+
+28
+00:02:14,530 --> 00:02:21,400
+Defina tambm o tamanho da fonte para um holands para R. E. M. isso simplesmente como uma unidade no caso de
+
+29
+00:02:21,400 --> 00:02:25,050
+voc no saber qual escala  baseada no tamanho de fonte padro que o usurio selecionou.
+
+30
+00:02:25,330 --> 00:02:28,560
+Ento, este  o layout que eu quero usar.
+
+31
+00:02:28,600 --> 00:02:31,140
+No entanto,  o layout mvel.
+
+32
+00:02:31,300 --> 00:02:38,530
+todos os que minimo 1000 pixels e e isso  importante porque o Bergere,  claro,  construir uma palavra.
+
+33
+00:02:38,620 --> 00:02:44,600
+Agora eu quero criar uma consulta de mdia aqui, onde eu verificar se temos uma tela com
+
+34
+00:02:45,040 --> 00:02:48,990
+Se tivermos uma altura mnima de 700 pixels.
+
+35
+00:02:49,150 --> 00:02:56,590
+Se for esse o caso, minha classe de Bergere ser ajustada e no vou colocar a esposa em 100
+
+36
+00:02:56,590 --> 00:03:00,860
+por cento, mas 2 700 pixels e a altura para 600.
+
+37
+00:03:01,270 --> 00:03:09,500
+Eu tambm adicionarei outra consulta de mdia onde eu vou verificar se o menwith  de 500 pixels, de
+
+38
+00:03:09,790 --> 00:03:18,850
+modo que um pouco menor e se a altura mnima for 400 e um pixels e, se for esse o caso,
+
+39
+00:03:19,170 --> 00:03:30,030
+eu quero 450 pixels como largura e 400 pixels como altura e Finalmente, todos manipulam dispositivos que no so brancos mortos, mas so bastante altos.
+
+40
+00:03:30,070 --> 00:03:33,160
+Coloque em uma palavra no modo retrato.
+
+41
+00:03:33,160 --> 00:03:40,100
+Eu quero ter um mural para uma largura mnima de quinhentos pixels, mas uma altura mxima de 400.
+
+42
+00:03:40,480 --> 00:03:47,570
+E l eu quero ter certeza de que o com  350 e a altura  de 300 pixels.
+
+43
+00:03:48,040 --> 00:03:56,220
+Ento, estas so apenas algumas consultas de mdia para garantir que o hambrguer se parea em tantos pontos de vista quanto possvel.
+
+44
+00:03:56,470 --> 00:04:00,270
+Como sempre, sinta-se livre para ajustar isso s suas necessidades.
+
+45
+00:04:00,340 --> 00:04:03,790
+Se voc sentir que no parece to bom em seu dispositivo.
+
+46
+00:04:03,790 --> 00:04:05,260
+Agora, o suficiente de C S S.
+
+47
+00:04:05,270 --> 00:04:08,770
+Vamos voltar ao hambrguer e vamos importar D. C. 's.
+
+48
+00:04:08,770 --> 00:04:13,510
+Como classes, acabamos de editar armazenadas nesse objeto de vidro posteriormente.
+
+49
+00:04:13,600 --> 00:04:19,900
+Vamos import-los do arquivo CSSA do hamburguer e vamos anex-los a essa morte envolvente com o nome
+
+50
+00:04:19,900 --> 00:04:22,490
+da classe e seu declasse sempre Asperger.
+
+51
+00:04:22,510 --> 00:04:25,210
+A mdia Cuore no importa para isso.
+
+52
+00:04:25,270 --> 00:04:28,730
+Agora, podemos comear a adicionar ingredientes dentro desse hambrguer.
+
+53
+00:04:28,960 --> 00:04:37,070
+Ento, vou importar o ingrediente Bergere da pasta Burger King e l o arquivo CSSA dos ingredientes do hambrguer
+
+54
+00:04:37,170 --> 00:04:44,770
+e agora podemos simplesmente us-lo como um componente de auto-fechamento como esse ingrediente Burgert, mas tenha em mente
+
+55
+00:04:44,770 --> 00:04:47,200
+que temos que definir um tipo.
+
+56
+00:04:47,440 --> 00:04:49,060
+O tipo pode ser uma string.
+
+57
+00:04:49,090 --> 00:04:50,440
+Na verdade, no pode ser uma string.
+
+58
+00:04:50,470 --> 00:04:51,660
+Tem que ser uma string.
+
+59
+00:04:51,660 --> 00:04:57,780
+Ns implementamos essa verificao de tipo de suporte e vou comear com uma parte superior do po aqui.
+
+60
+00:04:57,940 --> 00:05:00,690
+Ento, acho que  sensato ter isso.
+
+61
+00:05:00,720 --> 00:05:03,400
+Bem, o topo na parte inferior.
+
+62
+00:05:03,400 --> 00:05:12,080
+Voc nunca vai adivinhar tudo no fundo vermelho uma hora entre, vamos adicionar mais dois ingredientes,
+
+63
+00:05:12,320 --> 00:05:17,640
+talvez um pouco de queijo e abaixo dessa carne.
+
+64
+00:05:17,890 --> 00:05:18,920
+Agora com a morte.
+
+65
+00:05:18,940 --> 00:05:25,620
+Eu tenho o meu componente de hambrguer que deve render um hamburguer com carne de po e queijo.
+
+66
+00:05:25,630 --> 00:05:29,950
+Agora vamos implementar isso e vamos simplesmente renderizar esse hambrguer.
+
+67
+00:05:30,100 --> 00:05:31,790
+Ns estamos exportando isso j.
+
+68
+00:05:32,050 --> 00:05:39,700
+Ento, agora podemos ir ao nosso recipiente Burger Boulder e eles so substitudos por esta morte Dammy com nosso hambrguer.
+
+69
+00:05:40,030 --> 00:05:43,230
+Ento, importa o hambrguer.
+
+70
+00:05:43,510 --> 00:05:51,500
+E agora temos que subir ao nvel da fonte, em seguida, em componentes para hambrguer e importar hambrguer.
+
+71
+00:05:51,570 --> 00:05:58,870
+J. S. e agora substitua essa diferena por nosso componente de hambrguer auto-fechado.
+
+72
+00:05:59,020 --> 00:06:07,740
+salve tudo e vamos recarregar a pgina e voc deve ver este hambrguer caso seu estilo esteja desligado.
+
+73
+00:06:07,740 --> 00:06:09,310
+Vamos salvar isso,
+
+74
+00:06:09,310 --> 00:06:13,570
+Certifique-se de comparar seu cdigo CSX desse componente com o meu.
+
+75
+00:06:13,810 --> 00:06:18,450
+Voc deve ver que tambm parece certo se voc encolher e redimensionar a pgina novamente.
+
+76
+00:06:18,460 --> 00:06:24,340
+Sinta-se  vontade para a justia CSSA para se adequar a todos os tamanhos possveis que voc possa precisar.
+
+77
+00:06:24,400 --> 00:06:25,280
+Esse  o hambrguer.
+
+78
+00:06:25,300 --> 00:06:26,530
+Isso  timo.
+
+79
+00:06:26,530 --> 00:06:28,040
+No  to grande assim.
+
+80
+00:06:28,040 --> 00:06:31,780
+Tudo sobre este hambrguer , no final, codificado.
+
+81
+00:06:31,780 --> 00:06:38,800
+Estamos usando componentes, mas no somos capazes de mudar este hambrguer de forma dinmica e nem estamos
+
+82
+00:06:38,800 --> 00:06:40,050
+fazendo isso dinamicamente.
+
+83
+00:06:40,100 --> 00:06:47,020
+Ento, comecemos por gerenciar os ingredientes por que um estado e renderizar o hambrguer de forma dinmica nas
+
+84
+00:06:47,020 --> 00:06:47,790
+prximas palestras.
+

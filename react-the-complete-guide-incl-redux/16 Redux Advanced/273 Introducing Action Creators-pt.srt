@@ -1,0 +1,236 @@
+1
+00:00:02,200 --> 00:00:08,140
+Eu menciono na ltima palestra que os criadores de ao podem nos ajudar para que eu crie uma nova subpasta
+
+2
+00:00:08,140 --> 00:00:09,250
+na pasta da loja.
+
+3
+00:00:09,370 --> 00:00:14,160
+Vou nomear aes e mova minhas aes l.
+
+4
+00:00:14,250 --> 00:00:16,120
+Vou deixar o outono como  por enquanto.
+
+5
+00:00:16,240 --> 00:00:22,820
+Eu mudo isso para a pasta de aes porque tambm adicionarei vrias aes cairo nas prximas palestras.
+
+6
+00:00:22,840 --> 00:00:25,500
+Mas por agora vamos colar este aqui.
+
+7
+00:00:25,510 --> 00:00:30,920
+Ns exportamos todos os nossos identificadores de ao e isso est funcionando bem.
+
+8
+00:00:30,970 --> 00:00:36,160
+Agora, eu quero apresentar uma nova maneira de criar aes chamadas Criadores de Ao.
+
+9
+00:00:36,160 --> 00:00:40,060
+Como isso parece com o que  esse criador de ection.
+
+10
+00:00:40,120 --> 00:00:46,190
+ apenas uma funo que retorna uma ao ou que cria uma ao contra o nome.
+
+11
+00:00:46,570 --> 00:00:52,060
+Agora criamos nossas aes codificadas em nosso cdigo ou simplesmente quando as precisamos.
+
+12
+00:00:52,060 --> 00:00:54,940
+Devo dizer no componente do contador aqui.
+
+13
+00:00:55,000 --> 00:00:58,080
+No mapa, envie as aes para prop.
+
+14
+00:00:58,120 --> 00:01:00,640
+Estes so apenas objetos JavaScript do Deese diretamente.
+
+15
+00:01:00,670 --> 00:01:07,310
+Ns os criamos aqui criamos eles simplesmente escrevendo o cdigo para o objeto em nossa funo de despacho.
+
+16
+00:01:07,600 --> 00:01:14,020
+de ao retornaria esse objeto e voc pode ver o benefcio quando falamos de cdigo assncrono.
+
+17
+00:01:14,020 --> 00:01:14,630
+O criador
+
+18
+00:01:14,740 --> 00:01:17,660
+Ento, vamos criar um criador de ao agora.
+
+19
+00:01:17,710 --> 00:01:23,280
+Para o cdigo sncrono, porm, para isso, criarei uma nova funo e voc pode usar para
+
+20
+00:01:23,340 --> 00:01:28,090
+funcionar a palavra-chave ou criar a funo de seta e eu vou nome-lo incrementar.
+
+21
+00:01:28,120 --> 00:01:31,700
+A conveno  usar o mesmo nome do seu identificador.
+
+22
+00:01:31,780 --> 00:01:39,870
+Mas, no caso do camelo, o primeiro incremento de caracteres minsculos  uma funo como um conjunto.
+
+23
+00:01:39,970 --> 00:01:44,950
+Ele retornar algo eventualmente e receber algo que pode receber algo que
+
+24
+00:01:44,950 --> 00:01:51,160
+devo dizer que recebe qualquer carga que voc deseja passar com essa ao aqui para incremento.
+
+25
+00:01:51,160 --> 00:01:52,540
+Eu no quero passar nenhum.
+
+26
+00:01:52,600 --> 00:01:58,200
+Ento, em vez disso, eu apenas devolvo algo e que algo  as aes ou o objeto javascript.
+
+27
+00:01:58,250 --> 00:02:03,660
+Agora, como qualquer ao, tem que ter um tipo e o tipo deve ser incrementado.
+
+28
+00:02:03,850 --> 00:02:08,150
+Referindo-se anteriormente ao nosso identificador que no conta.
+
+29
+00:02:08,170 --> 00:02:14,610
+Basta seguir o seu incremento que eu importei dos tipos de ection ao chegar para adicionar aes.
+
+30
+00:02:14,720 --> 00:02:22,390
+Agora, na verdade, no consigo me livrar dessa importao e teremos que mudar o que enviamos aqui em breve.
+
+31
+00:02:22,390 --> 00:02:24,830
+Por agora vamos voltar s aes simplesmente carem.
+
+32
+00:02:24,900 --> 00:02:27,590
+Este  o nosso primeiro criador de ao j.
+
+33
+00:02:27,670 --> 00:02:28,660
+Ele retorna.
+
+34
+00:02:28,720 --> 00:02:34,150
+Ele cria, portanto, uma ao e uma ao s precisa ter um tipo. Essa  a
+
+35
+00:02:34,150 --> 00:02:35,840
+mnima ao que podemos criar.
+
+36
+00:02:35,920 --> 00:02:41,980
+Podemos usar este criador de ao agora e os contra-tortos caem onde fazemos esse
+
+37
+00:02:41,980 --> 00:02:43,200
+patch, primeiro importando-o.
+
+38
+00:02:43,480 --> 00:02:48,590
+Ento, aqui vou importar algo das aes seguidas.
+
+39
+00:02:48,700 --> 00:02:55,540
+Ento eu vou navegar at a pasta da loja em aes e l para as aes apenas seguem agora e l e
+
+40
+00:02:55,790 --> 00:02:57,210
+voc voltar para isso.
+
+41
+00:02:57,220 --> 00:03:00,560
+Preciso exportar esta funo de incremento.
+
+42
+00:03:00,610 --> 00:03:02,420
+Agora eu posso import-lo pelo nome.
+
+43
+00:03:02,470 --> 00:03:08,700
+Ento no arquivo js do contador eu posso importar incremento e tenha em mente que esta  uma funo.
+
+44
+00:03:08,830 --> 00:03:11,820
+Agora, podemos usar essa funo no contador J como queda.
+
+45
+00:03:11,890 --> 00:03:18,390
+Na parte inferior, ns colocamos nossos adereos para as funes de despacho para incrementar.
+
+46
+00:03:18,570 --> 00:03:26,240
+Aqui vou agora simplesmente passar incremente como esse e tambm execut-lo.
+
+47
+00:03:26,460 --> 00:03:33,000
+Porque, uma vez que eu executo o incremento, isso acontecer quando este suporte for basicamente executado quando eu executar
+
+48
+00:03:33,000 --> 00:03:33,840
+o incremento.
+
+49
+00:03:34,140 --> 00:03:40,260
+Isso me dar uma ao porque  a ao criar ou no se esquea que o incremento retorna como
+
+50
+00:03:40,260 --> 00:03:40,840
+uma ao.
+
+51
+00:03:40,860 --> 00:03:43,390
+Ento, ns executamos, ns conseguimos uma ao.
+
+52
+00:03:43,570 --> 00:03:44,460
+Agora isso  muito bom.
+
+53
+00:03:44,460 --> 00:03:49,250
+Nosso aplicativo ainda est quebrado, pois todas as outras aes aqui no esto conectadas.
+
+54
+00:03:49,470 --> 00:03:55,560
+Ento, o que vou fazer rapidamente  trocar mais criadores reais por todas as aes ou para ser preciso.
+
+55
+00:03:55,620 --> 00:03:56,760
+Voc deve fazer isso.
+
+56
+00:03:56,760 --> 00:03:58,290
+Ento, aqui est o seu desafio.
+
+57
+00:03:58,290 --> 00:04:05,070
+Crie criadores de ao como esse para todas as aes e veja se voc consegue descobrir como lidar com as aes
+
+58
+00:04:05,070 --> 00:04:07,280
+que realmente precisam de uma carga til.
+
+59
+00:04:07,410 --> 00:04:09,390
+Vamos fazer isso juntos no prximo vdeo.
+

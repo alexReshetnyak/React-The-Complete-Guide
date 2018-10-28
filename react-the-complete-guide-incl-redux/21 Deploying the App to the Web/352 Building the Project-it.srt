@@ -1,0 +1,124 @@
+1
+00:00:02,230 --> 00:00:05,850
+Sono tornato nel progetto e ora voglio distribuire questa applicazione.
+
+2
+00:00:06,040 --> 00:00:08,050
+Quindi questo  il progetto che
+
+3
+00:00:08,080 --> 00:00:10,030
+abbiamo lasciato, non ho cambiato nulla.
+
+4
+00:00:10,060 --> 00:00:12,450
+Ora la prima cosa  il percorso
+
+5
+00:00:12,610 --> 00:00:13,730
+di base, possiamo
+
+6
+00:00:13,910 --> 00:00:14,880
+vederlo nell'app.
+
+7
+00:00:14,980 --> 00:00:21,870
+file js, scusami, nell'indice. js file dove abbiamo il browser router, l potremmo impostare la propriet basename, ma
+
+8
+00:00:22,000 --> 00:00:26,830
+ho intenzione di servire la mia app da mydomain. com / nothing, quindi non ho bisogno
+
+9
+00:00:26,830 --> 00:00:29,110
+di impostare questo. Ora la prossima cosa 
+
+10
+00:00:29,150 --> 00:00:34,640
+che ho bisogno di assicurarmi che il server ritorni sempre all'indice. file html, questo  qualcosa che tutti gli
+
+11
+00:00:34,660 --> 00:00:40,560
+host statici in genere consentono di configurare e se non si sta utilizzando un host statico ma si
+
+12
+00:00:40,560 --> 00:00:46,960
+sta utilizzando il server nodejs,  sufficiente scrivere codice,  necessario impostare un catch su tutte le route e
+
+13
+00:00:46,960 --> 00:00:48,170
+ritornare indice. html e
+
+14
+00:00:48,310 --> 00:00:52,810
+la stessa logica ovviamente vale per qualsiasi altro linguaggio lato server.
+
+15
+00:00:52,840 --> 00:00:58,550
+Quindi per noi qui, il prossimo passo  costruire il progetto e
+
+16
+00:00:58,870 --> 00:01:09,070
+questo viene eseguito con il comando npm, npm run build. Questo ora costruir il nostro progetto, simile a npm start ma ora sputer
+
+17
+00:01:09,160 --> 00:01:17,040
+anche una cartella e non solo memorizzer il risultato in memoria e quella cartella conterr la nostra build di produzione ottimizzata.
+
+18
+00:01:17,470 --> 00:01:24,010
+Quindi, abbiamo questa nuova cartella di build ora nella cartella del progetto e, se guardiamo a questo,
+
+19
+00:01:24,010 --> 00:01:29,910
+vediamo la nostra singola pagina che  anche ottimizzata per consumare il minor spazio possibile.
+
+20
+00:01:29,920 --> 00:01:36,100
+Vedrai che alcune importazioni di script sono state aggiunte l, come in questo file js principale e
+
+21
+00:01:36,100 --> 00:01:38,230
+questo  quello che possiamo trovare
+
+22
+00:01:38,290 --> 00:01:45,400
+nella cartella statica, l abbiamo i nostri file multimediali, immagini come il logo burger e i file javascript per
+
+23
+00:01:45,400 --> 00:01:50,100
+i nostri diversi pezzi per il caricamento lazy e il file js principale.
+
+24
+00:01:50,110 --> 00:01:52,540
+Abbiamo anche ottenuto mappe di origine qui,
+
+25
+00:01:52,660 --> 00:01:57,080
+ora non  necessario distribuirle, queste sono puramente opzionali,  possibile concentrarsi
+
+26
+00:01:57,100 --> 00:02:01,880
+sui file javascript ma  anche possibile ed  quello che far distribuire
+
+27
+00:02:01,890 --> 00:02:05,650
+il contenuto dell'intera cartella di build e questo  importante.
+
+28
+00:02:05,650 --> 00:02:13,000
+Il contenuto della cartella di compilazione, la spedizione di quel contenuto, tutti i file l e la cartella statica sul tuo
+
+29
+00:02:13,000 --> 00:02:13,830
+host statico.
+
+30
+00:02:13,840 --> 00:02:16,150
+Quindi ora distribuiamo questo.
+
+31
+00:02:16,240 --> 00:02:18,420
+Lo faremo nella prossima lezione.
+

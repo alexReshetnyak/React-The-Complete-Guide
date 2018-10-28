@@ -1,0 +1,396 @@
+1
+00:00:02,140 --> 00:00:08,000
+Na ltima palestra, ajustamos o logo para ficar bem na barra de ferramentas e na gaveta Deeside.
+
+2
+00:00:08,230 --> 00:00:15,100
+Agora, vamos ajustar os itens de navegao para ler agora e depois itens de negao, especialmente os itens nicos
+
+3
+00:00:15,210 --> 00:00:18,810
+aqui, s comeam a ficar bons em dispositivos de mesa.
+
+4
+00:00:18,820 --> 00:00:21,880
+Esse , claro, o problema em dispositivos mveis.
+
+5
+00:00:21,880 --> 00:00:23,650
+Deslizamos esse aspecto de desktop.
+
+6
+00:00:23,830 --> 00:00:28,600
+Mas em vez de querer ter alguns itens que simplesmente se sentam um fora do outro e que no
+
+7
+00:00:28,600 --> 00:00:31,090
+esto tendo esta borda no fundo e assim por diante.
+
+8
+00:00:31,210 --> 00:00:37,240
+de navegao e isso far isso com consultas de mdia e os itens de navegao nos vero como arquivos.
+
+9
+00:00:37,270 --> 00:00:39,260
+Portanto, temos que ajustar os itens
+
+10
+00:00:39,280 --> 00:00:46,600
+Ento, aqui, eu quero escrever isso de uma primeira maneira mvel, ento minhas classes bsicas devem ser para dispositivos mveis e
+
+11
+00:00:46,600 --> 00:00:50,990
+depois adicionarei consultas de mdia para que fique bem em dispositivos maiores tambm.
+
+12
+00:00:51,040 --> 00:00:57,730
+Ento, para conseguir isso, vamos primeiro adicionar a esta rea de trabalho as consultas de mdia Wise ou a mdia
+
+13
+00:00:57,730 --> 00:01:04,440
+nica extraiu realmente como mdia correta e, em seguida, menwith para eu cortar o ponto aqui ser de 500 pixels.
+
+14
+00:01:04,460 --> 00:01:07,360
+Mas  claro que voc pode escolher um diferente agora.
+
+15
+00:01:07,360 --> 00:01:13,650
+Copie todas as classes do Seer existentes naquela mdia Querrey porque j escrevemos para a rea de trabalho antes.
+
+16
+00:01:13,660 --> 00:01:19,870
+para dispositivos mais amplos e agora queremos ajustar essas classes base para ficar bem no celular.
+
+17
+00:01:19,870 --> 00:01:21,940
+Ento, definitivamente queremos usar essas classes
+
+18
+00:01:21,940 --> 00:01:27,970
+Isso, por exemplo, inclui uma margem de 10 pixels de cima e de baixo e zero para cima e para a direita.
+
+19
+00:01:28,180 --> 00:01:31,400
+Portanto, h algum espaamento entre as correspondncias.
+
+20
+00:01:31,440 --> 00:01:40,050
+Eu tambm quero ajustar a largura agora para 100 por cento, mas no para a altura para esconder deve ser apenas tomar a
+
+21
+00:01:40,050 --> 00:01:47,120
+altura que precisa de uma perspectiva de texto e a exibio no precisa ser flexvel, o display pode ser
+
+22
+00:01:47,120 --> 00:01:47,670
+bloqueado aqui.
+
+23
+00:01:48,460 --> 00:01:51,990
+E eu tambm no preciso de um item de linha por esse motivo.
+
+24
+00:01:52,120 --> 00:01:57,580
+Agora, para um determinado link, a cor no deve ser branca porque o fundo da gaveta lateral  branco.
+
+25
+00:01:57,760 --> 00:02:01,600
+Eu quero usar uma cor marrom aqui e vou usar 8 F 5.
+
+26
+00:02:01,670 --> 00:02:08,770
+Veja para ver a cor marrom que usamos antes da criao de texta,  claro, ainda no est no mais
+
+27
+00:02:08,770 --> 00:02:11,800
+alto, no 100 por cento, porm, a largura .
+
+28
+00:02:11,930 --> 00:02:17,010
+Eu tambm quero ter certeza de que o dimensionamento da caixa  border borke, ento vamos deixar isso.
+
+29
+00:02:17,150 --> 00:02:18,530
+Mas eu no preciso do preenchimento.
+
+30
+00:02:18,530 --> 00:02:20,410
+Eu no preciso bordar o fundo.
+
+31
+00:02:20,420 --> 00:02:24,410
+Tudo isso pode ser exibido e ainda pode ser configurado para bloquear.
+
+32
+00:02:25,680 --> 00:02:31,010
+Agora, para itens ativos, no quero definir a cor de fundo para o marrom.
+
+33
+00:02:31,010 --> 00:02:36,000
+Eu quero configur-lo para exibir cor, em vez disso, no a cor de fundo, desculpe a cor.
+
+34
+00:02:36,030 --> 00:02:39,420
+Ento, a cor do texto e eu vou me livrar da cor de fundo e do limite inferior.
+
+35
+00:02:39,450 --> 00:02:40,740
+Eu quero ter qualquer coisa disso.
+
+36
+00:02:40,920 --> 00:02:45,840
+E, como sempre, voc , naturalmente, livre para transmitir a justia para uma maneira que voc ache para parecer melhor.
+
+37
+00:02:45,840 --> 00:02:48,060
+Ento, esses so meus estilos Mobot.
+
+38
+00:02:48,150 --> 00:02:54,420
+Agora, vamos fraudar as configuraes de estilo duplicadas que temos no celular e na rea de trabalho, por exemplo, caixa de borda de dimensionamento
+
+39
+00:02:54,420 --> 00:02:55,050
+de caixa.
+
+40
+00:02:55,050 --> 00:02:57,270
+Ns j definimos isso em Mobile.
+
+41
+00:02:57,270 --> 00:03:03,240
+No precisamos redefini-lo aqui porque as consultas da mdia,  claro, so mescladas com as clusulas originais.
+
+42
+00:03:03,330 --> 00:03:09,360
+Ento, o que quer que criamos aqui  geralmente limitado e, ento, podemos substituir as propriedades selecionadas, mas o tamanho
+
+43
+00:03:09,360 --> 00:03:13,470
+do bloco no precisa ser substitudo porque voc quer usar o mesmo valor.
+
+44
+00:03:13,470 --> 00:03:20,220
+Eu usarei os mesmos valores aqui, mas tambm definirei a largura, embora voc no use a largura
+
+45
+00:03:20,220 --> 00:03:26,570
+de 100 por cento que eu configurei nas configuraes mveis, embora tambm substitua as configuraes mdias.
+
+46
+00:03:26,610 --> 00:03:27,990
+Ento isso parece ser bom para mim.
+
+47
+00:03:28,810 --> 00:03:34,720
+Para um link selecionado aqui, agora eu quero ajustar a cor para branco.
+
+48
+00:03:34,720 --> 00:03:36,200
+Ento, aqui  marrom.
+
+49
+00:03:36,220 --> 00:03:37,870
+Deve ser branco para mim.
+
+50
+00:03:37,870 --> 00:03:40,960
+A decorao do texto j est configurada nas configuraes do celular.
+
+51
+00:03:40,960 --> 00:03:43,330
+Altura e preenchimento que  importante para mim.
+
+52
+00:03:43,420 --> 00:03:45,610
+Border Bawden  importante.
+
+53
+00:03:45,610 --> 00:03:48,160
+Dimensionamento e exibio da caixa.
+
+54
+00:03:48,160 --> 00:03:53,450
+Ns conseguimos configurar aqui as configuraes mveis para que possamos nos livrar disso aqui.
+
+55
+00:03:53,770 --> 00:03:58,150
+E para os links ativos e ativos, tudo precisa ser configurado porque temos
+
+56
+00:03:58,150 --> 00:04:00,490
+um estilo totalmente diferente para comprimentos mveis.
+
+57
+00:04:00,850 --> 00:04:03,400
+Vejamos agora a segurana e d uma olhada nela.
+
+58
+00:04:03,460 --> 00:04:07,470
+Parece bom, mas ainda esto sentados um ao lado do outro.
+
+59
+00:04:07,480 --> 00:04:08,980
+O motivo para isso est morto.
+
+60
+00:04:08,980 --> 00:04:14,340
+Nossos itens de navegao vem uma lista de pedidos que envolve os links.
+
+61
+00:04:14,410 --> 00:04:15,820
+Estamos usando o Fluxbox.
+
+62
+00:04:15,880 --> 00:04:19,900
+E isso leva ao item sentado ao lado do outro por padro.
+
+63
+00:04:19,900 --> 00:04:26,180
+No  um problema, s precisamos adicionar uma consulta de mdia aqui tambm com minuto com 500 pixels.
+
+64
+00:04:26,400 --> 00:04:33,990
+e eu configurarei o fluxo flexvel para filtrar aqui, porque tenha em mente que eu me equivoque para dispositivos desktop.
+
+65
+00:04:33,990 --> 00:04:37,410
+E agora criei minha classe de itens de navegao
+
+66
+00:04:37,440 --> 00:04:39,840
+Ento, eles devem sentar um ao lado do outro.
+
+67
+00:04:40,110 --> 00:04:47,100
+Mas para dispositivos mveis, eu realmente estabelecerei o Flux de Flull de Cullom para que eles se sentassem um
+
+68
+00:04:47,100 --> 00:04:48,170
+fora do outro.
+
+69
+00:04:48,180 --> 00:04:54,350
+Agora, se voc diz isso, veremos que os itens so realmente empilhados uns dos outros em telas maiores.
+
+70
+00:04:54,360 --> 00:04:56,220
+Ainda temos o velho aspecto.
+
+71
+00:04:56,370 --> 00:05:02,430
+Ns tambm recebemos alguns problemas aqui, pois a Briga distorcida ao mudar  apenas devido
+
+72
+00:05:02,520 --> 00:05:03,330
+ mudana.
+
+73
+00:05:03,330 --> 00:05:09,300
+Depois de recarregar e carregar o aplicativo, como o usurio ver, ele est bem, mas
+
+74
+00:05:09,300 --> 00:05:16,230
+temos problemas aqui, por exemplo, os itens de navegao esto visveis na barra de ferramentas em telas menores.
+
+75
+00:05:16,230 --> 00:05:18,140
+E, claro, isso no deveria ser o caso.
+
+76
+00:05:18,150 --> 00:05:22,190
+No quero ter os itens de navegao na barra de ferramentas em telas pequenas.
+
+77
+00:05:22,350 --> 00:05:24,450
+Eu tenho que fazer isso por isso.
+
+78
+00:05:24,570 --> 00:05:30,740
+Eu tambm quero ter um pouco mais de espaamento entre o logotipo e meus itens de navegao aqui no celular.
+
+79
+00:05:31,050 --> 00:05:40,570
+no cisto, onde eu incluo o logotipo e os itens de navegao, em primeiro lugar, adicione alguma margem  parte inferior do
+
+80
+00:05:40,570 --> 00:05:48,670
+logotipo para que possamos ter algum espaamento para os itens de navegao que esto abaixo dele talvez 42 pixels.
+
+81
+00:05:49,420 --> 00:05:53,590
+Para corrigir isso, todos voltem ao meu aplicativo e l
+
+82
+00:05:54,070 --> 00:05:55,420
+Ento, isso deveria parecer melhor.
+
+83
+00:05:55,450 --> 00:05:55,910
+Sim.
+
+84
+00:05:56,320 --> 00:06:02,560
+E, para remover os itens de navegao na barra de ferramentas, precisamos adicionar uma
+
+85
+00:06:02,800 --> 00:06:07,210
+nova classe S C-S, que tudo adiciona ao elemento envolvente.
+
+86
+00:06:07,420 --> 00:06:17,120
+E adicionei uma consulta imediata para que esta consulta de mdia chegue agora com o mximo com 499 pixels.
+
+87
+00:06:17,170 --> 00:06:24,910
+Ento, se estivermos em um dispositivo mvel, ento irei adicionar a minha rea de trabalho apenas como classe S e l
+
+88
+00:06:24,910 --> 00:06:27,140
+vou configurar a exibio como Norma.
+
+89
+00:06:27,250 --> 00:06:30,700
+Eu no tenho essa classe para o caso padro.
+
+90
+00:06:30,700 --> 00:06:36,550
+Ento, para dispositivos que so mais amplos que 500 pixels, mas isso basicamente significa que ele
+
+91
+00:06:36,550 --> 00:06:41,140
+leva o estilo padro que  bloco de exibio e, portanto, ser winnable.
+
+92
+00:06:41,350 --> 00:06:44,140
+Ento, eu apenas substituo isso por dispositivos pequenos.
+
+93
+00:06:44,140 --> 00:06:50,980
+Agora, eu posso usar essa nova classe em uma barra de ferramentas e posso adicion-la aqui ao item de navegao para o elemento de navegao.
+
+94
+00:06:51,100 --> 00:06:53,600
+Eu s posso usar a rea de trabalho do Klaas.
+
+95
+00:06:53,710 --> 00:07:00,180
+E agora, em dispositivos menores, os itens de navegao devem desaparecer e voc ver o logotipo aqui.
+
+96
+00:07:00,190 --> 00:07:03,810
+Mas acho que parece muito legal, ento, talvez, vamos deixar isso aqui.
+
+97
+00:07:03,940 --> 00:07:10,580
+Agora, se conseguimos uma gaveta lateral que parece melhor, ficaria ainda melhor se voc tivesse um pano de fundo.
+
+98
+00:07:10,720 --> 00:07:13,980
+E se pudssemos abrir e fech-lo dinamicamente.
+
+99
+00:07:14,230 --> 00:07:16,560
+Estas so as etapas em que vamos trabalhar no prximo.
+

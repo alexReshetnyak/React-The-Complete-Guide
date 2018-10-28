@@ -1,0 +1,352 @@
+1
+00:00:02,150 --> 00:00:06,120
+Na ltima leitura, editamos os itens de navegao para a frente de uma barra de ferramentas.
+
+2
+00:00:06,120 --> 00:00:07,260
+Somente agora.
+
+3
+00:00:07,500 --> 00:00:12,580
+Ento  hora de adicionar tambm  navegao para dispositivos mveis para DS.
+
+4
+00:00:12,630 --> 00:00:20,040
+Seu boto de menu aqui deve mostrar uma gaveta do site, de modo que alguns menus laterais que se deslocam para isso
+
+5
+00:00:20,070 --> 00:00:22,550
+adicionaro um novo componente na pasta de navegao.
+
+6
+00:00:22,650 --> 00:00:27,220
+O site desenha um componente em um desenho lateral ou pasta.
+
+7
+00:00:27,660 --> 00:00:37,530
+Agora, o site desenhar um ano consistir em dois componentes que voc poderia dizer o site para si prprio e, em seguida, o boto
+
+8
+00:00:37,530 --> 00:00:42,320
+alternativo que agora  simplesmente mo aqui com um espao reservado.
+
+9
+00:00:42,390 --> 00:00:46,360
+O boto de menu para seu pai deve ser um boto que abra a sociedade ou no final.
+
+10
+00:00:46,470 --> 00:00:52,670
+E isso pode, portanto, entrar em seu prprio componente, uma vez que, teoricamente, podemos querer reutilizar um alto,
+
+11
+00:00:52,750 --> 00:01:00,510
+mas tambm precisamos de um pano de fundo para a frente de uma gaveta lateral, mas felizmente j obtivemos um, ento vamos
+
+12
+00:01:00,510 --> 00:01:01,750
+reutilizar esse componente.
+
+13
+00:01:02,160 --> 00:01:06,090
+Vamos trabalhar no site para o nosso primeiro e vamos mostrar sempre isso.
+
+14
+00:01:06,180 --> 00:01:08,410
+Ento vamos falar e assim por diante.
+
+15
+00:01:08,430 --> 00:01:10,430
+Bem, vamos l passo a passo.
+
+16
+00:01:10,680 --> 00:01:19,080
+algo que algo no ser o cdigo Jazz X imediatamente, mas um corpo de funo real usar aqui.
+
+17
+00:01:19,080 --> 00:01:25,820
+O componente criptografia  um componente funcional normal, onde obtemos alguns adereos e retornamos
+
+18
+00:01:26,010 --> 00:01:31,950
+Porque antes de retornar J Jay x e a eu quero fazer algo aqui.
+
+19
+00:01:32,130 --> 00:01:39,150
+Eu basicamente quero anexar condicionalmente diferentes como classes para garantir que jogamos alguma animao quando o
+
+20
+00:01:39,150 --> 00:01:40,500
+sorteio  mostrado.
+
+21
+00:01:40,530 --> 00:01:46,560
+Ento, na Classe Aberta, esse tipo de slides e um armrio de roupa que tipo de
+
+22
+00:01:46,560 --> 00:01:49,980
+desliza, voc ver como implementar isso em um segundo.
+
+23
+00:01:49,980 --> 00:01:55,510
+Claro, tambm vamos importar de forma a que nosso cdigo GSX possa ser compilado.
+
+24
+00:01:55,800 --> 00:02:01,630
+E ento vamos exportar a funo de desenho lateral como padro do arquivo.
+
+25
+00:02:01,650 --> 00:02:08,160
+Agora, antes de adicionar quaisquer clusulas condicionais, configure a gaveta lateral e deseje simplesmente usar uma
+
+26
+00:02:08,280 --> 00:02:09,520
+div como essa.
+
+27
+00:02:09,840 --> 00:02:16,530
+E nesse ano Dith eu quero ter meu logotipo e meus itens de navegao.
+
+28
+00:02:16,590 --> 00:02:27,990
+Ento, importe tanto o logotipo de importao da pasta do logotipo quanto o arquivo js do logotipo e importa os itens de
+
+29
+00:02:28,290 --> 00:02:34,560
+navegao dos itens de navegao e eles so os itens de navegao.
+
+30
+00:02:34,700 --> 00:02:35,330
+Cair.
+
+31
+00:02:35,370 --> 00:02:39,240
+Ento, aqui, voc sempre pode ver como estamos reutilizando componentes.
+
+32
+00:02:39,510 --> 00:02:46,530
+E ento, vou adicionar o logotipo como um componente de fechamento automtico aqui e envolver itens de navegao em um elemento naff.
+
+33
+00:02:46,530 --> 00:02:51,180
+E sim, voc tambm pode terceirizar o navegao em itens de navegao.
+
+34
+00:02:51,180 --> 00:02:56,540
+Certifique-se tambm de ajustar o estilo que eles terminaram porque agora eu estou marcando a barra Neven.
+
+35
+00:02:56,610 --> 00:03:01,600
+Voc precisaria mover isso para itens de navegao, mas isso seria absolutamente possvel.
+
+36
+00:03:01,620 --> 00:03:08,140
+Ento, aqui incluirei itens de navegao como um elemento de auto-fechamento por agora na gaveta lateral.
+
+37
+00:03:08,600 --> 00:03:11,840
+E agora, claro, o lado ou precisa de algum estilo tambm.
+
+38
+00:03:12,090 --> 00:03:17,730
+Ento, para isso tudo cria e voc ver  o seguinte ao lado deste lado ou arquivo Julias.
+
+39
+00:03:17,880 --> 00:03:20,680
+As gavetas laterais vem este arquivo l.
+
+40
+00:03:20,700 --> 00:03:28,830
+e o lado s ser visvel na tela do dispositivo pequeno, ento eu vou cuidar que voc s pode abri-lo l.
+
+41
+00:03:28,830 --> 00:03:31,310
+Vou adicionar uma gaveta lateral Clauss
+
+42
+00:03:31,320 --> 00:03:36,630
+Ento, vamos definir a posio para consertar isso, porque sempre estar na pgina, mesmo que nos
+
+43
+00:03:36,630 --> 00:03:39,050
+desloquemos, deve sentir-se como um elemento esttico.
+
+44
+00:03:39,120 --> 00:03:48,040
+Eu quero definir a largura para dizer 200 pixels ou talvez 280 pixels e o mximo com deve ser 70 por cento.
+
+45
+00:03:48,060 --> 00:03:52,670
+Assim, mesmo em dispositivos super estreitos, ele no ultrapassa as bordas.
+
+46
+00:03:52,860 --> 00:03:59,010
+A altura deve ser de 100 por cento para ter a altura da tela cheia e a posio da esquerda deve
+
+47
+00:03:59,040 --> 00:04:04,580
+ser zero e as posies superiores devem ser zero, de modo que ele realmente fica na tela cheia.
+
+48
+00:04:05,010 --> 00:04:11,040
+que o pano de fundo,  claro, onde usamos 100 porque a porta lateral deve estar acima do pano de fundo.
+
+49
+00:04:11,130 --> 00:04:15,110
+Eu vou dar-lhe um ndice definido de 200 deliberadamente com um nmero maior do
+
+50
+00:04:15,180 --> 00:04:20,820
+Caso contrrio, seria difcil us-lo e, em seguida, quer dar-lhe uma cor de fundo de branco
+
+51
+00:04:20,820 --> 00:04:28,300
+para que se destaca e que possamos ver claramente todo o contedo do site ou sinais de preenchimento, digamos 32 pixels
+
+52
+00:04:28,350 --> 00:04:32,180
+de cima para baixo e 16 pixels esquerda  direita.
+
+53
+00:04:32,310 --> 00:04:37,210
+E voc, naturalmente, tambm pode usar o bem perceptual aqui se preferir fazer isso.
+
+54
+00:04:37,590 --> 00:04:44,590
+Vou dar-lhe algum tamanho de caixa para ajustar o tamanho ao preenchimento e no  importante. Vou adicionar uma
+
+55
+00:04:44,590 --> 00:04:52,150
+propriedade de transio para reagir s alteraes para transformar a propriedade e anim-las em mais de 300 milsimos de segundo com
+
+56
+00:04:52,230 --> 00:04:54,500
+a funo de temporizao de facilidade.
+
+57
+00:04:54,510 --> 00:04:58,650
+Isso ser importante para abrir e fechar a gaveta lateral.
+
+58
+00:04:59,190 --> 00:05:05,630
+Em seguida, vou adicionar um meteoro por ano para determinar o que deve acontecer em dispositivos maiores.
+
+59
+00:05:05,970 --> 00:05:14,650
+Se o nosso dispositivo tiver mais de 500 pixels, a classe c S C S deve realmente ter uma exibio de no.
+
+60
+00:05:14,670 --> 00:05:16,200
+Ento, no  visvel.
+
+61
+00:05:16,230 --> 00:05:19,650
+Ento, nunca podemos ver o lado desenhar em dispositivos maiores.
+
+62
+00:05:19,650 --> 00:05:24,120
+Agora, para testes, teremos que mudar para o modo de dispositivo mvel no navegador.
+
+63
+00:05:24,120 --> 00:05:32,550
+adicionarei dois Nusi como classes abertas e fechadas e estas sero anexadas condicionalmente e so responsveis por
+
+64
+00:05:32,670 --> 00:05:39,690
+reproduzir uma animao para o offset aberto a propriedade transformada para traduzir x 0.
+
+65
+00:05:39,750 --> 00:05:41,050
+Portanto, eu tambm
+
+66
+00:05:41,220 --> 00:05:48,660
+Isso basicamente mudar a cidra para a posio que eu teria encontrado aqui e forclose toda a transformada
+
+67
+00:05:48,990 --> 00:05:52,400
+definida para traduzir X menos 100 por cento.
+
+68
+00:05:52,500 --> 00:05:54,210
+Isso mudar para a esquerda.
+
+69
+00:05:54,390 --> 00:05:59,910
+E uma vez que alternamos constantemente entre essas classes, a transformao ser ajustada e, portanto,
+
+70
+00:05:59,970 --> 00:06:03,510
+vamos jogar com uma transio faz uma sociedade ou classe.
+
+71
+00:06:03,510 --> 00:06:08,200
+Vamos agora para a gaveta lateral e vamos importar a escada da classe.
+
+72
+00:06:08,340 --> 00:06:17,820
+e vamos adicionar isso ao nome da classe da morte, aqui deve ser a gaveta do lado das classes com um estoque de capital.
+
+73
+00:06:17,820 --> 00:06:22,590
+Vamos importar o Klaas's da cidra ou do arquivo C S S
+
+74
+00:06:23,040 --> 00:06:27,240
+Ento, agora decider ou um componente est configurado e deve ficar bem.
+
+75
+00:06:27,240 --> 00:06:29,140
+Agora,  claro, queremos us-lo.
+
+76
+00:06:29,280 --> 00:06:35,000
+E isso traz uma questo importante em que deve ser aprovado ou componente.
+
+77
+00:06:35,260 --> 00:06:39,490
+A ndia realmente possui um arquivo no arquivo da barra de ferramentas.
+
+78
+00:06:39,570 --> 00:06:44,630
+Nem um dos dois,  claro, obtivemos nosso layout e o layout que temos para a barra de ferramentas.
+
+79
+00:06:44,640 --> 00:06:50,520
+ aqui que tambm no devemos ter a gaveta do site porque  parte do nosso layout principal na minha opinio.
+
+80
+00:06:50,700 --> 00:06:58,670
+Pai, se voltarmos para o aplicativo e clicamos nesta visualizao do dispositivo mvel, eu posso ouvir as ferramentas de desenvolvimento do Chrome.
+
+81
+00:06:58,710 --> 00:07:07,400
+Ento, eu vou importar o sorteio do site ou um ano a partir daqui eu preciso entrar na pasta de navegao para a pasta
+
+82
+00:07:07,650 --> 00:07:15,000
+da gaveta do site e decidir por Arjay como arquivo e agora simplesmente importar ou adicionar este ano o ano ano
+
+83
+00:07:15,000 --> 00:07:17,440
+do site neste componente de layout com
+
+84
+00:07:17,640 --> 00:07:23,890
+Alternativamente, voc pode apenas reduzir o tamanho da tela a partir de um certo ponto, voc deve ver a
+
+85
+00:07:24,180 --> 00:07:30,150
+gaveta lateral e deve parecer horrvel porque o logotipo  muito grande e os itens de navegao, claro,
+
+86
+00:07:30,150 --> 00:07:31,080
+ficam mal.
+
+87
+00:07:31,080 --> 00:07:36,570
+Isso faz sentido, porque ajustamos o neber dos dois para ficar bem em dispositivos mveis.
+
+88
+00:07:36,600 --> 00:07:42,170
+Ento, vamos nos preocupar com isso, antes de ns, Dan, no pano de fundo e um boto alternativo.
+

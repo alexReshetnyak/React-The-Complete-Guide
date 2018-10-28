@@ -1,0 +1,76 @@
+1
+00:00:02,440 --> 00:00:04,860
+W tym module wiele omwilimy,
+
+2
+00:00:04,900 --> 00:00:11,110
+duo teorii, wiele zagadnie zza kulis, wiele wanych rzeczy, ktre musisz wiedzie.
+
+3
+00:00:11,170 --> 00:00:15,800
+Teraz nie bdcie zszokowani, jeli to nie jest co, co znacie na pami
+
+4
+00:00:15,820 --> 00:00:22,570
+w tej chwili, to byo duo rzeczy i duo teorii. Jest to wane, poniewa zamierzamy zagbi si
+
+5
+00:00:22,570 --> 00:00:27,740
+w nasz projekt kursu i uywamy wielu rzeczy, ktrych si nauczye,
+
+6
+00:00:27,940 --> 00:00:32,210
+dlatego tak wane jest zrozumienie, jak dziaa za kulisami.
+
+7
+00:00:32,440 --> 00:00:35,830
+Moesz wrci do niektrych filmw z tego moduu.
+
+8
+00:00:35,980 --> 00:00:42,680
+Jest to cakiem w porzdku, jeli chcesz przej przez niektre z nich raz po raz, aby
+
+9
+00:00:42,690 --> 00:00:47,860
+mie pewno, jak to powinno dziaa, aby dziaao, jak dziaa cykl ycia
+
+10
+00:00:47,860 --> 00:00:51,970
+i nie bj si widzie tych wszystkich koncepcji, moesz nie
+
+11
+00:00:52,150 --> 00:00:53,740
+uywa ich wszystkich, moesz
+
+12
+00:00:53,800 --> 00:00:57,730
+uy tylko kilku z nich. Ale stajesz si coraz lepszy,
+
+13
+00:00:57,730 --> 00:01:02,320
+im wicej si o tym dowiesz, tym bardziej kwestionujesz stosowane przez ciebie podejcia.
+
+14
+00:01:02,320 --> 00:01:08,500
+By moe istniej pewne zaawansowane koncepcje, ktre moesz wykorzysta jako dobrze umieszczony komponent wysokiego rzdu lub
+
+15
+00:01:08,500 --> 00:01:09,370
+czysty komponent.
+
+16
+00:01:09,700 --> 00:01:15,040
+I znowu, istnieje projekt kursu, w ktrym zanurkujemy dalej, gdzie zobaczysz take
+
+17
+00:01:15,040 --> 00:01:21,310
+wiele rzeczy, ktrych si nauczye dotychczas, a wic tam te powiniene poczu, kiedy uywa czego.
+
+18
+00:01:21,310 --> 00:01:27,460
+Przejdmy zatem do projektu kursu i zobaczmy wicej tych rzeczy w wikszym projekcie ni projekt
+
+19
+00:01:27,640 --> 00:01:30,220
+demonstracyjny, nad ktrym pracowalimy do tej pory.
+

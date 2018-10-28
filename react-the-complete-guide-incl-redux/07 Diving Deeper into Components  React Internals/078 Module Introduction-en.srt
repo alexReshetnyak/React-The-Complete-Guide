@@ -1,0 +1,36 @@
+1
+00:00:02,250 --> 00:00:07,220
+Now that we have learned about so many core features and basics of react,
+
+2
+00:00:07,220 --> 00:00:14,780
+it's time to dive deeper into components, after all components are the core building block and the feature
+
+3
+00:00:15,080 --> 00:00:16,890
+of the react library.
+
+4
+00:00:17,060 --> 00:00:22,850
+So we definitely have to make sure that we know how they work, what happens behind the scenes and what
+
+5
+00:00:22,850 --> 00:00:24,070
+we can do with them.
+
+6
+00:00:24,320 --> 00:00:29,750
+You already learn quite a bit about that but there still are some blind spots which are what I cover
+
+7
+00:00:29,750 --> 00:00:31,310
+in this module.
+
+8
+00:00:31,310 --> 00:00:39,470
+So let's dive deeper into components and not only the technical side but also how we may split our application
+
+9
+00:00:39,740 --> 00:00:40,790
+into components.
+

@@ -1,0 +1,92 @@
+1
+00:00:02,080 --> 00:00:07,560
+Ento, aprendemos muito sobre o middleware nas ltimas palestras e temos uma tima maneira de depurar.
+
+2
+00:00:07,580 --> 00:00:15,720
+Sim, vamos voltar para a nossa APA e vamos pensar sobre como executar o cdigo assncrono em nosso projeto de demonstrao aqui.
+
+3
+00:00:15,830 --> 00:00:21,760
+Ao contrrio de qualquer jogador de Bergere, no temos tarefas assncronas,  claro,  fcil criar algumas.
+
+4
+00:00:21,830 --> 00:00:29,630
+Digamos que, ao armazenar um novo resultado, queremos simular que tambm armazenamos isso em um
+
+5
+00:00:29,630 --> 00:00:30,320
+servidor.
+
+6
+00:00:30,500 --> 00:00:35,510
+Agora, no iremos chegar a um servidor aqui porque importa, mas podemos simplesmente usar o tempo limite definido para
+
+7
+00:00:35,510 --> 00:00:36,140
+simular isso.
+
+8
+00:00:36,140 --> 00:00:41,900
+tempo e queremos atualizar a loja depois de concluda, digamos o mesmo para o resultado do Duleep.
+
+9
+00:00:41,900 --> 00:00:44,230
+Isso simplesmente leva um curto perodo de
+
+10
+00:00:44,510 --> 00:00:49,320
+Ento, essencialmente, queremos criar um cdigo sncrono ou aes aqui.
+
+11
+00:00:49,340 --> 00:00:54,010
+Agora, como eu disse, a funo redutora deve ser executada de forma sncrona.
+
+12
+00:00:54,110 --> 00:01:01,290
+Voc no pode definir tempo limite aqui porque o tempo limite que, como voc sabe, toma uma funo.
+
+13
+00:01:01,430 --> 00:01:03,010
+E ento, o tempo.
+
+14
+00:01:03,020 --> 00:01:09,410
+Digamos que dois segundos aqui, voc no pode retornar seu estado, no funciona.
+
+15
+00:01:09,410 --> 00:01:14,750
+No  assim que o javascript funciona. A funo s  executada depois de dois segundos mudar
+
+16
+00:01:14,750 --> 00:01:17,990
+a etapa e ser feita at ento, voc entrar no contrato.
+
+17
+00:01:17,990 --> 00:01:23,810
+Ento, tipicamente o que voc faria, voc retornaria uma promessa que exige resolver dentro do referido tempo
+
+18
+00:01:23,840 --> 00:01:29,720
+e depois de um certo perodo de tempo, mas seu reprodutor simplesmente no espera obter uma promessa.
+
+19
+00:01:29,750 --> 00:01:34,060
+Ento, no h como voc pode executar o cdigo assncrono aqui.
+
+20
+00:01:34,130 --> 00:01:41,060
+Existe uma maneira diferente, embora possamos executar o cdigo assncrono sem a ajuda dos chamados
+
+21
+00:01:41,060 --> 00:01:42,520
+criadores de ection.
+
+22
+00:01:42,560 --> 00:01:49,940
+Ento, mergulhemos em criadores de ao antes de aprendermos como podemos utiliz-los para executar o cdigo
+
+23
+00:01:49,940 --> 00:01:50,470
+assncrono.
+

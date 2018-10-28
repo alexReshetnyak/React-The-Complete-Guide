@@ -1,0 +1,132 @@
+1
+00:00:01,990 --> 00:00:07,330
+Quindi nell'ultima lezione prendiamo parte a questo progetto di Firebase e abbiamo cambiato le regole.
+
+2
+00:00:07,470 --> 00:00:14,730
+Ora iniziamo a inviare richieste HTB a questo endpoint e ad inviare richieste HTP.
+
+3
+00:00:14,730 --> 00:00:18,970
+Ovviamente dovremmo installare un nuovo pacchetto nel nostro progetto di corso.
+
+4
+00:00:19,050 --> 00:00:25,830
+Lo facciamo con il dash dash di installazione di NPM save x yes  il pacchetto che voglio installare perch sei
+
+5
+00:00:25,830 --> 00:00:27,690
+proprio come un qualsiasi modulo HTP.
+
+6
+00:00:27,730 --> 00:00:31,890
+Vuoi usare gli assi per impostare la mia et per mantenere le richieste.
+
+7
+00:00:31,890 --> 00:00:38,210
+Ovviamente puoi usare diversi pacchetti Ajax, ma in realt  davvero eccezionale e posso solo raccomandarlo.
+
+8
+00:00:38,250 --> 00:00:43,260
+Da quel momento in poi possiamo riavviare il demone che la apre con l'avvio di NPM.
+
+9
+00:00:43,530 --> 00:00:47,290
+E ora, naturalmente, vogliamo aggiungere l'accesso alla nostra applicazione.
+
+10
+00:00:47,550 --> 00:00:55,020
+Nell'ultimo modulo del corso usa tutti i diversi modi di aggiungerlo aggiungendolo creando un'istanza di
+
+11
+00:00:55,290 --> 00:01:00,000
+accesso o semplicemente importandolo e potenzialmente impostando alcuni valori predefiniti.
+
+12
+00:01:00,000 --> 00:01:08,700
+Ora aggiungo aggiungendo istanza di xes ma potresti anche solo importare globalmente e impostare questi valori globali
+
+13
+00:01:08,700 --> 00:01:10,940
+che hai visto nell'ultimo modulo.
+
+14
+00:01:11,010 --> 00:01:12,900
+Sicuramente giocare con entrambi.
+
+15
+00:01:12,930 --> 00:01:15,110
+Scegli quello che ti piace di pi.
+
+16
+00:01:15,210 --> 00:01:22,900
+importare x anni dal pacchetto ex US e quindi chiama X crea e passa un oggetto javascript per configurarlo.
+
+17
+00:01:23,310 --> 00:01:30,600
+Ora per creare un'istanza di X anni ho intenzione di creare un nuovo file e ho intenzione di nominare
+
+18
+00:01:30,630 --> 00:01:38,010
+questi ordini di X puntino Ges per via del fatto che per tutte le cose relative all'ordine l dentro
+
+19
+00:01:38,010 --> 00:01:38,780
+ora devo
+
+20
+00:01:38,790 --> 00:01:46,050
+Ora ci sono le basi su cui basarsi su quel lbf che ho appena copiato da Firebase Dessous e tu sei Alwar
+
+21
+00:01:46,050 --> 00:01:50,760
+a cui vuoi inviare la tua richiesta per archiviare i tuoi dati nel database.
+
+22
+00:01:50,820 --> 00:01:55,260
+E di nuovo nel caso ti sia sfuggito  questa parte.
+
+23
+00:01:55,440 --> 00:02:02,280
+il database Dator che  quello che ho impostato come base di default del tuo L qui ovviamente dice
+
+24
+00:02:02,330 --> 00:02:08,820
+che viene creato qui dovrebbe essere memorizzato in alcune costanti o una costante o variabile e nominare l'istanza qui.
+
+25
+00:02:08,820 --> 00:02:09,910
+Puoi vedere sotto
+
+26
+00:02:10,110 --> 00:02:13,520
+E poi posso esportarlo come predefinito del file.
+
+27
+00:02:13,530 --> 00:02:18,100
+Ora ho la mia istanza di accesso configurata per questo tuo et al.
+
+28
+00:02:18,140 --> 00:02:23,670
+Questo  anche il motivo per cui utilizzo questo approccio di istanza perch pi avanti nel corso
+
+29
+00:02:23,760 --> 00:02:27,230
+quando aggiungiamo l'autenticazione, useremo tutti un altro utente con x s.
+
+30
+00:02:27,240 --> 00:02:34,230
+Quindi non voglio impostare lo spazio o come predefinito globale anche se per il momento potrei farlo.
+
+31
+00:02:34,260 --> 00:02:36,640
+Cos ora abbiamo creato l'istanza di accesso.
+
+32
+00:02:36,690 --> 00:02:37,570
+ fantastico.
+
+33
+00:02:37,590 --> 00:02:40,440
+Passiamo ora a Vaun per inviare effettivamente il richiedente.
+

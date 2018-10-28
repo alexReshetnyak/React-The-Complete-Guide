@@ -1,0 +1,300 @@
+1
+00:00:02,140 --> 00:00:07,720
+Teraz, zanim nadal bdziemy uywa tego tokena, ktry przechowujemy w naszym sklepie
+
+2
+00:00:08,140 --> 00:00:13,970
+redux, moesz pamita, e kiedy si zalogujemy i sprawdzimy dane, ktre otrzymujemy,
+
+3
+00:00:13,990 --> 00:00:18,240
+pozwl mi szybko to zrobi, przecz si na logowanie,
+
+4
+00:00:18,250 --> 00:00:21,410
+tam te otrzymujemy t warto ExpiresIn .
+
+5
+00:00:21,520 --> 00:00:25,880
+Tak wic token jest wany przez 60 minut, po czym za
+
+6
+00:00:25,880 --> 00:00:32,440
+kadym razem, gdy wysyamy go do dowolnego zasobu wymagajcego tokena, danie zakoczy si niepowodzeniem, tak jakbymy w
+
+7
+00:00:32,440 --> 00:00:34,220
+ogle nie wysali tokena.
+
+8
+00:00:34,220 --> 00:00:36,400
+Teraz nie jest to najlepszy
+
+9
+00:00:36,400 --> 00:00:41,970
+sposb na uytkownika, prawdopodobnie chcemy aktywnie wylogowa uytkownika po tej godzinie.
+
+10
+00:00:42,220 --> 00:00:48,940
+Na marginesie, jeli uytkownik ponownie zaaduje aplikacj, to i tak stan zostanie utracony, poniewa spowoduje to usunicie magazynu
+
+11
+00:00:48,940 --> 00:00:52,200
+redux, poniewa caa aplikacja zostanie ponownie zaadowana, wic moemy
+
+12
+00:00:52,360 --> 00:00:58,390
+nastpnie zmieni interfejs uytkownika, tak czy inaczej, w przyszoci, aby pokaza, e nie jestemy zalogowani, ale
+
+13
+00:00:58,390 --> 00:01:05,020
+jest to stan, w ktrym jestemy zalogowani i nie przeadowujemy strony przez godzin, w ktrej moemy znale si
+
+14
+00:01:05,020 --> 00:01:10,760
+w tym dziwnym miejscu posiadania tokena, ktry nie jest ju wany bez naszej wiedzy.
+
+15
+00:01:10,840 --> 00:01:20,740
+Z tego powodu chc tylko doda kod, aby uniewani ten token po godzinie,
+
+16
+00:01:21,040 --> 00:01:24,070
+abymy mogli zaktualizowa nasz
+
+17
+00:01:24,190 --> 00:01:33,490
+interfejs, gdy nie bdzie ju tokena. Aby to zrobi, przejd do mojego pliku auth
+
+18
+00:01:33,730 --> 00:01:41,240
+actions, a dodam now sta, now funkcj, ktr zasadniczo nazwie checkAuthTimeout, tam
+
+19
+00:01:41,270 --> 00:01:51,050
+spodziewam si uzyska czas wyganicia i tam zwrc t funkcj gdzie otrzymuj wysyk jako argument, poniewa
+
+20
+00:01:51,050 --> 00:01:54,350
+chc uruchomi jaki kod asynchroniczny.
+
+21
+00:01:54,860 --> 00:02:02,280
+Wyl to dziaanie checkAuthTimeout, gdy otrzymamy odpowied o powodzeniu, wic tam, gdzie wylemy
+
+22
+00:02:02,360 --> 00:02:07,870
+rwnie authSuccess, rwnie wyl checkAuthTimeout, a ja przeka dane odpowiedzi,
+
+23
+00:02:08,030 --> 00:02:11,110
+a tam jest to ta
+
+24
+00:02:11,420 --> 00:02:13,420
+wasno expiresIn, ktr
+
+25
+00:02:13,460 --> 00:02:17,570
+widziae, expiresIn, moesz szybko zobaczymy, e jeli
+
+26
+00:02:17,660 --> 00:02:22,660
+ponownie si zalogujemy, przecz si na logowanie, mwi o
+
+27
+00:02:22,910 --> 00:02:28,860
+tym, e ta waciwo wyganie. To zawiera warto, liczb lub
+
+28
+00:02:28,860 --> 00:02:35,370
+dokadniej cig znakw, ale ktry mona sparsowa jako liczb i otrzymuj
+
+29
+00:02:35,660 --> 00:02:43,960
+to tutaj, tam chc teraz wywoa setTimeout i wykona funkcj po pewnym czasie i prawdopodobnie
+
+30
+00:02:43,970 --> 00:02:48,490
+moesz zgadn jaka ilo czasu, czas wyganicia tutaj.
+
+31
+00:02:48,680 --> 00:02:56,230
+Teraz tutaj, w setTimeout, chc co zrobi i po prostu chc wywoa wylogowanie, to jest nowa
+
+32
+00:02:56,280 --> 00:02:58,540
+akcja, ktrej i tak potrzebuj.
+
+33
+00:02:58,690 --> 00:03:00,460
+Wic wyeksportuj sta,
+
+34
+00:03:00,470 --> 00:03:08,130
+ktr nazwiemy wylogowaniem tutaj, bdzie dziaaniem, ktre nie bierze adnego wkadu, bdzie twrc akcji synchronicznej,
+
+35
+00:03:08,300 --> 00:03:11,820
+ustawi typ na typ, ktry mam jeszcze
+
+36
+00:03:11,840 --> 00:03:20,150
+stworzy, wic let's utwrz go teraz, w typach akcji wyeksportuj stay AUTH_LOGOUT z identyfikatorem AUTH_LOGOUT, a
+
+37
+00:03:20,150 --> 00:03:30,630
+teraz mog wysa t akcj, wic tutaj typem bdzie actionTypes. AUTH_LOGOUT i akcja wylogowania, ten
+
+38
+00:03:30,810 --> 00:03:38,100
+twrca akcji bdzie rwnie uyty w setTimeout checkAuthTimeout.
+
+39
+00:03:38,400 --> 00:03:46,920
+Tak wic, nazwabym wysyk po upywie czasu wyganicia, aby wywoa akcj wylogowania, tak jak to, zawsze
+
+40
+00:03:46,920 --> 00:03:52,690
+wykonuj te funkcje, poniewa wtedy zwraca dziaanie, ktre jest faktycznie wywoywane.
+
+41
+00:03:52,740 --> 00:04:00,480
+Teraz, po wykonaniu tej czynnoci, uruchamiamy lub wysyamy funkcj wylogowania po upywie tego czasu i to pozwala mi teraz
+
+42
+00:04:00,480 --> 00:04:04,790
+wej do mojego reduktora i tam zajmij si przypadkiem wylogowania.
+
+43
+00:04:04,950 --> 00:04:13,940
+Wic dodam tam now funkcj, ktr nazwiemy authLogout, otrzymam stan i akcj tutaj iw funkcji, zwrc zaktualizowany obiekt
+
+44
+00:04:14,700 --> 00:04:23,370
+javascript i ten zaktualizowany obiekt javascript tutaj bdzie oczywicie utworzony z updateObject jest mj stary stan, w
+
+45
+00:04:24,150 --> 00:04:26,550
+ktrym ustawiem token na warto
+
+46
+00:04:26,610 --> 00:04:35,400
+null, a identyfikator uytkownika na null, tak e jestem zasadniczo wylogowany, poniewa wszystkie te podstawowe informacje, ktre
+
+47
+00:04:35,400 --> 00:04:41,790
+stanowiy zalogowanego uytkownika, zostaj teraz utracone. I musz to
+
+48
+00:04:41,790 --> 00:04:51,580
+oczywicie zaatwi tutaj, case actionTypes. AUTH_LOGOUT, tam chc zwrci wynik funkcji auth-wylogowania, w ktrej
+
+49
+00:04:51,610 --> 00:05:00,130
+przekazuj stan i akcj jako argumenty, a tym razem dostalimy ten timer w pliku naszego dziaania
+
+50
+00:05:00,400 --> 00:05:07,060
+w checkAuthTimeout, ktry uruchomi si po tym, co zwrci nam baza, a
+
+51
+00:05:07,060 --> 00:05:11,660
+ktra nastpnie upewnij si, e uytkownik jest wylogowany.
+
+52
+00:05:11,690 --> 00:05:14,740
+Na razie wyczyci to sklep i nie zrobi nic
+
+53
+00:05:14,740 --> 00:05:20,410
+wicej, nie wywietli adnych wizualnych informacji zwrotnych, ale zaimplementujemy co, co moe si wydarzy, gdy uytkownik
+
+54
+00:05:20,500 --> 00:05:26,570
+si wyloguje, w tym take gdy wiadomie wyloguje si, aby da uytkownikowi wskazwk, e nie jest zalogowany ju.
+
+55
+00:05:26,890 --> 00:05:34,700
+Na razie zobaczmy, czy to wysya wszystkie prace, przecz si na logowanie i przelij, spjrzmy
+
+56
+00:05:35,740 --> 00:05:36,240
+na
+
+57
+00:05:36,280 --> 00:05:38,660
+redux, tam jestem natychmiast wylogowany,
+
+58
+00:05:38,980 --> 00:05:42,400
+wic jako to wystrzeli troch za wczenie.
+
+59
+00:05:42,400 --> 00:05:47,110
+Powodem oczywicie jest czas wyganicia wynosi 3600, ale setTimeout
+
+60
+00:05:47,260 --> 00:05:50,190
+spodziewa si uzyska milisekundy, wic
+
+61
+00:05:50,200 --> 00:05:53,090
+byo tylko 3. 6 sekund.
+
+62
+00:05:53,140 --> 00:05:54,250
+To dobra praktyka,
+
+63
+00:05:54,250 --> 00:05:59,960
+teraz moemy przynajmniej zobaczy, e authLogout jest wywoywane i e wyczycio tokeny i
+
+64
+00:06:00,370 --> 00:06:08,310
+identyfikator uytkownika, ale oczywicie chc pomnoy t warto przez tysic, aby zmieni milisekundy w rzeczywiste sekundy, wic teraz
+
+65
+00:06:08,350 --> 00:06:10,410
+powinno by jedn godzin.
+
+66
+00:06:10,420 --> 00:06:16,810
+Teraz, jeli zapisz to i wykonam to wiczenie ponownie, zaloguj si, przecz si na logowanie, teraz
+
+67
+00:06:16,840 --> 00:06:22,240
+nie powinnimy widzie authLogout, poniewa teraz moglimy poczeka godzin, nie zrobi tego tutaj,
+
+68
+00:06:22,240 --> 00:06:23,760
+nie krpuj si. oczywicie.
+
+69
+00:06:24,130 --> 00:06:25,610
+Moemy teraz kontynuowa, a
+
+70
+00:06:25,660 --> 00:06:32,170
+teraz w kocu skorzysta z naszego tokena, aby w pierwszej kolejnoci chroni niektre zasoby naszego zaplecza,
+
+71
+00:06:32,170 --> 00:06:34,770
+a nastpnie nadal je aktualizowa, a
+
+72
+00:06:34,810 --> 00:06:40,660
+nastpnie zaktualizowa nasz interfejs uytkownika, na przykad doda przycisk wylogowania, aby umoliwi uytkownikowi wylogowanie
+
+73
+00:06:41,050 --> 00:06:42,760
+si. i podobne rzeczy.
+
+74
+00:06:42,820 --> 00:06:46,540
+Bd to nastpne kroki, nad ktrymi bd pracowa,
+
+75
+00:06:46,660 --> 00:06:48,970
+zrbmy to w nastpnych wykadach.
+

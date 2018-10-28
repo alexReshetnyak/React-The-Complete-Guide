@@ -1,0 +1,216 @@
+1
+00:00:02,190 --> 00:00:07,180
+Now over the last lectures I introduced you to some of the most important next generation javascript
+
+2
+00:00:07,180 --> 00:00:10,240
+features which you're going to see in those course.
+
+3
+00:00:10,270 --> 00:00:12,810
+There are two other things I know definitely.
+
+4
+00:00:12,830 --> 00:00:13,980
+Also want to cover.
+
+5
+00:00:14,020 --> 00:00:20,650
+They're not next generation javascript but they are features you might have missed or forgotten and
+
+6
+00:00:20,740 --> 00:00:23,190
+they're super important to keep in mind.
+
+7
+00:00:23,380 --> 00:00:30,220
+The first feature or concept of javascript I'm talking about is the fact that you have reference and
+
+8
+00:00:30,220 --> 00:00:31,870
+primitive types.
+
+9
+00:00:31,870 --> 00:00:37,850
+If I create a number like this, then this is a primitive type.
+
+10
+00:00:37,900 --> 00:00:44,560
+That means if I create a second number num2 and set it equal to this number then it will actually
+
+11
+00:00:44,560 --> 00:00:49,240
+create a real copy of number so num2 of course.
+
+12
+00:00:49,240 --> 00:00:53,930
+Now if I log this, it will also be one.
+
+13
+00:00:54,450 --> 00:00:58,470
+But it will have copied that value one into num2.
+
+14
+00:00:58,710 --> 00:01:06,030
+Now numbers, strings, booleans, these are so-called primitive types whenever you reassign or you store
+
+15
+00:01:06,090 --> 00:01:07,830
+a variable in another variable.
+
+16
+00:01:07,860 --> 00:01:12,720
+It will copy the value, objects and arrays are reference types.
+
+17
+00:01:12,720 --> 00:01:14,770
+Though let me show you what I mean.
+
+18
+00:01:14,910 --> 00:01:23,000
+I create my personal object which just has a name here and I now create a secondPerson and assigned
+
+19
+00:01:23,000 --> 00:01:24,940
+person as a value here.
+
+20
+00:01:25,250 --> 00:01:27,120
+If I console log.
+
+21
+00:01:27,140 --> 00:01:35,360
+secondPerson and hit run, it will print the same value as the first person but it will not actually have
+
+22
+00:01:35,390 --> 00:01:38,010
+copied the person instead.
+
+23
+00:01:38,150 --> 00:01:46,490
+Person the object is stored in memory and in the constant person we store a pointer to that place in memory.
+
+24
+00:01:46,700 --> 00:01:52,030
+And if we then assign person to secondPerson that pointer will be copied.
+
+25
+00:01:52,280 --> 00:01:59,450
+We can see that this is the case if we changed person.name after having it copied.
+
+26
+00:01:59,510 --> 00:02:07,400
+With that you would expect to print Max here still a person with name Max because we copied person, stored
+
+27
+00:02:07,400 --> 00:02:11,690
+it in secondPerson and thereafter changed the name.
+
+28
+00:02:11,690 --> 00:02:15,200
+However if I clear and run you will see name.
+
+29
+00:02:15,230 --> 00:02:22,010
+Manu here even though I'm printing the secondperson so for secondPerson the name also changed
+
+30
+00:02:22,340 --> 00:02:29,190
+the reason for it is that it just copied the pointer and points to the exact same object in memory as
+
+31
+00:02:29,210 --> 00:02:30,430
+person does.
+
+32
+00:02:30,470 --> 00:02:35,480
+So if we change name on person we automatically change it for secondPerson.
+
+33
+00:02:35,480 --> 00:02:36,530
+Now that's important.
+
+34
+00:02:36,530 --> 00:02:38,850
+Keep in mind and it's the same for arrays.
+
+35
+00:02:38,900 --> 00:02:41,840
+If you copy in quotation marks.
+
+36
+00:02:41,930 --> 00:02:43,310
+An array like this.
+
+37
+00:02:43,430 --> 00:02:45,370
+And you then change an array element.
+
+38
+00:02:45,410 --> 00:02:49,510
+It will all change in the so-called copied array.
+
+39
+00:02:49,520 --> 00:02:54,540
+This will become important in React because it can lead to unexpected behaviors.
+
+40
+00:02:54,590 --> 00:03:02,170
+If you copy objects or arrays like this because you then may manipulate one object in one place in the
+
+41
+00:03:02,250 --> 00:03:09,140
+app and accidentally manipulate another usage of the same object in another place of the app.
+
+42
+00:03:09,170 --> 00:03:16,850
+Therefore we will learn techniques to copy this in an immutable way which means we copy that by really
+
+43
+00:03:16,850 --> 00:03:24,630
+copying the object and not just a pointer for that we can use this spread operator.
+
+44
+00:03:24,680 --> 00:03:34,020
+Now we can simply create a new person object here and spread the person properties.
+
+45
+00:03:34,040 --> 00:03:40,580
+This will pull out the properties and the values of the properties from the object and add it to this
+
+46
+00:03:40,580 --> 00:03:45,500
+newly created object here and we do create a new one with the curly braces.
+
+47
+00:03:45,500 --> 00:03:51,440
+Now if I hit clear and run we still print an object with name Max even though we changed the name to
+
+48
+00:03:51,440 --> 00:03:55,760
+Manu here because now we really created a real copy.
+
+49
+00:03:55,760 --> 00:03:59,390
+This is a technique I will also come back to later in this course.
+
+50
+00:03:59,390 --> 00:04:05,530
+It's just important to realize and to keep in mind that objects and arrays are reference types.
+
+51
+00:04:05,600 --> 00:04:11,010
+If you reassign them you're copying the pointer not the value.
+
+52
+00:04:11,270 --> 00:04:17,690
+Therefore if you want to do this in a real copy way, you will have to create a new object and just copy
+
+53
+00:04:17,690 --> 00:04:20,950
+the properties and not the entire object.
+
+54
+00:04:20,960 --> 00:04:24,230
+That's something very important to keep in mind for this course.
+

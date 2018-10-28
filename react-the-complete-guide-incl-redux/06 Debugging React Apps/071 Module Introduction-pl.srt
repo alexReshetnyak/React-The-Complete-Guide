@@ -1,0 +1,44 @@
+1
+00:00:02,430 --> 00:00:10,650
+Witamy w tym module kursu. Nauczylimy si wielu rzeczy na temat reakcji i ju widzielimy
+
+2
+00:00:10,740 --> 00:00:12,790
+bdy w naszej aplikacji reagowania.
+
+3
+00:00:12,880 --> 00:00:21,900
+Teraz, bez wzgldu na to, jak dobry jeste programist, trafisz na bdy, albo komunikaty o bdach, albo
+
+4
+00:00:21,900 --> 00:00:22,680
+w
+
+5
+00:00:22,680 --> 00:00:25,390
+wikszoci przypadkw gorzej, logiczne bdy.
+
+6
+00:00:25,470 --> 00:00:32,460
+Teraz w tym module poka ci, jak moesz debugowa swoj aplikacj reagowania, jak powiniene czyta
+
+7
+00:00:32,520 --> 00:00:35,340
+i rozumie komunikaty o bdach reagowania,
+
+8
+00:00:35,400 --> 00:00:41,940
+poniewa wiele z nich jest rzeczywicie cakiem dobrych i pomocnych, i jak moesz wtedy
+
+9
+00:00:41,940 --> 00:00:44,270
+stworzy aplikacj reagujc bezbdnie .
+
+10
+00:00:44,700 --> 00:00:50,940
+Zajrzyjmy do tego i nauczmy si rnych technik, ktre masz do dyspozycji, aby zrozumie i
+
+11
+00:00:50,940 --> 00:00:52,660
+poradzi sobie z bdami.
+

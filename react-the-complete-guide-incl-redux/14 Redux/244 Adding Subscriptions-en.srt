@@ -1,0 +1,128 @@
+1
+00:00:02,230 --> 00:00:07,750
+So over the last lectures, we added or we created our store and we added actions,
+
+2
+00:00:07,750 --> 00:00:15,880
+now I also want to add my subscriptions. Subscriptions make sure that I don't have to manually call
+
+3
+00:00:15,880 --> 00:00:23,530
+getState here in my code if I want to get the current state snapshot but to inform me whenever I need to
+
+4
+00:00:23,530 --> 00:00:28,880
+get a new state because something changed, because if I manually do it like here in a console log,
+
+5
+00:00:29,020 --> 00:00:31,370
+I always have to guess if something changed.
+
+6
+00:00:31,480 --> 00:00:39,720
+So how do I create a subscription then? I access my store and there, I have a subscribe method I can execute.
+
+7
+00:00:40,150 --> 00:00:46,890
+Now subscribe takes an argument, a function which will be executed when ever the state is updated,
+
+8
+00:00:47,050 --> 00:00:55,260
+so whenever an action reached the reducer. The function we passed to subscribe doesn't get any arguments,
+
+9
+00:00:55,300 --> 00:00:59,450
+so here I'll use the ES6 arrow syntax with empty parentheses,
+
+10
+00:00:59,740 --> 00:01:05,660
+and then in the function body, we can execute any code we want on state updates.
+
+11
+00:01:05,680 --> 00:01:09,350
+So here, I'll log subscription,
+
+12
+00:01:09,400 --> 00:01:12,370
+just a marker so that I see where this is coming from
+
+13
+00:01:12,520 --> 00:01:18,370
+and now, I can also reach out to the store and get my state there. The getState method is the same as
+
+14
+00:01:18,370 --> 00:01:19,360
+before,
+
+15
+00:01:19,420 --> 00:01:26,140
+the difference is that I now know that I should get the state here because I know hey something changed
+
+16
+00:01:26,770 --> 00:01:28,680
+and that subscription
+
+17
+00:01:28,750 --> 00:01:35,380
+actually, of course typically is set up right after the store was created so that we get informed about
+
+18
+00:01:35,440 --> 00:01:37,530
+any future dispatches.
+
+19
+00:01:37,870 --> 00:01:43,990
+So I notice that subscribe comes before dispatching the actions and this function in the subscribe method
+
+20
+00:01:44,560 --> 00:01:49,190
+will be executed whenever action is dispatched and mutates the store.
+
+21
+00:01:49,270 --> 00:01:57,450
+With that, let's rerun this with node redux-basics.js and what we see is we first of all get the output
+
+22
+00:01:57,450 --> 00:02:01,590
+for the console log statement here after creating the store
+
+23
+00:02:02,650 --> 00:02:10,140
+and then, I get two subscription outputs and then the output here after the action is patching.
+
+24
+00:02:10,170 --> 00:02:15,730
+Now I get the two subscription outputs not because subscription comes before it getState, before
+
+25
+00:02:15,730 --> 00:02:20,910
+this console log statement but because it's triggered when ever an action is dispatched,
+
+26
+00:02:20,980 --> 00:02:24,150
+which of course happens before I do this console log statement.
+
+27
+00:02:25,340 --> 00:02:27,260
+This is how a subscription works,
+
+28
+00:02:27,260 --> 00:02:31,010
+it's getting triggered whenever the state is updated.
+
+29
+00:02:31,010 --> 00:02:35,600
+Now that's all nice and this is now showing us all the building blocks of redux,
+
+30
+00:02:35,600 --> 00:02:41,100
+however it doesn't show us at all how this fits into our react application.
+
+31
+00:02:41,420 --> 00:02:44,150
+So let's see how we connect redux to react
+
+32
+00:02:44,150 --> 00:02:45,380
+over the next lectures.
+

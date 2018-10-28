@@ -1,0 +1,420 @@
+1
+00:00:02,360 --> 00:00:06,360
+Na ltima conferncia, criamos nosso projeto com o create reag.
+
+2
+00:00:06,450 --> 00:00:11,980
+E, como mencionei, certifique-se de que o NPM seja iniciado, este processo est sendo executado sempre que estiver
+
+3
+00:00:11,980 --> 00:00:13,260
+trabalhando no seu cdigo.
+
+4
+00:00:13,290 --> 00:00:19,160
+Agora abro a pasta que foi criada com a Microsoft, que  um cdigo de estdio.
+
+5
+00:00:19,200 --> 00:00:22,030
+Esta  a ideia que vou usar para o curso.
+
+6
+00:00:22,200 --> 00:00:25,430
+Mas voc pode usar qualquer idia ou editor que voc queira usar.
+
+7
+00:00:25,500 --> 00:00:31,950
+Por exemplo, toda uma loja na web e seria uma alternativa ou  sublime ou Adam ou qualquer outro editor
+
+8
+00:00:31,950 --> 00:00:33,000
+que voc gosta.
+
+9
+00:00:33,000 --> 00:00:38,850
+Agora, eu instalo um tema e algumas extenses e voc pode encontrar a configurao exata em que estou
+
+10
+00:00:39,140 --> 00:00:42,170
+usando o descrito no documento PTF anexado a este vdeo.
+
+11
+00:00:42,210 --> 00:00:48,150
+Apenas no caso de querer usar o mesmo, sinta-se livre para usar sua configurao favorita, independentemente do tema
+
+12
+00:00:48,150 --> 00:00:53,230
+e da configurao, voc ter a mesma quantidade de arquivos e pastas no seu projeto.
+
+13
+00:00:53,460 --> 00:00:58,890
+Ento, vamos saber caminhar atravs de todos os arquivos e pastas que temos aqui no nvel da raiz, ns
+
+14
+00:00:58,890 --> 00:01:00,420
+conseguimos alguns arquivos de configurao.
+
+15
+00:01:00,480 --> 00:01:03,010
+Estes arquivos de bloqueio aqui podem basicamente ser ignorados.
+
+16
+00:01:03,030 --> 00:01:07,800
+Seu peito bloqueando as palavras das dependncias, estamos usando as dependncias gerais.
+
+17
+00:01:07,800 --> 00:01:14,250
+Nossos chapus de projeto so definidos no arquivo adjacente empacotado e l voc pode ver que temos trs a
+
+18
+00:01:14,250 --> 00:01:18,360
+pendncia  neste projeto e isso foi criado por Create re-act app.
+
+19
+00:01:18,540 --> 00:01:24,720
+Como voc pode ver, obviamente, importa reagir aqui. Eu estou usando uma verso de lanamento do re-agir 16 no momento
+
+20
+00:01:24,720 --> 00:01:26,520
+em que voc est vendo isso.
+
+21
+00:01:26,520 --> 00:01:32,710
+Isso deve ser lanado re-atuar Dom  o mesmo e re-agir scripts como eu mencionei  um pacote que
+
+22
+00:01:32,760 --> 00:01:39,900
+oferece todo este fluxo de trabalho de compilao este servidor de desenvolvimento a prxima gerao de recursos de javascript suporta e
+
+23
+00:01:39,990 --> 00:01:46,340
+todas essas coisas que estamos usando neste projeto no pacote O pai adjacente  um par de scripts definidos.
+
+24
+00:01:46,560 --> 00:01:51,000
+Voc pode executar esses scripts com a execuo do NPM e, em seguida, o nome do script.
+
+25
+00:01:51,180 --> 00:01:57,060
+A exceo  o incio, que voc tambm pode executar com o comeo do NPM para que o comando seja executado
+
+26
+00:01:57,060 --> 00:02:02,680
+e, como voc pode ver, ele usa este pacote de scripts de reao, ento tambm executa algum comando de partida l.
+
+27
+00:02:02,690 --> 00:02:03,730
+Isso  simplesmente um comando.
+
+28
+00:02:03,750 --> 00:02:08,900
+Este pacote faz um nvel de maneira e esse comando acontece para iniciar este servidor de desenvolvimento.
+
+29
+00:02:08,940 --> 00:02:15,750
+Veja todo o nosso cdigo compilar o nosso cdigo otimizar o cdigo e fazer todas essas coisas, uma vez que voc est pronto
+
+30
+00:02:15,750 --> 00:02:21,360
+para a implantao do seu aplicativo, voc executaria a compilao de execuo do NPM para otimiz-lo voc no iniciar
+
+31
+00:02:21,570 --> 00:02:28,740
+a vontade do servidor do homem, mas, em vez disso, obter seu cdigo otimizado armazenado em uma pasta porque agora voc no ver seu cdigo
+
+32
+00:02:28,770 --> 00:02:30,090
+compilado em qualquer lugar aqui.
+
+33
+00:02:30,090 --> 00:02:31,770
+Tudo acontece na memria.
+
+34
+00:02:31,770 --> 00:02:35,190
+Mas vou voltar a implantar o aplicativo mais tarde no curso.
+
+35
+00:02:35,220 --> 00:02:37,140
+Ento, vamos fechar o pacote que Jason seguiu.
+
+36
+00:02:37,140 --> 00:02:44,710
+Por enquanto, a pasta mdulos do n contm todas as dependncias e dependncias Suppe do nosso projeto.
+
+37
+00:02:44,940 --> 00:02:46,780
+ por isso que temos muitos.
+
+38
+00:02:46,800 --> 00:02:53,130
+Ns s tivemos que reagir ao brao e re-agir scripts, mas re-agir scripts tem muitas outras dependncias.
+
+39
+00:02:53,130 --> 00:02:56,550
+Todas essas pequenas ferramentas construdas que compilaram cdigo e assim por diante.
+
+40
+00:02:56,760 --> 00:02:59,820
+Voc no deve editar nada na pasta de mdulos de n.
+
+41
+00:02:59,850 --> 00:03:06,510
+Ele  gerado automaticamente se voc executar a instalao do NPM na pasta do projeto e foi feito
+
+42
+00:03:06,570 --> 00:03:08,680
+automaticamente por criar scripts de re-ao.
+
+43
+00:03:08,850 --> 00:03:11,160
+A pasta pblica  mais interessante.
+
+44
+00:03:11,160 --> 00:03:16,070
+, basicamente, a pasta raiz que  servida pelo servidor web no final.
+
+45
+00:03:16,080 --> 00:03:23,090
+Aqui s detm os arquivos que podemos editar os arquivos de script so adicionados na pasta de origem.
+
+46
+00:03:23,490 --> 00:03:26,580
+Aqui temos um ndice de arquivo importante h t m l.
+
+47
+00:03:26,700 --> 00:03:30,960
+Esta  uma pgina HGL normal e ainda  uma pgina nica.
+
+48
+00:03:30,980 --> 00:03:32,010
+Temos menos.
+
+49
+00:03:32,070 --> 00:03:35,760
+Ns nunca adicionaremos mais pginas HDMI neste projeto.
+
+50
+00:03:35,820 --> 00:03:41,950
+Se voc estiver criando um projeto de vrias pginas, voc criaria vrios desses projetos que voc criou um aplicativo de re-ao
+
+51
+00:03:42,240 --> 00:03:43,630
+que voc no adicionaria mais.
+
+52
+00:03:43,650 --> 00:03:47,690
+Tim excele aqui ou voc precisa de seu prprio fluxo de trabalho se quiser fazer isso.
+
+53
+00:03:47,820 --> 00:03:54,820
+Portanto,  a nica pgina onde, no final, nossos arquivos de script sero injetados por esse fluxo de trabalho de compilao.
+
+54
+00:03:54,840 --> 00:04:01,200
+ por isso que voc no v uma importao de script aqui e voc pode editar este arquivo, mas vamos escrever o cdigo
+
+55
+00:04:01,200 --> 00:04:02,160
+HTML da NEHTA aqui.
+
+56
+00:04:02,340 --> 00:04:05,670
+Quero destacar o ano diff com a rota ID.
+
+57
+00:04:05,700 --> 00:04:11,910
+Isso se tornar importante, porque isso ser onde realmente montamos nosso aplicativo de reao mais tarde
+
+58
+00:04:12,060 --> 00:04:14,160
+e, claro, vamos trabalhar e reagir.
+
+59
+00:04:14,160 --> 00:04:20,880
+Mas se voc precisar adicionar quaisquer importaes, digamos bibliotecas Abwehr C-s como bibliotecas ou quer adicionar algumas meta-tags
+
+60
+00:04:20,880 --> 00:04:25,170
+que voc pode fazer nesse ano no arquivo de correio DHV.
+
+61
+00:04:25,170 --> 00:04:26,930
+Voc tambm pode adicionar mais idade dele aqui.
+
+62
+00:04:26,940 --> 00:04:33,480
+Mas, novamente, voc provavelmente quer fazer isso para re-agir o manifesto adjacente ao Follett, porque o aplicativo de criao
+
+63
+00:04:33,480 --> 00:04:37,230
+de re-atuao nos d um aplicativo Web progressivo fora da caixa.
+
+64
+00:04:37,260 --> 00:04:43,230
+nos d seu manifesto ao lado do outono, onde podemos encontrar alguns metadados sobre nossa aplicao.
+
+65
+00:04:43,230 --> 00:04:45,630
+Um muito bsico, pelo menos, e
+
+66
+00:04:45,630 --> 00:04:48,150
+Interessante para ns  a pasta de origem.
+
+67
+00:04:48,270 --> 00:04:53,150
+Aqui ns recebemos alguns arquivos e esses so realmente os arquivos nos quais vamos trabalhar.
+
+68
+00:04:53,240 --> 00:04:56,310
+Esta  realmente a nossa aplicao de reao.
+
+69
+00:04:56,580 --> 00:04:58,380
+O mais importante para ns agora.
+
+70
+00:04:58,380 --> 00:05:06,540
+O prximo arquivo js obtm acesso a este elemento raiz do nosso Dom em nosso arquivo h chimley para que o elemento com
+
+71
+00:05:06,540 --> 00:05:12,000
+a raiz ID seja,  claro, esse Def que vimos no arquivo HVM do ndice.
+
+72
+00:05:12,000 --> 00:05:20,500
+Este e ali, como voc pode ver, torna nosso aplicativo de reao com o mtodo de renderizao.
+
+73
+00:05:20,850 --> 00:05:29,940
+Agora, aqui  uma referncia de algum objeto ou elemento de aplicativo que importamos de um arquivo de aplicativo,
+
+74
+00:05:30,060 --> 00:05:36,480
+a extenso Daut J. S.  deixado de fora porque  adicionado automaticamente por nosso fluxo de trabalho de
+
+75
+00:05:36,480 --> 00:05:38,290
+compilao e depois damos uma olhada neste arquivo JS do aplicativo.
+
+76
+00:05:38,290 --> 00:05:45,870
+Portanto,  aqui que vemos nosso primeiro e nico componente de reao que temos neste projeto de
+
+77
+00:05:45,870 --> 00:05:47,010
+partida no momento.
+
+78
+00:05:47,070 --> 00:05:53,580
+Aqui vemos algum GSX e mergulhar profundamente no que vemos aqui exatamente nas prximas palestras.
+
+79
+00:05:53,880 --> 00:06:01,210
+Por enquanto vamos remover todo o contedo desta div de wrapping e simplesmente adicionar uma tag.
+
+80
+00:06:01,240 --> 00:06:12,010
+Seu bem, diga Ol, eu sou uma reao, vamos fech-lo, claro, tambm e ento vamos salv-lo.
+
+81
+00:06:12,010 --> 00:06:15,200
+Isso sempre  importante no se esquea de salvar seus arquivos.
+
+82
+00:06:15,240 --> 00:06:21,400
+Agora, desde que voc tenha iniciado o NPM, isso gera automaticamente uma recompilao.
+
+83
+00:06:21,580 --> 00:06:27,130
+E ele deve recarregar automaticamente sua pgina tambm, e  por isso que voc deve agora ver oi. Eu sou um
+
+84
+00:06:27,190 --> 00:06:28,960
+aplicativo reativo em vez do contedo antigo.
+
+85
+00:06:29,050 --> 00:06:35,380
+Com isso, tambm podemos remover seu logotipo, no pergunte o que voc cair porque j no o usamos em nosso projeto.
+
+86
+00:06:35,380 --> 00:06:38,850
+E agora ns conseguimos um pouco de uma pasta de origem mais limpa.
+
+87
+00:06:38,860 --> 00:06:42,040
+Agora, o que mais criou uma nova ao criou para ns.
+
+88
+00:06:42,070 --> 00:06:48,640
+define alguns estilos que usamos neste arquivo de jazz de applet, embora eu diga que estes no so escopo para este outono.
+
+89
+00:06:48,640 --> 00:06:52,660
+Isso nos deu esse aplicativo em direo ao arquivo C S S, que basicamente
+
+90
+00:06:52,660 --> 00:07:00,370
+Estes ainda so estilos globais e, na verdade, removerei tudo, exceto essa primeira definio de classe de aplicativo nesse arquivo
+
+91
+00:07:00,370 --> 00:07:07,240
+e salvei-lo depois que todos ns chegarmos a ele depois nos vejamos, que tambm se aplica a Stahl
+
+92
+00:07:07,240 --> 00:07:14,540
+globalmente e o que deve ser usado  algum conjunto geral como o seu para o corpo de nossa aplicao.
+
+93
+00:07:14,660 --> 00:07:20,020
+Registros de trabalhador de servios que o japes cair  como o nome implica importante para registrar um
+
+94
+00:07:20,260 --> 00:07:22,290
+trabalhador de servio que  gerado automaticamente.
+
+95
+00:07:22,300 --> 00:07:26,490
+Isso est relacionado com o progresivo Web Ebbe que samos da caixa.
+
+96
+00:07:26,560 --> 00:07:30,180
+Ele basicamente ir pr-falhar nossos arquivos de script.
+
+97
+00:07:30,220 --> 00:07:34,160
+No precisamos configurar nada l e arquivo de teste.
+
+98
+00:07:34,290 --> 00:07:36,880
+Bem, vamos mergulhar no teste mais tarde no curso.
+
+99
+00:07:36,880 --> 00:07:44,380
+Isso basicamente nos permite criar testes unitrios para as diferentes unidades, por exemplo, componentes em nosso aplicativo.
+
+100
+00:07:44,410 --> 00:07:51,670
+Esta  a configurao geral e para a maioria dos coords funcionar em APT ou James ou nossos novos
+
+101
+00:07:51,670 --> 00:07:52,630
+componentes que criamos.
+
+102
+00:07:52,630 --> 00:07:58,260
+Falando, vamos analisar esse arquivo, vamos entender a sintaxe que vemos l.
+
+103
+00:07:58,390 --> 00:08:01,990
+Vamos eliminar essa importao de logotipo porque removemos o arquivo de logotipo.
+
+104
+00:08:01,990 --> 00:08:08,530
+isso e vamos mergulhar no J S X exatamente o que  e como adicionamos mais componentes  nossa aplicao.
+
+105
+00:08:08,530 --> 00:08:09,730
+Agora que eu vejo
+

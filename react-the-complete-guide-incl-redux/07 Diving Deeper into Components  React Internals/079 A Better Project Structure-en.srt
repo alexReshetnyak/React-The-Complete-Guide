@@ -1,0 +1,324 @@
+1
+00:00:02,190 --> 00:00:07,100
+Back in our starting project we worked on, let's improve this project.
+
+2
+00:00:07,140 --> 00:00:13,620
+Thus far, we only use two components, the app component our main component and container which contains
+
+3
+00:00:13,620 --> 00:00:22,200
+our state and the person component, a functional component which simply outputs one single person. With
+
+4
+00:00:22,290 --> 00:00:24,050
+these two components together
+
+5
+00:00:24,150 --> 00:00:28,290
+we get this output here. And there's nothing wrong with this output,
+
+6
+00:00:28,290 --> 00:00:30,060
+it's definitely working fine.
+
+7
+00:00:30,240 --> 00:00:35,520
+But of course behind the scenes we can still tweak this a little bit.
+
+8
+00:00:35,550 --> 00:00:40,970
+For example you would typically split this application in more components than that,
+
+9
+00:00:40,980 --> 00:00:44,910
+The question always is what should go into its own component
+
+10
+00:00:45,150 --> 00:00:51,870
+and what do you group together in a higher component, in the root component for example.
+
+11
+00:00:51,870 --> 00:00:58,810
+Now if we analyze our existing components, we see that the person component is pretty focused,
+
+12
+00:00:58,830 --> 00:01:03,150
+it displays the card of one person, the information of one person,
+
+13
+00:01:03,270 --> 00:01:05,820
+it handles a click on that card.
+
+14
+00:01:05,850 --> 00:01:12,810
+So this component doesn't need any more splitting up, what would you put into its own component?
+
+15
+00:01:12,810 --> 00:01:16,280
+You could outsource the input into its own component,
+
+16
+00:01:16,410 --> 00:01:22,650
+that might make sense if you want to create a generic input component across your application where
+
+17
+00:01:22,650 --> 00:01:24,860
+you really only change the styling.
+
+18
+00:01:25,020 --> 00:01:30,500
+But if that's not the goal, putting input into its own component doesn't make much sense.
+
+19
+00:01:30,510 --> 00:01:33,340
+So for us we can definitely leave it here.
+
+20
+00:01:33,630 --> 00:01:41,010
+And the same for the paragraphs, if you want to create some custom paragraph wrapper component which
+
+21
+00:01:41,020 --> 00:01:48,360
+gives all your paragraphs some specific styling and behavior, you might want to put into its own component.
+
+22
+00:01:48,630 --> 00:01:56,010
+If it's only about the global styling though, use the global stylesheet, the index.css file and simply set
+
+23
+00:01:56,010 --> 00:02:01,290
+up your styles there. So the person component really is finished,
+
+24
+00:02:01,290 --> 00:02:04,060
+we probably don't need to do much more here.
+
+25
+00:02:04,140 --> 00:02:11,960
+We can split up our app.js file though we managed to state that we actually do a lot of things there,
+
+26
+00:02:12,120 --> 00:02:18,810
+if we have a look at our render method which in the end decides what this component is responsible for rendering
+
+27
+00:02:18,810 --> 00:02:19,620
+for,
+
+28
+00:02:19,830 --> 00:02:28,050
+we see that we rendered a list of persons here but then we also of course do have this toggle button.
+
+29
+00:02:28,050 --> 00:02:35,220
+Now typically container components like the app.js component, so components which also manage state
+
+30
+00:02:35,790 --> 00:02:39,740
+shouldn't be involved with the UI rendering too much.
+
+31
+00:02:40,020 --> 00:02:47,890
+Put in other words, the render method should be rather lean and contain not too much jsx.
+
+32
+00:02:47,970 --> 00:02:55,590
+So whilst it's not necessarily the worst practice to have this kind of app component especially for
+
+33
+00:02:55,590 --> 00:03:01,490
+a small app like this one is, we might still split this up into more components.
+
+34
+00:03:01,530 --> 00:03:07,680
+For example, it might make sense to create a person list component or a person's component is how we
+
+35
+00:03:07,680 --> 00:03:08,730
+could name it,
+
+36
+00:03:08,850 --> 00:03:16,230
+we could then simply pass this array of persons into this component and inside that person's component,
+
+37
+00:03:16,530 --> 00:03:19,580
+we would do the mapping and render the list.
+
+38
+00:03:19,620 --> 00:03:26,340
+This would allow us to outsource all this code and in the end, just import persons into our component
+
+39
+00:03:26,610 --> 00:03:31,400
+and either render it if showPersons is true or not render it.
+
+40
+00:03:31,430 --> 00:03:37,950
+So this is one improvement, another improvement we can do and is of course is purely optional is to
+
+41
+00:03:37,950 --> 00:03:44,320
+outsource our cockpit into its own component so that in the end our app component really only has this
+
+42
+00:03:44,340 --> 00:03:52,710
+wrapping div and then a cockpit component and a persons component. As always in life, this is optional,
+
+43
+00:03:52,710 --> 00:03:59,010
+it is a good practice though since it will make our app component more focused and gives us these other
+
+44
+00:03:59,010 --> 00:04:05,070
+components which also have a clear focus instead of having everything mixed up in the app component.
+
+45
+00:04:05,370 --> 00:04:13,220
+So let's create these new components, for that in the source folder I'll create a persons file, folder
+
+46
+00:04:13,230 --> 00:04:18,830
+excuse me and in there a persons.js component file.
+
+47
+00:04:18,900 --> 00:04:25,080
+Now in my opinion it also makes sense to move the person folder into the persons folder, to have this
+
+48
+00:04:25,080 --> 00:04:31,770
+kind of nesting because a person really is just well one single element which we're about to render
+
+49
+00:04:31,770 --> 00:04:36,720
+a list of in the persons component anyways. This is purely optional
+
+50
+00:04:36,750 --> 00:04:43,020
+but having this kind of structure definitely makes sense, we can improve this even more. In our source
+
+51
+00:04:43,020 --> 00:04:43,670
+folder
+
+52
+00:04:43,680 --> 00:04:48,830
+we might also add things like assets folder which contains images or stuff like that,
+
+53
+00:04:49,050 --> 00:04:56,970
+so it might make sense to create components folder in the source folder which holds all our components
+
+54
+00:04:57,150 --> 00:05:02,820
+like the person's component so that we can clearly see that components go in there,
+
+55
+00:05:02,820 --> 00:05:09,130
+we also might have an assets folder as I mentioned which contains images we include and so on.
+
+56
+00:05:09,510 --> 00:05:18,510
+We also might have in the source folder, a containers folder which holds all our containers like the
+
+57
+00:05:18,870 --> 00:05:21,650
+app.js and its respective css file
+
+58
+00:05:21,870 --> 00:05:25,900
+so we can move data to the containers folder, also move the testing file there
+
+59
+00:05:25,920 --> 00:05:28,200
+even though we haven't worked with that yet.
+
+60
+00:05:28,380 --> 00:05:34,260
+So now we restructured our application, to only have the index.js file directly in the source folder
+
+61
+00:05:34,740 --> 00:05:40,330
+then have a list of the containers we know and then have a list of the components we know.
+
+62
+00:05:40,440 --> 00:05:44,850
+Of course this will break the application for now because all our imports are wrong now.
+
+63
+00:05:45,030 --> 00:05:51,660
+So the goal now is to fix these imports before we in the next lectures continue working on that persons
+
+64
+00:05:51,660 --> 00:05:52,410
+component
+
+65
+00:05:52,560 --> 00:05:56,520
+and I already mentioned it on that cockpit component
+
+66
+00:05:56,670 --> 00:05:57,970
+so cockpit.js
+
+67
+00:05:58,270 --> 00:06:05,260
+I guess this makes sense so let's fix the imports before we then move on with the actual need for
+
+68
+00:06:05,260 --> 00:06:08,820
+the cockpit and persons component in the next lecture.
+
+69
+00:06:08,820 --> 00:06:15,060
+Regarding the imports, in app.js, we need to reach out to the person component
+
+70
+00:06:15,060 --> 00:06:22,650
+for now, we're going to remove it soon though by going up one level because then we'll leave the containers
+
+71
+00:06:22,650 --> 00:06:29,310
+folder and we're back in the source folder and after going up one level, we want to go into the components
+
+72
+00:06:29,310 --> 00:06:38,160
+folder and there into the persons folder and then Person/Person. This will be the new path, how to reach
+
+73
+00:06:38,160 --> 00:06:42,110
+to person.js file from app.js file.
+
+74
+00:06:42,240 --> 00:06:50,320
+The app.css import path is still correct because it's still sitting next to app.js. In the index.js file,
+
+75
+00:06:50,560 --> 00:06:54,680
+we also need to adjust the import pointing to app.js, there
+
+76
+00:06:54,730 --> 00:06:57,090
+it's no longer sitting in the same folder,
+
+77
+00:06:57,100 --> 00:07:01,590
+instead we need to go into the containers folder and there we will find the app.js
+
+78
+00:07:01,620 --> 00:07:01,960
+file
+
+79
+00:07:01,990 --> 00:07:07,460
+so we need to adjust this import too. And this is it for now,
+
+80
+00:07:07,470 --> 00:07:14,730
+next we need to create this persons.js and the cockpit.js file or they were created of course but
+
+81
+00:07:14,730 --> 00:07:22,210
+we need to fill them with life and then we can really see an improved and focused component structure.
+

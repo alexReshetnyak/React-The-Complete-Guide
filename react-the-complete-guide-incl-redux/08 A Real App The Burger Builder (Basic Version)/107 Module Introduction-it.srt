@@ -1,0 +1,44 @@
+1
+00:00:02,390 --> 00:00:07,640
+Benvenuti in questo modulo Ora abbiamo trattato molte nozioni di base e molta teoria sulla reazione.
+
+2
+00:00:07,940 --> 00:00:13,660
+Beh, per fortuna non solo teoria, tutti abbiamo costruito un progetto, ma questo era pi un progetto demo.
+
+3
+00:00:13,670 --> 00:00:19,880
+ giunto il momento di costruire una vera applicazione di re-act in modo che possiamo vedere tutti questi concetti riunirsi
+
+4
+00:00:19,880 --> 00:00:26,570
+in modo da farti un'idea di come si pianifichi effettivamente una tale applicazione e di come hai costruito questo albero di componenti
+
+5
+00:00:26,930 --> 00:00:31,730
+e di utilizzare con successo tutti i concetti che hai imparato cos lontano in un'applicazione.
+
+6
+00:00:31,730 --> 00:00:33,870
+Questo  quello che faremo in questo modulo.
+
+7
+00:00:33,890 --> 00:00:40,790
+un'applicazione per hamburger in modo che un'applicazione in cui possiamo o l'utente possa creare dinamicamente un hamburger
+
+8
+00:00:40,790 --> 00:00:47,510
+aggiunga ingredienti e quindi alla fine ovviamente tutto per l'acquisto inizier con la fase di pianificazione.
+
+9
+00:00:47,510 --> 00:00:48,090
+Creeremo
+
+10
+00:00:48,290 --> 00:00:52,220
+E quella  la prima cosa che voglio dare un'occhiata nella prossima lezione.
+
+11
+00:00:52,340 --> 00:00:55,530
+Come pianifichiamo la domanda di re-act.
+

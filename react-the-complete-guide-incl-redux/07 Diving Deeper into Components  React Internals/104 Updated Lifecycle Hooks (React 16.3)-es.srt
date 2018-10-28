@@ -1,0 +1,260 @@
+1
+00:00:02,750 --> 00:00:06,420
+Ahora ltimo pero no menos importante, hay otro cambio que quiero mostrarte.
+
+2
+00:00:06,620 --> 00:00:12,770
+Y l realmente se cae, obtenemos todos estos mtodos de ciclo de vida que le explico desde este mdulo
+
+3
+00:00:12,820 --> 00:00:19,500
+ahora, volver a actuar 16 son gratuitos, en realidad desalienta el uso de los mismos y los agrega a los nuevos.
+
+4
+00:00:19,520 --> 00:00:24,470
+Pero paso a paso, cules deberan intentar con un blanco?
+
+5
+00:00:24,590 --> 00:00:32,330
+Estos son componentes que se actualizarn y el componente recibir accesorios.
+
+6
+00:00:32,330 --> 00:00:38,370
+Ahora bien, por qu se los desalienta sin reservas porque a menudo se usan de forma incorrecta?
+
+7
+00:00:38,720 --> 00:00:45,380
+Podras llamar al estado del conjunto all y posiblemente en el primer primer render podras hacer cosas
+
+8
+00:00:45,380 --> 00:00:45,980
+malas all.
+
+9
+00:00:45,980 --> 00:00:51,270
+Esta es tambin la razn por la que raramente utilizamos estos de forma gratuita en este curso, como ver en el proyecto del
+
+10
+00:00:51,290 --> 00:00:52,510
+curso que estamos por construir.
+
+11
+00:00:52,520 --> 00:00:56,130
+No son tan tiles y son fciles de usar incorrectamente.
+
+12
+00:00:56,300 --> 00:00:57,670
+Entonces todava puedes usarlos.
+
+13
+00:00:57,680 --> 00:01:03,620
+Todava funcionar, no es inseguro, pero se desaconseja volver a ofrecer ofertas a los nuevos sin embargo.
+
+14
+00:01:03,850 --> 00:01:14,750
+El primer nuevo ciclo de vida que agrega es obtener el estado derivado de los accesorios y obtendr los prximos
+
+15
+00:01:15,110 --> 00:01:18,080
+accesorios y el estado anterior.
+
+16
+00:01:18,110 --> 00:01:26,310
+Ahora este gancho de ciclo de vida se ejecuta cada vez que se actualizan sus accesorios y le da la oportunidad de
+
+17
+00:01:26,310 --> 00:01:27,970
+actualizar su estado entre ellos.
+
+18
+00:01:28,230 --> 00:01:30,150
+Ahora a menudo no quieres esto.
+
+19
+00:01:30,210 --> 00:01:34,100
+Su estado rara vez debe estar acoplado a sus accesorios.
+
+20
+00:01:34,140 --> 00:01:39,540
+Estas deberan ser dos cosas independientes, pero a veces obtienes casos en los que recibes accesorios nuevos y
+
+21
+00:01:39,540 --> 00:01:44,130
+quieres actualizar tu estado local porque tal vez quieras trabajar con ese estado si deseas
+
+22
+00:01:44,160 --> 00:01:50,880
+cambiarlo en ese componente antes de que el usuario haga clic en un botn seguro y t Comprometi tres componentes en tu
+
+23
+00:01:50,880 --> 00:01:55,560
+aplicacin y luego la cambias a otra parte y estn libres o cambiarn de nuevo.
+
+24
+00:01:55,890 --> 00:02:00,150
+As que simplemente agreguemos una declaracin de bloqueo de consola aqu.
+
+25
+00:02:01,280 --> 00:02:07,770
+Y estamos dentro de obtener el estado derivado de los accesorios y podemos generar el estado anterior aqu.
+
+26
+00:02:09,400 --> 00:02:16,120
+Y ahora, como he dicho todos los aos, todos deben regresar y afirman que puede ser un objeto que se fusionar con
+
+27
+00:02:16,120 --> 00:02:21,580
+el estado anterior, tal como lo hacen las llamadas estatales, pero tambin puede devolver el estado anterior, en
+
+28
+00:02:21,610 --> 00:02:24,800
+cuyo caso nunca se actualiz porque siempre tomas el ltimo.
+
+29
+00:02:24,910 --> 00:02:30,070
+Pero podra hacer que los accesorios hagan algo con ellos y devolver un nuevo objeto de estado que se
+
+30
+00:02:30,100 --> 00:02:31,110
+usara en su lugar.
+
+31
+00:02:31,600 --> 00:02:34,020
+Entonces ahora tenemos esta configuracin.
+
+32
+00:02:34,030 --> 00:02:39,820
+Una cosa para hacer que esto funcione es que realmente tenemos que usar la palabra clave esttica delante de esto porque
+
+33
+00:02:39,820 --> 00:02:41,060
+es un mtodo esttico.
+
+34
+00:02:41,080 --> 00:02:47,400
+As que, bsicamente, un mtodo que no est adjunto a una sola instancia sera que si ahora recargamos nuestra aplicacin obtenemos esa
+
+35
+00:02:47,470 --> 00:02:52,060
+advertencia porque estamos usando un nuevo ciclo de vida al tiempo que tambin usamos dos viejos.
+
+36
+00:02:52,080 --> 00:02:53,100
+Pero est bien.
+
+37
+00:02:54,030 --> 00:02:59,520
+Ms interesante es que aqu vemos que obtenemos un estado derivado de la llamada de prop cuando
+
+38
+00:02:59,520 --> 00:03:03,860
+realmente cargamos nuestra aplicacin y esto, por supuesto, es muy til para ver.
+
+39
+00:03:03,930 --> 00:03:06,950
+Se llama antes de que realmente est renderizando esto.
+
+40
+00:03:07,020 --> 00:03:12,870
+Y antes de que se monte esto, nos da la oportunidad de actualizar nuestro estado justo antes de que se
+
+41
+00:03:13,260 --> 00:03:16,860
+testeen los pasos y se ejecutar cada vez que cambien nuestros accesorios.
+
+42
+00:03:16,860 --> 00:03:22,260
+De nuevo, no es algo que deba usar en exceso, pero definitivamente es bueno si tiene un componente
+
+43
+00:03:22,260 --> 00:03:24,750
+que necesita sincronizar el estado y los accesorios.
+
+44
+00:03:24,750 --> 00:03:31,510
+El segundo ciclo de vida nuevo que se agreg es obtener instantnea antes de la actualizacin.
+
+45
+00:03:31,920 --> 00:03:37,790
+Ahora, esto le permite obtener una instantnea de su dormitorio justo antes de que est a punto de cambiar.
+
+46
+00:03:37,800 --> 00:03:44,550
+Por lo tanto, si tiene algunos cambios en su componente que necesitan cambiar a un Dom, el enlace del ciclo de
+
+47
+00:03:44,550 --> 00:03:47,910
+vida se ejecutar justo antes de que el amanecer se actualice.
+
+48
+00:03:47,910 --> 00:03:53,070
+As que aqu tambin podemos consolar el registro de algo que podemos cancelar con ese nombre.
+
+49
+00:03:53,460 --> 00:03:59,670
+Y si guardamos eso y volvemos a cargar nuestra aplicacin, en realidad no vemos nada aqu, pero si
+
+50
+00:04:00,780 --> 00:04:08,850
+hago clic en Mostrar personas, lo veo aqu obtengo una instantnea antes de la actualizacin y se ejecuta justo antes de que se haya
+
+51
+00:04:09,030 --> 00:04:11,410
+realizado una actualizacin del componente de captura.
+
+52
+00:04:11,430 --> 00:04:17,460
+Este es un excelente lugar para, por ejemplo, guardar la posicin de desplazamiento actual de un usuario.
+
+53
+00:04:17,460 --> 00:04:20,640
+Esto puede ser muy til porque obtiene Snapchat antes de la actualizacin.
+
+54
+00:04:20,670 --> 00:04:27,540
+Puede guardarlo antes de que amanezca y en el componente se actualiz, puede pasear al usuario a la posicin guardada anteriormente,
+
+55
+00:04:27,570 --> 00:04:33,030
+por ejemplo, digamos que tiene una lista de elementos que agrega y lista elementos aqu, puede guardar
+
+56
+00:04:33,330 --> 00:04:36,270
+las posiciones de desplazamiento antes de que se agreguen.
+
+57
+00:04:36,270 --> 00:04:40,710
+Y aqu puede configurar el desplazamiento del usuario a esa posicin despus de que se hayan agregado.
+
+58
+00:04:40,950 --> 00:04:46,020
+Tambin hay este ejemplo exacto que se ve en los documentos oficiales en las publicaciones oficiales de bloque
+
+59
+00:04:46,020 --> 00:04:48,200
+en la nueva versin para ser precisos all.
+
+60
+00:04:48,270 --> 00:04:52,810
+Si hace clic en esa captura instantnea antes del enlace de actualizacin obtendr la documentacin detallada.
+
+61
+00:04:52,920 --> 00:04:56,960
+Y all ver ese ejemplo con la posicin de desplazamiento que se guarda.
+
+62
+00:04:56,970 --> 00:05:00,290
+Entonces esta es una buena utilidad que ahora tambin puedes usar.
+
+63
+00:05:00,480 --> 00:05:01,330
+Y eso es todo.
+
+64
+00:05:01,440 --> 00:05:04,850
+Estas son nuevas caractersticas excelentes introducidas por re-act 16 no gratis.
+
+65
+00:05:04,950 --> 00:05:10,140
+Si est usando esa palabra, juegue con ellos y sintase libre de usarlos en su prximo proyecto.
+

@@ -1,0 +1,124 @@
+1
+00:00:02,120 --> 00:00:07,250
+En la ltima conferencia, nos aseguramos de que tambin podemos eliminar los ingredientes de la hamburguesa,
+
+2
+00:00:07,250 --> 00:00:12,560
+saber cundo actualizar el precio de la hamburguesa y mostrarla como parte de esa hamburguesa tambin.
+
+3
+00:00:12,740 --> 00:00:18,800
+Ahora, en realidad, si tuviera muchos ingredientes para una hamburguesa, es desplazable porque lo configuramos
+
+4
+00:00:18,800 --> 00:00:19,500
+como tal.
+
+5
+00:00:19,730 --> 00:00:25,370
+Entonces, el precio debera mostrarse probablemente por encima de los controles de construccin, digamos.
+
+6
+00:00:25,370 --> 00:00:29,200
+Entonces, los controles a granel aqu adems de enviar los controles.
+
+7
+00:00:29,270 --> 00:00:37,930
+Quiero mostrar el precio de la hamburguesa y simplemente podemos usar un prrafo aqu donde decimos el precio actual dos puntos.
+
+8
+00:00:38,180 --> 00:00:41,410
+Y luego espero obtener el precio aprobado con accesorios.
+
+9
+00:00:41,510 --> 00:00:45,450
+As que el precio de prop's es algo as.
+
+10
+00:00:45,560 --> 00:00:49,860
+Ahora el precio se calcula en el contenedor de Bergere Boulder.
+
+11
+00:00:49,910 --> 00:00:57,500
+Aqu tenemos el estado del precio total para pasar este precio al control con cdigo S10 porque all es donde
+
+12
+00:00:57,500 --> 00:01:00,670
+acabo de agregar el uso de esa propiedad.
+
+13
+00:01:01,010 --> 00:01:02,920
+As que agreguemos la propiedad del precio.
+
+14
+00:01:02,930 --> 00:01:09,690
+El nombre que acabo de elegir en los controles de compilacin y pasa este precio total del estado.
+
+15
+00:01:09,890 --> 00:01:12,750
+Asegrate de guardar todos los Follett y echemos un vistazo.
+
+16
+00:01:13,010 --> 00:01:14,560
+Vemos el precio actual aqu.
+
+17
+00:01:14,720 --> 00:01:21,680
+Y si agrego ingredientes, ver que este precio aumenta aqu. Sin embargo, volvemos con los nmeros decimales
+
+18
+00:01:21,740 --> 00:01:27,280
+en JavaScript, as que deberamos arreglar esto y tal vez todos queremos imprimir eso.
+
+19
+00:01:27,590 --> 00:01:29,100
+Bien enfatizado
+
+20
+00:01:29,420 --> 00:01:39,580
+Entonces, lo que podemos hacer en el documento en los controles de compilacin para uno que est envuelto est en la etiqueta fuerte.
+
+21
+00:01:39,620 --> 00:01:42,560
+El precio para que esto bsicamente con el peso de la fuente.
+
+22
+00:01:42,560 --> 00:01:48,640
+Audaz y arreglemos arreglando este precio aqu.
+
+23
+00:01:48,660 --> 00:01:52,810
+Ahora, para que ese precio debe ser un nmero, afortunadamente lo es.
+
+24
+00:01:52,820 --> 00:01:58,880
+Entonces ahora podemos llamar para fijarnos y arreglarlo con dos decimales.
+
+25
+00:01:58,930 --> 00:02:00,790
+Vamos a guardar esto.
+
+26
+00:02:01,060 --> 00:02:03,020
+Y ahora vemos cuatro.
+
+27
+00:02:03,190 --> 00:02:09,910
+Y si empiezo a agregarlo, ver que el precio sube, creo que la gente tiene una hamburguesa bastante
+
+28
+00:02:09,910 --> 00:02:12,160
+asequible, que se ve realmente deliciosa.
+
+29
+00:02:12,160 --> 00:02:16,530
+Entonces, con eso, el generador de hamburguesas est realmente en muy buena forma.
+
+30
+00:02:16,600 --> 00:02:21,060
+Falta el botn de salida, pero eso es algo que agregar en un segundo.
+
+31
+00:02:21,310 --> 00:02:26,890
+Y a partir de entonces tenemos que tener cuidado con toda la navegacin que est llegando aqu en la parte superior.
+

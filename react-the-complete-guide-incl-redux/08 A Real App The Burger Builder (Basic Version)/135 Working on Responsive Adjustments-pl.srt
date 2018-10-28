@@ -1,0 +1,216 @@
+1
+00:00:02,150 --> 00:00:04,200
+W ostatnim wykadzie mielimy przy bocznych drzwiach.
+
+2
+00:00:04,250 --> 00:00:09,680
+I oczywicie to wyglda okropnie, poniewa logo i elementy nawigacyjne musz by dostosowane, by
+
+3
+00:00:10,070 --> 00:00:12,200
+dobrze wyglday na urzdzeniach mobilnych.
+
+4
+00:00:12,200 --> 00:00:14,500
+Zacznijmy od logo.
+
+5
+00:00:14,600 --> 00:00:21,470
+Obecnie jest tak dua, poniewa wysoko logo jest ustawiona na 80 procent, a 80 procent w
+
+6
+00:00:21,830 --> 00:00:25,480
+bocznej szufladzie oznacza 80 procent penej wysokoci derecho.
+
+7
+00:00:25,550 --> 00:00:29,150
+To oczywicie troch za duo.
+
+8
+00:00:29,150 --> 00:00:35,080
+Teraz, jak moemy si dostosowa, poniewa moemy doda reakcj projektu na logo.
+
+9
+00:00:35,220 --> 00:00:41,900
+Zobacz plik s moe ustawi warto domyln na okoo 11 procent i doda zapytanie o media, aby zawin to do
+
+10
+00:00:41,900 --> 00:00:43,970
+80 procent w przypadku wikszych ekranw.
+
+11
+00:00:43,970 --> 00:00:47,990
+Ale to uczynioby nasze logo trudniejszym w uyciu.
+
+12
+00:00:48,020 --> 00:00:55,790
+Jestem fanem kontrolowania DILG a Hyatt w miejscu, w ktrym si osadzilimy, zamiast w komponencie logo.
+
+13
+00:00:55,790 --> 00:01:02,150
+Tak wic nawet ustawi logo z powrotem na 100 procent i powinnimy ograniczy jego wysoko w
+
+14
+00:01:02,150 --> 00:01:07,560
+pasku narzdzi iw bocznej szufladzie, aby dopasowa si do konkretnych potrzeb tych komponentw.
+
+15
+00:01:07,580 --> 00:01:09,370
+Zacznijmy od paska narzdzi.
+
+16
+00:01:09,410 --> 00:01:13,220
+Jak ju powiedziaem, logo powinno by wysokie tylko o 80 procent.
+
+17
+00:01:13,460 --> 00:01:21,650
+Moemy to osign na dwa sposoby, dziki czemu moemy doda podprk, aby faktycznie ustawi wysoko dynamicznie, abymy
+
+18
+00:01:21,710 --> 00:01:28,430
+mogli doda co takiego, jak wysoko, co moemy ustawi na przykad na 80 procent.
+
+19
+00:01:28,700 --> 00:01:31,610
+I to w logo moemy zaakceptowa.
+
+20
+00:01:31,610 --> 00:01:38,480
+Akceptujemy tutaj rekwizyty i moglibymy tutaj ustawi style wewntrzne, aby nadpisa ustawienia klasy C S S,
+
+21
+00:01:38,510 --> 00:01:43,850
+aby zasadniczo przypisa obiekt javascript, w ktrym ustawiamy wysoko na wysoko rekwizytw.
+
+22
+00:01:44,240 --> 00:01:53,270
+Jeli to zapiszemy, powinno to wyglda dobrze na pasku narzdzi, a jeli zrobimy to w cydrze lub
+
+23
+00:01:53,270 --> 00:01:56,790
+dwch, to po prostu przekaemy wysoko logotypowi.
+
+24
+00:01:56,930 --> 00:01:59,220
+Powiedzmy, e nie ma rekwizytw.
+
+25
+00:01:59,320 --> 00:02:03,160
+Powinno wynosi 11 procent rocznie.
+
+26
+00:02:03,380 --> 00:02:06,280
+Teraz powinna dobrze wyglda rwnie w bocznej szufladzie.
+
+27
+00:02:06,290 --> 00:02:12,680
+Jest to sprytny sposb dostosowania tego ustawienia wysokoci jako waciwoci, w ktrej po
+
+28
+00:02:12,680 --> 00:02:19,580
+prostu przekazujemy procentow wysoko do komponentu logo, a nastpnie komponent przypisuje j dynamicznie wyinaczy style.
+
+29
+00:02:19,580 --> 00:02:22,850
+Nic zego w tym podejciu powinno dziaa dobrze.
+
+30
+00:02:23,210 --> 00:02:25,520
+Chc ci jednak pokaza alternatyw.
+
+31
+00:02:25,850 --> 00:02:29,960
+Zostawi t waciwo tutaj, ebymy mogli z niej skorzysta.
+
+32
+00:02:30,200 --> 00:02:32,130
+Ale nie uyj tego.
+
+33
+00:02:32,270 --> 00:02:41,930
+Zamiast tego zastosuj inne podejcie i zawi logo w div na pasku bocznym, a take na pasku
+
+34
+00:02:42,420 --> 00:02:43,190
+narzdzi.
+
+35
+00:02:43,280 --> 00:02:50,360
+Wic zawimy logo do elementu div w obu komponentach i nie uywajmy. Czy waciwo height, ktra ponownie wystarczy,
+
+36
+00:02:50,360 --> 00:02:53,270
+aby to podkreli, nie byaby wcale zym podejciem.
+
+37
+00:02:53,420 --> 00:02:58,070
+A teraz te rnice, ktre zawijaj logo, powinny kontrolowa wysoko.
+
+38
+00:02:58,070 --> 00:03:03,500
+Moemy to zrobi za pomoc stylw rdliniowych lub z ozami jako podobiestwa klas.
+
+39
+00:03:03,500 --> 00:03:10,270
+Na przykad tutaj s dwa logo klas supkowych i fajne jest to, e mog uy klasy logo
+
+40
+00:03:10,280 --> 00:03:17,060
+w tym komponencie paska narzdzi, mimo e ju go uywam w komponencie logo, poniewa postrzegasz nas jako moduy.
+
+41
+00:03:17,120 --> 00:03:17,870
+To moe dziaa.
+
+42
+00:03:17,870 --> 00:03:25,190
+Moje C to nazwy klas w rnych nazwach i nazwach zakresu, tak wic nawet jeli pisz dwie
+
+43
+00:03:25,190 --> 00:03:32,210
+identyczne klasy w trybie rozwoju, to faktycznie mona je wymwi do dwch rnych klas C S S,
+
+44
+00:03:32,210 --> 00:03:35,100
+ktre s przypisane tak, aby nie przeszkadzay.
+
+45
+00:03:35,420 --> 00:03:45,040
+Wic znajduj t klas logo na pasku narzdzi i mog ustawi wysoko na 80 procent i mog teraz przej do
+
+46
+00:03:45,040 --> 00:03:52,930
+szuflady witryny i tam mog rwnie zdefiniowa klas logo i ustawi tutaj wysoko 11 procent, a
+
+47
+00:03:53,470 --> 00:03:59,860
+teraz mog uy tutaj w bocznej szufladzie i tam te przypisz moje nazwisko.
+
+48
+00:03:59,980 --> 00:04:06,760
+Wic wszystkie klasy aktyww loguj si tu i znowu, mam t klas logo, ktr mona znale w trzech rnych plikach.
+
+49
+00:04:06,850 --> 00:04:13,630
+Ale widzisz, e moduy faktycznie przeksztacaj si w darmowe rnice jako klasy, aby nie kolidoway ze
+
+50
+00:04:14,320 --> 00:04:15,810
+wszystkimi zapisanymi zmianami.
+
+51
+00:04:15,940 --> 00:04:19,820
+Mamy adne logo w szufladzie witryny i pasku narzdzi.
+
+52
+00:04:19,900 --> 00:04:25,630
+Widzielicie wic rne podejcia do dynamicznego dostosowywania i upewniania si, e wszystko wyglda dobrze
+
+53
+00:04:25,690 --> 00:04:27,960
+na wszystkich urzdzeniach, ktre musimy obsugiwa.
+
+54
+00:04:28,000 --> 00:04:32,350
+Nastpna praca nad elementem nawigacyjnym isten.
+

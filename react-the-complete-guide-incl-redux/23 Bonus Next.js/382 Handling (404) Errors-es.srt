@@ -1,0 +1,104 @@
+1
+00:00:02,050 --> 00:00:03,670
+As que aprendimos bastante sobre
+
+2
+00:00:03,690 --> 00:00:10,820
+nextjs y ya estoy llegando al final de este mdulo, ya que de nuevo no es un curso completo de nextjs pero
+
+3
+00:00:10,980 --> 00:00:13,110
+todava hay algunas cosas que quiero tocar.
+
+4
+00:00:13,230 --> 00:00:21,450
+Volvamos a la pgina github de nextjs y si nos desplazamos al resumen aqu, al contenido que
+
+5
+00:00:21,450 --> 00:00:23,500
+podemos ver, tambin podemos
+
+6
+00:00:23,520 --> 00:00:29,520
+echar un vistazo al manejo personalizado de errores porque en este momento,
+
+7
+00:00:29,520 --> 00:00:30,440
+ya tenemos
+
+8
+00:00:30,440 --> 00:00:37,920
+rutas en nuestra aplicacin nextjs, pero si ingreso una ruta invlida aqu, obtenemos este error predeterminado
+
+9
+00:00:37,920 --> 00:00:45,270
+de 404, mejor que nada, pero podemos personalizarlo. Como se describe aqu en el repositorio github de nextjs, puede crear su propio
+
+10
+00:00:45,510 --> 00:00:48,770
+manejador de errores creando un _error. js archivo en
+
+11
+00:00:48,810 --> 00:00:51,470
+la carpeta de pginas.
+
+12
+00:00:51,560 --> 00:00:56,350
+Entonces, hagamos eso, en las pginas creemos error. js con el guin bajo al
+
+13
+00:00:56,580 --> 00:01:00,680
+comienzo y que es un componente normal de reaccin de JavaScript.
+
+14
+00:01:00,960 --> 00:01:02,840
+As que djame copiar el contenido del ndice. js y
+
+15
+00:01:02,880 --> 00:01:08,550
+voy a nombrar esta pgina de error, pero el nombre, por supuesto, realmente
+
+16
+00:01:08,850 --> 00:01:14,690
+no importa y entonces puedo decir, whoops algo sali mal y tal vez
+
+17
+00:01:15,680 --> 00:01:23,660
+aqu, decimos probar y luego en el enlace, decimos volver. As que todava importamos el enlace, no necesitamos el botn, as
+
+18
+00:01:23,670 --> 00:01:24,510
+que tambin
+
+19
+00:01:24,510 --> 00:01:29,280
+eliminemos la importacin del enrutador y en el enlace, quiero ir a la barra.
+
+20
+00:01:29,730 --> 00:01:37,200
+Si ahora reiniciamos npm run dev, tenemos que hacer eso porque intercambiamos esa pgina de error y por lo tanto sobrescribimos
+
+21
+00:01:37,200 --> 00:01:38,820
+el valor predeterminado, ahora si
+
+22
+00:01:38,820 --> 00:01:44,610
+ingresamos una ruta que no conocemos, obtenemos nuestra pgina de error personalizada y ahora podemos regresar
+
+23
+00:01:44,610 --> 00:01:48,540
+a nuestra pgina principal y automticamente contina trabajando despus de eso.
+
+24
+00:01:48,540 --> 00:01:54,900
+As que as es como podemos manejar los errores en nextjs y cmo podemos renderizar nuestra propia pgina de error personalizada,
+
+25
+00:01:54,900 --> 00:01:56,610
+que por supuesto es bastante importante
+
+26
+00:01:56,760 --> 00:01:59,460
+si realmente queremos construir una aplicacin real con eso.
+

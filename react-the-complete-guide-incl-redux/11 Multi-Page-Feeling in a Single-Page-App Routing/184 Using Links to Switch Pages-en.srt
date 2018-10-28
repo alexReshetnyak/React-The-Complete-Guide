@@ -1,0 +1,228 @@
+1
+00:00:02,190 --> 00:00:08,650
+In the last lecture we made sure that we can actually switch between pages but our application is constantly
+
+2
+00:00:08,650 --> 00:00:10,830
+reloading and we don't want that.
+
+3
+00:00:10,960 --> 00:00:16,990
+Now we want to make sure that we stay inside the application when clicking on links inside of it, when
+
+4
+00:00:16,990 --> 00:00:20,820
+coming from outside of it and directly entering /new-post,
+
+5
+00:00:20,830 --> 00:00:23,380
+obviously it will reload the app if we hit enter,
+
+6
+00:00:23,380 --> 00:00:24,720
+that's just how the internet works,
+
+7
+00:00:24,720 --> 00:00:30,280
+We send a new request to get a new page. But inside of our application when we click links, we don't need
+
+8
+00:00:30,280 --> 00:00:32,350
+that behavior because we're inside of it.
+
+9
+00:00:32,350 --> 00:00:38,650
+We can basically prevent the default and make sure no requests get sent and handle that click internally
+
+10
+00:00:38,740 --> 00:00:41,280
+to re-render the page with javascript.
+
+11
+00:00:41,470 --> 00:00:44,200
+For that we need to change our links,
+
+12
+00:00:44,200 --> 00:00:46,510
+right now we use normal anchor tags
+
+13
+00:00:46,660 --> 00:00:50,350
+and this is not what we really use when using react router,
+
+14
+00:00:50,610 --> 00:00:58,660
+there are we have a special component we can use, the link component. As the name suggests, link allows
+
+15
+00:00:58,660 --> 00:00:59,510
+us to
+
+16
+00:00:59,530 --> 00:01:02,150
+you guessed it, create a link.
+
+17
+00:01:02,140 --> 00:01:05,040
+We use this instead of the anchor tag,
+
+18
+00:01:05,040 --> 00:01:07,430
+there we use link obviously
+
+19
+00:01:07,590 --> 00:01:15,400
+also as a closing tag. Link alone of course doesn't do much because we need to tell react router where
+
+20
+00:01:15,400 --> 00:01:17,070
+this link should lead to.
+
+21
+00:01:17,080 --> 00:01:26,530
+We do it as with the to property, the to property in its simplest form is a string, like to='/'.
+
+22
+00:01:26,530 --> 00:01:32,280
+Now this is essentially kind of the same as a href="/"
+
+23
+00:01:32,590 --> 00:01:39,340
+but react router will create the anchor tag and then prevent default which would be to send a new request
+
+24
+00:01:39,610 --> 00:01:42,570
+and instead handle that click on itself
+
+25
+00:01:42,580 --> 00:01:44,180
+that is why we need to use link
+
+26
+00:01:44,380 --> 00:01:47,450
+Now I said in its simplest form, to is a slash, to
+
+27
+00:01:47,620 --> 00:01:53,720
+can also be a more complex element, it can be a javascript object and hence needs to be wrapped in single
+
+28
+00:01:53,730 --> 00:01:56,410
+curly braces to output dynamic content
+
+29
+00:01:56,680 --> 00:01:59,830
+and then the dynamic content is a javascript object,
+
+30
+00:01:59,830 --> 00:02:02,300
+so one more pair of curly braces.
+
+31
+00:02:02,680 --> 00:02:06,050
+And there, we can now configure where we want to go to,
+
+32
+00:02:06,130 --> 00:02:13,080
+we can set up a pathname property here which then again is the string where we want to go to like
+
+33
+00:02:13,080 --> 00:02:23,240
+/new-post but we can also now add a potential hash tag after that like submit
+
+34
+00:02:23,260 --> 00:02:24,210
+which I don't have
+
+35
+00:02:24,220 --> 00:02:31,150
+but this would allow us to then jump to any ID submit we have in that elements, so using that feature
+
+36
+00:02:31,160 --> 00:02:35,770
+of appending a fragment of the URL, you might be aware of that,
+
+37
+00:02:35,800 --> 00:02:42,150
+you can simply add hash something after the URL to jump to that point.
+
+38
+00:02:42,220 --> 00:02:52,610
+We can also set up search and search allows us to add queryParams like quick submit equals
+
+39
+00:02:52,640 --> 00:02:53,130
+True
+
+40
+00:02:53,180 --> 00:02:54,760
+Now these are all just examples,
+
+41
+00:02:54,770 --> 00:03:00,380
+they won't do anything in this application but this is some advanced set up we can use to configure
+
+42
+00:03:00,470 --> 00:03:05,330
+where we're going to when clicking this link. With these links implemented
+
+43
+00:03:05,330 --> 00:03:12,500
+now, if we save the application and go back, you will see I'm on /new-post now, if I click on home
+
+44
+00:03:13,210 --> 00:03:16,190
+I go back to home but you will see that this reload
+
+45
+00:03:16,220 --> 00:03:19,380
+icon actually never spins the same for new posts,
+
+46
+00:03:19,550 --> 00:03:24,920
+and here you also see that queryParams and the hash tag added to the end.
+
+47
+00:03:24,920 --> 00:03:28,070
+So now we're not actually reloading the page,
+
+48
+00:03:28,070 --> 00:03:35,060
+it looks exactly like before but now simply react is re-rendering parts of the page which need to
+
+49
+00:03:35,060 --> 00:03:35,900
+be re-rendered,
+
+50
+00:03:35,960 --> 00:03:38,090
+we're not loading a new page,
+
+51
+00:03:38,090 --> 00:03:40,560
+we're not loading that same page again.
+
+52
+00:03:40,640 --> 00:03:45,910
+Of course when loading the same page again it's still react rendering the javascript to the DOM
+
+53
+00:03:45,980 --> 00:03:51,110
+but as I said we'll actually reload the page whilst doing that and therefore lose our state.
+
+54
+00:03:51,140 --> 00:03:53,150
+Now our state is contained,
+
+55
+00:03:53,150 --> 00:03:54,960
+we don't reload the application
+
+56
+00:03:55,040 --> 00:03:58,120
+and this is the way we should actually navigate around
+
+57
+00:03:58,120 --> 00:04:01,070
+therefore, using the link component.
+

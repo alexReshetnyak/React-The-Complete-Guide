@@ -1,0 +1,76 @@
+1
+00:00:02,440 --> 00:00:04,860
+Neste lanamento, cobriremos muito.
+
+2
+00:00:04,900 --> 00:00:11,110
+Muita teoria de muitos dos bastidores tem muitas coisas importantes que voc precisa saber.
+
+3
+00:00:11,170 --> 00:00:15,800
+Agora, no fique chocado se isso no for algo que voc conhea de corao agora.
+
+4
+00:00:15,820 --> 00:00:22,570
+Isso foi um monte de coisas e muita teoria,  importante, porque ns vamos mergulhar no nosso
+
+5
+00:00:22,570 --> 00:00:27,740
+projeto de curso e estamos usando muitas coisas que voc aprendeu at agora.
+
+6
+00:00:27,940 --> 00:00:32,210
+E, portanto,  to importante que voc entenda como est funcionando nos bastidores.
+
+7
+00:00:32,440 --> 00:00:35,830
+No hesite em voltar para alguns dos vdeos deste mdulo.
+
+8
+00:00:35,980 --> 00:00:42,680
+certeza de como isso deve ser uma atualizao do componente, descobrir como o ciclo de vida funciona para atualizar.
+
+9
+00:00:42,690 --> 00:00:47,860
+ perfeitamente bom se voc precisa passar por algumas delas novamente e novamente para ter
+
+10
+00:00:47,860 --> 00:00:51,970
+E no tenha medo de ver todos esses conceitos.
+
+11
+00:00:52,150 --> 00:00:53,740
+Voc pode no usar todos eles.
+
+12
+00:00:53,800 --> 00:00:57,730
+Voc s pode usar alguns deles, mas voc fica melhor e melhor.
+
+13
+00:00:57,730 --> 00:01:02,320
+Quanto mais voc aprender sobre isso e quanto mais voc questionar as abordagens que voc usa.
+
+14
+00:01:02,320 --> 00:01:08,500
+Talvez existam alguns conceitos avanados que voc pode usar como um componente de alta qualidade bem colocado ou
+
+15
+00:01:08,500 --> 00:01:09,370
+um componente puro.
+
+16
+00:01:09,700 --> 00:01:15,040
+aprendeu at agora sendo usadas e, portanto, voc tambm deve ter a sensao de quando usar o qu.
+
+17
+00:01:15,040 --> 00:01:21,310
+E, novamente, h um projeto de curso em que ir mergulhar no prximo, onde voc tambm ver muitas coisas que voc
+
+18
+00:01:21,310 --> 00:01:27,460
+Ento, com isso vamos mergulhar no projeto do curso e vamos ver mais dessas coisas em um projeto maior do que
+
+19
+00:01:27,640 --> 00:01:30,220
+um projeto de demonstrao em que trabalhamos at agora.
+

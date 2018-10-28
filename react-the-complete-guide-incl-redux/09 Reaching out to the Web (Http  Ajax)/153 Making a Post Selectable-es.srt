@@ -1,0 +1,188 @@
+1
+00:00:02,010 --> 00:00:09,620
+Ahora aprender los conceptos bsicos sobre el envo de solicitudes en nuestro ejemplo aqu con la ayuda de aos y utilizando esa informacin,
+
+2
+00:00:09,620 --> 00:00:15,500
+sigamos adelante y no veamos cmo podemos asegurarnos de que podemos hacer clic en una de estas publicaciones
+
+3
+00:00:15,860 --> 00:00:20,900
+y luego cargar la publicacin mencionada all tan buscaron los datos para la publicacin deseleccionada.
+
+4
+00:00:20,960 --> 00:00:26,850
+Cuando lo seleccionamos para esto, por supuesto, queremos asegurarnos de que podemos hacer clic en nuestras publicaciones individuales aqu.
+
+5
+00:00:27,080 --> 00:00:33,440
+Entonces, en el componente de publicacin, primero agregue un oyente a todo el artculo alimenticio y all espero
+
+6
+00:00:33,440 --> 00:00:39,070
+obtener una propiedad que contenga una referencia al mtodo que debe ejecutarse con un clic.
+
+7
+00:00:39,260 --> 00:00:43,730
+As que aqu voy a nombrar el prop recoger en el contenedor de bloque.
+
+8
+00:00:43,730 --> 00:00:49,880
+que acabo de decir que debe contener esa referencia de mtodo que debe ejecutarse con un clic .
+
+9
+00:00:49,880 --> 00:00:56,930
+Ahora necesito pasar la cola de props para publicar y la dividir en varias lneas para que sea ms fcil de
+
+10
+00:00:56,930 --> 00:00:59,130
+leer y haga clic aqu, ya
+
+11
+00:00:59,150 --> 00:01:03,780
+Entonces tenemos un contenedor basado en clases aqu, agreguemos tal mtodo.
+
+12
+00:01:03,920 --> 00:01:12,450
+El Post hizo clic o tal vez envi el controlador seleccionado y espero obtener una discusin.
+
+13
+00:01:12,530 --> 00:01:20,440
+La idea de la publicacin que se seleccion ahora all donde hicimos una lista de publicaciones que puedo pasar y
+
+14
+00:01:20,510 --> 00:01:27,620
+la funcin de la flecha E-6 funcionan como una referencia que debe ejecutarse cuando hacemos clic en una
+
+15
+00:01:27,620 --> 00:01:31,470
+publicacin y no quieren ejecutar la publicar seleccione ese controlador.
+
+16
+00:01:31,640 --> 00:01:35,920
+Pero ahora puedo pasar ID de publicacin como argumento para ese mtodo.
+
+17
+00:01:36,110 --> 00:01:42,830
+As que ahora tengo una idea para trabajar ahora que la ID debe pasarse al componente de publicacin completa.
+
+18
+00:01:43,070 --> 00:01:51,260
+Por lo tanto, probablemente deberamos almacenarlo en el estado en tal vez la propiedad de publicacin seleccionada, como esta identificacin de
+
+19
+00:01:51,260 --> 00:01:59,990
+publicacin seleccionada por el estado, de modo que dentro de la publicacin completa podamos escucharnos obtener una nueva identificacin y que obtuvieron
+
+20
+00:02:00,010 --> 00:02:01,170
+la identificacin permitida.
+
+21
+00:02:01,220 --> 00:02:08,280
+Entonces ahora necesitamos crear una propiedad de identificacin de publicaciones seleccionadas de deuda en el estado del contenedor de bloques
+
+22
+00:02:08,360 --> 00:02:17,060
+y luego sus publicaciones como ese manejador podemos llamar a este estado de configuracin y establecer la ID de publicacin seleccionada a la ID que
+
+23
+00:02:17,090 --> 00:02:18,640
+recibimos como argumento aqu.
+
+24
+00:02:18,650 --> 00:02:21,810
+As que ahora estaban pasando esa ID al componente de publicacin completo.
+
+25
+00:02:23,000 --> 00:02:27,010
+Y tal vez tambin debera definir la identificacin de la publicacin Selecta como una inicial.
+
+26
+00:02:27,010 --> 00:02:29,430
+Ahora tal vez aqu en el estado.
+
+27
+00:02:29,780 --> 00:02:31,640
+Entonces ahora agregamos ese cdigo.
+
+28
+00:02:31,640 --> 00:02:36,530
+Ahora tenemos que ir al componente de publicacin completa y hacer algo con la idea aqu.
+
+29
+00:02:36,710 --> 00:02:40,870
+Ahora, ante todo, podemos usar la ID para dar salida.
+
+30
+00:02:40,880 --> 00:02:47,410
+Seleccione la publicacin o la no seleccionada dependiendo de si tenemos una identificacin o no.
+
+31
+00:02:47,420 --> 00:02:52,850
+As que digamos que el valor predeterminado debe ser 3 3C, seleccione la publicacin y aadir un
+
+32
+00:02:52,850 --> 00:02:57,270
+poco de estilo en lnea aqu al centrado simplemente configurando el texto al centro.
+
+33
+00:02:57,860 --> 00:03:02,380
+Y ahora quiero verificar si esto me pide una identificacin.
+
+34
+00:03:02,600 --> 00:03:11,210
+Si esto es cierto, inicialmente el ID en el contenedor del bloque es nulo y lo estamos pasando a la publicacin completa
+
+35
+00:03:11,570 --> 00:03:13,700
+y NULL se trata como falso.
+
+36
+00:03:13,700 --> 00:03:16,400
+Por lo tanto, inicialmente se comprueba aqu.
+
+37
+00:03:16,550 --> 00:03:21,070
+Volver falso as que no entraremos en el bloque if.
+
+38
+00:03:21,350 --> 00:03:28,480
+Si entramos, lo cual solo hacemos una vez que la identificacin es algo que no se trata como falso.
+
+39
+00:03:28,520 --> 00:03:35,540
+Entonces, algo superior a 1 o igual o superior a 1 y todos los ID que obtenemos del servidor son iguales
+
+40
+00:03:35,540 --> 00:03:36,910
+o superiores a 1.
+
+41
+00:03:37,040 --> 00:03:40,100
+Una vez que este es el caso, quiero publicar esa publicacin.
+
+42
+00:03:40,280 --> 00:03:45,970
+Entonces, ahora deberamos tener el siguiente comportamiento: si guard esto, ahora podemos hacer clic en una de estas publicaciones.
+
+43
+00:03:46,190 --> 00:03:47,580
+Y ahora lo vemos.
+
+44
+00:03:47,690 --> 00:03:51,760
+Y como vieron antes de hacer clic en l, vemos que la polica selecciona la publicacin.
+
+45
+00:03:51,980 --> 00:03:52,920
+Entonces eso est funcionando.
+
+46
+00:03:52,940 --> 00:03:58,070
+Ahora, en la prxima conferencia, asegurmonos de que tambin hayamos buscado los datos para esa publicacin.
+
+47
+00:03:58,190 --> 00:03:59,330
+Una vez que lo seleccionamos
+

@@ -1,0 +1,404 @@
+1
+00:00:02,200 --> 00:00:09,910
+Agreguemos este fondo y ante todo crearemos el componente de fondo y agregaremos el estilo para
+
+2
+00:00:09,910 --> 00:00:10,970
+el fondo.
+
+3
+00:00:11,350 --> 00:00:15,370
+As que vamos a nuestra pgina Usted es una carpeta en el fondo.
+
+4
+00:00:15,550 --> 00:00:19,390
+Y comencemos a trabajar en ese componente de fondo.
+
+5
+00:00:19,420 --> 00:00:21,420
+Ser un componente sper simple.
+
+6
+00:00:21,790 --> 00:00:28,200
+Como siempre, es un componente funcional aqu que recibi algunos accesorios y devolvi algo de GSX.
+
+7
+00:00:28,210 --> 00:00:37,140
+Por lo tanto, tambin necesita importar reaccionar de reaccionar y necesita exportarse a s mismo como el valor predeterminado.
+
+8
+00:00:37,220 --> 00:00:40,380
+Ahora en el cdigo J es X, vuelvo.
+
+9
+00:00:40,670 --> 00:00:44,260
+Ni siquiera necesito escribir cdigo complejo.
+
+10
+00:00:44,270 --> 00:00:47,670
+Solo quiero comprobar si el show de prop es verdadero.
+
+11
+00:00:47,810 --> 00:00:55,490
+Si ese es el caso de nuevo usando una expresin de giro aqu si ese es el caso, entonces quiero devolver una
+
+12
+00:00:56,340 --> 00:01:00,760
+muerte. Esta def simplemente se mantendr para detener el fondo de avance.
+
+13
+00:01:00,960 --> 00:01:02,710
+De lo contrario, devolver NULL.
+
+14
+00:01:02,730 --> 00:01:09,150
+Puede volver ahora en componentes que estn bien o simplemente significa que no se procesa nada, pero est bien.
+
+15
+00:01:09,750 --> 00:01:14,760
+Ahora no necesito pasar ningn contenido al div. Sin embargo, necesito configurar un poco de estilo.
+
+16
+00:01:14,880 --> 00:01:21,040
+As que agreguemos un fondo hacia el archivo C S S donde agreguemos un poco de estilo para el fondo.
+
+17
+00:01:21,110 --> 00:01:23,250
+Podemos escribirnos rpidamente a gabber.
+
+18
+00:01:23,280 --> 00:01:30,570
+Agreguemos la clase C S S de fondo para que podamos usar estos mdulos Frue C S S y luego la
+
+19
+00:01:30,570 --> 00:01:36,390
+copia de seguridad debe abarcar todo el alto y ancho de la pgina para cubrir todo.
+
+20
+00:01:36,590 --> 00:01:43,010
+Debera tener una posicin fija para que permanezca en su posicin, incluso mientras la desplazamos debera
+
+21
+00:01:43,010 --> 00:01:50,620
+tener un ndice establecido de, digamos, 100, por lo que est por encima de los elementos que desea configurar.
+
+22
+00:01:50,750 --> 00:01:55,570
+Y esto cobrar importancia ms adelante una vez que agreguemos la barra de barras de herramientas, por ejemplo.
+
+23
+00:01:55,670 --> 00:02:00,890
+Pero si revisamos el estilo modal, ver que tambin tiene un ndice establecido de 500.
+
+24
+00:02:00,890 --> 00:02:02,070
+Eso es por supuesto importante.
+
+25
+00:02:02,090 --> 00:02:07,610
+El modal necesita sentarse sobre el teln de fondo y el teln de fondo luego tendr que situarse sobre algunos otros elementos
+
+26
+00:02:07,610 --> 00:02:08,790
+como la barra de herramientas.
+
+27
+00:02:09,110 --> 00:02:10,070
+Permite tambin agregar.
+
+28
+00:02:10,100 --> 00:02:18,200
+Izquierda cero en el cero superior para colocar en la esquina superior izquierda y permite agregar un color de
+
+29
+00:02:18,200 --> 00:02:26,120
+fondo donde usar nuestra G. PAG. A. valor para establecer esto en un color negro con una transparencia del 50 por ciento.
+
+30
+00:02:26,120 --> 00:02:34,940
+Ahora es el momento de importar es classist levantado estas clases o clase similar en realidad en el componente
+
+31
+00:02:34,940 --> 00:02:36,010
+de fondo.
+
+32
+00:02:36,260 --> 00:02:46,760
+como un nombre de clase al div, por lo que el nombre de clase ahora es igual al fondo de clase con una letra B.
+
+33
+00:02:46,760 --> 00:02:54,450
+As que aqu, por lo tanto, simplemente importo classis de ese fondo de barras C S y lo asigno
+
+34
+00:02:54,470 --> 00:02:58,590
+Es importante que obtengamos un componente de fondo.
+
+35
+00:02:58,760 --> 00:03:00,840
+Ahora tenemos que usarlo.
+
+36
+00:03:00,910 --> 00:03:03,490
+Espera obtener una propiedad de espectculo.
+
+37
+00:03:03,500 --> 00:03:07,610
+La pregunta ahora es dnde agregamos este teln de fondo?
+
+38
+00:03:07,880 --> 00:03:14,280
+Y ahora puede tener varios lugares donde podra agregarlo donde podra argumentar que tiene sentido que
+
+39
+00:03:15,290 --> 00:03:22,310
+uno de esos lugares est en un componente profundo, que se siente junto al diseo fuera del diseo,
+
+40
+00:03:22,460 --> 00:03:26,670
+incluso porque no forma parte del contenido de la pgina principal.
+
+41
+00:03:26,700 --> 00:03:34,100
+Habiendo dicho esto en el componente de diseo, podra argumentar porque es parte de la pgina, pero no debera ser parte del
+
+42
+00:03:34,100 --> 00:03:39,160
+contenido principal y no ser parte de la barra de herramientas ni nada de eso.
+
+43
+00:03:39,350 --> 00:03:42,840
+Definitivamente puede hacer eso, puede ponerlo en el componente de diseo.
+
+44
+00:03:42,920 --> 00:03:48,150
+Solo necesita asegurarse de que puede alcanzar eso pasando el espectculo.
+
+45
+00:03:48,150 --> 00:03:52,130
+El fondo se mantuvo hasta el componente muerto, y as sucesivamente.
+
+46
+00:03:52,160 --> 00:03:54,040
+Este es un buen desafo para ti.
+
+47
+00:03:54,260 --> 00:03:58,820
+Intenta colocar y manejar el fondo en diferentes lugares de tu aplicacin.
+
+48
+00:03:59,120 --> 00:04:05,960
+a los componentes basados en clases, porque tal vez, de repente, necesite definir algn mtodo en un componente.
+
+49
+00:04:05,960 --> 00:04:12,190
+Para pap, es posible que tambin tenga que cambiar algunos componentes de los componentes estatales menos funcionales
+
+50
+00:04:12,230 --> 00:04:20,930
+Ir por otro enfoque, aunque agregar el fondo a mi modelo porque en mi opinin este teln de fondo
+
+51
+00:04:20,930 --> 00:04:23,930
+est estrechamente relacionado con el modelo.
+
+52
+00:04:24,020 --> 00:04:32,000
+Si se muestra el mdem, debe mostrarse el fondo, por lo tanto, importar mis componentes auxiliares aqu
+
+53
+00:04:32,000 --> 00:04:35,450
+porque necesito ubicar ese modo junto al fondo.
+
+54
+00:04:35,840 --> 00:04:45,090
+As que djenme simplemente subir todo el camino hasta el lugar donde puedo acceder a la edad de Ossi y luego a mi auxiliar.
+
+55
+00:04:45,200 --> 00:04:56,120
+Y ahora envolvemos el def del modal en este componente de alks y ahora vamos a importar el fondo en este
+
+56
+00:04:56,150 --> 00:05:04,110
+otoo para importar el fondo de la carpeta de fondo del archivo Julias de fondo.
+
+57
+00:05:04,220 --> 00:05:06,800
+Pongamos al lado del modal.
+
+58
+00:05:06,820 --> 00:05:08,660
+Este es mi teln de fondo.
+
+59
+00:05:08,970 --> 00:05:15,200
+Ahora deberamos configurar la propiedad show en el fondo porque la esperamos all y, afortunadamente, obtenemos la
+
+60
+00:05:15,200 --> 00:05:21,980
+informacin del show en prop's en el componente modal en s mismo para que podamos simplemente pasar el
+
+61
+00:05:22,070 --> 00:05:23,830
+show de prop al fondo.
+
+62
+00:05:24,080 --> 00:05:27,200
+Si se muestra, se debe mostrar el fondo.
+
+63
+00:05:27,920 --> 00:05:32,770
+Si hacemos esto, guardemos todos los archivos y veamos si eso funciona.
+
+64
+00:05:32,960 --> 00:05:33,500
+Se ve bien.
+
+65
+00:05:33,500 --> 00:05:34,960
+Tenemos un teln de fondo.
+
+66
+00:05:35,360 --> 00:05:39,680
+Asegurmonos de que podamos hacer clic en este fondo para pap.
+
+67
+00:05:39,680 --> 00:05:46,430
+Por supuesto, necesitamos agregar un oyente clic en el fondo en el momento de la muerte, as que haga clic en.
+
+68
+00:05:46,650 --> 00:05:55,070
+Claro que ejecuta un mtodo y, por supuesto, recibir una referencia a ese mtodo en una propiedad, as que ejecutar
+
+69
+00:05:55,070 --> 00:05:55,860
+los accesorios.
+
+70
+00:05:55,910 --> 00:05:58,950
+Y luego digamos que recopilar podra ser el nombre de la propiedad.
+
+71
+00:05:59,090 --> 00:06:01,820
+Puede elegir cualquier nombre que desee.
+
+72
+00:06:01,930 --> 00:06:03,960
+Regresemos ahora al modal.
+
+73
+00:06:04,030 --> 00:06:11,890
+Aqu tenemos que proporcionar una propiedad de clic y ahora tenemos que hacer algo all y simplemente activar
+
+74
+00:06:12,490 --> 00:06:17,200
+Propp en ese Motilal que debera cerrarse de manera mvil.
+
+75
+00:06:17,590 --> 00:06:23,280
+Entonces, el cierre mvil ahora es una propiedad que debemos agregar al componente modal.
+
+76
+00:06:23,320 --> 00:06:24,930
+Cuando agregamos a J.
+
+77
+00:06:24,940 --> 00:06:26,960
+X a nuestra salida.
+
+78
+00:06:27,010 --> 00:06:32,480
+Por decirlo as, y por supuesto usamos ese modal en el generador de hamburguesas.
+
+79
+00:06:32,820 --> 00:06:41,340
+Su lo que ahora tenemos que hacer es agregar esta propiedad de cierre modal a modal porque
+
+80
+00:06:41,400 --> 00:06:46,030
+la agregamos all como referencia del mtodo que queremos ejecutar.
+
+81
+00:06:46,140 --> 00:06:53,100
+Una vez que se activaron los fuegos de fondo solo para asegurar que est claro cuando sucede esto, lo que sucede cuando
+
+82
+00:06:53,340 --> 00:06:54,770
+se dispara el clic.
+
+83
+00:06:54,810 --> 00:07:01,790
+Toda la diferencia que compone el fondo as que en el generador de Burgert donde al final obtendremos esta informacin.
+
+84
+00:07:01,950 --> 00:07:10,280
+Quiero ejecutar un cdigo una vez que se haga clic en este fondo al final y agregar un nuevo controlador que Chase
+
+85
+00:07:10,480 --> 00:07:16,500
+cancel handler porque hacer clic en el fondo esencialmente significa que queremos cerrar a modal y
+
+86
+00:07:16,620 --> 00:07:18,900
+que queremos cancelar la compra.
+
+87
+00:07:18,900 --> 00:07:29,560
+que voy a llamar a este estado de conjunto y establecer su persecucin a falso aviso el ndice especial que estoy usando aqu de nuevo para
+
+88
+00:07:29,690 --> 00:07:37,140
+asegurarse de que esto dentro de este Meffert se refiere a declasse y no a otra cosa.
+
+89
+00:07:37,140 --> 00:07:38,610
+No queremos continuar as
+
+90
+00:07:38,610 --> 00:07:41,040
+Entonces es el manejador de canceladores de Paperchase.
+
+91
+00:07:41,310 --> 00:07:44,420
+Quiero ejecutar una vez que se cerr el mdem.
+
+92
+00:07:44,580 --> 00:07:47,470
+Entonces, este controlador de cancelacin anterior a Chase.
+
+93
+00:07:47,820 --> 00:07:53,790
+Si ahora guardamos todo, volvemos a la aplicacin y abrimos el modelo que vemos.
+
+94
+00:07:53,820 --> 00:07:59,490
+Si hago clic en el fondo, ver que el modal desaparece y el fondo desaparece y podemos hacer
+
+95
+00:07:59,670 --> 00:08:01,340
+esto tantas veces como queramos.
+
+96
+00:08:01,340 --> 00:08:03,400
+Esto por cierto es una hamburguesa sper sabrosa.
+
+97
+00:08:03,450 --> 00:08:05,240
+Sin ritmo, pero con mucho queso.
+
+98
+00:08:05,310 --> 00:08:06,930
+Delicioso.
+
+99
+00:08:06,960 --> 00:08:13,830
+Ahora continuemos y asegurmonos de agregar algunos botones como parte del resumen de la orden para que
+
+100
+00:08:13,830 --> 00:08:14,650
+podamos continuar.
+
+101
+00:08:14,790 --> 00:08:16,290
+O que podemos cancelar.
+

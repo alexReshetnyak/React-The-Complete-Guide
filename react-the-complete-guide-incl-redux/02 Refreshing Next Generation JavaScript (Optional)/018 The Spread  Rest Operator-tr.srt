@@ -1,0 +1,324 @@
+1
+00:00:02,250 --> 00:00:06,000
+Snflar ve aero ilevleri hakknda ok ey reniyoruz.
+
+2
+00:00:06,210 --> 00:00:11,700
+imdi balarmz yeni iletmecilere evirelim, javascript'in geleceinde kullanabilecek ve
+
+3
+00:00:11,700 --> 00:00:17,340
+zaten bugn dinlenme operatrlerine yaymak iin Riak projemizde kullanabileceiz.
+
+4
+00:00:17,400 --> 00:00:20,840
+Aslnda sadece bir operatrn bo noktalar var.
+
+5
+00:00:20,850 --> 00:00:25,020
+Evet, bu garip grnyor olabilir ancak operatr sadece bo noktalar.
+
+6
+00:00:25,080 --> 00:00:32,010
+imdi yaylma ya da dinlenme denirse, onu kullandmz yere bal olarak yayc ileci, her eyi
+
+7
+00:00:32,100 --> 00:00:35,160
+ya da nesne zelliklerini blmek iin kullanlr.
+
+8
+00:00:35,250 --> 00:00:38,510
+Bu yzden bir dizi veya nesne yaymak.
+
+9
+00:00:38,640 --> 00:00:47,160
+rnein, eski bir dizimiz varsa ve bu eski dizideki tm eleri yeni bir diziye eklemek ve
+
+10
+00:00:47,160 --> 00:00:54,150
+ek olarak iki ede 1 eklemek istediimizde bu ilk dizin, tm dizinin nnde
+
+11
+00:00:54,150 --> 00:01:00,330
+ nokta olduu anlamna gelir basite tm unsurlar ekip keli ayralarla oluturduumuz
+
+12
+00:01:00,330 --> 00:01:01,630
+yeni diziye ekledik.
+
+13
+00:01:01,860 --> 00:01:04,870
+Ve elbette daha fazla eleman ekleyebiliriz.
+
+14
+00:01:04,890 --> 00:01:11,140
+Dolaysyla, nesne iin ayn diziyi oluturmak iin dizin keli ayralarla normalletirmek iin kullanyoruz.
+
+15
+00:01:11,190 --> 00:01:17,850
+Yeni kol ile ar ayralar olan yeni bir nesne oluturuyoruz, ancak o zaman nokta nokta nokta da var.
+
+16
+00:01:17,880 --> 00:01:26,670
+ve bunlar anahtar deer iftleri olarak eklemek de, eski nesne ise yan not olarak nesne yoktu.
+
+17
+00:01:26,670 --> 00:01:31,350
+Eski nesne, eski nesne ve deerlerin tm zelliklerini karmak
+
+18
+00:01:31,350 --> 00:01:33,350
+Ayrca yeni bir mal var.
+
+19
+00:01:33,480 --> 00:01:36,220
+Burada yeni bir pervane 5 tarafndan geersiz klacakt.
+
+20
+00:01:36,300 --> 00:01:40,920
+Dolaysyla, kendi mlkmz ncelikle sahtekrlk yayma operatrn alr.
+
+21
+00:01:41,010 --> 00:01:48,660
+imdi kalan operatr ayn operatre karn farkl bir ekilde kullanld, burada fonksiyon argmanlarnn bir listesini bir diziye
+
+22
+00:01:48,660 --> 00:01:50,270
+birletirmek iin kullanlyor.
+
+23
+00:01:50,460 --> 00:01:52,270
+Ve bu bize nerede kullandmz gsterir.
+
+24
+00:01:52,380 --> 00:01:55,190
+Bunu bir ilev argman listesinde kullanyoruz.
+
+25
+00:01:55,220 --> 00:01:57,380
+te bir rnek sralama.
+
+26
+00:01:57,370 --> 00:02:00,740
+Bizim X snrsz sayda argman alr.
+
+27
+00:02:00,750 --> 00:02:09,420
+Yani bamsz bir argman ya da nokta nokta nokta ile her ne olursa olsun biz sadece bir argman veya X yazyoruz,
+
+28
+00:02:09,420 --> 00:02:14,120
+ancak aslnda birden fazla alabiliriz ve hepsi birlikte bir dizi olarak birletirilecek.
+
+29
+00:02:14,130 --> 00:02:20,790
+Bu durumda, Array yntemlerini argman listemize uygulayabilir veya rahata saklanan argmanlarmz kullanarak ne yapmak
+
+30
+00:02:20,790 --> 00:02:22,210
+istiyorsa onu yapabiliriz.
+
+31
+00:02:22,410 --> 00:02:26,090
+O halde her ikisine de NJ Esben gibi bir gz atalm.
+
+32
+00:02:26,170 --> 00:02:31,600
+imdi yaylma operatryle balayalm veya bir dizi say oluturalm.
+
+33
+00:02:31,870 --> 00:02:35,310
+Bu yzden bir kere serbest brakmak istediiniz kadar ekleyin.
+
+34
+00:02:35,350 --> 00:02:42,820
+imdi yeni bir dizi yeni say yaratmak istiyorum ve grdnz gibi yaylma basite bo
+
+35
+00:02:42,820 --> 00:02:44,140
+noktalar ekleyerek kullanlyor.
+
+36
+00:02:44,140 --> 00:02:49,430
+Ardndan eski dizi saylar ve sonra potansiyel olarak bunu yapmak zorunda deilsiniz.
+
+37
+00:02:49,660 --> 00:02:53,260
+4 gibi yeni rakamlar ve bu istee baldr.
+
+38
+00:02:53,770 --> 00:02:56,070
+Son konsol gnlyle.
+
+39
+00:02:56,170 --> 00:02:58,130
+Yeni numaralar burada.
+
+40
+00:02:59,450 --> 00:03:07,250
+Ve kotum ki, tm unsurlar ve yeni unsuru ieren bir iki  drt eski diziyi elde ettik.
+
+41
+00:03:07,250 --> 00:03:09,320
+Aslnda eski eyi eklemeyiz.
+
+42
+00:03:09,350 --> 00:03:15,350
+Bunu noktalar olmadan yapsaydk, yeni unsurun iinde bir unsur olarak yer alrd.
+
+43
+00:03:15,350 --> 00:03:20,170
+Aka grdnz gibi eski unsurlar gerekten ekti.
+
+44
+00:03:20,300 --> 00:03:26,750
+Bu, yaylm operatre gre, bu dersi hem diziler hem de nesneler zerinde
+
+45
+00:03:26,750 --> 00:03:35,880
+birka kez bu kursta kullandm greceksiniz; rnein, bu eski nesneyi gvenli bir ekilde kopyalarken, dizileri rahata bir
+
+46
+00:03:35,880 --> 00:03:38,780
+ekilde kopyalayp bir nesneye zellik ekleyebilirsiniz.
+
+47
+00:03:38,780 --> 00:03:44,020
+Yine tabii ki, tabii ki her zaman, kursta ne zaman o operatr kullandmdan bahsedeceim.
+
+48
+00:03:44,180 --> 00:03:46,500
+Varolduunun farknda olmanz yeterlidir.
+
+49
+00:03:46,790 --> 00:03:53,200
+imdi de ayn eyi, nesneler iin hep birlikte grelim ki burada bir ada sahip olduum kiisel bir nesne oluturalm.
+
+50
+00:03:53,210 --> 00:04:01,980
+Diyelim ki Max ve imdi bir javascript nesnesi ve yenisi olan yeni bir kii nesnesine sahip olacam. lk
+
+51
+00:04:02,020 --> 00:04:09,630
+olarak, eski nesnenin tm zellik deer iftlerini kopyalamak iin kullancya ileci yaymak ve potansiyel olarak
+
+52
+00:04:09,930 --> 00:04:12,390
+kullanmak ve hepsi istee bal.
+
+53
+00:04:12,510 --> 00:04:14,200
+Yeni bir mlk ekleyin.
+
+54
+00:04:14,460 --> 00:04:21,630
+Ve eer yeni bir kiiyi gnle kaydettirirsem, J ait olan bu hatay grmezden gelebilirim, X dzgn
+
+55
+00:04:21,630 --> 00:04:24,500
+bir ekilde X ders projemde desteklenecektir.
+
+56
+00:04:24,810 --> 00:04:30,300
+Bunu, nesne olarak Brinton'n ya olarak 28 yandayken Max olarak adlandrdnz gryoruz.
+
+57
+00:04:30,480 --> 00:04:36,730
+Bu yzden eski insan alyor ve onu yayma operatr olan yeni kiiye datyor.
+
+58
+00:04:36,780 --> 00:04:44,210
+Artk daha az kullanlan dinlenme operatr bir fonksiyonda kullanlr ve elbette 6
+
+59
+00:04:44,250 --> 00:04:46,690
+ok fonksiyonunu da kullanabilirsiniz.
+
+60
+00:04:46,830 --> 00:04:53,760
+Bylece ad ne isterseniz szge fonksiyonu alabiliriz ve birka tane kemer elde ederiz ve X olarak
+
+61
+00:04:53,760 --> 00:04:59,460
+adlandrlan ya da istediiniz her eyi kullanmanz gerekmez; ancak nnde bo noktalar kullanmak
+
+62
+00:04:59,460 --> 00:05:00,590
+zorunda kalabilirsiniz. o.
+
+63
+00:05:00,990 --> 00:05:03,780
+Bylece orada sadece geri dnebilirsiniz.
+
+64
+00:05:03,790 --> 00:05:09,960
+kelimeyi dndrmeden inline szdizimini burada tek bir satrda yazmak iin kullanabiliriz, dn kullanacaz.
+
+65
+00:05:09,960 --> 00:05:10,760
+Buradaki anahtar
+
+66
+00:05:10,770 --> 00:05:16,710
+X dosyamza geri dnebilir ve sonra dizilerde bulunan yerleik filtre yntemini ardmz ve
+
+67
+00:05:16,800 --> 00:05:23,320
+burada noktalarn bir dinlenme ileci olarak kullanldn ve argmanlar bir diziye birletirdiini aklnzda bulunduralm.
+
+68
+00:05:23,340 --> 00:05:31,230
+Bylece, filtre szgeci gibi filtre szgeleri, gemiteki her eleman zerinde bir fonksiyon yrtecek gibi yntemleri
+
+69
+00:05:31,230 --> 00:05:31,900
+kullanabiliriz.
+
+70
+00:05:32,040 --> 00:05:38,580
+Yani burada elementimizi alyorduk ve daha sonra inline arrow fonksiyonunu kullanarak sadece doru veya
+
+71
+00:05:38,580 --> 00:05:39,830
+yanl dndrmeyi syleyebiliriz.
+
+72
+00:05:39,830 --> 00:05:45,300
+Eleman 1'e eitse, hangi filtre bekler.
+
+73
+00:05:45,300 --> 00:05:47,540
+imdi, bilmediiniz bir sr CYNICUS olabilir.
+
+74
+00:05:47,640 --> 00:05:53,760
+Serbest denk iaretler, Al'n da bir say olmas iin tr ve deer eitliini denetler.
+
+75
+00:05:53,820 --> 00:05:57,510
+Dahili filtre yntemine aktardmz sadece ok fonksiyonu mu.
+
+76
+00:05:57,510 --> 00:06:00,130
+Yani bu, dinlenme ya da yaylma ile ilgisi yoktur.
+
+77
+00:06:00,310 --> 00:06:07,220
+Filtre arayabileceimizi ve Konsole yasas filtresini grmek iin bir gnlk yapalm.
+
+78
+00:06:07,230 --> 00:06:15,480
+Dolaysyla odak noktamz veya ilevimiz burada 1 2 bedelsiz diyelim ve geriye dnk operatrle oluturulan desirei serbest
+
+79
+00:06:15,480 --> 00:06:21,600
+nokta ylyla filtrelediimiz iin yalnzca bir yl olarak bir dizi olarak kaydedilmeliyiz.
+
+80
+00:06:21,870 --> 00:06:27,960
+tekrar Reston yaylrsnz, bu derste daha sk grleceiniz bo noktalar kullanmak gibi yaygnlatrabilirsiniz.
+
+81
+00:06:27,960 --> 00:06:28,690
+Yani
+

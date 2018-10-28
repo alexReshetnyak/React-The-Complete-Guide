@@ -1,0 +1,212 @@
+1
+00:00:02,130 --> 00:00:07,990
+W ostatnim wykadzie wspomniaem, e mamy rne sposoby stylizacji aplikacji, wic
+
+2
+00:00:07,990 --> 00:00:15,400
+umy ten przycisk inaczej. W aplikacji. plik js, w ktrym mamy ten przycisk
+
+3
+00:00:15,400 --> 00:00:18,770
+Chc nada temu przyciskowi styl, ktry nazywa si stylami wewntrznymi.
+
+4
+00:00:18,840 --> 00:00:24,850
+Nie ma nic zego w korzystaniu z plikw css i klas, a to moe by
+
+5
+00:00:25,330 --> 00:00:32,790
+nawet preferowany sposb, ale to, co czsto widzisz w aplikacjach reagowania, to to, e projektujesz style w javascript.
+
+6
+00:00:32,800 --> 00:00:34,420
+Jak to dziaa?
+
+7
+00:00:34,800 --> 00:00:40,080
+Przejdmy do tej funkcji renderowania, stwrz now sta, ktr nazw styl, nazwa
+
+8
+00:00:40,090 --> 00:00:41,660
+zaley od Ciebie.
+
+9
+00:00:41,740 --> 00:00:43,460
+To jest obiekt
+
+10
+00:00:43,480 --> 00:00:50,800
+javascript i jak moesz by wiadomy waciwoci stylu css maj reprezentacje javascript, na
+
+11
+00:00:50,800 --> 00:00:59,170
+przykad backgroundColor, wielbda zamiast deskryptora, poniewa kolor ta taki jak ten byby nieprawidow nazw waciwoci
+
+12
+00:00:59,170 --> 00:01:04,140
+javascript, mgby zawin j w cudzysowy do uyj go jednak.
+
+13
+00:01:04,360 --> 00:01:09,850
+Bd uywa reprezentacji wielbdw, a nastpnie przypisuj warto, ktra jest acuchem,
+
+14
+00:01:10,210 --> 00:01:11,510
+ktry moe by
+
+15
+00:01:11,530 --> 00:01:16,630
+kolorem, na przykad biaym. Moemy take ustawi czcionk, aby
+
+16
+00:01:16,630 --> 00:01:26,080
+dziedziczya, aby uy naszej otaczajcej czcionki, moemy rwnie ustawi obramowanie, a nie kolor obramowania, po prostu obramowanie o
+
+17
+00:01:26,580 --> 00:01:32,970
+wielkoci 1px, a nastpnie by moe niebieskie, a take doda dopenienie, moe
+
+18
+00:01:32,980 --> 00:01:34,840
+8px, upewnij si, e
+
+19
+00:01:34,840 --> 00:01:39,760
+zawijamy wszystkie te wartoci w cudzysowach, poniewa piszemy tutaj
+
+20
+00:01:39,880 --> 00:01:42,840
+javascript, to musz by cigi.
+
+21
+00:01:42,860 --> 00:01:49,430
+Teraz mog przej do przycisku, umieci go w nowej linii, aby nieco atwiej byo odczyta i
+
+22
+00:01:49,640 --> 00:01:50,720
+doda waciwo stylu.
+
+23
+00:01:51,080 --> 00:01:58,280
+Jest to waciwie normalny atrybut stylu udostpniany przez jsx i styl, jak ju wida,
+
+24
+00:01:58,280 --> 00:02:01,060
+pokaza, aby otrzyma tu warto dynamiczn.
+
+25
+00:02:01,320 --> 00:02:09,230
+Po prostu przeka tutaj styl odnoszcy si do tej staej stylu, ktra jest zdefiniowana w metodzie renderowania, ktrej czci
+
+26
+00:02:09,620 --> 00:02:14,630
+jest to wyraenie zwrotne, wic nie mog po prostu uy takiego stylu,
+
+27
+00:02:14,630 --> 00:02:16,150
+to nie jest waciwo
+
+28
+00:02:16,190 --> 00:02:23,120
+klasy, to normalna zmienna lub faktycznie, poniewa nigdy nie zmienimy jej staej tej metody renderowania.
+
+29
+00:02:23,660 --> 00:02:31,840
+Zobaczmy, czy to ma jaki wpyw, jeli to zapiszemy, rzeczywicie widzimy, e przycisk wyglda teraz inaczej.
+
+30
+00:02:31,990 --> 00:02:37,750
+Moemy poprawi to nieco bardziej, przede wszystkim naprawiajc ten bd i 1px poza
+
+31
+00:02:37,760 --> 00:02:44,880
+naszymi granicami, aby ten styl zosta zastosowany i ustawiajc kursor na wskanik, abymy dostali kursor wskanika
+
+32
+00:02:44,880 --> 00:02:46,460
+po najechaniu na niego.
+
+33
+00:02:46,630 --> 00:02:47,700
+Teraz, zapiszmy
+
+34
+00:02:47,980 --> 00:02:52,150
+to, widzimy t niebiesk granic i znw widzimy kursor.
+
+35
+00:02:52,150 --> 00:02:58,780
+Teraz nie zmienia si po najechaniu i waciwie stylizacji, ktra powoduje, e efekt hover jest do trudny,
+
+36
+00:02:58,780 --> 00:03:00,530
+gdy uywasz stylw wbudowanych.
+
+37
+00:03:00,530 --> 00:03:05,920
+Jest to ju jedno ograniczenie, ale mam cay modu na tym kursie, w ktrym
+
+38
+00:03:05,920 --> 00:03:12,790
+pokazuj kilka sprytnych rozwiza do stylizacji elementw reagujcych, ktre naprawd mog by czym, co mona woy w to
+
+39
+00:03:12,790 --> 00:03:13,650
+wiele uwagi.
+
+40
+00:03:13,660 --> 00:03:16,720
+Zawsze pamitaj, moesz uy pliku css Nastpnie
+
+41
+00:03:16,930 --> 00:03:19,310
+style, ktre tu znajdziesz, s globalne.
+
+42
+00:03:19,330 --> 00:03:23,590
+Wic jeli zmienimy przycisk tutaj, wszystkie przyciski w naszej caej aplikacji
+
+43
+00:03:23,620 --> 00:03:30,940
+zostan zmienione, wic moe nie by to, co chcesz, ale z drugiej strony moesz uy normalnej skadni css
+
+44
+00:03:30,940 --> 00:03:33,250
+lub uy wbudowanych stylw jak tutaj.
+
+45
+00:03:33,250 --> 00:03:38,860
+Nastpnie styl jest dopasowany do komponentu lub elementu, do ktrego go
+
+46
+00:03:39,040 --> 00:03:44,250
+dodajesz, ale masz pewne ograniczenia, ktre uniemoliwiaj wykorzystanie penej mocy css.
+
+47
+00:03:44,560 --> 00:03:49,870
+Jak ju wspomniaem, bd mia peen modu na ten temat, poniewa istnieje zoty rodek w rodku,
+
+48
+00:03:49,870 --> 00:03:54,460
+w ktrym mona zakres style i nadal korzysta ze wszystkich funkcji css, wicej o
+
+49
+00:03:54,460 --> 00:03:55,930
+tym pniej. Na razie
+
+50
+00:03:55,930 --> 00:04:00,230
+pamitaj, e obecnie mamy do dyspozycji te dwa rne sposoby stylizacji,
+
+51
+00:04:00,370 --> 00:04:02,890
+uyj stylw wbudowanych tak jak tutaj,
+
+52
+00:04:02,980 --> 00:04:09,980
+gdy chcesz dopasowa zakres i upewni si, e dotyczy on tylko tego pojedynczego elementu i nie ma w
+
+53
+00:04:10,060 --> 00:04:13,360
+nim adnego innego elementu. nawet w tym samym komponencie.
+

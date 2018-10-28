@@ -1,0 +1,308 @@
+1
+00:00:02,100 --> 00:00:04,820
+So we had a look at how we test components,
+
+2
+00:00:04,860 --> 00:00:08,000
+let's now have a look at containers like the burger builder,
+
+3
+00:00:08,130 --> 00:00:10,550
+how do we test these?
+
+4
+00:00:10,590 --> 00:00:15,840
+The tricky part about containers is that they are connected to the redux store here,
+
+5
+00:00:15,840 --> 00:00:20,180
+the redux store has some external influence on this component.
+
+6
+00:00:20,700 --> 00:00:26,850
+If it weren't connected, testing it would just be very equal to the other components because then yes it
+
+7
+00:00:26,850 --> 00:00:32,810
+might have state but enzyme actually also has methods to handle this, just as we have setProps,
+
+8
+00:00:32,820 --> 00:00:36,580
+we also have setState to simulate different states in that component.
+
+9
+00:00:36,870 --> 00:00:39,930
+So the tricky thing really is the redux store,
+
+10
+00:00:40,150 --> 00:00:46,720
+now the good thing is we don't really need to test the connection of this container to the redux store,
+
+11
+00:00:46,860 --> 00:00:54,120
+we can rely on the redux store to work correctly, and then in the end we only receive data from the store
+
+12
+00:00:54,210 --> 00:00:56,420
+as props to this container.
+
+13
+00:00:56,460 --> 00:00:58,370
+So we're back to the previous world,
+
+14
+00:00:58,500 --> 00:01:04,290
+we can just simulate props in our tests because we want to simulate different outcomes in different
+
+15
+00:01:04,290 --> 00:01:08,830
+states of props anyways, so that we don't want to connect that to some real store,
+
+16
+00:01:08,850 --> 00:01:13,950
+we don't want to test if the store passes this correctly to the component, that's the job of the connect
+
+17
+00:01:13,950 --> 00:01:14,530
+method
+
+18
+00:01:14,610 --> 00:01:16,700
+and that's coming from a third party library,
+
+19
+00:01:16,770 --> 00:01:19,510
+we can rely on that to work correctly.
+
+20
+00:01:19,620 --> 00:01:24,930
+So what we really need to do is we need to get access to the component behind this container so to
+
+21
+00:01:24,930 --> 00:01:25,680
+say
+
+22
+00:01:25,890 --> 00:01:31,430
+and one convenient trick is to simply export this burger builder class,
+
+23
+00:01:31,470 --> 00:01:35,280
+so simply add the export statement in front of this.
+
+24
+00:01:35,340 --> 00:01:37,540
+This now gives us a named export
+
+25
+00:01:37,560 --> 00:01:44,520
+in this file, burger builder which gets access to this class which is just a react component and we still
+
+26
+00:01:44,520 --> 00:01:45,670
+have the default export
+
+27
+00:01:45,690 --> 00:01:53,640
+we still have in our app but now we can write a testing file, BurgerBuilder.test.js and simply import
+
+28
+00:01:54,210 --> 00:02:00,760
+the burger builder class here with the name export from ./BurgerBuilder.
+
+29
+00:02:00,820 --> 00:02:07,450
+This can now be rendered again with shallow and so on, just as we rendered the normal component because
+
+30
+00:02:07,450 --> 00:02:13,860
+it is just a normal component and we totally strip out the connection to redux which is what we want.
+
+31
+00:02:14,320 --> 00:02:22,210
+So now with that change here, we can go to the navigation items test file and also copy the set up regarding
+
+32
+00:02:22,510 --> 00:02:23,830
+enzyme and the adapter,
+
+33
+00:02:23,830 --> 00:02:32,110
+let me copy all of that over to the burger builder, get rid of the imports of the navigation items
+
+34
+00:02:32,110 --> 00:02:38,160
+here instead we're importing the burger builder in that file and now we can start writing tests
+
+35
+00:02:38,160 --> 00:02:38,890
+here.
+
+36
+00:02:38,970 --> 00:02:42,140
+We still do this with the describe function of course
+
+37
+00:02:42,300 --> 00:02:49,360
+so here we really are testing the burger builder and now to simulate this,
+
+38
+00:02:49,400 --> 00:02:54,490
+let's quickly have a look at what we could test here. If we have a look at this file,
+
+39
+00:02:54,530 --> 00:02:59,580
+it would be interesting to see if we actually have build controls here,
+
+40
+00:03:00,270 --> 00:03:07,340
+if the ingredients are nonexistent because we should only render that if ingredients are passed along.
+
+41
+00:03:07,450 --> 00:03:15,700
+So what we can do is we can go to that function, the describe function and we will need to import build
+
+42
+00:03:15,700 --> 00:03:16,510
+controls,
+
+43
+00:03:16,540 --> 00:03:25,970
+so let's add such an import already from ./ or let's go up actually to components burger build
+
+44
+00:03:25,990 --> 00:03:29,590
+controls and import from the BuildControls.js file.
+
+45
+00:03:30,070 --> 00:03:37,060
+And then here, I'll again add beforeEach function to set my wrapper up, therefore I need to add this
+
+46
+00:03:37,360 --> 00:03:38,650
+wrapper variable
+
+47
+00:03:38,650 --> 00:03:44,680
+before I do so and then beforeEach, wrapper should be equal to shallow again because I don't want
+
+48
+00:03:44,680 --> 00:03:50,980
+to do some deep rendering, I want to have an isolated unit tests as you should use it as often as possible
+
+49
+00:03:51,190 --> 00:03:56,860
+and I want to shallowly render burger builder here, just like that.
+
+50
+00:03:56,980 --> 00:04:06,320
+Now for that, we also need to import react as always, so import react from react.
+
+51
+00:04:06,420 --> 00:04:11,790
+Now we can write a test with the it function and there I will describe it,
+
+52
+00:04:11,790 --> 00:04:24,190
+so it should render build controls when receiving ingredients.
+
+53
+00:04:24,240 --> 00:04:31,350
+Now let's add as a second argument that javascript function that should get executed and now in there, I will
+
+54
+00:04:31,350 --> 00:04:33,170
+simply use my wrapper
+
+55
+00:04:33,210 --> 00:04:38,390
+and first of all set props and I want to set that ings prop
+
+56
+00:04:38,400 --> 00:04:39,890
+we're expecting to get.
+
+57
+00:04:40,080 --> 00:04:46,710
+so this prop we are checking here, that ings prop we're expecting to get. Here I'll set
+
+58
+00:04:46,710 --> 00:04:54,710
+ings equal to let's say a javascript object where I have salad, zero.
+
+59
+00:04:54,900 --> 00:05:05,990
+Now with that I can use expect and wrapper and find to find my build controls, not a jsx element, just
+
+60
+00:05:05,990 --> 00:05:11,800
+the type here and this should have a length of 1.
+
+61
+00:05:11,820 --> 00:05:18,760
+Let's save this file and also save the burger builder file to really export the class and in case
+
+62
+00:05:18,760 --> 00:05:25,180
+you're ever getting this error regarding app.test.js, remove the app.test.js file with which the project
+
+63
+00:05:25,180 --> 00:05:31,000
+started, it actually will mount your entire application fail due to using routing.
+
+64
+00:05:31,000 --> 00:05:38,500
+Now you should still get one error now, that this.props.onInitIngredients is not a function, this error
+
+65
+00:05:38,500 --> 00:05:44,270
+make sense because shallow will render your component here even though it doesn't deeply do that
+
+66
+00:05:44,410 --> 00:05:49,360
+and in the burger builder if you inspect it, you'll see that in componentDidMount,
+
+67
+00:05:49,510 --> 00:05:57,030
+we call this prop and this of course is not made available because we only set one prop, ings.
+
+68
+00:05:57,250 --> 00:06:00,850
+So to fix this, we have to add this as a prop,
+
+69
+00:06:00,850 --> 00:06:07,420
+now adding it with setProps won't do the trick because that is added or that is set after the component
+
+70
+00:06:07,420 --> 00:06:09,900
+has been instantiated, so that's too late.
+
+71
+00:06:09,910 --> 00:06:17,140
+We have to add it here onInitIngredients and I'll set it to an empty arrow function here, to
+
+72
+00:06:17,140 --> 00:06:20,030
+simply fulfill the requirement of passing a function.
+
+73
+00:06:20,350 --> 00:06:24,160
+Now with that if you save it, the test passes.
+
+74
+00:06:24,520 --> 00:06:30,950
+If we now pass ings to be null just to check the opposite, it fails
+
+75
+00:06:31,240 --> 00:06:38,540
+and this is an example which you of course may fine tune to your need to see how you can test containers.
+
+76
+00:06:38,650 --> 00:06:44,940
+You essentially strip out the component part and get rid of the connection to redux.
+
+77
+00:06:44,950 --> 00:06:48,370
+Now speaking of redux, how do we test that then?
+

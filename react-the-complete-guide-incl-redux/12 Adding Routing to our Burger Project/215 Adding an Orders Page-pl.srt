@@ -1,0 +1,256 @@
+1
+00:00:02,180 --> 00:00:08,730
+Zajmijmy si stron z moimi zamwieniami, a do tego utworz nowy folder w folderze kontenerw, nazam go
+
+2
+00:00:08,740 --> 00:00:13,610
+zamwieniami, a tam oczywicie utworz zamwienia. plik js, ktry
+
+3
+00:00:13,640 --> 00:00:20,490
+jest kontenerem dla zamwie. To zostanie utworzone za pomoc sowa kluczowego
+
+4
+00:00:20,510 --> 00:00:29,360
+class, klasa Order extends component to kod, ktry chc tam napisa, a tam zaimportuj reagowanie i komponent,
+
+5
+00:00:29,840 --> 00:00:32,480
+aby mc utworzy komponent w
+
+6
+00:00:32,480 --> 00:00:37,850
+ten sposb, a nastpnie wyeksportuj t klas, ta klasa zamwienia,
+
+7
+00:00:37,880 --> 00:00:44,690
+klasa zamwie przepraszam, klasa zamwie jako domylna. W tym miejscu oczywicie bdziemy mieli metod
+
+8
+00:00:44,690 --> 00:00:48,870
+renderowania, w ktrej zwracamy jsx dla tego komponentu.
+
+9
+00:00:48,950 --> 00:00:55,070
+Pytanie, oczywicie, co chcemy tam przedstawi? Chc oczywicie wydrukowa moje zamwienia na
+
+10
+00:00:55,070 --> 00:00:56,040
+tej stronie.
+
+11
+00:00:56,110 --> 00:01:03,400
+W tym celu utworz nowy komponent w folderze komponentw zamwienia, samym zamwieniu, zamwieniu. js
+
+12
+00:01:03,410 --> 00:01:11,840
+i porzdek. css, a teraz pytanie brzmi oczywicie jak powinno wyglda pojedyncze zamwienie
+
+13
+00:01:11,990 --> 00:01:12,920
+na tej stronie.
+
+14
+00:01:13,280 --> 00:01:20,720
+C, utworz go jako funkcj, otrzymam rekwizyty i zwrc jsx.
+
+15
+00:01:20,750 --> 00:01:28,850
+Oczywicie jak zawsze importujemy reagowa z reakcji tutaj i eksportujemy te funkcje jako domylne pliki.
+
+16
+00:01:29,720 --> 00:01:36,530
+Z tym, nasze zamwienie powinno by div, ktre w kocu otrzyma
+
+17
+00:01:36,530 --> 00:01:39,120
+pewn stylizacj, a ja
+
+18
+00:01:39,130 --> 00:01:49,790
+po prostu chc wypuci skadniki i cen tutaj powiedzmy. Wic chciabym mie w akapicie co takiego jak akapit, mgbym powiedzie
+
+19
+00:01:50,720 --> 00:01:51,490
+skadniki: i
+
+20
+00:01:51,560 --> 00:01:57,600
+tutaj mam skadniki takie jak saatka i to w nawiasach, potem ilo
+
+21
+00:01:57,620 --> 00:01:59,340
+jak 1 lub co
+
+22
+00:01:59,840 --> 00:02:08,540
+takiego, a potem mog mie co takiego cena zawsze w akapicie i silne znaczniki, aby j podkreli, a
+
+23
+00:02:08,930 --> 00:02:18,500
+nastpnie warto tak jak 5 USD. 45. Tak powinien wyglda jeden porzdek i oczywicie
+
+24
+00:02:18,500 --> 00:02:20,990
+skadniki i cena czego, co bd
+
+25
+00:02:20,990 --> 00:02:25,090
+musia otrzymywa za pomoc rekwizytw, wic potrzebuj troch stylizacji.
+
+26
+00:02:25,240 --> 00:02:29,540
+Stworz zamwienie. css klasy zamwienie. plik css,
+
+27
+00:02:29,780 --> 00:02:33,640
+nasze zamwienia powinny obejmowa ca szeroko
+
+28
+00:02:33,890 --> 00:02:42,860
+powiedzmy wic szeroko 100%, chc mie obramowanie o wielkoci 1px w tym szarym kolorze,
+
+29
+00:02:42,860 --> 00:02:52,240
+a dodaj pudeko-cie 0 2px 3px i ten szary kolor zmieni granic kolor do nieco janiejszego.
+
+30
+00:02:53,340 --> 00:02:57,590
+Dodam dopenienie 10px, dodam margines, powiedzmy 10px grny
+
+31
+00:02:57,600 --> 00:03:06,330
+i dolny, ale aden na lewo i na prawo. Ustawi rozmiar skrzynki na ramk, aby dopenienie
+
+32
+00:03:06,330 --> 00:03:13,300
+znalazo si w pudeku, a to powinno by adnie wygldajce.
+
+33
+00:03:13,310 --> 00:03:21,250
+Mog teraz importowa klasy z tego pliku css z zamwie. css i przypisz je
+
+34
+00:03:21,650 --> 00:03:23,330
+tutaj.
+
+35
+00:03:23,330 --> 00:03:28,260
+Zatem nazwa klasy moe by teraz klas. zamwienie.
+
+36
+00:03:28,370 --> 00:03:33,100
+Tak powinno wyglda jedno zamwienie w skadniku zamwienia, oczywicie
+
+37
+00:03:33,110 --> 00:03:40,430
+chc generowa wiele zamwie, faktycznie tyle zamwie, ile potrzeba, a zamwienia, ktre musz wydrukowa
+
+38
+00:03:40,430 --> 00:03:43,490
+oczywicie powinny by pobrane z zaplecza.
+
+39
+00:03:43,550 --> 00:03:44,540
+W tym celu
+
+40
+00:03:44,630 --> 00:03:46,310
+najpierw udam si do
+
+41
+00:03:46,340 --> 00:03:51,640
+bazy ogniowej i rzeczywicie zamierzam uporzdkowa tutaj moje zamwienia, poniewa mam ich tak wiele.
+
+42
+00:03:51,860 --> 00:03:57,080
+Aby byo to atwiejsze, usun cay wze zamwie i po prostu utworz kilka nowych
+
+43
+00:03:57,500 --> 00:04:02,440
+po tym czasie, ponownie ustawi miso na 0, aby zacz od pustego burgera.
+
+44
+00:04:02,510 --> 00:04:09,410
+Teraz wrmy do aplikacji i tutaj, w komponencie zamwie, na razie wypumy
+
+45
+00:04:09,410 --> 00:04:11,590
+tylko jedno faszywe zamwienie.
+
+46
+00:04:11,660 --> 00:04:13,880
+Wic zaimportuj ten komponent, ktry wanie stworzylimy, a
+
+47
+00:04:13,880 --> 00:04:20,690
+nastpnie przejd do folderu komponentw, do folderu zamwie i zapi to zamwienie. Plik js, a nastpnie tutaj, w
+
+48
+00:04:20,690 --> 00:04:24,140
+jsx, jak ju powiedziaem, tutaj bd
+
+49
+00:04:24,290 --> 00:04:31,110
+mia zawijanie div wok tej strony i tam po prostu wydrukuj powiedzmy dwa
+
+50
+00:04:31,340 --> 00:04:35,090
+zamwienia, abymy mogli zobaczy, jak to wyglda.
+
+51
+00:04:35,090 --> 00:04:38,140
+Zanim zapenimy to rzeczywistymi
+
+52
+00:04:38,240 --> 00:04:45,700
+danymi, zaadujmy t tras. I oczywicie strona zamwienia powinna zosta zaadowana zamiast budowniczego
+
+53
+00:04:45,690 --> 00:04:47,240
+hamburgera lub strony wypaty.
+
+54
+00:04:47,480 --> 00:04:52,990
+Wic jest w aplikacji. plik js, w ktrym ustawiamy trasy w gr, gdzie wszyscy chc
+
+55
+00:04:53,120 --> 00:04:55,140
+skonfigurowa tras dla zamwie. W
+
+56
+00:04:55,160 --> 00:05:05,440
+tym celu najpierw dokonam importu zamwie z. / pojemniki / zamwienia / zamwienia. js, a nastpnie dodam t now tras
+
+57
+00:05:05,440 --> 00:05:07,070
+tutaj. Na przykad
+
+58
+00:05:07,410 --> 00:05:12,560
+powiedzmy / zlecenia, chc przej
+
+59
+00:05:12,720 --> 00:05:16,990
+do komponentu zamwie, ktry jest tras poza aplikacj. js Teraz, aby wywietli t tras, bdziemy musieli zrobi co,
+
+60
+00:05:17,040 --> 00:05:18,100
+czego
+
+61
+00:05:18,330 --> 00:05:22,890
+jeszcze nie zrobilimy, musimy doda link, a my musimy w tym
+
+62
+00:05:23,040 --> 00:05:25,120
+miejscu dotkn naszych elementw nawigacyjnych.
+
+63
+00:05:25,290 --> 00:05:29,850
+Zrbmy to w nastpnym wykadzie.
+
+64
+00:05:30,000 --> 00:05:32,520
+&nbsp;
+

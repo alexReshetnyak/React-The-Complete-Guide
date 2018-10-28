@@ -1,0 +1,352 @@
+1
+00:00:02,150 --> 00:00:06,120
+W ostatnim wykadzie edytujemy elementy nawigacyjne do przodu na pasku narzdzi.
+
+2
+00:00:06,120 --> 00:00:07,260
+Tylko teraz.
+
+3
+00:00:07,500 --> 00:00:12,580
+Nadszed czas, aby doda do nawigacji na urzdzeniach mobilnych DS.
+
+4
+00:00:12,630 --> 00:00:20,040
+Ich przycisk menu powinien pokazywa szufladk strony, wic niektre menu boczne, ktre si do tego wsuwaj,
+
+5
+00:00:20,070 --> 00:00:22,550
+dodam nowy komponent w folderze nawigacyjnym.
+
+6
+00:00:22,650 --> 00:00:27,220
+Witryna narysuje komponent w bocznym losowaniu lub folderze.
+
+7
+00:00:27,660 --> 00:00:37,530
+Teraz strona z rysunkiem roku bdzie skada si z dwch elementw, ktre mona nazwa stron dla siebie, a nastpnie przyciskiem
+
+8
+00:00:37,530 --> 00:00:42,320
+przeczania, ktry teraz jest po prostu rcznie z symbolem zastpczym.
+
+9
+00:00:42,390 --> 00:00:46,360
+Przycisk menu do twojego taty powinien by przyciskiem otwierajcym spoeczestwo lub na kocu.
+
+10
+00:00:46,470 --> 00:00:52,670
+A to moe by czci naszego komponentu, poniewa teoretycznie moemy chcie ponownie wykorzysta tak
+
+11
+00:00:52,750 --> 00:01:00,510
+wysok warto, ale potrzebujemy rwnie ta do bocznej szuflady, ale na szczcie ju j mamy, wic wykorzystamy
+
+12
+00:01:00,510 --> 00:01:01,750
+ten komponent ponownie.
+
+13
+00:01:02,160 --> 00:01:06,090
+Pracujmy nad stron dla naszej pierwszej i zawsze j pokamy.
+
+14
+00:01:06,180 --> 00:01:08,410
+Porozmawiajmy o tym i tak dalej.
+
+15
+00:01:08,430 --> 00:01:10,430
+C, przejdmy krok po kroku.
+
+16
+00:01:10,680 --> 00:01:19,080
+Skadnik cyder jest normalnym komponentem funkcjonalnym, w ktrym dostajemy kilka rekwizytw i zwracamy co, czego
+
+17
+00:01:19,080 --> 00:01:25,820
+nie bdzie bezporednio kod Jazz X, ale uyjemy tu prawdziwego ciaa funkcyjnego.
+
+18
+00:01:26,010 --> 00:01:31,950
+Bo zanim wrc J Jay x i tam chc co tutaj zrobi.
+
+19
+00:01:32,130 --> 00:01:39,150
+Zasadniczo chc warunkowo docza rne klasy, aby mie pewno, e odtwarzamy animacj po
+
+20
+00:01:39,150 --> 00:01:40,500
+wywietleniu losowania.
+
+21
+00:01:40,530 --> 00:01:46,560
+Tak wic w klasie otwartej, ktrej rodzaju slajdy si w niej znajduj i szafie ubraniowej, ktra
+
+22
+00:01:46,560 --> 00:01:49,980
+j wysuwa, zobaczysz, jak zaimplementowa to w cigu sekundy.
+
+23
+00:01:49,980 --> 00:01:55,510
+Oczywicie sprbujmy rwnie zaimportowa, aby nasz kod GSX mg zosta skompilowany.
+
+24
+00:01:55,800 --> 00:02:01,630
+A nastpnie wyeksportuj funkcj rysowania bocznego jako plik domylny.
+
+25
+00:02:01,650 --> 00:02:08,160
+Teraz zanim dodamy jakie klauzule warunkowe, ustawmy szuflad boczn i hirable, po prostu uywaj div
+
+26
+00:02:08,280 --> 00:02:09,520
+takiego jak ten.
+
+27
+00:02:09,840 --> 00:02:16,530
+I w tym roku Dith chc mie moje logo i elementy nawigacyjne.
+
+28
+00:02:16,590 --> 00:02:27,990
+Z tego powodu zaimportuj zarwno nasze logo importowe z folderu logo, jak i plik logo js i zaimportuj elementy
+
+29
+00:02:28,290 --> 00:02:34,560
+nawigacyjne z folderu elementw nawigacyjnych i s to elementy nawigacyjne.
+
+30
+00:02:34,700 --> 00:02:35,330
+Spadek.
+
+31
+00:02:35,370 --> 00:02:39,240
+Tutaj zawsze moesz zobaczy, jak ponownie wykorzystujemy komponenty.
+
+32
+00:02:39,510 --> 00:02:46,530
+A potem dodam logo jako element samozamykajcy i zawijam elementy nawigacyjne do elementu naff.
+
+33
+00:02:46,530 --> 00:02:51,180
+I tak, moesz rwnie zleci nam nawigacj do pozycji nawigacyjnych.
+
+34
+00:02:51,180 --> 00:02:56,540
+Po prostu upewnij si, e dostosowujesz stylizacj, poniewa s teraz stylizowane na pasek Neven.
+
+35
+00:02:56,610 --> 00:03:01,600
+Musiaby przenie to do elementw nawigacyjnych, ale byoby to absolutnie moliwe.
+
+36
+00:03:01,620 --> 00:03:08,140
+W tym miejscu docz elementy nawigacyjne jako element samozamykajcy w bocznej szufladzie.
+
+37
+00:03:08,600 --> 00:03:11,840
+A teraz oczywicie z boku lub potrzebujesz te stylizacji.
+
+38
+00:03:12,090 --> 00:03:17,730
+Tak wic dla tego wszystkiego stwrz i zobaczysz, e jest obok tego lub pliku Julii.
+
+39
+00:03:17,880 --> 00:03:20,680
+Boczne szuflady widz tam ten plik.
+
+40
+00:03:20,700 --> 00:03:28,830
+Dodam boczn szuflad Claussa, a strona bdzie widoczna tylko na maym ekranie urzdzenia, wic zadbam o to,
+
+41
+00:03:28,830 --> 00:03:31,310
+aby mg j tam otworzy.
+
+42
+00:03:31,320 --> 00:03:36,630
+Ustawmy wic pozycj, aby to naprawi, poniewa zawsze bdzie na stronie, nawet jeli j
+
+43
+00:03:36,630 --> 00:03:39,050
+przewiniemy, powinna ona wyglda jak element statyczny.
+
+44
+00:03:39,120 --> 00:03:48,040
+Chc ustawi szeroko, na przykad 200 pikseli lub 280 pikseli, a maksimum powinno wynosi 70 procent.
+
+45
+00:03:48,060 --> 00:03:52,670
+Wic nawet na super wskich urzdzeniach nie przeskakuje przez krawdzie.
+
+46
+00:03:52,860 --> 00:03:59,010
+Wysoko musi wynosi 100 procent, aby uzyska pen wysoko ekranu, a pozycja lewa powinna wynosi
+
+47
+00:03:59,040 --> 00:04:04,580
+zero, a najwysze pozycje powinny by zerowe, aby naprawd miecio si na penym ekranie.
+
+48
+00:04:05,010 --> 00:04:11,040
+Nastpnie nadam mu ustalony indeks 200, ktry celowo ma wiksz liczb ni to, w ktrym
+
+49
+00:04:11,130 --> 00:04:15,110
+wykorzystalimy 100, poniewa boczne drzwi powinny znajdowa si ponad tem.
+
+50
+00:04:15,180 --> 00:04:20,820
+W przeciwnym razie trudno byoby go uy, a nastpnie chcie nada mu biay kolor ta,
+
+51
+00:04:20,820 --> 00:04:28,300
+tak aby wyrnia si i abymy wyranie widzieli ca tre strony lub znaki na wycice, powiedzmy 32 piksele od
+
+52
+00:04:28,350 --> 00:04:32,180
+gry do dou i 16 piksele w lewo w prawo.
+
+53
+00:04:32,310 --> 00:04:37,210
+Oczywicie moesz take uy spostrzegawczoci, jeli wolisz to robi.
+
+54
+00:04:37,590 --> 00:04:44,590
+Przydziel mu troch rozmiarw skrzynek, aby dopasowa rozmiar do wypenienia, a nie wane, dodam
+
+55
+00:04:44,590 --> 00:04:52,150
+waciwo przejcia, aby zareagowa na zmiany, aby przeksztaci wasno i animowa je na 300 milisekund
+
+56
+00:04:52,230 --> 00:04:54,500
+z funkcj atwego rozrzdu.
+
+57
+00:04:54,510 --> 00:04:58,650
+Bdzie to wane dla otwierania i zamykania bocznej szuflady.
+
+58
+00:04:59,190 --> 00:05:05,630
+Nastpnie dodam meteor w roku, aby okreli, co powinno si sta na wikszych urzdzeniach.
+
+59
+00:05:05,970 --> 00:05:14,650
+Jeli nasze urzdzenie ma ponad 500 pikseli, wwczas klasa cydru C S S powinna mie wywietlanie non.
+
+60
+00:05:14,670 --> 00:05:16,200
+Wic to jest po prostu niewidoczne.
+
+61
+00:05:16,230 --> 00:05:19,650
+Dlatego nigdy nie widzimy poboru na wikszych urzdzeniach.
+
+62
+00:05:19,650 --> 00:05:24,120
+Teraz do testw bdziemy musieli przej do trybu urzdzenia mobilnego w przegldarce.
+
+63
+00:05:24,120 --> 00:05:32,550
+Dlatego te dodam dwa Nusi jako klasy otwarte i zamknite, ktre zostan doczone warunkowo i
+
+64
+00:05:32,670 --> 00:05:39,690
+s odpowiedzialne za odtworzenie animacji dla otwartego przesunicia transformowanej waciwoci, aby przetumaczy
+
+65
+00:05:39,750 --> 00:05:41,050
+x 0.
+
+66
+00:05:41,220 --> 00:05:48,660
+To zasadniczo przeniesie cydr na pozycj, ktr znajd tutaj i zamkn wszystkie ustawione transformacje,
+
+67
+00:05:48,990 --> 00:05:52,400
+aby tumaczy X minus 100 procent.
+
+68
+00:05:52,500 --> 00:05:54,210
+To zostanie przesunite w lewo.
+
+69
+00:05:54,390 --> 00:05:59,910
+A poniewa cigle przeczamy si midzy tymi klasami, transformacja zostanie skorygowana, a wic
+
+70
+00:05:59,970 --> 00:06:03,510
+bdziemy gra z przejciem, czy to spoeczestwo, czy klasa.
+
+71
+00:06:03,510 --> 00:06:08,200
+Przejdmy teraz do bocznej szuflady i zaimportujmy schodw klasy.
+
+72
+00:06:08,340 --> 00:06:17,820
+Zaimportujmy Klaas'a z cydru lub pliku C S S i dodajmy to do nazwy klasy mierci,
+
+73
+00:06:17,820 --> 00:06:22,590
+tutaj powinna by szuflada klasy z zasobami kapitaowymi.
+
+74
+00:06:23,040 --> 00:06:27,240
+Teraz decydujcy lub komponent jest skonfigurowany i powinien wyglda dobrze.
+
+75
+00:06:27,240 --> 00:06:29,140
+Teraz oczywicie chcemy z niego korzysta.
+
+76
+00:06:29,280 --> 00:06:35,000
+I to prowadzi do jednego wanego pytania, gdzie powinno si zastosowa decydent lub komponent.
+
+77
+00:06:35,260 --> 00:06:39,490
+Indie faktycznie maj plik w pliku paska narzdzi.
+
+78
+00:06:39,570 --> 00:06:44,630
+aden z dwch oczywicie nie dostalimy nasz ukad i ukad mamy do paska narzdzi.
+
+79
+00:06:44,640 --> 00:06:50,520
+Tutaj te nie powinnimy mie szuflady witryny, poniewa moim zdaniem jest to cz naszego gwnego ukadu.
+
+80
+00:06:50,700 --> 00:06:58,670
+Wic zaimportuj remis strony lub za rok Potrzebuj przej do folderu nawigacji do folderu szuflady witryny i
+
+81
+00:06:58,710 --> 00:07:07,400
+zdecydowa si na Arjay jako plik, a teraz po prostu zaimportowa lub doda w tym roku rok strony rok
+
+82
+00:07:07,650 --> 00:07:15,000
+w tym komponencie ukadu z tato, jeli wrcimy do aplikacji i klikniemy na ten podgld urzdzenia
+
+83
+00:07:15,000 --> 00:07:17,440
+mobilnego, sysz narzdzia do tworzenia Chrome.
+
+84
+00:07:17,640 --> 00:07:23,890
+Alternatywnie moesz zmniejszy rozmiar ekranu z okrelonego punktu, powiniene zobaczy boczn szuflad i
+
+85
+00:07:24,180 --> 00:07:30,150
+powinna wyglda okropnie, poniewa logo jest zbyt due, a elementy nawigacyjne oczywicie
+
+86
+00:07:30,150 --> 00:07:31,080
+wygldaj le.
+
+87
+00:07:31,080 --> 00:07:36,570
+Ma to sens, poniewa dostosowalimy neber z dwch, aby wyglda dobrze na urzdzeniach mobilnych.
+
+88
+00:07:36,600 --> 00:07:42,170
+Zajmijmy si tym dalej, zanim zrobimy Dana na tle i dziaajcego przecznika.
+

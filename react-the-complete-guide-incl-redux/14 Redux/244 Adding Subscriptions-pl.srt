@@ -1,0 +1,128 @@
+1
+00:00:02,230 --> 00:00:07,750
+Tak wic w cigu ostatnich wykadw dodalimy lub stworzylimy nasz sklep i dodalimy dziaania.
+
+2
+00:00:07,750 --> 00:00:15,880
+Teraz chc rwnie doda subskrypcje subskrypcji upewnij si, e nie musz rcznie wywoywa stanu get tutaj w moim
+
+3
+00:00:15,880 --> 00:00:23,530
+kodu, jeli chc uzyska biecy stan migawki, ale poinformowa mnie, gdy trzeba uzyska nowy stan, poniewa co
+
+4
+00:00:23,530 --> 00:00:28,880
+si zmienio z powodu rcznego zrobi to jak tutaj w dzienniku konsoli.
+
+5
+00:00:29,020 --> 00:00:31,370
+Zawsze musz zgadywa, czy co si zmienio.
+
+6
+00:00:31,480 --> 00:00:39,720
+Wic jak utworzy subskrypcj, a nastpnie mam dostp do mojego sklepu i tam mam metod subskrypcji, ktr mog wykona.
+
+7
+00:00:40,150 --> 00:00:46,890
+Teraz subscribe przyjmuje argument funkcji, ktra zostanie wykonana, gdy tylko stan zostanie zaktualizowany.
+
+8
+00:00:47,050 --> 00:00:55,260
+Tak wic, ilekro ect osiga redukcj funkcji, ktr przekazalimy do subskrybowania, nie dostaje adnych argumentw.
+
+9
+00:00:55,300 --> 00:00:59,450
+Wic wszyscy jestecie przyzwyczajeni do szeciu strza Arion z pustymi nawiasami.
+
+10
+00:00:59,740 --> 00:01:05,660
+A nastpnie w ciele funkcji moemy wykona dowolny kod, ktry chcemy na aktualizacjach stanu.
+
+11
+00:01:05,680 --> 00:01:09,350
+Wic jeste subskrybentem Lagu.
+
+12
+00:01:09,400 --> 00:01:12,370
+Po prostu znacznik, eby zobaczy, skd to pochodzi.
+
+13
+00:01:12,520 --> 00:01:18,370
+A teraz mog rwnie skontaktowa si ze sklepem i uzyska tam stan, w ktrym metoda get state jest taka
+
+14
+00:01:18,370 --> 00:01:19,360
+sama jak poprzednio.
+
+15
+00:01:19,420 --> 00:01:26,140
+Rnica polega na tym, e teraz wiem, e powinienem otrzyma tutaj stan, poniewa wiem, e co si
+
+16
+00:01:26,770 --> 00:01:28,680
+zmienio i nie ma abonamentu.
+
+17
+00:01:28,750 --> 00:01:35,380
+Waciwie zazwyczaj jest to ustawiane zaraz po utworzeniu sklepu, abymy byli informowani
+
+18
+00:01:35,440 --> 00:01:37,530
+o wszelkich przyszych wysykach.
+
+19
+00:01:37,870 --> 00:01:43,990
+Zauwamy, e subskrybcja ma miejsce przed wysaniem akcji, a ta funkcja w metodzie SUBSCRIBE
+
+20
+00:01:44,560 --> 00:01:49,190
+zostanie wykonana, gdy tylko zostanie wywoana akcja i zmutuje histori.
+
+21
+00:01:49,270 --> 00:01:57,450
+Po tym powtrzmy te z podstawowymi podstawami relaksacji wzw J. S. i widzimy, e najpierw produkujemy dane
+
+22
+00:01:57,450 --> 00:02:01,590
+wyjciowe dla kroku blokady konsoli po utworzeniu sklepu.
+
+23
+00:02:02,650 --> 00:02:10,140
+A potem wybieram wyjciowe subskrypcje, a potem dane wyjciowe po tym, jak akcja si zaatwia.
+
+24
+00:02:10,170 --> 00:02:15,730
+Teraz wybieram wyjcia subskrypcji nie dlatego, e subskrypcja przychodzi zanim osignie stan przed
+
+25
+00:02:15,730 --> 00:02:20,910
+instrukcj blokujc Descanso, ale dlatego, e jest wyzwalana, gdy kiedykolwiek zostanie wykonana akcja.
+
+26
+00:02:20,980 --> 00:02:24,150
+Co oczywicie dzieje si przed wykonaniem tej instrukcji dziennika konsoli.
+
+27
+00:02:25,340 --> 00:02:27,260
+Tak dziaa subskrypcja.
+
+28
+00:02:27,260 --> 00:02:31,010
+Wystpuje wyzwalanie zawsze po zaktualizowaniu stanu.
+
+29
+00:02:31,010 --> 00:02:35,600
+To wszystko jest mie i pokazuje nam teraz wszystkie elementy skadowe redux.
+
+30
+00:02:35,600 --> 00:02:41,100
+Jednak w ogle nie pokazuje nam, jak to pasuje do naszego ponownego zastosowania.
+
+31
+00:02:41,420 --> 00:02:44,150
+Zobaczmy wic, jak czymy reagowa, aby zareagowa.
+
+32
+00:02:44,150 --> 00:02:45,380
+Przez nastpne Nycteris.
+

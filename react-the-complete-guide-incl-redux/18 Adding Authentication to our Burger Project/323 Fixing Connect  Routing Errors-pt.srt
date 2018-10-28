@@ -1,0 +1,368 @@
+1
+00:00:02,180 --> 00:00:10,860
+O erro que estamos enfrentando aqui tem a ver com o fato de que estamos envolvendo nosso continer de aplicativos com
+
+2
+00:00:11,490 --> 00:00:20,200
+a conexo e que simplesmente interrompe nosso roteador de resposta. Ns podemos facilmente consertar isso, embora ns precisemos importar o
+
+3
+00:00:20,200 --> 00:00:23,440
+componente de ordem mais alta do Router
+
+4
+00:00:23,880 --> 00:00:29,220
+de react-router-dom e se voc receber um erro como este que est
+
+5
+00:00:29,220 --> 00:00:36,900
+sempre relacionado ao conectar seu componente que voc tambm deseja carregar com roteamento e portanto este componente
+
+6
+00:00:36,900 --> 00:00:42,800
+no recebe seus props de rota, voc pode simplesmente ligar aqui com o Router.
+
+7
+00:00:43,080 --> 00:00:49,000
+E agora com essa pequena alterao, com o GoogleRouter impor seus props sendo repassados para o componente do aplicativo
+
+8
+00:00:49,000 --> 00:00:54,550
+ainda e, portanto, o roteador reagir estar de volta na pgina e saberemos o que est sendo carregado.
+
+9
+00:00:54,660 --> 00:00:56,370
+Com isso, estamos trabalhando novamente.
+
+10
+00:00:56,730 --> 00:01:03,730
+Ento agora vamos experimentar o que originalmente queramos testar, eu adicionarei onde eu vou entrar aqui, isso
+
+11
+00:01:03,750 --> 00:01:05,130
+funciona bem, agora
+
+12
+00:01:05,130 --> 00:01:11,180
+no redux ns verificamos que entramos com sucesso, se dermos uma olhada na aba do
+
+13
+00:01:11,280 --> 00:01:14,770
+aplicativo, ns veja que temos esses trs campos preenchidos.
+
+14
+00:01:15,210 --> 00:01:22,900
+Agora deixe-me recarregar o aplicativo, voc v que est limpo e no redux ns enviamos o logout de autenticao,
+
+15
+00:01:22,900 --> 00:01:25,220
+ento isso no est funcionando corretamente.
+
+16
+00:01:25,300 --> 00:01:33,550
+De alguma forma, estamos alcanando essa linha aqui em nosso criador de aes de autenticao, onde enviamos o logout ou
+
+17
+00:01:33,550 --> 00:01:36,100
+este, teremos que descobrir qual deles
+
+18
+00:01:36,100 --> 00:01:38,320
+, ento vamos rapidamente depurar isso.
+
+19
+00:01:38,350 --> 00:01:47,400
+Para depurar isso, voc pode entrar em fontes e l em nossa fonte de pasta e
+
+20
+00:01:47,640 --> 00:01:51,570
+vamos mergulhar em aes da loja, o
+
+21
+00:01:51,620 --> 00:01:53,270
+arquivo de autenticao.
+
+22
+00:01:53,280 --> 00:02:00,410
+Ento agora podemos colocar um breakpoint aqui na nossa funo authCheckState, vamos colocar
+
+23
+00:02:00,530 --> 00:02:04,730
+um aqui onde verificamos se temos um token.
+
+24
+00:02:05,170 --> 00:02:13,660
+Deixe-me agora ir autenticar e logar novamente para que possamos ter um token para o futuro e agora recarregar a
+
+25
+00:02:13,660 --> 00:02:21,680
+pgina, agora ficamos presos aqui porque o ponto de interrupo entra em ao e buscamos os tokens com sucesso.
+
+26
+00:02:22,480 --> 00:02:29,590
+Vamos agora passar por isso, vamos fazer isso em outro bloco, porque temos um token, mas agora j
+
+27
+00:02:29,590 --> 00:02:35,230
+vemos data de expirao  um objeto de data, de modo que parece bem.
+
+28
+00:02:35,230 --> 00:02:37,880
+Ento, a data de expirao aqui est no futuro e
+
+29
+00:02:38,200 --> 00:02:44,020
+o que acontece aqui  que entramos no bloco if e faz muito sentido porque eu estou verificando se a data
+
+30
+00:02:44,320 --> 00:02:47,540
+de validade  maior que a data de hoje ou a data
+
+31
+00:02:47,740 --> 00:02:52,480
+atual e claro, no quero para sair neste caso porque  exatamente o caso em que o
+
+32
+00:02:52,480 --> 00:02:53,230
+token  vlido.
+
+33
+00:02:53,500 --> 00:02:56,320
+Portanto, este  um erro lgico que podemos corrigir
+
+34
+00:02:56,350 --> 00:02:58,180
+graas  depurao aqui, ento o
+
+35
+00:02:58,450 --> 00:03:00,980
+que temos que fazer  reformular isso, queremos
+
+36
+00:03:01,000 --> 00:03:07,420
+fazer logout se a data de validade for menor ou igual mesmo que seja muito improvvel que a data atual
+
+37
+00:03:07,420 --> 00:03:09,130
+seja igual. Com isso
+
+38
+00:03:09,130 --> 00:03:13,570
+agora, se voltarmos para o aplicativo, vamos fazer o login
+
+39
+00:03:13,810 --> 00:03:17,670
+novamente, ento vamos rapidamente fazer isso, entrar e
+
+40
+00:03:17,860 --> 00:03:20,470
+agora vamos recarregar a pgina e
+
+41
+00:03:20,630 --> 00:03:27,100
+agora voc pode ver que temos o authSuccess aqui, mas ainda seguido por authLogout.
+
+42
+00:03:27,440 --> 00:03:33,800
+Ento vamos novamente depurar isso, vamos colocar um ponto de interrupo aqui novamente para descobrir
+
+43
+00:03:34,040 --> 00:03:37,910
+o que est errado aqui, ento eu rapidamente adicionarei
+
+44
+00:03:38,750 --> 00:03:43,710
+meu cdigo aqui, submeto isso e aqui eu recarregarei o aplicativo, ns
+
+45
+00:03:43,710 --> 00:03:44,710
+faremos isso
+
+46
+00:03:44,900 --> 00:03:52,040
+aqui e agora Se passarmos por isso, vamos para o bloco else e fazemos login com sucesso.
+
+47
+00:03:52,060 --> 00:03:54,450
+Agora vamos continuar a execuo do
+
+48
+00:03:55,630 --> 00:03:58,740
+cdigo, ento por que ns logout aqui?
+
+49
+00:03:58,840 --> 00:04:01,930
+Pode estar relacionado  nossa funo checkAuthTimeout,
+
+50
+00:04:01,930 --> 00:04:04,270
+onde tambm enviamos o logout.
+
+51
+00:04:04,270 --> 00:04:12,090
+Ento, vamos tambm colocar um ponto de interrupo aqui no logout de despacho para ver se isso 
+
+52
+00:04:12,520 --> 00:04:20,600
+acionado preventivamente, ento aqui eu tambm vou logar novamente, recarregar o aplicativo, chegar ao primeiro ponto de interrupo aqui,
+
+53
+00:04:20,750 --> 00:04:22,690
+podemos simplesmente avanar sabemos que
+
+54
+00:04:22,700 --> 00:04:23,810
+no h problema
+
+55
+00:04:23,810 --> 00:04:24,940
+e, de fato,
+
+56
+00:04:25,040 --> 00:04:28,120
+agora chegamos a segunda em setTimeout.
+
+57
+00:04:28,370 --> 00:04:30,180
+Isso no deve disparar, o
+
+58
+00:04:30,620 --> 00:04:34,190
+problema provavelmente  o tempo de expirao que configuramos, ento vamos
+
+59
+00:04:34,190 --> 00:04:39,520
+colocar um ponto de interrupo em setTimeout para chegar a um ponto em que este temporizador
+
+60
+00:04:39,980 --> 00:04:45,950
+est definido e vamos continuar por agora e vamos tentar mais uma vez descobrir qual valor est realmente
+
+61
+00:04:45,950 --> 00:04:49,690
+configurado como tempo de expirao, porque esse tem que ser o problema.
+
+62
+00:04:50,210 --> 00:04:59,300
+Ento, agora, se recarregarmos nosso aplicativo aqui, podemos pular o primeiro ponto de interrupo e agora vamos ver
+
+63
+00:04:59,300 --> 00:05:05,470
+o tempo de expirao,  -10 e faz sentido que isso seja -10.
+
+64
+00:05:05,600 --> 00:05:07,360
+Recebemos alguns erros aqui, ento
+
+65
+00:05:07,520 --> 00:05:09,620
+vamos continuar por enquanto e consert-los,
+
+66
+00:05:09,770 --> 00:05:10,920
+vamos tambm limpar
+
+67
+00:05:10,940 --> 00:05:12,510
+o segundo ponto de interrupo.
+
+68
+00:05:12,950 --> 00:05:19,910
+Ento, qual  o nosso problema? Para verificar o checkoutAuthTimeout na parte inferior da qual fao login automaticamente, estou
+
+69
+00:05:19,910 --> 00:05:22,390
+passando a diferena entre a data futura e hoje.
+
+70
+00:05:22,610 --> 00:05:25,040
+Agora, a questo  que eu uso getSeconds, eu
+
+71
+00:05:25,090 --> 00:05:27,130
+queria usar o getTime aqui, esse 
+
+72
+00:05:27,290 --> 00:05:28,910
+o tempo em milissegundos, esse 
+
+73
+00:05:28,910 --> 00:05:30,750
+o grande nmero que eu queria usar.
+
+74
+00:05:31,040 --> 00:05:36,660
+Ento getTime agora nos d a diferena correta em milissegundos, agora
+
+75
+00:05:36,740 --> 00:05:43,010
+em nossa funo checkAuthTimeout aqui, ns ento multiplicamos com mil, agora isso
+
+76
+00:05:43,010 --> 00:05:44,670
+se tornaria muito
+
+77
+00:05:44,810 --> 00:05:48,460
+grande ento o valor que passamos aqui
+
+78
+00:05:48,640 --> 00:05:58,060
+deveria estar em segundos de fato, ento eu vou quebrar esse clculo aqui entre parnteses e dividi-lo por mil, assim.
+
+79
+00:05:58,080 --> 00:06:04,780
+Ento agora vamos ver se isso funciona, vamos voltar ao nosso aplicativo e vamos
+
+80
+00:06:04,800 --> 00:06:07,080
+colocar um ponto de interrupo
+
+81
+00:06:07,080 --> 00:06:16,490
+em checkAuthTimeout para ver se conseguimos um valor correto agora. Com isso, deixe-me entrar, espero que uma ltima vez, ento, funcione, envie e vamos dar uma
+
+82
+00:06:16,890 --> 00:06:17,420
+olhada, aqui
+
+83
+00:06:17,450 --> 00:06:20,140
+ 3600, que estamos recebendo de volta do servidor,
+
+84
+00:06:20,150 --> 00:06:21,310
+podemos simplesmente pular.
+
+85
+00:06:21,320 --> 00:06:26,520
+Interessante  o que acontece se agora fizermos login, l vemos o tempo de
+
+86
+00:06:26,660 --> 00:06:27,290
+expirao, faz
+
+87
+00:06:27,290 --> 00:06:31,600
+sentido,  um pouco abaixo de 3600 porque 10 segundos se passaram.
+
+88
+00:06:31,610 --> 00:06:35,450
+Ento agora, se continuarmos, estamos logados, como voc pode ver pelo
+
+89
+00:06:35,540 --> 00:06:41,570
+fato de termos o boto de logout e ainda temos o armazenamento local preenchido com nossos dados e
+
+90
+00:06:41,570 --> 00:06:47,240
+que fica l se fizermos login novamente e novamente. Se limparmos isso e fizermos login
+
+91
+00:06:47,240 --> 00:06:49,500
+novamente, no faremos login.
+
+92
+00:06:49,520 --> 00:06:56,580
+Ento, agora temos essa funcionalidade de login automtico, contanto que recebamos um token vlido que ainda no expirou.
+

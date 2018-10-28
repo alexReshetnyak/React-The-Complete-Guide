@@ -1,0 +1,172 @@
+1
+00:00:02,320 --> 00:00:05,490
+Podczas ostatnich wykadw dowiedzielimy si duo o stanie i
+
+2
+00:00:05,500 --> 00:00:12,030
+rekwizytach, dowiedzielimy si, e s to jedyne dwie rzeczy, ktre prowadz do poprawy twojego domu, jeli co si zmieni.
+
+3
+00:00:12,040 --> 00:00:19,050
+Teraz wspomniaem rwnie, e tworzc komponent jako funkcj, tak jak robimy to dla osoby, nie moemy
+
+4
+00:00:19,090 --> 00:00:24,420
+uywa stanu tam, poniewa jest to tylko funkcja, w ktrej zwracamy kod jsx.
+
+5
+00:00:24,430 --> 00:00:27,770
+Oczywicie moemy uruchomi inny kod przed zrobieniem tego
+
+6
+00:00:27,970 --> 00:00:34,300
+i czsto robisz to, jeli chcesz przeksztaci rekwizyty dla nas lub co podobnego, ale moesz ustawi
+
+7
+00:00:34,300 --> 00:00:41,580
+waciwo stanu tutaj, nie moesz wywoa tego stanu zestawu, poniewa nie ma rozszerzenia klasy skadnik, wspomniana metoda stanu
+
+8
+00:00:41,590 --> 00:00:44,830
+nie jest znana i nie mamy adnych metod,
+
+9
+00:00:44,890 --> 00:00:45,850
+nie ma
+
+10
+00:00:45,880 --> 00:00:46,970
+klasy, jest funkcj.
+
+11
+00:00:47,380 --> 00:00:54,730
+Nadal wspominaem, e powiniene uywa tej funkcji funkcji tak czsto, jak to moliwe, i
+
+12
+00:00:55,060 --> 00:00:57,880
+podkrel to jeszcze raz, dlaczego
+
+13
+00:00:58,210 --> 00:01:00,180
+jest to tak wane?
+
+14
+00:01:00,760 --> 00:01:09,580
+Poniewa te proste komponenty, ktre s funkcjami odbierajcymi rekwizyty, bardzo jasno okrelaj, co robi, renderuj
+
+15
+00:01:09,580 --> 00:01:10,420
+tylko
+
+16
+00:01:10,750 --> 00:01:13,250
+co w domenie, s
+
+17
+00:01:13,270 --> 00:01:20,370
+dynamiczne z powodu rekwizytw, a przed wywoaniem zwrotu mona doda dodatkow logik.
+
+18
+00:01:20,770 --> 00:01:23,080
+Ale to bardzo wane, e
+
+19
+00:01:23,140 --> 00:01:28,570
+nie manipuluj stanem twojej aplikacji. Gdy twoja aplikacja si rozwija,
+
+20
+00:01:28,570 --> 00:01:32,280
+zobaczysz, e nie jest to tak niewane,
+
+21
+00:01:32,280 --> 00:01:34,610
+to jest naprawd bardzo wane.
+
+22
+00:01:34,630 --> 00:01:39,990
+Wikszo czci aplikacji nie powinna zmienia stanu aplikacji, powinny one po prostu
+
+23
+00:01:40,030 --> 00:01:43,770
+renderowa co w domenie. Dynamiczne, tak, ale
+
+24
+00:01:43,900 --> 00:01:48,780
+nie powinny pozwala na zmian stanu aplikacji.
+
+25
+00:01:48,820 --> 00:01:54,880
+Twj stan aplikacji powinien by zmieniany i obsugiwany tylko w kilku
+
+26
+00:01:54,880 --> 00:01:57,910
+wybranych komponentach zwanych rwnie kontenerami.
+
+27
+00:01:57,910 --> 00:02:00,110
+App. js byby takim
+
+28
+00:02:00,280 --> 00:02:06,310
+kontenerem, to po prostu inna nazwa, jest skadnikiem, ale my nazywamy to kontenerem, poniewa zawiera
+
+29
+00:02:06,310 --> 00:02:08,370
+on cz naszego stanu aplikacji.
+
+30
+00:02:08,560 --> 00:02:15,580
+W naszej aplikacji demo faktycznie cay stan aplikacji. Tutaj moemy zmieni co na temat naszej
+
+31
+00:02:15,580 --> 00:02:22,270
+aplikacji, a nastpnie przekazujemy te zmiany do np. Komponentu osoby, ale to wszystko.
+
+32
+00:02:22,270 --> 00:02:29,530
+Zmiana nastpi w aplikacji. js i gdy zaczniemy budowa projekt kursu, zobaczysz, e
+
+33
+00:02:29,530 --> 00:02:30,900
+uywam tego wzorca.
+
+34
+00:02:31,000 --> 00:02:38,380
+Bd mia kilka komponentw, w ktrych pastwo faktycznie yje i zostaje zmienione oraz wiele
+
+35
+00:02:38,740 --> 00:02:46,030
+komponentw, ktre pobieraj pewne elementy, a nastpnie renderuj co na ekranie, ale nie bd
+
+36
+00:02:46,120 --> 00:02:47,790
+bezporednio manipulowa pastwem.
+
+37
+00:02:47,800 --> 00:02:54,970
+Nadal moesz mie przypadki, w ktrych by moe chcesz take odsucha wydarzenie w skadniku osoby lub
+
+38
+00:02:54,970 --> 00:02:56,670
+w jakimkolwiek innym komponencie.
+
+39
+00:02:57,100 --> 00:03:02,770
+Teraz moesz to zmieni w komponent, ktry rozszerza komponent, dziki czemu moesz zdefiniowa metody, ktre bdziesz
+
+40
+00:03:02,800 --> 00:03:11,490
+wykonywa, ale moe chcesz sucha zdarzenia tutaj, ale wykona jak metod w aplikacji. js, aby zachowa ten wzr
+
+41
+00:03:11,500 --> 00:03:19,990
+zmiany nazwy w aplikacji. js ale faktycznie suchanie zdarzenia
+
+42
+00:03:19,990 --> 00:03:22,370
+w innym komponencie.
+
+43
+00:03:22,750 --> 00:03:31,470
+Przyjrzyjmy si, jak sobie z tym poradzi i zmieni stan z innego komponentu na nastpnym wykadzie.
+

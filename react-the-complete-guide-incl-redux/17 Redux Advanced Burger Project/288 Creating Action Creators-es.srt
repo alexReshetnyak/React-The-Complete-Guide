@@ -1,0 +1,320 @@
+1
+00:00:02,200 --> 00:00:04,450
+Preparamos nuestra estructura de carpetas.
+
+2
+00:00:04,480 --> 00:00:10,240
+Ahora creamos estos creadores de accin y comenzar en la hamburguesa Boulder porque esa es la funcionalidad
+
+3
+00:00:10,450 --> 00:00:11,950
+que en teora ya tenemos.
+
+4
+00:00:12,070 --> 00:00:14,860
+Y quiero romper mi aplicacin de nuevo.
+
+5
+00:00:15,200 --> 00:00:19,750
+Entonces, antes que nada, necesito importar mis tipos de acciones.
+
+6
+00:00:19,750 --> 00:00:26,860
+Entonces, en el tazn de hamburguesas o en la carpeta de acciones, todos navegan para reducir los tipos de accin
+
+7
+00:00:26,950 --> 00:00:33,960
+que hacen referencia a los archivos javascript muertos. Su reaccin escribe los archivos javascript y luego exportan una constante a
+
+8
+00:00:34,060 --> 00:00:35,280
+la que agregan ingredientes.
+
+9
+00:00:35,440 --> 00:00:41,450
+Siguiendo ese patrn de nombrar a mis creadores de acciones como los identificadores.
+
+10
+00:00:41,560 --> 00:00:45,770
+Pero no todas las maysculas con guiones bajos, pero en caso de Kemel.
+
+11
+00:00:46,220 --> 00:00:48,640
+Entonces, un ingrediente es el creador de la accin.
+
+12
+00:00:48,640 --> 00:00:51,730
+Por ahora lo has adivinado aadiendo un ingrediente.
+
+13
+00:00:51,940 --> 00:00:58,210
+Y si inspeccionamos el lugar donde despachamos tal accin, que est en el contenedor
+
+14
+00:00:58,210 --> 00:01:06,370
+del generador de hamburguesas, veremos que si nos desplazamos hacia abajo en el ingrediente y nos pasa el
+
+15
+00:01:06,370 --> 00:01:09,320
+nombre del ingrediente como carga til.
+
+16
+00:01:09,340 --> 00:01:12,320
+Entonces tenemos este ingrediente adicional llamado propiedad.
+
+17
+00:01:12,430 --> 00:01:17,650
+Y quiero mantener eso en mi creador de acciones o en la accin creada en el creador
+
+18
+00:01:17,650 --> 00:01:23,790
+de acciones, debera decir para que el cdigo existente en todos los lugares, por ejemplo, en el reductor no se rompa.
+
+19
+00:01:24,040 --> 00:01:29,650
+As que tenemos que configurar este nombre de ingrediente y podemos esperar obtener ese nombre de ingrediente como una entrada
+
+20
+00:01:29,770 --> 00:01:32,190
+para el Creador de accin por ese motivo.
+
+21
+00:01:32,200 --> 00:01:37,990
+Entonces, un ingrediente es una funcin de flecha en la que recib el nombre
+
+22
+00:01:37,990 --> 00:01:47,230
+de Ingredion que debera agregarse y donde devolver un objeto de javascript que tendr es la propiedad Nombre del ingrediente donde asign
+
+23
+00:01:47,650 --> 00:01:49,470
+el nombre que obtengo.
+
+24
+00:01:49,570 --> 00:01:55,780
+de accin y elijo un ingrediente y no simplemente duplicar esta accin crear o crear una segunda.
+
+25
+00:01:55,840 --> 00:02:01,210
+Y, por supuesto, tenemos esa propiedad de tipo obligatorio donde me acerco a mis tipos
+
+26
+00:02:01,210 --> 00:02:04,000
+Este se llamar eliminar ingrediente.
+
+27
+00:02:04,120 --> 00:02:09,880
+Y aqu, si echamos un vistazo al Bergere Boulder nuevamente, tambin recibimos el nombre
+
+28
+00:02:09,880 --> 00:02:18,520
+del ingrediente, todos los ingredientes, donde queremos eliminar uno, as que tambin puedo aceptar este nombre aqu y, bsicamente, emitir o
+
+29
+00:02:18,610 --> 00:02:26,080
+despachar, devolver la misma accin que para agregar Redan. simplemente cambie el identificador a un tipo para eliminar
+
+30
+00:02:26,080 --> 00:02:31,360
+el ingrediente y esa es la hamburguesa que termin la accin Bolar.
+
+31
+00:02:31,360 --> 00:02:35,620
+Ahora podemos usar D. S. creadores para que nuestra aplicacin no se rompa.
+
+32
+00:02:35,620 --> 00:02:41,680
+la cada de los reductores y all tenemos que actualizar nuestra ruta de importacin donde obtenemos nuestros tipos de accin.
+
+33
+00:02:41,680 --> 00:02:43,150
+Tambin tenemos que entrar en
+
+34
+00:02:43,150 --> 00:02:44,970
+Ya no se trata de acciones de barra.
+
+35
+00:02:45,100 --> 00:02:50,800
+En su lugar, tenemos que subir una carpeta a la carpeta de acciones y luego elegir los tipos
+
+36
+00:02:51,100 --> 00:02:57,360
+de accin caer de nuevo como siempre omitiendo la extensin de archivo con la que el productor sigue preparado.
+
+37
+00:02:57,640 --> 00:03:03,640
+Obviamente, an necesitamos actualizar nuestra tienda cuando la creamos, donde sealamos al usuario de lectura porque
+
+38
+00:03:03,700 --> 00:03:06,200
+movimos el reductor a una subcarpeta.
+
+39
+00:03:06,430 --> 00:03:12,120
+Entonces, en el ndice como otoo ya no importamos el productor de la carpeta de la tienda.
+
+40
+00:03:12,280 --> 00:03:17,490
+En su lugar, tenemos que ir a la carpeta de reductores y luego elegir el Berger Boler.
+
+41
+00:03:17,590 --> 00:03:19,480
+Pronto todos combinan los usuarios de Alred.
+
+42
+00:03:19,540 --> 00:03:25,520
+Pero en este momento solo tengo uno, la hamburguesa Bouclier llamada as este reductor de hamburguesas.
+
+43
+00:03:25,540 --> 00:03:31,000
+Y por ahora ese es mi nico reductor, as que escoger esto y lo pasar para crear una tienda.
+
+44
+00:03:31,030 --> 00:03:40,120
+Por ltimo, pero no por eso menos importante, tengo que actualizar mi contenedor Burger Boulder donde mapeo mi estado aqu donde
+
+45
+00:03:40,300 --> 00:03:41,140
+envo acciones.
+
+46
+00:03:41,200 --> 00:03:43,560
+Ya no los despacho directamente.
+
+47
+00:03:43,600 --> 00:03:49,750
+En su lugar, quiero usar mis creadores de accin, as que subir a la cima donde estoy o mis tipos
+
+48
+00:03:49,750 --> 00:03:52,080
+de accin y ya no hago eso.
+
+49
+00:03:52,100 --> 00:03:57,790
+En cambio, importar mis acciones o tal vez mis acciones ms audaces.
+
+50
+00:03:57,880 --> 00:04:02,600
+Si queremos ser sper precisos sobre el nombre, el nombre del curso depende de usted.
+
+51
+00:04:02,720 --> 00:04:09,730
+Ahora navegue de nuevo a la carpeta de la tienda y hay dos acciones y no quiero tener un archivo central desde
+
+52
+00:04:09,730 --> 00:04:10,890
+el que pueda importar.
+
+53
+00:04:11,050 --> 00:04:11,980
+As que lo nombrar.
+
+54
+00:04:12,070 --> 00:04:13,180
+ndice Punto
+
+55
+00:04:13,230 --> 00:04:15,130
+S, de hecho, la carpeta de acciones.
+
+56
+00:04:15,460 --> 00:04:18,400
+Y son como se muestra en el ltimo mdulo.
+
+57
+00:04:18,400 --> 00:04:25,720
+Quiero agrupar mis exploits, as que exportar todo desde dot slash Bergere Boulder y lo mismo.
+
+58
+00:04:25,720 --> 00:04:31,920
+Ms tarde, desde el archivo order js y lo que quiero exportar de Bergere Buller es, por supuesto.
+
+59
+00:04:31,960 --> 00:04:37,180
+Agregue ingrediente y retire greedhead y voy a estructurarlo en varias lneas para
+
+60
+00:04:37,330 --> 00:04:39,820
+que sea muy fcil tratarlo as.
+
+61
+00:04:39,820 --> 00:04:45,400
+As que ahora que en realidad se ha cado el asistente, puedo volver al contenedor del generador de
+
+62
+00:04:45,400 --> 00:04:48,880
+hamburguesas y ajustar mi importacin para que apunte al ndice de acciones.
+
+63
+00:04:48,880 --> 00:04:53,500
+En realidad, debido a nuestro flujo de trabajo configurado aqu, incluso puede omitir el ndice.
+
+64
+00:04:53,500 --> 00:04:55,990
+Seleccionar automticamente el ndice de la siguiente manera.
+
+65
+00:04:56,020 --> 00:05:01,460
+Si apunta a una carpeta, pero todo ser muy claro y se agreg, pero nuevamente el ndice podra omitirse aqu.
+
+66
+00:05:02,250 --> 00:05:08,480
+Con eso consegu que las acciones ms audaces de Berger objeten un archivo contenedor en el Bergere
+
+67
+00:05:08,480 --> 00:05:16,250
+Boulder y puedo usarlo en la parte inferior del archivo donde enviamos acciones aqu para despachar la accin del ingrediente ADD.
+
+68
+00:05:16,370 --> 00:05:17,190
+E importante
+
+69
+00:05:17,300 --> 00:05:21,780
+Tenemos que pasar nuestro nombre de ingrediente a la funcin que estamos llamando aqu.
+
+70
+00:05:22,190 --> 00:05:26,030
+Y, por supuesto, tambin quiero ejecutar una accin aqu.
+
+71
+00:05:26,210 --> 00:05:31,240
+Entonces, las acciones ms audaces de Berger eliminan el ingrediente y le pasan el nombre del ingrediente aqu.
+
+72
+00:05:31,250 --> 00:05:37,010
+P Estas son las dos acciones que deseo despachar con Debbie para guardar ese archivo.
+
+73
+00:05:37,040 --> 00:05:40,990
+Y si se hubieran guardado todos los archivos, las horas de la aplicacin funcionaran nuevamente.
+
+74
+00:05:41,300 --> 00:05:44,440
+De hecho, podemos verificar esto en una aplicacin en ejecucin.
+
+75
+00:05:44,720 --> 00:05:47,850
+Si comenzamos a agregar Burger nuevamente.
+
+76
+00:05:47,960 --> 00:05:53,280
+Los verdes me disculpan y eliminndolos, deberamos ver que funciona igual que antes.
+
+77
+00:05:53,390 --> 00:06:00,920
+Pero ahora, por supuesto, con la ayuda de nuestros creadores de accin, ese es el primer paso hacia el que nos movemos para
+
+78
+00:06:00,920 --> 00:06:02,210
+crear creadores de accin.
+
+79
+00:06:02,240 --> 00:06:06,970
+Por supuesto, hicimos esto para ejecutar Kodo asincrnico. Entonces esos sern los prximos pasos.
+
+80
+00:06:07,100 --> 00:06:13,730
+Agregando creadores de ection para pedidos para que finalmente podamos manejar todo el proceso de pedido de Rydex.
+

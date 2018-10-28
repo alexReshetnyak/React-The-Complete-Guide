@@ -1,0 +1,200 @@
+1
+00:00:02,160 --> 00:00:09,570
+Stworzylimy forum, ktre po prostu ustawilimy w javascript, ktre nastpnie dynamicznie przetwarzalimy z naszym wasnym
+
+2
+00:00:09,570 --> 00:00:17,550
+komponentem wejciowym, a nasze wejcie zmienio program obsugi, w ktrym niezmiennie aktualizujemy jakikolwiek efekt obcych elementw.
+
+3
+00:00:17,550 --> 00:00:21,080
+Teraz upewnijmy si, e moemy rwnie przesa ten formularz.
+
+4
+00:00:21,330 --> 00:00:23,530
+Do tego mamy przycisk z kliknitym treserem.
+
+5
+00:00:23,550 --> 00:00:26,210
+I nie chc uywa do zbierania programu obsugi.
+
+6
+00:00:26,220 --> 00:00:27,930
+Tak naprawd jest.
+
+7
+00:00:27,930 --> 00:00:35,220
+Po przesaniu moduu obsugi zdarze moemy uy go na samym formularzu i tam chc teraz
+
+8
+00:00:35,220 --> 00:00:39,990
+wykona metod, ktrej uylimy do obsugi zlecenia po przesaniu.
+
+9
+00:00:40,350 --> 00:00:45,530
+Teraz w module obsugi zamwie teraz oczywicie nadal chc zapobiec domylnemu.
+
+10
+00:00:45,540 --> 00:00:49,320
+Wci otrzymujemy obiekt zdarzenia, ktry automatycznie przekazujesz, reagujc.
+
+11
+00:00:49,320 --> 00:00:53,730
+Teraz chc zapobiec ustawieniu domylnemu, poniewa nie chc automatycznie
+
+12
+00:00:53,730 --> 00:00:56,440
+wysya dania, ktre odwieyyby moj stron.
+
+13
+00:00:56,530 --> 00:00:58,810
+Teraz musz wyodrbni dane.
+
+14
+00:00:58,950 --> 00:01:05,040
+Chc przesa i fajn rzecz jest to, e dane s ju zarzdzane w tym stanie, a nasz obiekt
+
+15
+00:01:05,040 --> 00:01:11,610
+Form tutaj jest aktualizowany przez cay czas z dwoma powizaniami, warto jest co najmniej aktualizowana, a warto z pewnoci
+
+16
+00:01:11,610 --> 00:01:13,140
+jest tym, co mnie interesuje.
+
+17
+00:01:13,140 --> 00:01:14,430
+Mog stworzy now sta.
+
+18
+00:01:14,460 --> 00:01:22,920
+Moe nazwijmy to danymi z formularza i tam chc uzyska dane z mojego stanu i chc w zasadzie uzyska
+
+19
+00:01:22,920 --> 00:01:28,780
+tutaj obiekt formularza zamwienia, chocia nie dbam o typ elementu i konflikt elementw.
+
+20
+00:01:28,950 --> 00:01:33,800
+Chc tylko uzyska nazw, a nastpnie warto bezporednio odwzorowan na siebie.
+
+21
+00:01:33,840 --> 00:01:42,960
+Wic troch go przetransformuj, poniewa dane tego formularza mog pocztkowo by pustym obiektem, a nastpnie wszystkie
+
+22
+00:01:43,030 --> 00:01:45,520
+przechodz przez mj formularz.
+
+23
+00:01:45,520 --> 00:01:54,930
+Wic oni wszyscy maj mj identyfikator elementu formularza w tym formularzu stanu.
+
+24
+00:01:55,030 --> 00:02:02,340
+Tak wic ten bardzo dugi element formy i ogie to po prostu adres e-mail i tak dalej.
+
+25
+00:02:03,600 --> 00:02:11,670
+A nastpnie chc ustawi dane formularza dla danego elementu formularza identyfikatora rwnego tej formie zamwienia
+
+26
+00:02:12,290 --> 00:02:16,400
+stanu dla identyfikatora elementu formularza i wartoci exista.
+
+27
+00:02:16,440 --> 00:02:22,420
+Dlatego po prostu tworz pary wartoci kluczy, w ktrych musz doda now waciwo do obcych danych.
+
+28
+00:02:22,620 --> 00:02:26,090
+Obiekt taki jak kraj, taki jak e-mail i tak dalej.
+
+29
+00:02:26,250 --> 00:02:32,060
+I ustawi warto tej waciwoci nie rwna obiektu, ale po prostu warto wprowadzonej przez uytkownika.
+
+30
+00:02:32,550 --> 00:02:35,490
+A teraz mam to proste mapowanie.
+
+31
+00:02:35,700 --> 00:02:38,570
+Mog teraz uy tego do przesania go.
+
+32
+00:02:38,640 --> 00:02:43,830
+Wic tutaj moje dane formularzy w kocu to, co chc przekaza.
+
+33
+00:02:43,860 --> 00:02:49,720
+Tak wic dodam waciwo daty zamwienia do mojego obiektu zamwienia i ustawi j jako rwn obcym danym.
+
+34
+00:02:50,100 --> 00:02:53,420
+A teraz zobaczmy, czy to dziaa tak, jak chc, eby dziaao.
+
+35
+00:02:53,640 --> 00:02:56,400
+Przejdmy do tego take do bazy ogniowej.
+
+36
+00:02:56,420 --> 00:02:58,700
+A wic w bazie ogniowej s moje rozkazy.
+
+37
+00:02:58,800 --> 00:03:04,190
+Dodajmy teraz nowe zamwienie i zobaczmy, czy to dziaa, przejd przez cay proces.
+
+38
+00:03:04,260 --> 00:03:07,350
+Wszystkie burger trader kliknij kliknij teraz.
+
+39
+00:03:07,360 --> 00:03:11,770
+Kontynuuj kontynuowanie tutaj, a nastpnie skonfiguruj niektre dane.
+
+40
+00:03:11,770 --> 00:03:21,290
+Twj kod pocztowy z ulic jakiego losowego kodu United States moe przetestowa na test dot com.
+
+41
+00:03:21,580 --> 00:03:24,480
+Wybierzmy najtasze tutaj i kliknij zamwienie.
+
+42
+00:03:24,790 --> 00:03:28,480
+Jestemy przekierowywani, nie rzucajmy okiem na firebase, do ktrego dodano nowe zamwienie.
+
+43
+00:03:28,630 --> 00:03:33,370
+A nastpnie zamwilimy dane, w ktrych rzeczywicie mamy wszystkie te odwzorowania, w ktrych
+
+44
+00:03:33,370 --> 00:03:38,630
+mamy dane wprowadzone przez uytkownika, wic przesanie formularza dziaa dobrze i w bardzo dynamiczny sposb.
+
+45
+00:03:38,650 --> 00:03:40,980
+Zobacz, jak atwo jest doda nowe wejcie.
+
+46
+00:03:40,990 --> 00:03:47,050
+Po prostu dodajesz now waciwo do formularza zamwienia w stanie ustawionym typie elementw, skonfiguruj go
+
+47
+00:03:47,060 --> 00:03:51,170
+tutaj i przypisz warto, a Ty szybko dodae nowe dane wejciowe.
+
+48
+00:03:51,190 --> 00:03:58,090
+Oczywicie, poniewa jest to w stanie, mona nawet niezmiennie manipulowa tym formularzem zamwienia w czasie wykonywania,
+
+49
+00:03:58,240 --> 00:04:05,230
+dziki czemu mona dynamicznie dodawa nowe waciwoci, ulepsza nowe dane wejciowe lub usuwa je lub zmienia konfiguracj.
+
+50
+00:04:05,230 --> 00:04:09,150
+Dlatego tak dynamiczny sposb tworzenia forum jest niesamowity.
+

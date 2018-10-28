@@ -1,0 +1,268 @@
+1
+00:00:02,230 --> 00:00:07,860
+Quindi abbiamo iniziato a lavorare per trovare le informazioni sui puntelli che abbiamo ricevuto dal router re-act.
+
+2
+00:00:08,080 --> 00:00:14,530
+Non sarebbe anche bello vedere quale percorso  attivo l'anno disegnandolo in modo appropriato.
+
+3
+00:00:14,530 --> 00:00:21,640
+Vorremmo aggiungere una speciale S-Class C-s al link che  attivo in modo che possiamo usare quella classe
+
+4
+00:00:21,640 --> 00:00:23,300
+per cambiare lo stile.
+
+5
+00:00:23,620 --> 00:00:29,450
+In questo momento se controlliamo che qui vedrai  un tag pi lungo che  stato creato dietro le quinte.
+
+6
+00:00:29,470 --> 00:00:35,980
+Ma ancora una volta tag di ancoraggio gestito dal router re-act che impedisce il default che sarebbe quello di
+
+7
+00:00:36,010 --> 00:00:37,220
+inviare veramente quella richiesta.
+
+8
+00:00:37,450 --> 00:00:41,670
+Ma vedi anche che non  stata aggiunta alcuna classe.
+
+9
+00:00:41,680 --> 00:00:46,210
+Anche se tecnicamente in questo momento  ancora una pagina attiva.
+
+10
+00:00:46,210 --> 00:00:52,930
+Quindi quello che dobbiamo fare  che dobbiamo dire manualmente al router re-act di farlo e lo facciamo non
+
+11
+00:00:52,930 --> 00:00:56,310
+usando un link ma un diverso tipo di link.
+
+12
+00:00:56,520 --> 00:00:59,090
+Il componente naftalenico.
+
+13
+00:00:59,380 --> 00:01:06,760
+ molto simile al link, ma ha alcuni oggetti extra che ci permettono di definire
+
+14
+00:01:06,760 --> 00:01:12,060
+alcuni stili per l'atto di collegamento. Sostituiamo il link con Naphtol.
+
+15
+00:01:12,460 --> 00:01:15,880
+E assicurati di averlo importato come ho appena fatto.
+
+16
+00:01:15,880 --> 00:01:23,170
+link qui in alto per la rotta attiva che  nuova, nel mio caso  cambiato il mio caso.
+
+17
+00:01:23,170 --> 00:01:27,160
+Ora, se torni all'applicazione, vedi l'elemento ri-controllato che  un
+
+18
+00:01:27,160 --> 00:01:29,700
+C' una classe attiva aggiunta.
+
+19
+00:01:29,700 --> 00:01:36,640
+Ora  come se la classe non fosse presente prima che ora ci consenta di applicare alcuni stili.
+
+20
+00:01:36,700 --> 00:01:45,640
+Quindi in Block C Ss posso semplicemente aggiungere una nuova regola e non solo passare al colore del link in arancione se ci passiamo sopra con il mouse sopra
+
+21
+00:01:45,640 --> 00:01:50,720
+o facendo clic su di esso, ma tutti a tutti i link che hanno la classe attiva.
+
+22
+00:01:50,890 --> 00:01:56,260
+Se lo salviamo ora, in realt entrambi sono arancione.
+
+23
+00:01:56,260 --> 00:02:03,020
+home  arancione Perch il motivo per questo  qualcosa che abbiamo imparato prima per default il router re-act
+
+24
+00:02:03,020 --> 00:02:11,390
+considera Steese Pasir come prefissi e lo stesso vale per i link quando si controlla se un link  attivo o no .
+
+25
+00:02:11,750 --> 00:02:14,200
+Se clicco su home anche se solo
+
+26
+00:02:14,210 --> 00:02:16,440
+Tratta questo come un prefisso.
+
+27
+00:02:16,550 --> 00:02:25,250
+Quindi dobbiamo aggiungere l'anno esatto proprio come nel percorso per dire al router di re-act. Non dovrebbe essere il pop completo.
+
+28
+00:02:25,400 --> 00:02:27,840
+Perch questo sia il collegamento attivo.
+
+29
+00:02:28,130 --> 00:02:31,030
+Quindi questo non cambia il link che stiamo indicando.
+
+30
+00:02:31,100 --> 00:02:37,380
+Sar sempre la via da percorrere ma per la classe attiva ci vorrebbe questo come prefisso.
+
+31
+00:02:37,520 --> 00:02:39,250
+Lo sostituiamo con Access.
+
+32
+00:02:39,380 --> 00:02:45,980
+Ora il pagamento completo deve essere ridotto per giorni per ricevere questa classe C Ss attiva.
+
+33
+00:02:46,280 --> 00:02:52,550
+Quindi, prevediamo di aggiungere al primo collegamento che non  necessario per il secondo, perch in
+
+34
+00:02:52,550 --> 00:02:57,590
+realt non abbiamo collegamenti nidificati che non dovrebbero attivare la classe attiva qui.
+
+35
+00:02:57,950 --> 00:03:00,560
+Cos esatto aggiunto per il primo link.
+
+36
+00:03:00,560 --> 00:03:03,490
+Ora abbiamo ancora evidenziato il collegamento Home.
+
+37
+00:03:03,500 --> 00:03:09,930
+Se siamo nella pagina principale, ma se fanno clic sul nuovo post, solo il nuovo post  evidenziato ora.
+
+38
+00:03:09,980 --> 00:03:13,030
+Quindi  cos che possiamo impostare classi attive.
+
+39
+00:03:13,260 --> 00:03:20,360
+Ora a volte non si desidera utilizzare il debito predefinito di attivo come nome di classe attivo.
+
+40
+00:03:20,390 --> 00:03:25,890
+Forse vuoi usare il mio Dasch attivo o evidenziato o quello che vuoi.
+
+41
+00:03:26,060 --> 00:03:29,960
+Ecco perch puoi ignorare la classe che dovrebbe essere aggiunta.
+
+42
+00:03:30,260 --> 00:03:35,660
+ possibile aggiungere ulteriori oggetti di scena e io sto dividendo questo su pi righe per renderlo facile da leggere.
+
+43
+00:03:35,990 --> 00:03:42,020
+ possibile aggiungere un nome di classe attivo e impostarlo su una stringa.
+
+44
+00:03:42,260 --> 00:03:46,620
+E questo ora potrebbe essere il mio attivo e ora per te il primo.
+
+45
+00:03:46,880 --> 00:03:53,370
+Il mio attivo verr aggiunto come classe C S S attiva e non come predefinito di attivo.
+
+46
+00:03:53,390 --> 00:03:55,630
+Quindi ora vedi se ricarichiamo.
+
+47
+00:03:55,680 --> 00:04:00,880
+nulla ma a casa ora non viene assegnato lo stile attivo perch come puoi vedere se
+
+48
+00:04:01,370 --> 00:04:07,700
+ci aspettiamo che sulla destra abbia una classe CSS della mia active perch  quello che abbiamo creato qui.
+
+49
+00:04:07,970 --> 00:04:13,330
+Gnuplot  stato ancora installato perch ha ancora l'atto di classe perch l non ho cambiato
+
+50
+00:04:13,370 --> 00:04:19,670
+Nome di classe attivo Il mio attivo ora passa a attivo che  ridondante perch  sempre l'impostazione
+
+51
+00:04:19,790 --> 00:04:23,980
+predefinita, ma  sufficiente lasciarlo qui per riferimento che  possibile impostarlo.
+
+52
+00:04:24,020 --> 00:04:28,820
+Inoltre, non devi lavorare con le classi CSSA se non vuoi.
+
+53
+00:04:28,820 --> 00:04:31,870
+Puoi anche impostare lo stile attivo.
+
+54
+00:04:32,180 --> 00:04:36,730
+Quindi restituiamo questo al mio attivo che non applicherebbe alcuno stile.
+
+55
+00:04:37,010 --> 00:04:40,150
+E diciamo invece lo stile attivo qui.
+
+56
+00:04:40,450 --> 00:04:42,300
+Questo  un valore dinamico.
+
+57
+00:04:42,440 --> 00:04:47,880
+ un oggetto javascript e funziona in realt proprio come si usa lo stile in linea.
+
+58
+00:04:47,900 --> 00:04:57,200
+Qui puoi impostare qualsiasi C-s come stili come forse il colore e impostarlo su f a 9 a f libera, che  il colore che
+
+59
+00:04:57,200 --> 00:05:03,400
+usiamo e anche C S ma questa  tutta la decorazione del testo impostata da sottolineare.
+
+60
+00:05:03,410 --> 00:05:08,600
+Ora se salviamo questo e torniamo all'app vedrai senzatetto arancione e sottolineato.
+
+61
+00:05:08,930 --> 00:05:17,040
+Considerando che il nuovo post  solo arancione perch il nuovo post utilizza questa classe C S S attiva.
+
+62
+00:05:17,060 --> 00:05:22,080
+Tuttavia quando essere attivo riceve il mio atto di classe che non fa nulla.
+
+63
+00:05:22,280 --> 00:05:26,140
+Ma poi riceverai anche uno stile in linea in linea.
+
+64
+00:05:26,140 --> 00:05:32,410
+Abbiamo creato uno stile attivo, quindi  possibile modellare l'azione dei sondaggi.
+
+65
+00:05:32,420 --> 00:05:39,740
+Il takeaway della chiave  che devi usare naff link object e non il normale oggetto link e potresti
+
+66
+00:05:39,740 --> 00:05:46,700
+doverlo usare eccetto per assicurarti di modellare solo i link per i percorsi che vuoi disegnare e non
+
+67
+00:05:46,700 --> 00:05:53,400
+usare le due parti qui come un prefisso per determinare se una rotta  attiva o meno.
+

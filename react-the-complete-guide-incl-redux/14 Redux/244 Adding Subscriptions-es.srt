@@ -1,0 +1,128 @@
+1
+00:00:02,230 --> 00:00:07,750
+Entonces, durante las ltimas conferencias agregamos o creamos nuestra tienda y agregamos acciones.
+
+2
+00:00:07,750 --> 00:00:15,880
+Ahora tambin quiero agregar miscripciones a suscripciones. Asegrese de que no tengo que llamar manualmente a get state aqu en mi cdigo
+
+3
+00:00:15,880 --> 00:00:23,530
+si quiero obtener la instantnea del estado actual, pero que me informen cada vez que necesito obtener un nuevo estado porque
+
+4
+00:00:23,530 --> 00:00:28,880
+algo cambi. debido a una accin manual como aqu en un registro de la consola.
+
+5
+00:00:29,020 --> 00:00:31,370
+Siempre tengo que adivinar si algo cambi.
+
+6
+00:00:31,480 --> 00:00:39,720
+Entonces, cmo creo una suscripcin? Entonces accedo a mi tienda y all tengo un mtodo de suscripcin que puedo ejecutar.
+
+7
+00:00:40,150 --> 00:00:46,890
+Ahora suscribirse toma un argumento una funcin que se ejecutar cada vez que se actualice el estado.
+
+8
+00:00:47,050 --> 00:00:55,260
+Entonces, cada vez que se llega a ection para reducir la funcin que pasamos para suscribirse, no obtiene ningn argumento.
+
+9
+00:00:55,300 --> 00:00:59,450
+Entonces, ya estn acostumbrados a seis flechas de texto de Arison con parntesis vacos.
+
+10
+00:00:59,740 --> 00:01:05,660
+Y luego en el cuerpo de la funcin podemos ejecutar cualquier cdigo que deseemos en las actualizaciones de estado.
+
+11
+00:01:05,680 --> 00:01:09,350
+Entonces, eres la suscripcin de Lague.
+
+12
+00:01:09,400 --> 00:01:12,370
+Solo un marcador para que vea de dnde viene esto.
+
+13
+00:01:12,520 --> 00:01:18,370
+Y ahora tambin puedo comunicarme con la tienda y obtener mi estado all para que los mtodos estatales sean los
+
+14
+00:01:18,370 --> 00:01:19,360
+mismos que antes.
+
+15
+00:01:19,420 --> 00:01:26,140
+La diferencia es que ahora s que debera obtener el estado aqu porque s que algo
+
+16
+00:01:26,770 --> 00:01:28,680
+cambi y la suscripcin muerta.
+
+17
+00:01:28,750 --> 00:01:35,380
+En realidad, por supuesto, normalmente se configura justo despus de que se cre la tienda para que
+
+18
+00:01:35,440 --> 00:01:37,530
+nos informemos sobre futuros envos.
+
+19
+00:01:37,870 --> 00:01:43,990
+Por lo tanto, tenga en cuenta que la suscripcin se produce antes de enviar las acciones y esta funcin en el
+
+20
+00:01:44,560 --> 00:01:49,190
+mtodo SUBSCRIBE se ejecutar cada vez que se enve una accin y se transformar la historia.
+
+21
+00:01:49,270 --> 00:01:57,450
+Con eso volvamos a ejecutar aquellos con nodos bsicos de relajacin J. S. y lo que vemos es que primero tenemos la
+
+22
+00:01:57,450 --> 00:02:01,590
+salida para el paso de la consola aqu despus de crear la tienda.
+
+23
+00:02:02,650 --> 00:02:10,140
+Y luego puedo elegir salidas de suscripcin y luego el resultado aqu despus de que la accin se aplica.
+
+24
+00:02:10,170 --> 00:02:15,730
+antes de la instruccin de bloqueo de Descanso, sino porque se activa cuando se enva una accin.
+
+25
+00:02:15,730 --> 00:02:20,910
+Ahora puedo elegir salidas de suscripcin no porque la suscripcin llegue antes de que consiga estado
+
+26
+00:02:20,980 --> 00:02:24,150
+Lo cual, por supuesto, sucede antes de hacer esta declaracin del registro de la consola.
+
+27
+00:02:25,340 --> 00:02:27,260
+As es como funciona una suscripcin.
+
+28
+00:02:27,260 --> 00:02:31,010
+Se activa cada vez que se actualiza el estado.
+
+29
+00:02:31,010 --> 00:02:35,600
+Ahora eso est bien y ahora nos muestra todos los componentes bsicos de redux.
+
+30
+00:02:35,600 --> 00:02:41,100
+Sin embargo, no nos muestra en absoluto cmo encaja esto en nuestra aplicacin de reactivacin.
+
+31
+00:02:41,420 --> 00:02:44,150
+Entonces veamos cmo conectamos reacciona para reaccionar.
+
+32
+00:02:44,150 --> 00:02:45,380
+Sobre la prxima Nycteris.
+

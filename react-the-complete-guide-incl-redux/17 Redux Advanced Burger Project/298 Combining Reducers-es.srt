@@ -1,0 +1,252 @@
+1
+00:00:02,170 --> 00:00:09,740
+Combinemos nuestros reductores con Bowler Berger y ordenemos para que todas las acciones del ndice caigan en nuestra aplicacin.
+
+2
+00:00:09,760 --> 00:00:12,090
+Ahora es el momento de combinar reductores.
+
+3
+00:00:12,100 --> 00:00:18,770
+Entonces, antes que nada, importemos reductores de combinacin del paquete de lectura X. Luego
+
+4
+00:00:18,800 --> 00:00:30,710
+quiero importar mi segundo productor, as que importo mi orden de reductores del orden de reducciones de tienda de punto barra y ahora puedo combinar ambos.
+
+5
+00:00:30,730 --> 00:00:39,020
+Entonces, lo que har es crear una nueva constante tu ruta reductora porque se combinan en un usuario como
+
+6
+00:00:39,080 --> 00:00:44,900
+una llamada aprendida combinada con los usuarios aqu y pasan un objeto javascript.
+
+7
+00:00:45,220 --> 00:00:53,260
+Y ahora puedo pasar a Bergere Boulder, asignarle el reductor Bergen Bolla y ordenar y asignar
+
+8
+00:00:53,350 --> 00:00:54,630
+la orden.
+
+9
+00:00:54,690 --> 00:01:00,460
+Las dos cosas que importamos a los rudos reductores de lo que pas para crear una tienda con eso,
+
+10
+00:01:00,460 --> 00:01:05,550
+toda la aplicacin se romper porque ahora tenemos diferentes rebanadas de hamburguesa de estado Boulder y orden.
+
+11
+00:01:05,860 --> 00:01:12,280
+As que tengo que ir a mis contenedores y actualizar la hamburguesa Bolar contenedor de la parte inferior, donde me extiendo para
+
+12
+00:01:12,280 --> 00:01:15,070
+indicar el precio total de los ingredientes y el error.
+
+13
+00:01:15,250 --> 00:01:25,230
+Todo esto debera ser ingredientes estatales para la elaboracin de hamburguesas y lo mismo para el precio total y el error en el contenedor donde
+
+14
+00:01:25,270 --> 00:01:31,420
+tambin obtienen los ingredientes que deberan ser los ingredientes Bolar de la hamburguesa y el contenedor
+
+15
+00:01:31,420 --> 00:01:35,420
+de datos de contacto donde me acerco a los ingredientes.
+
+16
+00:01:35,530 --> 00:01:40,070
+Todos deberan ser ingredientes ms audaces de la hamburguesa del estado Buller.
+
+17
+00:01:40,150 --> 00:01:49,030
+El precio total, pero la carga aqu proviene de los pedidos, por lo que esto debe ser rdenes de estado para cargar
+
+18
+00:01:49,630 --> 00:01:54,340
+para usar o simplemente pedir disculpa para poder usar esa propiedad.
+
+19
+00:01:54,370 --> 00:02:01,500
+Entonces, simplemente ordene que una carga de eso puede guardar todos estos archivos y volver a la aplicacin se ve
+
+20
+00:02:01,530 --> 00:02:01,850
+bien.
+
+21
+00:02:01,850 --> 00:02:04,270
+Esto todava funciona si ahora continuamos.
+
+22
+00:02:04,440 --> 00:02:08,900
+Veamos si podemos enviar una accin con xito aqu.
+
+23
+00:02:08,940 --> 00:02:13,560
+Aqu estn los datos de prueba de prueba.
+
+24
+00:02:13,920 --> 00:02:19,890
+Solo algo que podemos enviar prueba en la prueba que viene y hagamos clic en ordenar.
+
+25
+00:02:19,890 --> 00:02:22,400
+Vimos la pantalla de carga.
+
+26
+00:02:22,890 --> 00:02:26,630
+Recibimos algo del servidor que se ve bien.
+
+27
+00:02:26,790 --> 00:02:28,080
+As es como veo leer x.
+
+28
+00:02:28,110 --> 00:02:30,920
+Veo al menos una cosa que no funcionar como se esperaba.
+
+29
+00:02:31,170 --> 00:02:36,450
+Recibimos pre-Chase Bergere y vimos el spinner por un segundo para que el xito
+
+30
+00:02:36,450 --> 00:02:44,760
+y el xito del trabajo y de la pre-persecucin veamos que todos los pedidos se actualizaron y agregamos este nuevo objeto
+
+31
+00:02:44,760 --> 00:02:49,400
+aqu donde tenemos nuestros ingredientes y luego almacenamos algunos datos en l.
+
+32
+00:02:49,650 --> 00:02:50,980
+Echemos un vistazo al estado.
+
+33
+00:02:51,030 --> 00:02:52,740
+Podemos expandir nuestros pedidos.
+
+34
+00:02:52,830 --> 00:02:57,460
+Echa un vistazo a ese orden y vemos que esta orden aqu.
+
+35
+00:02:57,520 --> 00:03:05,480
+Creo que necesito hacer esto un poco ms amplio para ver si tiene una identificacin que no es correcta.
+
+36
+00:03:05,520 --> 00:03:09,600
+Debera haber extrado la propiedad del nombre, as que eso es algo que debemos ajustar.
+
+37
+00:03:09,840 --> 00:03:13,580
+Adems de eso, todo eso parece estar funcionando.
+
+38
+00:03:13,590 --> 00:03:15,000
+Robert bien.
+
+39
+00:03:15,000 --> 00:03:17,460
+Por supuesto que no seremos redirigidos una vez que hayamos terminado.
+
+40
+00:03:17,670 --> 00:03:22,440
+Entonces esta idea piensa y redirige que hay dos cosas que quiero arreglar.
+
+41
+00:03:22,470 --> 00:03:25,800
+Vamos a verificar rpidamente si funcionaba tambin en el back-end.
+
+42
+00:03:25,800 --> 00:03:29,650
+Pero obviamente no hubiramos tenido una idea de lo contrario.
+
+43
+00:03:29,730 --> 00:03:31,400
+As que eso se ve muy bien.
+
+44
+00:03:31,590 --> 00:03:33,030
+Tenemos una hamburguesa aqu.
+
+45
+00:03:33,390 --> 00:03:35,690
+El mtodo de entrega no se aprob, veo.
+
+46
+00:03:35,790 --> 00:03:37,760
+Entonces eso es algo que tambin deberamos arreglar.
+
+47
+00:03:37,950 --> 00:03:43,650
+Pero adems de verse bien, arreglemos todas estas cosas y veamos qu ms podemos hacer
+
+48
+00:03:43,650 --> 00:03:44,870
+en nuestra aplicacin.
+
+49
+00:03:44,880 --> 00:03:47,250
+Arreglemos rpidamente los problemas que encontramos.
+
+50
+00:03:47,310 --> 00:03:52,260
+Una es en los datos de contexto aqu donde enviamos el formulario.
+
+51
+00:03:52,260 --> 00:03:58,940
+La cuestin es si nunca ajustamos el valor desplegable, entonces el valor est vaco.
+
+52
+00:03:59,220 --> 00:04:00,680
+Y no debera ser.
+
+53
+00:04:00,750 --> 00:04:05,760
+Debera ser, digamos, el ms rpido por defecto.
+
+54
+00:04:06,060 --> 00:04:09,950
+As que acabo de agregar esto a la propiedad Value en el mtodo de entrega.
+
+55
+00:04:09,990 --> 00:04:12,530
+Objeto en un estado de los datos de contacto.
+
+56
+00:04:12,720 --> 00:04:17,600
+Ese es un ajuste importante para que funcione correctamente ahora.
+
+57
+00:04:17,670 --> 00:04:26,130
+Cuando todo est en el reductor en orden J. S. cuando tenemos xito y obtenemos ID aqu, ID de
+
+58
+00:04:26,160 --> 00:04:33,360
+orden de accin que es el ID incorrecto porque en el archivo de pedido y en la carpeta de acciones donde pasamos el ID,
+
+59
+00:04:33,360 --> 00:04:35,390
+paso el estado de respuesta como ID.
+
+60
+00:04:35,610 --> 00:04:41,730
+Pero en su lugar, acabamos de ver en la cerradura que est en la propiedad Nombre en los datos que es la ID
+
+61
+00:04:41,730 --> 00:04:42,610
+que queremos almacenar.
+
+62
+00:04:43,170 --> 00:04:49,290
+Pero con eso que estamos trabajando, lo nico que falta es que redirijamos la ruta y eso es algo
+
+63
+00:04:49,290 --> 00:04:51,280
+que har en la prxima conferencia.
+

@@ -1,0 +1,92 @@
+1
+00:00:02,080 --> 00:00:07,560
+Son dersler zerinde katman hakknda ok ey rendik ve hata ayklamann mkemmel bir yolunu bulduk.
+
+2
+00:00:07,580 --> 00:00:15,720
+Hadi APA'ya dnelim ve demo projemizde asenkron kodu altrmay dnelim.
+
+3
+00:00:15,830 --> 00:00:21,760
+Herhangi bir Bergere bowlinginin aksine, asenkron grevler elbette yoktur, bazlarn oluturmak kolaydr.
+
+4
+00:00:21,830 --> 00:00:29,630
+Diyelim ki, yeni bir sonu saklarken aslnda bunu bir sunucuda sakladmz taklit etmek
+
+5
+00:00:29,630 --> 00:00:30,320
+istiyoruz.
+
+6
+00:00:30,500 --> 00:00:35,510
+imdi bir sunucuya ulaamayacaz, nk nemli ancak bunun taklit edilmesi iin set
+
+7
+00:00:35,510 --> 00:00:36,140
+timeout kullanabilirsiniz.
+
+8
+00:00:36,140 --> 00:00:41,900
+sryor ve maazamz yeni tamamladktan sonra gncellemek istiyoruz Diyelim sonu iin de ayn diyelim.
+
+9
+00:00:41,900 --> 00:00:44,230
+Bu ilem sadece ksa bir sre
+
+10
+00:00:44,510 --> 00:00:49,320
+Aslnda biz burada ezamanl bir kod veya eylem yaratmak istiyoruz.
+
+11
+00:00:49,340 --> 00:00:54,010
+imdi dediim gibi redktr ilevi ezamanl olarak almak zorundadr.
+
+12
+00:00:54,110 --> 00:01:01,290
+Zaman amn burada ayarlayamazsnz, nk bildiiniz gibi zaman am bir fonksiyon alr.
+
+13
+00:01:01,430 --> 00:01:03,010
+Ve sonra zamanlama.
+
+14
+00:01:03,020 --> 00:01:09,410
+Diyelim ki iki saniye burada iinize yaramayan eyaletinize geri dnemezsiniz.
+
+15
+00:01:09,410 --> 00:01:14,750
+Javascript nasl iliyor ilevi, yalnzca iki saniyenin gemesinden sonra ilevin yerine
+
+16
+00:01:14,750 --> 00:01:17,990
+getirilmesini salar ve sonra contrat tarafndan evrilir.
+
+17
+00:01:17,990 --> 00:01:23,810
+Dolaysyla tipik olarak yapacanz ey, sz edilen zamann iinde ve belirli bir srenin
+
+18
+00:01:23,840 --> 00:01:29,720
+sonunda zlmesi gereken bir sz geri verirsiniz, ancak oaltcnz sadece bir sz vermeyi beklememektedir.
+
+19
+00:01:29,750 --> 00:01:34,060
+Dolaysyla asenkron kodu buradan altrabilmenin hibir yolu yoktur.
+
+20
+00:01:34,130 --> 00:01:41,060
+Asenkron kodu, szde ection yaratclarnn yardm olmadan yrtebilirsek de, farkl bir
+
+21
+00:01:41,060 --> 00:01:42,520
+yol var.
+
+22
+00:01:42,560 --> 00:01:49,940
+Bu durumda, asenkron kodu altrmak iin bunlar nasl kullanabileceimizi renmeden nce nce aksiyon yaratclarna
+
+23
+00:01:49,940 --> 00:01:50,470
+dalalm.
+

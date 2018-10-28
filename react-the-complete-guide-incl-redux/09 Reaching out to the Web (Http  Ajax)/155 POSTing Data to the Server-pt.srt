@@ -1,0 +1,204 @@
+1
+00:00:02,080 --> 00:00:06,510
+Ento, ao longo das ltimas palestras, mostro-lhe muito como voc pode obter dados.
+
+2
+00:00:06,520 --> 00:00:12,450
+Agora,  claro, eu tambm quero mostrar-lhe como voc pode enviar dados para um servidor e para Debbie obter o
+
+3
+00:00:12,510 --> 00:00:15,290
+anncio de uma rea de postagem aqui na parte inferior.
+
+4
+00:00:15,370 --> 00:00:21,070
+ gerenciado pelo novo componente de postagem que  um componente baseado em classe que gerencia seu prprio
+
+5
+00:00:21,340 --> 00:00:27,020
+estado e, portanto,  um continer porque no estamos passando ou distribuindo o estado para outros componentes.
+
+6
+00:00:27,100 --> 00:00:33,230
+E agora eu quero ligar este boto de publicao de anncio para enviar essencialmente um pedido de POST para o nosso backend
+
+7
+00:00:33,740 --> 00:00:34,640
+Dammy para isso.
+
+8
+00:00:34,660 --> 00:00:42,290
+Antes de mais, adicione um Meffert ao manipulador de dados de postagem ou postar o manipulador de postagem se desejar faz-lo.
+
+9
+00:00:42,300 --> 00:00:45,330
+E, claro, eu preciso usar x sim.
+
+10
+00:00:45,340 --> 00:00:53,260
+Agora, antes de mais, esperemos que este mtodo seja adicionado ao ouvinte de clique em baixo l, este postdata
+
+11
+00:00:53,270 --> 00:00:54,330
+um manipulador.
+
+12
+00:00:54,670 --> 00:01:00,180
+E agora vamos importar anos para que possamos enviar uma solicitao de publicao.
+
+13
+00:01:00,550 --> 00:01:02,290
+Agora, diga, crie solicitaes de publicao.
+
+14
+00:01:02,310 --> 00:01:04,180
+Ainda use o objeto dos eixos.
+
+15
+00:01:04,320 --> 00:01:08,440
+Mas agora,  claro, no o mtodo get, mas o mtodo post.
+
+16
+00:01:08,700 --> 00:01:15,360
+simplesmente usar o mesmo, ou ento ns usamos para a solicitao get, ele tambm aceita solicitaes de postagem.
+
+17
+00:01:15,480 --> 00:01:21,090
+A postagem, se ainda  necessrio como entrada e para o nosso back-end falso, podemos
+
+18
+00:01:21,120 --> 00:01:27,390
+Agora, uma solicitao de publicao precisa de mais do que voc  Eldo, ele precisa de um segundo argumento, que
+
+19
+00:01:27,390 --> 00:01:32,850
+ a informao que queremos enviar porque, obviamente, uma solicitao de publicao sem dados faz muito sentido.
+
+20
+00:01:32,850 --> 00:01:39,930
+Os dados que eu quero enviar so um objeto javascript que contm o ttulo de uma oferta de um post.
+
+21
+00:01:39,930 --> 00:01:45,900
+Ento vou criar uma nova constante que deve ser um objeto javascript e ir configurar um ttulo
+
+22
+00:01:46,140 --> 00:01:47,940
+para este ttulo de estado.
+
+23
+00:01:48,020 --> 00:01:55,290
+Eu configurarei o corpo para este contedo de estado e, claro, voc pode escolher as propriedades que deseja
+
+24
+00:01:55,290 --> 00:02:00,980
+para esse objeto e eu vou definir a oferta para este estado de oferta.
+
+25
+00:02:00,990 --> 00:02:02,450
+Novamente voc pode adicionar mais.
+
+26
+00:02:02,520 --> 00:02:06,500
+Voc pode expandir este formulrio aqui no final do curso.
+
+27
+00:02:06,660 --> 00:02:13,230
+Ento eu direi a publicao desta constante seu segundo argumento para o mtodo de publicao.
+
+28
+00:02:13,470 --> 00:02:18,840
+E  claro que isso  apenas chamado de postagem, porque o reenvio  algum dado sobre uma publicao que voc
+
+29
+00:02:18,840 --> 00:02:20,080
+pode nomear o que quiser.
+
+30
+00:02:20,100 --> 00:02:22,360
+Voc tambm pode ser nomeado como dados.
+
+31
+00:02:22,860 --> 00:02:27,120
+Agora, voc tambm pode passar um terceiro argumento para configurar esse pedido, mas no precisamos disso.
+
+32
+00:02:27,120 --> 00:02:29,500
+Voc  importante para ns.
+
+33
+00:02:29,550 --> 00:02:35,460
+Isso,  claro,  um objeto javascript, mas o Access automaticamente, basicamente, encadeia seus lutadores, de modo que nos
+
+34
+00:02:35,460 --> 00:02:37,160
+transformamos em dados de Jason.
+
+35
+00:02:37,170 --> 00:02:43,200
+Ele ir fazer isso para ns, assim como extrair os dados adjacentes e obter solicitaes para ns tambm.
+
+36
+00:02:43,680 --> 00:02:46,820
+E agora, claro, corre de forma assncrona.
+
+37
+00:02:46,860 --> 00:02:54,210
+Podemos ouvir a resposta exatamente como podemos fazer isso para obter pedidos e podemos apresent-lo ao
+
+38
+00:02:54,210 --> 00:02:55,290
+console aqui.
+
+39
+00:02:55,290 --> 00:02:56,480
+Agora vamos tentar isso.
+
+40
+00:02:56,480 --> 00:02:57,680
+Vamos salvar isso.
+
+41
+00:02:57,900 --> 00:03:03,570
+Vamos abrir o console e vamos entrar em algum contedo aqui.
+
+42
+00:03:03,580 --> 00:03:09,670
+Algum contedo de teste talvez altere voc oferece ao menu e acesse a publicao de anncios.
+
+43
+00:03:10,020 --> 00:03:18,000
+E aqui est o texto de status de resposta 201 que indica que ele foi bem-sucedido e agora esse manequim de volta
+
+44
+00:03:18,000 --> 00:03:24,540
+aqui no ir armazenar os dados,  claro, ele apenas retorna os dados na resposta para que possamos
+
+45
+00:03:24,540 --> 00:03:27,880
+ver que enviamos com sucesso e parece ns fizemos.
+
+46
+00:03:27,910 --> 00:03:28,620
+Faz isso at agora.
+
+47
+00:03:28,620 --> 00:03:32,640
+Ns enviamos novamente para um servidor real,  claro, para o seu prprio servidor.
+
+48
+00:03:32,640 --> 00:03:38,430
+Voc provavelmente tem alguma lgica no servidor para dentais armazenadas no banco de dados.
+
+49
+00:03:38,430 --> 00:03:44,250
+ assim que podemos publicar dados que  tudo o que  fazer apenas trocando a palavra aqui o
+
+50
+00:03:44,250 --> 00:03:47,460
+nome do mtodo e passando os dados como um segundo argumento.
+
+51
+00:03:47,610 --> 00:03:50,350
+E agora tambm podemos enviar dados para servidores.
+

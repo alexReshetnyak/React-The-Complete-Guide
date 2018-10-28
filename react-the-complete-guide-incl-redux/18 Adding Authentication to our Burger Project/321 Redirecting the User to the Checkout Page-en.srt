@@ -1,0 +1,672 @@
+1
+00:00:02,180 --> 00:00:07,280
+So we want to make sure that when we build a burger and are redirected to the sign up page because
+
+2
+00:00:07,300 --> 00:00:14,240
+we weren't authenticated, that we are then redirected to the checkout page from the authenticate page so that
+
+3
+00:00:14,270 --> 00:00:15,980
+we can continue with the burger
+
+4
+00:00:15,980 --> 00:00:20,000
+checkout. This is actually not that difficult,
+
+5
+00:00:20,000 --> 00:00:22,350
+there are multiple ways of doing that.
+
+6
+00:00:22,430 --> 00:00:29,570
+One way would be to simply store some information in your redux store, store the information if we're currently
+
+7
+00:00:29,570 --> 00:00:35,180
+building a burger and reset that whenever the user visits to burger builder page.
+
+8
+00:00:35,180 --> 00:00:42,340
+We're kind of storing this already whenever in our actions or in the reducer in the burger builder
+
+9
+00:00:42,360 --> 00:00:46,600
+reducer, whenever setIngredients is caught,
+
+10
+00:00:46,790 --> 00:00:50,920
+that means the user visited the burger builder, setIngredients
+
+11
+00:00:51,020 --> 00:00:58,400
+of course resets all ingredients by setting them into the reloaded state and therefore it is easy to
+
+12
+00:00:58,400 --> 00:01:05,630
+add a new property to our burger builder store which would be something like building and that is false
+
+13
+00:01:05,630 --> 00:01:06,410
+initially.
+
+14
+00:01:06,410 --> 00:01:13,010
+Now we can set this building property to true whenever we add or remove an ingredient, so whenever we
+
+15
+00:01:13,100 --> 00:01:14,860
+work on the burger.
+
+16
+00:01:15,290 --> 00:01:17,240
+Let's do that, in addIngredient
+
+17
+00:01:17,240 --> 00:01:21,750
+we already update our state with ingredients and the total price,
+
+18
+00:01:21,950 --> 00:01:25,930
+let's now also update the building state to true here,
+
+19
+00:01:26,150 --> 00:01:29,740
+let's do the same for this scenario here,
+
+20
+00:01:29,780 --> 00:01:31,100
+removeIngredient.
+
+21
+00:01:31,550 --> 00:01:38,330
+Now when setIngredients is called though, I want to set building to false because we just reloaded the
+
+22
+00:01:38,330 --> 00:01:41,290
+page, we're starting from scratch we're not building yet.
+
+23
+00:01:41,900 --> 00:01:50,570
+With this new building prop added to the burger builder slice of the state, we can go to our auth page
+
+24
+00:01:51,200 --> 00:01:55,110
+and there where we redirect the user after signing in,
+
+25
+00:01:55,190 --> 00:02:02,360
+we should have two different redirects, one to just slash and one to the checkout page depending on
+
+26
+00:02:02,360 --> 00:02:03,500
+where we need to go.
+
+27
+00:02:03,680 --> 00:02:12,200
+Now a more dynamic approach if you need to support different URLs would be to store the URL in your
+
+28
+00:02:12,200 --> 00:02:18,580
+redux store, so the path where you want to go to in your redux store so that you can dynamically replace it here
+
+29
+00:02:18,740 --> 00:02:25,040
+or to pass that path as query params for routing, you also learned how to pass and parse query params
+
+30
+00:02:25,040 --> 00:02:25,990
+in this course.
+
+31
+00:02:26,360 --> 00:02:32,360
+Let's do the half measure and store the path in the redux store even though in our app we only have
+
+32
+00:02:32,390 --> 00:02:33,400
+one path.
+
+33
+00:02:33,700 --> 00:02:40,220
+So in the auth reducer because I think it belongs to the auth slice of our state, it is in the end what
+
+34
+00:02:40,220 --> 00:02:42,170
+we want to do after authenticating,
+
+35
+00:02:42,490 --> 00:02:46,320
+I'll add an auth redirect path
+
+36
+00:02:46,340 --> 00:02:51,560
+prop and by default, that's just a string holding a slash to redirect to the root page.
+
+37
+00:02:51,560 --> 00:02:55,540
+However we should be able to change this, for that I
+
+38
+00:02:55,550 --> 00:02:58,000
+first of all need to register a new action,
+
+39
+00:02:58,220 --> 00:03:06,830
+so I'll go to my auth actions file or the action types first and there I'll export a new const, SET_AUTH_REDIRECT_PATH
+
+40
+00:03:07,460 --> 00:03:12,090
+with an equal identifier like this
+
+41
+00:03:12,410 --> 00:03:15,870
+and I need to add a new action in my auth, the action
+
+42
+00:03:15,980 --> 00:03:17,680
+creator file now,
+
+43
+00:03:17,900 --> 00:03:20,800
+I'll add it at the bottom here but the position doesn't matter,
+
+44
+00:03:21,140 --> 00:03:29,160
+this will be a function of course and it's the setAuthRedirectPath action creator, it will receive an
+
+45
+00:03:29,160 --> 00:03:29,870
+argument,
+
+46
+00:03:29,910 --> 00:03:36,240
+the path we want to set and then we want to return the action which should be dispatched here.
+
+47
+00:03:36,390 --> 00:03:39,620
+Now that action should of course be of the type we just created
+
+48
+00:03:39,660 --> 00:03:46,950
+so the type is imported from action types and there it's this SET_AUTH_REDIRECT_PATH and I'll pass a payload,
+
+49
+00:03:47,010 --> 00:03:49,750
+another property on this object,
+
+50
+00:03:49,770 --> 00:03:53,880
+the path property which holds the path we receive as an argument.
+
+51
+00:03:54,300 --> 00:03:57,010
+Let's handle this action in the auth reducer
+
+52
+00:03:57,010 --> 00:04:04,040
+now, there I'll add a new function above my reducer function to keep the pattern of having a lean
+
+53
+00:04:04,050 --> 00:04:05,600
+switch case statement,
+
+54
+00:04:05,640 --> 00:04:13,220
+it'll be called setAuthRedirectPath and there I'll receive state and action of course
+
+55
+00:04:14,230 --> 00:04:23,460
+and I want to return an updated state with updateObject and I will update this authRedirectPath here,
+
+56
+00:04:23,700 --> 00:04:32,850
+this property of my state slice. So authRedirectPath will then be set to action path, the path property
+
+57
+00:04:32,850 --> 00:04:36,190
+on the action because that is what we'll dispatch here,
+
+58
+00:04:36,210 --> 00:04:40,150
+there will be a path property in our action when it is dispatched.
+
+59
+00:04:40,230 --> 00:04:44,460
+With that, we have our reducer function prepared,
+
+60
+00:04:44,610 --> 00:04:46,430
+let's now add a case for it.
+
+61
+00:04:46,680 --> 00:04:53,280
+So add a new case in that switch case statement in the auth reducer where I'll listen to actionTypes.SET_AUTH_
+
+62
+00:04:53,280 --> 00:04:56,350
+REDIRECT_PATH and then return the updated path
+
+63
+00:04:56,490 --> 00:04:58,950
+when this function gets executed.
+
+64
+00:04:59,280 --> 00:05:02,120
+So now we have a way to set that path,
+
+65
+00:05:02,190 --> 00:05:10,620
+now this set of redirect action we added in the auth action creator file of course needs to be dispatched
+
+66
+00:05:10,620 --> 00:05:13,800
+whenever we want to adjust the path. For that,
+
+67
+00:05:13,800 --> 00:05:19,580
+first of all let's add it to the index.js file to make it available in other files through export here
+
+68
+00:05:19,920 --> 00:05:27,920
+and then let's have a look at where we need to change the path. Obviously in the burger builder, here
+
+69
+00:05:28,160 --> 00:05:30,470
+we are redirecting to auth
+
+70
+00:05:30,590 --> 00:05:36,680
+and before I do this, I want to change the redirect path away from that auth page.
+
+71
+00:05:36,680 --> 00:05:42,950
+So I'll go down to the bottom, to mapDispatchToProps and I'll add a new function here which
+
+72
+00:05:42,950 --> 00:05:44,860
+is
+
+73
+00:05:44,990 --> 00:05:54,730
+onSetRedirectPath or onSetAuthRedirectPath to be very clear about what this does and this function will
+
+74
+00:05:54,970 --> 00:06:01,570
+dispatch actions.setAuthRedirectPath.
+
+75
+00:06:01,650 --> 00:06:08,040
+Now to this action creator, we need to pass the path and I expect to get this as an input here
+
+76
+00:06:08,250 --> 00:06:11,330
+so I'll pass it on to the action creator,
+
+77
+00:06:11,340 --> 00:06:19,470
+now we can use this prop to dispatch this action and I want to do this right before we actually redirect
+
+78
+00:06:19,470 --> 00:06:20,220
+to the auth page,
+
+79
+00:06:20,220 --> 00:06:28,310
+we could also do it thereafter though, I'll call this.props.onSetAuthRedirectPath and set it to
+
+80
+00:06:28,460 --> 00:06:31,730
+/checkout because this is where the user should go thereafter.
+
+81
+00:06:31,730 --> 00:06:36,670
+So now with that, we got our redirect path set up,
+
+82
+00:06:36,740 --> 00:06:44,480
+we also want to set the redirect path to / if the user clicked on the authenticate button in our navigation
+
+83
+00:06:44,480 --> 00:06:45,000
+though
+
+84
+00:06:45,140 --> 00:06:49,250
+and this is something we can do in the auth container itself.
+
+85
+00:06:49,250 --> 00:06:55,510
+Now we do reach this auth container by pushing it with this push function here,
+
+86
+00:06:55,580 --> 00:07:02,360
+so by loading it as a route and therefore, if we dispatch the onSetAuthRedirectPath in there,
+
+87
+00:07:02,450 --> 00:07:05,670
+this will always be set whenever we go to the auth page.
+
+88
+00:07:05,690 --> 00:07:11,600
+However keep in mind that we have one additional piece of information in our store, in the burger builder
+
+89
+00:07:11,600 --> 00:07:12,590
+slice,
+
+90
+00:07:12,590 --> 00:07:20,520
+we have that building information here, that building information is very useful to us of course, we can
+
+91
+00:07:20,520 --> 00:07:28,860
+use it in the auth container to change the redirect path back if we think that the user is actually not
+
+92
+00:07:28,860 --> 00:07:39,010
+building a burger anymore, so we can simply go to componentDidMount in this auth container, componentDidMount
+
+93
+00:07:39,260 --> 00:07:44,510
+and there I want to dispatch this set redirect path too
+
+94
+00:07:44,570 --> 00:07:50,670
+if we are not building a burger, otherwise this path is probably set up correctly.
+
+95
+00:07:51,110 --> 00:07:56,860
+So I need to get two pieces of information, I need to get the information if we are building a burger,
+
+96
+00:07:56,930 --> 00:08:03,900
+so building burger could be the prop name and I reach out to state, then to the burger builder slice,
+
+97
+00:08:03,950 --> 00:08:06,160
+if you're not sure about the name of the slice,
+
+98
+00:08:06,200 --> 00:08:08,570
+always check your index.js file,
+
+99
+00:08:08,870 --> 00:08:13,050
+there you are combining your reducer and it's this property you are looking for.
+
+100
+00:08:13,370 --> 00:08:19,800
+So burger builder is our slice name and there, we got this building prop.
+
+101
+00:08:19,820 --> 00:08:26,850
+Additionally we got the authRedirectPath here,
+
+102
+00:08:27,010 --> 00:08:29,890
+that's coming from state.auth
+
+103
+00:08:30,040 --> 00:08:36,360
+and now if you have a look at the auth reducer there, we can see it's that authRedirectPath property,
+
+104
+00:08:36,490 --> 00:08:43,930
+so that is what I want to bind to my prop here in mapStateToProps and that also I need to be able
+
+105
+00:08:43,930 --> 00:08:54,890
+to dispatch a change in the redirect path. So add a prop here on setAuthRedirectPath and set this equal
+
+106
+00:08:54,890 --> 00:09:05,210
+to a function where we dispatch actions setAuthRedirectPath and now we could receive the path as
+
+107
+00:09:05,210 --> 00:09:07,870
+an argument to this function here and pass it on
+
+108
+00:09:08,000 --> 00:09:14,840
+or we just hard code / in here because if I call this action from within that component, I always
+
+109
+00:09:14,840 --> 00:09:18,820
+want to reset it back to its basic form.
+
+110
+00:09:18,840 --> 00:09:24,720
+So with that, I can now go into my function and adjust it as required,
+
+111
+00:09:24,720 --> 00:09:30,060
+here where I check if we are authenticated, I'll actually return different redirects,
+
+112
+00:09:30,120 --> 00:09:40,550
+I will bind this too to my dynamic property authRedirectPath which is bound to the path stored in my
+
+113
+00:09:40,550 --> 00:09:41,620
+redux store.
+
+114
+00:09:41,870 --> 00:09:44,300
+So authRedirectPath is the prop name
+
+115
+00:09:44,300 --> 00:09:48,870
+so here, I'll bind this.props.authRedirectPath.
+
+116
+00:09:49,130 --> 00:09:55,230
+Now the only thing I have to do is I have to make sure that I actually reset the path if we reach
+
+117
+00:09:55,230 --> 00:09:57,980
+this page whilst not building a burger
+
+118
+00:09:58,100 --> 00:10:05,960
+and that is what we do in componentDidMount. Here I'll check if this.props.buildingBurger is true
+
+119
+00:10:06,440 --> 00:10:08,890
+or to be precise, if it is not true
+
+120
+00:10:09,110 --> 00:10:19,380
+and if this.props.authRedirectPath is unequal to a / because that means we're trying to redirect
+
+121
+00:10:19,380 --> 00:10:20,260
+to checkout
+
+122
+00:10:20,360 --> 00:10:27,890
+even though we're not building a burger. In this case I want to call on setAuthRedirectPath
+
+123
+00:10:28,040 --> 00:10:34,550
+and I don't need to pass an argument here because we already set this up to always pass / at the
+
+124
+00:10:34,550 --> 00:10:35,000
+bottom of
+
+125
+00:10:35,000 --> 00:10:38,810
+our component to the action creator here,
+
+126
+00:10:39,120 --> 00:10:44,540
+so now we reset the path whenever we reach the auth page without building a burger.
+
+127
+00:10:44,900 --> 00:10:45,980
+Well there was a lot of work,
+
+128
+00:10:45,980 --> 00:10:47,660
+let's see if that works.
+
+129
+00:10:47,720 --> 00:10:51,510
+Back in our burger builder, let's first of all reload the app
+
+130
+00:10:51,560 --> 00:10:53,110
+so we're not authenticated and
+
+131
+00:10:53,340 --> 00:10:55,620
+let's go to the authenticate page and log in.
+
+132
+00:10:55,700 --> 00:10:58,310
+We should be redirected to the root page
+
+133
+00:10:58,310 --> 00:11:02,280
+now, switch to sign in, submit, this works.
+
+134
+00:11:02,300 --> 00:11:05,410
+Now let's try again, let's log out,
+
+135
+00:11:05,450 --> 00:11:06,880
+build a burger,
+
+136
+00:11:07,130 --> 00:11:09,590
+very delicious one with just salad oh
+
+137
+00:11:09,590 --> 00:11:11,270
+I can almost taste it.
+
+138
+00:11:11,270 --> 00:11:14,140
+Let's click sign up to order,
+
+139
+00:11:14,180 --> 00:11:15,800
+we go to authenticate,
+
+140
+00:11:16,070 --> 00:11:17,830
+let's now sign in,
+
+141
+00:11:17,840 --> 00:11:24,500
+we should now reach checkout and we do, we can check the burger out here.
+
+142
+00:11:24,900 --> 00:11:31,770
+Let's now also see if the burger is still set up correctly and we can't just inspect our state to confirm
+
+143
+00:11:31,770 --> 00:11:33,980
+this in the burger builder slice,
+
+144
+00:11:33,990 --> 00:11:36,440
+we still got the ingredients there and the price
+
+145
+00:11:36,450 --> 00:11:40,270
+so we would store the correct burger on our backend.
+
+146
+00:11:40,280 --> 00:11:47,790
+Finally let's log out, build a burger and click on sign up to order,
+
+147
+00:11:47,850 --> 00:11:51,650
+now let's not sign iN but go back to burger builder,
+
+148
+00:11:51,660 --> 00:11:58,140
+the burger is reset, let's inspect our state real quick now. We see that in the auth slice, authRedirectPath
+
+149
+00:11:58,150 --> 00:12:00,540
+is still /checkout.
+
+150
+00:12:00,780 --> 00:12:02,810
+Let's go back to authenticate now
+
+151
+00:12:03,710 --> 00:12:07,370
+and now this throws an error, it's not a function.
+
+152
+00:12:07,490 --> 00:12:08,870
+It makes sense,
+
+153
+00:12:08,930 --> 00:12:17,120
+this should be this.props.onSetAuthRedirectPath, we're of course accessing this on our props because
+
+154
+00:12:17,120 --> 00:12:21,430
+we set it through mapDispatchToProps. With that,
+
+155
+00:12:21,560 --> 00:12:23,040
+fix this back, go back.
+
+156
+00:12:23,060 --> 00:12:26,660
+So let's try again back to the burger builder, build a burger,
+
+157
+00:12:26,660 --> 00:12:28,360
+click on sign up to order,
+
+158
+00:12:28,400 --> 00:12:29,280
+don't sign in,
+
+159
+00:12:29,300 --> 00:12:32,490
+go back to burger builder and go back to authenticate
+
+160
+00:12:32,900 --> 00:12:38,850
+and now we see setAuthRedirect was dispatched and it overwrote the redirect path.
+
+161
+00:12:39,080 --> 00:12:44,250
+So now if we sign in, we shouldn't reach checkout even though the last thing we did was build a burger
+
+162
+00:12:44,570 --> 00:12:48,190
+but now we should reach the front page again.
+
+163
+00:12:48,440 --> 00:12:50,040
+So that's all working fine now,
+
+164
+00:12:50,060 --> 00:12:56,780
+we do respect the choice of the user and we do forward him to the page which makes the most sense.
+
+165
+00:12:56,780 --> 00:12:58,820
+A lot was acheived with that,
+
+166
+00:12:58,940 --> 00:13:06,740
+let's next work on the issue in quotation marks that if we are logged in and we reload the page, we are
+
+167
+00:13:06,740 --> 00:13:07,630
+logged out,
+
+168
+00:13:07,700 --> 00:13:10,520
+let's see what we can do about that in the next lecture.
+

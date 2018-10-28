@@ -1,0 +1,204 @@
+1
+00:00:02,100 --> 00:00:06,510
+Bu yzden son derste ilk testimizi yazdk, tabi ki bu gzel,
+
+2
+00:00:06,540 --> 00:00:10,360
+imdi ayn bileen iin imdi baka bir test yazalm.
+
+3
+00:00:10,530 --> 00:00:16,560
+Bu yzden bu ilevi kopyalayacam ve tarif edilen fonksiyonun iinde, sadece oraya yaptracam, imdi
+
+4
+00:00:16,560 --> 00:00:18,460
+baka ne test edebilirdik?
+
+5
+00:00:18,750 --> 00:00:21,750
+Tabii ki tam tersini test
+
+6
+00:00:21,780 --> 00:00:29,980
+edebiliriz, eer biz kimlik dorulamas yaplrsa  navigasyon gesine sahip olmak isteriz, bu nedenle
+
+7
+00:00:30,000 --> 00:00:38,280
+isAuthenticated prop' gemek ve testimizi ayarlamak zorundayz. Bu nedenle, eer dorulanmamsa, ancak
+
+8
+00:00:38,640 --> 00:00:42,110
+dorulanrsa  gezinme esi oluturmalyz.
+
+9
+00:00:42,240 --> 00:00:45,930
+imdi bunun iin, oluturduumuz bileeni deitirmemiz gerekiyor,
+
+10
+00:00:45,930 --> 00:00:53,340
+artk gezinme eleri deil, bir zellii olan gezinme eleri, kimlii dorulanm ve bu ekilde
+
+11
+00:00:53,340 --> 00:01:00,420
+aktarlyor, bu ekilde otomatik olarak aktarlacak, ardndan gezinme elerini bulmay bekliyoruz, ancak n
+
+12
+00:01:00,420 --> 00:01:02,350
+bulmay bekliyoruz bunlarn hepsi
+
+13
+00:01:02,610 --> 00:01:05,660
+ve hepsi bu. Npm testleri hala
+
+14
+00:01:05,670 --> 00:01:09,850
+alyorken, tek yapmanz gereken bunu kurtarmak ve imdi
+
+15
+00:01:09,910 --> 00:01:12,100
+iki testin getiini grmelisiniz.
+
+16
+00:01:12,330 --> 00:01:15,450
+imdi elbette ki byle birden fazla test yazabiliriz,
+
+17
+00:01:15,450 --> 00:01:21,510
+fakat eer testin banda srekli olarak ayn eyi yaparsak, biz de sahne deitirilmi olsa bile
+
+18
+00:01:21,510 --> 00:01:24,300
+bir sarc olarak iledik ama bunu da
+
+19
+00:01:24,540 --> 00:01:31,910
+farkl bir ekilde yapabiliriz, bu yzden srekli olarak ayn eyi yaparsak Burada aklanan ilev iinde kullanabileceimiz bir yardmc yntemdir.
+
+20
+00:01:31,950 --> 00:01:39,360
+Adndan da anlalaca gibi, beforeEach ilevi, bu otomatik olarak altrlacak bir ilevdir, ancak
+
+21
+00:01:39,380 --> 00:01:44,470
+her bir testinizde, gerekiyorsa tm testlerinizden sonra temizleme iin
+
+22
+00:01:44,520 --> 00:01:50,640
+bir AfterEach ilevine sahip olursunuz. Yani burada her eyden nce ve daha sonra, baz
+
+23
+00:01:50,670 --> 00:01:54,220
+genel kurulumlar yapabiliriz, her ey bir argman olarak ilev grmeden
+
+24
+00:01:54,240 --> 00:01:57,780
+nce ve bu her testten nce idam edilecek olan ilevdir.
+
+25
+00:01:57,780 --> 00:02:03,030
+Bu yzden yapacam ey, let anahtar szcyle bir deiken sarc
+
+26
+00:02:03,270 --> 00:02:10,670
+oluturacam ve daha sonra beforeEach iinde, bu bileeni s ileviyle ilemek ve bu
+
+27
+00:02:10,680 --> 00:02:12,950
+sarmalayc deikeninde saklamak istiyorum.
+
+28
+00:02:12,990 --> 00:02:20,370
+imdi tm fonksiyonlar bu dsal anlatm ilevinde yrtldnden, sarmalayc deikeni hepsinde kullanlabilir, yani tek
+
+29
+00:02:20,440 --> 00:02:21,460
+yapmamz gereken
+
+30
+00:02:21,660 --> 00:02:25,220
+const anahtar szcnden kurtulmak, bunun gibi ve
+
+31
+00:02:25,410 --> 00:02:27,720
+imdi sarcya eriimimiz var.
+
+32
+00:02:27,720 --> 00:02:30,740
+imdi, eer bunu kaydedersek, her eyi yeniden
+
+33
+00:02:31,050 --> 00:02:34,490
+altrmalyz ve imdi, elbette baarsz bir testimiz var.
+
+34
+00:02:34,620 --> 00:02:40,510
+imdi bakabiliriz, test eer  blml eyi ilediyse, eer otorize edilmediyse ve
+
+35
+00:02:40,740 --> 00:02:48,150
+bunu yaptmz zaman mantkl geliyorsa, bunu hibir zaman dorulanmyoruz, biz sadece bir kez buray kada
+
+36
+00:02:48,180 --> 00:02:52,530
+dkyoruz ve biz de onu gemiyoruz. kimlii dorulanmam, bu
+
+37
+00:02:52,560 --> 00:02:54,110
+test elbette ayn
+
+38
+00:02:54,330 --> 00:02:58,570
+sarc kullanr ve bu nedenle baarsz olur.
+
+39
+00:02:58,590 --> 00:03:01,970
+imdi burada yapabildiimiz iki ey,
+
+40
+00:03:01,980 --> 00:03:09,420
+ilki sarcy kullanabilmemiz ve buradaki gezinme eleriyle s olarak ayn hizaya getirebilmemiz
+
+41
+00:03:09,420 --> 00:03:17,080
+ve daha nce yaptmz gibi isAuthenticated' geebilmemiz, her iki testin de baarl olmas.
+
+42
+00:03:17,520 --> 00:03:24,000
+Bu bir seenek ama ayn zamanda enzim paketinin baka bir yararl yntemini de kullanabiliriz, sargya eriebiliriz ve
+
+43
+00:03:24,000 --> 00:03:24,810
+daha sonra,
+
+44
+00:03:25,050 --> 00:03:29,500
+bu sarc zerinde yrtebileceimiz bir set sahne yntemi vardr, bu yzden s
+
+45
+00:03:29,580 --> 00:03:37,500
+veya dier ilenmi reaksiyon elemann depolayan herhangi bir ey zerinde. Ve sahne ayarlamak iin, biz sadece
+
+46
+00:03:37,500 --> 00:03:43,770
+anahtar isimleri eleri ve deerlerin olduu anahtar deer iftleri ile
+
+47
+00:03:43,830 --> 00:03:45,740
+bir javascript nesnesi
+
+48
+00:03:45,990 --> 00:03:50,320
+gemek, bu yzden biz imdi ayarlayabildiimiz sahne dorudur.
+
+49
+00:03:50,580 --> 00:03:54,310
+Ve imdi, eer imdi tasarruf edersek, ikinci test, imdi de enzim
+
+50
+00:03:54,450 --> 00:04:00,420
+paketinden daha zarif bir takm yardmc yardmcs yntemiyle geer. Birden fazla snama yazp
+
+51
+00:04:00,420 --> 00:04:03,610
+gzelce birlikte almasn salayabilirsiniz.
+

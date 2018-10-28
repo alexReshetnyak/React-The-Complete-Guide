@@ -1,0 +1,368 @@
+1
+00:00:02,150 --> 00:00:03,950
+La nostra forma sta sicuramente funzionando alla grande.
+
+2
+00:00:04,090 --> 00:00:07,270
+Ma ovviamente c' una cosa importante che manca la convalida.
+
+3
+00:00:07,480 --> 00:00:09,540
+Possiamo sempre inviare il modulo.
+
+4
+00:00:09,550 --> 00:00:11,750
+Non riceviamo errori di convalida.
+
+5
+00:00:11,770 --> 00:00:14,580
+Non vediamo se il modulo  valido o meno.
+
+6
+00:00:14,590 --> 00:00:21,530
+Ora, mentre un framework come il pescatore ha un pacchetto di validazione integrato, fondamentalmente il re-act non lo ha fatto.
+
+7
+00:00:21,580 --> 00:00:23,740
+Devi fare la convalida per conto tuo.
+
+8
+00:00:23,770 --> 00:00:30,190
+pacchetti di terze parti che potresti voler controllare, ma in generale puoi anche creare la convalida da solo.
+
+9
+00:00:30,220 --> 00:00:31,120
+Ci sono alcuni
+
+10
+00:00:31,300 --> 00:00:34,460
+E voglio costruirlo da solo.
+
+11
+00:00:34,480 --> 00:00:41,650
+No, l'obiettivo  che quando cambiamo i valori sono qui e l'input  cambiato gestore. Controlliamo anche
+
+12
+00:00:41,740 --> 00:00:43,600
+se  valido o meno.
+
+13
+00:00:43,900 --> 00:00:50,760
+E naturalmente la validit dell'elemento dovrebbe essere definita da alcune regole che abbiamo impostato nel modulo d'ordine.
+
+14
+00:00:50,770 --> 00:00:57,160
+Quindi qui per un dato input in cui alteriamo il tipo e il de-conflict Quindi in pratica gli attributi DHV M-L
+
+15
+00:00:57,160 --> 00:00:58,230
+e il valore.
+
+16
+00:00:58,600 --> 00:01:06,840
+Tutti noi potremmo avere qualche chiave di convalida in cui impostiamo le regole che vogliamo rispettare.
+
+17
+00:01:06,880 --> 00:01:13,420
+Questa potrebbe essere una regola, come richiesto dovrebbe essere impostato su true in modo che questo  un campo che 
+
+18
+00:01:13,420 --> 00:01:15,810
+assolutamente necessario che non deve essere vuoto.
+
+19
+00:01:15,820 --> 00:01:18,610
+Questo  molto spesso usato per governare, naturalmente.
+
+20
+00:01:19,110 --> 00:01:26,590
+Usiamo quindi aggiungiamo questo campo di convalida con solo richiesto a tutti i nostri elementi subito dopo
+
+21
+00:01:26,590 --> 00:01:27,280
+i valori.
+
+22
+00:01:27,280 --> 00:01:33,710
+Quindi sul livello di elemento superiore quindi in modo che non deve essere vuoto.
+
+23
+00:01:33,910 --> 00:01:40,390
+E non ho bisogno del menu a discesa perch devo selezionare il valore in ogni caso, quindi non ho aggiunto la convalida alla
+
+24
+00:01:40,390 --> 00:01:45,280
+maggior parte dei miei elementi tranne il menu a discesa per la ragione che ho appena menzionato.
+
+25
+00:01:45,280 --> 00:01:49,240
+Ora, come possiamo controllare questo per questo.
+
+26
+00:01:49,250 --> 00:01:56,900
+O creare un altro nuovo metodo che indichi che la convalida del controllo o validit pu essere valida.
+
+27
+00:01:57,040 --> 00:02:02,120
+T dove ottengo il valore e poi le regole.
+
+28
+00:02:02,300 --> 00:02:09,110
+E poi questo dovrebbe restituire vero o falso determinando se questo  valido o no significa anche che
+
+29
+00:02:09,110 --> 00:02:16,130
+devo avere alcune propriet valide su ogni elemento nel mio stato che posso gestire in modo che abbiano come
+
+30
+00:02:16,130 --> 00:02:17,710
+valido che  falso.
+
+31
+00:02:17,720 --> 00:02:19,240
+Inizialmente diciamo cos.
+
+32
+00:02:19,250 --> 00:02:22,410
+Inoltre, aggiungilo a tutti gli elementi che dovrebbero avere la convalida.
+
+33
+00:02:22,580 --> 00:02:28,240
+E naturalmente potresti anche aggiungere questo come una sottochiave di validazione o qualcosa del genere.
+
+34
+00:02:28,310 --> 00:02:30,450
+Quindi aggiungo Valot qui.
+
+35
+00:02:33,050 --> 00:02:37,640
+Impostalo su false inizialmente forse e ora e verifica la validit.
+
+36
+00:02:37,640 --> 00:02:45,420
+Voglio restituire true o false per poi importare il gestore modificato ma fa anche una propriet valida.
+
+37
+00:02:45,650 --> 00:02:49,050
+Ora qui ovviamente dipende da quali regole abbiamo.
+
+38
+00:02:49,460 --> 00:02:54,800
+Controller semplicemente se le regole hanno una regola richiesta.
+
+39
+00:02:54,840 --> 00:03:04,460
+Quindi se questo  vero, ish, allora voglio regolare alcuni  una variabile valida che inizialmente  falsa, poich un
+
+40
+00:03:04,460 --> 00:03:11,840
+valore predefinito che voglio impostare  valido uguale al confronto del valore, quindi non  valido.
+
+41
+00:03:11,870 --> 00:03:15,390
+Dovrebbe essere uguale se non  uguale a una stringa vuota.
+
+42
+00:03:15,560 --> 00:03:21,390
+Comunque voglio usare il valore trim qui per rimuovere qualsiasi spazio bianco all'inizio o alla fine.
+
+43
+00:03:21,530 --> 00:03:27,740
+Quindi ora  valido viene aggiornato a Vero o falso a seconda del controllo se il valore tagliato  uguale
+
+44
+00:03:27,740 --> 00:03:28,970
+a una stringa vuota.
+
+45
+00:03:28,970 --> 00:03:36,050
+Se non  uguale Izabella sar vero e alla fine della validit del controllo restituir  valido.
+
+46
+00:03:36,140 --> 00:03:41,140
+Quindi true o false nell'input ha cambiato gestore.
+
+47
+00:03:41,420 --> 00:03:49,530
+Ovviamente posso anche aggiornare il mio valore valido dell'elemento modulo aggiornato qui.
+
+48
+00:03:49,700 --> 00:03:59,120
+e ovviamente voglio passare l'oggetto di convalida dell'elemento del modulo aggiornato che  solo il mio regole.
+
+49
+00:03:59,150 --> 00:04:07,790
+Voglio impostare quell'elemento add form Valorare uguale a questa validit del controllo e passare il
+
+50
+00:04:07,790 --> 00:04:15,080
+valore dell'elemento del modulo aggiornato che abbiamo gi adeguato al valore passato dall'evento
+
+51
+00:04:15,270 --> 00:04:22,200
+Quindi la validazione ha per esempio una propriet richiesta ed  quello che controllo e verifica la validit.
+
+52
+00:04:22,320 --> 00:04:29,310
+Vedo se il mio oggetto rules ha una propriet richiesta e se il valore di quella propriet
+
+53
+00:04:29,310 --> 00:04:38,010
+ true ish o  trattato come true, quindi ora con quella configurazione dovremmo essere in grado di verificarlo e impostare
+
+54
+00:04:38,010 --> 00:04:45,900
+valido su True o false perch tenere presente questa validit di controllo restituisce vero o falso, quindi archiviamo il
+
+55
+00:04:45,900 --> 00:04:49,290
+risultato di questo controllo nella propriet valida.
+
+56
+00:04:49,290 --> 00:04:51,650
+Ora per vedere se funziona davvero.
+
+57
+00:04:51,690 --> 00:04:59,030
+Tutti semplicemente Konsole bloccano il mio elemento di modulo aggiornato qui per ora in modo che possiamo vedere su ogni tasto.
+
+58
+00:04:59,130 --> 00:05:00,490
+Se questo cambia.
+
+59
+00:05:00,750 --> 00:05:06,460
+Quindi se inserisco qualcosa nel mio nome dessous l'oggetto e vedi bene  vero.
+
+60
+00:05:06,720 --> 00:05:11,330
+Se rimuovi il T vedrai valido come falso perch ora  vuoto.
+
+61
+00:05:11,330 --> 00:05:17,610
+Se entro quest'anno inserisco un paio di spazi vuoti, allora vedete che il valore valido  falso, perch
+
+62
+00:05:17,610 --> 00:05:24,150
+per il taglio del valore, quindi, il controllo personalizzato richiede un buon funzionamento qui e ora ovviamente potremmo usarlo.
+
+63
+00:05:24,150 --> 00:05:25,850
+O potremmo aggiungere pi regole.
+
+64
+00:05:26,040 --> 00:05:31,290
+Potremmo aggiungere un numero di controllo qui dove diciamo se le regole significano lunghezza.
+
+65
+00:05:31,290 --> 00:05:42,340
+Se abbiamo qualcosa di simile a questo, possiamo impostare  valido uguale alla lunghezza del valore maggiore della lunghezza media delle
+
+66
+00:05:42,460 --> 00:05:43,270
+regole uguali.
+
+67
+00:05:43,290 --> 00:05:51,540
+Quindi, ovviamente, a met della lunghezza ci si aspetta che sia come un valore come uno o due o tre che risolver
+
+68
+00:05:51,630 --> 00:05:56,640
+i contrasti che agiranno nel modo in cui governa e si pu naturalmente
+
+69
+00:05:56,640 --> 00:06:04,740
+essere creativi e persino creare regole pi complesse che potrebbero avere oggetti come valore in cui  possibile accedere alle regole
+
+70
+00:06:04,980 --> 00:06:13,120
+significa lunghezza e poi qualcosa come minimo assoluto o qualcosa del genere in modo da poter essere davvero creativi e creare le
+
+71
+00:06:13,120 --> 00:06:14,950
+proprie regole in modo dinamico.
+
+72
+00:06:15,150 --> 00:06:24,010
+abituati agli uomini che Lang governa qui per il codice postale, diciamo che il codice postale dovrebbe ricevere una lunghezza minima di cinque.
+
+73
+00:06:24,140 --> 00:06:24,880
+Tutti sono
+
+74
+00:06:25,060 --> 00:06:28,080
+E diciamo anche una lunghezza massima di cinque.
+
+75
+00:06:28,570 --> 00:06:39,530
+E ora ci significa che aggiunger anche un controllo per il numero massimo di lunghezze se la lunghezza massima delle regole e qui dovrebbe essere inferiore o
+
+76
+00:06:39,530 --> 00:06:47,150
+uguale alla lunghezza massima e la nostra logica di convalida attuale qui ha un difetto cruciale tra l'altro.
+
+77
+00:06:47,150 --> 00:06:49,500
+Torner su questo in un secondo.
+
+78
+00:06:49,520 --> 00:06:59,140
+Quindi per vedere se non c' la validazione della lunghezza, funziona semplicemente aggiungendo anno di controlli e aggiungendola.
+
+79
+00:06:59,170 --> 00:07:05,480
+La nostra configurazione qui per il codice per vedere se funziona, torniamo all'applicazione, inseriamo qualcosa
+
+80
+00:07:05,480 --> 00:07:08,400
+nel codice SIP come 5 5 5.
+
+81
+00:07:08,630 --> 00:07:11,660
+Espandilo e vedrai che Valot  vero.
+
+82
+00:07:11,720 --> 00:07:15,030
+Quindi non funziona qui, purtroppo.
+
+83
+00:07:15,920 --> 00:07:18,130
+La ragione di questo  il nostro difetto.
+
+84
+00:07:18,650 --> 00:07:24,410
+Se diamo un'occhiata al nostro metodo di convalida controlliamo una regola dopo yabber.
+
+85
+00:07:24,410 --> 00:07:31,910
+Ci significa che ovviamente solo l'ultima regola deve essere soddisfatta per girare  valida per true anche se i set di met
+
+86
+00:07:32,060 --> 00:07:34,120
+lunghezza non sono validi per false.
+
+87
+00:07:34,250 --> 00:07:43,940
+true, l'anno scorso assalta che se aggiungo sei cifre all'anno che sarebbe troppo lungo ora non  pi valido
+
+88
+00:07:43,950 --> 00:07:51,560
+perch l'ultima lunghezza massima di controllo si risolve in falso per questo lungo di input.
+
+89
+00:07:51,740 --> 00:07:58,440
+Se la lunghezza massima  soddisfatta, dopo di che  attualmente impostato su
+
+90
+00:07:58,460 --> 00:07:59,600
+Quindi questo  il problema.
+
+91
+00:07:59,600 --> 00:08:04,730
+Il difetto che abbiamo ora stiamo controllando le regole una dopo il numero.
+
+92
+00:08:04,850 --> 00:08:07,850
+Risolviamo questo difetto nella prossima lezione.
+

@@ -1,0 +1,304 @@
+1
+00:00:02,070 --> 00:00:05,790
+So preact is awesome, it's smaller and it has pretty much the same API,
+
+2
+00:00:05,790 --> 00:00:11,220
+so should we always reuse it is the question. And the answer as always is it depends,
+
+3
+00:00:11,220 --> 00:00:13,110
+let's find out what the differences are,
+
+4
+00:00:13,290 --> 00:00:17,810
+let's simply find this out on preactjs.com, to click on guide,
+
+5
+00:00:18,000 --> 00:00:21,520
+you can also click on differences to react there.
+
+6
+00:00:21,540 --> 00:00:25,360
+Now feel free to read through that article to learn more about the differences.
+
+7
+00:00:25,620 --> 00:00:27,390
+In the end you have a nice list here,
+
+8
+00:00:27,450 --> 00:00:29,060
+you see what's included
+
+9
+00:00:29,070 --> 00:00:31,850
+so what is exactly the same as react.
+
+10
+00:00:31,890 --> 00:00:37,440
+And these are things like higher order components, creating components, your functional components and
+
+11
+00:00:37,440 --> 00:00:38,940
+all that stuff,
+
+12
+00:00:38,970 --> 00:00:45,920
+you'll also see that for example react create element becomes h(), a function called h().
+
+13
+00:00:46,020 --> 00:00:51,240
+That is one of the small differences I mentioned, it's pretty much the same API but not entirely
+
+14
+00:00:51,240 --> 00:00:53,650
+but this page lists all the differences.
+
+15
+00:00:53,940 --> 00:00:58,410
+So what was added as I said, it even offers some new features
+
+16
+00:00:58,500 --> 00:01:04,190
+and for example, you get this.props and this.state passed as an argument to the render function
+
+17
+00:01:04,320 --> 00:01:09,740
+so that inside there, you can simply call props and state without the this keyword
+
+18
+00:01:09,750 --> 00:01:15,070
+but you can also still use the this keyword as it also mentions here.
+
+19
+00:01:15,090 --> 00:01:18,880
+Now that's a nice addition and that's generally the theme of the added
+
+20
+00:01:18,900 --> 00:01:19,400
+things,
+
+21
+00:01:19,410 --> 00:01:20,700
+nice additions.
+
+22
+00:01:20,700 --> 00:01:26,250
+For example, you can use the class keyword and don't have to use class name as in react,
+
+23
+00:01:26,250 --> 00:01:29,630
+these are all the tiny things preact added.
+
+24
+00:01:29,910 --> 00:01:32,050
+But of course there are also things missing,
+
+25
+00:01:32,160 --> 00:01:35,670
+for example prop type validation, though prop types
+
+26
+00:01:35,670 --> 00:01:41,480
+also were pulled into a separate library with the latest version of react to be honest.
+
+27
+00:01:41,490 --> 00:01:45,410
+So the what's missing part isn't that relevant here,
+
+28
+00:01:45,460 --> 00:01:50,450
+the most things that are missing are things behind the scenes. Here,
+
+29
+00:01:50,460 --> 00:01:55,710
+these are really mostly cosmetic things though they also strip out quite a lot of source code,
+
+30
+00:01:55,770 --> 00:02:02,370
+that certainly is something to consider and we can imagine that prop types were put into a separate
+
+31
+00:02:02,370 --> 00:02:10,430
+library by the react team to shrink the size of the react library and get closer to preact. Now
+
+32
+00:02:10,470 --> 00:02:18,060
+that's the differences on a screen here, on a page and this article should be helpful for you if you try to
+
+33
+00:02:18,060 --> 00:02:20,950
+switch from the react API to the preact one,
+
+34
+00:02:21,030 --> 00:02:22,910
+as I mentioned it's pretty much the same,
+
+35
+00:02:22,920 --> 00:02:26,950
+it's tiny things like the h() function instead of react create element
+
+36
+00:02:27,120 --> 00:02:31,260
+but you probably never called react create element manually anyways
+
+37
+00:02:31,410 --> 00:02:34,920
+and jsx of course is supported.
+
+38
+00:02:35,070 --> 00:02:40,450
+Now the biggest difference behind the scenes probably is how dom diffing works,
+
+39
+00:02:40,470 --> 00:02:46,110
+so how preact finds out whether it needs to update something and how react does that.
+
+40
+00:02:46,340 --> 00:02:54,290
+And we need a benchmark to find out what's better, if we want to measure it in better and worse, as categories.
+
+41
+00:02:54,660 --> 00:03:00,090
+To answer this question about what's better, you can search for a javascript framework benchmark and
+
+42
+00:03:00,090 --> 00:03:06,210
+you should find this github repository, there, a couple of different javascript frameworks are benchmarked
+
+43
+00:03:06,210 --> 00:03:07,280
+against each other,
+
+44
+00:03:07,380 --> 00:03:09,730
+you can also download this and run it on your machine
+
+45
+00:03:09,740 --> 00:03:15,210
+though I will warn you that this takes quite a lot of time but conveniently, you can find the latest
+
+46
+00:03:15,210 --> 00:03:17,890
+result of these benchmarks in the github repo
+
+47
+00:03:17,940 --> 00:03:24,690
+if you click on this image here. Then you get this table which is quite big where you can see a lot of
+
+48
+00:03:24,690 --> 00:03:28,000
+the different javascript frameworks benchmarked against each other,
+
+49
+00:03:28,170 --> 00:03:34,050
+you should always be careful when analyzing such numbers because the tests here might not be important for
+
+50
+00:03:34,050 --> 00:03:35,800
+the kind of app you're building.
+
+51
+00:03:35,910 --> 00:03:42,090
+In the end what is tested here are a couple of operations, like for example creating and removing 10000
+
+52
+00:03:42,090 --> 00:03:43,650
+rows of data
+
+53
+00:03:43,650 --> 00:03:47,100
+and there we can find react 16,
+
+54
+00:03:47,220 --> 00:03:53,370
+so the latest version of react which I used for recording this course and we also find preact here.
+
+55
+00:03:53,550 --> 00:04:02,370
+Now if we compare them, we see they're very close in performance terms but what we can also see for example
+
+56
+00:04:02,370 --> 00:04:12,060
+that for startup time which is the second lowest row here, react version 16 has 53 milliseconds and
+
+57
+00:04:12,130 --> 00:04:16,350
+preact has 36 which is quite a bit faster.
+
+58
+00:04:16,350 --> 00:04:19,860
+The reason for this of course is the smaller size,
+
+59
+00:04:20,190 --> 00:04:27,450
+we can also see that despite the smaller size, for operations like clearing a lot of rows, the third row
+
+60
+00:04:27,450 --> 00:04:35,140
+from the bottom, react is faster than preact because file size of the library doesn't matter for that,
+
+61
+00:04:35,250 --> 00:04:41,360
+what matters is how performant the diffing algorithm and the updating algorithm is.
+
+62
+00:04:41,400 --> 00:04:48,840
+And of course preact has to strip out some things, react on the other hand seems to be a bit more efficient
+
+63
+00:04:48,840 --> 00:04:50,740
+when we look at this benchmark.
+
+64
+00:04:51,090 --> 00:04:52,860
+So that is how you can look at it,
+
+65
+00:04:52,900 --> 00:04:58,770
+preact saves you a lot of time when you load your app, when you start it for the first time, it's much
+
+66
+00:04:58,770 --> 00:04:59,360
+smaller,
+
+67
+00:04:59,370 --> 00:05:05,840
+it doesn't take up as much space and if you have an application where the initial download time matters
+
+68
+00:05:05,840 --> 00:05:13,400
+a lot and where you want to send as little code as possible across the wire, preact might be an awesome
+
+69
+00:05:13,430 --> 00:05:15,150
+alternative to react.
+
+70
+00:05:15,410 --> 00:05:23,600
+If you're building a super big, performance heavy enterprise application, react especially in version 16
+
+71
+00:05:23,900 --> 00:05:26,010
+might still be the better choice.
+
+72
+00:05:26,360 --> 00:05:32,780
+But whatever you choose, feel free to play around with preact, read through the guide here to find out how
+
+73
+00:05:32,780 --> 00:05:33,690
+to use it,
+
+74
+00:05:33,740 --> 00:05:41,990
+use the preact-cli to create new projects with it easily and be aware that there is this great alternative
+
+75
+00:05:41,990 --> 00:05:46,970
+to react which is basically the same but much smaller
+
+76
+00:05:46,970 --> 00:05:48,800
+when we look at the library size.
+

@@ -1,0 +1,160 @@
+1
+00:00:02,250 --> 00:00:08,010
+ tima que agora saibamos como podemos enviar pedidos e esta  uma parte super importante da maioria
+
+2
+00:00:08,010 --> 00:00:09,820
+das aplicaes web,  claro.
+
+3
+00:00:10,030 --> 00:00:13,250
+No entanto, os pedidos nem sempre so bem-sucedidos.
+
+4
+00:00:13,380 --> 00:00:17,020
+Voc tambm precisa saber como voc pode lidar com erros.
+
+5
+00:00:17,220 --> 00:00:22,790
+E isso  algo que eu quero mostrar, agora o gerenciamento de erros  super simples com o Access.
+
+6
+00:00:23,100 --> 00:00:28,500
+Digamos que buscamos mensagens incorretamente e, claro, voc pode lidar com erros da maneira que eu vou
+
+7
+00:00:28,500 --> 00:00:28,970
+mostrar.
+
+8
+00:00:28,970 --> 00:00:32,150
+Agora, para cada tipo de solicitao que voc envia.
+
+9
+00:00:32,250 --> 00:00:38,400
+Ento, aqui no bloco, digamos que enviamos o pedido para posts incorretos.
+
+10
+00:00:38,400 --> 00:00:40,750
+Voc  Elswyth com muitos esus no final.
+
+11
+00:00:41,190 --> 00:00:47,380
+Ento, o que agora podemos ver  que, se recarregarmos isso, recebemos um erro aqui, mas no  processado.
+
+12
+00:00:47,670 --> 00:00:49,500
+Ns,  claro, queremos lidar com isso.
+
+13
+00:00:49,710 --> 00:00:56,640
+Agora, desde ex-U. S. usa promessas, ns no s temos que ento o mtodo que
+
+14
+00:00:56,640 --> 00:00:59,180
+podemos encadear, mas tambm podemos adicionar um segundo mtodo simplesmente mudado depois disso.
+
+15
+00:00:59,230 --> 00:01:06,030
+Em seguida, o mtodo de captura de nomes de gests isso capta os erros que voc recebe.
+
+16
+00:01:06,060 --> 00:01:14,520
+simplesmente, o bloqueio do bloqueio da Konsole, ou se eu fizer isso no pedido,  claro, ainda falha porque o seu outro ainda est incorreto.
+
+17
+00:01:14,550 --> 00:01:16,850
+Ento, o seu Isso , por enquanto,
+
+18
+00:01:16,890 --> 00:01:22,260
+Mas agora o erro  tratado e aqui eu simplesmente estou imprimindo com o log da consola.
+
+19
+00:01:22,380 --> 00:01:24,940
+Claro que voc pode fazer mais do que registrar isso aqui.
+
+20
+00:01:24,960 --> 00:01:27,110
+Voc pode atualizar sua UI.
+
+21
+00:01:27,120 --> 00:01:33,600
+Voc pode atualizar o estado para mostrar que algo correu mal que voc nos mostrou aqui, podemos ver a
+
+22
+00:01:33,780 --> 00:01:42,550
+propriedade do erro que est configurada como falso inicialmente e nesse mtodo de captura para o seu Eu no quero bloquear o erro no estado
+
+23
+00:01:42,720 --> 00:01:46,550
+do conjunto do arruixo e definir o erro ou dois verdadeiros.
+
+24
+00:01:47,130 --> 00:01:54,390
+cartaz em uma constante ou criar uma nova mensagem varivel, onde inicialmente diz que algo deu errado.
+
+25
+00:01:54,390 --> 00:02:02,740
+E agora, tudo o que podemos fazer  que podemos renderizar algo diferente na tela em vez de armazenar o
+
+26
+00:02:03,930 --> 00:02:12,260
+E deixe-me rapidamente adicionar algum estilo inline ao centredness, ento eu simplesmente adicionarei o centro de alinhamento de texto e
+
+27
+00:02:12,260 --> 00:02:17,240
+s anularei essas postagens muito pouco se o erro no for definido.
+
+28
+00:02:17,250 --> 00:02:24,480
+Ento, se este erro de estado, se isso no for verdade, indicado pelo ponto de exclamao
+
+29
+00:02:24,480 --> 00:02:29,170
+no incio, eu substitui postagens na minha srie de postagens.
+
+30
+00:02:29,250 --> 00:02:33,630
+Ento agora, se isso, se conservarmos isso, o centro deve ser uma string.
+
+31
+00:02:33,630 --> 00:02:34,400
+Obrigado.
+
+32
+00:02:34,410 --> 00:02:41,950
+Se salvarmos isso agora, vemos que algo correu mal, porque agora temos esse erro.
+
+33
+00:02:41,950 --> 00:02:51,880
+Agora, se eu retornar  minha aplicao e corrigir as postagens aqui para corrigir o seu L, veramos as
+
+34
+00:02:51,910 --> 00:02:52,860
+postagens novamente.
+
+35
+00:02:53,200 --> 00:02:58,570
+Ento, essa  uma maneira muito legal de lidar com erros e  algo que voc definitivamente precisa
+
+36
+00:02:58,570 --> 00:02:59,490
+tambm estar ciente.
+
+37
+00:02:59,680 --> 00:03:05,680
+As coisas nem sempre so bem-sucedidas, ento voc deve ter uma maneira de recuperar erros e depois fazer
+
+38
+00:03:05,680 --> 00:03:12,280
+algo com eles logando-os para o console, enviando alguns pedidos de log de erro para o seu prprio servidor para
+
+39
+00:03:12,670 --> 00:03:19,810
+bloquear o erro e mostrar algo na interface do usurio para permitir que o usurio para continuar ou dar instrues sobre o
+
+40
+00:03:19,810 --> 00:03:21,500
+que o usurio deve fazer.
+

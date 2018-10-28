@@ -1,0 +1,144 @@
+1
+00:00:02,210 --> 00:00:04,030
+Ento vamos comear com esse curso.
+
+2
+00:00:04,070 --> 00:00:09,200
+Mas primeiro eu quero explicar como voc pode tirar o mximo proveito deste curso.
+
+3
+00:00:09,200 --> 00:00:14,950
+Obviamente, voc assiste os vdeos e recomendo que todos vocs sigam o cdigo  direita.
+
+4
+00:00:14,960 --> 00:00:16,260
+Decode-se.
+
+5
+00:00:16,400 --> 00:00:18,640
+ assim que voc aprende mais.
+
+6
+00:00:18,650 --> 00:00:21,110
+Alm disso, verifique o meu cdigo fonte.
+
+7
+00:00:21,230 --> 00:00:27,170
+apenas um pequeno erro de digitao e, se voc no executar minha fonte codifique e compare com o seu, voc
+
+8
+00:00:27,170 --> 00:00:34,170
+no ser capaz de descobrir o que h de errado no seu cdigo e obter uma compreenso mais profunda do porqu deu errado.
+
+9
+00:00:34,580 --> 00:00:39,770
+Se voc est encontrando problemas, voc pode encontr-lo anexado ao final de cada mdulo e tambm a
+
+10
+00:00:39,770 --> 00:00:44,360
+muitas palestras para todo o mdulo e eu forneo o cdigo-fonte, porque s vezes 
+
+11
+00:00:44,360 --> 00:00:47,640
+Considere tambm D muitas sugestes e coisas.
+
+12
+00:00:47,660 --> 00:00:50,970
+Vou ensin-lo na seo de depurao deste curso.
+
+13
+00:00:51,080 --> 00:00:56,560
+L, vou ensinar-lhe como lidar com erros de reao, e como reagir a eles e corrigi-los.
+
+14
+00:00:56,750 --> 00:00:59,470
+Definitivamente algo que voc tem que saber como fazer.
+
+15
+00:00:59,540 --> 00:01:04,460
+Ento, use esse conhecimento que voc ganha l para corrigir todos os problemas que voc enfrenta.
+
+16
+00:01:04,460 --> 00:01:10,070
+Agora, se voc est preso e no pode encontrar erro na seo Q e A.
+
+17
+00:01:10,070 --> 00:01:13,940
+Minha equipe e eu estamos felizes em ajud-lo, mas isso  importante.
+
+18
+00:01:13,940 --> 00:01:15,500
+No pergunte aqui.
+
+19
+00:01:15,590 --> 00:01:17,360
+Tambm respondeu l.
+
+20
+00:01:17,360 --> 00:01:19,970
+No estou dizendo isso porque no quero responder s suas perguntas.
+
+21
+00:01:20,000 --> 00:01:25,220
+Eu vou, mas se voc responder, voc aprender mais do que se voc perguntar.
+
+22
+00:01:25,220 --> 00:01:27,740
+Pedir  to simples, mas responder  difcil.
+
+23
+00:01:27,770 --> 00:01:29,580
+E voc no pode dar errado l.
+
+24
+00:01:29,810 --> 00:01:32,850
+Mesmo que sua resposta seja errada, ningum vai mat-lo.
+
+25
+00:01:32,870 --> 00:01:39,380
+Em vez disso, voc vai aprender se as pessoas o corrigem e as respostas obrigam voc a pensar sobre um problema
+
+26
+00:01:39,440 --> 00:01:40,820
+e a encontrar uma soluo.
+
+27
+00:01:40,850 --> 00:01:47,630
+Se voc realmente quer se tornar um grande desenvolvedor de reao, voc deve resolver problemas e responder
+
+28
+00:01:47,630 --> 00:01:55,150
+a seo Q e A  uma boa maneira de praticar apenas isso e, finalmente, praticar prtica prtica.
+
+29
+00:01:55,160 --> 00:01:56,540
+ to fcil assim.
+
+30
+00:01:56,630 --> 00:02:00,390
+Mesmo depois de terminar este curso, voc deve praticar as coisas que aprendeu.
+
+31
+00:02:00,530 --> 00:02:07,850
+Voc tem que construir seus prprios projetos de demonstrao definir seus prprios desafios Dudi exerccios deste curso alterar
+
+32
+00:02:07,940 --> 00:02:11,630
+o cdigo que voc aprender neste curso prtica reagem.
+
+33
+00:02:11,900 --> 00:02:17,900
+Se voc seguir estas etapas e seguir esse curso inteiro, voc ser um incrvel desenvolvedor de reaes
+
+34
+00:02:18,320 --> 00:02:20,410
+e voc poder candidatar-se a escolhas.
+
+35
+00:02:20,420 --> 00:02:23,850
+Torne-se um re-atuador independente o que quiser com o pai.
+
+36
+00:02:24,020 --> 00:02:27,520
+Vamos mergulhar em reagir e aprender como funciona.
+

@@ -1,0 +1,64 @@
+1
+00:00:02,300 --> 00:00:09,400
+Onaylama kusurumuzu gidermek iin yapabileceimiz ey, balangta varsaylan olarak burada geerlidir ve sonra her
+
+2
+00:00:10,010 --> 00:00:12,400
+onay iin bir eyler ekleyebiliriz.
+
+3
+00:00:12,400 --> 00:00:18,270
+Burada, eer bu onay doruysa, doru olduu sylenebilir.
+
+4
+00:00:18,440 --> 00:00:21,010
+Ve eer geerli olursa zaten doruydu.
+
+5
+00:00:21,020 --> 00:00:24,400
+Dolaysyla deitiririz ve yaparsak geerlidir.
+
+6
+00:00:24,400 --> 00:00:30,540
+Her kural kurallar geree zmek hile yapmaktan baka bir ey yapmaz.
+
+7
+00:00:30,890 --> 00:00:33,380
+Artk tm kurallar doru zlmelidir.
+
+8
+00:00:33,380 --> 00:00:39,140
+bir basamakl SIP koduna girmeye balyorum, yanl olan hibir basamak yanl deil.
+
+9
+00:00:39,140 --> 00:00:42,770
+Kaydedersek bu deiikliin kaydedildiini kaydedersem ve imdi
+
+10
+00:00:42,770 --> 00:00:48,580
+imdi be haneli girersem dorudur, nk ok ksa deil.
+
+11
+00:00:48,590 --> 00:00:52,580
+Ve alt basamak ilgisini ekersem, yanl olur.
+
+12
+00:00:52,580 --> 00:00:58,580
+imdi ad ve adresini bir gz atarsam doru grdn grrsem, boaltrsam bir
+
+13
+00:00:58,730 --> 00:01:03,560
+ey girdim nk bunun bo olduunu grrsn, nk bo.
+
+14
+00:01:03,560 --> 00:01:06,800
+Bu artk kendi dorulamamz alyor.
+
+15
+00:01:06,950 --> 00:01:10,160
+Kendi kurallarmz bu esnek yntemle kurduk.
+
+16
+00:01:10,190 --> 00:01:16,150
+imdi, dorulama sonularmz hakknda baz geribildirim vermek iin bamz dndrebiliriz.
+

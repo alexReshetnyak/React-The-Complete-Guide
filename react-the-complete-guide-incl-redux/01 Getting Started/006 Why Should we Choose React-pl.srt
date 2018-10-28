@@ -1,0 +1,96 @@
+1
+00:00:02,340 --> 00:00:07,460
+Wic mamy ju brudne rce i widzielimy, jak budujemy aplikacj React.
+
+2
+00:00:07,970 --> 00:00:12,620
+Teraz to ju troch odpowiada, dlaczego moemy chcie uy React.
+
+3
+00:00:12,630 --> 00:00:13,730
+Jest jeszcze wicej.
+
+4
+00:00:13,730 --> 00:00:20,760
+Jest wicej powodw, dla ktrych chcemy uy React. React pomaga nam rozwiza problem z normalnym
+
+5
+00:00:20,760 --> 00:00:28,900
+JavaScriptem; stan interfejsu staje si trudny do zarzdzania. W wikszych aplikacjach JavaScript musisz rcznie kierowa
+
+6
+00:00:28,980 --> 00:00:34,520
+elementy do swojego DOM, a jeli zmienisz struktur kodu HTML,
+
+7
+00:00:34,530 --> 00:00:41,470
+prawdopodobnie bdziesz musia zmieni sposb, w jaki kierowae swoje elementy, poniewa uye querySelector.
+
+8
+00:00:41,580 --> 00:00:47,610
+Nawet jeli uywasz jQuery, przechodzenie przez DOM jest atwiejsze, ale zawsze jest to co, o
+
+9
+00:00:47,610 --> 00:00:48,590
+czym musisz pamita.
+
+10
+00:00:48,730 --> 00:00:55,020
+Jeli masz bardziej zoone aplikacje internetowe, w ktrych dynamicznie dodajesz i
+
+11
+00:00:55,020 --> 00:01:02,640
+usuwasz elementy, szybko moe to by uciliwe. W naszym projekcie kursu tworzymy aplikacj, ktra jest bardzo dynamiczna, gdy jestemy
+
+12
+00:01:02,640 --> 00:01:06,000
+w stanie zbudowa burgera i dynamicznie dodawa i usuwa skadniki.
+
+13
+00:01:06,180 --> 00:01:10,040
+Jeli napiszesz to z normalnym kodem JavaScript, to bdzie to koszmar.
+
+14
+00:01:10,140 --> 00:01:16,370
+React pomaga nam, sprawiajc, e cae zarzdzanie stanem UI nie jest problemem.
+
+15
+00:01:16,410 --> 00:01:21,440
+Pozwala nam skupi si na naszej logice biznesowej, zamiast utrzymywa nasz aplikacj od wybuchu.
+
+16
+00:01:21,540 --> 00:01:26,400
+Dodatkowo React jest utrzymywany przez du spoeczno.
+
+17
+00:01:26,400 --> 00:01:31,510
+S szanse, e kod React jest napisany lepiej, ni moglibymy napisa.
+
+18
+00:01:31,740 --> 00:01:34,480
+Jest wic bardzo wydajny i szybki.
+
+19
+00:01:34,560 --> 00:01:38,850
+Im wikszy wniosek dostaje, tym bardziej to si liczy.
+
+20
+00:01:38,850 --> 00:01:45,370
+Na koniec, React oferuje ogromny ekosystem i niezwykle aktywn spoeczno, co oznacza, e istnieje dua
+
+21
+00:01:45,370 --> 00:01:51,210
+szansa, e w przypadku napotkanego problemu znajdziecie rozwizanie lub dodatkowy pakiet, ktry mona
+
+22
+00:01:51,210 --> 00:01:52,770
+doda, aby go naprawi.
+
+23
+00:01:52,770 --> 00:01:57,960
+Wszystko to jest powd, dla ktrego React jest niesamowity i dlaczego na pewno warto go wzi pod uwag przy
+
+24
+00:01:57,960 --> 00:02:01,440
+kolejnym projekcie i dlaczego dokonae waciwego wyboru, aby zacz od tego kursu.
+

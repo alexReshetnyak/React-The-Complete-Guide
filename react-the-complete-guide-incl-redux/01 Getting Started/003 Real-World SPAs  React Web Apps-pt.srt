@@ -1,0 +1,132 @@
+1
+00:00:02,250 --> 00:00:08,470
+Ento, na ltima palestra, expliquei o reator de Ted sobre componentes e esses componentes so fantsticos.
+
+2
+00:00:08,700 --> 00:00:12,760
+Na verdade, o Cedar est em uma pgina web real aqui  reagir.
+
+3
+00:00:12,810 --> 00:00:15,280
+J. S. dot org que  a pgina oficial da web.
+
+4
+00:00:15,310 --> 00:00:17,030
+Ou voc reage a eles?
+
+5
+00:00:17,250 --> 00:00:21,550
+E se ns temos uma olhada nisso, ele  realmente construdo com re-ato,  claro.
+
+6
+00:00:21,570 --> 00:00:27,530
+Isso parece uma pgina da web normal e,  claro, podemos dividir isso em componentes.
+
+7
+00:00:27,540 --> 00:00:33,380
+Ns temos esse componente de gentilho l, ns conseguimos esses componentes de itens de navegao nicos.
+
+8
+00:00:33,390 --> 00:00:42,030
+ sobre ns vemos mais anos de componentes, como DS, emerge componentes do cdigo de fragmento ano com algumas descries  esquerda dele.
+
+9
+00:00:42,030 --> 00:00:49,860
+Ns conseguimos esse chamado de imagem inicial para componentes de ao aqui e ns conseguimos todos os nossos elementos aqui abaixo,
+
+10
+00:00:49,860 --> 00:00:53,040
+onde eles anunciam reagir e sobre o que
+
+11
+00:00:53,130 --> 00:00:59,400
+Todas estas coisas so, basicamente, blocos de construo que, naturalmente, podemos considerar facilmente como peas reutilizveis
+
+12
+00:00:59,610 --> 00:01:02,880
+e, na verdade, estamos reutilizando esse ano de alimentos.
+
+13
+00:01:02,880 --> 00:01:09,890
+Ns temos um elemento aqui e depois o mesmo elemento com contedo diferente sendo usado abaixo.
+
+14
+00:01:09,900 --> 00:01:15,810
+Agora  claro que voc pode codificar tudo isso apenas com o javascript e o C-else de H-G, mas ento
+
+15
+00:01:15,810 --> 00:01:22,050
+voc ter que repetir seu cdigo uma e outra vez aqui com os componentes que voc constri seus prprios elementos hm
+
+16
+00:01:22,050 --> 00:01:24,970
+l para dizer e ento voc apenas reso esse elemento.
+
+17
+00:01:25,110 --> 00:01:31,560
+E, nos bastidores, o elemento H Tim L tem todo este contedo j dentro dele e veremos
+
+18
+00:01:31,560 --> 00:01:33,680
+isso em detalhes em um segundo.
+
+19
+00:01:34,030 --> 00:01:40,080
+E esse  um bom exemplo, seria que voc faria comigo aqui na pgina onde procurei o Reino
+
+20
+00:01:40,170 --> 00:01:42,130
+Unido como uma alternativa para reagir.
+
+21
+00:01:42,150 --> 00:01:44,880
+L, ns percebemos que ns tambm temos muitos componentes.
+
+22
+00:01:44,900 --> 00:01:47,830
+Ns adquirimos esse hador inteiro com o componente da barra de pesquisa.
+
+23
+00:01:47,880 --> 00:01:53,580
+Em seguida, obteve o componente de resumo do resultado da pesquisa aqui, onde tambm nos permite filtrar os resultados da
+
+24
+00:01:54,090 --> 00:01:56,290
+pesquisa e depois os prprios resultados da pesquisa.
+
+25
+00:01:56,430 --> 00:01:59,540
+Ns adquirimos componentes de item de lista realmente usados aqui.
+
+26
+00:01:59,670 --> 00:02:02,060
+Cada um deles tem uma imagem e um ttulo diferente.
+
+27
+00:02:02,250 --> 00:02:04,680
+Mas no ncleo eles so todos iguais.
+
+28
+00:02:04,680 --> 00:02:06,390
+Todos eles tm a mesma estrutura.
+
+29
+00:02:06,510 --> 00:02:13,440
+E voc me faz tambm usa um framework javascript para conseguir isso e ter um desenvolvimento mais fcil.
+
+30
+00:02:13,560 --> 00:02:14,760
+E isso  importante.
+
+31
+00:02:14,850 --> 00:02:16,820
+Manter e atualizar esta pgina.
+
+32
+00:02:16,950 --> 00:02:22,970
+por que ns, como desenvolvedor, queremos usar componentes e  por isso que atuamos  tudo sobre os componentes.
+
+33
+00:02:22,970 --> 00:02:25,680
+O mesmo porque os componentes so incrveis e
+

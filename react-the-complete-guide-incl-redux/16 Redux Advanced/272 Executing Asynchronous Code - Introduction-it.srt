@@ -1,0 +1,92 @@
+1
+00:00:02,080 --> 00:00:07,560
+Cos abbiamo imparato molto sul middleware durante le ultime lezioni e abbiamo un ottimo modo per eseguire il debug.
+
+2
+00:00:07,580 --> 00:00:15,720
+S, torniamo al nostro APA e pensiamo di eseguire codice asincrono nel nostro progetto demo qui.
+
+3
+00:00:15,830 --> 00:00:21,760
+A differenza di qualsiasi bowler Bergere, non abbiamo compiti asincroni, ovviamente  facile crearne alcuni.
+
+4
+00:00:21,830 --> 00:00:29,630
+Diciamo che quando si memorizza un nuovo risultato, in realt vogliamo simulare che lo abbiamo anche memorizzato su
+
+5
+00:00:29,630 --> 00:00:30,320
+un server.
+
+6
+00:00:30,500 --> 00:00:35,510
+Ora non raggiungeremo qui un server perch  importante, ma possiamo semplicemente usare il timeout impostato
+
+7
+00:00:35,510 --> 00:00:36,140
+per simularlo.
+
+8
+00:00:36,140 --> 00:00:41,900
+tempo e vogliamo aggiornare il negozio dopo averlo appena completato diciamo lo stesso per il risultato di Duleep.
+
+9
+00:00:41,900 --> 00:00:44,230
+Questo richiede semplicemente un breve periodo di
+
+10
+00:00:44,510 --> 00:00:49,320
+Quindi essenzialmente vogliamo creare un codice sincrono o azioni qui.
+
+11
+00:00:49,340 --> 00:00:54,010
+Ora, come ho detto, la funzione di riduzione deve essere eseguita in modo sincrono.
+
+12
+00:00:54,110 --> 00:01:01,290
+Non puoi impostare il timeout qui perch detto timeout che, come sai, prende una funzione.
+
+13
+00:01:01,430 --> 00:01:03,010
+E poi i tempi.
+
+14
+00:01:03,020 --> 00:01:09,410
+Diciamo due secondi che qui non puoi restituire lo stato in cui non funziona.
+
+15
+00:01:09,410 --> 00:01:14,750
+Questo non  il modo in cui javascript funziona, la funzione viene eseguita solo dopo che due secondi sono
+
+16
+00:01:14,750 --> 00:01:17,990
+passati al passaggio e saranno eseguiti da l, quando ci sarai.
+
+17
+00:01:17,990 --> 00:01:23,810
+Quindi, in genere, ci che faresti restituiresti una promessa che le chiamate si risolvono all'interno di detto tempo
+
+18
+00:01:23,840 --> 00:01:29,720
+e dopo un certo periodo di tempo, ma il tuo riproduttore non si aspetta di ottenere una promessa.
+
+19
+00:01:29,750 --> 00:01:34,060
+Quindi non c' proprio modo di eseguire codice asincrono qui.
+
+20
+00:01:34,130 --> 00:01:41,060
+C' un modo diverso anche se possiamo eseguire codice asincrono senza l'aiuto dei cosiddetti
+
+21
+00:01:41,060 --> 00:01:42,520
+creatori di ection.
+
+22
+00:01:42,560 --> 00:01:49,940
+Entriamo quindi nei creatori di azioni prima di imparare come possiamo utilizzarli per eseguire codice
+
+23
+00:01:49,940 --> 00:01:50,470
+asincrono.
+

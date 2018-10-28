@@ -1,0 +1,20 @@
+1
+00:00:02,340 --> 00:00:08,750
+Welcome to this module. Over the last two modules you learned the basics about redux, you learned what
+
+2
+00:00:08,750 --> 00:00:11,660
+it is and why you might want to use it,
+
+3
+00:00:11,660 --> 00:00:19,010
+we also apply that to our burger builder project. In this module now, we'll dive deeper into redux, dive
+
+4
+00:00:19,010 --> 00:00:26,000
+into the a little bit more advanced features and see for example how we may run asynchronous code.
+
+5
+00:00:26,010 --> 00:00:26,840
+So let's start.
+

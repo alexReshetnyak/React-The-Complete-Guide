@@ -1,0 +1,76 @@
+1
+00:00:02,060 --> 00:00:07,580
+Durante essa palestra, tivemos uma breve introduo ao teste em aplicativos de reao e eu mencionei
+
+2
+00:00:07,580 --> 00:00:14,750
+que  possvel mergulhar mais fundo, que h cursos ou artigos inteiros mergulhando em testes e s posso incentiv-lo a mergulhar
+
+3
+00:00:14,750 --> 00:00:17,850
+mais fundo se quiser aprender mais sobre o teste,
+
+4
+00:00:17,860 --> 00:00:19,680
+esta  apenas uma introduo aproximada.
+
+5
+00:00:19,820 --> 00:00:24,980
+Uma das coisas mais importantes quando se trata de testar  a maneira
+
+6
+00:00:24,980 --> 00:00:32,990
+como voc pensa em testes, no teste coisas desnecessrias porque esse material desnecessrio  o mais difcil de testar, se
+
+7
+00:00:32,990 --> 00:00:40,810
+voc est testando todo o fluxo de trabalho clico em um boto Para o meu estado atualizaes para ento algo
+
+8
+00:00:40,820 --> 00:00:42,080
+muda em outro
+
+9
+00:00:42,080 --> 00:00:48,500
+componente, ento voc no vai se divertir simulando isso. Isso exigir muito trabalho difcil e cdigo onde voc precisa
+
+10
+00:00:48,500 --> 00:00:54,350
+zombar de h para as chamadas p de modo que voc no chegue ao servidor durante os testes
+
+11
+00:00:55,130 --> 00:00:56,920
+e nem tudo isso seja divertido.
+
+12
+00:00:56,960 --> 00:01:01,970
+E no  apenas divertido, tambm  redundante porque no precisamos testar se podemos
+
+13
+00:01:01,970 --> 00:01:02,860
+entrar em
+
+14
+00:01:02,990 --> 00:01:06,620
+contato com o servidor, precisamos testar se o nosso redutor
+
+15
+00:01:06,680 --> 00:01:10,460
+est funcionando corretamente, atualizamos nossos componentes corretamente se a entrada
+
+16
+00:01:10,580 --> 00:01:15,630
+mudar, talvez quer testar encontramos um objeto correto se clicarmos em um determinado boto.
+
+17
+00:01:15,980 --> 00:01:20,210
+Todas estas coisas podem ser facilmente testadas em testes unitrios isolados e esta 
+
+18
+00:01:20,210 --> 00:01:22,290
+realmente a maneira de pensar sobre isso
+
+19
+00:01:22,400 --> 00:01:24,860
+e a maneira como eu encorajo voc a praticar.
+

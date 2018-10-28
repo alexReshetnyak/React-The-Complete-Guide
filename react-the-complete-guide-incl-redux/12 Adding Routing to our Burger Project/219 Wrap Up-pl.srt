@@ -1,0 +1,64 @@
+1
+00:00:02,400 --> 00:00:05,580
+Wic znowu osignlimy wiele podczas ostatnich wykadw.
+
+2
+00:00:05,760 --> 00:00:08,570
+Skoczylimy nasz stron zamwie, Mamy naszego
+
+3
+00:00:08,610 --> 00:00:14,910
+producenta burgerw, ktry naprawd dziaa wietnie, ktry prowadzi nas do strony kasy, gdzie
+
+4
+00:00:15,210 --> 00:00:21,030
+adujemy formularz kasy, formularz tutaj nie jest gotowy, ale moemy wyda zamwienie,
+
+5
+00:00:21,100 --> 00:00:24,390
+jestemy przekierowywani a potem moemy zobaczy t
+
+6
+00:00:24,690 --> 00:00:27,200
+kolejno tutaj, wic wszystko dziaa dobrze.
+
+7
+00:00:27,420 --> 00:00:30,460
+Teraz moemy poprawi ten formularz kasowy,
+
+8
+00:00:30,480 --> 00:00:34,240
+o ktrym wanie wspomniaem, ten tutaj i oczywicie
+
+9
+00:00:34,650 --> 00:00:40,800
+w oglnoci zarzdzanie pastwem naszej aplikacji. Ju widzimy, e musimy od czasu
+
+10
+00:00:40,800 --> 00:00:46,650
+do czasu korzysta z niektrych sztuczek i obej, to jest co,
+
+11
+00:00:46,650 --> 00:00:48,540
+co poprawimy na tym
+
+12
+00:00:48,540 --> 00:00:55,530
+kursie, gdy tylko zanurkujemy w redux. Nadal mamy adnie dziaajc aplikacj, ktra ju jest czym wicej
+
+13
+00:00:55,530 --> 00:00:57,010
+ni tylko maym projektem.
+
+14
+00:00:57,300 --> 00:00:58,770
+Niesamowita praca do
+
+15
+00:00:58,860 --> 00:01:02,490
+tej pory, teraz zajmuj si gbszymi formami, a
+
+16
+00:01:02,610 --> 00:01:05,240
+nastpnie dodatkowymi funkcjami Reaktywowany ekosystem oferuje nam.
+

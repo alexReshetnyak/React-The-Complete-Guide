@@ -1,0 +1,312 @@
+1
+00:00:02,190 --> 00:00:10,740
+Dolaysyla, bir kii yaratabildiimiz atamamz var ve adn ve yan rasgele ya da
+
+2
+00:00:10,740 --> 00:00:12,070
+rasgele dolduruyoruz.
+
+3
+00:00:12,120 --> 00:00:15,620
+Bu isim yapmcda zor kodlanyor.
+
+4
+00:00:16,080 --> 00:00:23,550
+Elbette, kullanclarn bu deerleri belirtmek iin kullanaca giri alanlar iin tipik bir kullanm durumu olurdu.
+
+5
+00:00:23,550 --> 00:00:24,890
+Bu nasl ie yarar?
+
+6
+00:00:26,820 --> 00:00:34,410
+Yerel gzlemlerin tipik bir rneidir, tabii ki bu ekirdein son modlleri zerinde renmi
+
+7
+00:00:34,410 --> 00:00:43,160
+olduunuz durum, kullanc girii iin hepimizin bahsedilen devletle ve genel olarak devlette olduu ve bunun iin
+
+8
+00:00:43,560 --> 00:00:49,150
+redoks kullanmamz gerekmesidir sadece deerini kullanc girdisi olarak saklamak iin.
+
+9
+00:00:49,150 --> 00:00:54,690
+Dan, bu girdiyi ieren bir kii yaratmak istiyorsak, ancak her tu vuruunu halletmek ve
+
+10
+00:00:54,690 --> 00:00:58,270
+balayc kullanmakta iseniz, mutlaka yeniden ynlendirme kullanmamza gerek yoktur.
+
+11
+00:00:58,530 --> 00:01:07,380
+Dolaysyla u anda bizim dmemize nerede girdiimizi de syleyelim, imdi de giriler eklemeliyiz ve bunu,
+
+12
+00:01:07,400 --> 00:01:17,400
+bir yer tutucusu olan ad metni girii olarak ve daha sonra H ile ikinci bir metin olarak basitletireceiz.
+
+13
+00:01:18,830 --> 00:01:21,070
+Ve bunlar tip numaras olacak.
+
+14
+00:01:21,470 --> 00:01:27,340
+Bu nedenle, bir kii eklememize izin veren sper basit giri alanlar.
+
+15
+00:01:27,650 --> 00:01:35,330
+imdi, bu girdileri tkamak iin ynetmek iin class anahtar kelimesini kullanarak bir kiiyi bir bileene dntrebiliriz.
+
+16
+00:01:35,480 --> 00:01:44,390
+snfn bedeninde Trans-Am GSX olduumuzun render yntemine sahip olacaz; daha nce kullandmz GSX'dir.
+
+17
+00:01:44,390 --> 00:01:54,150
+Bunu basite yapalm veya bileenden ithal ediyorsunuz ve Turdus'tan Paris'teki bir snf snfna,
+
+18
+00:01:54,150 --> 00:01:58,870
+sermaye karakteri geniletme stee bileeniyle ve
+
+19
+00:01:59,220 --> 00:02:00,660
+O halde oraya yaptraym.
+
+20
+00:02:00,690 --> 00:02:03,000
+u taraftan kurtulun.
+
+21
+00:02:03,740 --> 00:02:10,770
+Ve neredeyse bir sahne ierisine girdiimiz iin sahne almaya neredeyse iyiyiz, ancak u anda bu sahne haline geliyor.
+
+22
+00:02:11,500 --> 00:02:13,670
+Bylece imdiye kadar bu daha nce olduu gibi almaldr.
+
+23
+00:02:13,690 --> 00:02:18,000
+De biz yararlanmak iin burada da ihracat ayarlamanz gerekir.
+
+24
+00:02:18,070 --> 00:02:20,160
+Yani bu daha nce olduu gibi almaldr.
+
+25
+00:02:20,290 --> 00:02:27,460
+imdi yerel gzleri devlete kullanabilir veya kurabilirim, bylece daha nce kullandmz durumu hep birlikte yaparm.
+
+26
+00:02:27,790 --> 00:02:34,450
+Ve bo bir dize sahip ismimi alacam balangta yamda balangta bo
+
+27
+00:02:34,540 --> 00:02:38,480
+olabileceini syleyelim ve daha sonra yntemimi ekleyeceim.
+
+28
+00:02:38,680 --> 00:02:48,040
+Ad, olay nesnemi aldm yerde ileyiciyi deitirdi ve burada adn olay hedef deerine gncelletirmek iin
+
+29
+00:02:48,040 --> 00:02:51,280
+yalnzca bu ayar durumunu aryor.
+
+30
+00:02:51,310 --> 00:02:58,690
+Ve ama, her tu vuruunda isim deitirme iini yrtmek ve yam deiti.
+
+31
+00:02:58,690 --> 00:03:05,030
+Olay hedefin nereden alacan belirten ileyici, bu ayar durumunu armaktr.
+
+32
+00:03:05,230 --> 00:03:11,740
+Ve elbette her tu vuruunda iki olay hedef deeri yata.
+
+33
+00:03:11,740 --> 00:03:21,460
+Ve imdi girilerimizi onchange ileyicisine balayabiliriz, onu isim adna deitirilen bu isme deitiririz ve
+
+34
+00:03:21,460 --> 00:03:27,230
+okumay kolaylatrmak iin basite distribtrlerin oklu satrlarna koyarz.
+
+35
+00:03:27,310 --> 00:03:34,240
+imdi, tm, iki basamaa sahip olmak iin bu deeri balamamz gerekir; bylece trn tu vurularmz girdi
+
+36
+00:03:34,240 --> 00:03:35,570
+dosyasna yanstm oluruz.
+
+37
+00:03:35,560 --> 00:03:38,100
+Bu devlet adna balayn.
+
+38
+00:03:38,560 --> 00:03:47,110
+Ve imdi, birden ok satrn zerine koyduumuz bir saniyeliine, change bind'in ekledii ey, buna balanyor.
+
+39
+00:03:47,290 --> 00:03:58,660
+Deitirilen tutucu ve deer, bu durumun WIP'lerine eittir H u an iin bu modlden nce
+
+40
+00:03:58,660 --> 00:04:00,570
+rendiimiz tm eylerdir.
+
+41
+00:04:00,570 --> 00:04:02,950
+Redux'la ilgisi yoktur.
+
+42
+00:04:02,950 --> 00:04:07,140
+Bu bileenin durumunu bizzat ynetiyoruz.
+
+43
+00:04:07,150 --> 00:04:12,850
+Yani bileen iinde ve farkl Devlet trleri hakknda konutuum slaytta
+
+44
+00:04:12,850 --> 00:04:19,930
+anlattm ey, yerel bir Devletin tipik bir kullanm rneidir. Kullanc, muhtemelen alakal
+
+45
+00:04:19,930 --> 00:04:24,380
+olmayan girdilere giren her eyi syleyebilir tm uygulama.
+
+46
+00:04:24,400 --> 00:04:28,300
+Bunu global redox maazasnda saklamaya gerek yoktur.
+
+47
+00:04:28,300 --> 00:04:34,970
+Bu bileenin durumuna kesinlikle sokamazsnz, nk lm bileeniyle ilgilidir.
+
+48
+00:04:35,020 --> 00:04:37,440
+Ortalama bileenler iin nemlidir.
+
+49
+00:04:37,600 --> 00:04:46,650
+Bu kt durum burada toplanrsa, anonim bir ileve geeceiz, bylece baz eyleri pervane
+
+50
+00:04:46,650 --> 00:04:48,450
+yanna gtreceiz.
+
+51
+00:04:48,450 --> 00:04:55,860
+Bu yzden iki kii hangi yntemde olursa olsun, bu devlet adn ve bu devlet yan onunla
+
+52
+00:04:55,920 --> 00:04:57,290
+gemek isteyen ekledim.
+
+53
+00:04:57,660 --> 00:05:04,920
+Dolaysyla, kiiyi, onu daha nce eklediimiz bir yntemi baladmz yere ynlendirdiimiz
+
+54
+00:05:04,920 --> 00:05:13,380
+kapsaycda, bir kii eklemeyi veya gerekletirilen bir cmleyi uygulamaya cesaret edelim; aslnda, aldmz
+
+55
+00:05:13,410 --> 00:05:15,510
+argmanlardan yararlanmaya cesaret ederiz.
+
+56
+00:05:15,780 --> 00:05:23,170
+Bu nedenle reklamda bir kii tabii ki bu yntemi belirtiyor ya da bir eylemi gndermek iin disfonksiyonel olarak kullanyor.
+
+57
+00:05:23,250 --> 00:05:32,630
+imdiyse, ad ve ya argman olarak aldmzn farkndayz, bu yzden burada onu konteynrda kullanmalyz.
+
+58
+00:05:32,800 --> 00:05:35,520
+Sonunda isim ve ya alyoruz.
+
+59
+00:05:35,770 --> 00:05:43,300
+Bu yzden, bir eyi gnderirken, yaa eit ad ve yala eit kii ad ekleyebiliriz ya
+
+60
+00:05:43,480 --> 00:05:50,710
+da kii verileri veya yk belirtebileceimiz tek bir mlk ya da ismini ve yan
+
+61
+00:05:50,980 --> 00:05:55,660
+ilgili argmana eletiren istediiniz her eyi istediiniz gibi ekleyebiliriz.
+
+62
+00:05:55,750 --> 00:06:02,040
+Ve imdi bununla reticimize gidebilir ve kullancnn girdii deeri karabiliriz.
+
+63
+00:06:02,320 --> 00:06:05,350
+Yani ad iin harekete geeceiz.
+
+64
+00:06:05,620 --> 00:06:09,490
+Sonra da kii bilgileri isimli bir anahtar kullandm.
+
+65
+00:06:09,640 --> 00:06:13,250
+Ve bu, Optik'i ad ve Alias tularyla birlikte tutar.
+
+66
+00:06:13,390 --> 00:06:22,990
+Bu yzden, X-ists aksiyon adam veri adnn adn ve yan ise o yata eylemci kii
+
+67
+00:06:22,990 --> 00:06:25,190
+verisi olarak verecektim.
+
+68
+00:06:25,230 --> 00:06:36,520
+imdi, tm dosyalar kaydedip, bu hatay, kiiyi eklemek ve u an iin ayar geri dndrmekle, ancak sitemde hata yazarak bo
+
+69
+00:06:36,520 --> 00:06:39,070
+bir dize koyarak dzeltiyoruz.
+
+70
+00:06:39,150 --> 00:06:43,510
+Bo bir dize de bunu yaparz.
+
+71
+00:06:43,700 --> 00:06:54,120
+bunun bileenlerini hala burada silebileceini greceksiniz, fakat imdi her ikisini de bir araya getiriyoruz. daha
+
+72
+00:06:54,210 --> 00:07:02,550
+sonra uygulamanzn daha geni blmlerini etkileyen kiiyi yaratmak iin ii halledebiliriz.
+
+73
+00:07:02,550 --> 00:07:09,300
+imdi Max 28'i bizzat deneyebiliriz ve maksimum 28 oluruz ve
+
+74
+00:07:09,300 --> 00:07:10,650
+bunu deitirirsek
+
+75
+00:07:10,650 --> 00:07:17,550
+Ve kullanc girdisini nasl ileyeceinizi redux dnyasnda nasl ele alacamz ve burada yalnzca
+
+76
+00:07:17,730 --> 00:07:23,880
+bu bileenle ve redoks iin ynetilen genel durumla ilgili bilgi iin kullandmz
+
+77
+00:07:23,880 --> 00:07:31,440
+gibi yerel UI durumu arasnda nasl ayrm yapacamz gstermek istedim tm bavurumuz iin nemli olan
+
+78
+00:07:31,440 --> 00:07:32,450
+bilgi iin.
+

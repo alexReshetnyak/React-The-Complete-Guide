@@ -1,0 +1,104 @@
+1
+00:00:02,220 --> 00:00:09,070
+Agora, aprendemos a carregar componentes, vamos adicionar mais rotas aqui para carregar componentes diferentes, como quando voc publica o
+
+2
+00:00:09,090 --> 00:00:16,260
+componente, para que possamos duplicar meu Apotheker e agora estiver procurando uma nova publicao e aqui tambm possamos remover exatamente
+
+3
+00:00:16,260 --> 00:00:23,910
+porque talvez ns desejemos lidar com todas as rotas comeando com Slash e voc publica com isso ou deixa exato, exceto
+
+4
+00:00:24,660 --> 00:00:29,670
+se voc realmente quiser apenas lidar com a barra e voc publicar e no
+
+5
+00:00:29,670 --> 00:00:31,540
+cortar e voc publicar um.
+
+6
+00:00:31,870 --> 00:00:37,030
+E agora, o componente, claro, no  postagem, mas um componente que devemos importar.
+
+7
+00:00:37,380 --> 00:00:44,900
+Temos de importar nova postagem, naturalmente, cortar novas postagens novas, assim como isso.
+
+8
+00:00:44,910 --> 00:00:52,480
+Agora, esse  um Graben que voc publica aqui e edita como se esta nova postagem salvou isso.
+
+9
+00:00:52,500 --> 00:00:54,300
+Agora voc v que vemos as postagens aqui.
+
+10
+00:00:54,450 --> 00:01:00,250
+Mas se eu clicar na nova publicao, vemos o novo componente de postagem e no em nossas postagens.
+
+11
+00:01:00,460 --> 00:01:03,070
+J est mostrando o funcionamento do roteamento.
+
+12
+00:01:03,210 --> 00:01:08,180
+No momento, nossa aplicao tem um problema, podemos clicar nesses links.
+
+13
+00:01:08,220 --> 00:01:15,120
+Eles so texto ncora normal, mas cada vez que nosso aplicativo realmente recarrega como pode ver se voc assistiu
+
+14
+00:01:15,120 --> 00:01:15,770
+voc recarregar.
+
+15
+00:01:15,780 --> 00:01:18,170
+Eu posso ouvir ao seu lado ou Albar.
+
+16
+00:01:18,540 --> 00:01:20,600
+Agora isso no  problema aqui.
+
+17
+00:01:20,670 --> 00:01:27,450
+Mas, teoricamente, um aplicativo de recarga significa que o seu cdigo javascript est comeando um novo e,
+
+18
+00:01:27,480 --> 00:01:31,140
+portanto, todo o estado do aplicativo anterior est perdido.
+
+19
+00:01:31,140 --> 00:01:37,940
+Este  realmente o que voc queria que seu aplicativo de reao sempre que o usurio estiver navegando por ele.
+
+20
+00:01:37,950 --> 00:01:44,940
+Voc no deseja recarregar a pgina que deseja apenas renderizar a pgina nas partes onde precisa ser pr-renderizado
+
+21
+00:01:44,940 --> 00:01:47,880
+para se parecer com a nova pgina.
+
+22
+00:01:47,880 --> 00:01:53,490
+Ento, precisamos mudar para o comportamento para que no tenhamos um link normal aqui que recarrega a
+
+23
+00:01:53,490 --> 00:01:59,910
+pgina, mas, em vez disso, evitamos a reconstruo da pgina e deixamos reativar o roteador apenas Re-Read para partes
+
+24
+00:01:59,910 --> 00:02:06,090
+do dom ou diga re -conforme o que re-ler ou para ser preciso que precisa ser re renderizado.
+
+25
+00:02:06,090 --> 00:02:13,560
+Ento, vamos na prxima conferncia descobrir como podemos nos certificar de que ficamos dentro do nosso aplicativo e no o
+
+26
+00:02:13,590 --> 00:02:15,090
+recarregamos o tempo todo.
+

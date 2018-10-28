@@ -1,0 +1,236 @@
+1
+00:00:02,200 --> 00:00:09,460
+Antes de terminar este mdulo y sumergirnos en conceptos de reduccin ms avanzados ms adelante, como ejecutar un
+
+2
+00:00:09,460 --> 00:00:12,140
+cdigo asncrono que an no hemos cubierto.
+
+3
+00:00:12,280 --> 00:00:16,070
+Permtame que lo gue por diferentes tipos de Estado, una respuesta a una pregunta.
+
+4
+00:00:16,180 --> 00:00:20,050
+Debera manejar cada estado a travs de Rydex?
+
+5
+00:00:20,110 --> 00:00:27,760
+Porque en la aplicacin de demostracin de este mdulo eliminamos dicha llamada de estado en el componente
+
+6
+00:00:27,760 --> 00:00:30,810
+y eliminamos el estado del componente local.
+
+7
+00:00:30,970 --> 00:00:37,140
+El estado que utilizamos hasta ahora en todas las aplicaciones y proyectos de reconstruccin que construimos en el discurso.
+
+8
+00:00:37,270 --> 00:00:44,830
+En cambio, utilizamos el estado de lectura X y el despacho de acciones y el enlace de almacenamiento para usar ese estado.
+
+9
+00:00:44,890 --> 00:00:47,290
+Siempre es el enfoque que debes seguir.
+
+10
+00:00:47,290 --> 00:00:50,370
+Siempre tiene que usar leer para comenzar?
+
+11
+00:00:50,650 --> 00:00:55,810
+Bueno, la cuestin de si usas redux o no depende del tamao de tu aplicacin y de la
+
+12
+00:00:55,810 --> 00:00:56,910
+complejidad de tu estado.
+
+13
+00:00:56,950 --> 00:01:03,760
+Si tiene una aplicacin pequea y sencilla, la configuracin de redox puede demorar ms tiempo de lo que obtendra
+
+14
+00:01:03,760 --> 00:01:12,090
+con los beneficios que merece la pena para cualquier tamao medio decente o una gran aplicacin que utilice redox y administrar el estado,
+
+15
+00:01:12,100 --> 00:01:13,960
+probablemente haya una buena idea.
+
+16
+00:01:14,200 --> 00:01:19,440
+Pero an tenemos que preguntar qu estado debera usarse para Rydex.
+
+17
+00:01:19,480 --> 00:01:23,500
+Porque no debes administrar necesariamente todo el estado en l.
+
+18
+00:01:23,920 --> 00:01:28,990
+Echemos un vistazo a los diversos tipos de estados de algunos ejemplos y si debe usar redux
+
+19
+00:01:28,990 --> 00:01:30,120
+para ellos o no.
+
+20
+00:01:30,370 --> 00:01:37,470
+Consideremos el estado de UI local, como mostrar u ocultar un fondo abriendo un modal.
+
+21
+00:01:37,510 --> 00:01:45,210
+Todas estas cosas que por supuesto cambian a estado para actualizar el usuario de su aplicacin de reactivacin y tena que
+
+22
+00:01:45,210 --> 00:01:49,490
+mostrar algo rescatado en caso de que utilice redox para la deuda.
+
+23
+00:01:49,610 --> 00:01:58,500
+La respuesta es que muchas veces no puede usar su dispositivo redux, principalmente manejado esto dentro de sus componentes.
+
+24
+00:01:58,510 --> 00:02:01,090
+Dicho esto, puedes usar redux para eso.
+
+25
+00:02:01,120 --> 00:02:09,040
+Puede hacer que se muestre la propiedad modal en su despacho de estado global una accin para establecerlo en True y despachar una
+
+26
+00:02:09,040 --> 00:02:10,970
+accin para establecerlo en False.
+
+27
+00:02:11,050 --> 00:02:19,360
+Luego, conecte su componente y escuche esa propiedad condicionalmente represente un molde o no, pero
+
+28
+00:02:19,360 --> 00:02:21,570
+eso podra ser excesivo.
+
+29
+00:02:21,630 --> 00:02:26,970
+A menudo no puede manejar eso dentro de sus componentes tal como lo hicimos antes.
+
+30
+00:02:27,980 --> 00:02:32,650
+Y el nmero importante de estado es el estado persistente.
+
+31
+00:02:32,730 --> 00:02:39,100
+Esto significa que normalmente tambin almacena en bases de datos de sitios como los usuarios de su aplicacin.
+
+32
+00:02:39,120 --> 00:02:44,210
+Todas las publicaciones de un bloque, Berger ordena cosas as.
+
+33
+00:02:44,250 --> 00:02:50,310
+Ahora, aqu normalmente lee X pero, por supuesto, no todos los datos que tiene en su base de datos
+
+34
+00:02:50,310 --> 00:02:55,800
+del lado del servicio porque, por supuesto, reducir es solo para administrar el estado en su aplicacin.
+
+35
+00:02:55,800 --> 00:03:03,630
+Mientras su aplicacin est activa y siempre tenga en cuenta que el usuario actualice su pgina,
+
+36
+00:03:03,630 --> 00:03:05,030
+su estado desaparecer.
+
+37
+00:03:05,100 --> 00:03:08,070
+Entonces, lee X no es un reemplazo para una base de datos.
+
+38
+00:03:08,100 --> 00:03:14,910
+En su lugar, almacena estos datos en un servidor, pero Rydex gestiona los sectores relevantes.
+
+39
+00:03:14,970 --> 00:03:21,390
+Por lo tanto, la publicacin que actualmente muestra los usuarios que necesita para mostrar el usuario del pster
+
+40
+00:03:21,390 --> 00:03:22,360
+actualmente puede editarse.
+
+41
+00:03:22,500 --> 00:03:27,290
+Estas cosas se cargan y almacenan en un redox para que tenga un nivel de forma tal que
+
+42
+00:03:27,300 --> 00:03:28,500
+pueda renderizarlas en la pantalla.
+
+43
+00:03:28,680 --> 00:03:32,360
+Pero eso podra no incluir todos los datos que tiene en su base de datos.
+
+44
+00:03:33,530 --> 00:03:41,280
+Y luego tenemos cosas tpicas del estado del cliente como es el usuario autenticado o los filtros establecidos por el usuario.
+
+45
+00:03:41,330 --> 00:03:47,050
+Entonces, si tiene un men desplegable, permita que el usuario filtre sus publicaciones que no son datos que almacen en la base de datos.
+
+46
+00:03:47,120 --> 00:03:53,420
+Puede almacenar si se ofrece atencin al usuario porque si ingresa el registro incorrecto en la informacin,
+
+47
+00:03:53,420 --> 00:03:56,110
+no necesita almacenarlo innecesariamente en el servidor.
+
+48
+00:03:56,120 --> 00:04:01,430
+usuario puede no almacenar datos en un servidor porque no es tan importante almacenarlo en la base de datos.
+
+49
+00:04:01,430 --> 00:04:03,120
+Tambin el filtro establecido por el
+
+50
+00:04:03,170 --> 00:04:09,170
+Definitivamente debe conocer las configuraciones de filtro en su cliente y su cdigo de JavaScript en la aplicacin
+
+51
+00:04:09,170 --> 00:04:13,700
+de reactivacin, aunque este es el estado en el que definitivamente necesita relajarse.
+
+52
+00:04:13,760 --> 00:04:21,080
+Lo logr a travs de redux porque podra afectar a mltiples componentes o reas de su aplicacin.
+
+53
+00:04:21,290 --> 00:04:26,870
+Por ejemplo, si el usuario se ofende, podra ser importante para una gran cantidad de
+
+54
+00:04:27,230 --> 00:04:33,640
+componentes en su aplicacin y su X realmente brilla porque el almacenamiento central ofrece una gran ventaja.
+
+55
+00:04:33,650 --> 00:04:37,500
+Entonces, estos son dos tipos diferentes de estado y cmo los manejas.
+
+56
+00:04:37,820 --> 00:04:43,820
+de todo eso en los prximos mdulos cuando agreguemos tambin redux a nuestro proyecto de curso.
+
+57
+00:04:43,820 --> 00:04:44,960
+Ahora veremos ejemplos
+
+58
+00:04:44,960 --> 00:04:46,520
+Antes de que hagamos eso.
+
+59
+00:04:46,700 --> 00:04:48,380
+Es hora de practicar relajacin.
+

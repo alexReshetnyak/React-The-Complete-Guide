@@ -1,0 +1,20 @@
+1
+00:00:02,340 --> 00:00:08,750
+Bem-vindo a este mdulo nos ltimos dois mdulos, voc aprender o bsico sobre relaxar, voc aprender o que
+
+2
+00:00:08,750 --> 00:00:11,660
+ e por que voc pode querer us-lo.
+
+3
+00:00:11,660 --> 00:00:19,010
+Ns tambm aplicamos isso ao nosso projeto Boulder buger neste mdulo agora vamos mergulhar mais profundamente no mergulho
+
+4
+00:00:19,010 --> 00:00:26,000
+redox nos recursos um pouco mais avanados e ver, por exemplo, como podemos executar o cdigo assncrono.
+
+5
+00:00:26,010 --> 00:00:26,840
+Ento vamos comear.
+

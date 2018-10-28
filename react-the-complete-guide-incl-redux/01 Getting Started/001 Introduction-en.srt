@@ -1,0 +1,79 @@
+0
+00:02.430 --> 00:06.810
+Welcome to this course about React. It's so great to have you onboard.
+
+1
+00:06.810 --> 00:09.920
+My name is Maximilian Schwarzmüller and I'm a freelance web developer
+
+2
+00:09.960 --> 00:16.500
+and React developer. I've worked with React a lot and I can tell you it's an amazing library for creating
+
+3
+00:16.500 --> 00:24.360
+highly-reactive and superfast JavaScript-driven web applications. The JavaScript-driven part is especially
+
+4
+00:24.360 --> 00:31.020
+important because React is a JavaScript library (it's about writing your web apps in JavaScript).
+
+5
+00:31.650 --> 00:38.250
+This is amazing because JavaScript runs in the browser and it allows you to create superfast
+
+6
+00:38.340 --> 00:40.880
+web apps that feel like mobile apps
+
+7
+00:41.040 --> 00:44.190
+(users don't have to wait for page reloads).
+
+8
+00:44.310 --> 00:51.060
+Now, React is probably 'the' most popular JavaScript library you can learn these days
+
+9
+00:51.060 --> 00:56.940
+and for a good reason. You will learn all of its core features throughout this course and way more than that.
+
+10
+00:57.480 --> 01:01.960
+You will learn what React is about, how it works and why you might want to use it.
+
+11
+01:01.980 --> 01:07.620
+You will learn how to build components with React, how to use Redux for better state management and how
+
+12
+01:07.620 --> 01:13.450
+to use the React Router; and you'll not just learn this as simple projects or theory.
+
+13
+01:13.610 --> 01:18.230
+We will also build an entire React application throughout this course.
+
+14
+01:18.270 --> 01:24.360
+The 'Burger Builder' is an amazing application utilizing all the concepts you'll learn in this course,
+
+15
+01:24.690 --> 01:30.410
+so that you have a really solid understanding of all the concepts taught throughout this course.
+
+16
+01:30.600 --> 01:36.450
+By the end of this course, you'll therefore have way more than just a solid understanding of React;
+
+17
+01:36.450 --> 01:43.230
+you'll be able to dive deeper into more challenging projects and apply for React developer jobs (or become
+
+18
+01:43.230 --> 01:44.370
+a React Developer
+
+19
+01:44.400 --> 01:47.250
+as a freelancer)...whatever your goal is.

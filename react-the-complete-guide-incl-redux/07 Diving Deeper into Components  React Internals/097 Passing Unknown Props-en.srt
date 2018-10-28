@@ -1,0 +1,192 @@
+1
+00:00:02,180 --> 00:00:07,450
+So one issue you are facing is that all the props are missing in our wrapped components, like the name
+
+2
+00:00:07,450 --> 00:00:09,110
+and the age.
+
+3
+00:00:09,120 --> 00:00:14,820
+The reason for this is that in our higher order with class component, we're outputting wrapped component
+
+4
+00:00:15,330 --> 00:00:20,480
+but wrapped component can be either app.js or person.js.
+
+5
+00:00:20,940 --> 00:00:27,870
+Now correctly both the title and the props the person.js components would expect are missing because
+
+6
+00:00:27,900 --> 00:00:30,250
+these components get props
+
+7
+00:00:30,660 --> 00:00:37,050
+except for now they don't anymore because they are our wrapped component and we don't pass any props
+
+8
+00:00:37,050 --> 00:00:37,950
+here.
+
+9
+00:00:37,950 --> 00:00:43,080
+Now of course we can't hard code the props here because it's not like we have to pass name here,
+
+10
+00:00:43,080 --> 00:00:49,470
+that would work for the person component but the app component or any other component we might wrap with
+
+11
+00:00:49,470 --> 00:00:52,680
+this might require totally different props.
+
+12
+00:00:53,050 --> 00:00:59,310
+There is one single simple thing we should do, just pass on the existing props.
+
+13
+00:00:59,460 --> 00:01:01,120
+Now how do you do that?
+
+14
+00:01:01,410 --> 00:01:06,840
+You take advantage of an ES6 operator, the spread operator.
+
+15
+00:01:07,200 --> 00:01:14,550
+Keep in mind that props are just an object, just an object of key value pairs.
+
+16
+00:01:15,540 --> 00:01:19,830
+Now you can output some dynamic content on this wrapped component,
+
+17
+00:01:19,980 --> 00:01:28,020
+with single curly braces and used the three dots, the spread operator on the props object to
+
+18
+00:01:28,020 --> 00:01:33,440
+simply split it up into these key value pairs and pass them to wrap component.
+
+19
+00:01:33,510 --> 00:01:39,320
+This index might look strange at first but in the end it simply means pass on the props as you get them,
+
+20
+00:01:39,380 --> 00:01:42,150
+don't do anything else with them, just pass them on.
+
+21
+00:01:42,150 --> 00:01:48,100
+Split them up into key value pairs so that you can validly assign them to this wrapped component.
+
+22
+00:01:48,540 --> 00:01:52,040
+Now with that, if you save this you immediately see up on the reload
+
+23
+00:01:52,080 --> 00:01:58,550
+the title is back and so is our person data and everything works as it did before.
+
+24
+00:01:58,830 --> 00:02:04,440
+So now we get a truly reusable higher order component and then there's this other thing I mentioned,
+
+25
+00:02:04,830 --> 00:02:10,430
+that this higher order component doesn't have to return a functional component as it does here,
+
+26
+00:02:10,470 --> 00:02:13,860
+it depends on what you want to do in your higher order component.
+
+27
+00:02:13,860 --> 00:02:19,920
+If you need access to lifecycle hooks, for example if you plan on reaching out to the web and fetch the
+
+28
+00:02:19,950 --> 00:02:23,860
+currently authenticated user and kind of do something with that,
+
+29
+00:02:23,970 --> 00:02:31,200
+if that's your plan you will need a stateful component and you can do that, going to copy that code
+
+30
+00:02:31,200 --> 00:02:34,240
+and comment it out up there
+
+31
+00:02:34,620 --> 00:02:37,050
+and now simply insert it again,
+
+32
+00:02:37,410 --> 00:02:44,670
+Instead of returning a function, you can also return a class which extends component or even your component
+
+33
+00:02:44,670 --> 00:02:50,510
+of course, which you then need to import from react component
+
+34
+00:02:50,710 --> 00:02:55,080
+and now that we extended this, we have a normal syntax here
+
+35
+00:02:55,150 --> 00:03:01,440
+as you know it where we should have a render method, in the method render method,
+
+36
+00:03:01,530 --> 00:03:04,980
+we will in the end return some jsx,
+
+37
+00:03:05,040 --> 00:03:12,240
+so just as we do in normal stateful components. And as always, the difference is props can be accessed
+
+38
+00:03:12,330 --> 00:03:20,050
+with this.props. So a normal stateful component, only difference is after the class keyword,
+
+39
+00:03:20,130 --> 00:03:26,690
+there is no name because it's like an anonymous class, we're returning it, we're having a class factory
+
+40
+00:03:26,700 --> 00:03:32,900
+here. We have a function that returns a class on demand and the class name doesn't matter,
+
+41
+00:03:32,910 --> 00:03:38,600
+what matters to us is the render method which wraps our component with a div with
+
+42
+00:03:38,610 --> 00:03:41,240
+in this case, a class name.
+
+43
+00:03:41,400 --> 00:03:45,150
+So now with that if I save it, works perfectly fine too,
+
+44
+00:03:45,150 --> 00:03:48,750
+now we got a wrapping component which is a class.
+
+45
+00:03:49,020 --> 00:03:53,350
+So these are higher order components and you saw some examples here,
+
+46
+00:03:53,460 --> 00:03:55,750
+You will see them again throughout the course
+
+47
+00:03:55,770 --> 00:04:01,710
+and as I mentioned, there are a lot of third party packages which actually use higher order components
+
+48
+00:04:02,040 --> 00:04:04,800
+so that is also one form where you will see them a lot.
+

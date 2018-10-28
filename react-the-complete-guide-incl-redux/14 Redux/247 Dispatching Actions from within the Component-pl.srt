@@ -1,0 +1,292 @@
+1
+00:00:02,340 --> 00:00:08,680
+Dostalimy wic kawaek stanu tutaj i wyprowadzilimy z CTA nasze rekwizyty.
+
+2
+00:00:09,060 --> 00:00:12,030
+Teraz chc rwnie mc wysya akcje.
+
+3
+00:00:12,630 --> 00:00:20,790
+I w tym celu musimy dowiedzie si, jak wszyscy moemy wysya akcje z naszych komponentw.
+
+4
+00:00:20,820 --> 00:00:27,350
+Teraz, gdy po prostu korzystamy z samodzielnego relaksu, po prostu nazywalimy wysyk w sklepie.
+
+5
+00:00:27,570 --> 00:00:31,760
+Teraz nie mamy dostpu do sklepu w naszym kontenerze, przynajmniej nie bezporednio.
+
+6
+00:00:31,860 --> 00:00:33,900
+Mamy jednak dostp do darmowego poczenia.
+
+7
+00:00:34,140 --> 00:00:40,630
+I tak jak moglimy przekaza pewne informacje o tym, jaki rodzaj stanu lub ktry
+
+8
+00:00:40,630 --> 00:00:44,820
+fragment stanu chcemy uzyska, moemy rwnie przekaza drug konfiguracj.
+
+9
+00:00:44,910 --> 00:00:53,010
+Nazw to wysyk mapy do wniosku, poniewa tutaj powiem, jakiego rodzaju akcje chc wysa
+
+10
+00:00:53,100 --> 00:00:55,190
+w tym pojemniku.
+
+11
+00:00:55,230 --> 00:01:03,630
+Czy wszystkie sklepy speniaj funkcj, ktra otrzyma funkcj wysyki, ktr moemy wykona jako argument tak, jak
+
+12
+00:01:04,320 --> 00:01:07,570
+mamy dyspozycj dostpn w roku sklepowym.
+
+13
+00:01:07,620 --> 00:01:15,000
+Jeli mamy bezporedni dostp do sklepu, czy zareagujesz, x x pakiet daje nam w zasadzie pomoc
+
+14
+00:01:15,210 --> 00:01:19,200
+lub funkcj, ktr nazwiemy wysyk w sklepie za kulisami.
+
+15
+00:01:19,440 --> 00:01:25,860
+Nie sycha caego zwrotu obiektu javascript, w ktrym moemy znale odpowiednie nazwy, ktre
+
+16
+00:01:25,890 --> 00:01:32,360
+bd zawiera odniesienie do funkcji, ktra powinna zosta wykonana w celu wysania akcji.
+
+17
+00:01:32,370 --> 00:01:37,780
+Teraz moesz wybra dowoln nazw nieruchomoci, ktr chcesz tutaj. Bd j nazwa na liczniku przyrostu.
+
+18
+00:01:37,800 --> 00:01:39,410
+Ale znowu nazwa naley do ciebie.
+
+19
+00:01:39,510 --> 00:01:46,110
+Ta waciwo ma teraz warto oczywicie i ta warto powinna by funkcj anonimow.
+
+20
+00:01:46,140 --> 00:01:50,010
+Wic wszyscy uywacie przy kadej 6 funkcji strzay w ten sposb.
+
+21
+00:01:50,010 --> 00:01:54,870
+I uyj wersji bardzo krtkiej, gdzie jeli jest napisana w jednym wierszu,
+
+22
+00:01:54,870 --> 00:01:57,790
+cz po prawej stronie strzaki jest automatycznie zwracana.
+
+23
+00:01:57,900 --> 00:02:01,000
+Wic chcesz oddzwoni do wysyki.
+
+24
+00:02:01,650 --> 00:02:03,970
+A to jest Decore, co chc tutaj zrobi.
+
+25
+00:02:04,380 --> 00:02:12,230
+Ta funkcja bdzie na kocu dostpna z tej waciwoci, a zatem zawsze, gdy waciwo ta
+
+26
+00:02:12,510 --> 00:02:14,430
+zostanie wykonana jako funkcja.
+
+27
+00:02:14,430 --> 00:02:20,890
+Na przykad, jeli przypiszemy to do obsugi po klikniciu, wwczas ta metoda wysyki zostanie wykonana.
+
+28
+00:02:21,330 --> 00:02:26,700
+I do tej metody mog teraz przekaza obiekt javascript, w ktrym musimy ustawi typ.
+
+29
+00:02:26,700 --> 00:02:34,480
+Jak si nauczysz, a ja ustawi ten typ, ktry zwikszy twoj, z tym, e mamy wasno, moemy rwnie uy
+
+30
+00:02:34,480 --> 00:02:35,300
+naszego kontenera.
+
+31
+00:02:35,470 --> 00:02:40,690
+Przynajmniej moemy to zrobi, kiedy przekazujemy to jako drugi argument do poczenia.
+
+32
+00:02:40,690 --> 00:02:46,960
+A tak na marginesie, jeli kiedykolwiek miae przypadek, w ktrym nie masz adnych dziaa w swoim
+
+33
+00:02:46,960 --> 00:02:52,960
+kontenerze, porzu go tak, jak przedtem, lub jeli masz pojemnik, ktry wymaga tylko wysania akcji, ale
+
+34
+00:02:52,960 --> 00:02:57,950
+nie potrzebuje kawaka stan po prostu przekazujesz null jako pierwszy argument do poczenia.
+
+35
+00:02:58,120 --> 00:02:59,700
+Tak jak na marginesie.
+
+36
+00:03:00,250 --> 00:03:05,860
+Wracajc do naszej konfiguracji, teraz przechodz na map tej strony do rekwizytw rwnie do metody connect.
+
+37
+00:03:05,980 --> 00:03:09,730
+I dziki temu uzyskuj dostp do metody licznika przyrostowego w tym miejscu.
+
+38
+00:03:09,730 --> 00:03:11,490
+Wic uyjmy tej waciwoci.
+
+39
+00:03:11,770 --> 00:03:17,440
+Skopiuj nazwisko na licznik inkrementw i chc go uy tutaj w moim
+
+40
+00:03:17,440 --> 00:03:24,640
+kontrolerze zamachu, w ktrym teraz mam przycisk zwikszania dawki, ktry jest tylko podpisem, podaem referencj.
+
+41
+00:03:24,640 --> 00:03:30,250
+Co chc wykona na dole, aby kontratakowa, wic mog przekaza funkcj, ktra powinna zosta wykonana
+
+42
+00:03:30,300 --> 00:03:32,640
+i klikam na tym rekwiycie tutaj.
+
+43
+00:03:32,650 --> 00:03:39,970
+Teraz nie chc ju przekazywa tej anonimowej funkcji, ale to na liczniku inkrementw bez jej wykonywania.
+
+44
+00:03:39,970 --> 00:03:40,160
+&nbsp;
+
+45
+00:03:40,210 --> 00:03:42,340
+Wic bez nawiasw tak jak to.
+
+46
+00:03:42,490 --> 00:03:48,460
+Nastpnie odniesiemy si do tego wniosku, ktry zawiera odniesienie do tej anonimowej funkcji,
+
+47
+00:03:48,460 --> 00:03:55,300
+ktra zostanie nastpnie wykonana, a nastpnie wyle to dziaanie wraz z wysyk i dziaaniem.
+
+48
+00:03:55,300 --> 00:04:01,040
+Zobaczmy teraz, jak zmieni to, aby si przeciwstawi, powracajc do reduktora.
+
+49
+00:04:01,150 --> 00:04:04,210
+I oczywicie dostosowujc go do obsugi tej akcji.
+
+50
+00:04:04,210 --> 00:04:12,340
+Wic znasz instrukcj if, aby sprawdzi typ akcji w ten sposb, a ja zobacz, czy typ akcji
+
+51
+00:04:12,340 --> 00:04:13,110
+jest rwny.
+
+52
+00:04:13,390 --> 00:04:19,060
+A teraz musz wzi ten sam identyfikator, co tutaj podano, poniewa jest to oczywicie
+
+53
+00:04:19,090 --> 00:04:21,100
+identyfikator identyfikujcy to dokadne dziaanie.
+
+54
+00:04:21,100 --> 00:04:23,530
+Tak wic jedna literwka i to nie zadziaa.
+
+55
+00:04:23,780 --> 00:04:31,180
+Tak stary kopiuje przyrostowy tekst, a ja sprawdz, czy typ akcji jest rwny temu wewntrz twojego, Nie
+
+56
+00:04:31,540 --> 00:04:38,230
+chc, aby mj zaktualizowany stan by niezmienny, tworzc nowy obiekt javascript i nawet nie musz kopiowa
+
+57
+00:04:38,230 --> 00:04:40,070
+mojego starego tutaj stwierdza.
+
+58
+00:04:40,090 --> 00:04:42,060
+Najpierw jednak moglibymy to zrobi.
+
+59
+00:04:42,340 --> 00:04:48,430
+Na razie po prostu zwrc nowy obiekt z waciwoci licznika, poniewa jest to odpowiednikiem kopiowania wszystkiego,
+
+60
+00:04:48,430 --> 00:04:52,880
+poniewa i tak masz tylko wasno licznika w naszym starym stanie.
+
+61
+00:04:53,290 --> 00:05:00,010
+Wic tutaj wrc do licznika i ustawi jako rwny licznikowi stanw plus jeden taki.
+
+62
+00:05:00,400 --> 00:05:08,070
+Jeli wic ten uytkownik jest skonfigurowany do powrotu do kontenera licznika, upewnij si, e w moim kontrolerze powinien
+
+63
+00:05:08,100 --> 00:05:09,520
+wysa t akcj.
+
+64
+00:05:09,520 --> 00:05:17,010
+Teraz, jeli spojrzysz, oto tutaj jest bd, po drodze zbieraj to, o czym mwimy podczas spotkania intro.
+
+65
+00:05:17,090 --> 00:05:22,680
+To oczywicie nie jest metoda klasowa, poniewa musiaaby tak by, jeli tak to nazywamy.
+
+66
+00:05:22,700 --> 00:05:24,270
+Mino rekwizyty.
+
+67
+00:05:24,440 --> 00:05:32,030
+Wic te rekwizyty na liczniku inkrementw s poprawne, bo to tylko rekwizyt. Otrzymujemy waciwo zawierajc odniesienie
+
+68
+00:05:32,030 --> 00:05:34,720
+do tej funkcji.
+
+69
+00:05:34,730 --> 00:05:40,490
+Jeli te zmiany zostan wprowadzone, jeli wszystko zapiszemy, zapiszemy wszystkie pliki i wrcimy do aplikacji, zobaczymy to
+
+70
+00:05:40,490 --> 00:05:41,320
+w Nanavati.
+
+71
+00:05:41,390 --> 00:05:48,710
+Ale to robi cokolwiek poza przyrostem, ale zwiksza warto licznika, ale teraz jest zarzdzane przez Rydex.
+
+72
+00:05:48,860 --> 00:05:49,850
+To jest niesamowite.
+
+73
+00:05:49,850 --> 00:05:51,310
+Teraz zrbmy to troch.
+

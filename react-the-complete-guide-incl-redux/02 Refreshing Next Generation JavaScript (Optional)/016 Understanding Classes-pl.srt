@@ -1,0 +1,224 @@
+1
+00:00:02,220 --> 00:00:08,790
+Dowiedzielimy si o imporcie i eksporcie. Kolejn podstawow cech javascript nastpnej generacji s
+
+2
+00:00:09,390 --> 00:00:14,190
+klasy, jeli pochodzisz z innego jzyka programowania, moesz ju zna klasy.
+
+3
+00:00:14,250 --> 00:00:17,880
+Klasy s zasadniczo projektami obiektw.
+
+4
+00:00:17,880 --> 00:00:24,390
+W naszym przypadku tutaj dla obiektw javascript. Klasa jest tworzona ze sowem kluczowym class, a
+
+5
+00:00:24,390 --> 00:00:27,860
+klasa moe mie zarwno waciwoci, jak i metody.
+
+6
+00:00:28,110 --> 00:00:33,720
+Metody s po prostu funkcjami doczonymi do klas, w ktrych waciwoci s zmiennymi doczonymi do klas.
+
+7
+00:00:33,720 --> 00:00:39,440
+Mona powiedzie, e uyjemy obu w tym kursie, a wtedy oczywicie zawsze wyjanimy, co tu robimy.
+
+8
+00:00:39,480 --> 00:00:46,850
+Kiedy dodajemy tak waciwo lub metod, klasa jest tworzona tak jak to z nowym sowem kluczowym.
+
+9
+00:00:46,980 --> 00:00:50,790
+A to moe oczywicie wyglda znajomo, jeli pracowae troch z javascript.
+
+10
+00:00:50,850 --> 00:00:56,190
+Moesz zauway, e funkcje konstruktora i rzeczywicie klasy s bardziej wygodnym
+
+11
+00:00:56,190 --> 00:01:02,520
+sposobem tworzenia funkcji konstruktora, wic tworzysz obiekty javascript z klasami jako projektami.
+
+12
+00:01:02,520 --> 00:01:06,290
+Taki jest pomys, a klasy wspieraj rwnie dziedziczenie.
+
+13
+00:01:06,300 --> 00:01:12,030
+Oznacza to, e masz inn klas, ktr dziedziczysz, biorc wszystkie jej waciwoci i metody
+
+14
+00:01:12,030 --> 00:01:15,140
+oraz potencjalnie dodajc nowe waciwoci i metody.
+
+15
+00:01:15,350 --> 00:01:17,110
+To te moe wyglda znajomo.
+
+16
+00:01:17,250 --> 00:01:19,450
+Moesz zauway na podstawie prototypw.
+
+17
+00:01:19,470 --> 00:01:21,860
+Rzumy okiem na zajcia w akcji.
+
+18
+00:01:22,260 --> 00:01:24,160
+Stwrzmy tutaj now klas.
+
+19
+00:01:24,270 --> 00:01:27,310
+Nazw tak osob.
+
+20
+00:01:27,330 --> 00:01:30,570
+Nastpnie masz nawiasy klamrowe, aby zaznaczy ciao klasy.
+
+21
+00:01:30,690 --> 00:01:38,070
+Teraz moemy zacz korzysta z waciwoci teraz w najprostszej formie, wasno jest dodawana przez
+
+22
+00:01:38,070 --> 00:01:41,760
+dodanie konstruktora, ktry jest domyln metod funkcji.
+
+23
+00:01:41,820 --> 00:01:47,490
+Moesz doda do dowolnej klasy, ktra bdzie wykonywana przy tworzeniu instancji klasy, a
+
+24
+00:01:47,490 --> 00:01:52,470
+metoda jest tworzona za pomoc nazwy nawiasw, a nastpnie nawiasw klamrowych.
+
+25
+00:01:52,860 --> 00:01:59,070
+Nastpnie moemy teraz ustawi waciwoci za pomoc tego sowa kluczowego i moemy napisa, e ta nazwa jest rwna
+
+26
+00:01:59,070 --> 00:02:00,290
+na przykad max.
+
+27
+00:02:00,750 --> 00:02:02,590
+Moemy teraz doda metod.
+
+28
+00:02:02,880 --> 00:02:12,720
+PrintMyName i moemy po prostu wypisa to. nazwa odnoszca si do stworzonej przez nas wasnoci nazwy.
+
+29
+00:02:12,720 --> 00:02:20,250
+Teraz moemy uy tej klasy do przechowywania instancji w staej z now osob, a nastpnie
+
+30
+00:02:20,260 --> 00:02:21,510
+moemy wykona osob.
+
+31
+00:02:21,510 --> 00:02:23,870
+PrintMyName.
+
+32
+00:02:24,150 --> 00:02:27,780
+Jeli teraz uderzymy, widzimy Max.
+
+33
+00:02:27,950 --> 00:02:30,930
+Tak atwo moemy uy klasy.
+
+34
+00:02:30,960 --> 00:02:33,420
+Teraz powiedziaem, e klasy mog rwnie dziedziczy.
+
+35
+00:02:33,450 --> 00:02:43,620
+Moemy wic stworzy inn klas ludzk i tam moemy doda
+
+36
+00:02:43,620 --> 00:02:51,060
+konstruktora, ktry to ustawi. pe rwna pci mskiej lub eskiej oczywicie, jeli chcesz, co
+
+37
+00:02:51,060 --> 00:02:55,680
+czujesz, cokolwiek chcesz i moesz wydrukowa program Gender, a nastpnie wypisa log konsoli.
+
+38
+00:02:55,770 --> 00:02:57,840
+to. pe.
+
+39
+00:02:58,180 --> 00:03:04,420
+A teraz, jeli osoba si rozciga, to sowo kluczowe rozciga si na czowieka.
+
+40
+00:03:04,660 --> 00:03:12,280
+Teraz dziedziczymy t waciwo i t metod printGender, a my moemy uywa zarwno na osobie, jak
+
+41
+00:03:12,730 --> 00:03:17,390
+i rwnie moemy wywoa osob. printGender w ten sposb.
+
+42
+00:03:17,390 --> 00:03:21,720
+Zanim jednak zaczniemy dziaa poprawnie, sprbujmy tego.
+
+43
+00:03:21,820 --> 00:03:28,480
+Otrzymamy bd, ktry musimy nazwa super konstruktorem w klasie pochodnej i to jest wane.
+
+44
+00:03:28,630 --> 00:03:34,320
+Jeli rozszerzasz inn klas i implementujesz konstruktor, ktrego nie musisz.
+
+45
+00:03:34,330 --> 00:03:41,280
+Ale jeli tak, to musisz doda super super specjaln metod do konstruktora.
+
+46
+00:03:41,320 --> 00:03:47,470
+Jest to sowo kluczowe i po prostu wykonuje konstruktor nadrzdny, do ktrego oczywicie musisz si
+
+47
+00:03:47,470 --> 00:03:49,540
+poprawi, aby zainicjowa klas nadrzdn.
+
+48
+00:03:49,570 --> 00:03:56,340
+Wic teraz jasne i biegnij, zobaczysz Maxa i mczyzn i oczywicie moesz teraz przej do swojej klasy i
+
+49
+00:03:56,350 --> 00:04:02,740
+nadal ustala pe dla kobiet, co nie jest w 100% poprawne, ale to tylko po to, eby
+
+50
+00:04:02,740 --> 00:04:03,880
+pokaza, e to dziaa.
+
+51
+00:04:03,940 --> 00:04:08,960
+Teraz widzimy, e drukujemy kobiet, mimo e nadal wzywamy printGender tutaj.
+
+52
+00:04:09,070 --> 00:04:17,800
+Ale jest rozszerzony przez osob, wic s to klasy i klasy uywane przez React do tworzenia jego komponentw.
+
+53
+00:04:17,800 --> 00:04:20,960
+Przynajmniej jest to jeden z dwch sposobw tworzenia komponentw.
+
+54
+00:04:20,980 --> 00:04:26,500
+Jest to, jak wida mi go uywa w tym kursie i wane jest, aby
+
+55
+00:04:26,500 --> 00:04:33,850
+zrozumie, e zajcia s tylko plany dla obiektw JavaScript i s bardzo porwnywalne do funkcji konstruktora, gdzie dziedziczenie
+
+56
+00:04:33,880 --> 00:04:35,640
+jest porwnywalna do prototypw.
+

@@ -1,0 +1,220 @@
+1
+00:00:02,400 --> 00:00:07,430
+Siamo quasi alla fine di questo routing di Marchal, molti contenuti sono stati trattati qui.
+
+2
+00:00:07,620 --> 00:00:14,190
+Ora c' una cosa importante da sapere per quanto riguarda il routing quando si utilizza il router di reazione quando
+
+3
+00:00:14,190 --> 00:00:19,650
+si tratta del polo nella propria app su un server reale perch non lo si noter qui
+
+4
+00:00:19,650 --> 00:00:22,460
+sul server di sviluppo perch  gi configurato correttamente.
+
+5
+00:00:22,500 --> 00:00:27,280
+Devi ricordare come le richieste di gestione funzionano effettivamente nel web.
+
+6
+00:00:27,510 --> 00:00:33,810
+Abbiamo l'utente che invia una richiesta al server e abbiamo la nostra app di re-act che viene poi
+
+7
+00:00:33,810 --> 00:00:36,030
+caricata nella pagina indice di HVM elde.
+
+8
+00:00:36,060 --> 00:00:43,890
+che prima di caricare la pagina di posta elettronica dell'indice il server deve individuare la pagina che l'utente desidera effettivamente visitare.
+
+9
+00:00:43,890 --> 00:00:44,900
+Il problema 
+
+10
+00:00:45,090 --> 00:00:48,670
+Questo naturalmente  il caso perch il server gestisce sempre le richieste prima.
+
+11
+00:00:48,720 --> 00:00:51,390
+Ecco come funziona Internet.
+
+12
+00:00:51,390 --> 00:00:55,830
+Il problema  che  il Riak che conosce i percorsi.
+
+13
+00:00:55,920 --> 00:01:04,050
+Quindi se esaminiamo i messaggi di barra non ci sono percorsi di barre sul nostro server che sono definiti nel codice
+
+14
+00:01:04,050 --> 00:01:11,640
+javascript che viene caricato nella pagina HTL dell'indice che non otteniamo mai perch otteniamo un errore di 4 0 sul
+
+15
+00:01:11,640 --> 00:01:15,610
+server perch abbiamo provato a wisit una rotta sconosciuta al server.
+
+16
+00:01:15,810 --> 00:01:20,820
+hai visto durante lo sviluppo perch, come ho detto, il server di sviluppo  gi configurato correttamente.
+
+17
+00:01:20,820 --> 00:01:22,800
+E chiaramente questo non  quello che
+
+18
+00:01:22,920 --> 00:01:30,720
+Dobbiamo configurare il server in modo che risponda sempre alle richieste, non importa se le capisce
+
+19
+00:01:30,720 --> 00:01:31,670
+o meno.
+
+20
+00:01:31,710 --> 00:01:40,500
+Cos anche per errori o richieste al client in modo che restituisca sempre la pagina del team di indice
+
+21
+00:01:40,500 --> 00:01:48,750
+anche per le richieste note perch questo consente quindi di reagire e di analizzare la richiesta rispetto alle
+
+22
+00:01:48,750 --> 00:01:50,360
+rotte che conosce.
+
+23
+00:01:50,610 --> 00:01:53,050
+Quindi dovremmo sempre caricare l'indice H. T. E se poi c' una richiesta che non conosciamo.
+
+24
+00:01:53,360 --> 00:01:55,910
+Bene, hai imparato come gestire un 4 per errori con il router re-act.
+
+25
+00:01:55,950 --> 00:02:01,280
+Ora, come ho detto, il server di sviluppo che abbiamo
+
+26
+00:02:01,320 --> 00:02:08,090
+usato qui  gi configurato per caricare sempre il file del team successivo.
+
+27
+00:02:08,080 --> 00:02:09,150
+ qualcosa che dovrai fare anche quando stai ospitando l'app sul tuo server.
+
+28
+00:02:09,270 --> 00:02:14,330
+Torna sempre alla prossima HVM.
+
+29
+00:02:14,550 --> 00:02:16,710
+Anche e soprattutto in 4 0 per i casi di errore.
+
+30
+00:02:16,920 --> 00:02:21,940
+Un'altra cosa che devi sapere quando si ospita la tua app sul tuo server.
+
+31
+00:02:22,060 --> 00:02:27,120
+Se lo stai ospitando, diciamo che il punto non  nulla.
+
+32
+00:02:27,360 --> 00:02:30,970
+mia app cos nulla di meglio cartella dovrebbe essere il tuo reagire.
+
+33
+00:02:30,990 --> 00:02:35,910
+Quindi, se quella  la pagina con cui stiamo atterrando sulla pagina del percorso della tua app
+
+34
+00:02:35,940 --> 00:02:42,240
+non hai bisogno di impostare nulla di speciale ma se stai servendo la tua app da diciamo ad esempio la com slash
+
+35
+00:02:42,240 --> 00:02:45,560
+Devi raccontare di nuovo su questo.
+
+36
+00:02:45,870 --> 00:02:48,050
+Reagisci router per essere precisi.
+
+37
+00:02:48,100 --> 00:02:50,150
+ necessario impostare la
+
+38
+00:02:50,340 --> 00:02:57,780
+base per il router di risposta e voglio mostrarti rapidamente come farlo nella tua applicazione.
+
+39
+00:02:57,780 --> 00:02:58,750
+Nel posto in cui si utilizza il router del browser.
+
+40
+00:02:58,830 --> 00:03:01,210
+e hai davvero bisogno di farlo.
+
+41
+00:03:01,260 --> 00:03:07,560
+Quindi nel nostro caso e ha effettivamente file qui browser router puoi anche configurare dat
+
+42
+00:03:07,560 --> 00:03:08,660
+Ma c' un oggetto basename che puoi impostare e per impostazione predefinita  impostato su barra.
+
+43
+00:03:08,820 --> 00:03:14,520
+Quindi questo  il valore predefinito ma non  necessario impostare.
+
+44
+00:03:14,760 --> 00:03:17,310
+Se stai servendo la tua app dalla mia
+
+45
+00:03:17,520 --> 00:03:26,460
+app, dovresti impostare questa opzione per tagliare la mia app, quindi tutte le tue richieste vengono indirizzate alla mia barra dell'app e quindi al link che avevi indicato.
+
+46
+00:03:26,460 --> 00:03:31,940
+Altrimenti se avessi un link come qui.
+
+47
+00:03:32,010 --> 00:03:36,200
+Se si spinge la pagina cambia su facendo
+
+48
+00:03:36,240 --> 00:03:44,640
+clic su post qui navighiamo per tagliare i messaggi e aggiungerebbe sempre questo al dominio principale.
+
+49
+00:03:44,700 --> 00:03:47,180
+Ora, se ti  stata richiesta un'app
+
+50
+00:03:47,190 --> 00:03:54,750
+di re-act dalla barra della mia app, funzioner correttamente e verr aggiunta alla fine della barra del dominio della mia app.
+
+51
+00:03:54,750 --> 00:03:57,110
+Se basename  impostato cos ogni volta che stai servendo la tua app da una sottodirectory, assicurati di impostare basename.
+
+52
+00:03:57,240 --> 00:04:04,860
+Quindi qui rimuover basename o tutti duplicati e commentati
+
+53
+00:04:04,950 --> 00:04:11,790
+per lasciarlo qui per riferimento e rimuoverlo nel browser.
+
+54
+00:04:11,790 --> 00:04:13,000
+In realt stiamo usando Ma questo  qualcosa che devi sapere.
+
+55
+00:04:13,020 --> 00:04:16,490
+&nbsp;
+

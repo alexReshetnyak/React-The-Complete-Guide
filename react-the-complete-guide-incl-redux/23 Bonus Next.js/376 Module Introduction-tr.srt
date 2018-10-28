@@ -1,0 +1,68 @@
+1
+00:00:02,170 --> 00:00:09,700
+Bu modle ho geldiniz, bu modlde nextjs'e bir gz atacam ve size
+
+2
+00:00:09,700 --> 00:00:16,450
+ilk ksa bir tantm yapacam. NextJs, reaksiyona dayanan bir ktphanedir ve onunla hala bir
+
+3
+00:00:16,450 --> 00:00:16,810
+tepki
+
+4
+00:00:16,810 --> 00:00:20,250
+uygulamas yazacaksnz, ekstra bir ktphane erevesi veya szdizimi deil.
+
+5
+00:00:20,470 --> 00:00:20,920
+NextJS
+
+6
+00:00:20,980 --> 00:00:27,100
+bunun yerine kullanmak zorunda olduunuz belirli bir klasr yapsn zorlar ve size sunucu tarafnda
+
+7
+00:00:27,100 --> 00:00:32,380
+render yapma gibi baz eyler verir. Bu klasr yapsn kullandnz iin, sizin iin
+
+8
+00:00:32,380 --> 00:00:37,560
+birok eyi ynetebilir, bylece bunlar manuel olarak yaplandrmanz gerekmez ve bu nedenle zellikle sunucu
+
+9
+00:00:37,560 --> 00:00:45,580
+taraf oluturma ksm iin tepki oluturma ilemlerinin daha kolay hale getirilmesini salayabilir. Sunucu taraf oluturma, ihtiyacnz olmayan eylere tepki
+
+10
+00:00:45,580 --> 00:00:51,700
+vermenin sper ilgin bir parasdr, ancak arama motorlarnda bu yksek derecede
+
+11
+00:00:51,700 --> 00:00:55,410
+baml olan bir uygulamaya sahipseniz yardmc olabilir.
+
+12
+00:00:55,420 --> 00:00:56,510
+Yani ksaca
+
+13
+00:00:56,530 --> 00:00:57,490
+nextjiler.
+
+14
+00:00:57,490 --> 00:01:00,830
+imdi bu modlde adm adm ilerleyelim ve
+
+15
+00:01:00,830 --> 00:01:06,860
+elbette aklda tutunuz ki, sadece bir giri modl geleceklerin tm zelliklerini burada deil,
+
+16
+00:01:06,970 --> 00:01:09,060
+nemli temel kavramlar kapsayacaktr.
+
+17
+00:01:09,080 --> 00:01:10,430
+O zaman ona dalalm.
+

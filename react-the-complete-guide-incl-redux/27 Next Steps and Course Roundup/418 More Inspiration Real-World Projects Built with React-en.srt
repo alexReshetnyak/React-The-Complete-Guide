@@ -1,0 +1,68 @@
+1
+00:00:01,950 --> 00:00:05,170
+In the last video we had a look at reactrocks.com,
+
+2
+00:00:05,250 --> 00:00:09,780
+now I want to guide you to this Google search, build with react.
+
+3
+00:00:09,810 --> 00:00:16,560
+Now this might sound stupid but if you look at it, you will for one find an official link so on the official
+
+4
+00:00:16,560 --> 00:00:22,850
+react repo where you can find projects that are using react and you can look through that list.
+
+5
+00:00:22,870 --> 00:00:28,710
+Now if you click on one of these projects, you'll be redirected to the page not to the source code.
+
+6
+00:00:28,710 --> 00:00:35,160
+Still, when I talked about practicing that, this can give you some ideas about what you can build because
+
+7
+00:00:35,160 --> 00:00:38,440
+since all of that here is built with react,
+
+8
+00:00:38,490 --> 00:00:42,260
+well you certainly can't find an excuse that you can't do it with react.
+
+9
+00:00:42,540 --> 00:00:47,700
+So definitely feel free to play around here and dig into these projects to get an idea about what you
+
+10
+00:00:47,700 --> 00:00:48,540
+might build.
+
+11
+00:00:48,630 --> 00:00:54,380
+You will also find more sites when searching for build with react, like madewithreact.com,
+
+12
+00:00:54,570 --> 00:01:00,080
+you can also check this out and then find some projects there which you can inspect and there you should
+
+13
+00:01:00,080 --> 00:01:03,050
+also find the source code for the project.
+
+14
+00:01:03,060 --> 00:01:09,690
+So that again is another way of really practicing react and digging into other people's projects to
+
+15
+00:01:09,690 --> 00:01:11,790
+learn how you may improve your code,
+
+16
+00:01:11,790 --> 00:01:15,300
+however people solved certain problems and so on.
+
+17
+00:01:15,330 --> 00:01:21,940
+So build with react, another great resource to learn more about react and find out how it works.
+

@@ -1,0 +1,216 @@
+1
+00:00:02,190 --> 00:00:07,180
+Saiba sobre as ltimas palestras que eu apresentei algumas das mais importantes funcionalidades de
+
+2
+00:00:07,180 --> 00:00:10,240
+javascript da prxima gerao que voc ver nesses tribunais.
+
+3
+00:00:10,270 --> 00:00:12,810
+H duas coisas que eu sei definitivamente.
+
+4
+00:00:12,830 --> 00:00:13,980
+Tambm quero cobrir.
+
+5
+00:00:14,020 --> 00:00:20,650
+Eles no so javascript da prxima gerao, mas eles so caractersticas que voc pode ter perdido ou esquecido e
+
+6
+00:00:20,740 --> 00:00:23,190
+eles so super importantes para se lembrar.
+
+7
+00:00:23,380 --> 00:00:30,220
+O primeiro recurso ou conceito de javascript Estou falando sobre o fato de voc ter
+
+8
+00:00:30,220 --> 00:00:31,870
+referncia e tipos primitivos.
+
+9
+00:00:31,870 --> 00:00:37,850
+Se eu criar um nmero como este, ento este  um tipo primitivo.
+
+10
+00:00:37,900 --> 00:00:44,560
+Isso significa que se eu tambm crie um segundo nome de nmero e configur-lo igual a este nmero,
+
+11
+00:00:44,560 --> 00:00:49,240
+ento ele criar uma cpia real do nmero, ento nome,  claro.
+
+12
+00:00:49,240 --> 00:00:53,930
+Agora, se eu bloquear isso, tudo ser.
+
+13
+00:00:54,450 --> 00:00:58,470
+Mas ele ter copiado esse valor um em dois.
+
+14
+00:00:58,710 --> 00:01:06,030
+Now numbers strings booleans Estes so os chamados tipos primitivos sempre que voc reatribuir ou voc armazena uma varivel
+
+15
+00:01:06,090 --> 00:01:07,830
+em uma varivel numrica.
+
+16
+00:01:07,860 --> 00:01:12,720
+Ele ir copiar os objetos de valor e os arrays so tipos de referncia.
+
+17
+00:01:12,720 --> 00:01:14,770
+Embora deixe-me mostrar o que quero dizer.
+
+18
+00:01:14,910 --> 00:01:23,000
+Eles criam meu objeto pessoal que s tem um nome aqui e agora crio uma segunda pessoa, uma pessoa
+
+19
+00:01:23,000 --> 00:01:24,940
+designada como valor aqui.
+
+20
+00:01:25,250 --> 00:01:27,120
+Se o log da minha consola.
+
+21
+00:01:27,140 --> 00:01:35,360
+A segunda pessoa e eu execut-lo ir imprimir o mesmo valor que a primeira pessoa, mas na
+
+22
+00:01:35,390 --> 00:01:38,010
+verdade no ter copiado a pessoa.
+
+23
+00:01:38,150 --> 00:01:46,490
+Pessoa, o objeto  armazenado na memria e a pessoa constante que armazenamos um ponteiro para esse lugar na memria.
+
+24
+00:01:46,700 --> 00:01:52,030
+E se ns atribumos a pessoa a segunda pessoa, esse ponteiro ser copiado.
+
+25
+00:01:52,280 --> 00:01:59,450
+Podemos ver que este  o caso se mudarmos o nome das pessoas depois de t-lo copiado.
+
+26
+00:01:59,510 --> 00:02:07,400
+Com isso, voc esperaria imprimir o Max aqui ainda uma pessoa com o nome Max porque copiamos a
+
+27
+00:02:07,400 --> 00:02:11,690
+pessoa armazenada na segunda pessoa e a mudou o nome.
+
+28
+00:02:11,690 --> 00:02:15,200
+No entanto, se eu limpar e executar voc ver o nome.
+
+29
+00:02:15,230 --> 00:02:22,010
+Man voc aqui mesmo que eu estou imprimindo a segunda pessoa, ento, para uma segunda pessoa, o nome tambm
+
+30
+00:02:22,340 --> 00:02:29,190
+mudou o motivo porque  que ele apenas copiou o ponteiro e aponta exatamente o mesmo objeto na memria
+
+31
+00:02:29,210 --> 00:02:30,430
+que a pessoa faz.
+
+32
+00:02:30,470 --> 00:02:35,480
+Ento, se mudarmos o nome na pessoa, mudamos automaticamente para uma segunda pessoa.
+
+33
+00:02:35,480 --> 00:02:36,530
+Agora isso  importante.
+
+34
+00:02:36,530 --> 00:02:38,850
+Tenha em mente e  o mesmo para apagar.
+
+35
+00:02:38,900 --> 00:02:41,840
+Se voc copi-lo entre aspas.
+
+36
+00:02:41,930 --> 00:02:43,310
+Uma matriz como essa.
+
+37
+00:02:43,430 --> 00:02:45,370
+E voc ento altera um elemento de matriz.
+
+38
+00:02:45,410 --> 00:02:49,510
+Tudo mudar no chamado conjunto copiado.
+
+39
+00:02:49,520 --> 00:02:54,540
+Isso se tornar importante em reagir porque pode levar a comportamentos inesperados.
+
+40
+00:02:54,590 --> 00:03:02,170
+nico lugar e aplicativo e manipular acidentalmente outro uso do mesmo objeto no local natural do aplicativo.
+
+41
+00:03:02,250 --> 00:03:09,140
+Se voc copiar objetos ou arrays como este porque voc pode manipular um objeto em um
+
+42
+00:03:09,170 --> 00:03:16,850
+Portanto, aprenderemos tcnicas para copiar isso da maneira imutvel, o que significa que copiamos os mortos, realmente
+
+43
+00:03:16,850 --> 00:03:24,630
+copiando o objeto e no apenas um ponteiro para a morte que podemos usar  o operador espalhado.
+
+44
+00:03:24,680 --> 00:03:34,020
+Agora, podemos simplesmente criar um novo objeto de pessoa aqui e espalhar as propriedades da pessoa.
+
+45
+00:03:34,040 --> 00:03:40,580
+Isso extrair as propriedades e os valores das propriedades do objeto e adicionado a este
+
+46
+00:03:40,580 --> 00:03:45,500
+objeto recm-criado aqui e criamos um novo com os aparelhos de Cauley.
+
+47
+00:03:45,500 --> 00:03:51,440
+Agora, se eu tivesse claro e executado, ainda imprimimos um objeto com o nome de Mex, embora mudssemos
+
+48
+00:03:51,440 --> 00:03:55,760
+o nome para aqui manualmente, porque agora ns realmente criamos uma cpia real.
+
+49
+00:03:55,760 --> 00:03:59,390
+Esta  uma tcnica que eu vou voltar para mais tarde neste curso.
+
+50
+00:03:59,390 --> 00:04:05,530
+ apenas importante perceber e ter em mente que objetos e arrays so tipos de referncia.
+
+51
+00:04:05,600 --> 00:04:11,010
+Se voc est sendo designado, voc est copiando o ponteiro e no o valor.
+
+52
+00:04:11,270 --> 00:04:17,690
+So para se voc quiser fazer isso de uma maneira de cpia real, voc ter que criar um novo objeto
+
+53
+00:04:17,690 --> 00:04:20,950
+e simplesmente copiar as propriedades e no o objeto inteiro.
+
+54
+00:04:20,960 --> 00:04:24,230
+Isso  algo muito importante para se manter em mente para o discurso.
+

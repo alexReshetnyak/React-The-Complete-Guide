@@ -1,0 +1,116 @@
+1
+00:00:02,160 --> 00:00:09,450
+Questa  l'immagine pi grande di cosa sia e cosa faccia il webpack, capiamo come funziona dietro le quinte visto che  uno strumento
+
+2
+00:00:09,450 --> 00:00:16,470
+cos cruciale che gestisce tutto il nostro flusso di lavoro di compilazione. Dietro le quinte, il webpack ha quattro
+
+3
+00:00:16,470 --> 00:00:20,180
+cose importanti, quattro caratteristiche importanti, ha sempre bisogno
+
+4
+00:00:20,490 --> 00:00:23,250
+di almeno un punto di ingresso,
+
+5
+00:00:23,250 --> 00:00:25,040
+puoi averne uno multiplo.
+
+6
+00:00:25,050 --> 00:00:32,460
+Questa potrebbe essere la nostra app. js file, il nostro file javascript di root che monta la
+
+7
+00:00:32,460 --> 00:00:39,360
+nostra applicazione reattiva al dom, che richiama il rendering dom ad esempio, ha bisogno di questo file poich analizza le
+
+8
+00:00:39,360 --> 00:00:45,870
+dipendenze di questo file e il file di voce di root avr una dipendenza da un altro file che
+
+9
+00:00:45,870 --> 00:00:52,450
+a sua volta ha pi dipendenze, quindi webpack pu creare un grafico delle dipendenze a partire da quel file
+
+10
+00:00:52,670 --> 00:00:56,280
+di immissione radice in modo che possa capire quali file compongono
+
+11
+00:00:56,320 --> 00:01:03,390
+la nostra applicazione se gli diamo il nostro file di ingresso. Analizza quindi tutte le dipendenze e le raggruppa
+
+12
+00:01:03,450 --> 00:01:03,960
+in
+
+13
+00:01:03,960 --> 00:01:10,100
+un output che viene specificato come un pacchetto. js file in una cartella dist, specifichiamo il nome del file e dove dovrebbe andare.
+
+14
+00:01:10,470 --> 00:01:17,100
+E l metter tutte queste dipendenze in quel file, ordinato correttamente e in un
+
+15
+00:01:17,220 --> 00:01:19,010
+file di output concatenato.
+
+16
+00:01:19,110 --> 00:01:22,840
+Questa  la funzionalit principale, ma come ho detto  pi di
+
+17
+00:01:22,990 --> 00:01:26,780
+questo, nel mezzo, ci sono altre due caratteristiche importanti che possiamo utilizzare.
+
+18
+00:01:26,940 --> 00:01:34,350
+Per uno ci sono i cosiddetti caricatori, i caricatori sono applicati a livello di file, quindi
+
+19
+00:01:34,660 --> 00:01:41,880
+possiamo ad esempio dire che tutti i file javascript dovrebbero essere gestiti da loaderX, tutti i
+
+20
+00:01:41,880 --> 00:01:49,740
+file CSS dovrebbero essere gestiti da loaderY, babel-loader e css-loader sono due esempi popolari che vengono utilizzati
+
+21
+00:01:49,740 --> 00:01:56,320
+in molti progetti, quindi i caricatori dipendono dal file o applicano trasformazioni dipendenti dal file.
+
+22
+00:01:56,340 --> 00:02:03,030
+Disponiamo anche di plug-in in cui i programmi di caricamento vengono applicati in base al file,
+
+23
+00:02:03,040 --> 00:02:09,330
+invece di prendere i file concatenati, quindi il bundle ma prima che venga scritto sull'output.
+
+24
+00:02:09,360 --> 00:02:15,120
+Qui possiamo applicare alcune trasformazioni generali o ottimizzazioni come Uglify, quindi questo  a
+
+25
+00:02:15,420 --> 00:02:20,950
+livello globale e accade dopo che i caricatori hanno fatto il loro lavoro.
+
+26
+00:02:20,970 --> 00:02:24,950
+Ecco come funziona il webpack, cosa fa dietro le quinte
+
+27
+00:02:25,110 --> 00:02:31,110
+e questo  tutto configurato in un file di configurazione del webpack che installeremo insieme
+
+28
+00:02:31,110 --> 00:02:32,510
+in questo modulo.
+
+29
+00:02:32,760 --> 00:02:37,920
+Quindi, senza ulteriori indugi, tuffiamoci nella costruzione del nostro stesso progetto.
+

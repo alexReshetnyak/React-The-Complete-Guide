@@ -1,0 +1,224 @@
+1
+00:00:02,200 --> 00:00:08,570
+W ostatnim wykadzie dodalimy rad i zaczlimy go uywa, aby zmieni nasz przycisk
+
+2
+00:00:08,810 --> 00:00:11,190
+i doda pseudo-selektor, pseudo-selektor hover.
+
+3
+00:00:11,210 --> 00:00:16,220
+Teraz jest to oczywicie mie, ale moemy rwnie uy radu do korzystania z zapyta o media.
+
+4
+00:00:16,320 --> 00:00:23,780
+Teraz zrobi to w komponencie osobowym, tam mamy klas osobow i moemy oczywicie atwo doda
+
+5
+00:00:23,780 --> 00:00:31,100
+zapytanie o media tutaj, gdzie mwimy, e jeli min-szeroko wynosi powiedzmy 500px, to nadpisujemy nasz
+
+6
+00:00:31,100 --> 00:00:36,970
+klas osobow, aby mie szeroko 450 pikseli i nie uywaj ju procentw.
+
+7
+00:00:37,130 --> 00:00:38,840
+Moglibymy to zrobi, ale
+
+8
+00:00:39,020 --> 00:00:43,490
+skomentuj to rozwizanie, poniewa nie chc uywa mojej klasy css,
+
+9
+00:00:43,520 --> 00:00:47,990
+chc pokaza, jak zrobi to z radem, ktrego moesz potrzebowa
+
+10
+00:00:48,080 --> 00:00:54,040
+w niektrych przypadkach, jeli chcesz go skalowa do skadnik lub jeli chcesz go zmieni dynamicznie.
+
+11
+00:00:54,250 --> 00:00:59,900
+W tym celu dodam nowy styl i oczywicie moesz nazwa t sta, co chcesz
+
+12
+00:00:59,900 --> 00:01:08,660
+w mojej funkcji tu i tam, teraz znowu uyj specjalnego selektora, ktry bdzie wyglda naprawd dziwnie, ale ktry dziaa dziki radowi i
+
+13
+00:01:08,900 --> 00:01:11,030
+donowi nie zapomnij zawin twojego
+
+14
+00:01:11,120 --> 00:01:15,650
+eksportu za pomoc radu, w przeciwnym razie nie zadziaa i teraz
+
+15
+00:01:16,070 --> 00:01:18,180
+moesz tutaj napisa zapytanie o media.
+
+16
+00:01:18,440 --> 00:01:30,730
+@media (min-width: 500px), a nastpnie zdefiniuj style jako obiekt javascript.
+
+17
+00:01:30,880 --> 00:01:33,640
+To nadal jest nazwa waciwoci javascript i wiem,
+
+18
+00:01:33,670 --> 00:01:35,060
+e to wyglda na
+
+19
+00:01:35,080 --> 00:01:39,040
+bardzo dziwne, ale poniewa jest to cig znakw, jest to poprawna nazwa,
+
+20
+00:01:39,040 --> 00:01:44,290
+a radium bdzie je parsowa i oczywicie zrozumie, poniewa jest to zapytanie o media i pord
+
+21
+00:01:44,290 --> 00:01:46,750
+pseudo selektorw, jest to co, co rozumie rad.
+
+22
+00:01:46,750 --> 00:01:54,820
+Teraz moemy powiedzie, e chcemy ustawi szeroko elementu, do ktrego stosujemy styl, do
+
+23
+00:01:54,820 --> 00:02:00,610
+450 px, czyli staej szerokoci, ktra nie ronie dynamicznie.
+
+24
+00:02:00,610 --> 00:02:07,510
+A teraz chc przypisa to do mojego komponentu tutaj, chc przypisa styl i mam dodan moj
+
+25
+00:02:07,810 --> 00:02:14,230
+klas, ale mam te swj styl, ktry nadpisze moje ustawienie klasy, domylnie regu css nie
+
+26
+00:02:14,230 --> 00:02:15,610
+ze wzgldu na rad.
+
+27
+00:02:15,610 --> 00:02:20,120
+A teraz powinnimy zobaczy nastpujce rzeczy, jeli przeadowuj aplikacj lub
+
+28
+00:02:20,140 --> 00:02:27,940
+przeczam osoby, teraz, jak wida, teraz mamy bd, e wtyczka wymagajca addCSS na przykad podczas korzystania z klatek
+
+29
+00:02:28,000 --> 00:02:31,000
+kluczowych lub dla nas wanych zapyta o
+
+30
+00:02:31,000 --> 00:02:34,810
+media, musimy zawin nasz aplikacj w stylowy skadnik root.
+
+31
+00:02:34,810 --> 00:02:42,100
+Jest to komponent udostpniony przez Radium i podczas gdy zawijanie eksportu za pomoc radu
+
+32
+00:02:42,220 --> 00:02:50,200
+jest wystarczajce dla jego pseudo-selektorw, aby zasadniczo przeksztaci selektory takie jak zapytania o media lub
+
+33
+00:02:50,200 --> 00:02:51,700
+inne animacje z
+
+34
+00:02:51,730 --> 00:02:58,150
+klatkami kluczowymi, musimy zawin ca aplikacj w specjalnym komponencie dostarczonym przez Rad.
+
+35
+00:02:58,150 --> 00:03:05,500
+Tam moemy po prostu zaimportowa pierwiastek z radu z tym pierwszym importem radu, importujemy
+
+36
+00:03:05,500 --> 00:03:11,330
+domylny eksport tego pliku, a nastpnie importujemy root nazwany styl eksportu,
+
+37
+00:03:11,680 --> 00:03:15,770
+a teraz moemy po prostu zawin ca nasz aplikacj.
+
+38
+00:03:16,000 --> 00:03:26,240
+Wic moemy po prostu przej tutaj, oops nie osobicie, przepraszam, owiadczenie return i po prostu zawijam
+
+39
+00:03:26,330 --> 00:03:34,750
+wszystko, cay div z aplikacj klasy class do stylu root tak jak ten.
+
+40
+00:03:34,760 --> 00:03:39,400
+Teraz, jeli to zapiszemy i ponownie zaadujemy aplikacj,
+
+41
+00:03:39,470 --> 00:03:41,630
+kliknem to ponownie, teraz
+
+42
+00:03:41,730 --> 00:03:47,690
+dziaa bezbdnie, a jeli zmieniam rozmiar tego, widzisz, e pudeka
+
+43
+00:03:47,690 --> 00:03:48,550
+pozostaj
+
+44
+00:03:48,920 --> 00:03:52,440
+tylko w rodku, ale nie powikszaj
+
+45
+00:03:52,580 --> 00:04:00,860
+ju szerokoci, s ronie do 60 procent, ale jeli przekrocz prg zapyta o media 500px.
+
+46
+00:04:00,860 --> 00:04:08,780
+Jeli wic przekrocz ten prg, w zasadzie bdzie on wynosi 60 procent, jeli przekrocz ten prg,
+
+47
+00:04:08,780 --> 00:04:09,750
+pozostanie on
+
+48
+00:04:09,920 --> 00:04:15,590
+na staej szerokoci 450 pikseli. Wane, owi ca aplikacj w komponencie gwnym tylko
+
+49
+00:04:15,680 --> 00:04:22,700
+tam, gdzie znajduje si stylowy skadnik gwny dostarczony przez rad, aby mg bezpiecznie uzyska dostp do zaawansowanych funkcji, aby
+
+50
+00:04:22,700 --> 00:04:29,940
+wywoywa go w ten sposb, np. Zapytania o media. W przypadku samego pseudo selektora nie musisz
+
+51
+00:04:29,940 --> 00:04:34,430
+wykonywa adnej z tych funkcji, musisz owija komponent, w
+
+52
+00:04:34,460 --> 00:04:40,340
+ktrym planujesz uywa funkcji radu, takich jak zapytania o media, takich
+
+53
+00:04:40,340 --> 00:04:41,200
+jak pseudo
+
+54
+00:04:41,240 --> 00:04:48,520
+selektory, musisz zawin eksport z funkcj radu w zasadzie ktre importujesz z pakietu radu.
+
+55
+00:04:48,800 --> 00:04:58,310
+Tak wic uywanie radu to jeden ze sposobw na uzyskanie najlepszych z obu wiatw obejmujcych style i zaawansowane funkcje css, takie jak
+
+56
+00:04:58,310 --> 00:05:00,740
+selektory pseudosystemw i zapytania o media.
+

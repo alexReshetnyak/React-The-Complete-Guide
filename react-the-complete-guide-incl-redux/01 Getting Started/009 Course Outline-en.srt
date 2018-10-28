@@ -1,0 +1,363 @@
+0
+00:02.230 --> 00:06.720
+So now that we've had a look at the basics of React and what React is about,  
+
+1
+00:06.760 --> 00:11.350
+let me explain what this course is about and what we're going to cover in this course.
+
+2
+00:11.380 --> 00:16.690
+We're almost done getting started. There's only a couple of things I want to mention on how you can get the most
+
+3
+00:16.690 --> 00:23.920
+out of this course and then we'll be leaving this module. Thereafter, you'll actually find an optional
+
+4
+00:23.920 --> 00:26.980
+second module. In this optional module,
+
+5
+00:26.980 --> 00:31.790
+I will walk you through the most important next- generation JavaScript features
+
+6
+00:31.870 --> 00:37.570
+we're going to use in this course. When writing React applications, you typically use quite a lot of
+
+7
+00:37.570 --> 00:42.830
+these next-gen features like arrow functions and classes.
+
+8
+00:42.910 --> 00:48.790
+You do this because it allows you to write cleaner React code and it's the defacto standard to use all
+
+9
+00:48.790 --> 00:53.970
+these features. If you already feel comfortable using next generation JavaScript features,
+
+10
+00:53.980 --> 00:55.190
+so if you already know
+
+11
+00:55.210 --> 00:55.720
+ES6
+
+12
+00:55.770 --> 00:57.070
+and so on,
+
+13
+00:57.220 --> 01:01.290
+then you can skip the next module and I will mention this there too.
+
+14
+01:01.360 --> 01:06.850
+Otherwise, you've got a nice module we're I'll ensure that we're all on the same page and that you've
+
+15
+01:06.850 --> 01:11.620
+got solid fundamentals about all these features we're about to use. You can always go back to that
+
+16
+01:11.620 --> 01:16.860
+module if, later in the course, you encounter something that looks strange or new to you.
+
+17
+01:17.320 --> 01:24.640
+After this optional module, the real second module is the module where we dive into React basics.
+
+18
+01:24.670 --> 01:31.210
+This, of course, is a super-important module. You will learn how you can create React components, that there
+
+19
+01:31.210 --> 01:35.820
+is more than one way of doing so and how you can communicate between components and
+
+20
+01:35.890 --> 01:42.130
+how a React application is generally built. This section also includes things like how we can
+
+21
+01:42.160 --> 01:49.280
+output lists and how we can render some content conditionally. Thereafter, it's time to dive into debugging;
+
+22
+01:49.450 --> 01:51.730
+because we all make mistakes.
+
+23
+01:51.790 --> 01:54.400
+You will write code that fails.
+
+24
+01:54.400 --> 01:56.610
+This is natural and happens to everyone.
+
+25
+01:56.800 --> 02:03.280
+It's super-important that you know how to recover, how to debug your application, how to find that
+
+26
+02:03.340 --> 02:03.960
+error
+
+27
+02:04.090 --> 02:06.090
+that makes your program crash.
+
+28
+02:06.160 --> 02:10.980
+We'll have a look at this in the debugging module. After debugging,
+
+29
+02:11.050 --> 02:13.090
+we'll dive into styling,
+
+30
+02:13.090 --> 02:19.690
+how can we style our React components and how we can make sure that the styling we apply to a component
+
+31
+02:20.140 --> 02:24.880
+only gets applied to that component and not to other components as well.
+
+32
+02:24.880 --> 02:27.410
+We'll take a look at this in that module.
+
+33
+02:27.430 --> 02:34.600
+Thereafter, we'll dive deeper into components. We'll already have learned a lot about them, but here we will
+
+34
+02:34.600 --> 02:36.850
+learn which lifecycle they follow.
+
+35
+02:37.060 --> 02:43.870
+We will learn how we can cleverly control whether React should check for updates to a component or not
+
+36
+02:43.990 --> 02:50.440
+and much more. So this is truly an important module, which will make sure that you understand the internals
+
+37
+02:50.470 --> 02:57.170
+of React and that you've got the tools you need for bigger and more advanced React applications.
+
+38
+02:57.360 --> 03:03.790
+After that, you will have learned a lot about components. But we're far from being done. We'll then dive into HTTP
+
+39
+03:03.790 --> 03:05.210
+requests,
+
+40
+03:05.260 --> 03:09.100
+how we can connect our React application to the outside world,
+
+41
+03:09.130 --> 03:13.510
+how we can fetch data from a server or send to that server,
+
+42
+03:13.780 --> 03:21.130
+how we can do all of this in a single page or also in a multi-page application with asynchronous HTTP requests
+
+43
+03:21.370 --> 03:28.720
+(Ajax); this is what we'll have a look at in that module. Thereafter, we'll dive into routing. Routing is a
+
+44
+03:28.720 --> 03:35.540
+core feature when building single page applications because with routing, we can actually handle different
+
+45
+03:35.540 --> 03:44.590
+URLs (like /user and /products) and render different pages; even though, technically, we
+
+46
+03:44.590 --> 03:52.600
+only have one HTML page and we simply parse the URL with JavaScript and re-render parts of the
+
+47
+03:52.600 --> 03:57.190
+DOM that need to be re-rendered to display a new 'page'.
+
+48
+03:57.190 --> 04:03.520
+That sounds very complex and this is why we will use a package for that. Routing is a super-important
+
+49
+04:03.520 --> 04:05.670
+and key module of this course
+
+50
+04:05.660 --> 04:13.330
+therefore. Now, one important note at this point is all these concepts are always taught in theory and with
+
+51
+04:13.330 --> 04:15.030
+tiny demo projects.
+
+52
+04:15.280 --> 04:22.150
+We will also have an overarching course project, the Burger Builder, and we'll regularly go back to this
+
+53
+04:22.150 --> 04:27.830
+project and apply the features you learn in the previous module to the course project.
+
+54
+04:27.850 --> 04:33.190
+We'll start by planning and creating it. Then we will use advanced component concepts. We will apply
+
+55
+04:33.190 --> 04:40.210
+styling and we'll also apply routing so that we can gradually see our project become better and
+
+56
+04:40.210 --> 04:40.930
+better,
+
+57
+04:40.930 --> 04:47.380
+so that you always have a great way of seeing all these things; not just in theory or in tiny demo
+
+58
+04:47.380 --> 04:50.630
+projects, but in a real project.
+
+59
+04:50.650 --> 04:54.460
+So the things I mentioned here are only the overarching topics.
+
+60
+04:54.490 --> 04:59.860
+This course actually has more modules because we have all these in-between practice-oriented modules.
+
+61
+05:00.250 --> 05:01.500
+Back to the outline though...
+
+62
+05:02.030 --> 05:07.600
+After routing, we'll dive into forms and validation. In almost every web application you build,
+
+63
+05:07.640 --> 05:12.770
+you'll need to fetch user input and in this module, I will show you how to do this in a dynamic way and
+
+64
+05:12.770 --> 05:19.410
+how to also validate user input. Thereafter it's time for Redux, Redux and more Redux.
+
+65
+05:19.460 --> 05:25.850
+We'll dive deeply into Redux; an independent, third-party library which is used
+
+66
+05:25.880 --> 05:32.090
+in many React projects. We'll start at the basics by learning why we might want to use Redux. Then
+
+67
+05:32.090 --> 05:38.240
+we will learn more advanced use-cases like using asynchronous actions in Redux and way more.
+
+68
+05:38.240 --> 05:42.280
+This is an important module and I can't wait to dive into this
+
+69
+05:42.320 --> 05:49.130
+and then also apply it to the course project together with you. After Redux, we'll dive into authentication.
+
+70
+05:49.130 --> 05:55.070
+Probably every web application has some sort of authentication allowing users to sign up and sign in.
+
+71
+05:55.430 --> 05:55.850
+Here,
+
+72
+05:55.880 --> 05:57.810
+I will show you how to implement this.
+
+73
+05:57.830 --> 06:01.750
+I will always, as in all these modules, focus on the client side;
+
+74
+06:01.790 --> 06:05.000
+so, on the React side and not on the server side.
+
+75
+06:05.180 --> 06:11.690
+But of course, I will explain how to implement authentication so that it works with any backend that
+
+76
+06:11.690 --> 06:17.380
+supports this kind of authentication. We'll of course also apply this to the course project.
+
+77
+06:17.380 --> 06:24.560
+After authentication, we'll dive into testing; only an introduction to be honest, because testing is enough
+
+78
+06:24.560 --> 06:31.160
+content or you can create enough content about testing to fill an entire course. But I want to introduce
+
+79
+06:31.160 --> 06:37.280
+you to testing React applications, which tools you use and how to think about testing React apps.
+
+80
+06:38.000 --> 06:43.400
+After testing, we'll of course also learn how to deploy a React application; so how to ship it
+
+81
+06:43.430 --> 06:44.910
+to a real server.
+
+82
+06:45.200 --> 06:45.980
+Thereafter,
+
+83
+06:46.030 --> 06:53.750
+I've got loads of bonus content. For example, a whole module about animating React applications, possible next
+
+84
+06:53.750 --> 06:57.140
+steps where you could dive into after finishing this module,
+
+85
+06:57.140 --> 07:04.100
+a module about NextJS (which is basically a library building up on React and making server-side-rendered
+
+86
+07:04.100 --> 07:11.480
+applications a breeze), a module where we will build our own workflow, our own project from scratch with
+
+87
+07:11.480 --> 07:15.310
+Webpack and a couple of build tools - and way more.
+
+88
+07:15.350 --> 07:18.080
+So, there's a lot of content in this course.
+
+89
+07:18.080 --> 07:23.030
+It has the length it has for a reason in the end and I can't wait to dive into it together with you.
+
+90
+07:23.030 --> 07:26.480
+So, why don't we do that and just start with the course.

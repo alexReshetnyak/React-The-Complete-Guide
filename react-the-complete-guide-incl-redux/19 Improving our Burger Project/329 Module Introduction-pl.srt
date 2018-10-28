@@ -1,0 +1,32 @@
+1
+00:00:02,170 --> 00:00:04,170
+Witamy w tym module.
+
+2
+00:00:04,200 --> 00:00:06,000
+Jest to rodzaj specjalnego
+
+3
+00:00:06,020 --> 00:00:14,110
+moduu, po prostu chc przejrze nasz aplikacj do budowania burgerw i przeanalizowa j, naprawi kilka drobnych bdw
+
+4
+00:00:14,540 --> 00:00:16,680
+i zobaczy, co moemy poprawi.
+
+5
+00:00:16,780 --> 00:00:22,970
+C, prawdopodobnie znajdziesz jeszcze wicej, o czym moesz poprawi, poniewa ktra aplikacja jest kiedykolwiek ukoczona.
+
+6
+00:00:23,000 --> 00:00:28,660
+Ale chc mie dopracowany projekt po tym module, ktry dziaa i czuje si dobrze, ju
+
+7
+00:00:28,850 --> 00:00:32,470
+to robi, ale jest kilka rzeczy, ktre moemy poprawi.
+
+8
+00:00:32,480 --> 00:00:38,110
+Przejdmy wic do tego i zacznijmy od poprawienia maego problemu na nastpnym wykadzie.
+

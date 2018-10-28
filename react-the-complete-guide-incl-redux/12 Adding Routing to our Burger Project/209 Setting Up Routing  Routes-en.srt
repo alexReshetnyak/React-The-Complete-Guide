@@ -1,0 +1,220 @@
+1
+00:00:02,170 --> 00:00:09,160
+In the last lecture, we started building the checkout container or we actually built it
+
+2
+00:00:09,420 --> 00:00:17,220
+but now we want to load it with routing. For that, I'll quit the start process because I'll install a new package
+
+3
+00:00:17,310 --> 00:00:24,690
+with npm install --save to store entry in the package.json file and then it's react-
+
+4
+00:00:24,690 --> 00:00:26,080
+router-dom.
+
+5
+00:00:26,100 --> 00:00:35,230
+Now as mentioned in an article in the react router module, you can install react router, react-router
+
+6
+00:00:35,250 --> 00:00:39,100
+-dom does wrap it and does have it as a dependency
+
+7
+00:00:39,210 --> 00:00:40,610
+but you don't need to.
+
+8
+00:00:40,650 --> 00:00:45,880
+We will only work with react-router-dom here, so that is all we need to install.
+
+9
+00:00:45,930 --> 00:00:49,090
+Still installing the other package too won't hurt you
+
+10
+00:00:49,110 --> 00:00:52,430
+it's not increasing the bundle size or anything like that,
+
+11
+00:00:52,470 --> 00:00:56,530
+you can install it explicitly but you don't need to.
+
+12
+00:00:56,540 --> 00:01:00,830
+So with that, let me now run npm start again.
+
+13
+00:01:01,630 --> 00:01:08,390
+And now that the routing is set up or that the router was installed, I want to take advantage of it to
+
+14
+00:01:08,390 --> 00:01:13,250
+load either the burger builder or the checkout.
+
+15
+00:01:13,250 --> 00:01:19,460
+Now as you learned for that, we need to wrap everything where we want to use routing with the browser router
+
+16
+00:01:20,150 --> 00:01:23,680
+and I will do that in the index.js file
+
+17
+00:01:23,810 --> 00:01:27,160
+though you could do it in the app.js file too.
+
+18
+00:01:27,530 --> 00:01:30,590
+I want to wrap my whole app though so I'll do it here
+
+19
+00:01:30,650 --> 00:01:32,890
+and this is a good place to do it of course.
+
+20
+00:01:33,630 --> 00:01:42,810
+For that I'll add a new import in the index.js file from react-router-dom and the thing I want to import
+
+21
+00:01:43,470 --> 00:01:46,260
+is the browser router.
+
+22
+00:01:46,680 --> 00:01:49,050
+Now I'll create a new constant which I'll just name
+
+23
+00:01:49,090 --> 00:01:50,440
+app,
+
+24
+00:01:50,580 --> 00:01:57,210
+I'll use parentheses to be able to write multi-line jsx code and then I'll use the browser router opening
+
+25
+00:01:57,210 --> 00:02:04,290
+and closing tag and in between I'll put my app like this.
+
+26
+00:02:04,480 --> 00:02:13,440
+And now I'll use the app const that I just created down there as an argument to pass it down here in
+
+27
+00:02:13,450 --> 00:02:15,290
+react dom render.
+
+28
+00:02:15,300 --> 00:02:18,030
+Now we can use routing in our package,
+
+29
+00:02:18,080 --> 00:02:20,320
+this is routing enabled.
+
+30
+00:02:20,340 --> 00:02:26,040
+Now let's set up some routes and let's do this in the app.js file where I currently load both
+
+31
+00:02:26,130 --> 00:02:29,610
+the burger builder and checkout. To set up routing,
+
+32
+00:02:29,670 --> 00:02:39,500
+I'll import the route component from react-router-dom like this and now instead of using burger builder or
+
+33
+00:02:39,560 --> 00:02:48,810
+checkout like this hardcoded in there are or route with a path and then with component, to render
+
+34
+00:02:48,810 --> 00:02:50,150
+some component here.
+
+35
+00:02:50,270 --> 00:02:55,130
+It's a self-closing component because you don't need to pass anything between opening and closing tag,
+
+36
+00:02:55,130 --> 00:02:56,960
+I actually can't.
+
+37
+00:02:56,960 --> 00:03:08,180
+So here for path, for just slash, so for the route path I want to load my burger builder component. I'll then
+
+38
+00:03:08,210 --> 00:03:17,710
+duplicate this because for /Checkout I want to load the checkout component.
+
+39
+00:03:18,080 --> 00:03:23,200
+Now with the current set up, both would be loaded because path is treated as a prefix
+
+40
+00:03:23,240 --> 00:03:27,440
+So this would always be a hit and for checkout, this would be a hit too.
+
+41
+00:03:27,470 --> 00:03:32,810
+So for checkout, both would be loaded, for burger builder, this would be loaded but we would always
+
+42
+00:03:32,810 --> 00:03:34,950
+load this because of the
+
+43
+00:03:34,970 --> 00:03:42,680
+treat me as a prefix standard. We can add the exact property to prevent this or we use the switch component
+
+44
+00:03:42,680 --> 00:03:44,390
+to wrap our routes to
+
+45
+00:03:44,470 --> 00:03:51,890
+only get one hit but then we also need to change the order. With exact, the order doesn't matter here
+
+46
+00:03:51,920 --> 00:03:59,000
+because it's not treated as a prefix, it's not catching everything, without exact, the order would matter
+
+47
+00:03:59,270 --> 00:04:06,650
+so I'll change the order and use exact and use switch too, just to show everything, though that isn't all
+
+48
+00:04:06,650 --> 00:04:09,470
+required for this setup here at least.
+
+49
+00:04:09,470 --> 00:04:14,760
+So I'll still wrap it with switch so that we only load one of these routes,
+
+50
+00:04:14,780 --> 00:04:18,300
+the first one, which matches a path, the given path.
+
+51
+00:04:18,710 --> 00:04:22,880
+So now we should only see the burger builder again and we do,
+
+52
+00:04:22,880 --> 00:04:25,890
+there is no other path loaded.
+
+53
+00:04:26,120 --> 00:04:33,500
+The next step of course is to make sure that when we click on continue in this modal, that we also navigate
+
+54
+00:04:33,530 --> 00:04:37,160
+to /checkout so that we can see that route instead.
+
+55
+00:04:37,220 --> 00:04:39,210
+Let's do this in the next lecture.
+

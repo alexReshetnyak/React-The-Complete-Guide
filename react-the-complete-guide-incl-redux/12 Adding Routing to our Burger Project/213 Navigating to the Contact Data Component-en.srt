@@ -1,0 +1,424 @@
+1
+00:00:02,210 --> 00:00:09,320
+Let's add the contactData component and actually that will also be a container, not only because it's loaded
+
+2
+00:00:09,320 --> 00:00:16,940
+via our routing but because it will manage its own state especially once we covered forms in react.
+
+3
+00:00:16,940 --> 00:00:25,640
+So let me add it as a subfolder to checkout in the containers folder, I'll add the contactdata folder there
+
+4
+00:00:25,910 --> 00:00:27,940
+with the contactdata.js
+
+5
+00:00:28,150 --> 00:00:35,930
+file so my contact data component and there I'll create this as a class, contact data and therefore
+
+6
+00:00:35,930 --> 00:00:40,930
+of course extend this component element, this component object.
+
+7
+00:00:40,940 --> 00:00:48,790
+So I'll import react and component like this from react
+
+8
+00:00:49,130 --> 00:00:51,710
+Now let's see how we show it to
+
+9
+00:00:51,710 --> 00:00:56,050
+creators or what should go inside of this contact data component,
+
+10
+00:00:56,240 --> 00:01:04,460
+first of all though I'll export contact data, this class. Now in there, we can fetch whichever contact data
+
+11
+00:01:04,460 --> 00:01:11,300
+we want and I'll set up states to manage all these inputs and I will not really work on the form,
+
+12
+00:01:11,300 --> 00:01:17,120
+I will not finish it in this module because we'll have a whole module about forms and validating forms
+
+13
+00:01:17,360 --> 00:01:19,230
+after this course module.
+
+14
+00:01:19,250 --> 00:01:22,980
+Still I want to fetch let's say the user name here,
+
+15
+00:01:23,030 --> 00:01:31,650
+maybe I want to fetch an email and maybe I want to fetch an address which also is an object where I
+
+16
+00:01:31,650 --> 00:01:37,580
+have like the street maybe and a postal code,
+
+17
+00:01:37,740 --> 00:01:39,000
+so something like that,
+
+18
+00:01:39,030 --> 00:01:44,620
+This could be the data I want to fetch here and we can always continue working on that.
+
+19
+00:01:44,640 --> 00:01:47,390
+I also need my render method of course
+
+20
+00:01:47,400 --> 00:01:50,210
+and as I said I went to have a form in there.
+
+21
+00:01:50,300 --> 00:02:00,140
+So in the render method we'll return some jsx and in there I need a div which basically is
+
+22
+00:02:00,210 --> 00:02:04,500
+well the wrapper for my contact data container
+
+23
+00:02:04,740 --> 00:02:15,060
+and in this div if I want to have the form which I use. Now I'll also have a h4 tag where I say enter your contact
+
+24
+00:02:15,210 --> 00:02:25,830
+data like this, and below that, a form using the html form element where I then can add the form in the way
+
+25
+00:02:25,830 --> 00:02:26,800
+I want to add it.
+
+26
+00:02:26,970 --> 00:02:29,600
+Now as I said I won't spend too much time on the form here,
+
+27
+00:02:29,640 --> 00:02:31,950
+I will do this in the modules thereafter.
+
+28
+00:02:31,950 --> 00:02:40,320
+So for now I'll really just create a quick form here with a couple of inputs, input of type text for my
+
+29
+00:02:40,320 --> 00:02:41,380
+name essentially.
+
+30
+00:02:41,400 --> 00:02:47,130
+So where I will set name equal to names so that we can see for what it should be there,
+
+31
+00:02:47,250 --> 00:02:57,060
+I'll add a placeholder where I'll say your name and that should be self-closing and then I'll add one for the
+
+32
+00:02:57,060 --> 00:03:02,740
+email, type email and then we got this address part
+
+33
+00:03:02,780 --> 00:03:13,820
+so I need one for the street and one with street written like that and one for the postal code,
+
+34
+00:03:14,130 --> 00:03:22,430
+So here postal code maybe. Here let's write your mail and your name with a capital N just like that,
+
+35
+00:03:23,550 --> 00:03:27,570
+I'll then of course also add a button and I'll use my own button component for this,
+
+36
+00:03:27,570 --> 00:03:30,420
+So I'll quickly import button from.
+
+37
+00:03:30,420 --> 00:03:37,800
+And now let's go to the components folder there, to the UI folder and to the button folder and the button.js
+
+38
+00:03:37,810 --> 00:03:39,300
+file in there and
+
+39
+00:03:40,110 --> 00:03:43,950
+let's then use our button here below all our inputs here
+
+40
+00:03:43,950 --> 00:03:51,970
+like a component of course. I'll say order here because that is the final button after which we
+
+41
+00:03:52,060 --> 00:03:56,540
+do place the order, button type therefore should be Success here
+
+42
+00:03:56,560 --> 00:04:00,480
+and of course we'll later also add a click listener to it.
+
+43
+00:04:00,500 --> 00:04:09,170
+Now I want you to give this contact form here some styling, so I'll add a contactdata.css file
+
+44
+00:04:09,200 --> 00:04:13,870
+and of course you could also create a subcomponent which handles the style if you want it to do that.
+
+45
+00:04:14,150 --> 00:04:23,750
+So here I'll add contact data, maybe add a margin top and bottom and center it with auto, then add width
+
+46
+00:04:23,870 --> 00:04:28,750
+80% and align all the text into the center let's say,
+
+47
+00:04:28,940 --> 00:04:35,330
+and let's also add a media query to limit the width just as we did it for the checkOutSummary
+
+48
+00:04:35,330 --> 00:04:36,440
+too.
+
+49
+00:04:36,590 --> 00:04:42,180
+So here, contact data will then have a width of 500px at most.
+
+50
+00:04:42,200 --> 00:04:44,500
+With that, we get the contact data component,
+
+51
+00:04:44,510 --> 00:04:51,830
+now I'm going to load it through routing and I will do this in a check out container, should be a nested
+
+52
+00:04:51,830 --> 00:04:58,160
+route below the summary, so it should not replace checkOutSummary though we could of course do that,
+
+53
+00:04:58,190 --> 00:05:04,130
+instead I want to load it below there, also to show that this is of course something you use in reality
+
+54
+00:05:04,130 --> 00:05:06,130
+too, nested routes.
+
+55
+00:05:06,230 --> 00:05:16,020
+So I'll import route from react-router-dom inside my checkout container and then I use route here below
+
+56
+00:05:16,020 --> 00:05:23,640
+my checkOutSummary to load something for a path which should now depend on the path we're currently
+
+57
+00:05:23,640 --> 00:05:27,220
+on +/ContactData.
+
+58
+00:05:27,510 --> 00:05:29,900
+So I'll use this props
+
+59
+00:05:30,270 --> 00:05:41,700
+and then we can use match url or also for building paths and routes you might use path +/
+
+60
+00:05:42,000 --> 00:05:43,860
+contact data
+
+61
+00:05:44,220 --> 00:05:50,390
+and this should also be part of the dynamic path here, the string.
+
+62
+00:05:50,400 --> 00:05:52,530
+So now we're loading this route in this case,
+
+63
+00:05:52,530 --> 00:05:55,900
+Of course we need to define what component to render.
+
+64
+00:05:55,950 --> 00:06:04,010
+So for that I'll import my contact data container from ./contactdata and there, the contactdata.js
+
+65
+00:06:04,040 --> 00:06:05,310
+file.
+
+66
+00:06:05,640 --> 00:06:12,820
+So let's grab contact data and let's set it up as a component down there on this route component
+
+67
+00:06:12,870 --> 00:06:19,400
+so there I'll pass the component prop and pass contact data just like that.
+
+68
+00:06:19,570 --> 00:06:22,780
+With that let's save all the files
+
+69
+00:06:23,160 --> 00:06:25,520
+and now if the click continue here,
+
+70
+00:06:25,980 --> 00:06:28,320
+here is the contact data.
+
+71
+00:06:28,410 --> 00:06:36,130
+Now it looks pretty ugly to be honest because I forgot to use my contactdata.css
+
+72
+00:06:36,210 --> 00:06:45,240
+file, I of course need to import classes from ./contactdata.css and then assign this here on the
+
+73
+00:06:45,240 --> 00:06:51,080
+wrapping div with class name and then classes contactdata.
+
+74
+00:06:51,120 --> 00:06:54,190
+Let's quickly do that and thereafter
+
+75
+00:06:54,200 --> 00:06:55,350
+this is how it looks. Now
+
+76
+00:06:55,390 --> 00:06:59,520
+if we load this page by reloading it as we just did automatically,
+
+77
+00:06:59,680 --> 00:07:03,590
+you see the queryParams are gone and therefore the burger is empty.
+
+78
+00:07:03,640 --> 00:07:11,480
+Now if I go there differently by building a burger and continuing and then if I click on continue,
+
+79
+00:07:11,670 --> 00:07:17,320
+the burger is still there because even though the queryParams are lost, it doesn't overwrite the old state
+
+80
+00:07:17,380 --> 00:07:24,550
+because we did set state and it doesn't really re-render this component as you've learned, so therefore
+
+81
+00:07:24,640 --> 00:07:30,430
+componentDidMount where we built the burger, where we set the state depending on the queryParams isn't
+
+82
+00:07:30,430 --> 00:07:31,270
+running again
+
+83
+00:07:31,390 --> 00:07:37,050
+just because we loaded a new component, so that is why the burger still looks like this.
+
+84
+00:07:37,060 --> 00:07:43,440
+So if we go there by clicking through the various steps, we will have a nicely styled burger.
+
+85
+00:07:43,450 --> 00:07:46,600
+Now again the form is not super nice,
+
+86
+00:07:46,600 --> 00:07:52,690
+the reason for this is that I won't finish it in this module, we'll work on this later.
+
+87
+00:07:52,690 --> 00:07:58,540
+The one thing I want to do though is I want to make sure that all the inputs here do at least
+
+88
+00:07:58,540 --> 00:08:02,800
+have their own line each so that they have a line wrap thereafter
+
+89
+00:08:02,860 --> 00:08:09,880
+and that the button also has its own line, and to achieve this, I'll simply add a styling for the input
+
+90
+00:08:09,910 --> 00:08:18,580
+element. So I'll add a new input class maybe where I'll say display should be block and this will automatically
+
+91
+00:08:18,580 --> 00:08:27,290
+add a line wrap because it's now a block element. So I'll add class name classes input to all these inputs
+
+92
+00:08:27,830 --> 00:08:29,980
+and with that looks a bit nicer,
+
+93
+00:08:30,020 --> 00:08:32,820
+well now of course sitting on the left here
+
+94
+00:08:32,830 --> 00:08:34,710
+but again will work on that.
+
+95
+00:08:35,210 --> 00:08:37,480
+So this is our order form,
+
+96
+00:08:37,490 --> 00:08:44,030
+this is our summary here above it. We can still improve the styling of the contact data form a little
+
+97
+00:08:44,030 --> 00:08:46,780
+bit by going to contact data,
+
+98
+00:08:47,030 --> 00:08:55,070
+adding a box shadow of maybe 0 2px 3px at this light gray and a border of even lighter gray
+
+99
+00:08:55,220 --> 00:08:59,400
+like this and adding some padding inside of it.
+
+100
+00:08:59,760 --> 00:09:03,840
+Let's then also set box-sizing to border-box
+
+101
+00:09:03,860 --> 00:09:10,510
+so this is just some styling on the contact data component, with that looks a bit nicer I believe.
+
+102
+00:09:10,670 --> 00:09:13,870
+So with that, we're able to load the contact data component,
+
+103
+00:09:13,970 --> 00:09:20,900
+the next step is to make sure that when we click the order button we actually do send these request
+
+104
+00:09:20,990 --> 00:09:22,110
+to our server.
+
+105
+00:09:22,130 --> 00:09:28,610
+Now let's build this together in the next lecture because getting the ingredients into the contact data
+
+106
+00:09:28,610 --> 00:09:31,790
+component now is kind of tricky as you will see.
+

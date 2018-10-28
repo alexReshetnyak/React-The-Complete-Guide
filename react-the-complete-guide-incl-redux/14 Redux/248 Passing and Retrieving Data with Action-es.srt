@@ -1,0 +1,184 @@
+1
+00:00:02,110 --> 00:00:03,860
+La tarea anterior.
+
+2
+00:00:03,910 --> 00:00:11,230
+Aadimos tres nuevas acciones que podemos despachar y les enviamos un contador de horas detrimento negativo
+
+3
+00:00:11,440 --> 00:00:18,420
+y restar ahora y sumar y restar lo que obviamente tenemos a mano nuestro reductor.
+
+4
+00:00:18,520 --> 00:00:27,670
+No tendra sentido recibir tambin una carga de datos pasados junto con el tipo de accin, porque ahora tenemos
+
+5
+00:00:28,300 --> 00:00:33,270
+un cdigo fijo ms 10 y menos 8 en el reductor.
+
+6
+00:00:33,490 --> 00:00:40,300
+Pero, por supuesto, en muchas aplicaciones, por ejemplo, al crear una nueva publicacin de bloque obtendra esa informacin
+
+7
+00:00:40,330 --> 00:00:47,680
+de su componente, la entrada que el usuario ingres, por ejemplo, la idea de que el usuario del pster haga
+
+8
+00:00:47,680 --> 00:00:52,060
+clic en usted no puede codificarla en su usuario para esa razn.
+
+9
+00:00:52,060 --> 00:00:59,080
+As que tambin digamos que no queremos codificar el valor con el que desea agregar o restar al
+
+10
+00:00:59,260 --> 00:01:02,020
+contador o desde el contador al reductor.
+
+11
+00:01:02,020 --> 00:01:10,210
+En cambio, queremos obtener esta informacin junto con la accin para que podamos implementar esto fcilmente en
+
+12
+00:01:10,300 --> 00:01:11,790
+nuestra accin aqu.
+
+13
+00:01:11,860 --> 00:01:18,580
+Estamos simplemente despachando un objeto javascript y solo para escribir propiedad est escrito en piedra.
+
+14
+00:01:18,730 --> 00:01:24,620
+Entonces, para decir que obviamente podemos agregar ms propiedades a ese objeto.
+
+15
+00:01:24,670 --> 00:01:33,690
+Nadie nos impide hacer eso, simplemente podemos agregar una segunda propiedad por ejemplo, valor o simplemente ser lo
+
+16
+00:01:33,730 --> 00:01:34,600
+que quieras.
+
+17
+00:01:34,600 --> 00:01:39,570
+Puede elegir el nombre que desee aqu y, por supuesto, tambin puede agregar varias propiedades.
+
+18
+00:01:39,570 --> 00:01:42,700
+Entonces, tomar el valor aqu.
+
+19
+00:01:42,710 --> 00:01:50,020
+Y a menudo tambin se ve que la carga til de la carga til podra ser un objeto de JavaScript que contenga
+
+20
+00:01:50,080 --> 00:01:52,290
+toda la carga relevante para esta accin.
+
+21
+00:01:52,420 --> 00:01:54,550
+Pero eso es algo que a menudo ves.
+
+22
+00:01:54,550 --> 00:02:01,130
+Tambin puedes omitir la carga y solo tener un valor y digamos que son diez y un nombre, y eso es mximo.
+
+23
+00:02:01,180 --> 00:02:04,470
+Entonces puede agregar tantas propiedades como desee.
+
+24
+00:02:04,550 --> 00:02:06,900
+Ahora aqu agregar uno que sea levell.
+
+25
+00:02:06,940 --> 00:02:08,290
+De nuevo, el nombre depende de ti.
+
+26
+00:02:08,290 --> 00:02:10,940
+Y digamos que siempre queremos agregar 10.
+
+27
+00:02:11,020 --> 00:02:17,730
+Y, por supuesto, dado que estamos dentro del contenedor, podramos conectarlo fcilmente a algn campo de entrada.
+
+28
+00:02:17,740 --> 00:02:23,990
+Ahora tenemos cuatro restas Voy a agregar a Velle y digamos que esto es 15.
+
+29
+00:02:24,460 --> 00:02:29,910
+As que ahora paso el valor que quiero agregar o restar junto con el tipo.
+
+30
+00:02:29,980 --> 00:02:35,690
+Y de nuevo, la propiedad tipo es la nica propiedad que debe tener donde el nombre no depende de usted.
+
+31
+00:02:35,740 --> 00:02:40,120
+Ahora podemos extraer esa propiedad de valor en nuestro productor.
+
+32
+00:02:40,120 --> 00:02:45,480
+As que aqu para sumar y restar ya no quiero agregar 10 o restar 8.
+
+33
+00:02:45,610 --> 00:02:55,600
+En cambio, aqu, en el cheque "at", todo simplemente en accin punto Velle. Y aqu, el nombre de propiedad Velle es, por supuesto, el nombre
+
+34
+00:02:55,600 --> 00:02:59,670
+de propiedad que eleg aqu en mi contenedor de mostrador.
+
+35
+00:02:59,750 --> 00:03:04,540
+Se pasa el objeto en esta accin o el OP tomar este parche?
+
+36
+00:03:04,730 --> 00:03:11,330
+Bueno y lo mismo, por supuesto, para restar aqu simplemente tambin uso action velle.
+
+37
+00:03:11,450 --> 00:03:17,240
+Por lo tanto, como desarrollador, por supuesto, s qu denomin esta propiedad cuando envi la accin y tengo
+
+38
+00:03:17,240 --> 00:03:23,830
+que recuperar mi valor o los datos que son relevantes para m y para el productor del mismo nombre de propiedad.
+
+39
+00:03:23,840 --> 00:03:27,320
+Guarde todos los archivos y regrese a la aplicacin.
+
+40
+00:03:27,320 --> 00:03:30,850
+Ahora las etiquetas estn equivocadas aqu, restamos 15 en realidad.
+
+41
+00:03:30,890 --> 00:03:33,410
+Pero hagamos clic en los botones para ver si funciona.
+
+42
+00:03:33,620 --> 00:03:41,840
+Restamos y restamos 50 y podemos agregar 10 nuevamente porque establecemos el valor en 10 para este botn.
+
+43
+00:03:41,840 --> 00:03:48,980
+As que vamos a actualizar rpidamente el ttulo del botn para que no diga restar 8, sino
+
+44
+00:03:48,980 --> 00:03:51,000
+que simplemente dice restar 15.
+
+45
+00:03:51,110 --> 00:03:56,660
+Y ahora nuestra aplicacin se actualiza al 100% ahora y eso es importante.
+
+46
+00:03:56,690 --> 00:04:04,040
+Pasar una carga til con la accin pasando algunos datos adicionales y no solo pasando el tipo.
+

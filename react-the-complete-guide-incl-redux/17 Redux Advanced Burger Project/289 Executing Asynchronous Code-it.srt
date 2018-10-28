@@ -1,0 +1,216 @@
+1
+00:00:02,220 --> 00:00:06,240
+Quindi durante le ultime lezioni abbiamo aggiunto i nostri creatori di azioni.
+
+2
+00:00:06,240 --> 00:00:08,750
+In questo momento stiamo gestendo solo il codice di centredness.
+
+3
+00:00:08,910 --> 00:00:13,580
+Ma ho detto che l'idea  ovviamente quella di usare anche il codice AYSON e Rose.
+
+4
+00:00:13,620 --> 00:00:19,830
+Almeno per quanto riguarda la gestione degli ordini prima di ci otteniamo un pezzo di codice
+
+5
+00:00:19,830 --> 00:00:26,710
+asincrono che possiamo eseguire subito nel contenitore di burger Buhler che abbiamo usato per prelevare i nostri ingredienti
+
+6
+00:00:26,730 --> 00:00:31,720
+dal componente montato e me lo porto temporaneamente quando siamo passati a leggere X.
+
+7
+00:00:31,960 --> 00:00:34,500
+Ora  il momento di nuovo.
+
+8
+00:00:34,800 --> 00:00:37,470
+E ci sono due percorsi che puoi seguire.
+
+9
+00:00:37,470 --> 00:00:42,750
+Puoi commentare il vecchio codice e il componente Mount dove raggiungiamo il nostro
+
+10
+00:00:43,290 --> 00:00:50,910
+backbase firebase dove recuperiamo i dati e invece di chiamare questo stato impostato qui potresti inviarne alcuni per creare
+
+11
+00:00:50,910 --> 00:00:55,230
+un'azione che aggiorni i nostri ingredienti nel negozio di riduzione.
+
+12
+00:00:55,350 --> 00:01:01,980
+Quindi eseguiresti il codice asincrono nel tuo componente e non avresti assolutamente bisogno dei creatori, perch
+
+13
+00:01:01,980 --> 00:01:04,470
+alla fine semplicemente invii azioni normali.
+
+14
+00:01:04,470 --> 00:01:11,130
+Una volta che la risposta  perfetta, l'idea che sta dietro i creatori di ection  che puoi
+
+15
+00:01:11,130 --> 00:01:14,590
+ancora inserire il tuo codice asincrono nel mondo redux.
+
+16
+00:01:14,670 --> 00:01:20,340
+di avvio di NPM e con il dash di installazione di NPM salver tutto install redox dash phunk.
+
+17
+00:01:20,340 --> 00:01:27,870
+E come ho detto prima, questa  la strada che voglio prendere qui per prima cosa ho bisogno di installare redux phunk, quindi
+
+18
+00:01:27,900 --> 00:01:29,200
+lascer il mio processo
+
+19
+00:01:29,430 --> 00:01:36,510
+Questo  il middleware che ci consente di utilizzare il codice asincrono e i creatori di azioni grazie al
+
+20
+00:01:36,600 --> 00:01:42,180
+middleware che si avvolge attorno all'azione di invio e blocca la richiesta fino a quando
+
+21
+00:01:42,180 --> 00:01:49,100
+il codice azing non viene eseguito, per cui con esso installato possiamo riavviare NPM e ora voglio aggiungerlo middleware.
+
+22
+00:01:49,110 --> 00:01:52,320
+Quindi quello che far  andare a indicizzare.
+
+23
+00:01:52,510 --> 00:01:54,450
+S, sono in cima.
+
+24
+00:01:54,450 --> 00:01:57,450
+Aggiunger la mia phunk di importazione importata.
+
+25
+00:01:57,480 --> 00:02:04,890
+Puoi chiamarlo come vuoi da Rydex func e questo Funt che ora devi aggiungere con il
+
+26
+00:02:04,890 --> 00:02:05,850
+middleware Apply.
+
+27
+00:02:05,940 --> 00:02:10,980
+Quindi ho intenzione di importare qualcosa da Redox e che qualcosa si applica al middleware.
+
+28
+00:02:11,250 --> 00:02:17,760
+E poich abbiamo anche strumenti di sviluppo, imparerai che dobbiamo anche importare la composizione e quindi regolare
+
+29
+00:02:17,790 --> 00:02:20,030
+la configurazione degli strumenti di sviluppo.
+
+30
+00:02:20,310 --> 00:02:26,680
+per vedere che set up dovremmo ricrearlo che compongono una risposta cosa in cui abbiamo mai usato dbx
+
+31
+00:02:26,770 --> 00:02:33,950
+dev tools variable o nativa compose function dal pacchetto redox e poi abbiamo creato il nostro store con quella funzione
+
+32
+00:02:34,350 --> 00:02:40,410
+di composizione e trasferimento che ci ha permesso di passare anche il middleware applicativo come argomento.
+
+33
+00:02:40,470 --> 00:02:43,010
+Possiamo consultare di nuovo la pagina Deftones
+
+34
+00:02:43,440 --> 00:02:45,170
+Cos anche l'installazione viene utilizzata qui.
+
+35
+00:02:45,390 --> 00:02:52,240
+Mi limiter a copiare il codice dalla pagina di avvio e incollarlo nelle mie condivisioni di indice prima che
+
+36
+00:02:52,240 --> 00:02:59,180
+io crei per archiviare questo codice qui dove raggiungo questa variabile o la funzione di composizione che la importa
+
+37
+00:02:59,180 --> 00:02:59,420
+appena.
+
+38
+00:02:59,550 --> 00:03:05,700
+Tieni presente che la composizione consente di comporre il nostro set di potenziatori e il middleware  solo un tipo
+
+39
+00:03:05,700 --> 00:03:06,410
+di miglioramento.
+
+40
+00:03:06,450 --> 00:03:08,490
+Gli strumenti Def sarebbero un altro esempio.
+
+41
+00:03:08,880 --> 00:03:12,760
+Quindi con questo abbiamo ottenuto le nostre risposte di composizione costanti.
+
+42
+00:03:12,780 --> 00:03:14,860
+Ora diamo un'occhiata alla pagina di alzare.
+
+43
+00:03:14,910 --> 00:03:19,930
+Dovremmo creare il negozio passandolo e passando il middleware di applicazione come argomento.
+
+44
+00:03:20,070 --> 00:03:25,600
+Facciamo cos che liberiamo il vecchio codice che abbiamo passato come secondo argomento per creare un
+
+45
+00:03:25,620 --> 00:03:30,220
+negozio e utilizziamo invece la composizione e le risposte come una funzione qui.
+
+46
+00:03:30,330 --> 00:03:35,120
+Ora a questa funzione e lo metto in una nuova riga per renderlo un po 'pi facile da leggere.
+
+47
+00:03:35,340 --> 00:03:36,250
+Io passo.
+
+48
+00:03:36,270 --> 00:03:41,500
+Applicare il middleware e applicare il middleware tutto il passato al middleware.
+
+49
+00:03:41,550 --> 00:03:47,200
+Voglio applicare con funzione dati di seguito in cui  sbloccato e dovrebbe funzionare bene.
+
+50
+00:03:47,240 --> 00:03:49,650
+Gli strumenti di sviluppo dovrebbero ancora funzionare correttamente.
+
+51
+00:03:49,650 --> 00:03:53,130
+Dovremmo ancora vederli se ricarichiamo la pagina con un bell'aspetto.
+
+52
+00:03:53,430 --> 00:03:57,680
+Quindi ora possiamo iniziare a scrivere codice asincrono nei nostri creatori di azioni.
+
+53
+00:03:57,840 --> 00:04:01,590
+Facciamolo per prendere gli ingredienti.
+
+54
+00:04:01,590 --> 00:04:03,570
+Potremmo aggiungere alla prossima lezione.
+

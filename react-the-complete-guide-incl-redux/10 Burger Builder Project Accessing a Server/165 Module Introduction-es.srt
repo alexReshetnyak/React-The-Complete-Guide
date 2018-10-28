@@ -1,0 +1,88 @@
+1
+00:00:02,110 --> 00:00:07,510
+As que bienvenidos de nuevo a nuestro proyecto de curso, nuestro Bergere Boulder, ahora el Bergere Boulder ya es bastante
+
+2
+00:00:07,510 --> 00:00:07,920
+bueno.
+
+3
+00:00:07,930 --> 00:00:12,610
+Podemos construir hamburguesas con l, lo cual no suena tan mal para este tipo de aplicacin.
+
+4
+00:00:12,610 --> 00:00:15,000
+Ahora podemos seguir revisando y leyendo.
+
+5
+00:00:15,010 --> 00:00:19,240
+Ahora cuando hacemos clic en esto, no ocurre nada, excepto esta alerta.
+
+6
+00:00:19,240 --> 00:00:24,430
+Ahora en el ltimo mdulo aprendimos cmo podemos enviar solicitudes HTP.
+
+7
+00:00:24,430 --> 00:00:28,680
+As que esto parece una gran oportunidad para almacenar ese orden.
+
+8
+00:00:28,730 --> 00:00:35,570
+vez que sepamos cmo crear diferentes pginas en nuestra aplicacin de una sola pgina y que muestremos un cheque para ellos, y as sucesivamente.
+
+9
+00:00:35,570 --> 00:00:40,840
+Los clientes clientes a punto de colocar en un servidor ahora luego lo encontrarn en su aplicacin ms
+
+10
+00:00:40,840 --> 00:00:42,280
+adelante en el curso una
+
+11
+00:00:42,490 --> 00:00:50,350
+Pero, por ahora, almacenar el pedido y obtener los pedidos sera un avance sorprendente en nuestra aplicacin.
+
+12
+00:00:50,350 --> 00:00:57,340
+Entonces, de esto se trata este modelo, que implementar el backend para que podamos almacenar nuestros pedidos de modo
+
+13
+00:00:57,580 --> 00:00:59,580
+que tengamos una forma de recuperarlos.
+
+14
+00:00:59,710 --> 00:01:07,780
+Incluso despus de que nuestra pgina se recarg para esa historia en la parte de atrs, voy a utilizar firebase firebase es
+
+15
+00:01:07,780 --> 00:01:09,760
+un servicio ofrecido por Google.
+
+16
+00:01:09,970 --> 00:01:15,890
+Bsicamente se trata de un proceso de recuperacin que incluye una base de datos.
+
+17
+00:01:15,910 --> 00:01:22,840
+Lo bueno es que podemos usarlo de forma gratuita y por la cantidad de combustible que vamos a aplicar en este proyecto de
+
+18
+00:01:22,840 --> 00:01:29,410
+curso, va a ser gratis y no tenemos que escribir ningn cdigo del lado del servidor del que discurrir, por supuesto,
+
+19
+00:01:29,440 --> 00:01:36,170
+no se trata pero la forma en que nos comunicamos con firebase es la misma que nos comunicamos con cualquier otro back-end.
+
+20
+00:01:36,190 --> 00:01:40,220
+Entonces es representativo para su espalda y en su proyecto.
+
+21
+00:01:40,390 --> 00:01:47,080
+Ahora con eso profundicemos en eso y creemos nuestro mejor proyecto de fuego en la prxima conferencia para
+
+22
+00:01:47,110 --> 00:01:50,150
+que podamos comenzar a almacenar nuestros pedidos all.
+

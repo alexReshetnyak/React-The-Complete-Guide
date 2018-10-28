@@ -1,0 +1,252 @@
+1
+00:00:02,240 --> 00:00:08,730
+Pracowaem nad zamwieniami dla twrcw i pracowalimy nad ich wysaniem, teraz musimy zarzdza zamawianiem stanu
+
+2
+00:00:08,730 --> 00:00:15,450
+dla naszego producenta, a do tego przejd do spadku zamwienia w folderze reduktorw, a przede
+
+3
+00:00:15,690 --> 00:00:22,440
+wszystkim zaimportuj tutaj moje typy akcji, poniewa potrzebuj ich w mojej instrukcji zmiany przecznika, wic
+
+4
+00:00:22,440 --> 00:00:26,110
+musz siga do dziaa i ich typw akcji.
+
+5
+00:00:26,520 --> 00:00:34,010
+Nastpnie stwrz cigy porzdek nazwy bitwy lub po prostu redukuj, poniewa jest to moja funkcja redukujca zbliajca si
+
+6
+00:00:34,020 --> 00:00:37,610
+do koca, a zrobi to jako normalny reduktor.
+
+7
+00:00:37,680 --> 00:00:44,270
+Tak wic funkcja, ktra odbiera dwa wejcia do stanu i jak go uczye.
+
+8
+00:00:44,310 --> 00:00:49,390
+Teraz chc ustawi stan pocztkowy dla tego reduktora, aby nazwa t waciwo.
+
+9
+00:00:49,410 --> 00:00:52,320
+Ta staa usprawiedliwia mj pocztkowy stan.
+
+10
+00:00:52,320 --> 00:00:55,190
+Powinien to by obiekt javascript, a nie tam.
+
+11
+00:00:55,200 --> 00:00:58,140
+Potrzebuj troch informacji.
+
+12
+00:00:58,140 --> 00:01:00,460
+Na pewno chc mie wszystkie moje zamwienia.
+
+13
+00:01:00,480 --> 00:01:02,620
+To moe by taka tablica.
+
+14
+00:01:02,700 --> 00:01:11,610
+Chciabym rwnie wiedzie, czy jestemy w trakcie zamawiania, czy te jestemy gotowi, abymy mogli doda waciwo, goni lub zaadowa
+
+15
+00:01:11,690 --> 00:01:19,760
+i ustawi j na warto false i pocztkowo powinna ona by faszywa. Powinna by ustawiona na true.
+
+16
+00:01:19,950 --> 00:01:25,390
+Gdy ju zaczniemy zamawia, nie padnie natychmiast jeden problem.
+
+17
+00:01:25,530 --> 00:01:29,860
+Czy to w naszym kreatorze acji zamwie.
+
+18
+00:01:29,970 --> 00:01:36,590
+Postpujemy tylko z sukcesem i nie wykonujemy tutaj akcji startowej.
+
+19
+00:01:36,630 --> 00:01:43,410
+W rzeczywistoci nie wysya niczego, co moemy zapa w czytanym X, zamiast tego uruchamiamy jaki kod
+
+20
+00:01:43,460 --> 00:01:50,610
+asynchroniczny, aby wywoa nasze akcje, co jest normalnym wzorcem, ale poniewa prawdopodobnie chcemy zaktualizowa nasz waciwo
+
+21
+00:01:50,610 --> 00:01:55,790
+adowania w naszym stanie, kiedy zaczynamy adowanie, potrzebujemy dodatkowej akcji, ktr wysyka.
+
+22
+00:01:55,830 --> 00:02:01,130
+Jest to co, o czym powinnimy pamita i porozmawiam na nastpnym wykadzie w tym wykadzie.
+
+23
+00:02:01,230 --> 00:02:03,820
+Pracujmy nad dziaaniami, ktre ju mamy.
+
+24
+00:02:04,140 --> 00:02:10,410
+Tak wic w moim reduktorze, zanim miaem myszy, w tym przypadku miaem na myli zaakceptowa mj stan rwny pocztkowemu stanowi.
+
+25
+00:02:10,470 --> 00:02:17,540
+Na pocztku mamy stan, a nastpnie dodam instrukcj case switch, wic zmieni typ akcji.
+
+26
+00:02:17,880 --> 00:02:24,720
+A teraz chc poradzi sobie z rnymi przypadkami, wic bd mia tutaj spraw, ktra jest typem akcji, a
+
+27
+00:02:25,140 --> 00:02:26,310
+nastpnie jest martwa.
+
+28
+00:02:26,490 --> 00:02:30,600
+Nasz pocig zakoczy si sukcesem.
+
+29
+00:02:30,600 --> 00:02:33,680
+Nastpnie chc zwrci pewien stan.
+
+30
+00:02:33,690 --> 00:02:34,820
+Wkrtce nad tym popracuj.
+
+31
+00:02:34,920 --> 00:02:43,860
+Nastpnym przypadkiem jest to, e mam awari burgera typu akcji, a nastpnie chc zwrci inny
+
+32
+00:02:43,890 --> 00:02:52,310
+stan, a nastpnie mam domylny przypadek, w ktrym chc po prostu zwrci obecny stan.
+
+33
+00:02:52,350 --> 00:02:56,470
+Jest to bardzo wane, poniewa wkrtce czymy kilka reduktorw.
+
+34
+00:02:56,480 --> 00:03:01,890
+Oczywicie musisz mie moliwo zwrotu czego, jeli jest to dziaanie, ktre jest obsugiwane w innym reduktorze.
+
+35
+00:03:02,150 --> 00:03:07,450
+W kocu chc wyeksportowa funkcj reduktorw tutaj jako domyln jesie.
+
+36
+00:03:07,460 --> 00:03:11,500
+Teraz popracujmy nad logik sukcesu.
+
+37
+00:03:11,510 --> 00:03:18,740
+Oczywicie chc przechowywa to zamwienie w mojej tablicy zamwie i chc ustawi adowanie na false,
+
+38
+00:03:18,740 --> 00:03:19,600
+poniewa skoczymy.
+
+39
+00:03:20,030 --> 00:03:22,760
+Przede wszystkim skopiuj stary stan.
+
+40
+00:03:22,760 --> 00:03:32,570
+Nastpnie na wspomnianym zaadowaniu dwch plikw, a nastpnie musz zaktualizowa moje zamwienia teraz zamwienia Shippey moje stare zamwienia i
+
+41
+00:03:32,840 --> 00:03:39,860
+cz nowy przedmiot i jak dowiedziae si, konkat zwraca now tablic i dlatego
+
+42
+00:03:39,950 --> 00:03:41,410
+dodalimy to niezmiennie.
+
+43
+00:03:41,660 --> 00:03:51,220
+Teraz, gdy chc doda tutaj nowy porzdek, to kolejno, jak otrzymuj z dziaania "Dlaczego ta akcja".
+
+44
+00:03:51,260 --> 00:03:54,110
+Moesz to zobaczy w twrcy akcji porzdkowych.
+
+45
+00:03:54,260 --> 00:03:59,600
+Tam otrzymujemy dane o zamwieniu, ale wszyscy otrzymalimy identyfikator zamwienia na oddzielnej nieruchomoci.
+
+46
+00:03:59,630 --> 00:04:02,600
+Musz poczy oba tutaj w jeden przedmiot.
+
+47
+00:04:02,930 --> 00:04:05,700
+Wic co zrobi w mojej kolejnoci z winy jr.
+
+48
+00:04:06,000 --> 00:04:14,700
+Dodam po prostu now sta do twojego nowego zamwienia i ustawi j jako obiekt javascript, w
+
+49
+00:04:15,420 --> 00:04:23,270
+ktrym najpierw wklejam wszystkie waciwoci danych kolejnoci dziaa, czyli dane o zamwieniach, ktre wszyscy przekazalimy
+
+50
+00:04:23,280 --> 00:04:32,100
+serwer i dodaj nowy identyfikator nieruchomoci, ktry jest identyfikatorem zlecenia, ktry odnosi si do tej innej waciwoci
+
+51
+00:04:32,100 --> 00:04:36,590
+i jest to identyfikator, ktry otrzymamy z serwera.
+
+52
+00:04:37,720 --> 00:04:42,260
+Z tat mam nowy porzdek i to jest to, co chciabym tutaj zczy.
+
+53
+00:04:42,400 --> 00:04:47,530
+Nowe zamwienie teraz za niepowodzenie.
+
+54
+00:04:47,750 --> 00:04:51,140
+Chc przywrci stary stan.
+
+55
+00:04:51,140 --> 00:04:57,050
+Na pewno nie chc wyczyci moich zamwie, ale chciaem powiedzie, e adowanie dwch spadkw oczywicie rwnie
+
+56
+00:04:57,050 --> 00:05:03,770
+dlatego, e nawet jeli nie udao si to jeszcze zrobi i bd powinien by obsugiwany z tego modelu,
+
+57
+00:05:03,830 --> 00:05:08,390
+poniewa dodalimy D z obsug bdw wyszego rzdu komponent do kontaktu dane.
+
+58
+00:05:08,390 --> 00:05:14,070
+Teraz, gdy to robimy, widz rwnie bd, ktry tu popeniem, ale naprawi to rwnie w nastpnym Lechterze
+
+59
+00:05:14,060 --> 00:05:15,170
+razem z tob.
+
+60
+00:05:15,170 --> 00:05:17,520
+Przede wszystkim z powrotem do uytkownika.
+
+61
+00:05:17,660 --> 00:05:21,150
+Teraz zajmiemy si sprawami sukcesw, a awarie wygldaj dobrze.
+
+62
+00:05:21,170 --> 00:05:22,560
+Teraz naprawmy ten bd.
+
+63
+00:05:22,570 --> 00:05:28,130
+Wanie zobaczyem i upewnijmy si, e ustawiamy adowanie na prawdziwe, gdy zaczniemy przynosi burgera.
+

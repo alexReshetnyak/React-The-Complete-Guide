@@ -1,0 +1,204 @@
+1
+00:00:02,190 --> 00:00:04,630
+Skorzystajmy wic z tej usugi bazy ogniowej.
+
+2
+00:00:04,680 --> 00:00:09,470
+Jak powiedziaem, po prostu jako rodzaj dumnego backendu, poniewa atwo jest zacz z nim
+
+3
+00:00:09,630 --> 00:00:12,600
+i dla naszych potrzeb tutaj, to nic nie kosztuje.
+
+4
+00:00:12,600 --> 00:00:18,480
+Sprawd stron cenow w bazie Firebase. Google. com / wycena, aby dowiedzie
+
+5
+00:00:18,480 --> 00:00:21,580
+si, co jest wliczone w darmowy plan,
+
+6
+00:00:21,600 --> 00:00:28,080
+a kiedy to bdzie kosztowa, jest to szczeglnie wane, jeli planujesz uywa tego w rodowiskach
+
+7
+00:00:28,170 --> 00:00:29,670
+produkcyjnych dla rzeczywistej aplikacji.
+
+8
+00:00:29,670 --> 00:00:34,370
+Nie martw si jednak, jeli pozostaniesz w darmowym abonamencie, ktrego faktycznie
+
+9
+00:00:34,470 --> 00:00:40,080
+nie moesz obciy opat, po prostu przekroczysz limit darmowych limitw, ktrych oczywicie nie
+
+10
+00:00:40,170 --> 00:00:43,040
+chcesz rwnie spotka w swojej gotowej aplikacji.
+
+11
+00:00:43,050 --> 00:00:46,020
+A teraz wystarczy rozmawia o cenach, jakie s
+
+12
+00:00:46,020 --> 00:00:49,810
+bezpatne dla naszych potrzeb, wic przejdmy do konsoli, bo potrzebujesz konta
+
+13
+00:00:49,830 --> 00:00:53,530
+Google, wic to jest co, co musisz stworzy, zanim bdziesz
+
+14
+00:00:53,670 --> 00:00:57,710
+mg kontynuowa i na tej konsoli, moe teraz utworzy tutaj nowy projekt.
+
+15
+00:00:57,960 --> 00:01:04,350
+Stwrzmy wic projekt, nad ktrym mam zamiar nazwa, reaguj z moim burgerem, moesz wybra dowoln nazw, a
+
+16
+00:01:04,350 --> 00:01:09,450
+nastpnie wybra kraj lub region tutaj i wybra kraj, w ktrym si znajdujesz.
+
+17
+00:01:09,510 --> 00:01:13,980
+nie wpynie to na miejsce przechowywania danych na kocu, a
+
+18
+00:01:14,310 --> 00:01:16,320
+nastpnie kliknij przycisk Utwrz projekt.
+
+19
+00:01:16,450 --> 00:01:21,770
+Jak ju wspomniaem, teraz skonfiguruj dla ciebie projekty zaplecza, ktre automatycznie podadz ci
+
+20
+00:01:21,780 --> 00:01:29,430
+pewne punkty kocowe API REST i baz danych MongoDB, ktrej moesz uy do przechowywania danych, abymy nie musieli pisa
+
+21
+00:01:29,490 --> 00:01:31,080
+kodu po stronie serwera.
+
+22
+00:01:31,170 --> 00:01:33,300
+Konsola bdzie wyglda w ten sposb,
+
+23
+00:01:33,410 --> 00:01:34,520
+teraz nic si
+
+24
+00:01:34,520 --> 00:01:37,430
+nie martw, nie potrzebujesz tutaj gbszego zrozumienia.
+
+25
+00:01:37,440 --> 00:01:43,490
+Zamierzamy uy bazy danych, poniewa chcemy przechowywa dane, a baza Firebase ma t skadni,
+
+26
+00:01:43,500 --> 00:01:48,810
+w ktrej punkty kocowe API s bezporednio odwzorowywane na punkty kocowe lub tabele,
+
+27
+00:01:48,840 --> 00:01:51,250
+ktre mona powiedzie w bazie danych.
+
+28
+00:01:51,330 --> 00:01:55,620
+Jest wic bardzo atwo zacz przechowywa tam dane.
+
+29
+00:01:55,650 --> 00:01:58,910
+Teraz jest to punkt kocowy API, ktry zamierzamy
+
+30
+00:01:58,920 --> 00:02:04,080
+uy, wic oczywicie masz inny projekt, ale jest to punkt kocowy, w ktrym
+
+31
+00:02:04,080 --> 00:02:09,560
+moemy przesa dane do ciebie, a nastpnie automatycznie zostanie on zapisany w tej bazie danych.
+
+32
+00:02:09,570 --> 00:02:12,710
+Nadal nie bdziemy si bezporednio czy z baz
+
+33
+00:02:12,780 --> 00:02:19,610
+danych. Wanie wysyamy danie HTTP, a baza ogniowa wykonuje odwzorowanie punktw kocowych HTTP do bazy danych, co
+
+34
+00:02:19,620 --> 00:02:25,260
+jest fajn rzecz w tej usudze. Teraz, aby byo to dostpne, musimy
+
+35
+00:02:25,260 --> 00:02:33,660
+ustawi jedn regu tutaj, na reguach bazy danych naley ustawi prawa dostpu do odczytu i zapisu.
+
+36
+00:02:33,690 --> 00:02:36,910
+Teraz domylnie jest wczona tylko dla uwierzytelnionych uytkownikw
+
+37
+00:02:37,000 --> 00:02:40,790
+i ma to sens w przypadku aplikacji gotowych do
+
+38
+00:02:41,010 --> 00:02:43,770
+produkcji, ale nie wdroylimy jeszcze uwierzytelniania uytkownika.
+
+39
+00:02:43,830 --> 00:02:46,070
+Nie mamy wic uwierzytelnionych uytkownikw.
+
+40
+00:02:46,260 --> 00:02:51,080
+Tak wic na chwil przejdmy do prawdy, aby kady mg czyta lub pisa, oczywicie,
+
+41
+00:02:51,120 --> 00:02:55,950
+e nie jest to co, czego potrzebujesz do swojej prawdziwej aplikacji, ktr wysyasz, przynajmniej
+
+42
+00:02:56,070 --> 00:03:00,020
+jest to najbardziej prawdopodobny przypadek uycia, ktrego nie chcesz da globalnej
+
+43
+00:03:00,030 --> 00:03:01,650
+lektury lub dostp do zapisu.
+
+44
+00:03:01,650 --> 00:03:03,990
+Upewnij si, e publikujesz zaktualizowane zasady
+
+45
+00:03:04,230 --> 00:03:06,120
+i e jestemy ju gotowi,
+
+46
+00:03:06,150 --> 00:03:06,930
+to wszystko.
+
+47
+00:03:06,960 --> 00:03:08,790
+Nie musimy konfigurowa niczego innego,
+
+48
+00:03:08,850 --> 00:03:15,750
+moemy zacz i moemy zacz wysya dania HTTP do tego punktu kocowego lub niektrych zagniedonych punktw kocowych,
+
+49
+00:03:15,750 --> 00:03:17,100
+jak to zobaczymy.
+
+50
+00:03:17,250 --> 00:03:18,820
+Teraz, w nastpnym
+
+51
+00:03:18,840 --> 00:03:25,170
+wykadzie, zanurzmy si w tym i zacznijmy wysya dania HTTP do naszego backendu tutaj.
+

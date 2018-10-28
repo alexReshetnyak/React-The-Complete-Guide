@@ -1,0 +1,292 @@
+1
+00:00:02,200 --> 00:00:05,160
+We can load the ingredients from the server and build the burger,
+
+2
+00:00:05,260 --> 00:00:08,460
+let's now work on the checkout process. There
+
+3
+00:00:08,470 --> 00:00:15,190
+when we enter all that contact data, I want to make sure that once we have a valid contact form and we
+
+4
+00:00:15,190 --> 00:00:22,630
+click that order button, we do of course submit that order and we do of course store that order on
+
+5
+00:00:22,630 --> 00:00:24,040
+the firebase server
+
+6
+00:00:24,220 --> 00:00:26,020
+but I want to handle more of that
+
+7
+00:00:26,050 --> 00:00:27,520
+via redux.
+
+8
+00:00:27,520 --> 00:00:33,430
+If we have a look at the checkout container, there we don't do anything related to the checkout because we
+
+9
+00:00:33,430 --> 00:00:39,420
+first of all load the contact data component or container. And in the contact data container,
+
+10
+00:00:39,460 --> 00:00:43,430
+it's a very big container because we do all these state management of the form here,
+
+11
+00:00:43,460 --> 00:00:51,140
+there we have that orderHandler where ultimately we reach out to our backend. This is now what I want to handle in
+
+12
+00:00:51,240 --> 00:00:59,040
+the action creator so that we actually create our order in there and automatically add it to our store.
+
+13
+00:00:59,800 --> 00:01:01,490
+So let's start working on this
+
+14
+00:01:01,540 --> 00:01:04,070
+and let's first of all define some action types.
+
+15
+00:01:04,180 --> 00:01:10,330
+If we have a look at the contact data container, we can actually split this up in a couple of actions
+
+16
+00:01:10,330 --> 00:01:12,100
+we probably want to dispatch,
+
+17
+00:01:12,100 --> 00:01:14,920
+we want to start submitting this.
+
+18
+00:01:15,100 --> 00:01:23,110
+So something like try purchase or try complete order but then, we also need actions for the success
+
+19
+00:01:23,110 --> 00:01:29,330
+case and for the failure where we might want to set up some error
+
+20
+00:01:29,350 --> 00:01:35,440
+or simply set loading to false if we don't want to do anything with the error. So these three action
+
+21
+00:01:35,440 --> 00:01:37,660
+types probably makes sense,
+
+22
+00:01:37,660 --> 00:01:45,610
+so back in the action types file, I'll export a couple of constants here and the first one is actually
+
+23
+00:01:46,240 --> 00:01:56,950
+PURCHASE_BURGER_SUCCESS and of course, a similarly named string here or a similar value for the string
+
+24
+00:01:57,420 --> 00:02:00,690
+and PURCHASE_BURGER_FAIL
+
+25
+00:02:00,900 --> 00:02:03,060
+and this will be the actual dispatch
+
+26
+00:02:03,060 --> 00:02:09,690
+if it fails. I don't have my try purchase action here because we don't need an identifier for that,
+
+27
+00:02:09,720 --> 00:02:14,190
+it will only be action creator we execute to run some async code,
+
+28
+00:02:14,220 --> 00:02:19,590
+it will never be an action we dispatch to reducer due to the async code.
+
+29
+00:02:19,920 --> 00:02:26,340
+So let's head over to the order.js file then, in the actions folder and there, I'll first of all import
+
+30
+00:02:26,700 --> 00:02:36,770
+my action types from ./actionTypes and then I want to export some handlers here, some action creators.
+
+31
+00:02:36,810 --> 00:02:38,480
+The first one will be
+
+32
+00:02:38,760 --> 00:02:44,010
+and we can orientate ourselves on the action types PURCHASE_BURGER_SUCCESS,
+
+33
+00:02:44,010 --> 00:02:51,020
+so here, I'll name this purchaseBurgerSuccess in camel case notation. Here,
+
+34
+00:02:51,150 --> 00:02:54,810
+I expect to get the id of the newly created order
+
+35
+00:02:54,840 --> 00:03:00,900
+so the order which was created on the backend, on the database on our backend, I expect to get this
+
+36
+00:03:00,900 --> 00:03:08,010
+as an id here because I want to pass it on in the action which I actually create here so that in the reducer,
+
+37
+00:03:08,070 --> 00:03:15,680
+we can use that action to actually add the order to our orders array and maybe, I need even more than
+
+38
+00:03:15,690 --> 00:03:18,740
+the ID, mayb I also want to have to order data
+
+39
+00:03:18,810 --> 00:03:27,650
+so I'll pass our order data object too. Then I return object where I have a type, type should be action types
+
+40
+00:03:27,920 --> 00:03:35,930
+and then purchaseBurgerSuccess then I'll set up an order ID property which is my ID and I'll also pass
+
+41
+00:03:35,930 --> 00:03:42,820
+the order data property and yes, we could merge both together of course where I set order data, like this.
+
+42
+00:03:42,890 --> 00:03:51,920
+Now I need to add another action creator, I'll name this one purchaseBurgerFail, there
+
+43
+00:03:51,940 --> 00:04:01,020
+I might get the error message but then, I simply want to return a new object of type actionTypes.
+
+44
+00:04:01,120 --> 00:04:08,060
+PURCHASE_BURGER_FAIL and I will pass on the error since we got it.
+
+45
+00:04:08,110 --> 00:04:11,560
+These are the two synchronous action creators,
+
+46
+00:04:11,560 --> 00:04:19,870
+now comes the async one, I'll name it purchaseBurgerStart, this is the action we dispatched from the
+
+47
+00:04:19,870 --> 00:04:20,350
+container
+
+48
+00:04:20,350 --> 00:04:28,760
+once we click that order button. Here I do expect to get some order data like the user data, add ingredients
+
+49
+00:04:28,800 --> 00:04:29,770
+and so on
+
+50
+00:04:31,160 --> 00:04:39,020
+and then in this function, I will return a function where I get the dispatch function using that redux
+
+51
+00:04:39,030 --> 00:04:44,600
+thunk middleware where I then will reach out to axios. For that,
+
+52
+00:04:44,640 --> 00:04:52,110
+I'll first of all import axios from and now I need to move up to the axios orders file here,
+
+53
+00:04:52,930 --> 00:04:57,490
+there I'll reach out to axios, I want to post a new order,
+
+54
+00:04:57,770 --> 00:05:02,520
+we actually have the code in the contact data container already,
+
+55
+00:05:02,690 --> 00:05:10,130
+it's this code here, so I can just cut it from there and put it into my order action creator, like this.
+
+56
+00:05:11,090 --> 00:05:16,240
+This is the request I want to make and I want to pass my order data as an argument here,
+
+57
+00:05:16,310 --> 00:05:21,460
+we could of course also restructure that order data in the action creator if we need to do so,
+
+58
+00:05:21,650 --> 00:05:24,720
+I certainly don't want to call this.setState here
+
+59
+00:05:24,980 --> 00:05:28,710
+and I also won't call this.props.history.push,
+
+60
+00:05:28,730 --> 00:05:30,890
+we don't have access to the router here.
+
+61
+00:05:30,890 --> 00:05:31,690
+We could get it,
+
+62
+00:05:31,730 --> 00:05:36,450
+we could pass it as an argument but I'll take a different route of redirecting later.
+
+63
+00:05:36,620 --> 00:05:39,710
+So none of that happens, instead
+
+64
+00:05:39,980 --> 00:05:49,070
+once we got the response so that we were successful, I will dispatch my purchaseBurgerSuccess action
+
+65
+00:05:49,070 --> 00:05:50,000
+creator here.
+
+66
+00:05:50,830 --> 00:05:59,550
+We'll execute it of course and I'll pass the response data and see if that's the id, so let's simply log response
+
+67
+00:06:00,420 --> 00:06:04,950
+data here to see how we can get the id of the newly created element
+
+68
+00:06:05,310 --> 00:06:09,560
+and I will also pass the order data which I'll also still need,
+
+69
+00:06:09,600 --> 00:06:18,210
+so what did we order so that I can add this to my local store. And in the error case, I'll dispatch purchase
+
+70
+00:06:18,250 --> 00:06:26,170
+error burger fail, not error, purchaseBurgerFail and pass on that error object.
+
+71
+00:06:26,760 --> 00:06:31,550
+With that, the action creators in the order file are finished, in the next lecture,
+
+72
+00:06:31,550 --> 00:06:37,130
+I want to connect them to my container and make sure that ordering indeed goes through
+
+73
+00:06:37,200 --> 00:06:37,810
+redux.
+

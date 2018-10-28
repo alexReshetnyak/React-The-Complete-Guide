@@ -1,0 +1,228 @@
+1
+00:00:02,210 --> 00:00:05,270
+Echemos un vistazo a nuestro productor aqu.
+
+2
+00:00:05,490 --> 00:00:10,180
+Vemos que tenemos todos estos casos diferentes incrementando la edicin, etc.
+
+3
+00:00:10,200 --> 00:00:13,780
+La historia principal resolvi todas estas cosas.
+
+4
+00:00:14,160 --> 00:00:20,820
+Y, por supuesto, enfatizo que los identificadores que estamos buscando aqu en el reductor ya identifican como
+
+5
+00:00:20,820 --> 00:00:27,410
+lo mostramos en los componentes de nuestro contenedor en nuestra aplicacin donde queremos enviar estas acciones.
+
+6
+00:00:27,780 --> 00:00:35,010
+pero siempre existe el peligro de simplemente agregar un pequeo error tipogrfico y buscarlo durante horas porque
+
+7
+00:00:35,010 --> 00:00:44,100
+no lo encontramos, por lo tanto, es una buena prctica externalizar sus tipos de accin en constantes que puede usar en
+
+8
+00:00:44,100 --> 00:00:51,700
+su aplicacin, por lo que que siempre importa una constante y elimina el peligro de escribir mal.
+
+9
+00:00:51,700 --> 00:00:53,570
+Lo hacemos, por supuesto,
+
+10
+00:00:53,580 --> 00:00:56,730
+Esto es especialmente til a medida que su aplicacin crece.
+
+11
+00:00:56,880 --> 00:01:00,950
+Si solo tienes dos tipos de acciones que envas, es posible que no las necesites.
+
+12
+00:01:01,110 --> 00:01:07,540
+Pero para las aplicaciones ms grandes definitivamente agregadas para esto, las agregar y usted caer en la carpeta de mi tienda
+
+13
+00:01:07,540 --> 00:01:08,750
+y le nombrar acciones.
+
+14
+00:01:08,820 --> 00:01:17,910
+J. S. all podemos simplemente exportar una constante que, por lo general, nos da el mismo nombre que
+
+15
+00:01:17,910 --> 00:01:18,660
+el identificador que tendremos.
+
+16
+00:01:18,930 --> 00:01:27,510
+Entonces, podras tener una constante que es un incremento y el valor que asignamos es solo ese identificador de cadena.
+
+17
+00:01:27,510 --> 00:01:34,920
+Entonces, almacenamos esa cadena en una constante que exportamos y lo hacemos para todas nuestras acciones.
+
+18
+00:01:35,010 --> 00:01:39,690
+Entonces todos tenemos ese comentario aqu y el identificador es el mismo.
+
+19
+00:01:40,020 --> 00:01:46,290
+Ahora, tericamente, el nombre de la constante y el identificador no tienen que coincidir, pero es una buena
+
+20
+00:01:46,910 --> 00:01:49,540
+prctica, entonces aqu tenemos que decir para ADD.
+
+21
+00:01:49,860 --> 00:02:02,360
+Y, por supuesto, para restar as y, por supuesto, tambin para el resultado de la tienda, que tampoco utilizamos SDH y
+
+22
+00:02:02,400 --> 00:02:08,130
+el resultado de disparar y eliminar de esta manera.
+
+23
+00:02:08,130 --> 00:02:12,610
+Entonces ahora tenemos esta cada adicional donde exportamos todas estas acciones.
+
+24
+00:02:12,630 --> 00:02:19,530
+Esto ahora nos permite reducirla e importar las acciones desde all.
+
+25
+00:02:19,890 --> 00:02:28,140
+Ahora podemos simplemente importar todo desde un archivo dado y almacenarlo en algn objeto javascript, tal vez
+
+26
+00:02:28,140 --> 00:02:33,930
+los tipos de accin de las acciones de barra diagonal realmente tipean.
+
+27
+00:02:33,930 --> 00:02:41,990
+Ahora es un objeto javascript que tiene todas estas propiedades aqu o todas estas consideraciones aqu debera decir.
+
+28
+00:02:42,240 --> 00:02:44,200
+Como propiedades.
+
+29
+00:02:44,220 --> 00:02:54,460
+As que ahora aqu podemos verificar si hay tipos de accin de caso dot y ahora aqu que seran incrementos y lo
+
+30
+00:02:54,460 --> 00:02:57,190
+mismo, por supuesto, para detrimento, etc.
+
+31
+00:02:57,430 --> 00:03:03,990
+La gran ventaja de este enfoque simplemente es que ahora estamos importando nuestras constantes aqu.
+
+32
+00:03:04,150 --> 00:03:11,710
+de ese proceso en negrita si almacenamos y guardamos todo o si obtenemos un error, no encontramos nuestro comando de exportacin.
+
+33
+00:03:11,710 --> 00:03:17,550
+Y si escribimos mal un nombre constante, en realidad obtendremos un error de nuestra ID o
+
+34
+00:03:17,560 --> 00:03:21,760
+As que tengo que arreglar mi error tipogrfico para tener una aplicacin en funcionamiento de nuevo.
+
+35
+00:03:21,760 --> 00:03:29,950
+Este es el motivo por el que utiliza este enfoque, por lo que reemplazar todas las cadenas de cadenas codificadas aqu con los tipos
+
+36
+00:03:29,950 --> 00:03:30,550
+de accin.
+
+37
+00:03:30,580 --> 00:03:38,240
+Estoy importando, as que restar suma y dems para eliminar el peligro de escribir mal aqu.
+
+38
+00:03:38,290 --> 00:03:41,430
+Entonces, los tipos de accin almacenan asalto.
+
+39
+00:03:41,650 --> 00:03:47,820
+Y, por supuesto, tambin los tipos de accin eliminan los resultados para que todos sean reemplazados.
+
+40
+00:03:47,990 --> 00:03:51,560
+Y luego hago lo mismo cuando los despacho.
+
+41
+00:03:51,950 --> 00:03:57,400
+Por supuesto, no tiene ningn sentido seguir teniendo valores codificados aqu porque an podra omitir el tipo.
+
+42
+00:03:57,530 --> 00:04:00,860
+As que ahora simplemente importar mis tipos de accin aqu.
+
+43
+00:04:01,360 --> 00:04:06,130
+As que importe todo como tipos de accin y este nombre depende de usted.
+
+44
+00:04:06,130 --> 00:04:09,850
+Puede nombrar a este Optik como quiera.
+
+45
+00:04:09,990 --> 00:04:17,230
+Y ahora simplemente suba a la carpeta de la tienda al archivo js de acciones y ahora utilizo mis tipos de accin
+
+46
+00:04:17,230 --> 00:04:18,740
+aqu tambin para despachar.
+
+47
+00:04:18,950 --> 00:04:23,780
+As que aqu para el tipo de accin incremente los tipos cromados y as sucesivamente.
+
+48
+00:04:24,050 --> 00:04:31,730
+al escribir errores o tener identificadores diferentes porque ahora solo tenemos un lugar donde configuramos y almacenamos nuestros identificadores.
+
+49
+00:04:31,730 --> 00:04:40,580
+Y, por lo tanto, no siempre nos estamos refiriendo a esa propiedad de los constantes que estamos exportando y las acciones caen
+
+50
+00:04:40,580 --> 00:04:43,630
+y, por lo tanto, podemos cometer errores
+
+51
+00:04:43,820 --> 00:04:47,550
+Y eso est en este archivo de acciones de Julias.
+
+52
+00:04:47,570 --> 00:04:53,700
+Entonces, simplemente, la aplicacin debera funcionar igual que antes.
+
+53
+00:04:53,960 --> 00:05:00,680
+Como puede ver, an puedo agregar y eliminar resultados y cambiar mi contador, pero ahora eliminamos ese
+
+54
+00:05:00,770 --> 00:05:03,310
+peligro, una posible fuente de errores.
+
+55
+00:05:03,560 --> 00:05:11,090
+Por lo tanto, la externalizacin de sus tipos de accin en un archivo separado del que no se importa es una buena
+
+56
+00:05:11,330 --> 00:05:15,920
+prctica, especialmente a medida que su aplicacin crece, pero no tiene que perforar tanto.
+
+57
+00:05:15,920 --> 00:05:17,290
+Para que esto tenga sentido.
+

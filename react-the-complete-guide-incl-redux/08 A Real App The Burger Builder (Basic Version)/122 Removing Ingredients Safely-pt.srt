@@ -1,0 +1,388 @@
+1
+00:00:02,140 --> 00:00:05,600
+Na ltima palestra, tivemos a lgica de adicionar ingredientes.
+
+2
+00:00:05,730 --> 00:00:11,520
+Agora, claro, tudo o que quero fazer o contrrio e remov-los. Eu j adicionei o removedor de
+
+3
+00:00:11,640 --> 00:00:14,030
+ingredientes ao recipiente do construtor de hambrguer.
+
+4
+00:00:14,040 --> 00:00:16,800
+Agora precisamos preencher o pai com alguma vida.
+
+5
+00:00:16,800 --> 00:00:21,190
+A lgica  bastante semelhante  lgica que tivemos e ao manipulador de ingredientes ADD.
+
+6
+00:00:21,210 --> 00:00:22,810
+ basicamente o contrrio.
+
+7
+00:00:22,830 --> 00:00:24,540
+Deduzindo um ingrediente.
+
+8
+00:00:24,860 --> 00:00:28,310
+Ento, vou copiar o cdigo por agora adicionado aqui.
+
+9
+00:00:28,560 --> 00:00:35,290
+Estou interessado na contagem antiga da conta de atualizao  a contagem anterior menos um dos ingredientes atualizados.
+
+10
+00:00:35,310 --> 00:00:42,120
+Ainda segue a mesma lgica aqui e o mesmo pelo preo, embora seja claro que no  uma adio
+
+11
+00:00:42,280 --> 00:00:48,340
+de preo surpreender a duo que so ento todos os que devem deduzir aqui e no adicionar.
+
+12
+00:00:48,590 --> 00:00:49,590
+E isso realmente  tudo.
+
+13
+00:00:49,590 --> 00:00:56,540
+Ento eu simplesmente reduzo meu ingrediente por 1 e eu deduziria o preo.
+
+14
+00:00:56,540 --> 00:01:01,380
+Agora com isso estamos atualizando os ingredientes e o preo novamente.
+
+15
+00:01:01,670 --> 00:01:04,760
+Agora vamos voltar ou redes agora.
+
+16
+00:01:04,770 --> 00:01:09,320
+Past  Methot handler  Methot referncia aqui.
+
+17
+00:01:09,330 --> 00:01:10,490
+Este manipulador de eventos.
+
+18
+00:01:10,550 --> 00:01:13,100
+Vamos passar para baixo para criar controles.
+
+19
+00:01:13,310 --> 00:01:19,370
+Ento, eu quero que o ingrediente remova o Propp, onde eu passo a referncia a esse mtodo que
+
+20
+00:01:19,390 --> 00:01:26,330
+acabou de adicionar alguma lgica e a propriedade de Ingredion removida aqui pode ser usada dentro de ambos os controles.
+
+21
+00:01:26,330 --> 00:01:34,430
+Agora, onde eu no s quero ter adicionado no controle de compilao individual, mas tambm removido e executado residental funo
+
+22
+00:01:34,470 --> 00:01:41,200
+de seta em que eu simplesmente executo Ingredion removido e passou o tipo de ingrediente que
+
+23
+00:01:41,240 --> 00:01:44,030
+deve ser removido seguindo a mesma lgica.
+
+24
+00:01:44,150 --> 00:01:46,370
+Quanto  adio.
+
+25
+00:01:46,570 --> 00:01:53,350
+Agora, precisamos conectar a propriedade remover no controle de compilao individual e l no ltimo boto e,
+
+26
+00:01:53,450 --> 00:02:00,430
+portanto, adicionar o ouvinte no ouvinte de clique e simplesmente executar o suporte removido ou no executado
+
+27
+00:02:00,430 --> 00:02:02,380
+passar uma referncia a isso.
+
+28
+00:02:02,470 --> 00:02:05,930
+Remova o suporte que contm uma referncia a esse mtodo.
+
+29
+00:02:05,930 --> 00:02:10,510
+Queremos executar o sauted quer que o boto seja clicado e esse evento seja disparado.
+
+30
+00:02:10,510 --> 00:02:12,720
+Executamos esse mtodo.
+
+31
+00:02:13,330 --> 00:02:16,000
+Com isso, vamos salvar isso e vamos ver se isso funciona.
+
+32
+00:02:16,000 --> 00:02:21,400
+Vamos adicionar um pouco de bacon e vamos remover o bacon e a salada e o queijo.
+
+33
+00:02:21,400 --> 00:02:27,190
+Agora, temos um problema se comearmos a deduzir elementos que no possumos, embora possamos ter um
+
+34
+00:02:27,190 --> 00:02:31,800
+erro e isso faz sentido porque tentamos remover um ingrediente que no possumos.
+
+35
+00:02:32,020 --> 00:02:35,950
+Ento, nosso criador de hambrguer, voc  o estado, torna-se negativo.
+
+36
+00:02:35,950 --> 00:02:39,110
+Temos menos 1 bacon e isso realmente  um erro.
+
+37
+00:02:39,130 --> 00:02:43,160
+Porque podemos criar uma matriz para renderizar a partir de um valor negativo.
+
+38
+00:02:43,570 --> 00:02:49,960
+Ento, devemos encontrar quando a nossa remoo do manipulador de reagentes Belz verificando se temos ingredientes
+
+39
+00:02:49,960 --> 00:02:50,620
+para comear.
+
+40
+00:02:50,950 --> 00:02:54,000
+Ento, o velho conte com um determinado ingrediente.
+
+41
+00:02:54,130 --> 00:02:56,460
+Deve ser maior que zero.
+
+42
+00:02:56,620 --> 00:03:06,070
+Ento, se a contagem antiga for menor ou igual ao Ciro, eu essencialmente quero retornar para que nada acontea.
+
+43
+00:03:06,200 --> 00:03:12,470
+Se tentarmos ler, use um ingrediente que no temos agora, eu realmente fui vend-lo ou bacon
+
+44
+00:03:12,470 --> 00:03:14,270
+ou nada mais nada acontece.
+
+45
+00:03:14,740 --> 00:03:18,310
+Claro que seria ainda melhor se o boto fosse desativado ento.
+
+46
+00:03:18,440 --> 00:03:22,180
+Ento vamos apresentar essa lgica l.
+
+47
+00:03:22,190 --> 00:03:28,730
+Eu quero passar algumas informaes sobre qual boto deve ser habilitado e qual boto deve ser desativado
+
+48
+00:03:29,030 --> 00:03:30,840
+para meus controles de compilao.
+
+49
+00:03:31,670 --> 00:03:34,120
+Para Dalat, role para baixo at o mtodo de renderizao.
+
+50
+00:03:34,220 --> 00:03:42,470
+E antes de retornar J como X, criarei um novo nome de batalha constante desativando informaes e
+
+51
+00:03:42,470 --> 00:03:49,640
+l, eu simplesmente quero criar um novo objeto onde ir distribuir as propriedades deste estado.
+
+52
+00:03:49,640 --> 00:03:51,060
+Ingredientes.
+
+53
+00:03:51,080 --> 00:03:56,120
+Tenha em mente esses ingredientes do estado simplesmente como esse objeto.
+
+54
+00:03:56,240 --> 00:04:00,430
+Ento, basicamente, copiei isso de forma imutvel.
+
+55
+00:04:00,440 --> 00:04:05,080
+Agora, esse objeto por si s,  claro, no  toda a informao que eu quero.
+
+56
+00:04:05,180 --> 00:04:15,050
+as chaves na informao de desativao e simplesmente verificar se o Ciro ou menos e ser atualizado para desativar a chave de informaes.
+
+57
+00:04:15,110 --> 00:04:19,980
+Agora, crie um loop for, ento faa um loop por todas
+
+58
+00:04:20,090 --> 00:04:26,980
+Ento, carne Sallet e assim por diante com essa informao se essa verificao para que o objeto
+
+59
+00:04:26,990 --> 00:04:31,330
+no tenha a forma de clula em 0 satisfaa 0.
+
+60
+00:04:31,460 --> 00:04:35,510
+Mas simplesmente se ele deve ser desativado ou no to slido.
+
+61
+00:04:35,540 --> 00:04:36,990
+Verdade.
+
+62
+00:04:37,040 --> 00:04:42,190
+Verdadeiro e verdadeiro ser o valor atribudo se ele for desativado.
+
+63
+00:04:42,380 --> 00:04:47,370
+Ento, verificar se a invocao de desativao para uma determinada chave  menor ou igual a zero.
+
+64
+00:04:47,420 --> 00:04:52,220
+Porque tenha em mente que essa chave de informaes capaz  o valor de cada chave.
+
+65
+00:04:52,220 --> 00:04:58,830
+Ento, zero em todos esses casos no incio e o controle aqui ser verdadeiro ou falso.
+
+66
+00:04:58,940 --> 00:05:03,090
+Ento, vamos atualizar isso em nosso objeto copiado, no no original.
+
+67
+00:05:03,170 --> 00:05:06,790
+O copiado com verdadeiro ou falso.
+
+68
+00:05:06,800 --> 00:05:14,890
+Agora, com isso, podemos puxar desativar informaes para informaes desativadas para o componente de controle de compilao aqui.
+
+69
+00:05:14,960 --> 00:05:21,860
+Ento, vou configurar uma propriedade desabilitada e passar informaes desabilitadas.
+
+70
+00:05:21,860 --> 00:05:28,180
+Agora,  claro, voc deve aproveitar esta propriedade desabilitada neste componente de controle de compilao e
+
+71
+00:05:28,700 --> 00:05:34,760
+a devemos passar essas informaes para o controle de compilao individual para inform-lo se ele
+
+72
+00:05:34,760 --> 00:05:37,190
+deve desativar esse boto ou no.
+
+73
+00:05:37,190 --> 00:05:40,450
+Ento, eu tambm estabelecerei uma deficincia proprietria l.
+
+74
+00:05:40,760 --> 00:05:48,530
+E para isso vou usar a informao desabilitada, eu estou obtendo no suporte desativado de controles de compilao no criar controles
+
+75
+00:05:48,530 --> 00:05:49,960
+de compilao de controle.
+
+76
+00:05:49,970 --> 00:05:56,660
+Estou usando o continer do construtor de hambrguer e l, claro, quero acessar informaes desabilitadas para
+
+77
+00:05:56,750 --> 00:05:58,730
+um determinado tipo de controle.
+
+78
+00:05:58,940 --> 00:06:06,530
+Porque tenha em mente que a estrutura desta informao habilitada  basicamente dessa forma slida.
+
+79
+00:06:06,620 --> 00:06:10,650
+Carne verdadeira cai e assim por diante.
+
+80
+00:06:10,730 --> 00:06:14,750
+Ento,  isso que teremos neste objeto reestruturado.
+
+81
+00:06:14,750 --> 00:06:16,730
+E se for verdade, ele deve estar desativado.
+
+82
+00:06:16,730 --> 00:06:23,510
+Ento, o que precisamos  que precisamos acessar as informaes para um determinado tipo de controle e, felizmente,  claro
+
+83
+00:06:23,510 --> 00:06:29,980
+que no h tipo de dados em controles de compilao porque estamos fazendo um loop nos controles onde armazenamos
+
+84
+00:06:29,990 --> 00:06:33,680
+esse tipo que tambm usamos para adicionar e remover elementos.
+
+85
+00:06:33,680 --> 00:06:40,910
+Mas aqui tambm o acesso para escrever informaes desabilitadas e o que eles podem usar para o Propp desabilitado
+
+86
+00:06:40,910 --> 00:06:49,940
+no controle de compilao individual para desativar o ltimo boto e desativado  uma propriedade padro que podemos configurar em um elemento do
+
+87
+00:06:49,940 --> 00:06:50,710
+boto HCM.
+
+88
+00:06:50,870 --> 00:06:54,030
+E  claro que eu quero configur-lo igual a desativado do prop.
+
+89
+00:06:54,110 --> 00:06:56,870
+Ento, para Verdadeiro ou falso.
+
+90
+00:06:56,930 --> 00:07:01,850
+E vou reestruturar isso em vrias linhas para torn-lo um pouco mais fcil de ler.
+
+91
+00:07:01,940 --> 00:07:03,860
+Ento espero que a lgica seja clara aqui.
+
+92
+00:07:03,860 --> 00:07:11,210
+Estamos simplesmente certificando-se de que o menor boto fica desativado se o ingrediente for Ciro ou menos.
+
+93
+00:07:11,210 --> 00:07:14,020
+Ento, agora voc v todos os botes serem bloqueados.
+
+94
+00:07:14,060 --> 00:07:18,900
+O estilo  configurado porque fazia parte desse C-s  medida que os arquivos so compartilhados com voc.
+
+95
+00:07:19,130 --> 00:07:23,660
+E uma vez que comeamos a adicionar um ingrediente, podemos clicar novamente no boto.
+
+96
+00:07:23,810 --> 00:07:26,120
+Ento, nossos controles de barco funcionam.
+
+97
+00:07:26,240 --> 00:07:28,790
+Vamos tambm produzir o preo agora.
+

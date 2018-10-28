@@ -1,0 +1,324 @@
+1
+00:00:02,250 --> 00:00:06,000
+Impariamo molto sulle classi e le funzioni aerodinamiche.
+
+2
+00:00:06,210 --> 00:00:11,700
+Passiamo ora a rivolgere la nostra attenzione ai nuovi operatori che saranno in grado di utilizzare in futuro
+
+3
+00:00:11,700 --> 00:00:17,340
+di javascript e che possiamo gi utilizzare oggi nel nostro progetto Riak per diffonderlo negli operatori di resto.
+
+4
+00:00:17,400 --> 00:00:20,840
+In realt  solo un punto libero dall'operatore.
+
+5
+00:00:20,850 --> 00:00:25,020
+S, questo pu sembrare strano ma l'operatore  solo punti liberi.
+
+6
+00:00:25,080 --> 00:00:32,010
+Ora se lo chiamiamo spread o resto dipende da dove lo usiamo, l'operatore di spread  usato
+
+7
+00:00:32,100 --> 00:00:35,160
+per suddividere ogni elemento o propriet dell'oggetto.
+
+8
+00:00:35,250 --> 00:00:38,510
+Quindi distribuiamo una matrice o un oggetto.
+
+9
+00:00:38,640 --> 00:00:47,160
+Ad esempio se abbiamo un vecchio array e vogliamo aggiungere tutti gli elementi da quel vecchio array a un nuovo array e
+
+10
+00:00:47,160 --> 00:00:54,150
+aggiungere inoltre un 1 in un elemento two questo primo indice sarebbe quello che era tre punti davanti
+
+11
+00:00:54,150 --> 00:01:00,330
+a tutti gli array semplicemente estraete tutti gli elementi e aggiunti al nuovo array che abbiamo
+
+12
+00:01:00,330 --> 00:01:01,630
+creato con parentesi quadre.
+
+13
+00:01:01,860 --> 00:01:04,870
+E ovviamente possiamo aggiungerne altri.
+
+14
+00:01:04,890 --> 00:01:11,140
+Quindi usiamo solo per normalizzare l'indice con parentesi quadre per creare un array uguale per il tuo oggetto.
+
+15
+00:01:11,190 --> 00:01:17,850
+Creiamo un nuovo oggetto con bretelle di chiamata con il nuovo puntello, ma poi abbiamo anche punto punto punto.
+
+16
+00:01:17,880 --> 00:01:26,670
+i loro valori e aggiungerli come coppie di valori chiave non ti obietta come una nota a margine se il vecchio oggetto.
+
+17
+00:01:26,670 --> 00:01:31,350
+Il vecchio oggetto per estrarre tutte le propriet del vecchio oggetto e
+
+18
+00:01:31,350 --> 00:01:33,350
+Anche avanti una nuova propriet.
+
+19
+00:01:33,480 --> 00:01:36,220
+Sarebbe sovrascritto da un nuovo puntello 5 qui.
+
+20
+00:01:36,300 --> 00:01:40,920
+Quindi la nostra propriet ha la precedenza sull'operatore di diffusione disonest.
+
+21
+00:01:41,010 --> 00:01:48,660
+Ora l'operatore di resto  lo stesso operatore ma usato diversamente qui  usato per unire un elenco di argomenti di
+
+22
+00:01:48,660 --> 00:01:50,270
+funzione in un array.
+
+23
+00:01:50,460 --> 00:01:52,270
+E questo ci mostra dove lo usiamo.
+
+24
+00:01:52,380 --> 00:01:55,190
+Lo usiamo in una lista di argomenti di funzioni.
+
+25
+00:01:55,220 --> 00:01:57,380
+Ecco un esempio di esempio.
+
+26
+00:01:57,370 --> 00:02:00,740
+La nostra X riceve una quantit illimitata di argomenti.
+
+27
+00:02:00,750 --> 00:02:09,420
+Quindi un argomento per liberare o qualsiasi cosa con punto punto punto scriviamo solo un argomento o X, ma potremmo effettivamente
+
+28
+00:02:09,420 --> 00:02:14,120
+ricevere pi di uno e saranno tutti uniti in un array.
+
+29
+00:02:14,130 --> 00:02:20,790
+Quindi possiamo applicare i metodi Array alla nostra lista di argomenti o fare qualsiasi cosa vogliamo fare con i
+
+30
+00:02:20,790 --> 00:02:22,210
+nostri argomenti comodamente archiviati.
+
+31
+00:02:22,410 --> 00:02:26,090
+Diamo un'occhiata a entrambi come NJ Esben quindi.
+
+32
+00:02:26,170 --> 00:02:31,600
+Quindi iniziamo con l'operatore di spread o creiamo una serie di numeri.
+
+33
+00:02:31,870 --> 00:02:35,310
+Quindi, una volta libero, aggiungi tutti quelli che vuoi.
+
+34
+00:02:35,350 --> 00:02:42,820
+Ora voglio creare un nuovo array con nuovi numeri e come hai visto lo spread ora  semplicemente usato
+
+35
+00:02:42,820 --> 00:02:44,140
+aggiungendo punti gratuiti.
+
+36
+00:02:44,140 --> 00:02:49,430
+Quindi i vecchi numeri di array e quindi potenzialmente non devi farlo.
+
+37
+00:02:49,660 --> 00:02:53,260
+Nuovi numeri come 4 e di nuovo che  opzionale.
+
+38
+00:02:53,770 --> 00:02:56,070
+Con il registro della console finale.
+
+39
+00:02:56,170 --> 00:02:58,130
+Nuovi numeri qui.
+
+40
+00:02:59,450 --> 00:03:07,250
+E ho corso ottenendo uno due tre quattro la matrice pi vecchia con tutti i suoi elementi e il nuovo elemento.
+
+41
+00:03:07,250 --> 00:03:09,320
+E in realt non aggiungiamo il vecchio elemento.
+
+42
+00:03:09,350 --> 00:03:15,350
+Se dovessimo farlo senza i punti, sarebbe incluso come un elemento all'interno del nuovo elemento.
+
+43
+00:03:15,350 --> 00:03:20,170
+Ha davvero tirato fuori i vecchi elementi come puoi vedere chiaramente.
+
+44
+00:03:20,300 --> 00:03:26,750
+Quindi questo  l'operatore di spread e vedrete che utilizzer questo corso per un paio di
+
+45
+00:03:26,750 --> 00:03:35,880
+volte su entrambi gli array e gli oggetti, ad esempio, per copiare opportunamente gli array o aggiungere propriet a un oggetto mentre
+
+46
+00:03:35,880 --> 00:03:38,780
+copio in modo sicuro quel vecchio oggetto.
+
+47
+00:03:38,780 --> 00:03:44,020
+Anche in questo caso, ovviamente, menzioner sempre il motivo per cui sto usando quell'operatore quando fa un corso.
+
+48
+00:03:44,180 --> 00:03:46,500
+Basta essere consapevoli che esiste.
+
+49
+00:03:46,790 --> 00:03:53,200
+Vediamo ora lo stesso per gli oggetti tutti creano un oggetto personale qui dove ho un nome.
+
+50
+00:03:53,210 --> 00:04:01,980
+Diciamo Max e ora avr un nuovo oggetto person che  un oggetto javascript e uno nuovo, mentre prima di tutto si
+
+51
+00:04:02,020 --> 00:04:09,630
+usa per diffondere l'operatore di persona per copiare tutte le coppie di valori di propriet del vecchio oggetto e
+
+52
+00:04:09,930 --> 00:04:12,390
+potenzialmente e questo  tutto facoltativo.
+
+53
+00:04:12,510 --> 00:04:14,200
+Aggiungi una nuova propriet.
+
+54
+00:04:14,460 --> 00:04:21,630
+E ora se registro una persona nuova, puoi ignorare questo errore che  di propriet di J  stato decente
+
+55
+00:04:21,630 --> 00:04:24,500
+X sar supportato nel nostro progetto di corso.
+
+56
+00:04:24,810 --> 00:04:30,300
+Facciamo ci che vedi oggetto come l'anno di Brinton con il nome Max all'et di 28 anni.
+
+57
+00:04:30,480 --> 00:04:36,730
+Quindi sta prendendo la persona anziana e la distribuisce nella nuova persona che  l'operatore di diffusione.
+
+58
+00:04:36,780 --> 00:04:44,210
+Ora l'operatore di riposo che viene utilizzato meno spesso viene utilizzato in una funzione e, naturalmente,  possibile utilizzare
+
+59
+00:04:44,250 --> 00:04:46,690
+anche la funzione di 6 frecce.
+
+60
+00:04:46,830 --> 00:04:53,760
+Quindi potremmo avere una funzione di filtro come vuoi chiamarla e otteniamo un paio di archi e non
+
+61
+00:04:53,760 --> 00:04:59,460
+devi usare X year olds o come vuoi, ma devi usare i punti gratuiti di
+
+62
+00:04:59,460 --> 00:05:00,590
+fronte a esso.
+
+63
+00:05:00,990 --> 00:05:03,780
+Quindi l puoi semplicemente tornare.
+
+64
+00:05:03,790 --> 00:05:09,960
+la sintassi inline qui per scrivere tutto in una riga senza che tu risponda parola chiave qui user return.
+
+65
+00:05:09,960 --> 00:05:10,760
+Potremmo usare
+
+66
+00:05:10,770 --> 00:05:16,710
+Si potrebbe restituire la nostra X e quindi diciamo che chiamiamo il metodo di filtro incorporato che  disponibile sugli
+
+67
+00:05:16,800 --> 00:05:23,320
+array e teniamo presente che i punti qui sono usati come operatore di resto e che uniscono gli argomenti in una matrice.
+
+68
+00:05:23,340 --> 00:05:31,230
+Quindi possiamo usare metodi aere come il filtro filtro eseguir una funzione su ogni elemento nel passato in
+
+69
+00:05:31,230 --> 00:05:31,900
+array.
+
+70
+00:05:32,040 --> 00:05:38,580
+Quindi qui avremmo il nostro elemento e quindi potremmo usare la funzione freccia in linea per dire semplicemente
+
+71
+00:05:38,580 --> 00:05:39,830
+return true o false.
+
+72
+00:05:39,830 --> 00:05:45,300
+Quale filtro si aspetta se l'elemento  uguale a 1.
+
+73
+00:05:45,300 --> 00:05:47,540
+Ora potrebbe essere un sacco di CYNICUS che non conosci.
+
+74
+00:05:47,640 --> 00:05:53,760
+I segni di uguaglianza gratuiti controllano l'uguaglianza di tipo e valore in modo che anche Al debba essere un numero.
+
+75
+00:05:53,820 --> 00:05:57,510
+E fa solo la funzione freccia che passiamo al metodo di filtro integrato.
+
+76
+00:05:57,510 --> 00:06:00,130
+Quindi questo non ha nulla a che fare con il riposo o la diffusione.
+
+77
+00:06:00,310 --> 00:06:07,220
+Abbiamo che potremmo chiamare filtro e facciamo un log per vedere qualcosa di Konsole legge filtro.
+
+78
+00:06:07,230 --> 00:06:15,480
+Quindi il nostro focus o la funzione qui diciamo 1 2 gratis e in realt dovremmo solo registrare 1 anno come
+
+79
+00:06:15,480 --> 00:06:21,600
+array, perch filtriamo desir che viene creato con l'operatore di resto con i punti liberi anno.
+
+80
+00:06:21,870 --> 00:06:27,960
+il modo in cui Reston si diffonde diffuso  quello di utilizzare tali punti liberi che vedrai pi spesso in questo corso.
+
+81
+00:06:27,960 --> 00:06:28,690
+Quindi questo 
+

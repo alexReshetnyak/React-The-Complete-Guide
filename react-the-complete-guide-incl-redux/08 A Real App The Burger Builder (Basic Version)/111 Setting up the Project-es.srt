@@ -1,0 +1,228 @@
+1
+00:00:02,420 --> 00:00:03,710
+Ahora que la planificacin est hecha.
+
+2
+00:00:03,740 --> 00:00:08,060
+Sumrgete en el proyecto y construyamos esta aplicacin.
+
+3
+00:00:08,240 --> 00:00:13,740
+Florida: abr un nuevo proyecto creado con la aplicacin de creacin de personajes.
+
+4
+00:00:13,880 --> 00:00:16,450
+Nada ha cambiado aqu todava.
+
+5
+00:00:16,520 --> 00:00:24,230
+Ahora, en este proyecto, lo primero que quiero es habilitar los mdulos CSS para asegurarme de que este
+
+6
+00:00:24,250 --> 00:00:32,630
+Cs como clases que creamos en un archivo CSS pueda tener un alcance en un componente especfico de nuestra
+
+7
+00:00:32,630 --> 00:00:39,350
+aplicacin para que no se apliquen Clovelly cuando lo hagamos reutilizar accidentalmente la misma clase CSSA.
+
+8
+00:00:39,530 --> 00:00:42,400
+Para eso necesito comer para proyectar.
+
+9
+00:00:42,410 --> 00:00:44,690
+Como aprendiste, hagmoslo primero.
+
+10
+00:00:44,750 --> 00:00:52,670
+Vamos a ejecutar Ejecutar NPM expulse en el Proyecto recin creado y esto ahora nos preguntar si realmente queremos comprobar.
+
+11
+00:00:52,670 --> 00:01:00,260
+As que lo confirmar con Y por s y ahora, como lo vimos antes en el mdulo donde te mostr cmo implementar
+
+12
+00:01:00,260 --> 00:01:05,840
+el mdulo de Videntes, tienes acceso al conflicto en una carpeta de conflicto y hay dos
+
+13
+00:01:05,840 --> 00:01:09,100
+debido a los archivos de configuracin del paquete mojado.
+
+14
+00:01:09,110 --> 00:01:15,410
+Ahora vamos a sumergirnos en el primero de los dos y buscar la parte donde tienes que evaluar la prueba.
+
+15
+00:01:15,440 --> 00:01:24,140
+A. S. En este caso, como he mostrado en el mdulo de mencin, debe agregar mdulos verdaderos a las opciones
+
+16
+00:01:24,140 --> 00:01:32,030
+de ese cargador y a su opcin de nombre de identificador local para definir bsicamente D. DO. es como nombre de clase.
+
+17
+00:01:32,030 --> 00:01:34,910
+Generar y asignar automticamente.
+
+18
+00:01:35,090 --> 00:01:37,630
+Esto debera tomar el nombre original.
+
+19
+00:01:37,790 --> 00:01:44,360
+Luego, dos subrayan el nombre local del componente y luego nuestro hash generado
+
+20
+00:01:44,360 --> 00:01:48,860
+aleatoriamente con hash colon base 64 carbn y fuego.
+
+21
+00:01:49,220 --> 00:01:56,380
+Esto generar estos nombres nicos de clase CSX que luego se asignan automticamente una vez que los importamos
+
+22
+00:01:56,390 --> 00:02:02,540
+de ese objeto desde el archivo C S S como te mostr en ese mdulo.
+
+23
+00:02:02,540 --> 00:02:09,490
+Ahora copie estas dos lneas con los mdulos y el nombre de idon local y vaya al conflicto WePay del rbol Faltu.
+
+24
+00:02:09,620 --> 00:02:14,960
+como su cargador, as que ambos archivos de configuracin WePay se han ajustado y guardado.
+
+25
+00:02:14,960 --> 00:02:23,720
+Lo hace para condenar archivos para la compilacin de produccin y, por supuesto, tambin queremos asegurarnos de que podamos usar los mdulos de caesuras,
+
+26
+00:02:23,750 --> 00:02:30,830
+as que ingresa aqu en las opciones, asegrate de cerrar esa cadena que has ingresado en las opciones de DC
+
+27
+00:02:30,830 --> 00:02:35,150
+Y con eso tenemos nuestro proyecto configurado y podemos comenzar.
+
+28
+00:02:35,210 --> 00:02:36,670
+Ahora hagamos un trabajo de limpieza.
+
+29
+00:02:36,830 --> 00:02:43,070
+Vamos a eliminar ese logotipo para cada archivo que se cre automticamente. No estoy muerto y luego,
+
+30
+00:02:43,080 --> 00:02:50,450
+en la medida de lo posible, podemos deshacernos de la importacin del archivo, por lo que tambin podemos limpiar la aplicacin.
+
+31
+00:02:50,450 --> 00:02:52,270
+J. S. contenido aqu.
+
+32
+00:02:52,370 --> 00:03:00,890
+Elimine el nombre de clase de la muerte y elimine las importaciones de D C S aqu o incluso y elimine las profundidades como cada.
+
+33
+00:03:00,920 --> 00:03:03,000
+No necesito disear aqu ahora.
+
+34
+00:03:03,290 --> 00:03:06,040
+Aunque dejar el estilo global.
+
+35
+00:03:06,200 --> 00:03:13,370
+Pero en los ndices como el otoo donde configur mi estilo de cuerpo global y que todava importo
+
+36
+00:03:13,370 --> 00:03:19,100
+normalmente entre comillas haciendo referencia al archivo y no importando un objeto de Klaas.
+
+37
+00:03:19,250 --> 00:03:24,030
+Por lo tanto, se aplicarn ndices globales como archivos.
+
+38
+00:03:24,200 --> 00:03:30,050
+Quiero establecer la familia de fuentes en una cantidad de fuentes que podramos usar, por supuesto, paso, pero eleg una
+
+39
+00:03:30,050 --> 00:03:32,220
+diferente que me parece un poco ms hermosa.
+
+40
+00:03:32,220 --> 00:03:40,760
+Formularios de Google y en la pgina de fuentes de Google, como se acaba de mencionar, abre el sentido aqu.
+
+41
+00:03:40,760 --> 00:03:46,110
+Bsicamente fui a usar el sentido abierto y para eso puedes simplemente buscar
+
+42
+00:03:46,160 --> 00:03:51,480
+Ahora, una vez que seleccionas esto, puedes hacer clic en la parte inferior para personalizarlo y all.
+
+43
+00:03:51,500 --> 00:03:53,650
+No solo quiero elegir el regular.
+
+44
+00:03:53,810 --> 00:03:56,400
+Vamos todos a recoger el negrita en caso de que necesitemos esto.
+
+45
+00:03:56,480 --> 00:04:00,320
+En caso de que quiera tener un texto en negrita, por ejemplo, para los ttulos.
+
+46
+00:04:00,410 --> 00:04:07,880
+Ahora con eso vayamos a lo malo y all encontrar un enlace al Google CDN desde el que puede importar
+
+47
+00:04:07,880 --> 00:04:08,500
+este fondo.
+
+48
+00:04:08,630 --> 00:04:12,160
+Y aquellos perfectamente bien hacen exactamente el enfoque cuando los uso.
+
+49
+00:04:12,650 --> 00:04:18,500
+Entonces, ahora con ese enlace Volvamos a la carpeta de nuestro proyecto a la carpeta pblica y al ndice
+
+50
+00:04:18,540 --> 00:04:19,350
+h l L5.
+
+51
+00:04:19,610 --> 00:04:22,210
+Y todos se agregan justo arriba del ttulo.
+
+52
+00:04:22,220 --> 00:04:30,590
+Ahora hablando del ttulo tambin le hago justicia a mi hamburguesa porque bien este debera ser el nombre de mi solicitud
+
+53
+00:04:30,590 --> 00:04:31,150
+aqu.
+
+54
+00:04:31,640 --> 00:04:35,960
+Con eso, el conjunto del proyecto est casi terminado.
+
+55
+00:04:35,960 --> 00:04:43,790
+Ahora podemos comenzar a escribir nuestra aplicacin de reactivacin e implementar los componentes que diseamos en las
+
+56
+00:04:43,790 --> 00:04:44,660
+ltimas conferencias.
+
+57
+00:04:44,690 --> 00:04:48,750
+As que sigamos adelante y comencemos a desarrollar estos componentes en la prxima conferencia.
+

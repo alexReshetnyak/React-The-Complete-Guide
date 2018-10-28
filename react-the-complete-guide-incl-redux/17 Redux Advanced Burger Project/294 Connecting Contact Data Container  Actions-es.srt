@@ -1,0 +1,212 @@
+1
+00:00:02,230 --> 00:00:04,030
+Entonces creamos el creador real.
+
+2
+00:00:04,060 --> 00:00:08,830
+Vamos ahora a conectarnos a nuestro contenedor de datos de contacto.
+
+3
+00:00:08,830 --> 00:00:11,150
+All tenemos que pedir el mtodo del manejador.
+
+4
+00:00:11,260 --> 00:00:13,570
+Y lo dejar aqu porque todava lo necesito.
+
+5
+00:00:13,570 --> 00:00:20,020
+Debera ejecutarse al hacer clic en el botn de pedido, pero ya no quiero gestionar
+
+6
+00:00:20,020 --> 00:00:28,500
+la carga aqu, por lo que eliminar la carga que permaneca all y ya no quiero hacer el pedido aqu.
+
+7
+00:00:28,510 --> 00:00:34,150
+Ya elimin el cdigo para llegar a acceder a lo que quiero hacer.
+
+8
+00:00:34,420 --> 00:00:35,690
+Quiero dejar el acceso.
+
+9
+00:00:35,700 --> 00:00:37,760
+Impone su importacin aqu.
+
+10
+00:00:37,900 --> 00:00:40,900
+Y en realidad no hice otra cosa antes.
+
+11
+00:00:40,900 --> 00:00:49,450
+Quiero importar con el controlador de errores ese componente de orden superior de mi carpeta de componentes de orden superior.
+
+12
+00:00:49,660 --> 00:00:54,550
+No necesito hacer eso, no est relacionado con redux pero quiero asegurarme de que lo use aqu.
+
+13
+00:00:54,550 --> 00:01:00,700
+P Tal como lo uso en la roca de Bergere en la parte inferior, est siendo envuelto por para conectar
+
+14
+00:01:00,980 --> 00:01:03,990
+el middleware y quiero que este error aparezca aqu tambin.
+
+15
+00:01:04,090 --> 00:01:11,390
+inferior donde exportar todo, todos envuelven los datos de contacto con un componente adicional de alto orden, mi controlador de errores, la escritura
+
+16
+00:01:11,390 --> 00:01:17,510
+de componentes de orden superior, no solo pasa los datos de contacto, sino que el acceso es muy pequeo.
+
+17
+00:01:17,680 --> 00:01:20,660
+Entonces en los datos de contacto en la parte
+
+18
+00:01:20,720 --> 00:01:28,400
+Lo principal es agregar una vez para conectar mi contenedor aqu a las nuevas acciones que he creado y para
+
+19
+00:01:28,610 --> 00:01:32,230
+eso necesito conectarme con el envo de las acciones.
+
+20
+00:01:32,270 --> 00:01:37,610
+As que agregar un despacho de mapa constante a prop's, no lo tenamos antes.
+
+21
+00:01:38,390 --> 00:01:46,540
+Y aqu ahora tengo una propiedad que quiero crear en la hamburguesa de la orden o cualquier nombre que quiera all.
+
+22
+00:01:46,550 --> 00:01:54,080
+Ejecutar una funcin annima donde de hecho enviar a mi creador de acciones el creador de acciones.
+
+23
+00:01:54,080 --> 00:01:57,470
+Edito en el orden fall comprar el inicio de Burger.
+
+24
+00:01:57,470 --> 00:01:59,170
+Ese es el creador real.
+
+25
+00:01:59,420 --> 00:02:07,520
+Quiero importar en mi ndice la cada de Chia en la carpeta de acciones para que puedan llegar desde otros archivos y
+
+26
+00:02:08,280 --> 00:02:12,510
+que Arafa quiera leerlo desde el contenedor de datos de contacto.
+
+27
+00:02:12,590 --> 00:02:21,450
+Ahora hay importados, as que importe todo como acciones desde.
+
+28
+00:02:21,610 --> 00:02:27,050
+Y ahora todo se mueve hacia arriba para almacenar acciones all.
+
+29
+00:02:27,100 --> 00:02:28,760
+El ndice j de la siguiente manera.
+
+30
+00:02:29,210 --> 00:02:33,110
+Y con eso puedo despachar en la parte inferior del contacto en un contenedor.
+
+31
+00:02:33,230 --> 00:02:41,290
+Puedo despachar acciones y luego aqu comienza su compra ladrones ahora espero obtener una discusin
+
+32
+00:02:41,290 --> 00:02:41,920
+aqu.
+
+33
+00:02:42,100 --> 00:02:44,200
+Los datos del pedido.
+
+34
+00:02:44,500 --> 00:02:51,100
+As que lo incorporo a mi funcin annima y se lo paso al creador de acciones porque realmente
+
+35
+00:02:51,100 --> 00:02:56,380
+espero que los datos aqu en la accin crear ahora estn en datos de contacto.
+
+36
+00:02:56,390 --> 00:02:58,600
+Yo, por supuesto, tambin quiero usar esta propiedad.
+
+37
+00:02:58,810 --> 00:03:04,880
+Por lo tanto, para pedir una hamburguesa debe llamarse en el controlador de hamburguesas de la orden.
+
+38
+00:03:05,320 --> 00:03:11,540
+Avancemos hasta el manejador de pedidos y all preparamos los datos de la orden.
+
+39
+00:03:12,010 --> 00:03:17,140
+Ahora podemos ejecutar estos accesorios.
+
+40
+00:03:17,140 --> 00:03:23,600
+Recuerde que siempre recibimos nuestras acciones de envo aqu como accesorios en la hamburguesa de la orden.
+
+41
+00:03:23,830 --> 00:03:26,260
+Y all quiero pasar mi pedido.
+
+42
+00:03:26,380 --> 00:03:32,890
+Y esto contiene los ingredientes sorpresa y los datos de su pedido son simplemente detalles o datos que el
+
+43
+00:03:32,890 --> 00:03:34,420
+usuario ingres en el formulario.
+
+44
+00:03:34,630 --> 00:03:41,350
+Con eso, podemos despachar con un clic, pero hay un par de cosas que ya no funcionarn
+
+45
+00:03:41,350 --> 00:03:42,640
+como se esperaba.
+
+46
+00:03:42,640 --> 00:03:51,520
+Por ejemplo, en el mtodo de renderizado, todos los componentes de datos de contacto aqu verificamos si estamos cargando para mostrar eventualmente
+
+47
+00:03:51,520 --> 00:03:54,680
+Espen o si estamos en lugar del formulario.
+
+48
+00:03:54,970 --> 00:03:56,310
+Ahora estamos cargando
+
+49
+00:03:56,380 --> 00:04:01,880
+Si hace clic en el botn de orden, necesitamos manejar ese estado de carga en nuestra tienda de redock.
+
+50
+00:04:01,890 --> 00:04:10,120
+Por lo tanto, debido a que ponemos todo el proceso de ordenamiento en redox para poder hacerlo, tenemos que trabajar en el reductor
+
+51
+00:04:10,120 --> 00:04:12,660
+que est bastante vaco en este momento.
+
+52
+00:04:12,700 --> 00:04:14,110
+Entonces ese es el prximo objetivo.
+
+53
+00:04:14,110 --> 00:04:16,090
+Vamos a trabajar en ese orden reductor.
+

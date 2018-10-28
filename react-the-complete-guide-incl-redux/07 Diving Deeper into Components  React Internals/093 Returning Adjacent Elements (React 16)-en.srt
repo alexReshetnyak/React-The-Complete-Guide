@@ -1,0 +1,424 @@
+1
+00:00:02,240 --> 00:00:08,830
+Over the last lectures we had a super detailed look at all the theory behind react, what it's doing behind
+
+2
+00:00:08,830 --> 00:00:12,310
+the scenes, how it is creating component the lifecycle
+
+3
+00:00:12,310 --> 00:00:18,710
+and that's important of course how we may use this theoretical background,
+
+4
+00:00:18,850 --> 00:00:26,290
+this concept behind react to optimize react apps. It is something you will also see in the course projects
+
+5
+00:00:26,300 --> 00:00:27,780
+we are going to build,
+
+6
+00:00:27,880 --> 00:00:33,310
+that of course makes it an even easier to understand to see when to use a lifecycle, how to reach out
+
+7
+00:00:33,310 --> 00:00:38,620
+to the web from componentDidMount and where to use a pure component for example.
+
+8
+00:00:38,620 --> 00:00:45,610
+So this should be a first idea and there are more things you will see throughout the course projects which
+
+9
+00:00:45,610 --> 00:00:47,290
+I want to introduce right now.
+
+10
+00:00:47,590 --> 00:00:55,960
+And one thing is some thing I did mention earlier, you learned that our components typically have a wrapping
+
+11
+00:00:55,990 --> 00:01:02,650
+element that you must not have multiple elements sit next to each other on a root level inside
+
+12
+00:01:02,650 --> 00:01:07,830
+your render method or to be precise, inside the return statement of your render method.
+
+13
+00:01:07,870 --> 00:01:14,340
+This is a restriction of react, it's kind of loosened with react 16 though. For example in persons.js
+
+14
+00:01:14,380 --> 00:01:19,830
+we have no issue returning person, this array,
+
+15
+00:01:19,840 --> 00:01:21,120
+we just returned an array
+
+16
+00:01:21,130 --> 00:01:28,540
+keep this in mind, we're mapping this javascript array into an array of jsx elements.
+
+17
+00:01:28,540 --> 00:01:30,210
+and that's an important take away.
+
+18
+00:01:30,220 --> 00:01:33,310
+You may return an array of elements,
+
+19
+00:01:33,340 --> 00:01:38,450
+this is something which is okay, not element sitting next to each other,
+
+20
+00:01:38,590 --> 00:01:43,740
+but if it's an array of jsx elements like it is here, it works.
+
+21
+00:01:43,810 --> 00:01:47,800
+And of course you can do this here too in person.js
+
+22
+00:01:47,870 --> 00:01:52,000
+you could return an array of these three elements.
+
+23
+00:01:52,090 --> 00:02:00,870
+Each array item then also needs to have a key though, as it's the case here for our persons array.
+
+24
+00:02:01,210 --> 00:02:07,630
+So no matter if you automatically generate the array with the map method or if you do it manually like
+
+25
+00:02:07,630 --> 00:02:19,910
+so, you could of course have an array with the first paragraph then a second element and a third element
+
+26
+00:02:19,910 --> 00:02:20,380
+here.
+
+27
+00:02:22,620 --> 00:02:25,230
+This would be a valid array though
+
+28
+00:02:25,440 --> 00:02:26,920
+you need to key it.
+
+29
+00:02:26,940 --> 00:02:32,450
+So let me comment out the first return statement for now and let me save this updated code, if we
+
+30
+00:02:32,490 --> 00:02:34,130
+now go back to our application,
+
+31
+00:02:34,140 --> 00:02:36,870
+open the console, we reload it
+
+32
+00:02:37,960 --> 00:02:40,020
+and toggle persons,
+
+33
+00:02:40,060 --> 00:02:45,570
+you see we actually get an error in between that each child in an array should have a key.
+
+34
+00:02:45,610 --> 00:02:47,740
+You also see that the styles are missing,
+
+35
+00:02:47,740 --> 00:02:53,270
+that simply happens because we no longer have this wrapping element which had the person class which
+
+36
+00:02:53,270 --> 00:02:59,970
+in this case was needed because here, the wrapping div is not just a must but something we also need for
+
+37
+00:02:59,970 --> 00:03:00,860
+styling,
+
+38
+00:03:01,090 --> 00:03:05,690
+So in this case we're returning array isn't even optimal but you can do it
+
+39
+00:03:05,800 --> 00:03:11,060
+and if you add a key with a unique ID, of course you can hard code it
+
+40
+00:03:11,080 --> 00:03:14,670
+if it's not dynamically generated as it's the case here.
+
+41
+00:03:14,980 --> 00:03:23,710
+So if you do that, if you now save this and reload your application, toggle persons, no error to be seen.
+
+42
+00:03:23,710 --> 00:03:30,150
+Still in this example here, not the most useful thing because we actually need the wrapping div
+
+43
+00:03:30,400 --> 00:03:34,540
+but I wanted to highlight that you can return arrays.
+
+44
+00:03:34,590 --> 00:03:39,900
+Now I'll go back to my old code here still and you will most of the time have code like this and not
+
+45
+00:03:39,900 --> 00:03:41,080
+return the arrays.
+
+46
+00:03:41,080 --> 00:03:47,340
+The exception is components which handle the rendering of lists like our persons component does,
+
+47
+00:03:47,610 --> 00:03:53,080
+there it's very convenient that we don't have to wrap this changed array, this updated, this transformed
+
+48
+00:03:53,080 --> 00:03:56,240
+array in a div.
+
+49
+00:03:56,250 --> 00:04:01,990
+Now there's another exception, let's consider this cockpit.js file,
+
+50
+00:04:02,280 --> 00:04:07,580
+there we also have a wrapping div to apply to cockpit class. If we
+
+51
+00:04:07,620 --> 00:04:14,940
+check out the css file though, we don't really need the cockpit class except for the buttons on which
+
+52
+00:04:14,940 --> 00:04:22,960
+we want to scope for this component. Well we could simply create our own button class for this though,
+
+53
+00:04:23,470 --> 00:04:32,170
+we could define a button class here for hover combined with the red class and also for red and hover.
+
+54
+00:04:32,170 --> 00:04:39,070
+Now there's no cockpit class in there and all we have to do in our code now is assign this button
+
+55
+00:04:39,070 --> 00:04:48,300
+class so that for our button, we either have classes button as a default,
+
+56
+00:04:48,310 --> 00:04:49,950
+keep in mind css modules
+
+57
+00:04:49,960 --> 00:04:57,200
+now give us this button class because we defined it here in the css file and for the case that we
+
+58
+00:04:57,200 --> 00:05:05,260
+want to add the red class, we would simply have an array of classes, so classes red
+
+59
+00:05:05,620 --> 00:05:14,230
+but prior to that, all the classes button and then in the end, we just join it with a whitespace.
+
+60
+00:05:14,240 --> 00:05:20,050
+Now with that, if we save this code and go back to the application, the button looks and works as before
+
+61
+00:05:20,270 --> 00:05:23,240
+but now, this wrapping div is redundant.
+
+62
+00:05:23,240 --> 00:05:28,040
+We can remove the class name there and still have the same button style
+
+63
+00:05:28,280 --> 00:05:31,350
+so it's redundant and it would be nice if you could get rid of it.
+
+64
+00:05:31,370 --> 00:05:35,530
+Now one solution is to remove it and return an array of elements here
+
+65
+00:05:35,780 --> 00:05:38,060
+but there also is another alternative,
+
+66
+00:05:38,240 --> 00:05:42,190
+we can create a higher order component for that.
+
+67
+00:05:42,650 --> 00:05:50,990
+So I'll go into source and I'll create a new folder which i'll name hoc for higher order components
+
+68
+00:05:51,560 --> 00:05:56,420
+Higher order components are absolutely normal react components,
+
+69
+00:05:56,750 --> 00:06:04,220
+they have one specialty though, they are not representational but they wrap other components to add a certain
+
+70
+00:06:04,220 --> 00:06:05,730
+functionality.
+
+71
+00:06:05,750 --> 00:06:13,170
+For example, we can create an aux component for auxiliary, and this component will have one single task,
+
+72
+00:06:13,250 --> 00:06:23,030
+it will be a function aux which gets props and which returns some jsx, it obviously needs to import
+
+73
+00:06:23,060 --> 00:06:27,600
+react because again it's just a normal component. In there though,
+
+74
+00:06:27,630 --> 00:06:38,040
+all I want to do is I want to output props children wrapped in curly braces or we don't even need
+
+75
+00:06:38,040 --> 00:06:39,100
+to do that,
+
+76
+00:06:39,210 --> 00:06:47,730
+we can just return props children like that and now export a default, the
+
+77
+00:06:47,850 --> 00:06:49,880
+aux function.
+
+78
+00:06:49,950 --> 00:06:56,100
+This component might look useless because all it does is returning what's passed between the opening
+
+79
+00:06:56,130 --> 00:06:58,200
+and closing tag.
+
+80
+00:06:58,590 --> 00:07:05,640
+This however is huge because we can now use this aux component in the cockpit component here,
+
+81
+00:07:05,970 --> 00:07:15,380
+there we can import Aux with a capital A from two levels up hoc aux.js
+
+82
+00:07:15,540 --> 00:07:17,090
+without the file extension
+
+83
+00:07:17,090 --> 00:07:25,840
+as always. And now we can wrap our code here with our custom aux component,
+
+84
+00:07:25,950 --> 00:07:33,000
+the one we just created. Now we no longer get an error here because we have a wrapping component but we
+
+85
+00:07:33,000 --> 00:07:39,160
+don't actually create a wrapping html element because aux is empty,
+
+86
+00:07:39,180 --> 00:07:41,680
+we may just return props children.
+
+87
+00:07:41,690 --> 00:07:43,060
+That is the key take away,
+
+88
+00:07:43,200 --> 00:07:46,230
+we don't have to wrap this and even if props.
+
+89
+00:07:46,230 --> 00:07:51,090
+children are then adjacent html elements as it's the case here,
+
+90
+00:07:51,090 --> 00:07:52,550
+these are the children,
+
+91
+00:07:52,770 --> 00:07:55,310
+it will still work in react 16.
+
+92
+00:07:55,710 --> 00:08:02,370
+That's pretty cool because sometimes you don't want to introduce a seperate html element like a wrapping
+
+93
+00:08:02,370 --> 00:08:03,090
+div
+
+94
+00:08:03,270 --> 00:08:08,460
+if you don't need for styling reasons, it can even destroy your styling if you're using flexbox
+
+95
+00:08:08,460 --> 00:08:10,270
+or something like that.
+
+96
+00:08:10,440 --> 00:08:14,680
+So with that if we save this, we get a working application,
+
+97
+00:08:14,730 --> 00:08:20,920
+no errors to be seen except for react that's defined but never used an aux.
+
+98
+00:08:20,940 --> 00:08:27,180
+That is because we don't even have react create element so we can remove it there even, make this even
+
+99
+00:08:27,180 --> 00:08:31,020
+leaner because all we do is distribute props children.
+
+100
+00:08:31,080 --> 00:08:38,910
+So now we have a very lean setup but we save this extra redundant html element here in the cockpit,
+
+101
+00:08:38,910 --> 00:08:41,570
+this div which we don't really need.
+
+102
+00:08:41,580 --> 00:08:47,640
+This is something I wanted to bring to your attention that you can return arrays like in persons and
+
+103
+00:08:47,640 --> 00:08:54,180
+that you can return props children like an aux and even though these might be adjacent, react is fine with
+
+104
+00:08:54,180 --> 00:09:00,960
+that, react 16 at least. Something you have to keep in mind and something which allows you to save that
+
+105
+00:09:01,140 --> 00:09:03,690
+unnecessary div element,
+
+106
+00:09:03,690 --> 00:09:06,160
+we had to use prior to this solution here.
+

@@ -1,0 +1,340 @@
+1
+00:00:02,230 --> 00:00:06,540
+Buradaki kk demo uygulamamz optimize ettik.
+
+2
+00:00:06,910 --> 00:00:16,120
+Bu fonksiyonel bileen Wurzels'n durum bileenine veya konteyner bileenine tekrar girmeme izin verin.
+
+3
+00:00:16,150 --> 00:00:21,670
+Bu nedenle, temel olarak, bileen oluturmak iin bir yol olan bileeni genileten CLOS
+
+4
+00:00:21,700 --> 00:00:28,510
+ile tanmlanan bileenler ve tepki ve sadece bu uygulamadaki dier tm bileenler gibi ilev gren bileenler vardr.
+
+5
+00:00:28,960 --> 00:00:36,300
+imdi bu derste oka bahsettiim gibi ilevsel bileenleri olabildiince sk oluturmaya almalsnz.
+
+6
+00:00:36,360 --> 00:00:37,170
+Niye ya.
+
+7
+00:00:38,730 --> 00:00:43,860
+nk bu bileenler dar bir odaa ve net bir sorumlulua sahiptir.
+
+8
+00:00:43,860 --> 00:00:50,610
+yaptmz gibi baz snflar ekleyerek GSX'i doru bir ekilde grntlemek iin baz mantklar ieriyorlar.
+
+9
+00:00:50,610 --> 00:00:57,850
+Onlar sadece GSX oluturma ile ilgili bir ey sunmakla ykmldrler ve burada rnein kokpit bileeninde
+
+10
+00:00:57,900 --> 00:00:59,110
+Onlar ok fazla ey yapmazlar.
+
+11
+00:00:59,130 --> 00:01:03,980
+Kesinlikle yapmadklar ve yapamayacaklar ey, devleti ynetmektir.
+
+12
+00:01:03,990 --> 00:01:09,630
+Ve oka sz verdim ki, bu ayrlmann nedeni, uygulamanzda,
+
+13
+00:01:09,630 --> 00:01:16,230
+uygulama durumunun deitii birka yer olmas gerektiidir; bu, uygulamanzn bydke
+
+14
+00:01:16,440 --> 00:01:23,550
+bile bakml olmasn salar; uygulamanz daha fazla byrse devleti ynetmek olur;
+
+15
+00:01:23,610 --> 00:01:31,620
+nk her bir bileen iinde eyaleti ynetirseniz, bu yeni yayn oluturduunuz kiilerin
+
+16
+00:01:31,620 --> 00:01:35,040
+listesini nerede dzenlediinizi izlemek ok zor.
+
+17
+00:01:35,040 --> 00:01:41,840
+Bunu yaptnz birka konteynr alrsanz ve daha sonra basite devlete geip geri kalann elimizden gelenin
+
+18
+00:01:41,850 --> 00:01:42,860
+altna verelim.
+
+19
+00:01:42,870 --> 00:01:48,510
+Bu ele alnmas daha kolaydr, nk burada her zaman grebileceiniz gibi Aptera'da olduu gibi
+
+20
+00:01:48,510 --> 00:01:49,590
+burada devlet deiir.
+
+21
+00:01:49,740 --> 00:01:56,640
+Ve bir pervane ancak dier tm bileenlerin devleti deitiremeyeceini
+
+22
+00:01:56,940 --> 00:02:00,360
+dzenleyen ilevlere referanslar datyoruz.
+
+23
+00:02:00,360 --> 00:02:05,530
+Bu, iyi bir yeniden bavuru ileminin temel dayanaklarndan biridir.
+
+24
+00:02:05,660 --> 00:02:12,800
+bileenleri olabildiince az kullann ancak elbette mantklysa bunlar kullanmaktan korkmayn.
+
+25
+00:02:12,800 --> 00:02:14,030
+Snf temelli
+
+26
+00:02:14,210 --> 00:02:20,540
+Bavurunuzda merkezi bir nokta bulursanz ve iyi bir blnme genellikle birden ok zelliktir.
+
+27
+00:02:20,540 --> 00:02:27,200
+rnein, uygulamanzda bir engelleme zellii ve kimlik dorulama zellii varsa, bu zelliklerin kk
+
+28
+00:02:27,310 --> 00:02:34,760
+bileenleri, o zellik alan iin durumu yneten konteynerler olabilir ve bunu, bu zellik alanna girdiimizde
+
+29
+00:02:34,760 --> 00:02:39,650
+skorlar iin geerli olduunu greceksiniz. Daha byk ders projesi.
+
+30
+00:02:40,160 --> 00:02:47,930
+Ancak bahsedilen bileenlerin ou zaman ilevsel bileenler olmal, devlet varlnn yan sra nemli
+
+31
+00:02:47,930 --> 00:02:55,700
+bir farka dalm ve snf temelli bileenlerde sahip olduunuz yntemlerin yetenei ile ilgilenmek
+
+32
+00:02:55,700 --> 00:02:56,270
+zorundayz.
+
+33
+00:02:56,270 --> 00:03:01,460
+Bir sonraki derslerde snf bileenleri ve ilevsel bileenler arasndaki nemli bir
+
+34
+00:03:01,460 --> 00:03:02,200
+farka dalacam.
+
+35
+00:03:02,390 --> 00:03:07,610
+Ve yaam dngsne dalmadan nce bir bileenin yaam dngs olurdu.
+
+36
+00:03:07,820 --> 00:03:14,210
+Devleti daha az karlatmz halde, devlet bileenlerini yeniden gzden geirelim, bunu yalnzca tam bileenlerin zihin durumuna getirmek iin
+
+37
+00:03:14,210 --> 00:03:14,870
+tekrar edelim.
+
+38
+00:03:14,870 --> 00:03:19,380
+Ayrca konteynerler ve devlet daha az bileen olarak anlacaktr farkldr.
+
+39
+00:03:19,430 --> 00:03:24,620
+Aslnda, devletin tam bileenleri Klasky szc ve uzants bileeni ile oluturulurken,
+
+40
+00:03:24,620 --> 00:03:29,060
+devlet daha az olanlar yalnzca sahne alm olan ilevlerdir.
+
+41
+00:03:29,120 --> 00:03:32,740
+Artk ithalat farkllklar elbette devlete eriimdir.
+
+42
+00:03:32,810 --> 00:03:39,950
+Ve bu yeni bir yaam dngs varl, devlete eriebildiimiz duruma zg kaplarda kanca yapar
+
+43
+00:03:39,950 --> 00:03:46,640
+ve yaam dngs kancalarn uygulayabilir veya bir sonraki ders durumunda geri dnebiliriz, son
+
+44
+00:03:46,910 --> 00:03:52,070
+bileen bir devlete asla eriemez veya yaam dngs kancalarn uygulayamazlar.
+
+45
+00:03:52,250 --> 00:03:58,260
+Ve eyalete ve devletlere ait tam konteynrlardaki sahne rnlerine erimek istiyorsak, bunu neden bu
+
+46
+00:03:58,610 --> 00:04:09,230
+anahtar kelimeyi eklemelisin bu durumu X Y bu pervane x y ve devletimizin son bileeninde yaptmz gibi, biz sadece sahne yelpazemiziz x y bir
+
+47
+00:04:09,260 --> 00:04:11,290
+argman olarak sahne alyoruz.
+
+48
+00:04:11,540 --> 00:04:18,410
+ihtiya duyarsanz, yalnzca devlet tam bileenlerini kullann, tm Aberg durumlarda durumunu daha az bileenleri kullann.
+
+49
+00:04:18,410 --> 00:04:23,860
+Ve belirtildii gibi devleti ynetmek veya genel kullanma hazr yaam dngs kancalarna
+
+50
+00:04:23,870 --> 00:04:31,040
+Ve bunu vurgulamak istemediimiz bir ey yapmamamz, devletin tam bileenleri iindeki sahne yuvas eyidir.
+
+51
+00:04:31,040 --> 00:04:37,520
+Eyaletimizin tamamna sahip olduumuz tek unsuru gz nne alrsak, burada sahip olduumuz, sahne bile kullanmyor.
+
+52
+00:04:37,520 --> 00:04:41,840
+Yalnzca bir devlet kullanyor ancak sahtelere de eriebiliyordu.
+
+53
+00:04:41,960 --> 00:04:44,130
+Ve ben bunu size gsterebilirim.
+
+54
+00:04:44,300 --> 00:04:46,840
+Birka sahne dizinden geireyim.
+
+55
+00:04:46,880 --> 00:04:47,720
+Evet.
+
+56
+00:04:47,870 --> 00:04:58,740
+burada ilgili peruses syleyeceim bir dize olabilir Sadece bir kapsayc olan Access uygulamamzn bal olabilir.
+
+57
+00:04:58,740 --> 00:05:03,910
+Bana bir alfabe pabucu iletmeme izin verin,
+
+58
+00:05:03,960 --> 00:05:09,540
+Hala pervanelere eriebiliriz, buradaki sahne alanna eriimi yok gibi deil.
+
+59
+00:05:09,690 --> 00:05:14,290
+Onu orada gstermek iin belki de bunu kokpite gtrmek istiyoruz.
+
+60
+00:05:14,580 --> 00:05:20,300
+Dolaysyla, yeni bir balk tanmlayalm orada uygun bir balk olabilecek yeni bir mlk var.
+
+61
+00:05:20,310 --> 00:05:23,220
+Onu gemek zere olduumuz pervane ile kartrmayn.
+
+62
+00:05:23,550 --> 00:05:25,880
+Ve imdi merdivenlerin olduunu biliyoruz.
+
+63
+00:05:25,980 --> 00:05:33,530
+Balk mlkmz, uygulama bileenimizde byk bir su gbei olsun, nk burada Jaspal dizinde syledik.
+
+64
+00:05:33,540 --> 00:05:36,440
+phesiz elbette buna u ekilde eriemiyoruz.
+
+65
+00:05:36,450 --> 00:05:42,230
+Pervane'nin balna eriemiyoruz nk pervane burada tanmsz olacakt.
+
+66
+00:05:42,240 --> 00:05:44,040
+leme yntemimizin iinde.
+
+67
+00:05:44,160 --> 00:05:49,620
+Ve bu yntem iinde hibir zaman sahne bulamadk ve bu yntem de pervaneleri bir argman olarak
+
+68
+00:05:49,920 --> 00:05:51,940
+almaz, bu nedenle pervane burada tanmszdr.
+
+69
+00:05:52,470 --> 00:05:57,250
+Ancak snfn kendisi bir pervanenin mlkne sahiptir, nk bileeni geniletiyoruz.
+
+70
+00:05:57,410 --> 00:06:01,800
+Tpk kendimiz bulamadmz belirli bir devlet yntemine eriebildiimiz gibi.
+
+71
+00:06:02,010 --> 00:06:05,870
+Hepimizin kendimizi tanmlamadmz uygun bir mlke eriebiliyoruz.
+
+72
+00:06:06,090 --> 00:06:13,500
+Bize verildi ve tepki gsterdi; dolaysyla bu sahneye bu ekilde eriebiliriz.
+
+73
+00:06:13,800 --> 00:06:15,760
+Ve bu davay basite aktaracaz.
+
+74
+00:06:15,780 --> 00:06:18,980
+Ancak elbette bu ablonu buradan da ktrabiliriz.
+
+75
+00:06:19,290 --> 00:06:20,950
+Ama bunu getiimizden beri.
+
+76
+00:06:21,080 --> 00:06:28,050
+imdi kokpite gideceim ve burada yeni bir mlk ele alacam, burada
+
+77
+00:06:28,360 --> 00:06:36,440
+bir sahne alm yapmak iin sahne aletini kullanarak buradaki sahne prodksiyon nitesine kt.
+
+78
+00:06:37,420 --> 00:06:45,160
+Bir meslektam sahteleri justi argman olarak desteklese de, imdi tm dosyalar kaydetmek ve bavurumuza geri dnersek,
+
+79
+00:06:45,160 --> 00:06:52,630
+tepki olarak kendisine otomatik olarak geirilen ilev bozukluuna kavutuumuz iin burada alakal ve yeni bir balk
+
+80
+00:06:52,630 --> 00:06:58,380
+greceiz nk imdi biz Bunu bir sonraki satran dosyasnda ayarlarsak, onu geeriz.
+
+81
+00:06:58,420 --> 00:07:02,030
+Ve grdnz gibi konteyner sramzda tropsaller elde ediyoruz.
+
+82
+00:07:02,140 --> 00:07:05,720
+Daha nce hi kullanmadk nk daha nce kullanmadk.
+
+83
+00:07:05,800 --> 00:07:12,520
+Ancak burada sahne seti kullanmak isterseniz, tpk bu snf kullandnzdan bu
+
+84
+00:07:12,520 --> 00:07:13,510
+sahnede kullann.
+
+85
+00:07:13,510 --> 00:07:18,520
+Burada, argmanlar olarak sahne ve devlet almadnz bir ilevi bulunmuyorsunuz.
+

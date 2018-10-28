@@ -1,0 +1,308 @@
+1
+00:00:02,100 --> 00:00:04,820
+Quindi abbiamo visto come testiamo i
+
+2
+00:00:04,860 --> 00:00:08,000
+componenti, diamo un'occhiata ai contenitori come il
+
+3
+00:00:08,130 --> 00:00:10,550
+burger builder, come li testiamo?
+
+4
+00:00:10,590 --> 00:00:15,840
+La parte difficile dei contenitori  che sono collegati al redux store qui,
+
+5
+00:00:15,840 --> 00:00:20,180
+il redux store ha qualche influenza esterna su questo componente.
+
+6
+00:00:20,700 --> 00:00:26,850
+Se non fosse connesso, testarlo sarebbe molto uguale agli altri componenti, perch allora s potrebbe avere
+
+7
+00:00:26,850 --> 00:00:32,810
+uno stato ma l'enzima ha anche dei metodi per gestirlo, cos come abbiamo impostato setProps,
+
+8
+00:00:32,820 --> 00:00:36,580
+abbiamo anche setState per simulare diversi stati in quel componente.
+
+9
+00:00:36,870 --> 00:00:39,930
+Quindi la cosa pi complicata  davvero il redux
+
+10
+00:00:40,150 --> 00:00:46,720
+store, ora la cosa buona  che non abbiamo davvero bisogno di testare la connessione di questo container al redux
+
+11
+00:00:46,860 --> 00:00:54,120
+store, possiamo fare affidamento sul redux store per funzionare correttamente, e quindi alla fine abbiamo ricevi solo i dati dal negozio come
+
+12
+00:00:54,210 --> 00:00:56,420
+oggetti di scena in questo contenitore.
+
+13
+00:00:56,460 --> 00:00:58,370
+Quindi siamo tornati al mondo precedente,
+
+14
+00:00:58,500 --> 00:01:04,290
+possiamo semplicemente simulare gli oggetti di scena nei nostri test perch vogliamo simulare diversi risultati in diversi stati di
+
+15
+00:01:04,290 --> 00:01:08,830
+oggetti di scena in ogni caso, cos che non vogliamo collegarli ad un vero negozio,
+
+16
+00:01:08,850 --> 00:01:13,950
+non lo facciamo t voglio testare se lo store passa correttamente al componente, questo  il lavoro
+
+17
+00:01:13,950 --> 00:01:14,530
+del metodo
+
+18
+00:01:14,610 --> 00:01:16,700
+connect e viene da una libreria di
+
+19
+00:01:16,770 --> 00:01:19,510
+terze parti, possiamo fare affidamento su questo per funzionare correttamente.
+
+20
+00:01:19,620 --> 00:01:24,930
+Quindi, quello che dobbiamo davvero fare  che dobbiamo avere accesso al componente dietro questo
+
+21
+00:01:24,930 --> 00:01:25,680
+contenitore, per
+
+22
+00:01:25,890 --> 00:01:31,430
+cos dire, e un comodo espediente  semplicemente esportare questa classe di builder di hamburger,
+
+23
+00:01:31,470 --> 00:01:35,280
+quindi aggiungi semplicemente la dichiarazione di esportazione di fronte a questo.
+
+24
+00:01:35,340 --> 00:01:37,540
+Questo ci d ora un'esportazione denominata in
+
+25
+00:01:37,560 --> 00:01:44,520
+questo file, burger builder che accede a questa classe che  solo un componente reattivo e abbiamo ancora l'esportazione predefinita che abbiamo ancora
+
+26
+00:01:44,520 --> 00:01:45,670
+nella nostra app, ma
+
+27
+00:01:45,690 --> 00:01:53,640
+ora possiamo scrivere un file di test, BurgerBuilder. test. js e semplicemente importa la classe di
+
+28
+00:01:54,210 --> 00:02:00,760
+builder burger qui con il nome di esportazione da. / BurgerBuilder.
+
+29
+00:02:00,820 --> 00:02:07,450
+Questo pu ora essere reso di nuovo con shallow e cos via, proprio come abbiamo reso il componente normale
+
+30
+00:02:07,450 --> 00:02:13,860
+perch  solo un componente normale e eliminiamo completamente la connessione a Redux che  ci che vogliamo.
+
+31
+00:02:14,320 --> 00:02:22,210
+Quindi, con questo cambiamento qui, possiamo andare al file di prova degli elementi di navigazione e anche copiare il set
+
+32
+00:02:22,510 --> 00:02:23,830
+up relativo all'enzima
+
+33
+00:02:23,830 --> 00:02:32,110
+e all'adattatore, lascia che copi tutto ci al costruttore di hamburger, elimina qui le importazioni degli elementi di navigazione invece
+
+34
+00:02:32,110 --> 00:02:38,160
+stiamo importando il generatore di hamburger in quel file e ora possiamo iniziare a scrivere
+
+35
+00:02:38,160 --> 00:02:38,890
+test qui.
+
+36
+00:02:38,970 --> 00:02:42,140
+Lo facciamo ancora con la funzione descriva,
+
+37
+00:02:42,300 --> 00:02:49,360
+quindi qui stiamo davvero testando il generatore di hamburger e ora per simulare questo, diamo un'occhiata
+
+38
+00:02:49,400 --> 00:02:54,490
+a ci che potremmo testare qui. Se diamo un'occhiata a questo
+
+39
+00:02:54,530 --> 00:02:59,580
+file, sarebbe interessante vedere se effettivamente abbiamo controlli di compilazione qui,
+
+40
+00:03:00,270 --> 00:03:07,340
+se gli ingredienti sono inesistenti perch dovremmo solo renderli se gli ingredienti vengono passati insieme.
+
+41
+00:03:07,450 --> 00:03:15,700
+Quindi, quello che possiamo fare  che possiamo andare a quella funzione, la funzione descriva e avremo bisogno di
+
+42
+00:03:15,700 --> 00:03:16,510
+importare i
+
+43
+00:03:16,540 --> 00:03:25,970
+controlli di compilazione, quindi aggiungiamo una tale importazione gi da. / o andiamo in effetti ai componenti dei controlli di generazione burger
+
+44
+00:03:25,990 --> 00:03:29,590
+e importiamo da BuildControls. file js.
+
+45
+00:03:30,070 --> 00:03:37,060
+E poi qui, aggiunger ancora una volta prima di ogni funzione per impostare il mio wrapper, quindi ho bisogno
+
+46
+00:03:37,360 --> 00:03:38,650
+di aggiungere questa variabile
+
+47
+00:03:38,650 --> 00:03:44,680
+di wrapper prima di farlo e poi prima di Every, wrapper dovrebbe essere uguale a shallow di
+
+48
+00:03:44,680 --> 00:03:50,980
+nuovo perch non voglio fare qualche deep rendering, voglio avere un test unitario isolato come dovresti usarlo
+
+49
+00:03:51,190 --> 00:03:56,860
+il pi spesso possibile e voglio renderizzare superficialmente il generatore di hamburger qui, proprio cos.
+
+50
+00:03:56,980 --> 00:04:06,320
+Ora, per quello, dobbiamo anche importare reagire come sempre, quindi l'importazione reagir per reagire.
+
+51
+00:04:06,420 --> 00:04:11,790
+Ora possiamo scrivere un test con la funzione
+
+52
+00:04:11,790 --> 00:04:24,190
+it e l lo descriver, quindi dovrebbe rendere i controlli di build quando si ricevono gli ingredienti.
+
+53
+00:04:24,240 --> 00:04:31,350
+Ora aggiungiamo come seconda argomentazione che la funzione javascript che dovrebbe essere eseguita e ora l dentro, user semplicemente il
+
+54
+00:04:31,350 --> 00:04:33,170
+mio wrapper e prima di
+
+55
+00:04:33,210 --> 00:04:38,390
+tutto l'impostazione di oggetti di scena e voglio impostare il supporto per le puntate che
+
+56
+00:04:38,400 --> 00:04:39,890
+ci aspettiamo di ottenere.
+
+57
+00:04:40,080 --> 00:04:46,710
+quindi questo sostegno stiamo controllando qui, che stiamo pensando di ottenere. Qui imposter uguali per
+
+58
+00:04:46,710 --> 00:04:54,710
+dire un oggetto javascript dove ho insalata, zero.
+
+59
+00:04:54,900 --> 00:05:05,990
+Ora con quello posso usare expect e wrapper e trovare per trovare i miei controlli di compilazione, non un elemento jsx, solo
+
+60
+00:05:05,990 --> 00:05:11,800
+il tipo qui e questo dovrebbe avere una lunghezza di 1.
+
+61
+00:05:11,820 --> 00:05:18,760
+Salviamo questo file e salviamo anche il file del generatore di hamburger per esportare davvero la classe e nel caso in cui si verifichi
+
+62
+00:05:18,760 --> 00:05:25,180
+questo errore relativo all'app. test. js, rimuovi l'app. test. Il file js con
+
+63
+00:05:25,180 --> 00:05:31,000
+cui  stato avviato il progetto, in realt, non riuscir a montare l'intera applicazione a causa dell'utilizzo del routing.
+
+64
+00:05:31,000 --> 00:05:38,500
+Ora dovresti ancora ottenere un errore ora, che questo. puntelli. onInitIngredients non  una funzione, questo
+
+65
+00:05:38,500 --> 00:05:44,270
+errore ha senso perch shallow render il tuo componente qui anche se non lo
+
+66
+00:05:44,410 --> 00:05:49,360
+fa profondamente e nel burger builder se lo ispezioni, vedrai che in
+
+67
+00:05:49,510 --> 00:05:57,030
+componentDidMount, chiamiamo questo puntello e questo ovviamente non  reso disponibile perch abbiamo impostato solo un oggetto.
+
+68
+00:05:57,250 --> 00:06:00,850
+Quindi, per risolvere questo problema, dobbiamo aggiungere questo come un oggetto
+
+69
+00:06:00,850 --> 00:06:07,420
+di scena, ora aggiungendolo con setProps non far il trucco perch viene aggiunto o viene impostato dopo che il componente
+
+70
+00:06:07,420 --> 00:06:09,900
+ stato istanziato, quindi  troppo tardi.
+
+71
+00:06:09,910 --> 00:06:17,140
+Dobbiamo aggiungerlo qui suInitIngredients e lo imposter su una funzione di freccia vuota qui, per soddisfare
+
+72
+00:06:17,140 --> 00:06:20,030
+semplicemente il requisito di passare una funzione.
+
+73
+00:06:20,350 --> 00:06:24,160
+Ora con quello se lo salvi, il test passa.
+
+74
+00:06:24,520 --> 00:06:30,950
+Se ora passiamo a null solo per verificare l'opposto, fallisce e questo  un
+
+75
+00:06:31,240 --> 00:06:38,540
+esempio che, naturalmente, pu affinare il tuo bisogno di vedere come puoi testare i container.
+
+76
+00:06:38,650 --> 00:06:44,940
+In pratica si elimina la parte componente e si elimina la connessione a Redux.
+
+77
+00:06:44,950 --> 00:06:48,370
+Ora, parlando di redux, come possiamo testarlo allora?
+

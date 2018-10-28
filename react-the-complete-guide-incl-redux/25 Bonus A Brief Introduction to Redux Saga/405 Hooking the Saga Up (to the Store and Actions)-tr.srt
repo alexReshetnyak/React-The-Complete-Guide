@@ -1,0 +1,188 @@
+1
+00:00:02,130 --> 00:00:07,900
+Son derste destan retecimizi burada oluturduk ve u anda ok kullanl
+
+2
+00:00:08,210 --> 00:00:11,200
+grnmyor, bu yzden maazamza balamamz gerekiyor.
+
+3
+00:00:11,390 --> 00:00:20,120
+imdi bunu yapmak iin, maazamz indekste oluturduumuz yere gitmeliyiz. js dosyas ve imdi, ben sadece
+
+4
+00:00:20,120 --> 00:00:22,890
+maaza yaratmak istemiyorum, bunun
+
+5
+00:00:22,940 --> 00:00:30,680
+yerine sagalarm da kaydettirmek ve bunlarn maazamn farknda olduu ve
+
+6
+00:00:30,680 --> 00:00:43,190
+kullanabilecei bir ey olduundan emin olmak istiyorum. Bunun iin baka bir eyi ie aktarmam gerekiyor, ben de redux destanndan destan
+
+7
+00:00:43,280 --> 00:00:52,280
+ara katmanlar ithal edeceim, bunun gibi ve baka bir eyi de ithal edeceim, daha nce yarattm destan, bundan nce
+
+8
+00:00:52,280 --> 00:00:55,800
+auth'umda ithal edeceim. sagas klasrnde js
+
+9
+00:00:56,020 --> 00:01:02,420
+dosyas, jeneratr fonksiyonunun nne bir ihracat anahtar szc ekleyeceim ve dosyay kaydedeceim.
+
+10
+00:01:02,620 --> 00:01:18,470
+Yani endekste geri. js, daha sonra kmn adn buradan alabilirim. / storeSagas auth. js ve isimlendirmeyle tutarl
+
+11
+00:01:18,470 --> 00:01:20,770
+olmak iin,
+
+12
+00:01:20,840 --> 00:01:27,200
+aslnda auth'a geri dneceim. js dosyas sagas klasrnde ve bu logoutSaga'y bir jeneratr ad
+
+13
+00:01:27,200 --> 00:01:30,730
+olarak adlandrr ve bu yzden bu ismi de alrm, bu istee
+
+14
+00:01:30,740 --> 00:01:35,880
+baldr, ancak bunun ne olduunu da akla kavuturur. imdi, bu ithal, ne yapabiliriz,
+
+15
+00:01:36,140 --> 00:01:44,240
+biz de efsane middleware fonksiyonu yrtmek, sonu sabit bir saklayabilirsiniz, bylece ben sabit sagaMiddleware
+
+16
+00:01:44,240 --> 00:01:54,780
+adn ve daha sonra herhangi bir argman olmadan ve imdi olduu gibi sagaMiddleware oluturmak icra biz maaza oluturmak, burada
+
+17
+00:01:54,780 --> 00:02:00,180
+applyMiddleware aryorum ve orada sadece thunk middleware uygulamak deil, ayn
+
+18
+00:02:00,180 --> 00:02:05,310
+zamanda benim destan middleware uygulamak istiyorum ben bu yzden
+
+19
+00:02:05,610 --> 00:02:08,980
+applyMiddleware bir argman olarak ekleyelim.
+
+20
+00:02:09,480 --> 00:02:16,680
+Sonunda, maazada da kaytl olan sagaMiddleware'i kullanabilirim ve burada bir destan
+
+21
+00:02:16,680 --> 00:02:18,890
+altrabilirim, bu yzden
+
+22
+00:02:19,080 --> 00:02:28,470
+burada bu dosyaya da aktardmz k logosunu altrabilirim. imdi, eer hepsini kurtarrsam ve bavurumuza
+
+23
+00:02:28,470 --> 00:02:35,250
+geri dnersek tekrar yklersek, burada muhteem bir ey
+
+24
+00:02:35,640 --> 00:02:38,360
+grmyoruz, deil mi?
+
+25
+00:02:38,760 --> 00:02:44,970
+Redux dev aralarmza gidelim ve orada ilgin bir ey
+
+26
+00:02:45,120 --> 00:02:50,390
+gryoruz, kn birka kez gerekletirildiini gryoruz, imdi
+
+27
+00:02:50,640 --> 00:02:59,100
+bu mantkldr nk bizim auth eylem yaratcmzda, aslnda aslnda checkout eylemimizdeki k
+
+28
+00:02:59,100 --> 00:03:03,050
+eylemini de gnderdik Geerli bir belirte
+
+29
+00:03:03,150 --> 00:03:13,270
+bulamazsak otomatik olarak kullanc girii yapmaya alrz. imdi test amal olarak, tm oturum kapatma gnderilerini
+
+30
+00:03:13,410 --> 00:03:19,650
+yorumlayalm. Bu dosyay kaydedersek ve uygulamamza geri dnersek, imdi bu
+
+31
+00:03:19,650 --> 00:03:24,980
+uygulamay yeniden yklersek, hala outh knn gnderildiini ve bu
+
+32
+00:03:25,230 --> 00:03:33,150
+durumun destanmzdan geldiini grrz. Dizine gittiklerini kantlayabilirim. js dosyas ve ben bu sagaMiddleware, ben k destan satrn altrn
+
+33
+00:03:33,150 --> 00:03:33,710
+yorum.
+
+34
+00:03:33,900 --> 00:03:39,890
+Bunu yaparsam geri dnyorum ve imdi sayfay yeniden yklyorum, artk gnderilmediini gryorsun.
+
+35
+00:03:40,020 --> 00:03:43,730
+Bu yzden destanmzla bir eyler yapyor gibi grnyoruz, hep
+
+36
+00:03:43,830 --> 00:03:45,940
+yle diyoruz, bu yzden yorum
+
+37
+00:03:46,030 --> 00:03:52,920
+yaptmz her eye yorum vermeme izin verin nk her zaman bu destan armak pek kullanl grnmyor,
+
+38
+00:03:52,920 --> 00:03:55,230
+deil mi? u anda,
+
+39
+00:03:55,290 --> 00:04:02,070
+uygulamay balattmz ilk anda, baladmzda, bu garip jeneratrler bir ey
+
+40
+00:04:02,070 --> 00:04:08,550
+yapmasna ramen, tm bu eleri yerel depolama biriminden kaldrr
+
+41
+00:04:08,850 --> 00:04:11,490
+ve yetkilendirme eylemini gnderir.
+
+42
+00:04:11,490 --> 00:04:15,250
+Akas bu uygulamay balatmak iin
+
+43
+00:04:15,510 --> 00:04:23,790
+altrmak istemiyoruz, bunun yerine bu kodu, daha nce kullandmz oturum eylemi yaratcmzn
+
+44
+00:04:23,820 --> 00:04:25,570
+bulunduu yerde
+
+45
+00:04:25,680 --> 00:04:31,650
+altrmay istiyoruz, bu yzden ama aslnda bir eylemin
+
+46
+00:04:31,650 --> 00:04:38,030
+tannmas iin destan retecimizin alabilmesi iin redux destanyla dinleyebileceimiz eylem.
+
+47
+00:04:38,220 --> 00:04:40,470
+Bir sonraki derste bunun zerine alalm.
+

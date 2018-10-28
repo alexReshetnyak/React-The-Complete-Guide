@@ -1,0 +1,175 @@
+0
+00:02.210 --> 00:09.050
+When we talk about React, or also about Angular and Vue as a side note, we also have to keep in mind
+
+1
+00:09.140 --> 00:14.620
+that we can essentially build two kinds of web applications with all these libraries and frameworks.
+
+2
+00:14.750 --> 00:18.980
+We can build a single page application or a multi-page application.
+
+3
+00:18.980 --> 00:22.400
+Now, what's the difference? In a single page application,
+
+4
+00:22.400 --> 00:29.540
+we only get back one single HTML file from the server and we get back this file the first time the user visits
+
+5
+00:29.600 --> 00:31.570
+the page; so the first time the user visits
+
+6
+00:31.580 --> 00:40.430
+example.com. Thereafter, everything is managed with JavaScript; with React. The entire page consists
+
+7
+00:40.520 --> 00:45.770
+of components which are rendered and handled by JavaScript.
+
+8
+00:46.070 --> 00:53.150
+On the other hand, in a multi-page application, we get back multiple HTML pages where each page has the
+
+9
+00:53.150 --> 00:54.680
+content for a given route;
+
+10
+00:54.740 --> 01:02.090
+a given URL we visited. For example.com and example.com/users, we get back two different
+
+11
+01:02.090 --> 01:02.630
+pages.
+
+12
+01:02.630 --> 01:04.370
+That's important.
+
+13
+01:04.370 --> 01:10.550
+On multi-page applications, we might also use React, but only to create little widgets,
+
+14
+01:10.580 --> 01:17.570
+so to say; individually-contained components we dump into that page but the 'entire page' is not managed
+
+15
+01:17.570 --> 01:18.880
+by React.
+
+16
+01:18.890 --> 01:24.410
+We also see this on some pages, but the more popular approach these days is to use the single-page-application
+
+17
+01:24.410 --> 01:30.830
+approach, because if you manage the entire page with JavaScript, you never have to go back to the server
+
+18
+01:30.860 --> 01:32.030
+and reload the page.
+
+19
+01:32.180 --> 01:37.850
+This is an amazing user experience because everything happens instantly. Even if the user needs
+
+20
+01:37.850 --> 01:44.300
+to wait, you're showing a spinner or you're still presenting a reactive web app; you're not just showing
+
+21
+01:44.570 --> 01:47.620
+a loading page where the user can't do anything.
+
+22
+01:48.020 --> 01:54.680
+So in single page applications, our page is built up with components and every component is a React
+
+23
+01:54.680 --> 02:03.740
+component. The entire page is also managed by a root React component which is exclusively under React's control.
+
+24
+02:04.040 --> 02:06.480
+In a multi-page application, on the other hand,
+
+25
+02:06.740 --> 02:13.550
+we also could split up our app into theoretical components, but actually a lot of the page is just going
+
+26
+02:13.550 --> 02:19.740
+to be normal HTML and CSS code and some widgets we dump in, like an image gallery or something like
+
+27
+02:19.740 --> 02:22.290
+that is managed by React.
+
+28
+02:22.430 --> 02:30.210
+So, the entire page is not under React's control. The individual widgets don't know of each other's existence.
+
+29
+02:30.250 --> 02:36.080
+Therefore, in the single-page-application case, which is the case we'll cover in this course, we typically only
+
+30
+02:36.080 --> 02:43.070
+have one ReactDOM.render call. You saw this method in the previous lectures where we created our first
+
+31
+02:43.070 --> 02:44.120
+app.
+
+32
+02:44.120 --> 02:49.970
+Now, we only need one ReactDOM.render call because we only have one root app component which is mounted to the DOM and which
+
+33
+02:49.970 --> 02:56.090
+hosts all other React components. In a multi-page application, we would typically call ReactDOM.render
+
+34
+02:56.090 --> 03:00.490
+more often to render our different components in different places of the app.
+
+35
+03:00.530 --> 03:06.230
+You saw that ReactDOM.render allows you to pick a place in your HTML code where you want to render your
+
+36
+03:06.230 --> 03:13.220
+app. Therefore, you have these widgets which don't know of each other's existence.
+
+37
+03:13.220 --> 03:15.880
+Now, you can build such an application too
+
+38
+03:15.980 --> 03:18.950
+and the React code you write won't differ.
+
+39
+03:18.980 --> 03:21.120
+This course actually covers both,
+
+40
+03:21.260 --> 03:27.260
+but I will focus on the single-page-application case, since this also allows us to use some libraries
+
+41
+03:27.260 --> 03:28.750
+like React router.
+
+42
+03:28.820 --> 03:34.500
+It is the most popular way of creating web apps these days and also the approach
+
+43
+03:34.550 --> 03:36.230
+I can only recommend to you.

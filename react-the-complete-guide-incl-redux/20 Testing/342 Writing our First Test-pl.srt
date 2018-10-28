@@ -1,0 +1,676 @@
+1
+00:00:02,180 --> 00:00:07,940
+Wrciem do projektu burgera i tutaj, chc teraz doda troch testw. W tym celu powinnimy najpierw upewni si,
+
+2
+00:00:07,940 --> 00:00:13,600
+e start npm nie jest uruchomiony, poniewa musimy zainstalowa dodatkowe pakiety po tym,
+
+3
+00:00:13,670 --> 00:00:16,870
+jak nie tylko uywamy artw, ale take enzymu.
+
+4
+00:00:16,940 --> 00:00:22,700
+Teraz, jeli przyjrzymy si naszej paczce. plik json, a my przewijamy troch, widzimy, e art
+
+5
+00:00:22,760 --> 00:00:26,620
+jest rzeczywicie zainstalowany, moesz mie inn wersj, ale powinna by zainstalowana, ale
+
+6
+00:00:26,780 --> 00:00:27,930
+enzym nie jest.
+
+7
+00:00:28,100 --> 00:00:33,320
+Najpierw zainstalujmy to za pomoc enzymu npm install --save, ale
+
+8
+00:00:33,380 --> 00:00:35,430
+teraz to samo nie
+
+9
+00:00:35,510 --> 00:00:41,830
+wystarczy, musimy zainstalowa dwa dodatkowe pakiety, aby dziaao poprawnie z artem i reagowao.
+
+10
+00:00:41,870 --> 00:00:48,820
+Po pierwsze, musimy zainstalowa pakiet renderera testu reakcji, czyli
+
+11
+00:00:48,980 --> 00:00:55,430
+zaleno enzymu, ktry musimy zainstalowa oddzielnie i musimy
+
+12
+00:00:55,440 --> 00:00:58,130
+zainstalowa adapter pakietu
+
+13
+00:00:58,130 --> 00:01:07,310
+enzymw do naszej obecnej wersji reagowania. A wic tutaj jest reakcja adaptera-reakcji-16 w wersji 4 16.
+
+14
+00:01:07,320 --> 00:01:10,160
+Wszystkie te s teraz dodawane do pakietu. json i oczywicie zainstalowano
+
+15
+00:01:10,200 --> 00:01:16,650
+go w folderze moduw wzw, a kiedy to si skoczyo, jestemy gotowi, aby przej dalej i napisa
+
+16
+00:01:16,650 --> 00:01:17,920
+nasz pierwszy test.
+
+17
+00:01:17,970 --> 00:01:19,350
+Tak wic skoczyo
+
+18
+00:01:19,350 --> 00:01:26,180
+si, teraz napiszmy nasz pierwszy test i chc zacz od napisania testu dla komponentu, poniewa
+
+19
+00:01:26,190 --> 00:01:26,870
+oczywicie
+
+20
+00:01:26,970 --> 00:01:29,630
+reagujemy, cigle rozmawiamy o komponentach, wic
+
+21
+00:01:29,670 --> 00:01:32,400
+dlaczego nie zaczniemy od testowania jednego.
+
+22
+00:01:32,400 --> 00:01:38,640
+Teraz pozwl mi zacz od skadnika funkcjonalnego tutaj, poniewa jest to oczywicie bardzo atwy sposb testowania,
+
+23
+00:01:38,790 --> 00:01:42,840
+a nastpnie przeniesiemy si do kontenerw, a nastpnie do redux.
+
+24
+00:01:42,840 --> 00:01:48,450
+Teraz chc zacz od mojego elementu nawigacyjnego tutaj, w folderze nawigacyjnym w folderze
+
+25
+00:01:48,450 --> 00:01:51,480
+komponentw, ktry jest komponentem elementw nawigacyjnych, teraz
+
+26
+00:01:51,480 --> 00:01:58,440
+pamitaj, e wikszo twoich komponentw reagowania to tylko funkcje i dlatego zale tylko od rekwizytw, ktre
+
+27
+00:01:58,440 --> 00:01:59,810
+otrzymuj, to co,
+
+28
+00:01:59,850 --> 00:02:02,800
+o czym musisz pamita podczas testw.
+
+29
+00:02:02,820 --> 00:02:05,950
+Teraz stwrzmy plik testowy dla tego komponentu, dlatego obok niego w tym
+
+30
+00:02:05,950 --> 00:02:13,200
+samym folderze dodam nowy plik, ktry bd nazywa NavigationItems. test.
+
+31
+00:02:13,350 --> 00:02:21,300
+js. test. js jest wany, poniewa jest on automatycznie
+
+32
+00:02:21,340 --> 00:02:22,110
+pobierany przez
+
+33
+00:02:22,110 --> 00:02:28,260
+tworzenie aplikacji reagowania po uruchomieniu specjalnego polecenia, a nastpnie zostanie wczony do testowania i dlatego zostanie przetestowany.
+
+34
+00:02:28,260 --> 00:02:36,750
+Teraz w tym pliku testowym mog teraz zacz pisa test, a test uywa go domylnie, a z
+
+35
+00:02:36,750 --> 00:02:41,040
+drugiej strony podaje nam kilka metod definiowania testu.
+
+36
+00:02:41,280 --> 00:02:44,800
+Pierwsz wan metod jest metoda opisowa,
+
+37
+00:02:44,850 --> 00:02:47,130
+nie trzeba jej importowa
+
+38
+00:02:47,130 --> 00:02:51,870
+do tego pliku, zostanie ona automatycznie udostpniona w naszym
+
+39
+00:02:51,870 --> 00:02:59,070
+projekcie aplikacji reagowania po uruchomieniu polecenia testowego. Opis to funkcja, ktra pobiera dwa argumenty, pierwszy to tylko
+
+40
+00:02:59,070 --> 00:03:01,740
+opis pakietu testowego, ktry ten plik zawiera,
+
+41
+00:03:01,740 --> 00:03:03,110
+dlatego tutaj po prostu
+
+42
+00:03:03,300 --> 00:03:09,630
+nazwij ten element nawigacyjny, a ja pisz go jak element jsx, ale nie jest to wymagane.
+
+43
+00:03:09,840 --> 00:03:13,040
+To jest tylko to, co zobaczysz pniej w wynikach
+
+44
+00:03:13,080 --> 00:03:17,790
+konsolety, wic powinno to by co, co pozwala ci okreli, jakie testy przeprowadzimy tutaj.
+
+45
+00:03:17,850 --> 00:03:22,980
+Bardziej interesujca cz pojawia si w drugim argumencie, czyli twojej funkcji testowania.
+
+46
+00:03:22,980 --> 00:03:28,620
+Jest to normalna funkcja javascript i uyj tutaj funkcji strzaki ES6, tutaj
+
+47
+00:03:28,620 --> 00:03:32,850
+opisasz, napiszesz swoje aktualne testy. Aby to zrobi, piszesz
+
+48
+00:03:32,880 --> 00:03:35,470
+test, piszc go, to jest
+
+49
+00:03:35,580 --> 00:03:38,760
+kolejna funkcja, ktra bdzie dostpna.
+
+50
+00:03:38,880 --> 00:03:43,590
+Opisuje lub umoliwia napisanie jednego testu, a
+
+51
+00:03:43,620 --> 00:03:45,630
+take dwa argumenty.
+
+52
+00:03:45,750 --> 00:03:50,960
+Pierwszy to po prostu cig znakw, opis, ktry pojawi si w konsoli
+
+53
+00:03:51,240 --> 00:03:56,270
+i zwykle po prostu wypeniasz zdanie, a nastpnie opisujesz, co naley zrobi.
+
+54
+00:03:56,280 --> 00:03:59,030
+Tak wic powinno i teraz zajrzyjmy
+
+55
+00:03:59,040 --> 00:04:01,580
+do naszego komponentu NavigationItems, powiedzmy
+
+56
+00:04:01,770 --> 00:04:09,660
+domylnie, jeli nie jestemy uwierzytelnieni, ten komponent powinien renderowa jeden element nawigacji, drugi nie powinien by
+
+57
+00:04:10,290 --> 00:04:15,590
+renderowany i e tutaj powinien renderowa jeden wicej prowadzcy do /
+
+58
+00:04:15,810 --> 00:04:18,560
+auth, wic powinien wyrenderowa elementy nawigacyjne,
+
+59
+00:04:18,630 --> 00:04:20,830
+jeli nie bdziemy uwierzytelniani.
+
+60
+00:04:21,240 --> 00:04:24,240
+Wic to jest to, co
+
+61
+00:04:24,240 --> 00:04:32,700
+chcemy przetestowa, wic napiszmy zdanie, ktre powinno zosta wywietlone w elementach nawigacji, jeli nie jest uwierzytelnione.
+
+62
+00:04:33,090 --> 00:04:36,510
+To jest po prostu mj opis i nie ma znaczenia, co tu
+
+63
+00:04:36,510 --> 00:04:41,870
+piszesz, to nie jest parsowane, czy co w tym stylu, powinno by po prostu czym znaczcym, ktre rozpoznajesz w
+
+64
+00:04:41,860 --> 00:04:46,140
+konsoli, poniewa jeli test si nie powiedzie, chcesz wiedzie, ktry test si nie powid .
+
+65
+00:04:46,590 --> 00:04:49,070
+Jest to wic pierwszy argument
+
+66
+00:04:49,080 --> 00:04:56,610
+funkcji, drugi argument jest teraz ponownie funkcj testow opisujc rzeczywisty test, tutaj jest to zwyka
+
+67
+00:04:56,610 --> 00:04:57,660
+funkcja javascript.
+
+68
+00:04:57,660 --> 00:05:03,130
+Ponownie wykorzystam funkcj strzaki i tutaj piszemy nasz aktualn logika testowania.
+
+69
+00:05:03,390 --> 00:05:10,620
+Teraz chcemy stworzy instancj tego komponentu, poniewa byaby ona renderowana do domingu, do
+
+70
+00:05:10,620 --> 00:05:17,250
+realnej domeny poprzez reakcj, a nastpnie zajrze do renderowanego komponentu i zobaczy,
+
+71
+00:05:17,250 --> 00:05:22,920
+co zostao wyrenderowane dla przypadku, isAuthenticated prop jest faszywe.
+
+72
+00:05:22,920 --> 00:05:28,770
+Teraz moesz pomyle, e w tym celu oczywicie musimy renderowa ca aplikacj,
+
+73
+00:05:28,770 --> 00:05:35,520
+poniewa elementy nawigacyjne to tylko jeden drobny element w caej aplikacji reagowania, czyli w
+
+74
+00:05:35,520 --> 00:05:43,800
+miejscu, w ktrym pojawia si enzym, ten pakiet testowy. Enzym pozwala nam po prostu wyrenderowa ten niezaleny element nawigacyjny niezalenie
+
+75
+00:05:43,800 --> 00:05:46,210
+od caej innej aplikacji reagujcej, to
+
+76
+00:05:46,320 --> 00:05:52,980
+jest caa idea kryjca si za pakietem enzymw, e moemy naprawd pisa testy jednostkowe, pojedyncze testy, testy,
+
+77
+00:05:52,980 --> 00:05:56,350
+w ktrych nie musimy renderowa kompletnego reagowa na aplikacj.
+
+78
+00:05:56,580 --> 00:06:04,120
+Wic zaimportujmy enzym, musz zaimportowa co z enzymu, teraz wrc do tego, ale najpierw musz te
+
+79
+00:06:04,150 --> 00:06:04,970
+skonfigurowa enzym
+
+80
+00:06:04,970 --> 00:06:12,040
+i poczy go z moj wersj reagowania. W tym celu musz zaimportowa adapter
+
+81
+00:06:12,050 --> 00:06:17,950
+i jest to domylny eksport, aby mg nazwa to, co chcesz.
+
+82
+00:06:18,050 --> 00:06:25,820
+Adapter adaptera enzymu reaguje 16, ten pakiet i z pakietu enzymw, musimy teraz tylko zaimportowa co
+
+83
+00:06:25,820 --> 00:06:27,220
+konkretnego, jest to
+
+84
+00:06:27,230 --> 00:06:28,580
+eksport nazwany, wic
+
+85
+00:06:28,580 --> 00:06:34,260
+potrzebujemy nawiasw klamrowych, funkcji konfiguracyjnej. Po dodaniu tych dwch importw
+
+86
+00:06:34,260 --> 00:06:41,120
+powyej opisanej funkcji moemy teraz skonfigurowa i przekaza obiekt javascript do skonfigurowania.
+
+87
+00:06:41,270 --> 00:06:47,990
+Tam powinnimy ustawi waciwo adaptera i przypisa nowy adapter jako funkcj konstruktora, wic ten
+
+88
+00:06:47,990 --> 00:06:54,820
+adapter jest tworzony z nowym adapterem i to wszystko, z tym enzymem jest podczony.
+
+89
+00:06:55,250 --> 00:07:01,760
+Teraz chcemy wyrenderowa komponent elementw nawigacyjnych, a nastpnie zajrze do niego, poniewa ten enzym
+
+90
+00:07:01,760 --> 00:07:04,660
+daje nam specyficzn metod pomocnicz, ktrej
+
+91
+00:07:04,840 --> 00:07:06,140
+moemy uy, rwnie
+
+92
+00:07:06,290 --> 00:07:12,820
+j zaimportujemy, jest to pytka funkcja. Pytki jest najbardziej popularnym lub najlepszym sposobem renderowania
+
+93
+00:07:12,830 --> 00:07:14,860
+reagujcych skadnikw w wielu okolicznociach,
+
+94
+00:07:14,970 --> 00:07:20,510
+enzym oferuje dwie alternatywy, ktre rwnie wska pniej, ale pytka jest t, ktrej
+
+95
+00:07:20,510 --> 00:07:28,210
+powiniene uywa tak czsto, jak to tylko moliwe, poniewa jedna rzecz jest bardzo pytka. komponent z ca zawartoci,
+
+96
+00:07:28,640 --> 00:07:31,750
+ale tre nie jest gboko renderowana.
+
+97
+00:07:31,850 --> 00:07:39,860
+Skadnik elementw nawigacyjnych zawiera komponenty elementw nawigacyjnych, ale s one renderowane jako symbole zastpcze, ich zawarto nie jest
+
+98
+00:07:39,860 --> 00:07:40,840
+renderowana i
+
+99
+00:07:40,970 --> 00:07:46,430
+to oczywicie jest znowu wane dla tworzenia izolowanych testw, w ktrych nie
+
+100
+00:07:46,490 --> 00:07:50,080
+renderujemy caego podarchiwum komponentw , chcemy tylko renderowa
+
+101
+00:07:50,180 --> 00:07:55,520
+ten komponent i wiedzie, co jest w nim, bez renderowania wszystkiego, co
+
+102
+00:07:55,520 --> 00:07:58,460
+jest zagniedone wewntrz zawartych w nim komponentw.
+
+103
+00:07:58,700 --> 00:08:01,540
+Tak pytka jest metoda do wykorzystania
+
+104
+00:08:01,880 --> 00:08:06,970
+tu i teraz, chcemy to uczyni. Wic utworz sta, ktra bdzie nazw wrapper,
+
+105
+00:08:06,990 --> 00:08:09,590
+nazwa jest do Ciebie, ale czsto uywane
+
+106
+00:08:09,830 --> 00:08:16,020
+jest opakowanie, w ktrym bd nazywa pytkie i teraz bd przekazywa elementy nawigacyjne jako element reagowania.
+
+107
+00:08:16,460 --> 00:08:23,510
+Dlatego najpierw musz to zaimportowa, musz zaimportowa elementy nawigacyjne z
+
+108
+00:08:23,510 --> 00:08:29,360
+pliku nawigacyjnego, ktry znajduje si obok naszego programu nawigacyjnego.
+
+109
+00:08:29,390 --> 00:08:30,660
+podr javascript.
+
+110
+00:08:30,910 --> 00:08:34,240
+Dziki temu moemy uczyni to tutaj jako jsx i
+
+111
+00:08:34,250 --> 00:08:35,110
+to jest
+
+112
+00:08:35,110 --> 00:08:39,360
+wane, przekazujemy jsx do pytkiej metody. Aby to dziaao, jak zwykle
+
+113
+00:08:39,380 --> 00:08:46,070
+oczywicie musimy zaimportowa reagowa, poniewa niezalenie od tego, czy jest to test, czy nie,
+
+114
+00:08:46,070 --> 00:08:51,270
+kod jsx musi zosta przekonwertowany na jego alternatywny element create elementu.
+
+115
+00:08:51,290 --> 00:08:56,780
+Teraz pytko to odtwarzamy i przechowujemy wynik w tej staej opakowania, teraz
+
+116
+00:08:56,780 --> 00:09:02,770
+moemy zajrze do opakowania w tym tecie. I to jest ostatnia cz testw,
+
+117
+00:09:02,810 --> 00:09:10,880
+teraz nasze oczekiwania, poniewa uywamy innej metody, ktra jest udostpniana na caym wiecie przez art, metod oczekiwan.
+
+118
+00:09:10,880 --> 00:09:15,370
+Wewntrz oczekujemy, e zdefiniujemy nasz, rzecz, ktr chcemy sprawdzi,
+
+119
+00:09:15,650 --> 00:09:19,890
+wic tutaj chc sprawdzi, czy opakowanie zawiera pewien element.
+
+120
+00:09:20,210 --> 00:09:27,180
+Teraz na opakowaniu moemy ponownie uy funkcji uytecznoci dostarczonej przez zdefiniowan przez enzym metod, dziki czemu
+
+121
+00:09:27,400 --> 00:09:31,790
+moemy zajrze do opakowania i zobaczy, czy zawiera on pewn
+
+122
+00:09:31,790 --> 00:09:34,580
+tre i tutaj chc znale element nawigacyjny.
+
+123
+00:09:34,760 --> 00:09:43,250
+Musimy wic rwnie zaimportowa to, importuj element nawigacyjny z. / Nawigacja pozycji elementu nawigacyjnego, wanie tak, a wic tutaj
+
+124
+00:09:43,340 --> 00:09:50,830
+w metodzie szukania, teraz chc znale element nawigacji. Wane, to nie jest element
+
+125
+00:09:50,930 --> 00:09:58,260
+jsx, jest to normalnie wyeksportowana funkcja z pliku elementu nawigacji.
+
+126
+00:09:59,290 --> 00:10:00,220
+Teraz, po
+
+127
+00:10:00,250 --> 00:10:02,390
+zaimportowaniu, spodziewamy si, e teraz
+
+128
+00:10:02,410 --> 00:10:04,270
+niczego nie oczekujemy, mwimy tylko,
+
+129
+00:10:04,420 --> 00:10:08,250
+co jest nasz rzecz, ktr chcemy sprawdzi, chcemy sprawdzi, czy
+
+130
+00:10:08,250 --> 00:10:13,360
+j znajdziemy, ale jakie s nasze oczekiwania? Mona powiedzie, e oczekuje si, e j
+
+131
+00:10:13,360 --> 00:10:14,360
+znajdziemy, ale testy
+
+132
+00:10:14,470 --> 00:10:16,750
+s nieco bardziej elastyczne ni to.
+
+133
+00:10:16,900 --> 00:10:21,820
+Moesz si spodziewa, e znajdziesz go tylko raz lub dwa razy lub e
+
+134
+00:10:21,820 --> 00:10:23,530
+go nie znajdziesz, moe
+
+135
+00:10:23,530 --> 00:10:26,750
+chcesz przetestowa co przeciwnego, wic tutaj musimy zmieni
+
+136
+00:10:26,980 --> 00:10:34,840
+co na oczekujce poczenie, s to metody uytecznoci udostpniane przez . Tak wic moemy spodziewa si elementu nawigacyjnego, jak powiedzielimy
+
+137
+00:10:34,840 --> 00:10:42,250
+wczeniej, dwa razy, jeli nie jestemy uwierzytelnieni, wic nawigacja do poowy dugoci jest tym, co moemy teraz
+
+138
+00:10:42,250 --> 00:10:43,170
+nazwa i
+
+139
+00:10:43,390 --> 00:10:45,540
+widzimy, e jest kilka metod pomocniczych.
+
+140
+00:10:45,670 --> 00:10:47,870
+Dugo, ktr spodziewamy si znale, to
+
+141
+00:10:47,890 --> 00:10:49,210
+dwie, chcemy znale
+
+142
+00:10:49,360 --> 00:10:51,420
+dwie, wic jest ona automatycznie
+
+143
+00:10:51,520 --> 00:10:54,260
+dodawana do tablicy i chcemy mie dugo 2.
+
+144
+00:10:54,460 --> 00:11:02,070
+Teraz bdzie mie Zmodyfikowany ustawiony na false, poniewa nie przekazujemy tego wniosku, pamitasz? Po prostu pytko odtwarzamy elementy
+
+145
+00:11:02,060 --> 00:11:06,400
+nawigacyjne, nie wysyamy tutaj adnych rekwizytw.
+
+146
+00:11:06,430 --> 00:11:12,670
+Teraz, jeli wyrenderujemy to w ten sposb, opcja Uwierzytelniona nie zostanie przekazana, a zatem bdzie traktowana jako faszywa.
+
+147
+00:11:12,820 --> 00:11:15,790
+Tak wic ten test powinien si powie.
+
+148
+00:11:16,120 --> 00:11:18,930
+Teraz zobaczmy, jak moemy to przetestowa.
+
+149
+00:11:19,180 --> 00:11:21,150
+W tym celu przyjrzyjmy si pakietowi. plik json
+
+150
+00:11:21,180 --> 00:11:27,220
+i tam, jeli przewijamy ca drog do dou, nie ca drog wybacz mi
+
+151
+00:11:27,220 --> 00:11:28,740
+troch poniej naszych
+
+152
+00:11:28,930 --> 00:11:30,800
+zalenoci, widzimy sekcj skryptw.
+
+153
+00:11:31,060 --> 00:11:32,380
+Znamy skrypt
+
+154
+00:11:32,380 --> 00:11:33,720
+startowy, dziaa
+
+155
+00:11:33,790 --> 00:11:35,710
+on w przegldarce,
+
+156
+00:11:35,710 --> 00:11:43,670
+niedugo zobaczymy skrypt budujcy, teraz potrzebujemy skryptu testowego. Moemy uruchomi to za pomoc npm run test lub faktycznie npm test, tak jak
+
+157
+00:11:43,690 --> 00:11:46,720
+start to specjalny skrypt, w ktrym nie musimy uruchamia polecenia.
+
+158
+00:11:46,950 --> 00:11:52,810
+Spowoduje to teraz wykonanie wszystkich testw i automatycznie przeszuka wszystkie pliki testowe, sprawdzajc
+
+159
+00:11:52,810 --> 00:11:54,780
+zakoczenie, test. js.
+
+160
+00:11:54,980 --> 00:11:58,430
+Teraz nigdy nie zapisuj tego pliku, wic powinienem to zrobi
+
+161
+00:11:58,450 --> 00:12:00,790
+teraz, to automatycznie ponownie uruchomi nasze testy,
+
+162
+00:12:00,790 --> 00:12:02,370
+bdzie oglda pliki testowe.
+
+163
+00:12:02,710 --> 00:12:05,480
+To ostrzeenie dotyczce polyfill mona zignorowa,
+
+164
+00:12:05,710 --> 00:12:13,840
+ciekawiej jest, gdybym rozszerzy to, e mamy jeden zdany zestaw testw, zestaw testw to opisana funkcja i
+
+165
+00:12:14,260 --> 00:12:16,900
+jeden zaliczony test w ogle, to
+
+166
+00:12:16,900 --> 00:12:19,930
+jest to test tutaj, jego funkcja.
+
+167
+00:12:20,000 --> 00:12:23,240
+Tak wic nasz test jest przekazywany zgodnie z
+
+168
+00:12:23,380 --> 00:12:26,860
+oczekiwaniami i tak wanie piszemy test dla komponentu.
+
+169
+00:12:26,860 --> 00:12:32,570
+Teraz dodajmy dodatkowe testy tego komponentu, zanim zanurkujemy w testowaniu innych rzeczy.
+

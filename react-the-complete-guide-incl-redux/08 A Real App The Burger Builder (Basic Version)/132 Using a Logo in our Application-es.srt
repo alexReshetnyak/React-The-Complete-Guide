@@ -1,0 +1,324 @@
+1
+00:00:02,150 --> 00:00:04,690
+Hicimos una barra de herramientas y The Last Lecture.
+
+2
+00:00:04,730 --> 00:00:09,270
+Agreguemos ahora un logotipo y no voy a agregar el logotipo a la navegacin.
+
+3
+00:00:09,290 --> 00:00:14,470
+Agregar dos componentes porque tericamente podramos usar ese logotipo en cualquier lugar de la aplicacin.
+
+4
+00:00:14,720 --> 00:00:20,970
+As que voy a crear una nueva carpeta all logo y en esa carpeta un nuevo archivo logo J S.
+
+5
+00:00:20,990 --> 00:00:27,200
+Ahora, de hecho, quiero utilizar un archivo de imagen como logotipo, as que voy a almacenar ese archivo de imagen y s,
+
+6
+00:00:27,200 --> 00:00:28,950
+su carpeta para ser preciso all.
+
+7
+00:00:28,960 --> 00:00:33,660
+Tambin crear la subcarpeta de imgenes a la que debera ir esta imagen.
+
+8
+00:00:33,740 --> 00:00:38,480
+Ahora puedes encontrar esa imagen de la que estoy hablando adjunta a este video.
+
+9
+00:00:38,510 --> 00:00:45,770
+Simplemente agrguelo a la carpeta de imgenes y debera obtener este logotipo de hamburguesa aqu, una hamburguesa
+
+10
+00:00:45,830 --> 00:00:47,300
+con fondo transparente.
+
+11
+00:00:47,300 --> 00:00:54,050
+Ahora, cuando usa ese logotipo, cualquier archivo de logotipo J S y el componente de logotipo simplemente sern un
+
+12
+00:00:54,050 --> 00:00:54,940
+componente funcional.
+
+13
+00:00:54,950 --> 00:00:56,830
+Como siempre
+
+14
+00:00:57,350 --> 00:01:05,750
+La cpula que se parece a esto y las importaciones reaccionan y que luego, por supuesto, exporta esta
+
+15
+00:01:05,750 --> 00:01:07,380
+funcin por defecto.
+
+16
+00:01:07,460 --> 00:01:11,670
+Y ahora simplemente quiero mostrar esa imagen aqu.
+
+17
+00:01:11,690 --> 00:01:16,970
+Tambin quiero envolverlo en un div que establece el fondo de la imagen, porque la imagen en s
+
+18
+00:01:16,970 --> 00:01:20,290
+tiene un fondo transparente y quiero establecer un fondo blanco aqu.
+
+19
+00:01:20,660 --> 00:01:26,930
+Y, por supuesto, incluso podramos llegar tan lejos para aceptar el color de fondo por qu los accesorios cambian dinmicamente.
+
+20
+00:01:26,930 --> 00:01:29,450
+Pero eso no es lo que voy a hacer aqu.
+
+21
+00:01:29,510 --> 00:01:31,880
+As que simplemente estamos envolviendo a Divin all.
+
+22
+00:01:31,910 --> 00:01:33,780
+Vamos a tener la etiqueta de imagen.
+
+23
+00:01:34,250 --> 00:01:41,870
+etiqueta de la imagen tendr una propiedad de origen y esto debera establecerse dinmicamente como si pudieras pensar que
+
+24
+00:01:41,870 --> 00:01:50,270
+simplemente dices Ir a la carpeta de activos y luego a la carpeta de imgenes y al logotipo de Bergere PNC.
+
+25
+00:01:50,350 --> 00:01:51,190
+Ahora la
+
+26
+00:01:51,350 --> 00:01:56,540
+Ahora esto no funcionar como esperara que funcione debido a la forma en que nuestro flujo de trabajo de compilacin
+
+27
+00:01:56,540 --> 00:01:57,170
+est configurado.
+
+28
+00:01:57,200 --> 00:02:03,890
+Tenga en cuenta que la carpeta de origen es solo la carpeta en la que estamos trabajando en India y Westpac
+
+29
+00:02:03,890 --> 00:02:08,010
+tomar todos estos archivos para agruparlos y crear una nueva carpeta de salida.
+
+30
+00:02:08,090 --> 00:02:13,020
+Podemos ver ese ao porque estamos en modo de desarrollo donde todo eso pasar en la memoria.
+
+31
+00:02:13,130 --> 00:02:19,640
+aplicacin obtendremos una carpeta real diferente donde todos los activos compilados y agrupados optimizados estn contenidos ahora, por lo
+
+32
+00:02:19,640 --> 00:02:25,760
+tanto, esta carpeta de activos aqu en la carpeta de origen no se enviar a ningn servidor real.
+
+33
+00:02:25,760 --> 00:02:27,980
+Pero una vez que publiquemos nuestra
+
+34
+00:02:28,100 --> 00:02:30,600
+Toda la carpeta de origen ser enviada all.
+
+35
+00:02:30,770 --> 00:02:36,380
+Por lo tanto, tambin debemos hacer que WePay sea consciente del hecho de que estamos usando esta imagen
+
+36
+00:02:36,380 --> 00:02:40,610
+y lo estamos haciendo mediante la importacin de la imagen en nuestro archivo javascript.
+
+37
+00:02:40,610 --> 00:02:43,790
+Ahora, por supuesto, solo para ver es lo siguiente.
+
+38
+00:02:43,790 --> 00:02:48,770
+Esto no significa que WePay mezcle la imagen con nuestro cdigo Javascript.
+
+39
+00:02:48,770 --> 00:02:49,950
+Cmo se vera eso?
+
+40
+00:02:49,950 --> 00:02:57,560
+se agreg a la seleccin web a su configuracin manejar la imagen bsicamente copiar sobre el directorio de destino que crea.
+
+41
+00:02:57,560 --> 00:03:03,860
+De todos modos solo significa que hacemos que WePay tome conciencia del hecho de que estamos utilizando esta
+
+42
+00:03:04,290 --> 00:03:10,130
+imagen y la pgina web manejar esta imagen con un complemento especial o un mdulo especial que
+
+43
+00:03:10,130 --> 00:03:15,650
+Nuevamente solo en la memoria durante el desarrollo e incluso optimizaremos la imagen.
+
+44
+00:03:15,650 --> 00:03:20,400
+As que aqu podemos simplemente importar el logotipo de Bergere.
+
+45
+00:03:20,420 --> 00:03:22,670
+Y ahora el POV a la imagen.
+
+46
+00:03:22,700 --> 00:03:32,750
+Entonces, en las imgenes SS, agregue el archivo y el logotipo de Bergere aqu y solo recibir la ruta de la
+
+47
+00:03:32,870 --> 00:03:35,360
+imagen donde WePay lo copiar.
+
+48
+00:03:35,390 --> 00:03:37,490
+Entonces esto ser resuelto dinmicamente.
+
+49
+00:03:37,520 --> 00:03:43,790
+As que aqu podemos simplemente configurar la fuente para el logotipo de Bergere y esto volver a referirse a una cadena al final
+
+50
+00:03:43,790 --> 00:03:48,550
+del punto de vista donde est bien empaquetada la imagen optimizada y copiada de la BD almacenada.
+
+51
+00:03:48,560 --> 00:03:50,670
+Esto es importante de entender
+
+52
+00:03:51,100 --> 00:03:58,940
+Ahora todo un conjunto de palabras de texto simplemente escribir mi hamburguesa o cualquiera que sea el nombre de tu marca.
+
+53
+00:03:58,940 --> 00:04:00,610
+Entonces este D-Mich. Asegurmonos ahora de que tambin tengamos el color de fondo y para eso agregar un logo de siesta.
+
+54
+00:04:00,620 --> 00:04:09,760
+Crear un logotipo del vidente como clase en el que quiero establecer un fondo de color blanco, tal
+
+55
+00:04:09,800 --> 00:04:16,730
+vez configurar un relleno de, digamos, 8 pxeles alrededor de la imagen para que
+
+56
+00:04:16,790 --> 00:04:24,160
+no se extienda a los bordes de ese div circundante y eso debera ser .
+
+57
+00:04:24,890 --> 00:04:26,380
+Supongo que hacer la diferencia de alta al 100 por ciento y ahora importante.
+
+58
+00:04:26,390 --> 00:04:31,970
+Tambin dale estilo a la imagen dentro de pap Dave, que al final recibir esa clase de logotipo.
+
+59
+00:04:32,190 --> 00:04:38,090
+Y configuremos la altura de la imagen al 100 por ciento para que
+
+60
+00:04:38,390 --> 00:04:46,880
+la imagen tome esta altura como mximo y no tome su altura inherente predeterminada, que sera ms alta.
+
+61
+00:04:47,330 --> 00:04:51,690
+Ahora guarde ese archivo y, por supuesto, imprtelo importar a las clases
+
+62
+00:04:52,100 --> 00:05:01,910
+desde el archivo del logotipo en su archivo js del logotipo y luego asigne su nombre de clase del logotipo Colossus al div que lo rodea.
+
+63
+00:05:02,180 --> 00:05:09,500
+Ahora usemos esto y veamos si el estilo se ajusta a nuestras necesidades.
+
+64
+00:05:09,500 --> 00:05:12,830
+Ir al componente de la barra de herramientas porque aqu es donde quiero usarlo.
+
+65
+00:05:13,160 --> 00:05:18,530
+Y, por supuesto, ahora agregar un pequeo logo de importacin.
+
+66
+00:05:19,130 --> 00:05:22,610
+A partir de ahora, tenemos que navegar hasta
+
+67
+00:05:22,610 --> 00:05:29,060
+la carpeta del componente superior y luego importar ese logotipo desde el archivo del logo js.
+
+68
+00:05:29,060 --> 00:05:30,870
+Y aqu puedo simplemente importar mi componente de logotipo y agregarlo a la persecucin X. Guarde todo y esto se ve bien.
+
+69
+00:05:31,250 --> 00:05:37,110
+Supongo que no quiero que mi imagen se gaste toda la altura de esto.
+
+70
+00:05:37,160 --> 00:05:40,170
+Tal vez debera haber algo de espacio marrn alrededor, as que simplemente podemos hacerlo en la barra de herramientas del logotipo.
+
+71
+00:05:40,250 --> 00:05:45,940
+Disculpe, acabo de ver dice como cdigo para asegurarse de que el logotipo solo usa el 80 por ciento del ancho.
+
+72
+00:05:45,950 --> 00:05:54,370
+adelante cuando comencemos a implementar est en el cajn lateral.
+
+73
+00:05:54,370 --> 00:06:02,040
+Ya puedo decir que tendremos que tocar esto ms
+
+74
+00:06:02,060 --> 00:06:07,840
+Pero para la barra de herramientas esto realmente debera hacerlo.
+
+75
+00:06:07,850 --> 00:06:08,490
+Establezcamos tambin el tamao del cuadro en el cuadro de pedido para que la altura del 80% tambin incluya el relleno.
+
+76
+00:06:08,700 --> 00:06:11,970
+Y, finalmente, tal vez tambin demos un radio de cinco pxeles para tener bordes redondeados.
+
+77
+00:06:12,330 --> 00:06:20,370
+Ahora si eso, si guardamos esto, tenemos este logotipo que se ve muy bien en mi opinin.
+
+78
+00:06:20,730 --> 00:06:25,850
+Por supuesto, siempre puedes twittear esto segn tus necesidades.
+
+79
+00:06:25,860 --> 00:06:30,560
+A continuacin, comencemos a trabajar en los elementos de navegacin.
+
+80
+00:06:30,780 --> 00:06:33,520
+&nbsp;
+
+81
+00:06:33,990 --> 00:06:37,860
+&nbsp;
+

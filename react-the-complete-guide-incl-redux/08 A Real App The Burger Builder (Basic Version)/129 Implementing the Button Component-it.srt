@@ -1,0 +1,228 @@
+1
+00:00:02,200 --> 00:00:05,980
+Termina l'ultima lezione creiamo il nostro componente pulsante.
+
+2
+00:00:06,170 --> 00:00:10,110
+Usiamolo ora nel riepilogo dell'ordine in cui abbiamo due pulsanti.
+
+3
+00:00:10,550 --> 00:00:21,080
+Prima di tutto in quel componente tutti importano il mio pulsante dalla cartella dell'interfaccia utente l dallo sfondo dalla
+
+4
+00:00:21,350 --> 00:00:25,070
+cartella dei pulsanti del pulsante js file.
+
+5
+00:00:25,610 --> 00:00:34,380
+E ora possiamo sostituire il default ma il nuovo anno con il mio pulsante mentre lo impostiamo per visualizzare
+
+6
+00:00:34,400 --> 00:00:43,970
+i prompt dei bambini, qui possiamo semplicemente avvolgere quel testo che vuoi mettere sul pulsante con il nostro stesso pulsante.
+
+7
+00:00:43,970 --> 00:00:50,770
+Ora ci sono due propriet che dobbiamo trovare sul pulsante collect e sul tipo Button.
+
+8
+00:00:51,170 --> 00:00:53,050
+Quindi facciamolo velocemente.
+
+9
+00:00:53,060 --> 00:00:59,870
+Iniziamo con il tipo di pulsante, forse per il cancellatore, voglio impostare il tipo di pulsante sul pericolo
+
+10
+00:00:59,870 --> 00:01:07,150
+e assicurati di usare la D maiuscola perch devi abbinare il nome che usiamo qui nel pulsante C asfalto.
+
+11
+00:01:07,160 --> 00:01:08,600
+Pericolo e successo.
+
+12
+00:01:08,600 --> 00:01:10,580
+Questi sono i due valori che possiamo usare.
+
+13
+00:01:10,590 --> 00:01:13,140
+Naturalmente per cambiarli o aggiungerne di nuovi.
+
+14
+00:01:13,220 --> 00:01:15,630
+Ma questi sono quelli con iSuppli.
+
+15
+00:01:16,160 --> 00:01:17,700
+Quindi, digitare il tipo di pericolo.
+
+16
+00:01:17,870 --> 00:01:28,100
+E sul secondo pulsante digita il successo in quel modo e, naturalmente, come ho detto, ci sono le scale.
+
+17
+00:01:28,410 --> 00:01:33,580
+Fare clic sulla propriet che utilizza anche quale componente del pulsante utilizza anche.
+
+18
+00:01:33,810 --> 00:01:36,140
+Quindi dovremmo anche organizzare la raccolta.
+
+19
+00:01:36,330 --> 00:01:43,170
+Questo verr attivato quando si fa clic sul pulsante e, naturalmente, qui vogliamo eseguire un metodo
+
+20
+00:01:43,620 --> 00:01:50,280
+che, dal momento che siamo nel componente di riepilogo dell'ordine, dobbiamo anche ricevere qui dinamicamente.
+
+21
+00:01:50,340 --> 00:01:56,500
+Ora l'ordine del componente di riepilogo viene utilizzato nel componente o nel contenitore del builder di Bergere.
+
+22
+00:01:56,760 --> 00:02:04,770
+Quindi, dovremmo passare una propriet per ordinare un riassunto o due propriet in realt una che passer un riferimento nel caso in
+
+23
+00:02:04,770 --> 00:02:10,380
+cui vogliamo continuare ad acquistare un riferimento a un metodo che poi gestisce questo caso
+
+24
+00:02:10,380 --> 00:02:14,150
+e un riferimento a un metodo che gestisce il caso .
+
+25
+00:02:14,170 --> 00:02:16,310
+Non vogliamo continuare.
+
+26
+00:02:16,320 --> 00:02:21,100
+Abbiamo gi un metodo per non continuare il gestore di annullamento dell'acquisto.
+
+27
+00:02:21,390 --> 00:02:23,360
+Ora aggiunger un terzo metodo.
+
+28
+00:02:23,540 --> 00:02:27,250
+Acquista continua gestore.
+
+29
+00:02:27,510 --> 00:02:33,750
+Definir anche questo con questa sintassi della funzione freccia e quindi ora
+
+30
+00:02:34,140 --> 00:02:41,150
+seguir semplicemente l'avviso che continui perch  tutto ci che possiamo fare per ora.
+
+31
+00:02:41,180 --> 00:02:49,160
+Ora passiamo questi due metodi riferimenti al riepilogo ordinato e possiamo scegliere qualsiasi nome di propriet che
+
+32
+00:02:49,160 --> 00:02:50,150
+si desidera.
+
+33
+00:02:50,150 --> 00:03:00,160
+Quindi aggiunger un evento cancellato da Che per qui o il nome della propriet dove voglio eseguire il
+
+34
+00:03:00,200 --> 00:03:09,320
+pre-Chase cance Landler e aggiunger la propriet continuata di acquisto che contiene un riferimento al gestore
+
+35
+00:03:09,320 --> 00:03:10,950
+di continuare l'acquisto.
+
+36
+00:03:10,950 --> 00:03:15,620
+Ora con questo implementiamo questi due hub cancellati con altri due.
+
+37
+00:03:16,170 --> 00:03:20,600
+Implementiamo queste due propriet nel riepilogo dell'ordine.
+
+38
+00:03:21,000 --> 00:03:23,610
+L abbiamo i pulsanti.
+
+39
+00:03:23,730 --> 00:03:29,780
+Se fai clic sul pulsante Annulla, allora vogliamo eseguire l'acquisto di oggetti di scena annullato.
+
+40
+00:03:30,060 --> 00:03:36,720
+vogliamo eseguire prop's per Che's ha continuato  stata la propriet che detiene il metodo corretto di riferimento allora.
+
+41
+00:03:36,720 --> 00:03:39,130
+Se il pulsante continua di clique che
+
+42
+00:03:39,210 --> 00:03:44,610
+Vediamo se funziona se salviamo questo e aggiungiamo gli ingredienti e facciamo clic sull'ordine.
+
+43
+00:03:44,610 --> 00:03:47,220
+Ora qui ci sono i pulsanti.
+
+44
+00:03:47,430 --> 00:03:56,610
+Se faccio clic su Annulla, fa lo stesso che facendo clic sullo sfondo, si chiude la modal per il clic continua.
+
+45
+00:03:56,610 --> 00:04:00,120
+Prendo l'avviso che dice che continui.
+
+46
+00:04:00,260 --> 00:04:04,090
+Ora questo  il modale e la disonest.
+
+47
+00:04:04,130 --> 00:04:10,270
+Costruttore di hamburger per quanto possiamo costruirlo per costruire il lato hamburger.
+
+48
+00:04:10,610 --> 00:04:17,630
+in un database su un server reale dove probabilmente elaboreremo l'ordine se fosse un'app reale.
+
+49
+00:04:17,630 --> 00:04:24,010
+Pi avanti nel corso si aggiungeranno anche funzionalit per rendere veramente l'acquisto e memorizzarlo
+
+50
+00:04:24,350 --> 00:04:30,610
+E aggiungeremo anche pi pagine in modo che l'utente possa anche vedere una pagina degli ordini che ha inserito.
+
+51
+00:04:30,680 --> 00:04:37,700
+E, naturalmente, nel caso in cui tu gi sappia leggere x nessuna preoccupazione ripasser anche questa app con Rydex.
+
+52
+00:04:37,700 --> 00:04:39,320
+Non abbiamo ancora finito.
+
+53
+00:04:39,410 --> 00:04:40,270
+Dai un'occhiata alla nostra app.
+
+54
+00:04:40,280 --> 00:04:41,410
+Cosa manca.
+
+55
+00:04:41,810 --> 00:04:45,750
+Il decisore della barra degli strumenti  lo sfondo per il sito.
+
+56
+00:04:45,770 --> 00:04:49,940
+Beh, almeno abbiamo avuto lo sfondo, ma qui abbiamo ancora del lavoro da fare.
+
+57
+00:04:49,940 --> 00:04:51,920
+Il desiderio  ci su cui ci concentreremo in futuro.
+

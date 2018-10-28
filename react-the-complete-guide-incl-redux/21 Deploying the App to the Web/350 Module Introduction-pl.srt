@@ -1,0 +1,36 @@
+1
+00:00:02,270 --> 00:00:08,290
+Zbliamy si do koca podstawowych funkcji reagowania, zbudowalimy nasz niesamowit aplikacj reagowania podczas caego
+
+2
+00:00:08,310 --> 00:00:12,830
+kursu, a nawet dodalimy do niej troch testw w ostatnim module.
+
+3
+00:00:12,830 --> 00:00:19,230
+Teraz czas wdroy t aplikacj, abymy mogli zobaczy, jak dziaa ona w Internecie.
+
+4
+00:00:19,640 --> 00:00:21,470
+Wdraajc aplikacje reagujce,
+
+5
+00:00:21,470 --> 00:00:22,790
+jak to dziaa?
+
+6
+00:00:22,790 --> 00:00:24,820
+Na co musimy uwaa?
+
+7
+00:00:24,830 --> 00:00:26,840
+Na szczcie to bardzo proste,
+
+8
+00:00:26,840 --> 00:00:27,980
+oto kroki i
+
+9
+00:00:27,980 --> 00:00:31,000
+oczywicie poka ci rwnie przykad w tym module.
+

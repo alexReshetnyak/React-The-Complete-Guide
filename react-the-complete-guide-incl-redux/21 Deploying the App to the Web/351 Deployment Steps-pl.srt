@@ -1,0 +1,136 @@
+1
+00:00:02,280 --> 00:00:06,200
+Jakie kroki musimy wykona, gdy wdraamy aplikacj reagowania?
+
+2
+00:00:06,480 --> 00:00:11,410
+Przede wszystkim musimy sprawdzi i ewentualnie dopasowa ciek podstawow, jest to
+
+3
+00:00:11,430 --> 00:00:16,890
+wane tylko wtedy, gdy uywamy routera reagowania i tam, podczas pakowania aplikacji
+
+4
+00:00:16,890 --> 00:00:24,840
+w routerze przegldarki, mona ustawi swoj waciwo basename. Jest to zawsze wymagane, gdy Twoja aplikacja jest obsugiwana z innej
+
+5
+00:00:24,840 --> 00:00:25,140
+usugi
+
+6
+00:00:25,150 --> 00:00:32,040
+ni trasa gwna, czyli domena trasy. Jeli wywietlasz swoj aplikacj na przykadzie. com / my-app, a nastpnie musisz
+
+7
+00:00:32,160 --> 00:00:36,920
+ustawi systemow baz danych na moj aplikacj, aby router dziaa poprawnie.
+
+8
+00:00:37,020 --> 00:00:38,910
+To jest pierwsza wana rzecz,
+
+9
+00:00:38,910 --> 00:00:44,850
+drug wan rzecz jest to, e musimy zbudowa zoptymalizowany projekt, odbywa si to za pomoc
+
+10
+00:00:44,850 --> 00:00:47,060
+jednego wygodnego polecenia w naszej
+
+11
+00:00:47,160 --> 00:00:54,630
+aplikacji, npm run build w tworzeniu projektw aplikacji reagowania. To automatycznie zbuduje projekt i zoptymalizuje wszystkie nasze pakiety
+
+12
+00:00:54,690 --> 00:00:58,920
+javascript, tak aby mie bardzo ma baz kodu, ktr bdziemy nastpnie
+
+13
+00:00:58,920 --> 00:01:04,680
+przesya na serwer, poniewa oczywicie chcesz wysa tak mao kodu, jak to tylko moliwe,
+
+14
+00:01:04,830 --> 00:01:07,800
+poniewa to bdzie tak szybko, jak to moliwe.
+
+15
+00:01:07,830 --> 00:01:16,650
+Kolejn wan rzecz, o ktrej naley pamita, jest to, e serwer musi zawsze obsugiwa indeks. Plik html rwnie, a zwaszcza w
+
+16
+00:01:16,650 --> 00:01:23,910
+404 przypadkach, jest wymagany ze wzgldu na sposb dziaania Internetu.
+
+17
+00:01:23,940 --> 00:01:32,350
+Jeli Twj uytkownik odwiedza moj aplikacj. com / users, wtedy serwer jest pierwszym, ktry odbierze t tras
+
+18
+00:01:32,460 --> 00:01:38,550
+i istnieje prawdopodobiestwo, e serwer nie zna cieki / users, poniewa zdefiniowa j w swojej aplikacji reagowania.
+
+19
+00:01:39,090 --> 00:01:42,240
+Teraz, aby nie zgasza bdu, twoja aplikacja reagowania musi mie szans
+
+20
+00:01:42,360 --> 00:01:48,140
+przeanalizowania cieki i robi to tylko wtedy, gdy zwrcisz indeks. plik html dla nieznanej
+
+21
+00:01:48,130 --> 00:01:51,520
+trasy, na kocu serwer
+
+22
+00:01:51,600 --> 00:01:54,360
+nie jest znany.
+
+23
+00:01:54,360 --> 00:01:59,190
+Wic zawsze zwracaj indeks. html w 404 przypadkach
+
+24
+00:01:59,190 --> 00:02:05,160
+inaczej twoje aplikacje zalene od routingu nie bd dziaay.
+
+25
+00:02:05,160 --> 00:02:12,600
+Na koniec przelij artefakty z kompilacji z drugiego kroku, zbuduj i zoptymalizuj projekt na serwerze
+
+26
+00:02:12,600 --> 00:02:13,390
+statycznym, nie
+
+27
+00:02:13,620 --> 00:02:17,980
+potrzebujesz serwera z PHP lub wzem lub czymkolwiek podobnym.
+
+28
+00:02:18,120 --> 00:02:24,570
+W kocu to, co tutaj zainstalujesz, to pojedyncza strona skadajca si z html i odrobiny
+
+29
+00:02:24,660 --> 00:02:26,440
+css i duo javascriptu,
+
+30
+00:02:26,490 --> 00:02:34,140
+aden z nich nie potrzebuje jzyka po stronie serwera, wic serwer statyczny taki jak AWS S3, Github pages
+
+31
+00:02:34,230 --> 00:02:41,420
+lub Firebase lub jakikolwiek inny serwer, a Ty po prostu wgrywasz artefakty kompilacji, a nie cay folder projektu.
+
+32
+00:02:41,460 --> 00:02:47,200
+Artefakty z kompilacji bd przechowywane w folderze / build, a ja poka ci
+
+33
+00:02:47,610 --> 00:02:53,150
+to w cigu sekundy, a to wszystko. Tak atwo jest wdroy swoj aplikacj reagowania.
+
+34
+00:02:53,400 --> 00:02:56,040
+Zrbmy to teraz razem w nastpnym wykadzie.
+

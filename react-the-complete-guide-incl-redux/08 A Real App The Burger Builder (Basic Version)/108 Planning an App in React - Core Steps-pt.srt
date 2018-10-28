@@ -1,0 +1,128 @@
+1
+00:00:02,170 --> 00:00:07,660
+Agora, voc aprender toda a teoria sobre como os componentes funcionam como voc passa dados sobre como funcionam os adereos e
+
+2
+00:00:07,660 --> 00:00:08,350
+assim por diante.
+
+3
+00:00:08,350 --> 00:00:12,760
+E isso  tudo legal, mas como voc realmente planeja um aplicativo de reao.
+
+4
+00:00:12,760 --> 00:00:14,260
+Como isso funciona.
+
+5
+00:00:14,260 --> 00:00:18,470
+Agora, voc pode, naturalmente, dividir isso em etapas mais grandes, ento, livre de graa.
+
+6
+00:00:18,490 --> 00:00:25,840
+Mas aqui esto trs etapas muito importantes, e eu passo regularmente ao planejar um aplicativo de reao.
+
+7
+00:00:25,930 --> 00:00:30,810
+O primeiro passo  planejar a estrutura do componente componente.
+
+8
+00:00:30,880 --> 00:00:38,620
+um design de aplicativo por conta prpria e agora cabe a voc dividir isso em componentes de reagem.
+
+9
+00:00:38,620 --> 00:00:42,760
+Voc provavelmente foi projetado pelo seu designer ou, basicamente, criou
+
+10
+00:00:42,760 --> 00:00:48,880
+E  absolutamente normal que os resultados que voc pode ter no final podem parecer diferentes do seu componente
+
+11
+00:00:48,880 --> 00:00:54,610
+inicialmente planejado, mas  super importante ter uma idia sobre o que deve entrar em seu prprio componente
+
+12
+00:00:54,700 --> 00:00:55,950
+e o que no.
+
+13
+00:00:56,110 --> 00:01:00,640
+A parte importante da sua aplicao,  claro,  o estado do aplicativo.
+
+14
+00:01:00,640 --> 00:01:06,820
+Voc pode todos os tradutores com os dados que voc planeja usar e manipular em seu aplicativo por exemplo
+
+15
+00:01:06,830 --> 00:01:11,270
+e, claro, voc far isso durante as prximas palestras em nosso aplicativo Bergere.
+
+16
+00:01:11,350 --> 00:01:16,600
+o que precisamos para renderizar e tambm o que o usurio precisa pagar no final.
+
+17
+00:01:16,600 --> 00:01:20,650
+Precisamos acompanhar os ingredientes que um usurio adicionou porque isso determinar
+
+18
+00:01:20,650 --> 00:01:27,280
+Agora, uma vez que voc conhea a decomposio e a estrutura do seu aplicativo e para indicar que voc vai
+
+19
+00:01:27,280 --> 00:01:30,100
+us-lo, voc no pode planejar componentes versus recipientes.
+
+20
+00:01:30,190 --> 00:01:35,650
+Ento, quais componentes em sua aplicao devem ser aptridas ou funcionais.
+
+21
+00:01:35,680 --> 00:01:42,690
+s vezes, tambm se referem como componentes estpidos e quais componentes devem ser componentes completos de estado
+
+22
+00:01:42,700 --> 00:01:49,030
+criados com essa palavra-chave da classe porque eles precisam gerenciar algum estado e distribu-lo para
+
+23
+00:01:49,180 --> 00:01:52,910
+seus componentes mais fofos para o estado menos componentes.
+
+24
+00:01:52,960 --> 00:01:59,360
+Estes so os trs passos que eu passo regularmente e estas so as etapas que eu quero passar com gabber.
+
+25
+00:01:59,590 --> 00:02:05,890
+Vamos planejar a nossa estrutura de componentes de componentes e ento vamos dar uma olhada em qual estado precisamos
+
+26
+00:02:05,890 --> 00:02:10,540
+e o que pode ser um componente e o que deve ser um continer.
+
+27
+00:02:10,540 --> 00:02:13,570
+E ento, vamos comear a construir o aplicativo.
+
+28
+00:02:13,600 --> 00:02:19,570
+E, como voc ver, podemos at adicionar mais componentes do que planejamos inicialmente porque vemos
+
+29
+00:02:19,570 --> 00:02:21,320
+que podemos dividir ainda mais.
+
+30
+00:02:21,370 --> 00:02:22,660
+Ou talvez isso seja dividido.
+
+31
+00:02:22,660 --> 00:02:27,650
+Ns planejamos no faz sentido quando comeamos a implement-lo e isso  perfeitamente normal.
+
+32
+00:02:27,730 --> 00:02:29,950
+Mas ter um plano,  claro,  muito importante.
+

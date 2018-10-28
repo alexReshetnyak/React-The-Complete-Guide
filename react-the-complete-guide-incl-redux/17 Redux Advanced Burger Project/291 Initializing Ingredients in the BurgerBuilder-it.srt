@@ -1,0 +1,300 @@
+1
+00:00:02,200 --> 00:00:06,300
+Quindi arriviamo a girare sempre il processo di recupero qui.
+
+2
+00:00:06,520 --> 00:00:14,300
+Come puoi vedere se controlli la console non abbiamo errori, ma non otteniamo mai i nostri ingredienti che hanno un senso, perch
+
+3
+00:00:14,570 --> 00:00:20,170
+l'impostazione delle regioni che vengono inviate una volta ottenuti gli ingredienti non viene mai gestita dal
+
+4
+00:00:20,170 --> 00:00:21,120
+nostro produttore.
+
+5
+00:00:21,200 --> 00:00:22,640
+Quindi  il momento di cambiare questo.
+
+6
+00:00:22,670 --> 00:00:24,970
+Lo stesso  vero per gli ingredienti fecche falliti.
+
+7
+00:00:25,250 --> 00:00:31,680
+Quindi nel burger Boulder cado nella cartella dei riduttori, so quando gestire questi due nuovi casi.
+
+8
+00:00:31,700 --> 00:00:40,010
+aggiungere un caso per i tipi di azione, gli ingredienti vengono eseguiti ogni volta che abbiamo gli ingredienti dal server l.
+
+9
+00:00:40,010 --> 00:00:41,940
+Quindi, prima di tutto o
+
+10
+00:00:41,960 --> 00:00:45,950
+Voglio restituire un nuovo stato e copier prima il vecchio stato.
+
+11
+00:00:45,950 --> 00:00:51,570
+Per quel motivo e poi ho bisogno di impostare i miei ingredienti qui.
+
+12
+00:00:51,620 --> 00:01:00,350
+Gli ingredienti dovrebbero essere impostati su ingredienti d'azione e so che ho ricevuto questi ingredienti perch nella ciotola dell'hamburger o
+
+13
+00:01:00,350 --> 00:01:06,860
+nella caduta dell'azione in cui abbiamo impostato degli ingredienti, passo la propriet di questi ingredienti.
+
+14
+00:01:06,860 --> 00:01:13,300
+Cos ora ho inizializzato dove ho impostato i miei reagenti e teoricamente potremmo eseguire questa azione o spedita come in
+
+15
+00:01:13,300 --> 00:01:14,770
+realt ci che vogliamo.
+
+16
+00:01:14,870 --> 00:01:22,100
+qualsiasi oggetto javascript che rappresenta i nostri ingredienti in qualsiasi momento che desideri, ad esempio, per ripristinare le persone attuali.
+
+17
+00:01:22,130 --> 00:01:26,420
+Quindi potremmo anche eseguire questo setter con qualsiasi set di ingredienti con
+
+18
+00:01:26,430 --> 00:01:28,180
+Eroe di Berger di sempre.
+
+19
+00:01:28,220 --> 00:01:30,900
+Voglio solo usarlo per inizializzare i nostri ingredienti.
+
+20
+00:01:31,370 --> 00:01:34,350
+Ora con quello chiamo gli ingredienti dell'insieme.
+
+21
+00:01:34,370 --> 00:01:41,750
+Avrei anche voluto trattare il caso che il recupero degli ingredienti non andasse a buon fine.
+
+22
+00:01:41,750 --> 00:01:49,880
+Inoltre restituir il nuovo stato in cui ho copiato il vecchio stato e quindi, naturalmente, ho anche bisogno di impostare qui il
+
+23
+00:01:49,880 --> 00:01:53,340
+mio errore e voglio impostarlo su true, quindi errore.
+
+24
+00:01:53,480 --> 00:01:54,550
+Vero.
+
+25
+00:01:55,100 --> 00:02:01,910
+Ora una cosa importante quando chiamiamo gli ingredienti set qui voglio impostare il mio errore su false per resettarlo nel caso in
+
+26
+00:02:02,060 --> 00:02:04,040
+cui avessimo un errore in precedenza.
+
+27
+00:02:04,130 --> 00:02:06,950
+E ora non ce l'ho pi, quindi accetta il mio errore.
+
+28
+00:02:07,060 --> 00:02:08,090
+Falso qui.
+
+29
+00:02:08,090 --> 00:02:11,790
+Quindi con ci abbiamo aggiunto la nostra logica del produttore.
+
+30
+00:02:11,810 --> 00:02:14,040
+Ora dobbiamo connettere il nostro contenitore.
+
+31
+00:02:14,360 --> 00:02:19,760
+Quindi andr al file burger Bolar e sono in fondo a questo contenitore.
+
+32
+00:02:19,790 --> 00:02:26,140
+Non abbiamo pi solo bisogno degli ingredienti di cui abbiamo bisogno per ottenere informazioni su un potenziale errore.
+
+33
+00:02:26,390 --> 00:02:29,770
+Quindi qui voglio ottenere il mio errore dallo stato.
+
+34
+00:02:30,020 --> 00:02:32,930
+E ora sono l'aria o la propriet.
+
+35
+00:02:33,080 --> 00:02:36,830
+Tenete a mente fino ad ora non abbiamo diverse sezioni di stato.
+
+36
+00:02:36,830 --> 00:02:38,330
+Abbiamo solo un riduttore.
+
+37
+00:02:38,330 --> 00:02:40,090
+Non stiamo combinando nessuno.
+
+38
+00:02:40,370 --> 00:02:43,270
+Quindi con quello ho il mio errore.
+
+39
+00:02:43,520 --> 00:02:50,040
+Ora un'altra cosa che abbiamo  che non inviamo mai il nostro in quell'azione di ingredienti.
+
+40
+00:02:50,120 --> 00:02:52,400
+Questo che in realt raggiunge il Web.
+
+41
+00:02:52,610 --> 00:02:54,200
+Non abbiamo mai inviato questo.
+
+42
+00:02:54,200 --> 00:02:56,570
+Quindi questo non verr mai inizializzato.
+
+43
+00:02:56,630 --> 00:03:01,530
+Quindi voglio anche essere in grado di spedirlo dal Burgert Boulder.
+
+44
+00:03:01,580 --> 00:03:05,910
+Quindi aggiungi una nuova propriet qui per mappare questo Peche agli oggetti di scena.
+
+45
+00:03:05,980 --> 00:03:07,850
+Lo nominer in esso.
+
+46
+00:03:07,850 --> 00:03:17,430
+Ingredienti e spedir le mie azioni di estrattore di hamburger qui e ho bisogno di aggiungere le azioni di burger Bolar ai chip di
+
+47
+00:03:17,430 --> 00:03:20,820
+indice che cadono dove li ho impacchettati qui.
+
+48
+00:03:20,910 --> 00:03:22,630
+Ho bisogno di aggiungerlo.
+
+49
+00:03:22,650 --> 00:03:24,280
+Ingredienti.
+
+50
+00:03:24,330 --> 00:03:31,170
+Cos ora posso raggiungerlo dal mio contenitore per hamburger o da un contenitore nei suoi ingredienti ed eseguirlo.
+
+51
+00:03:31,170 --> 00:03:37,880
+Ora l'ultimo passo  chiamare tutti gli ingredienti nel nostro componente che montino qui il metodo.
+
+52
+00:03:38,190 --> 00:03:46,790
+Cos ora eseguir questo processo su ingredienti come questo e il piatto dovrebbe eseguire questa spedizione e
+
+53
+00:03:46,790 --> 00:03:51,180
+sperare di recuperare con successo i nostri ingredienti.
+
+54
+00:03:51,180 --> 00:03:57,570
+Ultimo ma non meno importante, abbiamo aggiunto questo come nostra propriet per mapparlo al nostro stato di errore.
+
+55
+00:03:57,570 --> 00:04:05,170
+Ora ovviamente ho anche bisogno di usarlo e posso semplicemente cercare tutte le occorrenze di errore DOT di stato o nel mio
+
+56
+00:04:05,300 --> 00:04:09,580
+file qui questi sono i luoghi in cui ho bisogno di usare.
+
+57
+00:04:09,600 --> 00:04:11,350
+Beh, a parte il mio stato cade.
+
+58
+00:04:11,420 --> 00:04:17,780
+Quindi questo posto qui  il posto in cui ora ho bisogno di chiamare l'errore di questo prop perch ora stiamo ricevendo questo
+
+59
+00:04:17,780 --> 00:04:19,440
+come oggetti di scena con pap.
+
+60
+00:04:19,440 --> 00:04:24,950
+Salviamo tutti i difetti e se torniamo alla nostra applicazione diamo un'occhiata se abbiamo
+
+61
+00:04:24,950 --> 00:04:27,160
+delle frecce se ricarichiamo tiap.
+
+62
+00:04:27,400 --> 00:04:28,770
+Mi sembra vada bene.
+
+63
+00:04:28,770 --> 00:04:30,610
+Abbiamo un hamburger qui.
+
+64
+00:04:30,840 --> 00:04:37,830
+i nostri ingredienti e ora possiamo iniziare ad aggiungere gli ingredienti e possiamo anche inserire qui il processo di ordine.
+
+65
+00:04:37,830 --> 00:04:45,090
+Diamo ora uno sguardo agli strumenti di sviluppo redux che vediamo che sono stati eseguiti gli ingredienti set e abbiamo impostato
+
+66
+00:04:45,240 --> 00:04:47,020
+Fallo tutto bene.
+
+67
+00:04:47,070 --> 00:04:49,580
+Ultimo voglio controllare se funziona la gestione degli errori.
+
+68
+00:04:49,730 --> 00:04:56,680
+Quindi lasciami andare al mio burger Boulder action maker e roviniamo questo sei qui.
+
+69
+00:04:56,940 --> 00:04:57,890
+Salviamolo
+
+70
+00:04:58,710 --> 00:05:02,240
+E anche questo funziona come dovrebbe.
+
+71
+00:05:02,250 --> 00:05:03,230
+Quindi  fantastico.
+
+72
+00:05:03,240 --> 00:05:08,550
+degli errori con i nostri componenti di ordine superiore funziona ancora a causa del fatto che usiamo una stessa istanza x '.
+
+73
+00:05:08,550 --> 00:05:09,670
+Possiamo vedere che la gestione
+
+74
+00:05:09,720 --> 00:05:13,990
+E ora possiamo Vonta negli altri posti in cui dobbiamo usare il codice asincrono.
+
+75
+00:05:14,040 --> 00:05:16,950
+Il prossimo, naturalmente,  quando vogliamo ordinare un hamburger.
+

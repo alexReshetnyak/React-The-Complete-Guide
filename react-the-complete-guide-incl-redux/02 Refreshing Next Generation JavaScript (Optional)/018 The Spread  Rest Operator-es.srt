@@ -1,0 +1,324 @@
+1
+00:00:02,250 --> 00:00:06,000
+Aprendemos mucho sobre clases y funciones aerodinmicas.
+
+2
+00:00:06,210 --> 00:00:11,700
+Ahora volvamos la cabeza hacia los nuevos operadores que podrn usar en el futuro de javascript
+
+3
+00:00:11,700 --> 00:00:17,340
+y que ya podemos usar hoy en nuestro proyecto Riak para difundir en los operadores restantes.
+
+4
+00:00:17,400 --> 00:00:20,840
+En realidad, solo hay un operador libre de puntos.
+
+5
+00:00:20,850 --> 00:00:25,020
+S, esto puede parecer extrao, pero el operador es solo puntos libres.
+
+6
+00:00:25,080 --> 00:00:32,010
+Ahora bien, si lo llamamos spread o el resto depende de dnde lo usemos, el operador de spread se
+
+7
+00:00:32,100 --> 00:00:35,160
+usa para dividir cada elemento o propiedad del objeto.
+
+8
+00:00:35,250 --> 00:00:38,510
+As que extendimos una matriz u objeto.
+
+9
+00:00:38,640 --> 00:00:47,160
+Por ejemplo, si tenemos una matriz antigua y queremos agregar todos los elementos de esa matriz anterior a una nueva matriz y,
+
+10
+00:00:47,160 --> 00:00:54,150
+adems, agregar un 1 en un elemento dos, este primer ndice sera lo que tena tres puntos delante
+
+11
+00:00:54,150 --> 00:01:00,330
+de toda la matriz. simplemente extraiga todos los elementos y agregue a la nueva matriz que
+
+12
+00:01:00,330 --> 00:01:01,630
+creamos con corchetes.
+
+13
+00:01:01,860 --> 00:01:04,870
+Y por supuesto, entonces podemos agregarle ms elementos.
+
+14
+00:01:04,890 --> 00:01:11,140
+As que solo usamos para normalizar el ndice con corchetes para crear una matriz igual para su objeto.
+
+15
+00:01:11,190 --> 00:01:17,850
+Creamos un nuevo objeto con llaves de llamada con el nuevo puntal pero tambin tenemos dot dot dot.
+
+16
+00:01:17,880 --> 00:01:26,670
+y sus valores y agregarlos como pares de valores clave tampoco se opona como una nota lateral si el objeto anterior.
+
+17
+00:01:26,670 --> 00:01:31,350
+El objeto antiguo para extraer todas las propiedades del objeto antiguo
+
+18
+00:01:31,350 --> 00:01:33,350
+Adelante una nueva propiedad.
+
+19
+00:01:33,480 --> 00:01:36,220
+Sera reemplazado por un nuevo apoyo 5 aqu.
+
+20
+00:01:36,300 --> 00:01:40,920
+Por lo tanto, nuestra propiedad tiene prioridad sobre el operador de deshonestidad.
+
+21
+00:01:41,010 --> 00:01:48,660
+Ahora el operador de reposo es el mismo operador pero se usa de manera diferente aqu. Se usa para fusionar una lista de argumentos
+
+22
+00:01:48,660 --> 00:01:50,270
+de funciones en una matriz.
+
+23
+00:01:50,460 --> 00:01:52,270
+Y esto nos muestra dnde lo usamos.
+
+24
+00:01:52,380 --> 00:01:55,190
+Lo usamos en una lista de argumentos de funciones.
+
+25
+00:01:55,220 --> 00:01:57,380
+Aqu hay un ejemplo de tipo.
+
+26
+00:01:57,370 --> 00:02:00,740
+Nuestra X recibe una cantidad ilimitada de argumentos.
+
+27
+00:02:00,750 --> 00:02:09,420
+As que un argumento para liberar o lo que sea con dot dot dot solo escribimos un argumento o X, pero en realidad
+
+28
+00:02:09,420 --> 00:02:14,120
+podemos recibir ms de uno y todos se fusionarn en una matriz.
+
+29
+00:02:14,130 --> 00:02:20,790
+Entonces podemos aplicar mtodos Array a nuestra lista de argumentos o hacer lo que queramos hacer con
+
+30
+00:02:20,790 --> 00:02:22,210
+nuestros argumentos convenientemente almacenados.
+
+31
+00:02:22,410 --> 00:02:26,090
+Echemos un vistazo a ambos como NJ Esben entonces.
+
+32
+00:02:26,170 --> 00:02:31,600
+Comencemos con el operador spread o creemos una matriz de nmeros.
+
+33
+00:02:31,870 --> 00:02:35,310
+Entonces, una vez que libere, agregue todos los que quiera.
+
+34
+00:02:35,350 --> 00:02:42,820
+Ahora quiero crear una nueva matriz con nuevos nmeros y, como viste, la dispersin ahora se usa simplemente
+
+35
+00:02:42,820 --> 00:02:44,140
+aadiendo puntos gratis.
+
+36
+00:02:44,140 --> 00:02:49,430
+Luego, los nmeros de la matriz anterior y luego potencialmente no tiene que hacer eso.
+
+37
+00:02:49,660 --> 00:02:53,260
+Nuevos nmeros como 4 y nuevamente eso es opcional.
+
+38
+00:02:53,770 --> 00:02:56,070
+Con ese registro final de la consola.
+
+39
+00:02:56,170 --> 00:02:58,130
+Nuevos nmeros aqu.
+
+40
+00:02:59,450 --> 00:03:07,250
+Y yo haba corrido tenemos uno dos tres cuatro el conjunto anterior con todos sus elementos y el nuevo elemento.
+
+41
+00:03:07,250 --> 00:03:09,320
+Y en realidad no agregamos el elemento anterior.
+
+42
+00:03:09,350 --> 00:03:15,350
+Si tuviramos que hacer eso sin los puntos, se incluira como un elemento dentro del nuevo elemento.
+
+43
+00:03:15,350 --> 00:03:20,170
+Realmente sac los elementos antiguos como puedes ver claramente.
+
+44
+00:03:20,300 --> 00:03:26,750
+As que ese es el operador de propagacin y me vern utilizarlo para este curso un
+
+45
+00:03:26,750 --> 00:03:35,880
+par de veces tanto en matrices como en objetos, por ejemplo, copiar convenientemente matrices o agregar propiedades a un objeto mientras se
+
+46
+00:03:35,880 --> 00:03:38,780
+copia de forma segura ese objeto viejo.
+
+47
+00:03:38,780 --> 00:03:44,020
+Nuevamente, obviamente, siempre mencionar por qu estoy usando ese operador cuando hago algo en el curso.
+
+48
+00:03:44,180 --> 00:03:46,500
+Solo ten en cuenta que existe.
+
+49
+00:03:46,790 --> 00:03:53,200
+Veamos ahora lo mismo para los objetos, todos crean un objeto personal aqu donde tengo un nombre.
+
+50
+00:03:53,210 --> 00:04:01,980
+Digamos Max y ahora tendr un nuevo objeto personal que es un objeto JavaScript y uno nuevo, mientras que Primero uso
+
+51
+00:04:02,020 --> 00:04:09,630
+para extender el operador en persona para copiar todos los pares de valores de propiedad del objeto viejo y
+
+52
+00:04:09,930 --> 00:04:12,390
+potencialmente, y eso es todo opcional.
+
+53
+00:04:12,510 --> 00:04:14,200
+Agrega una nueva propiedad.
+
+54
+00:04:14,460 --> 00:04:21,630
+Y ahora si consuelo el registro de una nueva persona, puede ignorar este error que es propiedad de J ha sido
+
+55
+00:04:21,630 --> 00:04:24,500
+decente. X ser compatible con nuestro proyecto de curso.
+
+56
+00:04:24,810 --> 00:04:30,300
+Hacemos esto, ves objetos como el ao de Brinton con el nombre Max a los 28 aos.
+
+57
+00:04:30,480 --> 00:04:36,730
+Entonces, es tomar al viejo y distribuirlo a la nueva persona que es el operador de propagacin.
+
+58
+00:04:36,780 --> 00:04:44,210
+Ahora, el operador de reposo que se utiliza con menos frecuencia se utiliza en una funcin y, por supuesto, tambin se
+
+59
+00:04:44,250 --> 00:04:46,690
+puede usar la funcin de 6 flechas.
+
+60
+00:04:46,830 --> 00:04:53,760
+As que ah podramos tener una funcin de filtro como quieras nombrar y obtenemos un par de arcos y no tienes
+
+61
+00:04:53,760 --> 00:04:59,460
+que usar X aos nombrados como o lo que quieras, pero tienes que usar los puntos gratis
+
+62
+00:04:59,460 --> 00:05:00,590
+en frente de eso.
+
+63
+00:05:00,990 --> 00:05:03,780
+Entonces, all puedes simplemente regresar.
+
+64
+00:05:03,790 --> 00:05:09,960
+sintaxis en lnea aqu para escribirlo todo en una lnea sin que nos devuelva la palabra clave. Voy a usar return.
+
+65
+00:05:09,960 --> 00:05:10,760
+Podramos usar la
+
+66
+00:05:10,770 --> 00:05:16,710
+Puede devolver nuestra X y luego digamos que llamamos al mtodo de filtro integrado que est disponible en las matrices
+
+67
+00:05:16,800 --> 00:05:23,320
+y tenga en cuenta que los puntos aqu se usan como un operador de descanso y que fusionan los argumentos en una matriz.
+
+68
+00:05:23,340 --> 00:05:31,230
+Entonces podemos usar mtodos aere como filter filter ejecutar una funcin en cada elemento en el pasado de
+
+69
+00:05:31,230 --> 00:05:31,900
+la matriz.
+
+70
+00:05:32,040 --> 00:05:38,580
+Entonces aqu obtendramos nuestro elemento y luego podramos usar la funcin de flecha en lnea para decir simplemente
+
+71
+00:05:38,580 --> 00:05:39,830
+devolver verdadero o falso.
+
+72
+00:05:39,830 --> 00:05:45,300
+Qu filtro espera si el elemento es igual a 1.
+
+73
+00:05:45,300 --> 00:05:47,540
+Ahora que podra ser una gran cantidad de CYNICUS no lo sabes.
+
+74
+00:05:47,640 --> 00:05:53,760
+Gratis equivale a la comprobacin de signos de tipo e igualdad de valor para que Al tambin tenga que ser un nmero.
+
+75
+00:05:53,820 --> 00:05:57,510
+Y lo hace simplemente la funcin de flecha que pasamos al mtodo de filtro incorporado.
+
+76
+00:05:57,510 --> 00:06:00,130
+Entonces esto no tiene nada que ver con el descanso o la propagacin.
+
+77
+00:06:00,310 --> 00:06:07,220
+Tenemos que podramos llamar filtro y dejarlo como un registro para ver algo que filtra la ley de Konsole.
+
+78
+00:06:07,230 --> 00:06:15,480
+As que nuestro enfoque o funcin aqu digamos 1 2 libre y en realidad solo deberamos registrar 1 ao como una matriz, porque
+
+79
+00:06:15,480 --> 00:06:21,600
+filtramos el deseo que se crea con el operador de descanso con el ao de puntos libres.
+
+80
+00:06:21,870 --> 00:06:27,960
+esa es la extensin extendida de Reston, es usar esos puntos libres que vers ms a menudo en este curso.
+
+81
+00:06:27,960 --> 00:06:28,690
+As que
+

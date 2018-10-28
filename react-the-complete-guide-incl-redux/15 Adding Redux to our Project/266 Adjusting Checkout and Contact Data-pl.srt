@@ -1,0 +1,444 @@
+1
+00:00:02,250 --> 00:00:07,230
+Knouted zajmujemy si wszystkim, co dotyczy skadnikw redux.
+
+2
+00:00:07,230 --> 00:00:13,850
+Oczywicie powinnimy rwnie dostosowa rednie skadniki, w ktrych uywamy tego skadnika Dator, a mianowicie sprawdzi
+
+3
+00:00:13,860 --> 00:00:21,030
+i skontaktowa si z danymi, szczeglnie sprawdzi, a dane kontaktowe s teraz super wietne i uywamy
+
+4
+00:00:21,450 --> 00:00:28,260
+przekierowa, poniewa do tej pory uywamy programw zapyta, aby przekaza nasze skadniki do komponentu kasowego .
+
+5
+00:00:28,270 --> 00:00:31,230
+To jest co, czego w kocu moemy si pozby.
+
+6
+00:00:31,410 --> 00:00:38,730
+Tak wic w komponencie Burger Burger, w ktrym przekazujemy nasze skadniki przez rodzicw Cuore,
+
+7
+00:00:38,730 --> 00:00:42,600
+kupujemy dalej, nie musimy ju tego robi.
+
+8
+00:00:42,750 --> 00:00:45,540
+Moemy po prostu usun t metod.
+
+9
+00:00:45,680 --> 00:00:49,360
+Zamiast tego musimy sobie z tym poradzi.
+
+10
+00:00:49,380 --> 00:00:58,650
+Teraz prawdopodobnie nadal chcemy nawigowa dalej, ale nie chc ju przekazywa rodzicom Clarie, wic mog pozby si caego kodu nadrzdnego
+
+11
+00:00:58,650 --> 00:01:06,240
+Kohary tutaj i mog rwnie uczyni t metod wypychania nieco krtsz teraz i po prostu pj
+
+12
+00:01:06,240 --> 00:01:13,610
+na ukonik tutaj i moemy po prostu zdoby skadniki z tego miejsca, eby przeczyta X-sklep.
+
+13
+00:01:13,770 --> 00:01:20,610
+Tak wic nasze zakupy kontynuuj obsug Lifsona i burgera Bolara, ale s znacznie lejsze i
+
+14
+00:01:20,610 --> 00:01:22,110
+rzeczywicie sprawdzaj kontener.
+
+15
+00:01:22,110 --> 00:01:29,360
+Nie musimy ju zdobywa naszych skadnikw, a komponent bdzie montowany w ten sposb.
+
+16
+00:01:29,450 --> 00:01:33,800
+Zamiast tego moemy pozby si komponentu, ktry bdzie tu montowany cakowicie.
+
+17
+00:01:33,910 --> 00:01:37,770
+Nie moemy pozby si naszego stanu, ktry tylko obsuguje skadniki i cen.
+
+18
+00:01:37,780 --> 00:01:47,180
+Dostalimy to i zrelaksowalimy si i moemy teraz zaimportowa conect ponownie z re-act redux, poniewa
+
+19
+00:01:47,180 --> 00:01:51,800
+oczywicie chcemy te poczy ten kontener z Rydexem.
+
+20
+00:01:52,310 --> 00:01:58,490
+Wic jeli zejdziemy na d kontenera do sprawdzenia, wszystko znowu stwrz sta
+
+21
+00:01:58,590 --> 00:02:06,260
+map stanu do rekwizytw i nadal mam funkcj, ktra pobiera stan, a NTN zwraca obiekt
+
+22
+00:02:06,290 --> 00:02:14,360
+javascript, w ktrym mapujemy Dobrze nasz stan jest przechowywany i redux do rekwizytw tego kontenera i
+
+23
+00:02:14,360 --> 00:02:16,910
+tam moemy mie IAG rwnie wasnoci.
+
+24
+00:02:16,970 --> 00:02:22,410
+Moesz nazwa to, co chcesz, a to powinno zawiera skadniki pastwowe.
+
+25
+00:02:22,430 --> 00:02:24,800
+Nie mona tego nazwa, jak chcesz.
+
+26
+00:02:24,800 --> 00:02:28,490
+To musi by waciwo, ktr nazywasz w swoim stanie.
+
+27
+00:02:28,490 --> 00:02:35,370
+Wic jako skadniki redukujce godzin i oczywicie wszyscy potrzebujemy tutaj ceny.
+
+28
+00:02:35,370 --> 00:02:40,380
+Wic pobierzmy cen, ktra jest cakowit cen pastwa.
+
+29
+00:02:40,380 --> 00:02:44,330
+To nazwa nieruchomoci uywamy reduktora.
+
+30
+00:02:44,340 --> 00:02:50,310
+Teraz nie potrzebujemy wysyania map do rekwizytw, poniewa w rzeczywistoci nie wysyamy niczego w tym
+
+31
+00:02:50,310 --> 00:02:55,790
+kontenerze, po prostu nawigujemy, ale nie robimy tego przez sklep Rydex, robimy to z
+
+32
+00:02:55,800 --> 00:02:56,930
+routera reagowania.
+
+33
+00:02:57,120 --> 00:03:00,330
+Wic tutaj nic nie zostao wysane.
+
+34
+00:03:00,330 --> 00:03:05,760
+Na razie potrzebujemy tylko mapy do wniosku, ktrego nie zrobiem z Raptorem za pomoc CONNECT.
+
+35
+00:03:05,970 --> 00:03:15,480
+I tutaj przekazuj stan mapy do wniosku jako pierwszy argument i po prostu pomijam drugi, poniewa nie
+
+36
+00:03:15,750 --> 00:03:20,670
+mamy wysyki do pola danych rekwizytw, ktre chcemy przekaza.
+
+37
+00:03:20,930 --> 00:03:29,030
+Nawiasem mwic, gdyby mia tylko map wysan do rekwizytw i brak stanu mapy do wniosku, po prostu ustawiaby teraz
+
+38
+00:03:29,030 --> 00:03:36,030
+stan mapy Propst i przekazywa map do wniosku, poniewa mapa ta ata zawsze musi by drugim
+
+39
+00:03:36,030 --> 00:03:39,750
+stanem mapy argumentw do wniosku musi by pierwszy.
+
+40
+00:03:39,780 --> 00:03:45,570
+Wic jeli pierwszy nie jest konieczny, po prostu ustaw t warto na null tutaj, ale pierwsza jest
+
+41
+00:03:45,570 --> 00:03:46,770
+jedyn, ktra nas interesuje.
+
+42
+00:03:46,770 --> 00:03:54,540
+Po prostu potrzebujemy stanu mapy, aby uzyska rekwizyt z tym, e otrzymalimy nagrod Ingredion za dostp do rekwizytw
+
+43
+00:03:54,560 --> 00:03:55,780
+w tym komponencie.
+
+44
+00:03:56,030 --> 00:03:57,050
+Uyjmy tego.
+
+45
+00:03:57,050 --> 00:04:04,880
+Tak wic, gdy tylko mamy dostp do tego stanu skadnikw, jest to teraz rekwizyt i ser.
+
+46
+00:04:04,880 --> 00:04:07,880
+A kiedy uywamy ceny, to ju jest.
+
+47
+00:04:07,940 --> 00:04:11,230
+Czy rekwizyty ceny jednak.
+
+48
+00:04:11,360 --> 00:04:17,490
+Naprawd potrzebujemy go tutaj, gdzie uywamy naszej maej sztuczki do adowania danych kontaktowych.
+
+49
+00:04:17,840 --> 00:04:25,220
+Teraz dziki naszemu sklepowi redux nie musimy ju uywa sztuczek, wic nie potrzebujemy nawet tutaj ceny, poniewa
+
+50
+00:04:25,220 --> 00:04:28,940
+nie uywamy go nigdzie indziej w tym komponencie.
+
+51
+00:04:28,940 --> 00:04:35,930
+Pozbdmy si wic tej nagrody w postaci mapy do rekwizytw i pozbdmy si tutaj metody
+
+52
+00:04:35,930 --> 00:04:36,570
+Raedera.
+
+53
+00:04:37,290 --> 00:04:45,920
+Kroki Editha po prostu ustawiaj komponent, ktry chcemy wczyta i ktre powinny by nadal naszymi komponentami danych kontaktowych.
+
+54
+00:04:46,080 --> 00:04:55,020
+Ale teraz nie uwzgldniono go jako komponentu GSX, ale po prostu wskazujc na waciwo komponentu trasy.
+
+55
+00:04:55,020 --> 00:05:01,860
+W zwizku z tym musimy rwnie dostosowa nasze dane kontaktowe, poniewa w tym miejscu, jak
+
+56
+00:05:01,860 --> 00:05:07,010
+wiadomo, uywamy rwnie skadnikw, ktre otrzymujemy na rekwizytach, oraz ceny sprzed przekierowa.
+
+57
+00:05:07,020 --> 00:05:09,960
+Dostalimy to z t ma sztuczk, ktr wanie usunlimy.
+
+58
+00:05:09,990 --> 00:05:15,560
+Teraz moemy po prostu podczy ten pojemnik tutaj, aby si zrelaksowa.
+
+59
+00:05:15,600 --> 00:05:27,330
+W zwizku z tym kontener danych kontaktowych, ktry jest rwnie importowany, czy si z reduktorem re-act, a na samym kocu utwrzmy
+
+60
+00:05:27,330 --> 00:05:36,130
+stan mapy do roku wniosku, aby przypisa funkcj, ktra odbiera stan i zwr nasz obiekt, w
+
+61
+00:05:36,190 --> 00:05:42,880
+ktrym mapujemy odpowiedni stan, ktry w tym komponencie potrzebuj rekwizytw i odwa
+
+62
+00:05:42,880 --> 00:05:49,280
+si, e chc przekaza moim odbiorcom skadniki pastwowe i nagrod dla pastwa.
+
+63
+00:05:49,360 --> 00:05:53,380
+Cakowita cena bya nazw, a nastpnie jak poprzednio.
+
+64
+00:05:53,410 --> 00:05:56,090
+Owimy to za pomoc CONNECT przeszoci.
+
+65
+00:05:56,110 --> 00:06:02,940
+Mapuj stan do rekwizytw i pomijaj szczegow argumentacj, poniewa nie wysyamy tutaj niczego.
+
+66
+00:06:03,130 --> 00:06:08,850
+A nastpnie przeprowad poczenie danych do funkcji return za pomoc funkcji connect.
+
+67
+00:06:10,140 --> 00:06:16,320
+Teraz oczywicie musimy zaktualizowa ten komponent wszdzie tam, gdzie uywamy skadnikw tego podpory.
+
+68
+00:06:16,320 --> 00:06:23,220
+Moemy teraz uy tej rekwizyty I elegii, aby jak najszybciej zaktualizowa zawarto, uywajc po prostu skadnikw tutaj jako waciwej
+
+69
+00:06:23,220 --> 00:06:26,370
+nazwy, poniewa taka jest nazwa, ktrej ju uywamy.
+
+70
+00:06:26,550 --> 00:06:32,200
+Aby jednak unikn pomyki z tymi skadnikami, otrzymujemy od stanu, ktry wybraem, aby uy innej nazwy.
+
+71
+00:06:32,310 --> 00:06:33,880
+Teraz wszystkie dane kontaktowe.
+
+72
+00:06:33,900 --> 00:06:39,260
+Zaktualizujmy wszystko, co uywa DS probs, dla ktrych otrzymalimy zamwienie.
+
+73
+00:06:39,390 --> 00:06:45,750
+Z pewnoci nie wymaga aktualizacji i zajmuje wikszo miejsca w tym pliku.
+
+74
+00:06:45,930 --> 00:06:47,650
+Obsuga zamwie tutaj.
+
+75
+00:06:47,700 --> 00:06:48,610
+Spjrzmy.
+
+76
+00:06:48,630 --> 00:06:54,730
+Bierzemy duo informacji od 4 i roku, w ktrym przekazujemy skadniki prop.
+
+77
+00:06:54,750 --> 00:06:56,120
+To powinno by rekwizyty I.
+
+78
+00:06:56,130 --> 00:07:05,360
+Cena Geez prop wci jest poprawna, poniewa nadal mapujemy to do waciwoci ceny w stanie mapy do wniosku, wic nie
+
+79
+00:07:05,820 --> 00:07:07,350
+musimy tego wymienia.
+
+80
+00:07:07,350 --> 00:07:12,420
+Odniesie si ju do sklepu redux, tak samo jak do skadnikw.
+
+81
+00:07:12,690 --> 00:07:16,320
+Kontynuujmy wic wszystko inne wyglda mi dobrze.
+
+82
+00:07:17,540 --> 00:07:20,930
+I caa nasza walidacja wejcia wyglda mi dobrze.
+
+83
+00:07:20,930 --> 00:07:28,600
+Wprowadzony zmieniony handler rwnie powinien odnosi si do naszych skadnikw lub do ceny w ogle.
+
+84
+00:07:28,640 --> 00:07:31,220
+Dodaj tutaj metod Raeder.
+
+85
+00:07:31,340 --> 00:07:40,060
+Po prostu dbamy o nasze forum, gdzie nie dbaj o skadniki i cen, wic wszystko to jest
+
+86
+00:07:40,070 --> 00:07:42,770
+po prostu zwizane z zagranic.
+
+87
+00:07:42,770 --> 00:07:46,330
+To jest powd, dla ktrego ten kontener jest tak duy, jak jest.
+
+88
+00:07:46,760 --> 00:07:50,390
+Potrzebujemy wic informacji, ktrych potrzebujemy.
+
+89
+00:07:50,630 --> 00:07:54,680
+Wyprbujmy teraz wszystko i sprawdmy, czy dziaa tak, jak powinno dziaa.
+
+90
+00:07:54,680 --> 00:07:56,660
+Pamitaj, aby zapisa wszystkie pliki.
+
+91
+00:07:56,660 --> 00:07:58,390
+Wr do swojej aplikacji.
+
+92
+00:07:59,230 --> 00:08:01,570
+Zbuduj tutaj przykad Bergere.
+
+93
+00:08:01,810 --> 00:08:02,110
+Kliknij.
+
+94
+00:08:02,110 --> 00:08:03,360
+Zamw teraz.
+
+95
+00:08:03,700 --> 00:08:04,940
+Podsumowanie wyglda dobrze.
+
+96
+00:08:05,020 --> 00:08:06,640
+Kliknijmy dalej.
+
+97
+00:08:06,680 --> 00:08:08,170
+To ci dobrze wyglda.
+
+98
+00:08:08,370 --> 00:08:10,010
+Nogi kliknij Dalej.
+
+99
+00:08:10,240 --> 00:08:14,230
+Diody LED wprowadzaj tutaj fikcyjne dane.
+
+100
+00:08:17,130 --> 00:08:19,220
+Wszystko to dziaa dobrze.
+
+101
+00:08:19,510 --> 00:08:24,480
+Kliknij zamwienie, a my zostalimy przekierowani tutaj.
+
+102
+00:08:24,610 --> 00:08:29,340
+Teraz sprawd take baz ogniow w swojej bazie danych.
+
+103
+00:08:29,410 --> 00:08:31,010
+Przy zamwieniach.
+
+104
+00:08:31,180 --> 00:08:35,420
+Powiniene zobaczy zamwienie, ktre wanie zoye.
+
+105
+00:08:35,420 --> 00:08:41,590
+Czy zaprzestaje si zamawiania, aby wszystkie prace, ktre przechodzimy wok naszego stanu redeco, z powodzeniem
+
+106
+00:08:41,590 --> 00:08:45,570
+teraz, bez adnych wymylnych sztuczek naprawd korzystajcych z redux.
+
+107
+00:08:45,580 --> 00:08:50,170
+I to rwnie pokazuje, gdzie byszczy redux.
+
+108
+00:08:50,170 --> 00:08:55,500
+To nie jest wielka aplikacja, ale jest nieco bardziej zaawansowana ni posiadanie listy zada do wykonania.
+
+109
+00:08:55,570 --> 00:08:59,360
+I tutaj naprawd uatwiamy sobie ycie.
+
+110
+00:08:59,620 --> 00:09:06,380
+Jeli uywamy przekierowa, mamy przewidywalny przepyw danych, a my przekazujemy dane w naszej aplikacji.
+
+111
+00:09:06,400 --> 00:09:08,550
+Super super proste.
+

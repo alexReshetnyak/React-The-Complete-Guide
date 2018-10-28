@@ -1,0 +1,172 @@
+1
+00:00:02,220 --> 00:00:07,230
+Abbiamo quasi finito con i cicli di vita ora che abbiamo dato un'occhiata all'aggiornamento attivato
+
+2
+00:00:07,470 --> 00:00:08,970
+dall'esterno dalle modifiche di Propst.
+
+3
+00:00:09,060 --> 00:00:14,760
+Diamo ora un'occhiata al processo del ciclo di vita dell'aggiornamento per le modifiche interne a causa dello stato impostato in
+
+4
+00:00:15,300 --> 00:00:15,710
+pratica.
+
+5
+00:00:15,750 --> 00:00:20,340
+Non iniziamo con il componente ricever puntelli perch non riceverai puntelli.
+
+6
+00:00:20,340 --> 00:00:25,320
+Invece iniziamo subito quale dovrebbe essere l'aggiornamento dei componenti e otteniamo il prossimo o il secondo stadio del prossimo puntello.
+
+7
+00:00:25,440 --> 00:00:30,960
+E proprio come prima possiamo annullare il processo di aggiornamento qui e come prima dovremmo decidere se
+
+8
+00:00:30,960 --> 00:00:32,000
+continuare o meno.
+
+9
+00:00:32,100 --> 00:00:33,870
+E non dovremmo causare effetti collaterali.
+
+10
+00:00:33,870 --> 00:00:36,580
+Quindi la logica  la stessa di prima qui.
+
+11
+00:00:36,740 --> 00:00:43,620
+Successivamente raggiungiamo il componente ben montato e la logica  la stessa di prima, quindi eseguiamo il rendering,
+
+12
+00:00:43,620 --> 00:00:47,490
+quindi rendiamo tutti i componenti figlio e quell'aggiornamento alla fine.
+
+13
+00:00:47,730 --> 00:00:53,680
+E lo affronto rapidamente perch  fondamentalmente la stessa procedura di prima per un cambiamento esterno.
+
+14
+00:00:53,730 --> 00:00:55,260
+Trigger esterno.
+
+15
+00:00:55,500 --> 00:01:01,320
+L'unica differenza  che il primo gancio del ciclo di vita ricever puntelli manca qui.
+
+16
+00:01:01,320 --> 00:01:07,080
+includere o implementare nuovi metodi ora nel nostro progetto perch abbiamo gi tutti questi metodi.
+
+17
+00:01:07,080 --> 00:01:08,770
+Quindi, non abbiamo bisogno di
+
+18
+00:01:09,090 --> 00:01:10,710
+Tuttavia li realizzer.
+
+19
+00:01:10,740 --> 00:01:15,730
+In realt s,  il posto in cui cambiamo, cos possiamo vederlo l.
+
+20
+00:01:15,740 --> 00:01:18,630
+Q Quindi dopo ha fatto MT e cos via.
+
+21
+00:01:18,690 --> 00:01:23,520
+Voglio implementare l'aggiornamento del componente scudo si aggiorner e cos via i metodi.
+
+22
+00:01:23,790 --> 00:01:30,400
+Quindi ho intenzione di copiarli da persone che giocano a scacchi e spostarli in realt come spesso il componente ha montato.
+
+23
+00:01:30,600 --> 00:01:39,480
+E ovviamente i loro occhi dovrebbero adattarsi al riferimento che le tue persone saranno in grado di sostituire tutte le persone J
+
+24
+00:01:39,540 --> 00:01:41,960
+come riferimento nel registro della console.
+
+25
+00:01:41,960 --> 00:01:46,200
+Qui con Apicio e dovrebbe essere circa un aggiornamento qui.
+
+26
+00:01:46,200 --> 00:01:49,170
+Anche io lo far diventare vero per ora.
+
+27
+00:01:49,170 --> 00:01:53,960
+Ora salviamo questo e vediamo ora come questo influenza la nostra app ricaricata.
+
+28
+00:01:54,180 --> 00:01:57,300
+Non vediamo alcun metodo di aggiornamento qui.
+
+29
+00:01:57,390 --> 00:02:03,030
+Consentitemi di cancellare questo e fare clic sul pulsante senza modifiche di avviso che vedrete all'inizio.
+
+30
+00:02:03,060 --> 00:02:08,850
+Siamo nell'aggiornamento in realt come dovrebbe l'innesco dell'aggiornamento dei componenti e questo ha senso perch
+
+31
+00:02:08,850 --> 00:02:15,410
+facendo clic su questo pulsante si chiama set state e quindi si attiva l'aggiornamento di quel componente.
+
+32
+00:02:15,720 --> 00:02:22,050
+di aggiornamento nei componenti del bambino, perch prima possiamo cambiare i componenti del bambino lo stato che deve aggiornare.
+
+33
+00:02:22,410 --> 00:02:26,570
+Ovviamente prima di cambiare gli oggetti di scena e quindi innescato il processo
+
+34
+00:02:26,970 --> 00:02:33,530
+Quindi siamo in dovrebbe completare l'aggiornamento e quindi il componente verr aggiornato e successivamente renderizzato.
+
+35
+00:02:33,630 --> 00:02:37,200
+E ora partiamo per il normale processo.
+
+36
+00:02:37,320 --> 00:02:43,440
+Alla fine per vediamo che il componente interno  stato aggiornato per l'app Geass.
+
+37
+00:02:43,440 --> 00:02:44,630
+Quindi questo  importante.
+
+38
+00:02:44,790 --> 00:02:50,070
+S, sta aggiornando le corse prima perch  innescata da un cambiamento di stato che ovviamente
+
+39
+00:02:50,070 --> 00:02:52,190
+ la prima cosa che accade.
+
+40
+00:02:52,260 --> 00:02:54,480
+Questi sono tutti i ganci del ciclo di vita.
+
+41
+00:02:54,480 --> 00:03:00,420
+Ora torniamo per spedire l'aggiornamento dei componenti e come possiamo migliorare le prestazioni della nostra applicazione
+
+42
+00:03:00,420 --> 00:03:01,070
+con esso.
+
+43
+00:03:01,080 --> 00:03:02,530
+Lascia che ti mostri un esempio.
+

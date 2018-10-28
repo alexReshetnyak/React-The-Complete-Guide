@@ -1,0 +1,160 @@
+1
+00:00:02,210 --> 00:00:07,600
+LET ve Konst ile dal yapalm. Bunlar, bu derste ok ey
+
+2
+00:00:07,600 --> 00:00:13,970
+grecek iki anahtar kelimedir, zellikle Konst kurun ve Konst deikenleri yaratmann farkl yollardr.
+
+3
+00:00:13,970 --> 00:00:17,920
+Biliyorsunuz, biz javascript iinde deiken oluturuyoruz.
+
+4
+00:00:17,930 --> 00:00:21,580
+imdi baz deikenler asla deimeyen bir ey.
+
+5
+00:00:21,590 --> 00:00:23,750
+Bunlara sabitler denir.
+
+6
+00:00:23,900 --> 00:00:25,360
+Teknik olarak olsa da.
+
+7
+00:00:25,370 --> 00:00:33,020
+sadece deikenler, nk javascript yalnzca sava biliyor, 6 kelimelik bir javascript szl iki farkl anahtar
+
+8
+00:00:33,020 --> 00:00:41,180
+kelime getirildi ve Konst hala alyor ancak son derece LET ve Konst let kullanmaya zendiriliyor.
+
+9
+00:00:41,870 --> 00:00:42,730
+Bunlarn hepsi
+
+10
+00:00:42,770 --> 00:00:50,030
+Demek ki deiken deerler iin kullanmak istemezsiniz ve Konst deikenlerin kapsam hakknda
+
+11
+00:00:50,030 --> 00:00:52,750
+perde arkasnda bir eyler deitiriyor.
+
+12
+00:00:52,850 --> 00:00:58,940
+Ancak burada en nemli paket, gerekten deiken olan bir deiken oluturmak istiyorsanz LET kullann.
+
+13
+00:00:58,940 --> 00:01:05,600
+Sabit bir deer yaratmay dnyorsanz, yalnzca bir kez atadnz ve asla deimeyen bir eyi
+
+14
+00:01:05,600 --> 00:01:06,400
+Konst kullann.
+
+15
+00:01:06,500 --> 00:01:09,710
+Ve bu sizin dndnzden daha sk oluyor.
+
+16
+00:01:09,770 --> 00:01:16,490
+yalnzca Lat ve Konst'u nereden greceinizi gremezsiniz ve ounlukla Konst'dur bylece sizi birbirine kartrmamaldr.
+
+17
+00:01:16,490 --> 00:01:17,780
+Bu derste nereye
+
+18
+00:01:17,900 --> 00:01:24,590
+Bir kural sadece daha modern bir biimde olduu gibi ayndr ve Konst sz konusu
+
+19
+00:01:24,590 --> 00:01:28,570
+olduunda aka gsterilen gnlerin hibirine yeni bir deer gelmeyecek.
+
+20
+00:01:28,850 --> 00:01:34,340
+imdi pratikte her zaman biraz daha net olduundan bunun iin bir gz atalm.
+
+21
+00:01:34,340 --> 00:01:35,950
+Eer bir dahi Ben olmanz en iyisi.
+
+22
+00:01:35,970 --> 00:01:36,730
+Dot com.
+
+23
+00:01:36,740 --> 00:01:42,920
+Bu, ASM javascript'i girmemizi ve bu devre d brakma iin baz konsol ktlarn grmeyi
+
+24
+00:01:43,490 --> 00:01:50,130
+kolaylatran baka bir web editrdr. T. posta ve k orada ve bunun yerine Javascript ve eksilerini etkinletirmek iin. imdi sol tarafta doru nesil javascript sa tarafta kt greceksiniz.
+
+25
+00:01:50,250 --> 00:01:55,780
+Dolaysyla orada bir deiken oluturabiliriz.
+
+26
+00:01:55,820 --> 00:01:57,460
+smim, maksimum
+
+27
+00:01:57,500 --> 00:02:08,640
+adm benim adm kilitlemeye eit olarak ayarlar ve kontrol girii yaptysanz, sada Max'i grrsnz.
+
+28
+00:02:08,640 --> 00:02:09,260
+Muhtemelen sana gre yeni deil.
+
+29
+00:02:09,270 --> 00:02:12,300
+Akas, ismimi menye ayarlayabiliriz ve eer Denne konsolunda ismimi tekrar tekrar yazarsak.
+
+30
+00:02:12,300 --> 00:02:19,550
+Ayrca, tamamen temizlerseniz ve tekrar altrrsanz Max'i grrsnz.
+
+31
+00:02:19,710 --> 00:02:25,210
+lk deyim ve ikinci menden.
+
+32
+00:02:25,230 --> 00:02:29,220
+imdi eer deiim izin vermekti.
+
+33
+00:02:29,310 --> 00:02:31,310
+Hibir ey deimeyecek.
+
+34
+00:02:31,310 --> 00:02:32,770
+ylece olsa Konst'i kullanrsanz, isabet hala geerli ve ayn ekilde alyor.
+
+35
+00:02:32,790 --> 00:02:39,750
+Daha sonra bunu silmek ve altrmak Max retecektir.
+
+36
+00:02:39,780 --> 00:02:43,210
+Ancak sonra bir hata yapn veya garip bir isim olan sabit bir deikeni yeniden atamaya aln.
+
+37
+00:02:43,260 --> 00:02:50,480
+Bu sabit Konst'un arkasndaki fikirdir.
+
+38
+00:02:50,720 --> 00:02:53,480
+Bunun asla yeni bir deer elde etmemesi gerektiini syleyebilir,
+
+39
+00:02:53,550 --> 00:02:59,100
+yanllkla baz kod yazmazsanz, yeniden atamanza izin vererek hatay alrsnz ve dolaysyla kodunuzu gelitirme ans elde edersiniz.
+
+40
+00:02:59,100 --> 00:03:03,580
+&nbsp;
+

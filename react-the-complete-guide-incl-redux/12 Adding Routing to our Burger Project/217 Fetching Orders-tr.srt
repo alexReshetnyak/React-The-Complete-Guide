@@ -1,0 +1,300 @@
+1
+00:00:02,170 --> 00:00:06,550
+imdi balantlar uyguladmzda, bu emirler zerinde tekrar alalm.
+
+2
+00:00:06,670 --> 00:00:12,790
+Ve bu emirlerde aslnda tek bir sipari iin ekillendirmeyi ayarlamak istiyorum, yalnzca
+
+3
+00:00:12,790 --> 00:00:14,890
+80 yzde 80 diyelim.
+
+4
+00:00:14,920 --> 00:00:16,690
+Tam genilii harcamak deil.
+
+5
+00:00:16,960 --> 00:00:20,130
+Hala bu siparileri sunucudan almaya geldim.
+
+6
+00:00:20,350 --> 00:00:22,860
+Ve bunun iin ncelikle iki emir yaratr.
+
+7
+00:00:22,900 --> 00:00:31,210
+Yani iki tane Burger yaratn, belki bu burger bana devam etmeme izin verin ve sipari verin ve bir tane daha ticaret yapmama
+
+8
+00:00:31,210 --> 00:00:32,020
+izin verin.
+
+9
+00:00:32,020 --> 00:00:34,270
+Sadece et ve domuz pastrmas.
+
+10
+00:00:34,330 --> 00:00:36,730
+Sper salkl burger burada devam etmeye devam edelim.
+
+11
+00:00:36,760 --> 00:00:39,200
+Devam edin ve sipari edin.
+
+12
+00:00:39,220 --> 00:00:44,120
+Ve imdi, gvenlik duvar veritabanna bakarsanz, burada iki sipari grrz.
+
+13
+00:00:44,320 --> 00:00:50,570
+Ayrca, fiyatn burada olduunu gryoruz, ancak bunu srayla doru bir ekilde kartarak dzeltiyoruz.
+
+14
+00:00:50,600 --> 00:00:54,710
+Yine de k ksm u anda yapmadmz paradr.
+
+15
+00:00:55,030 --> 00:01:00,910
+Sipariler konteynrnda akas bunu yapmak iin btn emirlerimi almak istiyorum.
+
+16
+00:01:00,910 --> 00:01:04,190
+Bileen bor yklemesini uygulayacam.
+
+17
+00:01:04,480 --> 00:01:09,430
+Bileen miktarn burada kullanabilirim, nk yalnzca yklendiinde emirleri almak istiyorum.
+
+18
+00:01:09,430 --> 00:01:13,410
+Oraya gidip onu yeniden balamamzn bir yolu yok.
+
+19
+00:01:13,450 --> 00:01:16,640
+Yani bu gncelleme deil aradm ey aradm ey deil.
+
+20
+00:01:17,050 --> 00:01:19,250
+Dolaysyla bu miktar, ihtiyacm olan miktardr.
+
+21
+00:01:19,270 --> 00:01:20,740
+Ayrca X ylna ihtiyacm var.
+
+22
+00:01:20,770 --> 00:01:24,680
+Bu yzden kendi eriimimden buraya eriim alacam.
+
+23
+00:01:24,730 --> 00:01:26,880
+O zaman aksiyomlar ithal edin.
+
+24
+00:01:26,880 --> 00:01:34,330
+gelene kadar yukar kalm ve burada aslnda emir almak iin uzlamak istiyoruz.
+
+25
+00:01:34,370 --> 00:01:37,900
+imdi X yl emir alp Chaiya'ya
+
+26
+00:01:37,900 --> 00:01:43,830
+Jason arka ucumdaki l sipari dmne atfta bulundu.
+
+27
+00:01:43,930 --> 00:01:50,440
+Ve dedik ki, S-D, L'nizi kendi X-ists rneimize dayandryor, bu yzden buna gerek yok.
+
+28
+00:01:50,510 --> 00:01:57,950
+Ve sonra veriler bir kez tabii ki yantla bir eyler yapmak istiyor, aslnda siparilerimi
+
+29
+00:01:57,950 --> 00:02:02,080
+ieren ve bunlar kartan baz devleti kurmak istiyorum.
+
+30
+00:02:02,420 --> 00:02:06,790
+Dolaysyla bir ksm 2. etapta u an devletin iinde olan bileen.
+
+31
+00:02:06,830 --> 00:02:13,100
+Balangta bir dizi ve bo bir dizi olan emirlerimi vermek istiyorum ve muhtemelen balangta
+
+32
+00:02:13,100 --> 00:02:17,220
+doru olan kayan bir duruma geleceim, nk yklemeye balayacam.
+
+33
+00:02:17,420 --> 00:02:25,230
+Ve sonra buraya ve sonra engellemek set devlet arayacam ve iki yanl boa ykleme
+
+34
+00:02:25,320 --> 00:02:30,520
+burada olas herhangi bir hatay yakalamak catch blou burada dedi.
+
+35
+00:02:31,420 --> 00:02:37,090
+Dolaysyla kesinlikle kopyann son teslim tarihi ve iki kat ykleme dedi, ancak elbette
+
+36
+00:02:37,090 --> 00:02:38,810
+siparilerimi de saklamak istiyorum.
+
+37
+00:02:38,830 --> 00:02:45,280
+imdi sra ulatmzda bir diziyi almadmz bir ey ama bir javascript nesnesinin tm basite
+
+38
+00:02:45,280 --> 00:02:52,540
+konsola yazdrlm bir ekilde geri alacam, bylece ey analiz edebiliyoruz, bylece dinlenme verileri elde ettiimiz
+
+39
+00:02:52,540 --> 00:02:54,010
+verileri alacak Firebase.
+
+40
+00:02:54,020 --> 00:02:55,390
+O halde bu verilere bir gz atalm.
+
+41
+00:02:55,390 --> 00:03:03,490
+Ardndan, konsolumuzun ak olduu uygulamamza geip, anahtarlarn sadece Deis benzersiz kimlik belgeleri
+
+42
+00:03:03,490 --> 00:03:10,960
+reten ve deerimiz bireysel sipari verisini densiz hale getiren bir javascript
+
+43
+00:03:10,960 --> 00:03:14,950
+nesnesi grdnden, nesne alev alanndan geri dnecektir.
+
+44
+00:03:15,280 --> 00:03:22,650
+Bylece sraya geri dnmyoruz, ancak zellik olarak kimlikleri bulunduumuz bir nesneye geri dnyoruz.
+
+45
+00:03:22,940 --> 00:03:29,860
+imdi yapmak istediim, elbette emirler nesnemi bir diziye evirmek istiyorum ve bunu yalnzca bir for
+
+46
+00:03:29,890 --> 00:03:31,520
+dngs kullanarak yapabilirim.
+
+47
+00:03:31,720 --> 00:03:40,060
+yleyse dinlenme verilerindeki kurun anahtar ve dinlenme verilerini hatrlamak yalnzca yeni bir konsolda yazdrdmz bir nesne
+
+48
+00:03:40,060 --> 00:03:48,070
+ve daha sonra burada kk bir yardmc yntem getirilmi sipariler veya ne isterseniz almak istiyoruz.
+
+49
+00:03:48,110 --> 00:03:55,910
+Balangta bo bir dizimdir ve yalnzca bulduum her e iin her yineleme iin
+
+50
+00:03:55,970 --> 00:04:05,150
+getirilen emirleri aracam ve tabii ki sipari deerine erien belirli bir anahtar iin dinlenenin verilerini
+
+51
+00:04:05,240 --> 00:04:06,650
+itmek istiyorum.
+
+52
+00:04:06,650 --> 00:04:14,680
+imdi bununla birlikte kimliklerimizi kaybetmemek iin emirler getirdik, ancak anahtarlarm burada.
+
+53
+00:04:14,690 --> 00:04:16,210
+Bir ey yapacam.
+
+54
+00:04:16,340 --> 00:04:25,280
+siparilerinde, spread operatryle birlikte Firebase'ten getirdiim Order nesnesinin zelliklerini dataca ve yapkan bir yeni
+
+55
+00:04:25,280 --> 00:04:32,560
+zellik kimlii ekleyecei bir oranda yeni bir nesne itin. anahtar, temel
+
+56
+00:04:33,020 --> 00:04:40,160
+szcmzden, gvenlik duvar tarafndan oluturulan kimlikleri alp getirdiimiz bu nesnede unutmayn.
+
+57
+00:04:40,160 --> 00:04:44,050
+Bu nesneyi itmem, aksine bugnn toplu
+
+58
+00:04:44,120 --> 00:04:51,220
+imdi, getirilen emirlerimin kimliklerinin farknda olduu sipari nesneleri dolu bir dizi var.
+
+59
+00:04:51,230 --> 00:04:55,920
+imdi buraya getirilen emirler iin emir verebilirim.
+
+60
+00:04:56,000 --> 00:05:04,490
+Tabii ki olas herhangi bir hatay da ele almak istiyorum, bu yzden kendi yksek sipari bileenim
+
+61
+00:05:05,300 --> 00:05:07,970
+ile hata ileyicisini ie aktaracam.
+
+62
+00:05:08,220 --> 00:05:16,220
+Ve imdi, hata ileyicisine sahip bir hata ileyicisi olan Agios bakn klasrne geip, emir
+
+63
+00:05:16,310 --> 00:05:21,350
+bileenimizi onun gibi bir hata ileyicisi ile sarmamz gerekiyor.
+
+64
+00:05:22,600 --> 00:05:23,820
+Byle sarn.
+
+65
+00:05:23,980 --> 00:05:27,720
+Elbette burada gemiteki tm eylemler, ie yaramayacak kadar akll olsun.
+
+66
+00:05:27,910 --> 00:05:32,740
+Ve imdi, Jason'n burada bitmesini kaldrarak deneyelim.
+
+67
+00:05:32,890 --> 00:05:36,370
+Geri gidelim ve burada a hatas alyoruz.
+
+68
+00:05:36,580 --> 00:05:38,940
+Bu yzden bu hata var, bu ie yaryor.
+
+69
+00:05:38,980 --> 00:05:46,000
+Hata ileyicisi elbette ekranda bir hata mesaj grntlemek iin yerel yakalama ynteminde ince ayar yapabilir
+
+70
+00:05:46,000 --> 00:05:48,100
+veya ne istersen isteyebilirsiniz.
+
+71
+00:05:48,100 --> 00:05:49,380
+DOT'de alre.
+
+72
+00:05:49,390 --> 00:05:51,110
+Jason ileri doru bir dakika.
+
+73
+00:05:51,490 --> 00:05:59,050
+Ve bununla beraber emirleri getirdiimiz iin emirlerimizi alyoruz elbette emir karma kadar
+
+74
+00:05:59,080 --> 00:05:59,680
+deil.
+
+75
+00:05:59,770 --> 00:06:01,760
+O halde bunu bir sonraki derste yapalm.
+

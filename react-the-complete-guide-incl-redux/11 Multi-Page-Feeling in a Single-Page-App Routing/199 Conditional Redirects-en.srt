@@ -1,0 +1,128 @@
+1
+00:00:02,060 --> 00:00:04,790
+In the last lecture, we learned about redirect,
+
+2
+00:00:04,790 --> 00:00:08,130
+now let me show you another usage of redirect
+
+3
+00:00:08,130 --> 00:00:13,790
+actually in the new post component. There, we probably want to redirect
+
+4
+00:00:13,800 --> 00:00:21,600
+once we clicked the submit button your and once we made our HTTP request. We often then want to change
+
+5
+00:00:21,600 --> 00:00:26,490
+the page and not remain on that page. Using the redirect component
+
+6
+00:00:26,490 --> 00:00:27,940
+we can easily do that,
+
+7
+00:00:28,230 --> 00:00:36,470
+we can import redirect from react-router-dom just like before.
+
+8
+00:00:36,570 --> 00:00:43,320
+Now if we place redirect in jsx here outside of a switch statement, we always have to redirect with the
+
+9
+00:00:43,320 --> 00:00:46,970
+to property though, we can't use from.
+
+10
+00:00:46,980 --> 00:00:50,240
+So here we could redirect to /posts,
+
+11
+00:00:50,250 --> 00:00:57,690
+for example. The issue with that of course is now if I save a code like this, if we click onto new post
+
+12
+00:00:58,290 --> 00:01:04,190
+we are immediately redirected back to posts because the redirect component is rendered and when whenever
+
+13
+00:01:04,190 --> 00:01:06,600
+this is rendered, it redirects us,
+
+14
+00:01:06,600 --> 00:01:09,480
+so we have no chance of entering content.
+
+15
+00:01:09,600 --> 00:01:12,500
+Therefore we need to render this conditionally
+
+16
+00:01:12,750 --> 00:01:20,130
+and since it's a normal component as all of js react router is, we just have to render it conditionally
+
+17
+00:01:20,400 --> 00:01:23,400
+as we render any other content conditionally.
+
+18
+00:01:23,400 --> 00:01:25,500
+So we could add a new state here
+
+19
+00:01:25,580 --> 00:01:31,590
+maybe submit it which initially is false which we then set to true
+
+20
+00:01:31,710 --> 00:01:40,210
+once we made the HTTP request. So there I'll call setState and set submitted to true.
+
+21
+00:01:40,220 --> 00:01:45,180
+Now I can use submitted to determine whether or not to render redirect,
+
+22
+00:01:45,450 --> 00:01:51,060
+so in the render method I could have a redirect variable which is null by default.
+
+23
+00:01:51,440 --> 00:01:59,390
+But then I check if this.state.submitted is true and if it is, then redirect is equal to that redirect
+
+24
+00:01:59,390 --> 00:02:06,290
+component, and then I return jsx which includes that redirect variable which is either null or
+
+25
+00:02:06,290 --> 00:02:07,850
+redirect component.
+
+26
+00:02:07,850 --> 00:02:16,640
+If we save that code, we can successfully go to new post but as soon as I do submit a post and it is hitting
+
+27
+00:02:16,640 --> 00:02:21,840
+the server, I am redirected with a conditional redirect.
+
+28
+00:02:21,860 --> 00:02:26,310
+Now this is our way of using redirect outside of a switch statement,
+
+29
+00:02:26,390 --> 00:02:30,460
+not with from, but instead the conditioned just is
+
+30
+00:02:30,470 --> 00:02:37,700
+did something happen so that I want to render this component? And then we only render it when we want
+
+31
+00:02:37,700 --> 00:02:38,750
+to redirect.
+
+32
+00:02:38,810 --> 00:02:45,440
+Might feel strange at first that we render a component to leave the page but this is just how it works.
+

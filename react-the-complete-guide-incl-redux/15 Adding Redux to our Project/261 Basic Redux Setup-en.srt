@@ -1,0 +1,104 @@
+1
+00:00:02,170 --> 00:00:07,210
+Let's add our provider component and therefore let's first of all import it,
+
+2
+00:00:07,400 --> 00:00:12,000
+it's named provider from react-redux.
+
+3
+00:00:12,000 --> 00:00:15,430
+And as I said, we have to wrap the app component with that,
+
+4
+00:00:15,430 --> 00:00:20,330
+the question is do we include the browser router or not?
+
+5
+00:00:21,350 --> 00:00:23,640
+The answer is the provider
+
+6
+00:00:23,660 --> 00:00:25,250
+should wrap everything,
+
+7
+00:00:25,250 --> 00:00:28,420
+so we'll put it outside of the browser router.
+
+8
+00:00:28,430 --> 00:00:36,000
+This all gets wrapped by the provider component like this, this is the set up we want to use and there is
+
+9
+00:00:36,000 --> 00:00:41,630
+something special about using react-redux with the react router
+
+10
+00:00:41,780 --> 00:00:44,480
+and I'll come back to that and how we fix this.
+
+11
+00:00:44,490 --> 00:00:51,890
+It basically has to do with making sure that the connect functionality and the routing functionalities
+
+12
+00:00:51,940 --> 00:00:57,300
+work together fine because both implicitly set up some props on the wrapping component
+
+13
+00:00:57,420 --> 00:01:00,530
+and we have to make sure that everything works there. For now,
+
+14
+00:01:00,540 --> 00:01:02,230
+let's create our store though,
+
+15
+00:01:02,400 --> 00:01:10,980
+let's import create store from redux in the index.js file and let's also add an import to import
+
+16
+00:01:11,010 --> 00:01:12,270
+our reducer.
+
+17
+00:01:12,340 --> 00:01:15,120
+So I'll import reducer from
+
+18
+00:01:15,360 --> 00:01:21,440
+and now we have to go into the store folder and there import it from the reducer file.
+
+19
+00:01:21,600 --> 00:01:28,250
+We can then create our store and store it in a variable or in a constant to be precise named store maybe,
+
+20
+00:01:28,680 --> 00:01:34,990
+we create it with the create store method we import from redux and pass the reducer to it, of course.
+
+21
+00:01:35,160 --> 00:01:42,150
+And with that we can then set the store property on the provider component and pass our created store
+
+22
+00:01:42,210 --> 00:01:50,610
+which is stored in the constant store, that are a lot of stores and pass that to that store property.
+
+23
+00:01:50,610 --> 00:01:56,840
+So now we connect our store which is created by redux with our react application.
+
+24
+00:01:56,880 --> 00:02:00,660
+Of course this won't do much, in the next lecture,
+
+25
+00:02:00,660 --> 00:02:08,010
+let's work on our reducer and let's make sure that we actually have some logic here to manage our ingredients
+
+26
+00:02:08,030 --> 00:02:08,490
+through it.
+

@@ -1,0 +1,80 @@
+1
+00:00:02,170 --> 00:00:07,400
+Son dersimizde, kendi bileenimiz olan kii bileenini oluturduk.
+
+2
+00:00:07,400 --> 00:00:10,640
+Asl soru bunun en byk avantaj.
+
+3
+00:00:11,060 --> 00:00:19,020
+Bileenler harika nk kodumuzu her dosyaya odaklayabilir ve bu sayede daha srdrlebilir hale getirebiliriz.
+
+4
+00:00:19,070 --> 00:00:26,690
+Her eyi, byk uygulamalar iin kalabalk hale getirebilen blm js dosyasna koymayn ve bu bileen
+
+5
+00:00:26,990 --> 00:00:30,110
+ayn zamanda yeniden kullanlabilir ve yaplandrlabilir.
+
+6
+00:00:30,290 --> 00:00:34,460
+Paray yeniden yaplandrmak iin geri dn yapmak olduka kolaydr.
+
+7
+00:00:34,700 --> 00:00:38,510
+stediimiz kadar kopyalayp yaptrabiliriz.
+
+8
+00:00:38,510 --> 00:00:46,010
+kty birden ok kez alyoruz ve bu, uygulamanzn herhangi bir yerinde onu tekrar kullanmann sper kolay bir yoludur.
+
+9
+00:00:46,010 --> 00:00:50,510
+Belki  kez ve bunu basite yaparak ve dosyay kaydederek,
+
+10
+00:00:50,720 --> 00:00:57,160
+Ve uygulamanz giderek daha fazla bileen ieriyorsa Bu, tm bu bileenleri oluturmak iin sper kolay
+
+11
+00:00:57,160 --> 00:01:01,350
+hale getirecek ve bunlar kullanmamz gereken her yerde kullanacakt.
+
+12
+00:01:01,400 --> 00:01:02,190
+Laboratuarmzda.
+
+13
+00:01:02,330 --> 00:01:06,190
+Bu artk etkin bir ekilde zel HVM erkek unsurumuzdur.
+
+14
+00:01:06,830 --> 00:01:12,230
+Bunu yapmadan nce de yaplandrabiliriz.
+
+15
+00:01:12,380 --> 00:01:17,900
+Harekete geirme kodumuzla ilgili baka eyler de gstelelim, nk imdi hepsi hala statik.
+
+16
+00:01:18,050 --> 00:01:23,730
+zel bileenimiz var, ancak orada yine de sadece baz statik HDMI var.
+
+17
+00:01:23,750 --> 00:01:27,230
+Sonunda baz HMO ieriini metinleyeceim.
+
+18
+00:01:27,230 --> 00:01:35,810
+imdiki halde, GSX kodunuzun dinamik olmas gereken ablonlarnz uygulamanzn durumuna veya baz kullanc girdilerine
+
+19
+00:01:35,810 --> 00:01:39,250
+bal olarak farkl eyler kt olmaldr.
+
+20
+00:01:39,470 --> 00:01:45,490
+imdi bunu ders iin ok ey yapacaz ancak bir sonraki dersin temellerini atalm.
+

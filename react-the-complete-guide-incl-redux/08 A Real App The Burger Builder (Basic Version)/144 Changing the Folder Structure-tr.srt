@@ -1,0 +1,256 @@
+1
+00:00:02,080 --> 00:00:08,920
+Peki hangi ortalama deiimi uygulayabiliriz Dzende klasre ve bileenlere bakalm,
+
+2
+00:00:08,960 --> 00:00:15,820
+ona bakarsak aka snf temelli bir bileen ve karar alc
+
+3
+00:00:15,850 --> 00:00:19,330
+grntsn ele alan bir eyalete sahiptir.
+
+4
+00:00:19,390 --> 00:00:26,230
+Akas baka bileenler ierdiinden ve devletleri onlara braktndan, onu gerekten bir konteyner
+
+5
+00:00:26,230 --> 00:00:30,860
+olarak grmyorum, ancak bir konteyner olduunu iddia edebildiniz.
+
+6
+00:00:30,970 --> 00:00:38,620
+Dolaysyla, bileenlerinin burada kendi kapsayc klasrlerine yerletirilmesi yanl
+
+7
+00:00:38,680 --> 00:00:39,380
+olmayabilir.
+
+8
+00:00:39,400 --> 00:00:41,650
+imdi de oraya hareket ettir.
+
+9
+00:00:41,680 --> 00:00:47,560
+Ayrca verilen klasr yaps ile farkl bir ey dnebilirsin ki bu tabii
+
+10
+00:00:47,620 --> 00:00:54,270
+ki daha yksek sipari bileenleri iin bu eski klasr kullanabildiim tek olas yol budur.
+
+11
+00:00:54,340 --> 00:00:59,220
+Bir dzenin gerekten sadece daha yksek bir dzen bileeninin olduunu iddia edebilirsin.
+
+12
+00:00:59,350 --> 00:01:06,300
+nk onunla yaptnz ey, ortalama bileenlerini dzen ile sarmalsnz.
+
+13
+00:01:06,370 --> 00:01:12,220
+Yani burger Bolar bileeni uygulamamzda ancak bir kez bir ynlendirme ekledik ki elbette daha
+
+14
+00:01:12,220 --> 00:01:13,360
+fazla bileen olacak.
+
+15
+00:01:13,600 --> 00:01:19,410
+Gerekten de daha dolgun bir hal alyor, aslnda burger yapcy katmanl bileeni ile saryoruz.
+
+16
+00:01:19,600 --> 00:01:23,510
+Ve bu aslnda daha yksek bir dzen bileen yapar.
+
+17
+00:01:23,530 --> 00:01:25,600
+Bunlar belki sadece semantik.
+
+18
+00:01:25,600 --> 00:01:30,800
+Uygulamanzn bileenlerini nasl ifade ettiini gerekten de deitirmez.
+
+19
+00:01:31,090 --> 00:01:38,290
+Yine de izin verilen konteynrlara yerletirebilir veya H O C'ye veya belki uygulamanzda tayabilirsiniz.
+
+20
+00:01:38,290 --> 00:01:40,640
+Gerekten bir HELOC klasr yok.
+
+21
+00:01:40,780 --> 00:01:43,860
+Belki orada sadece konteynrlar ve paralar var.
+
+22
+00:01:44,050 --> 00:01:46,140
+Birden fazla doru yol var.
+
+23
+00:01:46,190 --> 00:01:52,120
+imdi, dzeni H O C klasrnde olduu halde, daha yksek bir sipari bileeni olarak grdm
+
+24
+00:01:52,120 --> 00:01:53,150
+iin kurmay seviyorum.
+
+25
+00:01:53,230 --> 00:01:59,350
+Yalnzca Abra bileenlerini sarmak iin var ve bu nedenle buray kullanyoruz ve hangi yoldan rotamz sardmz iin
+
+26
+00:01:59,350 --> 00:02:00,460
+app aptest uyguluyoruz.
+
+27
+00:02:00,490 --> 00:02:03,090
+Dolaysyla onu HLC klasrne tadm.
+
+28
+00:02:03,400 --> 00:02:06,290
+imdi de HUAC'de alt klasr kullanacam ve kullanacam.
+
+29
+00:02:06,290 --> 00:02:10,620
+Bu nedenle yaylar klasr ve arklarm kovalamaca kovalamam sala.
+
+30
+00:02:10,630 --> 00:02:17,290
+imdi elbette baz hatalara yol aacaktr, nk u anda mizanpaj klasrndeki baz ie aktarma sorunlaryla
+
+31
+00:02:17,290 --> 00:02:23,200
+ithalatlarmz, baml olduumuz tm bileenlere gre doru pauvr'lara sahip olmalar iin ayarlamamz gerekecek
+
+32
+00:02:23,200 --> 00:02:28,430
+ve bizden emin olmanz gerekir; POF'yi de ayarladmz Oxx' ie aktaryoruz.
+
+33
+00:02:28,630 --> 00:02:29,980
+Hadi abucak balayalm.
+
+34
+00:02:30,070 --> 00:02:37,270
+Dzen bileenini balatacam ve Laodicea HAMC ve oxes'tan bu yana alks ithalatyla balayacam.
+
+35
+00:02:37,390 --> 00:02:43,780
+AOC klasrne girmek iin yalnzca bir seviye yukar kmamz gerekiyor, bylece o ksm kaldrabiliriz.
+
+36
+00:02:43,780 --> 00:02:49,370
+Zaten oradayz ve daha sonra alks klasrne getikten sonra ox paylamlarn indiriyoruz.
+
+37
+00:02:49,390 --> 00:02:51,780
+Yani bunu ayarlamamz gereken tek ey bu.
+
+38
+00:02:51,940 --> 00:02:57,570
+ayn klasrde olduu kadar hzl ancak ara ubuu ie aktarm deimiyor ve
+
+39
+00:02:57,590 --> 00:03:04,150
+bileen klasrne kadar her yere gitmemiz gerekiyor ve ardndan navigasyon klasrne gidebiliriz ve Temel
+
+40
+00:03:04,150 --> 00:03:11,050
+olarak, bu blm buradaki gezi ncesi ara ubuundan kopyalayabilir ve burada da yan ekmece iin kullanabilirsiniz.
+
+41
+00:03:11,070 --> 00:03:14,630
+Klaas'n ieri aktarm tabii ki deimez, nk bu
+
+42
+00:03:14,920 --> 00:03:18,060
+Bylece, dzen bileeni gncellenir.
+
+43
+00:03:18,070 --> 00:03:23,630
+imdi ne yaptm, yeniden balatmam gerekiyor ve insanlar balamal nk grnmemesi gereken eyleri
+
+44
+00:03:23,650 --> 00:03:24,840
+kryor gibi grnyor.
+
+45
+00:03:25,090 --> 00:03:29,780
+Ancak Oxx'u ie aktaracamz iin muhtemelen baka oklar da alacaz.
+
+46
+00:03:29,900 --> 00:03:32,460
+Aslnda Arafat'n elinde.
+
+47
+00:03:32,480 --> 00:03:36,060
+Hepimizin bir dzen bileeninin ie aktarmn ayarlamamz gerekiyor.
+
+48
+00:03:36,100 --> 00:03:38,230
+Elbette u anda HAMC klasrndedir.
+
+49
+00:03:38,240 --> 00:03:40,130
+Bu yzden ayarlamamz gereken bir ey.
+
+50
+00:03:40,450 --> 00:03:45,640
+Daha sonra Bergere Boulder'da, aero mesajnda grebileceiniz gibi Bergere Boulder'da
+
+51
+00:03:45,910 --> 00:03:50,630
+olduklar iin bir hata yaptk, elbette kz bileenini kullanyoruz.
+
+52
+00:03:50,770 --> 00:03:55,690
+Dolaysyla, ie aktarm ayarlamamz gerekiyor, nk imdi esasen HLC klasrnde.
+
+53
+00:03:55,750 --> 00:04:02,440
+Ancak ayarlamanz gereken alks alt klasrn yan izimde veya orada bileen oluturduk.
+
+54
+00:04:02,470 --> 00:04:08,470
+Ayrca Oxx' kullanyoruz ve oradaki ox klasrne gidip oradaki dosyay ie
+
+55
+00:04:08,470 --> 00:04:14,470
+aktarmalyz; buradaki modal bileeni UI klasrnde var, biz de alks kullanyoruz.
+
+56
+00:04:14,500 --> 00:04:21,870
+Bu yzden sonunda burada arpma iaretleri eklemeliyiz ve sipari zetinde de benzer bir sorunla kar karyayz.
+
+57
+00:04:21,940 --> 00:04:25,880
+Orada kutu klasrnden kz dn de almamz gerek.
+
+58
+00:04:25,990 --> 00:04:29,750
+Ve imdi tm bu deiikliklerle yeniden bir alma bavurusu yapmalyz.
+
+59
+00:04:29,760 --> 00:04:32,120
+e yarayp yarayp yaramadna hzl bir ekilde gz atalm.
+
+60
+00:04:32,320 --> 00:04:33,370
+yi grnyor.
+
+61
+00:04:33,370 --> 00:04:38,710
+imdi hatalar atmadan tekrar alan bir uygulama aldk.
+
+62
+00:04:38,830 --> 00:04:46,430
+Fakat imdi opsiyonel olan, ancak bence daha mantkl olan yeni klasr yapmzla, bileenlerin
+
+63
+00:04:46,680 --> 00:04:53,000
+u an iin nasl ilediinden dolay gerekten harika bir uygulamanz var.
+
+64
+00:04:53,110 --> 00:04:55,160
+imdi bu kursla devam edelim.
+

@@ -1,0 +1,268 @@
+1
+00:00:02,210 --> 00:00:07,940
+The next step is that I also want to support sign in on this form and I'll do this in a very simple way,
+
+2
+00:00:08,030 --> 00:00:18,640
+I'll add another button here below my form and on this button, I'll say switch to let's say sign in, the
+
+3
+00:00:18,640 --> 00:00:26,200
+button type can be danger to make it red so that it looks like this
+
+4
+00:00:26,880 --> 00:00:30,950
+and now I want to manage this state here in my state,
+
+5
+00:00:30,960 --> 00:00:36,650
+in this component I'll name the property I'll add to my state isSignUp
+
+6
+00:00:36,660 --> 00:00:42,510
+and initially it's true, we should be in sign up mode initially but whenever this button is clicked,
+
+7
+00:00:42,590 --> 00:00:46,170
+I'll execute a switchAuthModeHandler
+
+8
+00:00:46,320 --> 00:00:54,910
+and there I simply want to call this.setState in its function form,
+
+9
+00:00:54,900 --> 00:01:01,020
+so I receive the previous state and in that function, I return the object which gets merged with the
+
+10
+00:01:01,020 --> 00:01:03,610
+old state and there I'll set
+
+11
+00:01:03,720 --> 00:01:09,810
+isSignUp equal to what previous state
+
+12
+00:01:09,930 --> 00:01:12,080
+isSignUp was not,
+
+13
+00:01:12,140 --> 00:01:18,030
+so I'll add an exclamation mark in front of previous state isSign so that I basically switch the values.
+
+14
+00:01:18,330 --> 00:01:20,730
+Now to also reflect this on UI,
+
+15
+00:01:20,850 --> 00:01:27,270
+I'll overwrite this hardcoded caption here and I'll not switch to sign in but I'll check if this state
+
+16
+00:01:27,300 --> 00:01:28,940
+isSignUp,
+
+17
+00:01:29,160 --> 00:01:35,130
+if it is then I'll output a string sign in because we want to switch to sign in if the current state
+
+18
+00:01:35,130 --> 00:01:40,370
+isSignUp and otherwise, I'll switch to sign up like this.
+
+19
+00:01:40,380 --> 00:01:47,730
+With that in place, I'll distribute this over a new line because I want to add the clicked property the
+
+20
+00:01:47,730 --> 00:01:53,190
+button knows, you can check the button component to see that props.clicked is called when onClick is
+
+21
+00:01:53,190 --> 00:01:55,040
+registered on the native button.
+
+22
+00:01:55,980 --> 00:01:57,550
+So there on clicked,
+
+23
+00:01:57,690 --> 00:02:00,230
+I now when to execute my auth method
+
+24
+00:02:00,390 --> 00:02:07,560
+handler, switchAuthMethodHandler. With that if I save this, now we can switch between the two methods,
+
+25
+00:02:07,710 --> 00:02:11,250
+of course this doesn't do anything, for this to have any effect
+
+26
+00:02:11,250 --> 00:02:15,030
+we need to do something different on the submit handler.
+
+27
+00:02:15,030 --> 00:02:21,960
+We always call onAuth where in the end, we always execute this auth action
+
+28
+00:02:21,960 --> 00:02:25,680
+and that actually is fine, I just expect to get a third argument here,
+
+29
+00:02:25,830 --> 00:02:33,750
+that's the method for example if it's sign up or sign in and I will simply send the request to different
+
+30
+00:02:33,770 --> 00:02:36,540
+URLs for different methods.
+
+31
+00:02:36,540 --> 00:02:42,210
+So I can set a default URL which could be the sign up URL here,
+
+32
+00:02:42,450 --> 00:02:48,570
+let me copy that entire URL and store it in a string here
+
+33
+00:02:49,320 --> 00:02:57,680
+but if method, if that is not or let's not name it method, in the end it signals if it's sign up so I'll
+
+34
+00:02:57,700 --> 00:03:00,310
+name it isSign here too
+
+35
+00:03:00,550 --> 00:03:08,320
+and if this is not sign up mode, then the URL should be different and which URL that is can
+
+36
+00:03:08,320 --> 00:03:12,820
+be seen in the documentation. Here in sign in with email and password,
+
+37
+00:03:13,000 --> 00:03:16,920
+we now grab this URL which is essentially the same,
+
+38
+00:03:17,080 --> 00:03:18,350
+just this part
+
+39
+00:03:18,350 --> 00:03:20,360
+here, the verify password,
+
+40
+00:03:20,500 --> 00:03:21,630
+that's different.
+
+41
+00:03:21,730 --> 00:03:28,350
+If we have a look at our code, there we have that URL and we have sign up new user, now for authenticating
+
+42
+00:03:28,510 --> 00:03:31,680
+it's the same URL with verify password.
+
+43
+00:03:31,840 --> 00:03:37,500
+Nonetheless I'll copy the exact same URL here, add it here
+
+44
+00:03:37,570 --> 00:03:39,630
+and add the key at the end
+
+45
+00:03:39,760 --> 00:03:44,020
+but now this URL points to verify password.
+
+46
+00:03:44,060 --> 00:03:50,630
+With that, we got the URL adjusted to our mode and now we use that URL here in the post
+
+47
+00:03:50,750 --> 00:03:51,820
+request.
+
+48
+00:03:51,830 --> 00:03:57,200
+The last step is to pass that URL on to the auth action creator or not
+
+49
+00:03:57,200 --> 00:03:58,690
+the URL, the sign up mode
+
+50
+00:03:58,700 --> 00:03:59,960
+I should say.
+
+51
+00:03:59,960 --> 00:04:02,260
+So let's go back to the auth container
+
+52
+00:04:02,420 --> 00:04:08,420
+and there, you will see that of course at the bottom where we call onAuth, I expect to get e-mail and
+
+53
+00:04:08,420 --> 00:04:09,290
+password,
+
+54
+00:04:09,290 --> 00:04:18,170
+I now also want to get the isSignUp information here and I will pass it on as a third argument to
+
+55
+00:04:18,170 --> 00:04:26,630
+the auth action creator, isSignUp is information I can pass when I call this property in my submit handler
+
+56
+00:04:26,660 --> 00:04:33,200
+here onAuth because I of course store this in my state of this container. So I can access this state
+
+57
+00:04:33,590 --> 00:04:36,790
+isSignUp and pass that information on.
+
+58
+00:04:37,000 --> 00:04:43,370
+With that if we save all files and we go back to our application, we see that by default if I use the
+
+59
+00:04:43,370 --> 00:04:49,570
+same e-mail address as before, we should get an error because that e-mail address is already in use.
+
+60
+00:04:49,610 --> 00:04:54,350
+We can confirm this in redux if we check authFail,
+
+61
+00:04:54,590 --> 00:04:56,960
+we have a look at the action,
+
+62
+00:04:56,960 --> 00:05:01,510
+the error we pass on there if we switch this to the right,
+
+63
+00:05:01,610 --> 00:05:08,540
+the error we pass on and the response has a data where it clearly says e-mail exists.
+
+64
+00:05:08,540 --> 00:05:15,920
+However if I switch to sign in and I submit, we see success and we get back auth data with the token and
+
+65
+00:05:15,920 --> 00:05:21,240
+and so on because we successfully do sign in here. So we can switch,
+
+66
+00:05:21,270 --> 00:05:23,360
+this is all working, with that
+
+67
+00:05:23,360 --> 00:05:28,320
+the next step is of course to store that token so that we can also use it in the future.
+

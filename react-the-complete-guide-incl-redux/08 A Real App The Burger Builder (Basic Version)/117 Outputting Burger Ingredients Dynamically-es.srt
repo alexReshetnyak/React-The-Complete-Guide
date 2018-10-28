@@ -1,0 +1,448 @@
+1
+00:00:02,150 --> 00:00:07,550
+En las ltimas conferencias comenzamos a implementar la hamburguesa, pero en realidad no es tan dinmica.
+
+2
+00:00:07,550 --> 00:00:15,910
+Tomemos un primer paso importante al manejar los ingredientes de la hamburguesa en el estado de nuestro generador
+
+3
+00:00:16,160 --> 00:00:20,290
+de hamburguesas porque aqu es donde finalmente los agregaremos.
+
+4
+00:00:20,300 --> 00:00:23,910
+Esa es la razn por la cual es un componente completo del estado.
+
+5
+00:00:23,930 --> 00:00:25,880
+Ahora estamos agregando estado.
+
+6
+00:00:26,090 --> 00:00:30,750
+Voy a agregar un estado como este simplemente inicialzalo como un apoyo. Pero como te mostr en el ltimo mdulo
+
+7
+00:00:30,980 --> 00:00:39,650
+del curso, tambin puedes agregar el constructor donde recibes los apoyos llamados super con los accesorios.
+
+8
+00:00:39,650 --> 00:00:42,800
+Nunca olvide esto y luego inicialice este estado porque est dentro de un mtodo como este.
+
+9
+00:00:42,800 --> 00:00:52,110
+Esto tambin funcionara.
+
+10
+00:00:52,130 --> 00:00:53,750
+Esta es una alternativa toda comentada
+
+11
+00:00:53,750 --> 00:01:01,670
+porque usa un poco ms moderno porque una sintaxis ms corta pero la sintaxis de los constructores funcionar absolutamente bien para saber qu debera estar dentro del estado.
+
+12
+00:01:02,090 --> 00:01:08,930
+Quiero tener el objeto de ingredientes en el que haba una mitad de pares de valores
+
+13
+00:01:09,380 --> 00:01:15,830
+clave donde las claves son los nombres de los ingredientes y los valores es la cantidad.
+
+14
+00:01:15,830 --> 00:01:19,900
+Entonces, tendr un ingrediente de ensalada, tal vez, un ingrediente de
+
+15
+00:01:19,940 --> 00:01:27,230
+tocino, tal vez todo lo que tenga, un ingrediente de queso, tal vez dos, y una reunin, tal vez los dos.
+
+16
+00:01:27,590 --> 00:01:33,520
+As que realmente construye una gran hamburguesa.
+
+17
+00:01:33,540 --> 00:01:36,080
+Ms adelante agregaremos ms estado como el precio.
+
+18
+00:01:36,110 --> 00:01:40,090
+Pero por ahora vamos con los fundamentos de Bergere.
+
+19
+00:01:40,160 --> 00:01:44,330
+Ahora obtenemos nuestros ingredientes, por supuesto.
+
+20
+00:01:44,360 --> 00:01:47,090
+El objetivo ahora es pasar esta matriz ahora a nuestra hamburguesa.
+
+21
+00:01:47,090 --> 00:01:52,030
+As que de alguna manera queremos darle a nuestro componente de hamburguesas los ingredientes.
+
+22
+00:01:52,340 --> 00:01:58,310
+Entonces en la propiedad de Adrians queremos pasar este ingrediente de estado.
+
+23
+00:01:58,400 --> 00:02:04,270
+Esa es la idea.
+
+24
+00:02:04,280 --> 00:02:05,660
+El problema es que la hamburguesa an no recibe ningn ingrediente.
+
+25
+00:02:05,690 --> 00:02:10,200
+As que copiemos eso al componente de Bruegel y comencemos a aceptarlo.
+
+26
+00:02:10,380 --> 00:02:16,010
+Y comencemos por poner los ingredientes dinmicamente ahora en el componente de hamburguesas.
+
+27
+00:02:16,010 --> 00:02:21,890
+Tenga en cuenta que estamos recibiendo ingredientes como accesorio. Pero si inspeccionamos los ingredientes en
+
+28
+00:02:22,040 --> 00:02:28,700
+un estado del generador de hamburguesas, debe tener en cuenta que se trata de un objeto.
+
+29
+00:02:28,700 --> 00:02:32,640
+No es una matriz.
+
+30
+00:02:32,870 --> 00:02:35,170
+Entonces, no podemos usar el mapa en ese ciclo consciente a travs de eso.
+
+31
+00:02:35,270 --> 00:02:38,450
+Es un objeto.
+
+32
+00:02:38,450 --> 00:02:40,250
+En cambio, tenemos que transformar este objeto en una matriz.
+
+33
+00:02:40,640 --> 00:02:44,270
+Y para ser precisos, tenemos que convertir este objeto en una matriz de los valores de los ingredientes.
+
+34
+00:02:44,480 --> 00:02:52,100
+Ahora bien, afortunadamente esto no es tan difcil en la funcin de hamburguesas y el componente de hamburguesas.
+
+35
+00:02:52,130 --> 00:02:59,620
+Cambiara un concepto nuevo que nombrar ingredientes o tal vez para dejar en claro que no
+
+36
+00:02:59,920 --> 00:03:04,920
+es la forma o nombre que recibe, ingredientes transformados y que
+
+37
+00:03:04,920 --> 00:03:13,430
+pueden usar el objeto objeto que es un objeto javascript predeterminado no proporcionado por reaccionar o nada como eso.
+
+38
+00:03:13,430 --> 00:03:19,370
+Tiene un mtodo clave que extrae las claves de un objeto dado y las convierte en una matriz.
+
+39
+00:03:19,370 --> 00:03:26,680
+Entonces te da una variedad de teclas.
+
+40
+00:03:26,690 --> 00:03:28,780
+1 2 2 no son parte de la matriz.
+
+41
+00:03:29,060 --> 00:03:36,530
+Por lo tanto, para nuestro objeto, nos dara una matriz que contiene una cadena, seleccione una cadena de tocino, una cadena de queso y una cadena que coinciden con los valores 1
+
+42
+00:03:36,620 --> 00:03:42,310
+Entonces, tal vez haya ingredientes.
+
+43
+00:03:42,740 --> 00:03:45,260
+Ahora tenemos esa serie de cadenas de llaves al final.
+
+44
+00:03:45,290 --> 00:03:49,990
+Ahora nuestra cadena es un mtodo para esto.
+
+45
+00:03:50,390 --> 00:03:52,180
+Y lo har en una nueva lnea para que sea ms fcil de leer.
+
+46
+00:03:52,280 --> 00:03:55,000
+Esto todava pertenece a las teclas de objeto.
+
+47
+00:03:55,040 --> 00:04:01,850
+Llama aqu el mtodo matemtico, que podemos, por supuesto, ejecutar ya que nuevamente las claves vuelven como una matriz.
+
+48
+00:04:01,850 --> 00:04:05,320
+Ahora menciono que los elementos en el conjunto son simplemente selecciones de propiedades, etc.
+
+49
+00:04:05,330 --> 00:04:10,810
+Entonces sabes que el mapa ejecuta una funcin en cada elemento en la matriz de entrada.
+
+50
+00:04:10,820 --> 00:04:17,660
+Entonces, todos los obsequios son argumentos que recibimos en la funcin con el
+
+51
+00:04:17,930 --> 00:04:25,910
+nombre IGY para la clave de ingrediente, porque esa es solo una parte de la matriz.
+
+52
+00:04:25,910 --> 00:04:27,540
+Y as.
+
+53
+00:04:27,980 --> 00:04:29,590
+Ahora, en esa
+
+54
+00:04:29,630 --> 00:04:41,300
+funcin, quiero transformar este valor de cadena en una matriz con tantos elementos como ingredientes tengamos para un ingrediente dado.
+
+55
+00:04:41,750 --> 00:04:45,180
+Entonces, si tenemos dos ingredientes de
+
+56
+00:04:45,380 --> 00:04:54,050
+queso, entonces quiero transformar esa cadena de queso en una matriz que simplemente contenga dos elementos.
+
+57
+00:04:54,260 --> 00:04:56,570
+No me importan los elementos si estos son dos a dos o lo que sea.
+
+58
+00:04:56,570 --> 00:05:03,100
+Pero debera tener una longitud de dos.
+
+59
+00:05:03,290 --> 00:05:06,010
+As que devolver una matriz aqu y la
+
+60
+00:05:06,140 --> 00:05:15,140
+usar para propagar el operador para esparcir una nueva matriz que tengo que construir y que se construir con el mtodo de matriz proporcionado por javascript.
+
+61
+00:05:15,140 --> 00:05:21,230
+De nuevo, eso no es un mtodo de reaccin o no reacciono objeto es un objeto javascript predeterminado.
+
+62
+00:05:21,220 --> 00:05:28,300
+Puede que no lo sepas porque no lo usas con tanta frecuencia, pero puedes crear una matriz con l.
+
+63
+00:05:28,400 --> 00:05:33,770
+Por ejemplo, array free te dar una
+
+64
+00:05:33,860 --> 00:05:41,480
+matriz con tres espacios vacos, bsicamente con espacios libres e indefinidos.
+
+65
+00:05:41,540 --> 00:05:42,670
+Ahora la longitud, por supuesto, no es gratuita.
+
+66
+00:05:43,100 --> 00:05:45,400
+La duracin debe ser la cantidad del ingrediente dado.
+
+67
+00:05:45,500 --> 00:05:49,880
+As que aqu los ingredientes de prop.
+
+68
+00:05:49,880 --> 00:05:52,020
+Y luego acceder a la clave que tengo
+
+69
+00:05:52,310 --> 00:05:59,600
+aqu porque tenga en cuenta que todava estamos en esa funcin de nuestro mtodo de mapa que se ejecuta en una matriz que contiene todas nuestras claves.
+
+70
+00:05:59,600 --> 00:06:05,190
+Entonces, lo que tenemos en este punto del tiempo es simplemente una matriz con dos elementos.
+
+71
+00:06:05,240 --> 00:06:11,360
+Los valores no nos importan en este momento.
+
+72
+00:06:11,360 --> 00:06:13,610
+Ahora ejecutar el mapa en esa matriz.
+
+73
+00:06:14,490 --> 00:06:17,370
+Tenga en cuenta que todava estamos dentro del mapa
+
+74
+00:06:17,370 --> 00:06:23,040
+exterior Meffert Pero tambin hay una matriz de nmeros de retorno donde ahora quiero mapear los elementos.
+
+75
+00:06:23,040 --> 00:06:26,220
+No me importa el elemento en s.
+
+76
+00:06:26,360 --> 00:06:30,790
+Es por eso que usar el guin bajo como un nombre de
+
+77
+00:06:31,160 --> 00:06:37,010
+argumento para indicar que sub-Planck Pero el ndice de ese elemento es importante para m.
+
+78
+00:06:37,010 --> 00:06:39,390
+As que ahora, dentro de ese
+
+79
+00:06:39,830 --> 00:06:48,440
+mapa, Meffert devolver el ingrediente de mi hamburguesa porque necesito devolver un conjunto de GSX al final donde voy a configurar la clave.
+
+80
+00:06:48,440 --> 00:06:52,880
+Tenga en cuenta que debemos asignar una clave porque es una matriz.
+
+81
+00:06:52,880 --> 00:06:55,550
+Devolvemos una matriz de elementos GSX a la tecla IGY.
+
+82
+00:06:55,550 --> 00:07:00,420
+Adems, ahora IGY key es algo as como venderlo y simplemente tengo uno dos gratis, y as sucesivamente.
+
+83
+00:07:00,500 --> 00:07:06,680
+Esto crea una clave nica para cada ingrediente y el tipo simplemente es la tecla IGY.
+
+84
+00:07:06,680 --> 00:07:16,240
+Es por eso que no me importa el primer argumento aqu.
+
+85
+00:07:16,240 --> 00:07:20,470
+No me importa con qu este objeto de rea llena esta matriz.
+
+86
+00:07:20,470 --> 00:07:24,230
+Es solo la longitud de esa matriz lo que
+
+87
+00:07:24,340 --> 00:07:30,540
+me importa porque necesito una matriz de longitud 2 para el queso en este caso.
+
+88
+00:07:30,550 --> 00:07:31,180
+desde el principio.
+
+89
+00:07:31,180 --> 00:07:37,210
+Para el tocino sera de longitud 1 para poder crear una cantidad adecuada de componentes de ingredientes de Bergere y solo me interesara el tipo que obtuve
+
+90
+00:07:37,750 --> 00:07:42,470
+Desde que extraigo todos los tipos, todos los nombres de propiedad de mis ingredientes indican
+
+91
+00:07:42,490 --> 00:07:50,700
+que, por supuesto, tambin implica que la clave es la que usa aqu en la hamburguesa El estado de Bullers tiene que ser igual a las claves.
+
+92
+00:07:50,710 --> 00:07:59,140
+Se busca en carne de ingrediente Bergere.
+
+93
+00:07:59,140 --> 00:08:02,270
+Queso y tocino
+
+94
+00:08:02,290 --> 00:08:03,650
+Deben tener la misma carcasa y el mismo nombre.
+
+95
+00:08:03,730 --> 00:08:07,190
+Eso es sper importante porque lo estoy usando para crear los ingredientes correctos aqu al final.
+
+96
+00:08:07,240 --> 00:08:13,680
+al mapear mi objeto en una matriz de ingredientes, al final puede parecer supercomplejo.
+
+97
+00:08:14,070 --> 00:08:22,540
+As que esto es lo que devuelvo al final en este mtodo de mapa interno y, por lo tanto,
+
+98
+00:08:22,600 --> 00:08:28,570
+Sintase libre de arrojar algunos contras. mucho en el medio para ver lo que tienes actualmente o
+
+99
+00:08:28,570 --> 00:08:34,810
+para atravesar eso con el depurador.
+
+100
+00:08:34,960 --> 00:08:36,530
+Pero al final es solo
+
+101
+00:08:36,700 --> 00:08:43,750
+una manera de transformar un objeto de pares clave de valores en una matriz de ingredientes Bruguera donde el valor de
+
+102
+00:08:44,110 --> 00:08:52,060
+ese objeto es importante para m para decidir cuntos ingredientes necesito y la clave es importante para qu tipo de enojado y Necesito.
+
+103
+00:08:52,060 --> 00:08:55,540
+As que ahora obtengo mis ingredientes transformados y ahora es el momento de devolverlos.
+
+104
+00:08:55,540 --> 00:09:00,390
+los ingredientes de Callie Bracers transformados y con eso veamos si eso funciona.
+
+105
+00:09:00,400 --> 00:09:07,990
+Siempre tendr la parte superior del pan y el fondo del pan, pero en el medio todos ahora dan salida a
+
+106
+00:09:08,080 --> 00:09:10,990
+Asegrate de que todos los archivos estn guardados y
+
+107
+00:09:10,990 --> 00:09:17,630
+ahora deberas tener una hamburguesa con dos trozos de carne para untar queso, pero un tocino y una celda.
+
+108
+00:09:17,710 --> 00:09:19,360
+Si obtiene algn error aqu, asegrese de que este cdigo de transformacin est funcionando como debera.
+
+109
+00:09:19,900 --> 00:09:25,280
+Y con eso dimos nuestro primer paso importante hacia una hamburguesa verdaderamente dinmica.
+
+110
+00:09:25,660 --> 00:09:31,120
+Todava no es dinmico, pero al menos tenemos un mtodo genrico de produccin de ingredientes.
+
+111
+00:09:31,120 --> 00:09:37,930
+A continuacin, podemos trabajar para permitir al usuario agregar y eliminar ingredientes.
+
+112
+00:09:37,930 --> 00:09:42,100
+&nbsp;
+

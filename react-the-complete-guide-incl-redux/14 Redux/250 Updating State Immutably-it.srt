@@ -1,0 +1,668 @@
+1
+00:00:02,240 --> 00:00:06,860
+Knouted impareremo come ristrutturare un po 'il nostro riduttore qui.
+
+2
+00:00:07,160 --> 00:00:10,650
+Facciamo un tuffo nella gestione pi statale.
+
+3
+00:00:10,940 --> 00:00:13,670
+Aggiungiamo un nuovo stadio qui.
+
+4
+00:00:13,800 --> 00:00:19,420
+Diamo forse un nome agli assalti cos nuova propriet al nostro stato che dovrei dire e inizialmente dovrei essere
+
+5
+00:00:19,420 --> 00:00:20,280
+a matrice vuota.
+
+6
+00:00:20,300 --> 00:00:25,100
+Ora andiamo al nostro contatore componente qua e l.
+
+7
+00:00:25,400 --> 00:00:27,570
+Voglio aggiungere un nuovo pulsante.
+
+8
+00:00:27,590 --> 00:00:34,320
+di tutto aggiungi una linea orizzontale con solo un elemento di auto-chiusura e aggiunger un pulsante normale qui.
+
+9
+00:00:34,320 --> 00:00:35,010
+Quindi, prima
+
+10
+00:00:35,080 --> 00:00:45,710
+In questo caso, dir semplicemente risultati del negozio come questo e questo risultato dovrebbe essere aggiunto a un elenco ordinato.
+
+11
+00:00:45,710 --> 00:00:50,490
+Tutto questo non ha uno stile in questo momento che creo sotto quel pulsante.
+
+12
+00:00:50,510 --> 00:01:01,070
+Ora l'idea  che quando faccio clic su Store result, aggiungo semplicemente il valore corrente del contatore alla mia lista di
+
+13
+00:01:01,070 --> 00:01:02,120
+risultati qui.
+
+14
+00:01:02,540 --> 00:01:09,290
+Quindi, ovviamente, voglio inviare un'azione ogni volta che si fa clic su questo pulsante e poi spinge a fare un
+
+15
+00:01:09,290 --> 00:01:11,310
+nuovo assalto per testare i risultati.
+
+16
+00:01:11,330 --> 00:01:13,730
+Aere aggiorna quell'array con esso.
+
+17
+00:01:14,210 --> 00:01:17,130
+E naturalmente prendi il contatore corrente come input.
+
+18
+00:01:17,510 --> 00:01:23,900
+Inoltre, se faccio clic su uno di questi risultati, uno di questi elementi di elenco  stato rimosso per
+
+19
+00:01:23,900 --> 00:01:24,520
+rimuoverlo dall'array.
+
+20
+00:01:24,830 --> 00:01:28,580
+Quindi dovrebbe avere un'idea di qualcosa di simile alla morte con la quale posso identificarlo.
+
+21
+00:01:28,910 --> 00:01:37,480
+E una volta rimosso l'elemento della lista dei dati l per questo, innanzitutto inizier qui nel mio componente
+
+22
+00:01:37,490 --> 00:01:38,190
+contenitore.
+
+23
+00:01:38,390 --> 00:01:44,240
+Anche se non ho lavorato sul riduttore o qualcosa del genere e aggiunger semplicemente due nuovi oggetti di
+
+24
+00:01:44,240 --> 00:01:51,560
+scena per mappare questa pagina agli oggetti di scena perch ho bisogno di due nuove funzioni, fondamentalmente due nuove funzioni di distribuzione.
+
+25
+00:01:51,560 --> 00:01:54,570
+Uno potrebbe essere sul risultato del negozio.
+
+26
+00:01:54,890 --> 00:02:00,920
+Questo dovrebbe contenere una funzione anonima in cui un dispatch spedisco un oggetto javascript che deve
+
+27
+00:02:00,920 --> 00:02:02,020
+avere un tipo.
+
+28
+00:02:02,090 --> 00:02:08,680
+Questo potrebbe essere il risultato del negozio e il valore dovrebbe essere il valore corrente del contatore, naturalmente.
+
+29
+00:02:08,690 --> 00:02:14,750
+Ora questo  qualcosa che non ho bisogno di passare come carico utile perch poich il contatore fa parte
+
+30
+00:02:14,750 --> 00:02:20,360
+del mio stato di applicazione, avr accesso ad esso nel mio riduttore In ogni caso pi tardi.
+
+31
+00:02:20,360 --> 00:02:22,680
+Quindi non ho bisogno di passarlo qui come payload.
+
+32
+00:02:22,730 --> 00:02:28,130
+vuoi memorizzare qualche utente inserito, quindi lo passeresti come valore dal tuo componente qui.
+
+33
+00:02:28,130 --> 00:02:31,430
+Ovviamente potresti anche avere casi d'uso in cui
+
+34
+00:02:31,430 --> 00:02:35,050
+Tuttavia non  richiesto o duplicato questo.
+
+35
+00:02:35,240 --> 00:02:42,170
+E creer anche una propriet che assegner il nome al risultato reale di eliminazione dove desidero inviare un
+
+36
+00:02:42,180 --> 00:02:45,580
+messaggio in realt diciamo con il risultato dell'eliminazione dell'identificatore.
+
+37
+00:02:45,590 --> 00:02:50,720
+Ora ho questi due oggetti di scena e li collegher nel mio contenitore qui.
+
+38
+00:02:50,990 --> 00:02:58,250
+Aggiunger il listener in clic al pulsante di assalto del negozio e eseguir questo puntello sul risultato del
+
+39
+00:02:58,820 --> 00:03:05,570
+negozio nessuna parentesi come sempre fa solo un riferimento a un metodo e verr eseguito automaticamente.
+
+40
+00:03:05,960 --> 00:03:12,130
+E sulla voce di elenco qui sono tutti gli ascoltatori di clic, dove altri dicono a sinistra.
+
+41
+00:03:12,140 --> 00:03:17,000
+Quindi questo suggerisce il sale di Leatrice.
+
+42
+00:03:17,030 --> 00:03:22,970
+Ora ovviamente questo elenco non ha ancora alcun contenuto, in seguito creer dinamicamente un elenco di elementi qui.
+
+43
+00:03:23,060 --> 00:03:30,790
+Quindi per ora concentriamoci su questo pulsante qui con il risultato del negozio. Bene, abbiamo fatto clic su questo pulsante.
+
+44
+00:03:31,060 --> 00:03:34,990
+In questo momento devo annullare l'apertura, non succede nulla.
+
+45
+00:03:34,990 --> 00:03:38,310
+Anche noi non riceviamo un errore o notiamo questo.
+
+46
+00:03:38,710 --> 00:03:44,190
+Quindi puoi inviare azioni che in realt non gestisci.
+
+47
+00:03:44,210 --> 00:03:52,150
+Questo  il primo take-away importante per il quale stiamo spedendo i risultati del negozio qui perch siamo vincolanti per l'assalto
+
+48
+00:03:52,150 --> 00:03:54,600
+del negozio che esegue questo metodo.
+
+49
+00:03:54,910 --> 00:03:56,780
+Stiamo vincolando il debito al pulsante.
+
+50
+00:03:56,830 --> 00:04:04,060
+Quindi questa azione viene inviata e raggiunge il produttore perch abbiamo solo un unico riduttore nella nostra
+
+51
+00:04:04,060 --> 00:04:09,370
+app di re-act e quindi tutte le azioni passano attraverso quel produttore.
+
+52
+00:04:09,430 --> 00:04:18,850
+Ma dato che semplicemente lo ignoro qui non ho alcun caso che gestisca l'azione con il tipo di negozio venduto che
+
+53
+00:04:18,850 --> 00:04:22,600
+posso disfare qui dove torno allo stato attuale.
+
+54
+00:04:22,660 --> 00:04:23,490
+Questo  tutto.
+
+55
+00:04:23,500 --> 00:04:28,330
+Sono appena tornato allo stato attuale, il che significa anche che se ho cambiato account o dal
+
+56
+00:04:28,690 --> 00:04:31,960
+mio backup qui e faccio clic su d'Este, non resetto lo stato.
+
+57
+00:04:31,960 --> 00:04:33,800
+Non restituisco lo stato iniziale.
+
+58
+00:04:33,880 --> 00:04:36,160
+Sono tornato allo stato attuale.
+
+59
+00:04:36,160 --> 00:04:38,120
+Quindi questo  il primo importante da asporto.
+
+60
+00:04:38,500 --> 00:04:40,290
+Ma ora gestiamo questo.
+
+61
+00:04:40,450 --> 00:04:48,700
+Creiamo un nuovo caso, diciamo il risultato del negozio e ce n' uno da restituire.
+
+62
+00:04:48,700 --> 00:04:55,890
+Ora voglio restituire ci che voglio restituire una versione aggiornata del mio stato.
+
+63
+00:04:56,080 --> 00:05:04,810
+E dovremmo questo immutabile proprio ora in tutti i casi restituir sempre un nuovo oggetto javascript dove aggiorniamo
+
+64
+00:05:04,810 --> 00:05:11,920
+il contatore solo per la singolare ragione per cui abbiamo solo la propriet contatore l.
+
+65
+00:05:11,950 --> 00:05:17,950
+L'intero stato precedentemente era costituito solo dall'account o dalla propriet.
+
+66
+00:05:17,950 --> 00:05:24,220
+Ora abbiamo anche una propriet result che  un array e quindi in questo momento se
+
+67
+00:05:24,280 --> 00:05:31,480
+incrementiamo decrementa add o sottriamo fondamentalmente lo rimuoviamo dal nostro stato perch restituiamo la versione aggiornata dello stato
+
+68
+00:05:31,480 --> 00:05:38,190
+ed  solo un Optik javascript con il contatore aggiornato ma senza una propriet dei risultati.
+
+69
+00:05:38,630 --> 00:05:42,440
+E a differenza degli Stati set hanno reagito.
+
+70
+00:05:42,550 --> 00:05:46,670
+Questo non  fuso con il vecchio stato o qualcosa del genere.
+
+71
+00:05:46,690 --> 00:05:49,480
+Questo  invece il nuovo stato.
+
+72
+00:05:49,810 --> 00:05:52,880
+Quindi qui in un nuovo stato non ci sono pi risultati.
+
+73
+00:05:53,110 --> 00:05:57,060
+Quindi in realt non  cos che dovremmo aggiornare lo stato.
+
+74
+00:05:57,100 --> 00:06:04,070
+Invece dovremmo copiare le propriet del vecchio stato e quindi aggiornare solo quelle che richiedono l'aggiornamento delle
+
+75
+00:06:04,120 --> 00:06:04,580
+aggiunte.
+
+76
+00:06:04,600 --> 00:06:14,500
+Immutabilmente, quindi, ci che non facciamo  che non impostiamo lo stato di notizie di Konst uguale allo stato e quindi detto
+
+77
+00:06:14,500 --> 00:06:22,530
+nuovo contatore di stato equivale al contatore di stato pi 1 e quindi restituiamo il nuovo stato qui.
+
+78
+00:06:22,540 --> 00:06:24,620
+Questo non  il modo in cui lo facciamo.
+
+79
+00:06:24,700 --> 00:06:26,330
+Perch non lo facciamo cos.
+
+80
+00:06:26,470 --> 00:06:29,260
+Perch stiamo mutando il vecchio stato qui.
+
+81
+00:06:29,740 --> 00:06:33,300
+Invece quello che facciamo  copiare il vecchio stato.
+
+82
+00:06:33,400 --> 00:06:41,140
+Ora un modo per farlo  chiamare l'oggetto un segno che passa un javascript Optik vuoto al primo
+
+83
+00:06:41,140 --> 00:06:47,420
+argomento e al vecchio oggetto javascript che vogliamo copiare come il secondo stato qui.
+
+84
+00:06:48,520 --> 00:06:49,900
+Come Det.
+
+85
+00:06:49,990 --> 00:06:55,240
+Ora questo fondamentalmente cloner il vecchio oggetto in modo immutabile.
+
+86
+00:06:55,660 --> 00:07:02,950
+Dandoci un nuovo oggetto sfida che ha tutte le propriet del vecchio oggetto ma  un oggetto tecnicamente diverso e
+
+87
+00:07:02,950 --> 00:07:09,700
+che ovviamente  importante a causa del modo in cui gli oggetti e gli array funzionano in Javascript
+
+88
+00:07:09,970 --> 00:07:14,980
+con i tipi di riferimento, i tipi primitivi di dati non sono chiari.
+
+89
+00:07:14,980 --> 00:07:16,210
+Sicuramente controlla questo.
+
+90
+00:07:16,210 --> 00:07:19,290
+ un concetto base di javascript.
+
+91
+00:07:19,330 --> 00:07:24,150
+Ora con quello otteniamo una copia anche se importante non un clone profondo.
+
+92
+00:07:24,190 --> 00:07:32,170
+Quindi la nostra matrice di risultati  ancora lo stesso oggetto che  qui nello stato iniziale, ma qui importa avere
+
+93
+00:07:32,170 --> 00:07:35,130
+una copia del nostro stato il nuovo stato.
+
+94
+00:07:35,170 --> 00:07:41,140
+Ora, se cambiamo per contrastare, non lo faremo nel vecchio stato ma in quello stato
+
+95
+00:07:41,140 --> 00:07:43,960
+copiato e restituiremo lo stato copiato aggiornato.
+
+96
+00:07:44,170 --> 00:07:51,070
+Questo diventer quindi il nuovo stato ed  un oggetto tecnicamente nuovo e questo  importante.
+
+97
+00:07:51,160 --> 00:07:52,980
+Ora puoi scrivere in questo modo.
+
+98
+00:07:53,110 --> 00:07:59,890
+Il modo pi breve consiste nel restituire semplicemente un oggetto javascript e quindi distribuire tutte le propriet del
+
+99
+00:07:59,890 --> 00:08:06,500
+vecchio stato che  possibile fare per diffondere lo stato dell'operatore come questo punto dot dot state.
+
+100
+00:08:07,390 --> 00:08:12,430
+Ci indica semplicemente il ritorno javascript dell'oggetto javascript.
+
+101
+00:08:12,730 --> 00:08:18,860
+Prendi tutte le propriet e i valori di ogni argomento dello stato che  il nostro vecchio stato.
+
+102
+00:08:18,970 --> 00:08:27,160
+Distribuisci queste propriet con i loro valori in questo nuovo oggetto e poi, dal momento che definiamo una propriet aggiuntiva
+
+103
+00:08:27,160 --> 00:08:35,410
+a questa propriet per l'oggetto o se era gi presente a causa della distribuzione degli Stati Uniti, lo stato precedente
+
+104
+00:08:35,410 --> 00:08:39,120
+com'era prima di incontrarlo fa parte del vecchio stato .
+
+105
+00:08:39,430 --> 00:08:43,630
+Sovrascrivi questo, ma lascia solo risultati intatti.
+
+106
+00:08:43,630 --> 00:08:49,690
+Questo  ci che sta accadendo qui dove si distribuisce un vecchio stato in cui il contatore prevalente
+
+107
+00:08:49,690 --> 00:08:50,900
+non tocca i risultati.
+
+108
+00:08:51,130 --> 00:08:54,830
+Quindi questo  il modo in cui dovremmo aggiornare lo stato in tutti i casi.
+
+109
+00:08:54,970 --> 00:09:03,490
+Fallo immutabilmente non toccare il vecchio stato, non solo restituire un nuovo oggetto senza coprire tutte le propriet del
+
+110
+00:09:03,490 --> 00:09:04,540
+vecchio stato.
+
+111
+00:09:04,660 --> 00:09:09,530
+O stai per eliminare propriet dal tuo stato come in precedenza.
+
+112
+00:09:10,000 --> 00:09:17,020
+in negozio restituiamo anche un oggetto javascript dove distribuiamo il vecchio stato mantenendo cos il contatore.
+
+113
+00:09:17,020 --> 00:09:18,420
+E con quello
+
+114
+00:09:18,850 --> 00:09:21,250
+Ma poi abbiamo detto risultati qui.
+
+115
+00:09:21,280 --> 00:09:24,200
+Quindi questo risolve la propriet che vogliamo aggiornare.
+
+116
+00:09:24,520 --> 00:09:32,650
+Diamo un risultato uguale a quello dello stato e quindi possiamo chiamare Comcast che  semplicemente come Porsche
+
+117
+00:09:32,660 --> 00:09:35,650
+ma Porsche manipola il valore originale.
+
+118
+00:09:35,670 --> 00:09:43,520
+Concord restituisce un nuovo array che rappresenta la frequenza precedente pi l'argomento che aggiungi a concat.
+
+119
+00:09:43,660 --> 00:09:47,510
+Quindi  un modo immutabile di aggiornare un array aggiungendo un oggetto.
+
+120
+00:09:47,620 --> 00:09:51,140
+Restituisce un nuovo array che  la cosa fondamentale.
+
+121
+00:09:51,280 --> 00:09:54,230
+Perch gli array sono anche tipi di riferimento.
+
+122
+00:09:54,310 --> 00:09:55,920
+Se tu chiamassi Porsche.
+
+123
+00:09:56,040 --> 00:10:01,660
+Stai toccando la propriet del risultato originale nello stato originale anche se hai usato per
+
+124
+00:10:01,660 --> 00:10:02,670
+diffondere l'operatore qui.
+
+125
+00:10:02,680 --> 00:10:04,670
+Questo non ti impedisce di farlo.
+
+126
+00:10:04,840 --> 00:10:06,700
+E questa non  una buona pratica.
+
+127
+00:10:06,730 --> 00:10:07,970
+Non come dovresti farlo.
+
+128
+00:10:07,990 --> 00:10:11,440
+La gestione dello stato  diventata imprevedibile se lo fai.
+
+129
+00:10:11,440 --> 00:10:16,090
+Quindi usa concat e ora spinge tutto ci che vuoi aggiungere a questo array.
+
+130
+00:10:16,090 --> 00:10:23,020
+Ad esempio qui potremmo aggiungere il contatore di stati poich vuoi memorizzare un'istantanea del contatore e spingerla
+
+131
+00:10:23,020 --> 00:10:24,440
+all'array dei risultati.
+
+132
+00:10:25,630 --> 00:10:31,180
+Ora con morti abbiamo aggiornato il nostro stato immutabilmente per tutti i casi.
+
+133
+00:10:31,480 --> 00:10:34,380
+Imparerai come aggiornare un array nel tuo stato.
+
+134
+00:10:34,390 --> 00:10:37,580
+Immutabilmente con il cemento aggiungendo un nuovo oggetto.
+
+135
+00:10:38,290 --> 00:10:43,970
+o componente ci possiamo ora legare in stato di mappa per puntellare a un nuovo
+
+136
+00:10:43,970 --> 00:10:52,600
+prop pu essere memorizzato risultati Propp che dovrebbe essere stato risultati riferiti al nome della propriet che hai impostato nella risorsa del produttore.
+
+137
+00:10:52,630 --> 00:10:59,800
+E ora possiamo tornare allo stato qui dove torniamo a qui in realt e possiamo usarlo nel nostro account
+
+138
+00:10:59,800 --> 00:11:00,960
+Questo deve essere uguale.
+
+139
+00:11:00,970 --> 00:11:07,580
+Quindi stiamo recuperando fa propriet state e ora possiamo usare la risorsa memorizzata che possiamo accedere
+
+140
+00:11:07,610 --> 00:11:11,880
+dai puntelli del disco qui nel nostro metodo di rendering.
+
+141
+00:11:12,230 --> 00:11:17,830
+Quindi qui per la voce di elenco in cui voglio produrli, lo far in linea qui con le parentesi graffe.
+
+142
+00:11:18,020 --> 00:11:27,680
+Posso dire che la mappa dei risultati memorizzata di questo puntello e ora mappare ognuno di essi  memorizzata come bittle di assalto memorizzato
+
+143
+00:11:27,690 --> 00:11:31,890
+in questo argomento che sono tutti mappati a questo elemento dell'elenco.
+
+144
+00:11:31,950 --> 00:11:39,150
+Meffert per mappare come sempre questa serie di risultati memorizzati in una serie di elementi dell'elenco GSX e l.
+
+145
+00:11:39,150 --> 00:11:44,100
+Quindi mi limiter a racchiudere la mia lista e metterla nella mia mappa
+
+146
+00:11:44,100 --> 00:11:51,860
+Ora abbiamo la nostra nuova voce di elenco in cui, naturalmente, possiamo produrre risultati memorizzati.
+
+147
+00:11:52,140 --> 00:11:54,440
+E ora questo sarebbe il nostro risultato.
+
+148
+00:11:54,690 --> 00:11:58,890
+Ma in realt voglio tornare al riduttore e cambiare un pochino.
+
+149
+00:11:58,890 --> 00:12:01,000
+Non voglio solo memorizzare un numero.
+
+150
+00:12:01,290 --> 00:12:07,140
+Voglio creare un oggetto e questo  un po 'opzionale qui, ma voglio farlo perch non voglio
+
+151
+00:12:07,140 --> 00:12:09,350
+solo avere il mio valore di risultato.
+
+152
+00:12:09,510 --> 00:12:12,970
+E potresti chiamare questa valle V come vuoi.
+
+153
+00:12:12,990 --> 00:12:18,090
+Voglio anche creare un'idea qui e quell'idea dovrebbe essere qualcosa di unico.
+
+154
+00:12:18,390 --> 00:12:24,540
+Quindi user semplicemente una nuova data che  semplicemente un'istantanea della data in cui  stata aggiunta.
+
+155
+00:12:24,540 --> 00:12:28,650
+Ora ho un'idea e un valore e non ritorno nel componente contatore.
+
+156
+00:12:28,680 --> 00:12:37,130
+Posso usare sia il valore del risultato memorizzato che si riferisce alla propriet del valore del debito qui nell'oggetto.
+
+157
+00:12:37,130 --> 00:12:41,690
+Una spinta per ottenere un tasso in cui concatio a dicere per essere precisi.
+
+158
+00:12:41,910 --> 00:12:50,480
+E dal momento che abbiamo una lista, dobbiamo impostare una chiave che possa impostare questa chiave per l'ID di assalto memorizzato che ha un'istantanea della data.
+
+159
+00:12:50,910 --> 00:12:57,330
+Ora se questo se torniamo all'applicazione e facciamo clic su Aggiungi 10 e clicchiamo sul risultato del negozio, vediamo 10 anni di
+
+160
+00:12:57,360 --> 00:12:58,300
+addizione nel mezzo.
+
+161
+00:12:58,320 --> 00:12:59,580
+Lasciami aggiungere di nuovo 10.
+
+162
+00:12:59,580 --> 00:13:02,010
+Ora memorizziamo 20 come secondo valore.
+
+163
+00:13:02,010 --> 00:13:03,000
+Quindi la nostra storia.
+
+164
+00:13:03,030 --> 00:13:07,140
+Tutti questi valori che cliccano su di loro non fanno molto.
+
+165
+00:13:07,140 --> 00:13:10,980
+Inoltre non segue un errore ma ovviamente non lo stiamo gestendo.
+
+166
+00:13:10,980 --> 00:13:16,150
+Fai clic su Lisner dove voglio eliminare il risultato e quindi elimina il risultato.
+
+167
+00:13:16,290 --> 00:13:18,810
+Quindi implementiamo questo nella prossima lezione.
+

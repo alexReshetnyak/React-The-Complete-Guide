@@ -1,0 +1,144 @@
+1
+00:00:01,980 --> 00:00:05,630
+Son derslerde, nexts'ler hakknda ok ey rendik, imdi
+
+2
+00:00:05,630 --> 00:00:07,270
+bunun hakknda daha
+
+3
+00:00:07,280 --> 00:00:13,700
+ok ey renmek var, bundan phe etmeyeceim. Bu modl boyunca size birka kez gsterdiim resmi github
+
+4
+00:00:13,700 --> 00:00:20,240
+sayfasn her zaman ziyaret edebilir ve learnnextjs'i ziyaret edebilirsiniz. com, giri yapmak iin bir github hesab gerektiren
+
+5
+00:00:20,540 --> 00:00:27,400
+nextjs yaratclar tarafndan resmi bir sayfa ama daha sonra adm adm size temel zellikleri ile yrr.
+
+6
+00:00:27,470 --> 00:00:32,390
+Bununla birlikte, bu derste kazandnz tepkime bilgisiyle birlikte bunu gerekten kullanabilmeniz
+
+7
+00:00:32,450 --> 00:00:36,820
+gerekir. nk, sunucu tarafnda, ihtiyacnz olmad yerde varsaylan olarak bir
+
+8
+00:00:36,830 --> 00:00:42,230
+tepkime oluturmak iin bir tepki uygulamas oluturmaya devam edebilirsiniz. kod blme ve
+
+9
+00:00:42,230 --> 00:00:47,810
+ynlendirme hakknda endielenmeniz ve bu nedenle oluturmay istediiniz tepki uygulamasn oluturmak iin daha
+
+10
+00:00:47,810 --> 00:00:49,400
+kolay bir zamannz olabilir.
+
+11
+00:00:49,760 --> 00:00:55,520
+Bu modl, bunu datm iin nasl hazrladn gstererek bitireyim. Gelitirme sunucumuzu brakalm ve
+
+12
+00:00:55,550 --> 00:01:00,250
+paketi tekrar gzden geirelim. json dosyas.
+
+13
+00:01:00,320 --> 00:01:02,610
+Burada  komut eklediimizi hatrla,
+
+14
+00:01:02,810 --> 00:01:10,430
+ina et ve bala, dier iki senaryo. Oluturma, projeyi datm iin oluturmak istediiniz betiktir, bu
+
+15
+00:01:10,430 --> 00:01:17,320
+nedenle yalnzca npm run yapsn altrarak, tm bu kodu derleyip optimize edecek ve bir sunucuya
+
+16
+00:01:17,360 --> 00:01:20,070
+gndermeniz iin hazr olacak ekilde tkenecektir.
+
+17
+00:01:20,090 --> 00:01:24,120
+imdi bir kez npm run build bitti, sen olsun. Bir sonraki klasr,
+
+18
+00:01:24,140 --> 00:01:27,170
+imdi tm yap ieriini ieriyor.
+
+19
+00:01:27,170 --> 00:01:34,940
+imdi bu klasr, aslnda datlmas gereken eydir, ancak dm modllerini de
+
+20
+00:01:35,120 --> 00:01:39,060
+yklemeniz gerektiinden, tm proje klasrn databilirsiniz.
+
+21
+00:01:39,230 --> 00:01:46,040
+Bu yzden tm proje klasrn AWS elastik beanstalk veya Heroku gibi bir sunucuya databilirsiniz.
+
+22
+00:01:46,580 --> 00:01:47,700
+Ve bu nemli,
+
+23
+00:01:47,840 --> 00:01:53,900
+bir host, nodeJS altrmak mmkn olan bir hizmet gerekir, nk nextjs nodejs kullanr ve
+
+24
+00:01:53,960 --> 00:02:01,820
+sadece nodejs zerinde alr, konutuunuz tm dosyalar javascript dosyalardr. Yani bir nodejs hazr ana bilgisayarna
+
+25
+00:02:01,850 --> 00:02:02,620
+ihtiyacnz
+
+26
+00:02:02,620 --> 00:02:10,700
+var ve o zaman tm projenizi buraya gnderiyorsunuz ve sadece npm start, nc
+
+27
+00:02:10,700 --> 00:02:11,360
+script'i altryorsunuz.
+
+28
+00:02:11,360 --> 00:02:15,320
+Buraya yklediimizden beri yerel olarak da altrabiliriz.
+
+29
+00:02:15,440 --> 00:02:19,110
+Bu imdi, localhost: 3000 uygulamasna hizmet edecek,
+
+30
+00:02:19,370 --> 00:02:25,130
+ancak imdi datm iin hazrladmz uygulama, daha nce olduu gibi alyor ama
+
+31
+00:02:25,150 --> 00:02:31,430
+aslnda her eyin minimize edildii ve bu ekilde her eyin ie yarad optimize
+
+32
+00:02:31,520 --> 00:02:39,260
+edilmi dosyalar kullanyor. tm proje ve daha sonra npm install npm sunucunuzda balatmak ve sonra yrtmek
+
+33
+00:02:39,260 --> 00:02:46,370
+yrtmek, size nextjs verir tm avantajlar ile gerek bir sunucu zerinde alan tepki nextjs
+
+34
+00:02:46,370 --> 00:02:47,480
+uygulama var.
+
+35
+00:02:47,810 --> 00:02:50,370
+Yine, nextjs hakknda daha fazla bilgi edinmek istiyorsanz,
+
+36
+00:02:50,480 --> 00:02:56,430
+github repo veya learnnextjs'deki resmi belgelere dalma ansn karmayn. com.
+

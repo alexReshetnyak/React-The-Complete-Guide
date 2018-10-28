@@ -1,0 +1,332 @@
+1
+00:00:02,230 --> 00:00:07,860
+Gdzie si udajemy, paczmy razem, teraz mamy ju jedno dziaanie Stwrcy.
+
+2
+00:00:07,870 --> 00:00:09,350
+Teraz dodam wicej.
+
+3
+00:00:09,370 --> 00:00:12,370
+Drugi, ktry dodam, po prostu nazywa si szkod.
+
+4
+00:00:12,460 --> 00:00:14,800
+Dlatego typ bdzie szkodliwy.
+
+5
+00:00:14,920 --> 00:00:18,080
+Nie musz teraz przekazywa do niego adnego adunku.
+
+6
+00:00:18,180 --> 00:00:19,690
+Przyjd dodaj i odejmij.
+
+7
+00:00:19,690 --> 00:00:22,980
+Zacznijmy wic od przynajmniej funkcji na.
+
+8
+00:00:23,200 --> 00:00:25,430
+A teraz potrzebujemy adunku.
+
+9
+00:00:25,770 --> 00:00:30,040
+Spjrzmy na licznik Jamesa Fowlera, ktry go tam wysalimy.
+
+10
+00:00:30,270 --> 00:00:35,460
+Ustawilimy warto adunku 10 lub warto 15.
+
+11
+00:00:35,460 --> 00:00:38,940
+W jaki sposb dostajemy adunek do naszego twrcy akcji.
+
+12
+00:00:39,240 --> 00:00:42,520
+Pamitajmy, e robimy to tutaj w naszym kontenerze.
+
+13
+00:00:42,720 --> 00:00:48,360
+Dlatego prawdopodobnie chcemy przekaza dowolny adunek jako argumenty rzeczywistemu twrcy.
+
+14
+00:00:48,780 --> 00:00:52,910
+Wic powinnimy oczekiwa, e adunek jako argumenty.
+
+15
+00:00:52,920 --> 00:00:59,140
+Tutaj wic na przykad argument wartociowy mona nazwa dowolnie, a nastpnie ustawi waciwo value.
+
+16
+00:00:59,240 --> 00:01:04,230
+I po prostu uyj haveli tutaj, poniewa uywam tego wczeniej, wic nie musz zmienia
+
+17
+00:01:04,230 --> 00:01:11,220
+kodu w reduktorze tak dobrze, e tylko Ty stworzysz t akcj, ktra bdzie ustawiona na rwni z wartoci przychodzc.
+
+18
+00:01:11,250 --> 00:01:16,740
+To samo stanie si z odejmowaniem lub powinienem zmieni typ, zanim to zrobi.
+
+19
+00:01:16,780 --> 00:01:26,260
+Tak samo teraz bdzie si odejmowa tam odejmowanie tak jak ten typ powinno by ustawione na odejmowanie.
+
+20
+00:01:26,410 --> 00:01:31,010
+Otrzymuj rwnie warto, ktr przekazuj na rekwizytach wartoci.
+
+21
+00:01:31,020 --> 00:01:36,940
+Teraz wreszcie, jeli spojrzymy na kontuar Jariusa dla kontenera, zobaczymy take cztery w
+
+22
+00:01:36,940 --> 00:01:39,940
+sklepie i wyniki 40 wysanych tam akcji.
+
+23
+00:01:40,150 --> 00:01:47,140
+Otrzymujemy rwnie wynik adunku i rozwizany identyfikator, wic powinnimy rwnie stworzy twrcw akcji z myl
+
+24
+00:01:47,140 --> 00:01:48,640
+o tych adunkach.
+
+25
+00:01:48,700 --> 00:01:57,130
+Tak wic po prostu dodaj kolejn akcj, ktr stworzy akcja Naviera, lub powiem, e wszystkie s nazwane jako wynik jednego sklepu.
+
+26
+00:01:57,130 --> 00:02:02,530
+To jest opis wielbda, ktry miaem na myli zaczynajc od maej litery, ale kade
+
+27
+00:02:02,590 --> 00:02:06,510
+sowo wewntrz wyszego sowa zaczyna si od duej litery 1.
+
+28
+00:02:06,940 --> 00:02:14,220
+Wic tutaj, w tym akcie twrcy akcji sklepowej, otrzymam mj wynik.
+
+29
+00:02:14,230 --> 00:02:20,790
+Chc przechowywa i spodziewam si mie waciwo rozstrzygnit w dziaaniu, ktre zostanie utworzone na kocu.
+
+30
+00:02:20,800 --> 00:02:27,760
+Wic przejdmy tam, to jest oczekiwana warto lub argument, ktry nazwiemy wrasse, moesz wybra dowolne imi,
+
+31
+00:02:27,760 --> 00:02:28,740
+jakie chcesz.
+
+32
+00:02:28,740 --> 00:02:36,190
+Wana waciwo wyniku musi zosta ustawiona, a ona przejdzie na reszt, poniewa warto szesnastkowa typu D jest
+
+33
+00:02:36,190 --> 00:02:36,760
+inna.
+
+34
+00:02:36,760 --> 00:02:38,830
+To wynik sklepu.
+
+35
+00:02:38,830 --> 00:02:43,630
+Teraz w kocu stwrzmy akcj stworzon dla ostatniej akcji, ktr mamy.
+
+36
+00:02:43,630 --> 00:02:48,090
+By to wynik wiodcy, wic nazw go tutaj odpowiednio.
+
+37
+00:02:48,130 --> 00:02:53,790
+Dostaj rozpoznany identyfikator elementu i dlatego typ bdzie wynikiem.
+
+38
+00:02:54,120 --> 00:03:00,670
+A jeli anulujemy nasze konto lub kontener jeszcze raz, zobaczymy, e wczeniej wysalimy akcj, w ktrej
+
+39
+00:03:00,700 --> 00:03:06,650
+pomys przed zasoleniem jest wasnoci, powinnimy zachowa ten wzorzec, aby nasze reduktory nadal dziaay.
+
+40
+00:03:06,660 --> 00:03:13,150
+Skopiujmy wic t nazw waciwoci z powrotem do akcji, mwic, e ma tutaj waciwo i
+
+41
+00:03:13,160 --> 00:03:16,880
+jest przypisana do przychodzcej wartoci ll jako wartoci.
+
+42
+00:03:17,080 --> 00:03:19,480
+Dziki temu mamy grup twrcw akcji.
+
+43
+00:03:19,480 --> 00:03:23,010
+Moemy teraz importowa je wszystkie w naszym kontuarze po prostu spadn.
+
+44
+00:03:23,200 --> 00:03:32,090
+Wic po prostu zaimportuj wszystko jako twrcy akcji, a teraz moemy ich uy tam, gdzie
+
+45
+00:03:32,090 --> 00:03:33,290
+s zaatani.
+
+46
+00:03:33,290 --> 00:03:40,670
+Tak wic na przykad teraz naley wywoywa przyrost kreatorw akcji dla Decory i mona uywa kreatorw
+
+47
+00:03:41,150 --> 00:03:44,180
+akcji i tam nazywa si dekrementacj.
+
+48
+00:03:44,300 --> 00:03:50,930
+To samo dotyczy oczywicie metody add, ale tutaj musimy przekaza warto jako argument, tak jak
+
+49
+00:03:50,930 --> 00:03:51,670
+si dowiedziae.
+
+50
+00:03:51,680 --> 00:04:01,560
+Wic pamitaj, aby to zrobi dla usunicia mona rwnie wywoa delete przepraszam, odejmij i podaj tam warto.
+
+51
+00:04:01,670 --> 00:04:04,770
+Wic kiedy ogldalimy napis 15.
+
+52
+00:04:04,790 --> 00:04:07,540
+Wic pozwl mi odj 15 tutaj.
+
+53
+00:04:08,150 --> 00:04:15,590
+A jeli chodzi o akcj szturmow, nasi twrcy zbiorw przechowuj tutaj szturm, musimy przej atak.
+
+54
+00:04:15,590 --> 00:04:20,530
+Chcesz przechowywa i otrzymalimy to tutaj jako argument do tej metody zwizanej z nieruchomociami.
+
+55
+00:04:20,690 --> 00:04:23,500
+Tutaj przekazuj wynik.
+
+56
+00:04:23,630 --> 00:04:33,170
+I na koniec za atak deleterw bd nazywa twrcw ect. Atakami deleterw i przekazywa mj identyfikator na ID, wszystko
+
+57
+00:04:33,200 --> 00:04:36,540
+to jest odbierane w tej anonimowej funkcji.
+
+58
+00:04:36,540 --> 00:04:39,990
+Uywam tylko prawdziwych twrcw do tworzenia dziaa.
+
+59
+00:04:40,040 --> 00:04:42,630
+Nadal wysyaem te same akcje, co poprzednio.
+
+60
+00:04:42,710 --> 00:04:48,370
+To si nie zmienio, wci mam bd, e nie znaleziono jakiego faulu.
+
+61
+00:04:48,380 --> 00:04:50,030
+To powinno by z powrotem tutaj.
+
+62
+00:04:50,030 --> 00:04:52,940
+Po prostu uruchomi ponownie start NPM i powinien to naprawi.
+
+63
+00:04:52,940 --> 00:04:54,860
+Zobaczmy tak.
+
+64
+00:04:54,890 --> 00:04:58,920
+Wskazywa na zy plik, ale wci mamy problem z reduktorem.
+
+65
+00:04:59,010 --> 00:05:03,540
+To ma sens, poniewa przesunlimy pozycj akcji zeszej jesieni.
+
+66
+00:05:03,540 --> 00:05:10,230
+Tak wic w naszych reduktorach musimy dostosowa pauzy importu, e nie ma ich ju w folderze nad
+
+67
+00:05:10,230 --> 00:05:10,900
+folderem reduktorw.
+
+68
+00:05:11,020 --> 00:05:15,480
+Tam musimy przej do folderu dziaa, a nastpnie bdzie dziaa ponownie.
+
+69
+00:05:15,480 --> 00:05:19,490
+Wic po prostu importuj pauvres do obu reduktorw w ten sposb.
+
+70
+00:05:19,680 --> 00:05:24,150
+Zapisz wszystko, a nastpnie aplikacja powinna znw dziaa.
+
+71
+00:05:24,210 --> 00:05:34,100
+Teraz kliknij te przyciski i przekonaj si, e tym razem z powodzeniem manipulujemy naszym sklepem przez naszych twrcw akcji,
+
+72
+00:05:34,820 --> 00:05:40,220
+chocia do tej pory dziaa tylko w nich kod synchroniczny.
+
+73
+00:05:40,340 --> 00:05:44,690
+Jak ju powiedziaem twrcy ect s przydatni do obsugi asynchronicznego kodu.
+
+74
+00:05:44,930 --> 00:05:47,360
+Przejdmy wic dalej do asynchronicznego kodu.
+
+75
+00:05:47,510 --> 00:05:54,510
+Ale pozwlcie mi te szybko wyjani, czy powinnimy uywa ich do kodu Circulus, czy te nie.
+
+76
+00:05:54,530 --> 00:05:56,180
+Odpowied brzmi: to zaley od ciebie.
+
+77
+00:05:56,180 --> 00:05:58,600
+To czysty sposb na tworzenie swoich dziaa.
+
+78
+00:05:58,610 --> 00:06:00,910
+Masz wszystko na temat dziaa w jednym pliku.
+
+79
+00:06:01,010 --> 00:06:04,280
+Nie musisz tworzy obiektw akcji w innym miejscu.
+
+80
+00:06:04,280 --> 00:06:10,580
+To drobna poprawka, ktr mona uzna za dobr, wic nic nie przemawia przeciwko uywaniu prawdziwych
+
+81
+00:06:10,580 --> 00:06:12,280
+twrcw do synchronicznego kodu.
+
+82
+00:06:12,380 --> 00:06:16,060
+Ale, jak powiedziaem, bdzie bardzo uyteczny dla asynchronicznego kodu.
+
+83
+00:06:16,130 --> 00:06:18,300
+Zobaczymy to na kolejnym wykadzie.
+

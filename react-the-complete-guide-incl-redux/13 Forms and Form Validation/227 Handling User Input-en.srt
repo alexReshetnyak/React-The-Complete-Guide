@@ -1,0 +1,364 @@
+1
+00:00:02,340 --> 00:00:07,050
+So now that we have this basic form set up with our own input component,
+
+2
+00:00:07,110 --> 00:00:13,650
+let's adjust this to also be able to react to user input and to get the user input.
+
+3
+00:00:13,650 --> 00:00:19,740
+So for that my input component, each element of course should receive onChange listener,
+
+4
+00:00:19,740 --> 00:00:24,120
+so let's add one to each of the elements we are creating here.
+
+5
+00:00:24,330 --> 00:00:31,730
+So I'll go through all of them and I'll just use IDE option where I can place multiple cursors, add
+
+6
+00:00:31,790 --> 00:00:33,420
+onChange to all of them
+
+7
+00:00:33,650 --> 00:00:37,080
+and of course I don't want to handle the change in this component,
+
+8
+00:00:37,220 --> 00:00:42,220
+I expect to get a method reference from outside which then takes care about this.
+
+9
+00:00:42,410 --> 00:00:48,440
+So here I'll simply add props and I'll name the property changed and you can of course choose any prop
+
+10
+00:00:48,440 --> 00:00:49,790
+name you want.
+
+11
+00:00:49,820 --> 00:00:51,820
+Now changed is the name I chose
+
+12
+00:00:51,980 --> 00:00:59,600
+so in contact data, I now actually need to implement the method which reacts to the changed properties,
+
+13
+00:00:59,600 --> 00:01:04,170
+so where I can fire up onChanged, which I can pass to to change prop
+
+14
+00:01:04,250 --> 00:01:08,900
+which then in the end will be attached to the onChange event.
+
+15
+00:01:08,930 --> 00:01:09,770
+So for that,
+
+16
+00:01:09,790 --> 00:01:19,420
+I'll create a new method in my contact data component, I'll name it inputChangedHandler, there I expect
+
+17
+00:01:19,420 --> 00:01:25,160
+to get an event object as it will automatically be passed to me by react
+
+18
+00:01:25,180 --> 00:01:30,130
+if this method is attached to an event listener which it of course is.
+
+19
+00:01:30,220 --> 00:01:36,200
+So the inputChangedHandler is what I passed to the changed prop, this inputChangedHandler,
+
+20
+00:01:36,310 --> 00:01:38,700
+no parentheses as always.
+
+21
+00:01:39,070 --> 00:01:48,790
+And now here, I want to first of all log the event target value to see any output and see if it's generally
+
+22
+00:01:48,790 --> 00:01:49,660
+working.
+
+23
+00:01:50,080 --> 00:01:52,570
+Let me type something into your name,
+
+24
+00:01:52,600 --> 00:01:58,810
+I do see it here on the right, also for the zipcode and also for the dropdown
+
+25
+00:01:58,820 --> 00:02:00,800
+so we do receive that value,
+
+26
+00:02:00,800 --> 00:02:02,930
+we connected it successfully.
+
+27
+00:02:03,110 --> 00:02:09,740
+But of course, we can see the values in our inputs because what's missing is the other part of two
+
+28
+00:02:09,740 --> 00:02:10,820
+way binding.
+
+29
+00:02:10,820 --> 00:02:18,290
+We're not using this data here when the input changes to update the value of our elements
+
+30
+00:02:18,350 --> 00:02:23,660
+and of course, we have that value key for each input element which we bind to it,
+
+31
+00:02:23,660 --> 00:02:28,930
+so this is currently the key which determines the value which is shown on the screen.
+
+32
+00:02:29,150 --> 00:02:37,400
+So we need to update the value for a given input upon user changes, for that of course we need more
+
+33
+00:02:37,400 --> 00:02:42,260
+information than just the event which gives us access to the event target value,
+
+34
+00:02:42,290 --> 00:02:51,110
+we also receive or need a second argument which is the input identifier so that we can reach out to
+
+35
+00:02:51,110 --> 00:02:57,590
+our state, get the right element here, the right object and adjust its value.
+
+36
+00:02:58,280 --> 00:03:05,510
+So to do that, I'll go to my contact data component and the method I passed to changed, the reference here
+
+37
+00:03:05,790 --> 00:03:08,520
+should be a referenced to an anonymous function
+
+38
+00:03:08,960 --> 00:03:16,250
+so that I can now pass arguments to the inputChangedHandler method call. In this anonymous function,
+
+39
+00:03:16,340 --> 00:03:21,210
+here we now get this event object which is created by react automatically
+
+40
+00:03:21,410 --> 00:03:31,720
+and I want to pass this on but I also now want to pass my identifier, which is form element ID, that
+
+41
+00:03:31,730 --> 00:03:35,330
+is this ID which is just a key from our object
+
+42
+00:03:35,330 --> 00:03:36,990
+and that's exactly what I need.
+
+43
+00:03:37,130 --> 00:03:40,490
+These keys here in our state object,
+
+44
+00:03:40,490 --> 00:03:47,370
+these are the identifiers of the inputs and exactly the objects I need to adjust it.
+
+45
+00:03:47,390 --> 00:03:51,920
+Now of course, I can use that information to update the value,
+
+46
+00:03:51,920 --> 00:03:58,860
+the problem just is I of course can't access this.state.orderForm identifier and update the value,
+
+47
+00:03:59,000 --> 00:04:01,310
+this is not how we mutate the state.
+
+48
+00:04:01,580 --> 00:04:03,230
+Instead we have to mutate it,
+
+49
+00:04:03,260 --> 00:04:13,400
+well immutably and we do this with set state and for that, what I'll do is I'll first of all create my copy
+
+50
+00:04:13,400 --> 00:04:15,540
+my form data,
+
+51
+00:04:15,560 --> 00:04:19,170
+so from the state here, my order form, I'll create,
+
+52
+00:04:19,190 --> 00:04:19,940
+copy it.
+
+53
+00:04:20,060 --> 00:04:28,760
+So I'll name this updatedOrderForm and for that here, I will now create a javascript object where I copy
+
+54
+00:04:28,760 --> 00:04:32,070
+this.state.orderForm.
+
+55
+00:04:32,090 --> 00:04:39,950
+However this does not create a deep clone, so I copy that object and I distribute all the properties,
+
+56
+00:04:39,950 --> 00:04:48,560
+I get a new object but since these objects, I have more nested objects, these would not be cloned
+
+57
+00:04:48,560 --> 00:04:49,410
+deeply
+
+58
+00:04:49,490 --> 00:04:55,520
+but there, I will again just copy the pointer to them and hence if I change something there, I will
+
+59
+00:04:55,520 --> 00:04:57,540
+still mutate the original state
+
+60
+00:04:57,560 --> 00:05:03,800
+unfortunately because the object in my copied object and the object in the state would still be equal.
+
+61
+00:05:04,990 --> 00:05:07,930
+So we need to clone this deeply,
+
+62
+00:05:08,080 --> 00:05:09,390
+how do we do that?
+
+63
+00:05:11,240 --> 00:05:14,150
+Well in the end I only care about the value here
+
+64
+00:05:14,240 --> 00:05:21,320
+so I only need to make sure that this object here is also cloned and I don't point to the same object
+
+65
+00:05:21,320 --> 00:05:22,390
+anymore.
+
+66
+00:05:22,490 --> 00:05:29,180
+I can achieve this in my inputChangedHandler by not just distributing the properties of order form
+
+67
+00:05:29,270 --> 00:05:33,680
+which would be name, email and so on but that
+
+68
+00:05:33,710 --> 00:05:44,530
+I also copy the properties inside my selected order form element deeply. For this,
+
+69
+00:05:44,600 --> 00:05:50,120
+I'll take the updatedOrderForm which is a clone of the original one and not referring to the original
+
+70
+00:05:50,120 --> 00:05:53,200
+one anymore and there I'll now access
+
+71
+00:05:53,210 --> 00:05:54,890
+my input identifier
+
+72
+00:05:54,980 --> 00:05:58,040
+so this is a value like email, like
+
+73
+00:05:58,040 --> 00:05:59,580
+delivery method.
+
+74
+00:05:59,600 --> 00:06:03,850
+Now I get access to this object which we haven't cloned already
+
+75
+00:06:03,890 --> 00:06:12,880
+so now I need to clone that object and I'll store the new constant updatedFormElement, maybe.
+
+76
+00:06:14,280 --> 00:06:18,300
+In here again, I'll create a new object and used to spread operator here
+
+77
+00:06:19,800 --> 00:06:27,500
+to create a clone. Now I can safely change the value of the updatedFormElement because it is again
+
+78
+00:06:27,500 --> 00:06:28,610
+a clone.
+
+79
+00:06:28,610 --> 00:06:34,010
+Only if I were to change the element config, that would still be an object which I haven't cloned which
+
+80
+00:06:34,010 --> 00:06:36,890
+points to the original one but I'm not doing that here
+
+81
+00:06:36,920 --> 00:06:42,560
+if you are doing that, you need to also clone that deeply with the spread operator.
+
+82
+00:06:42,560 --> 00:06:50,220
+So I will reach out to updatedFormElement value and set this equal to event target value
+
+83
+00:06:50,330 --> 00:06:58,760
+and now, I can take my updatedOrderForm, so this which is my clone original form and there, I can now
+
+84
+00:06:58,760 --> 00:07:06,120
+again access the input identifier and set it equal to the updatedFormElement.
+
+85
+00:07:06,120 --> 00:07:15,180
+Now with this, I can call this.setState and set order form to updated order form.
+
+86
+00:07:15,290 --> 00:07:20,030
+Now let's see if this works, if I save this and I go back to my application and type something
+
+87
+00:07:20,030 --> 00:07:25,730
+into your name like Chris, you see this works, let's try it for all these inputs there.
+
+88
+00:07:26,580 --> 00:07:28,430
+Let's also try the dropdown,
+
+89
+00:07:28,440 --> 00:07:31,550
+this is all updated so two way binding is now working.
+
+90
+00:07:31,560 --> 00:07:36,960
+Now we successfully set this up in a very generic way which is great.
+
+91
+00:07:36,960 --> 00:07:40,830
+Now let's turn our heads towards form submission then.
+

@@ -1,0 +1,284 @@
+1
+00:00:02,150 --> 00:00:05,970
+Ento, vamos garantir que algo til acontea quando esse boto
+
+2
+00:00:06,110 --> 00:00:11,990
+for pressionado, para isso, adicionarei criadores de ao, porque  claro que quero enviar uma ao
+
+3
+00:00:12,590 --> 00:00:14,870
+quando isso for pressionado. Assim, na
+
+4
+00:00:14,870 --> 00:00:22,940
+pasta de aes da minha loja, adicionarei um novo arquivo auth . js e eu quero configurar aes relacionadas 
+
+5
+00:00:23,000 --> 00:00:29,720
+autenticao, agora tambm configurarei alguns tipos de ao no arquivo de tipos de ao
+
+6
+00:00:29,720 --> 00:00:30,510
+que exportarei
+
+7
+00:00:30,590 --> 00:00:38,610
+e adicionarei um tipo de ao AUTH_START, portanto, o identificador tambm  AUTH_START e, em seguida, duplique-o
+
+8
+00:00:38,750 --> 00:00:42,210
+duas vezes para tambm criar um tipo
+
+9
+00:00:42,230 --> 00:00:45,640
+de ao AUTH_SUCCESS e um tipo de
+
+10
+00:00:45,710 --> 00:00:50,340
+ao AUTH_FAIL porque, obviamente, a autenticao tambm pode falhar.
+
+11
+00:00:50,930 --> 00:00:51,390
+&nbsp;
+
+12
+00:00:51,400 --> 00:01:01,480
+Agora no auth. js, importarei todos os tipos de ao para os tipos de ao. / actionTypes e, em seguida, quero
+
+13
+00:01:01,480 --> 00:01:05,540
+criar alguns criadores de ao, exportarei todos eles.
+
+14
+00:01:05,680 --> 00:01:10,410
+O primeiro  o criador de ao AUTH_START, eu vou fazer isso
+
+15
+00:01:10,450 --> 00:01:12,870
+uma funo,  claro, eu realmente
+
+16
+00:01:12,970 --> 00:01:16,960
+no solicitar ou exigir quaisquer entradas aqui, eu s quero
+
+17
+00:01:17,020 --> 00:01:24,580
+retornar um objeto javascript onde o tipo  do tipo actionTypes. AUTH_START, eu no passo nenhuma carga til
+
+18
+00:01:24,730 --> 00:01:27,040
+aqui, usarei essencialmente essa
+
+19
+00:01:27,070 --> 00:01:34,710
+ao para definir um estado de carregamento e, possivelmente, mostrar um controle giratrio, se quiser.
+
+20
+00:01:34,750 --> 00:01:39,120
+Em seguida vou adicionar uma const, authSuccess, essa funo aqui
+
+21
+00:01:39,150 --> 00:01:45,150
+vai pegar alguns dados, dados de autenticao e aqui eu quero tambm retornar
+
+22
+00:01:45,490 --> 00:01:52,530
+um objeto javascript, o tipo ser do tipo AUTH_SUCCESS,  claro e vou passar os
+
+23
+00:01:52,900 --> 00:01:55,480
+dados de autenticao , vamos dar
+
+24
+00:01:55,510 --> 00:02:01,920
+uma olhada no que isso  depois. Agora precisamos de outro criador
+
+25
+00:02:02,010 --> 00:02:04,230
+de ao aqui,
+
+26
+00:02:04,290 --> 00:02:10,420
+AUTH_FAIL, aqui temos um erro potencial e tambm retornarei
+
+27
+00:02:10,680 --> 00:02:19,880
+um objeto javascript, o tipo ser actionTypes. AUTH_FAIL e eu passaremos
+
+28
+00:02:19,890 --> 00:02:27,400
+o erro assim. Finalmente eu adicionarei um ltimo tipo de ao, que
+
+29
+00:02:27,400 --> 00:02:28,680
+ser o nico
+
+30
+00:02:28,690 --> 00:02:30,930
+segurando o cdigo assncrono fazendo
+
+31
+00:02:30,960 --> 00:02:37,840
+a autenticao, eu vou apenas nomear o auth, aqui eu espero pegar o email e a senha
+
+32
+00:02:37,840 --> 00:02:40,810
+e ento retornarei o envio, ento um
+
+33
+00:02:40,870 --> 00:02:47,880
+funo que recebe despacho como um argumento graas ao redux-thunk e l, agora quero autenticar o usurio.
+
+34
+00:02:47,890 --> 00:02:55,370
+Agora, por enquanto, simplesmente enviarei a authStart aqui para pelo menos definir esse estado, agora com isso  claro
+
+35
+00:02:55,580 --> 00:03:02,210
+que precisamos conectar nossas aes aos nossos contineres para que possamos despach-los, ento eu irei at o
+
+36
+00:03:02,690 --> 00:03:09,100
+continer auth e l, quero importar minhas aes. Para isso, adicionarei meus criadores de aes
+
+37
+00:03:09,110 --> 00:03:13,260
+de autorizao ao ndice. arquivo js onde eu
+
+38
+00:03:13,300 --> 00:03:17,790
+agrupo todas as minhas exportaes dessa pasta de aes.
+
+39
+00:03:18,140 --> 00:03:24,520
+Ento, vou exportar tudo de que preciso. / auth sem a extenso do
+
+40
+00:03:24,620 --> 00:03:27,350
+arquivo e, no momento, isso
+
+41
+00:03:27,540 --> 00:03:31,130
+ apenas o prprio mtodo auth.
+
+42
+00:03:31,130 --> 00:03:37,130
+Agora, com isso, podemos voltar para o continer auth e importar todas as aes
+
+43
+00:03:37,340 --> 00:03:40,680
+aqui, ento importe tudo como aes e agora
+
+44
+00:03:40,730 --> 00:03:49,970
+vamos para a loja, para as aes e para o ndice. arquivo js e agora podemos adicionar
+
+45
+00:03:49,970 --> 00:03:59,100
+nossa boa const constante mapDispatchToProps para despachar algo aqui via adereos neste componente.
+
+46
+00:03:59,820 --> 00:04:07,340
+Ento, como sempre, vou retornar um objeto javascript e l eu quero criar uma proponente onAuth que
+
+47
+00:04:07,340 --> 00:04:15,660
+eu possa usar como um mtodo que, portanto, contm uma referncia a um mtodo no qual eu despachei minha
+
+48
+00:04:15,870 --> 00:04:19,020
+ao e desejo despachar a ao auth .
+
+49
+00:04:19,050 --> 00:04:24,240
+Agora, como voc viu quando configuramos isso, a ao de autenticao requer
+
+50
+00:04:24,240 --> 00:04:31,140
+um email e uma senha, portanto, espero obter isso aqui quando executarmos essa propriedade basicamente, para
+
+51
+00:04:31,140 --> 00:04:38,410
+que eu possa transmiti-la ao executar a autenticao. mapDispatchToProps s faz sentido se ns conect-lo a este
+
+52
+00:04:38,700 --> 00:04:43,490
+continer, ento eu vou agora importar a conexo de react-redux para que
+
+53
+00:04:43,740 --> 00:04:52,400
+possamos fazer isso, ento import connect from react-redux, como este. Com isso podemos voltar para a parte inferior do arquivo
+
+54
+00:04:52,400 --> 00:05:00,280
+e agora executar connect e passar null para mapStateToProps porque ainda no temos isso e mapDispatchToProps como o
+
+55
+00:05:00,280 --> 00:05:02,710
+segundo argumento e tambm vou
+
+56
+00:05:02,960 --> 00:05:06,170
+envolver meu continer de autenticao,  claro.
+
+57
+00:05:06,500 --> 00:05:12,710
+Com isso, podemos executar onAuth nos nossos adereos neste continer e eu quero fazer isso sempre que o
+
+58
+00:05:12,710 --> 00:05:13,760
+formulrio for enviado.
+
+59
+00:05:14,090 --> 00:05:22,200
+Ento, adicionarei um manipulador onSubmit aqui e executarei esse manipulador de envio, adicionarei
+
+60
+00:05:22,250 --> 00:05:25,420
+esse mtodo a esse continer,
+
+61
+00:05:25,610 --> 00:05:33,650
+o manipulador de envio. Eu espero conseguir o evento l porque eu primeiro preciso chamar o evento. Impea o padro de impedir o recarregamento
+
+62
+00:05:33,710 --> 00:05:42,590
+da pgina e depois disso, eu quero chamar isso de adereos, onAuth e execut-lo e  claro que eu preciso passar o
+
+63
+00:05:42,590 --> 00:05:43,470
+e-mail e
+
+64
+00:05:43,490 --> 00:05:46,010
+a senha para que eu possa
+
+65
+00:05:46,160 --> 00:05:56,130
+entrar em contato com isso. Estado. controla o valor de e-mail e isso. Estado. controla o valor da senha.
+
+66
+00:05:57,610 --> 00:06:02,070
+Com isso, vamos salvar isso e vamos ver se isso funciona.
+
+67
+00:06:02,110 --> 00:06:10,080
+De volta ao nosso projeto eu posso inserir um endereo de e-mail aqui e uma senha, se eu clicar em
+
+68
+00:06:10,080 --> 00:06:15,060
+enviar e inspecionar o redux, vemos que o authStart foi despachado com sucesso.
+
+69
+00:06:15,060 --> 00:06:18,200
+Ento, isso est funcionando, mas  claro que nada mais funciona ainda.
+
+70
+00:06:18,240 --> 00:06:24,480
+O prximo passo  executar um cdigo assncrono que realmente nos autentica e, como eu disse,
+
+71
+00:06:24,480 --> 00:06:26,550
+faremos isso usando o firebase.
+

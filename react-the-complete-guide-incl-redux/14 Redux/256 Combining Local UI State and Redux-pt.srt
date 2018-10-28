@@ -1,0 +1,312 @@
+1
+00:00:02,190 --> 00:00:10,740
+Ento, temos a tarefa onde podemos criar uma pessoa e preenchemos nome e idade aleatoriamente ou
+
+2
+00:00:10,740 --> 00:00:12,070
+a idade aleatoriamente.
+
+3
+00:00:12,120 --> 00:00:15,620
+O nome est codificado no produtor.
+
+4
+00:00:16,080 --> 00:00:23,550
+Claro que seria um caso de uso tpico ter campos de entrada para o usurio usar para especificar esses valores.
+
+5
+00:00:23,550 --> 00:00:24,890
+Como isso funcionaria?
+
+6
+00:00:26,820 --> 00:00:34,410
+ um caso tpico de local que voc observa, o estado que voc obteve, naturalmente, aprende sobre os ltimos mdulos
+
+7
+00:00:34,410 --> 00:00:43,160
+neste ncleo  que, para a entrada do usurio, todos somos manipuladores com o referido estado e no estado em geral e, para isso,
+
+8
+00:00:43,560 --> 00:00:49,150
+no precisamos usar redox apenas para armazenar o valor da entrada do usurio que precisvamos.
+
+9
+00:00:49,150 --> 00:00:54,690
+Dan, se queremos criar uma pessoa com essa entrada, mas apenas para lidar com cada batida de
+
+10
+00:00:54,690 --> 00:00:58,270
+tecla e usado para usar a ligao, no utilizamos necessariamente redirecionamentos.
+
+11
+00:00:58,530 --> 00:01:07,380
+Ento, no momento em que temos o nosso boto, digamos que agora tambm adicionamos entradas e vou tornar isso
+
+12
+00:01:07,400 --> 00:01:17,400
+muito simples como a entrada do tipo de texto com um espao reservado de nome e, em seguida, um segundo com H.
+
+13
+00:01:18,830 --> 00:01:21,070
+E aqueles sero do tipo nmero.
+
+14
+00:01:21,470 --> 00:01:27,340
+Ento, um campo de entrada super simples aqui que nos permite adicionar uma pessoa.
+
+15
+00:01:27,650 --> 00:01:35,330
+Agora, podemos transformar a pessoa adicional em um componente usando a palavra-chave da classe para gerenciar para evitar essas entradas.
+
+16
+00:01:35,480 --> 00:01:44,390
+ter o mtodo de renderizao no qual estamos no final so Trans-Am GSX e isso  o GSX que usamos antes.
+
+17
+00:01:44,390 --> 00:01:54,150
+Vamos simplesmente fazer isso ou no componente, voc est na importao e o Turdus em uma classe de classe em Paris, com um
+
+18
+00:01:54,150 --> 00:01:58,870
+personagem principal estende o componente stee e, no corpo da classe,
+
+19
+00:01:59,220 --> 00:02:00,660
+Ento eu vou col-lo l.
+
+20
+00:02:00,690 --> 00:02:03,000
+Livrar-se da parte l embaixo.
+
+21
+00:02:03,740 --> 00:02:10,770
+E somos quase bons para adiantamentos agora se torna este adereos, porm, porque estamos dentro de uma classe.
+
+22
+00:02:11,500 --> 00:02:13,670
+Portanto, at agora, isso deveria funcionar como antes.
+
+23
+00:02:13,690 --> 00:02:18,000
+Bem, tambm precisamos ajustar a exportao aqui para capitalizar a.
+
+24
+00:02:18,070 --> 00:02:20,160
+Ento, isso deve funcionar como antes.
+
+25
+00:02:20,290 --> 00:02:27,460
+Agora eu posso usar ou configurar o estado local de olhos, ento o mesmo estado que usamos antes em todo o curso.
+
+26
+00:02:27,790 --> 00:02:34,450
+E eu vou ter o meu nome, que  uma corda vazia, digamos inicialmente na minha idade, que
+
+27
+00:02:34,540 --> 00:02:38,480
+poderia ser inicialmente inicial e depois vou adicionar meu mtodo.
+
+28
+00:02:38,680 --> 00:02:48,040
+O nome mudou o manipulador onde eu recebo meu objeto de evento e onde ele simplesmente chama este estado definido para atualizar o
+
+29
+00:02:48,040 --> 00:02:51,280
+nome para o valor de destino do evento.
+
+30
+00:02:51,310 --> 00:02:58,690
+E o objetivo  executar o manipulador de mudana de nome em cada batida de tecla e eu mudarei minha idade.
+
+31
+00:02:58,690 --> 00:03:05,030
+O manipulador onde obter o evento onde segmentar  chamar este estado definido.
+
+32
+00:03:05,230 --> 00:03:11,740
+E, claro, no valor do alvo do evento de dois anos em cada batida de tecla.
+
+33
+00:03:11,740 --> 00:03:21,460
+E agora podemos ligar nossas entradas no manipulador do onchange, ligue-o a este nome, manipulador alterado para o nome
+
+34
+00:03:21,460 --> 00:03:27,230
+e coloque-o simplesmente em vrias linhas para distribu-lo para facilitar a leitura.
+
+35
+00:03:27,310 --> 00:03:34,240
+Agora, todos precisamos vincular o valor para ter duas ligaes para que nosso tipo, as batidas de teclas, sejam realmente refletidas
+
+36
+00:03:34,240 --> 00:03:35,570
+no arquivo de entrada.
+
+37
+00:03:35,560 --> 00:03:38,100
+Bind  para este nome do estado.
+
+38
+00:03:38,560 --> 00:03:47,110
+E agora por um segundo que colocou tambm sobre mltiplas linhas, todos os add on changes bind fazem isso.
+
+39
+00:03:47,290 --> 00:03:58,660
+O manipulador alterado e o valor so iguais aos WIPs neste estado H, assim como isso,  tudo o que aprendemos
+
+40
+00:03:58,660 --> 00:04:00,570
+antes deste mdulo.
+
+41
+00:04:00,570 --> 00:04:02,950
+No tem nada a ver com redux.
+
+42
+00:04:02,950 --> 00:04:07,140
+Estamos gerenciando o estado desse componente em si mesmo.
+
+43
+00:04:07,150 --> 00:04:12,850
+Ento, dentro do componente e  o que eu quis dizer nesse slide, onde eu falei sobre
+
+44
+00:04:12,850 --> 00:04:19,930
+diferentes tipos de Estado, um caso de uso tpico de um local. Voc afirma que voc poderia dizer o que o
+
+45
+00:04:19,930 --> 00:04:24,380
+usurio entrou nas entradas que voc provavelmente no  relevante para toda a aplicao.
+
+46
+00:04:24,400 --> 00:04:28,300
+No  necessrio armazenar isso na loja global redox.
+
+47
+00:04:28,300 --> 00:04:34,970
+Voc no pode absolutamente armazen-lo no estado desse componente porque ele s importa para o componente de morte.
+
+48
+00:04:35,020 --> 00:04:37,440
+ importante para os componentes mdios.
+
+49
+00:04:37,600 --> 00:04:46,650
+Assim que esse mal colete, ento vamos passar uma funo annima para que possamos passar alguns dados para
+
+50
+00:04:46,650 --> 00:04:48,450
+o suporte aqui.
+
+51
+00:04:48,450 --> 00:04:55,860
+Ento, duas pessoas adicionadas a qualquer mtodo que possamos chegar aqui, eu quero passar este nome do estado e esta era do
+
+52
+00:04:55,920 --> 00:04:57,290
+estado junto com ele.
+
+53
+00:04:57,660 --> 00:05:04,920
+Ento, no recipiente onde lemos a pessoa em um prompt onde ns conectamos um
+
+54
+00:05:04,920 --> 00:05:13,380
+mtodo a ele, onde anteriormente adicionamos para adicionar uma pessoa ou um executado, isso desafia agora aproveitamos
+
+55
+00:05:13,410 --> 00:05:15,510
+os argumentos que recebemos.
+
+56
+00:05:15,780 --> 00:05:23,170
+Ento, em ad, uma pessoa, obviamente, se refere a este mtodo ou usa-se disfuncionalmente para despachar uma ao.
+
+57
+00:05:23,250 --> 00:05:32,630
+Bem, agora sabemos que conseguimos o nome e a idade como argumentos, ento devemos usar isso no recipiente aqui.
+
+58
+00:05:32,800 --> 00:05:35,520
+Recebemos o nome ea idade no final.
+
+59
+00:05:35,770 --> 00:05:43,300
+Ento, quando enviamos algo, podemos adicionar um nome que seja igual ao nome e idade que seja igual 
+
+60
+00:05:43,480 --> 00:05:50,710
+idade ou a uma nica propriedade, podemos nomear dados pessoais ou carga til ou o que quiser, o que,
+
+61
+00:05:50,980 --> 00:05:55,660
+em seguida, mantm seu nome e idade mapeados para o respectivo argumento.
+
+62
+00:05:55,750 --> 00:06:02,040
+E agora com isso podemos ir ao nosso produtor e extrair o valor que o usurio inseriu.
+
+63
+00:06:02,320 --> 00:06:05,350
+Ento, para o nome, obteramos ao.
+
+64
+00:06:05,620 --> 00:06:09,490
+E ento usei uma chave chamada de dados pessoais.
+
+65
+00:06:09,640 --> 00:06:13,250
+E isso levaria o Optik com o nome e as chaves do Alias.
+
+66
+00:06:13,390 --> 00:06:22,990
+Ento, eu gostaria de dados de pessoa de ao de X-ists nome de ponto para o nome e para a idade seria dados da
+
+67
+00:06:22,990 --> 00:06:25,190
+pessoa de ao que idade.
+
+68
+00:06:25,230 --> 00:06:36,520
+Agora, se guardarmos todos os arquivos e corrigir esse erro, voltando a adicionar a pessoa e configurando o ational at agora, mas a um erro de digitao
+
+69
+00:06:36,520 --> 00:06:39,070
+de cadeia vazia no meu site.
+
+70
+00:06:39,150 --> 00:06:43,510
+Ento, para uma cadeia vazia, fazemos isso.
+
+71
+00:06:43,700 --> 00:06:54,120
+ver que isso est refletido em nossos componentes, que ainda podemos excluir aqui, mas agora estamos combinando o estado local do You ice para lidar
+
+72
+00:06:54,210 --> 00:07:02,550
+com a entrada e ento ainda redox para manipular para criar essa pessoa que afeta partes mais amplas do nosso aplicativo.
+
+73
+00:07:02,550 --> 00:07:09,300
+Agora podemos tentar o Max 28 aqui pessoalmente e ns conseguimos um mximo de 28 e,
+
+74
+00:07:09,300 --> 00:07:10,650
+se mudarmos, voc
+
+75
+00:07:10,650 --> 00:07:17,550
+E eu queria mostrar que voc faz como lidar com a entrada do usurio como lidar com isso em
+
+76
+00:07:17,730 --> 00:07:23,880
+um mundo redux e como diferenciar entre estado de UI local, pois usamos aqui informaes que realmente
+
+77
+00:07:23,880 --> 00:07:31,440
+so somente relevantes para este componente e para o estado global gerenciado para redox para informaes que so importantes para toda
+
+78
+00:07:31,440 --> 00:07:32,450
+a nossa aplicao.
+

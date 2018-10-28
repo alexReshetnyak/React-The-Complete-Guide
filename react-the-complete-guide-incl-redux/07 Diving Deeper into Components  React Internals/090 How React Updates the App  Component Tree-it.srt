@@ -1,0 +1,112 @@
+1
+00:00:02,200 --> 00:00:07,840
+Diamo un'occhiata a questo processo di rendering e aggiornamento e dove posizionare i nostri componenti puri.
+
+2
+00:00:07,900 --> 00:00:10,180
+Considera questa applicazione di re-act.
+
+3
+00:00:10,180 --> 00:00:16,060
+Abbiamo una componente di app di percorso e quindi potremmo avere un negozio e una componente di un utente e il
+
+4
+00:00:16,060 --> 00:00:18,070
+negozio e gli utenti potrebbero essere contenitori.
+
+5
+00:00:18,070 --> 00:00:24,010
+Ognuno dei quali gestisce lo stato pertinente di questi componenti probabilmente ha anche componenti figlio.
+
+6
+00:00:24,700 --> 00:00:30,910
+Elenco e carta per il negozio e gli utenti da liberare nel caso degli utenti.
+
+7
+00:00:30,950 --> 00:00:38,420
+Ora l'aggiornamento come impari avviene da cima a fondo e solo quando lo stato o Propst cambiano.
+
+8
+00:00:38,420 --> 00:00:44,840
+e il componente del negozio cambiano, l'elenco e la carta riceveranno probabilmente nuovi oggetti di scena e anche l'aggiornamento.
+
+9
+00:00:44,840 --> 00:00:46,370
+Quindi, se lo stato
+
+10
+00:00:46,370 --> 00:00:52,730
+E questo ci d anche un'idea di ci che potrebbe essere componenti puri e dove semplicemente non
+
+11
+00:00:52,730 --> 00:00:53,660
+ha troppo senso.
+
+12
+00:00:54,200 --> 00:01:02,150
+Se abbiamo elenchi e carrelli dipendiamo da oggetti di scena distribuiti dal negozio, forse  logico
+
+13
+00:01:02,150 --> 00:01:07,500
+implementare l'aggiornamento dei componenti nel caso del negozio e interrompere l'aggiornamento.
+
+14
+00:01:07,640 --> 00:01:13,790
+Se lo stato non cambia in realt se possiamo essere chiamati detto stato ma le propriet nello stato sono
+
+15
+00:01:13,790 --> 00:01:19,940
+sempre le stesse di prima e quindi l'elenco e la carta non saranno comunque raggiunti, quindi non c' bisogno.
+
+16
+00:01:19,940 --> 00:01:26,330
+contenitore del negozio e ovviamente lo stesso sarebbe vero per gli utenti o qualsiasi altra parte della tua applicazione.
+
+17
+00:01:26,330 --> 00:01:33,200
+E trasformare un elenco e un carrello in componenti puri perch abbiamo un buon controllo sopra di loro nel nostro
+
+18
+00:01:33,260 --> 00:01:40,940
+Quindi avere alcuni contenitori in cui hai questi controlli potrebbe avere molto senso e comunque potresti persino trovare casi in cui
+
+19
+00:01:40,940 --> 00:01:46,940
+i tuoi contenitori non hanno bisogno di quel controllo perch sai che chiami solo detto stato
+
+20
+00:01:47,150 --> 00:01:53,660
+o ricevi solo nuovi oggetti di scena se cambiano davvero puoi anche escludere l'aggiornamento del componente o
+
+21
+00:01:53,660 --> 00:01:54,750
+un componente puro.
+
+22
+00:01:54,830 --> 00:01:57,440
+Ma spesso potrebbe avere senso.
+
+23
+00:01:57,470 --> 00:02:00,470
+Ecco come funziona il rendering e l'aggiornamento.
+
+24
+00:02:00,470 --> 00:02:07,320
+In che modo l'albero dei componenti viene aggiornato e gestito reagendo e in che modo  possibile ottimizzarlo.
+
+25
+00:02:07,340 --> 00:02:13,700
+Ora comprendiamo come reagire per ottimizzare questo processo di aggiornamento per noi senza mai colpire il vero
+
+26
+00:02:13,700 --> 00:02:19,730
+Dom, perch come potete vedere c' una grande differenza tra il metodo di rendering che viene
+
+27
+00:02:19,730 --> 00:02:22,940
+chiamato e il vero Dom che viene cambiato.
+
+28
+00:02:23,150 --> 00:02:25,460
+Il secondo sguardo a questo nella prossima lezione.
+

@@ -1,0 +1,300 @@
+1
+00:00:02,170 --> 00:00:06,550
+Quindi ora con i collegamenti implementare che lavoriamo nuovamente su questi ordini.
+
+2
+00:00:06,670 --> 00:00:12,790
+E su quegli ordini in realt voglio regolare lo stile per un singolo ordine che con dovrebbe
+
+3
+00:00:12,790 --> 00:00:14,890
+essere solo diciamo 80 percento 80.
+
+4
+00:00:14,920 --> 00:00:16,690
+Non non spendere l'intera larghezza.
+
+5
+00:00:16,960 --> 00:00:20,130
+Comunque sono andato a prendere questi ordini dal mio server.
+
+6
+00:00:20,350 --> 00:00:22,860
+E per prima cosa crea due ordini.
+
+7
+00:00:22,900 --> 00:00:31,210
+Quindi crea due hamburger, forse questo hamburger qui mi consente di continuare, di ordinare e lasciarmi scambiare
+
+8
+00:00:31,210 --> 00:00:32,020
+un altro.
+
+9
+00:00:32,020 --> 00:00:34,270
+Solo carne e pancetta.
+
+10
+00:00:34,330 --> 00:00:36,730
+Hamburger super sano qui facciamo clic continua.
+
+11
+00:00:36,760 --> 00:00:39,200
+Continua e ordinalo.
+
+12
+00:00:39,220 --> 00:00:44,120
+E ora se controlli il database di Firebase vediamo due ordini qui.
+
+13
+00:00:44,320 --> 00:00:50,570
+Vediamo anche che il prezzo  scaduto qui, ma sistemeremo questo facendo l'output correttamente nell'ordine.
+
+14
+00:00:50,600 --> 00:00:54,710
+La parte che emette  ancora quella che non stiamo facendo in questo momento.
+
+15
+00:00:55,030 --> 00:01:00,910
+Ovviamente nel contenitore degli ordini voglio recuperare tutti i miei ordini per farlo.
+
+16
+00:01:00,910 --> 00:01:04,190
+Implementer il montaggio del debito dei componenti.
+
+17
+00:01:04,480 --> 00:01:09,430
+Posso usare l'importo del componente qui perch voglio solo recuperare gli ordini quando viene caricato.
+
+18
+00:01:09,430 --> 00:01:13,410
+Non c' modo che ci andremo l fuori rimontandolo.
+
+19
+00:01:13,450 --> 00:01:16,640
+Quindi componente che l'aggiornamento non  quello che sto cercando.
+
+20
+00:01:17,050 --> 00:01:19,250
+Quindi la componente  quella di cui ho bisogno.
+
+21
+00:01:19,270 --> 00:01:20,740
+Ho anche bisogno di X anni.
+
+22
+00:01:20,770 --> 00:01:24,680
+Quindi importer l'accesso qui dalla mia istanza.
+
+23
+00:01:24,730 --> 00:01:26,880
+Quindi importare gli assiomi da.
+
+24
+00:01:26,880 --> 00:01:34,330
+anni ci ordina Chaiya qui e poi qui voglio raggiungere davvero gli ordini per iniziare.
+
+25
+00:01:34,370 --> 00:01:37,900
+E ora saliamo fino a quando X
+
+26
+00:01:37,900 --> 00:01:43,830
+Jason si riferisce al nodo degli ordini morti sul mio back-end.
+
+27
+00:01:43,930 --> 00:01:50,440
+E abbiamo detto che S-D basa la tua L sulla nostra istanza di X-ists quindi non devo farlo.
+
+28
+00:01:50,510 --> 00:01:57,950
+E poi, una volta che i dati ci sono ovviamente vogliono fare qualcosa con la risposta, voglio impostare uno
+
+29
+00:01:57,950 --> 00:02:02,080
+stato che contenga effettivamente i miei ordini e poi li restituisca.
+
+30
+00:02:02,420 --> 00:02:06,790
+Quindi in qualche fase 2 dis componente qui ora nello stato.
+
+31
+00:02:06,830 --> 00:02:13,100
+Voglio avere i miei ordini che sono inizialmente un array e un array vuoto e probabilmente avr anche
+
+32
+00:02:13,100 --> 00:02:17,220
+uno stato flottante che inizialmente  vero perch inizier a caricare.
+
+33
+00:02:17,420 --> 00:02:25,230
+E poi qui e poi il blocco definir definitivamente lo stato di set e detto che caricando due false
+
+34
+00:02:25,320 --> 00:02:30,520
+awls lo faccio nel blocco catch qui dove prendo in considerazione eventuali errori.
+
+35
+00:02:31,420 --> 00:02:37,090
+Quindi ci sono sicuramente tutte le scadenze per le copie e ho detto che caricano due pieghe, ma ovviamente
+
+36
+00:02:37,090 --> 00:02:38,810
+voglio anche memorizzare i miei ordini.
+
+37
+00:02:38,830 --> 00:02:45,280
+Ora il fatto  che quando raggiungo l'ordine si nota che non sto ottenendo un array ma torner
+
+38
+00:02:45,280 --> 00:02:52,540
+un oggetto javascript tutto semplicemente stampato sulla console in modo che possiamo analizzarlo. I dati di riposo terranno i dati
+
+39
+00:02:52,540 --> 00:02:54,010
+che riceviamo da Firebase.
+
+40
+00:02:54,020 --> 00:02:55,390
+Diamo un'occhiata a quei dati.
+
+41
+00:02:55,390 --> 00:03:03,490
+Quindi ci dirigiamo verso la nostra applicazione per aprire la console e andare agli ordini dessous l'oggetto torner da
+
+42
+00:03:03,490 --> 00:03:10,960
+Firebase mentre vede un oggetto javascript in cui le chiavi sono semplicemente Deis ID univoci firebase generato per
+
+43
+00:03:10,960 --> 00:03:14,950
+noi e il valore nega i singoli dati dell'ordine.
+
+44
+00:03:15,280 --> 00:03:22,650
+Quindi non torneremo in array ma torniamo indietro di un oggetto in cui abbiamo gli ID come propriet.
+
+45
+00:03:22,940 --> 00:03:29,860
+Ora, quello che voglio fare  ovviamente voler trasformare il mio oggetto ordini in un array e farlo semplicemente
+
+46
+00:03:29,890 --> 00:03:31,520
+usando un ciclo for.
+
+47
+00:03:31,720 --> 00:03:40,060
+Quindi, per la chiave di piombo nei dati di riposo e ricordare i dati di riposo  un oggetto che abbiamo appena
+
+48
+00:03:40,060 --> 00:03:48,070
+stampato sulla console e quindi qui voglio creare un piccolo metodo di supporto recuperato dagli ordini o qualsiasi cosa tu voglia.
+
+49
+00:03:48,110 --> 00:03:55,910
+Inizialmente  un array vuoto e chiamer semplicemente gli ordini scaricati push per ogni iterazione di
+
+50
+00:03:55,970 --> 00:04:05,150
+ogni elemento che trovo e voglio spingere i dati del resto per una data chiave accedendo al valore che
+
+51
+00:04:05,240 --> 00:04:06,650
+ovviamente  l'ordine.
+
+52
+00:04:06,650 --> 00:04:14,680
+Ora con questo abbiamo recuperato gli ordini aere per non perdere gli ID sebbene siano le mie chiavi qui.
+
+53
+00:04:14,690 --> 00:04:16,210
+Far una cosa.
+
+54
+00:04:16,340 --> 00:04:25,280
+oggetto sugli ordini batch di oggi a una velocit in cui distribuir le propriet dall'oggetto Order che ho recuperato da firebase
+
+55
+00:04:25,280 --> 00:04:32,560
+con l'operatore di spread e aggiunger un nuovo ID di propriet che  appiccicoso perch ricorda che
+
+56
+00:04:33,020 --> 00:04:40,160
+la chiave  in questo oggetto che abbiamo recuperato dalla nostra parola base gli ID creati da Firebase.
+
+57
+00:04:40,160 --> 00:04:44,050
+Non spinger tutto questo invece a spingere un nuovo
+
+58
+00:04:44,120 --> 00:04:51,220
+Cos ora ho i miei ordini recuperati un array pieno di oggetti ordine che sono anche a conoscenza dei loro ID.
+
+59
+00:04:51,230 --> 00:04:55,920
+Ora posso impostare gli ordini qui per gli ordini recuperati.
+
+60
+00:04:56,000 --> 00:05:04,490
+Ovviamente voglio anche gestire eventuali errori potenziali, quindi importer il mio componente di ordine superiore
+
+61
+00:05:05,300 --> 00:05:07,970
+con il gestore degli errori.
+
+62
+00:05:08,220 --> 00:05:16,220
+E ora dobbiamo passare a quella cartella Agios see con il gestore degli errori con gestore degli errori e avvolgere il
+
+63
+00:05:16,310 --> 00:05:21,350
+nostro componente degli ordini con esso con il gestore degli errori proprio cos.
+
+64
+00:05:22,600 --> 00:05:23,820
+Avvolgere in questo modo
+
+65
+00:05:23,980 --> 00:05:27,720
+Certo che tutte le azioni passate qui sono saggi, questo non funzioner.
+
+66
+00:05:27,910 --> 00:05:32,740
+E ora proviamo eliminando Jason che finisce qui.
+
+67
+00:05:32,890 --> 00:05:36,370
+Torniamo indietro e otteniamo l'errore di rete qui.
+
+68
+00:05:36,580 --> 00:05:38,940
+Quindi abbiamo ricevuto questo errore, quindi funziona.
+
+69
+00:05:38,980 --> 00:05:46,000
+Il gestore degli errori, naturalmente, pu essere messo a punto nel metodo di cattura locale qui per mostrare un messaggio di errore
+
+70
+00:05:46,000 --> 00:05:48,100
+sullo schermo o qualsiasi cosa tu voglia.
+
+71
+00:05:48,100 --> 00:05:49,380
+Alre a DOT.
+
+72
+00:05:49,390 --> 00:05:51,110
+Jason tuo avanti un momento.
+
+73
+00:05:51,490 --> 00:05:59,050
+E con questo stiamo recuperando i nostri ordini, ora raccogliere gli ordini non  ovviamente la stessa cosa che
+
+74
+00:05:59,080 --> 00:05:59,680
+emettere ordini.
+
+75
+00:05:59,770 --> 00:06:01,760
+Quindi facciamolo nella prossima lezione.
+

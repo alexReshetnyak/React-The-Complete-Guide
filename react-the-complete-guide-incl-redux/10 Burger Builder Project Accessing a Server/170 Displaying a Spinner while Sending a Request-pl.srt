@@ -1,0 +1,492 @@
+1
+00:00:02,150 --> 00:00:05,940
+W ostatnim wykadzie upewnilimy si, e moemy wysa zapytanie
+
+2
+00:00:05,980 --> 00:00:11,860
+POST, teraz w typowej aplikacji chcemy pokaza co uytkownikowi, gdy danie jest ju w drodze.
+
+3
+00:00:11,900 --> 00:00:13,170
+Teraz musz doda,
+
+4
+00:00:13,180 --> 00:00:16,790
+e baza ogniowa jest naprawd szybka, wic prawdopodobnie
+
+5
+00:00:17,000 --> 00:00:23,030
+nie bdziemy mieli okazji zobaczy ekranu adowania lub czego, co chcesz pokaza uytkownikowi,
+
+6
+00:00:23,030 --> 00:00:25,640
+gdy danie jest ju w drodze.
+
+7
+00:00:25,640 --> 00:00:30,890
+Mimo to dobr praktyk jest pokazywanie czego takiego, poniewa w przypadku opnienia lub moe
+
+8
+00:00:30,890 --> 00:00:32,460
+powolna jest sie uytkownika,
+
+9
+00:00:32,570 --> 00:00:36,230
+na pewno chcesz pokaza uytkownikowi, e co si dzieje.
+
+10
+00:00:36,260 --> 00:00:37,750
+Co chcemy pokaza?
+
+11
+00:00:37,850 --> 00:00:40,840
+C, chc pokaza spinner w tym
+
+12
+00:00:40,850 --> 00:00:47,030
+modalu, wic zamiast podsumowania zamwienia, chc pokaza spinner, aby uytkownik mg zobaczy, e
+
+13
+00:00:47,030 --> 00:00:47,940
+co si
+
+14
+00:00:48,050 --> 00:00:54,660
+tutaj dzieje, a kiedy skoczysz, modal powinien si zamkn, a wic spinner oczywicie rwnie zniknie.
+
+15
+00:00:55,010 --> 00:00:56,740
+Wic jak to robimy?
+
+16
+00:00:56,780 --> 00:01:01,600
+Przede wszystkim potrzebujemy elementu typu spinner, ktry jest wyranie elementem interfejsu uytkownika,
+
+17
+00:01:01,610 --> 00:01:08,180
+wic tutaj dodam folder z obrotami i tam spinner. plik js.
+
+18
+00:01:08,180 --> 00:01:16,570
+Teraz spinner moe po prostu by prostym komponentem funkcjonalnym, w ktrym zwrc js, jak zawsze
+
+19
+00:01:16,590 --> 00:01:24,410
+tam, gdzie import React reaguje i eksportuje tutaj funkcj spinnera, oczywicie jako domylny plik.
+
+20
+00:01:24,410 --> 00:01:26,960
+Teraz, aby stworzy spinner CSS, moemy
+
+21
+00:01:26,960 --> 00:01:31,120
+po prostu wykorzysta niektre zasoby, ktre moemy znale w Internecie.
+
+22
+00:01:31,310 --> 00:01:37,940
+Jeli szukasz css spinnerw, znajdziesz tutaj ten niesamowity projekt, pierwszy wynik wyszukiwania, ktry moesz
+
+23
+00:01:37,940 --> 00:01:44,930
+zobaczy tutaj w filmie, ktry jest stron z mnstwem css spinnerw i kodem do niego,
+
+24
+00:01:44,930 --> 00:01:47,620
+ktry moesz po prostu posugiwa si.
+
+25
+00:01:47,640 --> 00:01:52,190
+Moesz take dostosowa je tutaj, wybierajc kolor
+
+26
+00:01:52,190 --> 00:02:01,360
+ta i tutaj zamierzam wprowadzi kod szesnastkowy bieli dla ta, a nastpnie przedni kolor
+
+27
+00:02:01,530 --> 00:02:05,770
+tego adnego fioletu. Dziki temu moesz wybra
+
+28
+00:02:05,920 --> 00:02:12,210
+dowolny spinner, moe ten tutaj lub cokolwiek chcesz i zobaczysz kod css odpowiedzialny
+
+29
+00:02:12,210 --> 00:02:13,310
+za spinner.
+
+30
+00:02:13,320 --> 00:02:15,540
+Teraz mam zamiar pobra cay ten kod,
+
+31
+00:02:15,730 --> 00:02:21,180
+widzisz rwnie kod HTML, ktry jest naprawd prosty, zamierzam pobra cay ten kod, a nastpnie wrci
+
+32
+00:02:21,180 --> 00:02:23,190
+do aplikacji reagowania. Tam dodam
+
+33
+00:02:23,190 --> 00:02:26,300
+plik css-spinner i wklej kod, ktry
+
+34
+00:02:26,310 --> 00:02:27,630
+wanie skopiowaem.
+
+35
+00:02:27,930 --> 00:02:34,610
+Teraz to, co zrobi, to szybko zmieni nazw programu adujcego na Loader z wielk liter L,
+
+36
+00:02:34,710 --> 00:02:40,860
+aby by w zgodzie z innymi nazwami plikw css, ktrych uywam w tym projekcie, i
+
+37
+00:02:40,860 --> 00:02:49,650
+wtedy zamierzam pobra ten kod HTML tutaj na spinner i uyj tego w moim komponencie spinner jako jsx, a klasa oczywicie
+
+38
+00:02:49,710 --> 00:02:51,200
+musi zosta skorygowana.
+
+39
+00:02:51,210 --> 00:02:56,680
+Jest to nazwa klasy i musz zaimportowa klasy z moich plikw css, wic importuj j
+
+40
+00:02:56,680 --> 00:03:03,870
+z spinner css, a nastpnie z tej klasy rwnej klasom. adowacz o
+
+41
+00:03:03,870 --> 00:03:10,170
+kapitale L. I tak naprawd to wszystko, adowanie pomidzy jest jak powrt w przypadku,
+
+42
+00:03:10,170 --> 00:03:10,970
+gdy css nie
+
+43
+00:03:11,040 --> 00:03:12,410
+zostanie wywietlone, wtedy to zostanie pokazane.
+
+44
+00:03:12,600 --> 00:03:15,370
+To waciwie jest cay kod, ktrego potrzebuj do
+
+45
+00:03:15,390 --> 00:03:19,880
+spinnera, teraz potrzebuj tylko logiki, aby pokaza go wewntrz modalu podczas adowania.
+
+46
+00:03:19,920 --> 00:03:26,290
+Zasadniczo warunkowo chc renderowa podsumowanie zamwienia lub mj spinner.
+
+47
+00:03:26,460 --> 00:03:30,420
+Ale do tego potrzebuj nowego stanu w moim budowniczym hamburgerw tutaj, dodam
+
+48
+00:03:30,420 --> 00:03:37,310
+wtedy stan, ktry nazwabym adowaniem, a ktry pocztkowo jest faszywy. Kiedy to prawda, chc pokaza spinnerowi, gdy
+
+49
+00:03:37,320 --> 00:03:39,690
+jest on faszywy, chc wywietli
+
+50
+00:03:39,720 --> 00:03:42,800
+podsumowanie zamwienia w tym komponencie.
+
+51
+00:03:43,290 --> 00:03:44,940
+Tak wic w metodzie
+
+52
+00:03:44,970 --> 00:03:53,650
+renderowania dodam teraz czek, w ktrym mwi, e jeli ten stan aduje si, chc pokaza spinner, a przede wszystkim
+
+53
+00:03:53,710 --> 00:04:01,020
+skonfiguruj alternatyw, ktr jest tutaj moje podsumowanie zamwie, ktre powinno by po prostu tym elementem tutaj
+
+54
+00:04:01,020 --> 00:04:02,490
+ten element podsumowujcy
+
+55
+00:04:02,490 --> 00:04:04,310
+zamwienie zagniedzilimy si w modalu.
+
+56
+00:04:04,650 --> 00:04:12,210
+Przechowuj to w tej zmiennej podsumowania celu tutaj, ktr utworzyem za pomoc sowa kluczowego let, i
+
+57
+00:04:12,210 --> 00:04:14,570
+nadpisam, jeli mamy stan adowania.
+
+58
+00:04:14,640 --> 00:04:19,350
+W tym miejscu chc uy tego nowego komponentu, ktry
+
+59
+00:04:19,380 --> 00:04:25,950
+wanie stworzylimy, wic zaimportujmy spinner, dodam go tutaj, importuj Spinner z, a teraz
+
+60
+00:04:26,130 --> 00:04:31,710
+musimy przej do folderu komponentw oczywicie do folderu UI, a nastpnie
+
+61
+00:04:31,710 --> 00:04:39,570
+do folderu spinnera i importuj tam plik spinner. A teraz moemy pobra ten spinner i uy go tam w
+
+62
+00:04:39,570 --> 00:04:40,850
+naszej metodzie renderowania.
+
+63
+00:04:41,070 --> 00:04:48,180
+Teraz chc ustawi podsumowanie zlece jako mj spinner, a to po prostu samozamykajcy si tag.
+
+64
+00:04:48,600 --> 00:04:53,250
+Dziki temu moemy to zapisa, a teraz powinnimy wydrukowa podsumowanie zamwienia tutaj,
+
+65
+00:04:53,250 --> 00:04:56,240
+t zmienn, ktr wanie utworzylimy midzy tagami modalnymi.
+
+66
+00:04:56,250 --> 00:05:01,320
+Teraz pokazujemy spinner lub wywietlamy podsumowanie zamwienia.
+
+67
+00:05:01,590 --> 00:05:07,370
+Zapiszmy to i upewnijmy si, e teraz przeczamy ten stan adowania, ktry tutaj sprawdzamy.
+
+68
+00:05:07,380 --> 00:05:13,820
+Chcemy oczywicie go tutaj przeczy, kiedy bdziemy kontynuowa zakup.
+
+69
+00:05:13,980 --> 00:05:15,420
+Ju na samym
+
+70
+00:05:15,450 --> 00:05:22,140
+pocztku chc wywoa ten stan zestawu i ustawi adowanie na true, poniewa teraz adujemy
+
+71
+00:05:22,200 --> 00:05:26,830
+danie, ktre ma zosta wysane. Jednak po otrzymaniu odpowiedzi, tutaj, gdzie
+
+72
+00:05:26,850 --> 00:05:34,140
+j zapisuj, nie chc ju jej rejestrowa, ale chc przerwa adowanie i chc przerwa adowanie bez wzgldu
+
+73
+00:05:34,140 --> 00:05:38,800
+na odpowied, poniewa danie jest wykonywane, nawet jeli nie udao si.
+
+74
+00:05:38,850 --> 00:05:45,330
+Tak wic teraz zadzwoni do tego ustawionego stanu i oczywicie ponownie ustawi
+
+75
+00:05:45,390 --> 00:05:48,920
+adowanie na fasz, abymy wrcili do drugiej
+
+76
+00:05:49,080 --> 00:05:51,620
+studni, na stron innego stanu.
+
+77
+00:05:51,990 --> 00:05:58,380
+Oczywicie chc ustawi adowanie na false, jeli mamy bd, poniewa nawet jeli wystpi bd, chcemy
+
+78
+00:05:58,650 --> 00:06:02,830
+zatrzyma adowanie, nie chcemy ju pokazywa spinnera, poniewa nasz UI
+
+79
+00:06:02,860 --> 00:06:06,390
+utknby w tym przypadku, a uytkownik pomylaabym, e
+
+80
+00:06:06,420 --> 00:06:07,950
+nadal jest adowany Oczywicie
+
+81
+00:06:08,310 --> 00:06:11,500
+powiedziaem, e chc rwnie zamkn modal, dobrze, e
+
+82
+00:06:11,820 --> 00:06:18,900
+mona to zrobi atwo, poniewa modal jest pokazywany tylko wtedy, gdy waciwo zakupu stanu tutaj jest ustawiona
+
+83
+00:06:18,900 --> 00:06:20,000
+na true.
+
+84
+00:06:20,250 --> 00:06:23,550
+Powinnimy wic po prostu ustawi zakupy jako faszywe.
+
+85
+00:06:23,730 --> 00:06:31,190
+W obu przypadkach ustawiam take zakupy na faszywe, aby zamkn modalno.
+
+86
+00:06:31,350 --> 00:06:31,930
+A wic
+
+87
+00:06:31,940 --> 00:06:32,820
+wyprbujmy to.
+
+88
+00:06:32,850 --> 00:06:38,910
+Jeli wrcimy do naszego burgera i utworzymy burgera, klikam teraz, aby kontynuowa.
+
+89
+00:06:39,710 --> 00:06:42,980
+Waciwie nie widzielimy spinnera, prawda?
+
+90
+00:06:43,170 --> 00:06:46,780
+Teraz ma to sens ze wzgldu na sposb, w jaki skonfigurowalimy
+
+91
+00:06:46,790 --> 00:06:52,940
+nasz aplikacj, ale czy wiesz, dlaczego nie widzielimy spinnera? Moe to by trudne do wykrycia, ale dam Ci szans,
+
+92
+00:06:52,940 --> 00:06:57,850
+aby zatrzyma wideo i znale problem na wasn rk, zanim poka ci, dlaczego to nie dziaa.
+
+93
+00:06:59,590 --> 00:07:01,750
+Dowiedziae si, co jest nie tak?
+
+94
+00:07:02,110 --> 00:07:08,870
+Teraz mog powiedzie, e poprawnie ustawiamy adowanie i tak dalej, a podsumowanie zamwie rwnie jest
+
+95
+00:07:08,880 --> 00:07:09,560
+tym spinerem.
+
+96
+00:07:09,760 --> 00:07:15,730
+Ale nasz modalny sposb nie aktualizuje si, nie pokazuje tego, kiedy ustawimy to
+
+97
+00:07:15,740 --> 00:07:17,880
+teraz, nie bez powodu.
+
+98
+00:07:18,040 --> 00:07:26,270
+Zastanw si nad naszym modalnym kodem, ktrego uywamy tutaj. Powinnimy tutaj doda ComponentUpdate i zasadniczo aktualizujemy
+
+99
+00:07:26,440 --> 00:07:34,090
+tylko ten komponent, jeli zmieni si stan show. Tutaj jednak dzieci komponentu po prostu zmieniaj si w rekwizyty.
+
+100
+00:07:34,090 --> 00:07:35,380
+dzieci. Zmienilimy,
+
+101
+00:07:35,380 --> 00:07:39,910
+przekazujemy nowe dziecko, przekazujemy spinner zamiast podsumowania
+
+102
+00:07:40,240 --> 00:07:47,380
+zamwienia, ktre nie powoduje aktualizacji tutaj. Musimy wic po prostu dopracowa nasz metod
+
+103
+00:07:47,470 --> 00:07:49,330
+shouldComponentUpdate w komponencie modalnym
+
+104
+00:07:49,510 --> 00:07:57,430
+i musimy sprawdzi, czy nastpnaProps. dzieci s w rzeczywistoci inne ni te roliny. dzieci, aby zaktualizowa,
+
+105
+00:07:57,430 --> 00:08:04,120
+jeli otrzyma nowe dzieci. Po tej zmianie, po jej zapisaniu, jeli teraz
+
+106
+00:08:04,120 --> 00:08:09,250
+wrcisz do swojej aplikacji, zbuduj burgera, teraz musisz uwanie obserwowa, poniewa pozostanie
+
+107
+00:08:09,250 --> 00:08:15,960
+tam tylko przez uamek sekundy, ale jeli klikniesz Dalej, zobaczysz ten adowacz i widzisz, e stylizacja
+
+108
+00:08:15,950 --> 00:08:16,690
+bya nieco
+
+109
+00:08:16,690 --> 00:08:18,140
+zepsuta, szybko to naprawmy.
+
+110
+00:08:18,240 --> 00:08:26,120
+Musimy wej do przdzarki i tam kolor ta na tym adowaczu zanim regua powinna by
+
+111
+00:08:26,140 --> 00:08:33,030
+biaa, wic #fff, adowarka po kolorze powinna by biaa, a teraz jeli to
+
+112
+00:08:33,030 --> 00:08:37,890
+zapiszemy i stworzymy jeszcze jednego burgera i zamwienie, teraz
+
+113
+00:08:37,980 --> 00:08:39,500
+mamy adnie wygldajcego kdzioka.
+
+114
+00:08:39,590 --> 00:08:43,020
+Ponownie, nie widzimy tego tak dugo, poniewa baza ogniowa
+
+115
+00:08:43,080 --> 00:08:45,220
+jest tak szybka, nie krpuj si
+
+116
+00:08:45,250 --> 00:08:49,130
+skomentowa tego posta tutaj, aby zobaczy go troch duej, wic
+
+117
+00:08:49,150 --> 00:08:50,160
+zamierzam to zrobi.
+
+118
+00:08:50,160 --> 00:08:54,810
+Teraz nie wysyamy proby i nigdy nie cofamy si od
+
+119
+00:08:54,810 --> 00:08:57,420
+stanu adowania, teraz widzisz tutaj spinner.
+
+120
+00:08:57,420 --> 00:09:01,930
+Wic teraz mamy spinner w miejscu, ktre pokazujemy, gdy co si dzieje.
+
+121
+00:09:02,110 --> 00:09:07,800
+Oczywicie nic si tutaj nie dzieje, poniewa skomentowaem, ale teraz mamy to zaatwione.
+
+122
+00:09:07,810 --> 00:09:11,680
+Teraz zajmijmy si rwnie przypadkiem, w ktrym
+
+123
+00:09:11,730 --> 00:09:17,910
+nasze danie HTTP nie dziaa, poniewa chcemy poinformowa uytkownika o takiej awarii.
+

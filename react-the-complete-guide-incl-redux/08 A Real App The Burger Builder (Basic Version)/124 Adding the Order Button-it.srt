@@ -1,0 +1,504 @@
+1
+00:00:02,230 --> 00:00:08,000
+Quindi ora abbiamo coperto molto e abbiamo creato il nostro controllo e Bullah Berger pu
+
+2
+00:00:08,020 --> 00:00:16,030
+creare quella modale che ci permette di visualizzare l'ordine. Una modalita 'di discommodamento di sommario dovrebbe essere mostrata quando clicchiamo sul
+
+3
+00:00:16,030 --> 00:00:20,330
+pulsante Check out che dobbiamo anche aggiungere sotto o compilare controlli.
+
+4
+00:00:20,620 --> 00:00:27,540
+Quindi queste sono le cose che voglio fare dopo che il bottone check out per costruire i controlli
+
+5
+00:00:27,580 --> 00:00:34,750
+e aggiungere  modale che dovrebbe fondamentalmente avvolgersi attorno ad un qualche tipo di riepilogo dell'ordine che probabilmente dovrebbe
+
+6
+00:00:34,750 --> 00:00:36,560
+andare anche nel suo componente.
+
+7
+00:00:36,580 --> 00:00:40,150
+Facciamo entrambi passo dopo passo e iniziamo con quello.
+
+8
+00:00:40,150 --> 00:00:42,310
+Dai un'occhiata BOTTEN per pap.
+
+9
+00:00:42,310 --> 00:00:47,560
+Andiamo ai controlli della barca perch voglio aggiungere il pulsante check out in fondo a questi controlli.
+
+10
+00:00:47,740 --> 00:00:54,160
+E l potremo semplicemente aggiungere anche questo pulsante alla fine che dovrebbe mostrare questo modello alla
+
+11
+00:00:54,160 --> 00:00:54,770
+fine.
+
+12
+00:00:55,070 --> 00:01:02,140
+Quindi ogni anno  un normale pulsante normale pulsante HGL o J come X come sempre  qui.
+
+13
+00:01:02,160 --> 00:01:06,870
+Ma tu sai cosa intendo con chemio e questo dovrebbe dire ordine.
+
+14
+00:01:06,880 --> 00:01:12,320
+Ora inserir questa didascalia in maiuscolo ma ovviamente  facoltativa.
+
+15
+00:01:12,370 --> 00:01:18,970
+Puoi impostare questo pulsante e il testo sul pulsante in qualsiasi modo desideri.
+
+16
+00:01:19,000 --> 00:01:20,110
+Ora il pulsante.
+
+17
+00:01:20,110 --> 00:01:24,180
+Parlare di stallo dovrebbe ovviamente anche ricevere alcuni stili.
+
+18
+00:01:24,430 --> 00:01:29,030
+Quindi apriamo entrambi i controlli e colleghiamo a questo file.
+
+19
+00:01:29,050 --> 00:01:32,550
+Troverai il codice per questo pulsante.
+
+20
+00:01:33,680 --> 00:01:37,720
+Qui aggiunger semplicemente il pulsante dell'ordine Zia's S class.
+
+21
+00:01:37,880 --> 00:01:45,710
+Poi ho aggiunto il passaggio del mouse inattivo Stahl attivo lo stile disabilitato che vogliamo usare quando abbiamo
+
+22
+00:01:45,710 --> 00:01:53,660
+ordinato un hamburger perch non abbiamo aggiunto nessun ingrediente ed Elham qualsiasi mazione che faccia semplicemente il bottone.
+
+23
+00:01:53,660 --> 00:01:58,280
+Una volta che diventa attivo ora con quell'atteggiamento  visto come fallo.
+
+24
+00:01:58,280 --> 00:02:02,740
+Assicurati di salvare i controlli aggiornati del bullone C-s come segue.
+
+25
+00:02:02,900 --> 00:02:09,340
+E ora possiamo aggiungere il nostro nome di classe a quel pulsante e l  il nome della classe.
+
+26
+00:02:09,350 --> 00:02:12,010
+L'ho appena aggiunto alla C S come.
+
+27
+00:02:12,380 --> 00:02:18,210
+Pulsante Ordina e semplicemente controlla il file per confermare questo pulsante d'ordine.
+
+28
+00:02:18,230 --> 00:02:20,400
+Questa  la classe.
+
+29
+00:02:20,720 --> 00:02:25,200
+Cos ora lo stile del pulsante per disabilitare questo pulsante.
+
+30
+00:02:25,220 --> 00:02:32,270
+Dobbiamo verificare ovunque tutti gli ingredienti abbiano una quantit di 0 o se almeno uno degli ingredienti  a 1,
+
+31
+00:02:32,330 --> 00:02:38,450
+il che farebbe attivare questo pulsante perch in quel caso potremmo ovviamente fare clic su di esso.
+
+32
+00:02:38,480 --> 00:02:46,310
+perch  l che dobbiamo dichiarare che  dove sappiamo quanto di ogni ingrediente vogliamo aggiungere a questo hamburger.
+
+33
+00:02:46,640 --> 00:02:52,460
+Cos fa la logica per controllare ovunque, ma la nave  attiva, quindi dove possiamo
+
+34
+00:02:52,460 --> 00:02:57,820
+inseguire l'hamburger o no, naturalmente, dovrebbe essere gestito e il contenitore di hamburger Boulder
+
+35
+00:02:57,920 --> 00:03:02,800
+Quello che dobbiamo sapere qui  la quantit totale di tutti gli ingredienti.
+
+36
+00:03:02,840 --> 00:03:09,110
+Quindi, in pratica, una somma di tutti gli ingredienti e aggiunger semplicemente una nuova propriet in cui dir
+
+37
+00:03:09,680 --> 00:03:13,440
+per il tavolo di Shea e imposter questo per forzare inizialmente.
+
+38
+00:03:13,480 --> 00:03:16,740
+Ora acquistabile dovrebbe semplicemente diventare vero.
+
+39
+00:03:16,770 --> 00:03:25,640
+Una volta che possiamo comprare questo acquistabile una volta che possiamo comprare il suo hamburger cos almeno una volta un ingrediente  uno
+
+40
+00:03:25,640 --> 00:03:26,490
+o pi.
+
+41
+00:03:26,660 --> 00:03:34,550
+Ora aggiunger un nuovo metodo alla data del builder burger up per chase state.
+
+42
+00:03:34,550 --> 00:03:39,050
+Qualsiasi nome ti piace lo fa qui e voglio chiamare questo metodo.
+
+43
+00:03:39,050 --> 00:03:46,720
+Alla fine di un ingrediente e rimuovendo il conduttore mediano in modo denso, controlla semplicemente se abbiamo
+
+44
+00:03:46,730 --> 00:03:51,980
+bisogno di due o se dobbiamo rendere l'acquirente vero o falso.
+
+45
+00:03:52,130 --> 00:04:00,020
+Quindi qui voglio controllare gli ingredienti che ho nel mio stato cos creer un nuovo oggetto qui per
+
+46
+00:04:00,110 --> 00:04:02,740
+creare una copia di questo stato.
+
+47
+00:04:02,750 --> 00:04:04,260
+Ingredienti.
+
+48
+00:04:04,310 --> 00:04:09,770
+Ora ho bisogno di riassumere tutti i valori qui.
+
+49
+00:04:09,770 --> 00:04:15,800
+Ora che  super facile da fare alla fine, quello che devo fare  che devo trasformare questo
+
+50
+00:04:15,860 --> 00:04:20,420
+oggetto qui in un array di nuovo in una matrice di questi valori qui.
+
+51
+00:04:20,420 --> 00:04:31,490
+Ora, per quello che posso fare, posso creare delle costanti dove prendo il mio oggetto oggetto javascript e l
+
+52
+00:04:31,490 --> 00:04:36,950
+uso di nuovo le chiavi e vi passo gli ingredienti.
+
+53
+00:04:37,070 --> 00:04:42,390
+E questo creer di nuovo una serie di stringhe e.
+
+54
+00:04:42,600 --> 00:04:46,140
+Formaggio con pancetta e cos via.
+
+55
+00:04:46,160 --> 00:04:54,170
+Ora ho detto che ho bisogno di questi valori qui, anche se cos le quantit degli ingredienti non i nomi.
+
+56
+00:04:54,500 --> 00:04:57,800
+Bene, possiamo semplicemente mappare questo array nell'array.
+
+57
+00:04:57,800 --> 00:05:04,610
+Abbiamo bisogno di progettare una nuova linea per rendere pi semplice la lettura del metodo di mappatura, ovviamente riceviamo comunque
+
+58
+00:05:04,910 --> 00:05:07,810
+la chiave e quindi questa viene usata in Word.
+
+59
+00:05:08,000 --> 00:05:13,460
+La funzione che abbiamo passato al metodo della mappa ricevuto da Sakia dovrebbe dirlo e quindi possiamo usarla
+
+60
+00:05:13,850 --> 00:05:21,390
+per restituire un nuovo valore e sostituire il vecchio valore che era il nome della propriet insalata e cos via con quel nuovo valore.
+
+61
+00:05:21,740 --> 00:05:30,610
+E qui volevo semplicemente restituire gli ingredienti e l il valore per una determinata chiave.
+
+62
+00:05:30,720 --> 00:05:37,500
+E questa sar la quantit a causa di ingredienti e questa notazione sto accedendo a una certa propriet
+
+63
+00:05:37,500 --> 00:05:42,230
+degli ingredienti oggetto chiave IGY  l'insalata di cottura e cos via.
+
+64
+00:05:42,330 --> 00:05:47,870
+Quindi sto fondamentalmente ottenendo questi valori i numeri ed  quello che restituisco per ogni chiave.
+
+65
+00:05:47,910 --> 00:05:50,990
+Quindi ora ho una serie di valori.
+
+66
+00:05:51,000 --> 00:05:55,250
+Ora tutto ci che devo fare  chiamare ridurre per ridurre di nuovo il desiderio.
+
+67
+00:05:55,300 --> 00:06:00,210
+In questo momento non appiattire l'array ma trasformarlo in un numero singolo.
+
+68
+00:06:00,240 --> 00:06:06,990
+La somma di tutti gli ingredienti per quello avr un numero iniziale di 0 e quindi avremo una funzione
+
+69
+00:06:06,990 --> 00:06:11,730
+che viene eseguita su ogni elemento in questo array mappato in questa funzione.
+
+70
+00:06:11,730 --> 00:06:19,770
+Ottengo nuovi elementi individuali e tengo a mente che semplicemente sde  costantemente aggiornato.
+
+71
+00:06:19,800 --> 00:06:24,870
+Riepilogo corrente fino all'iterazione corrente in cui vengono eseguite le disfunzioni.
+
+72
+00:06:24,960 --> 00:06:31,620
+restituita la somma corrente pi l'elemento e tenere presente che l'elemento  un numero perch  il de-value che accediamo qui.
+
+73
+00:06:31,620 --> 00:06:37,960
+E una volta che questa funzione  stata eseguita su tutti gli elementi dell'array, la somma  il risultato finale
+
+74
+00:06:38,040 --> 00:06:39,380
+e qui viene semplicemente
+
+75
+00:06:39,660 --> 00:06:47,280
+Con ci ottengo una costante somma che  zero se non abbiamo aggiunto ingredienti o nessun altro numero che rappresenta
+
+76
+00:06:47,370 --> 00:06:49,090
+la quantit totale di ingredienti.
+
+77
+00:06:49,740 --> 00:06:54,320
+E con ci posso semplicemente chiamare set-set e impostarla.
+
+78
+00:06:54,350 --> 00:06:56,810
+Lei  in grado di
+
+79
+00:06:57,080 --> 00:07:00,650
+E ora dipende da chi ne ha qualcuno  maggiore di zero o no.
+
+80
+00:07:00,650 --> 00:07:04,130
+Quindi lo imposteremo su un valore maggiore 0 0.
+
+81
+00:07:04,130 --> 00:07:05,680
+VERO O FALSO.
+
+82
+00:07:05,840 --> 00:07:09,950
+Ed  vero se abbiamo almeno un ingrediente allora acquistabile  vero.
+
+83
+00:07:10,040 --> 00:07:12,710
+E questo  esattamente il comportamento che voglio.
+
+84
+00:07:12,710 --> 00:07:18,940
+Quindi ora abbiamo acquisito e ora possiamo passare questo controllo ai controlli della cintura.
+
+85
+00:07:19,070 --> 00:07:25,820
+Quindi aggiungiamo una nuova propriet, diamo anche un nome alla propriet acquistabile forse e leghiamo la propriet
+
+86
+00:07:25,820 --> 00:07:27,140
+a questo stato.
+
+87
+00:07:27,140 --> 00:07:28,430
+Acquistabile.
+
+88
+00:07:28,700 --> 00:07:34,490
+questo abbiamo passato le informazioni sul fatto che possiamo controllare questo hamburger e pagarlo o meno.
+
+89
+00:07:34,490 --> 00:07:35,020
+E con
+
+90
+00:07:35,150 --> 00:07:41,720
+Gi per i controlli bulled dove posso ora prendere queste informazioni per disabilitare questo pulsante o
+
+91
+00:07:41,720 --> 00:07:42,530
+ben abilitare.
+
+92
+00:07:42,560 --> 00:07:49,490
+Quindi lasciatemi dividere questo su linee modello e bind disabilitato spesso  l'elemento pulsante HVM.
+
+93
+00:07:49,490 --> 00:07:52,770
+Di nuovo  GSX, ma alla fine render un pulsante.
+
+94
+00:07:53,060 --> 00:07:56,260
+Leghiamo questi due oggetti di scena ed eccolo l.
+
+95
+00:07:56,270 --> 00:07:58,860
+Acquistabile ci che abbiamo appena creato.
+
+96
+00:07:59,090 --> 00:08:04,760
+e non dovrebbe essere cos acquistabile in qualche modo non viene trasmesso correttamente.
+
+97
+00:08:05,270 --> 00:08:14,570
+Ora, se salviamo questo e torniamo a un'applicazione in esecuzione, abbiamo disordine ora il pulsante qui sotto, anche se  abilitato qui
+
+98
+00:08:14,570 --> 00:08:17,370
+Fammi vedere velocemente cosa c' che non va.
+
+99
+00:08:17,400 --> 00:08:25,140
+Ho identificato il problema acquistabile naturalmente  vero se il pulsante se l'hamburger  acquistabile
+
+100
+00:08:25,230 --> 00:08:28,250
+questo a. m. dovrebbe essere impostato su True se non  acquistabile.
+
+101
+00:08:28,350 --> 00:08:30,480
+Quindi dobbiamo semplicemente dire a N questo qui.
+
+102
+00:08:30,690 --> 00:08:35,820
+Quindi aggiungi un punto esclamativo davanti all'acquisto di oggetti di scena e ora il pulsante dovrebbe essere disabilitato.
+
+103
+00:08:35,820 --> 00:08:41,220
+Ovviamente non diventa mai attivo perch non chiamiamo mai il bel metodo di supporto.
+
+104
+00:08:41,220 --> 00:08:44,760
+Abbiamo creato questo aggiornamento per metodo dello stato dell'inseguimento.
+
+105
+00:08:44,880 --> 00:08:48,790
+Non lo chiamiamo mai, dovremmo chiamarlo dopo aver funzionato.
+
+106
+00:08:48,810 --> 00:08:55,890
+Gestore di Ed Ingredion o rimozione del gestore di Reagen in modo che siano in grado quindi di eseguire questo
+
+107
+00:08:55,890 --> 00:09:02,650
+aggiornamento per stato di inseguimento allo stesso modo alla fine del gestore di Ingredion rimosso e con il debito aggiunto.
+
+108
+00:09:02,730 --> 00:09:05,180
+Se ora salviamo questo, dovremmo vederlo.
+
+109
+00:09:05,190 --> 00:09:10,860
+Ma questo non appena aggiungo un ingrediente rimane disabilitato.
+
+110
+00:09:10,980 --> 00:09:13,710
+Solo una volta ne ho avuto un secondo, diventa attivo.
+
+111
+00:09:13,710 --> 00:09:16,330
+Ora, perch hai individuato l'errore.
+
+112
+00:09:16,650 --> 00:09:25,290
+ottenere gli ingredienti aggiornati e quindi, una volta copiati gli ingredienti e analizzati, potremmo semplicemente ottenere una parola obsoleta.
+
+113
+00:09:25,300 --> 00:09:35,670
+Ha qualcosa a che fare con i metodi dello stato pre-Chase dell'aggiornamento il problema  che gli ingredienti che sto analizzando sono naturalmente
+
+114
+00:09:35,670 --> 00:09:43,710
+il mio vecchio stato qui ora a causa del modo in cui lo stato impostato funziona quando
+
+115
+00:09:43,710 --> 00:09:47,940
+eseguiamo l'aggiornamento per stato di inseguimento che potrebbe non
+
+116
+00:09:48,040 --> 00:09:55,560
+Ovviamente ora possiamo semplicemente risolvere questo problema passando gli ingredienti aggiornati che abbiamo in aggiunta e rimuoviamo
+
+117
+00:09:55,560 --> 00:09:56,810
+comunque l'ingrediente hndler.
+
+118
+00:09:57,030 --> 00:10:03,580
+D L'aggiornamento per il metodo dello stato dell'inseguimento e si aspetta di ottenere gli ingredienti l.
+
+119
+00:10:03,600 --> 00:10:11,650
+Quindi ingredienti e ora possiamo semplicemente usare questi ingredienti all'interno di questo metodo invece di
+
+120
+00:10:11,650 --> 00:10:12,980
+copiare dallo stato.
+
+121
+00:10:13,000 --> 00:10:20,650
+Ora se salviamo questo diritto sul primo elemento, aggiungiamo che diventa attivo e dobbiamo rimuovere tutti gli ingredienti per
+
+122
+00:10:20,650 --> 00:10:22,400
+disabilitare nuovamente il pulsante.
+
+123
+00:10:22,480 --> 00:10:25,080
+E l vedi questa bella animazione.
+
+124
+00:10:25,270 --> 00:10:27,440
+Quindi otteniamo il primo passo numero uno.
+
+125
+00:10:27,460 --> 00:10:34,670
+Ora nel passaggio successivo voglio aggiungere anche una modale per visualizzare il riepilogo dell'ordine e non solo mostrare il pulsante.
+
+126
+00:10:34,840 --> 00:10:37,400
+Quindi passiamo a quello nella prossima lezione.
+

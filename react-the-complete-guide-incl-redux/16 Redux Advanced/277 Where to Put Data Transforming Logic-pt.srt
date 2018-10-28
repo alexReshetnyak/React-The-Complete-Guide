@@ -1,0 +1,292 @@
+1
+00:00:02,340 --> 00:00:05,630
+Agora reestruturamos nossas aes na ltima palestra.
+
+2
+00:00:05,640 --> 00:00:10,410
+Agora eu quero mergulhar no que realmente colocamos nos criadores de ao.
+
+3
+00:00:10,440 --> 00:00:12,990
+ bvio que  fcil para o cdigo assncrono.
+
+4
+00:00:13,020 --> 00:00:18,720
+O nico lugar onde podemos executar cdigo assncrono est no nosso criador de ection.
+
+5
+00:00:18,810 --> 00:00:23,700
+ o que o redux funk  feito e  o padro de prtica comum e melhor.
+
+6
+00:00:23,790 --> 00:00:29,820
+Voc precisa chegar a um servidor para buscar dados dele e depois armazen-lo em sua loja.
+
+7
+00:00:29,940 --> 00:00:35,580
+Definitivamente faa isso com o criador de ao, envie sua solicitao HTP aqui em vez de tempo limite e, uma vez
+
+8
+00:00:35,580 --> 00:00:37,860
+que a resposta est l, a resposta  fixa.
+
+9
+00:00:37,890 --> 00:00:42,780
+Armazene-o em sua loja, voc o ver como uma ao no projeto do curso,  claro.
+
+10
+00:00:42,890 --> 00:00:51,010
+No entanto, voc pode, naturalmente, colocar muito mais lgica em seus criadores de ao pensar sobre o mesmo resultado.
+
+11
+00:00:51,120 --> 00:00:57,300
+Ns salvamos nosso resultado l, ns o entendemos como um argumento e simplesmente devolvemos uma ao onde passamos isso como
+
+12
+00:00:57,300 --> 00:00:58,390
+uma carga til.
+
+13
+00:00:58,410 --> 00:01:00,930
+Agora, este  um criador de ection muito seco.
+
+14
+00:01:00,930 --> 00:01:05,940
+No faz mais nada alm de retornar o objeto com a resposta inalterada.
+
+15
+00:01:05,940 --> 00:01:07,260
+Resultado desculpa-me.
+
+16
+00:01:07,260 --> 00:01:15,700
+fazer  que poderamos criar uma constante, talvez o nomeemos, o resultado atualizado e, em seguida, um resultado igual aos dois.
+
+17
+00:01:15,720 --> 00:01:17,960
+Agora, obviamente, o que podemos
+
+18
+00:01:17,970 --> 00:01:24,720
+Agora, obviamente, isso no faz muito sentido aqui, mas podemos teoricamente alterar qualquer coisa que voc quiser aqui
+
+19
+00:01:24,720 --> 00:01:28,310
+e voc pode ter transformaes que fazem mais sentido.
+
+20
+00:01:28,470 --> 00:01:36,690
+Talvez desejemos atualizar algumas idias que queremos adicionar um nome de usurio e, em seguida, passamos nossos resultados atualizados.
+
+21
+00:01:36,690 --> 00:01:39,770
+O que acontece  acontecer nos anos de salvao.
+
+22
+00:01:39,780 --> 00:01:40,960
+Eu vou manter isso em mente.
+
+23
+00:01:41,280 --> 00:01:49,620
+Nosso aplicativo ainda funciona para uma loja que armazenamos 20 porque atualizamos seu ataque,
+
+24
+00:01:49,620 --> 00:01:51,470
+multiplicando-o por dois.
+
+25
+00:01:51,480 --> 00:01:54,110
+Agora temos lgica no criador de ao.
+
+26
+00:01:54,180 --> 00:01:58,970
+E isso pode ser uma lgica vlida em vez de uma operao sem sentido como essa.
+
+27
+00:01:58,980 --> 00:02:03,160
+O que  que voc poderia, claro, tambm executar a mesma lgica.
+
+28
+00:02:03,180 --> 00:02:07,700
+Ento, deixe-me reformular isso para o estado anterior de apenas passar a resposta.
+
+29
+00:02:07,860 --> 00:02:13,440
+Voc poderia executar essa mesma lgica se voc precisar transformar os dados antes de armazen-lo no estado que
+
+30
+00:02:13,440 --> 00:02:15,680
+est perfeitamente bem, o que pode acontecer.
+
+31
+00:02:15,840 --> 00:02:20,210
+Voc pode executar essa mesma lgica,  claro, em seu redutor aqui.
+
+32
+00:02:20,340 --> 00:02:21,670
+Resultado da loja.
+
+33
+00:02:21,900 --> 00:02:25,750
+Aqui concatenamos o resultado e armazenamos o valor.
+
+34
+00:02:25,780 --> 00:02:30,650
+Agora, obviamente, nada nos impede de multiplicar isso com dois aqui.
+
+35
+00:02:30,720 --> 00:02:33,990
+Se eu fizer com o seu em seu redutor de assalto.
+
+36
+00:02:34,020 --> 00:02:38,870
+Agora, se eu salvar 10, ainda armazenamos 20 na loja, como voc pode ver.
+
+37
+00:02:38,940 --> 00:02:41,620
+Mas agora mudamos em um lugar totalmente diferente.
+
+38
+00:02:41,640 --> 00:02:43,310
+Ns o mudamos no redutor.
+
+39
+00:02:43,350 --> 00:02:49,470
+Agora, como eu disse que esta operao aqui pode no ter muito sentido, mas muitas vezes voc ter casos em que
+
+40
+00:02:49,470 --> 00:02:53,190
+voc realmente deseja mudar algo antes de voc ser armazenado no estado.
+
+41
+00:02:53,310 --> 00:02:56,950
+Voc nem sempre obtm o valor que voc quer apenas transmitir.
+
+42
+00:02:57,030 --> 00:03:00,190
+Onde voc deve Denne mud-lo no redutor.
+
+43
+00:03:00,300 --> 00:03:09,180
+Como mostro voc, voc pode, claro, tambm executar algum cdigo antes de retornar seus dados de mudana ou qualquer criador
+
+44
+00:03:09,180 --> 00:03:10,000
+de ao.
+
+45
+00:03:10,140 --> 00:03:13,550
+Como eu mostrei at aqui o que eu comentei.
+
+46
+00:03:13,980 --> 00:03:15,570
+Ambos funcionam.
+
+47
+00:03:15,600 --> 00:03:18,020
+O que  melhor, olhe mais de perto.
+
+48
+00:03:18,720 --> 00:03:23,030
+No final, a questo se resume a onde colocar a lgica.
+
+49
+00:03:23,070 --> 00:03:27,670
+Ns temos criadores e produtores atuais como opes agora.
+
+50
+00:03:27,690 --> 00:03:35,270
+Os criadores de ao, como voc aprendeu, so timos para a execuo de cdigo assncrono quando voc despacha
+
+51
+00:03:35,280 --> 00:03:44,240
+um redutor de ao na Yaverland s so capazes de executar o cdigo sncrono e so uma entrada pura em redutores de
+
+52
+00:03:44,240 --> 00:03:50,740
+estado atualizados, no entanto, tenha em mente que  o lugar onde voc atualiza o Estado.
+
+53
+00:03:50,740 --> 00:03:59,030
+Este  um dos principais criadores de ao do conceito redux so o conceito Natcore redux um conceito central de nossas aes.
+
+54
+00:03:59,180 --> 00:04:05,930
+DS com inveja de objetos com um tipo e uma carga til para que os redutores o conceito central e toda a idia
+
+55
+00:04:05,930 --> 00:04:12,980
+por trs do redux  que o redutor  a nica coisa que atualiza os criadores de ao do estado no devem se preparar
+
+56
+00:04:12,980 --> 00:04:14,460
+para o estgio demais.
+
+57
+00:04:14,460 --> 00:04:19,940
+Por essa razo, porque deve ser o redutor que faz a atualizao, mas  claro
+
+58
+00:04:19,940 --> 00:04:27,090
+que  uma diferena entre atualizar o estado que, essencialmente, significa simplesmente retornar um novo objeto que compe nosso estado
+
+59
+00:04:27,080 --> 00:04:30,910
+e que altera os dados que vo para o estado.
+
+60
+00:04:31,220 --> 00:04:35,370
+Ainda assim, voc pode encontrar argumentos para ambas as direes.
+
+61
+00:04:35,390 --> 00:04:42,770
+Eu me inclino para colocar a lgica no redutor e no muita lgica no criador de ao.
+
+62
+00:04:42,770 --> 00:04:49,010
+O cdigo assncrono tem que ir l, mas uma vez que voc retornou os dados do
+
+63
+00:04:49,010 --> 00:04:55,860
+servidor, voc pode precisar chegar, voc pode, naturalmente, transform-lo no Action Creator e voc deve fazer isso at
+
+64
+00:04:56,540 --> 00:05:03,970
+certo ponto, mas uma vez que voc tenha dados que so relativamente limpo, voc deve entregar o produto ao produtor.
+
+65
+00:05:04,130 --> 00:05:09,980
+E se voc ainda precisa manipular, por exemplo, levando 8 vezes ou algo assim na
+
+66
+00:05:09,980 --> 00:05:12,910
+minha opinio, que deveria entrar no redutor.
+
+67
+00:05:13,100 --> 00:05:18,620
+Agora, voc tambm encontrar argumentos para o outro lado e, no final,  sua deciso,
+
+68
+00:05:18,620 --> 00:05:21,660
+se voc escolher uma abordagem, no se altere.
+
+69
+00:05:21,800 --> 00:05:27,860
+No coloque muita lgica em um criador de ao, simplesmente no tenha muita lgica e um redutor numrico.
+
+70
+00:05:27,920 --> 00:05:35,120
+Seja consistente e decida onde deseja transformar e preparar seu criador de direo de dados ou educe ou
+
+71
+00:05:35,120 --> 00:05:36,960
+eu recomendo o ltimo.
+
+72
+00:05:36,980 --> 00:05:38,640
+Mas, em ltima anlise, depende de voc.
+
+73
+00:05:38,750 --> 00:05:40,460
+Basta seguir uma rota consistente.
+

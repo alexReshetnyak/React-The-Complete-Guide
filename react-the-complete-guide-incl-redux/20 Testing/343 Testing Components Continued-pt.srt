@@ -1,0 +1,204 @@
+1
+00:00:02,100 --> 00:00:06,510
+Ento, na ltima palestra, ns escrevemos nosso primeiro teste, isso  claro,
+
+2
+00:00:06,540 --> 00:00:10,360
+vamos agora escrever outro teste para o mesmo componente por enquanto.
+
+3
+00:00:10,530 --> 00:00:16,560
+Ento vou copiar essa funo e dentro da funo descrita, vou apenas col-la a, agora
+
+4
+00:00:16,560 --> 00:00:18,460
+o que mais poderamos testar?
+
+5
+00:00:18,750 --> 00:00:21,750
+Bem,  claro que poderamos obviamente
+
+6
+00:00:21,780 --> 00:00:29,980
+testar o oposto, ns queremos ter trs itens de navegao se formos autenticados, ento para isso ns simplesmente
+
+7
+00:00:30,000 --> 00:00:38,280
+precisamos passar o suporte isAuthenticated e ajustar nosso teste. Portanto, devemos renderizar trs elementos de navegao se
+
+8
+00:00:38,640 --> 00:00:42,110
+autenticados, se no, mas se autenticados.
+
+9
+00:00:42,240 --> 00:00:45,930
+Agora, para isso, precisamos alterar o componente que
+
+10
+00:00:45,930 --> 00:00:53,340
+renderizamos, no so mais itens de navegao, mas itens de navegao com uma propriedade isAuthenticated
+
+11
+00:00:53,340 --> 00:01:00,420
+e pass-lo assim passaro automaticamente como true, ento esperamos encontrar itens de navegao, mas esperamos
+
+12
+00:01:00,420 --> 00:01:02,350
+encontrar trs deles e
+
+13
+00:01:02,610 --> 00:01:05,660
+isso  tudo. Com os testes npm ainda
+
+14
+00:01:05,670 --> 00:01:09,850
+em execuo, tudo o que voc precisa fazer  salvar isso e agora voc
+
+15
+00:01:09,910 --> 00:01:12,100
+deve ver que dois testes foram aprovados.
+
+16
+00:01:12,330 --> 00:01:15,450
+Agora,  claro, podemos escrever vrios testes como este,
+
+17
+00:01:15,450 --> 00:01:21,510
+mas se fizermos constantemente o mesmo no incio do teste, renderizamos um invlucro mesmo que os adereos
+
+18
+00:01:21,510 --> 00:01:24,300
+tenham mudado, mas tambm podemos fazer isso de
+
+19
+00:01:24,540 --> 00:01:31,910
+forma diferente, portanto, se fizermos o mesmo constantemente,  um mtodo auxiliar que podemos usar dentro da funo descrita aqui.
+
+20
+00:01:31,950 --> 00:01:39,360
+ a funo beforeEach, como o nome sugere, esta  uma funo que ser executada automaticamente, mas para
+
+21
+00:01:39,380 --> 00:01:44,470
+cada um dos seus testes, voc tambm ter uma funo afterEach para
+
+22
+00:01:44,520 --> 00:01:50,640
+limpeza aps todos os seus testes, se necessrio. Ento, aqui est antes e cada um antes deCada, podemos
+
+23
+00:01:50,670 --> 00:01:54,220
+fazer algumas configuraes gerais, claro, antesCada uma funo como um argumento e
+
+24
+00:01:54,240 --> 00:01:57,780
+esta  a funo que ser executada antes de cada teste.
+
+25
+00:01:57,780 --> 00:02:03,030
+Ento, com isso, o que farei  criar um wrapper de varivel
+
+26
+00:02:03,270 --> 00:02:10,670
+com a palavra-chave let e, em seguida, no beforeEach, quero renderizar esse componente com a funo superficial
+
+27
+00:02:10,680 --> 00:02:12,950
+e armazen-lo nessa varivel de wrapper.
+
+28
+00:02:12,990 --> 00:02:20,370
+Agora, como todas as funes so executadas nesta funo de descrio externa, a varivel wrapper est disponvel em todas
+
+29
+00:02:20,440 --> 00:02:21,460
+elas, ento tudo
+
+30
+00:02:21,660 --> 00:02:25,220
+que precisamos fazer  nos livrar da palavra-chave const,
+
+31
+00:02:25,410 --> 00:02:27,720
+e agora temos acesso ao wrapper.
+
+32
+00:02:27,720 --> 00:02:30,740
+Agora, com isso, se salvarmos isso, ele dever re-executar
+
+33
+00:02:31,050 --> 00:02:34,490
+tudo e agora,  claro, teremos um teste com falha.
+
+34
+00:02:34,620 --> 00:02:40,510
+Agora podemos olhar para ele, o teste que deve renderizar trs elementos de
+
+35
+00:02:40,740 --> 00:02:48,150
+item de navegao se o autheticated falhar e fizer sentido, porque ns nunca somos autenticados, s renderizamos
+
+36
+00:02:48,180 --> 00:02:52,530
+o wrapper uma vez aqui e no passamos isAuthenticated para
+
+37
+00:02:52,560 --> 00:02:54,110
+ele no so autenticados,
+
+38
+00:02:54,330 --> 00:02:58,570
+este teste usa o mesmo invlucro e, portanto, falha.
+
+39
+00:02:58,590 --> 00:03:01,970
+Agora, o que podemos fazer aqui 
+
+40
+00:03:01,980 --> 00:03:09,420
+duas coisas, a primeira  que podemos usar o wrapper e configur-lo igual a raso com itens
+
+41
+00:03:09,420 --> 00:03:17,080
+de navegao aqui e passar isAuthenticated como fizemos antes, se salvarmos isso, ambos os testes sero bem-sucedidos.
+
+42
+00:03:17,520 --> 00:03:24,000
+Essa  uma opo, mas tambm podemos usar outro mtodo til do pacote de enzimas, podemos acessar o
+
+43
+00:03:24,000 --> 00:03:24,810
+wrapper e,
+
+44
+00:03:25,050 --> 00:03:29,500
+em seguida, h um mtodo de props set que podemos executar nesse
+
+45
+00:03:29,580 --> 00:03:37,500
+wrapper, ou seja, qualquer coisa que armazene um elemento de reao renderizado. E para definir props, simplesmente passamos um objeto javascript
+
+46
+00:03:37,500 --> 00:03:43,770
+com pares de valores de chave, onde as chaves so os nomes prop e
+
+47
+00:03:43,830 --> 00:03:45,740
+os valores, bem os
+
+48
+00:03:45,990 --> 00:03:50,320
+valores dos props, ento aqui poderamos definir isAuthenticated como true agora.
+
+49
+00:03:50,580 --> 00:03:54,310
+E agora, se salvarmos, o segundo teste tambm ainda passa agora com o mtodo
+
+50
+00:03:54,450 --> 00:04:00,420
+helper de adereos de conjunto mais elegante do pacote de enzima.  assim que voc pode escrever vrios testes
+
+51
+00:04:00,420 --> 00:04:03,610
+e fazer com que eles funcionem bem juntos.
+

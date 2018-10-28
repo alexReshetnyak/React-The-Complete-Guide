@@ -1,0 +1,40 @@
+1
+00:00:02,210 --> 00:00:07,970
+Abbiamo il progetto del generatore di hamburger e ci sono alcune cose che modificheremo in questo modulo. Dobbiamo aggiungere una nuova vista, la
+
+2
+00:00:07,970 --> 00:00:14,390
+registrazione e l'accesso, la combiner in una vista in cui possiamo creare nuovi utenti
+
+3
+00:00:14,390 --> 00:00:15,830
+o accedere agli utenti.
+
+4
+00:00:16,010 --> 00:00:21,740
+Vogliamo anche proteggere alcune rotte sul frontend, custodirle in modo che, ad esempio, non possiamo accedere
+
+5
+00:00:21,740 --> 00:00:24,850
+alla rotta degli ordini se non siamo autenticati.
+
+6
+00:00:25,160 --> 00:00:33,070
+Inoltre, desidero anche passare quel token che riceviamo sul backend per le richieste di protezione delle
+
+7
+00:00:33,090 --> 00:00:37,850
+risorse, in modo che possiamo assicurarci che ci non funzioni.
+
+8
+00:00:37,880 --> 00:00:43,480
+Questi sono gli aggiustamenti che dobbiamo fare sul nostro frontend e per crearli,
+
+9
+00:00:43,500 --> 00:00:49,100
+iniziamo innanzitutto con la registrazione e l'accesso perch senza gli utenti, tutte le
+
+10
+00:00:49,100 --> 00:00:51,640
+altre cose sono difficili da fare.
+

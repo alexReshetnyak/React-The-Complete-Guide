@@ -1,0 +1,84 @@
+1
+00:00:02,230 --> 00:00:09,220
+Let's have a look at our current burger application state, in the checkout page in the contact data
+
+2
+00:00:09,250 --> 00:00:12,220
+container there, if we have a look at that container,
+
+3
+00:00:12,340 --> 00:00:20,410
+we see that we got some general state set up at the top of the page and we of course also in there have
+
+4
+00:00:20,470 --> 00:00:27,330
+our submit method where we submit our order to a server and where we also pass some data.
+
+5
+00:00:27,340 --> 00:00:32,790
+Now the customer data which is set up here is not suited to this state at all,
+
+6
+00:00:32,800 --> 00:00:35,010
+actually not even the fields are equal,
+
+7
+00:00:35,020 --> 00:00:41,410
+now part of that module will be to sync that up but also if we have a look at the form itself, we
+
+8
+00:00:41,410 --> 00:00:44,180
+have a couple of the normal input elements there,
+
+9
+00:00:44,290 --> 00:00:46,420
+leave aside that they're not even styled,
+
+10
+00:00:46,660 --> 00:00:49,240
+we don't really handle their input,
+
+11
+00:00:49,240 --> 00:00:54,570
+we don't really handle when the value changes, leave alone that we would validate the input the user
+
+12
+00:00:54,580 --> 00:00:55,560
+left.
+
+13
+00:00:55,570 --> 00:01:02,180
+So the first step is that we will have to decide which kind of data do we need, that we then store this
+
+14
+00:01:02,290 --> 00:01:09,220
+in the state then it would be best if we even find a way of dynamically generating our form
+
+15
+00:01:09,280 --> 00:01:15,250
+and that of course is a last step, of course not only handle the form submission but also to handle the
+
+16
+00:01:15,250 --> 00:01:21,550
+form validity or check the form validity and change the styling of our form based on the validity for
+
+17
+00:01:21,550 --> 00:01:22,560
+example.
+
+18
+00:01:22,570 --> 00:01:30,670
+These are all things I want to do and for that, I'll start by putting these input elements here into
+
+19
+00:01:30,700 --> 00:01:38,710
+custom components which have a standardized styling, maybe have a default label and also later will be
+
+20
+00:01:38,710 --> 00:01:41,670
+extended to have room for error messages.
+
+21
+00:01:41,680 --> 00:01:48,150
+So one step after the other, let's start by putting inputs into their own component.
+

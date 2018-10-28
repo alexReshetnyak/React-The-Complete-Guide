@@ -1,0 +1,128 @@
+1
+00:00:02,080 --> 00:00:04,960
+Na ltima palestra, eu apresentei voc ao
+
+2
+00:00:05,000 --> 00:00:07,310
+Gatsbyjs e chamei de um
+
+3
+00:00:07,310 --> 00:00:08,540
+projeto incrvel, .
+
+4
+00:00:08,540 --> 00:00:10,010
+Se isso foi incrvel,
+
+5
+00:00:10,040 --> 00:00:11,980
+reagir nativo foi apenas alucinante.
+
+6
+00:00:12,140 --> 00:00:15,830
+Reagir nativo, se voc procurar no google, voc ver que a
+
+7
+00:00:15,830 --> 00:00:22,570
+pgina oficial no github  outro projeto criado pelo Facebook. Reagir nativa essencialmente  reagir, mas para
+
+8
+00:00:22,580 --> 00:00:24,860
+aplicativos mveis e com isso,
+
+9
+00:00:24,860 --> 00:00:33,140
+quero dizer aplicativos nativos, iOS nativo ou aplicativos Android. Com reacjs ensinados neste curso, voc naturalmente aprendeu a construir
+
+10
+00:00:33,170 --> 00:00:36,980
+aplicativos web com javascript, com react native, voc usa
+
+11
+00:00:36,980 --> 00:00:37,900
+javascript e
+
+12
+00:00:38,060 --> 00:00:46,970
+reage e outra biblioteca, reage nativa para construir aplicativos mobile. Voc ainda escreve cdigo javascript, mas depois reage nativo ir
+
+13
+00:00:47,060 --> 00:00:48,510
+compilar isso para
+
+14
+00:00:48,620 --> 00:00:55,170
+cdigo que roda em dispositivos iOS ou Android, ele faz isso expondo alguns blocos
+
+15
+00:00:55,310 --> 00:01:01,460
+de construo a voc como este componente de viso que  sua alternativa para
+
+16
+00:01:01,460 --> 00:01:02,430
+um div.
+
+17
+00:01:02,450 --> 00:01:05,020
+Divs s funciona em navegadores da web,
+
+18
+00:01:05,050 --> 00:01:11,390
+claro, agora a viso nos bastidores  um elemento, um elemento em execuo no iOS ou Android.
+
+19
+00:01:11,420 --> 00:01:13,560
+Essa  a idia por trs de
+
+20
+00:01:13,640 --> 00:01:20,250
+reagir nativo, voc escreve cdigo nativo, mas com javascript que  compilado e com a mesma lgica de reao que voc
+
+21
+00:01:20,250 --> 00:01:21,250
+aprendeu neste cdigo.
+
+22
+00:01:21,470 --> 00:01:26,990
+Ento voc ainda precisa aprender algumas coisas novas ao mergulhar na reao nativa por causa de todos
+
+23
+00:01:26,990 --> 00:01:31,880
+esses novos componentes e algumas outras coisas que mudam, mas ainda  extremamente simples de comear.
+
+24
+00:01:31,880 --> 00:01:35,910
+H ainda uma alternativa para criar reagir reativo nativo, 
+
+25
+00:01:35,930 --> 00:01:41,690
+chamado de criar reagir aplicativo nativo, por isso muito perto do nome, eu acho.
+
+26
+00:01:41,720 --> 00:01:47,480
+Definitivamente, sinta-se  vontade para mergulhar em reagir nativo, mergulhar em documentos, usar aplicativos que criem
+
+27
+00:01:47,930 --> 00:01:54,080
+resposta nativa e sinta-se  vontade para levar seu conhecimento para comear a criar aplicativos nativos com
+
+28
+00:01:54,080 --> 00:01:59,780
+ele, faa alguns ajustes,  preciso aprender algumas coisas novas, mas  uma oportunidade incrvel de
+
+29
+00:01:59,780 --> 00:02:03,430
+construir aplicativos nativos reais e no apenas aplicativos da web.
+
+30
+00:02:03,440 --> 00:02:05,340
+Agora, isso no  necessariamente
+
+31
+00:02:05,360 --> 00:02:11,630
+melhor, mas se voc quiser entrar no desenvolvimento de aplicativos nativo, com isso voc ter a chance de
+
+32
+00:02:11,630 --> 00:02:15,160
+faz-lo sem aprender primeiro o Android ou o Swift Objective-C.
+

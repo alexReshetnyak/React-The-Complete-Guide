@@ -1,0 +1,40 @@
+1
+00:00:02,430 --> 00:00:08,960
+Para este mdulo no mdulo de imprensa, aprendemos a sintaxe bsica de reagir e voc aprendeu como voc cria aplicativos de reagem em como
+
+2
+00:00:08,960 --> 00:00:15,770
+voc cria componentes e como voc trabalha com J. S. X para renderizar algo na tela.
+
+3
+00:00:16,130 --> 00:00:19,380
+Neste mdulo o levar ao prximo nvel.
+
+4
+00:00:19,400 --> 00:00:26,380
+Ns j tnhamos uma olhada em como podemos produzir contedo dinmico com chaves DS simples.
+
+5
+00:00:26,620 --> 00:00:32,090
+Neste mdulo, veremos como tambm podemos produzir contedo de forma condicional.
+
+6
+00:00:32,090 --> 00:00:38,750
+do seu dormitrio da sua idade, ele codifique se uma determinada condio  verdadeira e como podemos produzir
+
+7
+00:00:38,750 --> 00:00:46,280
+listas de dados, na verdade, temos uma lista e nossa demo j so as bolsas que temos Bem, haveria sentido
+
+8
+00:00:46,310 --> 00:00:53,030
+se pudssemos cri-los dinamicamente com base no nmero de pessoas que temos naquela matriz que administramos no estado.
+
+9
+00:00:53,030 --> 00:00:56,980
+Ento, por exemplo, que voc s quer renderizar uma determinada parte
+
+10
+00:00:57,230 --> 00:01:01,710
+Vamos dar uma olhada em tudo isso e no que se deve observar neste mdulo.
+

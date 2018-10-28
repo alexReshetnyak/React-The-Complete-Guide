@@ -1,0 +1,80 @@
+1
+00:00:02,190 --> 00:00:03,870
+Let's start with prop types,
+
+2
+00:00:04,050 --> 00:00:08,070
+right now we're doing prop type validation in the burger ingredient component.
+
+3
+00:00:08,400 --> 00:00:15,170
+There we make sure that the type is set so it's required and that it is a string.
+
+4
+00:00:15,210 --> 00:00:19,100
+I'm not doing any validation in any other component
+
+5
+00:00:19,440 --> 00:00:22,180
+and the reason for this is that here
+
+6
+00:00:22,230 --> 00:00:27,250
+I'm not working on a project which is going to get used by other people,
+
+7
+00:00:27,270 --> 00:00:29,580
+I'm not working on a third party library,
+
+8
+00:00:29,640 --> 00:00:32,250
+I'm not even working in a developer team.
+
+9
+00:00:32,250 --> 00:00:37,620
+So a lot of the reasons why properties might be used incorrectly aren't relevant here
+
+10
+00:00:37,800 --> 00:00:46,650
+Additionally we'll get logical errors in our application if we forget or assign a wrong key property
+
+11
+00:00:46,660 --> 00:00:47,530
+anyways
+
+12
+00:00:47,820 --> 00:00:53,250
+and that is why I don't use prop type validation that much in this application.
+
+13
+00:00:53,250 --> 00:00:55,100
+Now as an exercise,
+
+14
+00:00:55,260 --> 00:00:57,410
+definitely feel free to add prop
+
+15
+00:00:57,540 --> 00:01:00,870
+type validation to some or all of the components.
+
+16
+00:01:01,020 --> 00:01:08,010
+Just keep in mind that you will have to convert them from functional components to class based stateful
+
+17
+00:01:08,010 --> 00:01:15,060
+components which isn't bad per se, you can absolutely do that but it's also a good practice to not unnecessarily
+
+18
+00:01:15,060 --> 00:01:22,770
+do that and instead use as many stateless functional components as possible and therefore really only
+
+19
+00:01:22,770 --> 00:01:24,380
+do it if it makes sense
+
+20
+00:01:24,390 --> 00:01:29,970
+but again for practice purposes, feel free to validate more prop types.
+

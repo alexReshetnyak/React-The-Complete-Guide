@@ -1,0 +1,252 @@
+1
+00:00:02,170 --> 00:00:09,740
+Poczmy wic nasze reduktory, ktre dostalimy z melonikami Berger i zamwmy, aby kady indeks znalaz si w naszej aplikacji.
+
+2
+00:00:09,760 --> 00:00:12,090
+Czas poczy reduktory.
+
+3
+00:00:12,100 --> 00:00:18,770
+Przede wszystkim zaimportujmy reduktory kombajnw z pakietu read X, a nastpnie
+
+4
+00:00:18,800 --> 00:00:30,710
+chc zaimportowa mojego drugiego producenta, wic zaimportuj mj reduktor zamwie z zamwienia reduktorw kropek, a teraz mog poczy oba.
+
+5
+00:00:30,730 --> 00:00:39,020
+To, co zrobi, tworzy now sta reduktor trasy, poniewa s one poczone w jeden uytkownik
+
+6
+00:00:39,080 --> 00:00:44,900
+jako wyuczone poczenie poczone z uytkownikami tutaj i przekazuj obiekt javascript.
+
+7
+00:00:45,220 --> 00:00:53,260
+I mog teraz po prostu min Bergere Boulder i przypisa do niego reduktor Bergen Bolla i zamwi
+
+8
+00:00:53,350 --> 00:00:54,630
+i przypisa zamwienie.
+
+9
+00:00:54,690 --> 00:01:00,460
+Dwie rzeczy, ktre importujemy w grubych reduktorach, ni to, co przekazaem, tworz ze sklepem, e
+
+10
+00:01:00,460 --> 00:01:05,550
+caa aplikacja si zerwie, poniewa teraz mamy rne plasterki burgera stanowego Boulder i porzdku.
+
+11
+00:01:05,860 --> 00:01:12,280
+Musz wic uda si do kontenerw i zaktualizowa kontener Bolara na dnie, gdzie sigam, by
+
+12
+00:01:12,280 --> 00:01:15,070
+poda skadniki: cakowit cen i bd.
+
+13
+00:01:15,250 --> 00:01:25,230
+To wszystko powinno by stanem skadnikw budowniczych hamburgera i to samo za cakowit cen i bd w kontenerze
+
+14
+00:01:25,270 --> 00:01:31,420
+kasowym, gdzie dostaj rwnie skadniki, ktre powinny by burgera stanowym Bolar
+
+15
+00:01:31,420 --> 00:01:35,420
+i kontenerem danych kontaktowych, gdzie sigam do skadnikw.
+
+16
+00:01:35,530 --> 00:01:40,070
+Powiniene by burger stanowy bardziej odwane skadniki w burger stanie Buller.
+
+17
+00:01:40,150 --> 00:01:49,030
+Cena cakowita, ale adunek tutaj pochodzi z zamwie, wic powinno to by zlecenie stanu do uycia lub po prostu zamwienie
+
+18
+00:01:49,630 --> 00:01:54,340
+przepraszam, aby po prostu zamwi do korzystania z tej nieruchomoci.
+
+19
+00:01:54,370 --> 00:02:01,500
+Wic po prostu zamw stan, w ktrym adowanie tego moe zapisa wszystkie te pliki i wrci do aplikacji wyglda
+
+20
+00:02:01,530 --> 00:02:01,850
+dobrze.
+
+21
+00:02:01,850 --> 00:02:04,270
+To nadal dziaa, jeli teraz bdziemy kontynuowa.
+
+22
+00:02:04,440 --> 00:02:08,900
+Sprawdmy, czy uda nam si wysa tutaj akcj.
+
+23
+00:02:08,940 --> 00:02:13,560
+Oto niektre dane demo testowe.
+
+24
+00:02:13,920 --> 00:02:19,890
+Po prostu moemy przesa test w tecie, ktry nadejdzie, a nastpnie kliknij zamwienie.
+
+25
+00:02:19,890 --> 00:02:22,400
+Widzielimy ekran adowania.
+
+26
+00:02:22,890 --> 00:02:26,630
+Dostajemy co z serwera, ktry wyglda dobrze.
+
+27
+00:02:26,790 --> 00:02:28,080
+Tak wanie patrz na read x.
+
+28
+00:02:28,110 --> 00:02:30,920
+Widz co najmniej jedn rzecz, ktra nie zadziaa zgodnie z oczekiwaniami.
+
+29
+00:02:31,170 --> 00:02:36,450
+Dostajemy pocztek przed Chase Bergere i widzielimy spinner na sekund, dziki czemu udao
+
+30
+00:02:36,450 --> 00:02:44,760
+nam si przej do sukcesu i sukcesu w postpach poprzedzajcych Chase. Widzimy, e wszystkie zamwienia zostay zaktualizowane i dodalimy ten nowy
+
+31
+00:02:44,760 --> 00:02:49,400
+obiekt tutaj, gdzie mamy nasze skadniki, a nastpnie dane w nim.
+
+32
+00:02:49,650 --> 00:02:50,980
+Patrzymy na pastwo.
+
+33
+00:02:51,030 --> 00:02:52,740
+Moemy rozszerzy nasze zamwienia.
+
+34
+00:02:52,830 --> 00:02:57,460
+Spjrz na to zamwienie i widzimy, e to zamwienie tutaj.
+
+35
+00:02:57,520 --> 00:03:05,480
+Myl, e musz zrobi to nieco szerzej, aby sprawdzi, czy ma on nieprawidowy identyfikator.
+
+36
+00:03:05,520 --> 00:03:09,600
+Powinienem wyodrbni wasno nazwy, wic to jedna rzecz, ktr musimy zmieni.
+
+37
+00:03:09,840 --> 00:03:13,580
+Poza tym wszystko wydaje si dziaa.
+
+38
+00:03:13,590 --> 00:03:15,000
+Robert dobry.
+
+39
+00:03:15,000 --> 00:03:17,460
+Oczywicie nie jestemy przekierowywani, kiedy skoczymy.
+
+40
+00:03:17,670 --> 00:03:22,440
+Wic ten pomys myli i przekierowuje, e s dwie rzeczy, ktre chc naprawi.
+
+41
+00:03:22,470 --> 00:03:25,800
+Sprawdmy szybko, czy to te dziaa na zapleczu.
+
+42
+00:03:25,800 --> 00:03:29,650
+Ale oczywicie, e nie mielibymy innego pomysu.
+
+43
+00:03:29,730 --> 00:03:31,400
+Wic wszystko wyglda dobrze.
+
+44
+00:03:31,590 --> 00:03:33,030
+Mamy tu burgera.
+
+45
+00:03:33,390 --> 00:03:35,690
+Metoda dostawy nie zostaa przekazana, widz.
+
+46
+00:03:35,790 --> 00:03:37,760
+Dlatego powinnimy to naprawi.
+
+47
+00:03:37,950 --> 00:03:43,650
+Ale oprcz tego, e wyglda dobrze, naprawmy wszystkie te rzeczy i zobaczmy, co jeszcze moemy zrobi
+
+48
+00:03:43,650 --> 00:03:44,870
+w naszej aplikacji.
+
+49
+00:03:44,880 --> 00:03:47,250
+Szybko naprawmy problemy, ktre znalelimy.
+
+50
+00:03:47,310 --> 00:03:52,260
+Jeden znajduje si w danych kontekstowych tutaj, gdzie przesyamy formularz.
+
+51
+00:03:52,260 --> 00:03:58,940
+Chodzi o to, e jeli nigdy nie dostosujemy wartoci rozwijanej, wtedy warto jest pusta.
+
+52
+00:03:59,220 --> 00:04:00,680
+I nie powinno tak by.
+
+53
+00:04:00,750 --> 00:04:05,760
+Domylnie powinno to by powiedzmy najszybciej.
+
+54
+00:04:06,060 --> 00:04:09,950
+Wanie dodaem to do waciwoci Value w metodzie dostarczania.
+
+55
+00:04:09,990 --> 00:04:12,530
+Obiekt w stanie danych kontaktowych.
+
+56
+00:04:12,720 --> 00:04:17,600
+To jedna wana korekta, ktra teraz dziaa poprawnie.
+
+57
+00:04:17,670 --> 00:04:26,130
+Kiedy wszystko jest w reduktorze, aby J. S. kiedy osigniemy sukces i otrzymamy id id
+
+58
+00:04:26,160 --> 00:04:33,360
+to ID zlecenia, ktre jest bdnym ID, poniewa w pliku zamwienia i folderze akcji, w ktrym przekazujemy identyfikator,
+
+59
+00:04:33,360 --> 00:04:35,390
+przekazuj stan odpowiedzi jako ID.
+
+60
+00:04:35,610 --> 00:04:41,730
+Ale zamiast tego widzielimy w zamku, e jest to waciwo Name w danych, ktre s identyfikatorem, ktry
+
+61
+00:04:41,730 --> 00:04:42,610
+chcemy przechowywa.
+
+62
+00:04:43,170 --> 00:04:49,290
+Ale z tym, co mamy dziaa, jedyn brakujc rzecz jest to, e przekierowujemy tras, i to jest
+
+63
+00:04:49,290 --> 00:04:51,280
+co, co zrobi na nastpnym wykadzie.
+

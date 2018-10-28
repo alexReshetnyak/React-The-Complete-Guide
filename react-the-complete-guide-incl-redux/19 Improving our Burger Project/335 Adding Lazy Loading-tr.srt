@@ -1,0 +1,280 @@
+1
+00:00:02,350 --> 00:00:07,570
+Bu nedenle, daha nce de belirtildii gibi, daha fazla uygulama yapmak iin ekinmeyin, bir ok optimizasyon uyguland.
+
+2
+00:00:07,570 --> 00:00:12,760
+Yine de tantabileceimiz bir ey var, daha nce yapmadm bir eydi nk bu
+
+3
+00:00:12,760 --> 00:00:17,940
+uygulamay ilk bitirmek istedim, ancak imdi rotalarmz ykleme eklimizi optimize etme zaman geldi,
+
+4
+00:00:17,950 --> 00:00:19,680
+tembel ykleme burada kullanlabilir.
+
+5
+00:00:19,720 --> 00:00:21,670
+Bizim app bir gz atalm. js dosyas,
+
+6
+00:00:21,880 --> 00:00:28,720
+biz k yolu ve siparileri rota var ve her ikisi de mutlaka bizim tarafmzdan ziyaret edilmez,
+
+7
+00:00:28,720 --> 00:00:30,580
+biz asla deme iin
+
+8
+00:00:30,580 --> 00:00:32,870
+gidemeyebilir, biz asla sipari alan bilmiyorum.
+
+9
+00:00:33,220 --> 00:00:37,760
+Artk auth paras da asla ziyaret
+
+10
+00:00:37,840 --> 00:00:41,720
+edilmiyor, hepsini uyumsuz, tembelce ykleyebiliriz.
+
+11
+00:00:42,120 --> 00:00:43,750
+Burger reticisi, o kadar da
+
+12
+00:00:43,750 --> 00:00:48,200
+deil, bu bizim kk sayfamz, her zaman bunu dier rotalar da mutlaka ziyaret ediyoruz.
+
+13
+00:00:48,250 --> 00:00:52,810
+Artk tepki veren ynlendirici ile tembel yklemeyi nasl uygulayabileceinizi rendiniz, kendi
+
+14
+00:00:52,930 --> 00:00:55,330
+banza eklemekten ekinmeyin, videoyu duraklatmak iin
+
+15
+00:00:55,330 --> 00:01:00,670
+ksa bir duraklama yapacaz ve bunu kendi banza deneyeceim ve sonra bunu kesinlikle
+
+16
+00:01:00,670 --> 00:01:03,280
+birlikte yapacaz ve yalnzca onlara ihtiya
+
+17
+00:01:03,280 --> 00:01:06,060
+duyduumuzda deme, sipari ve yetkilendirme yaptmzdan emin olun.
+
+18
+00:01:10,090 --> 00:01:11,490
+Peki baarl msn?
+
+19
+00:01:11,500 --> 00:01:13,190
+Birlikte deneyelim, her eyden
+
+20
+00:01:13,270 --> 00:01:23,720
+nce bir daha yksek sipari bileenini, async bileenini ve AsyncComponent'i ekleyeceim. js dosyas, kodda yaptrn ben ynlendirme blmnde yazdm, bu
+
+21
+00:01:23,770 --> 00:01:31,870
+asyncComponent ilevi, daha sonra burada yrten bir giri olarak bir ilev alr, bu ilev
+
+22
+00:01:31,870 --> 00:01:34,730
+bu dinamik ie aktarm szdizimini
+
+23
+00:01:34,780 --> 00:01:40,660
+kullanacak ve sonra bize sonunda bir sz vereceiz Yklemek istediimiz
+
+24
+00:01:40,660 --> 00:01:43,950
+bileeni ve bu bileeni oluturduk.
+
+25
+00:01:43,960 --> 00:01:47,120
+Burada yaptmz ey, bu dosyay saklayalm
+
+26
+00:01:47,130 --> 00:01:50,600
+ve imdi uygulamada kullanalm. Baz bileenleri lazily yklemek iin js dosyas.
+
+27
+00:01:50,840 --> 00:02:00,520
+Bu yzden, AsyncComponent esini alyorum ve imdi hoc klasrne AsyncComponent dosyasna gidip o dosyadan oraya
+
+28
+00:02:00,550 --> 00:02:02,410
+ykleyeceim ve daha
+
+29
+00:02:02,800 --> 00:02:11,090
+sonra tembel olarak yklenecek baz bileenleri kurmak istiyorum, rnein asyncCheckout Bu sabit asyncCheckout
+
+30
+00:02:11,090 --> 00:02:15,480
+adn atacam ve burada AsyncComponent kullanacam.
+
+31
+00:02:15,540 --> 00:02:22,510
+imdi bir argman asyncComponent'e iletmeliyiz ve bu argmann bir fonksiyon olmas gerektiinden,
+
+32
+00:02:22,570 --> 00:02:27,500
+burada bir ilevi ileteceim, bu import ifadesini nihayetinde
+
+33
+00:02:27,500 --> 00:02:34,520
+istediimiz bileenin yolunu tanmlayabileceimiz bir fonksiyon olarak dndrecek bir fonksiyon tembel ykleme,
+
+34
+00:02:34,520 --> 00:02:37,820
+tabii ki bu durumda bizim deme
+
+35
+00:02:37,850 --> 00:02:38,860
+konteyneri, buradaki
+
+36
+00:02:38,870 --> 00:02:40,410
+ktan kurtulabiliriz.
+
+37
+00:02:40,460 --> 00:02:44,410
+imdi bunu iki kez sipariler ve auth iin
+
+38
+00:02:44,570 --> 00:02:52,490
+oaltalm, bu yzden burada asyncOrders'lar var. Tabii ki eski siparilerin ithalatndan yola kacam ve bu
+
+39
+00:02:52,490 --> 00:02:59,340
+tembellii ykleyecek ve o zaman orjinal emirleri kaldrabileceiz ve imdi auth iin ayn
+
+40
+00:02:59,350 --> 00:03:00,440
+eyi alabileceiz.
+
+41
+00:03:00,470 --> 00:03:08,750
+Burada asyncAuth ismini vereceim, eski auth ithalatndan yola kacaz ve tabiki burada deitirelim, o zaman biz
+
+42
+00:03:08,750 --> 00:03:11,070
+de oradaki ithalattan kurtulabiliriz.
+
+43
+00:03:11,090 --> 00:03:13,360
+imdi tm bu uyumsuz bileenleri alyoruz,
+
+44
+00:03:13,400 --> 00:03:14,470
+imdi onlar kullanalm.
+
+45
+00:03:14,570 --> 00:03:22,510
+Yani burada asyncCheckout var, asyncAuth veya bahane iin, auth iin asyncAuth ekleyeceiz ve
+
+46
+00:03:22,730 --> 00:03:29,360
+eski sipariler bileeni iin asyncOrders ekleyeceiz. Ve imdi tm bu veriler, tm bu
+
+47
+00:03:29,720 --> 00:03:31,570
+bileenler sadece gerektiinde yklenir.
+
+48
+00:03:31,790 --> 00:03:33,410
+imdi her eyi
+
+49
+00:03:33,680 --> 00:03:39,720
+kaydedelim, hadi bavurumuza geri dnelim ve uygulamaya bir bakalm ve bekleyeceimiz gibi alp
+
+50
+00:03:39,720 --> 00:03:40,420
+almadn grelim,
+
+51
+00:03:40,430 --> 00:03:46,220
+a sekmelerini aacam, bylece herhangi bir a isteini grebilmemiz iin bir tane
+
+52
+00:03:46,250 --> 00:03:47,450
+grmeliyiz. Dorulamay tkla,
+
+53
+00:03:47,450 --> 00:03:48,340
+aslnda yklyoruz.
+
+54
+00:03:48,380 --> 00:03:48,780
+yn 2.
+
+55
+00:03:48,780 --> 00:03:56,970
+imdi burada imzalarsam, gnder, burger reticisine geri dnyorum.
+
+56
+00:03:57,010 --> 00:04:01,560
+Uygulamay yeniden yklersem, yine de otomatik olarak oturum amam gerekiyor, bu yzden hala alyor.
+
+57
+00:04:01,570 --> 00:04:05,200
+imdi emirleri ziyaret edelim ve emir koduyla
+
+58
+00:04:05,200 --> 00:04:13,030
+3 nolu paray indirelim ve imdi nihayetinde deme ksmn tembel bir ekilde ykleyip yklemediimizi grmek iin
+
+59
+00:04:13,030 --> 00:04:14,450
+bir hamburger yapalm.
+
+60
+00:04:14,530 --> 00:04:16,840
+Devam'a tklayalm ve indirelim.
+
+61
+00:04:16,840 --> 00:04:17,680
+deme ile
+
+62
+00:04:17,710 --> 00:04:19,770
+ilgili kod olan yn 1.
+
+63
+00:04:19,960 --> 00:04:26,710
+Ve bununla birlikte, uygulamamz gelitirdik nk artk sadece yklemek iin gereken kodu yklyoruz ve
+
+64
+00:04:26,710 --> 00:04:28,910
+gereksiz bir kod yklemiyoruz.
+
+65
+00:04:29,110 --> 00:04:35,530
+Bu, retim modlmz uygulama iin oluturmadan nce, byk bir iyiletirme ve nemli bir admdr, ancak
+
+66
+00:04:35,620 --> 00:04:40,430
+ynlendirme modlnde de bahsettiim gibi, tembel ykleme her zaman daha iyi deildir.
+
+67
+00:04:40,510 --> 00:04:46,390
+Tembel ykl modller ok kkse, bizim uygulamamzn drst olduu gibi, tembel ykleme
+
+68
+00:04:46,420 --> 00:04:48,540
+eklemekten gerekten bir ey kazanamazsnz.
+
+69
+00:04:48,550 --> 00:04:54,430
+Yine de gstermek istiyorum nk nemli bir kavram ve oluturduunuz herhangi bir uygulamay optimize etmede gz
+
+70
+00:04:54,520 --> 00:04:56,230
+nnde bulundurmanz gereken bir ey.
+

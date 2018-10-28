@@ -1,0 +1,368 @@
+1
+00:00:02,150 --> 00:00:03,950
+Our form is certainly working great
+
+2
+00:00:04,090 --> 00:00:07,270
+but of course there's one important thing missing, validation.
+
+3
+00:00:07,480 --> 00:00:09,540
+We can always submit the form,
+
+4
+00:00:09,550 --> 00:00:11,750
+we don't get any validation errors,
+
+5
+00:00:11,770 --> 00:00:14,580
+we don't see if the form is valid or not.
+
+6
+00:00:14,590 --> 00:00:21,530
+Now whilst a framework like Angular has a built-in validation package basically, react hasn't,
+
+7
+00:00:21,580 --> 00:00:23,740
+you have to do validation on your own.
+
+8
+00:00:23,770 --> 00:00:30,190
+There are some third party packages you might want to check out but in general, you can also build validation
+
+9
+00:00:30,220 --> 00:00:31,120
+on your own
+
+10
+00:00:31,300 --> 00:00:34,460
+and I want to build it on my own.
+
+11
+00:00:34,480 --> 00:00:41,650
+Now the goal is that when ever we change the values, so here in the inputChangedHandler, we also check
+
+12
+00:00:41,740 --> 00:00:43,600
+if it's valid or not
+
+13
+00:00:43,900 --> 00:00:50,760
+and of course, the validity of element should be defined by some rules which we set up in the order form.
+
+14
+00:00:50,770 --> 00:00:57,160
+So here for a given input where we also define the type and the config, so basically the html attributes
+
+15
+00:00:57,160 --> 00:00:58,230
+and the value,
+
+16
+00:00:58,600 --> 00:01:06,840
+we also might have some validation key where we set up rules we want to have respected.
+
+17
+00:01:06,880 --> 00:01:13,420
+This could be a rule like required should be set to true so that this is a field which is absolutely
+
+18
+00:01:13,420 --> 00:01:15,810
+required, that it must not be empty,
+
+19
+00:01:15,820 --> 00:01:18,610
+this is a very often used rule, of course.
+
+20
+00:01:19,110 --> 00:01:26,590
+So let's use this, let's add thisValidation field with just required to all our elements right after
+
+21
+00:01:26,590 --> 00:01:27,280
+the value,
+
+22
+00:01:27,280 --> 00:01:33,710
+so on the top element level therefore, so that it must not be empty
+
+23
+00:01:33,910 --> 00:01:40,390
+and I don't need it for the dropdown because I have to select the value there anyways. So now I added validation
+
+24
+00:01:40,390 --> 00:01:45,280
+to most of my elements except for the dropdown for the reason I just mentioned,
+
+25
+00:01:45,280 --> 00:01:49,240
+now how do we check this? For this,
+
+26
+00:01:49,250 --> 00:01:56,900
+I'll create another new method which I'll name check validation or validity maybe, validity,
+
+27
+00:01:57,040 --> 00:02:02,120
+where I get the value and then the rules
+
+28
+00:02:02,300 --> 00:02:09,110
+and then this should return true or false determining whether this is valid or not. This also means that
+
+29
+00:02:09,110 --> 00:02:16,130
+I have to have some valid property on each element in my state which I can manage, so that I have
+
+30
+00:02:16,130 --> 00:02:17,710
+like valid which is false
+
+31
+00:02:17,720 --> 00:02:19,240
+initially, let's say. So
+
+32
+00:02:19,250 --> 00:02:22,410
+also add this to all elements which should have validation
+
+33
+00:02:22,580 --> 00:02:28,240
+and of course you could also kind of add this as a sub key of validation or something like that.
+
+34
+00:02:28,310 --> 00:02:30,450
+So I'll add valid here,
+
+35
+00:02:33,050 --> 00:02:37,640
+set it to false initially maybe and now in checkValidity,
+
+36
+00:02:37,640 --> 00:02:45,420
+I want to return true or false to then in inputChangedHandler, adjust this valid property too.
+
+37
+00:02:45,650 --> 00:02:49,050
+Now here of course, it depends on which rules we have,
+
+38
+00:02:49,460 --> 00:02:54,800
+I will simply check if rules has a required rule,
+
+39
+00:02:54,840 --> 00:03:04,460
+so if that is true-ish then I want to adjust some isValid variable which initially is false as a default
+
+40
+00:03:04,460 --> 00:03:11,840
+maybe, I want to set isValid equal to the value comparison, so isValid
+
+41
+00:03:11,870 --> 00:03:15,390
+should be equal if it's not equal to an empty string,
+
+42
+00:03:15,560 --> 00:03:21,390
+however I want to use value trim here to remove any whitespaces at the beginning or end.
+
+43
+00:03:21,530 --> 00:03:27,740
+So now isValid is updated to True or false depending on the check if the trimmed value is unequal
+
+44
+00:03:27,740 --> 00:03:28,970
+to an empty string,
+
+45
+00:03:28,970 --> 00:03:36,050
+if it is not equal, isValid will be true and at the end of checkValidity, I will return isValid,
+
+46
+00:03:36,140 --> 00:03:41,140
+so true or false. In the inputChangedHandler,
+
+47
+00:03:41,420 --> 00:03:49,530
+I can then of course also update my valid value of the updatedFormElement, here
+
+48
+00:03:49,700 --> 00:03:59,120
+I want to set updatedFormElement.valid equal to this.checkValidity and pass the updatedFormElement
+
+49
+00:03:59,150 --> 00:04:07,790
+value which we already adjusted to the value passed by the event, and of course I want to pass
+
+50
+00:04:07,790 --> 00:04:15,080
+my updatedFormElement validation object which is just my rules.
+
+51
+00:04:15,270 --> 00:04:22,200
+So validation here has for example a required property and that is what I check for in checkValidity,
+
+52
+00:04:22,320 --> 00:04:29,310
+I see if my rules object has a required property and if the value of that property is true-ish or is
+
+53
+00:04:29,310 --> 00:04:38,010
+treated as true. So now with that set up, we should be able to check for that and set valid to true or
+
+54
+00:04:38,010 --> 00:04:45,900
+false because keep in mind that this.checkValidity returns true or false so we store the result of this
+
+55
+00:04:45,900 --> 00:04:49,290
+check in the valid property.
+
+56
+00:04:49,290 --> 00:04:51,650
+Now to see if this really works,
+
+57
+00:04:51,690 --> 00:04:59,030
+I'll simply console log my updatedFormElement here for now, so that we can see on every keystroke
+
+58
+00:04:59,130 --> 00:05:00,490
+if this changes.
+
+59
+00:05:00,750 --> 00:05:06,460
+So if I enter something into my name, this is the object and you see valid is true,
+
+60
+00:05:06,720 --> 00:05:11,330
+if I remove the T, you'll see valid is false because now it's empty.
+
+61
+00:05:11,330 --> 00:05:17,610
+If I enter a couple of whitespaces here, then you see valid still is false because we're trimming the
+
+62
+00:05:17,610 --> 00:05:24,150
+value. So our custom required to check is working fine here and now of course we could use
+
+63
+00:05:24,150 --> 00:05:25,850
+or we could add more rules.
+
+64
+00:05:26,040 --> 00:05:31,290
+We could add another check here where we say if rules.minLength,
+
+65
+00:05:31,290 --> 00:05:42,340
+if we have something like this, then we can set isValid equal to value.length greater equal rules.minLength
+
+66
+00:05:42,460 --> 00:05:43,270
+.
+
+67
+00:05:43,290 --> 00:05:51,540
+So now minLength of course would be expected to be like a value like one or two or three which also will
+
+68
+00:05:51,630 --> 00:05:56,640
+resolve to true so which will activate this rule. And you can of course be creative and even
+
+69
+00:05:56,640 --> 00:06:04,740
+create more complex rules which might have objects as a value where you can access rules.minLength
+
+70
+00:06:04,980 --> 00:06:13,120
+and then something like absolute minimum or something like that, so you can really be creative and create
+
+71
+00:06:13,120 --> 00:06:14,950
+your own rules dynamically.
+
+72
+00:06:15,150 --> 00:06:24,010
+I'll use the minLength rule here for the zipcode, let's say the zipcode should receive a minLength of
+
+73
+00:06:24,140 --> 00:06:24,880
+five
+
+74
+00:06:25,060 --> 00:06:28,080
+and let's say also a maxLength of five
+
+75
+00:06:28,570 --> 00:06:39,530
+and now, that means I will also add a check for the maxLength here, if rules.maxLength and here this should
+
+76
+00:06:39,530 --> 00:06:47,150
+be then smaller or equal to maxLength, and our current validation logic here has a crucial flaw by the way,
+
+77
+00:06:47,150 --> 00:06:49,500
+I'll come back to that in a second.
+
+78
+00:06:49,520 --> 00:06:59,140
+So to see if this length validation now also works by just adding checks here and adding it in
+
+79
+00:06:59,170 --> 00:07:05,480
+our setup here for the zipcode, to see if that works let's go back to the application, let's enter something
+
+80
+00:07:05,480 --> 00:07:08,400
+into the zip code like 555,
+
+81
+00:07:08,630 --> 00:07:11,660
+let's expand this and you'll see valid is true,
+
+82
+00:07:11,720 --> 00:07:15,030
+so it's not working here unfortunately.
+
+83
+00:07:15,920 --> 00:07:18,130
+The reason for this is our flaw,
+
+84
+00:07:18,650 --> 00:07:24,410
+if we have a look at our validation method, we check one rule after the other,
+
+85
+00:07:24,410 --> 00:07:31,910
+that means that of course only the last rule has to be satisfied to turn isValid to true, even if minLength
+
+86
+00:07:32,060 --> 00:07:34,120
+sets isValid to false,
+
+87
+00:07:34,250 --> 00:07:43,940
+if maxLength is met thereafter, which it currently is, this will be set to true again. That has the
+
+88
+00:07:43,950 --> 00:07:51,560
+result that if I add six digits here which would be too long, that now it is indeed not valid anymore
+
+89
+00:07:51,740 --> 00:07:58,440
+because the last check maxLength resolves to false for this long of an input.
+
+90
+00:07:58,460 --> 00:07:59,600
+So this is the issue,
+
+91
+00:07:59,600 --> 00:08:04,730
+the flaw we have right now, we are checking the rules one after another.
+
+92
+00:08:04,850 --> 00:08:07,850
+Let's fix this flaw in the next lecture.
+

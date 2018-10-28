@@ -1,0 +1,140 @@
+1
+00:00:02,180 --> 00:00:07,030
+Podczas ostatniego wykadu przyjrzelimy si referencjom typw pierwotnych, o ktrych
+
+2
+00:00:07,030 --> 00:00:09,800
+trzeba pamita podczas pracy z javascript.
+
+3
+00:00:10,030 --> 00:00:14,260
+Inn rzecz, ktr zobaczysz bardzo duo w tym kursie s funkcje tablicowe.
+
+4
+00:00:14,260 --> 00:00:17,240
+Widzielimy ju filtr kilka wykadw temu.
+
+5
+00:00:17,350 --> 00:00:20,550
+Mamy rwnie sort, map i tak dalej.
+
+6
+00:00:20,860 --> 00:00:22,670
+Pozwl mi szybko pokaza, co mam na myli.
+
+7
+00:00:22,810 --> 00:00:27,560
+Dobry stary zestaw liczb z 1, 2 i 3.
+
+8
+00:00:27,970 --> 00:00:34,510
+Teraz zamy, e chcemy zamieni to w tablic, w ktrej liczba jest podwojona.
+
+9
+00:00:34,540 --> 00:00:41,370
+Musimy wic podwoi warto NumArray, moemy uy do tego funkcji tablicowej.
+
+10
+00:00:41,440 --> 00:00:45,050
+Moemy wzi tablic liczb i map pocze.
+
+11
+00:00:45,130 --> 00:00:47,150
+Mapa jest wbudowan metod tablicow.
+
+12
+00:00:47,170 --> 00:00:49,070
+I jest wiele takich metod.
+
+13
+00:00:49,420 --> 00:00:51,610
+Wykorzystam ich cakiem sporo, a nie s.
+
+14
+00:00:51,610 --> 00:00:57,940
+Nastpna generacja javascript wszystkie te metody dziaaj w ten sam sposb, chocia przyjmuj funkcj
+
+15
+00:00:57,940 --> 00:01:04,750
+jako dane wejciowe, a ta funkcja, ktra jest tutaj funkcj strzaki, ale moe by normaln
+
+16
+00:01:04,820 --> 00:01:09,050
+funkcj, jest po prostu wykonywana na kadym elemencie tablicy tutaj.
+
+17
+00:01:09,070 --> 00:01:13,830
+Wic na kadym elemencie w tablicy liczb, na 1 i 2 i 3.
+
+18
+00:01:14,260 --> 00:01:18,200
+Wic tym, co otrzymamy w tej funkcji strzaki, jest liczba na kocu.
+
+19
+00:01:18,220 --> 00:01:22,260
+Ale moesz nazwa ten argument, co chcesz tutaj.
+
+20
+00:01:22,260 --> 00:01:24,400
+Moemy wtedy po prostu zwrci co.
+
+21
+00:01:24,610 --> 00:01:30,660
+A to, co musisz zrobi w tej funkcji wewntrznej, zaley od tego, z ktrego obszaru funkcji korzystasz.
+
+22
+00:01:30,670 --> 00:01:37,010
+Sprawd dokumenty w miejscach takich, jak dokumenty w Mozilla Developer Network, aby uzyska wicej informacji na
+
+23
+00:01:37,100 --> 00:01:38,470
+temat dostpnych funkcji tablic.
+
+24
+00:01:38,470 --> 00:01:44,770
+Tak wic w funkcji mapy musimy zwrci now warto, ktr chcemy zamieni na star, abymy mogli zwrci
+
+25
+00:01:44,770 --> 00:01:49,440
+num * 2 i poniewa jest to wykonywane na kadym elemencie tutaj.
+
+26
+00:01:49,450 --> 00:01:55,890
+Zwrci 2, 4 i 6 i wygodnie odwzoruje wszystkie powroty na now tablic.
+
+27
+00:01:55,900 --> 00:02:00,720
+Tak wic prawdziwa nowa tablica, ktra jest nastpnie przechowywana w podwjnym NumArray.
+
+28
+00:02:01,060 --> 00:02:12,520
+Wic jeli teraz wypisz liczby, a potem podwjnie NumArray tak, a potem uderz, zobaczysz, e stary pozostaje niezmieniony, ale nowy
+
+29
+00:02:12,580 --> 00:02:19,750
+ma podwjne wartoci i wyjani, co te funkcje robi, gdy uywamy ich
+
+30
+00:02:19,750 --> 00:02:21,620
+w kursie .
+
+31
+00:02:21,850 --> 00:02:24,590
+Po prostu chc teraz zwrci na to uwag.
+
+32
+00:02:24,670 --> 00:02:30,730
+Wyjanij, e zawsze maj t funkcj, ktra jest wykonywana na kadym elemencie i e
+
+33
+00:02:30,760 --> 00:02:36,190
+nie s javascript nastpnej generacji, ale normalnym javascriptem, bd przygotowany na ich spenienie.
+
+34
+00:02:36,190 --> 00:02:41,600
+Wyjani, co robi, gdy je widzimy, i zawsze moesz zagbi si w dokumentach, takich jak sie twrcw Mozilli,
+
+35
+00:02:41,600 --> 00:02:43,840
+aby dowiedzie si wicej na ich temat.
+

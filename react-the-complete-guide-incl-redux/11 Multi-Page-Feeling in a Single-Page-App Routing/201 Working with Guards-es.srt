@@ -1,0 +1,160 @@
+1
+00:00:02,130 --> 00:00:06,270
+Descubrimos que cubrimos todas las tcnicas de redireccin que puede usar.
+
+2
+00:00:06,480 --> 00:00:12,500
+Vamos a hablar sobre algo que est relacionado con la redireccin de los guardias de navegacin.
+
+3
+00:00:13,080 --> 00:00:20,400
+Guard es algo que quizs conozcas de otros frameworks y los enrutadores tpicamente Garda, por ejemplo, se
+
+4
+00:00:20,400 --> 00:00:25,030
+usa cuando no sabes donde se autentica cada usuario o no.
+
+5
+00:00:25,170 --> 00:00:32,790
+Y hay algunas partes en su aplicacin, algunas rutas que solo quiere permitir que el usuario visite,
+
+6
+00:00:32,790 --> 00:00:42,360
+si est ofendiendo el odiado router de accin wifi que podra necesitar para pensar en los descartes de una nueva manera.
+
+7
+00:00:42,360 --> 00:00:49,080
+Por ejemplo, en los componentes del bloque se encuentra en un contenedor bloqueado donde configuramos el enrutamiento para
+
+8
+00:00:49,080 --> 00:00:51,300
+una nueva publicacin y as sucesivamente.
+
+9
+00:00:51,370 --> 00:00:58,020
+El sentido al final de todo lo que estamos haciendo aqu es simplemente convertir algunos componentes en el componente de
+
+10
+00:00:58,020 --> 00:01:04,170
+ruta en el componente de conmutador si queremos asegurarnos de que no se puedan alcanzar las nuevas publicaciones.
+
+11
+00:01:04,170 --> 00:01:08,340
+No podemos simplemente renderizar esto condicionalmente.
+
+12
+00:01:08,340 --> 00:01:16,670
+As que digamos que tenemos un estado off aqu. Agrego state y ese estado off es falso inicialmente.
+
+13
+00:01:18,050 --> 00:01:25,430
+Ahora, por supuesto, lo que puedo hacer es ir a la declaracin de mi renderizador e incluso usar una variable
+
+14
+00:01:25,430 --> 00:01:31,530
+que devuelva NULL o una ruta muerta o usar la solucin rpida y sucia en lnea.
+
+15
+00:01:31,700 --> 00:01:39,350
+Puedo verificar si este estado desactivado es verdadero, en cuyo caso quiero renderizar esa ruta, de lo contrario devuelvo NULL.
+
+16
+00:01:39,380 --> 00:01:45,890
+no se le ofrece servicio por lo que el estado desactivado es falso porque esta ruta es bsicamente desconocida porque no se proces.
+
+17
+00:01:46,070 --> 00:01:50,340
+Ahora no hay forma de que el usuario pueda acceder a la nueva publicacin si
+
+18
+00:01:50,660 --> 00:01:56,750
+As que ahora si guardo esto y tengo en cuenta que ahora el estado predeterminado es falso.
+
+19
+00:01:56,750 --> 00:02:04,350
+Si este es el caso y hago clic en una nueva publicacin, lo redirijo a la pgina de inicio porque lo que
+
+20
+00:02:04,350 --> 00:02:08,250
+esencialmente est sucediendo aqu es que la redireccin entra en accin aqu.
+
+21
+00:02:08,370 --> 00:02:15,630
+Como ya he dicho, bsicamente se usa chust como prefijo y, por lo tanto, capta todo lo que
+
+22
+00:02:15,660 --> 00:02:19,740
+no se capt antes y me redirige a las publicaciones.
+
+23
+00:02:19,740 --> 00:02:21,590
+Este es un guardia.
+
+24
+00:02:21,630 --> 00:02:27,480
+Es totalmente diferente que usemos guardias en Bangalore o en cualquier otro marco.
+
+25
+00:02:27,570 --> 00:02:32,610
+Pero al final, as es cmo puede controlar convenientemente donde el usuario puede acceder
+
+26
+00:02:32,610 --> 00:02:34,440
+a esta pgina o no.
+
+27
+00:02:34,440 --> 00:02:42,230
+Por supuesto, una alternativa a esto sera ir a la pgina protegida y al componente interno que se monta aqu.
+
+28
+00:02:42,450 --> 00:02:49,080
+Tambin puede verificar si el usuario es odiado de manera autntica y, por supuesto, depende de la aplicacin
+
+29
+00:02:49,140 --> 00:02:51,200
+desde donde obtiene esa informacin.
+
+30
+00:02:51,480 --> 00:03:01,060
+Pero luego tambin puedes verificarlo aqu y simplemente usar las publicaciones de reemplazo de la historia de disprop.
+
+31
+00:03:01,260 --> 00:03:04,940
+Si el usuario es vindicado por ejemplo as.
+
+32
+00:03:05,190 --> 00:03:11,460
+tambin es una alternativa que usa cantidades de componentes para redirigir esencialmente para usar o si no es verdad.
+
+33
+00:03:11,490 --> 00:03:12,780
+Por lo tanto, esta
+
+34
+00:03:12,780 --> 00:03:19,680
+As es como trabajas con el enrutador de reactiva As es como una vez sola pensar sobre eso,
+
+35
+00:03:19,680 --> 00:03:20,620
+controlas mucho.
+
+36
+00:03:20,740 --> 00:03:23,080
+Por cierto, renderiza sus componentes.
+
+37
+00:03:23,160 --> 00:03:27,240
+Y si esa ruta no se representa, no puede alcanzar esa ruta.
+
+38
+00:03:27,240 --> 00:03:32,790
+La definicin no se representa, por lo que el componente conectado no se puede cargar.
+
+39
+00:03:33,240 --> 00:03:38,310
+As es como debes pensar y cmo debes estructurar tu aplicacin.
+
+40
+00:03:38,460 --> 00:03:44,070
+Envuelva su cabeza en esto, esto es realmente crucial para ser correcto y crucial para entender.
+

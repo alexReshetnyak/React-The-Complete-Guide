@@ -1,0 +1,152 @@
+1
+00:00:02,190 --> 00:00:08,370
+So over the last lectures we had a look at a lot of possible next steps including libraries like Gatsbyjs
+
+2
+00:00:08,370 --> 00:00:12,700
+or component libraries like Material-UI.
+
+3
+00:00:13,050 --> 00:00:16,330
+Here's one other nice library you might want to look into,
+
+4
+00:00:16,350 --> 00:00:24,630
+preact. Now that's no typo, preact which you can read more about on preactjs.com is a lightweight
+
+5
+00:00:24,720 --> 00:00:26,340
+alternative to react,
+
+6
+00:00:26,460 --> 00:00:34,060
+it's only 3kb big and it offers pretty much the same with some deviations but not that many
+
+7
+00:00:34,130 --> 00:00:37,820
+API react does. So should you always use that,
+
+8
+00:00:37,820 --> 00:00:39,580
+are the creators of react stupid?
+
+9
+00:00:39,610 --> 00:00:41,580
+They are not,
+
+10
+00:00:41,580 --> 00:00:47,910
+there are differences and I will talk about these in the next lecture but for now, let me explain what
+
+11
+00:00:47,910 --> 00:00:49,170
+preact is,
+
+12
+00:00:49,170 --> 00:00:54,610
+you could always read through this page of course but let's click on the repl here, on that page.
+
+13
+00:00:54,660 --> 00:00:59,250
+There you simply see an example for the preact or for preact in action
+
+14
+00:00:59,400 --> 00:01:03,080
+and if you analyzed this example, you'll recognize the code.
+
+15
+00:01:03,210 --> 00:01:10,530
+For example down there, we have a normal component in the functional form just using destructuring here
+
+16
+00:01:10,530 --> 00:01:14,160
+to pull out one property of the props argument
+
+17
+00:01:14,340 --> 00:01:17,110
+but in the end that's just your normal jsx code,
+
+18
+00:01:17,190 --> 00:01:23,310
+that's just a functional component which gets used. And above and we got a class based one which also extends
+
+19
+00:01:23,310 --> 00:01:24,120
+component,
+
+20
+00:01:24,300 --> 00:01:32,970
+so this syntax looks a lot like react syntax and it is to a majority or to a certain degree, to a very
+
+21
+00:01:32,970 --> 00:01:40,860
+big degree actually. Preact uses pretty much the same API but uses a leaner diffing algorithm behind
+
+22
+00:01:40,860 --> 00:01:41,530
+the scenes,
+
+23
+00:01:41,580 --> 00:01:47,010
+so for finding out if it needs to update the real dom, it has a leaner algorithm for that.
+
+24
+00:01:47,080 --> 00:01:53,850
+Lean doesn't strictly mean better but of course it leads to a much smaller file size, 3kb
+
+25
+00:01:53,970 --> 00:02:00,090
+as I just showed you. The important thing here is that preact and you can always learn more here on
+
+26
+00:02:00,090 --> 00:02:00,930
+the guide
+
+27
+00:02:00,930 --> 00:02:06,670
+also offers some differences to react, even some new features as it will turn out
+
+28
+00:02:06,680 --> 00:02:09,840
+but more about the differences in the next lecture.
+
+29
+00:02:10,050 --> 00:02:18,270
+You can start working with preact, if you google for preact-cli, then you should find this github page where
+
+30
+00:02:18,270 --> 00:02:25,230
+you find a project which is a lot like create react app which allows you to create new preact apps
+
+31
+00:02:25,410 --> 00:02:27,180
+which use preact instead of react
+
+32
+00:02:27,180 --> 00:02:33,420
+obviously, based on some of the templates you find here. So you can quickly scaffold out a new app where
+
+33
+00:02:33,420 --> 00:02:39,300
+you can use the majority of the things you learned in this course, again differences are highlighted
+
+34
+00:02:39,300 --> 00:02:47,400
+in the next lecture and simply use this much smaller bundle, this much smaller library.
+
+35
+00:02:47,400 --> 00:02:54,720
+This is preact-cli and this is preact, a lightweight alternative using pretty much the same API and
+
+36
+00:02:54,720 --> 00:02:58,890
+therefore, the things you learned in this course are valid.
+
+37
+00:02:58,890 --> 00:03:04,470
+Now let's find out what the differences are then and when you should and should not use react,
+
+38
+00:03:04,470 --> 00:03:06,300
+let's do this in the next lecture.
+

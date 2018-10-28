@@ -1,0 +1,388 @@
+1
+00:00:02,280 --> 00:00:07,120
+So to show you how redux works, I attached a project to this lecture.
+
+2
+00:00:07,140 --> 00:00:09,870
+It's a very simple project with a container,
+
+3
+00:00:09,870 --> 00:00:12,540
+the counter container and two components.
+
+4
+00:00:12,660 --> 00:00:18,540
+In the end, what it does is it gives us this page where we have a counter at the top which we can manipulate
+
+5
+00:00:18,570 --> 00:00:24,660
+with these buttons and these buttons just use the normal state as react gives it to us as we used it
+
+6
+00:00:24,660 --> 00:00:28,920
+before, with the state property and our methods.
+
+7
+00:00:28,920 --> 00:00:33,760
+So this is normal react state, nothing redux-ish about it,
+
+8
+00:00:33,810 --> 00:00:36,080
+redux wasn't even installed,
+
+9
+00:00:36,240 --> 00:00:43,170
+that is the next thing I want to do though. I'll quit npm start and I'll run npm install --save
+
+10
+00:00:43,410 --> 00:00:45,750
+redux, just redux.
+
+11
+00:00:45,780 --> 00:00:52,800
+Now I said the redux library works standalone and we'll actually use it standalone for now but we'll
+
+12
+00:00:52,800 --> 00:00:57,960
+soon add it to our react application to see how it works together with it.
+
+13
+00:00:57,990 --> 00:01:04,230
+So with redux installed, I'll create a new file in the root folder next to the package.json file,
+
+14
+00:01:04,730 --> 00:01:05,980
+I'll name it
+
+15
+00:01:06,030 --> 00:01:07,810
+ReduxBasics.js.
+
+16
+00:01:07,860 --> 00:01:16,580
+Now this file here will not be holding any react code, we won't include it into our react project, I'll
+
+17
+00:01:16,620 --> 00:01:18,000
+execute it with nodeJS
+
+18
+00:01:18,070 --> 00:01:24,750
+instead, just to show the different concepts of redux in one file and to show that it's independent
+
+19
+00:01:24,750 --> 00:01:25,630
+of react.
+
+20
+00:01:26,010 --> 00:01:33,220
+So in this ReduxBasics file, I want to create everything that we need to use redux,
+
+21
+00:01:33,240 --> 00:01:42,210
+that of course is the store, that will be my reducer, that will then be an action probably or some code
+
+22
+00:01:42,420 --> 00:01:45,330
+dispatching an action
+
+23
+00:01:46,020 --> 00:01:50,130
+and we also certainly want to see a subscription action.
+
+24
+00:01:50,310 --> 00:01:52,010
+So let's start with the store
+
+25
+00:01:52,260 --> 00:01:56,090
+and for that, I need to import something from redux.
+
+26
+00:01:56,140 --> 00:02:03,150
+Now we'll still use the import something from something syntax later when we go back to react
+
+27
+00:02:03,210 --> 00:02:09,450
+but since I plan on executing this file with node, I need to use the node import syntax, which is I'll
+
+28
+00:02:09,480 --> 00:02:17,170
+create a constant, name it redux maybe and this constant will now require redux, like this.
+
+29
+00:02:17,220 --> 00:02:18,890
+Again, this required syntax is
+
+30
+00:02:18,900 --> 00:02:23,090
+nodeJS syntax and are only required because I want to show these with nodeJS
+
+31
+00:02:23,100 --> 00:02:26,340
+only first, we'll soon go back to react,
+
+32
+00:02:26,340 --> 00:02:27,810
+no worries.
+
+33
+00:02:27,810 --> 00:02:36,090
+So here I can then create a constant name, createStore which refers to redux.createStore, createStore
+
+34
+00:02:36,090 --> 00:02:38,950
+is a function but don't execute it yet.
+
+35
+00:02:39,540 --> 00:02:46,830
+createStore as the name suggests allows us to create a new redux store, I'll store it in a constant
+
+36
+00:02:46,830 --> 00:02:47,580
+named store
+
+37
+00:02:47,580 --> 00:02:52,930
+but you can of course give this constant any name you want, and here I'll simply execute
+
+38
+00:02:52,950 --> 00:02:55,560
+createStore, like this.
+
+39
+00:02:55,560 --> 00:02:58,180
+createStore like this won't do much though,
+
+40
+00:02:58,410 --> 00:03:03,530
+a store needs to be initialized with a reducer because the reducer
+
+41
+00:03:03,630 --> 00:03:06,380
+and remember we only have one reducer,
+
+42
+00:03:06,390 --> 00:03:10,230
+even if we combine multiple ones, they will be merged into one.
+
+43
+00:03:10,380 --> 00:03:12,990
+The reducer is strongly connected to the store,
+
+44
+00:03:13,020 --> 00:03:16,870
+it's the only thing that may update the state in the end.
+
+45
+00:03:17,100 --> 00:03:23,580
+That's why we need to pass the reducer to this creation function here because it's so closely connected
+
+46
+00:03:23,580 --> 00:03:25,240
+to the state.
+
+47
+00:03:25,380 --> 00:03:30,050
+Therefore I actually need to create my reducer first before I create the store,
+
+48
+00:03:30,420 --> 00:03:32,800
+so here, I'll create my root reducer,
+
+49
+00:03:32,850 --> 00:03:39,060
+the name of course is always up to you and that is just a function, you can of course create it with the
+
+50
+00:03:39,060 --> 00:03:39,990
+function keyword
+
+51
+00:03:39,990 --> 00:03:44,120
+now, you can also use an arrow function, whatever you like.
+
+52
+00:03:44,190 --> 00:03:48,640
+Now this function here receives two arguments,
+
+53
+00:03:48,780 --> 00:03:51,090
+the first one is the current state
+
+54
+00:03:51,090 --> 00:03:53,400
+because as I said, the reducer gets two arguments,
+
+55
+00:03:53,400 --> 00:03:57,980
+state and the action and the state is the old state which it then may update.
+
+56
+00:03:58,380 --> 00:04:00,030
+So the state is the first argument,
+
+57
+00:04:00,060 --> 00:04:06,750
+the second argument is the action and then the function has to return one thing and that is the updated
+
+58
+00:04:06,750 --> 00:04:07,700
+state.
+
+59
+00:04:07,730 --> 00:04:11,770
+The simplest reducer you can write simply returns the old state,
+
+60
+00:04:11,820 --> 00:04:15,340
+so this is a valid reducer though of course it does nothing,
+
+61
+00:04:15,390 --> 00:04:17,690
+it just returns the state you already had.
+
+62
+00:04:17,970 --> 00:04:25,120
+But we can already use that reducer and pass it as an argument to createStore rootReducer,
+
+63
+00:04:25,350 --> 00:04:31,950
+with that, our reducer our store is created with that reducer in mind and now we have a created store,
+
+64
+00:04:31,950 --> 00:04:36,000
+however this store will hold an undefined state.
+
+65
+00:04:36,150 --> 00:04:44,700
+We can verify this by console logging store and there, getState, that's a function we should execute
+
+66
+00:04:44,970 --> 00:04:48,350
+and it will pull out the state from the store.
+
+67
+00:04:48,510 --> 00:04:50,000
+Let's have a look at that,
+
+68
+00:04:50,010 --> 00:04:55,980
+now we need to execute that file with nodeJS and we do this by typing node in the command line and
+
+69
+00:04:55,980 --> 00:04:57,190
+then the file name,
+
+70
+00:04:57,210 --> 00:05:03,210
+you need to navigate into the folder of that file first in the terminal though, so in my case, node
+
+71
+00:05:03,230 --> 00:05:10,280
+redux-basics.js, this will execute the file and spit out any console log outputs
+
+72
+00:05:10,280 --> 00:05:11,500
+right in the terminal.
+
+73
+00:05:11,510 --> 00:05:16,710
+So here you see undefined and that exactly is coming from this console log statement,
+
+74
+00:05:16,760 --> 00:05:22,880
+the state is undefined because our root reducer only returns the old state and we never initialize
+
+75
+00:05:22,880 --> 00:05:25,620
+it. To initialize the state,
+
+76
+00:05:25,790 --> 00:05:32,210
+I'll set up a new constant which I'll name initialState, as for all constants this name is up to you.
+
+77
+00:05:32,270 --> 00:05:34,280
+It's a javascript object though
+
+78
+00:05:34,280 --> 00:05:38,320
+theoretically, it could also just be a number or anything like that
+
+79
+00:05:38,450 --> 00:05:43,760
+so it doesn't have to be object but most often it is because you have more than one field in your global
+
+80
+00:05:43,760 --> 00:05:44,970
+state most of the time
+
+81
+00:05:45,080 --> 00:05:49,330
+but if your global state is just a number, you could set up just a number. Here
+
+82
+00:05:49,340 --> 00:05:55,460
+I'll set up javascript object though and this javascript object should for example hold
+
+83
+00:05:55,700 --> 00:06:00,200
+my counter, can be null, zero initially.
+
+84
+00:06:00,290 --> 00:06:07,580
+Now in the root reducer, I'll use a feature provided by ES6, I can initialize this argument to the function
+
+85
+00:06:07,850 --> 00:06:14,520
+with a default value, whenever this function is now called with this argument being undefined,
+
+86
+00:06:14,540 --> 00:06:20,690
+it will take the default value instead. A default value is simply assigned by adding an equal sign and
+
+87
+00:06:20,690 --> 00:06:22,910
+then the value you want to use as a default,
+
+88
+00:06:23,150 --> 00:06:28,520
+so now it will take initial state whenever state is undefined, which will be the case when it's creating
+
+89
+00:06:28,520 --> 00:06:34,460
+that store where it will execute the reducer for the first time. For all subsequent actions,
+
+90
+00:06:34,460 --> 00:06:39,920
+the reducer will have been executed one time so the current state then will be your initial state and
+
+91
+00:06:39,920 --> 00:06:43,070
+you can start changing that. With that in place,
+
+92
+00:06:43,070 --> 00:06:46,710
+let's save this file and let's rerun node redux-basics.js.
+
+93
+00:06:46,790 --> 00:06:48,840
+We do this,
+
+94
+00:06:48,920 --> 00:06:55,280
+we now see our new state down there, with counter 0, this is the updated state or the initial state
+
+95
+00:06:55,280 --> 00:07:01,250
+I should say. So this is how we create a store with a reducer and how we initialize the state,
+
+96
+00:07:01,340 --> 00:07:05,150
+how do we now subscribe to the state and dispatch actions?
+
+97
+00:07:05,390 --> 00:07:07,900
+Let's take a closer look in the next lectures.
+

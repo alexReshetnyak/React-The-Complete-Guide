@@ -1,0 +1,120 @@
+1
+00:00:02,160 --> 00:00:06,520
+Now we learn quite a bit about this transition component over the last lectures,
+
+2
+00:00:06,630 --> 00:00:15,640
+now one important thing to of course know is that you can also nest this inside any component you want.
+
+3
+00:00:15,660 --> 00:00:24,450
+So of course we could move transition from the app.js file into our modal.js file and simply wrap our
+
+4
+00:00:24,450 --> 00:00:28,780
+entire modal with this transition component in there.
+
+5
+00:00:28,920 --> 00:00:33,940
+That of course also requires us to import transition from that package though,
+
+6
+00:00:34,050 --> 00:00:43,600
+so import transition from react.css or excuse me, from react transition group transition, like that.
+
+7
+00:00:43,960 --> 00:00:51,820
+And now we just need to update our code and basically say again that modal is always present in our
+
+8
+00:00:51,860 --> 00:00:54,580
+app.js file, this component,
+
+9
+00:00:54,870 --> 00:01:02,520
+show is therefore again back to this.state.ModalIsOpen and now a show inside the modal has to
+
+10
+00:01:02,520 --> 00:01:06,510
+be used differently, now a show is a property
+
+11
+00:01:06,510 --> 00:01:10,010
+controlling is in property here
+
+12
+00:01:10,380 --> 00:01:14,400
+so now this should be bound to props.show which is true or false
+
+13
+00:01:14,400 --> 00:01:25,890
+now again and therefore, when we control our css classes here we should do that inside a function
+
+14
+00:01:25,890 --> 00:01:33,540
+between the transition component opening and closing tags where we get the state managed by the transition
+
+15
+00:01:33,540 --> 00:01:41,400
+component where we then eventually return our div which holds the modal and where we then of course
+
+16
+00:01:41,730 --> 00:01:48,510
+no longer attach modal open and closed like this here on css classes, instead that's just an array
+
+17
+00:01:48,510 --> 00:01:51,270
+with modal. Down there instead
+
+18
+00:01:51,270 --> 00:01:55,730
+in this code we return inside the transition component, there
+
+19
+00:01:55,780 --> 00:02:04,230
+I instead now need to change my css classes and conditionally animate this. So therefore, let me
+
+20
+00:02:04,230 --> 00:02:10,710
+restructure this to a function with a function body where I don't just return something because before
+
+21
+00:02:10,710 --> 00:02:22,450
+I actually return the jsx which should be entered inside this function here, I of course want to
+
+22
+00:02:22,740 --> 00:02:30,800
+adjust my css classes, so I will essentially grab my constant from up there and now configure
+
+23
+00:02:30,800 --> 00:02:35,640
+it here to be either just the modal or
+
+24
+00:02:35,660 --> 00:02:47,820
+now again checking for state being equal to entering, that's the case then I want to use modal opened,
+
+25
+00:02:47,940 --> 00:02:49,030
+this one here
+
+26
+00:02:50,570 --> 00:02:58,570
+otherwise if state is equal to exiting and I'm using this entering and exiting classes to move in right
+
+27
+00:02:58,570 --> 00:03:01,270
+at the point of time we start the animation,
+
+28
+00:03:01,450 --> 00:03:07,630
+so if it's exiting then I want to have modal closed and in other cases I'll have null, so the same logic
+
+29
+00:03:07,630 --> 00:03:10,630
+as before but now inside the modal.
+
+30
+00:03:10,840 --> 00:03:14,830
+If we try this out, we should still get the same behavior as before though.
+

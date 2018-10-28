@@ -1,0 +1,276 @@
+1
+00:00:02,020 --> 00:00:05,690
+Y la ltima conferencia editamos el componente de orden superior de clase.
+
+2
+00:00:06,120 --> 00:00:11,310
+Esto al igual que el componente buey es un componente que esencialmente envuelve los accesorios.
+
+3
+00:00:11,310 --> 00:00:12,040
+Nios.
+
+4
+00:00:12,150 --> 00:00:18,220
+Entonces la parte con el impuesto de apertura y cierre y agrega algo as como En este caso hasta la muerte.
+
+5
+00:00:18,250 --> 00:00:26,010
+Ahora bien, esta es una forma de hacerlo, pero tambin podemos escribir el componente de clase superior de clase diferente.
+
+6
+00:00:26,280 --> 00:00:34,220
+Podemos nombrarlo con clase con una letra minscula y vaciada. Necesito eliminar primero la anterior.
+
+7
+00:00:34,440 --> 00:00:40,110
+Y esta es tambin una de las convenciones para este tipo de componente de orden superior que se usa de forma
+
+8
+00:00:40,110 --> 00:00:42,450
+un poco diferente, como ver en un segundo.
+
+9
+00:00:42,510 --> 00:00:48,750
+Y aqu crear una constante con la clase, pero esta vez no es una funcin que tome
+
+10
+00:00:48,750 --> 00:00:54,540
+los puntales, sino una funcin que requiere alguna configuracin, como el nombre de la clase.
+
+11
+00:00:54,540 --> 00:01:03,430
+Y luego esto devolver una funcin que recibe los puntales y que al final representar
+
+12
+00:01:03,480 --> 00:01:13,850
+algo as como hacer que un div con nombre de clase sea igual al nombre de clase.
+
+13
+00:01:13,870 --> 00:01:22,390
+Entonces, el argumento que tenemos arriba no solo obtendremos el nombre de la clase. Espero otro argumento para
+
+14
+00:01:22,960 --> 00:01:29,870
+el componente empaquetado y el componente envuelto se usar realmente en el componente envuelto aqu.
+
+15
+00:01:29,950 --> 00:01:33,150
+Una etiqueta de cierre automtico all.
+
+16
+00:01:33,220 --> 00:01:40,800
+actuar desde reaccionar para poder escribir este cdigo GSX y luego exportar un valor predeterminado de esto con la funcin de clase.
+
+17
+00:01:40,800 --> 00:01:42,320
+Voy a importar volver a
+
+18
+00:01:42,560 --> 00:01:48,720
+Ahora, tenga en cuenta que con la funcin de clase no es un componente funcional, es una funcin
+
+19
+00:01:48,720 --> 00:01:55,070
+normal de JavaScript que espera dos argumentos que luego devuelve una funcin que califica como un componente funcional.
+
+20
+00:01:55,290 --> 00:01:57,000
+Este de aqu.
+
+21
+00:01:57,030 --> 00:01:59,460
+Ahora, cul es la idea detrs de este enfoque?
+
+22
+00:01:59,760 --> 00:02:01,000
+Deja que te ensee.
+
+23
+00:02:01,290 --> 00:02:08,870
+Tenemos un cdigo GSX vlido aqu donde estamos envolviendo un componente, pero ahora podemos usarlo de manera diferente.
+
+24
+00:02:08,940 --> 00:02:16,410
+Podemos ir a nuestro archivo js de la aplicacin y deshacernos de este envoltorio que, por supuesto, arrojar un error.
+
+25
+00:02:16,410 --> 00:02:23,340
+As que por ahora usar mi componente auxiliar y luego lo importar del archivo del rabo de buey.
+
+26
+00:02:23,340 --> 00:02:26,600
+As que voy a envolver esto con bsicamente una etiqueta invisible.
+
+27
+00:02:26,660 --> 00:02:28,470
+Eso es lo que Excel hace bien.
+
+28
+00:02:28,500 --> 00:02:30,110
+Simplemente devuelve a los nios.
+
+29
+00:02:30,120 --> 00:02:33,800
+No agrega un elemento h m l real.
+
+30
+00:02:33,970 --> 00:02:42,000
+Y ahora tambin importar este nuevo con la funcin de clase y lo dejar con una W minscula al
+
+31
+00:02:42,000 --> 00:02:47,910
+principio porque no voy a usarlo como componente porque esta funcin que acabo de
+
+32
+00:02:47,910 --> 00:02:50,300
+explicar no califica como un componente.
+
+33
+00:02:50,580 --> 00:02:53,230
+No devuelve GSX a la derecha.
+
+34
+00:02:53,310 --> 00:03:01,660
+Simplemente devuelve una funcin de nmero as que ahora aqu voy a importar esto desde la carpeta de ver de Agios con
+
+35
+00:03:01,660 --> 00:03:03,000
+la Clase 2.
+
+36
+00:03:03,520 --> 00:03:07,420
+Y ahora uno para usar con la clase pero no lo uso en mi cdigo GSX.
+
+37
+00:03:07,420 --> 00:03:12,740
+No voy a envolver nada con eso porque de nuevo no califica como un componente.
+
+38
+00:03:13,150 --> 00:03:21,490
+En lugar de eso, envuelvo mi aplicacin aqu, la exporto, y la estoy incluyendo con la funcin de clase y
+
+39
+00:03:21,490 --> 00:03:25,950
+la aplicacin de paso, as como la aplicacin de clases.
+
+40
+00:03:26,020 --> 00:03:32,440
+la funcin de clase, que espera que contemple el componente que debe envolver y el nombre de la clase.
+
+41
+00:03:32,440 --> 00:03:36,010
+Entonces, para vernos como clase, quiero asignar estos 32 argumentos a
+
+42
+00:03:36,010 --> 00:03:41,890
+Ahora con esto en su lugar Vamos a todo el trabajo sobre la persona a la que James se cae, donde todava la usamos con la clase
+
+43
+00:03:41,890 --> 00:03:42,880
+que ya no existe.
+
+44
+00:03:42,880 --> 00:03:44,290
+Eliminamos esto
+
+45
+00:03:44,590 --> 00:03:48,600
+As que importmoslo con la clase aqu desde la nota que conocemos con el archivo de clase.
+
+46
+00:03:48,670 --> 00:03:50,740
+W. minscula Y vamos a envolver todo esto con el componente auxiliar.
+
+47
+00:03:50,930 --> 00:03:55,220
+As que con Alks aqu, envolvemos esto
+
+48
+00:03:55,220 --> 00:04:06,050
+para envolver alks y luego usamos con la clase tal como lo usamos en nuestra aplicacin Alber J. S. archivo aqu.
+
+49
+00:04:06,410 --> 00:04:08,560
+Vamos a usarlo envolviendo la funcin de persona.
+
+50
+00:04:09,690 --> 00:04:14,130
+Estamos exportando con CLOS para que el personal sea todo componente envuelto.
+
+51
+00:04:14,160 --> 00:04:20,340
+Y el segundo argumento debera ser la clase que desea adjuntar.
+
+52
+00:04:20,340 --> 00:04:23,220
+En este caso, asegrese de que
+
+53
+00:04:23,220 --> 00:04:30,750
+todos los archivos estn guardados y ahora regrese a la aplicacin y debera funcionar como antes.
+
+54
+00:04:30,750 --> 00:04:33,060
+Sin embargo, no hace clic en este botn y se ve en el primer vistazo como si funcionara bien.
+
+55
+00:04:33,060 --> 00:04:40,010
+Pero ves que a todos los elementos dinmicos todos los puntales de las personas les falta el
+
+56
+00:04:40,230 --> 00:04:46,620
+nombre de la edad que no podemos escribir o podemos escribir pero no se actualiza.
+
+57
+00:04:47,120 --> 00:04:50,020
+No obtenemos un error, pero los accesorios faltan ahora.
+
+58
+00:04:50,190 --> 00:04:54,380
+En general, nuestro componente de orden superior aqu est funcionando.
+
+59
+00:04:54,420 --> 00:04:57,640
+Y este es un patrn que a
+
+60
+00:04:57,750 --> 00:05:06,090
+menudo vers si planeas cambiar tu componente como este envolvindolo o haciendo alguna transformacin Aberlour con l.
+
+61
+00:05:06,420 --> 00:05:09,660
+Sin embargo, una cosa que nunca debes hacer aqu es manipular el componente envuelto.
+
+62
+00:05:09,660 --> 00:05:14,320
+Solo salo como lo hacemos aqu.
+
+63
+00:05:14,370 --> 00:05:16,610
+No comience a agregar o cambiar su estado o propiedades.
+
+64
+00:05:16,620 --> 00:05:20,870
+Y como nota al margen, no est limitado a devolver un componente funcional aqu.
+
+65
+00:05:21,120 --> 00:05:26,700
+Tambin puede devolver un componente con estado.
+
+66
+00:05:26,730 --> 00:05:30,050
+Ahora vamos a ver qu hay de malo con
+
+67
+00:05:30,060 --> 00:05:35,910
+estos accesorios antes de que echemos un vistazo a los componentes con estado que se devuelven aqu.
+
+68
+00:05:35,910 --> 00:05:36,920
+Echaremos un vistazo a ambos en la prxima conferencia.
+
+69
+00:05:37,140 --> 00:05:39,180
+&nbsp;
+

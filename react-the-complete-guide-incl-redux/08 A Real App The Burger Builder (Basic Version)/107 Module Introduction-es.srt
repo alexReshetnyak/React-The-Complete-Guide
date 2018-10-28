@@ -1,0 +1,44 @@
+1
+00:00:02,390 --> 00:00:07,640
+Bienvenido a este mdulo. Ahora cubrimos muchos de los conceptos bsicos y mucha teora sobre la reaccin.
+
+2
+00:00:07,940 --> 00:00:13,660
+Bueno, afortunadamente, no solo la teora, todos construimos un proyecto, pero esto fue ms un proyecto de demostracin.
+
+3
+00:00:13,670 --> 00:00:19,880
+Es hora de construir una aplicacin real para que podamos ver todos estos conceptos juntos para que
+
+4
+00:00:19,880 --> 00:00:26,570
+pueda hacerse una idea de cmo planea realmente esa aplicacin y cmo construy este rbol de componentes y utiliza
+
+5
+00:00:26,930 --> 00:00:31,730
+con xito todos los conceptos que aprendi hasta el momento en una aplicacin.
+
+6
+00:00:31,730 --> 00:00:33,870
+Entonces eso es lo que vamos a hacer en este mdulo.
+
+7
+00:00:33,890 --> 00:00:40,790
+construir una aplicacin de hamburguesas para que una aplicacin donde podamos o el usuario pueda construir dinmicamente una
+
+8
+00:00:40,790 --> 00:00:47,510
+hamburguesa agregue ingredientes y luego, al final del curso, todo para comprarlo comenzar con la fase de planificacin.
+
+9
+00:00:47,510 --> 00:00:48,090
+Vamos a
+
+10
+00:00:48,290 --> 00:00:52,220
+Y eso es lo primero que quiero ver en la prxima conferencia.
+
+11
+00:00:52,340 --> 00:00:55,530
+Cmo planeamos la aplicacin para volver a actuar?
+

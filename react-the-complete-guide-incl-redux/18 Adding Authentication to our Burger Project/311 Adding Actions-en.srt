@@ -1,0 +1,284 @@
+1
+00:00:02,150 --> 00:00:05,970
+So let's make sure that something useful happens when this button is pressed,
+
+2
+00:00:06,110 --> 00:00:11,990
+for that, I will add action creators because of course I want to dispatch an action when this is pressed
+
+3
+00:00:12,590 --> 00:00:14,870
+So in my store actions folder,
+
+4
+00:00:14,870 --> 00:00:22,940
+I'll add a new file auth.js and there I want to set up authentication related actions,
+
+5
+00:00:23,000 --> 00:00:29,720
+I now also will set up some action types in the action types file I'll export them and I will add
+
+6
+00:00:29,720 --> 00:00:30,510
+an AUTH_START
+
+7
+00:00:30,590 --> 00:00:38,610
+action type, identifier therefore is also AUTH_START and then I'll duplicate it twice
+
+8
+00:00:38,750 --> 00:00:42,210
+to also create an AUTH_SUCCESS
+
+9
+00:00:42,230 --> 00:00:45,640
+action type and an
+
+10
+00:00:45,710 --> 00:00:50,340
+AUTH_FAIL action type because obviously, authentication can also fail.
+
+11
+00:00:50,930 --> 00:00:51,390
+Now in
+
+12
+00:00:51,400 --> 00:01:01,480
+auth.js, I will import all action types so as action types from ./actionTypes and then I want
+
+13
+00:01:01,480 --> 00:01:05,540
+to create a couple of action creators, I'll export them all.
+
+14
+00:01:05,680 --> 00:01:10,410
+The first one is the AUTH_START action creator,
+
+15
+00:01:10,450 --> 00:01:12,870
+I will make this a function of course,
+
+16
+00:01:12,970 --> 00:01:16,960
+I don't actually request or require any inputs here,
+
+17
+00:01:17,020 --> 00:01:24,580
+I just want to return a javascript object where the type is of type actionTypes.AUTH_START,
+
+18
+00:01:24,730 --> 00:01:27,040
+I don't pass any payload here,
+
+19
+00:01:27,070 --> 00:01:34,710
+I will essentially use this action to set a loading state and potentially show a spinner if I want to.
+
+20
+00:01:34,750 --> 00:01:39,120
+Next I'll add a const, authSuccess,
+
+21
+00:01:39,150 --> 00:01:45,150
+this function here will get some data, auth data
+
+22
+00:01:45,490 --> 00:01:52,530
+and here I want to also return a javascript object, the type will be of type AUTH_SUCCESS, of course
+
+23
+00:01:52,900 --> 00:01:55,480
+and I'll pass on the auth data,
+
+24
+00:01:55,510 --> 00:02:01,920
+we'll have a look at what this is later. Now we need another action creator here,
+
+25
+00:02:02,010 --> 00:02:04,230
+AUTH_FAIL,
+
+26
+00:02:04,290 --> 00:02:10,420
+here we get a potential error and I will return a javascript object here too,
+
+27
+00:02:10,680 --> 00:02:19,880
+the type will be actionTypes.AUTH_FAIL and I will then pass on the error,
+
+28
+00:02:19,890 --> 00:02:27,400
+like so. Finally I'll add one last action type, that will be the one holding the async code doing the
+
+29
+00:02:27,400 --> 00:02:28,680
+authentication,
+
+30
+00:02:28,690 --> 00:02:30,930
+I'll just name it auth, here
+
+31
+00:02:30,960 --> 00:02:37,840
+I expect to get the email and the password and I will then return dispatch,
+
+32
+00:02:37,840 --> 00:02:40,810
+so a function which gets dispatch as an argument
+
+33
+00:02:40,870 --> 00:02:47,880
+thanks to redux-thunk and in there, I now want to authenticate the user.
+
+34
+00:02:47,890 --> 00:02:55,370
+Now for now, I'll simply dispatch authStart here to at least set this state,
+
+35
+00:02:55,580 --> 00:03:02,210
+now with that we of course need to connect our actions to our containers so that we can dispatch them,
+
+36
+00:03:02,690 --> 00:03:09,100
+so I'll head over to the auth container and there, I want to import my actions. To do so,
+
+37
+00:03:09,110 --> 00:03:13,260
+I will add my auth action creators to the index.js
+
+38
+00:03:13,300 --> 00:03:17,790
+file where I bundle all my exports from that actions folder.
+
+39
+00:03:18,140 --> 00:03:24,520
+So I'll export everything I need from ./auth without the file extension
+
+40
+00:03:24,620 --> 00:03:27,350
+and right now, that is really just the
+
+41
+00:03:27,540 --> 00:03:31,130
+auth method itself.
+
+42
+00:03:31,130 --> 00:03:37,130
+Now with that, we can go back to the auth container and import all the actions here,
+
+43
+00:03:37,340 --> 00:03:40,680
+so import everything as actions from
+
+44
+00:03:40,730 --> 00:03:49,970
+and now let's go up to the store, to the actions and to the index.js file and now we can add our good
+
+45
+00:03:49,970 --> 00:03:59,100
+old const mapDispatchToProps constant to be able to dispatch something here via props in this component.
+
+46
+00:03:59,820 --> 00:04:07,340
+So there as always, I will return a javascript object and there I want to create an onAuth prop which
+
+47
+00:04:07,340 --> 00:04:15,660
+I can use as a method which therefore holds a reference to a method where I will eventually dispatch my action
+
+48
+00:04:15,870 --> 00:04:19,020
+and I want to dispatch the auth action.
+
+49
+00:04:19,050 --> 00:04:24,240
+Now as you saw when we set this up, the auth action requires an email and a password,
+
+50
+00:04:24,240 --> 00:04:31,140
+so I do expect to get this here when we execute this property basically, so that I can pass it on when
+
+51
+00:04:31,140 --> 00:04:38,410
+executing auth. mapDispatchToProps does only makes sense if we connect it to this container,
+
+52
+00:04:38,700 --> 00:04:43,490
+so I will now import connect from react-redux so that we can do that,
+
+53
+00:04:43,740 --> 00:04:52,400
+so import connect from react-redux, like this. With that we can go back to the bottom of the file and
+
+54
+00:04:52,400 --> 00:05:00,280
+now execute connect and pass null for mapStateToProps because we don't have that yet and
+
+55
+00:05:00,280 --> 00:05:02,710
+mapDispatchToProps as the second argument
+
+56
+00:05:02,960 --> 00:05:06,170
+and I'll also wrap my auth container of course.
+
+57
+00:05:06,500 --> 00:05:12,710
+With that, we can execute onAuth on our props in this container and I want to do this whenever the form
+
+58
+00:05:12,710 --> 00:05:13,760
+is submitted.
+
+59
+00:05:14,090 --> 00:05:22,200
+So I will add an onSubmit handler here and execute this submit handler,
+
+60
+00:05:22,250 --> 00:05:25,420
+I'll add this method to this container,
+
+61
+00:05:25,610 --> 00:05:33,650
+the submit handler. I do expect to get the event there because I first of all need to call event.prevent
+
+62
+00:05:33,710 --> 00:05:42,590
+Default to prevent the reloading of the page and thereafter, I want to call this props, onAuth and
+
+63
+00:05:42,590 --> 00:05:43,470
+execute it
+
+64
+00:05:43,490 --> 00:05:46,010
+and of course I need to pass e-mail and password
+
+65
+00:05:46,160 --> 00:05:56,130
+so I'll reach out to this.state.controls e-mail value and this.state.controls password value.
+
+66
+00:05:57,610 --> 00:06:02,070
+With that, let's save this and let's see if this works.
+
+67
+00:06:02,110 --> 00:06:10,080
+Back in our project I can enter an email address here and a password, if I click submit and inspect
+
+68
+00:06:10,080 --> 00:06:15,060
+redux, we see that authStart was dispatched successfully.
+
+69
+00:06:15,060 --> 00:06:18,200
+So that's working but of course nothing else works yet.
+
+70
+00:06:18,240 --> 00:06:24,480
+The next step is to run some async code which actually does authenticate ourselves and as I said, we'll
+
+71
+00:06:24,480 --> 00:06:26,550
+do this using firebase.
+

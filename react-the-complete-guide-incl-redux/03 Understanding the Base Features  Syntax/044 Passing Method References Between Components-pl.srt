@@ -1,0 +1,340 @@
+1
+00:00:02,590 --> 00:00:08,460
+Powiedzmy, e chcemy nazwa switchNameHndler, ktry rozpoznaem, zmienia te wiek, wic moe
+
+2
+00:00:08,460 --> 00:00:11,060
+nazwa nie zostaa wybrana perfekcyjnie.
+
+3
+00:00:11,350 --> 00:00:17,200
+Powiedzmy, e chcemy to nazwa nie po klikniciu tego przycisku tutaj lub nie
+
+4
+00:00:17,770 --> 00:00:26,050
+tylko po klikniciu tego przycisku, ale powiedzmy te, gdy klikniesz tutaj dowolny akapit, akapit, ktry moe powiedzie, e zawiera
+
+5
+00:00:26,050 --> 00:00:28,860
+imi i wiek w komponencie osoby.
+
+6
+00:00:29,440 --> 00:00:37,840
+Teraz, w komponencie osoby, moemy doda onClick, ale co teraz? Nie moemy nazwa tej metody obsugi w
+
+7
+00:00:37,840 --> 00:00:40,620
+innym pliku w innej klasie.
+
+8
+00:00:40,900 --> 00:00:49,000
+Waciwie moemy przekaza odniesienie do tego programu obsugi jako wasnoci do naszego komponentu, a to nie
+
+9
+00:00:49,000 --> 00:00:50,140
+jest wyszukane
+
+10
+00:00:50,290 --> 00:00:53,330
+narzdzie, to jest bardzo powszechny wzorzec.
+
+11
+00:00:53,810 --> 00:00:59,620
+Najpierw zrestrukturyzuj to w wielu liniach dla wszystkich tych komponentw, abymy mogli
+
+12
+00:00:59,620 --> 00:01:06,460
+atwiej zorientowa si, ktre waciwoci przechodzimy, a nastpnie powiedzmy, e nie chc tego przekazywa dla
+
+13
+00:01:06,550 --> 00:01:09,630
+innych komponentw, ale tylko dla tego uycia
+
+14
+00:01:10,030 --> 00:01:17,620
+z tego, wic tutaj dodam now waciwo, ktr nazwabym klikniciem, a nazwa zaley cakowicie od Ciebie.
+
+15
+00:01:18,460 --> 00:01:23,160
+Tutaj przeka odnonik do tego switchNameHandler.
+
+16
+00:01:23,410 --> 00:01:30,460
+Wic w zasadzie to, co rwnie zrobiem tutaj, to switchNameHandler po klikniciu przycisku, tutaj
+
+17
+00:01:30,460 --> 00:01:34,740
+przekazuj to jako odniesienie do tej waciwoci kliknicia.
+
+18
+00:01:35,020 --> 00:01:45,190
+Teraz moemy uy tej waciwoci kliknicia osobicie. js. Teraz mog po prostu wywoywa rekwizyty klikajc, poniewa
+
+19
+00:01:45,190 --> 00:01:48,310
+kliknicie jest nazw waciwoci, ktr tu zdefiniowaem,
+
+20
+00:01:48,610 --> 00:01:52,740
+a to spowoduje wykonanie tej funkcji, ktr przekazuj jako odniesienie.
+
+21
+00:01:52,780 --> 00:02:00,460
+Wic jeli zapiszemy wszystkie aplikacje plikw. js i osoba. js, powinnimy zobaczy, e w naszej aplikacji
+
+22
+00:02:00,460 --> 00:02:05,380
+moemy oczywicie klikn ten przycisk, aby zmieni nazw Maximillian i wiek Stephanie.
+
+23
+00:02:05,590 --> 00:02:10,190
+Ale jeli ponownie zaaduj, moemy rwnie klikn ten akapit z
+
+24
+00:02:10,310 --> 00:02:19,120
+Manu tutaj, zobaczysz take, e zmienio nazw i lata. To jest co wanego do zrozumienia, wany wzorzec, moesz
+
+25
+00:02:19,320 --> 00:02:28,940
+przekazywa metody take jako rekwizyty, dziki czemu moesz wywoa metod, ktra moe zmieni stan w innym komponencie, ktry nie ma
+
+26
+00:02:29,160 --> 00:02:34,200
+bezporedniego dostpu do stanu i ktry nie powinien mie bezporedniego dostp
+
+27
+00:02:34,200 --> 00:02:35,220
+do pastwa.
+
+28
+00:02:35,220 --> 00:02:41,460
+Jest to powszechny wzorzec i wane jest, aby wiedzie, e moesz przekaza procedury
+
+29
+00:02:41,460 --> 00:02:45,150
+obsugi klikni, ktre umoliwiaj zmian danych w komponencie
+
+30
+00:02:45,150 --> 00:02:55,020
+nadrzdnym, w komponencie aplikacji w tym przypadku dla komponentu osoby. By moe chcemy rwnie przekaza warto naszej funkcji, moe
+
+31
+00:02:55,020 --> 00:03:01,510
+tutaj switchNameHandler powinien otrzyma now nazw, tak e tutaj, gdzie na stae
+
+32
+00:03:01,530 --> 00:03:06,730
+zakodowaem Maximilien, tak naprawd ustawiem nazw rwn nowej nazwie.
+
+33
+00:03:06,740 --> 00:03:10,390
+Jak przekazujemy te dane?
+
+34
+00:03:10,390 --> 00:03:12,600
+S na to dwa sposoby:
+
+35
+00:03:12,610 --> 00:03:16,910
+po pierwsze wywoujesz bind, tutaj moesz to po prostu powiza,
+
+36
+00:03:16,960 --> 00:03:19,690
+to kontroluje to, do czego odwouje
+
+37
+00:03:19,780 --> 00:03:26,820
+si funkcja wewntrz funkcji i przez powizanie go z tym tutaj poza funkcj, do ktrej go
+
+38
+00:03:26,850 --> 00:03:31,840
+wiymy. klasa moe wyglda dziwnie, ale jest typowym sposobem radzenia sobie
+
+39
+00:03:31,850 --> 00:03:36,110
+z tym problemem w javascript, nie musielibymy tego jednak robi.
+
+40
+00:03:36,430 --> 00:03:42,340
+Ale moemy uy tej skadni, poniewa chc rwnie przekaza drugi argument do wizania.
+
+41
+00:03:42,610 --> 00:03:50,710
+To jest teraz lista argumentw, ktre w rzeczywistoci zostan przekazane do naszej funkcji i tutaj powinno to by
+
+42
+00:03:50,710 --> 00:03:51,610
+nowe imi,
+
+43
+00:03:51,790 --> 00:03:54,150
+wic tutaj moe to by
+
+44
+00:03:54,410 --> 00:03:56,270
+Maximillian i naprawd zobaczy
+
+45
+00:03:56,620 --> 00:04:02,290
+rnic, skopiujmy ten kod bindowania i zamy go tutaj kiedy przekazujemy t funkcj
+
+46
+00:04:02,290 --> 00:04:03,480
+jako odniesienie do
+
+47
+00:04:03,970 --> 00:04:11,230
+rekwizytu kliknicia i zmiemy j na Max z wykrzyknikiem tutaj, abymy mogli zobaczy rnic w zalenoci
+
+48
+00:04:11,230 --> 00:04:13,090
+od tego, gdzie kliknlimy.
+
+49
+00:04:13,380 --> 00:04:21,030
+Jeli teraz zapiszemy to z dodanym bindem, a to otrzymamy jako argument i switchNameHandler, zobaczmy, co si stanie,
+
+50
+00:04:21,040 --> 00:04:28,210
+jeli klikn opcj Zmie nazw i nadal bd zmienia to na Maximilien, co ma sens, poniewa to
+
+51
+00:04:28,210 --> 00:04:34,130
+jest to, do czego go przypisuj, ale dziaa potwierdzajc e dziaa z otrzymaniem argumentu
+
+52
+00:04:34,130 --> 00:04:41,460
+i jeli klikn na akapicie I'm Manu, zobaczysz, e zmienia si on na Max z wykrzyknikiem.
+
+53
+00:04:41,480 --> 00:04:44,060
+Wic jest to sposb na przekazanie
+
+54
+00:04:44,120 --> 00:04:45,990
+argumentu, nie jest to
+
+55
+00:04:46,190 --> 00:04:51,990
+jedyny sposb, zostawi jeden z dwch fragmentw kodu tutaj z bindem, aby pokaza, jak
+
+56
+00:04:52,070 --> 00:04:54,580
+to dziaa, poka ci alternatywn skadni.
+
+57
+00:04:54,770 --> 00:04:57,840
+Opuszcz wic tutaj, gdzie przekazujemy
+
+58
+00:04:58,010 --> 00:05:00,560
+go jako rekwizyty, ale
+
+59
+00:05:00,570 --> 00:05:11,510
+moglibymy uy tej nowej skadni, ktr wam teraz poka. Ta skadnia wiadomoci wyglda inaczej, tutaj na onClick I rzeczywicie wykona funkcj strzaki,
+
+60
+00:05:11,510 --> 00:05:13,650
+ktra nie bierze adnych argumentw,
+
+61
+00:05:13,690 --> 00:05:16,070
+chocia teoretycznie otrzymaby obiekt zdarzenia
+
+62
+00:05:16,070 --> 00:05:16,980
+przy okazji.
+
+63
+00:05:17,420 --> 00:05:18,980
+ale nie uyj
+
+64
+00:05:19,550 --> 00:05:27,020
+tego tutaj, a potem po prostu jako funkcja zwraca to wywoanie funkcji.
+
+65
+00:05:27,020 --> 00:05:29,120
+Oto kilka rzeczy, ktre musisz
+
+66
+00:05:29,120 --> 00:05:37,550
+zrozumie, przede wszystkim, gdy uywasz funkcji strzaki, to domylnie dodaje sowo kluczowe return przed kodem, ktry pojawia si bezporednio
+
+67
+00:05:37,550 --> 00:05:39,890
+po strzale, jeli wszystko jest
+
+68
+00:05:40,070 --> 00:05:42,230
+napisane w jednym wierszu.
+
+69
+00:05:42,230 --> 00:05:46,730
+Alternatyw jest zawinicie tego w nawiasy klamrowe i napisanie normalnego ciaa funkcyjnego.
+
+70
+00:05:47,210 --> 00:05:51,860
+Wic to si zwraca i to, co zwracam, to
+
+71
+00:05:51,860 --> 00:05:54,140
+wywoanie funkcji, dlatego dodaem nawiasy.
+
+72
+00:05:54,410 --> 00:06:01,700
+Teraz we wczeniejszym wykadzie powiedziaem, e nie powiniene tego nazywa, ale to nie
+
+73
+00:06:01,700 --> 00:06:03,550
+jest natychmiast wykonywane.
+
+74
+00:06:03,560 --> 00:06:10,250
+Zamiast tego przekazujemy tutaj anonimow funkcj, ktra zostanie wykonana po klikniciu,
+
+75
+00:06:10,250 --> 00:06:13,550
+a nastpnie zwrci wynik tej funkcji.
+
+76
+00:06:13,550 --> 00:06:17,900
+Co oczywicie prowadzi do wykonania tej funkcji.
+
+77
+00:06:17,900 --> 00:06:26,270
+Jest to uyteczne, poniewa teraz moemy atwo przekaza nasze dane, Maximillian,
+
+78
+00:06:26,270 --> 00:06:31,760
+z dwoma wykrzyknikami. Jeli teraz zapisz to i klikn
+
+79
+00:06:31,760 --> 00:06:35,000
+opcj Zmie nazw, widzimy Maximilliana z dwoma wykrzyknikami.
+
+80
+00:06:35,000 --> 00:06:41,930
+Teraz jest to bardzo wygodna skadnia, ale moe by nieefektywna, reagowanie moe
+
+81
+00:06:41,930 --> 00:06:48,950
+ponownie renderowa pewne rzeczy w twojej aplikacji, wic niekoniecznie polecam uywanie tego, jeli
+
+82
+00:06:48,950 --> 00:06:50,150
+nie musisz,
+
+83
+00:06:50,180 --> 00:06:56,590
+uyj skadni bindowania, jeli moesz . Nadal pozostawiam go tutaj, moesz go uy i w zalenoci
+
+84
+00:06:56,660 --> 00:06:59,520
+od rozmiaru twojej aplikacji moesz nie odczu tak duego
+
+85
+00:06:59,780 --> 00:07:03,100
+uderzenia wydajnoci, ale pamitaj, e moe to by nieefektywne.
+

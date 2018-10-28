@@ -1,0 +1,112 @@
+1
+00:00:02,100 --> 00:00:04,820
+W ostatnim wykadzie rozmawialimy o
+
+2
+00:00:04,820 --> 00:00:11,480
+taktowaniu, teraz czasami chcecie wykona okrelony kod po zakoczeniu stanu animacji, a
+
+3
+00:00:11,480 --> 00:00:14,150
+nie po prostu zmieni to,
+
+4
+00:00:14,300 --> 00:00:21,490
+co wyrenderujecie na ekranie, poniewa otrzymujemy rne wywoania zwrotne, mona dodawa funkcje mog
+
+5
+00:00:21,770 --> 00:00:26,450
+wykona przejcie, wrc do aplikacji. js i zrb to na tym elemencie
+
+6
+00:00:26,450 --> 00:00:31,430
+przejciowym, ktrego uylimy do owinicia tego czerwonego bloku. Otrzymujemy sze rnych zdarze, ktre
+
+7
+00:00:31,430 --> 00:00:33,870
+moemy wysucha na temat tego
+
+8
+00:00:33,980 --> 00:00:42,520
+komponentu przejciowego, pierwszy to onEnter i tam, po prostu wykonam funkcj, w ktrej zapisz log, aby si zalogowa,
+
+9
+00:00:42,520 --> 00:00:44,610
+abymy mogli zobaczy, kiedy
+
+10
+00:00:44,720 --> 00:00:54,550
+to si stanie, drugi jest na wejciu, wic zrbmy print onEntering. Trzeci to onEntered i moesz oczywicie
+
+11
+00:00:54,590 --> 00:01:00,370
+odgadn, kiedy te metody s wykonywane.
+
+12
+00:01:00,740 --> 00:01:10,420
+Dostalimy take eXit, ktry powinien wydrukowa na Exit tutaj, a potem moesz by w stanie to odgadn, mamy ekscytujce, wic wydrukujmy to
+
+13
+00:01:10,490 --> 00:01:16,520
+take w dzienniku tutaj, a potem wybralimy si na Exited, tak jak to.
+
+14
+00:01:16,520 --> 00:01:21,070
+Teraz te sze rnych rekwizytw moe by zwizanych z funkcjami,
+
+15
+00:01:21,230 --> 00:01:27,980
+tak jak wanie to zrobiem tutaj, a nastpnie moesz uruchomi dowolny kod, ktry chcesz i
+
+16
+00:01:28,160 --> 00:01:34,940
+wykonuj w tej kolejnoci, onEnter jest wykonywany tu przed wejciem do trybu wprowadzania, onEntering jest nastpnie
+
+17
+00:01:35,220 --> 00:01:39,670
+wykonywany raz Weszlimy w tryb wprowadzania, a onEntered jest wykonywany
+
+18
+00:01:39,750 --> 00:01:47,180
+po wejciu w wprowadzony tryb, c, to duo wejcia. Exit i tak dalej zachowuj si tak samo, onExit jest
+
+19
+00:01:47,180 --> 00:01:54,610
+uywany, gdy zaczynamy tryb wyjcia tu przed tym, gdy jest on dokadny, przy czym Exiting jest wykonywany, gdy jestemy w
+
+20
+00:01:55,010 --> 00:02:01,210
+trybie Exiting i wychodzimy, gdy jestemy w trybie Exited. Pozwol sobie zapisa to wszystko i zobaczmy to po prostu
+
+21
+00:02:01,220 --> 00:02:07,070
+w dzienniku konsoli, jeli klikn tutaj, aby przeczy na czerwony przycisk, widz na wejciu, na wejciu i po tej
+
+22
+00:02:07,190 --> 00:02:14,600
+jednej sekundzie trwa, onEntered i tak samo dla usuwania, onExit, onExiting i onExited. To moe by fajne tworzy zoone animacje,
+
+23
+00:02:14,600 --> 00:02:20,150
+w ktrych chcesz poczeka na zakoczenie jednej animacji, zanim rozpoczniesz
+
+24
+00:02:20,150 --> 00:02:20,900
+nastpn.
+
+25
+00:02:20,900 --> 00:02:26,570
+Dziki tym metodom uzyskasz pen kontrol potrzebn, aby dowiedzie si, co si stao, co zakoczyo si,
+
+26
+00:02:26,570 --> 00:02:27,370
+co zaczo
+
+27
+00:02:27,500 --> 00:02:30,200
+si, a nastpnie czas, na przykad na podstawie
+
+28
+00:02:30,200 --> 00:02:31,010
+twoich animacji.
+

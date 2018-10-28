@@ -1,0 +1,104 @@
+1
+00:00:02,290 --> 00:00:09,610
+Termine a ltima palestra, que detectem que esse erro ou quando alteramos o valor do nosso menu suspenso, est
+
+2
+00:00:09,610 --> 00:00:16,720
+relacionado  nossa verificao de validao no continer de dados de contato que eles esto em cheque de validade.
+
+3
+00:00:16,720 --> 00:00:19,570
+Verificamos se as regras so necessrias.
+
+4
+00:00:19,570 --> 00:00:21,820
+O problema  regras.
+
+5
+00:00:22,060 --> 00:00:23,050
+O que isso acontece.
+
+6
+00:00:23,050 --> 00:00:25,920
+A que se refere esse argumento.
+
+7
+00:00:26,260 --> 00:00:28,780
+Vamos dar uma olhada em onde chamamos de validade de verificao.
+
+8
+00:00:28,780 --> 00:00:34,420
+Chamamos isso de manipulador alterado de entrada e passamos o valor do elemento de formulrio de atualizao.
+
+9
+00:00:34,540 --> 00:00:38,410
+E para as regras atualizadas de validao de elementos de formulrio.
+
+10
+00:00:38,410 --> 00:00:46,400
+Agora, o objeto  que esse objeto de validao no existe para o menu suspenso para o mtodo de entrega.
+
+11
+00:00:46,810 --> 00:00:56,290
+Ento, se no tentarmos acessar requerido em algo que no existe, temos um erro em duas maneiras de corrigir
+
+12
+00:00:56,290 --> 00:00:56,970
+isso.
+
+13
+00:00:56,980 --> 00:01:05,770
+A primeira maneira  simplesmente adicionar um objeto de validao vazio ao controle suspenso.
+
+14
+00:01:05,770 --> 00:01:11,520
+Agora, o acesso  validao necessria no falhar, mas simplesmente retornar indefinido.
+
+15
+00:01:11,530 --> 00:01:16,340
+Eu gosto muito desta maneira porque agora todos os nossos controles so configurados igualmente.
+
+16
+00:01:16,360 --> 00:01:19,510
+Todos eles tm uma propriedade de validao e uma propriedade vlida.
+
+17
+00:01:19,510 --> 00:01:23,170
+E se eles no precisam de validao, ele deve estar vazio.
+
+18
+00:01:23,170 --> 00:01:25,400
+ por isso que eu gostei da abordagem dele.
+
+19
+00:01:25,590 --> 00:01:32,380
+Agora, a alternativa teria sido tambm adicionar uma verificao e verificar a validade e ver se as regras.
+
+20
+00:01:32,500 --> 00:01:38,890
+Se isso  verdadeiro ish, o que  apenas se  para encontrar e se no  judeu, ento por que acrescentar
+
+21
+00:01:38,890 --> 00:01:41,390
+marca de exclamao para simplesmente retornar verdadeiro ento.
+
+22
+00:01:41,500 --> 00:01:47,430
+Portanto, sempre retornar verdadeiro para cada resultado de validade de verificao se nenhuma regra de validao for definida.
+
+23
+00:01:47,470 --> 00:01:54,490
+Podemos, claro, implementar tambm ambos para segurana dupla, mas novamente eu gosto da abordagem aqui, adicionando
+
+24
+00:01:54,490 --> 00:02:00,250
+esse objeto de validao vazio, porque ele faz todos os controles configurados igualmente.
+
+25
+00:02:00,250 --> 00:02:06,840
+Agora, se isso adicionado Se eu salvar isso agora, podemos mudar para o valor suspenso novamente sem ter erros.
+
+26
+00:02:06,850 --> 00:02:07,600
+Como voc pode ver.
+

@@ -1,0 +1,300 @@
+1
+00:00:02,140 --> 00:00:07,720
+Agora, antes de continuarmos usando esse token que armazenamos em nossa loja redux,
+
+2
+00:00:08,140 --> 00:00:13,970
+voc deve se lembrar que quando ns fizermos login e ns inspecionarmos os dados,
+
+3
+00:00:13,990 --> 00:00:18,240
+voltemos ento deixe-me fazer isso rapidamente, mude para entrar, l
+
+4
+00:00:18,250 --> 00:00:21,410
+ns tambm recebemos este valor expiresIn .
+
+5
+00:00:21,520 --> 00:00:25,880
+Portanto, o token s  vlido por 60 minutos. Depois disso,
+
+6
+00:00:25,880 --> 00:00:32,440
+sempre que o enviarmos a qualquer recurso que exija um token, a solicitao falhar como se no
+
+7
+00:00:32,440 --> 00:00:34,220
+tivssemos enviado nenhum token.
+
+8
+00:00:34,220 --> 00:00:36,400
+Agora, essa no  a
+
+9
+00:00:36,400 --> 00:00:41,970
+melhor experincia do usurio. Provavelmente, queremos fazer o logout do usurio aps essa hora.
+
+10
+00:00:42,220 --> 00:00:48,940
+Como uma nota lateral, se o usurio recarrega o aplicativo, o estado  perdido de qualquer forma, porque isso limpa
+
+11
+00:00:48,940 --> 00:00:52,200
+o repositrio redux desde que o aplicativo inteiro  recarregado,
+
+12
+00:00:52,360 --> 00:00:58,390
+portanto, podemos alterar a interface do usurio de qualquer maneira que faremos no futuro para mostrar que no
+
+13
+00:00:58,390 --> 00:01:05,020
+est logado, mas  o estado em que estamos logados e no recarregamos a pgina por uma hora, onde podemos
+
+14
+00:01:05,020 --> 00:01:10,760
+entrar neste ponto estranho de ter um token que no  mais vlido sem que vejamos isso.
+
+15
+00:01:10,840 --> 00:01:20,740
+Por esse motivo, quero adicionar um cdigo para invalidar esse token aps uma hora, para que
+
+16
+00:01:21,040 --> 00:01:24,070
+possamos atualizar nossa interface de
+
+17
+00:01:24,190 --> 00:01:33,490
+usurio assim que o token deixar de existir. Para fazer isso, eu vou para o meu arquivo de
+
+18
+00:01:33,730 --> 00:01:41,240
+aes auth e vou adicionar uma nova constante, essencialmente uma nova funo que eu vou nomear
+
+19
+00:01:41,270 --> 00:01:51,050
+checkAuthTimeout, a espero obter o tempo de expirao e a, vou retornar essa funo onde eu recebo como um argumento porque
+
+20
+00:01:51,050 --> 00:01:54,350
+eu quero executar algum cdigo assncrono.
+
+21
+00:01:54,860 --> 00:02:02,280
+Vou despachar essa ao checkAuthTimeout quando recebermos uma resposta de sucesso, ento onde eu
+
+22
+00:02:02,360 --> 00:02:07,870
+tambm despacharei o authSuccess, eu tambm despacharei checkAuthTimeout e eu
+
+23
+00:02:08,030 --> 00:02:11,110
+transmitirei os dados de resposta e
+
+24
+00:02:11,420 --> 00:02:13,420
+l,  essa propriedade
+
+25
+00:02:13,460 --> 00:02:17,570
+expiresIn que voc viu, expiresIn, voc pode veja
+
+26
+00:02:17,660 --> 00:02:22,660
+rapidamente que, se fizermos login novamente, alterne para entrar,
+
+27
+00:02:22,910 --> 00:02:28,860
+estou falando sobre essa propriedade expiresIn. Isso contm um valor, um nmero ou,
+
+28
+00:02:28,860 --> 00:02:35,370
+para ser preciso, uma string, mas que pode ser analisada como um nmero e eu recebo
+
+29
+00:02:35,660 --> 00:02:43,960
+isso aqui, agora eu quero chamar setTimeout e executar uma funo depois de um certo perodo de tempo e voc provavelmente
+
+30
+00:02:43,970 --> 00:02:48,490
+pode adivinhar qual a quantidade de tempo, o tempo de expirao aqui.
+
+31
+00:02:48,680 --> 00:02:56,230
+Agora aqui no setTimeout, eu quero fazer alguma coisa e eu simplesmente quero chamar o logout, esta  uma nova ao
+
+32
+00:02:56,280 --> 00:02:58,540
+que eu preciso de qualquer maneira.
+
+33
+00:02:58,690 --> 00:03:00,460
+Ento, eu vou exportar uma
+
+34
+00:03:00,470 --> 00:03:08,130
+constante que eu vou nomear logout aqui, ser uma ao que no toma nenhuma entrada, ser um criador de ao sncrona,
+
+35
+00:03:08,300 --> 00:03:11,820
+vou definir o tipo para um tipo que eu ainda
+
+36
+00:03:11,840 --> 00:03:20,150
+tenho que criar ento vamos crie agora, nos tipos de ao eu exportarei uma constante AUTH_LOGOUT com o identificador AUTH_LOGOUT e agora com
+
+37
+00:03:20,150 --> 00:03:30,630
+isso, eu posso despachar esta ao para que aqui o tipo seja actionTypes. AUTH_LOGOUT e esta ao de logout, este criador
+
+38
+00:03:30,810 --> 00:03:38,100
+de aes aqui tambm ser usado em setTimeout de checkAuthTimeout.
+
+39
+00:03:38,400 --> 00:03:46,920
+Ento aqui eu chamaria de dispatch aps o tempo de expirao para chamar a ao de logout, assim,
+
+40
+00:03:46,920 --> 00:03:52,690
+sempre execute estas funes pois isso retorna a ao que  realmente despachada.
+
+41
+00:03:52,740 --> 00:04:00,480
+Ento, agora, com isso, ns executamos ou despachamos a funo de logout depois desse intervalo de tempo e isso permite que eu
+
+42
+00:04:00,480 --> 00:04:04,790
+v para o meu redutor e l, manipule o caso de logout.
+
+43
+00:04:04,950 --> 00:04:13,940
+Ento eu vou adicionar uma nova funo l que eu vou chamar authLogout, eu obtenho estado e ao aqui e na
+
+44
+00:04:14,700 --> 00:04:23,370
+funo, eu vou retornar um objeto javascript atualizado e esse objeto javascript atualizado aqui ser criado com updateObject meu estado antigo,
+
+45
+00:04:24,150 --> 00:04:26,550
+onde eu defini o token como
+
+46
+00:04:26,610 --> 00:04:35,400
+null e o id do usurio como null, para que eu seja essencialmente desconectado, porque todas as informaes essenciais que compem
+
+47
+00:04:35,400 --> 00:04:41,790
+um usurio conectado agora so perdidas novamente. E eu preciso lidar
+
+48
+00:04:41,790 --> 00:04:51,580
+com isso, claro, aqui, caso actionTypes. AUTH_LOGOUT, quero retornar o resultado da funo de logoff de autenticao
+
+49
+00:04:51,610 --> 00:05:00,130
+onde passo o estado e a ao como argumentos e, com isso, colocamos esse cronmetro no arquivo do criador
+
+50
+00:05:00,400 --> 00:05:07,060
+de aes em checkAuthTimeout que ser acionado aps o que o firebase nos devolver e
+
+51
+00:05:07,060 --> 00:05:11,660
+qual ser em seguida, verifique se o usurio est desconectado.
+
+52
+00:05:11,690 --> 00:05:14,740
+E, por enquanto, isso limpar a loja e no far
+
+53
+00:05:14,740 --> 00:05:20,410
+muito mais, no mostrar nenhum feedback visual, mas implementaremos algo para acontecer quando o usurio fizer o logoff,
+
+54
+00:05:20,500 --> 00:05:26,570
+incluindo quando ele deliberadamente fizer logoff para dar ao usurio uma pista de que ele no est logado mais.
+
+55
+00:05:26,890 --> 00:05:34,700
+Por enquanto, vamos ver se o despacho de todos funciona, mude para entrar e enviar, vamos dar uma olhada no redux,
+
+56
+00:05:35,740 --> 00:05:36,240
+l
+
+57
+00:05:36,280 --> 00:05:38,660
+na verdade eu estou imediatamente desconectado,
+
+58
+00:05:38,980 --> 00:05:42,400
+ento de alguma forma, isso disparou um pouco cedo demais.
+
+59
+00:05:42,400 --> 00:05:47,110
+O motivo, obviamente,  o tempo de expirao  de 3600,
+
+60
+00:05:47,260 --> 00:05:50,190
+mas o setTimeout espera obter milissegundos, portanto,
+
+61
+00:05:50,200 --> 00:05:53,090
+era apenas 3. 6 segundos.
+
+62
+00:05:53,140 --> 00:05:54,250
+ uma boa
+
+63
+00:05:54,250 --> 00:05:59,960
+prtica, agora podemos pelo menos ver que authLogout  despachado e que ele apagou os tokens
+
+64
+00:06:00,370 --> 00:06:08,310
+e o ID do usurio, mas  claro, eu quero multiplicar esse valor por mil para transformar meus milissegundos em segundos reais,
+
+65
+00:06:08,350 --> 00:06:10,410
+ento agora deveria seja uma hora.
+
+66
+00:06:10,420 --> 00:06:16,810
+Agora, se eu salvar isso e fizer esse exerccio novamente, faa o login, mude para entrar, agora no devemos
+
+67
+00:06:16,840 --> 00:06:22,240
+ver authLogout porque agora poderamos esperar por uma hora, no vou fazer isso aqui, sinta-se 
+
+68
+00:06:22,240 --> 00:06:23,760
+vontade para fazer isso claro.
+
+69
+00:06:24,130 --> 00:06:25,610
+Podemos agora continuar e
+
+70
+00:06:25,660 --> 00:06:32,170
+agora, finalmente, tirar proveito do nosso token para proteger alguns dos recursos em nosso backend e, em seguida,
+
+71
+00:06:32,170 --> 00:06:34,770
+ainda alcan-los e, claro, tambm atualizar nossa
+
+72
+00:06:34,810 --> 00:06:40,660
+interface do usurio para, por exemplo, adicionar um boto de logout para permitir que o usurio
+
+73
+00:06:41,050 --> 00:06:42,760
+faa logout e coisas assim.
+
+74
+00:06:42,820 --> 00:06:46,540
+Ento, esses sero os prximos passos em que vou trabalhar,
+
+75
+00:06:46,660 --> 00:06:48,970
+vamos fazer isso nas prximas palestras.
+

@@ -1,0 +1,104 @@
+1
+00:00:02,050 --> 00:00:03,670
+Bu yzden hemen hemen
+
+2
+00:00:03,690 --> 00:00:10,820
+nextjiler hakknda ok ey rendik ve bu modln sonuna yaklayorum, nk yine tam bir sonraki ders deil, yine de
+
+3
+00:00:10,980 --> 00:00:13,110
+zerinde durmak istediim baz eyler var.
+
+4
+00:00:13,230 --> 00:00:21,450
+NextJet'in github sayfasna geri dnelim ve buradan zetle, ierie geebileceimiz ierie gidersek, zel
+
+5
+00:00:21,450 --> 00:00:23,500
+hata ilemcilerine de
+
+6
+00:00:23,520 --> 00:00:29,520
+bir gz atabiliriz, nk u anda bizim nexts uygulamasnda yollar
+
+7
+00:00:29,520 --> 00:00:30,440
+var.
+
+8
+00:00:30,440 --> 00:00:37,920
+Burada geersiz bir rota girersek, bu varsaylan 404 hatasn alrz, hibir eyden
+
+9
+00:00:37,920 --> 00:00:45,270
+daha iyi deil, ancak bunu zelletirebiliriz. Burada nextjs'nin github deposunda akland gibi, bir hata oluturarak
+
+10
+00:00:45,510 --> 00:00:48,770
+kendi hata ileyicinizi oluturabilirsiniz. js dosyas
+
+11
+00:00:48,810 --> 00:00:51,470
+sayfalar klasrnde.
+
+12
+00:00:51,560 --> 00:00:56,350
+yleyse yapalm, sayfalarda hatay yaratalm. Balangta alt izgi ile
+
+13
+00:00:56,580 --> 00:01:00,680
+js ve normal javascript tepki bileenidir.
+
+14
+00:01:00,960 --> 00:01:02,840
+Bu yzden ierii dizinden kopyalamama izin verin. js ve
+
+15
+00:01:02,880 --> 00:01:08,550
+ben bu hata sayfasn adlandracam ama dersin ad gerekten nemli
+
+16
+00:01:08,850 --> 00:01:14,690
+deil ve sonra diyebilirim ki, bireyler yanl gitti ve belki burada,
+
+17
+00:01:15,680 --> 00:01:23,660
+denedik ve sonra balantda, geri dnyoruz diyoruz. Bu yzden hala balanty ithal ediyoruz, butona gerek yok,
+
+18
+00:01:23,670 --> 00:01:24,510
+o yzden
+
+19
+00:01:24,510 --> 00:01:29,280
+ynlendirici ithalatndan da kurtulalm ve linkte sadece eik izgiye gitmek istiyorum.
+
+20
+00:01:29,730 --> 00:01:37,200
+imdi npm run devresini yeniden balatrsak, bunu yapmalyz nk bu hata sayfasn deitirdik ve bu yzden varsaylann
+
+21
+00:01:37,200 --> 00:01:38,820
+zerine yazdk, imdi bilmediimiz
+
+22
+00:01:38,820 --> 00:01:44,610
+bir rotaya girersek, zel hata sayfamz alrz ve imdi geri dnebiliriz ana sayfamza
+
+23
+00:01:44,610 --> 00:01:48,540
+ve bundan sonra otomatik olarak almaya devam eder.
+
+24
+00:01:48,540 --> 00:01:54,900
+Yani bu, nextjs'deki hatalar nasl ileyebileceimiz ve kendi zel hata sayfamz nasl oluturabildiimizdir ki, eer
+
+25
+00:01:54,900 --> 00:01:56,610
+gerekten bununla gerek bir
+
+26
+00:01:56,760 --> 00:01:59,460
+uygulama yapmak istiyorsak, elbette olduka nemlidir.
+

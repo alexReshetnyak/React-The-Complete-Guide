@@ -1,0 +1,368 @@
+1
+00:00:02,190 --> 00:00:07,650
+Dostalimy token i wszystkie te informacje podczas rejestracji i logowania, oczywicie chcemy to zapisa, aby mc
+
+2
+00:00:07,650 --> 00:00:16,290
+w przyszoci uzyska dostp do zasobw na naszym serwerze, ktre s chronione. Aby zachowa token, przejd teraz do folderu reduktorw
+
+3
+00:00:16,350 --> 00:00:23,210
+i utworz nowy plik autorw reduktora. js, tam chc obsuy te akcje
+
+4
+00:00:23,230 --> 00:00:29,360
+auth i mj stan autoryzacji. W tym celu najpierw zaimportuj
+
+5
+00:00:29,400 --> 00:00:36,330
+wszystkie moje typy akcji z folderu dziaa i tam, z typw akcji,
+
+6
+00:00:36,330 --> 00:00:43,890
+poniewa potrzebuj ich w mojej instrukcji case switch, a nastpnie utworz swoj funkcj
+
+7
+00:00:43,890 --> 00:00:51,430
+reduktora, tak jak zawsze otrzymuj stan i akcja, wyeksportuj to jako domyln tego pliku.
+
+8
+00:00:51,710 --> 00:01:01,070
+Ustawi rwnie stan pocztkowy, wic stan pocztkowy powinien by obiektem javascript, a tam w tym obiekcie javascript
+
+9
+00:01:01,130 --> 00:01:07,520
+chc mie swj token, ktry pocztkowo ma warto NULL, chc rwnie
+
+10
+00:01:07,520 --> 00:01:12,660
+przechowywa mj identyfikator uytkownika, ktry jest pocztkowo pusty, moemy
+
+11
+00:01:12,860 --> 00:01:20,720
+rwnie zapisa tutaj bd pocztkowo zerowy, a by moe take adowanie, ktre jest faszywe.
+
+12
+00:01:20,720 --> 00:01:26,490
+Teraz w moim reduktorze dodam instrukcj switch case, przecz typ
+
+13
+00:01:26,720 --> 00:01:29,570
+akcji i tam, sprawdz teraz
+
+14
+00:01:29,900 --> 00:01:36,600
+moje sprawy, pierwszym przypadkiem jest actionTypes. AUTH_START i tam po prostu
+
+15
+00:01:36,620 --> 00:01:44,550
+chc zwrci mj stan i teraz moemy oczywicie uy naszej funkcji narzdzia do
+
+16
+00:01:44,780 --> 00:01:56,270
+aktualizacji obiektu, wic zaimportuj to rwnie tutaj, zaimportuj updateObject z pliku narzdzia, aby zwrci zaktualizowany stan updateObject przekazuje stary
+
+17
+00:01:56,690 --> 00:02:05,560
+stan i aktualizuje tylko bd, ustawia go ponownie na warto null w przypadku zmiany
+
+18
+00:02:05,600 --> 00:02:13,030
+i zaadowania, ustaw tutaj na true, poniewa wanie zaczlimy adowanie tutaj oczywicie.
+
+19
+00:02:13,370 --> 00:02:17,320
+Musimy take ustawi domylny przypadek ju, aby pozby si tego bdu IDE,
+
+20
+00:02:17,460 --> 00:02:20,460
+tam po prostu zwrc mj stan, w ten sposb.
+
+21
+00:02:20,510 --> 00:02:25,060
+Teraz zoptymalizowalimy wszystkie pozostae reduktory tak, aby zawieray instrukcje dotyczce przecznikw typu lean switch,
+
+22
+00:02:25,050 --> 00:02:26,380
+zrbmy to rwnie tutaj.
+
+23
+00:02:26,480 --> 00:02:34,160
+Stworz tutaj now funkcj, ktr nazwabym authStart, gdzie otrzymam stan i akcj, i gdzie po
+
+24
+00:02:34,160 --> 00:02:44,030
+prostu chc zwrci ten kod tutaj, wic zwr mj zaktualizowany obiekt stanu, tak e w tym przypadku mog po
+
+25
+00:02:44,030 --> 00:02:51,900
+prostu zadzwoni authStart, return to jest dokadne, poniewa nadal musz zwrci stan tutaj w moim
+
+26
+00:02:51,910 --> 00:02:54,950
+reduktorze, authStart i przekaza stan i dziaanie.
+
+27
+00:02:55,510 --> 00:03:03,040
+Teraz dodam kolejn funkcj do mojego auth reduktora, authSuccess, tutaj rwnie
+
+28
+00:03:03,040 --> 00:03:12,600
+oczekujemy stanu i akcji oczywicie i tam, zwrc rwnie zaktualizowany obiekt, wic zadzwoni do
+
+29
+00:03:12,660 --> 00:03:17,440
+updateObject tutaj i zwrc go dla mojego stanu.
+
+30
+00:03:17,460 --> 00:03:22,790
+Co teraz musi zmieni stan w przypadku sukcesu? W przypadku sukcesu chc ustawi
+
+31
+00:03:22,920 --> 00:03:28,020
+token i identyfikator uytkownika oraz bd i adowanie, wic wszystko.
+
+32
+00:03:28,440 --> 00:03:35,370
+Tak wic w przypadku sukcesu ustawiam token na powiedzmy token dziaania ID,
+
+33
+00:03:35,370 --> 00:03:38,620
+oczekuj, e otrzymam t waciwo w
+
+34
+00:03:38,640 --> 00:03:42,680
+moim akcie ID uytkownika do dziaania ID
+
+35
+00:03:42,680 --> 00:03:47,080
+uytkownika, rwnie spodziewam si tego, bd do null
+
+36
+00:03:47,100 --> 00:03:53,190
+i adowanie do false, poniewa gotowe. Teraz utworz take inn
+
+37
+00:03:53,200 --> 00:03:57,650
+funkcj, authFail, tam te otrzymam stan
+
+38
+00:03:58,040 --> 00:04:06,550
+i akcj i tutaj, zwrc stan updateObject i tutaj ustawi bd
+
+39
+00:04:06,770 --> 00:04:14,630
+bdu dziaania, ktry spodziewam si uzyska i nadal aduj do
+
+40
+00:04:14,630 --> 00:04:16,100
+false oczywicie.
+
+41
+00:04:16,100 --> 00:04:23,600
+Teraz te dwa dziaania oczywicie musz by obsugiwane w przypadkach, wic dodajmy argumenty actionType. AUTH_SUCCESS, whoops, AUTH_SUCCESS, tutaj chc
+
+42
+00:04:23,640 --> 00:04:33,620
+zwrci wynik funkcji authSuccess, ktr wanie utworzyem, przekaza stan i dziaanie oczywicie
+
+43
+00:04:33,620 --> 00:04:39,890
+i typy akcji actionTypes. AUTH_FAIL, tutaj chc zwrci wynik mojej
+
+44
+00:04:40,100 --> 00:04:43,660
+funkcji authFail, w ktrej rwnie przekazuj stan
+
+45
+00:04:43,670 --> 00:04:46,080
+i akcj, wic s
+
+46
+00:04:46,190 --> 00:04:52,880
+to dwie funkcje, ktre wanie utworzyem. Dziki temu otrzymuj niezy reduktor auth, ktry
+
+47
+00:04:52,880 --> 00:04:55,080
+powinien mc co zrobi
+
+48
+00:04:55,220 --> 00:04:59,470
+z moimi danymi, teraz oczywicie chc go poczy z
+
+49
+00:04:59,540 --> 00:05:11,460
+moimi innymi reduktorami, wic w moim gwnym indeksie. js, zaimportuj reduktor auth z. / przechowuj zworki auth, tak jak to i
+
+50
+00:05:12,310 --> 00:05:14,790
+dodaj je, aby poczy reduktory
+
+51
+00:05:14,830 --> 00:05:23,230
+w domenie auth, tak na wasnoci o nazwie auth. Dodajc do naszego globalnego reduktora root, nie otrzymamy wszystkich
+
+52
+00:05:23,650 --> 00:05:27,890
+informacji, ktre chcemy, ale token ID, ID uytkownika, wydobywam
+
+53
+00:05:27,920 --> 00:05:33,180
+to wszystko z akcji, teraz, jeli spojrzymy na nasz akcj tutaj,
+
+54
+00:05:33,250 --> 00:05:40,030
+tak naprawd nie przekazuj tych danych. Sprawdmy wic odpowied, ktr otrzymujemy, aby zobaczy,
+
+55
+00:05:40,030 --> 00:05:44,980
+jak wyodrbniamy dane, ktre chcemy przekaza do autsSupcess i tak dalej.
+
+56
+00:05:44,980 --> 00:05:53,170
+Wrmy zatem do naszej aplikacji i przeadujmy j i otrzymajmy ten bd, poniewa w redukujcym do uwierzytelnienia, zapomniaem o
+
+57
+00:05:53,180 --> 00:05:55,160
+jednej wanej rzeczy, stan oczywicie
+
+58
+00:05:55,270 --> 00:06:01,020
+musi by ustawiony na stan pocztkowy, w przeciwnym razie na pocztku jest niezdefiniowany.
+
+59
+00:06:01,200 --> 00:06:07,810
+Teraz to dziaa, a teraz sprbujmy si zalogowa, zalogowa, poniewa ten adres e-mail jest ju
+
+60
+00:06:07,810 --> 00:06:09,340
+zajty, tam otrzymujemy odpowied
+
+61
+00:06:09,340 --> 00:06:16,660
+i teraz widzimy, e otrzymujemy lokalny identyfikator, ktry jest identyfikatorem uytkownika, a my zdobd token tosamoci, ktry
+
+62
+00:06:16,660 --> 00:06:17,400
+rwnie jest
+
+63
+00:06:17,410 --> 00:06:18,980
+dla mnie interesujcy.
+
+64
+00:06:19,360 --> 00:06:23,380
+Wic to dwie rzeczy, ktre zapisz, nie zapisz tokena odwieania, wic
+
+65
+00:06:23,470 --> 00:06:26,270
+odwieenie tokena nie bdzie moliwe tutaj, to jest
+
+66
+00:06:26,290 --> 00:06:32,020
+co, co musiaby zrobi, jeli chcesz si upewni, e tokeny nie wygasn po 1 godzina,
+
+67
+00:06:32,200 --> 00:06:36,450
+w mojej aplikacji ludzie bd musieli zalogowa si ponownie po godzinie.
+
+68
+00:06:36,760 --> 00:06:42,110
+Aby zapisa te dane na lokalnym tokenie ID i ID,
+
+69
+00:06:42,340 --> 00:06:51,010
+otrzymuj to w moim pliku auth w folderze actions, tutaj gdzie wysyamy nasze danie uwierzytelnienia i
+
+70
+00:06:51,010 --> 00:06:53,870
+otrzymujemy odpowied, w danych odpowiedzi
+
+71
+00:06:54,040 --> 00:07:02,380
+mamy token ID i pole lokalnego ID i musz przekaza to do autsSupcji, poniewa authSuccess
+
+72
+00:07:02,400 --> 00:07:07,640
+musi nastpnie przekaza to, przekazujc, powiedzmy token, wic spodziewam
+
+73
+00:07:07,660 --> 00:07:16,870
+si dosta mj token i identyfikator uytkownika, aby przekaza token i ID uytkownika jako rekwizyty, ktre Nastpnie
+
+74
+00:07:16,870 --> 00:07:19,860
+prbuj wyodrbni w moim reduktorze.
+
+75
+00:07:19,960 --> 00:07:26,050
+Tam prbuj wyodrbni token, token identyfikacyjny i identyfikator uytkownika, wic jego token identyfikacyjny, ktrego nazw
+
+76
+00:07:26,230 --> 00:07:34,650
+zmieniamy na tak w naszym pliku akcji autoryzacji, powinien by waciwoci o nazwie tokenu identyfikatora, a za bd, nazywa si on
+
+77
+00:07:34,690 --> 00:07:42,430
+bdem, to jest ju to, co prbuj wyodrbni, aby zadziaao. W tym celu musimy powrci do pliku auth
+
+78
+00:07:42,550 --> 00:07:50,130
+tutaj i oczekuj, e dostan swj token i identyfikator uytkownika w funkcji authSuccess, co oczywicie oznacza,
+
+79
+00:07:50,200 --> 00:07:57,330
+e kiedy wysyam t funkcj tutaj, w przypadku sukcesu, musz j przekaza w zwizku z
+
+80
+00:07:57,400 --> 00:08:04,450
+tym musz przekaza dane odpowiedzi, a nastpnie nazwano tokenem ID, a jako drugi argument dane
+
+81
+00:08:04,450 --> 00:08:11,260
+odpowiedzi i identyfikator uytkownika zostay zapisane w lokalnej waciwoci ID i zawsze mona to sprawdzi
+
+82
+00:08:11,260 --> 00:08:11,750
+w
+
+83
+00:08:11,800 --> 00:08:16,960
+dzienniku konsoli, tokenie identyfikatora i identyfikator lokalny. Dziki temu zapisuj te dane,
+
+84
+00:08:17,320 --> 00:08:19,060
+a teraz zobaczmy,
+
+85
+00:08:19,070 --> 00:08:23,150
+czy to zadziaa, wylijmy te dane jeszcze raz,
+
+86
+00:08:23,150 --> 00:08:30,780
+przecz si na logowanie, przejd do redux i kliknij Przelij i na sukces, jeli teraz
+
+87
+00:08:31,050 --> 00:08:37,110
+sprawdzimy stan, widzimy, e w auth rzeczywicie mamy token i mamy tu
+
+88
+00:08:37,110 --> 00:08:44,310
+zapisany identyfikator uytkownika, wic wszystko dziaao. Dziki temu przechowujemy status uwierzytelniania, a nie robimy
+
+89
+00:08:44,310 --> 00:08:45,310
+tego, gdy
+
+90
+00:08:45,320 --> 00:08:47,140
+nie pokazujemy spinnera podczas uwierzytelniania.
+
+91
+00:08:47,400 --> 00:08:54,600
+Dodajmy to, jak rwnie obsug bdw, zanim bdziemy kontynuowa i wykorzystaj token, prbujc uzyska dostp
+
+92
+00:08:54,600 --> 00:08:58,230
+do zasobw, do ktrych nie mielibymy dostpu.
+

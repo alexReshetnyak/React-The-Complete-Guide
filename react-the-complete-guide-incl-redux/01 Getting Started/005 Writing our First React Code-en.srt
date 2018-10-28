@@ -1,0 +1,736 @@
+0
+00:02.260 --> 00:07.040
+Now that we know what React actually is, it's time to get our hands dirty.
+
+1
+00:07.070 --> 00:14.900
+For that, I'm visiting codepen.io. This is a web editor which allows us to write very simple
+
+2
+00:14.960 --> 00:20.120
+HTML, CSS and JavaScript apps. It's really more like a playground.
+
+3
+00:20.150 --> 00:23.570
+We won't really use this to build real projects in this course.
+
+4
+00:23.630 --> 00:29.730
+We will use a local setup for that, but it is great to dive into React. So on codepen.io,
+
+5
+00:29.810 --> 00:36.450
+you can click on Create and create a so-called Pen; which 
+is simply a workspace where you can write
+
+6
+00:36.500 --> 00:39.330
+HTML, CSS and JavaScript code.
+
+7
+00:39.350 --> 00:44.150
+Now, in this editor, you've got three areas for HTML, CSS and JavaScript.
+
+8
+00:44.150 --> 00:47.830
+Now, let's write a very simple application
+
+9
+00:47.870 --> 00:54.650
+(a demo) to see how we write something with normal HTML, JavaScript and so on and how we then add React;
+
+10
+00:54.680 --> 00:59.440
+to maybe have an easier time creating such an application. For that
+
+11
+00:59.440 --> 01:05.210
+and the HTML part of this editor I'll create a new div. You can quickly create this by typing div and
+
+12
+01:05.210 --> 01:06.160
+hitting tab.
+
+13
+01:06.170 --> 01:08.250
+This will then automatically expand this.
+
+14
+01:08.540 --> 01:12.890
+In there, I will now add an h1 tag and simply output
+
+15
+01:12.900 --> 01:19.210
+Max (my name) and below that a paragraph where I say Your Age: 28 
+
+16
+01:19.220 --> 01:20.050
+(this is my age).
+
+17
+01:20.060 --> 01:22.450
+Of course, feel free to use your data here.
+
+18
+01:22.490 --> 01:24.950
+So, this now leads to the output below;
+
+19
+01:24.980 --> 01:27.320
+it updates automatically.
+
+20
+01:27.320 --> 01:29.820
+Now let's quickly give this some styling.
+
+21
+01:29.900 --> 01:37.310
+Let's simply give this div a class of person (the name is up to you) and add this person
+
+22
+01:37.310 --> 01:42.260
+CSS class with some normal CSS code where I will give this a border: 1px solid #ccc;
+
+23
+01:42.320 --> 01:53.150
+and a box-shadow: 0 2px 2px #ccc;
+
+24
+01:53.150 --> 01:53.520
+Let's
+
+25
+01:53.570 --> 01:58.840
+maybe use a slightly brighter one here #eee
+
+26
+01:58.880 --> 02:00.010
+for the border.
+
+27
+02:00.230 --> 02:08.240
+Let's now also give this a width: 200px and a padding: 20px and now we have  
+
+28
+02:08.240 --> 02:11.760
+this card-like look you see below.
+
+29
+02:11.870 --> 02:17.990
+Now, this is a person card holding information about a person.
+
+30
+02:18.290 --> 02:27.830
+We can also set this to display: inline-block; and give it a margin: 10px. Now I can
+
+31
+02:27.830 --> 02:36.750
+replicate this and add a second person; let's say Manu who has an age of 29 (Manu is
+
+32
+02:36.750 --> 02:37.880
+my colleague).
+
+33
+02:38.280 --> 02:45.930
+So now we've got these two person cards and you could easily think of this as a normal web application where
+
+34
+02:45.930 --> 02:52.320
+you output some information about users or about the team behind a blog you're creating; something
+
+35
+02:52.320 --> 02:53.150
+like that.
+
+36
+02:53.310 --> 02:56.110
+We're using only HTML and CSS here.
+
+37
+02:56.250 --> 02:59.370
+Now we can already see one limitation (kind of).
+
+38
+02:59.580 --> 03:04.150
+We're always reusing the same HTML code here.
+
+39
+03:04.320 --> 03:06.660
+Now this isn't too problematic here.
+
+40
+03:06.780 --> 03:11.610
+It would be more problematic if we were to do something with each of these snippets with JavaScript,
+
+41
+03:12.000 --> 03:16.800
+but even without that we can think of this part here as a component.
+
+42
+03:16.860 --> 03:23.290
+This person div is always structured in the same way; just the data inside of it varies.
+
+43
+03:23.310 --> 03:29.720
+This is where React comes in, though React shines the most as we connect this to JavaScript logic too.
+
+44
+03:29.730 --> 03:34.430
+But still, we can already use React to create reusable components here.
+
+45
+03:34.500 --> 03:36.300
+For that, let's add React.
+
+46
+03:36.300 --> 03:41.430
+I'm going to shrink this CSS part a tiny bit and in the JavaScript area,  I
+
+47
+03:41.550 --> 03:44.020
+first of all have to import React.
+
+48
+03:44.330 --> 03:51.060
+You can click on that gear icon next to JavaScript and then you can download or import some external
+
+49
+03:51.060 --> 03:55.780
+JavaScript libraries. React is such an external library.
+
+50
+03:55.800 --> 04:02.880
+Actually it's so popular that on CodePen, you can go to the Quick-add dropdown and simply scroll to
+
+51
+04:03.000 --> 04:04.230
+React
+
+52
+04:04.230 --> 04:05.440
+and this will add it.
+
+53
+04:05.440 --> 04:08.030
+Now here, it adds version 15.6.1.
+
+54
+04:08.030 --> 04:12.440
+This might differ at the point-in-time you're viewing this. In this course,
+
+55
+04:12.450 --> 04:18.570
+I will cover version 16; so you are learning the latest React and in the local setup we'll use in this
+
+56
+04:18.570 --> 04:21.390
+course, we'll also use this latest React version.
+
+57
+04:21.420 --> 04:27.600
+No worries, here however, we're using an older one but for the demo here this does not matter at all.
+
+58
+04:27.600 --> 04:30.720
+We also need to Quick-add React  DOM.
+
+59
+04:30.810 --> 04:37.860
+This is another package from the React team. React itself kind of is the logic we need for creating
+
+60
+04:37.860 --> 04:39.680
+these React components.
+
+61
+04:39.690 --> 04:46.530
+I told you that React is all about components. React DOM is about rendering these components to
+
+62
+04:46.530 --> 04:50.980
+the real DOM. With these two packages added, we're almost there.
+
+63
+04:51.030 --> 04:57.570
+But React uses a special JavaScript syntax and a lot of next generation JavaScript features. I'll come
+
+64
+04:57.570 --> 05:03.030
+back to this later in the course. I'll have a whole module where I introduce you to the most important
+
+65
+05:03.030 --> 05:05.410
+next-gen features React uses.
+
+66
+05:05.790 --> 05:13.320
+So, to unlock the usage of these features and this special syntax, in the JavaScript Preprocessor dropdown,
+
+67
+05:13.560 --> 05:15.170
+you have to choose Babel.
+
+68
+05:15.270 --> 05:21.330
+This is simply a tool which compiles the next-generation JavaScript code you're writing here, to code
+
+69
+05:21.420 --> 05:25.750
+that runs fine in the browser; so that we write code with all of the features we want,
+
+70
+05:25.830 --> 05:28.450
+but ship code that works in the browser.
+
+71
+05:28.770 --> 05:34.680
+With that, you can click Save & Close and now we can start writing our React app here in the JavaScript
+
+72
+05:34.680 --> 05:35.430
+section.
+
+73
+05:35.430 --> 05:36.690
+So, why don't we do that.
+
+74
+05:36.990 --> 05:43.250
+Let's create a React component so that we have a reusable, custom HTML element
+
+75
+05:43.410 --> 05:49.400
+we can use instead of repeating this HTML code here on the left. In its most basic form (and you're
+
+76
+05:49.410 --> 05:55.710
+going to learn about a different form in this course too), but in its most basic form, a React component is just
+
+77
+05:55.770 --> 06:01.140
+a function. So, we can create a new function and maybe name this Person.
+
+78
+06:01.290 --> 06:08.880
+Make sure it starts with a capital P. This is required to use it correctly with React. This Person component
+
+79
+06:09.270 --> 06:13.100
+is a normal function but it has to return the code
+
+80
+06:13.100 --> 06:20.320
+you actually want to render to the DOM and here, React uses a special syntax which is called JSX.
+
+81
+06:20.500 --> 06:25.680
+I'm using parentheses here to be able to write or to return some multi-line code.
+
+82
+06:26.040 --> 06:32.190
+Now I'm going to copy the code here (from the left) and paste it into my return statement here.
+
+83
+06:32.400 --> 06:35.670
+And this certainly looks strange now. It looks like HTML
+
+84
+06:35.760 --> 06:43.860
+in JavaScript which wouldn't work normally and it wouldn't if we hadn't added Babel here as a preprocessor.
+
+85
+06:44.520 --> 06:50.880
+Babel, if configured correctly (which it automatically is here) allows us to use this special syntax which
+
+86
+06:50.880 --> 06:57.550
+looks like HTML but which isn't and I will dive deeper into this syntax in the next course modules.
+
+87
+06:57.690 --> 07:01.420
+It's called JSX and it's just syntactical sugar.
+
+88
+07:01.530 --> 07:06.060
+Behind the scenes, this gets compiled to normal JavaScript code.
+
+89
+07:06.060 --> 07:11.450
+We can use it here though to have an easier time writing what we actually want to render.
+
+90
+07:11.640 --> 07:16.750
+Fine, so now we've got this function and I said that this is a React component.
+
+91
+07:17.010 --> 07:21.940
+Of course, right now it's just a function. To turn this into a React component,
+
+92
+07:21.960 --> 07:26.220
+we actually have to use React to render it to the screen.
+
+93
+07:26.460 --> 07:33.600
+So I'll get rid of my person here on the left and instead I'll add a new div here and I'll give it
+
+94
+07:33.600 --> 07:36.560
+an id="p1".
+
+95
+07:36.710 --> 07:39.440
+You can choose any ID you want though.
+
+96
+07:39.560 --> 07:45.430
+Now, the React package we imported is responsible for correctly parsing this code
+
+97
+07:45.450 --> 07:47.450
+here; this JSX code.
+
+98
+07:47.660 --> 07:52.620
+The other package we imported was ReactDOM (if you remember).
+
+99
+07:52.670 --> 07:55.910
+You can always check here on the gear icon; react-dom.
+
+100
+07:56.090 --> 08:02.980
+This actually exposes an object, ReactDOM (written like this with DOM in capitals) which
+
+101
+08:02.990 --> 08:05.000
+has a render method.
+
+102
+08:05.000 --> 08:14.700
+This method allows us to render a JavaScript function as a component to the real DOM and treating
+
+103
+08:14.710 --> 08:18.960
+it as a component is exactly what React takes care of.
+
+104
+08:19.460 --> 08:23.990
+We can then render this function, but not by referencing it like this,
+
+105
+08:24.080 --> 08:32.000
+but by actually turning it into an HTML element (again, behind the scenes using this JSX syntax which is
+
+106
+08:32.000 --> 08:33.620
+understood by React).
+
+107
+08:34.040 --> 08:42.400
+So, I write this as my custom self-closing HTML element and render then takes another argument where
+
+108
+08:42.410 --> 08:45.220
+I specify where to render this element.
+
+109
+08:45.250 --> 08:48.860
+I reach out to the document and it can use a query selector
+
+110
+08:48.860 --> 08:56.830
+(using normal JavaScript code) to select any element with id="p1" (this is also normal JavaScript code;
+
+111
+08:56.880 --> 08:59.010
+this query selector).
+
+112
+08:59.510 --> 09:09.650
+With that, I'm telling React that I want to render this function, the Person component, in this place here
+
+113
+09:09.650 --> 09:12.100
+on the left and it does.
+
+114
+09:12.320 --> 09:19.340
+Now, the styling is lost because class actually is a keyword in JavaScript, so React turns this into className;
+
+115
+09:19.340 --> 09:22.730
+and this is the best proof that this looks like HTML,
+
+116
+09:22.760 --> 09:23.480
+but isn't.
+
+117
+09:23.540 --> 09:30.350
+It uses a custom syntax, which in 99% of cases is like HTML, but behind the scenes it's transformed to
+
+118
+09:30.410 --> 09:31.410
+JavaScript.
+
+119
+09:31.880 --> 09:39.800
+Now you see we have our person class here again, Max, treated as a custom component which we can also
+
+120
+09:39.890 --> 09:47.000
+verify by the fact that our inline-block styling here is kind of ignored; because we're wrapping this
+
+121
+09:47.000 --> 09:50.780
+in a custom element which is treated as a block statement.
+
+122
+09:50.780 --> 09:53.050
+Now, I'll dive into styling in this course, but
+
+123
+09:53.120 --> 09:58.320
+for now, let's just be happy that we got our component rendered here.
+
+124
+09:58.580 --> 10:00.450
+It's not really reusable though.
+
+125
+10:00.590 --> 10:10.450
+If I had a second hook in my HTML here, in my HTML part (let's say with id="p2")
+
+126
+10:10.490 --> 10:14.480
+and I wanted to render a different component (a different person)
+
+127
+10:14.780 --> 10:19.430
+I would have to hard-code the values into it and actually create a new component.
+
+128
+10:19.430 --> 10:26.150
+The great thing about React and why components are so awesome and save us a lot of time, is that we can
+
+129
+10:26.150 --> 10:30.060
+configure them dynamically as we need them.
+
+130
+10:30.120 --> 10:36.920
+So here, what I'll do is, I'll actually add an argument to this person function which I'll name props.
+
+131
+10:36.950 --> 10:42.950
+You can choose any name you want, but the concept I'm using here is called props. React automatically
+
+132
+10:42.950 --> 10:48.830
+gives me an argument in the function that I turned into a component, with this syntax down here (with the
+
+133
+10:48.830 --> 10:57.140
+Person JSX code) and props simply contains all the attributes I add to my own component.
+
+134
+10:57.140 --> 11:00.320
+So, I could add name="Max" and 
+
+135
+11:00.530 --> 11:03.720
+age="28" (like this).
+
+136
+11:03.900 --> 11:08.820
+If I do this, now we can output this in our Person component.
+
+137
+11:08.820 --> 11:12.130
+We just need to dynamically access this props element;
+
+138
+11:12.150 --> 11:18.600
+this props argument. We output dynamic content in React with curly braces (opening and closing) and only
+
+139
+11:18.600 --> 11:19.190
+one pair
+
+140
+11:19.200 --> 11:22.540
+(not double-curly braces; only one pair of curly braces).
+
+141
+11:22.860 --> 11:30.540
+Then we reach out to props.name to get this name attribute I passed and props.age
+
+142
+11:30.660 --> 11:37.710
+to output the age property I passed. Now we're using the properties (the attributes)
+
+143
+11:37.830 --> 11:44.820
+we're passing to our own component and that's pretty cool, because now if we repeat this ReactDOM.render
+
+144
+11:44.820 --> 11:48.010
+call here for #p2
+
+145
+11:48.150 --> 11:51.510
+(make sure to exchange this in the second query selector).
+
+146
+11:51.900 --> 11:59.370
+We can pass different props to that component, like Manu and 29, and now both components use the
+
+147
+11:59.370 --> 12:01.010
+same base as you can see.
+
+148
+12:01.110 --> 12:07.140
+They use the same function which is turned into a component by React. We're really taking advantage of
+
+149
+12:07.140 --> 12:14.940
+the component concept because we only wrote the HTML code once and now we can reuse it over and over
+
+150
+12:14.940 --> 12:15.580
+again.
+
+151
+12:15.720 --> 12:19.810
+I bet you can see the potential of this in very big applications!
+
+152
+12:19.890 --> 12:26.720
+You can compose the entire application of reusable pieces and this component isn't even using any logic.
+
+153
+12:26.850 --> 12:32.600
+It doesn't listen to clicks or stuff like that. In apps (such as the app we build in this course),
+
+154
+12:32.730 --> 12:34.160
+we will of course do that.
+
+155
+12:34.200 --> 12:41.340
+We will append our own logic to our components and then we have small, reusable, maintainable and easy-
+
+156
+12:41.340 --> 12:48.290
+to-manage pieces with their own logic contained in them which we can use anywhere to build amazing applications.
+
+157
+12:48.300 --> 12:54.690
+That's the idea behind React and that is why it's so great and why this component concept is so great.
+
+158
+12:54.690 --> 12:56.700
+Now, let me do one more thing though.
+
+159
+12:56.790 --> 12:59.670
+Right now, I'm calling ReactDOM.render twice.
+
+160
+12:59.670 --> 13:04.440
+There's nothing wrong with that, but actually we can also do this a bit differently.
+
+161
+13:04.440 --> 13:10.050
+We could have one div here in the HTML part which has an id="app" (or id="root");
+
+162
+13:10.110 --> 13:12.640
+it doesn't matter; pick any id of your choice.
+
+163
+13:12.750 --> 13:18.840
+Now I'll get rid of the secondary ReactDOM.render call and I will add a variable here.
+
+164
+13:18.960 --> 13:22.520
+This variable I'll name app, but this name is also up to you,
+
+165
+13:22.620 --> 13:25.920
+but this variable will also hold some JSX code.
+
+166
+13:25.920 --> 13:31.060
+I am just wrapping this in parentheses so that I can write this code over multiple lines.
+
+167
+13:31.080 --> 13:43.710
+Now here what I can do is, I can output my Person component as I did before. We have to wrap it with
+
+168
+13:43.710 --> 13:50.580
+a div though because JSX has the requirement of only having one root element; so adjacent elements are
+
+169
+13:50.580 --> 13:51.650
+not allowed.
+
+170
+13:51.660 --> 13:56.430
+I will also talk about this in the course though (there are ways around this limitation).
+
+171
+13:56.460 --> 14:04.560
+So, now I've added two person-component usages to my app variable here and now I simply mount the app
+
+172
+14:04.800 --> 14:14.070
+variable in the place of this element with the id="app" which I select by adjusting my query selector.
+
+173
+14:14.070 --> 14:18.070
+Now you see, I get the two elements next to each other
+
+174
+14:18.300 --> 14:23.160
+because now they're rendered in the same hook, in the same element,
+
+175
+14:23.160 --> 14:32.070
+in the same div and this method of only having one hook, one ReactDOM.render call and then
+
+176
+14:32.070 --> 14:38.190
+creating an app with nested components is a far more popular way of creating React apps.
+
+177
+14:38.220 --> 14:43.120
+It is the method I will use in this course and in the coming lectures I will talk about this
+
+178
+14:43.160 --> 14:46.910
+versus the alternative with multiple ReactDOM.render calls.
+
+179
+14:46.960 --> 14:52.010
+But be aware, this is what you'll see far more often. With this approach,
+
+180
+14:52.050 --> 14:56.060
+you create so-called Single Page Applications.
+
+181
+14:56.080 --> 14:59.110
+Now, this is our first React app.
+
+182
+14:59.130 --> 15:01.290
+Now let's dive deeper into React
+
+183
+15:01.300 --> 15:05.160
+and let's continue with the course and really get started with React.

@@ -1,0 +1,172 @@
+1
+00:00:02,180 --> 00:00:06,700
+Now over the last lectures we saw how to use css transitions and animations
+
+2
+00:00:06,710 --> 00:00:11,070
+and as I mentioned, using them is absolutely fine.
+
+3
+00:00:11,090 --> 00:00:17,360
+Now what's one limitation of using these animations though? We can see it if we use the developer tools
+
+4
+00:00:17,630 --> 00:00:19,610
+to inspect our dom, if
+
+5
+00:00:19,670 --> 00:00:21,370
+we do this here,
+
+6
+00:00:21,500 --> 00:00:28,180
+we see that our modal div and the backdrop div are always present,
+
+7
+00:00:28,190 --> 00:00:35,850
+they're just not visible because we're actually animating this here.
+
+8
+00:00:35,850 --> 00:00:44,370
+Now that of course means that all our code, all our html code is always in the dom and just not displayed
+
+9
+00:00:44,400 --> 00:00:46,240
+because the opacity is 0,
+
+10
+00:00:46,260 --> 00:00:53,490
+this might not be what we want, it populates our dom with a lot of elements which slows it down a little
+
+11
+00:00:53,490 --> 00:01:01,650
+bit and which also might not be the best case or the best way to do for accessibility and it is not
+
+12
+00:01:01,650 --> 00:01:03,150
+very react-ish
+
+13
+00:01:03,330 --> 00:01:12,120
+if we in the end are back to having to control the display of things with just css, it's also not super bad,
+
+14
+00:01:12,150 --> 00:01:18,320
+we do it like this in our burger builder in the end and especially for this modal or some side drawer
+
+15
+00:01:18,320 --> 00:01:19,220
+menu,
+
+16
+00:01:19,380 --> 00:01:27,090
+this might be perfectly fine but let's say we really want to ensure that we show and hide this differently
+
+17
+00:01:27,780 --> 00:01:37,380
+by not passing the show in higher property like that but instead by using our ModalIsOpen state to
+
+18
+00:01:37,380 --> 00:01:44,490
+really show or hide the backdrop in modal elements. I can of course do this by using a ternary expression
+
+19
+00:01:44,520 --> 00:01:47,630
+where I check if this.state.ModalIsOpen is true,
+
+20
+00:01:47,700 --> 00:01:55,140
+if it is, I want to render to modal otherwise I render null and I use the exact same logic for the backdrop
+
+21
+00:01:55,230 --> 00:02:00,900
+to either show the backdrop or render nothing, this is rendering conditional content as we
+
+22
+00:02:00,910 --> 00:02:05,010
+learned it throughout the course. If we go back and I click open modal,
+
+23
+00:02:05,310 --> 00:02:12,120
+we just see it move away here actually, well the reason for this is that inside the modal we're still using
+
+24
+00:02:12,120 --> 00:02:19,160
+the show prop to have the open or closed classes and since we don't pass the show prop anymore here
+
+25
+00:02:19,170 --> 00:02:21,910
+on the modal and also not on the backdrop,
+
+26
+00:02:22,140 --> 00:02:28,320
+well it is always considered to be false and therefore inside the modal, always the modal close classes
+
+27
+00:02:28,320 --> 00:02:31,740
+attached and I place the out animation.
+
+28
+00:02:32,130 --> 00:02:39,780
+We could of course fix this by still passing show on both, so we could set show on both to this.state.
+
+29
+00:02:39,990 --> 00:02:41,670
+ModalIsOpen, if
+
+30
+00:02:41,880 --> 00:02:43,180
+we do it like this,
+
+31
+00:02:43,260 --> 00:02:44,380
+we go back
+
+32
+00:02:44,610 --> 00:02:52,530
+We still have an in animation and we now see of course that the element is added to the dom but if I click dismiss,
+
+33
+00:02:52,620 --> 00:02:58,010
+we don't get an out animation because the element is instantly removed.
+
+34
+00:02:58,080 --> 00:03:06,870
+The reason for this is that react in our app.js file doesn't wait for re-rendering this jsx and
+
+35
+00:03:06,870 --> 00:03:13,770
+therefore removing the modal and the backdrop when the state changes, for our animation to finish because
+
+36
+00:03:13,770 --> 00:03:19,830
+it's not aware of that animation and it's good that it doesn't scan our elements which are to be removed
+
+37
+00:03:20,040 --> 00:03:23,040
+for possibly running css animations,
+
+38
+00:03:23,040 --> 00:03:25,410
+that would be a performance nightmare.
+
+39
+00:03:25,830 --> 00:03:34,170
+So here, we now see a limitation we have with css animations and transitions, animating in showing it
+
+40
+00:03:34,470 --> 00:03:41,430
+did actually still work because adding the element to the modal simply now also adds css class and the
+
+41
+00:03:41,430 --> 00:03:48,930
+animation therefore plays but removing happens instantly and that of course means that we get kind of
+
+42
+00:03:48,930 --> 00:03:57,040
+a bad behavior or look here. Now for that we need other tools to manage this,
+
+43
+00:03:57,060 --> 00:04:02,480
+now let's have a look at which tools that would be over the next lectures.
+

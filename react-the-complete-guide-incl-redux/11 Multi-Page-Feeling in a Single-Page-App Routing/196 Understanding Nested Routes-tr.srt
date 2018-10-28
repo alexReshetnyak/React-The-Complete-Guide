@@ -1,0 +1,336 @@
+1
+00:00:02,190 --> 00:00:09,600
+imdiye dek uygulamanzda, blog sayfamzn bir paras olarak tek posta yolu yklediimizden, bir
+
+2
+00:00:09,600 --> 00:00:15,310
+postaya tkladmzda, Postun sayfasn tek bir posta sayfas ile deitirdik.
+
+3
+00:00:15,330 --> 00:00:18,330
+imdi elbette bunu kesinlikle yapabiliriz.
+
+4
+00:00:18,330 --> 00:00:25,350
+Bununla birlikte, bazen, i ie gemi bir yol oluturmak istediiniz belirli bir bileene sahipseniz
+
+5
+00:00:25,380 --> 00:00:33,360
+veya belirli bir bileeni yklemek istiyorsanz veya ayn zamanda ynlendirme yoluyla yklenen baka bir bileenin iinde
+
+6
+00:00:33,360 --> 00:00:35,540
+belirli ierii oluturmak istiyorsanz.
+
+7
+00:00:35,790 --> 00:00:41,850
+Dolaysyla u anda burada sadece bir seviye var, burada blok konteynerde ynlendirme yapmaktayz, farkl
+
+8
+00:00:41,850 --> 00:00:45,810
+rotalar iin farkl bileenler yklyoruz ve bu kesinlikle iyi.
+
+9
+00:00:45,810 --> 00:00:54,090
+imdi, blok bileeni iinde deil, burada yaynlarmzn hemen altndaki ana makine bileeninde belirli bir ana
+
+10
+00:00:54,330 --> 00:00:56,730
+makine yklemek istediimizi sylemeyelim.
+
+11
+00:00:57,090 --> 00:01:06,060
+Bunun iin bunu Dith'e yapacam ve oraya rota ekleyeceim, orada rota bileenimi orada
+
+12
+00:01:06,180 --> 00:01:09,390
+eklenen post bileeni iinde.
+
+13
+00:01:09,390 --> 00:01:16,780
+Dolaysyla elbette post-bileeninin hepsinde yeniden ynlendirici ynlendiriciden rotay ieri aktardm stte bir ie
+
+14
+00:01:16,890 --> 00:01:25,350
+aktarma eklemem gerekiyor ve imdi burada bir hatayla karlayorum nk burada atfta bulunulan tam yaz
+
+15
+00:01:25,380 --> 00:01:28,740
+bileeni Bu dosyada da mevcut deildir.
+
+16
+00:01:28,770 --> 00:01:33,900
+Bu yzden, tam postay ieri aktarmak iin bunun iin bir ie aktarma eklemeliyim.
+
+17
+00:01:33,900 --> 00:01:39,570
+Ve imdi tam deftere nakil klasrne gidelim ve tam posta dosyasndan ie aktaralm.
+
+18
+00:01:39,570 --> 00:01:47,890
+Ve imdi, rota listemi farkl bir bileenden kullandmdan tek bir yayn yapabilirim, nk bu genel olarak
+
+19
+00:01:48,300 --> 00:01:51,050
+tabii ki yapabileceiniz bir ey.
+
+20
+00:01:51,120 --> 00:01:56,010
+Uygulamanzda istediin yerde rota bileenini kullanabilirsiniz.
+
+21
+00:01:56,250 --> 00:02:04,110
+Sayfay kullandnz bileen, tarayc ynlendiricisi tarafndan sktrld srece elbette durum
+
+22
+00:02:04,110 --> 00:02:08,670
+budur nk blok bileenini onunla saryoruz.
+
+23
+00:02:08,760 --> 00:02:14,490
+Posta bileeni, bir rota zerinden yklenen blok bileenlerinin sadece bir alt
+
+24
+00:02:14,820 --> 00:02:16,680
+bileenidir nk bu alr.
+
+25
+00:02:16,800 --> 00:02:22,000
+imdi burada block bileeni switch ifadesi biraz gereksiz.
+
+26
+00:02:22,010 --> 00:02:29,280
+imdi orada sadece bir bileen var, belki de teknik olarak bu zorunlu deildir, nk bu iki
+
+27
+00:02:29,280 --> 00:02:34,400
+rota ayn yol iin asla elemeyecek, ancak d rotam oraya tadm.
+
+28
+00:02:34,470 --> 00:02:40,710
+Dolaysyla switch ifadesini kaldrabiliriz, bylece burada kodunuzu bir araya getirebilmeniz iin
+
+29
+00:02:40,710 --> 00:02:43,700
+yalnzca bir referans olarak brakrz.
+
+30
+00:02:43,830 --> 00:02:49,310
+Blok bileeninde imdi yapabileceimiz ey, artk burada kullanmadmz tam post ie
+
+31
+00:02:49,310 --> 00:02:50,790
+aktarma ileminden kurtulabilmemiz.
+
+32
+00:02:51,110 --> 00:02:58,850
+kaydedip post bileenine giderseniz tek bir mesaj tklarsanz gncellemeler olduunuzu greceksiniz.
+
+33
+00:02:58,850 --> 00:03:01,290
+imdi tm dosyalar
+
+34
+00:03:01,520 --> 00:03:05,600
+Ancak grev sonras deil ve yaynlar da gitti.
+
+35
+00:03:05,630 --> 00:03:08,940
+Bunun nedeni imdi i ie gemi bir rota oluturmamz.
+
+36
+00:03:09,170 --> 00:03:16,940
+Blok konteynrnda burada syleyelim rota yolumuz var, herhangi bir rota deiikliine tepki verdiimiz en
+
+37
+00:03:16,970 --> 00:03:22,790
+st seviye ve ardndan bir ynlendiriciden yklediimiz posta bileeni yok.
+
+38
+00:03:22,790 --> 00:03:24,200
+Bunu unutmayn ki ykledik.
+
+39
+00:03:24,200 --> 00:03:27,760
+Bu bileendeki ynlendirici araclyla burada uyguladk.
+
+40
+00:03:27,980 --> 00:03:29,800
+imdi yine rota kullanyoruz.
+
+41
+00:03:29,840 --> 00:03:33,290
+Sorun, Slash iin bir kimlik belgesi.
+
+42
+00:03:33,470 --> 00:03:40,640
+Bu rotaya ulaamayacaz nk tam eleme yapmamz iin sadece eik izgi Kimliimiz o
+
+43
+00:03:40,640 --> 00:03:41,870
+rotayla uyumuyor.
+
+44
+00:03:41,900 --> 00:03:47,810
+Dolaysyla, Post bileeni, belirli bir kimlik iin tam yaz
+
+45
+00:03:47,810 --> 00:03:53,840
+bileenini oluturmak istediimiz bileende olaca iin ok kt hale getirilmez.
+
+46
+00:03:53,870 --> 00:04:03,500
+imdi bunu dzeltmek iin elbette exect'i kaldrabiliriz, bu durumda bu eik izgi ile eleecek ve iki eik izgi
+
+47
+00:04:03,500 --> 00:04:04,520
+ikiye blnecektir.
+
+48
+00:04:04,520 --> 00:04:11,120
+ancak eik izgi yeni yayn ilk nce bulunursa bu olacak sonra ynlendirici bundan sonra duracaktr.
+
+49
+00:04:11,120 --> 00:04:17,730
+Sonra sipariiniz deitirilmeliydi, bylece eik izgi ilk nce yeni yaynlar tketmiyor ve imdi mantkl
+
+50
+00:04:18,020 --> 00:04:24,980
+da oluyor, nk imdi bu rota eik izgi iin yeni bir yayn iin oluturulmu olacak,
+
+51
+00:04:24,980 --> 00:04:31,290
+imdi bu kurulumla, rotalarmzn altnda tek bir rota ykleyebildiimizi greceksiniz.
+
+52
+00:04:31,310 --> 00:04:38,120
+Dolaysyla sadece eik izgiye gidersem sadece yazlar grrsem, ancak bir yaz zerine tklarsam yazlarn altna yklenir.
+
+53
+00:04:38,540 --> 00:04:41,420
+Bu zaten i ie gemi bir yoldur.
+
+54
+00:04:41,420 --> 00:04:49,290
+Buna ramen, burada Slash mesajlarmz var ve hibir eyi kesmemeliyiz diyebiliriz.
+
+55
+00:04:49,670 --> 00:04:57,140
+Ve tabii ki bunun anlam, bir balant kullansaydk dolatmz post bileenlerinde, postalar kesmek iin bunu
+
+56
+00:04:57,140 --> 00:04:59,660
+gncellemek zorunda kalacamz anlamna gelir.
+
+57
+00:04:59,810 --> 00:05:06,200
+Ayn ey, bu programl ynlendirme ve aslnda kullandmz ynlendirme iin de ayn.
+
+58
+00:05:06,350 --> 00:05:14,000
+Dolaysyla imdi, posta kutusu kimliini izmek iin geziniyoruz ve eer bu yerinde grrseniz ve
+
+59
+00:05:14,000 --> 00:05:17,970
+buradaki balantlar buradaki kprleme gnl iin de gncellemeliyiz.
+
+60
+00:05:18,820 --> 00:05:26,020
+imdi greceksiniz ki buradaki mesajlara tklarsam yazlar ykleyeceim ve elbette bir yazy tklayabilirim.
+
+61
+00:05:26,020 --> 00:05:34,930
+imdi hepsini baarsz gryorsunuz, nk bir hata aldk, nk burada posttaki i ie gemi rota bileen.
+
+62
+00:05:34,930 --> 00:05:45,340
+Bu yol eik izgi kimliini ayrtryor ve bu, posta bileeni yklemekten sorumlu olan rota
+
+63
+00:05:45,340 --> 00:05:47,230
+yoluna eklenmiyor.
+
+64
+00:05:47,380 --> 00:05:50,460
+Dolaysyla bu otomatik olarak zlmez.
+
+65
+00:05:50,470 --> 00:05:52,030
+ki mesaj kimlii.
+
+66
+00:05:52,030 --> 00:05:54,490
+Bu gereklemiyor.
+
+67
+00:05:54,490 --> 00:06:03,670
+Bunun yerine hala eik izgi eik izgi kimliidir; bu nedenle, bunu, yeni oluturduumuz yuvalanm ynlendirme yapmak iin, kimlik dorulama ktn
+
+68
+00:06:03,670 --> 00:06:10,100
+blmlere ayracak bir gncelletirme yapmak zorunda kalacaz. Bu, eik izgi eik izgi olan l'dir.
+
+69
+00:06:10,110 --> 00:06:14,780
+Kimliin elbette bunu yapmak ok hantaldr.
+
+70
+00:06:15,310 --> 00:06:19,000
+Yani bunun yerine yaz kullanmak yerine.
+
+71
+00:06:19,000 --> 00:06:28,990
+Daha iyi bir yol, mevcut yolu dinamik olarak elde etmektir; bylece bu, dinamik, esnek bir i ie gemi rota olur ve
+
+72
+00:06:29,080 --> 00:06:35,760
+bu pauvres iin burada sabit kodlanm bir dize deil dinamik bir ey olarak ayarlanmaldr.
+
+73
+00:06:36,160 --> 00:06:45,700
+Ve sonra muhtemelen bu pervanenin eleme uyumazl nesnesini kullanmal ve orada temel olarak D veya l
+
+74
+00:06:45,710 --> 00:06:49,550
+olan bir u r l zellii var.
+
+75
+00:06:49,570 --> 00:06:50,980
+imdiye kadar ykledik.
+
+76
+00:06:51,010 --> 00:06:59,630
+Bu yaz bileenlerini yklemekten sorumlu olan ddktr ve tabii ki yola kmak haricinde.
+
+77
+00:06:59,740 --> 00:07:08,610
+Esnek blmmz oradan sonra eklemeliyiz, bylece bunu Cauley parantezleri iinde
+
+78
+00:07:08,670 --> 00:07:11,130
+kimliklerimizle de birletirebiliriz.
+
+79
+00:07:11,130 --> 00:07:18,350
+Bylece Slash kolon kimlii ile ve parantez aramak iin para teklif kaldrn.
+
+80
+00:07:18,350 --> 00:07:27,470
+tm yaynlar eik izgi zerine yazarsak dinamik olduu iin bu yaz otomatik olarak tm yaynlara zmlenecektir.
+
+81
+00:07:27,530 --> 00:07:33,950
+imdi bu, yayn kimliiyle eleecek ve eer bu bileeni farkl ykleyecek olsaydk,
+
+82
+00:07:34,340 --> 00:07:41,410
+imdi bunu kaydettiimizde, bunu kurtarrsak, daha nce olduu gibi davranrz, ancak bu sadece onun altn kantlyor.
+
+83
+00:07:41,430 --> 00:07:49,760
+Yuvalanm rotamza dinamik olarak eik izgi ilanlar ekliyoruz ve yeniden hareket ettiren rvanyla yeniden uygulama
+
+84
+00:07:49,760 --> 00:07:53,170
+uygulamanzda gerekten yuvalanm rotalar oluturduunuz ekilde.
+

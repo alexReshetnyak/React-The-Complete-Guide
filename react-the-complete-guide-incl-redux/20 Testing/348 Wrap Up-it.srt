@@ -1,0 +1,76 @@
+1
+00:00:02,060 --> 00:00:07,580
+Durante questa lezione, abbiamo fatto una breve introduzione ai test nelle app di reazione e ho menzionato
+
+2
+00:00:07,580 --> 00:00:14,750
+che puoi immergerti pi a fondo, che ci sono interi corsi o articoli che si immergono solo nelle prove e posso solo
+
+3
+00:00:14,750 --> 00:00:17,850
+incoraggiarti ad approfondire se vuoi saperne di pi sui test,
+
+4
+00:00:17,860 --> 00:00:19,680
+questa  solo una presentazione approssimativa.
+
+5
+00:00:19,820 --> 00:00:24,980
+Una delle cose pi importanti quando si tratta di test  il modo
+
+6
+00:00:24,980 --> 00:00:32,990
+in cui si pensa ai test, non testare cose inutili perch quella roba non necessaria  spesso la pi difficile
+
+7
+00:00:32,990 --> 00:00:40,810
+da testare, se si sta testando l'intero flusso di lavoro, faccio clic su un pulsante al mio stato aggiorni poi
+
+8
+00:00:40,820 --> 00:00:42,080
+qualcosa cambia in
+
+9
+00:00:42,080 --> 00:00:48,500
+un altro componente, quindi non ti divertirai a simularlo. Ci richieder un sacco di lavoro difficile e codice in cui 
+
+10
+00:00:48,500 --> 00:00:54,350
+necessario prendere in giro le chiamate h in p in modo da non raggiungere effettivamente il server durante i test e
+
+11
+00:00:55,130 --> 00:00:56,920
+tutto ci non  affatto divertente.
+
+12
+00:00:56,960 --> 00:01:01,970
+E non solo non  divertente,  anche ridondante perch non abbiamo bisogno di
+
+13
+00:01:01,970 --> 00:01:02,860
+testare se
+
+14
+00:01:02,990 --> 00:01:06,620
+possiamo raggiungere il server, dobbiamo testare il nostro riduttore funziona
+
+15
+00:01:06,680 --> 00:01:10,460
+correttamente, aggiorniamo i nostri componenti correttamente se l'input cambia, forse
+
+16
+00:01:10,580 --> 00:01:15,630
+noi voglio testare troviamo un puntello corretto se facciamo clic su un determinato pulsante.
+
+17
+00:01:15,980 --> 00:01:20,210
+Tutte queste cose possono essere facilmente testate in test di unit isolate e questo
+
+18
+00:01:20,210 --> 00:01:22,290
+ davvero il modo di pensarci e
+
+19
+00:01:22,400 --> 00:01:24,860
+il modo in cui ti incoraggio a praticare.
+

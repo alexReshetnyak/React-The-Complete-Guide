@@ -1,0 +1,252 @@
+1
+00:00:02,240 --> 00:00:08,730
+We worked on the action creators for orders and we worked on being able to dispatch them. Now we need to manage
+
+2
+00:00:08,730 --> 00:00:15,450
+the order state through our reducer of course and for that, I'll go to the order file in the reducers folder
+
+3
+00:00:15,690 --> 00:00:22,440
+and first of all, I'll import my action types here because I need them in my switch case statement, so
+
+4
+00:00:22,440 --> 00:00:26,110
+I need to reach out to actions and their action types.
+
+5
+00:00:26,520 --> 00:00:34,010
+Next I'll create a constant which I'll name order or just reducer because it is my reducer function here in
+
+6
+00:00:34,020 --> 00:00:37,610
+the end and I will make this a normal reducer.
+
+7
+00:00:37,680 --> 00:00:44,270
+So a function which receives two inputs, the state and the action, as you learned it.
+
+8
+00:00:44,310 --> 00:00:49,390
+Now I want to set up an initial state for this reducer too, so I'll name that property,
+
+9
+00:00:49,410 --> 00:00:52,320
+that constant, excuse me initial state,
+
+10
+00:00:52,320 --> 00:00:55,190
+it should be a javascript object and now there,
+
+11
+00:00:55,200 --> 00:00:58,140
+I need a little bit of information.
+
+12
+00:00:58,140 --> 00:01:00,460
+I certainly want to have all my orders,
+
+13
+00:01:00,480 --> 00:01:02,620
+could be an array like that,
+
+14
+00:01:02,700 --> 00:01:11,610
+I also want to know if we are in the process of ordering or if we are done, so we can add a property
+
+15
+00:01:11,690 --> 00:01:19,760
+purchasing or loading and set it to false and it should be false initially, it should be set to true
+
+16
+00:01:19,950 --> 00:01:25,390
+once we then start ordering of course. Now the one issue we'll face immediately
+
+17
+00:01:25,530 --> 00:01:29,860
+is that in our order action creator,
+
+18
+00:01:29,970 --> 00:01:36,590
+we only handle success and fail, the start action here
+
+19
+00:01:36,630 --> 00:01:43,410
+doesn't actually dispatch anything we can catch in redux, we instead run some async code to dispatch
+
+20
+00:01:43,460 --> 00:01:50,610
+other actions which is a normal pattern but since we probably want to update our loading property in our
+
+21
+00:01:50,610 --> 00:01:55,790
+state when we start loading, we need an additional action we dispatch.
+
+22
+00:01:55,830 --> 00:02:01,130
+So that's something we should keep in mind and I'll handle in the next lecture. In this lecture here,
+
+23
+00:02:01,230 --> 00:02:03,820
+let's work on the actions we already have.
+
+24
+00:02:04,140 --> 00:02:10,410
+So in my reducer, I, before I add my switch case statement, I'll set my state equal to the initial state
+
+25
+00:02:10,470 --> 00:02:17,540
+so that we have a state initially and then, I'll add my switch case statement. So I'll switch my action type
+
+26
+00:02:17,880 --> 00:02:24,720
+and now I want to handle my different cases of course. So I'll have a case here which is action types
+
+27
+00:02:25,140 --> 00:02:26,310
+and then it is that
+
+28
+00:02:26,490 --> 00:02:30,600
+our purchase succeeded, here
+
+29
+00:02:30,600 --> 00:02:33,680
+I then want to return a certain state,
+
+30
+00:02:33,690 --> 00:02:34,820
+I'll work on this soon.
+
+31
+00:02:34,920 --> 00:02:43,860
+The next case is that I got actionType_PURCHASE_BURGER_FAIL, then I want to return a different state
+
+32
+00:02:43,890 --> 00:02:52,310
+obviously and then I got my default case where I simply want to return the current state.
+
+33
+00:02:52,350 --> 00:02:56,470
+This is by the way very important since we're combining a couple of reducers soon,
+
+34
+00:02:56,480 --> 00:03:01,890
+you of course need to be able to return something if it's an action which is handled in a different reducer.
+
+35
+00:03:02,150 --> 00:03:07,450
+In the end, I want to export my reducer function here as the file default,
+
+36
+00:03:07,460 --> 00:03:11,500
+now let's work on the logic. Upon success,
+
+37
+00:03:11,510 --> 00:03:18,740
+I obviously want to store this order in my orders array and I want to set loading to false because
+
+38
+00:03:18,740 --> 00:03:19,600
+we're done.
+
+39
+00:03:20,030 --> 00:03:22,760
+So I'll first of all copy the old state
+
+40
+00:03:22,760 --> 00:03:32,570
+then I'll set loading to false and then, I need to update my orders. Now the orders should be my old orders
+
+41
+00:03:32,840 --> 00:03:39,860
+and I concatenate a new item, as you learned concat returns a new array and therefore we added this
+
+42
+00:03:39,950 --> 00:03:41,410
+immutably.
+
+43
+00:03:41,660 --> 00:03:51,220
+Now that new order I want to add here actually is the order I receive from the, via the action,
+
+44
+00:03:51,260 --> 00:03:54,110
+you can see this in the order action creator,
+
+45
+00:03:54,260 --> 00:03:59,600
+there we receive order data but we also receive the order ID on a separate property,
+
+46
+00:03:59,630 --> 00:04:02,600
+I need to merge both together into one object here.
+
+47
+00:04:02,930 --> 00:04:05,700
+So what I'll do in my order.js file,
+
+48
+00:04:06,000 --> 00:04:14,700
+I'll simply add a new constant here, newOrder maybe and I'll set it equal to a javascript object
+
+49
+00:04:15,420 --> 00:04:23,270
+where I first of all paste all the properties of action order data, that is the order data we also
+
+50
+00:04:23,280 --> 00:04:32,100
+passed onto the server and I add a new property ID which is action order ID, that is referring to
+
+51
+00:04:32,100 --> 00:04:36,590
+that other property and that is the ID we will get back from the server.
+
+52
+00:04:37,720 --> 00:04:42,260
+With that, I have a new order and that is what I would want to concatenate here,
+
+53
+00:04:42,400 --> 00:04:47,530
+newOrder. Now for failing,
+
+54
+00:04:47,750 --> 00:04:51,140
+I want to return the old state,
+
+55
+00:04:51,140 --> 00:04:57,050
+I certainly don't want to clear my orders but I wanted to set loading to false of course also because
+
+56
+00:04:57,050 --> 00:05:03,770
+even if it failed, we're still done and the error should be handled through that modal since we added the
+
+57
+00:05:03,830 --> 00:05:08,390
+withErrorHandler higher order component to contact data.
+
+58
+00:05:08,390 --> 00:05:14,070
+Now that we're doing this, I'm also seeing a mistake I made here but I'll fix this in the next lecture
+
+59
+00:05:14,060 --> 00:05:15,170
+together with you too.
+
+60
+00:05:15,170 --> 00:05:17,520
+So first of all back to reducer,
+
+61
+00:05:17,660 --> 00:05:21,150
+we're now handling success and fail case, this is looking good.
+
+62
+00:05:21,170 --> 00:05:22,560
+Now let's fix this error
+
+63
+00:05:22,570 --> 00:05:28,130
+I just saw and let's make sure that we set loading to true when we start fetching a burger.
+

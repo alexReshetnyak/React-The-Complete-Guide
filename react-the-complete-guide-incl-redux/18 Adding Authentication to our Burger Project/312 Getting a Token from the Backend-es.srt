@@ -1,0 +1,348 @@
+1
+00:00:02,350 --> 00:00:08,770
+Entonces, el objetivo es obtener un token del backend y estamos usando firebase, pero el enfoque, por
+
+2
+00:00:08,770 --> 00:00:09,810
+supuesto, funciona con
+
+3
+00:00:09,810 --> 00:00:14,600
+cualquier backend dado que el backend tiene puntos finales API apropiados para conectarse.
+
+4
+00:00:14,890 --> 00:00:22,060
+Si est buscando instrucciones sobre cmo validar un correo electrnico del usuario en el servidor, cmo crear ese token, ese es el
+
+5
+00:00:22,090 --> 00:00:24,250
+curso equivocado, esto no tiene nada que
+
+6
+00:00:24,250 --> 00:00:27,670
+ver con reaccionar y, por lo tanto, no se trata aqu.
+
+7
+00:00:27,970 --> 00:00:31,060
+Un curso general de creacin de API para su servicio
+
+8
+00:00:31,090 --> 00:00:36,790
+y el idioma de su eleccin sera ms apropiado ya que debera aprender cosas como esa en dichos
+
+9
+00:00:36,910 --> 00:00:40,300
+cursos o tomar un curso de reaccin completa, por supuesto.
+
+10
+00:00:40,300 --> 00:00:47,350
+Le mostrar el sitio de reaccin y la base de firebase, el back-end fcil de usar que estamos
+
+11
+00:00:47,380 --> 00:00:49,660
+usando nos brinda autenticacin de fbrica.
+
+12
+00:00:49,840 --> 00:00:56,590
+Si hacemos clic en la autenticacin all, tenemos que configurar un mtodo de inicio de sesin y all, puedo elegir el correo electrnico y
+
+13
+00:00:56,590 --> 00:01:01,220
+la contrasea, esto almacenar los datos del usuario en nuestro propio proyecto de base de datos.
+
+14
+00:01:01,510 --> 00:01:04,630
+Hago clic en Habilitar all y guardo esto y ahora podemos alcanzar
+
+15
+00:01:04,960 --> 00:01:12,880
+ciertos puntos finales de la API de descanso para registrar usuarios y obtener un token. Para saber a qu direccin debemos enviar eso, no
+
+16
+00:01:12,880 --> 00:01:14,600
+es nuestra direccin de
+
+17
+00:01:14,620 --> 00:01:22,330
+base de datos que utilizamos hasta ahora, simplemente podemos buscar en Google para firebase rest auth.
+
+18
+00:01:22,420 --> 00:01:26,820
+y aqu hay un segundo resultado, la API de auth rest de firebase.
+
+19
+00:01:27,190 --> 00:01:34,780
+Aqu encontrar los puntos finales API que puede enviar sus datos de autenticacin para registrar a un usuario o para arriba, as que
+
+20
+00:01:34,780 --> 00:01:40,450
+comencemos con el registro y aqu ver que tenemos que enviar una solicitud postal a este punto
+
+21
+00:01:40,450 --> 00:01:41,160
+final aqu.
+
+22
+00:01:41,590 --> 00:01:42,150
+As que
+
+23
+00:01:42,150 --> 00:01:43,850
+copiar ese punto final y
+
+24
+00:01:44,170 --> 00:01:46,170
+ahora quiero enviar una solicitud.
+
+25
+00:01:46,300 --> 00:01:49,690
+Podramos crear otra instancia de axios para esto, definitivamente no
+
+26
+00:01:49,690 --> 00:01:55,360
+podemos usar la instancia de pedidos de axios porque aqu tenemos una URL base que sera
+
+27
+00:01:55,870 --> 00:02:01,990
+incorrecta pero usar el servicio de axios predeterminado y no la instancia aqu y tampoco crear una nueva
+
+28
+00:02:01,990 --> 00:02:03,770
+uno porque solo enviar dos
+
+29
+00:02:03,850 --> 00:02:10,840
+solicitudes, as que no necesito configurar esa cosa de baseURL. En el archivo de autenticacin en mi carpeta
+
+30
+00:02:10,870 --> 00:02:15,760
+de acciones, ahora voy a importar axios del paquete axios y
+
+31
+00:02:16,210 --> 00:02:18,550
+luego puedo comenzar a enviar solicitudes.
+
+32
+00:02:18,700 --> 00:02:25,270
+As que aqu en el creador de acciones de autenticacin en esa funcin volvemos, me pondr en contacto con axios, enviar una solicitud
+
+33
+00:02:25,490 --> 00:02:27,620
+a la URL que acabo de copiar.
+
+34
+00:02:27,940 --> 00:02:35,620
+Ahora que tenemos esta extraa clave API, tenemos que reemplazarla con la clave API de nuestro proyecto de Firebase, puedes
+
+35
+00:02:35,620 --> 00:02:42,430
+encontrar esto en tu proyecto de Firebase si haces clic en autenticacin y all en la configuracin web,
+
+36
+00:02:42,430 --> 00:02:43,720
+en la esquina
+
+37
+00:02:43,990 --> 00:02:45,560
+superior derecha, est esta
+
+38
+00:02:45,700 --> 00:02:53,760
+clave aqu, esta clave completa se puede ver all, clave de API. Copie la clave completa sin las comillas y reemplace los corchetes
+
+39
+00:02:53,760 --> 00:02:57,980
+con la clave de la API que se encuentra en medio
+
+40
+00:02:58,000 --> 00:03:01,280
+con esa clave, esto identifica su aplicacin a firebase.
+
+41
+00:03:01,300 --> 00:03:07,630
+Ahora esta publicacin de datos all, los datos que necesitamos publicar se pueden encontrar en la documentacin en la
+
+42
+00:03:07,630 --> 00:03:08,610
+que acabamos de
+
+43
+00:03:08,770 --> 00:03:15,520
+estar, necesitamos pasar un objeto javascript que se transformar en json por axios automticamente que tiene un correo electrnico, una
+
+44
+00:03:15,520 --> 00:03:17,220
+contrasea y este retorno propiedad
+
+45
+00:03:17,380 --> 00:03:23,770
+de token seguro, que devuelve propiedad de token seguro es un booleano e indica si queremos obtener un token
+
+46
+00:03:23,770 --> 00:03:25,660
+o no, siempre debe ser cierto
+
+47
+00:03:25,720 --> 00:03:30,570
+como se indica aqu y la contrasea y el correo electrnico deben estar claros.
+
+48
+00:03:30,580 --> 00:03:38,270
+Regresemos a nuestra aplicacin y configuremos aqu algunos datos de autenticacin, un objeto javascript donde configuramos una propiedad de correo
+
+49
+00:03:38,270 --> 00:03:44,350
+electrnico que contiene el correo electrnico que recibimos como argumento, lo mismo para la contrasea y,
+
+50
+00:03:44,600 --> 00:03:49,670
+por ltimo pero no menos importante, configuremos esto devolver token seguro a verdadero.
+
+51
+00:03:50,120 --> 00:03:54,670
+Y este es el objeto de autenticacin de datos que luego quiero adjuntar
+
+52
+00:03:54,830 --> 00:04:02,000
+a esta solicitud, de modo que como segundo argumento para el mtodo de publicacin, paso los datos de autenticacin, axios nos
+
+53
+00:04:02,000 --> 00:04:09,590
+da una promesa para poder llamar y capturar. En el caso de captura. Quiero registrar ese error
+
+54
+00:04:09,710 --> 00:04:17,830
+y tambin fui a despachar authFail ejecutado como una funcin, en el caso
+
+55
+00:04:17,830 --> 00:04:19,660
+de succcss, obtendremos
+
+56
+00:04:19,760 --> 00:04:28,020
+una respuesta, quiero registrar esa respuesta y quiero enviar authSuccess aqu, as.
+
+57
+00:04:28,130 --> 00:04:33,420
+Tambin pasar la respuesta a o los datos de respuesta, de modo
+
+58
+00:04:33,470 --> 00:04:39,710
+que los datos que recibamos en respuesta a authSuccess y el error en authFail.
+
+59
+00:04:40,100 --> 00:04:42,710
+Ahora guardemos esto y veamos si
+
+60
+00:04:42,770 --> 00:04:52,130
+funciona, vayamos a nuestra aplicacin e ingresemos algunos datos de registro vlidos otra vez, pulse enviar y veamos authStart y authSuccess y si
+
+61
+00:04:52,130 --> 00:04:54,250
+va a la consola, veremos
+
+62
+00:04:54,320 --> 00:05:00,800
+lo que obtuvimos de nuevo solicitudes de autenticacin. En los datos, recibimos informacin de
+
+63
+00:05:00,980 --> 00:05:04,990
+cunto tiempo el token es vlido, por lo
+
+64
+00:05:05,270 --> 00:05:09,100
+que 3600 segundos, eso es una hora.
+
+65
+00:05:09,410 --> 00:05:15,950
+Luego, el token de ID en s, esta larga cadena crptica que se puede descifrar a un objeto javascript
+
+66
+00:05:15,950 --> 00:05:23,900
+si queremos, luego este token de actualizacin que se usa para obtener un nuevo token de identificacin porque como puede ver el token
+
+67
+00:05:23,960 --> 00:05:26,270
+de ID caduca relativamente rpido, despus de
+
+68
+00:05:26,270 --> 00:05:27,860
+uno por razones de seguridad,
+
+69
+00:05:28,100 --> 00:05:33,620
+pero puede generar uno nuevo con el token de actualizacin, pero solo usted y su aplicacin
+
+70
+00:05:33,620 --> 00:05:34,790
+pueden hacerlo, por supuesto.
+
+71
+00:05:34,790 --> 00:05:36,400
+Estas son nuestras opciones, tambin vemos
+
+72
+00:05:36,410 --> 00:05:42,770
+la direccin de correo electrnico para la que creamos el usuario. Y en nuestro backbase de firebase, si vamos
+
+73
+00:05:42,980 --> 00:05:50,460
+a la autenticacin y actualizamos esta pgina de usuarios, vemos al usuario con su ID que se gener automticamente aqu.
+
+74
+00:05:50,810 --> 00:05:53,040
+As que as es como firmamos a
+
+75
+00:05:53,210 --> 00:05:57,920
+los usuarios y no agregu la validacin, as que veamos qu sucede si ingreso una contrasea
+
+76
+00:05:57,920 --> 00:06:01,000
+no vlida, an podemos hacer clic en el botn Enviar.
+
+77
+00:06:01,040 --> 00:06:10,190
+Ahora recibimos un error aqu y en el error, si echamos un vistazo a la accin aqu, en el error mismo, tenemos un
+
+78
+00:06:10,370 --> 00:06:18,170
+problema de desplazamiento aqu, ya que parece, obtenemos datos sobre el error donde tenemos un mensaje donde dice que
+
+79
+00:06:18,170 --> 00:06:21,030
+la contrasea no es lo suficientemente larga
+
+80
+00:06:21,790 --> 00:06:28,150
+En la consola, tambin veramos esto si hacemos clic en la solicitud errnea e inspeccionamos esto aqu, la vemos
+
+81
+00:06:28,150 --> 00:06:31,300
+aqu y tambin la vista previa de la respuesta.
+
+82
+00:06:31,630 --> 00:06:35,620
+Entonces, en nuestro error, recibimos este mensaje, este problema.
+
+83
+00:06:36,130 --> 00:06:38,710
+As que esto es lo que
+
+84
+00:06:38,710 --> 00:06:40,650
+recuperamos en solicitudes de registro
+
+85
+00:06:41,080 --> 00:06:48,670
+y, lo que es ms importante, tenemos ese token y ese token actualizado as como el tiempo de caducidad,
+
+86
+00:06:48,670 --> 00:06:52,930
+debemos usar esa informacin para autenticarnos para solicitudes posteriores pero
+
+87
+00:06:52,930 --> 00:06:57,010
+antes de eso, asegurmonos de que tambin podamos iniciar sesin.
+

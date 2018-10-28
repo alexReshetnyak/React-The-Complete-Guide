@@ -1,0 +1,240 @@
+1
+00:00:02,300 --> 00:00:09,590
+Vamos implementar a lgica para passar os ingredientes reais que escolhemos para o recipiente de sada. Vou fazer
+
+2
+00:00:09,590 --> 00:00:16,390
+isso aqui no meu componente Bergere Boulder, obviamente, onde eu empurro para a pgina de check-out.
+
+3
+00:00:16,430 --> 00:00:19,520
+Agora eu quero pressionar um objeto javascript.
+
+4
+00:00:19,610 --> 00:00:27,320
+Bem, disse o professor chamado slash check out, mas onde ento pode especificar um parmetro de pesquisa ou uma consulta de pesquisa,
+
+5
+00:00:27,860 --> 00:00:30,880
+que  como eu quero passar os ingredientes.
+
+6
+00:00:30,890 --> 00:00:38,570
+Agora, por isso,  claro que, de alguma forma, preciso codificar meus ingredientes em tal consulta de pesquisa.
+
+7
+00:00:38,570 --> 00:00:39,780
+Como eu posso fazer isso.
+
+8
+00:00:41,250 --> 00:00:46,840
+nome de nome de nome de nome  para voc,  claro, e esta ser uma matriz vazia inicialmente.
+
+9
+00:00:46,840 --> 00:00:49,020
+Vou tentar uma nova constante que um
+
+10
+00:00:49,130 --> 00:01:00,130
+Ento eu quero que voc adicione elementos a uma srie de doodles com um loop for e todos os loop em todas as propriedades
+
+11
+00:01:00,160 --> 00:01:06,470
+neste ingrediente de estado, ento, nos ingredientes que eu tenho, agora vou para Porche.
+
+12
+00:01:06,730 --> 00:01:09,710
+Cada ingrediente para descrever a matriz dos pais.
+
+13
+00:01:10,730 --> 00:01:16,640
+Mas l vou usar um pequeno mtodo auxiliar que  fornecido pelo javascript e pelo cdigo.
+
+14
+00:01:16,640 --> 00:01:23,340
+Voc  um componente que simplesmente codifica meus elementos, de modo que eles possam ser usados no Reino Unido.
+
+15
+00:01:23,360 --> 00:01:26,820
+Isso  bastante ruim para espaos em branco e assim por diante.
+
+16
+00:01:26,950 --> 00:01:34,130
+para nomear a propriedade, o que no precisaria de codificao no meu caso porque funcionar como esse slido e assim por diante.
+
+17
+00:01:34,130 --> 00:01:35,270
+Eles so todos usados
+
+18
+00:01:35,270 --> 00:01:38,110
+Estes so todos elementos no crticos.
+
+19
+00:01:38,480 --> 00:01:46,130
+Em seguida, adicione um sinal de igual porque temos a chave igual a alguns parens de pesquisa e, em seguida, codificamos o
+
+20
+00:01:46,130 --> 00:01:47,010
+valor novamente.
+
+21
+00:01:47,030 --> 00:01:52,910
+Isso no seria realmente necessrio aqui porque o valor  apenas um nmero que no  crtico.
+
+22
+00:01:53,180 --> 00:01:59,530
+Mas aqui vou usar esses ingredientes do estado para a decie em que estamos atualmente.
+
+23
+00:01:59,570 --> 00:02:05,000
+Ento eu pedi para chave, estes so os nomes das propriedades nas regies ideais no final apenas.
+
+24
+00:02:05,090 --> 00:02:11,840
+E aqui estou configurando o nome da propriedade igual ao valor desse nome da propriedade.
+
+25
+00:02:11,960 --> 00:02:19,040
+Ento, esta  uma matriz que agora tem apenas algumas cordas, que  o nome da propriedade igual ao valor da propriedade.
+
+26
+00:02:19,070 --> 00:02:23,960
+Agora, essa srie de strings  o que eu quero juntar com o sinal final.
+
+27
+00:02:24,080 --> 00:02:30,650
+Ento, vou adicionar uma constante de string de consulta aqui onde irei usar minha matriz de parens
+
+28
+00:02:30,680 --> 00:02:40,120
+de consulta, chamado mtodo de juno, mostrando-o com o signo final e, finalmente, fui anex-lo aqui com o questionmark e depois a minha string de
+
+29
+00:02:40,690 --> 00:02:48,100
+consulta que  apenas minha Uma corda de ingredientes bons me deixa salvar No  que veja se isso funciona
+
+30
+00:02:48,220 --> 00:02:50,130
+para voltar ao hambrguer Polder.
+
+31
+00:02:50,290 --> 00:02:56,210
+E sim, os links no so godlings, eles ainda so as coisas antigas que so profundas, mas excelentes por enquanto.
+
+32
+00:02:56,440 --> 00:03:00,860
+Ento, vamos construir um hambrguer agora como Ordem agora e clique em continuar.
+
+33
+00:03:01,060 --> 00:03:06,350
+E voc pode ver que eu o transmito assim na U r l.
+
+34
+00:03:06,430 --> 00:03:12,100
+Agora  claro que eu preciso analisar isso no componente de checkout e ento eu vou fazer isso no
+
+35
+00:03:12,100 --> 00:03:12,920
+componente foi montado.
+
+36
+00:03:13,210 --> 00:03:19,900
+No vou usar componente atualizado ou qualquer coisa assim, porque sempre que eu carregar este componente, ele
+
+37
+00:03:19,900 --> 00:03:20,770
+ir montar.
+
+38
+00:03:20,770 --> 00:03:27,180
+No h nenhuma maneira de rotear para ele sem que ele seja montado novamente porque no est aninhado em
+
+39
+00:03:27,190 --> 00:03:29,360
+alguma outra pgina ou qualquer coisa assim.
+
+40
+00:03:29,360 --> 00:03:36,400
+tratam uma nova constante, que eu chamarei o Querrey onde eu usei d ou ento procure o construtor Perens.
+
+41
+00:03:36,400 --> 00:03:43,010
+Agora, eu vou querer usar o cdigo que voc viu antes para extrair os parmetros da consulta, todos
+
+42
+00:03:43,140 --> 00:03:51,700
+Passe a busca de localizao deste prop que inclui o questionrio e assim por diante, mas onde voc est, eu vou
+
+43
+00:03:51,700 --> 00:03:54,020
+procurar peronista, eu basicamente extrai isso.
+
+44
+00:03:54,190 --> 00:04:01,910
+Ento eu vou adicionar um novo ingrediente aqui porque eu quero armazenar e ingredientes objeto nesta
+
+45
+00:04:01,930 --> 00:04:09,070
+forma voc est no estado e ento vou usar para deixar Param de Entradas Querrey.
+
+46
+00:04:09,070 --> 00:04:14,410
+Como voc aprende a percorrer o amigo Querrey pais e eu separado.
+
+47
+00:04:14,440 --> 00:04:22,230
+Cada entrada ter este formato a chave como vend-lo e, em seguida, o valor como um.
+
+48
+00:04:22,240 --> 00:04:31,490
+apenas um nome como esse que  usado como um nome de propriedade e adicionado a esse objeto de ingrediente Shippy  igual a Q.
+
+49
+00:04:31,580 --> 00:04:37,430
+Agora,  claro, eu quero transformar isso em este formato de objeto, ento eu simplesmente direi
+
+50
+00:04:37,460 --> 00:04:40,330
+o ingrediente Elemento de Param 0, que  E agora vem para o bem -
+
+51
+00:04:40,370 --> 00:04:48,080
+voc, que  apenas o elemento Param um faz valor e podemos converter isso em um nmero, adicionando uma vantagem.
+
+52
+00:04:48,080 --> 00:04:50,170
+E, claro, deve haver ingredientes aqui usando este objeto javascript.
+
+53
+00:04:50,210 --> 00:04:55,610
+Agora, assim que isso for feito, posso chamar esse estado definido e
+
+54
+00:04:55,610 --> 00:05:02,330
+espero que estabelea com sucesso meus ingredientes aos ingredientes que criei e extraie isso aqui.
+
+55
+00:05:02,330 --> 00:05:05,130
+Vamos salvar, no vamos ver se isso funciona.
+
+56
+00:05:05,510 --> 00:05:08,240
+Parece muito bom se eu agora mudar manualmente.
+
+57
+00:05:08,360 --> 00:05:10,880
+Digamos que ela tem 2 2 no parmetro de consulta que extramos e lotas com sucesso.
+
+58
+00:05:10,900 --> 00:05:16,680
+Ento, agora somos capazes de passar os dados com a pergunta Perens um enorme avano,  claro.
+
+59
+00:05:16,700 --> 00:05:21,940
+Vamos ao prximo trabalho sobre esses dados de contato.
+
+60
+00:05:22,010 --> 00:05:25,310
+&nbsp;
+

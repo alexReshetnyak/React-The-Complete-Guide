@@ -1,0 +1,240 @@
+1
+00:00:02,150 --> 00:00:05,740
+Ser capaz de configurar uma configurao padro para X  bastante impressionante.
+
+2
+00:00:05,840 --> 00:00:11,570
+Mas e se voc realmente no quer usar a mesma base para sua aplicao completa, mas apenas quatro partes
+
+3
+00:00:11,570 --> 00:00:17,060
+dela e para outras partes voc tem um Eurail diferente e o mesmo,  claro, para os cabealhos e
+
+4
+00:00:17,060 --> 00:00:17,960
+assim por diante.
+
+5
+00:00:18,350 --> 00:00:24,770
+Nesse caso, voc pode fazer uma meia medida criando um recurso legal fornecido por X-ists que
+
+6
+00:00:24,860 --> 00:00:26,510
+ chamado de instncias.
+
+7
+00:00:26,510 --> 00:00:27,880
+Deixe-me criar um novo arquivo.
+
+8
+00:00:27,900 --> 00:00:30,430
+EXISTE Arjay como nas pastas de origem.
+
+9
+00:00:30,430 --> 00:00:38,780
+Ento, no mesmo nvel que o ndice Cheras cair, eu vou importar x anos do pacote
+
+10
+00:00:38,840 --> 00:00:45,650
+real e no ex-U. S. podemos executar uma funo ou mtodo de criao especial para ser preciso
+
+11
+00:00:45,650 --> 00:00:47,870
+ou armazenar o resultado em uma constante que eu nomeei instncia.
+
+12
+00:00:47,870 --> 00:00:49,850
+E novamente uso X-ists criar.
+
+13
+00:00:49,850 --> 00:00:56,330
+Agora isso cria uma instncia de X anos como uma cpia do objeto Xs que voc poderia dizer e
+
+14
+00:00:56,330 --> 00:00:58,340
+voc pode criar vrias dessas cpias.
+
+15
+00:00:58,340 --> 00:01:05,150
+Agora, aqui esto todos os caminhos do Java podem se opor a configurar isso e definir a base que voc  e eu vou
+
+16
+00:01:05,150 --> 00:01:06,120
+pegar essa base.
+
+17
+00:01:06,130 --> 00:01:09,910
+Voc est configurado na configurao raiz.
+
+18
+00:01:10,100 --> 00:01:14,290
+Agora, quando X  Chase, eu simplesmente estabelecerei o seu.
+
+19
+00:01:14,570 --> 00:01:17,780
+E agora uma palavra comentada na prxima cadeira da seguinte maneira.
+
+20
+00:01:18,640 --> 00:01:23,660
+Agora, se conseguimos uma parte do todo, mas no terminamos.
+
+21
+00:01:23,890 --> 00:01:29,800
+Agora chegamos  nossa instncia Xs e, claro, voc pode criar mltiplas instncias em diferentes
+
+22
+00:01:30,100 --> 00:01:32,580
+arquivos para diferentes partes do seu aplicativo.
+
+23
+00:01:32,590 --> 00:01:36,190
+Vou mostrar-lhe como usar essas instncias em um segundo.
+
+24
+00:01:36,190 --> 00:01:43,140
+assumir a configurao padro de seu alvo substituir qualquer coisa que ele configure na prpria instncia.
+
+25
+00:01:43,140 --> 00:01:46,000
+Agora, por padro, a instncia, voc tambm
+
+26
+00:01:46,000 --> 00:01:52,800
+Por exemplo, eu poderia deixar a autorizao estava sendo configurada aqui.
+
+27
+00:01:53,000 --> 00:01:55,620
+Mas eu tambm quero configur-lo para minha prpria instncia.
+
+28
+00:01:55,790 --> 00:01:59,490
+Ento, depois de criar a instncia em que podemos atribuir a base, seu l.
+
+29
+00:01:59,630 --> 00:02:07,160
+Agora, para as letras, substituo os padres X com padres de instncia Hatteras comuns e assim por diante.
+
+30
+00:02:07,220 --> 00:02:14,810
+E agora, eu posso definir este token fora da instncia para substitu-lo por todos os pedidos que so
+
+31
+00:02:14,810 --> 00:02:16,550
+enviados usando esta instncia.
+
+32
+00:02:16,680 --> 00:02:23,810
+exportar esta instncia como os padres de queda e podemos usar um Abra Foz e agora deixe-me mostrar-lhe como us-lo.
+
+33
+00:02:23,810 --> 00:02:24,980
+Agora, temos que
+
+34
+00:02:25,220 --> 00:02:30,390
+Dizendo o recipiente do bloco onde usamos X anos para obter todas as postagens do bloco.
+
+35
+00:02:30,620 --> 00:02:37,390
+Digamos que no importamos mais o exis do pacote de axiomas, mas ns estabelecemos essa varivel de
+
+36
+00:02:37,400 --> 00:02:45,890
+X anos aqui so uma constante para a nossa instncia x ', apontando para esse arquivo onde exportamos essa instncia como padro.
+
+37
+00:02:46,010 --> 00:02:49,780
+Voc, naturalmente, tambm pode ser nomeado como x 'instncia ou o que quiser.
+
+38
+00:02:50,000 --> 00:02:54,390
+Vou deixar o X aqui para que eu no precise ajustar meu cdigo l embaixo.
+
+39
+00:02:54,650 --> 00:03:00,630
+Certifique-se de salvar todos os arquivos e, se voc voltar para sua aplicao, ele ainda deve funcionar bem.
+
+40
+00:03:00,680 --> 00:03:08,720
+mesmo a ter um erro porque agora voc  Ellas incorreto porque eu retiro dbase seu L do arquivo de ndice.
+
+41
+00:03:08,720 --> 00:03:15,110
+Agora voc notar uma coisa, j que voc no v mais o interceptor que imprime o
+
+42
+00:03:15,110 --> 00:03:23,990
+log para a solicitao que foi enviada e a resposta que foi obtida porque o interceptor foi configurado para o objeto de acesso
+
+43
+00:03:24,470 --> 00:03:31,200
+global que no estamos usando mais aqui no bloco container se eu agora tentar postar algum post,
+
+44
+00:03:31,500 --> 00:03:31,880
+chegamos
+
+45
+00:03:31,880 --> 00:03:38,490
+Eu comentei e coloquei na minha instncia que eu estou usando apenas em um recipiente de bloco embora,
+
+46
+00:03:38,510 --> 00:03:43,670
+em qualquer outro lugar do meu aplicativo, eu ainda estou importando o prprio pacote.
+
+47
+00:03:44,060 --> 00:03:51,450
+o pacote real com o padro, mas tambm usar nossa prpria instncia em lugares onde queremos usar nosso aplicativo
+
+48
+00:03:51,470 --> 00:03:57,650
+para substituir algumas das configuraes para os lugares onde usamos essa instncia em vez do objeto padro.
+
+49
+00:03:57,920 --> 00:04:04,920
+Ento, eu poderia, claro, tambm comentar a base padro em que voc est novamente para que possamos usar
+
+50
+00:04:04,970 --> 00:04:07,060
+E agora temos o melhor dos dois mundos.
+
+51
+00:04:07,130 --> 00:04:13,280
+Ns conseguimos nossa prpria instncia configurada para buscar todas as postagens, mas para publicar uma publicao, usamos o
+
+52
+00:04:13,280 --> 00:04:14,200
+pacote padro novamente.
+
+53
+00:04:14,240 --> 00:04:17,550
+Ento  por isso que ainda vemos nossos interceptores trabalharem aqui.
+
+54
+00:04:17,840 --> 00:04:24,140
+E, claro, tambm podemos adicionar interceptores para a nossa prpria instncia IN, voc pode simplesmente usar a solicitao
+
+55
+00:04:24,140 --> 00:04:31,130
+de interceptores de instncias, assim como voc fez isso para a instncia padro para o objeto de eixos padro.
+
+56
+00:04:31,250 --> 00:04:37,880
+isso porque poder usar instncias pode lhe dar a flexibilidade necessria em sua aplicao.
+
+57
+00:04:37,880 --> 00:04:39,260
+Eu queria mostrar
+
+58
+00:04:39,260 --> 00:04:46,670
+Ele permite que voc controle em detalhes em qual parte do seu aplicativo voc quer usar quais configuraes padro
+
+59
+00:04:47,060 --> 00:04:53,360
+e funcionalidade incrvel e algo que arredonda este mdulo, onde voc esperanas obter um bom entendimento sobre
+
+60
+00:04:53,360 --> 00:05:01,370
+como voc enviou solicitaes HTP e como o pacote de uso X pode D-lhe um monte de caractersticas de convenincia agradvel.
+

@@ -1,0 +1,72 @@
+1
+00:00:02,120 --> 00:00:07,850
+yleyse ya, akran taleplerine gndermek, genellikle yeniden hareket uygulamalarnda alr.
+
+2
+00:00:07,920 --> 00:00:14,540
+Ve ben genellikle sylyorum nk ok sayfal bir yeniden uygulama uygulamas oluturuyorsanz bunun iin zel
+
+3
+00:00:14,540 --> 00:00:16,030
+bir ey deildir.
+
+4
+00:00:16,070 --> 00:00:22,870
+Bavurunuzu muhtemelen sayfanz form gnderdiiniz bavurudunuz ve srtnza bir istek gnderir ve oradaki
+
+5
+00:00:22,880 --> 00:00:29,230
+yeni yeniden ileme kodu ile birlikte yeni bir ya ekibi sayfas dndrrsnz.
+
+6
+00:00:29,300 --> 00:00:31,670
+Tek bir sayfa bavurunuz yok.
+
+7
+00:00:31,670 --> 00:00:34,300
+Gl ayrlma yapmaya devam etmiyorsun.
+
+8
+00:00:34,490 --> 00:00:40,690
+veriyor ve sunucularn hala zaman zaman iletiim kurmalar gerekiyor ancak H dei tokuuyla iletiim kurmuyorlar.
+
+9
+00:00:40,730 --> 00:00:47,840
+Byle tek bir sayfa uygulamanz varsa, n uunuz ile tepki EP'niz ve srtnz arasnda gl bir ayrma
+
+10
+00:00:47,840 --> 00:00:53,660
+sahipsiniz, ancak yine de tepki E. e-posta sayfalar.
+
+11
+00:00:53,720 --> 00:00:56,470
+Bu yzden ar tepki bir sunucuya bir istek gnderir.
+
+12
+00:00:56,630 --> 00:01:03,860
+Geri dnemezsiniz ve G posta sayfas yandasnz, bunun yerine baz Jason verilerini normalde geri alabilir veya
+
+13
+00:01:03,860 --> 00:01:05,950
+sunucuya baz Jason verilerini gnderirsiniz.
+
+14
+00:01:06,020 --> 00:01:11,840
+Sunucuda baz kaynaklar yaratmak isterseniz, rnein bunun nasl iledii
+
+15
+00:01:11,840 --> 00:01:14,050
+bu ayrtrma ve sunucunuzdur.
+
+16
+00:01:14,060 --> 00:01:22,340
+tek bana veri almak veya almak iin istek gnderebileceiniz baz API u noktalarn ortaya karmaktadr.
+
+17
+00:01:22,550 --> 00:01:28,870
+Dolaysyla, genellikle, dinlendirici bir API'dir ve yalnzca, yaklamnzdaki uygulamaya tepki verdiiniz
+
+18
+00:01:28,880 --> 00:01:33,130
+Bu Marchal'da size gstereceim ve size nasl yaplacan gstereceim.
+

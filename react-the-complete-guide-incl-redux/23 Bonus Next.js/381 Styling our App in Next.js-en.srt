@@ -1,0 +1,120 @@
+1
+00:00:02,110 --> 00:00:06,280
+So now we had a look at how nextjs works and how we work with components in
+
+2
+00:00:06,320 --> 00:00:12,680
+nextjs, how we can build our react application with nextjs in its core basics.
+
+3
+00:00:13,120 --> 00:00:17,340
+Now what about styling? In create react app,
+
+4
+00:00:17,440 --> 00:00:21,960
+we use css modules but I taught you that you have other options too.
+
+5
+00:00:22,180 --> 00:00:29,140
+What do we actually do when you're working with nextjs? Nextjs has its own way of styling
+
+6
+00:00:29,170 --> 00:00:29,940
+react,
+
+7
+00:00:30,220 --> 00:00:37,440
+you can still use inline styles, you can still use radium, css modules,
+
+8
+00:00:37,540 --> 00:00:44,290
+you can't use that here because you can't access the webpack configuration nextjs uses but it offers
+
+9
+00:00:44,320 --> 00:00:50,640
+another out of the box working way of styling your components and having scoped styling.
+
+10
+00:00:50,800 --> 00:01:00,580
+Let's say for the user component, you add a style tag, style html element to your component jsx like
+
+11
+00:01:00,640 --> 00:01:01,700
+this
+
+12
+00:01:02,110 --> 00:01:10,120
+and then on that style, you set jsx as a prop, jsx is a prop
+
+13
+00:01:10,390 --> 00:01:16,900
+understood by style here because next use a special package which is called styled-jsx,
+
+14
+00:01:16,960 --> 00:01:25,060
+you can learn more about this on the github page of nextjs of course and styled-jsx is a package
+
+15
+00:01:25,060 --> 00:01:27,850
+which just allows you to write your css styles
+
+16
+00:01:27,850 --> 00:01:31,810
+here in your jsx code and then it will pull them out,
+
+17
+00:01:31,810 --> 00:01:36,710
+apply them to your component here and scope it to that component.
+
+18
+00:01:36,820 --> 00:01:41,230
+Again you can see how it works on the official github page of nextjs.
+
+19
+00:01:41,270 --> 00:01:42,370
+.
+
+20
+00:01:42,370 --> 00:01:44,870
+So here you can also use media queries and so on
+
+21
+00:01:45,070 --> 00:01:47,530
+and therefore, I could also write a div
+
+22
+00:01:47,540 --> 00:01:54,930
+here and style that. Important, you need to wrap all of that in curly braces and then two back ticks,
+
+23
+00:01:54,940 --> 00:02:00,760
+now these are not single quotation marks but back ticks which allow you to create string literals in
+
+24
+00:02:00,760 --> 00:02:06,910
+javascript so basically multi-line strings you could say. Now in there, you can now style your div, like
+
+25
+00:02:06,910 --> 00:02:07,500
+that
+
+26
+00:02:08,270 --> 00:02:18,910
+and for example give it a border of 1px solid #eee, box-shadow of 0 2pxs 3px
+
+27
+00:02:18,970 --> 00:02:27,310
+#ccc and a padding of 20px and maybe also text align center.
+
+28
+00:02:27,310 --> 00:02:33,620
+Now with that, if we go back to the auth page, this is how our user now looks like.
+
+29
+00:02:33,620 --> 00:02:37,940
+So this is how we style components in nextjs,
+
+30
+00:02:38,030 --> 00:02:45,300
+we use this third party package, styled-jsx to create styles which are scoped to that given component.
+

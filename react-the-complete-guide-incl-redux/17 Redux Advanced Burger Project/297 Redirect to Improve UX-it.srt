@@ -1,0 +1,168 @@
+1
+00:00:02,260 --> 00:00:06,170
+Abbiamo lavorato un po 'sul riduttore dell'ordine e sulle azioni di ordine.
+
+2
+00:00:06,310 --> 00:00:12,130
+E prima ancora di combinare i nostri produttori, riceviamo un errore o quando visitiamo i dati di contatto come
+
+3
+00:00:12,130 --> 00:00:13,550
+questo nella pagina di pagamento.
+
+4
+00:00:13,690 --> 00:00:19,480
+La ragione di questo  che nella pagina di check in un riepilogo del check out ovviamente mostriamo un'anteprima del
+
+5
+00:00:19,480 --> 00:00:21,630
+nostro hamburger con gli ingredienti che abbiamo.
+
+6
+00:00:21,760 --> 00:00:28,330
+E inizialmente prima di caricare gli ingredienti, gli ingredienti sono nulli e quindi fallisce se proviamo
+
+7
+00:00:28,330 --> 00:00:30,130
+a scorrere i nostri ingredienti.
+
+8
+00:00:30,460 --> 00:00:33,630
+Ora ci sono un paio di modi per risolvere questo.
+
+9
+00:00:33,670 --> 00:00:35,960
+Il modo semplice  semplicemente non caricare.
+
+10
+00:00:35,980 --> 00:00:42,040
+Dai un'occhiata a Samari se gli ingredienti non sono ancora stati caricati, possiamo mostrare uno spinner finch non ci sono.
+
+11
+00:00:42,310 --> 00:00:48,940
+Ma dal momento che nella nostra applicazione, almeno l'unica volta in cui gli ingredienti non ci sono, all'avvio
+
+12
+00:00:49,300 --> 00:00:54,870
+potremmo semplicemente reindirizzare l'utente se non ci sono ingredienti caricati perch non ci sono ingredienti.
+
+13
+00:00:55,000 --> 00:00:58,970
+Bene, quindi ha senso essere su una pagina di pagamento.
+
+14
+00:00:59,080 --> 00:01:04,450
+Questa  la strada che prender qui, ma sappi che potresti anche mostrarci Spener invece
+
+15
+00:01:04,450 --> 00:01:05,560
+del sommario qui.
+
+16
+00:01:05,560 --> 00:01:07,210
+Se volessi farlo.
+
+17
+00:01:07,660 --> 00:01:13,710
+Quindi, cosa far mentre importer qualcosa da re-act Rotterdam e quella sar la componente di reindirizzamento.
+
+18
+00:01:13,750 --> 00:01:22,020
+Abbiamo visto che nella sezione di routing e nel rendering Meffert ha modificato un nuovo sommario costante e
+
+19
+00:01:22,030 --> 00:01:25,830
+questo riepilogo per impostazione predefinita dovrebbe essere il reindirizzamento.
+
+20
+00:01:25,830 --> 00:01:26,590
+Diciamo.
+
+21
+00:01:26,800 --> 00:01:31,900
+Quindi stai tutti reindirizzando e semplicemente reindirizzer a barra.
+
+22
+00:01:31,990 --> 00:01:38,680
+Quindi, per la mia pagina di percorso per l'hamburger Bolar sulla pagina di hamburger Boulder ho un caricatore fino a quando non sono stati
+
+23
+00:01:38,690 --> 00:01:39,460
+caricati gli ingredienti.
+
+24
+00:01:40,530 --> 00:01:44,090
+Ora il riassunto non dovrebbe ovviamente essere reindirizzato.
+
+25
+00:01:44,280 --> 00:01:47,370
+Se invece questo Propst inj.
+
+26
+00:01:47,490 --> 00:01:53,280
+Quindi, sono disponibili solo gli ingredienti che riceviamo dal nostro stato Rydex ed  disponibile una
+
+27
+00:01:53,280 --> 00:01:54,150
+volta caricato.
+
+28
+00:01:54,510 --> 00:02:02,400
+Una volta che  il caso, ovviamente, voglio renderizzare e quindi questo non dovrebbe essere un concetto ma una variabile
+
+29
+00:02:02,400 --> 00:02:03,190
+con LET.
+
+30
+00:02:03,240 --> 00:02:06,390
+Voglio rendere il riepilogo che abbiamo mostrato prima.
+
+31
+00:02:06,600 --> 00:02:08,720
+Quindi inserir il codice riassuntivo.
+
+32
+00:02:08,820 --> 00:02:12,220
+Ora possiamo usare quella variabile di riepilogo e mostrarla qui.
+
+33
+00:02:12,390 --> 00:02:15,610
+Quindi visualizzer semplicemente un riepilogo.
+
+34
+00:02:15,750 --> 00:02:20,370
+Inoltre, non  necessario mostrare il percorso verso i dati di contatto.
+
+35
+00:02:20,480 --> 00:02:30,750
+Quindi posso semplicemente inserire questo nel mio codice di riepilogo qui per avvolgerlo con il div a causa di
+
+36
+00:02:30,780 --> 00:02:32,530
+elementi adiacenti qui.
+
+37
+00:02:32,680 --> 00:02:39,450
+E questo in realt mi permette anche di sbarazzarmi del giorno dell'anno e restituire semplicemente un riepilogo che 
+
+38
+00:02:39,450 --> 00:02:43,170
+semplicemente un reindirizzamento o il codice che abbiamo visto in precedenza.
+
+39
+00:02:43,170 --> 00:02:50,580
+Ora se ho salvato l'aggiornamento check out container vedrai se vado alla pagina di checkout facendo clic
+
+40
+00:02:50,640 --> 00:02:57,770
+su ordine ora tutto funziona ma se lo ricarico semplicemente premendo enter o refresh vengo reindirizzato.
+
+41
+00:02:58,020 --> 00:03:02,100
+Quindi questo  Demerara risolto con questo piccolo aggiustamento.
+
+42
+00:03:02,100 --> 00:03:06,230
+Ora assicuriamoci di combinare effettivamente i nostri riduttori.
+

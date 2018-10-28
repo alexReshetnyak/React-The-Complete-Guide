@@ -1,0 +1,340 @@
+1
+00:00:02,230 --> 00:00:06,540
+Teraz, gdy zoptymalizowalimy nasz ma aplikacj demonstracyjn, pozwl
+
+2
+00:00:06,910 --> 00:00:16,120
+mi ponownie zagbi si w ten komponent funkcjonalny w porwnaniu z komponentem stanowym lub komponentem kontenera.
+
+3
+00:00:16,150 --> 00:00:21,670
+Zasadniczo komponenty zdefiniowane klas, ktra rozszerza komponent bdcy jednym ze sposobw tworzenia komponentu
+
+4
+00:00:21,700 --> 00:00:28,510
+i reagowania oraz komponenty, ktre s po prostu funkcjami jak wszystkie inne komponenty w tej aplikacji.
+
+5
+00:00:28,960 --> 00:00:36,300
+Jak ju wspominaem duo na tym kursie, powiniene stara si tworzy komponenty funkcjonalne tak czsto, jak to moliwe.
+
+6
+00:00:36,360 --> 00:00:37,170
+Czemu?
+
+7
+00:00:38,730 --> 00:00:43,860
+Poniewa te komponenty maj wski zakres i wyran odpowiedzialno, dotycz
+
+8
+00:00:43,860 --> 00:00:50,610
+tylko prezentacji czego, dotycz renderowania jsx i zawieraj pewn logik, aby poprawnie wywietla jsx,
+
+9
+00:00:50,610 --> 00:00:57,850
+na przykad przez dodanie niektrych klas css, tak jak to robimy w komponencie kokpitu .
+
+10
+00:00:57,900 --> 00:00:59,110
+Nie robi wiele wicej
+
+11
+00:00:59,130 --> 00:01:03,980
+i jedno, czego na pewno nie robi i nie mog zrobi, to zarzdza pastwem.
+
+12
+00:01:03,990 --> 00:01:09,630
+Wspominam bardzo, e powodem tego podziau jest to, e chcemy mie kilka
+
+13
+00:01:09,630 --> 00:01:16,230
+miejsc w naszej aplikacji, w ktrych zmienia si stan aplikacji, co zapewnia, e aplikacja
+
+14
+00:01:16,440 --> 00:01:23,550
+bdzie atwa do utrzymania, nawet jeli bdzie rosa. Poniewa im bardziej aplikacja ronie, tym trudniej jest
+
+15
+00:01:23,610 --> 00:01:31,620
+zarzdza stanem, poniewa jeli zarzdzasz stanem w kadym komponencie, bardzo trudno jest ledzi miejsce edycji tej listy
+
+16
+00:01:31,620 --> 00:01:35,040
+osb, w ktrej utworzye ten nowy wpis.
+
+17
+00:01:35,040 --> 00:01:41,840
+Jeli dostaniesz kilka pojemnikw, w ktrych to robisz, a nastpnie po prostu przekazujesz stan i reszta w d za
+
+18
+00:01:41,850 --> 00:01:42,860
+pomoc rekwizytw, jest
+
+19
+00:01:42,870 --> 00:01:48,510
+to znacznie atwiejsze w obsudze, poniewa zawsze moesz zobaczy, w kocu stan zostaje zmieniony tutaj w
+
+20
+00:01:48,510 --> 00:01:49,590
+aplikacji. Plik
+
+21
+00:01:49,740 --> 00:01:56,640
+js I rozprowadzamy odniesienia do funkcji edytowanych za pomoc rekwizytw, ale wszystkie
+
+22
+00:01:56,940 --> 00:02:00,360
+inne komponenty nie mog zmieni stanu.
+
+23
+00:02:00,360 --> 00:02:05,530
+Jest to jedna z podstawowych podstaw dobrej aplikacji reagowania, wykorzystuj komponenty
+
+24
+00:02:05,660 --> 00:02:12,800
+oparte na klasach tak mao jak to moliwe, ale oczywicie nie bj si ich uywa, jeli
+
+25
+00:02:12,800 --> 00:02:14,030
+ma to sens.
+
+26
+00:02:14,210 --> 00:02:20,540
+Jeli masz centralny punkt w swojej aplikacji, a dobry podzia to zazwyczaj wiele funkcji,
+
+27
+00:02:20,540 --> 00:02:27,200
+wic jeli na przykad masz w swojej aplikacji funkcj bloga i funkcj uwierzytelniania, to gwnymi
+
+28
+00:02:27,310 --> 00:02:34,760
+elementami tych funkcji mog by kontenery zarzdzajce pastwem. dla tego obszaru cech i zobaczysz to w
+
+29
+00:02:34,760 --> 00:02:39,650
+akcji podczas tego kursu, kiedy zanurzymy si w wikszym projekcie kursu.
+
+30
+00:02:40,160 --> 00:02:47,930
+Ale wszystkie inne komponenty, o ktrych wspomniano czsto, powinny by funkcjonalnymi komponentami, ja te zanurkowaem
+
+31
+00:02:47,930 --> 00:02:55,700
+w jedn wan rnic, oprcz istnienia stanu i dostpnoci metod, ktre posiadasz w komponentach opartych
+
+32
+00:02:55,700 --> 00:02:56,270
+na klasach.
+
+33
+00:02:56,270 --> 00:03:01,460
+W nastpnych wykadach zagbi si w jeszcze jedn istotn rnic midzy komponentami klas
+
+34
+00:03:01,460 --> 00:03:02,200
+a komponentami
+
+35
+00:03:02,390 --> 00:03:07,610
+funkcjonalnymi, a bdzie to cykl ycia komponentu. Zanim wkroczymy w cykl
+
+36
+00:03:07,820 --> 00:03:14,210
+ycia, porwnajmy bezpastwowe i stanowe komponenty. Aby przypomnie to sobie, elementy stanowe, nazywane
+
+37
+00:03:14,210 --> 00:03:14,870
+take
+
+38
+00:03:14,870 --> 00:03:19,380
+kontenerami i elementami bezpastwowymi, rni si tym, e skadniki
+
+39
+00:03:19,430 --> 00:03:24,620
+stanowe s tworzone za pomoc sowa klasowego i komponentu rozszerzajcego, podczas
+
+40
+00:03:24,620 --> 00:03:29,060
+gdy elementy bezpastwowe to tylko funkcje, ktre otrzymuj rekwizyty.
+
+41
+00:03:29,120 --> 00:03:32,740
+Teraz rnice importowe to oczywicie dostp do pastwa i
+
+42
+00:03:32,810 --> 00:03:39,950
+czy jest to nowo, istnienie hakw cyklu ycia. W stanowych pojemnikach, moemy uzyska dostp do stanu i moemy wdroy
+
+43
+00:03:39,950 --> 00:03:46,640
+haki cyklu ycia, powrc do tego, co jest na nastpnym wykadzie. Bezstanowe komponenty nie maj dostpu do stanu
+
+44
+00:03:46,910 --> 00:03:52,070
+ani nie mog implementowa hase cyklu ycia, a jeli chcemy
+
+45
+00:03:52,250 --> 00:03:58,260
+uzyska dostp do stanu i rekwizytw, w kontenerach stanowych, robimy to za
+
+46
+00:03:58,610 --> 00:04:09,230
+pomoc tego sowa kluczowego. stan. xy, to. rekwizyty. xy, a w elementach bezstanowych robimy to za pomoc tylko rekwizytw. xy, otrzymujemy
+
+47
+00:04:09,260 --> 00:04:11,290
+rekwizyty jako argument.
+
+48
+00:04:11,540 --> 00:04:18,410
+I jak czsto wspominalimy, korzystaj tylko z komponentw stanowych, jeli potrzebujesz zarzdza hakami w
+
+49
+00:04:18,410 --> 00:04:23,860
+zakresie stanu lub dostpu, korzystaj z komponentw bezstanowych we wszystkich innych przypadkach.
+
+50
+00:04:23,870 --> 00:04:31,040
+I dlatego, e nigdy tego nie robilimy, chc to podkreli. rekwizyty. rzecz Xy w komponentach stanowych.
+
+51
+00:04:31,040 --> 00:04:37,520
+Jeli wemiemy pod uwag nasz jedyny element skadowy, ktry mamy tutaj, to nawet nie uywa
+
+52
+00:04:37,520 --> 00:04:41,840
+rekwizytw, uywa tylko stanu, ale bdzie mia dostp rwnie do
+
+53
+00:04:41,960 --> 00:04:44,130
+rekwizytw i mog ci to pokaza.
+
+54
+00:04:44,300 --> 00:04:46,840
+Pozwl, e przejd troch rekwizytw z indeksu. Plik js, pozwl
+
+55
+00:04:46,880 --> 00:04:47,720
+mi poda
+
+56
+00:04:47,870 --> 00:04:58,740
+tutaj tytuow propozycj, ktra moe by po prostu cigiem, w ktrym powiem odpowiednie osoby. Teraz moe to by tytu naszej
+
+57
+00:04:58,740 --> 00:05:03,910
+aplikacji, w aplikacji. Js, ktry jest kontenerem, wci moemy uzyska dostp do rekwizytw,
+
+58
+00:05:03,960 --> 00:05:09,540
+to nie jest tak, e nie ma dostpu do rekwizytw. Tutaj, moe chcemy przekaza
+
+59
+00:05:09,690 --> 00:05:14,290
+to do kokpitu, aby go tam wywietli.
+
+60
+00:05:14,580 --> 00:05:20,300
+Zdefiniujmy wic nowy tytu, now waciwo tam, moe tytu aplikacji, nie myli go
+
+61
+00:05:20,310 --> 00:05:23,220
+z propem, ktry mamy zamiar przekaza.
+
+62
+00:05:23,550 --> 00:05:25,880
+Teraz wiemy, e ta waciwo tytuu jest
+
+63
+00:05:25,980 --> 00:05:33,530
+dostpna w naszym komponencie aplikacji, poniewa ustawilimy j tutaj w indeksie. plik js.
+
+64
+00:05:33,540 --> 00:05:36,440
+Oczywicie nie moemy uzyska do niego dostpu w
+
+65
+00:05:36,450 --> 00:05:42,230
+ten sposb, nie moemy uzyska dostpu do tytuu rekwizytw, poniewa rekwizyty bd tutaj niezdefiniowan zmienn.
+
+66
+00:05:42,240 --> 00:05:44,040
+Znajdujemy si wewntrz metody renderowania,
+
+67
+00:05:44,160 --> 00:05:49,620
+a wewntrz tej metody nigdy nie zdefiniowalimy rekwizytw, a ta metoda rwnie nie przyjmuje rekwizytw jako
+
+68
+00:05:49,920 --> 00:05:51,940
+argumentu, wic podpory s tu niezdefiniowane.
+
+69
+00:05:52,470 --> 00:05:57,250
+Ale sama klasa ma waciwo rekwizytw, poniewa rozszerzamy komponent I tak jak
+
+70
+00:05:57,410 --> 00:06:01,800
+mamy dostp do metody ustalonego stanu, ktrej sami nigdy nie definiowalimy,
+
+71
+00:06:02,010 --> 00:06:05,870
+mamy take dostp do waciwoci rekwizytw, ktrych sami nigdy nie definiowalimy.
+
+72
+00:06:06,090 --> 00:06:13,500
+Jest nam dany i zamieszany w reakcje, wic moemy uzyska do niego dostp. rekwizyty takie jak ten i ten przypadek, po prostu
+
+73
+00:06:13,800 --> 00:06:15,760
+przekazujemy je dalej, ale oczywicie
+
+74
+00:06:15,780 --> 00:06:18,980
+moemy rwnie wyprowadzi je tutaj w tym szablonie.
+
+75
+00:06:19,290 --> 00:06:20,950
+Ale poniewa przekazujemy to
+
+76
+00:06:21,080 --> 00:06:28,050
+dalej, przejd teraz do kokpitu i zajmiemy si t zupenie now wasnoci, by moe tutaj,
+
+77
+00:06:28,360 --> 00:06:36,440
+aby wyprowadzi j do twojego tytuu aplikacji rekwizytw. Tutaj znowu uywamy rekwizytw, poniewa otrzymujemy rekwizyty
+
+78
+00:06:37,420 --> 00:06:45,160
+jako element tutaj z jednym nawiasem klamrowym. Rekwizyty s tylko argumentem, ktry otrzymujemy dla
+
+79
+00:06:45,160 --> 00:06:52,630
+tej funkcji, przekazywanej automatycznie przez reakcj. Jeli teraz zapiszemy wszystkie pliki i wrcimy do naszej aplikacji, zobaczysz odpowiednie osoby jako
+
+80
+00:06:52,630 --> 00:06:58,380
+nowy tytu, ktry tutaj widzimy, poniewa teraz ustawiamy to w indeksie. Plik js i przekazujemy go w d i
+
+81
+00:06:58,420 --> 00:07:02,030
+jak widzisz, mamy rekwizyty w naszej kolejce kontenerw, Nie uywalimy tego
+
+82
+00:07:02,140 --> 00:07:05,720
+wczeniej, poniewa nigdy wczeniej czego nie otrzymalimy, ale jeli chcesz
+
+83
+00:07:05,800 --> 00:07:12,520
+uywa rekwizytw tutaj, uyj go z tym. rekwizyty tak jak tego uywasz. Stan tutaj, poniewa jeste tutaj
+
+84
+00:07:12,520 --> 00:07:13,510
+w klasie,
+
+85
+00:07:13,510 --> 00:07:18,520
+nie masz funkcji, nie otrzymujesz rekwizytw i nie mwisz tutaj o argumentach.
+

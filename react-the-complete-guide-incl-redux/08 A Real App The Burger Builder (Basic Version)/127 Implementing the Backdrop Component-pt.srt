@@ -1,0 +1,404 @@
+1
+00:00:02,200 --> 00:00:09,910
+Vamos adicionar este pano de fundo e, em primeiro lugar, criar o componente do pano de fundo e adicionar o estilo para o
+
+2
+00:00:09,910 --> 00:00:10,970
+pano de fundo.
+
+3
+00:00:11,350 --> 00:00:15,370
+Ento vamos ao nosso. Voc  uma pasta no pano de fundo.
+
+4
+00:00:15,550 --> 00:00:19,390
+E vamos comear a trabalhar nesse componente de pano de fundo.
+
+5
+00:00:19,420 --> 00:00:21,420
+Ser um componente super simples.
+
+6
+00:00:21,790 --> 00:00:28,200
+Como sempre,  um componente funcional aqui que recebeu alguns adereos e retornou algum GSX.
+
+7
+00:00:28,210 --> 00:00:37,140
+Portanto, tambm precisa importar reac de reagir e precisa se exportar como padro.
+
+8
+00:00:37,220 --> 00:00:40,380
+Agora, no J  o cdigo X, eu retorno.
+
+9
+00:00:40,670 --> 00:00:44,260
+Na verdade, nem preciso escrever cdigo complexo.
+
+10
+00:00:44,270 --> 00:00:47,670
+Eu s quero verificar se o show do prop  verdadeiro.
+
+11
+00:00:47,810 --> 00:00:55,490
+Se esse for o caso de novo usando uma expresso de mudana aqui, se for esse o caso, ento eu quero retornar uma
+
+12
+00:00:56,340 --> 00:01:00,760
+morte, esta def ir simplesmente segurar para parar o cenrio para a frente.
+
+13
+00:01:00,960 --> 00:01:02,710
+Caso contrrio, ele retornar NULL.
+
+14
+00:01:02,730 --> 00:01:09,150
+Voc pode retornar agora em componentes que est OK ou simplesmente significa que nada  processado, mas est OK.
+
+15
+00:01:09,750 --> 00:01:14,760
+Agora, eu no preciso passar nenhum contedo para o div, eu preciso configurar algum estilo.
+
+16
+00:01:14,880 --> 00:01:21,040
+Ento, vamos adicionar um pano de fundo para o arquivo C S S, onde adicionamos algum estilo para o pano de fundo.
+
+17
+00:01:21,110 --> 00:01:23,250
+Ns podemos nos escrever rapidamente para gabber.
+
+18
+00:01:23,280 --> 00:01:30,570
+Vamos adicionar o cenculo C S S classe para que possamos usar esses mdulos Frue C S S e,
+
+19
+00:01:30,570 --> 00:01:36,390
+em seguida, backup deve abranger toda a altura e largura da pgina para cobrir tudo.
+
+20
+00:01:36,590 --> 00:01:43,010
+Deve ter uma posio fixa para que ele permanea em posio, mesmo quando rolar, deve ter
+
+21
+00:01:43,010 --> 00:01:50,620
+um ndice definido, digamos 100 para que ele esteja acima dos elementos que voc deseja que ele seja configurado.
+
+22
+00:01:50,750 --> 00:01:55,570
+E isso se tornar importante mais tarde, depois de adicionar barra de barra de ferramentas, por exemplo.
+
+23
+00:01:55,670 --> 00:02:00,890
+Mas se verificarmos o estilo modal, voc ver que ele tambm possui um ndice definido de 500.
+
+24
+00:02:00,890 --> 00:02:02,070
+Isso  claro,  importante.
+
+25
+00:02:02,090 --> 00:02:07,610
+O modal precisa se sentar acima do pano de fundo e o cenrio mais tarde precisar se sentar acima de alguns outros elementos
+
+26
+00:02:07,610 --> 00:02:08,790
+como a barra de ferramentas.
+
+27
+00:02:09,110 --> 00:02:10,070
+Vamos tambm adicionar.
+
+28
+00:02:10,100 --> 00:02:18,200
+Esquerda zero no zero superior para posicionar no canto superior esquerdo e vamos adicionar uma cor de fundo onde
+
+29
+00:02:18,200 --> 00:02:26,120
+eu usarei o nosso G. P. UMA. valor para definir isso como uma cor preta com 50 por cento de transparncia.
+
+30
+00:02:26,120 --> 00:02:34,940
+Agora  hora de importar  classista individualizou essas classes ou classe similar realmente no componente do pano
+
+31
+00:02:34,940 --> 00:02:36,010
+de fundo.
+
+32
+00:02:36,260 --> 00:02:46,760
+isso como um nome de classe para o div, ento o nome da classe agora  igual ao cenrio das classes com um capital B.
+
+33
+00:02:46,760 --> 00:02:54,450
+Ento, aqui, ento, eu vou simplesmente importar classis a partir desse pano de fundo C S S e atribuir
+
+34
+00:02:54,470 --> 00:02:58,590
+Isso  importante para ns ter um componente de pano de fundo.
+
+35
+00:02:58,760 --> 00:03:00,840
+Agora precisamos us-lo.
+
+36
+00:03:00,910 --> 00:03:03,490
+Ele espera obter uma propriedade de show.
+
+37
+00:03:03,500 --> 00:03:07,610
+A questo agora  onde podemos adicionar este pano de fundo.
+
+38
+00:03:07,880 --> 00:03:14,280
+E agora voc pode ter vrios lugares onde voc poderia adicion-lo onde voc poderia argumentar que faz
+
+39
+00:03:15,290 --> 00:03:22,310
+sentido um desses lugares seria em um componente profundo, que ele se sente ao lado do layout fora do
+
+40
+00:03:22,460 --> 00:03:26,670
+layout, mesmo porque no faz parte do contedo da pgina principal.
+
+41
+00:03:26,700 --> 00:03:34,100
+Tendo dito no componente layout, voc poderia argumentar porque faz parte da pgina, mas no deve fazer parte do
+
+42
+00:03:34,100 --> 00:03:39,160
+contedo principal e no fazer parte da barra de ferramentas ou algo assim.
+
+43
+00:03:39,350 --> 00:03:42,840
+Voc pode definitivamente fazer isso, pode coloc-lo no componente de layout.
+
+44
+00:03:42,920 --> 00:03:48,150
+Voc s precisa se certificar de que voc pode alcanar isso passando o show.
+
+45
+00:03:48,150 --> 00:03:52,130
+O pano de fundo permaneceu at a componente morta e assim por diante.
+
+46
+00:03:52,160 --> 00:03:54,040
+Este  um bom desafio para voc.
+
+47
+00:03:54,260 --> 00:03:58,820
+Tente colocar e manipular o pano de fundo em diferentes locais do seu aplicativo.
+
+48
+00:03:59,120 --> 00:04:05,960
+para componentes baseados em classes, porque talvez de repente voc precise definir algum mtodo em um componente.
+
+49
+00:04:05,960 --> 00:04:12,190
+Para papai voc tambm pode ter que trocar alguns componentes do estado de componentes menos funcionais
+
+50
+00:04:12,230 --> 00:04:20,930
+Eu irei para outra abordagem, porm vou adicionar o pano de fundo ao meu modelo, porque, na minha opinio,
+
+51
+00:04:20,930 --> 00:04:23,930
+esse cenrio est intimamente conectado ao modelo.
+
+52
+00:04:24,020 --> 00:04:32,000
+Se o modem for mostrado, o pano de fundo deve ser exibido, portanto, vou importar meus componentes auxiliares aqui porque preciso
+
+53
+00:04:32,000 --> 00:04:35,450
+colocar esse modo ao lado do pano de fundo.
+
+54
+00:04:35,840 --> 00:04:45,090
+Ento, deixe-me simplesmente subir at o lugar onde eu posso acessar a idade Ossi e depois o meu auxiliar.
+
+55
+00:04:45,200 --> 00:04:56,120
+E agora vamos embrulhar o desfase do modal para este componente alks e vamos agora importar o pano de fundo para este outono para
+
+56
+00:04:56,150 --> 00:05:04,110
+importar o pano de fundo da pasta do pano de fundo do arquivo Julias do pano de fundo.
+
+57
+00:05:04,220 --> 00:05:06,800
+Vamos coloc-lo ao lado do modal.
+
+58
+00:05:06,820 --> 00:05:08,660
+Este  o meu pano de fundo.
+
+59
+00:05:08,970 --> 00:05:15,200
+Agora, devemos configurar a propriedade do show no pano de fundo porque esperamos que a e, felizmente,
+
+60
+00:05:15,200 --> 00:05:21,980
+obtenhamos as informaes do show no prop no prprio componente modal, para que possamos simplesmente passar no show do
+
+61
+00:05:22,070 --> 00:05:23,830
+prop no pano de fundo.
+
+62
+00:05:24,080 --> 00:05:27,200
+Se for mostrado, o pano de fundo deve ser mostrado.
+
+63
+00:05:27,920 --> 00:05:32,770
+Se fizermos isso, vamos salvar todos os arquivos e vamos ver se isso funciona.
+
+64
+00:05:32,960 --> 00:05:33,500
+Parece bom.
+
+65
+00:05:33,500 --> 00:05:34,960
+Temos um pano de fundo.
+
+66
+00:05:35,360 --> 00:05:39,680
+Certifique-se de que podemos clicar neste cenrio para o pai.
+
+67
+00:05:39,680 --> 00:05:46,430
+Ns,  claro, precisamos adicionar um ouvinte de cliques dentro do pano de fundo da morte, ento clique.
+
+68
+00:05:46,650 --> 00:05:55,070
+Sure executa um mtodo e, claro, receber uma referncia a esse mtodo em uma propriedade, ento eu vou
+
+69
+00:05:55,070 --> 00:05:55,860
+executar adereos.
+
+70
+00:05:55,910 --> 00:05:58,950
+E, em seguida, digamos que colecionar pode ser o nome da propriedade.
+
+71
+00:05:59,090 --> 00:06:01,820
+Voc pode escolher qualquer nome que desejar.
+
+72
+00:06:01,930 --> 00:06:03,960
+Voltemos agora ao modal.
+
+73
+00:06:04,030 --> 00:06:11,890
+Aqui temos que fornecer uma propriedade de clique e agora temos que fazer algo l e simplesmente dispararei
+
+74
+00:06:12,490 --> 00:06:17,200
+o Propp no Motilal, que deve ser fechado por celular.
+
+75
+00:06:17,590 --> 00:06:23,280
+Ento, o fechamento mvel  agora uma propriedade que temos de adicionar ao componente modal.
+
+76
+00:06:23,320 --> 00:06:24,930
+Quando adicionamos a J.
+
+77
+00:06:24,940 --> 00:06:26,960
+X para nossa sada.
+
+78
+00:06:27,010 --> 00:06:32,480
+Ento, para dizer e ns, claro, usamos esse modal no criador de hambrguer.
+
+79
+00:06:32,820 --> 00:06:41,340
+ assim que tudo o que agora precisamos fazer  que devemos adicionar essas propriedades modais prximas a modal, porque
+
+80
+00:06:41,400 --> 00:06:46,030
+acabamos de adicion-la como uma referncia do mtodo que queremos executar.
+
+81
+00:06:46,140 --> 00:06:53,100
+Uma vez que os fogos de fundo clicaram apenas para tranquilizar que  claro quando isso acontece, o que acontece quando
+
+82
+00:06:53,340 --> 00:06:54,770
+o clique  disparado.
+
+83
+00:06:54,810 --> 00:07:01,790
+Todo o diferencial que compe o pano de fundo, ento, no construtor Burgert, onde, no final, obteremos essa informao.
+
+84
+00:07:01,950 --> 00:07:10,280
+Eu quero executar algum cdigo uma vez que este cenrio foi clicado no final e vou adicionar um novo manipulador que Chase
+
+85
+00:07:10,480 --> 00:07:16,500
+cancelar o manipulador porque clicar no pano de fundo significa essencialmente que queremos fechar o modal
+
+86
+00:07:16,620 --> 00:07:18,900
+e que queremos cancelar a compra.
+
+87
+00:07:18,900 --> 00:07:29,560
+continuar, ento eu vou chamar esse estado definido e definir sua perseguio para aviso falso o ndice especial que eu estou usando aqui
+
+88
+00:07:29,690 --> 00:07:37,140
+novamente para garantir que este dentro deste Meffert se refira a declasse e no a outra coisa.
+
+89
+00:07:37,140 --> 00:07:38,610
+Ns no queremos
+
+90
+00:07:38,610 --> 00:07:41,040
+Ento,  o manipulador de cancelador de Paperchase.
+
+91
+00:07:41,310 --> 00:07:44,420
+Eu quero executar uma vez que o modem foi fechado.
+
+92
+00:07:44,580 --> 00:07:47,470
+Ento, este manipulador de cancelamento pr-Chase.
+
+93
+00:07:47,820 --> 00:07:53,790
+Se ns agora salvamos tudo e voltarmos para o aplicativo e abrimos o modelo que vemos.
+
+94
+00:07:53,820 --> 00:07:59,490
+Se eu clicar no pano de fundo, voc ver que o modal desaparece e o cenrio desaparece e podemos
+
+95
+00:07:59,670 --> 00:08:01,340
+fazer isso sempre que quisermos.
+
+96
+00:08:01,340 --> 00:08:03,400
+A propsito,  um hamburguer super saboroso.
+
+97
+00:08:03,450 --> 00:08:05,240
+Sem batida, mas muito queijo.
+
+98
+00:08:05,310 --> 00:08:06,930
+Delicioso.
+
+99
+00:08:06,960 --> 00:08:13,830
+Agora vamos continuar e vamos ter certeza de adicionar alguns botes como parte do resumo da ordem para que
+
+100
+00:08:13,830 --> 00:08:14,650
+possamos continuar.
+
+101
+00:08:14,790 --> 00:08:16,290
+Ou podemos cancelar.
+

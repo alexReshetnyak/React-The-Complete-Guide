@@ -1,0 +1,280 @@
+1
+00:00:02,180 --> 00:00:05,520
+Bu yzden redux destann nasl kullanabileceimiz hakknda ok konutum, imdi
+
+2
+00:00:05,720 --> 00:00:11,540
+nasl altna dair bir his elde etmek iin kullanalm. Redux destan ile, temelde
+
+3
+00:00:11,570 --> 00:00:21,050
+belirli eylemlere koan ve tm yan etki mantn ve bir yan etkinin yerel depolama
+
+4
+00:00:21,130 --> 00:00:28,460
+alanna erime, bir sunucuya ulama gibi bir ey olduunu dndnz fonksiyonlar
+
+5
+00:00:28,460 --> 00:00:36,280
+olan sagaslar yaratrsnz. rotay deitirmek veya buraya benzer bir zamanlaycy altrmak.
+
+6
+00:00:36,290 --> 00:00:41,930
+Bunlar dorudan yan etkilerdir, nk dorudan redux maazanz maniple etmezler,
+
+7
+00:00:41,930 --> 00:00:47,330
+sonunda redux maazanzda depolanan ancak dorudan redktr tarafndan tketilmeyen farkl
+
+8
+00:00:47,660 --> 00:00:51,450
+bir duruma yol aabilecek bir eyler yapabilirler.
+
+9
+00:00:51,890 --> 00:00:56,700
+Bunun iin, maaza klasrnde yeni bir alt klasr oluturacam ve bunu sagas olarak adlandracam, adnz
+
+10
+00:00:56,870 --> 00:00:59,970
+size kalm ama bu olduka fazla greceiniz bir ey.
+
+11
+00:01:00,170 --> 00:01:05,290
+imdi sagusta farkl trlerde sagalar iin farkl dosyalar yaratacam ve
+
+12
+00:01:05,300 --> 00:01:08,800
+neden burada auth destan ile balamyoruz.
+
+13
+00:01:08,990 --> 00:01:18,170
+Bylece yeni bir dosya oluturacam, auth. sagas klasrnde js, imdi burada, redux sagas'm oluturmak
+
+14
+00:01:18,260 --> 00:01:22,100
+istiyorum, soru sadece nasl bir destan yaratyoruz,
+
+15
+00:01:22,100 --> 00:01:25,010
+gerekte nedir? znde, bu bir
+
+16
+00:01:25,040 --> 00:01:31,280
+ilev ve bir tr sylyorum nk yaknda size gstereceim kk bir
+
+17
+00:01:31,280 --> 00:01:32,280
+bklme var.
+
+18
+00:01:32,660 --> 00:01:35,900
+ncelikle burada bir fonksiyon yaratalm,
+
+19
+00:01:36,100 --> 00:01:39,490
+fonksiyon anahtar szcn kullanacaz ve ismini
+
+20
+00:01:39,530 --> 00:01:46,820
+yazacaz diyelim ki, yerel depolamada temizlediimiz destan deitirmek istiyoruz, yani asenkron kod
+
+21
+00:01:46,850 --> 00:01:52,580
+yok Orada, ezamanl olarak gerekleen sadece bir yan etkisi.
+
+22
+00:01:52,730 --> 00:01:54,550
+Bu yzden buradaki fonksiyona
+
+23
+00:01:54,710 --> 00:01:55,880
+isim vereceim,
+
+24
+00:01:55,880 --> 00:02:01,880
+imdi bu fonksiyonda, otomatik olarak tekrar alacam bir argman kabul edebilirim, tabii
+
+25
+00:02:01,880 --> 00:02:04,370
+ki byle sagalar nasl balayacanz
+
+26
+00:02:04,370 --> 00:02:07,020
+gstereceim, argman bu yzden eylem
+
+27
+00:02:07,070 --> 00:02:12,820
+olacak Sagas eylemlerle ilgili olduu iin gnderildi, ben buna geri geleceim.
+
+28
+00:02:12,860 --> 00:02:18,660
+imdi bunun bir fonksiyon olmayacan syledim, bir ilev dedim, fonksiyon
+
+29
+00:02:19,070 --> 00:02:25,350
+anahtar szcnden sonra bir yldz ekleyelim ve bu yldz burada nemli,
+
+30
+00:02:25,580 --> 00:02:28,820
+fonksiyon isminin bir paras deil, aslnda
+
+31
+00:02:28,820 --> 00:02:34,480
+bu fonksiyonu szde jeneratr. Jeneratrler jenerasyon javascript zellikleridir,
+
+32
+00:02:34,480 --> 00:02:42,830
+bunlar aamal olarak altrlabilir, bylece onlar arayabilir ve hemen bandan sonuna
+
+33
+00:02:42,830 --> 00:02:49,490
+kadar almazlar, ancak ilev yrtme srasnda duraklatabilirsiniz, rnein asenkron
+
+34
+00:02:49,490 --> 00:02:56,780
+kodun bitmesini bekleyebilirsiniz. ve bu tam olarak redux destannn yararland
+
+35
+00:02:56,780 --> 00:02:57,760
+ey.
+
+36
+00:02:57,950 --> 00:03:03,470
+Ezamanl bir kodunuz varsa, o zaman bunu hemen batan balayp hemen balatabilirsiniz,
+
+37
+00:03:03,470 --> 00:03:06,860
+her ikisinin de bu modlde nasl altn gstereceim.
+
+38
+00:03:06,860 --> 00:03:11,600
+imdi bu jeneratr fonksiyonuna sahibiz, imdi k yaptktan sonra
+
+39
+00:03:11,600 --> 00:03:17,870
+ak bir ekilde benim k eylemi yaratcmla ayn eyi yapmak istiyorum. Bu yzden
+
+40
+00:03:17,870 --> 00:03:23,900
+burada  yerel depolama arsn kopyalayacam ve buradaki logout destan jeneratrne yaptracam.
+
+41
+00:03:23,900 --> 00:03:26,780
+imdiyse, IDE'nin bundan holanmadn gryorsunuz, bu
+
+42
+00:03:26,860 --> 00:03:33,710
+jeneratrn bir verim fonksiyonu veya verimi, herhangi bir verim anahtar kelimesi olmad, imdi bununla
+
+43
+00:03:33,770 --> 00:03:36,800
+ilgileneceimizi ve verimin ne olduunu aklayacamz sylyor.
+
+44
+00:03:36,800 --> 00:03:39,460
+imdilik yerel depolama alanlarn burada temizliyoruz, imdi
+
+45
+00:03:39,710 --> 00:03:48,260
+yerel depolama kaldrma elerini burada bulunduktan sonra, auth'a bir gz atabiliriz. js action creator ve sonunda orada
+
+46
+00:03:48,260 --> 00:03:54,410
+olduunu gryoruz, bu eylem nesnesini, aslnda gnderilmeye yol aacak
+
+47
+00:03:54,410 --> 00:03:55,860
+ekilde dndrdk.
+
+48
+00:03:56,210 --> 00:04:03,620
+Biz de burada aynsn yapmak istiyoruz ve bir destanda, bunu sadece kurduumuz paketten aldmz zel
+
+49
+00:04:03,620 --> 00:04:05,870
+bir fonksiyonla yapyoruz, bu yzden
+
+50
+00:04:06,170 --> 00:04:16,610
+redux destanndan bireyler ithal edeceim ve gerekte efekt alt paketlerinden alacam. Orada, put ilevini ie aktarmak istiyorum, imdi
+
+51
+00:04:16,620 --> 00:04:24,960
+sonun iine koymak sadece yeni bir eylemi gnderecek, bu yzden burada
+
+52
+00:04:25,480 --> 00:04:32,370
+altryoruz ve imdi eylem yaratcsnda kullandm ayn eylem tanmn,
+
+53
+00:04:32,370 --> 00:04:36,220
+eylemi trden eylemlerle kopyalayacam, bylece
+
+54
+00:04:36,220 --> 00:04:40,830
+bu eylemi koyacam. Elbette bunun ie yaramas iin,
+
+55
+00:04:40,840 --> 00:04:49,320
+eylem trm de ie aktarmam gerekiyor, bu yzden her eyi bu tr eylemlerden eylem trleri olarak alyorum.
+
+56
+00:04:49,330 --> 00:04:57,780
+Yani tpk ite yaptmz gibi. js dosyas ve orada eylem trleri dosyasndan.
+
+57
+00:04:58,020 --> 00:05:04,170
+Yani imdi bunu koyuyoruz ve hala tm bu hatalarm var nk bu
+
+58
+00:05:04,170 --> 00:05:06,580
+normal bir fonksiyon deil, bir
+
+59
+00:05:06,690 --> 00:05:09,150
+jeneratr ve bir jeneratrde, nek
+
+60
+00:05:09,360 --> 00:05:17,060
+yapmalyz, her bir basama verim anahtar kelimesiyle altryoruz. Bu basite, bu admn yrtlmesi gerektii anlamna gelir
+
+61
+00:05:17,060 --> 00:05:19,380
+ve sonra bitmesi iin bekleyecektir,
+
+62
+00:05:19,380 --> 00:05:25,030
+eer bir ezamanl olmayan bir eylem olsayd, bu adm ayndr, ayn adm
+
+63
+00:05:25,110 --> 00:05:26,180
+burada yaplr.
+
+64
+00:05:26,400 --> 00:05:34,200
+Bu yzden tm bu admlar burada veriyoruz ve imdi bu adm, bu adm, bu
+
+65
+00:05:34,200 --> 00:05:36,590
+adm yrtecek ve sonunda
+
+66
+00:05:36,600 --> 00:05:41,750
+sahnelerin ardnda sonunda bu eylemi gnderecek olan arya geeceiz.
+
+67
+00:05:41,910 --> 00:05:47,950
+imdi bu bir redux destan ve bir eylem yaratcs yaratmann daha karmak bir yolu gibi grnyor, deil mi?
+
+68
+00:05:48,000 --> 00:05:54,660
+yi bir fikir, bununla uratnz uygulamada kendi alannza sahip olmak, bizim
+
+69
+00:05:54,660 --> 00:06:01,860
+k jeneratrlerimize sahibiz ve imdi onu kullanabilmek iin sadece maazamza balamanz gerekiyor.
+
+70
+00:06:01,860 --> 00:06:04,960
+imdi bir sonraki derste bunun nasl altn grelim.
+

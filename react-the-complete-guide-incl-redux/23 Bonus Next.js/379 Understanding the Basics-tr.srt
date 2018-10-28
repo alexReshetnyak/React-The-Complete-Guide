@@ -1,0 +1,200 @@
+1
+00:00:02,080 --> 00:00:06,310
+Son derste ilk nextjs uygulamasn oluturduk.
+
+2
+00:00:06,310 --> 00:00:11,980
+imdi bu tam bir sonraki ders deil ve aslnda bu konuda bir kurs
+
+3
+00:00:11,980 --> 00:00:16,710
+oluturabilirsin, sadece size plak temel zellikleri gstermek istiyorum, bylece daha derine
+
+4
+00:00:16,720 --> 00:00:20,080
+dalmak, rnein seni iaret ettiim github repo ile.
+
+5
+00:00:20,080 --> 00:00:26,230
+imdi ana dizin sayfamzdan auth indeks sayfasna nasl kolayca gidebileceimizi
+
+6
+00:00:26,230 --> 00:00:32,170
+grelim, bunun iin elbette bir balantya ve tepki veren bir
+
+7
+00:00:32,200 --> 00:00:35,280
+ynlendiriciye ihtiyacmz var. imdi nextjs ile
+
+8
+00:00:35,290 --> 00:00:37,650
+birlikte kullanabileceimiz bir balant
+
+9
+00:00:37,750 --> 00:00:40,140
+bileenimiz var, tepki veren
+
+10
+00:00:40,240 --> 00:00:44,610
+ynlendiriciden gelmiyor ama bunun yerine elbette gelecekten geliyoruz.
+
+11
+00:00:44,710 --> 00:00:48,430
+Bu yzden, etrafta gezinmek iin, yeni bir bileeni,
+
+12
+00:00:48,430 --> 00:00:56,680
+balant bileenini bir sonraki / balantdan ie aktaracam, nemli balantnn, ie aktarm yolunda burada kk bir harf L var.
+
+13
+00:00:56,980 --> 00:00:59,320
+imdi buraya byle bir
+
+14
+00:00:59,500 --> 00:01:07,500
+link ekleyebiliriz, rnein ana sayfama para ekleyebilirim ve imdi auth'a gidip balant kurabilirim.
+
+15
+00:01:07,540 --> 00:01:12,880
+imdi bunun almas iin, elbette ki balantnn bir yere iaret edecek ekilde yaplandrlmas gerekiyor ve
+
+16
+00:01:12,880 --> 00:01:16,990
+bunu normal html'deki normal bir balant etiketindeki gibi ref znitelii ile yapyorsunuz.
+
+17
+00:01:17,080 --> 00:01:23,410
+Ve orada, auth / auth'a, auth klasrne iaret etmek iin iaret edebilir ve orada her zaman dizini seer. Eer varsa,
+
+18
+00:01:23,420 --> 00:01:25,660
+js dosyas.
+
+19
+00:01:25,690 --> 00:01:28,830
+Yalnz balant sadece hile yapmaz, aslnda
+
+20
+00:01:28,900 --> 00:01:35,530
+hala normal balant etiketini ref znitelii olmadan kullanrsnz, ancak sahnelerin arkasnda, nextjs temel
+
+21
+00:01:35,530 --> 00:01:42,790
+olarak ref zniteliini anchor etiketine ekleyecektir ancak daha sonra herhangi bir tklamay yakalayacaktr. etiketini
+
+22
+00:01:42,790 --> 00:01:47,770
+tutturun ve dahili olarak ileyin, bylece sayfay gerekten yeniden yklemeyin.
+
+23
+00:01:47,800 --> 00:01:51,970
+imdi bunu kaydedip uygulamamza geri dnersek, uygulamay yeniden
+
+24
+00:01:52,270 --> 00:01:56,120
+ykleyelim, balanty grmeliyiz, eer tklarsak, / auth'a gideriz.
+
+25
+00:01:56,320 --> 00:02:01,630
+Grebilmeniz gereken bir baka gzel ey, a sekmesine gidip ana
+
+26
+00:02:01,630 --> 00:02:04,200
+sayfanza gidip auth'a tklarsanz, ekstra
+
+27
+00:02:04,490 --> 00:02:11,850
+bir auth paketinin yklendiini ve nextJs'in sizin iin ne yaptn, otomatik kod blme
+
+28
+00:02:12,010 --> 00:02:13,790
+olduunu grrsnz. .
+
+29
+00:02:13,870 --> 00:02:16,880
+Bu arada, dosya boyutlar tarafndan gz
+
+30
+00:02:16,890 --> 00:02:18,660
+korkutmayn, bu hi
+
+31
+00:02:18,670 --> 00:02:22,540
+optimize edilmez, bu bir ok gelitirme ortam ierir.
+
+32
+00:02:22,750 --> 00:02:28,600
+Yani, cretsiz olarak alabileceiniz otomatik kod budur ve burada grdnz
+
+33
+00:02:28,600 --> 00:02:31,280
+balant sayesinde, uygulamanzda kolayca gezinebilirsiniz.
+
+34
+00:02:31,590 --> 00:02:36,190
+te bu yzden balanty kullanyoruz ve bu bizim uygulamamzla kolayca nasl baa kabiliyoruz.
+
+35
+00:02:36,190 --> 00:02:38,630
+Ayrca, balanty kullanmakla da snrl kalmyoruz,
+
+36
+00:02:38,680 --> 00:02:44,620
+hadi gidip auth'a gitmek istediiniz bir dmeniz olduunu ve bunu bir tklamayla yapmak istediinizi ve bu
+
+37
+00:02:44,620 --> 00:02:45,930
+nedenle de zorunlu
+
+38
+00:02:45,940 --> 00:02:49,240
+olarak gezinebildiinizi diyelim, bylece kodunuzda her zaman bunu yapabilirsiniz.
+
+39
+00:02:49,300 --> 00:02:54,100
+rnein, elbette, onClick dinleyicisine kayt yaptrmak ve daha sonra, bir snf temel bileeniniz
+
+40
+00:02:54,100 --> 00:02:58,350
+varsa, bu bileenin herhangi bir yntemine sahipseniz, yrtlmesi gereken bir yntem
+
+41
+00:02:58,360 --> 00:03:06,320
+tanmlamak ve bunu burada tutmak iin satr ii yazyorum. ksa. Daha sonra ynlendiriciyi bir sonraki / ynlendiriciden
+
+42
+00:03:06,320 --> 00:03:15,380
+alabilirsin, bunun gibi kk harfle r ve sonra burada sadece ynlendirici push / auth'u arabilirsin
+
+43
+00:03:15,470 --> 00:03:17,810
+ve bu ok hzl
+
+44
+00:03:17,990 --> 00:03:20,320
+bir ekilde kodun iinde,
+
+45
+00:03:20,360 --> 00:03:28,310
+etrafta gezinmek iin ok hzl bir yoldur. imdi geri dnp ana sayfanz yklerseniz, o dmeyi
+
+46
+00:03:28,340 --> 00:03:33,830
+aldnz, eer tklatrsanz, imdi o ynlendirici nesnesinde kod araclyla gezinilen yetkilendirme sayfasndasnz.
+
+47
+00:03:33,830 --> 00:03:36,870
+Bu nasl olurda olsun, nextjs'deki balanty nasl kullanrsn.
+
+48
+00:03:37,400 --> 00:03:43,210
+Temel kavramlardan biri ve sper basit grnyor ama sahnelerin ardnda ok ey
+
+49
+00:03:43,280 --> 00:03:47,550
+oluyor, en nemlisi de harika olan otomatik kod blme.
+
+50
+00:03:47,900 --> 00:03:51,700
+imdi nextJs'in bize ne verdiini ve onunla nasl altmz grelim.
+

@@ -1,0 +1,344 @@
+1
+00:00:02,080 --> 00:00:06,970
+That was a lot of talking for just switching between two different pages
+
+2
+00:00:06,970 --> 00:00:10,370
+but this is important of course to know how to work with the router.
+
+3
+00:00:10,780 --> 00:00:16,600
+Now however I want to make sure that we can also click on a single post and still load that because right
+
+4
+00:00:16,630 --> 00:00:19,430
+now, nothing is happening when we're doing that.
+
+5
+00:00:19,450 --> 00:00:20,820
+We also don't get an error,
+
+6
+00:00:20,830 --> 00:00:22,570
+but nothing is happening.
+
+7
+00:00:22,570 --> 00:00:29,860
+The reason for this is of course is that in our posts component where we have this handler for handling
+
+8
+00:00:29,860 --> 00:00:36,280
+a click on the post here, the postSelectedHandler is setting some state which is irrelevant because
+
+9
+00:00:36,310 --> 00:00:38,310
+I'm not handling the state anymore,
+
+10
+00:00:38,320 --> 00:00:40,610
+I don't even set up a default here.
+
+11
+00:00:40,930 --> 00:00:47,450
+Now when clicking on this I actually now want to load the full post. For this
+
+12
+00:00:47,450 --> 00:00:52,750
+we of course also need to determine where this full post should be shown.
+
+13
+00:00:52,750 --> 00:00:58,080
+We could render it in the blog component instead of our post here,
+
+14
+00:00:58,300 --> 00:01:02,450
+we could load the full post in this place,
+
+15
+00:01:02,460 --> 00:01:05,580
+this is one option. Here however,
+
+16
+00:01:05,770 --> 00:01:14,350
+or no matter where we use actually, we need to be able to get dynamic routing parameter because if we
+
+17
+00:01:14,440 --> 00:01:18,920
+have a look at our posts output, each post has ID
+
+18
+00:01:19,120 --> 00:01:24,610
+And this ID of course is important because when we click on a post, we need to know which post that
+
+19
+00:01:24,610 --> 00:01:30,150
+was, which post we want to load and that doesn't change when we use different routes.
+
+20
+00:01:30,520 --> 00:01:33,970
+Thankfully we have a way of getting the ID
+
+21
+00:01:34,090 --> 00:01:42,460
+so now we need to pass that ID as part of the URL so that in the post component, the full post component,
+
+22
+00:01:42,910 --> 00:01:49,770
+when we load it, we can get this parameter and load the appropriate post. For this,
+
+23
+00:01:49,770 --> 00:01:57,660
+when defining the route, we need to inform react router about the fact that we now have a dynamic
+
+24
+00:01:57,690 --> 00:01:59,780
+element in this URL.
+
+25
+00:02:00,030 --> 00:02:06,900
+Obviously we will have posts with ID 1, 2 3 and we won't hardcode it like this,
+
+26
+00:02:06,900 --> 00:02:08,400
+that would be a nightmare
+
+27
+00:02:08,460 --> 00:02:10,590
+and in 99.
+
+28
+00:02:10,590 --> 00:02:16,760
+9 percent of the applications, you don't even know how many possible values you have here.
+
+29
+00:02:16,770 --> 00:02:25,470
+So instead of hardcoding the different IDs, we define a flexible, a variable route parameter with colon
+
+30
+00:02:25,770 --> 00:02:34,130
+and then any name of your choice like ID or postID, I'll just use ID because it's shorter.
+
+31
+00:02:34,260 --> 00:02:36,550
+This will be replaced dynamically
+
+32
+00:02:36,570 --> 00:02:44,200
+or essentially it tells the react router hey whenever you have slash something, this route here
+
+33
+00:02:44,210 --> 00:02:47,470
+is meant, so just call an ID.
+
+34
+00:02:47,790 --> 00:02:54,720
+And yes this will interfere with this route, I'll take care about this in a second by simply changing
+
+35
+00:02:54,720 --> 00:02:58,140
+the positions because it's parsed from top to bottom.
+
+36
+00:02:58,230 --> 00:03:06,330
+So new post is recognized first and this doesn't accidentally catch this because new posts of course
+
+37
+00:03:06,330 --> 00:03:12,120
+could be interpreted as an ID, because all we're saying is we have something dynamic here.
+
+38
+00:03:12,540 --> 00:03:15,900
+So that is a route parameter,
+
+39
+00:03:15,900 --> 00:03:22,780
+now of course we also want to make sure that we pass that parameter when clicking on a route
+
+40
+00:03:22,780 --> 00:03:30,360
+now. For that we need to handle a click on a single post in the post component and there would be two
+
+41
+00:03:30,360 --> 00:03:31,790
+ways of doing that.
+
+42
+00:03:31,800 --> 00:03:36,850
+The first is to simply wrap that post component we output here with a link
+
+43
+00:03:37,110 --> 00:03:39,190
+and that would be perfectly fine,
+
+44
+00:03:39,280 --> 00:03:41,740
+it may be the default way you do it.
+
+45
+00:03:41,790 --> 00:03:50,970
+So let me quickly do this, I'll import link in curly bracers from react-router-dom and I use link and
+
+46
+00:03:51,000 --> 00:03:57,630
+not nav link because I don't plan on styling the active post, though of course you could do that. Now
+
+47
+00:03:57,630 --> 00:03:58,010
+here,
+
+48
+00:03:58,020 --> 00:04:06,930
+I'll then wrap this post element here with this link component, just like that and I'll wrap it in parentheses
+
+49
+00:04:07,170 --> 00:04:12,760
+so that I can split these over multiple lines because that makes it a bit easier to read.
+
+50
+00:04:13,080 --> 00:04:20,070
+So now we're essentially returning a link and there we now have to set to to something dynamic and
+
+51
+00:04:20,070 --> 00:04:22,550
+that dynamic should be our ID.
+
+52
+00:04:22,800 --> 00:04:27,990
+Potentially of course if you have longer URLs where you have something like post/ and then
+
+53
+00:04:27,990 --> 00:04:28,830
+the ID,
+
+54
+00:04:28,860 --> 00:04:34,110
+you might also mix a string and then your ID or whatever it is. Here
+
+55
+00:04:34,110 --> 00:04:38,430
+however, we're just handling slash and then directly the ID,
+
+56
+00:04:38,550 --> 00:04:41,250
+So there is no string path in front of the ID,
+
+57
+00:04:41,310 --> 00:04:49,530
+I just need to pass the ID itself. So I want to go to post.id here,
+
+58
+00:04:49,530 --> 00:04:51,650
+that is essentially what I want to do,
+
+59
+00:04:51,650 --> 00:04:58,430
+I want to navigate to this URL and you can still add slash in front of it like this.
+
+60
+00:04:58,440 --> 00:05:01,860
+So now with that, we're passing the post.id
+
+61
+00:05:02,220 --> 00:05:11,130
+let's now go back to the blog component and make sure we load the post component when going to this
+
+62
+00:05:11,210 --> 00:05:12,440
+route here.
+
+63
+00:05:12,720 --> 00:05:16,260
+So for that and the blog component, I'll add the import of.
+
+64
+00:05:16,260 --> 00:05:18,150
+Post from
+
+65
+00:05:18,150 --> 00:05:21,130
+and now that's in the full post component,
+
+66
+00:05:21,210 --> 00:05:22,060
+FullPost
+
+67
+00:05:22,080 --> 00:05:22,870
+.js
+
+68
+00:05:22,920 --> 00:05:31,460
+and therefore maybe it's also name this full post here and then let's load full post down there.
+
+69
+00:05:31,470 --> 00:05:34,050
+Now we have the full post component,
+
+70
+00:05:34,260 --> 00:05:37,530
+let's now save all files and go back to the application
+
+71
+00:05:39,090 --> 00:05:47,280
+and get that key error because obviously forgot this. In the post component when looping through all
+
+72
+00:05:47,280 --> 00:05:52,100
+these elements, link is now the outer element in our array of elements here
+
+73
+00:05:52,090 --> 00:05:58,400
+for posts, so that key property should now also be added to the link and not to the post,
+
+74
+00:05:58,470 --> 00:06:02,020
+it always has to be on the outmost element in your loop.
+
+75
+00:06:02,490 --> 00:06:05,300
+With that however we got rid of the error message
+
+76
+00:06:05,460 --> 00:06:14,830
+and now if I click on the post, you can actually see that there is the ID in the URL and you see please
+
+77
+00:06:14,990 --> 00:06:18,580
+select the post here which doesn't make too much sense anymore.
+
+78
+00:06:18,740 --> 00:06:27,290
+It makes sense in one way though, we don't load the posts successfully because this.props.id in the full
+
+79
+00:06:27,290 --> 00:06:30,410
+post component is not set anymore,
+
+80
+00:06:30,440 --> 00:06:35,510
+it's not how we retrieved the parameter we're passing through the URL.
+
+81
+00:06:35,660 --> 00:06:37,160
+So this is not working,
+
+82
+00:06:37,370 --> 00:06:39,070
+what is working though
+
+83
+00:06:39,260 --> 00:06:46,450
+we can confirm this in our application is that we can click on posts and load different IDs.
+
+84
+00:06:46,460 --> 00:06:47,390
+This is working,
+
+85
+00:06:47,420 --> 00:06:49,160
+we're also loading the component.
+
+86
+00:06:49,190 --> 00:06:52,750
+Now we just need to work on extracting that parameter though.
+

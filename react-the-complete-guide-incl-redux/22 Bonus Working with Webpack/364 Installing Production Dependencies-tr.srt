@@ -1,0 +1,72 @@
+1
+00:00:02,190 --> 00:00:08,220
+Son derste, imdi indirdiiniz ya da takip ettiiniz temel
+
+2
+00:00:08,220 --> 00:00:09,620
+bir tepki
+
+3
+00:00:09,630 --> 00:00:11,850
+uygulamas oluturdum, imdi
+
+4
+00:00:11,910 --> 00:00:20,380
+bamllk kurma zaman geldi, rnein tepki uygulamas aka tepki veya tepki-dom ve tepki
+
+5
+00:00:20,610 --> 00:00:24,140
+veren ynlendirici kullanyor, bu yzden
+
+6
+00:00:24,150 --> 00:00:30,930
+hepsini yklemeliyiz Bu retim bamllklar, bunu npm ile ykledik --save,
+
+7
+00:00:30,930 --> 00:00:41,540
+--save-dev deil, nk bunlarn retim bamllklar olduunu ve bunun gibi tepki-tepki ve tepki-ynlendirici-dom olduunu belirtmek istiyoruz.
+
+8
+00:00:41,540 --> 00:00:46,520
+Bu  bamlln hepsi beyaz boluklarla ayrlm ve imdi
+
+9
+00:00:46,520 --> 00:00:52,550
+kurulduktan sonra dm modl klasrne yerletirilmi, en son srmlere uygun giriler
+
+10
+00:00:52,550 --> 00:00:55,490
+de pakete eklenmitir. Grdnz gibi json dosyas.
+
+11
+00:00:55,490 --> 00:00:57,510
+Tepki kurduk, web paketini
+
+12
+00:00:57,530 --> 00:01:00,680
+bir sre nce kurduk, imdi bir i
+
+13
+00:01:00,800 --> 00:01:07,130
+ak oluturmak iin bir ka tane baka bamllk kurmamz gerekiyor ve onlara ihtiya duyduumuzda
+
+14
+00:01:07,130 --> 00:01:09,080
+bunlar adm adm ekleyeceiz.
+
+15
+00:01:09,110 --> 00:01:16,880
+Yani yapmak istediim ey imdi, yeni nesil javascript, css, resimler ve tm bu elenceli
+
+16
+00:01:16,880 --> 00:01:19,280
+eyleri ele alabilmesi iin
+
+17
+00:01:19,300 --> 00:01:22,220
+web paketi yaplandrmasn kurmakla balamak istiyorum.
+
+18
+00:01:22,310 --> 00:01:24,800
+Bir sonraki derste bununla balayalm.
+

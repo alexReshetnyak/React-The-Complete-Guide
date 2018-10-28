@@ -1,0 +1,376 @@
+1
+00:00:01,990 --> 00:00:08,480
+ok ilevsellik eklediimizi ve bu anahtar hakknda bilgi aldmz bilmeliyiz Buradaki uygulamamzda biraz daha
+
+2
+00:00:08,480 --> 00:00:13,970
+bulalm, nk biz hala bu girdiyi bulduk ki onchange ileyicisine sahip olduumuz
+
+3
+00:00:13,970 --> 00:00:19,510
+kiiyi altrmaya altmz yerden deitirdik ve bu pervaneyi deitirdik deer girdi olarak.
+
+4
+00:00:19,670 --> 00:00:25,290
+Ve nihayetinde amacmz, buraya yazarsak, biz sadece bunun iine yazdmz kullancnn ismidir.
+
+5
+00:00:25,310 --> 00:00:31,280
+Artk bir liste oluturuyoruz ve gerekten dinamik ierie sahibiz, nihai olarak bunu gerekten dinamik bir
+
+6
+00:00:31,280 --> 00:00:31,950
+ekilde ayarlayabiliriz.
+
+7
+00:00:32,150 --> 00:00:38,830
+Dolaysyla yapmamz gereken ey, bu change zellii, baz olay dinleyicilerine veya durumun
+
+8
+00:00:38,830 --> 00:00:42,850
+doru ekilde gncellenen baz yntemlere iaret etmeleri yeterlidir.
+
+9
+00:00:42,920 --> 00:00:47,750
+Dolaysyla deimi durumdasnz ve imdi bize bir yntem sunmamz gerekiyor.
+
+10
+00:00:47,990 --> 00:00:51,700
+Ad deitiren ileyici var.
+
+11
+00:00:51,980 --> 00:00:54,820
+O halde burada kullanalm.
+
+12
+00:00:55,130 --> 00:00:57,870
+sim deitirme ileyicisine iaret edelim.
+
+13
+00:00:58,040 --> 00:01:05,270
+Ve imdi burada bu isim deitirme ileyicisi ve iki bilgi paras olaylar olay hedef deerine
+
+14
+00:01:05,330 --> 00:01:07,490
+erimek iin hala almam gerekiyor.
+
+15
+00:01:07,490 --> 00:01:12,660
+Dolaysyla kullancnn girdii ey, ancak ikinci bir girdi bekliyorum.
+
+16
+00:01:12,740 --> 00:01:19,120
+Dizideki kullanclarn kimliini gncellemek veya dizine eklemek istiyorum.
+
+17
+00:01:19,130 --> 00:01:20,960
+Ancak imdi kimlik atamalyz.
+
+18
+00:01:20,960 --> 00:01:22,540
+Neden kullanmyorsun onu.
+
+19
+00:01:23,150 --> 00:01:30,230
+Dolaysyla, burada bu veriyi rahata geirmek iin bu ilev szdizimini tekrar kullanacam.
+
+20
+00:01:30,260 --> 00:01:37,170
+imdi bu fonksiyon, onchange olay zerine idam edilen ilevdir.
+
+21
+00:01:37,220 --> 00:01:40,810
+te olay nesnesini, daha nce olduu gibi alyoruz.
+
+22
+00:01:40,810 --> 00:01:46,340
+veren adna deitirilen herhangi bir ileve dorudan atamadmzda aldk.
+
+23
+00:01:46,340 --> 00:01:51,440
+imdi onu buraya getirelim, nk imdi burada tanmladmz bu isimsiz ilevi
+
+24
+00:01:51,440 --> 00:01:53,100
+altran ilk ilevdir.
+
+25
+00:01:53,210 --> 00:01:56,660
+Sonra ad deitirme ileyicisine iletebilirim.
+
+26
+00:01:56,900 --> 00:02:00,620
+Ve ben de ona kimlik belgesini vermek istiyorum.
+
+27
+00:02:00,620 --> 00:02:04,310
+Elbette ki kii kimlii, burada harita ynteminde olduumuzdan mevcuttur.
+
+28
+00:02:04,340 --> 00:02:07,940
+Bylece kiiye ve dolaysyla kimlie x var.
+
+29
+00:02:08,600 --> 00:02:17,180
+Ve bununla u an bu bilgileri isim deiiklii ileyicisinde kullanabiliriz ve durumu gncellemek istiyoruz.
+
+30
+00:02:17,180 --> 00:02:21,740
+Ancak elbette yalnzca girdi alanna girdiimiz kii iindir.
+
+31
+00:02:21,770 --> 00:02:27,230
+o kiiyi tek kiili bulmamz gerekiyor ve biz bunu kiinin bak
+
+32
+00:02:27,230 --> 00:02:36,080
+iin devlete ulaarak yapabiliriz ve bunu da bu kiiyi bize veren varsaylan bir javascript yntemi olarak bulabiliriz.
+
+33
+00:02:36,090 --> 00:02:37,080
+Bu yzden
+
+34
+00:02:37,460 --> 00:02:45,680
+Bir dizideki eyi bulmak iin find dizini de kullanabiliriz ancak o enin dizinini elde edebiliriz, evet
+
+35
+00:02:45,680 --> 00:02:48,830
+dizini dorudan bu ileve dahil edebilirdik.
+
+36
+00:02:48,830 --> 00:02:55,220
+Ben sadece bu alternatif yaklamn avantajlarndan yararlanarak size gstermek istedim dizinindeki her e
+
+37
+00:02:55,220 --> 00:03:02,930
+zerinde bu ilevi yerine getirecek olan eleme haritas gibi bir girdi olarak ilev bulan dizin bulma
+
+38
+00:03:02,930 --> 00:03:03,670
+dizininden yararlann.
+
+39
+00:03:03,980 --> 00:03:10,820
+Yani burada, bu argman adnn size kalmasn salayan bir ilevi yerine getireceim, ancak kii zaten
+
+40
+00:03:10,820 --> 00:03:12,940
+bir sabit tarafndan alnyor.
+
+41
+00:03:13,100 --> 00:03:16,940
+Bu kiiyi nereden buldum ve ileve gtryorum.
+
+42
+00:03:17,240 --> 00:03:22,240
+imdi haritann aksine bu eyi yeni bir eyle eletirmem.
+
+43
+00:03:22,310 --> 00:03:27,200
+Bunun yerine aradm kiiyi reddetmeme ya da aradm e
+
+44
+00:03:27,500 --> 00:03:32,810
+bu olup olmadna bal olarak doru ya da yanl dndrmeliyim.
+
+45
+00:03:32,840 --> 00:03:34,780
+imdi aradm kii bu.
+
+46
+00:03:34,790 --> 00:03:36,920
+Eer P ID ise.
+
+47
+00:03:37,130 --> 00:03:39,960
+Bu yzden u anda baktm tek kii.
+
+48
+00:03:39,980 --> 00:03:44,070
+Yine bu fonksiyonun her eleman iin yrtld unutulmamaldr.
+
+49
+00:03:44,510 --> 00:03:50,570
+Eer fikir eitse veya bu ileve eit olmak iin bir argman olarak kabul edilirse, doruyu
+
+50
+00:03:50,570 --> 00:03:51,160
+dndrecektir.
+
+51
+00:03:51,320 --> 00:03:58,670
+Ardndan, bir kii dizini belki daha iyi bir isim, dizilerindeki kimliklerin eit
+
+52
+00:03:58,670 --> 00:04:01,370
+olduu kiinin dizinini tutacaktr.
+
+53
+00:04:01,370 --> 00:04:09,290
+Daha sonra, bu devlet grevlilerine ulaarak ve buraya yeni getirdiim dizinde bulunan kii dizinindeki
+
+54
+00:04:09,290 --> 00:04:12,670
+eye erierek kiinin kendisini elde edebiliyorum.
+
+55
+00:04:13,160 --> 00:04:14,730
+imdi de daha nce olduu gibi.
+
+56
+00:04:14,840 --> 00:04:21,830
+bir javascript nesnesi olduunu dorulayabileceiniz kiinin dizinindeki bir kiinin iyi bir uygulamadr.
+
+57
+00:04:21,830 --> 00:04:25,200
+Dorudan devleti mutasyona geirmek deil, burada
+
+58
+00:04:25,220 --> 00:04:32,240
+imdi sylediim gibi javascript nesneleri referans trleridir, dolaysyla bunlar dorudan deitirmemeliyiz nk burada kiiye
+
+59
+00:04:32,240 --> 00:04:38,470
+ulatmzda sadece bir iareti alyoruz ve dolaysyla bu iaretinin iaret ettii orijinal
+
+60
+00:04:38,480 --> 00:04:40,290
+nesneyi mutasyona uratacaz.
+
+61
+00:04:40,790 --> 00:04:51,140
+Bu durumda daha iyi bir yaklam, byle yeni bir javascript nesnesi yaratmak ve daha sonra bu yayma operatrn
+
+62
+00:04:51,500 --> 00:04:53,820
+getirdiim nesnenin nnde kullanmaktr.
+
+63
+00:04:53,960 --> 00:04:59,810
+Dizi ile olduu gibi, nesneler iin her seviyede bir dzeye sahiptir ve
+
+64
+00:05:00,080 --> 00:05:05,870
+sizin tarafmza getirdiimiz nesnenin tm zelliklerini burada oluturduumuz yeni Optik'e datr.
+
+65
+00:05:06,130 --> 00:05:11,940
+Ve burada, kullanmayacamz alternatif bir yaklam var, ancak yaylma operatr olmadan
+
+66
+00:05:11,980 --> 00:05:19,000
+bunu kullanan alternatif bir yaklam, nesneyi ilk argman olarak bo bir nesneyi iletirken
+
+67
+00:05:19,000 --> 00:05:25,600
+varsaylan bir javascript ilevi atamak iin kullanyor olacakt. kinci nesne olarak kendisine
+
+68
+00:05:25,600 --> 00:05:27,840
+atamak istediiniz zellikleri sein.
+
+69
+00:05:28,660 --> 00:05:30,540
+Ya da sylemem gereken ikinci argman.
+
+70
+00:05:30,700 --> 00:05:35,560
+Dolaysyla nesne bo bir nesneyle atanm ve daha sonra mlkleri almak
+
+71
+00:05:35,860 --> 00:05:36,980
+istediimiz nesne alternatiftir.
+
+72
+00:05:37,120 --> 00:05:41,920
+yaylma operatrnn daha modern bir yaklamn kullanmak istiyorum, kesinlikle her ikisini de kullanabilirsiniz.
+
+73
+00:05:41,920 --> 00:05:43,230
+Ancak, bunu yorumlayacam nk
+
+74
+00:05:43,240 --> 00:05:46,720
+Burada daha iyi veya kt olmasa da.
+
+75
+00:05:46,780 --> 00:05:48,700
+Yani onunla ben de insan elde ediyorum.
+
+76
+00:05:48,700 --> 00:05:53,790
+imdi elbette kiinin adn gncellemek istiyorum ve bunu bir kopyam aldm nk yapabilirim.
+
+77
+00:05:53,800 --> 00:06:02,500
+Artk orijinal nesneyi maniple etmiyorum ve daha nce yaptmz gibi olay hedef ad
+
+78
+00:06:02,500 --> 00:06:04,500
+Suzy deerine ayarlayabilirim.
+
+79
+00:06:04,510 --> 00:06:12,300
+imdi tabii diziyi gncellemeliyim ve diziyi buraya getirdiim bu konumda gncellemek istiyorum.
+
+80
+00:06:12,730 --> 00:06:20,500
+yzde yzm, devlet kiilerine ulaarak operatre veya dilimle yaymak zorunda olduum diziyi alabilirim.
+
+81
+00:06:20,710 --> 00:06:23,110
+Daha nce olduu gibi
+
+82
+00:06:23,500 --> 00:06:31,690
+Ve imdi bunu bir konumda gncelleyebiliriz, bir sonraki kii u an gncelletirilmi kii olmal.
+
+83
+00:06:31,690 --> 00:06:34,310
+Ve yine burada kopyalarla alyorum.
+
+84
+00:06:34,840 --> 00:06:44,620
+imdi gncellenmi bir kiinin Irais'ine sahibiz ve bu durum sonunda durumu ayarlayp, ad deitirdiimiz
+
+85
+00:06:44,680 --> 00:06:52,360
+gncellenmi kiiyle bir e gncellediimiz eski dizinin bir kopyas olan cutis
+
+86
+00:06:52,360 --> 00:06:55,390
+updated persons dizisini ayarlamamz salyor.
+
+87
+00:06:55,390 --> 00:07:01,550
+Bir sr kod ancak durumu deitirmeden en verimli ekilde yapmann en iyi yolu.
+
+88
+00:07:01,690 --> 00:07:08,650
+gz nne alrsak greceimiz udur: Burada tm isimleri grmeden nce bu uyary almayacaz.
+
+89
+00:07:08,710 --> 00:07:10,370
+Ve imdi bunu
+
+90
+00:07:10,690 --> 00:07:17,680
+Ve burada yazmaya balayabilirim ve bunlar, girdinin ait olduu nesne iin gncellerim.
+
+91
+00:07:17,690 --> 00:07:21,120
+imdi burada gerekten esnek bir bileen elde ediyoruz.
+
+92
+00:07:21,220 --> 00:07:28,600
+Bu listeyi etkin bir ekilde oluturmak ve verimli bir ekilde etkileimde bulunmak iin modern zelliklerden
+
+93
+00:07:28,660 --> 00:07:30,910
+yararlanan gerekten esnek bir uygulama.
+
+94
+00:07:30,910 --> 00:07:32,120
+Sper nemlidir.
+

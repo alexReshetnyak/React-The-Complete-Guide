@@ -1,0 +1,280 @@
+1
+00:00:02,110 --> 00:00:06,990
+W ostatnich wykadach przebudowalimy nasz projekt tak, by mia rne strony,
+
+2
+00:00:07,180 --> 00:00:10,780
+teraz nie chc ju renderowa wpisw przez cay
+
+3
+00:00:10,780 --> 00:00:18,820
+czas, chc zaadowa to dynamicznie w zalenoci od cieki, ktr mamy w adresie URL i za / nic.
+
+4
+00:00:18,820 --> 00:00:26,110
+Zasadniczo dla localhost: 3000 / w naszym przypadku tutaj lub cokolwiek nasza domena
+
+5
+00:00:26,110 --> 00:00:29,190
+to koniec, chc zaadowa komponent PostS.
+
+6
+00:00:29,260 --> 00:00:35,430
+Teraz ju wczamy routing w aplikacji. js pakujc wszystko za pomoc routera przegldarki,
+
+7
+00:00:35,650 --> 00:00:42,670
+Teraz w komponencie blogu, w ktrym chc zaadowa moje rne strony, musz zaimportowa co innego
+
+8
+00:00:42,670 --> 00:00:44,270
+z pakietu routera.
+
+9
+00:00:44,270 --> 00:00:46,880
+Tak wic, od ponownego
+
+10
+00:00:46,900 --> 00:00:56,980
+reagowania-router-dom, poniewa jest on zwizany z renderowaniem, stamtd chc zaadowa obiekt trasy, a komponent trasy
+
+11
+00:00:56,980 --> 00:00:58,110
+jest precyzyjny.
+
+12
+00:00:58,330 --> 00:01:04,400
+Teraz uywamy go jak kadego innego komponentu w naszym kodzie jsx i jest to komponent samozamykajcy si.
+
+13
+00:01:04,760 --> 00:01:12,460
+Trasa wymaga pewnej konfiguracji, trasa wymaga waciwoci cieki, a wszystkie te rekwizyty, ktre tutaj ustawiam,
+
+14
+00:01:12,460 --> 00:01:18,910
+s oczywicie sowami zastrzeonymi, maj by nazwane tak przez ten komponent, wic
+
+15
+00:01:18,970 --> 00:01:24,140
+nie moesz zmieni nazwy i cieki po prostu jest cigiem.
+
+16
+00:01:24,220 --> 00:01:31,720
+Tutaj definiujesz ciek, dla ktrej ta trasa powinna sta si aktywna, podobnie jak cieka /, wtedy musisz
+
+17
+00:01:31,720 --> 00:01:36,880
+okreli, co ma si sta, gdy jest to cieka aktywna, wic gdy
+
+18
+00:01:36,970 --> 00:01:46,470
+reagujesz na router, dowiadujesz si, e jest to aktywna cieka. Teraz, w najprostszej formie, moesz teraz doda rekwizyt
+
+19
+00:01:46,590 --> 00:01:53,800
+renderujcy, ktry faktycznie zawiera odniesienie do funkcji i moesz przekaza tutaj anonimow
+
+20
+00:01:53,800 --> 00:01:55,510
+funkcj jako strzak.
+
+21
+00:01:55,530 --> 00:01:59,910
+Tak wic tutaj funkcja ta musi zwraca jsx, ktry powinien by
+
+22
+00:02:00,150 --> 00:02:05,600
+renderowany, wic moesz po prostu renderowa co takiego jak znacznik h1 gdzie mwisz do
+
+23
+00:02:05,700 --> 00:02:11,970
+domu i oczywicie moesz rwnie renderowa struktur jsx, zawijajc go w nawiasy i pisujc wielolinijk tak
+
+24
+00:02:12,150 --> 00:02:13,140
+jak ty
+
+25
+00:02:13,170 --> 00:02:13,630
+napisz
+
+26
+00:02:13,650 --> 00:02:15,020
+jsx gdziekolwiek indziej.
+
+27
+00:02:15,300 --> 00:02:21,170
+Jeli zapiszesz ten kod i wrcisz do aplikacji, zobaczysz tutaj dom.
+
+28
+00:02:21,390 --> 00:02:29,160
+Zobaczysz rwnie, e jeli odwiedzasz nowy wpis, przyczyn jest to, e router reaguje na
+
+29
+00:02:29,370 --> 00:02:31,640
+to, ktr ciek widzisz,
+
+30
+00:02:31,670 --> 00:02:36,270
+jeli twoja obecna cieka zaczyna si od tej cieki.
+
+31
+00:02:36,300 --> 00:02:43,240
+Wic jeli jest to przedrostek, moesz zmieni to zachowanie, dodajc jeszcze jeden podpr, ktry jest dokadny, jest boolowskim
+
+32
+00:02:43,320 --> 00:02:47,380
+podpisem, wic dodanie go w ten sposb ustawia go jako
+
+33
+00:02:47,450 --> 00:02:48,840
+prawdziwy, domylny, gdy nie
+
+34
+00:02:48,840 --> 00:02:50,580
+jest dodany, jest faszywy.
+
+35
+00:02:50,730 --> 00:02:58,950
+Teraz z dokadnoci do nowego postu ju nie widzisz domu, zobaczysz tylko na stronie gwnej, gdzie rzeczywicie
+
+36
+00:02:59,010 --> 00:03:01,420
+pena cieka jest slash, tak,
+
+37
+00:03:01,560 --> 00:03:04,090
+e ju jest wane na wynos.
+
+38
+00:03:04,170 --> 00:03:08,110
+Uywasz tu cieki, aby powiedzie, e router reaguje, czy
+
+39
+00:03:08,160 --> 00:03:13,900
+moja cieka zaczyna si od tego? Z wyjtkiem przypadku, ktry definiujesz jako
+
+40
+00:03:13,920 --> 00:03:15,510
+dokadny, pytanie brzmi:
+
+41
+00:03:15,510 --> 00:03:18,420
+czy moja pena cieka wyglda tak?
+
+42
+00:03:18,420 --> 00:03:24,990
+A nastpnie tutaj render okrela, co router reagujcy powinien renderowa na ekranie w miejscu
+
+43
+00:03:24,990 --> 00:03:28,710
+tego komponentu tutaj, wic trasa po prostu zastpuje
+
+44
+00:03:28,710 --> 00:03:36,120
+si, co mona powiedzie z treci tutaj zdefiniowan i oczywicie mona korzysta z wielu tras, nawet
+
+45
+00:03:36,120 --> 00:03:37,460
+dla tej samej cieki.
+
+46
+00:03:37,470 --> 00:03:41,410
+Tak wic po prostu skopiowaem go i renderowaem co
+
+47
+00:03:41,440 --> 00:03:48,250
+innego, a teraz, gdy to zapisuj, renderujemy zarwno dom, jak i dom 2 pod sob.
+
+48
+00:03:48,360 --> 00:03:52,800
+Moesz wic uy trasy gdziekolwiek chcesz, pod sob, moesz rwnie
+
+49
+00:03:52,800 --> 00:03:55,790
+zagniedzi drug tras w dziale, moesz uy
+
+50
+00:03:55,980 --> 00:03:59,080
+tyle tras na tej samej stronie, ile
+
+51
+00:03:59,220 --> 00:04:00,730
+chcesz, router reaguje na
+
+52
+00:04:00,780 --> 00:04:05,100
+kade z nich, sprawd czy to kryterium tutaj jest speniony.
+
+53
+00:04:05,100 --> 00:04:06,880
+Jeli wic powysze kryteria
+
+54
+00:04:06,900 --> 00:04:15,360
+s spenione, wic jeli cieka jest biec ciek lub nie okrelasz dokadnego, to jest to prefiks biecej
+
+55
+00:04:15,360 --> 00:04:18,680
+cieki, a nastpnie renderuj t tre.
+
+56
+00:04:18,680 --> 00:04:22,560
+Jest to podstawowa funkcjonalno routera do tej pory i
+
+57
+00:04:22,560 --> 00:04:26,450
+tutaj, na przykad, gdzie usunem dokadn na drugiej trasie,
+
+58
+00:04:26,610 --> 00:04:29,620
+jeli to zapiszemy, nadal widzimy obie, ale
+
+59
+00:04:29,760 --> 00:04:37,530
+jeli przejdziemy do Nowego postu, widzimy tylko dom 2, poniewa pierwszy element domu ma dokadna i dlatego pena
+
+60
+00:04:37,530 --> 00:04:41,990
+cieka jest dokadna, a zatem oceniana jest pena cieka, ktra
+
+61
+00:04:42,090 --> 00:04:44,350
+oczywicie jest teraz nowym postem.
+
+62
+00:04:44,550 --> 00:04:51,810
+Druga trasa nie uywa jednak dokadnego, wic cieka musi zaczyna si od ukonika, a kada cieka zaczyna
+
+63
+00:04:51,810 --> 00:04:52,650
+si od
+
+64
+00:04:52,650 --> 00:04:55,100
+ukonika, wic to zawsze bdzie renderowane.
+
+65
+00:04:55,320 --> 00:04:58,020
+Tak wic jest to podstawowa funkcjonalno routera.
+
+66
+00:04:58,080 --> 00:05:04,140
+Oczywicie nie chcemy renderowa jsx w naszym przypadku, cho moe to by oczywicie to, co chcemy
+
+67
+00:05:04,140 --> 00:05:05,410
+zrobi w niektrych przypadkach.
+
+68
+00:05:05,670 --> 00:05:08,730
+Chcemy zaadowa jeden z naszych
+
+69
+00:05:08,910 --> 00:05:12,210
+komponentw, komponent Post po prostu ciek.
+
+70
+00:05:12,210 --> 00:05:16,730
+Upewnijmy si wic, e zaadujemy ten komponent w nastpnym wykadzie.
+

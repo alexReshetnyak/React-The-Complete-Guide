@@ -1,0 +1,360 @@
+1
+00:00:02,280 --> 00:00:07,230
+Bu yzden son derste nihayet korunan kaynaklara eriim salamak iin bir
+
+2
+00:00:07,230 --> 00:00:13,530
+jeton kullandk, imdi kimlik dorulamamz olsun ya da olmasn uygulamadaki UI'mizi grebildiimizden emin olmak istiyorum.
+
+3
+00:00:13,530 --> 00:00:18,000
+u anda, kimlik dorulama formunu bize ynlendiren her zaman burada
+
+4
+00:00:18,240 --> 00:00:26,100
+kimlik doruladn gryoruz, ancak burada baarl bir ekilde giri yapsak bile, burada kimlik doruladn gryoruz, kimlik dorulamas yaparsak
+
+5
+00:00:26,100 --> 00:00:30,980
+buradan k yapmamz daha iyi olur, bylece kimlii dorulanm olduumuzu grebiliriz.
+
+6
+00:00:31,050 --> 00:00:31,590
+Tabii
+
+7
+00:00:31,590 --> 00:00:34,690
+ki, profilinize erimek iin kullanc gibi bir ey
+
+8
+00:00:34,860 --> 00:00:37,060
+gsterebilirsiniz, ancak sadece ka bal kalacam.
+
+9
+00:00:37,200 --> 00:00:43,080
+Yani bu, bizim uygulamalarmza byk bir ek olacak ve uygulanmas kolaydr.
+
+10
+00:00:43,170 --> 00:00:50,760
+Gezinme alannda grdklerimizi, gezinme gezinme eleri altndaki bileenler klasrnde ynetiriz, bu
+
+11
+00:00:50,850 --> 00:00:52,510
+bileenin iinde,
+
+12
+00:00:52,530 --> 00:01:01,170
+hem tepkisel hem de bu masast gezinme mensnde menmzn iinde ne olduunu tanmlarz.
+
+13
+00:01:01,230 --> 00:01:06,410
+imdi buradaki fikir, kimlik dorulamas yapmadnz takdirde yalnzca gezinme esini
+
+14
+00:01:06,510 --> 00:01:08,370
+zerinde kimlik dorulamas
+
+15
+00:01:08,430 --> 00:01:14,810
+yapmaktr. Bu nedenle, oturum amanz veya oturum amanz gerekiyorsa oturum amanz ve
+
+16
+00:01:14,910 --> 00:01:17,690
+oturum ama balantnz olmas gerekiyorsa.
+
+17
+00:01:17,700 --> 00:01:25,920
+Bu yzden bizim durumumuzu kontrol etmemiz gerekiyor, navigasyon elerindeki giri durumumuz, seyrsefer kalemleri elbette
+
+18
+00:01:25,920 --> 00:01:30,490
+suni bir bileendir, bu yzden bunu redux'a balayamayz.
+
+19
+00:01:30,540 --> 00:01:36,160
+Yapabildiimiz gibi, sadece bir snf temel alan bir sisteme evirebiliriz ve sonra bu bileen
+
+20
+00:01:36,450 --> 00:01:37,550
+zerinde balant kurabiliriz,
+
+21
+00:01:37,590 --> 00:01:38,830
+bunu yapabilirsin, bunu
+
+22
+00:01:38,880 --> 00:01:44,370
+tavsiye etmem, ancak bu da balantya bal birka konteyner bileenine sahip olma fikrini krar.
+
+23
+00:01:44,370 --> 00:01:47,660
+Maaza ve maaza hakknda bilmeyen bir sr aptalca
+
+24
+00:01:47,910 --> 00:01:55,530
+bileene sahip olmaktan dolay bu yaklam kullanmamanz tavsiye ederim. Gezinme elerini gerekte ykleyen bir kapsaycy semek daha
+
+25
+00:01:55,530 --> 00:01:57,720
+iyi bir yaklam olurdu ve
+
+26
+00:01:57,990 --> 00:02:03,780
+burada kapsayc klasrde deil, dzen klasrnde sadece dier bileenleri sarmak iin kullanyoruz.
+
+27
+00:02:04,290 --> 00:02:12,510
+Tasarm. js dosyas snf tabanl bir bileendir ve ara ubuunu ve
+
+28
+00:02:12,600 --> 00:02:16,650
+elbette gezinme elerini en sonunda kullanan bileenler olan sidedrawer' uygularz.
+
+29
+00:02:16,680 --> 00:02:26,250
+Bu yzden dzeni buraya yerletirmek mantkl olacaktr, bylece auth bilgisini ara ubuuna ve yan ekmeceye
+
+30
+00:02:26,250 --> 00:02:33,090
+aktarabiliriz, ki bu da onu gezinme elerine aktarabilirdi, bu benim yapmak
+
+31
+00:02:33,090 --> 00:02:34,040
+istediim eydir.
+
+32
+00:02:34,260 --> 00:02:45,020
+Bu yzden ben burada rea-redux'dan balant kuracam ve dzenimi balayacam, imdi baz eyaletlerle ilgileniyorum, bu yzden mapStateToProps
+
+33
+00:02:45,040 --> 00:02:51,990
+sabitini buraya ekleyeceim, bu her zaman olduu gibi devleti aldm bir
+
+34
+00:02:52,060 --> 00:02:57,580
+ilev olacaktr. javascript nesnesini dndmde, eyaletimin dilimlerinin baz blmlerini
+
+35
+00:02:57,580 --> 00:03:06,650
+haritaya koyarm ve ismini isimlendirdiim bir zellik oluturmak istiyorum ve bunu devlete balayacam ve
+
+36
+00:03:07,430 --> 00:03:09,360
+imdi kullancnn kimliinin
+
+37
+00:03:09,710 --> 00:03:15,980
+dorulanp dorulanmadn nasl renebiliriz? Sonunda, bizim auth redktrmze bakacak
+
+38
+00:03:16,220 --> 00:03:22,230
+olursak, durumun kimlik dorulama ile ilgili olduunu, jetonun null deerinin
+
+39
+00:03:22,240 --> 00:03:25,520
+kullanc kimlii dorulanmamsa, belirtecin null deilse,
+
+40
+00:03:25,520 --> 00:03:28,200
+kullancnn kimlii dorulandn grrz. Bir
+
+41
+00:03:28,280 --> 00:03:32,420
+simge otomatik olarak bittiinde otomatik olarak temizlediimizden,
+
+42
+00:03:32,420 --> 00:03:37,970
+bu daha nce eklediimiz koddur. Bu nedenle, kullancnn kimliinin dorulanp dorulanmadna dair bize bir
+
+43
+00:03:37,970 --> 00:03:40,520
+iaret veren gvene dayanabiliriz. Bu nedenle, dzenine geri
+
+44
+00:03:40,550 --> 00:03:47,510
+dnebiliriz ve isauthenticated durumuna eit olarak ayarlayabiliriz. auth. ve null ile eit
+
+45
+00:03:47,930 --> 00:03:49,680
+deilse, null deerine
+
+46
+00:03:49,790 --> 00:03:57,500
+eittir, kimlik dorulamas yaptmz iin bu denetimin Kimlii dorulanm olduu dorudur.
+
+47
+00:03:58,370 --> 00:04:08,110
+imdi bunu connect ile birlikte kullanacam, bu yzden balanty balamak ve sarmalamak iin bunu geeceim, whoop'lar, function ilevini connect ileviyle
+
+48
+00:04:08,290 --> 00:04:15,910
+dndreceim ve isJuthenticated' jsx kodumda burada veya her yerde kullanabilirim tabii ki bu bileende ve onu
+
+49
+00:04:15,940 --> 00:04:21,880
+ara ubuuma aktarmak istiyorum, bu yzden buraya yeni bir prop ekleyeceim ve
+
+50
+00:04:21,940 --> 00:04:30,470
+buna isAuth ismini vereceim, ve bunu geeceim. sahne. isAuthenticated, bu yzden biz sadece
+
+51
+00:04:30,520 --> 00:04:37,190
+orada elenen bu zellik ve ben yan ekmece iin aynsn yapacaz.
+
+52
+00:04:38,340 --> 00:04:42,650
+Elbette bu yeni pervaneyi bu yeni pervaneyi kullanabilmek iin dzenlemem gerekiyor, bu
+
+53
+00:04:42,900 --> 00:04:47,070
+yzden burada ve oradaki ara ubuu bileenine gideceim, imdi bu yeni pervane
+
+54
+00:04:47,070 --> 00:04:52,550
+bilgilerini alyorum ve onu navigasyon elerine aktarmam gerekiyor. Burada, bu yetkilendirmenin simsiz olarak
+
+55
+00:04:52,550 --> 00:04:55,760
+isimlendirileceim ve bu isimleri sadece ieri
+
+56
+00:04:55,770 --> 00:05:00,540
+girenleri ve ne getiimizi kartrmayacanzdan emin olmak iin deitiriyorum.
+
+57
+00:05:00,540 --> 00:05:01,610
+Bu yzden
+
+58
+00:05:01,860 --> 00:05:09,030
+burada isimlendirilmi bir e olarak gezinme elerine aktarlacak ve izlerimizle geiyoruz isAuth, isAuth
+
+59
+00:05:09,690 --> 00:05:17,580
+nk bu sadece dzende aldmz ey, isAuth. Tabii ki, yan ekmece iin ayn, yan ekmecede, biz
+
+60
+00:05:17,580 --> 00:05:19,170
+de navigasyon eleri var
+
+61
+00:05:19,260 --> 00:05:23,500
+ve ben baladm isAuthenticated bylece sadece ara ubuunda setiim
+
+62
+00:05:23,550 --> 00:05:29,070
+prop adn ve ben sahne gemek. isAuth.
+
+63
+00:05:29,340 --> 00:05:31,890
+Bununla hem bileenleri hem
+
+64
+00:05:31,890 --> 00:05:39,270
+de imdi navigasyon elerini kaydediyorum, bunun doru veya yanl olan Kimlii dorulanm prop
+
+65
+00:05:39,270 --> 00:05:40,430
+olduunu biliyorum.
+
+66
+00:05:40,440 --> 00:05:44,750
+imdi burada, bu gezinme maddesini artl olarak oluturabilirim, bunu
+
+67
+00:05:44,950 --> 00:05:47,240
+satr ii veya ayr olarak
+
+68
+00:05:47,300 --> 00:05:53,550
+yapabilirim, srayla yapacam ve sadece burada aldm sahne elerinin bir argman olarak eklenip
+
+69
+00:05:54,000 --> 00:06:01,050
+eklenmediini kontrol edeceim. prova isAuthenticated, tabii ki sadece yan ekmecede ve ara ubuunda tanmladmz pervane,
+
+70
+00:06:01,860 --> 00:06:04,060
+isAuthenticated doruysa o zaman bu
+
+71
+00:06:04,230 --> 00:06:11,370
+gezinme esini oluturmak istiyorum, bunu okumay biraz daha kolaylatrmak iin bunu birden ok satrda bleceim.
+
+72
+00:06:11,370 --> 00:06:12,240
+&nbsp;
+
+73
+00:06:12,240 --> 00:06:22,440
+Alternatif olarak, aslnda / logut'a balandm ve k yaptm yerde, imdi / km henz
+
+74
+00:06:22,740 --> 00:06:29,400
+kaydetmediimiz bir rotaya yol ayor ama kullanmak istediim mantk.
+
+75
+00:06:29,640 --> 00:06:33,480
+imdi bunu kaydedelim ve u anda bu logout
+
+76
+00:06:33,480 --> 00:06:37,070
+dmesini u anda mende grebiliyoruz, u anda
+
+77
+00:06:37,080 --> 00:06:41,630
+yanl, dorulanmadmz zaman kn gsteriyor, nk uygulama yeniden yklendiinde
+
+78
+00:06:41,760 --> 00:06:45,770
+kimlii dorulanmyor, bu yzden dzeni konteynrdaki mant hzlca
+
+79
+00:06:45,780 --> 00:06:50,100
+kontrol edelim isAuthenticated, balangta sfr olan belirtecin durumuna baldr,
+
+80
+00:06:50,100 --> 00:06:56,610
+bu yzden dorudur, ancak gezinme elerinde mantksal bir hatam var, eer kimlii dorulanmsa,
+
+81
+00:06:56,610 --> 00:06:58,850
+tabiki kimlik dorulamasn gstermek istemiyorum.
+
+82
+00:06:59,010 --> 00:07:03,020
+Bu yzden bir nlem iareti ekleyerek kimlik dorulamas yaplmazsa tam tersini
+
+83
+00:07:03,150 --> 00:07:04,420
+kontrol edeceim, aksi halde
+
+84
+00:07:04,680 --> 00:07:08,010
+kn kimliini dorulamak iin bu srayla mantkl olduunu gstereceim.
+
+85
+00:07:08,010 --> 00:07:09,960
+imdi imdi bu dosyay tekrar kaydedelim
+
+86
+00:07:10,170 --> 00:07:13,570
+ve imdi bu uygulama yeniden yklendiinde kimlik dorulamann varsaylan olduunu grrsnz.
+
+87
+00:07:13,590 --> 00:07:18,950
+imdi giri yapsak bile, oturum amak ve gndermek iin gei
+
+88
+00:07:19,050 --> 00:07:21,540
+yaparz, k iin deitirildiini grrsnz.
+
+89
+00:07:21,810 --> 00:07:28,200
+imdi UI'yi gncelledik, bir sonraki derste, k yaptmz zaman aslnda bir ey yapyoruz, nk u
+
+90
+00:07:28,200 --> 00:07:30,540
+anda bu rota mevcut deil.
+

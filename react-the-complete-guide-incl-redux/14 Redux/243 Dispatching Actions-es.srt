@@ -1,0 +1,352 @@
+1
+00:00:02,150 --> 00:00:05,680
+En la ltima conferencia creamos nuestro rudo productor y la tienda.
+
+2
+00:00:05,710 --> 00:00:11,930
+Ahora quiero utilizar esa tienda y no solo publicarla con esta declaracin consular, sino todo el
+
+3
+00:00:11,990 --> 00:00:16,490
+despacho y, en realidad, se despacha simplemente accediendo a la tienda.
+
+4
+00:00:16,580 --> 00:00:19,930
+Lo mismo ocurre con la constante de tienda que Holstege crea en la tienda.
+
+5
+00:00:20,260 --> 00:00:25,820
+Y en ese concepto de tienda podemos llamar despacho de despacho como una funcin.
+
+6
+00:00:25,940 --> 00:00:33,950
+Y ahora es importante que esta funcin de envo tome un argumento y ese argumento es una accin que
+
+7
+00:00:33,950 --> 00:00:39,360
+debe ser un objeto javascript que necesita tener una propiedad de tipo.
+
+8
+00:00:39,680 --> 00:00:45,510
+As que no te pierdas el tipo ni nada de eso, solo escribe y asegrate de deletrear esto correctamente.
+
+9
+00:00:45,620 --> 00:00:53,930
+Ms adelante, este ser un componente importante para obtener la informacin sobre qu tipo de accin se envi y qu
+
+10
+00:00:54,170 --> 00:00:56,100
+deberamos hacer en el reductor.
+
+11
+00:00:56,120 --> 00:00:58,310
+Es por eso que el tipo es tan importante.
+
+12
+00:00:58,610 --> 00:01:02,900
+Escriba entonces es solo un identificador nico de su eleccin.
+
+13
+00:01:02,930 --> 00:01:09,950
+La convencin es usar todas las cadenas en maysculas, por ejemplo, contador de tinta para incrementos de Kountry.
+
+14
+00:01:10,070 --> 00:01:16,390
+Ahora puede usar lo que quiera aqu, pero esta es la convencin en maysculas y ser descriptivo,
+
+15
+00:01:16,400 --> 00:01:21,440
+adems de ser breve sobre lo que est haciendo cuando se repara el desastre.
+
+16
+00:01:21,470 --> 00:01:29,350
+Ahora dije que tambin puede pasar una carga til opcional que har esto con la siguiente accin adems del contador AInc.
+
+17
+00:01:29,360 --> 00:01:32,420
+Eso tambin es imit at counter.
+
+18
+00:01:32,430 --> 00:01:34,360
+Ahora engg debe aumentarlo en 1.
+
+19
+00:01:34,400 --> 00:01:37,380
+Entonces no necesita pasar ninguna informacin adicional.
+
+20
+00:01:37,520 --> 00:01:44,750
+Pero como el contador realmente debe agregar un nmero especfico al contador y ese valor debe pasarse junto
+
+21
+00:01:44,750 --> 00:01:50,920
+con el tipo, no es un tipo la nica propiedad que tiene que usar as.
+
+22
+00:01:51,050 --> 00:01:58,620
+Puede agregar cualquier otra propiedad que desee a este Optik Now. Puede agregar el ID del nombre de valor como lo desee.
+
+23
+00:01:58,820 --> 00:02:04,550
+O agregue una propiedad adicional a la que pueda asignar una carga til o cualquier otro nombre que le guste,
+
+24
+00:02:04,550 --> 00:02:10,310
+que a su vez podra ser un objeto de JavaScript que agrupe todos los datos que desea pasar con la accin.
+
+25
+00:02:10,310 --> 00:02:11,990
+Esto es totalmente tu decisin.
+
+26
+00:02:12,320 --> 00:02:18,730
+No pasar un objeto de carga porque solo quiero pasar un campo de informacin Alber con todos los
+
+27
+00:02:18,770 --> 00:02:19,480
+valores nombrados.
+
+28
+00:02:19,520 --> 00:02:25,190
+Pero una vez ms, el nombre de la propiedad depende totalmente de ti y tiene un valor de 10 porque quiero aumentar
+
+29
+00:02:25,190 --> 00:02:26,290
+a contar por 10.
+
+30
+00:02:26,450 --> 00:02:28,820
+Y, por supuesto, puedes elegir cualquier nmero.
+
+31
+00:02:28,850 --> 00:02:31,550
+Entonces ahora estamos enviando dos acciones.
+
+32
+00:02:32,030 --> 00:02:35,390
+Qu crees que le hace esto a nuestra tienda?
+
+33
+00:02:35,750 --> 00:02:44,210
+Vamos a consolar log store consigue el estado aqu y antes de ejecutar esto quiero que adivines lo que ahora ser
+
+34
+00:02:44,210 --> 00:02:47,250
+nuestro estado nuestro contador en el estado.
+
+35
+00:02:47,300 --> 00:02:48,830
+Qu ser ahora?
+
+36
+00:02:53,550 --> 00:02:55,220
+Entonces, tienes una opinin?
+
+37
+00:02:55,410 --> 00:02:56,280
+Vamos a averiguar.
+
+38
+00:02:56,280 --> 00:03:00,700
+Vamos a volver a ejecutar la nota redox dash BASIX chase.
+
+39
+00:03:00,930 --> 00:03:02,890
+Veamos qu escupe.
+
+40
+00:03:03,030 --> 00:03:05,380
+Obtenemos el contador cero dos veces.
+
+41
+00:03:05,430 --> 00:03:10,430
+El primero es desde el primer paso de bloqueo de consola y justo despus de crear la tienda.
+
+42
+00:03:10,620 --> 00:03:18,430
+El segundo proviene de la declaracin de bloqueo de Descanso, que se refiere a cuando enviamos nuestras acciones.
+
+43
+00:03:18,510 --> 00:03:22,360
+Entonces aqu todava tenemos un contador de cero.
+
+44
+00:03:22,410 --> 00:03:25,420
+Pensaste que tendramos un contador de 11 aqu?
+
+45
+00:03:25,440 --> 00:03:29,260
+Porque incrementamos el bulbo uno y luego agregamos un 10.
+
+46
+00:03:29,280 --> 00:03:32,780
+Ahora esto de alguna manera se esperara.
+
+47
+00:03:32,940 --> 00:03:38,730
+Pero, por supuesto, no hemos agregado ninguna lgica para reaccionar a estos diferentes tipos de acciones.
+
+48
+00:03:38,790 --> 00:03:41,110
+Tambin podramos haber enviado algo.
+
+49
+00:03:41,190 --> 00:03:45,560
+No importara porque no escuchamos el tipo de accin en cualquier lugar.
+
+50
+00:03:45,630 --> 00:03:49,230
+Esto es lo que ahora se agregar en nuestro reductor.
+
+51
+00:03:49,290 --> 00:03:51,820
+Obtenemos la accin como un segundo argumento.
+
+52
+00:03:52,050 --> 00:03:55,900
+Entonces, por supuesto, podemos reaccionar a diferentes tipos de acciones.
+
+53
+00:03:56,070 --> 00:03:59,760
+Podemos agregar la instruccin if y ver si el tipo de punto de accin.
+
+54
+00:03:59,940 --> 00:04:06,290
+Y notamos que una propiedad tipo estar ah porque dije que es obligatoria en cada accin
+
+55
+00:04:07,580 --> 00:04:16,890
+que despachamos para que podamos verificar si el tipo de accin es por ejemplo contador de tinta si est dentro de la declaracin if.
+
+56
+00:04:16,910 --> 00:04:19,420
+Quiero devolver algo ms ahora aqu.
+
+57
+00:04:19,460 --> 00:04:29,180
+Una cosa importante es que no establezca el contador de estado ms ms que incrementara y devolvera el estado porque
+
+58
+00:04:29,180 --> 00:04:31,400
+esto no es inmutable.
+
+59
+00:04:31,440 --> 00:04:34,190
+Ests mutando el estado original aqu.
+
+60
+00:04:34,640 --> 00:04:42,320
+Entonces, lo que en su lugar hace es devolver un nuevo objeto javascript donde primero puede copiar el
+
+61
+00:04:42,380 --> 00:04:48,910
+estado anterior con el estado del operador extendido y luego sobrescribir la propiedad que desea ajustar.
+
+62
+00:04:49,040 --> 00:04:50,380
+Entonces el contador.
+
+63
+00:04:50,570 --> 00:04:56,630
+Y si todo eso fuera un objeto javascript, primero tendra que copiarlo para no volver
+
+64
+00:04:56,720 --> 00:04:58,530
+a mutar ningn dato.
+
+65
+00:04:58,610 --> 00:05:00,490
+Nunca hagas esto
+
+66
+00:05:00,530 --> 00:05:07,220
+Inmutablemente aqu, afortunadamente, el contador es un nmero, as que simplemente puedo tomar el contador estatal para obtener acceso a
+
+67
+00:05:07,220 --> 00:05:08,170
+mi contador anterior.
+
+68
+00:05:08,210 --> 00:05:11,210
+Solo lee X-ists para que pueda hacer eso.
+
+69
+00:05:11,210 --> 00:05:13,760
+No estoy cambiando nada con esa expresin.
+
+70
+00:05:13,760 --> 00:05:15,370
+Y ahora ms uno.
+
+71
+00:05:15,650 --> 00:05:22,190
+Y esto ahora se almacena en esta propiedad de pas que agrego a este nuevo objeto javascript cuando
+
+72
+00:05:22,190 --> 00:05:25,730
+primero copio las propiedades y valores de mi estado anterior.
+
+73
+00:05:26,000 --> 00:05:32,540
+Con eso estoy devolviendo un contador actualizado o un estado actualizado con un contador actualizado sobre la
+
+74
+00:05:32,720 --> 00:05:35,180
+accin del contador de tinta aqu.
+
+75
+00:05:35,510 --> 00:05:38,190
+Y, por supuesto, puedo duplicar esta declaracin if.
+
+76
+00:05:38,190 --> 00:05:42,580
+Ahora tambin hacer lo mismo para el contador ADD.
+
+77
+00:05:42,950 --> 00:05:47,440
+Entonces, si no lo hacemos en la primera declaracin tal vez lo hagamos en la segunda.
+
+78
+00:05:47,480 --> 00:05:52,530
+Si el tipo de accin est en el mostrador aqu, sin embargo, no quiero agregar uno.
+
+79
+00:05:52,550 --> 00:06:00,560
+Quiero agregar accin y ahora es valioso porque he especificado una propiedad de valor aqu en el
+
+80
+00:06:00,590 --> 00:06:02,030
+objeto que envi.
+
+81
+00:06:02,030 --> 00:06:07,590
+Ahora con esto solo devolvemos el estado si no es de estos dos si se aplican las condiciones.
+
+82
+00:06:07,850 --> 00:06:14,220
+Entonces, si guardamos este otoo y no ejecutaremos ninguna base de redux, veremos una salida diferente.
+
+83
+00:06:14,360 --> 00:06:21,770
+Obtenemos el contador 0 para el primer registro que se ejecuta justo despus de inicializar la tienda, pero despus
+
+84
+00:06:21,770 --> 00:06:27,800
+de enviar las dos acciones aqu, obtenemos un resultado diferente para el segundo bloque, donde
+
+85
+00:06:28,010 --> 00:06:32,080
+el contador es 11 porque lo incrementamos y lo agregamos.
+
+86
+00:06:32,100 --> 00:06:36,710
+Esto es ahora acciones y despacho de acciones en accin.
+
+87
+00:06:36,710 --> 00:06:39,610
+Sin embargo, una cosa an falta la suscripcin.
+
+88
+00:06:39,800 --> 00:06:42,290
+Echemos un vistazo ms de cerca en la prxima conferencia.
+

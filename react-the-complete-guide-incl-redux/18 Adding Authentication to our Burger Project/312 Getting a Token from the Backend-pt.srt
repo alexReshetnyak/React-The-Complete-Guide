@@ -1,0 +1,348 @@
+1
+00:00:02,350 --> 00:00:08,770
+Portanto, o objetivo  agora receber um token do back-end e estamos usando o Firebase, mas a abordagem do curso
+
+2
+00:00:08,770 --> 00:00:09,810
+funciona com qualquer
+
+3
+00:00:09,810 --> 00:00:14,600
+back-end, pois o back-end tem pontos de extremidade de API apropriados aos quais se conectar.
+
+4
+00:00:14,890 --> 00:00:22,060
+Se voc est procurando instrues sobre como validar um e-mail do usurio no servidor, como criar esse token, esse  o
+
+5
+00:00:22,090 --> 00:00:24,250
+caminho errado, isso no tem nada
+
+6
+00:00:24,250 --> 00:00:27,670
+a ver com reagir e, portanto, no  abordado aqui.
+
+7
+00:00:27,970 --> 00:00:31,060
+Um curso geral de construo de APIs para o
+
+8
+00:00:31,090 --> 00:00:36,790
+seu servio e idioma de escolha seria mais apropriado, j que voc deve aprender coisas como essas
+
+9
+00:00:36,910 --> 00:00:40,300
+em cursos ou fazer um curso de reao completa,  claro.
+
+10
+00:00:40,300 --> 00:00:47,350
+Eu mostrarei a voc o site e o firebase, o back-end fcil de usar que estamos usando nos
+
+11
+00:00:47,380 --> 00:00:49,660
+d a autenticao fora da caixa.
+
+12
+00:00:49,840 --> 00:00:56,590
+Se clicarmos em autenticao, teremos que configurar um mtodo de login e l, eu posso escolher e-mail e
+
+13
+00:00:56,590 --> 00:01:01,220
+senha, isso armazenar os dados do usurio em nosso prprio projeto firebase.
+
+14
+00:01:01,510 --> 00:01:04,630
+Eu clico em ativar e salvar isso e agora podemos alcanar
+
+15
+00:01:04,960 --> 00:01:12,880
+determinados endpoints da API de descanso para inscrever usurios e obter um token. Para descobrir para qual endereo precisamos enviar, no
+
+16
+00:01:12,880 --> 00:01:14,600
+ nosso endereo
+
+17
+00:01:14,620 --> 00:01:22,330
+de banco de dados que usamos at agora, simplesmente podemos procurar o google firebase rest auth.
+
+18
+00:01:22,420 --> 00:01:26,820
+e aqui est um segundo resultado, a API de restabelecimento da autenticao firebase.
+
+19
+00:01:27,190 --> 00:01:34,780
+Aqui voc encontra em quais endpoints da API voc pode enviar seus dados de autenticao para entrar ou sair de um usurio, ento
+
+20
+00:01:34,780 --> 00:01:40,450
+vamos comear a inscrever-se e aqui voc ver que temos que enviar uma solicitao de post para
+
+21
+00:01:40,450 --> 00:01:41,160
+este endpoint aqui.
+
+22
+00:01:41,590 --> 00:01:42,150
+Ento,
+
+23
+00:01:42,150 --> 00:01:43,850
+vou copiar esse terminal
+
+24
+00:01:44,170 --> 00:01:46,170
+e agora quero enviar uma solicitao.
+
+25
+00:01:46,300 --> 00:01:49,690
+Poderamos criar outra instncia de axios para isso, definitivamente no
+
+26
+00:01:49,690 --> 00:01:55,360
+podemos usar a instncia de ordens de axios porque aqui temos uma URL base que estaria errada,
+
+27
+00:01:55,870 --> 00:02:01,990
+mas eu vou usar o servio de axios padro e no a instncia aqui e tambm criar um novo
+
+28
+00:02:01,990 --> 00:02:03,770
+um porque eu s enviarei
+
+29
+00:02:03,850 --> 00:02:10,840
+dois pedidos para que eu no precise configurar essa coisa de baseURL. No arquivo de autenticao na minha pasta
+
+30
+00:02:10,870 --> 00:02:15,760
+de aes, agora vou importar axios do pacote axios e
+
+31
+00:02:16,210 --> 00:02:18,550
+ento posso comear a enviar solicitaes.
+
+32
+00:02:18,700 --> 00:02:25,270
+Ento aqui no criador da action auth nessa funo ns retornamos, eu vou chegar aos axios, enviar um post request
+
+33
+00:02:25,490 --> 00:02:27,620
+para o URL que acabei de copiar.
+
+34
+00:02:27,940 --> 00:02:35,620
+Agora, temos essa estranha API key, temos que substituir isso pela API do nosso firebase project, voc pode encontrar
+
+35
+00:02:35,620 --> 00:02:42,430
+isso no seu firebase project se voc clicar em autenticao e l na web set up, no
+
+36
+00:02:42,430 --> 00:02:43,720
+canto superior direito,
+
+37
+00:02:43,990 --> 00:02:45,560
+ essa chave aqui,
+
+38
+00:02:45,700 --> 00:02:53,760
+toda essa chave voc pode ver l, chave de API. Copie a chave inteira sem as aspas e substitua
+
+39
+00:02:53,760 --> 00:02:57,980
+os colchetes pela chave da API entre com essa chave,
+
+40
+00:02:58,000 --> 00:03:01,280
+isso identifica seu aplicativo para o firebase.
+
+41
+00:03:01,300 --> 00:03:07,630
+Agora, esses dados postados l, os dados que precisamos postar podem ser encontrados na documentao onde acabamos de
+
+42
+00:03:07,630 --> 00:03:08,610
+entrar, precisamos passar
+
+43
+00:03:08,770 --> 00:03:15,520
+um objeto javascript que ser transformado para json por axios automaticamente que possui um email, uma senha e esse
+
+44
+00:03:15,520 --> 00:03:17,220
+retorno A propriedade de token
+
+45
+00:03:17,380 --> 00:03:23,770
+seguro, que retorna a propriedade de token seguro,  um booleano e indica se queremos obter um token
+
+46
+00:03:23,770 --> 00:03:25,660
+ou no, deve ser sempre
+
+47
+00:03:25,720 --> 00:03:30,570
+verdadeiro, como diz aqui, e a senha e o email devem estar claros.
+
+48
+00:03:30,580 --> 00:03:38,270
+Ento, vamos voltar para o nosso aplicativo e vamos configurar alguns dados de autenticao aqui, um objeto javascript onde configuramos uma propriedade
+
+49
+00:03:38,270 --> 00:03:44,350
+de email que contm o email que recebemos como argumento, o mesmo para a senha e por
+
+50
+00:03:44,600 --> 00:03:49,670
+ltimo mas no menos importante, vamos definir isso retorna o token seguro para true.
+
+51
+00:03:50,120 --> 00:03:54,670
+E  esse objeto de dados de autenticao que, em seguida, quero anexar a
+
+52
+00:03:54,830 --> 00:04:02,000
+essa solicitao de postagem. Assim, como um segundo argumento para o mtodo post, transmitirei os dados de autenticao, os axios nos do
+
+53
+00:04:02,000 --> 00:04:09,590
+uma promessa para que possamos chamar e capturar. No caso de captura. Quero logar esse erro
+
+54
+00:04:09,710 --> 00:04:17,830
+e tambm fui despachar o authFail executado como uma funo, no caso do
+
+55
+00:04:17,830 --> 00:04:19,660
+succcss, vamos obter
+
+56
+00:04:19,760 --> 00:04:28,020
+uma resposta, quero logar essa resposta e quero despachar o authSuccess aqui, assim.
+
+57
+00:04:28,130 --> 00:04:33,420
+Tambm transmitirei a resposta para os dados de resposta, para
+
+58
+00:04:33,470 --> 00:04:39,710
+que os dados sejam respondidos no authSuccess e o erro no authFail.
+
+59
+00:04:40,100 --> 00:04:42,710
+Vamos agora salvar isso e ver se
+
+60
+00:04:42,770 --> 00:04:52,130
+funciona, vamos ao nosso aplicativo e inserir alguns dados de inscrio vlidos novamente, clique em enviar e veremos authStart e authSuccess e se voc
+
+61
+00:04:52,130 --> 00:04:54,250
+for ao console, veremos o
+
+62
+00:04:54,320 --> 00:05:00,800
+que recuperamos em um sucesso solicitaes de autenticao. Nos dados, voltamos a informar
+
+63
+00:05:00,980 --> 00:05:04,990
+quanto tempo o token  vlido, ento
+
+64
+00:05:05,270 --> 00:05:09,100
+3600 segundos, isso  uma hora.
+
+65
+00:05:09,410 --> 00:05:15,950
+Em seguida, o prprio token de ID, essa longa string criptografada que pode ser descriptografada para um objeto javascript, se
+
+66
+00:05:15,950 --> 00:05:23,900
+desejar, esse token de atualizao que  usado para obter um novo token de ID porque, como voc pode ver, o token de ID
+
+67
+00:05:23,960 --> 00:05:26,270
+expira com relativa rapidez. hora por motivos
+
+68
+00:05:26,270 --> 00:05:27,860
+de segurana, mas voc pode
+
+69
+00:05:28,100 --> 00:05:33,620
+gerar um novo com o token de atualizao, mas somente voc e seu aplicativo podem fazer isso,
+
+70
+00:05:33,620 --> 00:05:34,790
+ claro.
+
+71
+00:05:34,790 --> 00:05:36,400
+Ento, essas so nossas opes, tambm
+
+72
+00:05:36,410 --> 00:05:42,770
+vemos o endereo de e-mail para o qual criamos o usurio. E em nosso back-end do Firebase, se formos
+
+73
+00:05:42,980 --> 00:05:50,460
+fazer a autenticao e atualizarmos essa pgina de usurios, veremos o usurio com seu ID que foi gerado automaticamente aqui.
+
+74
+00:05:50,810 --> 00:05:53,040
+Ento,  assim que assinamos os
+
+75
+00:05:53,210 --> 00:05:57,920
+usurios e no adicionamos validao, ento vamos ver o que acontece se eu inserir
+
+76
+00:05:57,920 --> 00:06:01,000
+uma senha invlida, ainda podemos clicar no boto enviar.
+
+77
+00:06:01,040 --> 00:06:10,190
+Agora recebemos um erro aqui e no erro, se observarmos a ao aqui, no erro em si, temos a questo de
+
+78
+00:06:10,370 --> 00:06:18,170
+rolagem aqui como parece, obtemos dados sobre o erro em que temos uma mensagem em que diz que
+
+79
+00:06:18,170 --> 00:06:21,030
+a senha no  longa o suficiente.
+
+80
+00:06:21,790 --> 00:06:28,150
+No console, tambm veramos isso se clicssemos na solicitao incorreta e inspecionssemos isso aqui, vemos
+
+81
+00:06:28,150 --> 00:06:31,300
+aqui e a visualizao da resposta tambm.
+
+82
+00:06:31,630 --> 00:06:35,620
+Ento, em nosso erro, recebemos essa mensagem, esse problema.
+
+83
+00:06:36,130 --> 00:06:38,710
+Ento,  isso que recebemos
+
+84
+00:06:38,710 --> 00:06:40,650
+de volta nos pedidos
+
+85
+00:06:41,080 --> 00:06:48,670
+de inscrio e, mais importante, temos esse token e esse token atualizado, bem como o
+
+86
+00:06:48,670 --> 00:06:52,930
+tempo de expirao, devemos usar essas informaes para nos
+
+87
+00:06:52,930 --> 00:06:57,010
+autenticarmos para solicitaes subsequentes, mas antes disso, entrar.
+

@@ -1,0 +1,736 @@
+1
+00:00:02,260 --> 00:00:07,040
+Agora, sabemos o que reagir, na verdade,  hora de nos sujar as mos.
+
+2
+00:00:07,070 --> 00:00:14,900
+E por isso eu era um cdigo Penn Dot I O que  como o nosso editor web que nos permite
+
+3
+00:00:14,960 --> 00:00:20,120
+escrever aplicativos HVM LCS e Javascript muito simples ou muito mais como um playground.
+
+4
+00:00:20,150 --> 00:00:23,570
+Ns realmente no usaremos isso para construir projetos reais neste curso.
+
+5
+00:00:23,630 --> 00:00:29,730
+Vamos usar uma configurao local para isso, mas  timo para mergulhar em reagir de modo a depender do cdigo.
+
+6
+00:00:29,810 --> 00:00:36,450
+Eu sei que voc pode clicar em criar e criar uma chamada caneta que  simplesmente um espao de trabalho onde voc pode escrever
+
+7
+00:00:36,500 --> 00:00:39,330
+h t m l c s s e cdigo Javascript.
+
+8
+00:00:39,350 --> 00:00:44,150
+Agora, neste editor voc tem trs reas para H M L C S S e Javascript.
+
+9
+00:00:44,150 --> 00:00:47,830
+E agora vamos escrever uma aplicao muito simples.
+
+10
+00:00:47,870 --> 00:00:54,650
+Uma demo para ver como escrevemos algo com o HVM normal, todos os javascript e assim por diante e como
+
+11
+00:00:54,680 --> 00:00:59,440
+ns, depois, reagimos, talvez tenham um tempo mais fcil criando esse aplicativo para isso.
+
+12
+00:00:59,440 --> 00:01:05,210
+E a parte HVM deste editor ultrapassa voc a morte e voc pode criar isso rapidamente, mas digitar o
+
+13
+00:01:05,210 --> 00:01:06,160
+Dev e clicar.
+
+14
+00:01:06,170 --> 00:01:08,250
+Isso expandir automaticamente isso.
+
+15
+00:01:08,540 --> 00:01:12,890
+E ento, agora vou adicionar uma tecnologia e alguns dos resultados.
+
+16
+00:01:12,900 --> 00:01:19,210
+Max meu nome e abaixo para o aumento do pargrafo dizem que voc tem 28 anos.
+
+17
+00:01:19,220 --> 00:01:20,050
+ minha idade.
+
+18
+00:01:20,060 --> 00:01:22,450
+E, claro, sinta-se livre para usar seus dados aqui.
+
+19
+00:01:22,490 --> 00:01:24,950
+Ento, isso agora leva  sada abaixo.
+
+20
+00:01:24,980 --> 00:01:27,320
+Ele atualiza automaticamente.
+
+21
+00:01:27,320 --> 00:01:29,820
+Agora vamos dar um estilo rpido.
+
+22
+00:01:29,900 --> 00:01:37,310
+Vamos simplesmente dar a Steve talvez uma classe, digamos, a pessoa, o nome depende de voc e adicione esta pessoa C, pois esta classe com
+
+23
+00:01:37,310 --> 00:01:42,260
+alguma viso normal  o cdigo dos EUA, onde eu simplesmente dou isso, digamos uma fronteira.
+
+24
+00:01:42,320 --> 00:01:53,150
+pixel slido e excelente com CCC e uma sombra de caixa de 0 2 pixels 2 pixels e dizemos o mesmo cinza.
+
+25
+00:01:53,150 --> 00:01:53,520
+Um
+
+26
+00:01:53,570 --> 00:01:58,840
+Vamos talvez nos perder usando um pouco mais brilhante aqui e.
+
+27
+00:01:58,880 --> 00:02:00,010
+Para a fronteira.
+
+28
+00:02:00,230 --> 00:02:08,240
+No vamos dar tambm como uma largura de, digamos, 200 pixels e o preenchimento de 20 pixels e
+
+29
+00:02:08,240 --> 00:02:11,760
+agora temos este carto, como voc v abaixo.
+
+30
+00:02:11,870 --> 00:02:17,990
+Agora, essa  uma informao de uma pessoa de carto que contm informaes sobre uma pessoa, digamos.
+
+31
+00:02:18,290 --> 00:02:27,830
+dizer que  exibir no bloco de linha e dar uma margem de 10 pixels, porque agora o que posso fazer
+
+32
+00:02:27,830 --> 00:02:36,750
+ que eu posso, naturalmente, replicar isso e adicionar uma segunda pessoa, digamos Manue, que tem 29 anos, meu colega.
+
+33
+00:02:36,750 --> 00:02:37,880
+Tambm podemos
+
+34
+00:02:38,280 --> 00:02:45,930
+Ento, ns conseguimos esses cartes de duas pessoas e voc poderia facilmente pensar nisso como aplicativo da web normal onde voc
+
+35
+00:02:45,930 --> 00:02:52,320
+exibe algumas informaes sobre usurios ou sobre o time atrs de uma rvore ou blog, voc est criando
+
+36
+00:02:52,320 --> 00:02:53,150
+algo assim.
+
+37
+00:02:53,310 --> 00:02:56,110
+Estamos usando apenas equipe Eliseus s aqui.
+
+38
+00:02:56,250 --> 00:02:59,370
+Agora j podemos ver um tipo de limitao.
+
+39
+00:02:59,580 --> 00:03:04,150
+Estamos sempre reutilizando o mesmo cdigo HMO aqui.
+
+40
+00:03:04,320 --> 00:03:06,660
+Agora isso no  to problemtico aqui.
+
+41
+00:03:06,780 --> 00:03:11,610
+Seria mais problemtico se fssemos fazer algo com cada um desses trechos com o
+
+42
+00:03:12,000 --> 00:03:16,800
+javascript, mesmo que, mesmo sem isso, possamos pensar nesta parte aqui como um componente.
+
+43
+00:03:16,860 --> 00:03:23,290
+A morte da pessoa sempre est estruturada da mesma maneira, apenas os dados dentro dela variam.
+
+44
+00:03:23,310 --> 00:03:29,720
+Este  o lugar onde o re-ato entra, embora as reaes  maioria como nos nos conectamos  a lgica javascript tambm.
+
+45
+00:03:29,730 --> 00:03:34,430
+Mas ainda assim, j podemos usar reagir para criar componentes reutilizveis aqui.
+
+46
+00:03:34,500 --> 00:03:36,300
+Para isso, vamos adicionar reagir.
+
+47
+00:03:36,300 --> 00:03:41,430
+Eu vou encolher esta srie como parte um minsculo e qualquer rea de javascript.
+
+48
+00:03:41,550 --> 00:03:44,020
+Em primeiro lugar, importa importar.
+
+49
+00:03:44,330 --> 00:03:51,060
+Voc pode clicar em seu cone ao lado do javascript e ento voc pode baixar ou
+
+50
+00:03:51,060 --> 00:03:55,780
+importar algumas bibliotecas javascript externas e re-agir  uma biblioteca externa.
+
+51
+00:03:55,800 --> 00:04:02,880
+Na verdade,  to popular que Ancoats pen voc pode ir para o rpido e soltar e simplesmente
+
+52
+00:04:03,000 --> 00:04:04,230
+rolar para reagir.
+
+53
+00:04:04,230 --> 00:04:05,440
+E isso ir adicion-lo.
+
+54
+00:04:05,440 --> 00:04:08,030
+Agora, adiciona a verso 15 Datsik start.
+
+55
+00:04:08,030 --> 00:04:12,440
+Pode-se diferir no momento em que voc est vendo isso neste curso.
+
+56
+00:04:12,450 --> 00:04:18,570
+aprendendo o mais recente reagir e, em seguida, a configurao local ser usada neste curso, tambm usar o ltimo recurso mais recente.
+
+57
+00:04:18,570 --> 00:04:21,390
+Vou abordar o trabalho em 16 para que voc esteja
+
+58
+00:04:21,420 --> 00:04:27,600
+No h preocupaes aqui no entanto, estamos usando um antigo, mas para a demonstrao aqui, isso no importa em tudo.
+
+59
+00:04:27,600 --> 00:04:30,720
+Tambm precisamos de uma resposta rpida e rpida.
+
+60
+00:04:30,810 --> 00:04:37,860
+Esse  outro pacote da reao que a equipe reage em si mesmo  a lgica que precisamos para
+
+61
+00:04:37,860 --> 00:04:39,680
+criar esses componentes de reagem.
+
+62
+00:04:39,690 --> 00:04:46,530
+Eu disse-lhe que re-agir  tudo sobre os componentes de re-agir brao  ento sobre a renderizao desses componentes
+
+63
+00:04:46,530 --> 00:04:50,980
+para o real Daun com estes dois pacotes adicionados Ns estamos quase l.
+
+64
+00:04:51,030 --> 00:04:57,570
+no curso, eu vou ter um mdulo inteiro onde eu apresentarei os mais importantes usurios do prximo gen.
+
+65
+00:04:57,570 --> 00:05:03,030
+Mas re-act use uma sintaxe de javascript especial e muitos recursos de javascript de prxima
+
+66
+00:05:03,030 --> 00:05:05,410
+gerao, todos voltam para isso mais tarde
+
+67
+00:05:05,790 --> 00:05:13,320
+Ento, para desbloquear o uso desses recursos e a sintaxe especial no menu suspenso do pr-processador javascript,
+
+68
+00:05:13,560 --> 00:05:15,170
+voc deve apenas balbuciar.
+
+69
+00:05:15,270 --> 00:05:21,330
+Essa  simplesmente uma ferramenta que compila o cdigo de javascript de prxima gerao que voc est escrevendo aqui para codificar que
+
+70
+00:05:21,420 --> 00:05:25,750
+ executado corretamente no navegador para que ns escrevemos cdigo com todos os recursos que queremos.
+
+71
+00:05:25,830 --> 00:05:28,450
+Mas o cdigo do navio que funciona no navegador.
+
+72
+00:05:28,770 --> 00:05:34,680
+voc pode clicar em salvar e fechar e agora podemos comear a escrever nosso aplicativo de re-ao aqui na seo de javascript.
+
+73
+00:05:34,680 --> 00:05:35,430
+E com isso,
+
+74
+00:05:35,430 --> 00:05:36,690
+Ento, por que no fazemos isso.
+
+75
+00:05:36,990 --> 00:05:43,250
+Vamos criar um componente re-agir para que possamos ter um elemento HVM l personalizado reutilizvel.
+
+76
+00:05:43,410 --> 00:05:49,400
+Podemos usar, em vez de repetir este HVM, todo o cdigo aqui  esquerda na sua forma mais bsica
+
+77
+00:05:49,410 --> 00:05:55,710
+e voc vai aprender sobre uma forma diferente neste curso para a sua forma mais bsica, um componente de reao
+
+78
+00:05:55,770 --> 00:06:01,140
+ apenas uma funo para que possamos No crie uma nova funo e talvez nomeie essa pessoa.
+
+79
+00:06:01,290 --> 00:06:08,880
+Certifique-se de que ele comea com um P principal  necessrio para us-lo corretamente com re-agir este componente de
+
+80
+00:06:09,270 --> 00:06:13,100
+pessoa  uma funo normal, mas tem que retornar decodificar.
+
+81
+00:06:13,100 --> 00:06:20,320
+Voc realmente quer renderizar para o Dom e aqui re-agir usa uma sintaxe especial que  chamada J como x.
+
+82
+00:06:20,500 --> 00:06:25,680
+Estou usando parnteses aqui para poder escrever ou retornar um cdigo de vrias linhas.
+
+83
+00:06:26,040 --> 00:06:32,190
+E agora vou copiar o cdigo aqui da esquerda e col-lo na minha declarao de retorno aqui.
+
+84
+00:06:32,400 --> 00:06:35,670
+E isso certamente parece estranho. No, parece que h tim l.
+
+85
+00:06:35,760 --> 00:06:43,860
+No javascript que no funcionaria normalmente e no seria se no tivssemos adicionado o Batal aqui como um
+
+86
+00:06:44,520 --> 00:06:50,880
+pr-processador Balal se configurado corretamente, o que  automaticamente aqui, permite-nos usar este ndice
+
+87
+00:06:50,880 --> 00:06:57,550
+especial que se parece com H. T. mail, mas que no  e vou mergulhar mais profundamente nessa sintaxe nos prximos mdulos do curso.
+
+88
+00:06:57,690 --> 00:07:01,420
+ chamado Deus Ex e  apenas acar sinttico.
+
+89
+00:07:01,530 --> 00:07:06,060
+Por trs das cenas, isso  compilado no cdigo Javascript normal.
+
+90
+00:07:06,060 --> 00:07:11,450
+Ns podemos us-lo aqui, porm para ter um tempo mais fcil de escrever o que realmente queremos renderizar.
+
+91
+00:07:11,640 --> 00:07:16,750
+Bem, agora ns conseguimos essa funo e eu disse que o componente de reao de doena.
+
+92
+00:07:17,010 --> 00:07:21,940
+Mas, claro, agora  apenas uma funo para transformar isso em um componente de reao.
+
+93
+00:07:21,960 --> 00:07:26,220
+Na verdade, temos que usar reagir para renderiz-lo para a tela.
+
+94
+00:07:26,460 --> 00:07:33,600
+Ento eu vou me livrar da minha bolsa e voc est  esquerda e, em vez disso, est em um novo ano div
+
+95
+00:07:33,600 --> 00:07:36,560
+e eu vou dar uma idia de dizer p.
+
+96
+00:07:36,710 --> 00:07:39,440
+Voc pode escolher qualquer ID que voc deseja.
+
+97
+00:07:39,560 --> 00:07:45,430
+Agora voc reage o pacote que importamos  responsvel pelo cdigo de dias de anlise correta.
+
+98
+00:07:45,450 --> 00:07:47,450
+Aqui est o cdigo GSX.
+
+99
+00:07:47,660 --> 00:07:52,620
+O pacote Obert que importamos foi o dormitrio re-atualizado se voc se lembrar.
+
+100
+00:07:52,670 --> 00:07:55,910
+Voc sempre pode verificar o seu equipamento na qual eu posso reagir.
+
+101
+00:07:56,090 --> 00:08:02,980
+Isso realmente expe um objeto re-agir Dom escrito assim com Dom todos sendo caracteres principais que
+
+102
+00:08:02,990 --> 00:08:05,000
+possui um mtodo de renderizao.
+
+103
+00:08:05,000 --> 00:08:14,700
+Este mtodo nos permite renderizar uma funo javascript como um componente para o Dom real e que trat-lo como
+
+104
+00:08:14,710 --> 00:08:18,960
+componente  exatamente o que Riak se preocupa.
+
+105
+00:08:19,460 --> 00:08:23,990
+Podemos ento renderizar esta funo, mas no referenci-lo assim.
+
+106
+00:08:24,080 --> 00:08:32,000
+Mas, na verdade, transformando-o em um elemento HVM novamente atrs das cenas, usando esta sintaxe GSX, que
+
+107
+00:08:32,000 --> 00:08:33,620
+ entendida por reagir.
+
+108
+00:08:34,040 --> 00:08:42,400
+Ento eu escrevo isso como meu elemento personalizado HVM l e render, ento, leva outro argumento
+
+109
+00:08:42,410 --> 00:08:45,220
+onde eu especifique onde renderizar isso.
+
+110
+00:08:45,250 --> 00:08:48,860
+Eu alcano o documento e ele pode usar um seletor de consulta.
+
+111
+00:08:48,860 --> 00:08:56,830
+Ento, o cdigo javascript normal para selecionar qualquer elemento com o ID P1 e que novamente  cdigo Javascript normal.
+
+112
+00:08:56,880 --> 00:08:59,010
+O seletor de consulta normal.
+
+113
+00:08:59,510 --> 00:09:09,650
+Com isso eu estou dizendo re-agir que eu quero tornar esta funo um componente de pessoa em exibies aqui
+
+114
+00:09:09,650 --> 00:09:12,100
+ esquerda e isso acontece.
+
+115
+00:09:12,320 --> 00:09:19,340
+Agora, o estilo est perdido porque a classe realmente  uma palavra-chave no javascript, ento reaja os touristas no nome da classe
+
+116
+00:09:19,340 --> 00:09:22,730
+e essa  a melhor prova de que isso parece H-G.
+
+117
+00:09:22,760 --> 00:09:23,480
+Mas no .
+
+118
+00:09:23,540 --> 00:09:30,350
+Ele usa um ndice personalizado que em 99% dos casos  como HGL Mas, nos bastidores, ele 
+
+119
+00:09:30,410 --> 00:09:31,410
+transformado em javascript.
+
+120
+00:09:31,880 --> 00:09:39,800
+bloco inline aqui  meio ignorado porque estamos envolvendo isso em um elemento personalizado que  tratado como um declarao de bloco.
+
+121
+00:09:39,890 --> 00:09:47,000
+E agora voc v que a nossa classe de pessoa aqui novamente Max tratou como um componente personalizado que todos
+
+122
+00:09:47,000 --> 00:09:50,780
+podemos verificar sobre o fato de que nosso estilo de
+
+123
+00:09:50,780 --> 00:09:53,050
+Agora vou mergulhar no estilo desses ncleos.
+
+124
+00:09:53,120 --> 00:09:58,320
+Por enquanto, fique feliz por termos recebido nosso componente aqui.
+
+125
+00:09:58,580 --> 00:10:00,450
+Ainda no  reutilizvel.
+
+126
+00:10:00,590 --> 00:10:10,450
+Se eu tivesse um segundo gancho no meu H. T. A boca cair aqui na minha idade, voc vai se separar, digamos, com o ITP tambm.
+
+127
+00:10:10,490 --> 00:10:14,480
+E eu queria tornar um componente diferente uma pessoa diferente.
+
+128
+00:10:14,780 --> 00:10:19,430
+Eu no teria que codificar os valores para isso e realmente criar um novo componente.
+
+129
+00:10:19,430 --> 00:10:26,150
+A grande coisa sobre reagir e por que os componentes so to incrveis e economizamos muito tempo
+
+130
+00:10:26,150 --> 00:10:30,060
+ que podemos configur-los dinamicamente  medida que precisamos deles.
+
+131
+00:10:30,120 --> 00:10:36,920
+Ento, aqui, o que vou fazer  que, na verdade, adicione um argumento a essa funo de pessoa que chamou adereos.
+
+132
+00:10:36,950 --> 00:10:42,950
+Voc pode escolher qualquer nome que voc deseja, mas o conceito que eu estou usando aqui  chamado
+
+133
+00:10:42,950 --> 00:10:48,830
+de reao de prop automaticamente me d um argumento naquela funo que eu me tornei um componente com
+
+134
+00:10:48,830 --> 00:10:57,140
+esta sintaxe aqui embaixo com a pessoa J  o cdigo X e o Propp simplesmente contm todos os Atributos que adiciono ao meu prprio componente.
+
+135
+00:10:57,140 --> 00:11:00,320
+Ento eu poderia adicionar o nome Max e idade.
+
+136
+00:11:00,530 --> 00:11:03,720
+Digamos como vinte e oito.
+
+137
+00:11:03,900 --> 00:11:08,820
+Se eu fizer isso, agora podemos produzir isso em nosso componente prisional.
+
+138
+00:11:08,820 --> 00:11:12,130
+Ns s precisamos ter acesso dinmico ao elemento deste suporte.
+
+139
+00:11:12,150 --> 00:11:18,600
+Isso mostra o argumento em que produzimos contedo dinmico e reagem com o fechamento da abertura de Cauley Brace e apenas
+
+140
+00:11:18,600 --> 00:11:19,190
+um par.
+
+141
+00:11:19,200 --> 00:11:22,540
+No h aparelhos de dupla ondulao apenas um par de cintas curly.
+
+142
+00:11:22,860 --> 00:11:30,540
+seguida, Daut nome para obter este nome atribuir a sua idade passada e prop para produzir essa idade debitado passado
+
+143
+00:11:30,660 --> 00:11:37,710
+a idade do prop e agora estamos usando as propriedades os atributos que estamos passando para o nosso
+
+144
+00:11:37,830 --> 00:11:44,820
+prprio componente e isso  muito legal, porque agora se repetimos, reage darm, faa uma chamada aqui para P2.
+
+145
+00:11:44,820 --> 00:11:48,010
+E, em seguida, chegamos a adereos e, em
+
+146
+00:11:48,150 --> 00:11:51,510
+Portanto, certifique-se de trocar no  o segundo seletor de consulta.
+
+147
+00:11:51,900 --> 00:11:59,370
+Podemos passar diferentes adereos para componentes de morte como Manue e 20: 9 e agora ambos os componentes usaram a mesma
+
+148
+00:11:59,370 --> 00:12:01,010
+base que voc pode ver.
+
+149
+00:12:01,110 --> 00:12:07,140
+Eles usam a mesma funo que  transformada em um componente por reagir, mas realmente
+
+150
+00:12:07,140 --> 00:12:14,940
+aproveitando o conceito do componente, porque ns apenas escrevemos o cdigo HMO uma vez e agora podemos reutiliz-lo uma e
+
+151
+00:12:14,940 --> 00:12:15,580
+outra vez.
+
+152
+00:12:15,720 --> 00:12:19,810
+E eu aposto que voc pode ver o potencial disso em aplicaes muito grandes.
+
+153
+00:12:19,890 --> 00:12:26,720
+Voc pode compor toda a aplicao de peas reutilizveis e este componente nem sequer usa qualquer lgica.
+
+154
+00:12:26,850 --> 00:12:32,600
+No escuta cliques ou coisas assim em aplicativos como o aplicativo que criamos neste curso.
+
+155
+00:12:32,730 --> 00:12:34,160
+Ns, naturalmente, faremos isso.
+
+156
+00:12:34,200 --> 00:12:41,340
+Vamos anexar a nossa prpria lgica aos nossos componentes e, em seguida, temos pequenas peas reutilizveis, mantidas e fceis
+
+157
+00:12:41,340 --> 00:12:48,290
+de gerenciar com sua prpria lgica contida nelas, que podemos usar em qualquer lugar para criar aplicativos incrveis.
+
+158
+00:12:48,300 --> 00:12:54,690
+Essa  a idia por trs da reao e  por isso que  to bom e por que o conceito de componente  to grande.
+
+159
+00:12:54,690 --> 00:12:56,700
+Agora, deixe-me fazer uma coisa mais.
+
+160
+00:12:56,790 --> 00:12:59,670
+No momento, eu estou reagindo reagir duas vezes.
+
+161
+00:12:59,670 --> 00:13:04,440
+No h nada de errado com isso, mas na verdade tambm podemos fazer isso um pouco diferente.
+
+162
+00:13:04,440 --> 00:13:10,050
+No poderamos ter um se voc estiver na parte HMO que tenha uma idia de aplicativo ou raiz.
+
+163
+00:13:10,110 --> 00:13:12,640
+No importa qualquer ideia de sua escolha.
+
+164
+00:13:12,750 --> 00:13:18,840
+Agora, livre-se do ato secundrio na chamada de renderizao e vou adicionar uma varivel aqui.
+
+165
+00:13:18,960 --> 00:13:22,520
+Esta varivel tudo nome, mas esse nome tambm depende de voc.
+
+166
+00:13:22,620 --> 00:13:25,920
+Mas esse oposto ter algum cdigo X como X.
+
+167
+00:13:25,920 --> 00:13:31,060
+Eu estou envolvendo isso entre parnteses para que eu possa escrever esse cdigo em vrias linhas.
+
+168
+00:13:31,080 --> 00:13:43,710
+fiz antes de termos que envolv-lo com um mergulho, pois o GSX tem o requisito de ter apenas um elemento raiz para que elementos adjacentes no sejam permitidos.
+
+169
+00:13:43,710 --> 00:13:50,580
+Agora, aqui o que posso fazer  que agora posso emitir o meu componente de
+
+170
+00:13:50,580 --> 00:13:51,650
+pessoa como
+
+171
+00:13:51,660 --> 00:13:56,430
+Eu tambm falo sobre isso,  claro, embora existam formas de reduzir essa limitao.
+
+172
+00:13:56,460 --> 00:14:04,560
+Ento, agora, adicionei um uso de dois componentes  minha varivel de aplicativo aqui e agora  simplesmente montar
+
+173
+00:14:04,800 --> 00:14:14,070
+a varivel do aplicativo no lugar desse elemento com a aplicao de ID que eu selecionei ajustando meu seletor de consulta.
+
+174
+00:14:14,070 --> 00:14:18,070
+E agora voc v os dois elementos agora prximos uns dos outros.
+
+175
+00:14:18,300 --> 00:14:23,160
+Porque agora eles so renderizados no mesmo gancho no mesmo elemento.
+
+176
+00:14:23,160 --> 00:14:32,070
+processar uma chamada e, em seguida, criar um up there com componentes aninhados  uma maneira muito mais popular de criar aplicativos de reao.
+
+177
+00:14:32,070 --> 00:14:38,190
+Ento, para dizer na mesma profundidade e esse mtodo de ter apenas um gancho, reaja em
+
+178
+00:14:38,220 --> 00:14:43,120
+ assim que vou usar neste curso e na prxima palestra falarei sobre isso.
+
+179
+00:14:43,160 --> 00:14:46,910
+Como a alternativa com reaes mltiplas em recorde de renderizao.
+
+180
+00:14:46,960 --> 00:14:52,010
+Mas esteja ciente de que esta  a maneira como voc ver muito mais frequentemente com essa abordagem.
+
+181
+00:14:52,050 --> 00:14:56,060
+Voc cria os chamados aplicativos de pgina nica.
+
+182
+00:14:56,080 --> 00:14:59,110
+Agora, este  o nosso primeiro aplicativo de reagem.
+
+183
+00:14:59,130 --> 00:15:01,290
+Agora vamos mergulhar mais fundo no reator.
+
+184
+00:15:01,300 --> 00:15:05,160
+Vamos continuar com os Chloris e realmente comear a re-agir.
+

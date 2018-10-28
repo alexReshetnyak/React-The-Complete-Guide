@@ -1,0 +1,72 @@
+1
+00:00:02,160 --> 00:00:05,190
+Este es mi primer consejo para ti, reacciona. rocas, esta es
+
+2
+00:00:05,250 --> 00:00:07,740
+una pgina web que alberga
+
+3
+00:00:07,950 --> 00:00:11,820
+una gran cantidad de proyectos de reaccin.
+
+4
+00:00:11,820 --> 00:00:18,600
+Tambin puede buscar ciertas cosas all, para palabras clave como redux, por ejemplo, y luego encontrar
+
+5
+00:00:18,600 --> 00:00:21,370
+algunos proyectos de reaccin que puede consultar.
+
+6
+00:00:21,390 --> 00:00:23,520
+Todos son de cdigo abierto, puedes hacer
+
+7
+00:00:23,520 --> 00:00:29,880
+clic en ellos como en este clon de la pgina de destino de la pelcula de Netflix y luego encontrars
+
+8
+00:00:29,880 --> 00:00:32,170
+un enlace de demostracin donde podrs ver
+
+9
+00:00:32,170 --> 00:00:36,550
+el proyecto aunque algunos de los proyectos estn cados, pero siempre deberas encontrar un
+
+10
+00:00:36,660 --> 00:00:42,930
+cdigo de enlace, la mayora de las veces conduce a github, all puede ver este proyecto y eso es genial.
+
+11
+00:00:42,930 --> 00:00:49,800
+Puede ver estos proyectos y sumergirse en el cdigo escrito por otros desarrolladores de reaccin.
+
+12
+00:00:49,800 --> 00:00:56,160
+Ahora, una cosa importante, ese cdigo no tiene que ser 100% correcto o la mejor prctica, pero
+
+13
+00:00:56,190 --> 00:01:03,270
+debera darte algunas ideas sobre cmo puedes optimizar tu cdigo o cmo puedes resolver ciertos problemas o simplemente tomar
+
+14
+00:01:03,330 --> 00:01:05,870
+uno de estos proyectos, don Observe el
+
+15
+00:01:05,910 --> 00:01:11,880
+cdigo y, en su lugar, intente construirlo por su cuenta y luego compare su solucin con
+
+16
+00:01:12,240 --> 00:01:14,610
+la solucin de la oferta original.
+
+17
+00:01:14,610 --> 00:01:18,210
+As que definitivamente cavar en reatrocks. es un gran recurso
+
+18
+00:01:18,210 --> 00:01:22,590
+para encontrar algunos buenos proyectos para aprender ms sobre la reaccin.
+

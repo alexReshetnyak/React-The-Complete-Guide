@@ -1,0 +1,248 @@
+1
+00:00:02,130 --> 00:00:07,610
+So in the last lecture we defined our javascript object which should represent our form.
+
+2
+00:00:07,620 --> 00:00:11,180
+Now I want to output that in my render method here,
+
+3
+00:00:11,280 --> 00:00:18,240
+I want to create all these inputs dynamically. So I'll get rid of them in the render form here for now
+
+4
+00:00:18,540 --> 00:00:26,790
+and I now need to first of all turn my order form object here into some kind of array
+
+5
+00:00:26,790 --> 00:00:33,120
+I can loop through, an array where we basically have javascript objects where this key is just one property,
+
+6
+00:00:33,130 --> 00:00:37,790
+an identifier property and then we also still have the other properties.
+
+7
+00:00:38,010 --> 00:00:41,730
+Well we can create such an array relatively simple here,
+
+8
+00:00:41,790 --> 00:00:43,860
+there are always more than one method, of course here,
+
+9
+00:00:43,860 --> 00:00:50,790
+I'll create my form elements array, a constant which is an empty array and then I will use a for/in loop
+
+10
+00:00:50,880 --> 00:00:53,380
+where I get to keys of my
+
+11
+00:00:53,460 --> 00:01:02,700
+now this.state.orderForm and the key therefore are of course the property names of that object.
+
+12
+00:01:02,760 --> 00:01:09,130
+So the keys are going to be name, street, zipcode and so on
+
+13
+00:01:09,300 --> 00:01:16,460
+and if we access order form for a given key, we get these values here on the right side of course.
+
+14
+00:01:17,640 --> 00:01:25,740
+So with that information, let's go down there and let's create or let's push I should say a new object
+
+15
+00:01:25,950 --> 00:01:28,480
+to the form elements array,
+
+16
+00:01:28,590 --> 00:01:34,620
+this object should have an id which is the key, because again that is name and so on, these are identifiers
+
+17
+00:01:35,340 --> 00:01:45,720
+and then it should have the config which is this.state.orderForm for a given key.
+
+18
+00:01:45,720 --> 00:01:49,270
+So this is now the right side of this property
+
+19
+00:01:49,290 --> 00:01:56,110
+so this javascript object, that is what we we'll store in this config property. And of course, you can
+
+20
+00:01:56,110 --> 00:01:59,840
+name the config property whatever you want, you can name it set up whatever you want.
+
+21
+00:02:00,190 --> 00:02:05,010
+So now we got an array of javascript objects, with that array we can work
+
+22
+00:02:05,410 --> 00:02:12,150
+I can work with it by now creating my form here while looping through all these elements.
+
+23
+00:02:12,520 --> 00:02:20,680
+So I will add curly braces here in the form and now I want to loop through my form elements array with
+
+24
+00:02:20,680 --> 00:02:25,640
+the map method of course to generate a new array basically, here
+
+25
+00:02:25,660 --> 00:02:32,470
+this will get the individual form element and it just returns some jsx here, the jsx it returns
+
+26
+00:02:32,470 --> 00:02:37,440
+of course, it should be my custom input component.
+
+27
+00:02:37,750 --> 00:02:43,210
+And now we can configure it, it should have the elements and the element type.
+
+28
+00:02:43,240 --> 00:02:50,530
+Now the element type can be accessed on the form element in my array and there I said that in this config
+
+29
+00:02:50,530 --> 00:02:54,510
+property, we would store the right side of our setup,
+
+30
+00:02:54,550 --> 00:02:55,940
+so this object.
+
+31
+00:02:56,320 --> 00:03:00,600
+So in the config property, this is just another javascript object,
+
+32
+00:03:00,640 --> 00:03:04,740
+there should be the element type property, an element config and value
+
+33
+00:03:04,930 --> 00:03:07,360
+and these are properties I want to pass on.
+
+34
+00:03:07,360 --> 00:03:16,390
+So in the end what I pass on here is form element, config and then there as I just said, the element type.
+
+35
+00:03:16,480 --> 00:03:25,340
+So just the name we have here, element type, we pass element config and value in the same way,
+
+36
+00:03:25,600 --> 00:03:28,540
+so here we passed the element type,
+
+37
+00:03:28,540 --> 00:03:35,080
+now the element config is passed as I just said in the same way with form element config, element
+
+38
+00:03:35,150 --> 00:03:41,030
+config and the value also is passed like this element,
+
+39
+00:03:41,290 --> 00:03:41,780
+excuse me,
+
+40
+00:03:41,790 --> 00:03:47,590
+form element, form element config element config.
+
+41
+00:03:48,070 --> 00:03:50,670
+Let's get rid of that dummy and put elements here at the top
+
+42
+00:03:50,740 --> 00:03:54,380
+and with that we should dynamically create our input elements.
+
+43
+00:03:54,400 --> 00:04:02,580
+Now as always, I forgot my key and right now we're not having an onChange handler,
+
+44
+00:04:02,650 --> 00:04:08,100
+we also right now seem to have issues extracting our placeholder,
+
+45
+00:04:08,110 --> 00:04:10,180
+it's an object and not a string
+
+46
+00:04:10,180 --> 00:04:12,070
+so these are things we have to take care about.
+
+47
+00:04:12,100 --> 00:04:14,630
+Let's start with the key, for the key,
+
+48
+00:04:14,650 --> 00:04:21,970
+I'll simply take form element id property we add in our loop here, have a typo here,
+
+49
+00:04:22,110 --> 00:04:27,030
+now regarding the missing onChange handler for which I also got an error, we'll take care about this in
+
+50
+00:04:27,030 --> 00:04:27,990
+a second.
+
+51
+00:04:28,320 --> 00:04:34,430
+Let's have a look at why we have issues outputting our placeholder though,
+
+52
+00:04:34,830 --> 00:04:38,250
+I've found the error, I'm passing the wrong value, it's not the placeholder,
+
+53
+00:04:38,250 --> 00:04:42,840
+the value is wrong. Here of course, this should be config value not element config.
+
+54
+00:04:43,050 --> 00:04:46,070
+Now if that we're outputting the placeholder,
+
+55
+00:04:46,120 --> 00:04:48,090
+this all is working.
+
+56
+00:04:48,090 --> 00:04:54,000
+Now of course, we also have to make sure if we can react to changes and that we also have a way of handling
+
+57
+00:04:54,030 --> 00:05:01,680
+our dropdown down because right now, this is created incorrectly because of course here we have our switch
+
+58
+00:05:01,680 --> 00:05:07,780
+statement and the input component, we handle inputs and text areas but we also try to create a select element,
+
+59
+00:05:07,800 --> 00:05:12,640
+we do this here in our set up for delivery method, should be select with options.
+
+60
+00:05:12,750 --> 00:05:17,760
+So let's add or let's adjust our input component to also be able to create that before we then have a
+
+61
+00:05:17,760 --> 00:05:20,360
+look at how we can actually get the data
+
+62
+00:05:20,400 --> 00:05:21,360
+the user enters.
+

@@ -1,0 +1,68 @@
+1
+00:00:02,170 --> 00:00:09,700
+Bienvenido a este mdulo. En este mdulo, echar un vistazo a nextjs
+
+2
+00:00:09,700 --> 00:00:16,450
+y le dar una breve introduccin. NextJs es una biblioteca que se est formando en reaccionar y usted todava estar
+
+3
+00:00:16,450 --> 00:00:16,810
+escribiendo una
+
+4
+00:00:16,810 --> 00:00:20,250
+aplicacin de reaccin con l, no es un marco de biblioteca adicional o sintaxis.
+
+5
+00:00:20,470 --> 00:00:20,920
+NextJS
+
+6
+00:00:20,980 --> 00:00:27,100
+en su lugar impone una estructura de carpeta especfica que tiene que usar y le ofrece algunas cosas como
+
+7
+00:00:27,100 --> 00:00:32,380
+la representacin del lado del servidor de la caja. Como usa esa estructura de carpetas, puede administrar muchas
+
+8
+00:00:32,380 --> 00:00:37,560
+cosas para que no tenga que configurarlas manualmente y, por lo tanto, puede hacer que la creacin de
+
+9
+00:00:37,560 --> 00:00:45,580
+reacciones sea ms conveniente, especialmente la parte de representacin del lado del servidor. La representacin del lado del servidor es una parte muy interesante de
+
+10
+00:00:45,580 --> 00:00:51,700
+reaccionar lo que puede que no necesites pero que puede ser til si tienes una aplicacin que es altamente
+
+11
+00:00:51,700 --> 00:00:55,410
+dependiente de ser encontrada en los motores de bsqueda, por ejemplo.
+
+12
+00:00:55,420 --> 00:00:56,510
+Entonces eso es nextjs
+
+13
+00:00:56,530 --> 00:00:57,490
+en pocas palabras.
+
+14
+00:00:57,490 --> 00:01:00,830
+Ahora vemoslo paso a paso en este mdulo y, por
+
+15
+00:01:00,830 --> 00:01:06,860
+supuesto, tenga en cuenta que es solo un mdulo introductorio que no cubrir todas las caractersticas de nextjs
+
+16
+00:01:06,970 --> 00:01:09,060
+aqu, sino los conceptos centrales importantes.
+
+17
+00:01:09,080 --> 00:01:10,430
+As que vamos a sumergirnos en eso.
+

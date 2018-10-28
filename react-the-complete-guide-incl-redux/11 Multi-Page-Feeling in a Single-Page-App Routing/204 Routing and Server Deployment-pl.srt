@@ -1,0 +1,220 @@
+1
+00:00:02,400 --> 00:00:07,430
+Jestemy prawie na kocu tego moduu routingu, wiele treci zostao tutaj omwionych.
+
+2
+00:00:07,620 --> 00:00:14,190
+Teraz jest jedna wana rzecz, ktr musisz wiedzie o routingu podczas korzystania z routera reagowania, jeli
+
+3
+00:00:14,190 --> 00:00:19,650
+chodzi o wdraanie aplikacji na prawdziwym serwerze, poniewa nie zauwaysz jej tutaj na
+
+4
+00:00:19,650 --> 00:00:22,460
+serwerze programowania, poniewa jest ju poprawnie skonfigurowana.
+
+5
+00:00:22,500 --> 00:00:27,280
+Musisz pamita, e sposb obsugi zgosze rzeczywicie dziaa w sieci.
+
+6
+00:00:27,510 --> 00:00:33,810
+Mamy uytkownika, ktry wysya zapytanie do serwera i mamy nasz aplikacj reagowania, ktra jest nastpnie
+
+7
+00:00:33,810 --> 00:00:36,030
+adowana do indeksu. strona html.
+
+8
+00:00:36,060 --> 00:00:43,890
+Chodzi o to, zanim zaadujemy indeks. strona html serwer musi dowiedzie si, ktr stron uytkownik faktycznie
+
+9
+00:00:43,890 --> 00:00:44,900
+chcia odwiedzi.
+
+10
+00:00:45,090 --> 00:00:48,670
+Oczywicie tak jest, poniewa serwer zawsze najpierw
+
+11
+00:00:48,720 --> 00:00:51,390
+obsuguje dania, tak dziaa internet.
+
+12
+00:00:51,390 --> 00:00:55,830
+Problem polega na tym, e to aplikacja reagujca, ktra zna trasy.
+
+13
+00:00:55,920 --> 00:01:04,050
+Wic jeli odwiedzamy / publikujemy, nie ma trasy / postw na naszym serwerze, ktra jest zdefiniowana
+
+14
+00:01:04,050 --> 00:01:11,640
+w kodzie javascript, ktry jest adowany do indeksu. strona html, ktrej nigdy nie dostalimy, poniewa otrzymalimy bd
+
+15
+00:01:11,640 --> 00:01:15,610
+404 na serwerze, poniewa prbowalimy odwiedzi tras nieznan serwerowi.
+
+16
+00:01:15,810 --> 00:01:20,820
+Oczywicie nie jest to to, co widzielicie podczas programowania, poniewa jak ju powiedziaem, serwer
+
+17
+00:01:20,820 --> 00:01:22,800
+programistyczny jest ju poprawnie skonfigurowany.
+
+18
+00:01:22,920 --> 00:01:30,720
+Musimy skonfigurowa serwer w taki sposb, aby zawsze przekazywa dania, niezalenie od tego, czy je rozumie, czy te nie,
+
+19
+00:01:30,720 --> 00:01:31,670
+a wic
+
+20
+00:01:31,710 --> 00:01:40,500
+rwnie 404 dania bdw do klienta, tak aby zawsze zwraca indeks. strona html, rwnie dla nieznanych da,
+
+21
+00:01:40,500 --> 00:01:48,750
+poniewa pozwala to wtedy na przejcie i przeanalizowanie dania na podstawie
+
+22
+00:01:48,750 --> 00:01:50,360
+znanych tras.
+
+23
+00:01:50,610 --> 00:01:53,050
+Dlatego zawsze powinnimy adowa indeks. html i jeli
+
+24
+00:01:53,360 --> 00:01:55,910
+to jest proba, ktrej nie
+
+25
+00:01:55,950 --> 00:02:01,280
+znamy, dobrze nauczye si obsugiwa bdy 404 przy pomocy routera reagujcego.
+
+26
+00:02:01,320 --> 00:02:08,090
+Teraz, jak ju powiedziaem, serwer deweloperski, ktrego tutaj uywalimy, jest skonfigurowany tak, aby zawsze adowa indeks. plik html.
+
+27
+00:02:08,080 --> 00:02:09,150
+&nbsp;
+
+28
+00:02:09,270 --> 00:02:14,330
+Jest to rwnie co, co trzeba bdzie zrobi rwnie podczas hostowania aplikacji na wasnym serwerze,
+
+29
+00:02:14,550 --> 00:02:16,710
+zawsze zwracajc indeks. html
+
+30
+00:02:16,920 --> 00:02:21,940
+nawet, a zwaszcza w 404 przypadkach bdw.
+
+31
+00:02:22,060 --> 00:02:27,120
+Jest jeszcze jedna rzecz, o ktrej musisz pamita podczas hostowania aplikacji na serwerze,
+
+32
+00:02:27,360 --> 00:02:30,970
+jeli hostujesz j na przykad. pl / so, jeli
+
+33
+00:02:30,990 --> 00:02:35,910
+to strona, z ktrej ldujemy na gwnej stronie twojej aplikacji,
+
+34
+00:02:35,940 --> 00:02:42,240
+nie musisz niczego konfigurowa. Ale jeli podajesz swoj aplikacj od powiedzmy przykad. com / myapp, wic wszystko
+
+35
+00:02:42,240 --> 00:02:45,560
+poniej tego folderu powinno by twoj aplikacj reagowania,
+
+36
+00:02:45,870 --> 00:02:48,050
+musisz powiedzie, e reagujesz na
+
+37
+00:02:48,100 --> 00:02:50,150
+to, router reaguje precyzyjnie.
+
+38
+00:02:50,340 --> 00:02:57,780
+Musisz ustawi ciek podstawow dla routera reagowania i chc szybko pokaza, jak to zrobi. W aplikacji, w miejscu, w
+
+39
+00:02:57,780 --> 00:02:58,750
+ktrym
+
+40
+00:02:58,830 --> 00:03:01,210
+korzystasz z przegldarki,
+
+41
+00:03:01,260 --> 00:03:07,560
+tak w naszym przypadku w aplikacji. Plik js tutaj router przegldarki, mona rwnie skonfigurowa, i naprawd
+
+42
+00:03:07,560 --> 00:03:08,660
+trzeba to zrobi.
+
+43
+00:03:08,820 --> 00:03:14,520
+Ale istnieje podstawowa nazwa, ktr moesz ustawi i domylnie ustawi na slash.
+
+44
+00:03:14,760 --> 00:03:17,310
+Jest to wic ustawienie domylne, ktrego nie trzeba ustawia.
+
+45
+00:03:17,520 --> 00:03:26,460
+Jeli udostpniasz swoj aplikacj w mojej aplikacji, powiniene ustawi to na / myapp, a nastpnie wszystkie twoje dania s
+
+46
+00:03:26,460 --> 00:03:31,940
+kierowane przeciwko mojemu / mojej aplikacji, a nastpnie linkowi, ktry wskazae.
+
+47
+00:03:32,010 --> 00:03:36,200
+W przeciwnym razie, jeli masz taki link, jak
+
+48
+00:03:36,240 --> 00:03:44,640
+tutaj, jeli po klikniciu strony nastpi zmiana strony, przejdziemy do / postw i zawsze doda to
+
+49
+00:03:44,700 --> 00:03:47,180
+do twojej domeny gwnej.
+
+50
+00:03:47,190 --> 00:03:54,750
+Teraz, jeli twoja aplikacja reagowania jest obsugiwana z / myapp, dziaa ona poprawnie i dodaje
+
+51
+00:03:54,750 --> 00:03:57,110
+j na kocu twojej domeny
+
+52
+00:03:57,240 --> 00:04:04,860
+/ myapp. Jeli jest ustawiona nazwa bazowa. Jeli wic udostpniasz aplikacj z podkatalogu podrzdnego, upewnij si, e ustawie wersj podstawow.
+
+53
+00:04:04,950 --> 00:04:11,790
+Tak wic usun element bazowy, a ja go zduplikuj i skomentuj, aby zostawi go tutaj w celach informacyjnych i usun
+
+54
+00:04:11,790 --> 00:04:13,000
+w przegldarce, z
+
+55
+00:04:13,020 --> 00:04:16,490
+ktrej aktualnie korzystamy, ale to jest co, co musisz wiedzie.
+

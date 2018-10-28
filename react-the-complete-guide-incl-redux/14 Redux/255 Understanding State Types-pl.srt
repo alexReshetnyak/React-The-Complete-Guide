@@ -1,0 +1,236 @@
+1
+00:00:02,200 --> 00:00:09,460
+Zanim skoczymy ten modu i zajmiemy si bardziej zaawansowanymi koncepcjami reduxu, np. Uruchomimy kod
+
+2
+00:00:09,460 --> 00:00:12,140
+asynchroniczny, ktrego jeszcze nie omwilimy.
+
+3
+00:00:12,280 --> 00:00:16,070
+Pozwlcie, e przedstawi wam rne rodzaje pastw, odpowied na pytanie.
+
+4
+00:00:16,180 --> 00:00:20,050
+Jeli kade pastwo bdzie obsugiwane przez Rydex.
+
+5
+00:00:20,110 --> 00:00:27,760
+Poniewa w aplikacji demonstracyjnej w tym module wyeliminowalimy to wezwanie do stanu w komponencie
+
+6
+00:00:27,760 --> 00:00:30,810
+i wyeliminowalimy stan skadnika lokalnego.
+
+7
+00:00:30,970 --> 00:00:37,140
+Stan, ktrego uywalimy do tej pory we wszystkich aplikacjach i projektach, ktre stworzylimy w dyskursie.
+
+8
+00:00:37,270 --> 00:00:44,830
+Zamiast tego uylimy stanu odczytu X i wywoania akcji oraz powizania magazynu, aby uy tego stanu.
+
+9
+00:00:44,890 --> 00:00:47,290
+Zawsze jest to podejcie, ktre powiniene przestrzega.
+
+10
+00:00:47,290 --> 00:00:50,370
+Czy zawsze musisz korzysta z odczytu na pocztek.
+
+11
+00:00:50,650 --> 00:00:55,810
+C, pytanie, czy uywasz redux, czy nie, zaley od wielkoci twojej aplikacji i
+
+12
+00:00:55,810 --> 00:00:56,910
+zoonoci twojego stanu.
+
+13
+00:00:56,950 --> 00:01:03,760
+Masz prost, niewielk konfiguracj aplikacji, ktra moe zaj ci wicej czasu ni korzyci, jakie moesz
+
+14
+00:01:03,760 --> 00:01:12,090
+uzyska z tego, e warto dla jakiej przyzwoitej redniej wielkoci lub duej aplikacji uywajcej redox i zarzdzania pastwem,
+
+15
+00:01:12,100 --> 00:01:13,960
+jest prawdopodobnie dobry pomys.
+
+16
+00:01:14,200 --> 00:01:19,440
+Ale wci musimy zapyta, ktry stan powinien by uyty dla Rydex.
+
+17
+00:01:19,480 --> 00:01:23,500
+Poniewa nie powiniene zarzdza caym stanem w nim.
+
+18
+00:01:23,920 --> 00:01:28,990
+Rzumy okiem na rne typy stanw niektre przykady i czy powiniene uywa redux dla
+
+19
+00:01:28,990 --> 00:01:30,120
+nich, czy nie.
+
+20
+00:01:30,370 --> 00:01:37,470
+Rozwamy lokalny stan interfejsu uytkownika, taki jak pokazanie lub ukrycie ta otwierajcego modal.
+
+21
+00:01:37,510 --> 00:01:45,210
+Wszystkie te rzeczy, ktre oczywicie zmieniaj si w stan, aby zaktualizowa twoj aplikacj do ponownego uycia i musiay
+
+22
+00:01:45,210 --> 00:01:49,490
+pokaza co, co zostanie uyte, jeli uyjesz redox do zaduenia.
+
+23
+00:01:49,610 --> 00:01:58,500
+Czsto zdarza si, e nie uywasz redux, z ktrego najczciej korzystasz w swoich komponentach.
+
+24
+00:01:58,510 --> 00:02:01,090
+Mwic to, moesz uy redux do tego.
+
+25
+00:02:01,120 --> 00:02:09,040
+Moesz mie modaln waciwo show w swoim stanie globalnym wywoaj akcj, aby ustawi j na True i wywoaj akcj,
+
+26
+00:02:09,040 --> 00:02:10,970
+aby ustawi j na False.
+
+27
+00:02:11,050 --> 00:02:19,360
+Nastpnie podcz swj komponent i wysuchaj tej waciwoci, ktr warunkowo wyrenderujesz form, ale
+
+28
+00:02:19,360 --> 00:02:21,570
+moe to by przesada.
+
+29
+00:02:21,630 --> 00:02:26,970
+Czsto nie moesz sobie z tym poradzi w ramach swoich komponentw, tak jak robilimy to wczeniej.
+
+30
+00:02:27,980 --> 00:02:32,650
+I liczba wanych typw stanw jest stanem trwaym.
+
+31
+00:02:32,730 --> 00:02:39,100
+Oznacza to, e zazwyczaj przechowujesz dane w bazach witryn, takich jak uytkownicy Twojej aplikacji.
+
+32
+00:02:39,120 --> 00:02:44,210
+Wszystkie posty bloku wszystkie Berger zamawia takie rzeczy.
+
+33
+00:02:44,250 --> 00:02:50,310
+Teraz zazwyczaj czytasz X, ale oczywicie nie dla wszystkich danych, ktre masz w swojej bazie
+
+34
+00:02:50,310 --> 00:02:55,800
+danych serwisowych, poniewa redux oczywicie suy tylko do zarzdzania stanem w twojej aplikacji.
+
+35
+00:02:55,800 --> 00:03:03,630
+Tak dugo, jak aplikacja jest aktywna i zawsze pamitaj o tym, kiedy uytkownik odwiey stron,
+
+36
+00:03:03,630 --> 00:03:05,030
+twj stan zniknie.
+
+37
+00:03:05,100 --> 00:03:08,070
+Wic przeczytaj X nie zastpuje bazy danych.
+
+38
+00:03:08,100 --> 00:03:14,910
+Zamiast tego przechowujesz takie dane na serwerze, ale odpowiednie plasterki s zarzdzane przez Rydex.
+
+39
+00:03:14,970 --> 00:03:21,390
+W zwizku z tym wpis, w ktrym aktualnie wywietlasz uytkownikw, ktrych obecnie potrzebujesz do wywietlenia uytkownika plakatu, moe
+
+40
+00:03:21,390 --> 00:03:22,360
+teraz by edytowany.
+
+41
+00:03:22,500 --> 00:03:27,290
+Te rzeczy s adowane i przechowywane w redoksie, dziki czemu masz je na poziomie drogi, dziki czemu mona
+
+42
+00:03:27,300 --> 00:03:28,500
+renderowa je na ekranie.
+
+43
+00:03:28,680 --> 00:03:32,360
+Ale to moe nie zawiera wszystkich danych, ktre masz w bazie danych.
+
+44
+00:03:33,530 --> 00:03:41,280
+Nastpnie mamy typowy stan klienta, na przykad uwierzytelniony przez uytkownika lub filtry ustawione przez uytkownika.
+
+45
+00:03:41,330 --> 00:03:47,050
+Jeli masz list rozwijan, moesz filtrowa swoje posty, ktre nie s danymi zapisanymi w bazie danych.
+
+46
+00:03:47,120 --> 00:03:53,420
+Moesz zapisa, jeli uytkownik jest offene, poniewa jeli wprowadzi zy dziennik do informacji, nie
+
+47
+00:03:53,420 --> 00:03:56,110
+trzeba go niepotrzebnie przechowywa na serwerze.
+
+48
+00:03:56,120 --> 00:04:01,430
+Rwnie filtr ustawiony przez uytkownika moe nie przechowywa danych na serwerze, poniewa przechowywanie go w bazie
+
+49
+00:04:01,430 --> 00:04:03,120
+danych nie jest tak wane.
+
+50
+00:04:03,170 --> 00:04:09,170
+Zdecydowanie musisz zna ustawienia filtru na kliencie i kod javascript w aplikacji re-act,
+
+51
+00:04:09,170 --> 00:04:13,700
+chocia jest to stan, w ktrym zdecydowanie korzystasz z relaksacji.
+
+52
+00:04:13,760 --> 00:04:21,080
+Udao ci si to poprzez redux, poniewa moe to wpyn na wiele komponentw lub obszarw twojej aplikacji.
+
+53
+00:04:21,290 --> 00:04:26,870
+Na przykad, jeli uytkownik jest obraony, moe to by wane dla wielu skadnikw
+
+54
+00:04:27,230 --> 00:04:33,640
+w aplikacji, a ich X naprawd wieci, poniewa centralne miejsce przechowywania oferuje wtedy ogromn przewag.
+
+55
+00:04:33,650 --> 00:04:37,500
+S to dwa rne typy stanw i sposb ich obsugi.
+
+56
+00:04:37,820 --> 00:04:43,820
+Teraz zobaczymy przykady tego wszystkiego w kolejnych moduach, gdy dodamy rwnie redux do
+
+57
+00:04:43,820 --> 00:04:44,960
+naszego projektu kursu.
+
+58
+00:04:44,960 --> 00:04:46,520
+Jednak zanim to zrobimy.
+
+59
+00:04:46,700 --> 00:04:48,380
+Czas si zrelaksowa.
+

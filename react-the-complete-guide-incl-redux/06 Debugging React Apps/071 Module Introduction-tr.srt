@@ -1,0 +1,44 @@
+1
+00:00:02,430 --> 00:00:10,650
+Sylem modlne ho geldiniz, tepki vermeyi ok ey rendik ve tekrar uygulama uygulamamzda da
+
+2
+00:00:10,740 --> 00:00:12,790
+baz hatalar grdk.
+
+3
+00:00:12,880 --> 00:00:21,900
+imdi bir programcnn ne kadar iyi olursa olsun hatalarnza hi hata, mesaj veya ou zaman
+
+4
+00:00:21,900 --> 00:00:22,680
+vurmayacaksnz.
+
+5
+00:00:22,680 --> 00:00:25,390
+Bu mantksal hatadan daha ktyd.
+
+6
+00:00:25,470 --> 00:00:32,460
+imdi bu el kitabnda tekrar eyleme uygulamanzn nasl hata ayklayabileceini gstereceim ve yeniden eyleme
+
+7
+00:00:32,520 --> 00:00:35,340
+geme hata iletilerini nasl okuyup anlayacaksnz.
+
+8
+00:00:35,400 --> 00:00:41,940
+ve faydal olduundan ve daha sonra hatasz olan yeniden-eyleme uygulamas nasl oluturabileceinizden.
+
+9
+00:00:41,940 --> 00:00:44,270
+Birou aslnda olduka iyi
+
+10
+00:00:44,700 --> 00:00:50,940
+Buna dalalm ve hatalar anlamak ve ilemek iin kullanmnza sunduunuz
+
+11
+00:00:50,940 --> 00:00:52,660
+eitli teknikleri renelim.
+

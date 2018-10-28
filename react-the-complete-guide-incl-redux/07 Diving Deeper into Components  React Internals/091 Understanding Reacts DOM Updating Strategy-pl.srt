@@ -1,0 +1,216 @@
+1
+00:00:02,190 --> 00:00:06,240
+W jaki sposb reaguje aktualizacja prawdziwej dom,
+
+2
+00:00:06,240 --> 00:00:13,950
+dom i przegldarki mam na myli? Wywoywana metoda renderowania nie oddaje jej rwnie do prawdziwego domu,
+
+3
+00:00:14,040 --> 00:00:15,740
+ktrego nazwa moe by mylca.
+
+4
+00:00:15,750 --> 00:00:23,070
+Nie oznacza to, e renderuje go do domingu, render jest raczej sugesti tego, jak powinien wyglda
+
+5
+00:00:23,070 --> 00:00:31,170
+html, ale renderowanie moe by bardzo dobrze wywoane i prowadzi do tego samego wyniku, ktry ju jest
+
+6
+00:00:31,770 --> 00:00:38,770
+wywietlany, a to jest czci powd, dla ktrego uywamy shouldComponentUpdate, aby zapobiec niepotrzebnym wywoaniom renderowania.
+
+7
+00:00:39,120 --> 00:00:46,440
+Ale nawet jeli nie zapiemy niepotrzebnego wezwania do renderowania, by moe rekwizyt zmieni si, a mimo to
+
+8
+00:00:46,440 --> 00:00:49,370
+z jakiegokolwiek powodu wykonamy ten sam wynik.
+
+9
+00:00:49,650 --> 00:00:57,600
+Nawet wtedy nie oznacza to, e od razu uderza w prawdziw dom i zaczyna j renderowa, zamiast
+
+10
+00:00:57,600 --> 00:01:00,490
+tego przede wszystkim robi co innego.
+
+11
+00:01:00,660 --> 00:01:03,460
+Porwnuje wirtualne domysy, ma star wirtualn
+
+12
+00:01:03,750 --> 00:01:11,930
+dom i ponownie renderowan lub przysz wirtualn domen. React przyjmuje to podejcie wirtualne dom, poniewa
+
+13
+00:01:11,970 --> 00:01:14,920
+jest szybszy ni prawdziwy dom.
+
+14
+00:01:14,940 --> 00:01:20,250
+Teraz wirtualna dom po prostu jest reprezentacj dominu w
+
+15
+00:01:20,280 --> 00:01:29,580
+javascript, moesz oczywicie reprezentowa wszystkie html, a wic elementy dom i obiekty w czystym javascript, wic bez
+
+16
+00:01:29,580 --> 00:01:31,810
+renderowania czegokolwiek do przegldarki.
+
+17
+00:01:32,040 --> 00:01:37,620
+I tak wanie si dzieje i zasadniczo reaguje na dwie kopie domeny,
+
+18
+00:01:37,650 --> 00:01:43,860
+ma star wirtualn domen, a nastpnie ponownie renderowan, ponownie renderowan, ktra jest tworzona
+
+19
+00:01:43,860 --> 00:01:45,710
+po wywoaniu metody renderowania.
+
+20
+00:01:45,720 --> 00:01:50,760
+Teraz, jak wspomniaem, chocia ponowne renderowanie lub wywoywanie renderowania nie powoduje natychmiastowej aktualizacji prawdziwego
+
+21
+00:01:50,940 --> 00:01:52,910
+domu, zamiast tego reaguje na porwnanie.
+
+22
+00:01:53,130 --> 00:01:58,650
+Porwnuje star wirtualn domow z now i sprawdza, czy s jakie rnice.
+
+23
+00:01:59,010 --> 00:02:06,300
+Jeli potrafi wykry rnice, dociera do prawdziwego domu i aktualizuje go, a nawet wtedy, to
+
+24
+00:02:06,300 --> 00:02:09,090
+nie renderuje realnej domeny w caoci.
+
+25
+00:02:09,090 --> 00:02:13,510
+Zmienia go tylko w miejscach, w ktrych wykryto rnice, na
+
+26
+00:02:13,560 --> 00:02:19,890
+przykad jeli tekst przycisku zosta zmieniony, zaktualizowa tylko ten tekst i nie zosta ponownie
+
+27
+00:02:20,020 --> 00:02:26,960
+renderowany, a cay przycisk pozostawi cay dom. Jeli nie stwierdzono adnych rnic, to nie dotyczy rzeczywistego domingu,
+
+28
+00:02:26,970 --> 00:02:28,210
+renderowania wykonano, porwnanie
+
+29
+00:02:28,260 --> 00:02:34,020
+zostao wykonane i dlatego funkcja ComponentUpdate moe mie sens, aby temu zapobiec, jeli nie jest potrzebna,
+
+30
+00:02:34,020 --> 00:02:34,740
+poniewa to
+
+31
+00:02:34,760 --> 00:02:39,990
+ju oczywicie kosztuje pewne zasoby, ale mimo to prawdziwy dom nigdy nie jest dotykany,
+
+32
+00:02:39,990 --> 00:02:41,250
+moesz na nim polega.
+
+33
+00:02:41,350 --> 00:02:45,110
+Prawdziwy dom zostanie dotknity tylko wtedy, gdy istniej rzeczywiste rnice
+
+34
+00:02:45,270 --> 00:02:51,400
+i to oczywicie jest wane, poniewa jak wiesz, dostp do domeny jest naprawd powolny, to jest
+
+35
+00:02:51,420 --> 00:02:58,650
+co, co chcesz zrobi tak mao, jak to tylko moliwe, a wic reagowa ma ten pomys wirtualnych domsw,
+
+36
+00:02:58,650 --> 00:03:04,860
+porwnuje wirtualne pliki i upewnia si, e prawdziwy dom jest tylko dotykany w razie potrzeby.
+
+37
+00:03:04,860 --> 00:03:10,350
+Oto, co dzieje si za kulisami i to te moemy zobaczy w naszej aplikacji. Z powrotem w tej aplikacji
+
+38
+00:03:10,350 --> 00:03:11,840
+mamy oczywicie wszystkie
+
+39
+00:03:11,850 --> 00:03:17,880
+nasze kontrole na miejscu, gdzie powinnimy si zaopatrzy w Component, ale nadal
+
+40
+00:03:18,450 --> 00:03:25,680
+moemy zobaczy, e jeli sprawdzimy cokolwiek tutaj i kliknem, przeczam osoby, wyranie dodano te
+
+41
+00:03:25,690 --> 00:03:27,020
+elementy div, zobaczyem,
+
+42
+00:03:27,090 --> 00:03:28,980
+e migaj, ale jeli
+
+43
+00:03:28,980 --> 00:03:37,060
+uwanie obserwujesz przycisk i kokpit div, jeli klikn tutaj, to nigdy nie miga, poniewa nie jest
+
+44
+00:03:37,060 --> 00:03:38,650
+ponownie renderowane, o
+
+45
+00:03:38,800 --> 00:03:40,050
+to mi chodzio.
+
+46
+00:03:40,060 --> 00:03:46,840
+Tak naprawd to si jeszcze nie zmienia, ale stylizacja zmienia si, ale cz powyej tego przycisku, jak ten
+
+47
+00:03:46,850 --> 00:03:52,060
+akapit, widzisz, jak zmienia si klasa przycisku, ale akapit i znacznik h1 po prawej,
+
+48
+00:03:52,060 --> 00:03:55,050
+nigdy nie bysny, poniewa nigdy si nie zmieniy.
+
+49
+00:03:55,120 --> 00:03:59,080
+Wic nie s ponownie renderowani, nie s dotknici przez reakcj w ogle.
+
+50
+00:03:59,080 --> 00:04:00,380
+To wanie mam
+
+51
+00:04:00,640 --> 00:04:07,510
+na myli, metoda renderowania dla kokpitu zostaa wykonana, w przeciwnym razie klasa przyciskw nie byaby aktualizowana.
+
+52
+00:04:07,510 --> 00:04:13,720
+Ale to wszystko nie powtrzyo, zrobio to w przyszej wirtualnej domenie, ale nie zrobio
+
+53
+00:04:13,720 --> 00:04:21,840
+tego w rzeczywistym domenie, poniewa reagowao w porwnaniu do przyszej wirtualnej dom do starej i tylko dotkno prawdziwego
+
+54
+00:04:21,840 --> 00:04:25,170
+domu w miejsca, w ktrych znaleziono rnice.
+

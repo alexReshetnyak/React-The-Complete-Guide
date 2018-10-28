@@ -1,0 +1,504 @@
+1
+00:00:02,230 --> 00:00:08,000
+So now that we covered a lot and we have our build control set up and can build a burger, let's create that
+
+2
+00:00:08,020 --> 00:00:16,030
+modal which allows us to display an order summary. This modal should be shown once we click checkout
+
+3
+00:00:16,030 --> 00:00:20,330
+button which we also have to add below our build controls.
+
+4
+00:00:20,620 --> 00:00:27,540
+So these are the things I want to do next, add this checkout button to the build controls and add this modal
+
+5
+00:00:27,580 --> 00:00:34,750
+which should basically wrap itself around some kind of order summary which probably should also go into
+
+6
+00:00:34,750 --> 00:00:36,560
+its own component.
+
+7
+00:00:36,580 --> 00:00:40,150
+Let's build this step by step and let's start with that
+
+8
+00:00:40,150 --> 00:00:42,310
+checkout button. For that,
+
+9
+00:00:42,310 --> 00:00:47,560
+let's go to the build controls because I want to add the checkout button at the bottom of these controls
+
+10
+00:00:47,740 --> 00:00:54,160
+and there we can now simply add this, well this button in the end which should show this modal in the
+
+11
+00:00:54,160 --> 00:00:54,770
+end.
+
+12
+00:00:55,070 --> 00:01:02,140
+So what I'll add here is a normal button, normal html button element or jsx as it always is here
+
+13
+00:01:02,160 --> 00:01:06,870
+but you know what I mean with html and this button should say order now.
+
+14
+00:01:06,880 --> 00:01:12,320
+Now I'm going to put this caption in all caps but that of course is optional,
+
+15
+00:01:12,370 --> 00:01:18,970
+you can style this button and the text on the button in whichever way you want.
+
+16
+00:01:19,000 --> 00:01:20,110
+Now the button,
+
+17
+00:01:20,110 --> 00:01:24,180
+speaking of styling should of course also receive some styles.
+
+18
+00:01:24,430 --> 00:01:29,030
+So let's open build controls and attach to this file,
+
+19
+00:01:29,050 --> 00:01:32,550
+you will find the css code for this button.
+
+20
+00:01:33,680 --> 00:01:37,720
+Here I simply added the order button css class,
+
+21
+00:01:37,880 --> 00:01:45,710
+then I added the hover and active styles. The disabled style which we want to use when we can't order the
+
+22
+00:01:45,710 --> 00:01:53,660
+burger because we haven't added any ingredients and a little animation here which will simply animate the button
+
+23
+00:01:53,660 --> 00:01:58,280
+once it does become active. Now with that added to the css file
+
+24
+00:01:58,280 --> 00:02:02,740
+make sure to save the updated buildControls css file
+
+25
+00:02:02,900 --> 00:02:09,340
+and now we can add our class name to that button and there, it is the css class name
+
+26
+00:02:09,350 --> 00:02:12,010
+I just added in the css file
+
+27
+00:02:12,380 --> 00:02:18,210
+order button and simply check the file to confirm this OrderButton,
+
+28
+00:02:18,230 --> 00:02:20,400
+this css class.
+
+29
+00:02:20,720 --> 00:02:25,200
+So this is the button style, now to disable this button,
+
+30
+00:02:25,220 --> 00:02:32,270
+we need to check whether all ingredients have an amount of 0 or if at least one of the ingredients
+
+31
+00:02:32,330 --> 00:02:38,450
+is at 1 which would make this button activated because then, we could of course click it.
+
+32
+00:02:38,480 --> 00:02:46,310
+So this logic to check whether this button should be active so whether we can purchase the burger or not
+
+33
+00:02:46,640 --> 00:02:52,460
+of course should managed in the burger builder container because that is where we have the state, that
+
+34
+00:02:52,460 --> 00:02:57,820
+is where we know how much of each ingredient we want to add to this burger.
+
+35
+00:02:57,920 --> 00:03:02,800
+What we need to know here is the total amount of all ingredients
+
+36
+00:03:02,840 --> 00:03:09,110
+so basically a sum of all the ingredients and I will simply add a new property where I will say
+
+37
+00:03:09,680 --> 00:03:13,440
+purchasable and I will set this to false initially.
+
+38
+00:03:13,480 --> 00:03:16,740
+Now purchasable should simply become true
+
+39
+00:03:16,770 --> 00:03:25,640
+once we can buy this purchasable, once we can buy this burger so once at least one ingredient is one or
+
+40
+00:03:25,640 --> 00:03:26,490
+more.
+
+41
+00:03:26,660 --> 00:03:34,550
+Now I will add a new method to the burger builder updatePurchaseState,
+
+42
+00:03:34,550 --> 00:03:39,050
+any name you like does it here and I want to call this method
+
+43
+00:03:39,050 --> 00:03:46,720
+at the end of addIngredient and removeIngredientHandler to then simply check whether we need to
+
+44
+00:03:46,730 --> 00:03:51,980
+or whether we should turn purchasable to true or to false.
+
+45
+00:03:52,130 --> 00:04:00,020
+Therefore here, I want to check the ingredients I have in my state. So I will create a new object here
+
+46
+00:04:00,110 --> 00:04:02,740
+to create a copy of this.state.
+
+47
+00:04:02,750 --> 00:04:04,260
+ingredients.
+
+48
+00:04:04,310 --> 00:04:09,770
+Now I need to sum up all the values here,
+
+49
+00:04:09,770 --> 00:04:15,800
+now that is super easy to do in the end, what I need to do is I need to turn this object here into an
+
+50
+00:04:15,860 --> 00:04:20,420
+array again, into an array of these values here.
+
+51
+00:04:20,420 --> 00:04:31,490
+Now for that, what I can do is I can create some constant where I take my javascript object object and
+
+52
+00:04:31,490 --> 00:04:36,950
+there I use keys again and pass my ingredients to it
+
+53
+00:04:37,070 --> 00:04:42,390
+and this will again create an array of string entries,
+
+54
+00:04:42,600 --> 00:04:46,140
+salad, bacon, cheese and so on.
+
+55
+00:04:46,160 --> 00:04:54,170
+Now I said that I need these values here though so the amounts of the ingredients, not the names.
+
+56
+00:04:54,500 --> 00:04:57,800
+Well we can simply map this array into the array
+
+57
+00:04:57,800 --> 00:05:04,610
+we need, so I'll do this in a new line to make it easier to read. The map method of course still receives the key
+
+58
+00:05:04,910 --> 00:05:07,810
+and then this is used in or
+
+59
+00:05:08,000 --> 00:05:13,460
+the function we passed to the map method receives the key here should say and then we can use this to return
+
+60
+00:05:13,850 --> 00:05:21,390
+new value and replace the old value which was the property name, salad and so on with that new value.
+
+61
+00:05:21,740 --> 00:05:30,610
+And here I simply wanted to return ingredients and there the value for a given key
+
+62
+00:05:30,720 --> 00:05:37,500
+and this will be the amount because with ingredients and this notation, I'm accessing a certain property
+
+63
+00:05:37,500 --> 00:05:42,230
+in the ingredients object, igKey is salad, bacon and so on
+
+64
+00:05:42,330 --> 00:05:47,870
+so I'm basically getting these values, the numbers and that is what I return for each key.
+
+65
+00:05:47,910 --> 00:05:50,990
+So now I have an array of values,
+
+66
+00:05:51,000 --> 00:05:55,250
+now all I need to do is call reduce to again reduce this array
+
+67
+00:05:55,300 --> 00:06:00,210
+but this time not to flatten the array but to turn it into a single number,
+
+68
+00:06:00,240 --> 00:06:06,990
+the sum of all ingredients. For that, we'll have a starting number of 0 and then we have a function which
+
+69
+00:06:06,990 --> 00:06:11,730
+is executed on each element in this mapped array. In this function,
+
+70
+00:06:11,730 --> 00:06:19,770
+I get new sum and the individual element and keep in mind, sum simply is the constantly updated
+
+71
+00:06:19,800 --> 00:06:24,870
+current sum up until the current iteration where this function is executed
+
+72
+00:06:24,960 --> 00:06:31,620
+and once this function was executed on all array elements, sum is the final result. And here I'll simply
+
+73
+00:06:31,620 --> 00:06:37,960
+return the current sum plus the element and keep in mind element is a number because it is the value
+
+74
+00:06:38,040 --> 00:06:39,380
+we accessed here.
+
+75
+00:06:39,660 --> 00:06:47,280
+With that, I get a sum constant which is zero if we have no ingredients added or any other number representing
+
+76
+00:06:47,370 --> 00:06:49,090
+the total amount of ingredients,
+
+77
+00:06:49,740 --> 00:06:54,320
+and with that I can simply call set state and set
+
+78
+00:06:54,350 --> 00:06:56,810
+purchasable too
+
+79
+00:06:57,080 --> 00:07:00,650
+and now it depends on whoever has sum is greater than zero or not,
+
+80
+00:07:00,650 --> 00:07:04,130
+so we'll set it to sum greater 0. This is either
+
+81
+00:07:04,130 --> 00:07:05,680
+true or false
+
+82
+00:07:05,840 --> 00:07:09,950
+and it is true if we have at least one ingredient, then purchasable is true
+
+83
+00:07:10,040 --> 00:07:12,710
+and that is exactly the behavior I want.
+
+84
+00:07:12,710 --> 00:07:18,940
+So now with that, we got purchasable and we can now pass this down to build controls
+
+85
+00:07:19,070 --> 00:07:25,820
+so let's add a new property, let's also name the property purchasable maybe and let's bind the property
+
+86
+00:07:25,820 --> 00:07:27,140
+to this state,
+
+87
+00:07:27,140 --> 00:07:28,430
+purchasable.
+
+88
+00:07:28,700 --> 00:07:34,490
+And with that, we passed the information about whether we can check this burger out and pay for it or
+
+89
+00:07:34,490 --> 00:07:35,020
+not.
+
+90
+00:07:35,150 --> 00:07:41,720
+down to the build controls where I can now take this information to disable this button or well, enable
+
+91
+00:07:41,720 --> 00:07:42,530
+it.
+
+92
+00:07:42,560 --> 00:07:49,490
+So let me split this over mutiple lines and bind disabled of this html button element,
+
+93
+00:07:49,490 --> 00:07:52,770
+again it is jsx but it will render a button in the end.
+
+94
+00:07:53,060 --> 00:07:56,260
+Let's bind these two props and there it was
+
+95
+00:07:56,270 --> 00:07:58,860
+purchasable what we just set up.
+
+96
+00:07:59,090 --> 00:08:04,760
+Now if we save this and we go back to a running application, we have this order now button down there,
+
+97
+00:08:05,270 --> 00:08:14,570
+though it is enabled here and it shouldn't be, so purchasable somehow isn't passed on correctly.
+
+98
+00:08:14,570 --> 00:08:17,370
+Let me quickly have a look at what's wrong,
+
+99
+00:08:17,400 --> 00:08:25,140
+I identified the problem, purchasable of course is true if the button, if the burger is purchasable, disable
+
+100
+00:08:25,230 --> 00:08:28,250
+should be set to true though if it's not purchasable.
+
+101
+00:08:28,350 --> 00:08:30,480
+So we simply have to invert this here,
+
+102
+00:08:30,690 --> 00:08:35,820
+so add exclamation mark in front of props.purchasable and now the button should be disabled.
+
+103
+00:08:35,820 --> 00:08:41,220
+It of course never becomes active though because we never call the nice little helper method
+
+104
+00:08:41,220 --> 00:08:44,760
+we created, this update purchase state method,
+
+105
+00:08:44,880 --> 00:08:48,790
+we never call it. We should call it after running
+
+106
+00:08:48,810 --> 00:08:55,890
+addIngredientHandler or removeIngredientHandler, so there I'll then also execute this update purchase
+
+107
+00:08:55,890 --> 00:09:02,650
+state, the same on the end of the removeIngredientHandler. And with that added,
+
+108
+00:09:02,730 --> 00:09:05,180
+if we now save this, we should see that the button is
+
+109
+00:09:05,190 --> 00:09:10,860
+disabled but as soon as I add one ingredient, it stays disabled,
+
+110
+00:09:10,980 --> 00:09:13,710
+only once I add a second one, it becomes active.
+
+111
+00:09:13,710 --> 00:09:16,330
+Now why is that? Do you spot the error?
+
+112
+00:09:16,650 --> 00:09:25,290
+It has something to do with the update purchase state method, the problem is that the ingredients which
+
+113
+00:09:25,300 --> 00:09:35,670
+I'm analyzing is of course my old state here. Now due to the way set state works, when we execute update
+
+114
+00:09:35,670 --> 00:09:43,710
+purchase state, we might not get the updated ingredients and therefore, once we copy the ingredients
+
+115
+00:09:43,710 --> 00:09:47,940
+and analyze them, we might simply get an outdated version.
+
+116
+00:09:48,040 --> 00:09:55,560
+Now we can of course simply fix this by passing the updated ingredients we have in add and remove ingredient
+
+117
+00:09:55,560 --> 00:09:56,810
+handler anyways
+
+118
+00:09:57,030 --> 00:10:03,580
+to the update purchase state method and expect to get ingredients there,
+
+119
+00:10:03,600 --> 00:10:11,650
+so ingredients. And now we can simply use these ingredients inside this method instead of the copy from
+
+120
+00:10:11,650 --> 00:10:12,980
+the state.
+
+121
+00:10:13,000 --> 00:10:20,650
+Now if we save this right on the first item we add, it becomes active and we have to remove all ingredients
+
+122
+00:10:20,650 --> 00:10:22,400
+to disable the button again
+
+123
+00:10:22,480 --> 00:10:25,080
+and there you also see this nice animation.
+
+124
+00:10:25,270 --> 00:10:27,440
+So we get the button, this is step number one,
+
+125
+00:10:27,460 --> 00:10:34,670
+now in the next step, I want to also add a modal to display the order summary and not just show the button.
+
+126
+00:10:34,840 --> 00:10:37,400
+So let's move on that in the next lecture.
+

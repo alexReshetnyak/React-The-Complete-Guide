@@ -1,0 +1,152 @@
+1
+00:00:02,150 --> 00:00:07,190
+Agora na ltima palestra, ns movemos o componente de transio dentro do modal e ento estamos
+
+2
+00:00:07,190 --> 00:00:09,050
+usando essencialmente a mesma lgica, agora
+
+3
+00:00:09,200 --> 00:00:12,990
+ainda h uma coisa que voc deve ter notado, ns ajustamos o
+
+4
+00:00:13,280 --> 00:00:20,690
+temporizador para 300 milissegundos, mas a animao que tocamos, ns configuramos em modal. css realmente leva
+
+5
+00:00:20,780 --> 00:00:23,230
+400 milissegundos.
+
+6
+00:00:23,330 --> 00:00:24,970
+Agora que isso no 
+
+7
+00:00:25,010 --> 00:00:28,030
+um problema, ele simplesmente no reproduzir toda a animao
+
+8
+00:00:28,100 --> 00:00:31,420
+que  a coisa que, naturalmente, pode ser um problema novamente.
+
+9
+00:00:31,610 --> 00:00:38,390
+O tempo limite definido no componente de transio determina por quanto tempo o estado de entrada
+
+10
+00:00:38,390 --> 00:00:42,440
+e sada para o qual estamos verificando ser mantido,
+
+11
+00:00:42,430 --> 00:00:51,920
+por quanto tempo esse  basicamente o estado que ele usa. Se voc definir um tempo de espera muito menor do que a
+
+12
+00:00:51,920 --> 00:00:52,700
+animao que
+
+13
+00:00:52,880 --> 00:00:58,540
+est reproduzindo, simplesmente encerre a animao preventivamente porque voc mudou de estado muito cedo,
+
+14
+00:00:58,580 --> 00:00:59,110
+voc trocou.
+
+15
+00:00:59,120 --> 00:01:04,400
+para sair, o que significa que o elemento foi removido e, claro, pode no ser o
+
+16
+00:01:04,400 --> 00:01:05,840
+comportamento que voc est procurando.
+
+17
+00:01:05,870 --> 00:01:11,140
+Ainda no  necessariamente um problema se voc configur-lo assim.
+
+18
+00:01:11,150 --> 00:01:18,140
+No entanto, uma coisa que voc pode querer ter em mente ou
+
+19
+00:01:18,270 --> 00:01:27,050
+configurar em alguns casos  o tempo limite. O tempo limite agora  apenas o nosso valor em milissegundos
+
+20
+00:01:27,470 --> 00:01:34,960
+definido como um nmero, e se voc quiser tempos diferentes para entrar e sair, voc pode configurar isso, ento deixe-me
+
+21
+00:01:34,970 --> 00:01:38,610
+definir isso definindo uma nova constante e eu fao
+
+22
+00:01:38,630 --> 00:01:44,210
+isso fora de o componente porque isso no vai mudar para constante no relacionada com
+
+23
+00:01:44,210 --> 00:01:46,110
+a renderizao do componente aqui.
+
+24
+00:01:46,580 --> 00:01:53,930
+Essa constante nomear animationTiming e isso ser um objeto javascript e, nesse objeto javascript, voc poder definir
+
+25
+00:01:54,200 --> 00:02:02,500
+uma chave de insero e dar a ela uma durao de, digamos, 400 milissegundos e uma chave de sada de
+
+26
+00:02:02,900 --> 00:02:08,880
+1 segundo, 400 milissegundos e uma segundo, para que possamos realmente ver a diferena.
+
+27
+00:02:08,890 --> 00:02:12,590
+Ento, entrar e sair, isso  importante, estes so
+
+28
+00:02:12,610 --> 00:02:19,510
+os dois tipos que voc pode definir e como voc pode adivinhar, digite simplesmente define a durao
+
+29
+00:02:19,500 --> 00:02:26,080
+que usaremos para adicionar esse elemento, exit define a durao que ele usar para remov-lo .
+
+30
+00:02:26,080 --> 00:02:34,300
+Ento, agora, se passarmos animaoTiming aqui, esse objeto que acabamos de definir para timeout, ele usar esses
+
+31
+00:02:34,420 --> 00:02:38,210
+valores para os dois tipos diferentes de transio.
+
+32
+00:02:38,660 --> 00:02:45,530
+Com isso vamos ajustar a animao em nosso arquivo css e digamos que close modal tambm deve
+
+33
+00:02:45,690 --> 00:02:48,040
+demorar um segundo. Se agora salvarmos
+
+34
+00:02:48,320 --> 00:02:54,950
+isso e voltarmos e clicarmos em modal aberto, a animao  a mesma de antes, mas se eu
+
+35
+00:02:55,040 --> 00:02:58,890
+ignorar isso,  muito mais lento que um segundo e l
+
+36
+00:02:58,950 --> 00:03:01,950
+voc pode ver as diferentes duraes sendo usadas.
+
+37
+00:03:01,970 --> 00:03:04,580
+Ento, isso  algo para se ter em
+
+38
+00:03:04,700 --> 00:03:12,170
+mente sobre o tempo, ele pode sair de uma animao muito cedo e voc tambm pode definir horrios diferentes para entrar e sair.
+

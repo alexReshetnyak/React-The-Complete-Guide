@@ -1,0 +1,288 @@
+1
+00:00:02,150 --> 00:00:07,760
+Quindi abbiamo lavorato un sacco di saghe ma presumo che sia ancora un po
+
+2
+00:00:07,850 --> 00:00:09,850
+'confuso, presto diventer pi chiaro.
+
+3
+00:00:09,860 --> 00:00:13,020
+Andiamo all'autore. js file nella cartella
+
+4
+00:00:13,100 --> 00:00:16,840
+azioni, l abbiamo il nostro creatore di azioni di logout
+
+5
+00:00:17,030 --> 00:00:20,080
+e qui, voglio fare un cambiamento molto importante.
+
+6
+00:00:20,210 --> 00:00:25,810
+Prender tutto il codice di archiviazione locale e ho intenzione di commentarlo qui,
+
+7
+00:00:25,940 --> 00:00:28,010
+invece qui, voglio solo inviare
+
+8
+00:00:28,020 --> 00:00:30,530
+un'azione, voglio creare un'azione, nient'altro.
+
+9
+00:00:30,530 --> 00:00:35,990
+Non voglio pi avere effetti collaterali li dentro perch voglio gestirli con la saga di
+
+10
+00:00:36,010 --> 00:00:36,760
+Redux ora.
+
+11
+00:00:37,190 --> 00:00:45,270
+Quindi quello che far  che invier qualcosa qui e creer un nuovo tipo di azione per questo,
+
+12
+00:00:45,290 --> 00:00:54,290
+quindi oltre all'autentout logout, esporter una nuova costante nella cartella dei tipi di azione che chiamer AUTH_INITIATE_LOGOUT perch  una
+
+13
+00:00:54,740 --> 00:00:59,220
+specie di passo prima che ci disconnettiamo davvero, c' un
+
+14
+00:01:00,100 --> 00:01:01,390
+errore di battitura.
+
+15
+00:01:01,730 --> 00:01:08,070
+Questo ricever sempre lo stesso identificatore di una stringa come abbiamo
+
+16
+00:01:08,320 --> 00:01:17,080
+chiamato la costante e ora torner all'autore. js file di azioni e qui, invier i tipi
+
+17
+00:01:17,080 --> 00:01:20,020
+di azione AUTH_INITIATE_LOGOUT e non il
+
+18
+00:01:20,080 --> 00:01:27,290
+logout di autenticazione pi, quindi ogni volta che invio il logout, ora avvier semplicemente il logout.
+
+19
+00:01:27,640 --> 00:01:35,530
+Ora l'obiettivo  quello di ascoltare questo creatore di azioni appena creato ed eseguire il nostro generatore di logout saga
+
+20
+00:01:35,560 --> 00:01:43,900
+ogni volta che rileviamo questa chiamata di disconnessione di avvio. Per questo, creer un nuovo file nella cartella sagas, lo
+
+21
+00:01:44,100 --> 00:01:45,640
+chiamer indice. js, puoi anche nominare
+
+22
+00:01:45,670 --> 00:01:50,640
+root, saga o qualsiasi altra cosa tu voglia. Nell'indice js, importer semplicemente
+
+23
+00:01:50,720 --> 00:01:59,520
+qualcosa dal file saga auth e quella cosa ovviamente  l'unica saga che ho ottenuto finora, la
+
+24
+00:01:59,520 --> 00:02:01,910
+saga di logout, ma
+
+25
+00:02:02,010 --> 00:02:07,270
+anch'io importer qualcosa da questo pacchetto di saga di redux.
+
+26
+00:02:07,270 --> 00:02:15,820
+Quindi dalla saga di redux, importer takeEvery, questa  un'altra funzione utile che
+
+27
+00:02:15,960 --> 00:02:25,320
+possiamo usare e prendereEvery ci permetter di ascoltare determinate azioni e fare qualcosa quando
+
+28
+00:02:25,320 --> 00:02:27,350
+si verificano, ora
+
+29
+00:02:27,570 --> 00:02:29,470
+come lo usiamo?
+
+30
+00:02:29,550 --> 00:02:36,450
+Per prima cosa creiamo un altro generatore, quindi una funzione con questa
+
+31
+00:02:36,450 --> 00:02:37,420
+stella dopo
+
+32
+00:02:37,480 --> 00:02:46,130
+la parola chiave function e la chiamer watchAuth. Ora qui dentro ceder qualcosa come dobbiamo fare nei
+
+33
+00:02:46,120 --> 00:02:53,610
+generatori, in pratica dire eseguirlo e aspettare che finisca e poi prendereEvery, la funzione che importa
+
+34
+00:02:53,630 --> 00:02:55,010
+e prendereEvery, passer
+
+35
+00:02:55,210 --> 00:03:03,410
+ora l'azione che voglio ascoltare, quindi importer anche questo, importer tutto come tipo di azione e ora andiamo
+
+36
+00:03:03,430 --> 00:03:09,820
+nella cartella azioni nel file dei tipi di azione e qui ascolter ogni azione
+
+37
+00:03:10,030 --> 00:03:12,510
+di tipo avvia il logout.
+
+38
+00:03:13,060 --> 00:03:20,130
+Ora takeEvery prende un secondo argomento, questo secondo argomento  il generatore, la saga che vogliamo
+
+39
+00:03:20,140 --> 00:03:21,490
+eseguire quando questa
+
+40
+00:03:21,490 --> 00:03:26,200
+azione si verifica e quella sarebbe la saga di logout.
+
+41
+00:03:26,200 --> 00:03:32,500
+Ora non eseguire la funzione, quindi non usare le parentesi qui, basta passarci un riferimento.
+
+42
+00:03:32,650 --> 00:03:38,910
+Ci che questo far sar che ogni volta che eseguiremo questo generatore, in pratica istituiremo un
+
+43
+00:03:38,920 --> 00:03:45,610
+ascoltatore, in questo caso autorizzeremo il logout e quindi eseguiremo la saga di logout ogni volta che appare.
+
+44
+00:03:46,060 --> 00:03:52,300
+Quindi ora possiamo andare all'indice. js file qui e non vogliamo pi eseguire la saga
+
+45
+00:03:52,750 --> 00:03:56,630
+di logout all'inizio ma eseguiamo invece il generatore in cui configuriamo questo watcher.
+
+46
+00:03:56,890 --> 00:04:04,250
+Quindi nell'indice. js, non importer pi la saga di logout da sagas
+
+47
+00:04:04,270 --> 00:04:08,430
+auth, invece da sagas / index che posso omettere a causa
+
+48
+00:04:08,470 --> 00:04:15,400
+del nostro set qui, voglio importare la nostra funzione watchAuth appena creata e quindi, naturalmente, dovr aggiungere esportazione
+
+49
+00:04:15,410 --> 00:04:16,780
+parola chiave ad esso.
+
+50
+00:04:16,780 --> 00:04:24,250
+Ora con questo, posso importare watchAuth e voglio eseguire watchAuth, impostando l'osservatore proprio
+
+51
+00:04:24,250 --> 00:04:26,570
+all'inizio della nostra applicazione.
+
+52
+00:04:26,590 --> 00:04:29,630
+Ora torniamo alla nostra applicazione e vediamo
+
+53
+00:04:29,630 --> 00:04:38,800
+se funziona ora, se lo ricarico, sembra tutto come prima, vediamo comunque un cambiamento importante, viene avviato l'avvio dell'autenticazione di logout
+
+54
+00:04:38,800 --> 00:04:40,450
+e questo ha senso
+
+55
+00:04:40,450 --> 00:04:46,900
+perch stiamo ora inviando questo in il nostro creatore di azioni di logout che chiamiamo
+
+56
+00:04:46,900 --> 00:04:47,920
+ancora nel
+
+57
+00:04:47,950 --> 00:04:50,210
+nostro tentativo di firmarti in codice.
+
+58
+00:04:50,530 --> 00:04:54,340
+Quindi ora stiamo gi utilizzando il nuovo creatore di azioni e
+
+59
+00:04:54,670 --> 00:05:02,800
+poich vediamo anche che il logout di autenticazione  stato inviato da allora in poi, vediamo che la nostra saga sta funzionando perch
+
+60
+00:05:02,800 --> 00:05:10,390
+non lo inviamo pi da nessuna parte nel nostro creatore di azioni auth, questo tipo di azione il logout non viene
+
+61
+00:05:10,480 --> 00:05:14,610
+pi utilizzato qui,  invece il processo di avvio automatico, quindi la
+
+62
+00:05:14,880 --> 00:05:17,000
+nostra saga sta gi funzionando.
+
+63
+00:05:17,050 --> 00:05:20,260
+Ora confermiamo ci accedendo davvero qui e poi premendo
+
+64
+00:05:23,130 --> 00:05:25,130
+il pulsante di disconnessione e abbiamo
+
+65
+00:05:25,350 --> 00:05:29,530
+fatto il logout e ora controlliamo la scheda dell'applicazione per vedere se
+
+66
+00:05:32,300 --> 00:05:36,570
+nella memoria locale abbiamo ancora un token e non lo facciamo, 
+
+67
+00:05:36,650 --> 00:05:37,470
+vuoto.
+
+68
+00:05:37,580 --> 00:05:39,060
+Quindi in effetti l'abbiamo
+
+69
+00:05:39,110 --> 00:05:41,270
+cancellato, abbiamo chiamato remove item, quindi
+
+70
+00:05:41,330 --> 00:05:44,360
+la saga di Redux ha funzionato qui.
+
+71
+00:05:44,380 --> 00:05:52,730
+Ora approfondiamoci per renderlo pi chiaro e per sostituire tutti i nostri effetti collaterali nei creatori di azioni
+
+72
+00:05:52,970 --> 00:05:55,480
+con i generatori di saga.
+

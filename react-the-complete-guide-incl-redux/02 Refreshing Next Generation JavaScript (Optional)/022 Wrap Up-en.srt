@@ -1,0 +1,56 @@
+1
+00:00:01,980 --> 00:00:07,780
+With that I want to conclude this module. We've learned a lot about next generation javascript and some
+
+2
+00:00:07,780 --> 00:00:09,580
+important javascript concepts.
+
+3
+00:00:09,580 --> 00:00:15,430
+In general you will meet a lot of the things you'll learn about in this module throughout the course.
+
+4
+00:00:15,460 --> 00:00:16,790
+Don't be confused by it.
+
+5
+00:00:16,840 --> 00:00:18,330
+It's still javascript.
+
+6
+00:00:18,490 --> 00:00:21,070
+Just using some more modern features.
+
+7
+00:00:21,070 --> 00:00:23,740
+That's just how we write React apps.
+
+8
+00:00:23,890 --> 00:00:26,760
+The next module will now start with React.
+
+9
+00:00:26,770 --> 00:00:32,300
+Now I will show you how to quickly create a project set up where we can use all these features while
+
+10
+00:00:32,340 --> 00:00:36,360
+still shipping code that works in older browsers too.
+
+11
+00:00:36,440 --> 00:00:38,200
+With that you're well prepared.
+
+12
+00:00:38,200 --> 00:00:43,660
+Always feel free to go back to this module and have a look at a given feature if you forgot how it
+
+13
+00:00:43,660 --> 00:00:47,640
+worked and you meet it in the course and want to refresh your knowledge.
+
+14
+00:00:47,710 --> 00:00:50,080
+And with that let's dive into React.
+

@@ -1,0 +1,136 @@
+1
+00:00:02,280 --> 00:00:06,200
+Entonces, qu pasos debemos seguir cuando implementamos una aplicacin de reaccin?
+
+2
+00:00:06,480 --> 00:00:11,410
+En primer lugar, debemos verificar y posiblemente ajustar la ruta base, esto solo es
+
+3
+00:00:11,430 --> 00:00:16,890
+importante cuando usamos el enrutador de reaccin y all, al ajustar la aplicacin en el enrutador
+
+4
+00:00:16,890 --> 00:00:24,840
+del navegador, puede establecer la propiedad de su nombre de base. Esto siempre es necesario cuando su aplicacin se sirve desde algo ms que
+
+5
+00:00:24,840 --> 00:00:25,140
+la
+
+6
+00:00:25,150 --> 00:00:32,040
+ruta raz, el dominio de la ruta. Si est publicando su aplicacin por ejemplo. com / my-app, entonces deber configurar
+
+7
+00:00:32,160 --> 00:00:36,920
+el nombre de base para mi aplicacin para que el enrutador funcione correctamente.
+
+8
+00:00:37,020 --> 00:00:38,910
+Esa es la primera cosa
+
+9
+00:00:38,910 --> 00:00:44,850
+importante, la segunda cosa importante es que tenemos que construir un proyecto optimizado, esto se hace
+
+10
+00:00:44,850 --> 00:00:47,060
+con un comando conveniente en nuestra
+
+11
+00:00:47,160 --> 00:00:54,630
+aplicacin, construir ejecutar npm en crear proyectos de aplicaciones de reaccin. Eso construir automticamente el proyecto y optimizar todos nuestros paquetes
+
+12
+00:00:54,690 --> 00:00:58,920
+de JavaScript para tener una base de cdigo muy pequea que
+
+13
+00:00:58,920 --> 00:01:04,680
+luego realmente cargaremos en un servidor, porque obviamente desea enviar el menor cdigo posible, ya
+
+14
+00:01:04,830 --> 00:01:07,800
+que eso ser lo ms rpido posible.
+
+15
+00:01:07,830 --> 00:01:16,650
+Ahora, otra cosa importante a tener en cuenta es que su servidor siempre debe servir al ndice. Tambin se necesita un archivo html y
+
+16
+00:01:16,650 --> 00:01:23,910
+especialmente en 404 casos, debido a la forma en que funciona Internet.
+
+17
+00:01:23,940 --> 00:01:32,350
+Si su usuario visita my-app. com / users, entonces el servidor es el primero en recibir esa ruta
+
+18
+00:01:32,460 --> 00:01:38,550
+y es probable que el servidor no conozca la ruta / users porque la defini en su aplicacin reaccionar.
+
+19
+00:01:39,090 --> 00:01:42,240
+Ahora, para que eso no arroje un error, su aplicacin de reaccin debe tener la
+
+20
+00:01:42,360 --> 00:01:48,140
+oportunidad de analizar la ruta y solo lo hace si devuelve el ndice. archivo html para esa
+
+21
+00:01:48,130 --> 00:01:51,520
+ruta desconocida, al final es
+
+22
+00:01:51,600 --> 00:01:54,360
+desconocido para el servidor.
+
+23
+00:01:54,360 --> 00:01:59,190
+As que siempre regrese el ndice. html en 404 casos; de
+
+24
+00:01:59,190 --> 00:02:05,160
+lo contrario, las aplicaciones de respuesta dependiente de enrutamiento no funcionarn.
+
+25
+00:02:05,160 --> 00:02:12,600
+Finalmente, cargue los artefactos de compilacin que obtiene del segundo paso, cree y optimice el proyecto en un servidor esttico,
+
+26
+00:02:12,600 --> 00:02:13,390
+no necesita
+
+27
+00:02:13,620 --> 00:02:17,980
+un servidor que ejecute PHP o Node ni nada de eso.
+
+28
+00:02:18,120 --> 00:02:24,570
+Al final, lo que implementar aqu es una aplicacin de una sola pgina que consiste en html y un poco
+
+29
+00:02:24,660 --> 00:02:26,440
+de css y una gran
+
+30
+00:02:26,490 --> 00:02:34,140
+cantidad de JavaScript, nada de eso necesita un lenguaje del lado del servidor, por lo que un servidor esttico como AWS S3, Github
+
+31
+00:02:34,230 --> 00:02:41,420
+pginas o Firebase o cualquier otro servidor lo har y solo cargue los artefactos de compilacin, no toda la carpeta del proyecto.
+
+32
+00:02:41,460 --> 00:02:47,200
+Los artefactos de construccin se almacenarn en una carpeta / build y te mostrar esto
+
+33
+00:02:47,610 --> 00:02:53,150
+en un segundo y eso es todo. As de fcil es desplegar su aplicacin de reaccin.
+
+34
+00:02:53,400 --> 00:02:56,040
+Hagamos ahora esto juntos en la prxima conferencia.
+

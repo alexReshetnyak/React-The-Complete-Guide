@@ -1,0 +1,212 @@
+1
+00:00:02,180 --> 00:00:09,370
+Entonces, ahora necesitamos botones en el resumen de nuestro pedido. Entonces, tenemos la opcin de continuar o cancelar.
+
+2
+00:00:09,860 --> 00:00:18,680
+Entonces, para resumir, lo que har obviamente es presionar un botn aqu y otro.
+
+3
+00:00:18,730 --> 00:00:23,000
+Y en el primer botn, simplemente quiero decir cancelar.
+
+4
+00:00:23,050 --> 00:00:25,990
+De acuerdo, todo tiene maysculas por motivos de diseo.
+
+5
+00:00:26,020 --> 00:00:31,670
+Por supuesto, puede escribirnos de manera diferente y continuar aqu.
+
+6
+00:00:31,990 --> 00:00:38,920
+As que obtenemos el cancelador de eleccin bsicamente har lo mismo al hacer clic en el fondo as y continuar
+
+7
+00:00:38,920 --> 00:00:46,510
+por ahora tambin lo har o al menos no puede hacer mucho ms porque nos falta la lgica de Diablo donde lo
+
+8
+00:00:46,510 --> 00:00:48,700
+enviaramos a un servidor y as en.
+
+9
+00:00:48,790 --> 00:00:52,340
+Pero esto es algo que agregaremos a lo largo del curso.
+
+10
+00:00:52,340 --> 00:00:56,670
+Ahora bien, estos botones no se vern como quiero.
+
+11
+00:00:56,890 --> 00:00:59,690
+As que asegurmonos de darles un estilo.
+
+12
+00:01:00,070 --> 00:01:08,410
+Y en realidad podra reutilizar ciertos estilos de patrones desde la aplicacin que tiene una cancelacin y un botn
+
+13
+00:01:08,410 --> 00:01:10,360
+Continuar tiene mucho sentido.
+
+14
+00:01:10,570 --> 00:01:15,800
+Entonces quizs deberamos externalizar el bastn en su propio componente.
+
+15
+00:01:15,970 --> 00:01:21,340
+y una hembra, podramos ponerlo en su propio componente para que podamos utilizar un estilo predeterminado
+
+16
+00:01:21,640 --> 00:01:27,850
+en Rapide y no tener que almacenar ese botn en ningn componente donde lo usemos desde el principio.
+
+17
+00:01:27,850 --> 00:01:30,300
+Aunque ya hay un elemento de botn
+
+18
+00:01:30,790 --> 00:01:36,430
+Entonces, si estamos muertos ir a mi carpeta y agregar una subcarpeta de botones con el botn.
+
+19
+00:01:36,460 --> 00:01:38,720
+Archivo JS.
+
+20
+00:01:38,710 --> 00:01:43,750
+Ahora el cdigo de este componente de botn es muy simple, como puedes imaginar.
+
+21
+00:01:43,960 --> 00:01:53,050
+Es un componente funcional que recibi algunos accesorios en los que devuelvo algo de GSX sorprendentemente y s que
+
+22
+00:01:53,050 --> 00:01:57,230
+es muy sorprendente que necesitemos importar de nuevo aqu.
+
+23
+00:01:58,340 --> 00:02:07,790
+Ahora cualquiera para exportar el botn como predeterminado aqu, por supuesto, y con eso ahora quiero simplemente ajustar un
+
+24
+00:02:07,790 --> 00:02:13,340
+elemento de botn normal aqu, pero necesitar algunos accesorios para configurarlo.
+
+25
+00:02:13,340 --> 00:02:20,240
+Por supuesto, quiero sacar los hijos de Prop aqu para que pueda usar mi propio botn
+
+26
+00:02:20,360 --> 00:02:28,040
+como un botn normal y simplemente envolver el contenido que debera estar dentro con mi elemento de botn
+
+27
+00:02:28,640 --> 00:02:35,040
+personalizado y necesitar hacer clic en Lisner para ver dnde debo ejecutar prop's clicked por ejemplo.
+
+28
+00:02:35,630 --> 00:02:38,350
+Y, por supuesto, esto no es parte importante.
+
+29
+00:02:38,450 --> 00:02:42,490
+Necesito diferentes enlaces de estilo para diferentes tipos de botones.
+
+30
+00:02:42,590 --> 00:02:46,900
+Un botn de cancelar Continuar o algo as.
+
+31
+00:02:47,120 --> 00:02:55,700
+Eso es ante todo en el botn C S S para que podamos configurar algunos Starling y preguntar antes de encontrar
+
+32
+00:02:55,700 --> 00:03:03,690
+un archivo C S S adjunto a este video para que pueda comenzar con los estilos de botones rpidamente.
+
+33
+00:03:04,280 --> 00:03:05,570
+As que aqu estoy.
+
+34
+00:03:05,600 --> 00:03:11,750
+O que el contenido de su archivo adjunto y simplemente define un xito y un peligro, pero
+
+35
+00:03:11,750 --> 00:03:18,460
+instalar el botn de xito es esencialmente verde y el botn peligroso es de color rojo o rojo pardusco.
+
+36
+00:03:18,620 --> 00:03:23,630
+Ahora podemos usar eso con el nombre de clase en el botn.
+
+37
+00:03:23,630 --> 00:03:28,180
+Y, por supuesto, para eso tenemos que importar Klaas de los botones C-s.
+
+38
+00:03:28,180 --> 00:03:33,500
+En cuanto a lo que acabamos de poblar ahora en el nombre de la clase aqu.
+
+39
+00:03:33,560 --> 00:03:35,330
+Tenemos que pasar la cuerda al final.
+
+40
+00:03:35,330 --> 00:03:36,830
+Mantenlo en mente.
+
+41
+00:03:36,830 --> 00:03:45,890
+As que agrega una matriz porque siempre quiero asignar la clase de botn, pero luego condicionalmente la agregar a la
+
+42
+00:03:45,890 --> 00:03:48,830
+clase de xito o de peligro.
+
+43
+00:03:49,020 --> 00:03:57,620
+As que establecer el botn de clases como un elemento de esta matriz de clases que quiero agregar y luego clases.
+
+44
+00:03:57,750 --> 00:04:05,910
+Y ahora sacar dinmicamente un cierto tipo con el tipo de botn de props, por ejemplo, el tipo de botn es un accesorio que tengo
+
+45
+00:04:05,910 --> 00:04:12,600
+que configurar desde fuera y el tipo de botn tendr que ser el peligro de Ebuyer con una D mayscula
+
+46
+00:04:12,600 --> 00:04:14,920
+o un xito con una S. mayscula. Y, por supuesto, tambin puede usar un enfoque diferente para asignar a las clases.
+
+47
+00:04:15,180 --> 00:04:18,880
+Me gusta esta porque es muy flexible y fcil de
+
+48
+00:04:18,890 --> 00:04:25,310
+implementar, y tenga en cuenta que lo que pasamos a clase tiene que ser una cadena.
+
+49
+00:04:25,320 --> 00:04:27,190
+Ahora mismo es una serie de cadenas.
+
+50
+00:04:27,210 --> 00:04:29,520
+Cambiemos esto mostrando esto con un
+
+51
+00:04:29,700 --> 00:04:36,150
+espacio en blanco para tener una lista de clases que es una cadena al final.
+
+52
+00:04:36,150 --> 00:04:36,710
+Ahora tenemos nuestro propio componente de botn en el siguiente video. Quiero usar ese botn en nuestro resumen ordenado.
+
+53
+00:04:37,910 --> 00:04:44,340
+&nbsp;
+

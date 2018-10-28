@@ -1,0 +1,356 @@
+1
+00:00:02,200 --> 00:00:07,450
+Es hora de agregar algo de control para que el usuario pueda controlar realmente qu
+
+2
+00:00:07,480 --> 00:00:14,830
+ingredientes debe tener o no debera tener una hamburguesa y para eso tenemos que agregar los controles en negrita y agregaremos
+
+3
+00:00:14,830 --> 00:00:21,630
+este componente en la carpeta de la hamburguesa o agregaremos una nueva subcarpeta que todos nombrar controles de compilacin.
+
+4
+00:00:21,730 --> 00:00:26,930
+Y all agregar un archivo js de arranque controlado.
+
+5
+00:00:26,980 --> 00:00:35,830
+Ahora los controles de compilacin sern un componente funcional, por lo que ambos controles son una funcin que recibe
+
+6
+00:00:35,830 --> 00:00:40,020
+accesorios y que al final devolver algo de GSX.
+
+7
+00:00:40,030 --> 00:00:48,310
+Por lo tanto, por supuesto, tambin necesitamos importar Rea from Reaction y luego podemos exportar la funcin
+
+8
+00:00:48,340 --> 00:00:50,520
+de control preconfigurada como predeterminada.
+
+9
+00:00:50,530 --> 00:00:54,420
+Ahora cmo deberamos construir controles parecidos.
+
+10
+00:00:54,520 --> 00:00:56,500
+Ahora, por supuesto, el estudio siempre depende de usted.
+
+11
+00:00:56,500 --> 00:01:03,370
+Quiero tener un div que usar para darle un estilo a esta rea y all quiero tener mis
+
+12
+00:01:03,520 --> 00:01:04,970
+diversos controles de compilacin.
+
+13
+00:01:05,070 --> 00:01:08,530
+Ahora comencemos con el estilo de esa rea.
+
+14
+00:01:08,800 --> 00:01:17,790
+Para eso crear un nuevo archivo construido controlado C S y agregar un control de compilacin.
+
+15
+00:01:18,070 --> 00:01:18,600
+Disculpe.
+
+16
+00:01:18,610 --> 00:01:21,490
+Lo siguiente debera llamarse tambin ambos controles.
+
+17
+00:01:21,490 --> 00:01:27,790
+Al igual que J como el archivo es plural, as que en la C es asfalto, agregar controles incorporados.
+
+18
+00:01:27,790 --> 00:01:29,440
+C S S clase.
+
+19
+00:01:29,640 --> 00:01:35,200
+Y quiero dar mi control de construccin a un ancho del 100 por ciento y para el
+
+20
+00:01:35,200 --> 00:01:38,250
+color hacia atrs escog un bonito color marrn anaranjado.
+
+21
+00:01:38,260 --> 00:01:41,330
+C f 8 F a e.
+
+22
+00:01:41,620 --> 00:01:49,030
+Me gusta este color en la pantalla Shelby Flex Box para colocar todos estos controles de perno correctamente.
+
+23
+00:01:49,030 --> 00:01:54,290
+Establecer el flujo flexible en Cullinan para colocarlos uno debajo del otro, de modo que en una columna en lugar de
+
+24
+00:01:54,290 --> 00:01:55,110
+en una fila.
+
+25
+00:01:55,630 --> 00:02:05,920
+Quiero alinear todo el texto en el centro. Quiero darle a mi caja una pequea sombra de cuadro solo en la parte inferior, una
+
+26
+00:02:06,160 --> 00:02:11,010
+extensin de pxel y justis genial como un color de sombra.
+
+27
+00:02:11,220 --> 00:02:11,950
+Margen.
+
+28
+00:02:11,950 --> 00:02:19,860
+Automtico y agregue un relleno de, por ejemplo, 10 pxeles y 0 de izquierda a derecha.
+
+29
+00:02:19,870 --> 00:02:21,140
+Porque el texto debe estar centrado.
+
+30
+00:02:21,150 --> 00:02:24,770
+De todos modos ahora esta es mi rea de controles de barco.
+
+31
+00:02:24,910 --> 00:02:30,490
+Por supuesto, deberamos agregar algo de contenido al rea de controles de la pelota y all quiero tener un par
+
+32
+00:02:30,640 --> 00:02:31,870
+de controles de construccin.
+
+33
+00:02:31,870 --> 00:02:33,040
+Lo adivinaste.
+
+34
+00:02:33,040 --> 00:02:39,040
+Ahora, en mi opinin, tiene sentido externalizar estos controles de compilacin porque no es solo un botn.
+
+35
+00:02:39,100 --> 00:02:44,840
+Es una etiqueta y luego dos botones y bsicamente es un elemento reutilizable.
+
+36
+00:02:44,980 --> 00:02:49,440
+Entonces, portarlo en su propio componente tiene mucho sentido.
+
+37
+00:02:49,480 --> 00:02:57,130
+Por lo tanto, dentro de los controles incorporados, todos agregan la carpeta de control achaflanada y all la cada controlada del Jr
+
+38
+00:02:57,370 --> 00:03:03,360
+controlado y todo listo el control de compilacin realiza C-s de la siguiente manera para el diseo posterior.
+
+39
+00:03:03,580 --> 00:03:06,630
+Empecemos en la J como sigue.
+
+40
+00:03:06,750 --> 00:03:14,650
+que X importar reaccionar de reaccionar como siempre lo sabe y exportar ambos controles como el predeterminado.
+
+41
+00:03:14,740 --> 00:03:23,670
+El control de pernos de este componente tambin ser una funcin que recibir accesorios y devoluciones de J ya
+
+42
+00:03:23,680 --> 00:03:26,860
+Ahora tenemos que decidir cmo debera verse un control de perno.
+
+43
+00:03:26,870 --> 00:03:34,900
+Ahora usar un div como envoltorio o un estilo y luego mi control audaz debe tener un div que
+
+44
+00:03:34,960 --> 00:03:37,900
+contenga el texto para ese control audaz.
+
+45
+00:03:37,900 --> 00:03:41,270
+Bsicamente, el texto es el nombre del ingrediente que quiero agregar.
+
+46
+00:03:41,590 --> 00:03:45,000
+Entonces, quiero mostrar algo dinmicamente.
+
+47
+00:03:45,130 --> 00:03:49,990
+Voy a recibir un aviso para esto y quiero ponerle nombre.
+
+48
+00:03:50,020 --> 00:03:52,310
+Por supuesto, puede elegir el nombre que desee.
+
+49
+00:03:52,310 --> 00:03:56,860
+Podra nombrarlo etiqueta de ingredientes como sea que necesites a un lado.
+
+50
+00:03:56,860 --> 00:03:58,780
+Solo hay dos botones
+
+51
+00:03:58,870 --> 00:04:03,350
+El primer botn, por supuesto, elimina un ingrediente por ltimo.
+
+52
+00:04:03,610 --> 00:04:09,130
+Y luego lo duplicar para tener tambin un botn ms.
+
+53
+00:04:09,130 --> 00:04:13,940
+Ahora tengo dos botones que me permiten eliminar y agregar ingredientes.
+
+54
+00:04:13,960 --> 00:04:15,340
+Ahora necesitar algo.
+
+55
+00:04:15,330 --> 00:04:18,060
+Se le pide a C que tenga control incorporado para verse bien.
+
+56
+00:04:18,100 --> 00:04:21,930
+As que vayamos a D. DO. archivo de culo y all.
+
+57
+00:04:21,970 --> 00:04:25,130
+Agreguemos control incorporado.
+
+58
+00:04:25,150 --> 00:04:27,260
+Esta C es clase S
+
+59
+00:04:27,360 --> 00:04:35,360
+Quiero usar bloques flexibles para posicionar el div con el texto y se escribirn los botones de flujo flexible.
+
+60
+00:04:35,400 --> 00:04:36,660
+Entonces el predeterminado.
+
+61
+00:04:37,050 --> 00:04:44,370
+Quiero que los distribuyas con espacio entre ellos para que se mantengan a cierta distancia unos de otros y alinear
+
+62
+00:04:44,410 --> 00:04:52,050
+todo el contenido en el centro para la alineacin de palabras iguales y asignar un margen de cinco pxeles de arriba
+
+63
+00:04:52,130 --> 00:04:58,680
+a abajo para que haya algunos espacio entre los controles de pernos individuales, pero ninguno de cero de
+
+64
+00:04:58,750 --> 00:05:02,550
+izquierda a derecha ahora en el control de bola.
+
+65
+00:05:02,550 --> 00:05:07,850
+Tenemos un botn por supuesto y el bate debera estar en exhibicin.
+
+66
+00:05:08,310 --> 00:05:12,800
+Normalmente, la sobrescritura en lnea que se puede grabar es un botn de estilo de bloque.
+
+67
+00:05:14,120 --> 00:05:25,150
+O una vez que herede el fondo y establezca el relleno en 5 pxeles de margen a cero o 5 pxeles con 80 pxeles, debera
+
+68
+00:05:25,360 --> 00:05:26,390
+verse bien.
+
+69
+00:05:26,620 --> 00:05:36,970
+Y el borde ser un pxel slido y ese 6 8 7 3 1 8 1 7 disclpeme que tambin es un color marrn.
+
+70
+00:05:37,510 --> 00:05:40,050
+Kirsner debera ser un puntero.
+
+71
+00:05:40,330 --> 00:05:45,040
+Y quiero eliminar ese esquema que tiene de forma predeterminada.
+
+72
+00:05:45,040 --> 00:05:50,290
+Ahora hay muchos ms estilos que podemos agregar para darle estilo al botn y a todas las etiquetas.
+
+73
+00:05:50,290 --> 00:05:57,600
+Para acortar esto adjuntar un archivo con todos los stouts y simplemente puede agregarlos aqu debajo.
+
+74
+00:05:57,670 --> 00:06:01,630
+En realidad, el archivo adjunto contendr el lpiz para este archivo completo.
+
+75
+00:06:01,630 --> 00:06:05,160
+Entonces puedes simplemente reemplazar todo aqu con eso.
+
+76
+00:06:05,200 --> 00:06:09,570
+Estos son solo estilos para asegurarnos de que tenemos clases de estilo Q.
+
+77
+00:06:09,730 --> 00:06:14,820
+Menos y ms botones de forma diferente e incluso desactivar botones.
+
+78
+00:06:15,130 --> 00:06:21,680
+Con eso regresemos a nuestro javascript fall para reaccionar al cdigo para el que todos ustedes estn aqu, supongo.
+
+79
+00:06:21,690 --> 00:06:28,160
+As que ahora importemos este objeto de clase de nuestro s. do. s de la siguiente manera para que
+
+80
+00:06:28,160 --> 00:06:33,880
+podamos comenzar a utilizarlos como clases y vamos a adjuntar una clase a nuestro ao div de envoltura.
+
+81
+00:06:33,880 --> 00:06:37,640
+Esta ser la clase de control de compilacin.
+
+82
+00:06:37,750 --> 00:06:42,620
+Tambin necesito una clase para mi etiqueta Def aqu.
+
+83
+00:06:42,730 --> 00:06:51,220
+Usar la etiqueta de Klaas y luego esta es una de las clusulas de C que acaba de importar y todos
+
+84
+00:06:51,280 --> 00:06:53,800
+los botones recibirn nombres de clase.
+
+85
+00:06:53,800 --> 00:07:02,560
+El ltimo BOTTEN para pap Obtuve la ltima clase y el botn ms para este botn es posible que
+
+86
+00:07:02,560 --> 00:07:07,870
+no lo adivines, pero ah tengo ese o botn como este.
+
+87
+00:07:07,940 --> 00:07:16,510
+Ahora se disea un solo control de perno, el prximo paso que se har en la prxima conferencia es crear
+
+88
+00:07:16,510 --> 00:07:22,350
+ahora una matriz de dichos controles de compilacin en el componente de controles incorporados.
+
+89
+00:07:22,600 --> 00:07:25,090
+Hagamos eso juntos en la prxima conferencia.
+

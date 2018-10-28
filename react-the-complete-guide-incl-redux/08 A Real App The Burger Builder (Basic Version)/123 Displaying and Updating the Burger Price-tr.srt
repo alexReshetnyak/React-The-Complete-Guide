@@ -1,0 +1,124 @@
+1
+00:00:02,120 --> 00:00:07,250
+Son dersimizde, burgerdeki maddeleri kaldrabileceimizden ve burger fiyatn ne
+
+2
+00:00:07,250 --> 00:00:12,560
+zaman gncelleyeceimizi ve burgerin bir paras olarak grntleyebileceimizden emin olduk.
+
+3
+00:00:12,740 --> 00:00:18,800
+imdi Aslnda burger iin pek ok malzemeyim olsayd kaydrlabilir olurduk nk onu
+
+4
+00:00:18,800 --> 00:00:19,500
+yaplandrdk.
+
+5
+00:00:19,730 --> 00:00:25,370
+Diyelim ki fiyat muhtemelen inaat denetimlerinin zerinde gsterilmelidir.
+
+6
+00:00:25,370 --> 00:00:29,200
+Dolaysyla toplu kontroller burada kontrolleri ktlyor.
+
+7
+00:00:29,270 --> 00:00:37,930
+Burger fiyatn gstermek istiyorum ve burada u anki fiyat iki nokta stste diyebileceimiz bir paragraf kullanabilirsiniz.
+
+8
+00:00:38,180 --> 00:00:41,410
+Ve sonra fiyatn sandklarla geirilmesini bekliyorum.
+
+9
+00:00:41,510 --> 00:00:45,450
+Yani pervane fiyat byle.
+
+10
+00:00:45,560 --> 00:00:49,860
+imdi fiyat Bergere Boulder konteyneri iinde hesaplanr.
+
+11
+00:00:49,910 --> 00:00:57,500
+Burada toplam fiyat durumumuz var, bu fiyat kabark kontrol S10'a gemek iin S10'a tkladk, nk
+
+12
+00:00:57,500 --> 00:01:00,670
+bu sadece o mlkn kullanmn ekledi.
+
+13
+00:01:01,010 --> 00:01:02,920
+Bylece fiyat mlkn ekleyelim.
+
+14
+00:01:02,930 --> 00:01:09,690
+Oluturduum ad kontrol ediyor ve bu devlet toplam fiyatn geiyor.
+
+15
+00:01:09,890 --> 00:01:12,750
+Tm Follett'leri kaydettiinizden emin olun ve bir gz atalm.
+
+16
+00:01:13,010 --> 00:01:14,560
+Mevcut fiyat burada gryoruz.
+
+17
+00:01:14,720 --> 00:01:21,680
+Ve eer malzemeleri eklersem, fiyatn arttn grrsn, ancak javascript'te ondalk sayya geri
+
+18
+00:01:21,740 --> 00:01:27,280
+dnersek, bunu dzeltmeliyiz ve belki de hepsini de bastrmak istiyoruz.
+
+19
+00:01:27,590 --> 00:01:29,100
+yi vurguland.
+
+20
+00:01:29,420 --> 00:01:39,580
+Dolaysyla, kada sarl olann yapm denetimlerindeki yapabileceklerimiz gl etikettedir.
+
+21
+00:01:39,620 --> 00:01:42,560
+Bylece fiyat esasen yaz tipi arl ile.
+
+22
+00:01:42,560 --> 00:01:48,640
+Cesur ve bu fiyat burada sabitleyerek dzeltelim.
+
+23
+00:01:48,660 --> 00:01:52,810
+imdi bu fiyat bir numara olmal ama neyse ki yle.
+
+24
+00:01:52,820 --> 00:01:58,880
+imdi bunu dzeltip iki ondalk basamakta dzeltmek iin arayabiliriz.
+
+25
+00:01:58,930 --> 00:02:00,790
+unu kurtaralm.
+
+26
+00:02:01,060 --> 00:02:03,020
+Ve imdi drt gryoruz.
+
+27
+00:02:03,190 --> 00:02:09,910
+Ve eer size eklemeye balarsam fiyatn arttn grrm sanrm insanlar burada olduka lezzetli grnen olduka
+
+28
+00:02:09,910 --> 00:02:12,160
+uygun fiyatl bir burgere giderler.
+
+29
+00:02:12,160 --> 00:02:16,530
+Bylelikle burger kurucusu aslnda olduka iyi durumda.
+
+30
+00:02:16,600 --> 00:02:21,060
+Kontrol dmesi eksik, ancak saniyede ekleyeceim bir ey var.
+
+31
+00:02:21,310 --> 00:02:26,890
+Ve bundan sonra en stte bulunan tm gezinme hareketlerine dikkat etmeliyiz.
+

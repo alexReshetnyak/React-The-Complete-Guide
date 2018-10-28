@@ -1,0 +1,112 @@
+1
+00:00:02,200 --> 00:00:07,840
+Vamos dar uma olhada neste processo de renderizao e atualizao e onde colocar nossos componentes puros.
+
+2
+00:00:07,900 --> 00:00:10,180
+Considere este aplicativo de reao.
+
+3
+00:00:10,180 --> 00:00:16,060
+Temos um componente de aplicativo de rota e, ento, podemos ter uma loja e um componente de usurio e comprar
+
+4
+00:00:16,060 --> 00:00:18,070
+e usurios podem muito bem ser contineres.
+
+5
+00:00:18,070 --> 00:00:24,010
+Cada um deles gerenciando seu estado relevante desses componentes provavelmente tambm tem componentes filho.
+
+6
+00:00:24,700 --> 00:00:30,910
+Lista e carto para a loja e os usurios de um para livre no caso dos usurios.
+
+7
+00:00:30,950 --> 00:00:38,420
+Agora, a atualizao como voc vai aprender acontece de cima para baixo e somente quando o estado ou Propst mudam.
+
+8
+00:00:38,420 --> 00:00:44,840
+e o componente da loja mudarem de lista e o carto provavelmente receber novos adereos e tambm atualizar.
+
+9
+00:00:44,840 --> 00:00:46,370
+Ento, se o estado
+
+10
+00:00:46,370 --> 00:00:52,730
+E isso tambm nos d uma idia sobre o que pode ser um componente puro e onde simplesmente no
+
+11
+00:00:52,730 --> 00:00:53,660
+faz muito sentido.
+
+12
+00:00:54,200 --> 00:01:02,150
+Se tivermos listas e carrinho dependem de adereos distribudos pela loja, talvez seja til implementar a
+
+13
+00:01:02,150 --> 00:01:07,500
+atualizao do componente no caso da loja e parar de atualizar.
+
+14
+00:01:07,640 --> 00:01:13,790
+Se o estado no mudou realmente se pudermos ser chamados de dito estado, mas as propriedades no estado ainda so
+
+15
+00:01:13,790 --> 00:01:19,940
+iguais s de antes e depois a lista e o carto no sero alcanados de qualquer forma, ento no h necessidade.
+
+16
+00:01:19,940 --> 00:01:26,330
+nosso continer de loja e, obviamente, o mesmo seria verdade para usurios ou qualquer outra parte de sua aplicao.
+
+17
+00:01:26,330 --> 00:01:33,200
+E transformar uma lista e um carrinho em componentes puros porque temos um bom controle um nvel acima deles em
+
+18
+00:01:33,260 --> 00:01:40,940
+Ento, ter alguns contineres onde voc possui essas verificaes pode ter muito sentido e ainda assim voc pode encontrar casos em que
+
+19
+00:01:40,940 --> 00:01:46,940
+seus contineres no precisam desse cheque porque voc sabe que voc s chama o referido estado ou
+
+20
+00:01:47,150 --> 00:01:53,660
+voc s recebe novos adereos se eles realmente mudaram ento Voc tambm pode deixar a atualizao do componente ou
+
+21
+00:01:53,660 --> 00:01:54,750
+um componente puro.
+
+22
+00:01:54,830 --> 00:01:57,440
+Mas muitas vezes isso pode fazer sentido.
+
+23
+00:01:57,470 --> 00:02:00,470
+Ento,  assim que a renderizao e atualizao funcionam.
+
+24
+00:02:00,470 --> 00:02:07,320
+Como a rvore de componentes  atualizada e tratada por reagir e como voc pode otimizar.
+
+25
+00:02:07,340 --> 00:02:13,700
+Vamos agora entender como reagir para otimizar este processo de atualizao para ns fora da caixa ao no bater o
+
+26
+00:02:13,700 --> 00:02:19,730
+Dom real o tempo todo porque, como voc pode ver, h uma grande diferena entre o mtodo de renderizao
+
+27
+00:02:19,730 --> 00:02:22,940
+que est sendo chamado eo Dom real sendo alterado.
+
+28
+00:02:23,150 --> 00:02:25,460
+O segundo olhar para isso na prxima palestra.
+

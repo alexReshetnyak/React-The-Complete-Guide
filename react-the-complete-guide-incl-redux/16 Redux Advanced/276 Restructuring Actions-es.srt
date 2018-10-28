@@ -1,0 +1,324 @@
+1
+00:00:02,260 --> 00:00:08,940
+As que introdujimos creadores de accin en las ltimas conferencias y aprendes que son especialmente tiles cuando
+
+2
+00:00:08,940 --> 00:00:10,690
+se trabaja con cdigo asncrono.
+
+3
+00:00:10,870 --> 00:00:17,950
+Porque junto con redux phunk ese middleware bsicamente podramos encontrar un lugar para ejecutar nuestro cdigo
+
+4
+00:00:17,950 --> 00:00:25,870
+asncrono al despachar una accin y bloquear ese despacho original para luego despachar otra accin, todo lo que
+
+5
+00:00:26,050 --> 00:00:27,640
+maneje por eso.
+
+6
+00:00:27,640 --> 00:00:29,160
+Redux phunk middleware.
+
+7
+00:00:29,260 --> 00:00:37,600
+Una vez que nuestra tarea asncrona se realiza ahora, obtenemos esta nueva accin que no solo mantiene nuestros
+
+8
+00:00:37,600 --> 00:00:38,960
+tipos de accin.
+
+9
+00:00:39,040 --> 00:00:41,420
+Entonces los identificadores nicos.
+
+10
+00:00:41,470 --> 00:00:42,490
+Por asi decirlo.
+
+11
+00:00:42,760 --> 00:00:50,170
+Pero tambin todas estas funciones de creador que usan estos identificadores obviamente nuestra cada aqu en el proyecto de
+
+12
+00:00:50,170 --> 00:00:52,300
+demostracin no es tan grande.
+
+13
+00:00:52,300 --> 00:00:58,690
+Por supuesto, podemos limitarnos a un archivo, pero tambin dividimos a los productores para contrarrestar el resultado final y, por
+
+14
+00:00:59,260 --> 00:01:04,960
+lo general, tambin lo haces para las acciones a medida que crece tu aplicacin y eso lo vers.
+
+15
+00:01:04,980 --> 00:01:12,300
+Y el proyecto de Bergere Boulder, por lo tanto, todos crean nuevas cadas aqu. Crear la falla de un contratista
+
+16
+00:01:12,700 --> 00:01:15,350
+y crear un resultado que simplemente caiga.
+
+17
+00:01:15,400 --> 00:01:22,450
+As que al igual que en la carpeta de reductores ahora donde las acciones son renombradas, las acciones caen en tipos de accin.
+
+18
+00:01:22,450 --> 00:01:28,680
+Porque aqu, ahora solo quiero exportar estos identificadores nicos que estn tan muertos.
+
+19
+00:01:28,690 --> 00:01:35,840
+Tengo un archivo que proporciona todos los tipos de acciones que mi aplicacin conoce y,
+
+20
+00:01:35,860 --> 00:01:38,970
+tericamente, podra dividirse en mltiples archivos.
+
+21
+00:01:39,010 --> 00:01:43,250
+Ahora tomar mis creadores de eccin y los incluir en sus respectivos archivos.
+
+22
+00:01:43,270 --> 00:01:49,630
+Entonces, para el contador tomar el incremento de chrome y sumar y restar el creador de ecciones creado a
+
+23
+00:01:49,630 --> 00:01:53,950
+partir del archivo de tipos de accin y lo pondr en el contador.
+
+24
+00:01:54,030 --> 00:02:00,160
+referencia a esta constante ya no funcionar porque esa constante ahora vive en un archivo diferente.
+
+25
+00:02:00,160 --> 00:02:01,590
+Ahora, por supuesto, esta
+
+26
+00:02:01,690 --> 00:02:10,360
+As que debera importar eso e importar todo como tipos de accin de los tipos de acciones de barra diagonal que me
+
+27
+00:02:10,360 --> 00:02:17,440
+permiten ahora configurar mis tipos accediendo a los tipos de accin y luego a las constantes que exportamos
+
+28
+00:02:17,530 --> 00:02:18,620
+en ese archivo.
+
+29
+00:02:18,760 --> 00:02:27,760
+Har lo mismo para Decora tripulado y por supuesto tambin para sumar y restar as.
+
+30
+00:02:27,970 --> 00:02:30,160
+Finalmente tambin para restar
+
+31
+00:02:30,490 --> 00:02:36,870
+As que eso es lo que un contador J cae con los creadores de accin para las acciones relacionadas con el contador.
+
+32
+00:02:36,940 --> 00:02:42,400
+mismo por el asalto. Asediar mi asalto en el asalto de la tienda slida y simplemente eliminar al creador de Rosol.
+
+33
+00:02:42,400 --> 00:02:43,500
+Por supuesto, har lo
+
+34
+00:02:43,630 --> 00:02:46,650
+Entonces eso tambin incluye el asincrnico.
+
+35
+00:02:47,110 --> 00:02:54,630
+Y luego tambin importe todo como tipos de accin de este tipo de acciones archivadas.
+
+36
+00:02:54,880 --> 00:03:00,220
+Y con eso tambin podemos usar los tipos de accin que importamos para asignar a los tipos correctos aqu.
+
+37
+00:03:00,250 --> 00:03:06,460
+As que el almacenamiento de sal se almacena para resolverlo solo. Tengo por qu el cdigo asncrono que despacha
+
+38
+00:03:06,460 --> 00:03:12,080
+Savir asalto al final y luego elimina las lloviznas, por supuesto, tambin quiero enviar el resultado de eliminacin.
+
+39
+00:03:12,100 --> 00:03:18,670
+As que ahora tengo mis creadores reales tercerizados del archivo de tipos de accin ahora solo contiene mis tipos de accin
+
+40
+00:03:18,670 --> 00:03:19,680
+y los exporta.
+
+41
+00:03:19,780 --> 00:03:24,430
+Ahora tambin quiero tener un archivo exportando todos mis creadores de ection.
+
+42
+00:03:24,430 --> 00:03:31,090
+As que todo es cierto que el ndice punto J. S. caer aqu y en realidad hay una sintaxis que
+
+43
+00:03:31,090 --> 00:03:32,180
+quizs no hayas visto antes.
+
+44
+00:03:32,410 --> 00:03:35,720
+Exportar algo de un archivo.
+
+45
+00:03:35,740 --> 00:03:39,030
+Puedo hacer eso, as que ni siquiera import en este otoo.
+
+46
+00:03:39,070 --> 00:03:41,820
+Solo tengo una cada la prxima cada de Cheras.
+
+47
+00:03:41,950 --> 00:03:42,730
+Qu grupos.
+
+48
+00:03:42,760 --> 00:03:49,330
+eso, exportemos algo del error JS del contador y ese algo realmente ser un lista de todo.
+
+49
+00:03:49,420 --> 00:03:57,190
+Todas las exportaciones desde archivos separados para que al final siempre pueda sealar la posibilidad de importar algo desde cualquiera
+
+50
+00:03:57,190 --> 00:04:01,650
+de los archivos o sealar ese archivo aqu, de modo que hagamos
+
+51
+00:04:01,650 --> 00:04:07,840
+Este archivo ofrece como agregar resta restar y detrimento.
+
+52
+00:04:07,990 --> 00:04:14,740
+Y esto realmente es solo una cumbre de funciones avanzadas que quiere usar tal configuracin del proyecto para manejar un proyecto
+
+53
+00:04:14,740 --> 00:04:19,160
+ms grande con montones y montones de acciones y creadores de accin, por supuesto.
+
+54
+00:04:19,210 --> 00:04:26,800
+Es excesivo para este proyecto de demostracin, pero tendr ms sentido ms adelante cuando lleguemos a nuestro Bergere Buller y
+
+55
+00:04:26,920 --> 00:04:29,510
+quiero ensearte el concepto en este momento.
+
+56
+00:04:29,620 --> 00:04:37,640
+no se exporta aqu aunque podra, por supuesto, exportarlo, pero nunca necesitar ningn Rafal, as que no incluir en mi agrupacin
+
+57
+00:04:37,730 --> 00:04:43,930
+As que todos exportarn algo del archivo de resultados aqu que ser el resultado de la tienda
+
+58
+00:04:43,930 --> 00:04:47,470
+y ser un asalto de eliminacin. El asalto de Savery
+
+59
+00:04:47,470 --> 00:04:54,430
+Ahora, lo que esto me permite hacer es importar ms tarde desde el ndice JS e importar desde
+
+60
+00:04:54,490 --> 00:04:58,940
+cualquiera de estos dos archivos que se agrupan en este ndice Jaspal.
+
+61
+00:04:58,960 --> 00:05:06,070
+Ahora solo es una pequea mejora para hacer que nuestros archivos sean an ms sencillos. Ahora tengo que ajustar
+
+62
+00:05:06,070 --> 00:05:13,180
+mi archivo reductor donde importo los tipos de accin, as que me encuentro con geus donde importo los tipos
+
+63
+00:05:13,180 --> 00:05:21,700
+de accin que ahora viven en los tipos de accin. comience J como se cae en la carpeta de acciones el mismo ajuste
+
+64
+00:05:21,700 --> 00:05:23,680
+debe hacerse y el resultado reductor.
+
+65
+00:05:23,680 --> 00:05:30,460
+Tambin ahora importo desde el archivo de tipos de accin en la carpeta de acciones y finalmente en el contador
+
+66
+00:05:30,460 --> 00:05:38,050
+donde envo aqu me refer a los creadores de acciones y que en realidad no debera apuntar a la falla JS del
+
+67
+00:05:38,070 --> 00:05:38,510
+ndice.
+
+68
+00:05:38,560 --> 00:05:46,660
+Por lo tanto, ndice de barra Vamos a reiniciar rpidamente y comenzar a ver si realmente tiene problemas o simplemente est atascado
+
+69
+00:05:46,660 --> 00:05:48,450
+en el proceso de reconstruccin.
+
+70
+00:05:48,490 --> 00:05:51,620
+S encontramos un problema en la falla del contador JS.
+
+71
+00:05:52,030 --> 00:05:55,770
+No me gusta que importe tus tipos de accin.
+
+72
+00:05:56,020 --> 00:05:58,270
+Oh, porque escrib mal aqu, son acciones.
+
+73
+00:05:58,390 --> 00:06:03,700
+Eso es un error tipogrfico en el nombre del archivo, el nombre del archivo debe ser tipos de accin.
+
+74
+00:06:03,700 --> 00:06:10,130
+Ahora, si el nombre del archivo cambi, necesito cambiar todas mis importaciones en la media de las acciones.
+
+75
+00:06:10,420 --> 00:06:16,450
+Estaba haciendo referencia al archivo incorrecto con todo lo ajustado para realmente apuntar a cosas del tipo de accin.
+
+76
+00:06:16,510 --> 00:06:24,070
+Como deberamos tener una aplicacin en funcionamiento nuevamente como antes con almacenamiento asncrono disponible.
+
+77
+00:06:24,310 --> 00:06:31,810
+Ahora, sin embargo, con un poco ms de creadores de accin divididos en varios archivos como dije para este proyecto de demostracin exagerado
+
+78
+00:06:32,020 --> 00:06:37,450
+pero definitivamente algo que debes tener en cuenta para proyectos ms grandes porque lo que te permite
+
+79
+00:06:37,450 --> 00:06:44,350
+es que tengas archivos con solo unos pocos creadores de eccin en cada archivo que hace que sea ms fcil encontrar
+
+80
+00:06:44,410 --> 00:06:47,750
+el creador de acciones inactivas que desea que cambie o verifique.
+
+81
+00:06:48,070 --> 00:06:53,760
+As que esta es la razn por la que eleg esa configuracin y es algo que quera mostrarles para sus proyectos ms grandes.
+

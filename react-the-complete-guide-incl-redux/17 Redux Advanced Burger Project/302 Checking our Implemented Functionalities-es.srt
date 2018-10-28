@@ -1,0 +1,96 @@
+1
+00:00:02,180 --> 00:00:04,070
+Tuvimos mucha funcionalidad.
+
+2
+00:00:04,160 --> 00:00:10,220
+Veamos si realmente todo funciona o construye una nueva hamburguesa, la hamburguesa con queso y tocino o tal
+
+3
+00:00:10,610 --> 00:00:11,810
+vez sin ensalada.
+
+4
+00:00:11,810 --> 00:00:12,390
+As que vamos a jugar.
+
+5
+00:00:12,470 --> 00:00:13,430
+Contina aqu.
+
+6
+00:00:13,550 --> 00:00:18,410
+Contina aqu e ingresa algunos datos de Quantic y no me importan los datos, por lo que estoy pasando por
+
+7
+00:00:18,410 --> 00:00:19,470
+encima de mi teclado.
+
+8
+00:00:19,760 --> 00:00:22,820
+Entonces, agreguemos todos esos datos rpidamente.
+
+9
+00:00:22,830 --> 00:00:26,470
+Tu pedido de clics ms barato
+
+10
+00:00:26,560 --> 00:00:29,500
+As que eso est funcionando, esa es la pgina de tu pedido.
+
+11
+00:00:29,620 --> 00:00:34,080
+Pap se parece mucho a la hamburguesa que acabamos de crear, es un muerto que se ve bien.
+
+12
+00:00:34,390 --> 00:00:37,550
+Vamos a todo el anlisis que no vemos ningn error aqu.
+
+13
+00:00:37,870 --> 00:00:45,520
+Y si echamos un vistazo a firebase, tambin vemos que se estn colocando ambos pedidos, los datos de pedido tambin se ven
+
+14
+00:00:45,520 --> 00:00:46,450
+bien para m.
+
+15
+00:00:46,600 --> 00:00:47,280
+Recoge ms.
+
+16
+00:00:47,290 --> 00:00:52,420
+ya que podemos verlos en la pgina de pedidos y esto proviene del servidor.
+
+17
+00:00:52,420 --> 00:00:54,390
+Ingresamos los ingredientes obviamente son correctos,
+
+18
+00:00:54,430 --> 00:00:56,720
+As que todo est funcionando bien.
+
+19
+00:00:56,740 --> 00:00:58,750
+Tenemos una buena aplicacin de trabajo.
+
+20
+00:00:58,750 --> 00:01:05,050
+Ahora definitivamente puede seguir adelante y Hans para ver an ms, podra agregar un botn Eliminar para deshacerse
+
+21
+00:01:05,110 --> 00:01:06,100
+de los pedidos.
+
+22
+00:01:06,310 --> 00:01:13,540
+Pero quiero centrarme en el cdigo y en Hansons e implementar algunas de las cosas que mencion en el ltimo mdulo,
+
+23
+00:01:13,750 --> 00:01:19,130
+por ejemplo, cmo podemos hacer que nuestros reductores sean ms giles sin dividirlos an ms.
+
+24
+00:01:19,150 --> 00:01:21,610
+Vamos a centrarnos en eso en el prximo Electra's.
+

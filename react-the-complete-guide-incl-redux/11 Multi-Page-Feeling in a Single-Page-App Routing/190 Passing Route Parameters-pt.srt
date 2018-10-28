@@ -1,0 +1,344 @@
+1
+00:00:02,080 --> 00:00:06,970
+Isso foi muita conversa para simplesmente mudar entre duas pginas diferentes.
+
+2
+00:00:06,970 --> 00:00:10,370
+Mas,  claro, era importante saber como trabalhar com o roteador.
+
+3
+00:00:10,780 --> 00:00:16,600
+Agora no entanto, eu quero garantir que todos possamos clicar em uma nica publicao e ainda carregar isso
+
+4
+00:00:16,630 --> 00:00:19,430
+porque agora nada est acontecendo quando estamos fazendo isso.
+
+5
+00:00:19,450 --> 00:00:20,820
+Tambm no recebemos um erro.
+
+6
+00:00:20,830 --> 00:00:22,570
+Mas nada est acontecendo.
+
+7
+00:00:22,570 --> 00:00:29,860
+ que, no nosso componente de postagens, onde temos esse manipulador para lidar com um clique na publicao aqui, o manipulador
+
+8
+00:00:29,860 --> 00:00:36,280
+selecionado da publicao est enviando algum estado que  irrelevante porque eu no estou lidando mais com o estado.
+
+9
+00:00:36,310 --> 00:00:38,310
+A razo para isso , naturalmente,
+
+10
+00:00:38,320 --> 00:00:40,610
+Eu nem mesmo configurei um padro aqui.
+
+11
+00:00:40,930 --> 00:00:47,450
+Agora, ao clicar nisso, eu realmente quero carregar a publicao completa para isso.
+
+12
+00:00:47,450 --> 00:00:52,750
+Ns,  claro, tambm precisamos determinar onde a postagem completa deve ser mostrada.
+
+13
+00:00:52,750 --> 00:00:58,080
+Poderamos torn-lo no componente do bloco em vez de nossa publicao aqui.
+
+14
+00:00:58,300 --> 00:01:02,450
+Poderamos carregar o post completo neste local.
+
+15
+00:01:02,460 --> 00:01:05,580
+Esta  uma opo aqui no entanto.
+
+16
+00:01:05,770 --> 00:01:14,350
+capazes de obter um parmetro de roteamento dinmico porque, se olharmos as publicaes, cada publicao possui ID.
+
+17
+00:01:14,440 --> 00:01:18,920
+Ou no importa onde usamos, na verdade, precisamos ser
+
+18
+00:01:19,120 --> 00:01:24,610
+E esta ideia,  claro,  importante porque, quando clicamos em uma publicao, precisamos saber
+
+19
+00:01:24,610 --> 00:01:30,150
+qual  a publicao que queremos carregar e que no muda quando usamos rotas diferentes.
+
+20
+00:01:30,520 --> 00:01:33,970
+Felizmente, temos uma maneira de obter o ID.
+
+21
+00:01:34,090 --> 00:01:42,460
+Ento, agora, precisamos passar essa identificao como parte do seu sistema, de modo que, no componente de postagem, o componente
+
+22
+00:01:42,910 --> 00:01:49,770
+de postagem completo quando o carregamos, podemos obter esse parmetro e carregar a publicao apropriada para isso.
+
+23
+00:01:49,770 --> 00:01:57,660
+Quando encontrar a rota que precisamos para informar o roteador re-agir sobre o fato de que agora temos
+
+24
+00:01:57,690 --> 00:01:59,780
+um elemento dinmico neste URL.
+
+25
+00:02:00,030 --> 00:02:06,900
+Obviamente, teremos postagens com ID 1 a 3 e no vamos codificar como esta.
+
+26
+00:02:06,900 --> 00:02:08,400
+Isso seria um pesadelo.
+
+27
+00:02:08,460 --> 00:02:10,590
+E em 99.
+
+28
+00:02:10,590 --> 00:02:16,760
+9 por cento das aplicaes que voc nem sabe quantos valores possveis voc tem aqui.
+
+29
+00:02:16,770 --> 00:02:25,470
+Ento, em vez de codificar com dificuldade as IDs diferentes, definimos um parmetro de rota varivel flexvel com dois pontos e, em
+
+30
+00:02:25,770 --> 00:02:34,130
+seguida, qualquer nome de sua escolha como ID ou ID de host ID de uso de Alceste porque  mais curto.
+
+31
+00:02:34,260 --> 00:02:36,550
+Isso ser substitudo dinamicamente.
+
+32
+00:02:36,570 --> 00:02:44,200
+roteiro, quando voc tem Slash, alguns dias ao longo do ano significa que basta chamar um ID.
+
+33
+00:02:44,210 --> 00:02:47,470
+Ou, essencialmente, diz ao roteador que o
+
+34
+00:02:47,790 --> 00:02:54,720
+E sim isso ir interferir com esta rota, todos se preocupam com isso em um segundo simplesmente mudando
+
+35
+00:02:54,720 --> 00:02:58,140
+as posies porque  analisado de cima para baixo.
+
+36
+00:02:58,230 --> 00:03:06,330
+Portanto, a nova postagem  reconhecida primeiro e isso no ocorre acidentalmente porque as novas postagens, claro, podem ser interpretadas
+
+37
+00:03:06,330 --> 00:03:12,120
+como uma ID porque tudo o que estamos dizendo  que temos algo dinmico aqui.
+
+38
+00:03:12,540 --> 00:03:15,900
+Ento, esse  o parmetro Route.
+
+39
+00:03:15,900 --> 00:03:22,780
+Agora, claro, tambm queremos garantir que ns passemos esse parmetro ao clicar em uma rota.
+
+40
+00:03:22,780 --> 00:03:30,360
+em um nico post no componente de postagem e haveria duas maneiras de fazer isso.
+
+41
+00:03:30,360 --> 00:03:31,790
+Agora, precisamos clicar
+
+42
+00:03:31,800 --> 00:03:36,850
+O primeiro  simplesmente envolver o componente de publicao que produzimos aqui com um link.
+
+43
+00:03:37,110 --> 00:03:39,190
+E isso ficaria perfeitamente bem.
+
+44
+00:03:39,280 --> 00:03:41,740
+Pode ser o diabo do jeito que voc faz.
+
+45
+00:03:41,790 --> 00:03:50,970
+Ento, deixe-me rapidamente fazer isso todo o link de importao em braceleiras Cali do roteador Dom reativo e eu uso link e no
+
+46
+00:03:51,000 --> 00:03:57,630
+link de navegao porque no planejo escrever o post ativo, claro que voc poderia fazer isso agora
+
+47
+00:03:57,630 --> 00:03:58,010
+aqui.
+
+48
+00:03:58,020 --> 00:04:06,930
+isso e vou envolv-lo entre parnteses para que eu possa dividi-los em vrias linhas, porque isso torna um pouco mais fcil de ler.
+
+49
+00:04:07,170 --> 00:04:12,760
+Em seguida, irei envolver este elemento host aqui com este componente de link, assim como
+
+50
+00:04:13,080 --> 00:04:20,070
+Ento, agora estamos basicamente retornando um link e, agora, temos que definir dois para algo dinmico e
+
+51
+00:04:20,070 --> 00:04:22,550
+essa dinmica deve ser nossa idia.
+
+52
+00:04:22,800 --> 00:04:27,990
+Potencialmente,  claro, se voc tiver mais de voc ou em outro lugar, voc tem algo como barras de mensagens e, em
+
+53
+00:04:27,990 --> 00:04:28,830
+seguida, o ID.
+
+54
+00:04:28,860 --> 00:04:34,110
+Voc tambm pode misturar uma string e, em seguida, sua ID ou o que quer que esteja aqui.
+
+55
+00:04:34,110 --> 00:04:38,430
+No entanto, estamos apenas segurando a barra e, em seguida, diretamente a ID.
+
+56
+00:04:38,550 --> 00:04:41,250
+Portanto, no h uma parte de string na frente do ID.
+
+57
+00:04:41,310 --> 00:04:49,530
+Eu s preciso passar a identificao, ento eu quero ir para a ID do host aqui.
+
+58
+00:04:49,530 --> 00:04:51,650
+Isso  essencialmente o que eu quero fazer.
+
+59
+00:04:51,650 --> 00:04:58,430
+Eu quero navegar para voc e voc ainda pode adicionar uma barra na frente disso.
+
+60
+00:04:58,440 --> 00:05:01,860
+Ento, agora com isso, estamos passando o ID da postagem.
+
+61
+00:05:02,220 --> 00:05:11,130
+Vamos agora voltar para o componente de bloco e certifique-se de carregar o componente de publicao quando estiver indo
+
+62
+00:05:11,210 --> 00:05:12,440
+para este Routier.
+
+63
+00:05:12,720 --> 00:05:16,260
+Ento, para isso e o componente de bloco ou adicione a importao de.
+
+64
+00:05:16,260 --> 00:05:18,150
+Postagem de.
+
+65
+00:05:18,150 --> 00:05:21,130
+E agora est no componente de postagem completo.
+
+66
+00:05:21,210 --> 00:05:22,060
+Publicao completa.
+
+67
+00:05:22,080 --> 00:05:22,870
+J. S. E, portanto, talvez tambm seja nomeado como publicao completa aqui e, em seguida, vamos carregar o post completo l embaixo.
+
+68
+00:05:22,920 --> 00:05:31,460
+Agora temos o componente de postagem completo.
+
+69
+00:05:31,470 --> 00:05:34,050
+Vamos agora salvar todos os arquivos e voltar para o aplicativo.
+
+70
+00:05:34,260 --> 00:05:37,530
+E obtenha esse erro-chave porque, obviamente, esqueceu isso no
+
+71
+00:05:39,090 --> 00:05:47,280
+componente de postagem ao fazer um loop em todos esses elementos, o link agora  o elemento externo em nossa matriz de elementos aqui.
+
+72
+00:05:47,280 --> 00:05:52,100
+Para postagens para que a propriedade da chave no deve ser adicionada ao link e no  publicao.
+
+73
+00:05:52,090 --> 00:05:58,400
+Ele sempre deve estar no elemento mais distante do seu loop.
+
+74
+00:05:58,470 --> 00:06:02,020
+Com isso, porm, livramos a mensagem de erro.
+
+75
+00:06:02,490 --> 00:06:05,300
+E agora, se eu clicar na publicao,
+
+76
+00:06:05,460 --> 00:06:14,830
+voc pode realmente ver que h o ID no seu L e voc simplesmente seleciona a publicao aqui, o que no faz mais sentido.
+
+77
+00:06:14,990 --> 00:06:18,580
+Isso faz sentido de uma maneira, porm no
+
+78
+00:06:18,740 --> 00:06:27,290
+carregamos para postagens com xito porque este ID de adereos no componente de publicao completo j no est configurado.
+
+79
+00:06:27,290 --> 00:06:30,410
+No  como recuperamos o parmetro que estamos passando pela rota que voc .
+
+80
+00:06:30,440 --> 00:06:35,510
+Ento isso no est funcionando.
+
+81
+00:06:35,660 --> 00:06:37,160
+O que est funcionando, no entanto.
+
+82
+00:06:37,370 --> 00:06:39,070
+Podemos confirmar isso em nosso aplicativo  que podemos clicar em postagens e carregar diferentes IDs.
+
+83
+00:06:39,260 --> 00:06:46,450
+Isso  que estamos manipulando.
+
+84
+00:06:46,460 --> 00:06:47,390
+Tambm estamos carregando para o componente.
+
+85
+00:06:47,420 --> 00:06:49,160
+Agora, s precisamos trabalhar na extrao desse parmetro.
+
+86
+00:06:49,190 --> 00:06:52,750
+&nbsp;
+

@@ -1,0 +1,104 @@
+1
+00:00:02,300 --> 00:00:08,360
+Nell'ultima lezione, miglioriamo la nostra applicazione un po 'aggiungendo aggiornamenti di componenti
+
+2
+00:00:08,420 --> 00:00:14,050
+della camicia alla talpa per assicurarci che non aggiorniamo inutilmente qualsiasi componente.
+
+3
+00:00:14,060 --> 00:00:21,620
+Ora per quanto riguarda i metodi del ciclo di vita come il componente ha fatto il mount o il componente ha fatto l'aggiornamento e
+
+4
+00:00:21,620 --> 00:00:22,430
+tutte queste cose.
+
+5
+00:00:22,430 --> 00:00:24,010
+Perch non usiamo nessuno di loro.
+
+6
+00:00:24,050 --> 00:00:25,910
+Quando li useremmo.
+
+7
+00:00:25,910 --> 00:00:33,230
+Bene, in realt vedrete alcuni di loro essere utilizzati una volta aggiunto HTP come avete visto nelle diapositive
+
+8
+00:00:33,230 --> 00:00:34,640
+nell'ultimo modulo di chorus.
+
+9
+00:00:34,640 --> 00:00:39,710
+Il componente montato e componente ha aggiornato gli hook del ciclo di vita  estremamente importante
+
+10
+00:00:39,710 --> 00:00:40,830
+per causare effetti collaterali.
+
+11
+00:00:40,940 --> 00:00:46,130
+Sembra strano ma significa solo cose come raggiungere un servizio web e
+
+12
+00:00:46,130 --> 00:00:47,610
+recuperare dati da l.
+
+13
+00:00:47,630 --> 00:00:52,370
+Ora non lo stiamo ancora facendo e l'applicazione non  molto inizializzata che dobbiamo fare
+
+14
+00:00:52,370 --> 00:00:53,230
+nei nostri componenti.
+
+15
+00:00:53,270 --> 00:00:59,720
+Questo  il motivo per cui non abbiamo bisogno dei ganci del ciclo di vita di altri imbroglioni come Aggiornamento di Will e cos via, che
+
+16
+00:00:59,720 --> 00:01:01,620
+non usiamo se non per la registrazione qui.
+
+17
+00:01:01,820 --> 00:01:05,110
+Beh di solito non usi Steese cos spesso.
+
+18
+00:01:05,240 --> 00:01:12,120
+Potrebbero esserci alcuni casi in cui  necessario regolare lo stato dei componenti in base ad alcuni oggetti di
+
+19
+00:01:12,120 --> 00:01:13,170
+scena ricevuti dall'esterno.
+
+20
+00:01:13,460 --> 00:01:19,940
+E questo pu certamente accadere in applicazioni di re-act pi grandi, ma non  raro avere
+
+21
+00:01:19,940 --> 00:01:26,830
+applicazioni di re-act in cui non si usano molti deadly lifecycle hooks tranne che per il componente update.
+
+22
+00:01:26,870 --> 00:01:30,520
+Questa  la ragione per cui non ne vedi troppi.
+
+23
+00:01:30,530 --> 00:01:32,780
+Ce ne saranno altri una volta aggiunto l'accesso HTP.
+
+24
+00:01:32,780 --> 00:01:37,220
+Come ho gi detto, ma per ora questo  il modo in cui l'applicazione funziona e sembra.
+
+25
+00:01:37,220 --> 00:01:43,680
+ una buona applicazione che mostra molte caratteristiche del reagente e molte buone pratiche.
+
+26
+00:01:43,910 --> 00:01:47,070
+Quindi permettimi di riassumerlo nella prossima lezione.
+

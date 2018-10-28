@@ -1,0 +1,204 @@
+1
+00:00:02,080 --> 00:00:06,510
+Quindi durante le ultime lezioni ti mostro molto come puoi ottenere i dati.
+
+2
+00:00:06,520 --> 00:00:12,450
+Ovviamente voglio anche mostrarti come puoi inviare dati a un server e per Debbie ottenere l'area
+
+3
+00:00:12,510 --> 00:00:15,290
+di un annuncio qui nella parte inferiore.
+
+4
+00:00:15,370 --> 00:00:21,070
+ gestito dal nuovo componente post che  un componente basato sulla classe che gestisce il proprio stato
+
+5
+00:00:21,340 --> 00:00:27,020
+e quindi  un contenitore perch non stiamo passando o distribuendo lo stato su nessun altro componente.
+
+6
+00:00:27,100 --> 00:00:33,230
+E ora voglio collegare questo pulsante per pubblicare annunci essenzialmente per inviare una richiesta POST al nostro back-end
+
+7
+00:00:33,740 --> 00:00:34,640
+Dammy per questo.
+
+8
+00:00:34,660 --> 00:00:42,290
+Prima di tutto aggiungi un Meffert al gestore di dati post o al post post handler se vuoi farlo.
+
+9
+00:00:42,300 --> 00:00:45,330
+E poi ovviamente ho bisogno di usare x s.
+
+10
+00:00:45,340 --> 00:00:53,260
+Ora, prima di tutto, speriamo che questo metodo aggiunga il listener in clic laggi questo postdate
+
+11
+00:00:53,270 --> 00:00:54,330
+un gestore.
+
+12
+00:00:54,670 --> 00:01:00,180
+E ora importiamo anni cos possiamo inviare una richiesta di posta.
+
+13
+00:01:00,550 --> 00:01:02,290
+Ora d pensare a postare le richieste.
+
+14
+00:01:02,310 --> 00:01:04,180
+Usa ancora l'oggetto assi.
+
+15
+00:01:04,320 --> 00:01:08,440
+Ma ora ovviamente non il metodo get ma il metodo post.
+
+16
+00:01:08,700 --> 00:01:15,360
+backend fittizio possiamo semplicemente usare lo stesso oppure usato per la richiesta get accetta anche richieste post.
+
+17
+00:01:15,480 --> 00:01:21,090
+Il post se ha ancora bisogno di un input come input e per il nostro
+
+18
+00:01:21,120 --> 00:01:27,390
+Ora una richiesta di post ha bisogno di pi di te Eldo ha bisogno di un secondo argomento che
+
+19
+00:01:27,390 --> 00:01:32,850
+ quel dato che vogliamo inviare perch ovviamente una richiesta di post senza dati ha molto senso.
+
+20
+00:01:32,850 --> 00:01:39,930
+I dati che voglio inviare sono un oggetto javascript che contiene il corpo del titolo un'offerta di un post.
+
+21
+00:01:39,930 --> 00:01:45,900
+Quindi creer una nuova costante che dovrebbe essere un oggetto javascript e verr impostato un titolo
+
+22
+00:01:46,140 --> 00:01:47,940
+per questo titolo di stato.
+
+23
+00:01:48,020 --> 00:01:55,290
+Metter il corpo a questo contenuto di stato e potrai ovviamente scegliere le propriet che
+
+24
+00:01:55,290 --> 00:02:00,980
+desideri per quell'oggetto e imposter l'offerta in questo stato di offerta.
+
+25
+00:02:00,990 --> 00:02:02,450
+Di nuovo puoi aggiungere altro.
+
+26
+00:02:02,520 --> 00:02:06,500
+Puoi espandere questo modulo qui in fondo, naturalmente.
+
+27
+00:02:06,660 --> 00:02:13,230
+Quindi dir di postare questa costante come secondo argomento del metodo post.
+
+28
+00:02:13,470 --> 00:02:18,840
+E ovviamente questo viene chiamato post perch ci che viene riportato di nuovo  che alcuni dati su un post che puoi nominare
+
+29
+00:02:18,840 --> 00:02:20,080
+fa sempre ci che vuoi.
+
+30
+00:02:20,100 --> 00:02:22,360
+Puoi anche nominare come dati.
+
+31
+00:02:22,860 --> 00:02:27,120
+Ora puoi anche passare un terzo argomento per configurare questa richiesta ma non ne abbiamo bisogno.
+
+32
+00:02:27,120 --> 00:02:29,500
+Sei importante per noi.
+
+33
+00:02:29,550 --> 00:02:35,460
+Questo ovviamente  un oggetto javascript, ma Access automaticamente ti stringa automaticamente i tuoi combattenti,
+
+34
+00:02:35,460 --> 00:02:37,160
+trasformandoci in dati Jason.
+
+35
+00:02:37,170 --> 00:02:43,200
+Lo far per noi proprio mentre estrae i dati adiacenti e ottiene anche le richieste per noi.
+
+36
+00:02:43,680 --> 00:02:46,820
+E ora tutto viene eseguito in modo asincrono.
+
+37
+00:02:46,860 --> 00:02:54,210
+Possiamo ascoltare la risposta proprio come possiamo fare per ottenere richieste e possiamo presentarla qui
+
+38
+00:02:54,210 --> 00:02:55,290
+alla console.
+
+39
+00:02:55,290 --> 00:02:56,480
+Ora proviamo questo.
+
+40
+00:02:56,480 --> 00:02:57,680
+Salviamo questo
+
+41
+00:02:57,900 --> 00:03:03,570
+Apriamo la console e inseriamo alcuni contenuti qui.
+
+42
+00:03:03,580 --> 00:03:09,670
+Alcuni contenuti di prova possono cambiare l'offerta al menu e premere il post dell'annuncio.
+
+43
+00:03:10,020 --> 00:03:18,000
+Ed ecco il testo dello stato di risposta 201 che indica che ha avuto successo e ora che il dummy di
+
+44
+00:03:18,000 --> 00:03:24,540
+nuovo in qui non memorizzer i dati, naturalmente restituisce semplicemente i dati nella risposta in modo che possiamo
+
+45
+00:03:24,540 --> 00:03:27,880
+vedere che l'abbiamo inviato correttamente e sembra Noi facemmo.
+
+46
+00:03:27,910 --> 00:03:28,620
+Questo fino ad oggi.
+
+47
+00:03:28,620 --> 00:03:32,640
+Abbiamo inviato nuovamente per un vero server ovviamente per il tuo server.
+
+48
+00:03:32,640 --> 00:03:38,430
+Probabilmente hai un po 'di logica sul server per i dentali che sono memorizzati nel database.
+
+49
+00:03:38,430 --> 00:03:44,250
+Questo  il modo in cui possiamo postare dati che  tutto ci che fa, basta scambiare la parola qui con
+
+50
+00:03:44,250 --> 00:03:47,460
+il nome del metodo e passare i dati come secondo argomento.
+
+51
+00:03:47,610 --> 00:03:50,350
+E ora possiamo anche inviare dati ai server.
+

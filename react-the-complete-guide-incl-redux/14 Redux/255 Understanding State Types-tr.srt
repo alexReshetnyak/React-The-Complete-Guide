@@ -1,0 +1,236 @@
+1
+00:00:02,200 --> 00:00:09,460
+Bu modl bitirmeden ve daha nce tamamlamadmz asenkron kodu altrmak gibi daha
+
+2
+00:00:09,460 --> 00:00:12,140
+ileri redux kavramlarna gemeden nce.
+
+3
+00:00:12,280 --> 00:00:16,070
+Farkl devlet trleri iin bir sorunun cevabn size anlataym.
+
+4
+00:00:16,180 --> 00:00:20,050
+Her eyalet Rydex araclyla ele alnmal mdr?
+
+5
+00:00:20,110 --> 00:00:27,760
+nk bu modldeki demo uygulamas, bileende sz edilen Devlet arsn kaldrd ve
+
+6
+00:00:27,760 --> 00:00:30,810
+yerel bileen durumunu ortadan kaldrdk.
+
+7
+00:00:30,970 --> 00:00:37,140
+imdiye dek kullandmz devlet, sylemde ina ettiimiz uygulamalar ve projeleri tekrar aktard.
+
+8
+00:00:37,270 --> 00:00:44,830
+Bunun yerine, okuma X durumunu ve eylem gnderme ve bu durumu kullanmak iin cilt balam kullandk.
+
+9
+00:00:44,890 --> 00:00:47,290
+Takip etmeniz gereken her zaman yaklamdr.
+
+10
+00:00:47,290 --> 00:00:50,370
+Balamak iin her zaman okumay kullanmanz gerekiyor mu?
+
+11
+00:00:50,650 --> 00:00:55,810
+Redux kullanp kullanmamanz, uygulamanzn byklne ve eyaletin
+
+12
+00:00:55,810 --> 00:00:56,910
+karmaklna baldr.
+
+13
+00:00:56,950 --> 00:01:03,760
+Basit bir kk uygulamanz var, redoks kurmanz size verebilecei faydalardan daha uzun srebilir; bu, redoks
+
+14
+00:01:03,760 --> 00:01:12,090
+kullanan ve byk bir uygulamann herhangi bir iyi orta boy ya da byk uygulama iin buna deer, muhtemelen
+
+15
+00:01:12,100 --> 00:01:13,960
+iyi bir fikir olacaktr.
+
+16
+00:01:14,200 --> 00:01:19,440
+Fakat yine de Rydex iin hangi devletin kullanlmak zorunda kalacan sormalyz.
+
+17
+00:01:19,480 --> 00:01:23,500
+nk mutlaka onun iindeki btn devleti ynetmemelisin.
+
+18
+00:01:23,920 --> 00:01:28,990
+eitli devlet tiplerine baz rnekler ve bunlara redux kullanp
+
+19
+00:01:28,990 --> 00:01:30,120
+kullanmamaya bakalm.
+
+20
+00:01:30,370 --> 00:01:37,470
+Bir yerel alan bir arka plan gstererek veya gizleyerek yerel UI durumunu dnelim.
+
+21
+00:01:37,510 --> 00:01:45,210
+Elbette yeniden hareket uygulamanzn sizi gncelleyecek ekilde devlete dnen bu eylerin borcu iin redoks
+
+22
+00:01:45,210 --> 00:01:49,490
+kullanmanz durumunda ortaya km bir ey gstermek zorundayd.
+
+23
+00:01:49,610 --> 00:01:58,500
+Cevap ounlukla redux kullanmadnz iin bunu ounlukla bileenlerin iinde ele alrsnz.
+
+24
+00:01:58,510 --> 00:02:01,090
+Bunun iin redux kullanabileceiniz syleniyor.
+
+25
+00:02:01,120 --> 00:02:09,040
+Global durumunuzda show modal mlkiyete sahip olabilirsiniz; bunu, True olarak ayarlamak iin bir eylem gnderebilir ve Yanl olarak
+
+26
+00:02:09,040 --> 00:02:10,970
+ayarlamak iin bir eylem gnderebilirsiniz.
+
+27
+00:02:11,050 --> 00:02:19,360
+Ardndan bileeninizi balayn ve koullu olarak bir kalp oluturup yapmadnz o mlknz dinleyin,
+
+28
+00:02:19,360 --> 00:02:21,570
+ancak arya kaabilir.
+
+29
+00:02:21,630 --> 00:02:26,970
+ou zaman, bileenlerini kullanarak daha nce yaptmz gibi bunu uygulayamazsnz.
+
+30
+00:02:27,980 --> 00:02:32,650
+Ve nemli saydaki devlet tr kalc devlettir.
+
+31
+00:02:32,730 --> 00:02:39,100
+Bu, genellikle uygulamanzn kullanclar gibi site veritabanlarnda da bulunduunuzu belirtmek anlamna gelir.
+
+32
+00:02:39,120 --> 00:02:44,210
+Bir bloun tm mesajlar Berger'in emirlerini byle yapt.
+
+33
+00:02:44,250 --> 00:02:50,310
+imdi burada genellikle X'i okur musunuz? Elbette servis tarafndaki veritabannda bulunan tm veriler
+
+34
+00:02:50,310 --> 00:02:55,800
+iin deil, nk redux tabii ki sadece uygulamanzda durumu ynetmek iindir.
+
+35
+00:02:55,800 --> 00:03:03,630
+Uygulama canl olduundan ve kullanc sayfanz yenilediinde aklnzda bulunduunuz srece
+
+36
+00:03:03,630 --> 00:03:05,030
+devletiniz kayboldu.
+
+37
+00:03:05,100 --> 00:03:08,070
+Bu yzden X, bir veritabannn yerine gemez.
+
+38
+00:03:08,100 --> 00:03:14,910
+Bunun yerine byle verileri bir sunucuda saklarsn, ancak ilgili diller Rydex tarafndan ynetilir.
+
+39
+00:03:14,970 --> 00:03:21,390
+Dolaysyla u anda poster kullancsn u anda grntlemeniz gereken kullanclar grntleyen posta u
+
+40
+00:03:21,390 --> 00:03:22,360
+anda dzenleyebilir.
+
+41
+00:03:22,500 --> 00:03:27,290
+Bunlar yklenir ve bir redoksda saklanr; bylece onlara bir ekilde yol gsterirler, bylece
+
+42
+00:03:27,300 --> 00:03:28,500
+onlar ekrana getirebilirsiniz.
+
+43
+00:03:28,680 --> 00:03:32,360
+Ancak, veritabannzdaki tm verileri iermeyebilir.
+
+44
+00:03:33,530 --> 00:03:41,280
+Ardndan, kullanc kimlii dorulanm veya kullanc tarafndan ayarlanm filtreler gibi tipik istemci devlet eylerine sahibiz.
+
+45
+00:03:41,330 --> 00:03:47,050
+Dolaysyla alr bir alr menye sahipseniz, kullancnn veritabannda depoladnz veriler deil, yaynlarnz filtrelemesine izin verin.
+
+46
+00:03:47,120 --> 00:03:53,420
+Kullanc yanl yiyecek giriine girerse, gereksiz yere sunucudan saklamak zorunda kalmazsnz nk
+
+47
+00:03:53,420 --> 00:03:56,110
+kullancya yiyecek iecek salyorsa saklayabilirsiniz.
+
+48
+00:03:56,120 --> 00:04:01,430
+filtre, bir sunucudaki verileri saklamayabilir, nk veritabannda saklamak o kadar da nemli deildir.
+
+49
+00:04:01,430 --> 00:04:03,120
+Ayrca kullanc tarafndan ayarlanan
+
+50
+00:04:03,170 --> 00:04:09,170
+Kesinlikle istemediiniz durum olsa da, istemcideki filtre ayarlarnn ve
+
+51
+00:04:09,170 --> 00:04:13,700
+yeniden aktive uygulamanzdaki javascript kodunun farknda olmalsnz.
+
+52
+00:04:13,760 --> 00:04:21,080
+Bunu uygulamanzn birden fazla bileeni veya alann etkileyebilecei iin redux araclyla ynettiniz.
+
+53
+00:04:21,290 --> 00:04:26,870
+rnein, kullanc rahatsz edilirse, uygulamanzda ok sayda bileen iin nem tayabilir
+
+54
+00:04:27,230 --> 00:04:33,640
+ve merkezi depolama alan byk bir avantaj salad iin X'leri gerekten parlar.
+
+55
+00:04:33,650 --> 00:04:37,500
+Dolaysyla bunlar iki farkl devlet eidi ve bunlar nasl ele alyorsunuz.
+
+56
+00:04:37,820 --> 00:04:43,820
+projemize redux eklediimizde, sonraki modller zerinde bunlarn hepsine rnekler greceiz.
+
+57
+00:04:43,820 --> 00:04:44,960
+imdi ders
+
+58
+00:04:44,960 --> 00:04:46,520
+Bunu yapmadan nce.
+
+59
+00:04:46,700 --> 00:04:48,380
+Rahatlamak iin uygulama zaman.
+

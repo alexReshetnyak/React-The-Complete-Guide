@@ -1,0 +1,124 @@
+1
+00:00:02,150 --> 00:00:06,900
+Wic spojrzae na build, by zareagowa i zareagowa. Skay, teraz odejdmy od
+
+2
+00:00:06,980 --> 00:00:10,550
+projektw demonstracyjnych i tak dalej, a
+
+3
+00:00:10,610 --> 00:00:14,500
+zamiast tego rzumy okiem na gatsbyjs.
+
+4
+00:00:14,580 --> 00:00:22,160
+Teraz gatsbyjs jest tak naprawd bibliotek budujc si na reakcj, tak jak robi to nextjs,
+
+5
+00:00:22,160 --> 00:00:25,550
+gatsbyjs suy jednak innym celom i jest
+
+6
+00:00:25,550 --> 00:00:33,440
+to do ekscytujca biblioteka, z ktr bd szczery. Gatsbyjs to biblioteka, ktra pozwala na tworzenie statycznych stron internetowych z reakcj.
+
+7
+00:00:33,440 --> 00:00:40,210
+Co to jest statyczna strona internetowa? Statyczna strona to strona, ktra uywa tylko html, javascript i
+
+8
+00:00:40,310 --> 00:00:46,550
+css, c, to prawda w przypadku zwykej, reagujcej aplikacji na pojedyncz stron, ale statyczna strona rwnie ma jedn
+
+9
+00:00:46,550 --> 00:00:47,930
+specjaln rzecz, ktra si
+
+10
+00:00:48,080 --> 00:00:53,220
+tam dzieje, zwykle nie uywasz routera reagowania, nie uywaj go bezporednio, a zamiast tego masz
+
+11
+00:00:53,330 --> 00:00:59,960
+struktur folderw, w ktrej kady folder ma indeks. plik html i odpowiednie zasoby nalece
+
+12
+00:00:59,990 --> 00:01:02,780
+do pliku w nim zawartego.
+
+13
+00:01:02,780 --> 00:01:09,320
+Teraz fajne jest to, e naprawd tworzysz witryny podobne do tych z lat
+
+14
+00:01:09,320 --> 00:01:17,180
+90. lub mniejszych, ale uywasz reagowania, budujesz to jako aplikacj reagowania i gatsbyjs, ta technologia, ta
+
+15
+00:01:17,180 --> 00:01:19,780
+biblioteka faktycznie robi Odpoczynek dla
+
+16
+00:01:19,770 --> 00:01:25,700
+ciebie, dzieli wszystko i na okrelon komend, generuje t struktur folderw, skd
+
+17
+00:01:25,700 --> 00:01:30,520
+masz kilka folderw z plikami html na podstawie reakcji, ktr zbudowae.
+
+18
+00:01:30,560 --> 00:01:33,510
+Moesz dowiedzie si wicej o tym na gatsbyjs. com, to niesamowita
+
+19
+00:01:33,530 --> 00:01:39,830
+biblioteka, ktra w rzeczywistoci zapewni wystarczajc ilo treci dla wasnego kursu.
+
+20
+00:01:39,860 --> 00:01:42,140
+Teraz nie mam takiego kursu, moesz
+
+21
+00:01:42,170 --> 00:01:46,880
+zacz od dokumentw tutaj, ale aby dowiedzie si, jak z niego korzysta i
+
+22
+00:01:46,880 --> 00:01:53,630
+na pewno troch si z nim pogodzi, aby dowiedzie si wicej o tym, jak to dziaa i czy ma
+
+23
+00:01:53,660 --> 00:01:56,930
+sens dla Ciebie, porwnywalne alternatywy wymienione na stronie funkcji
+
+24
+00:01:56,960 --> 00:02:00,940
+gatsbyjs to Jekyll, ale tam nie uywasz systemw reagowania ani systemw
+
+25
+00:02:00,980 --> 00:02:04,810
+zarzdzania treci, takich jak Wordpress, ale musisz te napisa kod po
+
+26
+00:02:04,850 --> 00:02:11,780
+stronie serwera, potrzebujesz bazy danych SQL i tego wszystkiego. Gatsbyjs dziaa z reakcj i oferuje
+
+27
+00:02:11,780 --> 00:02:13,280
+wiele zalet.
+
+28
+00:02:13,280 --> 00:02:15,730
+Zastanw si wic nad kolejnym projektem, zapoznaj
+
+29
+00:02:15,740 --> 00:02:20,610
+si z dokumentami i stron funkcji na swojej stronie, aby dowiedzie si, czy jest to
+
+30
+00:02:20,840 --> 00:02:25,610
+waciwy wybr, a gdy uznasz, e jest to dla ciebie interesujce, nie krpuj si.
+
+31
+00:02:25,610 --> 00:02:29,370
+Chciaem Ci o tym poinformowa, poniewa jest to naprawd niesamowity projekt.
+

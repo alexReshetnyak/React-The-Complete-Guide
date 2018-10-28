@@ -1,0 +1,152 @@
+1
+00:00:02,240 --> 00:00:08,560
+So let's add prop type validation and for this, I'll cancel the development server and then run npm install
+
+2
+00:00:08,570 --> 00:00:16,330
+--save --save to also save an entry in package.json and then prop types.
+
+3
+00:00:16,370 --> 00:00:17,590
+This is the package
+
+4
+00:00:17,600 --> 00:00:25,340
+I showed you in the last core section which is provided by the react team to validate the prop types
+
+5
+00:00:25,400 --> 00:00:34,290
+of your react properties. Simply import prop types from prop types and you can start using that package.
+
+6
+00:00:34,680 --> 00:00:35,650
+I'll
+
+7
+00:00:35,660 --> 00:00:44,090
+restart the development server with npm start and then I told you that you can use prop types on components
+
+8
+00:00:44,300 --> 00:00:47,030
+which are created with the class keyword.
+
+9
+00:00:47,030 --> 00:00:52,850
+Now here we have a stateless component created as a function or we can simply convert it
+
+10
+00:00:53,090 --> 00:00:56,940
+and this doesn't automatically turn it into a container.
+
+11
+00:00:57,050 --> 00:01:03,080
+You could add it to the containers folder but it still don't plan on managing any state here or passing
+
+12
+00:01:03,080 --> 00:01:05,780
+down any state to any other component.
+
+13
+00:01:05,780 --> 00:01:08,840
+So for me, it still stays a dumb component,
+
+14
+00:01:08,840 --> 00:01:15,170
+a normal stateless component, that doesn't change just because I created with the class keyword and
+
+15
+00:01:15,170 --> 00:01:18,410
+that is generally an important thing to understand,
+
+16
+00:01:18,470 --> 00:01:22,160
+you don't decide if something is a container or not
+
+17
+00:01:22,160 --> 00:01:23,750
+with the class keyword.
+
+18
+00:01:23,750 --> 00:01:26,960
+You can create all your components as a class if you want,
+
+19
+00:01:27,140 --> 00:01:33,880
+it's just a good practice to use the functional form as often as possible but it's not a must.
+
+20
+00:01:34,310 --> 00:01:40,040
+Well with that, let's rename Burger ingredient to have a capital B to follow the naming convention of
+
+21
+00:01:40,040 --> 00:01:50,270
+classes and let's import component as a named import from react. Now Burger ingredient should extend
+
+22
+00:01:50,960 --> 00:01:57,220
+component and we can then add a class body where we need to implement the render method.
+
+23
+00:01:57,560 --> 00:02:02,250
+Now inside render, we can now execute our logic, our switch statement
+
+24
+00:02:02,390 --> 00:02:04,580
+and in the end, return the ingredient.
+
+25
+00:02:04,580 --> 00:02:07,210
+So simply put that in there,
+
+26
+00:02:07,220 --> 00:02:16,780
+remove that relict down there and export your newly named class. Now props type won't work because inside
+
+27
+00:02:16,780 --> 00:02:20,540
+a class, you access props with this.props
+
+28
+00:02:20,650 --> 00:02:26,740
+so make sure to add up this in front of props, with that it should be working again though.
+
+29
+00:02:26,920 --> 00:02:35,200
+Now we can add prop type validation by taking our class name, adding the prop types property with
+
+30
+00:02:35,200 --> 00:02:39,690
+a lowercase P and setting it equal to a javascript object.
+
+31
+00:02:39,910 --> 00:02:45,550
+And there, I now want to configure the type property using the prop types
+
+32
+00:02:45,560 --> 00:02:48,940
+we imported from that prop types
+
+33
+00:02:48,950 --> 00:02:57,140
+package. Using that and there I want to make sure the type should be a string and we can chain another
+
+34
+00:02:57,140 --> 00:02:59,800
+condition that it is required.
+
+35
+00:02:59,960 --> 00:03:08,050
+So if we ever tried to use the ingredient component without passing a type, we will get an error. So with that,
+
+36
+00:03:08,060 --> 00:03:10,130
+the burger ingredient is finished.
+
+37
+00:03:10,130 --> 00:03:16,070
+Now of course it would be interesting to also see it in action and for that in the next lecture, we'll
+
+38
+00:03:16,070 --> 00:03:20,330
+actually start building our burger in the burger component.
+

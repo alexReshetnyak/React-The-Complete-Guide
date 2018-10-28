@@ -1,0 +1,248 @@
+1
+00:00:02,130 --> 00:00:07,610
+Bu yzden son konferansta formumuzu temsil eden javascript nesnemize meydan okuduk.
+
+2
+00:00:07,620 --> 00:00:11,180
+imdi bunu render yntemimde burada istiyorum.
+
+3
+00:00:11,280 --> 00:00:18,240
+Btn bu girdileri dinamik olarak oluturmak istiyorum, bu yzden imdi render formundan bunlardan kurtulacam.
+
+4
+00:00:18,540 --> 00:00:26,790
+imdi ncelikle sipari form nesnemizi bir dizi diziye dntrmek zorundaym.
+
+5
+00:00:26,790 --> 00:00:33,120
+Burada, temel olarak, Diski'nin bir tanmlayc zellik olan yalnzca bir zellik olduu ve ardndan hala Alber
+
+6
+00:00:33,130 --> 00:00:37,790
+zelliklerine sahip olduumuz javascript nesnelerine sahip bir dizi zerinden dng salayabiliriz.
+
+7
+00:00:38,010 --> 00:00:41,730
+Burada nispeten basit bir dizi oluturabiliriz.
+
+8
+00:00:41,790 --> 00:00:43,860
+Burada her zaman birden fazla yntem vardr.
+
+9
+00:00:43,860 --> 00:00:50,790
+Form eleri dizisini bo bir dizi olan bir dizi olutururum ve sonra da bir for
+
+10
+00:00:50,880 --> 00:00:53,380
+dngs kullanarak benim anahtarlarmn anahtarlarn alacam.
+
+11
+00:00:53,460 --> 00:01:02,700
+imdi bu devlet dzen formu ve anahtar elbette o nesnenin mlkiyet isimleridir.
+
+12
+00:01:02,760 --> 00:01:09,130
+Yani anahtarlar Sokak posta kodu gibi isim olacak.
+
+13
+00:01:09,300 --> 00:01:16,460
+Ve eer X-ists belirli bir anahtar iin form verirsek, bu deerleri tabii ki sa tarafta elde ederiz.
+
+14
+00:01:17,640 --> 00:01:25,740
+Bu yzden bu bilgilere bakalm oraya gidelim ve Portia'y yaratalm veya izin verelim Yeni nesne
+
+15
+00:01:25,950 --> 00:01:28,480
+ateli form eleri dizisi sylemeliyim.
+
+16
+00:01:28,590 --> 00:01:34,620
+anahtar iin bu durum siparii biiminde olan yaplandrmaya sahip olmaldrlar.
+
+17
+00:01:35,340 --> 00:01:45,720
+Bu nesnenin kimlii bir anahtar niteliinde olmaldr, nk yine ad ve benzeri tanmlayclardr ve daha sonra belirli bir
+
+18
+00:01:45,720 --> 00:01:49,270
+Dolaysyla imdi bu mlkiyetin sa taraf.
+
+19
+00:01:49,290 --> 00:01:56,110
+Bu javascript nesnesi, bu atma mlknde saklayacamz ey ve elbette mlknze istediiniz
+
+20
+00:01:56,110 --> 00:01:59,840
+ismi istediiniz her eyi verdiinizde adlandrabileceinizi belirtebilirsiniz.
+
+21
+00:02:00,190 --> 00:02:05,010
+imdi, alabildiimiz dizi ile bir dizi javascript nesnesi bulduk.
+
+22
+00:02:05,410 --> 00:02:12,150
+Btn bu unsurlar arasnda dng yaparken imdi formumu yaratarak onunla alabilirim.
+
+23
+00:02:12,520 --> 00:02:20,680
+Bu yzden formda kvrck parantez ekleyeceim ve imdi drt element dizilimimi, tabii ki burada yeni
+
+24
+00:02:20,680 --> 00:02:25,640
+bir dizi oluturmak iin harita yntemi ile dnglemek istiyorum.
+
+25
+00:02:25,660 --> 00:02:32,470
+Bu, dier bireysel form esini alacak ve yalnzca X ve J yanndaki x deerini
+
+26
+00:02:32,470 --> 00:02:37,440
+X olarak dndrr ve dndrr, elbette benim zel inport bileenim olmaldr.
+
+27
+00:02:37,750 --> 00:02:43,210
+Ve imdi elemanlar ve eleman trn olmas gerektii gibi yaplandrabiliriz.
+
+28
+00:02:43,240 --> 00:02:50,530
+imdi eleman trne dizilimdeki form esinde eriilebilir ve orada bu atma
+
+29
+00:02:50,530 --> 00:02:54,510
+zelliinde kurulumun sa tarafn saklardm dedim.
+
+30
+00:02:54,550 --> 00:02:55,940
+Yani bu nesne.
+
+31
+00:02:56,320 --> 00:03:00,600
+Yani atma zelliinde sadece birka javascript nesnesi var.
+
+32
+00:03:00,640 --> 00:03:04,740
+e tr mlkiyet ve e atmas ve deeri olmaldr.
+
+33
+00:03:04,930 --> 00:03:07,360
+Bunlar gemek istediim zellikler.
+
+34
+00:03:07,360 --> 00:03:16,390
+Sonunda burada anlattm ey, form esinin kaln olmas ve daha sonra e trnn ayarlanmas.
+
+35
+00:03:16,480 --> 00:03:25,340
+Dolaysyla sadece burada sahip olduumuz isim element ats ve deerini ayn ekilde geirdik.
+
+36
+00:03:25,600 --> 00:03:28,540
+Bylece burada d element trn getik.
+
+37
+00:03:28,540 --> 00:03:35,080
+imdi e ierii form esi atma esi atmas ile ayn ekilde
+
+38
+00:03:35,150 --> 00:03:41,030
+sylendiim gibi iletilir ve deer de bu e gibi geirilir.
+
+39
+00:03:41,290 --> 00:03:41,780
+Affedersiniz.
+
+40
+00:03:41,790 --> 00:03:47,590
+Form esi form esi akma esi akmas.
+
+41
+00:03:48,070 --> 00:03:50,670
+O kukladan kurtulalm ve elemanlar buraya yerletirelim.
+
+42
+00:03:50,740 --> 00:03:54,380
+Ve bununla birlikte, giri elerimizi dinamik olarak oluturmalyz.
+
+43
+00:03:54,400 --> 00:04:02,580
+imdi her zamanki gibi anahtarm unuttum ve u an iin bir deiim ileci sahibi deiliz.
+
+44
+00:04:02,650 --> 00:04:08,100
+Ayrca imdi yer tutucumuzu karmak iin sorunlar yayoruz gibi grnyoruz.
+
+45
+00:04:08,110 --> 00:04:10,180
+Bu bir cisim deil, bir cisim.
+
+46
+00:04:10,180 --> 00:04:12,070
+Dolaysyla bunlar bizimle ilgilenmek zorunda olduumuz eyler.
+
+47
+00:04:12,100 --> 00:04:14,630
+Anahtarn anahtar ile balayalm.
+
+48
+00:04:14,650 --> 00:04:21,970
+Tm basite form unsurunu alalm id zellii ekliyoruz, burada yazm hatas var.
+
+49
+00:04:22,110 --> 00:04:27,030
+imdi de eksik olan onchange ileyicisi ile ilgili bir hata aldm, bununla ilgili
+
+50
+00:04:27,030 --> 00:04:27,990
+bir saniye bekleyecektir.
+
+51
+00:04:28,320 --> 00:04:34,430
+Neden kirac olduumuzu ortaya karmakla ilgili sorunlarmz olduunu dnelim.
+
+52
+00:04:34,830 --> 00:04:38,250
+Hatay buldum ve yanl deerleri geirdim, yer tutucu deil.
+
+53
+00:04:38,250 --> 00:04:42,840
+Deer yanl burada elbette ki atma deeri atma deil atma olmal.
+
+54
+00:04:43,050 --> 00:04:46,070
+imdi eer yer tutucu ktlyorsa.
+
+55
+00:04:46,120 --> 00:04:48,090
+Bu her ey alyor.
+
+56
+00:04:48,090 --> 00:04:54,000
+girdi bileeni var. ve metin alanlarn kullanrz, ancak seilen bir eyi ele almaya alrz.
+
+57
+00:04:54,030 --> 00:05:01,680
+imdilik elimizde deiikliklere tepki gsterip gsteremeyeceimizden emin olmalyz ve alr listemizi ele almann bir yolunu bulmamz gerekiyor, nk
+
+58
+00:05:01,680 --> 00:05:07,780
+u anda yanl bir ekilde oluturuldu, tabii ki burada switch ifadem ve ele aldmz
+
+59
+00:05:07,800 --> 00:05:12,640
+Bunu yaptmz yerde kurma yntemimiz iin seeneklerle birlikte semeliyiz.
+
+60
+00:05:12,750 --> 00:05:17,760
+Bu yzden, giri bileenini, verileri nasl alacamzza bir bakmadan nce de
+
+61
+00:05:17,760 --> 00:05:20,360
+tedavi edebilmek iin ekleyelim veya ayarlayalm.
+
+62
+00:05:20,400 --> 00:05:21,360
+Kullanc girer.
+

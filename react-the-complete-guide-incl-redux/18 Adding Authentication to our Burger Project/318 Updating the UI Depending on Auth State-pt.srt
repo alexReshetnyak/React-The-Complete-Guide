@@ -1,0 +1,360 @@
+1
+00:00:02,280 --> 00:00:07,230
+Ento, na ltima palestra, finalmente usamos um token para obter acesso a recursos protegidos. Agora,
+
+2
+00:00:07,230 --> 00:00:13,530
+quero ter certeza de que podemos ver na nossa interface do usurio no aplicativo se estamos autenticados ou no.
+
+3
+00:00:13,530 --> 00:00:18,000
+No momento, sempre vemos autenticar aqui, o que nos leva ao
+
+4
+00:00:18,240 --> 00:00:26,100
+formulrio de autenticao, mas mesmo se fizermos login com sucesso aqui, ainda veremos a autenticao aqui, seria melhor ver
+
+5
+00:00:26,100 --> 00:00:30,980
+o logout aqui se autenticarmos para que possamos ver se somos autenticados.
+
+6
+00:00:31,050 --> 00:00:31,590
+ claro
+
+7
+00:00:31,590 --> 00:00:34,690
+que voc tambm pode mostrar algo como usurio para acessar seu
+
+8
+00:00:34,860 --> 00:00:37,060
+perfil, mas vou continuar com o logout.
+
+9
+00:00:37,200 --> 00:00:43,080
+Ento, isso seria um timo complemento para o nosso aplicativo e  fcil de implementar.
+
+10
+00:00:43,170 --> 00:00:50,760
+Ns gerenciamos o que vemos na rea de navegao aqui, na pasta de componentes sob itens
+
+11
+00:00:50,850 --> 00:00:52,510
+de navegao, neste componente,
+
+12
+00:00:52,530 --> 00:01:01,170
+definimos o que est dentro do nosso menu, tanto o responsivo quanto a navegao da rea de trabalho.
+
+13
+00:01:01,230 --> 00:01:06,410
+Agora, a ideia  mostrar apenas o item de navegao com
+
+14
+00:01:06,510 --> 00:01:08,370
+autenticao se voc no
+
+15
+00:01:08,430 --> 00:01:14,810
+estiver autenticado, portanto, se precisar se inscrever ou entrar e mostrar um link
+
+16
+00:01:14,910 --> 00:01:17,690
+de logout, se estiver conectado.
+
+17
+00:01:17,700 --> 00:01:25,920
+Ento, para isso precisamos verificar nosso estado, nosso estado de login em itens de navegao, itens de navegao,  claro, 
+
+18
+00:01:25,920 --> 00:01:30,490
+um componente de apresentao, ento no podemos conectar isso ao redux.
+
+19
+00:01:30,540 --> 00:01:36,160
+Embora pudssemos, poderamos simplesmente transform-lo em um baseado em classe e, em seguida, usar a conexo
+
+20
+00:01:36,450 --> 00:01:37,550
+neste componente, voc
+
+21
+00:01:37,590 --> 00:01:38,830
+pode fazer isso, mas
+
+22
+00:01:38,880 --> 00:01:44,370
+eu no recomendaria isso, isso quebra a ideia de ter alguns componentes de continer conectados ao
+
+23
+00:01:44,370 --> 00:01:47,660
+armazenar e ter um monte de componentes idiotas que
+
+24
+00:01:47,910 --> 00:01:55,530
+no conhecem a loja, ento eu no recomendaria usar essa abordagem. Uma abordagem melhor seria escolher um continer de encaixe que, na verdade,
+
+25
+00:01:55,530 --> 00:01:57,720
+carrega itens de navegao e, aqui, ele
+
+26
+00:01:57,990 --> 00:02:03,780
+no est na pasta do continer, mas na pasta de layout, simplesmente porque o usamos para envolver outros componentes.
+
+27
+00:02:04,290 --> 00:02:12,510
+O layout. O arquivo js  um componente baseado em classes e l implementamos a barra de ferramentas
+
+28
+00:02:12,600 --> 00:02:16,650
+e o sidedrawer, que so,  claro, os componentes que usam itens de navegao no final.
+
+29
+00:02:16,680 --> 00:02:26,250
+Ento, faria sentido conectar o layout aqui  nossa loja para que possamos passar as informaes de autenticao para a barra de ferramentas e
+
+30
+00:02:26,250 --> 00:02:33,090
+a gaveta lateral que, por sua vez, poderiam pass-las para itens de navegao,  exatamente o que
+
+31
+00:02:33,090 --> 00:02:34,040
+eu quero fazer.
+
+32
+00:02:34,260 --> 00:02:45,020
+Ento eu vou importar connect from react-redux aqui e vou conectar meu layout, agora estou interessado em algum estado ento vou adicionar
+
+33
+00:02:45,040 --> 00:02:51,990
+a constante mapStateToProps aqui, esta ser uma funo onde eu recebo o estado como sempre
+
+34
+00:02:52,060 --> 00:02:57,580
+e Retorno um objeto javascript onde eu mapear alguns adereos para fatias
+
+35
+00:02:57,580 --> 00:03:06,650
+do meu estado e eu quero criar uma propriedade que eu vou chamar isAuthenticated e vou vincul-lo ao estado
+
+36
+00:03:07,430 --> 00:03:09,360
+e agora como podemos
+
+37
+00:03:09,710 --> 00:03:15,980
+descobrir se o usurio  autenticado? No final, se dermos uma olhada no nosso
+
+38
+00:03:16,220 --> 00:03:22,230
+redutor de autenticao, vemos que no estado que temos relevante para a autenticao, se o token
+
+39
+00:03:22,240 --> 00:03:25,520
+ nulo, o usurio no  autenticado, se o
+
+40
+00:03:25,520 --> 00:03:28,200
+token no for nulo, o usurio 
+
+41
+00:03:28,280 --> 00:03:32,420
+autenticado, especialmente verdade, j que limpamos um token automaticamente quando ele
+
+42
+00:03:32,420 --> 00:03:37,970
+expira, esse  o cdigo que adicionamos anteriormente. Assim, podemos confiar no token nos dando uma indicao sobre se o
+
+43
+00:03:37,970 --> 00:03:40,520
+usurio est autenticado ou no. Com isso em mente, podemos voltar
+
+44
+00:03:40,550 --> 00:03:47,510
+ao layout e simplesmente definir isAuthenticated igual ao estado. auth. token e compar-lo a null,
+
+45
+00:03:47,930 --> 00:03:49,680
+se no for igual
+
+46
+00:03:49,790 --> 00:03:57,500
+a null, o que essa verificao verifica que  autenticado  true porque estamos autenticados.
+
+47
+00:03:58,370 --> 00:04:08,110
+Agora eu vou usar isso junto com o connect, ento eu vou passar isso para conectar e quebrar o whoops, enrole o componente layout com a funo return pela funo
+
+48
+00:04:08,290 --> 00:04:15,910
+connect e posso usar isAuthenticated como um prop no meu cdigo jsx aqui ou em qualquer lugar neste componente, claro, e eu quero
+
+49
+00:04:15,940 --> 00:04:21,880
+pass-lo para minha barra de ferramentas, ento eu vou adicionar um novo prop aqui e eu vou chamar
+
+50
+00:04:21,940 --> 00:04:30,470
+isso de isAuth por exemplo, e vou passar isso. adereos. isAuthenticated, ento essa propriedade que
+
+51
+00:04:30,520 --> 00:04:37,190
+acabamos de mapear l e eu farei o mesmo para a gaveta lateral.
+
+52
+00:04:38,340 --> 00:04:42,650
+Agora  claro que preciso editar esses dois componentes para poder usar esse novo suporte, por
+
+53
+00:04:42,900 --> 00:04:47,070
+isso vou para o componente da barra de ferramentas aqui e ali, agora recebo essa nova
+
+54
+00:04:47,070 --> 00:04:52,550
+informao de suporte e preciso pass-la para itens de navegao. Aqui, eu vou nomear este prop isAuthenticated
+
+55
+00:04:52,550 --> 00:04:55,760
+e estou mudando esses nomes apenas para ter
+
+56
+00:04:55,770 --> 00:05:00,540
+certeza de que voc no est confundindo o que est chegando e
+
+57
+00:05:00,540 --> 00:05:01,610
+o que estamos
+
+58
+00:05:01,860 --> 00:05:09,030
+passando, ento aqui estAutenticated ser passado para itens de navegao como um prop e ns passamos em props isAuth,
+
+59
+00:05:09,690 --> 00:05:17,580
+isAuth porque  isso que acabamos de escolher no layout, isAuth. O mesmo para a gaveta lateral,  claro, na gaveta lateral, l tambm
+
+60
+00:05:17,580 --> 00:05:19,170
+temos os itens de navegao
+
+61
+00:05:19,260 --> 00:05:23,500
+e eu ligo isAuthenticated ento o nome do prop que eu acabei de escolher
+
+62
+00:05:23,550 --> 00:05:29,070
+na barra de ferramentas e eu passo em props. isAuth.
+
+63
+00:05:29,340 --> 00:05:31,890
+Com isso, salve os dois
+
+64
+00:05:31,890 --> 00:05:39,270
+componentes e agora nos itens de navegao, sei que recebo essa proposio autenticada que 
+
+65
+00:05:39,270 --> 00:05:40,430
+verdadeira ou falsa.
+
+66
+00:05:40,440 --> 00:05:44,750
+Ento agora aqui, eu posso simplesmente renderizar este item de navegao condicionalmente,
+
+67
+00:05:44,950 --> 00:05:47,240
+eu posso fazer isso em linha
+
+68
+00:05:47,300 --> 00:05:53,550
+ou separado, eu vou fazer isso na linha e eu vou simplesmente checar se os adereos que eu
+
+69
+00:05:54,000 --> 00:06:01,050
+recebo aqui ento os adicione como um argumento, se props isAuthenticated,  claro que o prop que acabamos de definir
+
+70
+00:06:01,860 --> 00:06:04,060
+na gaveta lateral e na barra
+
+71
+00:06:04,230 --> 00:06:11,370
+de ferramentas, se isAuthenticated for true, ento eu quero renderizar esse item de navegao, dividirei isso em vrias linhas para
+
+72
+00:06:11,370 --> 00:06:12,240
+facilitar a leitura.
+
+73
+00:06:12,240 --> 00:06:22,440
+A alternativa  renderizar um item de navegao onde eu realmente ligo / logout e onde eu digo logout, agora / logout leva a
+
+74
+00:06:22,740 --> 00:06:29,400
+uma rota que ainda no registramos, mas essa  a lgica que eu quero usar.
+
+75
+00:06:29,640 --> 00:06:33,480
+Vamos salvar isso e podemos ver esse boto de logout aqui
+
+76
+00:06:33,480 --> 00:06:37,070
+no menu, mas est incorreto, mostrando o logout quando no estamos
+
+77
+00:06:37,080 --> 00:06:41,630
+autenticados porque no somos autenticados quando o aplicativo  recarregado, ento vamos verificar
+
+78
+00:06:41,760 --> 00:06:45,770
+rapidamente a lgica no continer de layout isAuthenticated est ligado ao estado
+
+79
+00:06:45,780 --> 00:06:50,100
+do token que  nulo inicialmente, de modo que est correto, mas em
+
+80
+00:06:50,100 --> 00:06:56,610
+itens de navegao eu tenho um erro lgico, se eu sou autenticado, ento  claro que eu no quero
+
+81
+00:06:56,610 --> 00:06:58,850
+mostrar a autenticao, mas o logout.
+
+82
+00:06:59,010 --> 00:07:03,020
+Ento, eu vou verificar o oposto se eu no for autenticado adicionando um ponto
+
+83
+00:07:03,150 --> 00:07:04,420
+de exclamao, ento eu
+
+84
+00:07:04,680 --> 00:07:08,010
+mostro a autenticao do contrrio, o logout, nesta ordem, faz sentido.
+
+85
+00:07:08,010 --> 00:07:09,960
+Ento, agora vamos salvar esse arquivo novamente
+
+86
+00:07:10,170 --> 00:07:13,570
+e, agora, se esse aplicativo for recarregado, veremos que autenticar  o padro.
+
+87
+00:07:13,590 --> 00:07:18,950
+Agora, se fizermos login, mudaremos para entrar e enviar, voc ver que
+
+88
+00:07:19,050 --> 00:07:21,540
+ele ser trocado por logout.
+
+89
+00:07:21,810 --> 00:07:28,200
+Ento, agora ns atualizamos a interface do usurio, na prxima aula vamos ter certeza de que quando clicamos em logout, ns realmente fazemos
+
+90
+00:07:28,200 --> 00:07:30,540
+alguma coisa porque neste momento esta rota no existe.
+

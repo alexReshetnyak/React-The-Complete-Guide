@@ -1,0 +1,668 @@
+1
+00:00:02,260 --> 00:00:06,790
+Nell'ultima lezione modifichiamo questo ordine, ora il pulsante  in basso e funziona bene.
+
+2
+00:00:06,790 --> 00:00:12,640
+Ora voglio assicurarmi che, una volta cliccato sul pulsante, apriamo questo sommario degli ordini di Swift Modal.
+
+3
+00:00:12,730 --> 00:00:19,730
+Ora per questo abbiamo ovviamente bisogno del modale abbiamo bisogno di uno sfondo e abbiamo bisogno di mostrare qualche riepilogo dell'ordine.
+
+4
+00:00:19,810 --> 00:00:26,590
+L'idea alla base del motore  di avere un elemento di avvolgimento che fornisce lo stile che quindi si avvolge
+
+5
+00:00:26,590 --> 00:00:29,190
+semplicemente su qualsiasi contenuto che si desidera mostrare.
+
+6
+00:00:29,200 --> 00:00:33,010
+In quel modello che ha senso per me almeno.
+
+7
+00:00:33,010 --> 00:00:40,660
+Quindi creer un componente modale di questo tipo e voglio crearlo in una nuova cartella nella loro cartella
+
+8
+00:00:40,660 --> 00:00:45,510
+dei componenti o creare una sottocartella di scrittura per un te generale.
+
+9
+00:00:45,580 --> 00:00:52,170
+Elementi come il modale Cos li aggiunger modali al file modale di Che.
+
+10
+00:00:52,690 --> 00:00:59,950
+Come ho detto sar anche lo sfondo quindi aggiunger una cartella sullo sfondo in effetti Eifel o due non ho
+
+11
+00:00:59,980 --> 00:01:05,000
+aggiunto lo sfondo al motile perch potresti riutilizzare lo sfondo anche in altri posti.
+
+12
+00:01:05,020 --> 00:01:09,600
+Ad esempio per un cassetto laterale per la navigazione che stiamo per aggiungere in seguito.
+
+13
+00:01:10,120 --> 00:01:13,960
+E nella cartella dello sfondo ci sono tutti per aggiungere uno sfondo appena seguito.
+
+14
+00:01:14,080 --> 00:01:16,310
+Ora abbiamo questi due componenti.
+
+15
+00:01:16,540 --> 00:01:25,450
+E iniziamo con il modale Ora, come dovrebbe questo componente Modal apparire come un componente
+
+16
+00:01:25,450 --> 00:01:26,160
+funzionale.
+
+17
+00:01:26,170 --> 00:01:28,750
+Non ha nessuno stato collegato ad esso.
+
+18
+00:01:28,750 --> 00:01:34,800
+Ha appena ricevuto alcuni oggetti di scena e ha restituito alcuni GSX e potrebbe sorprenderti.
+
+19
+00:01:34,810 --> 00:01:42,460
+Ma naturalmente importiamo anche re-act da re-act e esportiamo la funzione modal come default
+
+20
+00:01:42,700 --> 00:01:44,400
+di questo file.
+
+21
+00:01:45,340 --> 00:01:52,990
+Ora, come appare il codice GSX, allora il moton dovrebbe semplicemente essere un div alla fine che si avvolge
+
+22
+00:01:52,990 --> 00:01:54,800
+attorno a qualsiasi contenuto.
+
+23
+00:01:55,000 --> 00:02:02,260
+attorno ai bambini e agli oggetti di scena di un bambino pu davvero essere tutto ci che pu essere i nostri
+
+24
+00:02:02,260 --> 00:02:10,240
+componenti pu essere un testo un paragrafo che  totalmente a noi come usiamo il modem e non possiamo passare nulla l dentro.
+
+25
+00:02:10,240 --> 00:02:12,340
+Quindi un div che  avvolto
+
+26
+00:02:12,460 --> 00:02:19,660
+Ovviamente il div wrapper dovrebbe ricevere un po 'di stile troppo bene per sembrare buono alla fine per avere un
+
+27
+00:02:19,750 --> 00:02:20,590
+look modale.
+
+28
+00:02:20,860 --> 00:02:27,310
+Quindi per quello aggiunger un modale modale C-s come file qua e l.
+
+29
+00:02:27,310 --> 00:02:33,280
+Condivido anche alcuni semi di codice che puoi trovare allegati a questo video che potresti semplicemente incollare
+
+30
+00:02:33,280 --> 00:02:33,820
+l.
+
+31
+00:02:33,940 --> 00:02:42,970
+delle modalita' Sanders nel mezzo della pagina e ci d un po 'di ombreggiatura della scatola e cambia anche alcune delle parti di Starling
+
+32
+00:02:43,090 --> 00:02:50,550
+per un pi ampio passo dello schermo e' tutto con noi puoi importare le classi da quel SEUS come segue.
+
+33
+00:02:50,560 --> 00:02:56,840
+L abbiamo la nostra classe modale e ora possiamo vedere che questo crea semplicemente una modalita 'fissa
+
+34
+00:02:56,840 --> 00:03:04,630
+Quindi importa le classi dal C-s modale come file e assegnale alla profondit del wrapping con l'attributo del nome
+
+35
+00:03:04,900 --> 00:03:05,910
+della classe.
+
+36
+00:03:05,920 --> 00:03:13,110
+Quindi qui abbiamo classi dot motile con la M maiuscola perch  il nome della classe C S S.
+
+37
+00:03:13,180 --> 00:03:16,560
+A proposito, assicurati di salvare che C S S cada.
+
+38
+00:03:16,600 --> 00:03:18,980
+Si incolla il mio contenuto l.
+
+39
+00:03:19,120 --> 00:03:22,310
+Quindi questo  il modale J. S. file.
+
+40
+00:03:22,360 --> 00:03:25,000
+Questo creer un tale modale.
+
+41
+00:03:25,000 --> 00:03:27,540
+Ora aggiungiamo un piccolo subito.
+
+42
+00:03:27,610 --> 00:03:34,280
+E la domanda ovviamente  dove nella nostra applicazione dovremmo aggiungere il modale.
+
+43
+00:03:34,870 --> 00:03:41,530
+Bene, direi che abbiamo aggiunto loro il luogo in cui vogliamo mostrarlo, perch questo  il luogo
+
+44
+00:03:41,530 --> 00:03:47,560
+logico in cui appartiene e dove probabilmente dobbiamo dichiarare e i metodi per controllare tale visualizzazione.
+
+45
+00:03:47,890 --> 00:03:50,410
+Quindi nel nostro caso  il costruttore di hamburger.
+
+46
+00:03:50,920 --> 00:03:55,320
+Aggiungiamo semplicemente in ordine il modale in alto da.
+
+47
+00:03:55,540 --> 00:04:02,200
+E ora dobbiamo navigare verso quel file modale che possiamo trovare nei componenti.
+
+48
+00:04:02,200 --> 00:04:09,310
+Sei un modale e ci sono i modali Jey sporchi come sempre senza l'estensione del file.
+
+49
+00:04:09,310 --> 00:04:13,970
+E poi prendi il modale e aggiungilo al J  X del Bergere Boulder.
+
+50
+00:04:14,050 --> 00:04:16,280
+Ora qui abbiamo il nostro componente ausiliario.
+
+51
+00:04:16,300 --> 00:04:18,380
+Abbiamo ottenuto il Bergere e i controlli di massa.
+
+52
+00:04:18,580 --> 00:04:24,280
+Ora qui aggiunger semplicemente modale e ovviamente questo sar presto regolato per non essere sempre visibile in
+
+53
+00:04:24,980 --> 00:04:25,240
+rosso.
+
+54
+00:04:25,240 --> 00:04:29,920
+Ora se salviamo questo, vediamo la casella modale qui nel mezzo.
+
+55
+00:04:29,920 --> 00:04:35,640
+Ovviamente senza contenuti perch, come ho detto, dovremmo avvolgere questa modalit per mostrarla e leggerla ora
+
+56
+00:04:35,950 --> 00:04:41,490
+ un elemento che si chiude automaticamente e quindi non si avvolge attorno a nulla.
+
+57
+00:04:41,500 --> 00:04:49,320
+L'obiettivo era quello di mostrare il riepilogo dell'ordine e il file del builder non funzionante  gi abbastanza affollato.
+
+58
+00:04:49,540 --> 00:04:57,910
+Quindi non voglio aggiungere alla logica per trasformare questo array in un riassunto ben strutturato in questo file.
+
+59
+00:04:57,910 --> 00:05:06,370
+Lo affider in outsourcing nel suo stesso componente in quanto  generalmente una buona pratica in re-act
+
+60
+00:05:06,400 --> 00:05:08,460
+avere componenti granulari focalizzati.
+
+61
+00:05:08,820 --> 00:05:15,130
+Il componente che voglio creare  un componente di riepilogo dell'ordine e lo aggiunger.
+
+62
+00:05:15,180 --> 00:05:23,800
+Hamburger del componente di Andrew e l ha senso essere aggiunto allo stesso livello dei controlli di costruzione e degli
+
+63
+00:05:23,800 --> 00:05:25,750
+ingredienti per hamburger, immagino.
+
+64
+00:05:25,750 --> 00:05:33,350
+Quindi aggiungiamo il riepilogo dell'ordine l e, ovviamente, nell'ordine, l'ordine un riassunto punto J come file.
+
+65
+00:05:33,520 --> 00:05:40,950
+Ora, quando trattate tutti un sommario di ordine di funzione che riceve alcuni oggetti di scena e che quindi
+
+66
+00:05:40,950 --> 00:05:47,890
+dovrebbe avere un corpo di funzione normale perch dovr eseguire del codice per ottenere il riepilogo dell'ordine
+
+67
+00:05:47,920 --> 00:05:51,850
+gli ingredienti che ottengo nel formato giusto e cos via.
+
+68
+00:05:51,940 --> 00:06:02,810
+Ovviamente come sempre abbiamo bisogno di importare re-act da re-act e vogliamo anche esportare il sommario degli ordini
+
+69
+00:06:02,810 --> 00:06:05,270
+come default del file.
+
+70
+00:06:05,300 --> 00:06:12,030
+Ora, come  possibile che si riversi il sommario degli ordini, alla fine, come  sicuro.
+
+71
+00:06:12,040 --> 00:06:18,590
+Voglio avere un titolo che dice il tuo ordine e forse un breve testo, quindi un elenco di
+
+72
+00:06:18,590 --> 00:06:22,830
+tutti gli articoli nell'ordine e il prezzo e quindi forse una domanda.
+
+73
+00:06:22,880 --> 00:06:24,330
+Continua a dare un'occhiata.
+
+74
+00:06:24,530 --> 00:06:25,590
+E alcuni pulsanti.
+
+75
+00:06:25,660 --> 00:06:27,290
+Quindi un po 'di roba.
+
+76
+00:06:27,290 --> 00:06:29,980
+Ora non ho davvero bisogno di un elemento di avvolgimento qui.
+
+77
+00:06:30,080 --> 00:06:41,480
+Perci importer il mio elemento ausiliario dagli alask whoops Agios Seahawks.
+
+78
+00:06:41,490 --> 00:06:48,490
+Quindi ora possiamo restituire un po 'di codice X qui con un elemento ausiliario avvolgente e nessuna preoccupazione.
+
+79
+00:06:48,490 --> 00:06:53,850
+Aggiungeremo una certa logica di fronte all'istruzione return in modo che abbia senso avere
+
+80
+00:06:53,850 --> 00:06:57,270
+un corpo funzione reale e non solo l'istruzione return.
+
+81
+00:06:57,750 --> 00:07:06,080
+Cos li aggiunger un tag libero dove dico il tuo ordine qui sotto che voglio
+
+82
+00:07:06,080 --> 00:07:06,710
+aggiungere
+
+83
+00:07:08,760 --> 00:07:15,460
+un paragrafo in cui dico semplicemente hamburger delizioso con i seguenti ingredienti.
+
+84
+00:07:15,510 --> 00:07:22,520
+Colin e ora voglio aggiungere una lista non ordinata che dovrebbe contenere anche tante voci di elenco necessarie
+
+85
+00:07:22,790 --> 00:07:26,030
+per produrre tutte le informazioni sul mio hamburger.
+
+86
+00:07:26,030 --> 00:07:29,090
+Quindi per ogni ingrediente un elemento della lista.
+
+87
+00:07:29,150 --> 00:07:34,850
+scrivere hardcoded l, ma voglio crearlo dinamicamente perch siamo sempre dinamici e reagiamo in modo
+
+88
+00:07:34,880 --> 00:07:41,240
+da poter aggiungere una nuova variabile in realt un concetto perch non ho intenzione di modificarlo.
+
+89
+00:07:41,240 --> 00:07:41,990
+Ovviamente potrei
+
+90
+00:07:41,990 --> 00:07:46,700
+Sommario degli ingredienti che dovrebbe prendere alcuni ingredienti.
+
+91
+00:07:46,700 --> 00:07:53,730
+Mi aspetto di ottenere come oggetti di scena e in pratica di mapparli in elenchi.
+
+92
+00:07:53,810 --> 00:08:01,010
+Ora per gli ingredienti avremo il vecchio problema che questi sono in un formato oggetto e non
+
+93
+00:08:01,160 --> 00:08:02,540
+in un array.
+
+94
+00:08:02,540 --> 00:08:08,360
+Ora, naturalmente, potremmo anche creare questo componente in modo tale da aspettarsi un array e trasformare
+
+95
+00:08:08,360 --> 00:08:12,790
+la matrice nel generatore di hamburger dove lo inoltreremo al riepilogo Oracle.
+
+96
+00:08:13,100 --> 00:08:17,990
+farlo viceversa e semplicemente passare l'oggetto e fare la trasformazione nel sommario ordine.
+
+97
+00:08:17,990 --> 00:08:19,330
+Ma puoi anche
+
+98
+00:08:19,340 --> 00:08:26,390
+ l'approccio che seguir perch ritengo che ci ci consenta di mantenere un costruttore pi profondo un po 'pi snello
+
+99
+00:08:26,600 --> 00:08:30,370
+anche se potresti discutere per entrambe le direzioni dove dovrebbe accadere.
+
+100
+00:08:30,680 --> 00:08:36,770
+Quindi qui mi aspetto di ottenere i miei ingredienti in un formato di oggetto e alla fine quello che voglio produrre  qualcosa
+
+101
+00:08:36,770 --> 00:08:37,160
+del genere.
+
+102
+00:08:37,160 --> 00:08:45,350
+Voglio avere una voce di elenco in cui posso sostanzialmente dire di chiamarlo come venderlo e quindi semplicemente il numero di
+
+103
+00:08:45,440 --> 00:08:47,060
+ingredienti di quel tipo.
+
+104
+00:08:47,090 --> 00:08:51,040
+E ovviamente avrei una lista per ogni ingrediente.
+
+105
+00:08:51,080 --> 00:08:56,000
+Ora, quando l'hard coding  ovviamente pi semplice, potrei semplicemente scrivere un
+
+106
+00:08:56,270 --> 00:09:00,880
+codice per un elenco e accedere alla rispettiva propriet dell'oggetto ingredients.
+
+107
+00:09:01,040 --> 00:09:04,000
+Ma voglio creare in un modo pi flessibile.
+
+108
+00:09:04,060 --> 00:09:06,560
+L'output che voglio avere di nuovo per.
+
+109
+00:09:06,650 --> 00:09:17,390
+Quindi, ci che possiamo fare  che possiamo prendere gli ingredienti che otteniamo qui e ancora usare le chiavi dell'oggetto per
+
+110
+00:09:17,390 --> 00:09:22,790
+trasformarlo in un array di chiavi di cella e cos via.
+
+111
+00:09:22,790 --> 00:09:25,620
+Ora chiedo prima di voler mappare questo.
+
+112
+00:09:25,910 --> 00:09:30,140
+Vogliamo mappare questo in una serie di elementi J S X alla fine.
+
+113
+00:09:30,140 --> 00:09:34,110
+Quindi abbiamo inserito le chiavi Ingredion come input e vogliamo tornare.
+
+114
+00:09:34,190 --> 00:09:39,910
+Beh, in pratica faccio parte dell'elenco, ho solo trovato qui.
+
+115
+00:09:39,980 --> 00:09:43,240
+Quindi prendiamo l'ultimo elemento e aggiungiamolo qui.
+
+116
+00:09:43,270 --> 00:09:48,290
+Ora come facciamo ad avere la cellula l fuori gi il nome dell'ingrediente.
+
+117
+00:09:48,290 --> 00:09:58,700
+Ora questa  solo la nostra chiave ingrediente e il valore  solo gli ingredienti del prop e quindi accedere alla
+
+118
+00:09:58,700 --> 00:10:00,800
+chiave ingrediente e basta.
+
+119
+00:10:00,860 --> 00:10:09,050
+tutta la chiave dell'ingrandimento qui in un intervallo perch voglio capitalizzare cos trasformare la prima lettera in una maiuscola
+
+120
+00:10:09,230 --> 00:10:15,950
+perch il nostro array di ingredienti gestito nel generatore di hamburger negli ingredienti oggetto mi scusa.
+
+121
+00:10:16,250 --> 00:10:18,200
+L'unica cosa che aggiunger 
+
+122
+00:10:18,260 --> 00:10:20,600
+Ovviamente abbiamo pancetta e cos via.
+
+123
+00:10:20,630 --> 00:10:22,860
+Tutto a partire da caratteri minuscoli.
+
+124
+00:10:23,000 --> 00:10:27,260
+Ora se li stiamo producendo, voglio avere caratteri maiuscoli iniziali.
+
+125
+00:10:27,260 --> 00:10:35,180
+Quindi, quindi, avvolgo il nome in uno span in modo da poter utilizzare alcuni stili in linea qui e semplicemente
+
+126
+00:10:35,180 --> 00:10:37,240
+impostarlo su un oggetto javascript.
+
+127
+00:10:37,340 --> 00:10:45,860
+Questo  il motivo per cui ho le doppie parentesi graffe che la coppia esterna  per la marcatura e l'entrata dinamica e le
+
+128
+00:10:45,950 --> 00:10:48,580
+parentesi graffe di Cauley interne sono l'oggetto javascript.
+
+129
+00:10:48,980 --> 00:10:54,800
+E l imposter il testo che trasforma C-s come propriet da capitalizzare.
+
+130
+00:10:54,800 --> 00:10:58,360
+Quindi, semplicemente usando alcuni stili in linea qui.
+
+131
+00:10:58,800 --> 00:11:04,570
+Ora lascia che lo avvolga su pi righe per renderlo un po 'pi facile da leggere.
+
+132
+00:11:04,580 --> 00:11:13,030
+Quindi abbiamo un elemento della lista qui e in quella voce dell'elenco abbiamo la nostra Spanne.
+
+133
+00:11:13,080 --> 00:11:17,650
+Ora questo  quello che voglio che tu crei un elenco di questi elementi della lista.
+
+134
+00:11:17,820 --> 00:11:24,870
+E ora possiamo semplicemente generare il sommario di Ingredion all'interno di quella lista non ordinata e una citazione stilata come una
+
+135
+00:11:24,870 --> 00:11:32,490
+lista ordinata perch sei per questa rara occasione o in realt usi lo stile predefinito di tutti questi elementi ed  per
+
+136
+00:11:32,790 --> 00:11:38,950
+questo che il componente di riepilogo dell'ordine non  nemmeno avere il proprio riepilogo dell'ordine C come segue.
+
+137
+00:11:39,030 --> 00:11:43,270
+Anche se ovviamente sei libero di aggiungere uno e uno stilista alle tue esigenze.
+
+138
+00:11:43,590 --> 00:11:50,920
+E poi voglio aggiungere un paragrafo in cui dico di continuare a dare un'occhiata in questo modo.
+
+139
+00:11:51,160 --> 00:11:57,360
+Ora seguiamo questo approccio per ora con questo riepilogo dell'ordine e usiamolo nel costruttore Bergere.
+
+140
+00:11:57,760 --> 00:12:02,780
+Voglio passarlo tra i miei tag di apertura e chiusura modali.
+
+141
+00:12:03,010 --> 00:12:10,720
+Quindi, prima di tutto importa questo componente di riepilogo dell'ordine dalla nostra cartella dei componenti e l dalla
+
+142
+00:12:10,720 --> 00:12:17,020
+cartella Bergere dalla cartella di riepilogo degli ordini nel file di riepilogo degli ordini queste
+
+143
+00:12:17,020 --> 00:12:19,710
+istruzioni di importazione possono essere piuttosto lunghe.
+
+144
+00:12:19,720 --> 00:12:23,950
+Ora prendiamo quella o una variabile riassuntiva in cui importare la sicurezza.
+
+145
+00:12:24,380 --> 00:12:29,770
+Andiamo al modal e cambiamo solo per avere il tag di apertura e chiusura.
+
+146
+00:12:30,040 --> 00:12:38,800
+E nel frattempo desidero pubblicare il mio riepilogo dell'ordine come componente autochiudente qui.
+
+147
+00:12:39,760 --> 00:12:40,980
+Per funzionare correttamente.
+
+148
+00:12:40,990 --> 00:12:47,680
+Il riepilogo dell'ordine del corso ha bisogno di ottenere la propriet degli ingredienti perch stiamo accedendo
+
+149
+00:12:47,680 --> 00:12:49,960
+agli ingredienti sull'oggetto dell'elica qui.
+
+150
+00:12:50,760 --> 00:12:52,140
+Nel sommario dell'ordine.
+
+151
+00:12:52,560 --> 00:12:56,990
+Quindi abbiamo bisogno di passare i nostri ingredienti e li otteniamo dal nostro stato.
+
+152
+00:12:57,000 --> 00:13:00,090
+Quindi questo stato ingredienti.
+
+153
+00:13:00,390 --> 00:13:06,170
+Ora vediamo come appare se salviamo tutti i difetti e torniamo alla sua applicazione.
+
+154
+00:13:07,800 --> 00:13:11,610
+Vedrai che riceviamo un avviso che abbiamo dimenticato di aggiungere la chiave al nostro array.
+
+155
+00:13:11,670 --> 00:13:13,890
+Ma generalmente questo sembra buono.
+
+156
+00:13:14,130 --> 00:13:17,030
+E se ho cliccato sui pulsanti, aggiorna anche il modem.
+
+157
+00:13:17,160 --> 00:13:21,240
+E naturalmente sarebbe una buona idea non mostrare costantemente questo modello, ma lavoreremo su questo
+
+158
+00:13:21,240 --> 00:13:22,060
+al pi presto.
+
+159
+00:13:22,230 --> 00:13:25,110
+Risolviamo questa area chiave o prima.
+
+160
+00:13:25,170 --> 00:13:27,070
+E naturalmente  facile da risolvere.
+
+161
+00:13:27,090 --> 00:13:33,000
+Prova questo da solo  un riepilogo dell'ordine, ovviamente qui sulla voce di elenco.
+
+162
+00:13:33,010 --> 00:13:38,180
+Dobbiamo aggiungere una chiave e la chiave morta dovrebbe essere una chiave univoca.
+
+163
+00:13:38,200 --> 00:13:45,280
+Come sai ora, usiamo semplicemente il tasto IGY cos solido e cos via come una chiave qui.
+
+164
+00:13:45,400 --> 00:13:48,190
+E con questo l'avvertimento dovrebbe essere sparito.
+
+165
+00:13:48,380 --> 00:13:54,340
+Ora il passo successivo  assicurarsi che non sempre vediamo il modello ma che possiamo aggiungerlo o
+
+166
+00:13:54,340 --> 00:13:54,850
+mostrarlo.
+
+167
+00:13:54,850 --> 00:13:56,410
+Una volta che fai clic sull'ordine ora.
+

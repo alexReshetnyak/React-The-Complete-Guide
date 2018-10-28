@@ -1,0 +1,420 @@
+1
+00:00:02,360 --> 00:00:06,360
+Son dersimizde projemizi yaratc tepki ile yarattk.
+
+2
+00:00:06,450 --> 00:00:11,980
+Ve bahsettiim gibi, NPM'nin balatldndan emin olun, bu sre, kodunuz zerinde alrken her
+
+3
+00:00:11,980 --> 00:00:13,260
+zaman alyor demektir.
+
+4
+00:00:13,290 --> 00:00:19,160
+imdi stdyo kodu olan Microsoft ile oluturulmu klasr atm.
+
+5
+00:00:19,200 --> 00:00:22,030
+Kurs iin kullanacam fikir budur.
+
+6
+00:00:22,200 --> 00:00:25,430
+Ancak kullanmak istediiniz herhangi bir fikir veya editr kullanabilirsiniz.
+
+7
+00:00:25,500 --> 00:00:31,950
+rnein tm bir web maazas ve bir alternatif veya olaanst bir ey olurdu veya Adam veya sevdiiniz
+
+8
+00:00:31,950 --> 00:00:33,000
+herhangi bir editr.
+
+9
+00:00:33,000 --> 00:00:38,850
+imdi burada bir tema ve baz uzantlar yklyorum ve kullandnz yaplandrmay
+
+10
+00:00:39,140 --> 00:00:42,170
+bu videolara ekli PTF dokmannda bulabilirsiniz.
+
+11
+00:00:42,210 --> 00:00:48,150
+Ayn eyi kullanmak istiyorsanz, ancak temay ne olursa olsun favori ayarlarnz kullanmaktan
+
+12
+00:00:48,150 --> 00:00:53,230
+ekinmeyin ve ayn miktarda dosyann ve klasrn projenizde olmas gerekir.
+
+13
+00:00:53,460 --> 00:00:58,890
+Dolaysyla, sahip olduumuz tm dosya ve klasrleri dolatracamz kk dzeyinde renelim, bir ift
+
+14
+00:00:58,890 --> 00:01:00,420
+yaplandrma dosyas elde edelim.
+
+15
+00:01:00,480 --> 00:01:03,010
+Buradaki kilit dosyalar temelde gz ard edilebilir.
+
+16
+00:01:03,030 --> 00:01:07,800
+Onlarn gs kilitleme bamllklarnn kelimelerini kullanarak genel bamllklarn kullanyoruz.
+
+17
+00:01:07,800 --> 00:01:14,250
+Projemizin apkalar paketlenmi bitiik dosyada tanmlanmtr ve orada  tane askya sahip olduunuzu grebilirsiniz; bu
+
+18
+00:01:14,250 --> 00:01:18,360
+projede yer alan ve hepsi Create re-act uygulamas tarafndan oluturulmutur.
+
+19
+00:01:18,540 --> 00:01:24,720
+Grdnz gibi, burada akas tepki aldmz gryoruz, bunu tekrar inceleme aamasnda, 16 numaral yeniden
+
+20
+00:01:24,720 --> 00:01:26,520
+yaynlanma aday srmn kullanyorum.
+
+21
+00:01:26,520 --> 00:01:32,710
+Bu yeniden aktive edilmeli Dom ayn ve yeniden aktive komut dosyalar bahsettiim gibi
+
+22
+00:01:32,760 --> 00:01:39,900
+tm bu i akn sunan bir paket Bu gelitirme sunucusu yeni nesil javascript zellikleri destekliyor
+
+23
+00:01:39,990 --> 00:01:46,340
+ve bu projede pakette kullandmz tm bu eyler komu baba birka komut dosyas tanmlamak.
+
+24
+00:01:46,560 --> 00:01:51,000
+Bu komut dosyalarn NPM run ve ardndan komut dosyas ad ile altrabilirsiniz.
+
+25
+00:01:51,180 --> 00:01:57,060
+stisna, NPM ile birlikte almaya balayarak komutu yrtmeye balayabilir ve grebildiiniz gibi
+
+26
+00:01:57,060 --> 00:02:02,680
+bu yeniden aktive komut dosyalar paketini kullanarak baz balang komutlarn orada yrtebilirsiniz.
+
+27
+00:02:02,690 --> 00:02:03,730
+Bu sadece bir emir.
+
+28
+00:02:03,750 --> 00:02:08,900
+Bu paket bir yol kat eder ve bu komut bu gelitirme sunucusunu balatmak olur.
+
+29
+00:02:08,940 --> 00:02:15,750
+Tm kodumuzu izleyin kodumuzu derleyin ve kodunuzu optimize edin ve uygulamanz datmaya hazr olduunuzda bunlar
+
+30
+00:02:15,750 --> 00:02:21,360
+yapn NPM altrn envanterini optimize etmek iin onu altrn ve insan sunucusunun
+
+31
+00:02:21,570 --> 00:02:28,740
+iradesini yerine getirmeyin, bunun yerine optimize edilmi kodunuzu saklayn Bir klasr, nk u anda burada
+
+32
+00:02:28,770 --> 00:02:30,090
+derlenmi kodunuzu grmeyeceksiniz.
+
+33
+00:02:30,090 --> 00:02:31,770
+Her ey hafzada olur.
+
+34
+00:02:31,770 --> 00:02:35,190
+Ancak uygulamay daha sonra kursta konulandrmak iin geri geleceim.
+
+35
+00:02:35,220 --> 00:02:37,140
+Jason'n takip ettii bu paketin konumasn kapatalm.
+
+36
+00:02:37,140 --> 00:02:44,710
+imdilik, dm modlleri klasr, projemizin tm bamllklarn ve Suppe bamllklarn tutar.
+
+37
+00:02:44,940 --> 00:02:46,780
+te bu yzden ok ey var.
+
+38
+00:02:46,800 --> 00:02:53,130
+Sadece kollara tepki vermek ve komut dosyalarn yeniden harekete geirmek zorunda kaldk, ancak komut dosyalarn yeniden hareket ettirmek dier bamllklar da oktur.
+
+39
+00:02:53,130 --> 00:02:56,550
+Kodu derleyen ve bylece devam eden btn bu kk aralar.
+
+40
+00:02:56,760 --> 00:02:59,820
+Nod modlleri klasrne bir ey dzenlememelisiniz.
+
+41
+00:02:59,850 --> 00:03:06,510
+NPM kurulumunu proje klasrnzde altrrsanz otomatik olarak oluturulur ve Yeniden Olutur komut dosyalar
+
+42
+00:03:06,570 --> 00:03:08,680
+oluturarak otomatik olarak yaplr.
+
+43
+00:03:08,850 --> 00:03:11,160
+Ortak klasr daha ilgin.
+
+44
+00:03:11,160 --> 00:03:16,070
+Temel olarak olsa sonunda web sunucusu tarafndan hizmet alan kk klasrdr.
+
+45
+00:03:16,080 --> 00:03:23,090
+Burada yalnzca dosyalar tutuyoruz, komut dosyalarn kaynak klasre ekleyerek dzenleyebiliyoruz.
+
+46
+00:03:23,490 --> 00:03:26,580
+Burada bir nemli dosya endeksimiz var, h t m l.
+
+47
+00:03:26,700 --> 00:03:30,960
+Bu normal bir HGL sayfasdr ve hala tek bir sayfadr.
+
+48
+00:03:30,980 --> 00:03:32,010
+Daha azmz var.
+
+49
+00:03:32,070 --> 00:03:35,760
+Bu projeye daha fazla HDMI sayfas eklemeyeceiz.
+
+50
+00:03:35,820 --> 00:03:41,950
+Birden fazla sayfa projesi oluturuyorsanz, birden fazla trde projeler oluturursunuz, daha sonra yeniden
+
+51
+00:03:42,240 --> 00:03:43,630
+uygulama uygulamas oluturamazsnz.
+
+52
+00:03:43,650 --> 00:03:47,690
+Tim buraya gelir ya da isterseniz kendi i aknza ihtiyacnz var.
+
+53
+00:03:47,820 --> 00:03:54,820
+Sonuta, komut dosyalarmzn bu yap i ak tarafndan enjekte edilecei tek sayfa.
+
+54
+00:03:54,840 --> 00:04:01,200
+te bu yzden burada bir komut dosyas ieri aktarm grmyorsunuz ve bu dosyay dzenleyebilirsiniz, ancak burada NEHTA
+
+55
+00:04:01,200 --> 00:04:02,160
+HTML kodu yazacaz.
+
+56
+00:04:02,340 --> 00:04:05,670
+Kimlik rotasyla diff yln vurgulamak istiyorum.
+
+57
+00:04:05,700 --> 00:04:11,910
+Bu nem kazanacak nk bu reaksiyon uygulamamz daha sonra monte edeceiz ve tabii
+
+58
+00:04:12,060 --> 00:04:14,160
+ki alp tepki gstereceiz.
+
+59
+00:04:14,160 --> 00:04:20,880
+Abwehr ktphanelerini C-s ktphanesi olarak veya baz meta etiketler eklemek istemek iin herhangi bir
+
+60
+00:04:20,880 --> 00:04:25,170
+ithalat eklemeniz gerekiyorsa o yl DHV posta dosyasnda yapabilirsiniz.
+
+61
+00:04:25,170 --> 00:04:26,930
+Onu burada daha ok yalandrabilirsiniz.
+
+62
+00:04:26,940 --> 00:04:33,480
+Follett'in orada komusunu yeniden hareket ettirmek iin bunu yapmak istiyor olabilirsiniz, nk yeniden eylem
+
+63
+00:04:33,480 --> 00:04:37,230
+uygulamas bize kutudan ilerici bir Web uygulamas salyor.
+
+64
+00:04:37,260 --> 00:04:43,230
+ve bize uygulamanzla ilgili baz meta veriler bulabildiimiz manifestoyu bitiik sonbaharda veriyor.
+
+65
+00:04:43,230 --> 00:04:45,630
+En azndan en basit olan
+
+66
+00:04:45,630 --> 00:04:48,150
+Bizim iin ilgin olan kaynak klasr.
+
+67
+00:04:48,270 --> 00:04:53,150
+Burada birka dosya alyoruz ve bunlar aslnda alacamz dosyalardr.
+
+68
+00:04:53,240 --> 00:04:56,310
+Bu aslnda tepki bavurumuzdur.
+
+69
+00:04:56,580 --> 00:04:58,380
+u anda bizim iin en nemli ey.
+
+70
+00:04:58,380 --> 00:05:06,540
+Bir sonraki js dosyas Domino'daki bu kk elemanmza h chimley dosyamza eriir; bu nedenle
+
+71
+00:05:06,540 --> 00:05:12,000
+Kimlie sahip kk dizini HVM dosyasnda grdmz bu Def'dir.
+
+72
+00:05:12,000 --> 00:05:20,500
+Bunu yaptnz greceiniz gibi render yntemini render yntemiyle iler.
+
+73
+00:05:20,850 --> 00:05:29,940
+imdi, bir uygulama dosyasndan Daut J. uzantsn ie aktardmz baz uygulama nesnesinin veya
+
+74
+00:05:30,060 --> 00:05:36,480
+enin bir referans. S. otomatik olarak yapm i akmz tarafndan eklendiinden ve daha
+
+75
+00:05:36,480 --> 00:05:38,290
+sonra bu uygulamann JS dosyasn dndmz gzlemlediimizden karld.
+
+76
+00:05:38,290 --> 00:05:45,870
+Dolaysyla, u anda bu balang projesinde sahip olduumuz ilk ve tek tekrar et
+
+77
+00:05:45,870 --> 00:05:47,010
+bileenimizi gryoruz.
+
+78
+00:05:47,070 --> 00:05:53,580
+Burada baz GSX gryoruz ve bir sonraki derslerde tam olarak burada grdmz eylere derinlemesine dalacaz.
+
+79
+00:05:53,880 --> 00:06:01,210
+imdilik, bu kaydrma blmndeki tm ierii kaldralm ve bir etiket ekleyelim.
+
+80
+00:06:01,240 --> 00:06:12,010
+Sayn Merhaba ben de tepki gsterelim elbette kapatalm ve sonra da kurtaralm.
+
+81
+00:06:12,010 --> 00:06:15,200
+Dosyalarnz kaydetmeyi unutmayn, bu her zaman nemlidir.
+
+82
+00:06:15,240 --> 00:06:21,400
+NPM'nin almaya balamas bu yana, otomatik olarak bir derlemeyi tetikleyecektir.
+
+83
+00:06:21,580 --> 00:06:27,130
+Ve otomatik olarak sayfanz yeniden yklemelisiniz, bu yzden eski ieriiniz yerine bir tepki
+
+84
+00:06:27,190 --> 00:06:28,960
+uygulamas olduum Merhaba'y grmelisiniz.
+
+85
+00:06:29,050 --> 00:06:35,380
+Bununla birlikte, onun logosunu da kaldrabiliriz, hangisini drdn sorma. nk artk projemizde kullanmyoruz.
+
+86
+00:06:35,380 --> 00:06:38,850
+Ve imdi biraz daha temiz bir kaynak klasr var.
+
+87
+00:06:38,860 --> 00:06:42,040
+imdi baka ne daha yaratmak yeniden yaratmak bizim iin yaratmak.
+
+88
+00:06:42,070 --> 00:06:48,640
+stilleri tanmlayan C S S dosyasna doru verdi, ancak bu sonbahara kadar kapsam olmadn sylyorum.
+
+89
+00:06:48,640 --> 00:06:52,660
+Bu uygulamay temelde bu applet caz dosyasnda kullandmz baz
+
+90
+00:06:52,660 --> 00:07:00,370
+Bunlar hala kresel ekillendirme ve aslnda bu dosyadaki ilk uygulama snf tanm hari her eyi
+
+91
+00:07:00,370 --> 00:07:07,240
+kaldracam ve hepimiz ona ulatktan sonra orada kaydedeceiz. Bundan sonra da Stahl'n kresel olduunu
+
+92
+00:07:07,240 --> 00:07:14,540
+ve ne kullanlmas gerektiini dndm iin baz genel set bavurunuzun gvdesi iin sizin kadar.
+
+93
+00:07:14,660 --> 00:07:20,020
+Kaytlar servis grevlisi japes fall, adn otomatik olarak oluturulan bir servis grevlisini kaydettirmek
+
+94
+00:07:20,260 --> 00:07:22,290
+iin nemli olduu anlamna gelir.
+
+95
+00:07:22,300 --> 00:07:26,490
+Bu, kutudan kan aamal Web Ebbe ile alkal.
+
+96
+00:07:26,560 --> 00:07:30,180
+Temel olarak, komut dosyalarmz nceden kertir.
+
+97
+00:07:30,220 --> 00:07:34,160
+Orada bir ey yaplandrmamz ve test dosyasna ihtiyacmz yok.
+
+98
+00:07:34,290 --> 00:07:36,880
+Kursun ilerleyen saatlerinde dala gireceiz.
+
+99
+00:07:36,880 --> 00:07:44,380
+Temelde uygulamanzdaki rnek bileenler iin farkl birimler iin birim testleri oluturmamz salar.
+
+100
+00:07:44,410 --> 00:07:51,670
+Bu genel kurulum ve koordinatlarn ounluu APT veya James veya yarattmz yeni
+
+101
+00:07:51,670 --> 00:07:52,630
+bileenlerimizde alacaktr.
+
+102
+00:07:52,630 --> 00:07:58,260
+Konutuumuzda bu dosyay analiz edelim, burada grdmz szdizimini anlamalsnz.
+
+103
+00:07:58,390 --> 00:08:01,990
+Logo dosyasn kaldrdmz iin bu logo ie aktarmadan kurtulalm.
+
+104
+00:08:01,990 --> 00:08:08,530
+ve tam da ne olduunu ve uygulamanza nasl daha fazla bileen eklediimizi J S X'e daltralm.
+
+105
+00:08:08,530 --> 00:08:09,730
+Artk onu grdm
+

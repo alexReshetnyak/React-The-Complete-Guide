@@ -1,0 +1,160 @@
+1
+00:00:02,250 --> 00:00:08,010
+Es genial que ahora sepamos cmo podemos enviar solicitudes y esta es una parte muy importante de la mayora
+
+2
+00:00:08,010 --> 00:00:09,820
+de las aplicaciones web, por supuesto.
+
+3
+00:00:10,030 --> 00:00:13,250
+Sin embargo, las solicitudes no siempre tienen xito.
+
+4
+00:00:13,380 --> 00:00:17,020
+Tambin necesita saber cmo puede manejar los errores.
+
+5
+00:00:17,220 --> 00:00:22,790
+Y esto es algo que quiero mostrarte ahora, el manejo de errores es muy simple con Access.
+
+6
+00:00:23,100 --> 00:00:28,500
+Supongamos que hemos obtenido una publicacin de forma incorrecta y, por supuesto, puede manejar los errores de la forma en que voy
+
+7
+00:00:28,500 --> 00:00:28,970
+a mostrarle.
+
+8
+00:00:28,970 --> 00:00:32,150
+Ahora para cada tipo de solicitud que enve.
+
+9
+00:00:32,250 --> 00:00:38,400
+Entonces aqu en el contenedor de bloques digamos que enviamos la solicitud a publicaciones que son incorrectas.
+
+10
+00:00:38,400 --> 00:00:40,750
+Eres Elswyth con tantos ess al final.
+
+11
+00:00:41,190 --> 00:00:47,380
+Entonces, lo que ahora podemos ver es que si volvemos a cargar esto obtenemos un error pero no se lo maneja.
+
+12
+00:00:47,670 --> 00:00:49,500
+Por supuesto, queremos manejarlo.
+
+13
+00:00:49,710 --> 00:00:56,640
+Ahora desde ex-U. S. Utiliza promesas que no solo tenemos que hacer con el mtodo que podemos
+
+14
+00:00:56,640 --> 00:00:59,180
+encadenar, sino que tambin podemos agregar un segundo mtodo simplemente modificado despus de eso.
+
+15
+00:00:59,230 --> 00:01:06,030
+Luego, el mtodo de captura en cuanto a los nombres de gests capta los errores que obtienes.
+
+16
+00:01:06,060 --> 00:01:14,520
+simplemente Konsole bloquea el bloqueo de aire o si lo hago a peticin del curso todava falla porque su otra persona sigue siendo incorrecta.
+
+17
+00:01:14,550 --> 00:01:16,850
+As que su Eso es por ahora
+
+18
+00:01:16,890 --> 00:01:22,260
+Pero ahora se maneja el error y aqu estoy simplemente imprimiendo con el registro de la consola.
+
+19
+00:01:22,380 --> 00:01:24,940
+Por supuesto, puede hacer ms que iniciar sesin aqu.
+
+20
+00:01:24,960 --> 00:01:27,110
+Puedes actualizar tu UI.
+
+21
+00:01:27,120 --> 00:01:33,600
+Puede actualizar el estado para mostrar que algo sali mal y que nos mostr aqu. Podemos ver la
+
+22
+00:01:33,780 --> 00:01:42,550
+propiedad de error que inicialmente est configurada como falsa y en ese mtodo de captura. No quiero bloquear el error en el estado del
+
+23
+00:01:42,720 --> 00:01:46,550
+conjunto de agujeros y establecer el error. o dos verdaderos
+
+24
+00:01:47,130 --> 00:01:54,390
+pster en forma constante o crear una nueva variable donde todos digan inicialmente que algo sali mal.
+
+25
+00:01:54,390 --> 00:02:02,740
+Y ahora, todo lo que podemos hacer es presentar algo diferente a la pantalla en lugar de almacenar el
+
+26
+00:02:03,930 --> 00:02:12,260
+Y permtanme agregar rpidamente un poco de estilo en lnea al centrado, as que simplemente agregar texto al centro de la alineacin
+
+27
+00:02:12,260 --> 00:02:17,240
+y solo anular estas publicaciones muy poco si no se establece el error.
+
+28
+00:02:17,250 --> 00:02:24,480
+Entonces, si este error de estado, si no es cierto, se indica con el signo de exclamacin
+
+29
+00:02:24,480 --> 00:02:29,170
+al principio, entonces sobrescribir las publicaciones a mi conjunto de publicaciones.
+
+30
+00:02:29,250 --> 00:02:33,630
+Entonces, si eso si guardamos esto y el centro debera ser una cadena.
+
+31
+00:02:33,630 --> 00:02:34,400
+Gracias.
+
+32
+00:02:34,410 --> 00:02:41,950
+Si guardamos esto ahora, vemos que algo sali mal aqu porque ahora tenemos este error.
+
+33
+00:02:41,950 --> 00:02:51,880
+Ahora, si regreso a mi aplicacin y corrijo las publicaciones aqu para corregir su L, veramos las
+
+34
+00:02:51,910 --> 00:02:52,860
+publicaciones nuevamente.
+
+35
+00:02:53,200 --> 00:02:58,570
+Esa es una forma genial de manejar errores y eso es algo que definitivamente tambin debes
+
+36
+00:02:58,570 --> 00:02:59,490
+tener en cuenta.
+
+37
+00:02:59,680 --> 00:03:05,680
+Las cosas no siempre tienen xito, entonces debera tener una forma de detectar errores y luego hacer algo
+
+38
+00:03:05,680 --> 00:03:12,280
+con ellos al iniciar sesin en la consola enviando algunas solicitudes de registro de errores a su propio servidor para
+
+39
+00:03:12,670 --> 00:03:19,810
+bloquear el error o mostrar algo en la interfaz de usuario para permitirle al usuario continuar an o dar instrucciones sobre lo
+
+40
+00:03:19,810 --> 00:03:21,500
+que el usuario debera hacer.
+

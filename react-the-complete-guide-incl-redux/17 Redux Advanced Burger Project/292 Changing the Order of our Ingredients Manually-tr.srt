@@ -1,0 +1,104 @@
+1
+00:00:02,300 --> 00:00:05,080
+Maddelerimizi yklemek iin mantk ekledik.
+
+2
+00:00:05,150 --> 00:00:10,250
+Ve bu arada neden bir salata altta duruyor merak ediyorsanz,
+
+3
+00:00:10,250 --> 00:00:16,700
+nk biz ate bazndan yklediimizden oradan oraya elle sipari edemiyoruz salatalklar tbben dibinde
+
+4
+00:00:16,700 --> 00:00:17,570
+sipari ettik.
+
+5
+00:00:17,570 --> 00:00:19,280
+Ve bu nedenle burada alttadr.
+
+6
+00:00:19,280 --> 00:00:26,480
+iin bir nesne haline getiren maddeleri manuel olarak dndrmek iin ayarlamanz gerekir ve bu durumda bununla
+
+7
+00:00:26,480 --> 00:00:31,910
+ilgilenmek iin nnz ve kodunuzu ayarlamanz gerekir. pozisyonunuzu veya size tabii ki,
+
+8
+00:00:31,910 --> 00:00:37,790
+malzemelerinizi sert kodladnz ve sunucudan aldnz ieriklere eit miktarda ierik koymadnz bir zm sein.
+
+9
+00:00:37,790 --> 00:00:42,230
+S Kodunuzu, yalnzca bir say olarak deil, ayn zamanda bir
+
+10
+00:00:42,230 --> 00:00:42,910
+konum bulmak
+
+11
+00:00:43,070 --> 00:00:51,320
+Ancak elle haritalama yapmadnz bir javascript nesnesine eylem bileenleri satmak vb. Elbette ki elbette daha nce sahip
+
+12
+00:00:51,320 --> 00:00:58,010
+olduunuz esneklii biraz kaybederek neredeyse bir ey ayarlamann avantajndan yararlanabilir ve daha sonra bunu
+
+13
+00:00:58,100 --> 00:01:04,370
+kullanabilir n u uygulamanz olsa da, tm bu esneklii zaten hi kullanmadnz nk
+
+14
+00:01:04,370 --> 00:01:10,920
+bizimle snrl miktarda madde destekliyoruz. c. s s kodu burada ve
+
+15
+00:01:10,960 --> 00:01:14,300
+hepimiz bir switch case deyimi var maddeler zellii.
+
+16
+00:01:14,570 --> 00:01:21,440
+balayn ve sipari tekrar doru olduundan imdi biz bunu manuel olarak haritalandryoruz.
+
+17
+00:01:21,440 --> 00:01:28,520
+te bu dnceyi burada tamamlamak iin biz aslnda Regans peynirimize ulaabiliriz ...
+
+18
+00:01:28,520 --> 00:01:35,000
+ve burada da eti tabayla koyduumuzda birer tane haritalamamz gerekiyor. bu
+
+19
+00:01:35,000 --> 00:01:39,380
+ve uygulamaya geri dnn ve salata eklemeye
+
+20
+00:01:39,380 --> 00:01:45,200
+Yine dezavantaj, bunu yapmak zorundayz nk bu drt maddeyi yalnzca gerekten destekliyoruz ancak
+
+21
+00:01:45,200 --> 00:01:46,920
+bunu uygulamamzda zaten yapyoruz.
+
+22
+00:01:47,000 --> 00:01:53,390
+rnein sadece burger Alannda bulunan maddeler bileeninde sylediim gibi, tmnde yalnzca snrl
+
+23
+00:01:53,390 --> 00:01:57,900
+miktarda bileenleri destekleyen bir switch case deyimi var.
+
+24
+00:01:57,920 --> 00:02:03,550
+Bu durumda zaten byle ve en azndan emir nceki haline dnyor.
+
+25
+00:02:03,560 --> 00:02:06,610
+Dolaysyla, bu olas bir iyiletirme tamamen istee baldr.
+
+26
+00:02:06,650 --> 00:02:10,510
+Sadece neden Senatonun en altndayken kafanz karmadndan emin olmak istedim.
+

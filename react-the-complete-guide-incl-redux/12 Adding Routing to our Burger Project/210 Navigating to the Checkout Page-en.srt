@@ -1,0 +1,224 @@
+1
+00:00:02,140 --> 00:00:08,230
+The last lecture I set up routing, now I want to improve this and I want to make sure that when I click on
+
+2
+00:00:08,230 --> 00:00:16,240
+continue in that modal here on the order summary, that I actually load a different route.
+
+3
+00:00:16,570 --> 00:00:21,220
+Now it's the purchaseContinuedHandler here which is interesting,
+
+4
+00:00:21,290 --> 00:00:25,630
+that is the handler which gets fired when I click continue.
+
+5
+00:00:25,630 --> 00:00:33,170
+Right now this is where I set loading to true and where I then place my order and send it to the web,
+
+6
+00:00:33,310 --> 00:00:39,340
+I will comment all this code out because I no longer want to store it on firebase immediately here
+
+7
+00:00:39,490 --> 00:00:42,920
+I went to go to the checkout component instead.
+
+8
+00:00:42,940 --> 00:00:51,490
+Now as you learned since burger builder is part of the routable area of our project, we have
+
+9
+00:00:51,490 --> 00:00:55,500
+access to the match location and history props.
+
+10
+00:00:55,510 --> 00:01:01,950
+I can prove this by adding console log this.props in component
+
+11
+00:01:02,010 --> 00:01:03,920
+DidMount. We have a look,
+
+12
+00:01:03,940 --> 00:01:08,040
+we see the props with history location and match.
+
+13
+00:01:08,150 --> 00:01:16,930
+Now by the way, since in here we also use a couple of components like the burger component, just in case
+
+14
+00:01:16,930 --> 00:01:21,010
+you're wondering, do we also have access to these props here?
+
+15
+00:01:21,280 --> 00:01:27,160
+Let's simply log props in the burger function, the burger component,
+
+16
+00:01:27,160 --> 00:01:30,110
+there you see we only have the ingredients.
+
+17
+00:01:30,220 --> 00:01:35,840
+We don't have access to match and so on there because while this is of course part of the routable
+
+18
+00:01:35,890 --> 00:01:44,720
+area, burger is not loaded through a route object, only burger builder is. Burger builder is loaded through
+
+19
+00:01:44,770 --> 00:01:50,830
+this route and everything which is loaded through a route but only the direct components, only burger
+
+20
+00:01:50,830 --> 00:01:56,990
+builder itself gets these special props. Components nested inside burger builder
+
+21
+00:01:57,040 --> 00:02:00,720
+don't get them, we would have to pass them on manually.
+
+22
+00:02:00,730 --> 00:02:08,830
+There is a way we could still get the props in the burger component too though and this really is a
+
+23
+00:02:08,830 --> 00:02:11,940
+bit advanced and not something we need here
+
+24
+00:02:11,950 --> 00:02:14,380
+but I want to show it nonetheless.
+
+25
+00:02:14,380 --> 00:02:19,600
+Let me reintroduce that log statement to see the props and we saw that we don't have the match and
+
+26
+00:02:19,600 --> 00:02:21,000
+history thing.
+
+27
+00:02:21,340 --> 00:02:31,570
+If we use a special higher order component provided by react-router-dom, we can actually kind of inject
+
+28
+00:02:32,350 --> 00:02:38,410
+or make them available, inject these special props in any component.
+
+29
+00:02:38,800 --> 00:02:47,230
+The higher order component is named withRouter and if we wrap our export with it, so like this with
+
+30
+00:02:47,230 --> 00:02:51,440
+router burger here, if I now save this
+
+31
+00:02:51,580 --> 00:02:59,140
+now you see that in the router we also have match location and history and match will refer to the
+
+32
+00:02:59,230 --> 00:03:07,090
+nearest match. So to the nearest route which was matched in the past, in this case the route which matched
+
+33
+00:03:07,150 --> 00:03:11,750
+the burger builder. This is something I also wanted to share with you,
+
+34
+00:03:11,770 --> 00:03:14,870
+we will use it later again when we really need it,
+
+35
+00:03:14,890 --> 00:03:16,630
+just want to show this little trick.
+
+36
+00:03:16,750 --> 00:03:24,190
+If you ever need direct access to match history and location and you don't want to manually pass
+
+37
+00:03:24,190 --> 00:03:28,760
+it on from the top level component, you can use withRouter.
+
+38
+00:03:28,900 --> 00:03:31,610
+I did mention this in the routing section already.
+
+39
+00:03:31,810 --> 00:03:40,990
+Well back to our original task, in the burger builder component, in the method which gets executed when
+
+40
+00:03:40,990 --> 00:03:43,140
+we click continue, there.
+
+41
+00:03:43,150 --> 00:03:45,910
+I of course had access to this props,
+
+42
+00:03:45,910 --> 00:03:49,380
+history is one of these special props provided by the router
+
+43
+00:03:49,480 --> 00:03:55,240
+and there we have this push prop which allows us to basically switch the page and push a new page onto that
+
+44
+00:03:55,240 --> 00:03:57,450
+stack of pages.
+
+45
+00:03:57,460 --> 00:04:03,210
+So now here I can simply say that I want to go to /checkout,
+
+46
+00:04:03,430 --> 00:04:09,880
+if we save this let's see what happens, if I start building my burger here and I click order now and
+
+47
+00:04:09,880 --> 00:04:11,530
+click continue,
+
+48
+00:04:11,530 --> 00:04:13,360
+now I'm on the checkout page.
+
+49
+00:04:13,360 --> 00:04:16,520
+I get an error because the click listeners aren't hooked up yet
+
+50
+00:04:16,690 --> 00:04:20,800
+but besides that, it's working. Now I won't connect
+
+51
+00:04:20,800 --> 00:04:27,010
+this checkout navigation link here because I'm going to replace it with a my order soon anyways
+
+52
+00:04:27,550 --> 00:04:34,570
+so that's something I won't do here. But the next step I want to do is let's add more functionality so
+
+53
+00:04:34,570 --> 00:04:38,710
+that when we click Cancel here, we actually are taken back.
+
+54
+00:04:38,710 --> 00:04:45,940
+We go back to the burger builder whilst when clicking continue we show a form where we can enter
+
+55
+00:04:45,940 --> 00:04:46,920
+some data.
+
+56
+00:04:47,110 --> 00:04:48,810
+This is what I want to build next.
+

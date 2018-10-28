@@ -1,0 +1,64 @@
+1
+00:00:02,140 --> 00:00:07,790
+Gzel bir uygulama bulduk, son derslerde bir sr fonksiyonellik ekledik.
+
+2
+00:00:08,030 --> 00:00:15,320
+phesiz elbette, sadece grnyle deil, ayn zamanda yapm biimimizle de iyi bir uygulamaya sahip
+
+3
+00:00:15,320 --> 00:00:16,480
+olmak istiyoruz.
+
+4
+00:00:16,490 --> 00:00:20,460
+Artk bu uygulamay oluturmakla birlikte alyoruz.
+
+5
+00:00:20,480 --> 00:00:26,900
+Zanaatkrmda, uygulamann nasl yaplacan ve planlandracam konusunda dnce srecimi paylatmz belletmeniz iin bir sr en
+
+6
+00:00:26,900 --> 00:00:32,230
+iyi uygulamalar gsterdim ve bir takm eleri paralara ayrma eklinizle ilgili baz
+
+7
+00:00:32,390 --> 00:00:34,540
+zaman noktalarnda baz alternatifler vereceim.
+
+8
+00:00:34,580 --> 00:00:38,410
+Burada aslnda greceli olarak ayrntl bir bileen yapmz var.
+
+9
+00:00:38,510 --> 00:00:41,970
+Kesinlikle, kullandmz baz bileenleri birletirebilirsin.
+
+10
+00:00:42,410 --> 00:00:45,640
+Ancak baz eyleri de gelitirebilir misin?
+
+11
+00:00:45,950 --> 00:00:52,960
+imdi, Propp trleri ve saf bileenler hakknda rendiimiz iki nemli bilgiye dalalm.
+
+12
+00:00:53,000 --> 00:00:54,750
+Yani ksa bir bileen gncelleme.
+
+13
+00:00:54,920 --> 00:01:00,420
+Ayrca, genel olarak rendiiniz tm yaam dngs yntemlerine bir gz atalm.
+
+14
+00:01:00,620 --> 00:01:01,840
+Onlar orada kullanyor muyuz
+
+15
+00:01:01,850 --> 00:01:06,450
+Neden onlar nerede kullanacamz bir noktada kullanmyoruz?
+
+16
+00:01:06,680 --> 00:01:09,400
+Bu sorular bir sonraki ders boyunca cevaplayalm.
+

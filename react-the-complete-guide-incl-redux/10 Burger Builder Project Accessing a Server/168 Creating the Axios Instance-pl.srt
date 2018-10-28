@@ -1,0 +1,132 @@
+1
+00:00:01,990 --> 00:00:07,330
+W ostatnim wykadzie stworzylimy ten projekt bazy ogniowej i zmienilimy
+
+2
+00:00:07,470 --> 00:00:14,730
+reguy, teraz zacznijmy wysya dania HTTP do tego punktu kocowego i wysya dania HTTP,
+
+3
+00:00:14,730 --> 00:00:18,970
+oczywicie powinnimy zainstalowa nowy pakiet w naszym projekcie kursu.
+
+4
+00:00:19,050 --> 00:00:25,830
+Robimy to za pomoc npm install -save axios to pakiet, ktry chc zainstalowa, poniewa
+
+5
+00:00:25,830 --> 00:00:27,690
+jeste podobny do moduu
+
+6
+00:00:27,730 --> 00:00:31,890
+HTTP, chc uy axios do ustawienia moich da HTTP.
+
+7
+00:00:31,890 --> 00:00:38,210
+Moesz oczywicie uy innego pakietu Ajax, ale topory s naprawd wietne i mog je tylko poleci.
+
+8
+00:00:38,250 --> 00:00:43,260
+Nastpnie moemy zrestartowa serwer deweloperski za pomoc npm start i
+
+9
+00:00:43,530 --> 00:00:47,290
+teraz oczywicie chcemy doda aksios do naszej aplikacji.
+
+10
+00:00:47,550 --> 00:00:55,020
+W ostatnim module kursu zobaczye rne sposoby dodawania go, dodajc go, tworzc instancj osiow lub
+
+11
+00:00:55,290 --> 00:01:00,000
+po prostu importujc j i potencjalnie ustawiajc pewne wartoci domylne.
+
+12
+00:01:00,000 --> 00:01:08,700
+Teraz dodam j dodajc instancj Axios, ale moesz te po prostu zaimportowa j globalnie i ustawi globalne ustawienia domylne, ktre
+
+13
+00:01:08,700 --> 00:01:10,940
+widziae w ostatnim module, zdecydowanie
+
+14
+00:01:11,010 --> 00:01:12,900
+baw si z obydwoma,
+
+15
+00:01:12,930 --> 00:01:15,110
+wybierz t, ktr lubisz bardziej.
+
+16
+00:01:15,210 --> 00:01:22,900
+Teraz, aby utworzy instancj osi, mam zamiar utworzy nowy plik i mam zamiar
+
+17
+00:01:23,310 --> 00:01:30,600
+nazwa te zamwienia axios. js, poniewa zamierzam uy tego dla wszystkich rzeczy zwizanych z zamwieniem. I tam potrzebuj teraz zaimportowa
+
+18
+00:01:30,630 --> 00:01:38,010
+axios z pakietu axios, a nastpnie wywoa axios utworzy i przekaza obiekt javascript, aby go
+
+19
+00:01:38,010 --> 00:01:38,780
+skonfigurowa.
+
+20
+00:01:38,790 --> 00:01:46,050
+Teraz ustawi podstawowy adres URL na t ciek, ktr wanie skopiowaem z bazy Firebase. To jest twj adres URL, pod ktry
+
+21
+00:01:46,050 --> 00:01:50,760
+chcesz wysa swoje danie do przechowywania danych w bazie danych.
+
+22
+00:01:50,820 --> 00:01:55,260
+I znowu na wypadek, gdyby go przegapi, to jest ta cieka, ktr tutaj widzisz pod danymi
+
+23
+00:01:55,440 --> 00:02:02,280
+z bazy danych, to wanie tutaj ustawiem jako domylny podstawowy adres URL. Oczywicie utworzona tutaj instancja powinna by
+
+24
+00:02:02,330 --> 00:02:08,820
+przechowywana w niektrych staych lub staej lub zmiennej i nazywa j tutaj,
+
+25
+00:02:08,820 --> 00:02:09,910
+a nastpnie
+
+26
+00:02:10,110 --> 00:02:13,520
+mog wyeksportowa j jako plik domylny.
+
+27
+00:02:13,530 --> 00:02:18,100
+Teraz mam skonfigurowan wasn instancj osiow dla tego podstawowego adresu URL,
+
+28
+00:02:18,140 --> 00:02:23,670
+dlatego te uywam tej metody instancji, poniewa pniej w trakcie dodawania uwierzytelniania wszyscy
+
+29
+00:02:23,760 --> 00:02:27,230
+uyjemy innego adresu URL z aksiosami, wic nie
+
+30
+00:02:27,240 --> 00:02:34,230
+chc ustawi podstawowy adres URL jako globaln warto domyln, chocia w tej chwili mgbym to zrobi.
+
+31
+00:02:34,260 --> 00:02:36,640
+Teraz otrzymujemy utworzon instancj osi,
+
+32
+00:02:36,690 --> 00:02:37,570
+to wietnie.
+
+33
+00:02:37,590 --> 00:02:40,440
+Przejdmy teraz do wysyania da tam.
+

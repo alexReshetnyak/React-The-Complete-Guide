@@ -1,0 +1,548 @@
+1
+00:00:02,190 --> 00:00:04,010
+In the last lecture we added the logo,
+
+2
+00:00:04,010 --> 00:00:10,340
+let's now add the navigation items and I will outsource these items into their own component because
+
+3
+00:00:10,340 --> 00:00:16,190
+I actually want to reuse the navigation items in the sideDrawer later on.
+
+4
+00:00:16,190 --> 00:00:22,880
+So for that reason, I will actually create a new subfolder in navigation and I'll name it navigation
+
+5
+00:00:23,180 --> 00:00:27,540
+items like this. Now in navigation items folder,
+
+6
+00:00:27,590 --> 00:00:35,090
+I'll of course create navigation items javascript file which should well hold the jsx for the navigation
+
+7
+00:00:35,090 --> 00:00:37,310
+items. In there,
+
+8
+00:00:37,370 --> 00:00:45,180
+I will as always export function in the end where I may receive some props but I won't even need them
+
+9
+00:00:45,180 --> 00:00:47,600
+here, I could still add them of course.
+
+10
+00:00:47,600 --> 00:00:52,250
+I will need to import react from react
+
+11
+00:00:52,440 --> 00:00:57,230
+and I want to export navigation items as a default.
+
+12
+00:00:57,230 --> 00:00:58,390
+Now how should the navigation
+
+13
+00:00:58,400 --> 00:00:59,890
+items look like here? I
+
+14
+00:00:59,930 --> 00:01:05,090
+want to create this unordered list which makes up my navigation items and in there, we want to
+
+15
+00:01:05,090 --> 00:01:12,770
+have the individual navigation items which are list items with anchor tag inside which would look something
+
+16
+00:01:12,770 --> 00:01:15,710
+like that, a link.
+
+17
+00:01:15,710 --> 00:01:19,050
+Now these are my navigation items,
+
+18
+00:01:19,310 --> 00:01:26,350
+we can even go as far as outsourcing the single links into their own components
+
+19
+00:01:26,420 --> 00:01:29,810
+and if you want to do that or not is of course totally up to you,
+
+20
+00:01:29,960 --> 00:01:31,460
+you don't have to do that,
+
+21
+00:01:31,460 --> 00:01:38,300
+you could also argue for having only one component, the navigation items component which holds both the
+
+22
+00:01:38,300 --> 00:01:40,260
+list and individual items
+
+23
+00:01:40,460 --> 00:01:47,400
+but since I will add quite some styling to the individual list items, I will actually outsource them.
+
+24
+00:01:47,420 --> 00:01:54,160
+So inside the navigation items folder, I'll create another subfolder, the navigation item folder,
+
+25
+00:01:54,260 --> 00:02:00,350
+and again, this splitting of components is totally optional. In that newly created folder,
+
+26
+00:02:00,430 --> 00:02:07,070
+I'll create the navigationitem.js file which should then hold the individual navigation item.
+
+27
+00:02:07,100 --> 00:02:13,940
+So there, I'll create a constant navigation item which is a function which receives props and returns jsx
+
+28
+00:02:14,000 --> 00:02:18,900
+and of course here I'll also add my react import
+
+29
+00:02:19,010 --> 00:02:26,540
+and in the end, export this function as the default. And then the jsx for a single navigation item
+
+30
+00:02:26,720 --> 00:02:29,130
+of course simply is this here,
+
+31
+00:02:29,130 --> 00:02:35,690
+this code of a list item, I'll grab that and return it here essentially.
+
+32
+00:02:35,720 --> 00:02:44,390
+Now I need css files for both components, for the navigation item and for the navigation items.
+
+33
+00:02:44,390 --> 00:02:48,990
+So navigation items should also receive a css code.
+
+34
+00:02:49,010 --> 00:02:53,440
+Now let's start with the navigation items, there
+
+35
+00:02:53,480 --> 00:03:08,380
+I will add my navigation items class and I want to set margin of 0 here and a padding of 0 and a list
+
+36
+00:03:08,470 --> 00:03:14,050
+style of none because navigation items, this css class is going to get added to unordered
+
+37
+00:03:14,050 --> 00:03:16,800
+list and I don't want to have the default list style there.
+
+38
+00:03:16,810 --> 00:03:21,830
+Now I'm actually not developing this mobile first because we don't have to sideDrawer yet
+
+39
+00:03:21,850 --> 00:03:24,890
+and we can't see that in the sideDrawer for that reason.
+
+40
+00:03:24,970 --> 00:03:31,390
+So let's start desktop first here and style these navigation items to look good in the toolbar,
+
+41
+00:03:31,480 --> 00:03:35,020
+we'll of course also adjust them for mobile devices later.
+
+42
+00:03:35,050 --> 00:03:43,120
+Now I want to use display flex here to align the list items next to each other and I will set align
+
+43
+00:03:43,180 --> 00:03:48,040
+items to center here to make sure they are vertically centered,
+
+44
+00:03:48,040 --> 00:03:53,060
+finally I want to set the height to 100% to take the full height of the toolbar.
+
+45
+00:03:53,470 --> 00:03:58,360
+With this set up I actually got all the styling I want for the navigation items,
+
+46
+00:03:58,480 --> 00:04:01,420
+let's now go to the individual navigation item.
+
+47
+00:04:01,540 --> 00:04:04,230
+So there, I'll create a navigation item class
+
+48
+00:04:04,400 --> 00:04:09,200
+and here, I want to make sure that they of course look good on the toolbar.
+
+49
+00:04:09,340 --> 00:04:20,650
+So first of all, I'll give the list items a margin of 0, box-sizing of border box and a display of flex,
+
+50
+00:04:20,780 --> 00:04:26,660
+I actually need to add this to make sure that I can center the link vertically, the link inside the
+
+51
+00:04:26,660 --> 00:04:27,760
+list item,
+
+52
+00:04:27,890 --> 00:04:30,640
+I'll set the height to 100%,
+
+53
+00:04:30,650 --> 00:04:39,700
+I do this because I have a special idea about how I want to have active links look. I'll set width to
+
+54
+00:04:39,710 --> 00:04:44,740
+auto basically therefore we can omit it, which will become important later once we add mobile
+
+55
+00:04:44,800 --> 00:04:45,860
+design.
+
+56
+00:04:46,190 --> 00:04:53,550
+I'll set the line items to center though because I set this display flex as I said to center the link vertically
+
+57
+00:04:53,580 --> 00:04:54,800
+and for that,
+
+58
+00:04:54,820 --> 00:05:02,760
+I also need to set align-items center. Then we can move on and set navigation item anchor tag to style
+
+59
+00:05:02,770 --> 00:05:04,850
+the links inside the list item,
+
+60
+00:05:04,900 --> 00:05:10,690
+color should be white so that it stands out from the brown background, text-decoration will be set to
+
+61
+00:05:10,690 --> 00:05:18,580
+none so that it's not underlined, I'll set a height of 100% to take the full height and the padding
+
+62
+00:05:18,610 --> 00:05:26,890
+of let's say 16px and 10px, so 16px top at bottom, 10px left and right.
+
+63
+00:05:27,990 --> 00:05:35,940
+I'll also add a border-bottom or 4px solid and transparent which of course will be invisible
+
+64
+00:05:36,120 --> 00:05:42,140
+but this border will become important once we actually highlight a link,
+
+65
+00:05:42,150 --> 00:05:48,870
+once you hover over it. I also need to give it box-sizing border box to make sure that the height really
+
+66
+00:05:48,870 --> 00:05:56,110
+includes the padding and the border. I'll also change the display to block so that my height has an effect.
+
+67
+00:05:56,190 --> 00:06:03,960
+Let's now also style links which we hovered, let style links which are active, so which are clicked on
+
+68
+00:06:04,260 --> 00:06:07,050
+and links which have the active class, a class
+
+69
+00:06:07,080 --> 00:06:14,910
+I later want to assign to links on which page we are, so active links should have a background-color
+
+70
+00:06:15,030 --> 00:06:18,120
+of let's say light brown color
+
+71
+00:06:18,210 --> 00:06:19,600
+so let's see
+
+72
+00:06:19,670 --> 00:06:20,570
+#8F5C2C,
+
+73
+00:06:20,630 --> 00:06:21,810
+that's a nice color
+
+74
+00:06:21,900 --> 00:06:23,990
+I picked in advance.
+
+75
+00:06:24,330 --> 00:06:27,090
+And now I want to style the bottom border,
+
+76
+00:06:27,090 --> 00:06:30,230
+I want you to keep the 4px I already set up here
+
+77
+00:06:30,450 --> 00:06:37,260
+but now of course it should not be transparent but I have a nice bluish color I want to use #4OA4C8
+
+78
+00:06:37,590 --> 00:06:43,400
+is the color and the color of the text should be white.
+
+79
+00:06:43,410 --> 00:06:48,270
+Now with that, we got the links styled, let's now see if they look good.
+
+80
+00:06:48,330 --> 00:06:52,650
+I'm going to save that and I need to assign my css classes as a next step.
+
+81
+00:06:52,770 --> 00:06:54,890
+Let's start with the navigation items,
+
+82
+00:06:55,080 --> 00:07:06,050
+there, I'll import my classes from the respective css file and assign it to my unordered list.
+
+83
+00:07:06,140 --> 00:07:13,990
+Class name should be classes and there, it's navigation items, plural and in the navigation item,
+
+84
+00:07:14,060 --> 00:07:21,170
+I also want to import my classes from the respective css file but here of course, the class name
+
+85
+00:07:21,170 --> 00:07:22,620
+is a different one, here
+
+86
+00:07:22,670 --> 00:07:31,640
+the class name I should assign is classes and then its navigation item without s at the end, of course,
+
+87
+00:07:31,730 --> 00:07:36,080
+and let me simply wrap this to make it a bit easier to read. Now,
+
+88
+00:07:36,110 --> 00:07:41,160
+we wouldn't see anything because right now we're not including any navigation item,
+
+89
+00:07:41,300 --> 00:07:46,140
+so any single navigation items in our navigation items component.
+
+90
+00:07:46,430 --> 00:07:55,430
+So first of all, we need to import navigation item, the single component for a single link from navigation
+
+91
+00:07:55,460 --> 00:07:57,200
+item navigation item,
+
+92
+00:07:57,200 --> 00:08:04,310
+so from this javascript file. And then we can start including the navigation item component here, self-closing
+
+93
+00:08:04,580 --> 00:08:09,440
+and of course you also need to pass some props to configure that link because each link has its own
+
+94
+00:08:09,650 --> 00:08:18,170
+destination it should point to and its own caption. So we can simply use the caption with props.children
+
+95
+00:08:18,200 --> 00:08:23,990
+so that we actually wrap the text we want to display with our own component and we can then set the
+
+96
+00:08:23,990 --> 00:08:24,720
+link here
+
+97
+00:08:24,770 --> 00:08:30,270
+ref dynamically by pulling that from let's say props.link, something like that.
+
+98
+00:08:31,620 --> 00:08:39,630
+Now we can also accept the active class so we can add a class name here and can bind this to a little
+
+99
+00:08:39,630 --> 00:08:44,720
+conditional check or just wrap it over multiple lines so that it fits into one line.
+
+100
+00:08:45,000 --> 00:08:51,210
+We can say if let's say props.active is true and we will need to pass that prop into this component
+
+101
+00:08:51,210 --> 00:08:57,580
+therefore, if that is true then the class name should be classes active,
+
+102
+00:08:57,630 --> 00:09:04,140
+keep in mind for navigation item we did define this active class here, it only works when attached to
+
+103
+00:09:04,140 --> 00:09:04,460
+a link
+
+104
+00:09:04,470 --> 00:09:07,010
+but still, this is a class which will be scoped.
+
+105
+00:09:07,350 --> 00:09:09,240
+So we will set this class
+
+106
+00:09:09,240 --> 00:09:16,860
+otherwise if active is not set, we'll just set null as a class name so we won't add a css class.
+
+107
+00:09:16,920 --> 00:09:22,920
+So there are two props we expect in this component, link active and we should wrap the actual text of
+
+108
+00:09:22,920 --> 00:09:26,280
+the link with our own navigation item component.
+
+109
+00:09:26,310 --> 00:09:28,140
+So back in navigation items,
+
+110
+00:09:28,320 --> 00:09:34,460
+let's turn this from a self-closing component to a component with opening and closing tag
+
+111
+00:09:34,710 --> 00:09:37,630
+and now, we can start adding our links here.
+
+112
+00:09:37,890 --> 00:09:44,430
+and for now, this will not be super spectacular but we will add more and more links and re-routing
+
+113
+00:09:44,430 --> 00:09:45,620
+later in the app.
+
+114
+00:09:45,650 --> 00:09:51,720
+So let's at the burger builder here and let's maybe add the checkout page here for now. Then we need to
+
+115
+00:09:51,720 --> 00:09:58,530
+set these props I mentioned, link should just lead to the starting page because we don't have routing
+
+116
+00:09:58,530 --> 00:10:01,250
+in there right now so we don't have any real links
+
+117
+00:10:01,530 --> 00:10:06,970
+and for the first item I'll also set the active prop and since this is a boolean value,
+
+118
+00:10:06,990 --> 00:10:08,850
+I only have to assign it like this,
+
+119
+00:10:08,850 --> 00:10:12,240
+we don't have to set active equal to true, though we could do that
+
+120
+00:10:12,390 --> 00:10:17,010
+but for boolean props, we can just pass it like this.
+
+121
+00:10:17,010 --> 00:10:20,460
+Now with that, we got our navigation items set up,
+
+122
+00:10:20,520 --> 00:10:25,580
+now we need to use our navigation items component in the toolbar. So there,
+
+123
+00:10:25,580 --> 00:10:29,680
+I'll add import navigation items from
+
+124
+00:10:29,700 --> 00:10:34,940
+and now let's move to the navigation items folder and then import it from the navigation items
+
+125
+00:10:35,050 --> 00:10:36,120
+.css,
+
+126
+00:10:36,150 --> 00:10:40,020
+.js file and let's use it here of course,
+
+127
+00:10:40,020 --> 00:10:45,960
+inside the nav element, let's add navigation items as a self-closing element.
+
+128
+00:10:45,960 --> 00:10:46,810
+Now with that, make
+
+129
+00:10:46,870 --> 00:10:48,590
+sure all files are saved.
+
+130
+00:10:48,600 --> 00:10:54,600
+Let's go back and we should have a navigation which looks like this where we hover over the items and
+
+131
+00:10:54,600 --> 00:10:59,340
+they get this style, where we see the active link. We can of course click on them but that just reloads
+
+132
+00:10:59,340 --> 00:11:05,600
+the page because we always load just slash as a route which is our root page and we'll take care about
+
+133
+00:11:05,600 --> 00:11:06,590
+the routing later
+
+134
+00:11:06,650 --> 00:11:10,820
+but I'm happy that we have working and nice looking navigation items now.
+
+135
+00:11:11,150 --> 00:11:18,560
+Now again, this will have to be adjusted once we add the sideDrawer and add mobile navigation
+
+136
+00:11:18,650 --> 00:11:20,390
+but for now, it looks great.
+
+137
+00:11:20,390 --> 00:11:24,300
+Speaking of mobile navigation, let's have a look at this next.
+

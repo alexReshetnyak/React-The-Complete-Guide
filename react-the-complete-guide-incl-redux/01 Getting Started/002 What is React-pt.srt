@@ -1,0 +1,152 @@
+1
+00:00:02,170 --> 00:00:05,940
+Ento, vamos comear a re-agir, por que e como.
+
+2
+00:00:06,160 --> 00:00:08,900
+Vamos comear com a questo do re-agir.
+
+3
+00:00:08,980 --> 00:00:15,910
+E deixe-me citar uma frase do reator de reatividade oficial da biblioteca javascript para interfaces de
+
+4
+00:00:15,940 --> 00:00:17,110
+usurio do Boulding.
+
+5
+00:00:17,110 --> 00:00:19,910
+Agora, essa  uma boa frase, mas o que isso significa.
+
+6
+00:00:19,930 --> 00:00:23,710
+A primeira parte importante  a parte da biblioteca javascript.
+
+7
+00:00:23,740 --> 00:00:25,320
+ uma biblioteca de javascript.
+
+8
+00:00:25,330 --> 00:00:32,360
+Trata-se de criar aplicativos de reativao de aplicativos orientados por JavaScript executados no navegador que no so executados no servidor.
+
+9
+00:00:32,380 --> 00:00:36,440
+Eles correm no navegador e isso nos d uma grande vantagem.
+
+10
+00:00:36,460 --> 00:00:39,980
+As coisas acontecem instantaneamente desde que acontecem ao navegador do usurio.
+
+11
+00:00:40,060 --> 00:00:45,850
+No precisamos esperar por uma resposta do servidor para obter uma nova pgina ou para renderizar algo novo.
+
+12
+00:00:45,850 --> 00:00:47,980
+Voc tem uma parte importante nessa frase.
+
+13
+00:00:47,980 --> 00:00:55,750
+A interface do usurio como parte das interfaces de usurio  basicamente o que o usurio v e reage  sobre
+
+14
+00:00:55,750 --> 00:00:58,710
+o uso de componentes para a construo destes.
+
+15
+00:00:58,810 --> 00:01:03,690
+Se voc pensar sobre isso, voc pode dividir qualquer pgina da Web em componentes.
+
+16
+00:01:03,700 --> 00:01:04,750
+Aqui est um exemplo.
+
+17
+00:01:04,750 --> 00:01:11,200
+Esta foi apenas qualquer pgina aleatria que podemos pensar, podemos ter essa rea de cabealho, uma barra lateral e,
+
+18
+00:01:11,200 --> 00:01:13,180
+em seguida,  direita, algum contedo.
+
+19
+00:01:13,180 --> 00:01:16,330
+Agora podemos claramente dividir isso em componentes.
+
+20
+00:01:16,450 --> 00:01:23,660
+Ns teramos uma cabea ou um componente um componente de barra lateral e, em seguida, uma manchete no componente de contedo do artigo.
+
+21
+00:01:24,040 --> 00:01:28,480
+Agora, por que o pensamento  importante ou til.
+
+22
+00:01:28,480 --> 00:01:36,670
+Porque, se dividirmos nosso aplicativo da Web ou site em tais componentes, podemos construir esses blocos
+
+23
+00:01:36,670 --> 00:01:41,460
+de construo desses componentes como partes de cdigo contidas.
+
+24
+00:01:41,560 --> 00:01:45,960
+No temos que construir toda a nossa pgina da web como uma imagem maior.
+
+25
+00:01:46,000 --> 00:01:48,730
+Podemos construir todas essas pequenas coisas por conta prpria.
+
+26
+00:01:48,730 --> 00:01:51,040
+Isso, claro, facilita o trabalho em equipe.
+
+27
+00:01:51,130 --> 00:01:57,850
+Mas mesmo que estejamos trabalhando sozinho, torna-se fcil para ns manter nosso cdigo gerencivel se mudarmos a
+
+28
+00:01:57,850 --> 00:01:59,150
+manchete mais tarde.
+
+29
+00:01:59,170 --> 00:02:04,810
+Ns s temos que entrar em componente de dvida e atualiz-lo e no precisamos encontrar esse cdigo
+
+30
+00:02:04,810 --> 00:02:06,610
+em nosso cdigo de pgina inteira.
+
+31
+00:02:06,610 --> 00:02:12,700
+os componentes, ento, se tivermos um componente de item de lista e queremos exibir uma lista desses itens
+
+32
+00:02:12,760 --> 00:02:20,070
+de lista de itens, ento s temos que escrever o cdigo uma vez e, ento, podemos reutiliz-lo facilmente porque isso  importante.
+
+33
+00:02:20,170 --> 00:02:21,350
+Todos ns podemos reutilizar
+
+34
+00:02:21,370 --> 00:02:29,870
+Os componentes Riette podem ser pensados como elementos HVM personalizados no final, voc est apenas escrevendo elementos de correio HVM
+
+35
+00:02:29,870 --> 00:02:38,110
+personalizados, no reagiu e, portanto, resolve o problema de ter que criar interfaces de usurio complexas com o que
+
+36
+00:02:38,110 --> 00:02:46,840
+o HLL e o Javascript lhe do, escrevendo, gerencivel de forma sustentvel e peas reutilizveis desse cdigo que voc pode lanar
+
+37
+00:02:47,110 --> 00:02:51,840
+em seu aplicativo da Web, onde quer que voc precise us-lo.
+
+38
+00:02:51,850 --> 00:02:53,460
+Vamos dar uma olhada em alguns exemplos.
+

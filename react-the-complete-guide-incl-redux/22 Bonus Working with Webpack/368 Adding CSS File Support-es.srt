@@ -1,0 +1,308 @@
+1
+00:00:02,160 --> 00:00:04,140
+As que agregamos Babel en la
+
+2
+00:00:04,170 --> 00:00:09,720
+ltima conferencia, ahora tambin admitamos archivos e imgenes css. Para eso, agregar una nueva regla y quiero comenzar
+
+3
+00:00:09,720 --> 00:00:10,640
+con css, as
+
+4
+00:00:10,680 --> 00:00:14,670
+que probaremos los archivos que terminen con. CSS, esa es
+
+5
+00:00:14,760 --> 00:00:17,150
+nuestra prueba simple.
+
+6
+00:00:17,190 --> 00:00:23,470
+Tambin quiero excluir cualquier cosa en los mdulos de nodos aqu solo para estar
+
+7
+00:00:23,880 --> 00:00:29,370
+seguros y luego podemos definir qu tipo de cargador queremos usar aqu.
+
+8
+00:00:29,460 --> 00:00:34,560
+Ahora para css, realmente necesito una configuracin ms compleja, para js tambin tenemos una configuracin bastante compleja,
+
+9
+00:00:34,560 --> 00:00:39,900
+pero todo se maneja a travs de babel y nuestra configuracin de babel, para css lo configuraremos aqu
+
+10
+00:00:39,900 --> 00:00:42,820
+en el archivo de configuracin de la carpeta web.
+
+11
+00:00:42,840 --> 00:00:46,830
+Entonces, en lugar de cargador, puedo usarlo aqu, esa es la forma
+
+12
+00:00:46,980 --> 00:00:52,580
+larga, el cargador es la forma ms corta si solo queremos configurar un cargador sin ninguna configuracin,
+
+13
+00:00:52,740 --> 00:00:57,620
+si queremos configurar cargadores mltiples o un cargador con config, debemos usa el uso aqu.
+
+14
+00:00:57,750 --> 00:01:00,870
+Se necesita una serie de cargadores que
+
+15
+00:01:01,260 --> 00:01:05,210
+queremos aplicar y aqu, ahora quiero instalar dos cargadores.
+
+16
+00:01:05,280 --> 00:01:13,170
+Lo har con npm install --save-dev y necesito un cargador que bsicamente le dice al paquete qu
+
+17
+00:01:13,170 --> 00:01:16,430
+hacer con estos. las importaciones de
+
+18
+00:01:16,650 --> 00:01:23,930
+CSS y el cargador de estilo. Es un cargador que luego extraer el cdigo CSS de los archivos CSS
+
+19
+00:01:23,940 --> 00:01:26,870
+e lo inyectar en la parte superior de nuestro archivo
+
+20
+00:01:26,910 --> 00:01:30,790
+html, reduciendo as la cantidad de descargas de archivos que tenemos que hacer.
+
+21
+00:01:30,810 --> 00:01:36,660
+As que voy a instalar tanto aqu como ahora. Quiero agregarlos, por supuesto, para eso en mi
+
+22
+00:01:36,780 --> 00:01:44,490
+matriz de uso, agregar un objeto javascript que tiene una propiedad de cargador de nuevo donde defino el cargador de estilos, se sigue
+
+23
+00:01:44,940 --> 00:01:50,390
+y el orden lo hace importa aqu por otro objeto con un cargador, el cargador CSS.
+
+24
+00:01:50,490 --> 00:01:53,120
+Ahora importante y esto es fcil de
+
+25
+00:01:53,340 --> 00:01:59,720
+perder, webpack analiza los cargadores en esta matriz de uso y los aplica de derecha a izquierda, as
+
+26
+00:01:59,730 --> 00:02:02,660
+que de abajo hacia arriba si lo escribimos as.
+
+27
+00:02:02,820 --> 00:02:09,210
+Entonces, primero se necesita el cargador css, ya que eso hace que comprenda las importaciones de css y
+
+28
+00:02:09,210 --> 00:02:10,750
+no arroje un error,
+
+29
+00:02:11,100 --> 00:02:16,140
+y luego aplica el cargador de estilo en el cdigo css extrado, y ese
+
+30
+00:02:16,410 --> 00:02:19,120
+es exactamente el orden que necesitamos aqu.
+
+31
+00:02:19,140 --> 00:02:25,730
+Ahora tambin podemos otorgarle al css loader que es responsable de analizar
+
+32
+00:02:25,730 --> 00:02:35,770
+y manejar el css otra propiedad que se llama opciones. Ahora las opciones son un objeto javascript donde podemos configurar este
+
+33
+00:02:35,770 --> 00:02:36,660
+cargador, ahora
+
+34
+00:02:37,060 --> 00:02:45,400
+aqu quiero configurar el mdulo en true para habilitar los mdulos css y voy a configurar el nombre ident
+
+35
+00:02:45,400 --> 00:02:52,660
+local para definir cmo deberan verse las clases css generadas debido a los mdulos css .
+
+36
+00:02:52,830 --> 00:03:00,160
+Y aqu tomar el nombre de la clase que definimos, dos guiones bajos, luego el nombre del mdulo, para que
+
+37
+00:03:00,160 --> 00:03:07,630
+el nombre del componente y luego un hash realmente tengan nombres nicos, esta es la misma configuracin que agregamos en
+
+38
+00:03:07,630 --> 00:03:13,080
+el mdulo de estilo para hacer el configuracin crear la aplicacin de reaccin nos dio.
+
+39
+00:03:13,420 --> 00:03:15,710
+Aunque no hemos terminado con CSS,
+
+40
+00:03:15,790 --> 00:03:22,000
+tambin quiero agregar el prefijo automtico y para esto instalar otro paquete con --save-dev post
+
+41
+00:03:22,000 --> 00:03:26,260
+css loader, ahora el mensaje css suena como si hiciera
+
+42
+00:03:26,260 --> 00:03:30,700
+algo para css luego de analizar eso , aqu se ejecutar
+
+43
+00:03:30,790 --> 00:03:38,830
+antes que el cargador css, se sumergir en el archivo css y ajustar nuestro cdigo antes de que css lo
+
+44
+00:03:38,920 --> 00:03:47,170
+saque y ajuste los nombres de clase, y as sucesivamente. El cargador de correos css simplemente es un cargador que nos
+
+45
+00:03:47,170 --> 00:03:49,540
+permite transformar el css, por ejemplo,
+
+46
+00:03:49,570 --> 00:03:55,320
+tambin podramos usar el cargador de posts css para manejar sass y cosas as, aqu
+
+47
+00:03:55,320 --> 00:04:00,820
+simplemente lo agregar como otro cargador y por lo tanto en tercera posicin porque debera
+
+48
+00:04:00,820 --> 00:04:02,780
+ejecutarse antes de ese cargador css.
+
+49
+00:04:03,010 --> 00:04:10,600
+Aqu voy a configurar mi cargador, que es el cargador de correos css, y tengo que configurar mis opciones en ese cargador
+
+50
+00:04:11,690 --> 00:04:18,870
+con la tecla de opciones donde ahora quiero establecer la opcin de identificacin, que es importante aqu, pero ms importante
+
+51
+00:04:19,070 --> 00:04:24,350
+son los complementos, que en realidad toma una funcin que devuelve una matriz y estos
+
+52
+00:04:24,470 --> 00:04:28,950
+son ahora los pasos que debemos aplicar o queremos aplicar para transformar todo.
+
+53
+00:04:29,270 --> 00:04:36,120
+Y aqu quiero ejecutar el prefijo automtico, ahora debe instalarse el prefijo automtico.
+
+54
+00:04:36,140 --> 00:04:37,530
+Es una herramienta separada.
+
+55
+00:04:37,880 --> 00:04:43,990
+As que voy a ejecutar npm install --save-dev auto prefixer, que
+
+56
+00:04:44,360 --> 00:04:52,040
+es una biblioteca de terceros que puede prefijar automticamente nuestras propiedades CSS, tenemos que
+
+57
+00:04:52,130 --> 00:04:53,530
+importarlo en el
+
+58
+00:04:53,540 --> 00:05:03,400
+archivo de configuracin, as que crear un nuevo const, autoPrefixer que usa la sintaxis requerida para importar autoPrefixer, as.
+
+59
+00:05:03,410 --> 00:05:08,120
+Ahora con esa importacin agregada, podemos agregar esto a la matriz de complementos aqu,
+
+60
+00:05:08,120 --> 00:05:11,510
+as que aqu agregar autoPrefixer y esta es en realidad
+
+61
+00:05:11,660 --> 00:05:17,450
+una funcin que necesitamos ejecutar y le pasamos un objeto javascript para configurarlo y all pasamos una
+
+62
+00:05:17,450 --> 00:05:17,770
+vez
+
+63
+00:05:17,900 --> 00:05:24,110
+ms lista de navegadores, por lo que los navegadores son una lista y podemos tomar la lista que
+
+64
+00:05:24,110 --> 00:05:26,830
+configuramos en babelrc, esa es la lista de
+
+65
+00:05:26,840 --> 00:05:27,890
+navegador que quiero
+
+66
+00:05:28,040 --> 00:05:31,810
+admitir, simplemente la pegar en la lista del navegador para el autoPrefixer.
+
+67
+00:05:31,940 --> 00:05:38,300
+As que ahora prefijamos CSS segn sea necesario para estos navegadores que admitimos y
+
+68
+00:05:38,330 --> 00:05:41,450
+automticamente descubrir qu navegadores son para nosotros.
+
+69
+00:05:41,450 --> 00:05:43,830
+Esa es la configuracin mnima bsica que quiero usar.
+
+70
+00:05:44,060 --> 00:05:50,030
+Ahora, dado que ejecutamos un cargador adicional antes del cargador css, de hecho necesitamos informar al cargador css sobre eso,
+
+71
+00:05:50,030 --> 00:05:50,550
+eso es
+
+72
+00:05:50,570 --> 00:05:53,210
+solo una configuracin especial que el cargador CSS necesita.
+
+73
+00:05:53,510 --> 00:06:00,950
+Entonces, agregar cargadores de importacin y establecer esto en uno porque ejecutamos un cargador antes de que se aplique el
+
+74
+00:06:00,950 --> 00:06:01,860
+cargador css.
+
+75
+00:06:02,210 --> 00:06:06,290
+Y esa es nuestra configuracin de manejo de css, debera estar bien,
+
+76
+00:06:06,320 --> 00:06:08,920
+pronto veremos si funciona. Con eso,
+
+77
+00:06:08,930 --> 00:06:16,820
+continuemos y asegurmonos de que ahora tambin podamos manejar imgenes, ya que tambin las importamos.
+

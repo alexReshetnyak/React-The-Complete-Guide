@@ -1,0 +1,104 @@
+1
+00:00:02,220 --> 00:00:09,070
+Teraz, gdy nauczylimy si adowa komponenty, dodajmy tutaj wicej tras, aby zaadowa
+
+2
+00:00:09,090 --> 00:00:16,260
+rne komponenty, takie jak nowy komponent pocztowy. Tak wic po prostu skopiuj ciek tutaj i teraz
+
+3
+00:00:16,260 --> 00:00:23,910
+szukam nowego posta i tutaj moemy rwnie usun dokadne, poniewa moe chcemy obsuy wszystkie trasy zaczynajce si od / new-post
+
+4
+00:00:24,660 --> 00:00:29,670
+z tym lub zostawi dokadne, jeli naprawd chcesz tylko obsuy / new-post i
+
+5
+00:00:29,670 --> 00:00:31,540
+not / new-post one A
+
+6
+00:00:31,870 --> 00:00:37,030
+teraz tutaj komponent oczywicie nie jest postem, ale komponentem, ktry musimy zaimportowa, musimy zaimportowa
+
+7
+00:00:37,380 --> 00:00:44,900
+nowy post z oczywicie / new-post new post / newposts. Wanie tak.
+
+8
+00:00:44,910 --> 00:00:52,480
+Teraz pobierzmy nowy post i dodajmy go w ten sposb, NewPost, zapisz to.
+
+9
+00:00:52,500 --> 00:00:54,300
+Teraz widzimy, e widzimy tu
+
+10
+00:00:54,450 --> 00:01:00,250
+posty, ale jeli klikn na nowy post, widzimy nowy komponent postu, a nie nasze posty,
+
+11
+00:01:00,460 --> 00:01:03,070
+to ju pokazuje, jak dziaa routing.
+
+12
+00:01:03,210 --> 00:01:08,180
+Obecnie nasza aplikacja ma problem, ale moemy klikn te linki, s to
+
+13
+00:01:08,220 --> 00:01:15,120
+normalne znaczniki zakotwiczenia, ale za kadym razem, gdy nasza aplikacja rzeczywicie si aduje, mona zobaczy, czy
+
+14
+00:01:15,120 --> 00:01:15,770
+ogldasz ikon
+
+15
+00:01:15,780 --> 00:01:18,170
+przeadowania obok paska adresu URL.
+
+16
+00:01:18,540 --> 00:01:20,600
+Nie stanowi to problemu,
+
+17
+00:01:20,670 --> 00:01:27,450
+ale teoretycznie aplikacja do ponownego adowania oznacza, e kod javascript zaczyna si od nowa,
+
+18
+00:01:27,480 --> 00:01:31,140
+a zatem cay poprzedni stan aplikacji zostanie utracony.
+
+19
+00:01:31,140 --> 00:01:37,940
+W aplikacji do reagowania rzadko si to zdarza, o ile uytkownik nawiguje w tym miejscu,
+
+20
+00:01:37,950 --> 00:01:44,940
+nie chcesz ponownie adowa strony, chcesz ponownie renderowa stron w czciach, w ktrych ma zosta
+
+21
+00:01:44,940 --> 00:01:47,880
+ponownie wywietlona. wyglda jak nowa strona.
+
+22
+00:01:47,880 --> 00:01:53,490
+Musimy wic zmieni zachowanie, aby nie byo tu zwykego cza, ktre przeadowuje stron,
+
+23
+00:01:53,490 --> 00:01:59,910
+ale zamiast tego zapobiegamy przebudowie strony i pozwalamy reagowa routerowi tylko ponownie renderowa czci domeny
+
+24
+00:01:59,910 --> 00:02:06,090
+lub reagowa na to, co naley ponownie -ponownie precyzuj to, co wymaga ponownego renderowania.
+
+25
+00:02:06,090 --> 00:02:13,560
+W nastpnym wykadzie dowiemy si, w jaki sposb moemy zagwarantowa, e pozostaniemy w naszej aplikacji i nie bdziemy jej ponownie
+
+26
+00:02:13,590 --> 00:02:15,090
+adowa przez cay czas.
+

@@ -1,0 +1,536 @@
+1
+00:00:02,340 --> 00:00:05,830
+Ento, na ltima conferncia, ns nos certificamos de que podemos carregar dados de contato.
+
+2
+00:00:05,910 --> 00:00:13,290
+Agora eu quero certificar-me de que quando clicamos neste boto aqui, realmente enviamos nossa ordem para esse manipulador
+
+3
+00:00:13,530 --> 00:00:21,230
+de anncios ou pedidos, que  um mtodo criado neste contexto para que possamos us-lo facilmente em eventos.
+
+4
+00:00:21,630 --> 00:00:29,460
+E ento aqui neste boto como todos os botes usando nosso prprio componente de boto, podemos usar nossa propriedade de clique
+
+5
+00:00:29,550 --> 00:00:34,560
+e passar o mtodo que deve ser executado em um clique como uma referncia.
+
+6
+00:00:34,560 --> 00:00:36,920
+Ento, este manipulador de pedidos ser executado.
+
+7
+00:00:37,170 --> 00:00:42,670
+Ns,  claro, precisamos acessar os ingredientes e os dados de contato para fazer esse pedido.
+
+8
+00:00:43,050 --> 00:00:44,680
+E aqui est um pequeno truque.
+
+9
+00:00:44,700 --> 00:00:50,100
+Quero mostrar que voc ensinou todos os blocos de construo que voc precisa para isso, mas ainda pode
+
+10
+00:00:50,100 --> 00:00:50,910
+no ser direto.
+
+11
+00:00:50,910 --> 00:01:00,790
+Para ser honesto no recipiente de sada, incluiremos um componente como esse no caminho de dados de contato.
+
+12
+00:01:00,890 --> 00:01:05,840
+Eu de alguma forma quero passar os ingredientes que eu tenho neste componente.
+
+13
+00:01:06,030 --> 00:01:16,380
+Q. dados de contato agora para isso, todos no usar o componente aqui, mas
+
+14
+00:01:16,410 --> 00:01:23,700
+a propriedade de renderizao que leva um mtodo conforme voc aprendeu onde voc no exibe algum GSX no lado
+
+15
+00:01:23,700 --> 00:01:29,130
+direito da seta e eu realmente quero renderizar o elemento de dados de contato.
+
+16
+00:01:29,430 --> 00:01:32,880
+Agora, o mesmo que antes, se eu salvar isso.
+
+17
+00:01:32,880 --> 00:01:36,180
+Voc v ainda ver os dados de contato para essa rota.
+
+18
+00:01:36,450 --> 00:01:44,700
+No entanto, desde que eu agora o processei manualmente aqui, posso passar do Propst para ele e ele ir adicionar
+
+19
+00:01:44,730 --> 00:01:54,760
+meus ingredientes como um suporte e referir-me a esses ingredientes do estado com esta configurao se eu agora entrar em dados de contato aqui
+
+20
+00:01:54,760 --> 00:02:01,610
+eu posso, claro, ex - ingredientes de irm no suporte porque eu apenas criei essa propriedade.
+
+21
+00:02:01,930 --> 00:02:03,570
+Agora vejamos aqueles que se juntam.
+
+22
+00:02:03,580 --> 00:02:12,370
+Eu salvei isso e um ousado e voc burger para que possamos um hamburguer real e, na verdade, continue e clique na
+
+23
+00:02:12,460 --> 00:02:21,520
+ordem. Bem, infelizmente voc acabou de carregar a pgina recarregada porque estamos dentro de um formulrio que  algo que  o comportamento
+
+24
+00:02:21,520 --> 00:02:28,000
+padro, mas seu olho deve lidar com o objeto de evento no manipulador de ordens e adicionar
+
+25
+00:02:28,000 --> 00:02:33,900
+U-bend pr-evento padro para evitar o padro que  enviar uma solicitao que eu no
+
+26
+00:02:33,910 --> 00:02:40,640
+quero, eu no quero enviar uma solicitao porque enquanto isso recarrega meu formulrio, ento depois de adicionar
+
+27
+00:02:40,660 --> 00:02:43,940
+dias, se tentarmos novamente, continue, vamos clicar em ordem.
+
+28
+00:02:44,110 --> 00:02:46,550
+Voc v agora eu imprimir bacon e carne.
+
+29
+00:02:46,600 --> 00:02:52,090
+Eu obtive os ingredientes com sucesso e novamente preveni o padro  importante que voc solicite um manipulador
+
+30
+00:02:52,090 --> 00:02:56,980
+sobre o evento que voc est recebendo automaticamente para evitar um padro que seria enviar a
+
+31
+00:02:56,980 --> 00:02:58,360
+solicitao e recarregar a pgina.
+
+32
+00:02:58,360 --> 00:03:02,930
+Ento agora estamos comeando realmente l com os ingredientes sendo aprovados.
+
+33
+00:03:03,070 --> 00:03:06,880
+Agora, a apresentao do pedido  fcil,  claro.
+
+34
+00:03:06,880 --> 00:03:13,630
+No burger Bolar onde eu comentei  um cdigo para o envio de um pedido, tomarei
+
+35
+00:03:13,630 --> 00:03:22,990
+o cdigo e reduzi-lo de l e adicione-o ao meu manipulador de pedidos aqui comentado novamente e em um estado de carregamento
+
+36
+00:03:23,020 --> 00:03:25,220
+aqui que inicialmente  falso.
+
+37
+00:03:25,390 --> 00:03:32,500
+Para que eu possa configur-lo como True e mostrar como Spener se eu quiser, adicione seus ingredientes, assim como os
+
+38
+00:03:32,500 --> 00:03:33,660
+ingredientes do prop.
+
+39
+00:03:33,670 --> 00:03:38,470
+Agora estamos reduzindo o preo total aqui  uma histria diferente.
+
+40
+00:03:38,490 --> 00:03:41,530
+O preo total aqui  uma causa difcil agora.
+
+41
+00:03:41,740 --> 00:03:46,930
+O preo total s  calculado e armazenado no burger Boler.
+
+42
+00:03:46,960 --> 00:03:55,300
+Ento ns realmente temos que fazer  que ns temos que passar o preo total, juntamente com os ingredientes do pedregulho
+
+43
+00:03:55,300 --> 00:03:59,910
+de hambrguer para o componente check out para o recipiente de sada.
+
+44
+00:03:59,950 --> 00:04:07,980
+Ento, aqui, tudo simplesmente Porsche  para o meu Kuri perms, todos Porsche o preo  igual.
+
+45
+00:04:08,070 --> 00:04:11,720
+E, em seguida, este preo total do estado.
+
+46
+00:04:11,760 --> 00:04:19,080
+Ento, esse  todo o passado como um parmetro de consulta,  claro, tambm significa que eu tenho que entrar
+
+47
+00:04:19,080 --> 00:04:20,500
+no meu componente check-out.
+
+48
+00:04:20,520 --> 00:04:26,100
+em seguida, estou empurrando para baixo em meus ingredientes e avaliar o preo total,  claro, no  um ingrediente.
+
+49
+00:04:26,100 --> 00:04:28,530
+Agora, aqui em looping para todos os ingredientes e,
+
+50
+00:04:28,740 --> 00:04:31,030
+Ento eu no deveria empurr-lo para o desordem.
+
+51
+00:04:31,230 --> 00:04:38,420
+Ento, em vez disso, vou ter que verificar se o Petrum 0  igual ao preo.
+
+52
+00:04:38,430 --> 00:04:42,150
+E, claro,  apenas um tipo de trabalho.
+
+53
+00:04:42,180 --> 00:04:50,790
+Encontraremos uma maneira melhor de lidar com esse estado e pass-lo para este recipiente mais tarde neste curso.
+
+54
+00:04:50,790 --> 00:04:51,890
+No se preocupe.
+
+55
+00:04:51,930 --> 00:04:54,990
+Ento, vou verificar se o par de Miss Price.
+
+56
+00:04:54,990 --> 00:04:58,080
+To desesperada, acabei de configurar aqui.
+
+57
+00:04:58,080 --> 00:05:05,010
+Se for preo, no quero adicion-lo aos meus ingredientes.
+
+58
+00:05:05,040 --> 00:05:09,350
+O objeto aqui no outro caso  quando eu quero fazer isso.
+
+59
+00:05:09,750 --> 00:05:18,090
+Ento, aqui, se o se tivermos o preo Bem, na verdade, em uma varivel de preo aqui que eu digo a Cyril ou
+
+60
+00:05:18,120 --> 00:05:23,990
+Knol o que voc quiser e, em seguida, aqui todos os preos so iguais ao pargrafo 1.
+
+61
+00:05:24,060 --> 00:05:30,150
+Porque agora eu sei OK Estou no elemento de preo Vamos extrair o valor do preo e armazen-lo nesta
+
+62
+00:05:30,150 --> 00:05:36,930
+varivel de preo e ento tambm posso definir o estado aqui e preparar o cenrio para o preo total igual ao preo.
+
+63
+00:05:36,930 --> 00:05:44,310
+O que eu tenho nesta varivel e tambm inicializo o preo aqui, a propsito, os ingredientes tambm podem ser
+
+64
+00:05:44,310 --> 00:05:47,840
+inicializados com agora conhecido e preo talvez com zero.
+
+65
+00:05:48,120 --> 00:05:54,140
+E, claro, agora  como obter o preo no componente de checkout.
+
+66
+00:05:54,150 --> 00:06:01,210
+Agora eu quero passar o preo para voc entrar em contato com os dados, assim como eu transmito os ingredientes.
+
+67
+00:06:01,230 --> 00:06:06,880
+Ento, aqui tambm  um preo fixo igual ao preo total desse estado.
+
+68
+00:06:06,870 --> 00:06:13,620
+Agora, com isso, recebo uma propriedade de preo nos dados de contexto que agora posso usar.
+
+69
+00:06:13,620 --> 00:06:20,200
+Ento, dentro, eu posso agora obter o preo na Propst  fixado o preo do preo deste prop.
+
+70
+00:06:20,370 --> 00:06:27,240
+Agora, a outra parte, eu j poderia conectar isso s minhas entradas, mas no quero fazer isso agora, vamos
+
+71
+00:06:27,240 --> 00:06:28,590
+fazer isso mais tarde.
+
+72
+00:06:28,590 --> 00:06:34,320
+Ento, por enquanto, deixarei todos esses dados aqui, pois  x anos, como se encontra aqui.
+
+73
+00:06:34,320 --> 00:06:39,070
+A razo, claro,  que X anos  importante no Bergere mais ousado.
+
+74
+00:06:39,270 --> 00:06:46,310
+Ns precisamos dele, mas agora precisamos disso no Word, que est se referindo  minha prpria instncia de X-ists, eu
+
+75
+00:06:46,310 --> 00:06:48,290
+tambm preciso nos dados de contato.
+
+76
+00:06:48,510 --> 00:06:54,870
+Ento, eu tambm vou adicionar ADX  importante e, na verdade, precisamos subir um nvel adicional
+
+77
+00:06:54,870 --> 00:06:57,300
+no caminho de importao como esse.
+
+78
+00:06:57,300 --> 00:07:04,020
+Agora, com isso, tivemos acesso l para ter certeza de salvar todos os arquivos e agora voc ver que,
+
+79
+00:07:04,080 --> 00:07:10,980
+uma vez que o aplicativo recarrega os dados de contato do anncio, voc obtm uma matriz sobre os ingredientes.
+
+80
+00:07:11,130 --> 00:07:19,470
+que extramos ingredientes aqui e confira o componente, mas ns realmente fazemos isso aqui quando inicializamos o estado.
+
+81
+00:07:19,500 --> 00:07:22,040
+A razo para isso 
+
+82
+00:07:22,220 --> 00:07:29,510
+A entrada inicial e segura agora so e se ns passamos dados para dados de contato e tentamos
+
+83
+00:07:29,550 --> 00:07:33,860
+renderizar um hambrguer, isso no funciona com ingredientes que so nulos.
+
+84
+00:07:34,110 --> 00:07:43,860
+Agora, para corrigir isso, o que podemos fazer  que podemos simplesmente alterar o componente, o que  que ns o anunciaremos antes de
+
+85
+00:07:43,860 --> 00:07:45,630
+renderizar o componente filho.
+
+86
+00:07:45,630 --> 00:07:50,330
+Ns j temos acesso ao Propst l para que possamos j conseguir os pais l.
+
+87
+00:07:50,370 --> 00:07:56,610
+O que fazemos  que estamos no ponto do tempo em que no registramos as crianas para que possamos configurar o estado
+
+88
+00:07:56,610 --> 00:07:57,920
+antes de render as crianas.
+
+89
+00:07:57,930 --> 00:08:03,460
+Agora com isso, se voltarmos aos dados de contato, isso agora deveria funcionar aqui.
+
+90
+00:08:03,480 --> 00:08:10,070
+Agora, uma coisa que eu quero fazer  que este estado por perseguio que eu estou configurando aqui no requer mais nenhum
+
+91
+00:08:10,440 --> 00:08:11,520
+carregamento  um estado.
+
+92
+00:08:11,520 --> 00:08:12,930
+Eu no uso ainda.
+
+93
+00:08:12,930 --> 00:08:21,690
+E agora, com isso, se voltarmos para o aplicativo e construamos um verdadeiro hamburguer realmente encomendamos agora e
+
+94
+00:08:21,690 --> 00:08:23,920
+continuemos a verificar aqui.
+
+95
+00:08:24,300 --> 00:08:27,800
+Mas agora clique em continuar aqui e clique em ordem.
+
+96
+00:08:27,840 --> 00:08:35,070
+nosso banco de dados da base de dados da Firebase, devemos ver esta nova ordem sendo colocada no final aqui.
+
+97
+00:08:35,070 --> 00:08:38,010
+No recebemos comentrios aqui, mas se verificarmos o
+
+98
+00:08:38,010 --> 00:08:43,390
+Agora, o que est sendo armazenado na base de fogo, vamos completar esta configurao nos dados do contexto aqui.
+
+99
+00:08:43,530 --> 00:08:49,440
+Mas aproveitando o estado de carregamento e mostrando um spinner e redirecionando o usurio
+
+100
+00:08:49,530 --> 00:08:50,620
+assim que terminarmos.
+
+101
+00:08:50,740 --> 00:08:53,030
+Agora vamos comear com spinner.
+
+102
+00:08:53,040 --> 00:08:57,120
+Podemos simplesmente importar o componente spinner aqui,  claro.
+
+103
+00:08:57,150 --> 00:09:00,600
+Vamos adicionar rapidamente o spinner de importao.
+
+104
+00:09:00,600 --> 00:09:08,160
+na pasta l, temos o spinner e esse  o spinner cair l e eu, voc  o Baner.
+
+105
+00:09:08,240 --> 00:09:12,390
+E agora temos que entrar na pasta de componentes l
+
+106
+00:09:12,930 --> 00:09:17,450
+Enquanto estivermos carregando, ento voc est no mtodo de renderizao.
+
+107
+00:09:17,580 --> 00:09:23,790
+Eu adicionarei minha varivel de formulrio que  o formulrio l embaixo por padro.
+
+108
+00:09:23,790 --> 00:09:33,060
+Mas se esse carregamento de estado for verdadeiro, ento, eles sero realmente esse componente girador.
+
+109
+00:09:33,120 --> 00:09:40,840
+Ento, deixe-me pegar o formulrio de baixo, h quatro elementos e apontou para o frum muito baixo aqui e
+
+110
+00:09:41,220 --> 00:09:47,880
+ento eu apenas emitirei para mim ou varivel estrangeira que  a forma ou o spinner.
+
+111
+00:09:48,310 --> 00:09:52,200
+E vamos agora ver se ele gira.
+
+112
+00:09:52,290 --> 00:09:55,270
+Vou enviar este elemento invlido aqui.
+
+113
+00:09:55,290 --> 00:09:56,120
+Ns vemos um spinner.
+
+114
+00:09:56,130 --> 00:09:57,480
+Ento est funcionando.
+
+115
+00:09:57,480 --> 00:10:00,710
+Vamos agora tambm certificar-se de redirecionar quando terminar.
+
+116
+00:10:00,840 --> 00:10:08,920
+Agora, para redirecionar aqui normalmente, poderamos executar o histrico deste prop como a histria do Optik que obtemos pelo roteador e,
+
+117
+00:10:08,920 --> 00:10:12,870
+em seguida, a Porsche, por exemplo, na pgina de rota.
+
+118
+00:10:13,030 --> 00:10:19,840
+No entanto, devido  renncia ao carregamento de dados de contexto, basicamente, tornando-o manualmente aqui embaixo
+
+119
+00:10:19,900 --> 00:10:25,310
+com o mtodo de renderizao, no temos o objeto de histrico disponvel l.
+
+120
+00:10:25,510 --> 00:10:28,550
+Agora, existem duas maneiras que podemos usar para corrigir isso.
+
+121
+00:10:28,600 --> 00:10:36,210
+Um  que podemos conter o componente de dados de contato com este com o mtodo de auxiliar de roteador.
+
+122
+00:10:36,520 --> 00:10:44,260
+A mdia seria passar seus trs braos sobre os quais, nos dados de contato, recebemos os
+
+123
+00:10:44,560 --> 00:10:46,770
+adereos desse mtodo de renderizao.
+
+124
+00:10:46,810 --> 00:10:55,990
+Agora vou usar os adereos que recebo neste mtodo de renderizao e simplesmente os distribuirei depois de passar meus prprios adereos com
+
+125
+00:10:56,020 --> 00:11:03,850
+os acessrios de armadilhas da Cauley, tudo o que eu obtenho nos adereos aqui sero transmitidos para dados de
+
+126
+00:11:03,850 --> 00:11:04,260
+contato.
+
+127
+00:11:04,270 --> 00:11:11,360
+E, portanto, como isso incluir o objeto de histria, este Porsche Meffert aqui deveria funcionar.
+
+128
+00:11:11,680 --> 00:11:19,570
+Ento, agora com o pai, se eu criar um novo hambrguer, clique novamente para clicar em continuar e clique em fazer clique aqui.
+
+129
+00:11:19,630 --> 00:11:23,560
+Ele realmente me empurra para a pgina inicial.
+
+130
+00:11:23,650 --> 00:11:28,510
+Ento, esta  a pgina de check-out e o processo terminou,  claro.
+
+131
+00:11:28,540 --> 00:11:34,060
+Ainda h algumas coisas que podemos fazer l em relao ao primeiro especialmente, mas isso vai se
+
+132
+00:11:34,060 --> 00:11:36,120
+preocupar com isso no mdulo do formulrio.
+
+133
+00:11:36,130 --> 00:11:40,980
+Agora, vamos nos concentrar na pgina de meus pedidos e na pgina numrica.
+
+134
+00:11:40,990 --> 00:11:42,070
+Ns definitivamente precisamos.
+

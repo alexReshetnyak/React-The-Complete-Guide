@@ -1,0 +1,36 @@
+1
+00:00:02,230 --> 00:00:06,510
+Bem-vindo ao mdulo do curso, nosso aplicativo est tomando forma.
+
+2
+00:00:06,550 --> 00:00:12,940
+Mas h um elemento para o aplicativo que realmente no nos importamos e esse  o nosso
+
+3
+00:00:12,940 --> 00:00:15,970
+formulrio de dados de contato em nosso aplicativo.
+
+4
+00:00:16,030 --> 00:00:21,980
+Em geral, no falamos demais sobre os formulrios neste curso, mas ns falamos sobre o manuseio de inport,
+
+5
+00:00:21,980 --> 00:00:25,150
+temos que usar a ligao e isso geralmente  suficiente.
+
+6
+00:00:25,450 --> 00:00:31,540
+Mas se voc realmente tem um formulrio e todos vocs querem validar isso para ele, isso  algo
+
+7
+00:00:31,720 --> 00:00:39,010
+que pode ser complexo devido ao fato de o re-atuar funcionar devido ao fato de ser apenas o javascript neste mdulo.
+
+8
+00:00:39,010 --> 00:00:45,070
+a validao e como ns realmente podemos tratar o nosso formulrio de dados de contato no aplicativo Burger com estes.
+
+9
+00:00:45,070 --> 00:00:47,470
+Vamos dar uma olhada nos formulrios e para
+

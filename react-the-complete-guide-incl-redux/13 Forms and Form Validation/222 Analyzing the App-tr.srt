@@ -1,0 +1,84 @@
+1
+00:00:02,230 --> 00:00:09,220
+u andaki burger uygulama durumumuza kontak veri konteyneri zerindeki check out sayfasndan bakalm,
+
+2
+00:00:09,250 --> 00:00:12,220
+o konteynere bir gz atalm.
+
+3
+00:00:12,340 --> 00:00:20,410
+Sayfann st ksmnda bir genel durumu belirlediimizi gryoruz ve elbette ayrca sipariimizi
+
+4
+00:00:20,470 --> 00:00:27,330
+bir sunucuya gnderdiimiz ve bize veriyi gnderdiimiz gnderim yntemimiz var.
+
+5
+00:00:27,340 --> 00:00:32,790
+imdi burada ayarlanan mteri verileri bu eyalete hi uymuyor.
+
+6
+00:00:32,800 --> 00:00:35,010
+Aslnda alanlar bile eit deildir.
+
+7
+00:00:35,020 --> 00:00:41,410
+imdi bu modln bir ksm ilki toplamak iin ok yaknda olacak, ancak foruma bir gz
+
+8
+00:00:41,410 --> 00:00:44,180
+attmzda orada birka normal girdi esi var.
+
+9
+00:00:44,290 --> 00:00:46,420
+Skmadklarn bir kenara brakn.
+
+10
+00:00:46,660 --> 00:00:49,240
+Onlarn giriini gerekten ele almamaktayz.
+
+11
+00:00:49,240 --> 00:00:54,570
+Deer deiiklikleri tek bana brakldnda kullanclarn gittii girdiyi dorulamamz gerektiinde bunu gerekten
+
+12
+00:00:54,580 --> 00:00:55,560
+ele almamaktayz.
+
+13
+00:00:55,570 --> 00:01:02,180
+Bu nedenle ilk adm, hangi veri trlerine ihtiyacmz olduuna karar vermek zorunda kalacaz,
+
+14
+00:01:02,290 --> 00:01:09,220
+bylece bunu duruma kaydettiimizde dinamik olarak formumuzu retmenin bir yolu bulursak daha iyi olur.
+
+15
+00:01:09,280 --> 00:01:15,250
+son adm olarak ya da yalnzca form gnderme ilemini gerekletirmekle kalmaz, ayn zamanda form
+
+16
+00:01:15,250 --> 00:01:21,550
+geerliliini ele alr ya da form geerliliini kontrol eder ve rnein geerliliine dayanarak formumuzun biimini deitirir.
+
+17
+00:01:21,550 --> 00:01:22,560
+Ve elbette
+
+18
+00:01:22,570 --> 00:01:30,670
+Bunlarn hepsi yapmak ve ilerlemek istediim eyler ve DS girdi elerini burada standart bir tasarma sahip standart
+
+19
+00:01:30,700 --> 00:01:38,710
+bir tasarma sahip standart bileenlere koyarak balayacam ve belki varsaylan bir etikete sahip olabilir ve daha sonra
+
+20
+00:01:38,710 --> 00:01:41,670
+hata mesaj alanna sahip olacak ekilde geniletilecektir.
+
+21
+00:01:41,680 --> 00:01:48,150
+Dolaysyla birbiri ardna bir adm nde kendi bileenine girdi koyarak balayalm.
+

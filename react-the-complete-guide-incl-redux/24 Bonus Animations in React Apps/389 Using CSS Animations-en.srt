@@ -1,0 +1,256 @@
+1
+00:00:02,200 --> 00:00:05,430
+In the last lecture we added css transitions,
+
+2
+00:00:05,440 --> 00:00:09,420
+now one obvious thing we can use instead is a css animation.
+
+3
+00:00:09,640 --> 00:00:17,050
+Now in case you're not aware, a css animation also has nothing to do with react as css animation simply
+
+4
+00:00:17,050 --> 00:00:22,240
+allows you to define a bit of a more complex and controlled animation than with the transition prop
+
+5
+00:00:22,480 --> 00:00:29,020
+because with the transition prop, we are just saying hey whenever any property changes, animate that change
+
+6
+00:00:29,020 --> 00:00:36,410
+and figure out how to animate it on your own basically. Now an animation, a css animation is a detailed
+
+7
+00:00:36,420 --> 00:00:40,010
+described set of steps you want to execute,
+
+8
+00:00:40,630 --> 00:00:48,670
+for that you create so-called keyframes with @addKeyframes, then you give these keyframes any name of your
+
+9
+00:00:48,670 --> 00:00:51,670
+choice like openModal
+
+10
+00:00:52,180 --> 00:01:00,970
+and then here you can define the steps, so inside the animation in percentages or just with from and
+
+11
+00:01:00,970 --> 00:01:08,280
+to if you only got to but we could say we want to start at 0% and then that's the syntax, then we
+
+12
+00:01:08,290 --> 00:01:08,680
+want to have
+
+13
+00:01:08,680 --> 00:01:15,100
+a certain state at let's say 50% of the animation and we want to end with another state.
+
+14
+00:01:15,130 --> 00:01:22,370
+Now inside these states, you use normal css properties to describe how the object should look like
+
+15
+00:01:22,480 --> 00:01:29,950
+at this point of time. So since this is the open modal animation, we can say when opening it, we're starting at an
+
+16
+00:01:29,950 --> 00:01:35,080
+opacity of zero and we transform this to be moved up to the top.
+
+17
+00:01:35,080 --> 00:01:40,330
+Now let's say at 50% of the time, we want to have opacity of 1
+
+18
+00:01:40,390 --> 00:01:49,720
+so it's fully visible but we actually move this 20% to the bottom, so it's not in the final position
+
+19
+00:01:49,750 --> 00:01:55,490
+but actually moved a little bit too far down and only at 100%,
+
+20
+00:01:55,630 --> 00:02:01,260
+we move it to its final destination with translate 0.
+
+21
+00:02:01,270 --> 00:02:08,310
+Now with that, we can use open modal in our modal open class because this is the class which gets attached
+
+22
+00:02:08,320 --> 00:02:09,850
+when the modal should be shown
+
+23
+00:02:10,210 --> 00:02:14,250
+and I no longer need to set opacity and transform here, instead
+
+24
+00:02:14,260 --> 00:02:21,100
+here I call animation that's a special property which now allows us to define a set of keyframes which
+
+25
+00:02:21,100 --> 00:02:27,310
+should be executed whenever this css class is present on an element and that of course includes when
+
+26
+00:02:27,310 --> 00:02:29,190
+it is added to an element.
+
+27
+00:02:29,530 --> 00:02:33,810
+So here I want to execute the open modal animation,
+
+28
+00:02:33,820 --> 00:02:36,110
+then again we need to define a timing
+
+29
+00:02:36,160 --> 00:02:39,200
+So let's say we want to show this over .3 seconds
+
+30
+00:02:39,340 --> 00:02:47,670
+or maybe .4, then we also can define an ease-in function which defines how it moves between our individual
+
+31
+00:02:47,670 --> 00:02:48,690
+steps here
+
+32
+00:02:48,930 --> 00:02:56,460
+and we also have to define if it should repeat this animation or end at the state we end at in this
+
+33
+00:02:56,460 --> 00:03:01,650
+animation. If we don't define anything it would jump back to the starting state once the animation play
+
+34
+00:03:01,650 --> 00:03:02,180
+through,
+
+35
+00:03:02,310 --> 00:03:10,110
+if we want to keep the final state, so in 100% state we actually have to add the forwards value
+
+36
+00:03:10,110 --> 00:03:14,210
+here so that it keeps the final animation step.
+
+37
+00:03:14,220 --> 00:03:19,700
+Now with that, if we save this file and I click open modal, you'll see it bumps a little bit,
+
+38
+00:03:19,800 --> 00:03:22,210
+it slides down and then slides up,
+
+39
+00:03:22,260 --> 00:03:24,500
+do you see this tiny bump here,
+
+40
+00:03:24,570 --> 00:03:29,800
+that is because we push it 20% down after 50%.
+
+41
+00:03:29,880 --> 00:03:36,350
+You can't see it, let's simply increase this to 90% and that it should be really easy to see,
+
+42
+00:03:36,360 --> 00:03:42,280
+now if we open the modal you see it jumped on much further and then moved back up again.
+
+43
+00:03:42,530 --> 00:03:48,750
+So now we're using a css animation and we're taking advantage of the fact that this is simply
+
+44
+00:03:49,020 --> 00:03:50,370
+added or played
+
+45
+00:03:50,400 --> 00:03:52,190
+when this class is added.
+
+46
+00:03:52,380 --> 00:03:57,720
+Now for closing, we can of course also define a set of keyframes
+
+47
+00:03:57,990 --> 00:04:05,950
+so let's quickly add close modal here and now we want to play the opposite,
+
+48
+00:04:05,950 --> 00:04:11,660
+so we start at the opacity 1 and are at the position
+
+49
+00:04:11,770 --> 00:04:15,970
+well the element sits at, after 50%
+
+50
+00:04:15,970 --> 00:04:19,460
+we maybe have an opacity of let's say .8
+
+51
+00:04:19,480 --> 00:04:27,460
+so still quite visible but we slid this down a little bit and then after 100%, we got opacity
+
+52
+00:04:27,490 --> 00:04:34,890
+of 0 and we move this out of the screen with -100% on translateY.
+
+53
+00:04:35,140 --> 00:04:42,040
+Now we only need to use the close modal animation and like for modal open, we make sure that this gets
+
+54
+00:04:42,100 --> 00:04:44,820
+added whenever the modal close class is added,
+
+55
+00:04:44,980 --> 00:04:48,840
+so there we play the close modal keyframes set.
+
+56
+00:04:48,850 --> 00:04:56,140
+Now with that if we save this, let's see it in action, opening works as before, dismissing also now plays
+
+57
+00:04:56,220 --> 00:04:57,400
+our animation
+
+58
+00:04:57,750 --> 00:05:03,420
+and that is of course quite nice because now we're again controlling everything with css but we get
+
+59
+00:05:03,420 --> 00:05:09,720
+more controlled with the transition property because the css animation property allows us to
+
+60
+00:05:09,720 --> 00:05:13,100
+play our own set of keyframes which we do here.
+
+61
+00:05:13,260 --> 00:05:18,660
+And again this has nothing to do with react but it is important to recognize that this doesn't make
+
+62
+00:05:18,660 --> 00:05:20,110
+it worse or bad,
+
+63
+00:05:20,130 --> 00:05:26,640
+you can absolutely use that and in a lot of cases, css animations might give you all the power you
+
+64
+00:05:26,640 --> 00:05:29,900
+need to achieve certain animations or looks.
+

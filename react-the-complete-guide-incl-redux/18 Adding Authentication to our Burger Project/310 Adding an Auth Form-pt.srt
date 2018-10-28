@@ -1,0 +1,616 @@
+1
+00:00:02,240 --> 00:00:09,830
+Ento, de volta ao nosso aplicativo, aqui  onde ns o deixamos pela ltima vez, eu adicionarei um novo container. Vou adicionar na pasta containers e vou nome-la
+
+2
+00:00:09,830 --> 00:00:11,520
+auth, voc pode, claro,
+
+3
+00:00:11,570 --> 00:00:13,570
+nomear isso o que
+
+4
+00:00:13,760 --> 00:00:19,450
+quiser e a, vou criar a auth. arquivo js e esta ser a pgina que eu quero
+
+5
+00:00:19,550 --> 00:00:24,280
+carregar com o formulrio de inscrio ou login. Agora, aqui, eu vou criar um componente
+
+6
+00:00:24,530 --> 00:00:31,110
+baseado em classe, ento eu vou importar reagir e componente de reagir, j faz um tempo desde que ns
+
+7
+00:00:31,110 --> 00:00:35,360
+criamos esse componente, mas eu tenho certeza que voc ainda sabe como funciona.
+
+8
+00:00:35,380 --> 00:00:37,480
+Ns criamos com a palavra-chave
+
+9
+00:00:37,540 --> 00:00:43,280
+class, ento o nome do componente como auth e estendemos este componente que estamos importando.
+
+10
+00:00:43,310 --> 00:00:49,980
+L precisamos de um mtodo de renderizao onde retornamos algum jsx e no final, eu exportarei essa
+
+11
+00:00:49,980 --> 00:00:51,910
+classe como o arquivo padro.
+
+12
+00:00:51,940 --> 00:00:59,650
+Agora o jsx aqui estar bem perto do nosso formulrio de dados de contato, eu vou ter um div de quebra e
+
+13
+00:00:59,650 --> 00:01:04,020
+l, eu adicionarei um elemento de formulrio e neste elemento de formulrio
+
+14
+00:01:04,030 --> 00:01:11,110
+eu quero usar meus componentes de entrada e boto customizados, assim como Eu os uso no componente de dados de
+
+15
+00:01:11,170 --> 00:01:12,770
+contato ou no continer.
+
+16
+00:01:12,910 --> 00:01:20,120
+Eu tambm vou gerenciar meu formulrio atravs do estado deste continer auth, no atravs do redux porque eu estou falando apenas sobre o
+
+17
+00:01:20,120 --> 00:01:24,600
+estado local, os valores que o usurio inseriu em suas entradas de formulrio e
+
+18
+00:01:24,670 --> 00:01:30,760
+assim por diante e faz mais sentido para mim usar eles e gerenci-los dentro do continer com propriedade de
+
+19
+00:01:30,760 --> 00:01:31,860
+estado de reao.
+
+20
+00:01:31,930 --> 00:01:38,890
+Ento, adicionarei state aqui e adicionarei uma propriedade controls e configurarei igualmente os dados de contato para que
+
+21
+00:01:38,890 --> 00:01:42,270
+eu possa reutilizar a lgica a partir da, tivemos
+
+22
+00:01:42,280 --> 00:01:49,090
+uma propriedade orderForm e, em seguida, tivemos a propriedade vrios controles e todos eles tinham algo como o
+
+23
+00:01:49,090 --> 00:01:51,710
+elemento, tipo, configurao e assim por diante.
+
+24
+00:01:51,760 --> 00:01:59,560
+Vou copiar o controle de nome de l e coloc-lo no meu objeto auth controles e renome-lo de nome
+
+25
+00:01:59,560 --> 00:02:01,390
+para e-mail, agora o tipo
+
+26
+00:02:01,390 --> 00:02:04,150
+de elemento ainda ser um elemento de
+
+27
+00:02:04,420 --> 00:02:12,220
+entrada, a configurao aqui vou criar um elemento de entrada digite email e espao reservado deve ser apenas endereo
+
+28
+00:02:12,790 --> 00:02:14,510
+de email, por exemplo.
+
+29
+00:02:14,830 --> 00:02:16,810
+Agora o valor inicialmente est
+
+30
+00:02:16,870 --> 00:02:24,670
+vazio, em relao s regras, eu quero reutilizar o mtodo checkValidity dos dados de contato e l, eu
+
+31
+00:02:24,670 --> 00:02:27,890
+aceito coisas como minLength, maxLength, isEmail, isNumeric
+
+32
+00:02:27,970 --> 00:02:34,190
+e isso  basicamente o que eu quero introduzir no container auth tambm .
+
+33
+00:02:34,560 --> 00:02:43,150
+Ento eu tenho requerido e agora eu tambm quero configurar isEmail para true para este controle de email que estou criando aqui,
+
+34
+00:02:43,840 --> 00:02:47,570
+vlido inicialmente deve ser falso e toques tambm  falso.
+
+35
+00:02:47,800 --> 00:02:52,550
+E agora, eu vou duplicar esta vez para tambm ter um campo
+
+36
+00:02:52,720 --> 00:02:58,250
+de senha ento aqui vou adicionar senha assim, ele tambm ser do tipo input
+
+37
+00:02:58,480 --> 00:03:05,710
+mas ento, o tipo de elemento ser desse, o tipo da entrada em si ento ser uma senha e
+
+38
+00:03:05,860 --> 00:03:08,210
+o espao reservado ser, portanto, senha.
+
+39
+00:03:08,380 --> 00:03:09,690
+Deve ser necessrio
+
+40
+00:03:09,700 --> 00:03:15,420
+e digamos que queremos ter um minLength de sete caracteres ou seis caracteres, que na
+
+41
+00:03:15,430 --> 00:03:20,710
+verdade  o minLength exigido pelo Firebase,  claro, ajuste isso ao seu back-end.
+
+42
+00:03:20,710 --> 00:03:27,550
+Com isso, criamos essa configurao, e agora podemos criar dinamicamente esse formulrio e, primeiro,
+
+43
+00:03:27,550 --> 00:03:30,360
+preciso importar os componentes de entrada
+
+44
+00:03:30,370 --> 00:03:37,540
+e boto para que meus componentes estejam l. Entrada de, agora eu preciso subir para a pasta de componentes, para
+
+45
+00:03:37,630 --> 00:03:45,560
+a pasta de interface do usurio, ento l a pasta de entrada com o arquivo de entrada e o mesmo para o componente de boto, como este.
+
+46
+00:03:45,580 --> 00:03:48,940
+Agora a lgica  a mesma que no componente de dados de
+
+47
+00:03:48,970 --> 00:03:55,900
+contato, l ns tambm passamos por todos os nossos controles aqui e eu posso copiar o cdigo de l onde eu converti meu objeto
+
+48
+00:03:55,900 --> 00:04:02,860
+de estado para um array que eu possa percorrer, eu copio . Em seguida, passarei para o continer auth e
+
+49
+00:04:02,860 --> 00:04:07,530
+adicionarei isso no mtodo render antes de retornar qualquer coisa e
+
+50
+00:04:07,870 --> 00:04:13,690
+agora quero percorr-lo e criar meu formulrio. Ento, eu vou criar uma nova constante que
+
+51
+00:04:13,690 --> 00:04:21,980
+eu vou nomear formulrio e l, eu quero pegar minha matriz de elementos de formulrio chamado mapa para mape-lo em uma matriz de
+
+52
+00:04:22,060 --> 00:04:29,180
+elementos jsx, eu recebo cada elemento de formulrio aqui e vou retornar jsx, eu quero retornar minha entrada,  um
+
+53
+00:04:29,320 --> 00:04:33,080
+elemento de fechamento automtico e isso exige muitas chaves e propriedades.
+
+54
+00:04:33,100 --> 00:04:35,130
+O primeiro  a propriedade
+
+55
+00:04:35,530 --> 00:04:44,190
+key, l eu realmente s quero usar o ID do elemento de formulrio que est disponvel desde que eu o incluo aqui.
+
+56
+00:04:44,200 --> 00:04:50,220
+Se voc se lembra do mdulo do formulrio, ns o adicionamos aqui,  o nome do elemento para ser preciso
+
+57
+00:04:50,590 --> 00:04:56,200
+e, em seguida, todas as outras chaves que so esperadas. Podemos dar uma olhada nos dados de contato
+
+58
+00:04:56,200 --> 00:04:59,780
+e podemos realmente copiar toda a configurao de l, para
+
+59
+00:04:59,780 --> 00:05:05,050
+todos os outros objetos que configuramos no elemento de entrada e adicion-lo aqui no continer auth.
+
+60
+00:05:05,050 --> 00:05:08,180
+Ento, l tambm podemos deixar o cdigo como  porque eu
+
+61
+00:05:08,200 --> 00:05:13,560
+mantive o nome, estou falando sobre um elemento de formulrio no meu loop e eu uso isso aqui tambm.
+
+62
+00:05:13,810 --> 00:05:19,060
+Eu tenho uma chave de configurao e uma chave de valor e todas essas chaves, porque
+
+63
+00:05:19,060 --> 00:05:21,480
+eu uso a mesma configurao em minha
+
+64
+00:05:21,820 --> 00:05:28,090
+propriedade de estado para que seja realmente reutilizvel e, com isso, agora temos um conjunto de entradas gerado dinamicamente.
+
+65
+00:05:28,510 --> 00:05:31,320
+Agora, a prxima coisa  claro que
+
+66
+00:05:31,390 --> 00:05:41,050
+tambm preciso de um boto abaixo de todas essas entradas, adicionarei um boto. Esse boto requer um tipo de boto prop que eu vou definir para
+
+67
+00:05:41,050 --> 00:05:48,160
+o sucesso, perigo seria a outra opo que temos em nossa aplicao e que no deveria fazer parte do
+
+68
+00:05:48,160 --> 00:05:54,340
+meu formulrio aqui, que deve ser parte do meu elemento de formulrio l onde eu retornar algo
+
+69
+00:05:54,340 --> 00:05:59,970
+e acima do boto, eu vou renderizar o contedo do formulrio que contm minhas entradas.
+
+70
+00:06:00,820 --> 00:06:07,000
+Com isso, o boto no deve ser um elemento de fechamento automtico, mas o boto deve permitir que eu adicione
+
+71
+00:06:07,450 --> 00:06:09,960
+alguma legenda entre as tags, ento aqui vou
+
+72
+00:06:10,120 --> 00:06:18,310
+simplesmente dizer enviar e agora temos um formulrio com entradas e um boto. Para v-lo, precisamos carreg-lo via roteamento, recebemos o continer de autenticao
+
+73
+00:06:18,410 --> 00:06:24,520
+e configuramos todas as nossas rotas no aplicativo. arquivo js.
+
+74
+00:06:24,770 --> 00:06:25,610
+&nbsp;
+
+75
+00:06:25,940 --> 00:06:34,990
+Ento, quero importar meu continer de autenticao, importar auth de. / containers auth e auth novamente e agora aqui,
+
+76
+00:06:35,180 --> 00:06:43,220
+eu vou simplesmente replicar uma das rotas e digamos que para / auth, eu quero
+
+77
+00:06:43,280 --> 00:06:46,100
+carregar esse componente auth, assim.
+
+78
+00:06:46,100 --> 00:06:49,030
+Vamos tentar isso e para conseguir isso, eu
+
+79
+00:06:49,130 --> 00:06:57,710
+tambm vou na minha pasta de componentes e l para navegao, itens de navegao no componente de itens de navegao, aqui ns temos
+
+80
+00:06:57,770 --> 00:06:59,290
+nossos links e eu
+
+81
+00:06:59,540 --> 00:07:02,530
+adicionarei um novo, vou adicionar um link para
+
+82
+00:07:02,720 --> 00:07:10,960
+/ auth e eu vou dar uma legenda de autenticar, algo assim. Com essa configurao, vamos voltar ao aplicativo,
+
+83
+00:07:10,960 --> 00:07:14,890
+estamos autenticando, mas o estilo est
+
+84
+00:07:14,890 --> 00:07:18,650
+um pouco errado e, se formos
+
+85
+00:07:18,790 --> 00:07:22,490
+inspecion-lo, no consigo identificar minhas entradas.
+
+86
+00:07:22,870 --> 00:07:28,890
+Ento, vamos voltar para o continer auth e ver onde esto as entradas, temos um
+
+87
+00:07:28,930 --> 00:07:32,840
+formulrio, que deve ser essa forma constante, mas de alguma
+
+88
+00:07:33,030 --> 00:07:35,240
+forma, quando o loop atravs
+
+89
+00:07:35,250 --> 00:07:38,560
+da matriz aqui, parece que no criamos entradas.
+
+90
+00:07:38,560 --> 00:07:41,940
+A razo  porque eu copiei o cdigo dos dados
+
+91
+00:07:41,980 --> 00:07:49,340
+de contato, estou me referindo a uma propriedade orderForm no meu estado, mas aqui no recipiente auth, eu renomei isso para
+
+92
+00:07:49,630 --> 00:07:51,570
+controles, ento eu vou renome-lo aqui
+
+93
+00:07:51,790 --> 00:07:55,090
+tambm e agora se voltarmos , vemos os controles.
+
+94
+00:07:55,160 --> 00:08:01,960
+Agora, para dar um pouco de estilo, adicionarei uma autenticao. css arquivo e vou copiar o estilo do arquivo css
+
+95
+00:08:01,960 --> 00:08:07,340
+de dados de contato para l, substituir a classe de dados de contato aqui com a
+
+96
+00:08:07,360 --> 00:08:13,900
+classe auth e deixar todo o estilo e na auth. Eu vou ento importar
+
+97
+00:08:14,170 --> 00:08:23,800
+minhas classes do. / auth arquivo css e depois eu vou atribu-lo ao wrapping div,
+
+98
+00:08:23,800 --> 00:08:32,180
+para que o wrapping div aqui receba o nome da classe que  classes. Auth, esta classe css recm-adicionada.
+
+99
+00:08:32,180 --> 00:08:34,160
+Se agora salvarmos todos esses
+
+100
+00:08:34,160 --> 00:08:38,740
+arquivos, isso parece muito bom em todos os tamanhos de dispositivos, eu acho.
+
+101
+00:08:38,840 --> 00:08:45,520
+Ento este  o meu formulrio de inscrio, o prximo passo  tambm configurar este formulrio para ter validao,
+
+102
+00:08:45,530 --> 00:08:47,370
+ento vamos fazer isso na
+
+103
+00:08:47,450 --> 00:08:50,920
+prxima etapa, eu tambm vou copiar o cdigo para isso
+
+104
+00:08:51,020 --> 00:08:57,560
+dos dados de contato e pela maneira como todos esses cdigos copiam , voc diria corretamente que no podemos
+
+105
+00:08:57,560 --> 00:09:00,240
+terceirizar parte deste cdigo em algum arquivo centralizado
+
+106
+00:09:00,260 --> 00:09:05,970
+e, sim, podemos, vamos fazer isso no prximo mdulo, onde aplicaremos algumas otimizaes para este projeto.
+
+107
+00:09:05,990 --> 00:09:09,680
+Por enquanto, eu iria apenas quebrar checkValidity, este mtodo,
+
+108
+00:09:09,830 --> 00:09:18,620
+copi-lo e adicion-lo ao meu recipiente de autenticao tambm, ento acima de render, vou adicionar checkValidity que suporta vrias regras, na
+
+109
+00:09:18,620 --> 00:09:19,220
+verdade
+
+110
+00:09:19,250 --> 00:09:26,600
+todas as regras que eu uso aqui e agora eu preciso de um inputChangedHandler e tambm receberei isso
+
+111
+00:09:26,600 --> 00:09:28,040
+dos dados de contato.
+
+112
+00:09:28,370 --> 00:09:37,290
+Ento, para verificar a validade, adicionarei um novo mtodo ao meu continer de autenticao, nomearei-o inputChangedHandler e l, espero
+
+113
+00:09:38,000 --> 00:09:44,500
+obter o evento e o nome do controle que foi alterado e, agora, posso
+
+114
+00:09:45,450 --> 00:09:51,560
+usar muito da lgica, mas no todos a partir dos dados de contato.
+
+115
+00:09:51,900 --> 00:09:59,640
+Eu quero criar um formulrio atualizado, no chamado orderForm embora onde eu atualizo meus elementos,
+
+116
+00:09:59,640 --> 00:10:08,850
+mas vou faz-lo manualmente aqui no recipiente de autenticao. Ento eu vou criar minha constante updatedControls onde eu vou criar um
+
+117
+00:10:08,850 --> 00:10:16,680
+novo objeto onde eu vou copiar isso. Estado. controles primeiro e, em seguida, quero apenas
+
+118
+00:10:16,680 --> 00:10:22,040
+atualizar um dos controles, o controle com o nome do controle que temos aqui.
+
+119
+00:10:22,440 --> 00:10:28,170
+Assim, os controles de estado simplesmente copiam todos os elementos dentro desse objeto de controle e
+
+120
+00:10:28,320 --> 00:10:33,300
+um deles ser sobrescrito por mim e  esse com o nome que recebo
+
+121
+00:10:33,300 --> 00:10:37,730
+como argumento aqui e que, por sua vez, deve receber um novo objeto.
+
+122
+00:10:37,980 --> 00:10:46,740
+Ento, aqui, eu tambm chamarei isso. Estado. controles para esse nome de controle e
+
+123
+00:10:46,740 --> 00:10:51,120
+distribuir todas essas propriedades para que eu possa sobrescrever algumas das
+
+124
+00:10:51,120 --> 00:10:59,530
+propriedades, por exemplo, o valor, agora o valor desse controle e eu posso basicamente sobrescrever todas as propriedades que temos
+
+125
+00:10:59,530 --> 00:11:03,240
+aqui no controle, como valor e vlido e tocado.
+
+126
+00:11:03,730 --> 00:11:14,510
+Ento o valor agora ser evento. alvo. value, valid usar esse mtodo checkValidity e l passarei
+
+127
+00:11:14,560 --> 00:11:16,580
+o evento. alvo. valor e
+
+128
+00:11:16,630 --> 00:11:19,080
+as regras deste controle dado,
+
+129
+00:11:19,090 --> 00:11:25,810
+ento as regras so isso. Estado. controles para este nome de controle,
+
+130
+00:11:25,870 --> 00:11:29,820
+no temos essa propriedade de validao que eu vou passar, de
+
+131
+00:11:29,830 --> 00:11:35,740
+modo que est se referindo a essa propriedade de validao cada controle tem onde eu configurei as regras.
+
+132
+00:11:35,890 --> 00:11:39,640
+Ento, isso  o que eu passo como um segundo argumento
+
+133
+00:11:40,410 --> 00:11:47,580
+para verificar a validade, alm disso, vou adicionar outra propriedade, tocada, ela ser configurada para true aqui sempre que this inputChangedHandler
+
+134
+00:11:47,580 --> 00:11:51,490
+for disparado, o usurio digitar algo para que seja definitivamente tocado.
+
+135
+00:11:51,750 --> 00:11:57,840
+Ento, com isso, atualizo meu controle individual que foi alterado, atualizo todos
+
+136
+00:11:57,870 --> 00:12:01,190
+os campos relevantes que desejo alterar.
+
+137
+00:12:01,500 --> 00:12:06,510
+Agora, eu deliberadamente no lidarei com a validade geral do formulrio aqui, no
+
+138
+00:12:06,510 --> 00:12:07,740
+verificarei isso, no
+
+139
+00:12:07,740 --> 00:12:14,070
+desabilitarei o boto de envio de formulrios invlidos porque tambm quero mostrar o que acontece se enviarmos
+
+140
+00:12:14,100 --> 00:12:15,490
+formulrios invlidos, voc pode
+
+141
+00:12:15,540 --> 00:12:18,400
+obviamente implementar isso tambm, mas no vou.
+
+142
+00:12:18,810 --> 00:12:25,320
+Ento, estou praticamente pronto aqui, o que terei que fazer  chamar o
+
+143
+00:12:25,800 --> 00:12:29,880
+set state em inputChangedHandler e definir a propriedade
+
+144
+00:12:29,880 --> 00:12:35,900
+controls igual a minha updatedControls agora. Com isso, consegui isso funcionando, agora preciso conect-lo, j
+
+145
+00:12:35,970 --> 00:12:39,950
+fiz isso porque usei o mesmo nome que nos dados de
+
+146
+00:12:40,080 --> 00:12:41,910
+contato, ento isso deve funcionar.
+
+147
+00:12:42,240 --> 00:12:48,450
+Agora vamos salvar isso e vamos ver se a validao est funcionando ento, de volta ao projeto, se eu comear
+
+148
+00:12:48,450 --> 00:12:54,540
+a digitar aqui, ele permanecer invlido at que seja um endereo de email vlido e a senha tenha pelo menos
+
+149
+00:12:54,540 --> 00:12:56,570
+6 caracteres para ser tratada como vlida.
+
+150
+00:12:56,610 --> 00:12:57,440
+Ento, isso est
+
+151
+00:12:57,450 --> 00:13:00,900
+funcionando e, como eu disse, o boto nunca  alterado deliberadamente.
+
+152
+00:13:00,900 --> 00:13:02,550
+Ento, meu formulrio est finalizado,
+
+153
+00:13:02,640 --> 00:13:08,460
+meu prximo passo  agora lidar com o envio e, claro, eu quero fazer isso usando redux e criadores
+
+154
+00:13:08,730 --> 00:13:09,150
+de ao.
+

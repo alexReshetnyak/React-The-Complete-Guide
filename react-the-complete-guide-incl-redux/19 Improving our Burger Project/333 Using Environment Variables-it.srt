@@ -1,0 +1,124 @@
+1
+00:00:02,260 --> 00:00:05,160
+Abbiamo gi migliorato molto questo progetto, ora c'
+
+2
+00:00:05,170 --> 00:00:08,240
+un'altra cosa che voglio portare alla tua attenzione.
+
+3
+00:00:08,410 --> 00:00:15,970
+Se questo progetto viene implementato, tutti saranno in grado di esaminare il tuo negozio con gli strumenti di sviluppo redux.
+
+4
+00:00:16,060 --> 00:00:18,830
+Questo non  strettamente o necessariamente un problema, alla
+
+5
+00:00:18,880 --> 00:00:24,330
+fine le persone possono sempre guardare nel tuo codice javascript se lo desiderano, non puoi crittografarlo ma forse
+
+6
+00:00:24,340 --> 00:00:32,800
+vuoi renderlo un po 'pi difficile e non cos ovvio per accedere al tuo stato. Per fare ci, puoi
+
+7
+00:00:32,800 --> 00:00:40,240
+andare nel tuo indice. file js che  il punto in cui abbiamo
+
+8
+00:00:40,240 --> 00:00:49,030
+sbloccato gli strumenti dev redux e possiamo aggiustare questo codice un pochino per sbloccarlo solo se siamo in modalit sviluppo
+
+9
+00:00:49,030 --> 00:00:55,900
+e non farlo se siamo in modalit produzione. Per fare ci, possiamo sfruttare una caratteristica chiamata
+
+10
+00:00:56,220 --> 00:00:57,160
+variabili d'ambiente
+
+11
+00:00:57,280 --> 00:01:05,930
+nel nostro progetto crea react app e questa  una caratteristica che  specifica del progetto, possiamo usare variabili d'ambiente, possiamo
+
+12
+00:01:06,130 --> 00:01:11,130
+definirli nella cartella config, l nel ENV. js file, puoi fondamentalmente
+
+13
+00:01:11,200 --> 00:01:17,590
+aggiungere le tue variabili d'ambiente, puoi aggiungerle qui dove vedi
+
+14
+00:01:17,800 --> 00:01:22,360
+NODE_ENV e l'URL pubblico. Ora la cosa NODE_ENV qui  interessante,
+
+15
+00:01:22,360 --> 00:01:25,420
+ impostata automaticamente per te ed  di sviluppo
+
+16
+00:01:25,420 --> 00:01:32,410
+se sei in modalit di sviluppo. Quindi, con quello, possiamo andare al nostro indice. js file e solo bisogno di
+
+17
+00:01:32,410 --> 00:01:37,750
+accedere a questa variabile per impostare solo questa estensione se siamo in modalit di sviluppo.
+
+18
+00:01:37,750 --> 00:01:43,990
+Accediamo alle nostre variabili di ambiente e di nuovo, questo funziona per questo specifico progetto impostato
+
+19
+00:01:43,990 --> 00:01:46,810
+chiamando il processo che  una variabile
+
+20
+00:01:46,810 --> 00:01:53,130
+globale che  disponibile qui, non dobbiamo importarlo, env per l'ambiente e l possiamo accedere a
+
+21
+00:01:53,170 --> 00:01:56,590
+NODE_ENV, questo  variabile d'ambiente che hai appena visto,
+
+22
+00:01:56,590 --> 00:01:58,950
+ad esempio lo sviluppo, durante lo sviluppo.
+
+23
+00:01:58,990 --> 00:02:02,320
+Quindi possiamo controllare se questo  uguale allo sviluppo e
+
+24
+00:02:02,790 --> 00:02:09,270
+se lo , allora questa  un'espressione ternaria, useremo gli strumenti di redux dev come abbiamo fatto prima, se
+
+25
+00:02:09,310 --> 00:02:14,740
+non lo , lo imposter su null e poi avere questo confronto OR quindi se la
+
+26
+00:02:14,740 --> 00:02:18,630
+prima parte  nulla, useremo la funzione di composizione predefinita.
+
+27
+00:02:18,820 --> 00:02:23,450
+Quindi ora gli strumenti dev redux saranno disponibili solo nell'ambiente di sviluppo.
+
+28
+00:02:23,500 --> 00:02:26,160
+Se salviamo questo e torniamo indietro e ricarichiamo
+
+29
+00:02:26,320 --> 00:02:27,250
+la pagina, non
+
+30
+00:02:27,250 --> 00:02:33,270
+cambia nulla, vediamo ancora il nostro redux inspector ma in seguito vedremo che una volta implementata l'applicazione, questo
+
+31
+00:02:33,300 --> 00:02:34,120
+non funzioner pi.
+

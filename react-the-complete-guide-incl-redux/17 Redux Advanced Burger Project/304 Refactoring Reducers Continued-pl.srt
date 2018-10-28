@@ -1,0 +1,368 @@
+1
+00:00:02,270 --> 00:00:09,890
+C, jedyn rzecz, ktr moemy zrobi, to wyodrbni logik z naszych przypadkw do ich wasnych funkcji, dziki czemu nasze
+
+2
+00:00:10,160 --> 00:00:13,100
+owiadczenie o zmianie switcha staje si bardzo krtkie.
+
+3
+00:00:13,160 --> 00:00:18,940
+Wic zmniejszenie lub rok mog doda now sta, ktr mog nazwa skadnikiem.
+
+4
+00:00:19,010 --> 00:00:25,100
+Zasadniczo, typ akcji poradzi sobie z tym jako funkcj, ktra odbiera stan i akcj, tak
+
+5
+00:00:25,100 --> 00:00:27,280
+jak ty lub ona sama.
+
+6
+00:00:27,590 --> 00:00:30,870
+Ale chc tylko obsuy ten kod.
+
+7
+00:00:31,070 --> 00:00:38,600
+Wic zapi cay kod z rodzaju akcji, dodaj skadnik, pokrj go i przenie do skadnika jak
+
+8
+00:00:38,810 --> 00:00:40,540
+pokazano w poprzednim module.
+
+9
+00:00:40,730 --> 00:00:44,620
+Kod jest taki sam, poniewa wci mamy tam X stan i akcj.
+
+10
+00:00:44,780 --> 00:00:55,290
+Teraz w moim przypadku mam tylko dwa zwroty i skadnik i przekazuj stan, a waciwie dostaniemy si do reduktora i to
+
+11
+00:00:55,290 --> 00:01:02,490
+zasadniczo jest takie samo jak przedtem, ale teraz w linii, co oczywicie jest super
+
+12
+00:01:02,490 --> 00:01:06,600
+szybkim sposobem zobaczenia wszystkich sprawy, ktrymi si zajmujemy.
+
+13
+00:01:06,750 --> 00:01:11,780
+I oczywicie nie chc tego robi dla skadnika, ktry chc zrobi rwnie dla Remove
+
+14
+00:01:11,780 --> 00:01:12,190
+Ingredion.
+
+15
+00:01:12,230 --> 00:01:18,840
+Stwrzmy wic funkcj usu skadnik ze swojej strzaki strzakowej, po prostu odetniemy kod z
+
+16
+00:01:19,170 --> 00:01:26,200
+roku, w ktrym usunito skadnik, wcznie z instrukcj zwrotu, a poniewa wrcilimy jest tutaj funkcja,
+
+17
+00:01:26,200 --> 00:01:31,930
+ktrej nie moemy po prostu wykona. i zwr wynik tutaj, ktry bdzie
+
+18
+00:01:31,930 --> 00:01:33,320
+stanem zaktualizowanym.
+
+19
+00:01:33,340 --> 00:01:41,000
+Wic usu skadnik jest tutaj wykonywany, a my przekazujemy stan akcji tak, jak po dodaniu.
+
+20
+00:01:41,050 --> 00:01:45,030
+Dziki temu te dwie funkcje s do tego zlecane.
+
+21
+00:01:45,130 --> 00:01:46,830
+Teraz to samo ustawienie.
+
+22
+00:01:46,860 --> 00:01:56,470
+Oczywicie przechwytuje cay kod i tworzy nowe skadniki zestawu funkcji, jak zawsze oczekuj pastwo i dziaanie
+
+23
+00:01:56,470 --> 00:02:01,580
+tutaj, a nastpnie wklejaj kod taki jak ten.
+
+24
+00:02:02,530 --> 00:02:11,190
+A w przypadku, kiedy mog, mog zwrci ustalone skadniki i przekaza stan i dziaanie.
+
+25
+00:02:11,550 --> 00:02:16,770
+I ostatnie, ale nie mniej wane, e robimy to samo, poniewa pobieranie skadnikw nie powiodo si.
+
+26
+00:02:16,770 --> 00:02:24,120
+Oczywicie, e jest to bardzo krtki, ale mimo to pobieranie skadnikw nie powiodo si i bierze stan
+
+27
+00:02:24,120 --> 00:02:28,170
+i akcj jako dane wejciowe, a nastpnie zwrci zaktualizowany stan.
+
+28
+00:02:28,170 --> 00:02:36,660
+Wic moemy to po prostu nazwa, nie, te regiony odzyskiwania zwrotu zawodz i przekazuj pastwu akcj, ktra
+
+29
+00:02:36,660 --> 00:02:37,850
+jest wana.
+
+30
+00:02:37,980 --> 00:02:40,940
+I z tym wracamy do stanu domylnego.
+
+31
+00:02:41,010 --> 00:02:47,020
+Mamy super-reduktor, ktry nadal powinien spenia swoje zadanie.
+
+32
+00:02:47,520 --> 00:02:49,750
+I robi to, co wida.
+
+33
+00:02:49,800 --> 00:02:53,310
+Ide, ktra kryje si za tym, oczywicie, nie jest zmniejszenie naszego pliku.
+
+34
+00:02:53,340 --> 00:02:59,190
+To tak dugo, jak przedtem, nawet nieco duej, ale instrukcja switch case jest znacznie chudsza i moemy szybko
+
+35
+00:02:59,190 --> 00:03:01,450
+zobaczy, ktre przypadki s obsugiwane w reduktorze.
+
+36
+00:03:01,590 --> 00:03:04,050
+I to wszystko kryje si za tym.
+
+37
+00:03:04,110 --> 00:03:07,850
+Teraz moemy oczywicie zrobi to samo dla uporzdkowanego douceur.
+
+38
+00:03:08,130 --> 00:03:16,080
+Tak wic istnieje rwnie funkcja na jednostk, w ktrej dostaj stan i akcj, w ktrej co zwracam, lub
+
+39
+00:03:16,590 --> 00:03:23,970
+jeszcze nie robi, ale robi to teraz, poniewa wyciem kod z pre-Chase w jego przypadku i umieciem
+
+40
+00:03:24,660 --> 00:03:32,460
+go bez jakichkolwiek zmian w pre-Chase w nim, tak jak poprzednio, a nastpnie w tym przypadku zwr pre-Chase
+
+41
+00:03:32,460 --> 00:03:38,580
+dla tego przypadku, tak jak kady niedwied polarny Bergere zawsze zwraca te wywoania funkcji
+
+42
+00:03:38,580 --> 00:03:41,160
+i wynik wywoania funkcji jest precyzyjny.
+
+43
+00:03:41,160 --> 00:03:50,240
+Teraz dla reduktora zamwie mona rwnie utworzy funkcj dla kadego burgera na pocztek sera, gdzie
+
+44
+00:03:50,250 --> 00:04:02,410
+otrzymam informacj o akcji, w ktrej wtedy rwnie szybko wo kod z tego przypadku, a tym samym zwrc wgiel lub
+
+45
+00:04:02,470 --> 00:04:06,730
+wynik wezwania do zakupu pocztek postpu.
+
+46
+00:04:06,820 --> 00:04:09,610
+To samo oczywicie dla sukcesu burgera sprzed chase.
+
+47
+00:04:09,610 --> 00:04:11,510
+Tam mamy troch wicej kodu.
+
+48
+00:04:12,010 --> 00:04:19,360
+Tak wic sukces Burgera przez Per Che jest dobr nazw funkcji, ktr trzeba poda, jak zawsze.
+
+49
+00:04:19,360 --> 00:04:21,150
+A potem umieszczamy kod.
+
+50
+00:04:21,160 --> 00:04:24,490
+Wanie wycilimy z naszego, ktry to przypadek.
+
+51
+00:04:24,670 --> 00:04:28,310
+Teraz po prostu wrmy do ataku wywoania funkcji.
+
+52
+00:04:28,480 --> 00:04:33,400
+I jedno, o czym oczywicie zapomniaem, wszystkie te wywoania funkcji wymagaj od pastwa akcji.
+
+53
+00:04:33,400 --> 00:04:35,770
+Poniewa spodziewamy si tego tutaj jako argumentu.
+
+54
+00:04:35,950 --> 00:04:39,550
+Wic oczywicie powinienem doda stan i akcj do wszystkich tych funkcji.
+
+55
+00:04:39,550 --> 00:04:43,090
+W moim owiadczeniu o zmianie przecznika kontynuujmy.
+
+56
+00:04:43,210 --> 00:04:47,270
+Zrbmy to samo w przypadku niepowodzenia zakupu Bergerera i wszystkich innych funkcji.
+
+57
+00:04:47,380 --> 00:04:55,150
+Oczywicie moesz przeskoczy do przodu, na wypadek gdyby nie chcia tego zrobi, wic stan awaryjny Burgera przed Chase'em i koniec
+
+58
+00:04:56,010 --> 00:04:56,450
+akcji.
+
+59
+00:04:56,450 --> 00:04:58,450
+Q Umiemy go w kodzie.
+
+60
+00:04:58,450 --> 00:05:08,670
+Wycofujemy si, a nastpnie po prostu wrmy do pocigu, ktremu Berger si nie uda, a oni przekazuj stanowi akcj do
+
+61
+00:05:08,670 --> 00:05:09,430
+tej funkcji.
+
+62
+00:05:09,810 --> 00:05:13,110
+I tak samo w przypadku zamwie pobierania, oczywicie.
+
+63
+00:05:13,110 --> 00:05:22,160
+Tak wic, przy zamawianiu rozkazw zacznij widzisz refaktoryzacj tak redukcj lub moe by nieco uciliwa, ale oczywicie chc ci pokaza,
+
+64
+00:05:22,160 --> 00:05:26,890
+jak to zrobi cakowicie, a nie tylko dla jednej funkcji.
+
+65
+00:05:26,960 --> 00:05:33,470
+Tak wic tutaj wszystkie zwrcone wyniki rozkazw fecche zaczynaj si po przekazaniu do niego stanu akcji.
+
+66
+00:05:34,620 --> 00:05:38,780
+Teraz otrzymalimy kolejne zamwienia, aby uzyska wikszy kod.
+
+67
+00:05:39,630 --> 00:05:45,050
+Wytnijmy go i utwrzmy now funkcj pobierania zamwie.
+
+68
+00:05:45,120 --> 00:05:55,320
+Sukces rwnie otrzymuje stan i dziaanie, a nastpnie umieszczamy kod, ktry wanie wycilimy, i tak jak poprzednio, po prostu zwracamy wezwanie,
+
+69
+00:05:55,320 --> 00:06:02,890
+aby odnie sukces w zamwieniu w funkcji EUROCRYPT i przekaza mu stan dziaania i cokolwiek.
+
+70
+00:06:02,900 --> 00:06:06,450
+Wszystkie te wykonane jeszcze jeden, aby przej do zamwienia pobrania nie.
+
+71
+00:06:06,480 --> 00:06:15,390
+Mamy wic cige zlecenia pobrania, ktre kocz si niepowodzeniem dla wszystkich stanw odbioru, a akcja powoduje, e zwracamy co lub zwracamy kod,
+
+72
+00:06:15,390 --> 00:06:20,240
+ktry wanie wycilimy, a to si nazywa nieudane zamwienia w tym przypadku.
+
+73
+00:06:20,430 --> 00:06:25,840
+Zwrcilimy wic wynik tego wezwania do dziaania takiego stanu.
+
+74
+00:06:25,980 --> 00:06:29,130
+Ustawmy stan diaba w tej samej linii.
+
+75
+00:06:29,130 --> 00:06:34,280
+A teraz otrzymujemy czyst instrukcj przecznika dla tego reduktora.
+
+76
+00:06:34,680 --> 00:06:40,320
+Po tym przejrzyjmy nasz burgerowy puchar. Czy jestecie jeszcze raz, aby zobaczy, czy to wszystko dziaa.
+
+77
+00:06:40,560 --> 00:06:42,400
+Zamwmy pysznego burgera.
+
+78
+00:06:42,630 --> 00:06:43,990
+Po prostu wprowad wszystko.
+
+79
+00:06:44,020 --> 00:06:44,790
+Naprawd nie ma znaczenia.
+
+80
+00:06:44,790 --> 00:06:52,380
+Po prostu chcesz sprawdzi, czy mamy jakie problemy z stanem w ktrymkolwiek z naszych kontenerw, wic sprbujmy tutaj.
+
+81
+00:06:52,740 --> 00:06:54,910
+Jestemy przekierowywani.
+
+82
+00:06:55,290 --> 00:07:02,200
+A na zamwieniach widzimy wszystkie zamwienia, cznie z tym, ktry wanie zebralimy.
+
+83
+00:07:02,460 --> 00:07:03,840
+Sprbujemy te czego innego.
+
+84
+00:07:03,840 --> 00:07:08,060
+Zacznijmy cign burgera, aby anulowa, e jest kontynuowany.
+
+85
+00:07:08,100 --> 00:07:13,910
+Wrmy do melonika z burgerami, ktre zresetowalimy, tak jak chcielimy, abymy mogli i na zamwienia.
+
+86
+00:07:13,970 --> 00:07:19,080
+Teraz kontynuujmy jeszcze raz, aby wszystko dziaao.
+
+87
+00:07:19,150 --> 00:07:26,260
+Wprowadzilimy do naszej aplikacji Bergere Boulder kilka zaawansowanych technik zatrzaskiwania.
+
+88
+00:07:26,260 --> 00:07:31,850
+Teraz zdecydowanie moesz zwikszy to jeszcze bardziej, usuwajc zlecenia.
+
+89
+00:07:31,900 --> 00:07:37,960
+Jak ju powiedziaem lub widz, e masz szczegow stron dla kadego zamwienia, jak tylko chcesz.
+
+90
+00:07:37,960 --> 00:07:43,220
+Aplikacja podobaa mi si wanie teraz, ale wdroylimy wiele fajnych funkcji.
+
+91
+00:07:43,270 --> 00:07:45,790
+Duo reaguje i przekierowuje rzeczy.
+
+92
+00:07:46,090 --> 00:07:53,340
+I z tym czuj si bardzo dobrze, aby i naprzd i wdraa uwierzytelnianie w nastpnych wykadach.
+

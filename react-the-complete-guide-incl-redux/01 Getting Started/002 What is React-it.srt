@@ -1,0 +1,152 @@
+1
+00:00:02,170 --> 00:00:05,940
+Quindi iniziamo a riattivare cosa e perch.
+
+2
+00:00:06,160 --> 00:00:08,900
+Iniziamo con la domanda su quale  il re-act.
+
+3
+00:00:08,980 --> 00:00:15,910
+E lasciatemi citare una frase dal reattore ufficiale della pagina di reazione della libreria javascript per le interfacce
+
+4
+00:00:15,940 --> 00:00:17,110
+utente di Boulding.
+
+5
+00:00:17,110 --> 00:00:19,910
+Questa  una bella frase, ma cosa significa?
+
+6
+00:00:19,930 --> 00:00:23,710
+La prima parte importante  la parte della libreria javascript.
+
+7
+00:00:23,740 --> 00:00:25,320
+ una libreria javascript.
+
+8
+00:00:25,330 --> 00:00:32,360
+Si tratta di creare app re-act app avviate da javascript nel browser che non funzionano sul server.
+
+9
+00:00:32,380 --> 00:00:36,440
+Funzionano nel browser e questo ci d un grande vantaggio.
+
+10
+00:00:36,460 --> 00:00:39,980
+Le cose accadono all'istante dal momento in cui accadono al browser dell'utente.
+
+11
+00:00:40,060 --> 00:00:45,850
+Non dobbiamo aspettare una risposta del server per ottenere una nuova pagina o per rendere qualcosa di nuovo.
+
+12
+00:00:45,850 --> 00:00:47,980
+Hai una parte importante in quella frase.
+
+13
+00:00:47,980 --> 00:00:55,750
+L'interfaccia utente come interfacce utente parte  fondamentalmente ci che l'utente vede e reagisce
+
+14
+00:00:55,750 --> 00:00:58,710
+utilizzando i componenti per crearli.
+
+15
+00:00:58,810 --> 00:01:03,690
+Se ci pensi, puoi dividere qualsiasi pagina web in componenti.
+
+16
+00:01:03,700 --> 00:01:04,750
+Ecco un esempio.
+
+17
+00:01:04,750 --> 00:01:11,200
+Questa era solo una qualsiasi pagina web casuale che possiamo pensare di avere questa area di intestazione su una barra laterale
+
+18
+00:01:11,200 --> 00:01:13,180
+e poi a destra qualche contenuto.
+
+19
+00:01:13,180 --> 00:01:16,330
+Ora possiamo chiaramente suddividerlo in componenti.
+
+20
+00:01:16,450 --> 00:01:23,660
+Avremmo una testa o un componente un componente della barra laterale e quindi un titolo nel componente di contenuto dell'articolo.
+
+21
+00:01:24,040 --> 00:01:28,480
+Ora, perch sta pensando come  importante o utile.
+
+22
+00:01:28,480 --> 00:01:36,670
+Perch se dividiamo la nostra app web o il nostro sito web in tali componenti,
+
+23
+00:01:36,670 --> 00:01:41,460
+possiamo costruire questi componenti elementari come componenti di codice.
+
+24
+00:01:41,560 --> 00:01:45,960
+Non dobbiamo costruire la nostra intera pagina web come un'immagine pi grande.
+
+25
+00:01:46,000 --> 00:01:48,730
+Possiamo costruire tutte queste piccole cose da sole.
+
+26
+00:01:48,730 --> 00:01:51,040
+Questo naturalmente facilita il lavoro nei team.
+
+27
+00:01:51,130 --> 00:01:57,850
+Ma anche se stiamo lavorando da soli,  facile per noi mantenere il nostro codice gestibile se cambiamo
+
+28
+00:01:57,850 --> 00:01:59,150
+il titolo in seguito.
+
+29
+00:01:59,170 --> 00:02:04,810
+Dobbiamo solo entrare nella componente del debito e aggiornarlo e non dobbiamo trovare quel codice
+
+30
+00:02:04,810 --> 00:02:06,610
+sul nostro intero codice web.
+
+31
+00:02:06,610 --> 00:02:12,700
+facilmente i componenti, quindi se disponiamo di un componente dell'elenco e vogliamo generare un elenco
+
+32
+00:02:12,760 --> 00:02:20,070
+di questi elementi dell'elenco dei pozzi, dobbiamo solo scrivere il codice una volta e riutilizzarlo facilmente perch  importante.
+
+33
+00:02:20,170 --> 00:02:21,350
+Tutti possiamo riutilizzare
+
+34
+00:02:21,370 --> 00:02:29,870
+I componenti di Riette possono essere pensati come elementi HVM personalizzati, alla fine si sta semplicemente scrivendo che gli
+
+35
+00:02:29,870 --> 00:02:38,110
+elementi di posta HVM personalizzati non reagiscono e quindi risolve il problema di dover costruire interfacce utente complesse
+
+36
+00:02:38,110 --> 00:02:46,840
+con ci che HLL e Javascript ti danno scrivendo gestibile gestibile e pezzi riutilizzabili di quel codice che puoi
+
+37
+00:02:47,110 --> 00:02:51,840
+gettare nella tua app web ovunque ti serva per usarlo.
+
+38
+00:02:51,850 --> 00:02:53,460
+Diamo un'occhiata ad alcuni esempi.
+

@@ -1,0 +1,212 @@
+1
+00:00:02,050 --> 00:00:05,930
+Son derste i ie gemi rotalarn nasl kullanlacan reneceiz.
+
+2
+00:00:05,950 --> 00:00:13,390
+Belirli bir yayn zerindeyken imdi belki daha erken bir ey fark etmi olabilirsiniz
+
+3
+00:00:13,390 --> 00:00:21,170
+ve baka bir postaya tklarsak, aslnda borcu yklemediimiz halde Kimlii deitiinde R L'de grebilirsiniz.
+
+4
+00:00:21,460 --> 00:00:26,110
+Dolaysyla tklamay kaydediyor ancak yeni bileeni yklemiyor.
+
+5
+00:00:26,140 --> 00:00:33,340
+imdi bunun nedeni, sahnelerin arkasndaki l yeniden aktr ynlendiricinin her zaman bileenin yerini
+
+6
+00:00:33,340 --> 00:00:34,230
+almas deil.
+
+7
+00:00:34,300 --> 00:00:41,950
+olduunuz gibi bir bileeni yklyorsak buradayz, tm bileeni gerekten oluturmayacaktr ve bu
+
+8
+00:00:41,950 --> 00:00:50,260
+nedenle tam yaz bileeni iin yeniden mount yaplmad, nk bunu neden yapard.
+
+9
+00:00:50,260 --> 00:00:51,520
+Halihazrda zerinde
+
+10
+00:00:51,520 --> 00:00:57,850
+Kendisinin zd paralamay deitirmeyin, paralamay kaldrmak ve yeniden balamak ok verimsiz olurdu.
+
+11
+00:00:57,850 --> 00:01:05,380
+Komponentlerden beri yeniden montaj yaplmad, ancak tekrar web'e ulaamayacaz.
+
+12
+00:01:05,500 --> 00:01:12,490
+Bunu dzeltmek iin yapmamz gereken ey, gncelleme yaplaca iin yeniden altrlaca iin bu
+
+13
+00:01:12,780 --> 00:01:16,220
+davay ilemek iin gncelleme bileenini de uygulamamzdr.
+
+14
+00:01:16,600 --> 00:01:25,330
+yk veri kolayl yntemi ekleyeceim, nk imdi bunu hem bileen montajnda hem de bileen olarak armak
+
+15
+00:01:25,360 --> 00:01:32,710
+istiyorum, bu yk verileri bu her iki yaam dngs kancasnda da arlmal, bylece
+
+16
+00:01:32,710 --> 00:01:39,670
+hem ilk kez hem de bu tekli yk yklendi ve ikinci kez hazrlandm.
+
+17
+00:01:39,700 --> 00:01:46,520
+Ve eski kodu burada web'e uzatacam ve verilerimi ykleyecek yeni bir yntem
+
+18
+00:01:46,540 --> 00:01:52,220
+Ancak imdi konsol gnlne gre sonsuz bir dngye zaten sahibiz.
+
+19
+00:01:52,300 --> 00:01:55,060
+Dolaysyla bu mkemmel bir zm deildir.
+
+20
+00:01:55,060 --> 00:01:59,470
+Buraya bir balanty tklyorum ve tekrar yklemeye devam ediyor.
+
+21
+00:01:59,740 --> 00:02:04,640
+Kesin olarak burada mevcut kurulumumuzdaki yanl olan yapmak istemediimiz ey.
+
+22
+00:02:05,520 --> 00:02:13,540
+Peki, yk verilerimizdeki eklerimiz, fikrimizin deiip deimediini kontrol ediyor ve bu doru kimlii kontrol
+
+23
+00:02:13,620 --> 00:02:14,500
+ediyoruz.
+
+24
+00:02:14,610 --> 00:02:21,210
+her yerde olduu gibi bu pervanenin ei olmas gerekiyor Perrin'in kimlii bu pervanenin kimlii asla belirlenmeyecek.
+
+25
+00:02:21,210 --> 00:02:22,250
+imdi de burada
+
+26
+00:02:22,410 --> 00:02:27,930
+Dolaysyla, HD blmnde sahip olduumuz ayn sonsuz dng sorunumuz vard nk eklerimiz artk
+
+27
+00:02:27,930 --> 00:02:33,390
+almyordu ve biz sadece bunu gncellememiz gerekmiyor; bunu her yerde gncellememiz gerekiyor ve
+
+28
+00:02:33,390 --> 00:02:40,230
+tabii ki bu pervanenin Kimliini de referans aldmz bileen olarak da te silmenin asla ie yaramayaca nedeni.
+
+29
+00:02:40,230 --> 00:02:46,580
+Ve tabii ki burada kimlii ayarlanm olup olmadn kontrol ettiimiz yer.
+
+30
+00:02:46,710 --> 00:02:53,220
+imdi yerinde olan bu deiikliklerle birlikte, yine de ie yaramayacakt, nk
+
+31
+00:02:53,220 --> 00:02:57,480
+kimlii gururlu ailelerden almak aslnda bir dize olacakt.
+
+32
+00:02:57,480 --> 00:03:05,270
+imdi burada ykl postta depolanan anti-ID eitlii iin bir numara olduunu kontrol ediyoruz.
+
+33
+00:03:05,280 --> 00:03:12,060
+Dolaysyla ya E-dize kimlii kelimesini bir numaraya almal ya da bunu sadece bir onay iaretine
+
+34
+00:03:12,060 --> 00:03:14,260
+evirmeliyiz veya deeri kontrol etmeliyiz.
+
+35
+00:03:14,280 --> 00:03:17,780
+imdi sadece deeri kontrol edip bir yazy tklarsak.
+
+36
+00:03:17,910 --> 00:03:20,850
+Artk her zaman yklenmediini gryorsun.
+
+37
+00:03:20,850 --> 00:03:26,080
+Bunun yerine, yalnzca bir kez ykler, ancak yayna getiimizde onu dzgn ekilde gnceller.
+
+38
+00:03:26,250 --> 00:03:31,440
+Yine alternatif, yazarak kalite kontrolnden vazgemek ama bunun nne bir art
+
+39
+00:03:31,440 --> 00:03:34,050
+ekleyerek bir sayya dntrmek olacaktr.
+
+40
+00:03:34,050 --> 00:03:38,220
+imdi yklediimiz bir postay tklarsak, yalnzca bir kez yklenir.
+
+41
+00:03:38,220 --> 00:03:40,010
+Sonsuz dngye girmiyoruz.
+
+42
+00:03:40,320 --> 00:03:46,740
+Genel post bileeninin nemli bir dzeltmesi, bileen genelinde Perens ID
+
+43
+00:03:46,870 --> 00:03:53,950
+elemesini kullandmz ve bileendeki deiiklikleri gerekletirmeniz gerektiini anlamak da nemlidir.
+
+44
+00:03:53,970 --> 00:04:01,800
+DB post bileenini mi yoksa genel olarak bileen ynlendirmeye yklendiyse gncelleme mi yaptnz, nk ynlendirici
+
+45
+00:04:01,800 --> 00:04:07,350
+eskisinin balantsn kesmeyecek ve ayn veriyi farkl verilerle yeniden balamayacaktr.
+
+46
+00:04:07,350 --> 00:04:12,320
+Eski rotay tekrar kullanacak ve sadece rota parametresini ayarlayacaktr.
+
+47
+00:04:12,390 --> 00:04:20,460
+Bu yeni parametreye tepki gstermek sizin iinizdir ve sahada deiiklik olmas nedeniyle arlabilecek bu
+
+48
+00:04:20,460 --> 00:04:23,010
+gncelleme bileenine tepki verebilirsiniz.
+
+49
+00:04:23,070 --> 00:04:29,840
+Yeni kimlie sahip yeni bir ebeveyn nesnesine sahip yeni bir eleme nesnesine sahip yeni bir kulplu alrsnz.
+
+50
+00:04:29,850 --> 00:04:31,170
+Burada olan bitti.
+
+51
+00:04:31,170 --> 00:04:32,830
+Yararladmz eyi yapar.
+
+52
+00:04:32,910 --> 00:04:34,530
+Ve anlamak nemlidir.
+
+53
+00:04:34,660 --> 00:04:36,780
+ ie gemi rotalarla alrken.
+

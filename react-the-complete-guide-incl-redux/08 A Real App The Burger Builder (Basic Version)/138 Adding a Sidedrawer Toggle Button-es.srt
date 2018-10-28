@@ -1,0 +1,308 @@
+1
+00:00:02,120 --> 00:00:08,210
+As que tuvimos que el teln de fondo editamos la lgica para deshacernos del lado o el prximo paso es
+
+2
+00:00:08,270 --> 00:00:10,190
+implementar aqu este botn de alternar.
+
+3
+00:00:10,220 --> 00:00:16,040
+Entonces, implementar un componente que nos permita hacer clic y que luego active algo que
+
+4
+00:00:16,130 --> 00:00:20,840
+muestre si decide si es o no es un buen ejercicio para usted.
+
+5
+00:00:20,870 --> 00:00:25,720
+Por supuesto, implica un par de pasos y ciertamente hay ms de una forma de lograr esto.
+
+6
+00:00:25,880 --> 00:00:31,520
+un componente y simplemente conectando este desarrollador con un oyente de clic para tomar la ruta ms fcil
+
+7
+00:00:31,520 --> 00:00:38,660
+o externalizar esto en su propio componente, tal vez crear una hamburguesa. Puedo hacerlo hacer clic y en el Al final, asegrese de
+
+8
+00:00:38,660 --> 00:00:45,620
+que de alguna manera obtenga el componente de diseo y ajuste el estado a ese lado de los shows que es demasiado cierto.
+
+9
+00:00:45,950 --> 00:00:49,530
+Pero sintase libre de probar esto solo ya sea al no crear
+
+10
+00:00:49,880 --> 00:00:58,100
+Primero, defnalo como falso en Dearden y asegrese de que ahora puede de algn modo hacer clic en algo en la barra de herramientas.
+
+11
+00:00:58,100 --> 00:01:04,460
+Establezca el escenario aqu como un conjunto justo y, por lo tanto, cambie abrir la propiedad abierta en el cajn lateral
+
+12
+00:01:04,460 --> 00:01:07,650
+porque depende del estado de la puerta del lado del espectculo.
+
+13
+00:01:07,670 --> 00:01:09,070
+Ahora es una buena prctica.
+
+14
+00:01:09,140 --> 00:01:13,280
+Te dar un par de segundos para publicar el
+
+15
+00:01:13,280 --> 00:01:19,840
+video y probar esto por tu cuenta y luego te mostrar mi enfoque.
+
+16
+00:01:19,840 --> 00:01:21,820
+Entonces, dnde tienes xito?
+
+17
+00:01:22,030 --> 00:01:23,170
+Vamos a resolverlo juntos.
+
+18
+00:01:23,170 --> 00:01:25,480
+Pero realmente lo insto a que lo intente por su cuenta.
+
+19
+00:01:25,480 --> 00:01:33,430
+Primero queremos asegurarnos de que podemos hacer clic en este botn de men en la barra de herramientas y
+
+20
+00:01:33,430 --> 00:01:41,110
+queremos externalizar el men en su propio componente que tambin quiero configurar como hamburguesa. PUEDO colocar este componente en
+
+21
+00:01:41,110 --> 00:01:48,670
+la carpeta del cajn del sitio porque pertenece al un cajn lateral y nombrar un alternador de charla
+
+22
+00:01:48,670 --> 00:01:52,000
+all agregue un cajn alternar ese archivo js.
+
+23
+00:01:52,030 --> 00:01:59,100
+Este ser un componente simple ya que la mayora de nuestros componentes son una funcin que recibe accesorios y
+
+24
+00:01:59,100 --> 00:02:00,380
+devuelve algo de GSX.
+
+25
+00:02:00,820 --> 00:02:09,800
+Y para eso, por supuesto, tenemos que importar volver a actuar de nuevo, entonces todo lo exportado s.
+
+26
+00:02:09,840 --> 00:02:11,140
+Por defecto
+
+27
+00:02:11,190 --> 00:02:13,990
+Por lo tanto, exportar destino de cada es un valor predeterminado.
+
+28
+00:02:14,310 --> 00:02:18,430
+Y por ahora simplemente agregar lo hice con el men de texto aqu.
+
+29
+00:02:18,570 --> 00:02:24,420
+Pero cambiar esto porque acabo de decir que cambiar esto a una hamburguesa que pueda en el futuro.
+
+30
+00:02:24,540 --> 00:02:26,710
+Por ahora vamos a usar eso sin embargo.
+
+31
+00:02:26,790 --> 00:02:34,580
+barra de herramientas y importar importar o alternar entre importados de la carpeta o la carpeta de cajn
+
+32
+00:02:34,650 --> 00:02:44,580
+y el cajn alto de las sillas cadas y reemplazar este marcador de posicin aqu con el cierre automtico cajn componente Tauriel.
+
+33
+00:02:44,580 --> 00:02:52,320
+As que asegrese de guardar ese archivo de palanca de desplazamiento y luego mover al archivo de la
+
+34
+00:02:52,980 --> 00:02:59,060
+Ahora el objetivo es agregar oyente de clic al da si as lo desea, agregue clic.
+
+35
+00:02:59,400 --> 00:03:05,670
+Y no quise vincular esto a alguna propiedad que espero recibir la propiedad click que, como
+
+36
+00:03:05,750 --> 00:03:11,690
+siempre, en este caso debe contener una referencia al mtodo que debera ejecutarse con un clic.
+
+37
+00:03:11,700 --> 00:03:18,150
+Ahora, en el componente de la barra de herramientas, agreguemos esa propiedad al dibujo o alternar y
+
+38
+00:03:18,180 --> 00:03:25,830
+luego, por supuesto, no todos tenemos ese mtodo definido aqu, pero usaremos la barra de herramientas en el componente de
+
+39
+00:03:25,830 --> 00:03:27,780
+disposicin donde agregaremos este mtodo.
+
+40
+00:03:27,780 --> 00:03:34,250
+As que finalmente establecimos algunas propiedades en la barra de herramientas y pasamos la referencia de Mefford desde all.
+
+41
+00:03:34,590 --> 00:03:39,640
+As que esperemos que esta propiedad se establezca en la barra de herramientas y la nombre.
+
+42
+00:03:39,640 --> 00:03:42,800
+Dibujar la palanca del cajn para recolectar.
+
+43
+00:03:43,020 --> 00:03:47,610
+Este ser un apoyo o recepcin que contiene una referencia al mtodo que debe ejecutarse.
+
+44
+00:03:47,640 --> 00:03:49,840
+As que dibuja y recoge.
+
+45
+00:03:49,940 --> 00:03:50,220
+De eso.
+
+46
+00:03:50,220 --> 00:03:55,250
+Vamos a disear el componente y todos estn en el cajn lateral.
+
+47
+00:03:55,470 --> 00:03:57,330
+Alternar controlador.
+
+48
+00:03:57,720 --> 00:04:00,180
+Ahora realmente funcionar como un alternar.
+
+49
+00:04:00,180 --> 00:04:02,750
+Entonces, de abierto a cerrado y al revs.
+
+50
+00:04:03,050 --> 00:04:08,660
+Pero una hora, Abu nunca podr ver esa funcionalidad cercana porque el sitio dibujable se superpone.
+
+51
+00:04:08,790 --> 00:04:14,010
+Todava lo voy a bloquear de esta manera porque si alguna vez agregamos esta palanca en
+
+52
+00:04:14,020 --> 00:04:16,760
+algn otro lugar, NEAP realmente funcionara como un todo.
+
+53
+00:04:17,160 --> 00:04:19,710
+Ahora, de todos modos, aqu lo s como acabo de decir.
+
+54
+00:04:19,750 --> 00:04:22,590
+Quiero hablar todo eso mostrando el estado.
+
+55
+00:04:22,630 --> 00:04:31,490
+Offsider o as podemos llamar a este estado y ahora establecer muestra la puerta lateral a lo que actualmente no es demasiado.
+
+56
+00:04:31,500 --> 00:04:36,890
+No es esta etapa mostrar cyder por lo de mostrar o es cierto.
+
+57
+00:04:36,960 --> 00:04:42,830
+Ahora se establecer en falso y al revs, este enfoque tiene un defecto.
+
+58
+00:04:42,840 --> 00:04:51,770
+Ve usted que mencion anteriormente que si planea usar el estado de las inserciones de estado no debera hacerlo as
+
+59
+00:04:51,770 --> 00:04:58,310
+porque debido a la naturaleza asncrona de dicho estado esto puede conducir a resultados inesperados?
+
+60
+00:04:58,490 --> 00:05:08,450
+Entonces, en su lugar, use la funcin para un estado previo esperado, ya que lo coloco all simplemente devuelve el objeto que desea establecer como
+
+61
+00:05:08,450 --> 00:05:12,070
+un nuevo estado o desea fusionarlo en el estado.
+
+62
+00:05:12,080 --> 00:05:17,750
+Debo decir y, por supuesto, Devar, no accedes a este estado, pero utilizas el estado
+
+63
+00:05:17,750 --> 00:05:20,780
+previo al que pasas automticamente a la disfuncin.
+
+64
+00:05:20,780 --> 00:05:25,480
+Esta es la forma limpia de establecer el estado cuando depende del estado anterior.
+
+65
+00:05:25,490 --> 00:05:31,270
+Ahora tenemos una forma segura de cambiar eso y cambiar el cajn lateral de las presentaciones.
+
+66
+00:05:31,400 --> 00:05:38,780
+Ahora, por supuesto, queremos llamar a esto y debemos pasarlo como referencia a la barra de herramientas ahora porque en la barra
+
+67
+00:05:38,900 --> 00:05:44,960
+de herramientas esperamos almacenar hacia la propiedad de clic que contiene una referencia al mtodo que debera ejecutarse
+
+68
+00:05:44,960 --> 00:05:47,960
+cuando se hace clic en la barra de herramientas. .
+
+69
+00:05:47,990 --> 00:05:53,690
+As que vamos a usar eso en el componente de diseo aqu en la barra de herramientas. Alternar con Jar. Se hizo clic en
+
+70
+00:05:54,200 --> 00:05:58,740
+un nombre de propiedad y vamos a pasar una referencia al sitio recin creado o al controlador de alternar.
+
+71
+00:05:59,120 --> 00:06:03,890
+Y como siempre, nunca ejecutes este mtodo solo pasa una referencia.
+
+72
+00:06:04,280 --> 00:06:05,940
+Asegrese de guardar todos los archivos.
+
+73
+00:06:05,940 --> 00:06:13,160
+Ahora regresemos a la aplicacin y tomemos Manue y, de hecho, se desliza en el fondo eliminar
+
+74
+00:06:13,610 --> 00:06:16,130
+dicho y podemos ir y venir.
+
+75
+00:06:16,160 --> 00:06:17,090
+Entonces esto est funcionando.
+
+76
+00:06:17,090 --> 00:06:18,120
+Eso es muy bonito.
+
+77
+00:06:18,260 --> 00:06:25,490
+Pasemos ahora este aburrido texto del men no tan bonito aqu en una hamburguesa que puedo en la prxima conferencia.
+

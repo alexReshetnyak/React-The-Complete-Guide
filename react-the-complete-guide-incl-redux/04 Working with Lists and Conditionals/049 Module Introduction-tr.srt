@@ -1,0 +1,40 @@
+1
+00:00:02,430 --> 00:00:08,960
+Bask modlndeki bu modle, tepki vermenin temel szdizimini rendik ve bileenleri nasl oluturduunuz ve J. ile nasl altklarnz
+
+2
+00:00:08,960 --> 00:00:15,770
+iin yeniden eyleme nasl bavurduunuzu rendiniz. S. X ekrana bir ey yapmak iin.
+
+3
+00:00:16,130 --> 00:00:19,380
+Bu modlde bir sonraki seviyeye geecektir.
+
+4
+00:00:19,400 --> 00:00:26,380
+DS'nin tek kvrml parantezleri ile nasl dinamik ierik ktrabildiimiz konusunda bir gz atmtk zaten.
+
+5
+00:00:26,620 --> 00:00:32,090
+Bu modlde, ierii koullu olarak nasl ktrabileceimizi de greceiz.
+
+6
+00:00:32,090 --> 00:00:38,750
+belirli bir blmn yanzdaki kodunu oluturmak istiyor ve aslnda veri listelerini nasl
+
+7
+00:00:38,750 --> 00:00:46,280
+ktrabiliriz ki byle bir liste ve demo uygulamas zaten sahip olduum czdanmz var. devlette
+
+8
+00:00:46,310 --> 00:00:53,030
+ynettiimiz dizide sahip olduumuz kiilerin saysna dayanlarak dinamik olarak oluturulabilseydik mantkl olurdu.
+
+9
+00:00:53,030 --> 00:00:56,980
+rnein, belirli bir koul doruysa, yalnzca yurtunuzun
+
+10
+00:00:57,230 --> 00:01:01,710
+Bu modlde dikkat edilmesi gerekenlere ve bunlarn hepsine bir gz atalm.
+

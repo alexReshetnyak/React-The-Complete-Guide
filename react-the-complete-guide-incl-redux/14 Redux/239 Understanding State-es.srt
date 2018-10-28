@@ -1,0 +1,112 @@
+1
+00:00:02,220 --> 00:00:03,750
+Entonces, qu es el estado?
+
+2
+00:00:03,900 --> 00:00:05,970
+Deja que te d algunos ejemplos.
+
+3
+00:00:06,000 --> 00:00:09,690
+Estado por ejemplo son dos ingredientes que agregamos a nuestra hamburguesa.
+
+4
+00:00:09,690 --> 00:00:15,730
+Esa es una parte de nuestra aplicacin que indica el estado de la aplicacin de nuestra hamburguesa Boulder.
+
+5
+00:00:16,080 --> 00:00:20,940
+La informacin que ingredientes agregamos es crucial porque determina lo que tenemos que presentar a
+
+6
+00:00:20,940 --> 00:00:21,660
+la pantalla.
+
+7
+00:00:21,840 --> 00:00:24,410
+Cmo debera ser nuestra vista previa de hamburguesas como all?
+
+8
+00:00:24,420 --> 00:00:30,600
+solicitud de HTP y el ejemplo de Navaira sera la pregunta que cada usuario est autenticado o no.
+
+9
+00:00:30,600 --> 00:00:36,780
+Todo es importante detrs de escena cuando almacenamos esa hamburguesa en un servidor y tenemos que enviar todos estos
+
+10
+00:00:36,780 --> 00:00:37,650
+ingredientes en la
+
+11
+00:00:37,650 --> 00:00:43,530
+Eso puede ser muy importante ya que podra determinar las opciones que mostramos en el men
+
+12
+00:00:43,530 --> 00:00:46,290
+o el acceso que otorgamos a ciertos componentes.
+
+13
+00:00:46,290 --> 00:00:53,190
+Tambin es interesante que digas que un determinado modal abierto es un teln de fondo abierto si est abierto.
+
+14
+00:00:53,220 --> 00:00:54,640
+Eso es muy importante tambin.
+
+15
+00:00:54,720 --> 00:01:01,740
+Se trata menos de datos como los ingredientes y la autenticacin de usuarios, se trata ms de nuestro estado puro
+
+16
+00:01:01,740 --> 00:01:02,290
+de UI.
+
+17
+00:01:02,400 --> 00:01:05,070
+Puede que solo sea relevante para un solo componente.
+
+18
+00:01:05,070 --> 00:01:10,810
+Todava esto tambin es un ejemplo para un estado ms de un estado local que de aplicacin.
+
+19
+00:01:10,890 --> 00:01:16,890
+Pero todava determine qu se debe representar en la pantalla y en qu consiste lo que
+
+20
+00:01:16,890 --> 00:01:21,230
+puede resumir para indicar las influenzas que ve en la pantalla.
+
+21
+00:01:21,600 --> 00:01:26,250
+Por lo tanto, el ejemplo de Allots sera una lista de publicaciones en bloque que procesamos y que podra
+
+22
+00:01:26,250 --> 00:01:29,690
+fallar o podramos necesitar saber cules de estas publicaciones fueron creadas por el usuario.
+
+23
+00:01:29,700 --> 00:01:34,110
+Tambin importante estado que podramos necesitar en nuestra aplicacin.
+
+24
+00:01:34,320 --> 00:01:36,300
+Y, por supuesto, la lista sigue y sigue.
+
+25
+00:01:36,300 --> 00:01:39,090
+Puede agregar ms y ms ejemplos aqu.
+
+26
+00:01:39,090 --> 00:01:44,670
+Ahora estos solo son algunos ejemplos de lo que ahora es tan complejo sobre el estado.
+
+27
+00:01:44,670 --> 00:01:47,320
+Por qu necesitamos biblioteca adicional para eso?
+
+28
+00:01:47,460 --> 00:01:48,820
+Miremos ms de cerca.
+

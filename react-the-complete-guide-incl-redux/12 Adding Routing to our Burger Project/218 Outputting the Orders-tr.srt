@@ -1,0 +1,340 @@
+1
+00:00:02,120 --> 00:00:05,570
+Son derste emirleri getirmek iin mantk ekledik.
+
+2
+00:00:05,660 --> 00:00:09,050
+imdi onlara dnelim ve ktlarz.
+
+3
+00:00:09,050 --> 00:00:18,000
+imdi, DUDAS tmyle bu durum emirlerine uyuyor ve bu diziyi haritalyor ve daha
+
+4
+00:00:18,000 --> 00:00:21,650
+sonra bunu GSX elerinin dizisine bildireceksiniz.
+
+5
+00:00:21,690 --> 00:00:29,130
+Yani burada, temelde sadece byle bir sipari nesnesine dntrlmesi gereken bireysel sipariim
+
+6
+00:00:29,130 --> 00:00:29,600
+var.
+
+7
+00:00:29,670 --> 00:00:31,020
+imdilik bu kadar.
+
+8
+00:00:31,350 --> 00:00:36,730
+Bunu emniyet altna alyoruz, emirlerimiz ve gvenlik merkezimiz gibi birok nesne almalyz.
+
+9
+00:00:36,870 --> 00:00:39,730
+Her zaman olduu gibi burada da Propp'un kalmasn salamamz gerekir.
+
+10
+00:00:39,750 --> 00:00:44,110
+imdi anahtar ekleyelim ve bunu da yapalm.
+
+11
+00:00:44,490 --> 00:00:51,270
+imdi Sipari Kimlii kullanabiliriz, nk mkemmel bir anahtar salayan FireBase ID'yi salayacak bir
+
+12
+00:00:51,270 --> 00:00:53,160
+id zellii olacaktr.
+
+13
+00:00:53,160 --> 00:00:58,350
+imdi onu kurtarabilirsek ve atebazndan emir alrsak tabii ki oradan
+
+14
+00:00:58,350 --> 00:00:59,150
+devalasyon kullanmyoruz.
+
+15
+00:00:59,320 --> 00:01:01,100
+Bu yapmak istediim sonraki ey.
+
+16
+00:01:01,350 --> 00:01:04,690
+Siparii verdiimiz emirleri alyoruz.
+
+17
+00:01:04,710 --> 00:01:10,800
+Elbette, sipari bilgisini bu sipari bileenine iletmenin mantkl olacandan, burada
+
+18
+00:01:10,800 --> 00:01:12,490
+bir ey oluturabiliriz.
+
+19
+00:01:12,810 --> 00:01:15,190
+Malzemeleri gemek istiyoruz.
+
+20
+00:01:15,210 --> 00:01:23,720
+yleyse oraya sipari malzemeleri aktaracam ve fiyat da iletmek istiyorum.
+
+21
+00:01:23,760 --> 00:01:29,740
+imdi, gvenlik taban nesnesine bir gz attmzda, fiyat burada uygun bir fiyata depolanr.
+
+22
+00:01:29,910 --> 00:01:31,410
+Bu yzden gemek istediim ey bu.
+
+23
+00:01:31,410 --> 00:01:39,300
+Q fiyat Shelby sipari fiyat biz sipari iin bilgi geiyoruz.
+
+24
+00:01:39,330 --> 00:01:44,940
+imdi fiyat basit olan sipari bileeninde ktalm.
+
+25
+00:01:44,940 --> 00:01:52,410
+Tekli parantezlerle dinamik ierik ktsn kullanmanz yeterlidir ve pervane'nin fiyatn byle retiriz.
+
+26
+00:01:52,440 --> 00:01:55,190
+imdi imdi gerek fiyatn burada grmeliyiz.
+
+27
+00:01:55,350 --> 00:02:04,590
+Ve biz de burada, 2 ondalk basamakla sabitlemek iin fiyat kullanmak istediimizi gryoruz.
+
+28
+00:02:04,650 --> 00:02:09,360
+Bu yalnzca bir numara zerinde alacak ve varsaylan olarak bu bir dizedir.
+
+29
+00:02:09,360 --> 00:02:21,570
+Peki yapabildiim ey, bir dizeyi bir sayya evirmek iin ayrtrma float adn basite arayabildiim veya elbette, sipari
+
+30
+00:02:21,600 --> 00:02:29,400
+bileeninde onu sipariin nne ekleyen bir noktaya geirirken, art iareti eklediinizdir
+
+31
+00:02:29,400 --> 00:02:32,460
+fiyat deil herkes hnerini yapmaldr.
+
+32
+00:02:32,460 --> 00:02:39,780
+tedaviler biraz daha karmaktr ve biz onlar dolatrmak ve ktsn almak iin bir alana ihtiyacmz var.
+
+33
+00:02:39,810 --> 00:02:46,370
+Her ikisi de almal ve kt yapmalyz, nk fiyatlar genellikle bir nesne olduu iin
+
+34
+00:02:46,620 --> 00:02:53,070
+Dolaysyla, sipari bileeni ylnda kn agzl karncalar olmasn istediimde banazlm bir
+
+35
+00:02:53,520 --> 00:03:00,990
+dizi haline getirmeliyim ve bu dntrmeyi sipari konteynerinde veya burada sipari bileeninde yapabilirsiniz.
+
+36
+00:03:01,170 --> 00:03:03,680
+Burada sipari bileeninde yapacam.
+
+37
+00:03:04,070 --> 00:03:11,880
+Bunun iin tm sadece sipari verme ilevini deitirerek JS X'i dndrmekle kalmad, ancak geri dndm J'nin tabiki X olduu
+
+38
+00:03:11,880 --> 00:03:16,920
+gerek bir ilev yapsna sahibiz, ancak bunu yapmadan nce baz kodlar altrabilirim.
+
+39
+00:03:17,160 --> 00:03:19,900
+O halde byle yapalm.
+
+40
+00:03:20,010 --> 00:03:23,990
+imdi maddeleri dntrmek iin kodu ekleyelim.
+
+41
+00:03:24,270 --> 00:03:28,300
+Yani burada hepsi olmas gereken maddeler ilave edilecek ve katk maddeleri dizisi eklenecek.
+
+42
+00:03:28,590 --> 00:03:34,150
+Ve buradaki Bergere bileeninde daha nce bunu dntrme mantmz vard.
+
+43
+00:03:34,180 --> 00:03:36,180
+Dntrlen maddeler.
+
+44
+00:03:36,180 --> 00:03:43,870
+Bu, aslnda, malzemelerimizi bir dizi madde haline getirmek iin kullanabileceimiz mantktr.
+
+45
+00:03:44,190 --> 00:03:46,350
+Yine de sana bir alternatif gstermek istiyorum.
+
+46
+00:03:46,590 --> 00:03:50,030
+Yani burada maddeler sadece bo bir dizi olan bir dizi.
+
+47
+00:03:50,250 --> 00:03:57,600
+Daha sonra, pervanenin ieriklerinde madde ad iin bir for dngs kullanacam.
+
+48
+00:03:57,600 --> 00:04:00,170
+Bu, for dngsnden dolay yapabileceim ey.
+
+49
+00:04:00,330 --> 00:04:03,580
+Deiken e mlk ad olacak.
+
+50
+00:04:03,600 --> 00:04:09,330
+Ve mlklerim sadece Ingredient temsilciliklerinden dolay bana bir isim olarak
+
+51
+00:04:09,330 --> 00:04:10,500
+mantkl geliyor.
+
+52
+00:04:10,500 --> 00:04:19,100
+Bylece burada malzemelerim dizisini kullanabilir ve bu maddeyi zerine itebilirim.
+
+53
+00:04:19,360 --> 00:04:26,490
+Bu yzden burada, pervanenin ieriklerine ulaabilir ve bileen ismiyle ierie eriebilirim.
+
+54
+00:04:26,500 --> 00:04:30,600
+Bu, 0 1 2 bileeninin de-deeri ve benzeri.
+
+55
+00:04:30,940 --> 00:04:39,610
+Bir javascript nesnesi itmek istiyorum ama tabii ki miktar da var ama tutar depolamak
+
+56
+00:04:39,610 --> 00:04:40,500
+iin.
+
+57
+00:04:40,540 --> 00:04:46,540
+Ayrca maddenin adn saklamak istiyorum ve bu adalet burada nemli bir isim maddesi ad.
+
+58
+00:04:46,600 --> 00:04:53,290
+Dolaysyla u anda zerine bastrdm nesne bu ve ok basit dnm dierinden ok daha
+
+59
+00:04:53,290 --> 00:04:58,860
+ksa srede yeniden entegre ediyor, bu yzden bu alternatifi gstermek istedim.
+
+60
+00:04:59,200 --> 00:05:07,420
+imdi fkeli olmaya ittiim unsurlarla temelde burada bulunan maddelere gre malzemeyi haritalayabilirim.
+
+61
+00:05:07,900 --> 00:05:16,950
+Dolaysyla burada yeni bir deiken veya yeni bir sabit yaratacam, nk bu sabit olarak isim koyacam.
+
+62
+00:05:16,950 --> 00:05:24,240
+indekiler da vurdu Bir madde davuru rendiiniz gibi maddeler haritas olmal.
+
+63
+00:05:24,280 --> 00:05:30,670
+snf atayacam, bu noktaya kvrck parantezler IGY ad ve daha sonra parantez
+
+64
+00:05:31,620 --> 00:05:42,090
+iinde ve ardndan dinamik kt IGY iin kvrck parantezlerle Bunun gibi kapan tutar imdi Ingredion ktsn oraya kalm.
+
+65
+00:05:42,230 --> 00:05:51,310
+Tek tek maddeleri elde ederiz ve burada baz caz fiillerini iade etmek istiyoruz ve burada bir span
+
+66
+00:05:51,340 --> 00:05:52,870
+tamamlayarak hepsine biraz
+
+67
+00:05:53,740 --> 00:05:58,730
+Bunun gibi ve burada bu ktya bir gz atalm.
+
+68
+00:05:59,050 --> 00:06:01,230
+Eski anahtar hatalarn buradan aln.
+
+69
+00:06:01,240 --> 00:06:03,910
+Ancak onlarca kiinin genel olarak altn gryoruz.
+
+70
+00:06:03,910 --> 00:06:11,170
+imdi anahtar anmsatmak iin maddenin adn anahtara gre kullanabilirim, bu yzden ad
+
+71
+00:06:11,170 --> 00:06:19,930
+benzersiz bir anahtar olarak kullanabilir ve imdi bu aral stillemek isteyebilirim ve burada baz satr
+
+72
+00:06:19,930 --> 00:06:24,470
+ii stillerle stil edeceim, Bir javascript nesnesi atayacam.
+
+73
+00:06:24,700 --> 00:06:28,330
+lk harf byk harf yapmak iin metin dnm kullann.
+
+74
+00:06:28,480 --> 00:06:34,590
+Yani byk harf tam olarak yapar, kaydettiimiz halde balang harfiyle balar.
+
+75
+00:06:35,050 --> 00:06:42,630
+Ve ayrca, birbirlerinden ne kacak ekilde kmsemeleri kk kutulara koymak istiyorum.
+
+76
+00:06:42,970 --> 00:06:51,600
+Bu yzden, bu javascript Optix yln izgi zerinde gstermek iin birden fazla satra saracam.
+
+77
+00:06:52,600 --> 00:06:59,590
+BLOCK biraz sola ve saa sfr eklemek biraz st ve alt 8 piksel
+
+78
+00:06:59,590 --> 00:07:11,480
+sola ve saa 0 8 piksel ve kenarlk eklemek belki bir piksel dz gri ve biraz dolgu gibi 5 piksel ve tabii
+
+79
+00:07:11,500 --> 00:07:15,370
+ki bunun iin bir CSS snf da kullann.
+
+80
+00:07:15,470 --> 00:07:17,310
+Ben bunu nasl ktm istiyorum.
+
+81
+00:07:17,320 --> 00:07:19,330
+Bunlar benim malzemelerim benim fiyatm.
+
+82
+00:07:19,360 --> 00:07:21,450
+Bunlar benim emirlerim.
+
+83
+00:07:21,460 --> 00:07:23,590
+imdi siparilere daha fazla ey katabiliriz.
+
+84
+00:07:23,620 --> 00:07:29,660
+Bir emri silmek veya yerine getirilmi olarak pazarlamak iin mantk ekleyebiliriz.
+
+85
+00:07:29,890 --> 00:07:32,670
+imdilik bunlar ancak bunlarla nasl ktm istiyorum.
+

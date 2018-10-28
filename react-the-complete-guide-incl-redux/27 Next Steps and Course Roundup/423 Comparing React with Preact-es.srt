@@ -1,0 +1,304 @@
+1
+00:00:02,070 --> 00:00:05,790
+Entonces, preact es increble, es ms pequeo y tiene prcticamente la misma
+
+2
+00:00:05,790 --> 00:00:11,220
+API, por lo que siempre debemos volver a utilizarla. Y la respuesta, como siempre, es que
+
+3
+00:00:11,220 --> 00:00:13,110
+depende, averigemos cules son las
+
+4
+00:00:13,290 --> 00:00:17,810
+diferencias, simplemente descubramos esto en preactjs. com, para hacer clic en la gua,
+
+5
+00:00:18,000 --> 00:00:21,520
+tambin puede hacer clic en las diferencias para reaccionar all.
+
+6
+00:00:21,540 --> 00:00:25,360
+Ahora sintase libre de leer ese artculo para aprender ms sobre las diferencias.
+
+7
+00:00:25,620 --> 00:00:27,390
+Al final tienes una buena lista
+
+8
+00:00:27,450 --> 00:00:29,060
+aqu, ves lo que est incluido
+
+9
+00:00:29,070 --> 00:00:31,850
+as que lo que es exactamente lo mismo que reaccionar.
+
+10
+00:00:31,890 --> 00:00:37,440
+Y estas son cosas como componentes de orden superior, creacin de componentes, sus componentes
+
+11
+00:00:37,440 --> 00:00:38,940
+funcionales y todo eso,
+
+12
+00:00:38,970 --> 00:00:45,920
+tambin ver que, por ejemplo, reaccionar crear elemento se convierte en h (), una funcin llamada h ().
+
+13
+00:00:46,020 --> 00:00:51,240
+Esa es una de las pequeas diferencias que mencion, es prcticamente la misma API pero no del
+
+14
+00:00:51,240 --> 00:00:53,650
+todo, pero esta pgina enumera todas las diferencias.
+
+15
+00:00:53,940 --> 00:00:58,410
+Entonces, qu se agreg como dije, incluso ofrece algunas caractersticas nuevas
+
+16
+00:00:58,500 --> 00:01:04,190
+y, por ejemplo, obtienes esto. accesorios y esto. estado pasado como argumento a
+
+17
+00:01:04,320 --> 00:01:09,740
+la funcin de renderizado para que all, simplemente llame a props y state sin la
+
+18
+00:01:09,750 --> 00:01:15,070
+palabra clave this, pero tambin puede usar la palabra clave this, ya que tambin menciona aqu.
+
+19
+00:01:15,090 --> 00:01:18,880
+Ahora que es una buena adicin y ese es generalmente el tema
+
+20
+00:01:18,900 --> 00:01:19,400
+de las
+
+21
+00:01:19,410 --> 00:01:20,700
+cosas adicionales, bonitas adiciones.
+
+22
+00:01:20,700 --> 00:01:26,250
+Por ejemplo, puede usar la palabra clave class y no tiene que usar el nombre de la clase como
+
+23
+00:01:26,250 --> 00:01:29,630
+en reaccionar, estas son todas las cosas pequeas que se agregan.
+
+24
+00:01:29,910 --> 00:01:32,050
+Pero, por supuesto, tambin faltan cosas,
+
+25
+00:01:32,160 --> 00:01:35,670
+por ejemplo, la validacin del tipo de prop, aunque los
+
+26
+00:01:35,670 --> 00:01:41,480
+tipos prop tambin fueron extrados a una biblioteca separada con la ltima versin de reaccionar para ser honestos.
+
+27
+00:01:41,490 --> 00:01:45,410
+Entonces, lo que le falta a la parte no es relevante aqu, la mayora
+
+28
+00:01:45,460 --> 00:01:50,450
+de las cosas que faltan son cosas entre bastidores. Aqu, estos son en su mayora cosas
+
+29
+00:01:50,460 --> 00:01:55,710
+cosmticas, aunque tambin eliminan un gran nmero de cdigo fuente, eso sin duda es algo a
+
+30
+00:01:55,770 --> 00:02:02,370
+considerar y podemos imaginar que los tipos de props fueron colocados en una biblioteca separada por el equipo de reaccin
+
+31
+00:02:02,370 --> 00:02:10,430
+para reducir el tamao de la reaccin biblioteca y acercarse a preactuar. Ahora esas son las diferencias en una pantalla aqu, en
+
+32
+00:02:10,470 --> 00:02:18,060
+una pgina y este artculo debera ser til para ti si tratas de cambiar de la API reaccionar a la
+
+33
+00:02:18,060 --> 00:02:20,950
+de preactuacin, como mencion es ms o menos
+
+34
+00:02:21,030 --> 00:02:22,910
+lo mismo, son cosas pequeas
+
+35
+00:02:22,920 --> 00:02:26,950
+como la h ( ) funciona en lugar de reaccionar
+
+36
+00:02:27,120 --> 00:02:31,260
+crea elemento pero probablemente nunca llam a reaccionar crear elemento manualmente
+
+37
+00:02:31,410 --> 00:02:34,920
+de todos modos y jsx por supuesto es compatible.
+
+38
+00:02:35,070 --> 00:02:40,450
+Ahora la mayor diferencia detrs de las escenas probablemente sea cmo funciona la
+
+39
+00:02:40,470 --> 00:02:46,110
+dominacin, por lo que preact averigua si necesita actualizar algo y cmo reacciona eso.
+
+40
+00:02:46,340 --> 00:02:54,290
+Y necesitamos un punto de referencia para descubrir qu es mejor, si queremos medirlo en mejor y peor, como categoras.
+
+41
+00:02:54,660 --> 00:03:00,090
+Para responder a esta pregunta sobre qu es mejor, puede buscar un marco de referencia
+
+42
+00:03:00,090 --> 00:03:06,210
+javascript y debe encontrar este repositorio github, all, un par de frameworks javascript diferentes se comparan
+
+43
+00:03:06,210 --> 00:03:07,280
+entre s, tambin
+
+44
+00:03:07,380 --> 00:03:09,730
+puede descargarlo y ejecutarlo en su
+
+45
+00:03:09,740 --> 00:03:15,210
+mquina Le advertir que esto lleva bastante tiempo, pero convenientemente, puede encontrar el ltimo resultado
+
+46
+00:03:15,210 --> 00:03:17,890
+de estos puntos de referencia en el
+
+47
+00:03:17,940 --> 00:03:24,690
+repositorio github si hace clic en esta imagen aqu. Luego obtienes esta tabla, que es bastante grande, donde puedes
+
+48
+00:03:24,690 --> 00:03:28,000
+ver muchos de los diferentes frameworks javascript comparados entre s,
+
+49
+00:03:28,170 --> 00:03:34,050
+siempre debes tener cuidado al analizar tales nmeros porque las pruebas aqu pueden no ser importantes para el
+
+50
+00:03:34,050 --> 00:03:35,800
+tipo de aplicacin que ests edificio.
+
+51
+00:03:35,910 --> 00:03:42,090
+Al final, lo que se prueba aqu son un par de operaciones, como por ejemplo crear
+
+52
+00:03:42,090 --> 00:03:43,650
+y eliminar 10000 filas
+
+53
+00:03:43,650 --> 00:03:47,100
+de datos y all podemos encontrar reaccionar 16, entonces
+
+54
+00:03:47,220 --> 00:03:53,370
+la ltima versin de reaccionar que utilic para grabar este curso y tambin encontramos preactuar aqu .
+
+55
+00:03:53,550 --> 00:04:02,370
+Ahora si los comparamos, vemos que son muy similares en trminos de rendimiento, pero tambin podemos ver que para
+
+56
+00:04:02,370 --> 00:04:12,060
+el tiempo de inicio, que es la segunda fila ms baja aqu, la versin de reaccin 16 tiene 53 milisegundos y
+
+57
+00:04:12,130 --> 00:04:16,350
+preact tiene 36, que es bastante un poco ms rpido.
+
+58
+00:04:16,350 --> 00:04:19,860
+La razn de esto, por supuesto, es el tamao
+
+59
+00:04:20,190 --> 00:04:27,450
+ms pequeo, tambin podemos ver que a pesar del tamao ms pequeo, para operaciones como limpiar un montn de
+
+60
+00:04:27,450 --> 00:04:35,140
+filas, la tercera fila desde abajo reacciona ms rpido que el preactivo porque el tamao del archivo de la biblioteca
+
+61
+00:04:35,250 --> 00:04:41,360
+no Para eso, lo importante es el rendimiento del algoritmo de diferenciacin y el algoritmo de actualizacin.
+
+62
+00:04:41,400 --> 00:04:48,840
+Y, por supuesto, preact tiene que quitar algunas cosas, reaccionar por otro lado parece ser un poco ms eficiente cuando
+
+63
+00:04:48,840 --> 00:04:50,740
+miramos este punto de referencia.
+
+64
+00:04:51,090 --> 00:04:52,860
+Entonces, as es como se
+
+65
+00:04:52,900 --> 00:04:58,770
+puede ver, preact le ahorra mucho tiempo cuando carga su aplicacin, cuando la inicia por
+
+66
+00:04:58,770 --> 00:04:59,360
+primera vez,
+
+67
+00:04:59,370 --> 00:05:05,840
+es mucho ms pequea, no ocupa tanto espacio y si tiene una aplicacin donde el tiempo de
+
+68
+00:05:05,840 --> 00:05:13,400
+descarga inicial importa mucho y donde desea enviar el menor cdigo posible a travs del cable, preact puede ser una
+
+69
+00:05:13,430 --> 00:05:15,150
+alternativa increble para reaccionar.
+
+70
+00:05:15,410 --> 00:05:23,600
+Si est construyendo una aplicacin empresarial sper grande y de alto rendimiento, reaccionar especialmente en la versin 16
+
+71
+00:05:23,900 --> 00:05:26,010
+podra ser la mejor opcin.
+
+72
+00:05:26,360 --> 00:05:32,780
+Pero sea lo que sea lo que elija, sintase libre de jugar con preact, lea la gua
+
+73
+00:05:32,780 --> 00:05:33,690
+aqu para
+
+74
+00:05:33,740 --> 00:05:41,990
+descubrir cmo usarlo, use el preact-cli para crear nuevos proyectos con facilidad y tenga en cuenta que existe una gran alternativa
+
+75
+00:05:41,990 --> 00:05:46,970
+para reaccionar que es bsicamente el mismo pero mucho ms pequeo cuando miramos
+
+76
+00:05:46,970 --> 00:05:48,800
+el tamao de la biblioteca.
+

@@ -1,0 +1,204 @@
+1
+00:00:01,990 --> 00:00:05,440
+W ostatnim wykadzie dodalimy kod, aby uzyska pewne
+
+2
+00:00:05,590 --> 00:00:11,950
+dane, co oczywicie jest ogromnym pierwszym krokiem, ale byoby jeszcze bardziej uyteczne, gdybymy mogli zapisa
+
+3
+00:00:11,950 --> 00:00:18,940
+te dane na ekranie, gdyby mg je wyrenderowa na ekranie i zastpi t tablic manekinw tutaj z
+
+4
+00:00:18,940 --> 00:00:26,380
+dynamicznie generowan tablic w oparciu o pobrane przez nas posty. W tym celu musimy zarzdza pewnym stanem i
+
+5
+00:00:26,380 --> 00:00:29,340
+powinnimy mie kilka postw w tym stanie,
+
+6
+00:00:29,470 --> 00:00:32,290
+pocztkowo moe to by pusta tablica.
+
+7
+00:00:32,320 --> 00:00:38,530
+Teraz chc zaktualizowa ten stan po pobraniu danych z serwera i dlatego miejsce, w ktrym naley
+
+8
+00:00:38,620 --> 00:00:42,140
+wywoa ten stan zestawu, znajduje si w metodzie then.
+
+9
+00:00:42,460 --> 00:00:50,200
+Gdybymy nazwali to poza tym, wic po tym, jak otrzymamy metod axios, nie mielibymy jeszcze stanowiska z powodu tego,
+
+10
+00:00:50,200 --> 00:00:51,860
+o czym wspomniaem wczeniej.
+
+11
+00:00:52,090 --> 00:00:58,900
+Kod javascript nie czeka na zakoczenie, wic jeli natychmiast wywoasz ten stan po metodzie
+
+12
+00:00:58,900 --> 00:01:02,020
+get, dane nie zostan jeszcze pobrane.
+
+13
+00:01:02,440 --> 00:01:10,550
+Wic wewntrz tego bloga jest waciwe miejsce i tam moemy ustawi posty na dane odpowiedzi, wanie
+
+14
+00:01:10,600 --> 00:01:16,510
+zobaczye w konsoli, e waciwo data jest dostpna dla tego obiektu
+
+15
+00:01:16,510 --> 00:01:24,460
+odpowiedzi i e waciwo data zawiera tablic wpisw. W zwizku z tym skomentuj rejestracj odpowiedzi i zamiast tego ustawi
+
+16
+00:01:24,490 --> 00:01:26,170
+mj stan na posty.
+
+17
+00:01:26,170 --> 00:01:30,380
+Teraz dynamicznie wypiszmy posty w metodzie renderowania, poniewa utworz tutaj
+
+18
+00:01:30,400 --> 00:01:38,260
+now sta, posty i powinna to by tablica elementw jsx. Wic uyj tego.
+
+19
+00:01:38,350 --> 00:01:40,180
+stan. posty, stan,
+
+20
+00:01:40,180 --> 00:01:46,720
+po prostu zaktualizowalimy go danymi serwera i tam, kiedy si go nauczye, wywoaj metod map, aby
+
+21
+00:01:46,780 --> 00:01:52,570
+odwzorowa j na tablic elementw jsx, a metoda map oczywicie zwraca now tablic, ktr
+
+22
+00:01:52,570 --> 00:01:54,790
+przechowuj w staej wiadomoci .
+
+23
+00:01:54,890 --> 00:01:56,830
+Teraz w metodzie map tutaj,
+
+24
+00:01:56,840 --> 00:02:03,560
+otrzymuj moje indywidualne posty jako dane wejciowe w funkcji, ktr przechodzimy do metody mapy i tam
+
+25
+00:02:03,560 --> 00:02:05,480
+chc zwrci element jsx.
+
+26
+00:02:05,480 --> 00:02:08,100
+Chc zwrci mj pojedynczy post tutaj,
+
+27
+00:02:09,030 --> 00:02:11,420
+tak jak tutaj, tam na
+
+28
+00:02:11,420 --> 00:02:18,060
+dole chc oczywicie wypisa t tablic wpisw, ktra jest przechowywana w tych postach na stae.
+
+29
+00:02:18,060 --> 00:02:21,210
+Teraz ten post powinien co najmniej wyprowadzi
+
+30
+00:02:21,210 --> 00:02:25,260
+tytu, jeli sprawdzimy komponent postu, widzimy tu tytu wyjciowy.
+
+31
+00:02:25,650 --> 00:02:27,210
+A wic tutaj,
+
+32
+00:02:27,270 --> 00:02:32,180
+prawdopodobnie chc zdoby jakie rekwizyty, moe rekwizyty z tytuem nazwy.
+
+33
+00:02:32,180 --> 00:02:35,810
+Powinien wic przekaza t waciwo tytuu do pojedynczego wpisu, wic
+
+34
+00:02:35,970 --> 00:02:43,680
+w kontenerze blogu musz ustawi tutaj waciwo title i przekaza post. title, waciwo title na tym elemencie postu jest
+
+35
+00:02:43,680 --> 00:02:50,130
+dostpna ze wzgldu na dane, ktre pobralimy z serwera tylko po to, by ci
+
+36
+00:02:50,130 --> 00:02:50,710
+uspokoi,
+
+37
+00:02:51,060 --> 00:02:52,940
+masz ju spoiler, ktry dziaa.
+
+38
+00:02:53,190 --> 00:02:58,260
+Ale dane, ktre otrzymujemy z usugi, to ta tablica, a kady element ma tutaj waciwo title.
+
+39
+00:02:58,710 --> 00:03:01,450
+Jak wida wyranie, ju tu dziaa.
+
+40
+00:03:01,650 --> 00:03:02,970
+Stylizacja jest troch za
+
+41
+00:03:02,970 --> 00:03:08,580
+maa, wyprowadzamy rwnie wszystkie posty, ktre mog by zbyt due, a my nie ustawilimy podprki,
+
+42
+00:03:08,640 --> 00:03:10,750
+wic naprawmy te trzy rzeczy.
+
+43
+00:03:10,770 --> 00:03:12,280
+Ustawmy kluczow podprk, a
+
+44
+00:03:12,510 --> 00:03:16,450
+jeli zweryfikujesz, sprawdzajc dane, ktre otrzymujemy z serwera, zobaczysz, e
+
+45
+00:03:16,560 --> 00:03:19,760
+w kadym pocie znajduje si rwnie waciwo id.
+
+46
+00:03:19,800 --> 00:03:23,750
+To oczywicie stanowi idealny klucz, poniewa jest wyjtkowy.
+
+47
+00:03:23,790 --> 00:03:30,120
+Teraz, jeli chodzi o stylizacj i liczb postw, do stylizacji, przejdmy do
+
+48
+00:03:30,120 --> 00:03:33,320
+komponentu i zmiemy szeroko na 250px,
+
+49
+00:03:33,690 --> 00:03:37,020
+teraz maj nieco wicej miejsca na tytu.
+
+50
+00:03:37,020 --> 00:03:41,920
+Nadal jest zbyt wiele postw i to jest co, o co bd dba podczas nastpnego
+
+51
+00:03:42,000 --> 00:03:44,750
+wykadu, kiedy poka ci, jak przeksztaci otrzymywane dane.
+

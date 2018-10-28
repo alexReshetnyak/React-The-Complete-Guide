@@ -1,0 +1,256 @@
+1
+00:00:02,080 --> 00:00:08,920
+Ento, qual a mudana mdia que podemos implementar? Vamos dar uma olhada no nosso componente de layout na pasta de
+
+2
+00:00:08,960 --> 00:00:15,820
+layout e nos componentes, se ns tivermos um olhar para ele  claramente um componente baseado em classe e tem
+
+3
+00:00:15,850 --> 00:00:19,330
+um estado um estado para lidar com a exibio de decider.
+
+4
+00:00:19,390 --> 00:00:26,230
+Agora, eu realmente no considero que seja um recipiente, embora voc possa argumentar que seja um porque,
+
+5
+00:00:26,230 --> 00:00:30,860
+obviamente, ele contm alguns outros componentes e passa os Estados para eles.
+
+6
+00:00:30,970 --> 00:00:38,620
+Portanto, no seria necessariamente errado colocar esses componentes aqui na pasta de contineres como
+
+7
+00:00:38,680 --> 00:00:39,380
+este.
+
+8
+00:00:39,400 --> 00:00:41,650
+Ento, mova-se para l.
+
+9
+00:00:41,680 --> 00:00:47,560
+Voc tambm pode argumentar por algo diferente com a estrutura de pastas dada, 
+
+10
+00:00:47,620 --> 00:00:54,270
+claro,  apenas uma maneira possvel de ter essa pasta antiga para componentes de ordem superior.
+
+11
+00:00:54,340 --> 00:00:59,220
+Voc poderia argumentar que um layout  realmente apenas um componente de ordem superior.
+
+12
+00:00:59,350 --> 00:01:06,300
+Porque o que voc est fazendo com isso  que voc est envolvendo seus componentes mdios com o layout.
+
+13
+00:01:06,370 --> 00:01:12,220
+Ento, o componente burger Bolar em nosso aplicativo, mas uma vez que adicionamos o roteamento,  claro, que
+
+14
+00:01:12,220 --> 00:01:13,360
+sero mais componentes.
+
+15
+00:01:13,600 --> 00:01:19,410
+E, na verdade,  mais completo, estamos realmente envolvendo o criador de hambrguer com nosso componente em camadas.
+
+16
+00:01:19,600 --> 00:01:23,510
+E isso essencialmente torna um componente de ordem superior.
+
+17
+00:01:23,530 --> 00:01:25,600
+Estes so talvez apenas semntica.
+
+18
+00:01:25,600 --> 00:01:30,800
+Isso realmente no altera a forma como seu aplicativo funciona como voc chama seus componentes.
+
+19
+00:01:31,090 --> 00:01:38,290
+Ainda assim, voc pode se mover permitido em contineres ou pode mov-lo para H O C ou talvez em sua aplicao.
+
+20
+00:01:38,290 --> 00:01:40,640
+Voc realmente no possui uma pasta HELOC.
+
+21
+00:01:40,780 --> 00:01:43,860
+Talvez voc tenha apenas contineres e componentes.
+
+22
+00:01:44,050 --> 00:01:46,140
+H mais de uma maneira correta.
+
+23
+00:01:46,190 --> 00:01:52,120
+Agora, eu gosto desta configurao, porm, onde o layout est agora na pasta H O C porque considero isso um
+
+24
+00:01:52,120 --> 00:01:53,150
+componente de ordem superior.
+
+25
+00:01:53,230 --> 00:01:59,350
+ s l para envolver os componentes da Abra e, portanto, aqui estamos usando e apopo de aplicativo para envolver a
+
+26
+00:01:59,350 --> 00:02:00,460
+rota que estamos renderizando.
+
+27
+00:02:00,490 --> 00:02:03,090
+Por isso, eu mov-lo para a pasta HLC.
+
+28
+00:02:03,400 --> 00:02:06,290
+Agora tambm irei usar subpasta na HUAC.
+
+29
+00:02:06,290 --> 00:02:10,620
+Portanto, a pasta arcs e mover meu arquivo de perseguio de arcos l.
+
+30
+00:02:10,630 --> 00:02:17,290
+Agora,  claro, isso levar a alguns erros, porque agora teremos alguns problemas de importao na pasta de layout
+
+31
+00:02:17,290 --> 00:02:23,200
+precisaremos ajustar nossas importaes para ainda ter corretos corretos para todos os componentes de que dependemos e
+
+32
+00:02:23,200 --> 00:02:28,430
+teremos que garantir que, em qualquer lugar estamos importando Oxx, ns tambm ajustamos o POF.
+
+33
+00:02:28,630 --> 00:02:29,980
+Ento vamos fazer isso rapidamente.
+
+34
+00:02:30,070 --> 00:02:37,270
+Vou iniciar o componente de layout e vou comear com a importao de alks desde Laodicea HAMC e oxas.
+
+35
+00:02:37,390 --> 00:02:43,780
+Ns s temos que subir de um nvel agora para entrar na pasta AOC para que possamos remover essa parte.
+
+36
+00:02:43,780 --> 00:02:49,370
+Ns j estamos l e depois nos movemos para a pasta alks e, em seguida, importamos as partes de boi caem.
+
+37
+00:02:49,390 --> 00:02:51,780
+Ento, isso  tudo o que precisamos para ajustar isso.
+
+38
+00:02:51,940 --> 00:02:57,570
+to rpido quanto na mesma pasta, mas a importao da barra de ferramentas no muda, precisamos
+
+39
+00:02:57,590 --> 00:03:04,150
+ir at a pasta de componentes e depois entrar na pasta de navegao e Eu basicamente posso copiar
+
+40
+00:03:04,150 --> 00:03:11,050
+essa parte aqui antes da navegao da barra de ferramentas implorada e tambm us-la aqui para a gaveta lateral.
+
+41
+00:03:11,070 --> 00:03:14,630
+A importao do Klaas no muda, claro, porque isso 
+
+42
+00:03:14,920 --> 00:03:18,060
+Ento, com isso, o componente de layout  atualizado.
+
+43
+00:03:18,070 --> 00:03:23,630
+Agora, o que eu tambm fao  que eu preciso reiniciar e as pessoas comeam, porque parece quebrar esses alks para
+
+44
+00:03:23,650 --> 00:03:24,840
+os quais realmente no deveria.
+
+45
+00:03:25,090 --> 00:03:29,780
+Mas provavelmente tambm obteremos algumas outras setas aqui porque estamos importando Oxx.
+
+46
+00:03:29,900 --> 00:03:32,460
+Na realidade, a Arafat realmente tem.
+
+47
+00:03:32,480 --> 00:03:36,060
+Todos ns precisamos ajustar a importao de encaminhar um componente de layout.
+
+48
+00:03:36,100 --> 00:03:38,230
+ claro que agora est na pasta HAMC.
+
+49
+00:03:38,240 --> 00:03:40,130
+Ento,  algo que devemos ajustar.
+
+50
+00:03:40,450 --> 00:03:45,640
+Ento, no Bergere Boulder, como voc pode ver aqui na mensagem aero, chegamos a um erro
+
+51
+00:03:45,910 --> 00:03:50,630
+porque eles esto no Bergere Boulder,  claro que estamos usando o componente de boi.
+
+52
+00:03:50,770 --> 00:03:55,690
+Ento, ns precisamos ajustar a importao, porque agora ainda est na pasta HLC.
+
+53
+00:03:55,750 --> 00:04:02,440
+Mas criamos essa subpasta de alks que precisamos ajustar no lado do desenho ou componente l.
+
+54
+00:04:02,470 --> 00:04:08,470
+Ns tambm estamos usando o Oxx e tambm temos que ir para a pasta de boi e importar voc acessar
+
+55
+00:04:08,470 --> 00:04:14,470
+o arquivo a partir da no componente modal que est na pasta de interface do usurio, ns tambm usamos alks.
+
+56
+00:04:14,500 --> 00:04:21,870
+Ento, ns tambm precisamos adicionar barras diagonais no final aqui e, no resumo da ordem, enfrentamos uma questo similar.
+
+57
+00:04:21,940 --> 00:04:25,880
+L, tambm precisamos importar a queda de boi da pasta da caixa.
+
+58
+00:04:25,990 --> 00:04:29,750
+E com todas essas mudanas agora devemos ter um aplicativo de trabalho novamente.
+
+59
+00:04:29,760 --> 00:04:32,120
+Vamos verificar rapidamente se ele funciona.
+
+60
+00:04:32,320 --> 00:04:33,370
+Parece bom.
+
+61
+00:04:33,370 --> 00:04:38,710
+Ento, ns conseguimos um aplicativo que funciona de novo sem que se apresentem erros.
+
+62
+00:04:38,830 --> 00:04:46,430
+Mas agora, com a nossa nova estrutura de pastas, que  opcional, mas que faz mais sentido na minha opinio, porque
+
+63
+00:04:46,680 --> 00:04:53,000
+voc se deve ao modo como nossos componentes funcionam agora com isso, ns realmente temos uma tima aplicao.
+
+64
+00:04:53,110 --> 00:04:55,160
+Vamos agora seguir esse curso.
+

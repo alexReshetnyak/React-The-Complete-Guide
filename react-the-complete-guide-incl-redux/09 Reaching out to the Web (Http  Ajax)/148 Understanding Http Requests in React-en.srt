@@ -1,0 +1,72 @@
+1
+00:00:02,120 --> 00:00:07,850
+So how does sending HTTP requests work in react applications typically
+
+2
+00:00:07,920 --> 00:00:14,540
+and I'm saying typically because if you're creating a multi-page react application, there actually isn't
+
+3
+00:00:14,540 --> 00:00:16,030
+anything special to it.
+
+4
+00:00:16,070 --> 00:00:22,870
+You probably have your application, your page where you submit a form and that sends a request to your
+
+5
+00:00:22,880 --> 00:00:29,230
+backend and you get back a new html page with potentially new react code in there.
+
+6
+00:00:29,300 --> 00:00:31,670
+You don't have a single page application,
+
+7
+00:00:31,670 --> 00:00:34,300
+you don't have a strong decoupling going on.
+
+8
+00:00:34,490 --> 00:00:40,690
+If you have such a single page application, you have a strong differentiation between your frontend,
+
+9
+00:00:40,730 --> 00:00:47,840
+your react app and your backend though. The react app and the servers still need to communicate from time
+
+10
+00:00:47,840 --> 00:00:53,660
+to time but they don't communicate by exchanging html pages.
+
+11
+00:00:53,720 --> 00:00:56,470
+So if a react app sends a request to a server,
+
+12
+00:00:56,630 --> 00:01:03,860
+you don't get back a new html page instead you can back some json data typically or you send
+
+13
+00:01:03,860 --> 00:01:05,950
+some json data to the server
+
+14
+00:01:06,020 --> 00:01:11,840
+if you want to create some resources on the server for example. This is how that works, you have that
+
+15
+00:01:11,840 --> 00:01:14,050
+decoupling and your server
+
+16
+00:01:14,060 --> 00:01:22,340
+therefore typically is a RESTful API, just exposing some API endpoints to which you can send requests
+
+17
+00:01:22,550 --> 00:01:28,870
+to get or send data from your standalone react application. This is the approach
+
+18
+00:01:28,880 --> 00:01:33,130
+I will show you in this module and I will show you how to do that.
+

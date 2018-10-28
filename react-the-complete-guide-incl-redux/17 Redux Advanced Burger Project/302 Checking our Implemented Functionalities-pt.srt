@@ -1,0 +1,96 @@
+1
+00:00:02,180 --> 00:00:04,070
+Ns tnhamos muita funcionalidade.
+
+2
+00:00:04,160 --> 00:00:10,220
+Vamos agora ver se isso realmente funciona ou construir um novo hambrguer, o hambrguer de bacon cheese killer
+
+3
+00:00:10,610 --> 00:00:11,810
+ou talvez nenhuma salada.
+
+4
+00:00:11,810 --> 00:00:12,390
+Ento vamos jogar.
+
+5
+00:00:12,470 --> 00:00:13,430
+Continue aqui.
+
+6
+00:00:13,550 --> 00:00:18,410
+Continue aqui e digite alguns dados do Quantic e no me importo com os dados, razo pela qual estou apenas
+
+7
+00:00:18,410 --> 00:00:19,470
+rolando o meu teclado.
+
+8
+00:00:19,760 --> 00:00:22,820
+Ento, vamos adicionar rapidamente todos esses dados.
+
+9
+00:00:22,830 --> 00:00:26,470
+Seu pedido de clique mais barato.
+
+10
+00:00:26,560 --> 00:00:29,500
+Ento, isso est funcionando, essa  a sua pgina de pedidos.
+
+11
+00:00:29,620 --> 00:00:34,080
+Papai parece muito com o hambrguer que acabamos de criar,  um morto, tudo est bem.
+
+12
+00:00:34,390 --> 00:00:37,550
+Deixe toda a verificao que no vejamos erros aqui.
+
+13
+00:00:37,870 --> 00:00:45,520
+E se ns tivermos uma olhada na base do firebase, ns tambm veremos que ambos os pedidos que esto sendo colocados, os dados da ordem tambm so
+
+14
+00:00:45,520 --> 00:00:46,450
+bons para mim.
+
+15
+00:00:46,600 --> 00:00:47,280
+Escolhe mais.
+
+16
+00:00:47,290 --> 00:00:52,420
+esto corretos, pois podemos v-los na pgina da ordem e isso vem do servidor.
+
+17
+00:00:52,420 --> 00:00:54,390
+Ns inserimos os ingredientes, obviamente,
+
+18
+00:00:54,430 --> 00:00:56,720
+Ento tudo est funcionando bem.
+
+19
+00:00:56,740 --> 00:00:58,750
+Temos uma boa aplicao de trabalho.
+
+20
+00:00:58,750 --> 00:01:05,050
+Agora voc pode definitivamente ir em frente e, para ver mais, Hans poder adicionar um boto de excluso para se
+
+21
+00:01:05,110 --> 00:01:06,100
+livrar dos pedidos.
+
+22
+00:01:06,310 --> 00:01:13,540
+Mas eu quero me concentrar no cdigo e Hansons e implementar algumas das coisas que abordei no ltimo mdulo,
+
+23
+00:01:13,750 --> 00:01:19,130
+por exemplo, como podemos tornar nossos redutores um pouco mais enxutos sem dividi-los ainda mais.
+
+24
+00:01:19,150 --> 00:01:21,610
+Vamos nos concentrar nisso durante as prximas Electra's.
+

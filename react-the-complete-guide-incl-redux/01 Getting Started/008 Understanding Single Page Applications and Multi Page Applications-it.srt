@@ -1,0 +1,176 @@
+1
+00:00:02,210 --> 00:00:09,050
+Di cosa parliamo di reazione o anche di angolare e vista come una nota a margine dobbiamo anche tenere a
+
+2
+00:00:09,140 --> 00:00:14,620
+mente che possiamo essenzialmente bloccare due tipi di applicazioni Web con tutte queste librerie e framework.
+
+3
+00:00:14,750 --> 00:00:18,980
+Non  possibile creare un'applicazione a pagina singola o un'applicazione a pi pagine.
+
+4
+00:00:18,980 --> 00:00:22,400
+Ora qual  la differenza in un'applicazione a singola pagina.
+
+5
+00:00:22,400 --> 00:00:29,540
+Torniamo indietro di un singolo byte di file su un server e torniamo indietro per la prima volta a utilizzare una procedura guidata per ordinare la prima volta
+
+6
+00:00:29,600 --> 00:00:31,570
+la pagina per l'utilizzo di una procedura guidata.
+
+7
+00:00:31,580 --> 00:00:40,430
+Exxon-Mobile dot com Deira ofter tutto  gestito con javascript con re-act l'intera pagina  composta
+
+8
+00:00:40,520 --> 00:00:45,770
+da componenti che vengono renderizzati e gestiti da javascript.
+
+9
+00:00:46,070 --> 00:00:53,150
+D'altra parte in un'applicazione multi-pagina si recuperano pi pagine HMO in cui ogni pagina ha contenuto
+
+10
+00:00:53,150 --> 00:00:54,680
+per un determinato percorso.
+
+11
+00:00:54,740 --> 00:01:02,090
+Dato che tu sei visitato per esempio o sei un esempio degli utenti di com slash, torniamo a pagine
+
+12
+00:01:02,090 --> 00:01:02,630
+diverse.
+
+13
+00:01:02,630 --> 00:01:04,370
+ importante.
+
+14
+00:01:04,370 --> 00:01:10,550
+Ora su applicazioni multipagina potremmo anche usare reagire ma solo per creare piccoli widget.
+
+15
+00:01:10,580 --> 00:01:17,570
+Per cos dire singolarmente abbiamo contenuto i componenti che scarichiamo in quella pagina ma non l'intera pagina che
+
+16
+00:01:17,570 --> 00:01:18,880
+ gestita reagendo.
+
+17
+00:01:18,890 --> 00:01:24,410
+Lo vediamo anche su alcune pagine, ma l'approccio pi popolare in questi giorni  l'approccio
+
+18
+00:01:24,410 --> 00:01:30,830
+di una singola pagina perch se gestisci l'intera pagina con javascript non devi mai tornare al server e
+
+19
+00:01:30,860 --> 00:01:32,030
+ricaricare la pagina.
+
+20
+00:01:32,180 --> 00:01:37,850
+E questa  un'esperienza utente straordinaria perch tutto accade all'istante e anche se l'utente ha bisogno di
+
+21
+00:01:37,850 --> 00:01:44,300
+aspettare che tu stia mostrando uno spinner o stai ancora presentando un'applicazione web reattiva, non stai solo mostrando una
+
+22
+00:01:44,570 --> 00:01:47,620
+pagina di caricamento o l'utente non pu Fai qualcosa.
+
+23
+00:01:48,020 --> 00:01:54,680
+pagina la nostra pagina  piena di componenti e ogni componente  un componente di re-act e
+
+24
+00:01:54,680 --> 00:02:03,740
+l'intera pagina  gestita anche da un componente di rude re-act ed  sotto il controllo di reagenti nell'applicazione multi-page dall'altra .
+
+25
+00:02:04,040 --> 00:02:06,480
+Quindi nelle applicazioni di una sola
+
+26
+00:02:06,740 --> 00:02:13,550
+Potremmo anche suddividere la nostra app in componenti teorici, ma in realt gran parte della pagina sar normale HVM e
+
+27
+00:02:13,550 --> 00:02:19,740
+C  il codice degli Stati Uniti e alcuni widget li scarichiamo come una galleria di immagini o
+
+28
+00:02:19,740 --> 00:02:22,290
+qualcosa del genere  gestita da una reazione.
+
+29
+00:02:22,430 --> 00:02:30,210
+Quindi l'intera pagina non  sotto controllo, i singoli widget non conoscono l'esistenza l'uno dell'altro.
+
+30
+00:02:30,250 --> 00:02:36,080
+Pertanto nel caso di domanda singola, che  il caso di coprire il corso di indice, in genere
+
+31
+00:02:36,080 --> 00:02:43,070
+si ha solo un rendering di re-act Dom che chiama questo metodo che hai visto nelle lezioni precedenti in cui scambiamo la
+
+32
+00:02:43,070 --> 00:02:44,120
+nostra prima app.
+
+33
+00:02:44,120 --> 00:02:49,970
+Ora ne abbiamo solo bisogno perch abbiamo un componente app root che  montato sul DOM
+
+34
+00:02:49,970 --> 00:02:56,090
+che ospita tutti i suoi componenti re-act in un'applicazione multi-pagina che normalmente chiameremmo reagire sul rendering
+
+35
+00:02:56,090 --> 00:03:00,490
+pi spesso per rendere i nostri diversi componenti in diversi luoghi dell'app.
+
+36
+00:03:00,530 --> 00:03:06,230
+Hai visto che reagire al rendering ti permette di scegliere un posto nel tuo codice
+
+37
+00:03:06,230 --> 00:03:13,220
+HMO in cui vuoi rendere la tua app e quindi hai questi widget che non conoscono l'uno l'esistenza dell'altro.
+
+38
+00:03:13,220 --> 00:03:15,880
+Ora puoi anche creare un'applicazione del genere.
+
+39
+00:03:15,980 --> 00:03:18,950
+E reagisci codice che scrivi non differir.
+
+40
+00:03:18,980 --> 00:03:21,120
+Quindi discours copre effettivamente entrambi.
+
+41
+00:03:21,260 --> 00:03:27,260
+Ma mi concentrer sul caso di applicazione di una singola pagina poich ci ci consente anche di utilizzare alcune
+
+42
+00:03:27,260 --> 00:03:28,750
+librerie come il router re-act.
+
+43
+00:03:28,820 --> 00:03:34,500
+Oggi  il modo pi popolare di creare app Web e anche l'approccio.
+
+44
+00:03:34,550 --> 00:03:36,230
+Posso solo consigliarti.
+

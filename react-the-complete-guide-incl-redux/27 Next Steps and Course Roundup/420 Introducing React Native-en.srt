@@ -1,0 +1,128 @@
+1
+00:00:02,080 --> 00:00:04,960
+In the last lecture, I introduced you to Gatsbyjs
+
+2
+00:00:05,000 --> 00:00:07,310
+and I called it an amazing project,
+
+3
+00:00:07,310 --> 00:00:08,540
+it is.
+
+4
+00:00:08,540 --> 00:00:10,010
+If that was amazing,
+
+5
+00:00:10,040 --> 00:00:11,980
+react native was just mind blowing.
+
+6
+00:00:12,140 --> 00:00:15,830
+React native, if you google for it you'll find the official page on
+
+7
+00:00:15,830 --> 00:00:22,570
+github is another project created by Facebook. React native essentially is react
+
+8
+00:00:22,580 --> 00:00:24,860
+but for mobile apps
+
+9
+00:00:24,860 --> 00:00:33,140
+and with that, I mean native apps, native iOS s or Android apps. With reactjs taught in this course,
+
+10
+00:00:33,170 --> 00:00:36,980
+you of course learned how to build web apps with javascript,
+
+11
+00:00:36,980 --> 00:00:37,900
+with react native,
+
+12
+00:00:38,060 --> 00:00:46,970
+you use javascript and react and another library, react native to build mobile apps. You still write
+
+13
+00:00:47,060 --> 00:00:48,510
+javascript code
+
+14
+00:00:48,620 --> 00:00:55,170
+but then react native will compile that to code that runs on iOS or Android devices,
+
+15
+00:00:55,310 --> 00:01:01,460
+it does so by exposing some building blocks to you like this view component which is your alternative
+
+16
+00:01:01,460 --> 00:01:02,430
+to a div.
+
+17
+00:01:02,450 --> 00:01:05,020
+Divs only work in web browsers of course,
+
+18
+00:01:05,050 --> 00:01:11,390
+now the view behind the scenes is an element, an element running on iOS or Android.
+
+19
+00:01:11,420 --> 00:01:13,560
+That's the idea behind react native,
+
+20
+00:01:13,640 --> 00:01:20,250
+you write native code but with javascript that gets compiled and with the same react logic you learned
+
+21
+00:01:20,250 --> 00:01:21,250
+in this code.
+
+22
+00:01:21,470 --> 00:01:26,990
+So you still need to learn some new things when diving into react native because of all these new components
+
+23
+00:01:26,990 --> 00:01:31,880
+and some other things that change but it's still extremely simple to get started.
+
+24
+00:01:31,880 --> 00:01:35,910
+There even is a create react app alternative for react native,
+
+25
+00:01:35,930 --> 00:01:41,690
+it's called create react native app, so very close to the name I guess.
+
+26
+00:01:41,720 --> 00:01:47,480
+Definitely feel free to dive into react native, dive into docs, use that create react native app too
+
+27
+00:01:47,930 --> 00:01:54,080
+and feel free to take your react knowledge to start building native apps with it,
+
+28
+00:01:54,080 --> 00:01:59,780
+it takes some adjustments, it takes some new things to learn but it's an amazing opportunity to build
+
+29
+00:01:59,780 --> 00:02:03,430
+real native apps and not just web apps.
+
+30
+00:02:03,440 --> 00:02:05,340
+Now that's not necessarily better
+
+31
+00:02:05,360 --> 00:02:11,630
+but if you want to get into native app development, with that you've got a chance of doing so without
+
+32
+00:02:11,630 --> 00:02:15,160
+learning Android or Swift Objective-C first.
+

@@ -1,0 +1,20 @@
+1
+00:00:02,340 --> 00:00:08,750
+Witaj w tym module w cigu ostatnich dwch moduw, w ktrych poznasz podstawy dotyczce odpoczynku, nauczysz si, co
+
+2
+00:00:08,750 --> 00:00:11,660
+to jest i dlaczego moesz z niego skorzysta.
+
+3
+00:00:11,660 --> 00:00:19,010
+Stosujemy to take do naszego projektu Boulder buger w tym module, teraz zagbimy si bardziej w
+
+4
+00:00:19,010 --> 00:00:26,000
+nurkowanie redox w nieco bardziej zaawansowane funkcje i zobaczmy na przykad, jak moemy uruchomi kod asynchroniczny.
+
+5
+00:00:26,010 --> 00:00:26,840
+A wic zacznijmy.
+

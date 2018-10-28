@@ -1,0 +1,160 @@
+1
+00:00:02,210 --> 00:00:06,180
+Jak dziaa uwierzytelnianie w aplikacjach z jedn stron?
+
+2
+00:00:06,200 --> 00:00:10,390
+Mamy serwer, a nasza pojedyncza aplikacja dziaa w przegldarce.
+
+3
+00:00:10,670 --> 00:00:15,980
+Teraz aplikacja pojedynczej strony wysya dane uwierzytelniajce do serwera, poniewa prawdopodobnie mamy rejestracj lub stron
+
+4
+00:00:15,980 --> 00:00:18,130
+logowania w naszym SPA i dlatego
+
+5
+00:00:18,140 --> 00:00:22,940
+otrzymujemy dane takie jak adres e-mail i haso, a my wysyamy to do
+
+6
+00:00:23,120 --> 00:00:29,150
+serwera w celu sprawdzenia poprawnoci to dlatego, e taka logika oczywicie zawsze musi si zdarzy na serwerze
+
+7
+00:00:29,150 --> 00:00:30,000
+i to
+
+8
+00:00:30,050 --> 00:00:35,750
+jest take miejsce, w ktrym przechowujemy nasze trwae dane, w bazie danych na serwerze, a serwer
+
+9
+00:00:35,750 --> 00:00:38,730
+nie musi by firebase, jak w naszym projekcie oczywicie.
+
+10
+00:00:38,750 --> 00:00:43,190
+Moe to by dowolny serwer, dowolne restrykcyjne API, ktre jest precyzyjne, z czym zwykle
+
+11
+00:00:43,300 --> 00:00:49,520
+si komunikujemy podczas korzystania z aplikacji na jedn stron. Serwer ten nastpnie wysya co z powrotem
+
+12
+00:00:49,520 --> 00:00:52,670
+i moesz pomyle, e to sesja, ale
+
+13
+00:00:52,910 --> 00:01:00,630
+poniewa serwer w wiecie SPA jest zazwyczaj bezpastwowym, restrykcyjnym API, nie otrzymujemy z powrotem sesji, poniewa serwer
+
+14
+00:01:00,630 --> 00:01:05,630
+nie dba o rnych klientw czcych si z nim .
+
+15
+00:01:05,630 --> 00:01:12,810
+Zamiast tego otrzymujemy z powrotem token, moesz myle o tym tokenie jako obiekcie javascript i kodowa go jako json,
+
+16
+00:01:12,920 --> 00:01:16,410
+a tokenw json to typowa forma tokenw, ktre otrzymujesz.
+
+17
+00:01:16,430 --> 00:01:21,800
+Tak wic jest to obiekt javascript, na koniec mona powiedzie, a ten obiekt javascript
+
+18
+00:01:21,800 --> 00:01:22,540
+musi by
+
+19
+00:01:22,640 --> 00:01:29,270
+teraz przechowywany na kliencie, na przykad w pamici lokalnej. Moemy rwnie przechowywa go w naszym sklepie redux, ale w takim
+
+20
+00:01:29,270 --> 00:01:31,360
+przypadku zostanie utracony, gdy uytkownik odwiey stron.
+
+21
+00:01:31,370 --> 00:01:37,820
+Dlatego zwykle uywamy magazynu lokalnego, poniewa trwa to odwieanie strony i pozwala nam pobra token, nawet
+
+22
+00:01:38,030 --> 00:01:44,440
+jeli uytkownik opuci nasz stron i ponownie odwiedzi j, abymy mogli pozostawi uytkownika zalogowanego, jeli chcemy.
+
+23
+00:01:44,660 --> 00:01:47,330
+I do czego potrzebujemy tego tokena?
+
+24
+00:01:47,690 --> 00:01:52,070
+Wyobramy sobie, e wysyamy dania do jakiego chronionego zasobu na serwerze,
+
+25
+00:01:52,250 --> 00:01:58,610
+jak na przykad prbowalimy zmieni haso lub chcemy utworzy nowy wpis na blogu, takie dania s
+
+26
+00:01:58,610 --> 00:02:01,380
+oczywicie dozwolone tylko dla uwierzytelnionych uytkownikw, a
+
+27
+00:02:01,430 --> 00:02:06,340
+poniewa nie  stale sprawdzaj status uwierzytelniania na serwerze, nie mamy tam sesji.
+
+28
+00:02:06,650 --> 00:02:13,760
+Przekazujemy token wraz z daniami do takich chronionych zasobw, tokenem i to jest wane jest tworzone przez
+
+29
+00:02:13,760 --> 00:02:15,340
+serwer oraz w taki
+
+30
+00:02:15,530 --> 00:02:21,590
+sposb, e serwer moe zweryfikowa, czy jest token wany utworzony przez serwer, czy nie.
+
+31
+00:02:21,740 --> 00:02:24,680
+Abymy nie mogli sfaszowa takiego tokena na kliencie,
+
+32
+00:02:24,770 --> 00:02:27,310
+nie moemy go tam utworzy i wysa
+
+33
+00:02:27,350 --> 00:02:28,850
+na serwer, ktry nie zadziaaby.
+
+34
+00:02:28,910 --> 00:02:33,790
+Tylko tokeny wysyane przez serwer s akceptowane na serwerze.
+
+35
+00:02:33,800 --> 00:02:40,040
+Tak wic w ten sposb uwierzytelniamy si na kolejnych daniach po otrzymaniu tokena i
+
+36
+00:02:40,040 --> 00:02:43,750
+to jest wzr, ktry zamierzamy wprowadzi w tym module.
+
+37
+00:02:43,760 --> 00:02:49,020
+Teraz, jak ju powiedziaem, uyjemy tutaj firebase, poniewa uylimy go jako zaplecza, poniewa jest tak atwy w
+
+38
+00:02:49,220 --> 00:02:54,830
+konfiguracji, ale ten wzr bdzie taki sam, bez wzgldu na to, z ktrego backendu korzystasz, o ile jest
+
+39
+00:02:54,830 --> 00:02:55,900
+to spokojny interfejs API.
+
+40
+00:02:56,300 --> 00:03:00,010
+Jakie s zatem wymagane korekty w naszej aplikacji?
+

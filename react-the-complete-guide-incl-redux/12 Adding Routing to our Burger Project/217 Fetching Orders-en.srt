@@ -1,0 +1,300 @@
+1
+00:00:02,170 --> 00:00:06,550
+So now with links implemented, let's work on these orders again
+
+2
+00:00:06,670 --> 00:00:12,790
+and on the orders, I actually want to adjust the styling for a single order, the width should only be
+
+3
+00:00:12,790 --> 00:00:14,890
+let's say 80%,
+
+4
+00:00:14,920 --> 00:00:16,690
+to not span dthe full width.
+
+5
+00:00:16,960 --> 00:00:20,130
+Still I went to fetch these orders from my server
+
+6
+00:00:20,350 --> 00:00:22,860
+and for that I'll first of all create two orders.
+
+7
+00:00:22,900 --> 00:00:31,210
+So create two burgers, maybe this burger here let me continue continue and order it and let me trade
+
+8
+00:00:31,210 --> 00:00:32,020
+one more
+
+9
+00:00:32,020 --> 00:00:34,270
+just meat and bacon,
+
+10
+00:00:34,330 --> 00:00:36,730
+super healthy burger here, let's click continue,
+
+11
+00:00:36,760 --> 00:00:39,200
+continue and order it.
+
+12
+00:00:39,220 --> 00:00:44,120
+And now if you check the firebase database, we see two orders here,
+
+13
+00:00:44,320 --> 00:00:50,570
+we also see that the price is off here but we'll fix this by outputting it correctly in the order.
+
+14
+00:00:50,600 --> 00:00:54,710
+Still the outputting part is the one we're not doing right now,
+
+15
+00:00:55,030 --> 00:01:00,910
+In the orders container I obviously want to fetch all my orders. Now to do that
+
+16
+00:01:00,910 --> 00:01:04,190
+I will implement componentDidMount.
+
+17
+00:01:04,480 --> 00:01:09,430
+I can use componentDidMount here because I only want to fetch orders when this is loaded,
+
+18
+00:01:09,430 --> 00:01:13,410
+there is no way we will go there with out remounting it
+
+19
+00:01:13,450 --> 00:01:16,640
+So componentDidUpdate is not what I'm looking for,
+
+20
+00:01:17,050 --> 00:01:19,250
+so componentDidMount is what I need.
+
+21
+00:01:19,270 --> 00:01:20,740
+I also need axios
+
+22
+00:01:20,770 --> 00:01:24,680
+So I'm going to import axios here from my own instance.
+
+23
+00:01:24,730 --> 00:01:26,880
+So import axios from
+
+24
+00:01:26,880 --> 00:01:34,330
+and now let's go up till we have axios-orders.js here and then here I want to reach out to
+
+25
+00:01:34,370 --> 00:01:37,900
+axios.get get orders.json
+
+26
+00:01:37,900 --> 00:01:43,830
+referring to that orders node on my backend
+
+27
+00:01:43,930 --> 00:01:50,440
+and we set this as the baseURL on our own axios instance so I don't have to add this.
+
+28
+00:01:50,510 --> 00:01:57,950
+And then, once the data is there, of course we waant to do something with the response, I want to set some
+
+29
+00:01:57,950 --> 00:02:02,080
+state which actually contains my orders and then outputs them.
+
+30
+00:02:02,420 --> 00:02:06,790
+So i'll add some stage to this component here, now in the state,
+
+31
+00:02:06,830 --> 00:02:13,100
+I want to have my orders which is an array, an empty array initially and I'll probably also have a loading
+
+32
+00:02:13,100 --> 00:02:17,220
+state which initially is true because I'll start loading,
+
+33
+00:02:17,420 --> 00:02:25,230
+and then here in the then block, I'll definitely call set state and set loading to false. I'll also do this
+
+34
+00:02:25,320 --> 00:02:30,520
+in the catch block here where I catch any potential errors.
+
+35
+00:02:31,420 --> 00:02:37,090
+So there I'll definitely also copy that line and set loading to false. But of course also I want to
+
+36
+00:02:37,090 --> 00:02:38,810
+store my orders.
+
+37
+00:02:38,830 --> 00:02:45,280
+Now the thing is when I reach out to the orders node, I'm not getting an array but I'll get back a
+
+38
+00:02:45,280 --> 00:02:52,540
+javascript object, I'll simply print it to the console so that we can analyze it res.data will hold the
+
+39
+00:02:52,540 --> 00:02:54,010
+data we get from firebase
+
+40
+00:02:54,020 --> 00:02:55,390
+so let's have a look at that data then.
+
+41
+00:02:55,390 --> 00:03:03,490
+We head over to our application, open the console and go to orders, this is the object we'll get back
+
+42
+00:03:03,490 --> 00:03:10,960
+from firebase and as you see, it's a javascript object where the keys are simply these unique IDs firebase generated
+
+43
+00:03:10,960 --> 00:03:14,950
+for us and the value then is the individual order data.
+
+44
+00:03:15,280 --> 00:03:22,650
+So we're not getting back an array but we get back an object where we have the IDs as properties.
+
+45
+00:03:22,940 --> 00:03:29,860
+Now what I want to do is, I of course want to turn my orders object into an array and I can simply do
+
+46
+00:03:29,890 --> 00:03:31,520
+that by using a for/in loop.
+
+47
+00:03:31,720 --> 00:03:40,060
+So for let key in res.data and remember rest data is an object we just printed to the console and
+
+48
+00:03:40,060 --> 00:03:48,070
+then here, I want to create a little helper method, fetchedOrders or whatever you want
+
+49
+00:03:48,110 --> 00:03:55,910
+it's an empty array initially and I will simply call fetchedOrders.push for each iteration or for each
+
+50
+00:03:55,970 --> 00:04:05,150
+element I find and I want to push res.data for a given key, accessing the value which of course is
+
+51
+00:04:05,240 --> 00:04:06,650
+the order.
+
+52
+00:04:06,650 --> 00:04:14,680
+Now with that, we have the fetchedOrders array, to not lose the IDs though which are my keys here.
+
+53
+00:04:14,690 --> 00:04:16,210
+I'll do one thing,
+
+54
+00:04:16,340 --> 00:04:25,280
+I'll not push this object, I'll instead push a new object onto this fetchedOrders array where I
+
+55
+00:04:25,280 --> 00:04:32,560
+will distribute the properties off the Order object I've fetched from firebase with the spread operator
+
+56
+00:04:33,020 --> 00:04:40,160
+and add one new property ID which is the key because remember the key is in this object we've fetched
+
+57
+00:04:40,160 --> 00:04:44,050
+from firebase where the ID's created by firebase.
+
+58
+00:04:44,120 --> 00:04:51,220
+So now I have my fetchedOrders array full of order objects which also are aware of their IDs.
+
+59
+00:04:51,230 --> 00:04:55,920
+Now I can set orders here to fetchedOrders,
+
+60
+00:04:56,000 --> 00:05:04,490
+I of course also want to handle any potential errors so I'll import my own higher order component,
+
+61
+00:05:05,300 --> 00:05:07,970
+withErrorHandler from
+
+62
+00:05:08,220 --> 00:05:16,220
+and now we have to move up to that HOC folder, withErrorHandler/withErrorHandler and wrap our
+
+63
+00:05:16,310 --> 00:05:21,350
+orders component with it, withErrorHandler just like that,
+
+64
+00:05:22,600 --> 00:05:23,820
+wrapped like this.
+
+65
+00:05:23,980 --> 00:05:27,720
+Of course, let's also pass axios here, otherwise this won't work
+
+66
+00:05:27,910 --> 00:05:32,740
+and now let's try it out by removing this json ending here,
+
+67
+00:05:32,890 --> 00:05:36,370
+let's go back and we get the network error here.
+
+68
+00:05:36,580 --> 00:05:38,940
+So we got this error so this works,
+
+69
+00:05:38,980 --> 00:05:46,000
+the error handler. Of course you can fine tune it in the local catch method here to show an error message
+
+70
+00:05:46,000 --> 00:05:48,100
+on the screen or whatever you want.
+
+71
+00:05:48,100 --> 00:05:49,380
+I'll re-add the .json
+
+72
+00:05:49,390 --> 00:05:51,110
+here for the moment
+
+73
+00:05:51,490 --> 00:05:59,050
+and with that, we are fetching our orders. Now fetching orders is of course not the same as outputting
+
+74
+00:05:59,080 --> 00:05:59,680
+orders,
+
+75
+00:05:59,770 --> 00:06:01,760
+so let's do this in the next lecture.
+

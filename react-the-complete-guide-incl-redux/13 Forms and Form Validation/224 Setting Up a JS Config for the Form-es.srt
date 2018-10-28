@@ -1,0 +1,376 @@
+1
+00:00:02,160 --> 00:00:05,060
+As que en la ltima conferencia obtuvimos un estilo bsico para nuestra forma.
+
+2
+00:00:05,080 --> 00:00:08,230
+Todos solucionamos ese error, aunque volveremos a visitarlo.
+
+3
+00:00:08,230 --> 00:00:14,710
+Ahora busquemos una forma de crear nuestra forma de forma dinmica y definir claramente cmo debera ser
+
+4
+00:00:14,710 --> 00:00:15,430
+cada elemento.
+
+5
+00:00:15,430 --> 00:00:20,470
+Para eso voy a echar un vistazo a los datos que realmente quiero pasar con la orden de obtener algunos datos de
+
+6
+00:00:20,470 --> 00:00:24,070
+los clientes como el nombre y la direccin y luego obtenemos este mtodo de entrega.
+
+7
+00:00:24,070 --> 00:00:29,260
+Esto podra ser un men desplegable donde podemos elegir entre el ms rpido y ms barato o algo as.
+
+8
+00:00:29,260 --> 00:00:38,080
+datos de los elementos en nuestro estado, podramos tener la propiedad del formulario de pedido que debera ser un objeto javascript.
+
+9
+00:00:38,260 --> 00:00:45,580
+Entonces, para eso digamos que quieres almacenar o manejar esta forma de formulario bsicamente y todos los
+
+10
+00:00:45,730 --> 00:00:50,870
+Y en este javascript Optik ahora quera encontrar todos los campos extranjeros para todas las entradas.
+
+11
+00:00:51,040 --> 00:00:54,180
+Cmo deben ser configurados y sus valores.
+
+12
+00:00:54,460 --> 00:01:00,160
+As que ahora voy a tomar mi configuracin desde all con el cliente y el mtodo de entrega
+
+13
+00:01:00,160 --> 00:01:06,580
+borra estos campos del objeto Orden por ahora y lo agrego al formulario de pedido, no quiero aplanar esto para
+
+14
+00:01:06,580 --> 00:01:09,520
+que tenga todas las entradas que quiero tener .
+
+15
+00:01:09,520 --> 00:01:12,330
+Entonces me deshago del cliente y de la direccin.
+
+16
+00:01:12,340 --> 00:01:15,780
+Entonces, de estas propiedades anidadas aqu.
+
+17
+00:01:15,790 --> 00:01:22,860
+De modo que ahora solo tenemos algunas propiedades en el formulario de pedido donde cada propiedad representa una entrada.
+
+18
+00:01:22,860 --> 00:01:24,650
+Quiero crear
+
+19
+00:01:24,990 --> 00:01:32,050
+Ahora el objetivo es definir cmo se ven las entradas para que podamos pasar por este objeto de forma
+
+20
+00:01:32,050 --> 00:01:37,570
+dinmica e incluso podramos agregar elementos dinmicamente y crear un elemento de entrada adecuado.
+
+21
+00:01:37,570 --> 00:01:42,200
+Para eso quiero tener esas propiedades de tipo de elemento para cada elemento.
+
+22
+00:01:42,490 --> 00:01:44,380
+Y este debera ser un elemento de entrada normal.
+
+23
+00:01:44,380 --> 00:01:51,910
+impuesto HVM l normal bsicamente sin el signo ms bajo y el ms grande que el solo con un nombre de etiqueta, entonces digamos
+
+24
+00:01:51,910 --> 00:01:57,490
+que queremos que el elemento sea falso y los nombres de estas propiedades son, por supuesto, totalmente tuyo.
+
+25
+00:01:57,520 --> 00:01:58,790
+Aqu deberamos usar el
+
+26
+00:01:59,030 --> 00:02:05,060
+El conflicto de elementos aqu podra definir la configuracin de los atributos normales.
+
+27
+00:02:05,110 --> 00:02:08,680
+Podemos configurar la etiqueta HVM elegida.
+
+28
+00:02:09,010 --> 00:02:12,040
+Entonces aqu podra ser un tipo que debera ser texto.
+
+29
+00:02:12,040 --> 00:02:15,710
+Podramos configurar el marcador de posicin aqu tambin, que podra ser tu nombre.
+
+30
+00:02:15,760 --> 00:02:21,670
+Esto ser lo que quiero distribuir para la entrada creada sobre el overdye y luego digamos que tambin queremos
+
+31
+00:02:21,670 --> 00:02:23,500
+tener un valor para el nombre.
+
+32
+00:02:23,710 --> 00:02:31,120
+aqu podra ser simplemente Maximillian o, por supuesto, un valor vaco al principio y eso es todo por ahora.
+
+33
+00:02:31,120 --> 00:02:31,830
+El valor
+
+34
+00:02:31,930 --> 00:02:38,380
+Y este es un patrn que ahora quiero repetir para todos los elementos y, por supuesto, podra escribir
+
+35
+00:02:38,380 --> 00:02:44,830
+un cdigo ms limpio que podra crear una funcin de ayuda que crea un objeto javascript as que
+
+36
+00:02:44,830 --> 00:02:48,010
+aqu solo llama a una funcin que lo inicializa.
+
+37
+00:02:48,100 --> 00:02:52,090
+De acuerdo, en la forma larga para que quede muy claro lo que est sucediendo aqu.
+
+38
+00:02:52,180 --> 00:02:55,730
+Aunque eso abultar nuestra clase por el momento.
+
+39
+00:02:56,230 --> 00:02:58,810
+Entonces streatch tambin ser texto de elemento de entrada.
+
+40
+00:02:59,170 --> 00:03:04,980
+Y luego, si todos solo ingresan a la calle, este valor tambin podra estar vaco.
+
+41
+00:03:05,230 --> 00:03:09,670
+Hace cdigo postal la misma entrada del juego de tipo texto.
+
+42
+00:03:09,670 --> 00:03:15,520
+Por supuesto, puede ingresar el nmero de tipo aqu, pero tal vez desee dejarlo como texto
+
+43
+00:03:15,520 --> 00:03:22,060
+para que los usuarios tambin puedan ingresar cdigos con algunos caracteres en algn lugar donde sea necesario.
+
+44
+00:03:22,060 --> 00:03:25,440
+Entonces, todos agregan cdigo como marcador de posicin.
+
+45
+00:03:27,110 --> 00:03:32,780
+El pas escuchar que por supuesto puede usar un men desplegable, pero tambin usar una entrada de texto
+
+46
+00:03:32,810 --> 00:03:38,390
+para que podamos aceptar cualquier pas porque tener un men desplegable con un pas restringido es implementar datos
+
+47
+00:03:38,390 --> 00:03:42,860
+es un poco ms complejo y probablemente usara un tercio paquete de fiesta para eso.
+
+48
+00:03:42,860 --> 00:03:44,010
+Y luego el correo electrnico.
+
+49
+00:03:44,030 --> 00:03:46,680
+Por ltimo, pero no menos importante, el tipo podra ser un correo electrnico.
+
+50
+00:03:46,700 --> 00:03:50,890
+Entonces, el correo electrnico de tipo HVM predeterminado que puede asignar a la entrada.
+
+51
+00:03:51,020 --> 00:03:55,070
+Y aqu puede decir su correo o correo electrnico en realidad.
+
+52
+00:03:55,070 --> 00:03:56,910
+Entonces con eso tenemos esta configuracin.
+
+53
+00:03:56,920 --> 00:04:03,410
+Ahora, el mtodo de entrega tambin debera tener este objeto aqu. Los elementos tipo
+
+54
+00:04:03,440 --> 00:04:12,800
+deben ser seleccionados y su elemento D puede tener, por supuesto, tambin algunos elementos, pero no el tipo, no el
+
+55
+00:04:12,800 --> 00:04:14,660
+marcador de posicin.
+
+56
+00:04:14,660 --> 00:04:18,970
+Aqu podramos decir que queremos definir las opciones en las que queremos tener una opcin.
+
+57
+00:04:18,980 --> 00:04:25,520
+Entonces, por supuesto, debera ser una matriz y luego podramos ingresar los objetos javascript de nuevo, donde tenemos el
+
+58
+00:04:26,210 --> 00:04:33,870
+valor que podra ser algo as como el ms rpido y el valor de visualizacin que podra ser el ms rpido como este.
+
+59
+00:04:33,890 --> 00:04:38,060
+Y, por supuesto, puede ajustar la configuracin del disco segn sus necesidades.
+
+60
+00:04:38,060 --> 00:04:40,830
+Solo estoy mostrando algunos ejemplos aqu.
+
+61
+00:04:40,890 --> 00:04:50,720
+As que aqu podramos tener, por supuesto, una segunda opcin que es ms barata y aqu es ms barata.
+
+62
+00:04:50,760 --> 00:04:53,130
+As que este podra ser mi mtodo de entrega configurado.
+
+63
+00:04:53,130 --> 00:04:59,520
+As que ahora obtenemos esta forma de pedido bastante larga con todos los pares clave de valores donde bsicamente tenemos algunos identificadores
+
+64
+00:04:59,580 --> 00:05:01,790
+de los diferentes elementos de nuestra forma.
+
+65
+00:05:01,920 --> 00:05:05,070
+Y luego un objeto javascript con la configuracin y arriba.
+
+66
+00:05:05,220 --> 00:05:12,330
+Y ahora ajustaremos nuestro elemento de entrada para poder trabajar en conjunto con eso, de modo que podamos crear
+
+67
+00:05:12,450 --> 00:05:19,680
+dinmicamente estas entradas simplemente haciendo un bucle a travs de nuestro objeto bien aqu, que por supuesto tenemos que transformar
+
+68
+00:05:19,680 --> 00:05:21,470
+en una matriz para eso.
+
+69
+00:05:21,660 --> 00:05:23,890
+Pero comencemos ajustando el elemento de entrada.
+
+70
+00:05:24,060 --> 00:05:26,140
+Har esto en esta conferencia tambin.
+
+71
+00:05:26,370 --> 00:05:34,350
+Entonces, es probable que deseemos pasar algo as como "vamos a ver como queremos pasar el tipo y
+
+72
+00:05:34,350 --> 00:05:36,600
+el conflicto y el valor".
+
+73
+00:05:36,690 --> 00:05:45,630
+As que deberamos hacer esto, eliminemos el tipo de marcador de posicin nombrado aqu, simplemente pasemos el tipo de elemento aqu, que debera
+
+74
+00:05:45,960 --> 00:05:52,500
+ser algo que el elemento profundo no puede pensar y no necesitamos escribir esta letra minscula porque
+
+75
+00:05:52,500 --> 00:05:59,910
+cambiar la forma en que distribuyo los accesorios en el elemento y luego tambin el valor que es algo
+
+76
+00:06:00,210 --> 00:06:03,260
+de valores reales del curso se agregar pronto.
+
+77
+00:06:03,300 --> 00:06:06,800
+Luego, vamos a nuestro elemento de entrada all.
+
+78
+00:06:06,930 --> 00:06:09,320
+Ahora recibimos diferentes accesorios.
+
+79
+00:06:09,480 --> 00:06:13,980
+Tenemos el tipo de elemento donde todava quiero usar mi declaracin de cambio.
+
+80
+00:06:14,340 --> 00:06:23,120
+Pero luego ya no distribuyo todos los accesorios, simplemente distribuyo accesorios y no hay elementos en conflicto con la propiedad.
+
+81
+00:06:23,190 --> 00:06:24,310
+Me acabo de configurar.
+
+82
+00:06:24,390 --> 00:06:30,970
+Lo mismo ocurre con la propiedad que, por supuesto, al final debera recibir el elemento de configuracin de conflicto para una entrada determinada.
+
+83
+00:06:30,990 --> 00:06:36,130
+En nuestro estado y all si distribuimos los accesorios, estos son los predeterminados.
+
+84
+00:06:36,150 --> 00:06:42,550
+H m m l nombre de los atributos y, por supuesto, es importante que los use dentro del conflicto de elementos.
+
+85
+00:06:42,570 --> 00:06:44,180
+Los nombres predeterminados.
+
+86
+00:06:44,610 --> 00:06:48,770
+Entonces con eso tenemos esta configuracin, tenemos el elemento de entrada.
+
+87
+00:06:48,930 --> 00:06:55,220
+Solo este ao, por supuesto, tambin quiero agregar valor a cada elemento de entrada.
+
+88
+00:06:55,260 --> 00:07:03,130
+componente de entrada la propiedad de valor all y cedo esto a los valores de apoyos para que esto tambin se reciba aqu.
+
+89
+00:07:03,150 --> 00:07:04,990
+As que agregar en mi
+
+90
+00:07:05,780 --> 00:07:11,780
+Y ahora todos simplemente envuelven todas estas propiedades en varias lneas para crear los elementos para
+
+91
+00:07:11,780 --> 00:07:21,010
+que sea un poco ms fcil de entender y leer y con eso obtenemos el elemento de entrada, nuestro componente de entrada personalizado, debera
+
+92
+00:07:21,020 --> 00:07:24,420
+decir que con suerte funciona en la prxima conferencia.
+
+93
+00:07:24,430 --> 00:07:32,230
+Ahora quiero usar nuestro JavaScript para los datos que configuramos en un estado para crear los elementos de entrada reales
+
+94
+00:07:32,230 --> 00:07:32,880
+con l.
+

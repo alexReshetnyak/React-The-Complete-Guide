@@ -1,0 +1,152 @@
+1
+00:00:02,240 --> 00:00:08,560
+Tak wic sprawdmy poprawno typu prop, a Fords anuluj serwer programistyczny, a
+
+2
+00:00:08,570 --> 00:00:16,330
+nastpnie uruchamiaj instalacj NPM, to jest desk rozdzielcz i pakietem Georgeson, a nastpnie typy rekwizytw.
+
+3
+00:00:16,370 --> 00:00:17,590
+To jest paczka.
+
+4
+00:00:17,600 --> 00:00:25,340
+Pokazaem ci w ostatniej sekcji gwnej, ktra jest dostarczana przez zesp reagowania, aby sprawdzi typy
+
+5
+00:00:25,400 --> 00:00:34,290
+propu z twoich waciwoci ponownego dziaania, po prostu zaimportuj typy Propp z typw Propp i moesz zacz uywa
+
+6
+00:00:34,680 --> 00:00:35,650
+tej odpowiedzi.
+
+7
+00:00:35,660 --> 00:00:44,090
+Zrestartuj program do odczytu z uyciem NPM start, a nastpnie powiedziaem ci, e moesz uywa typw Propp na komponentach, ktre
+
+8
+00:00:44,300 --> 00:00:47,030
+s tworzone za pomoc sowa kluczowego class.
+
+9
+00:00:47,030 --> 00:00:52,850
+Teraz mamy element bezstanowy stworzony jako funkcja, w ktrej moemy go po prostu przekonwertowa.
+
+10
+00:00:53,090 --> 00:00:56,940
+A to nie zmienia automatycznie w pojemnik.
+
+11
+00:00:57,050 --> 00:01:03,080
+Moesz doda go do folderu kontenerw, ale nadal nie planuj tutaj zarzdzania adnym stanem ani
+
+12
+00:01:03,080 --> 00:01:05,780
+przekazywania jakiegokolwiek stanu do adnego innego komponentu.
+
+13
+00:01:05,780 --> 00:01:08,840
+Tak wic dla mnie nadal pozostaje komponentem zrzutu.
+
+14
+00:01:08,840 --> 00:01:15,170
+Stan normalny ostatni komponent, ktry nie zmienia si tylko dlatego, e zosta utworzony za pomoc sowa kluczowego klasy
+
+15
+00:01:15,170 --> 00:01:18,410
+i na og jest to wana rzecz do zrozumienia.
+
+16
+00:01:18,470 --> 00:01:22,160
+Nie decydujesz, czy co jest kontenerem, czy nie.
+
+17
+00:01:22,160 --> 00:01:23,750
+Mamy sowo kluczowe class.
+
+18
+00:01:23,750 --> 00:01:26,960
+Jeli chcesz, moesz utworzy wszystkie swoje komponenty jako klas.
+
+19
+00:01:27,140 --> 00:01:33,880
+Dobr praktyk jest uywanie formularza funkcjonalnego tak czsto, jak to moliwe, ale nie jest to koniecznoci.
+
+20
+00:01:34,310 --> 00:01:40,040
+No c, zmiemy nazw skadnika Bergere, aby mie kapita B
+
+21
+00:01:40,040 --> 00:01:50,270
+do naladowania konwencji nazewnictwa klas i importujmy skadnik jako nazwany import z re-act teraz skadnik Burgert powinien rozszerzy
+
+22
+00:01:50,960 --> 00:01:57,220
+komponent i moemy wtedy doda ciao klasowe gdzie musimy zaimplementowa metoda renderowania.
+
+23
+00:01:57,560 --> 00:02:02,250
+Teraz wewntrz renderowania moemy teraz wykona nasz logik, nasz instrukcj switch.
+
+24
+00:02:02,390 --> 00:02:04,580
+I na koniec zwr skadnik.
+
+25
+00:02:04,580 --> 00:02:07,210
+Po prostu to tam umie.
+
+26
+00:02:07,220 --> 00:02:16,780
+Usu martwy relikt tam i wyeksportuj swoj nowo nazwan klas teraz rekwizyty Taieb nie bdzie dziaa, poniewa koczy si na klasie, do
+
+27
+00:02:16,780 --> 00:02:20,540
+ktrej masz dostp do rekwizytw z tymi rekwizytami.
+
+28
+00:02:20,650 --> 00:02:26,740
+Dlatego pamitaj o dodaniu tego przed rekwizytami z martwymi, ale powinno to znw dziaa.
+
+29
+00:02:26,920 --> 00:02:35,200
+Teraz moemy doda sprawdzanie poprawnoci typu prompt, biorc nasz nazw klasy, dodajc waciwo type type z
+
+30
+00:02:35,200 --> 00:02:39,690
+maymi literami P i ustawiajc j jako obiekt javascript.
+
+31
+00:02:39,910 --> 00:02:45,550
+I teraz chc skonfigurowa waciwo type za pomoc typw prop.
+
+32
+00:02:45,560 --> 00:02:48,940
+Zaimportowalimy z tych rur Propp.
+
+33
+00:02:48,950 --> 00:02:57,140
+Paczka uywajca tego i tam chc si upewni, e typ powinien by acuchem i moemy zmieni
+
+34
+00:02:57,140 --> 00:02:59,800
+warunek liczbowy, ktry jest wymagany.
+
+35
+00:02:59,960 --> 00:03:08,050
+Jeli wic sprbujemy uy komponentu Ingredion bez podania typu, otrzymamy bd, aby skadnik
+
+36
+00:03:08,060 --> 00:03:10,130
+Bergere zosta zakoczony.
+
+37
+00:03:10,130 --> 00:03:16,070
+Teraz oczywicie byoby interesujce zobaczy to rwnie w akcji, a to, co na
+
+38
+00:03:16,070 --> 00:03:20,330
+nastpnym wykadzie, zacznie wciga naszego burgera w skadnik burgera.
+

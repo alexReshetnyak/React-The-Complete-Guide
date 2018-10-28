@@ -1,0 +1,152 @@
+1
+00:00:02,050 --> 00:00:09,660
+Nell'ultima lezione abbiamo aggiunto il codice per passare i parametri del percorso e ho detto che lo fai semplicemente avvolgendo
+
+2
+00:00:09,660 --> 00:00:16,860
+il tuo elemento in una corsia mentre lo facciamo l non usiamo per trasformarlo in un percorso assoluto e
+
+3
+00:00:17,160 --> 00:00:23,680
+passiamo post ID che siamo in grado di ricevere perch abbiamo impostato un percorso flessibile qui.
+
+4
+00:00:23,790 --> 00:00:27,560
+Tuttavia ora dobbiamo recuperare anche questo parametro.
+
+5
+00:00:27,600 --> 00:00:30,030
+Quindi nel componente post completo l.
+
+6
+00:00:30,120 --> 00:00:33,220
+Ora questo ID del puntello non funziona pi.
+
+7
+00:00:33,810 --> 00:00:34,800
+Lo stampo.
+
+8
+00:00:34,800 --> 00:00:36,080
+Puntelli alla console.
+
+9
+00:00:36,090 --> 00:00:38,710
+Prima per se ispezionato.
+
+10
+00:00:38,830 --> 00:00:40,430
+Questo  quattro diversi componenti.
+
+11
+00:00:40,440 --> 00:00:43,310
+Ma l'oggetto ha sempre la stessa struttura.
+
+12
+00:00:43,380 --> 00:00:45,140
+Lo vedi sotto partita.
+
+13
+00:00:45,270 --> 00:00:47,870
+In realt esiste come oggetto dei genitori.
+
+14
+00:00:48,270 --> 00:00:59,580
+E se stampiamo la console blocciamo questi oggetti di scena nel nostro intero post componente e importante anche trasformare il componente che
+
+15
+00:00:59,580 --> 00:01:05,420
+si aggiorna nel componente che monta perch ora non lo stiamo aggiornando.
+
+16
+00:01:05,580 --> 00:01:08,850
+Viene aggiunto o rimosso da e all'alba.
+
+17
+00:01:08,850 --> 00:01:18,260
+Quindi questo deve essere un componente di Mount se lo facciamo, quindi vediamo l'oggetto nel nostro componente di post e sono
+
+18
+00:01:18,620 --> 00:01:23,250
+in una corrispondenza vediamo che i genitori hanno il genitore ideale.
+
+19
+00:01:23,540 --> 00:01:30,950
+E si chiama I. D. perch questo  il nome che impostiamo come nome
+
+20
+00:01:30,950 --> 00:01:34,590
+per questo elemento flessibile in questa definizione di rotta nel componente di blocco.
+
+21
+00:01:35,120 --> 00:01:37,880
+Ora ovviamente questo ci consente di estrarlo.
+
+22
+00:01:37,940 --> 00:01:45,530
+Quindi qui non solo possiamo registrarlo, ma possiamo anche accedere all'ID di inizio genitori di questo gioco di puntelli
+
+23
+00:01:45,530 --> 00:01:52,750
+e sappiamo che sar l perch questo componente viene caricato solo attraverso questa rotta che definisce questa idea Paran.
+
+24
+00:01:53,060 --> 00:02:01,060
+meglio che l'errore che otteniamo  che in qualche modo accediamo ancora all'ID sbagliato con l'ID del post sbagliato che stiamo inviando.
+
+25
+00:02:01,060 --> 00:02:06,080
+Quindi, se salviamo questo, vediamo che qui abbiamo un errore, quindi qualcosa 
+
+26
+00:02:06,220 --> 00:02:12,610
+Beh, la ragione  semplicemente quella di aggiungere nel post completo la richiesta HTP, ma continuiamo
+
+27
+00:02:12,610 --> 00:02:14,840
+ad accedere all'ID del disco.
+
+28
+00:02:14,840 --> 00:02:21,970
+Questo naturalmente deve anche essere l'ID dei genitori di questa partita e con i dati se salviamo tutto e ricarichiamo
+
+29
+00:02:21,970 --> 00:02:28,480
+l'app ora che carica con successo il numero del post o se scambiamo questo con il numero quattro
+
+30
+00:02:28,480 --> 00:02:29,070
+del post.
+
+31
+00:02:29,110 --> 00:02:32,130
+E naturalmente anche se li clicchiamo qui.
+
+32
+00:02:32,530 --> 00:02:39,850
+cui abbiamo un elemento dinamico perch stiamo superando con successo i parametri del percorso ed estraendoli.
+
+33
+00:02:39,850 --> 00:02:42,770
+Cos ora abbiamo davvero un'applicazione in
+
+34
+00:02:42,790 --> 00:02:46,840
+Ora ci sono ancora un paio di cose che non funzionano esattamente per dire che vogliamo lavorare.
+
+35
+00:02:46,870 --> 00:02:53,440
+Ad esempio, se fai clic su un nuovo post, stiamo caricando il nuovo modulo per i post, ma carichiamo anche
+
+36
+00:02:53,440 --> 00:02:54,580
+quel singolo post.
+
+37
+00:02:54,580 --> 00:02:57,560
+Ora sai perch questo succede.
+
+38
+00:02:57,730 --> 00:03:01,360
+Diamo uno sguardo pi da vicino a questo problema e come risolverlo nella prossima lezione.
+

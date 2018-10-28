@@ -1,0 +1,64 @@
+1
+00:00:02,160 --> 00:00:09,840
+Bu yzden son derslerde, tm asenkron kodlar tadk ve eksenlerin ie aktarlmasn sipari
+
+2
+00:00:09,840 --> 00:00:12,100
+eylemi yaratcs dosyasndan kaldrabiliriz.
+
+3
+00:00:12,210 --> 00:00:18,300
+Bu nedenle, senkronize olmayan tm kodlar ve hatta senkronize edilmi yan efekt
+
+4
+00:00:18,300 --> 00:00:21,270
+kodunu eylem yaratcmzdaki dosyalarmzdan somalarmza tadk.
+
+5
+00:00:21,660 --> 00:00:26,900
+Trnak iaretlerindeki avantaj, nk mutlaka daha iyi deil, tercih
+
+6
+00:00:26,940 --> 00:00:28,700
+ettiiniz eye baldr.
+
+7
+00:00:28,920 --> 00:00:33,990
+Bu nedenle, avantajmz, eylem ierik oluturucularmzn ok yaln olabileceidir,
+
+8
+00:00:34,110 --> 00:00:36,030
+gerekten sadece bir
+
+9
+00:00:36,030 --> 00:00:37,600
+ey yaparlar, baka
+
+10
+00:00:37,650 --> 00:00:45,750
+bir kod altrmadklar bir eylem olutururlar ve tm yan etki kodlarmz, dolaysyla ilgili olmayan
+
+11
+00:00:45,810 --> 00:00:49,250
+kodlar azalr veya eylemler bizim sagasmzda.
+
+12
+00:00:49,260 --> 00:00:55,500
+Bulunduumuz rotay bile deitirebileceimiz API arlarmz, yerel
+
+13
+00:00:55,530 --> 00:00:57,470
+depolama arlarmz.
+
+14
+00:00:57,470 --> 00:01:03,240
+Bu, kullanmak zorunda kalmayacanz bir desendir, ancak daha az hareketli aksiyon oluturuculara yol aar.
+
+15
+00:01:03,240 --> 00:01:10,650
+imdi size, farknda olmanz gereken ve gerekten gl uygulamalar oluturmanza izin vermeniz gereken redux destan
+
+16
+00:01:11,160 --> 00:01:15,430
+ile size gstermek istediim birka ey daha var.
+

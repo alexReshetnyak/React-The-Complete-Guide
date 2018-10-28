@@ -1,0 +1,200 @@
+1
+00:00:02,260 --> 00:00:05,730
+Wiele ju zostao zoptymalizowanych w naszej aplikacji
+
+2
+00:00:05,830 --> 00:00:09,790
+i, jak ju wczeniej powiedziaem, moesz mie wikszy potencja.
+
+3
+00:00:09,790 --> 00:00:13,440
+Teraz obrmy gowy w stron naszego terminalu, nie mamy wielu
+
+4
+00:00:13,570 --> 00:00:18,850
+ostrzee, ale jest jeden, ktry jest w kasie. plik js w naszym folderze
+
+5
+00:00:18,850 --> 00:00:22,820
+kontenerw, e istnieje import, ktrego nigdy nie uywamy.
+
+6
+00:00:22,900 --> 00:00:24,310
+Spjrzmy, pojemniku kasy,
+
+7
+00:00:24,310 --> 00:00:25,680
+tam importujemy akcje,
+
+8
+00:00:25,780 --> 00:00:28,390
+a waciwie w tym pliku, nigdy
+
+9
+00:00:28,600 --> 00:00:33,920
+nie wysyamy adnych akcji, wic moemy po prostu si tego pozby.
+
+10
+00:00:34,090 --> 00:00:36,880
+Oglnie rzecz biorc, wane jest, aby
+
+11
+00:00:36,880 --> 00:00:40,550
+spojrza na wyjcie konsoli, nie powinien wywietla adnych
+
+12
+00:00:40,570 --> 00:00:45,820
+ostrzee, usun niepotrzebny import, aby zapobiec nadmiarowi ostatecznego rozmiaru pakietu i wypowiadaniu
+
+13
+00:00:45,820 --> 00:00:49,310
+si na wyjciu konsoli, ten jest teraz czysty,
+
+14
+00:00:49,330 --> 00:00:54,490
+ale jeli mamy spjrz na konsol naszej dziaajcej aplikacji, zauwaamy, e mamy
+
+15
+00:00:54,490 --> 00:01:00,620
+duo logw na konsolach, w modalu, w burgeru, w budowniczym burgerw, prawdopodobnie gdzie indziej.
+
+16
+00:01:00,700 --> 00:01:06,400
+Dobrym pomysem jest take oczyszczenie aplikacji, poniewa te logi z konsoli nie byyby tak
+
+17
+00:01:06,400 --> 00:01:12,590
+ze, ale bd rwnie dostpne w produkcji i dostarcz wgldu w twoj aplikacj, a poza tym
+
+18
+00:01:12,610 --> 00:01:17,770
+nie musisz spamowa konsola z wyjciem, ktre nie ma ju dla ciebie znaczenia.
+
+19
+00:01:17,980 --> 00:01:21,460
+Wic odwiedmy te trzy pliki tutaj, aby zacz od sprztania,
+
+20
+00:01:21,490 --> 00:01:23,280
+przyjrz si burgerowi. plik js
+
+21
+00:01:23,440 --> 00:01:29,360
+w folderze components i znajd tam zapis loga konsoli, tutaj gdzie
+
+22
+00:01:29,410 --> 00:01:32,140
+wyprowadzamy rekwizyty, usumy to.
+
+23
+00:01:32,500 --> 00:01:39,520
+Kolejny mona znale, jeli przejdziemy do budowniczego hamburgera, w plikach budowniczych hamburgera w kontenerze budowniczego burgera,
+
+24
+00:01:39,520 --> 00:01:47,530
+zobaczmy te ten plik i zobaczmy, gdzie uywamy log konsoli tutaj, w componentDidMount, usumy to i drugie by
+
+25
+00:01:47,530 --> 00:01:47,960
+w
+
+26
+00:01:47,960 --> 00:01:50,990
+modalu, wic odwiedmy take, e w folderze
+
+27
+00:01:51,010 --> 00:01:57,370
+UI, w folderze components, logujemy si do componentWillUpdate i mog usun cay ten blok,
+
+28
+00:01:57,370 --> 00:02:02,770
+poniewa nie robimy tam nic innego. Zrobilimy to w przeszoci, aby uzyska
+
+29
+00:02:02,770 --> 00:02:04,880
+pewne spostrzeenia, kiedy to zostanie
+
+30
+00:02:04,900 --> 00:02:11,260
+wyrzucone, nie jest ju dla nas interesujce. Widzimy, e robimy rwnie niektre logowania w
+
+31
+00:02:11,260 --> 00:02:12,320
+kolejnoci. Podsumowujc,
+
+32
+00:02:12,380 --> 00:02:20,230
+kiedy dodajemy i usuwamy skadniki, wic przejdmy rwnie do orderSummary, moemy zauway, e w czci z burgerami
+
+33
+00:02:20,230 --> 00:02:24,460
+naszych komponentw, mamy komponent podsumowania zamwie i tam, jeli
+
+34
+00:02:24,520 --> 00:02:30,110
+mamy spjrz, znajdujemy instrukcj logu konsoli w componentWillUpdate, wic moemy to rwnie usun.
+
+35
+00:02:30,580 --> 00:02:37,330
+I dziki temu moglibymy ponownie przeksztaci to w komponent funkcjonalny, poniewa wszystko,
+
+36
+00:02:37,330 --> 00:02:42,670
+co robimy, to renderowanie czego. Teraz zostawi tutaj klas opart na klasach, ale mona
+
+37
+00:02:42,670 --> 00:02:47,530
+to atwo przekonwertowa, aby jeszcze bardziej zoptymalizowa to. Z tym, zobaczmy, gdzie jeszcze otrzymamy wycigi z logw
+
+38
+00:02:47,620 --> 00:02:56,160
+konsoli, kontynuujmy i szybko si logujmy, przecz si na logowanie, wic otrzymamy tutaj dane wyjciowe w auth. js, to jest nasz
+
+39
+00:02:56,280 --> 00:02:59,100
+plik twrcw akcji.
+
+40
+00:02:59,340 --> 00:03:01,740
+Zobaczmy, czy otrzymamy jakie dane
+
+41
+00:03:01,740 --> 00:03:11,090
+wyjciowe gdzie indziej, jeli tylko wprowadz jakie dowolne wartoci tutaj w polu zamwienia i klikn porzdek, to otrzymamy take jeden
+
+42
+00:03:11,090 --> 00:03:13,150
+z pliku dziaa zamwie,
+
+43
+00:03:13,160 --> 00:03:20,700
+wic odwiedmy te pliki take w folderze akcji, auth. js mia instrukcj logu konsoli, wic pozbdmy
+
+44
+00:03:20,720 --> 00:03:26,630
+si tego i pozbdmy si zapisu logu konsoli w pliku zamwienia
+
+45
+00:03:26,950 --> 00:03:27,360
+w
+
+46
+00:03:27,380 --> 00:03:28,440
+tym samym
+
+47
+00:03:28,490 --> 00:03:36,370
+folderze, tam log konsoli, usumy to te. Teraz moemy mie wicej zapisw w dzienniku konsoli gdzie w naszej aplikacji, ale myl, e
+
+48
+00:03:36,370 --> 00:03:40,280
+usunem wikszo z nich, nie krpuj si usun. Znowu z pewnoci nie jest
+
+49
+00:03:40,330 --> 00:03:43,160
+to szkodliwe, jeli je tam zostawisz, ale
+
+50
+00:03:43,180 --> 00:03:44,990
+lepiej, jeli si ich pozbdziesz.
+

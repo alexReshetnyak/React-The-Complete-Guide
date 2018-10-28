@@ -1,0 +1,160 @@
+1
+00:00:02,130 --> 00:00:06,270
+Now that we covered all the redirection techniques you can use,
+
+2
+00:00:06,480 --> 00:00:12,500
+let's talk about something which is kind of related with redirecting, navigation guards.
+
+3
+00:00:13,080 --> 00:00:20,400
+A guard is something you might know from other frameworks and their routers. Typically guards is for example
+
+4
+00:00:20,400 --> 00:00:25,030
+used when you don't know whether the user is authenticated or not
+
+5
+00:00:25,170 --> 00:00:32,790
+and there are some paths in your application, some routes you only want to allow the user to visit if
+
+6
+00:00:32,790 --> 00:00:42,360
+he is authenticated. With the react router, you might need to have to think about these guards in a new way.
+
+7
+00:00:42,360 --> 00:00:49,080
+For example in the blog components here, in a blog container where we set up the routing for a
+
+8
+00:00:49,080 --> 00:00:51,300
+new post and so on.
+
+9
+00:00:51,370 --> 00:00:58,020
+Since in the end, all we're doing here is just rendering some components, the route components, the
+
+10
+00:00:58,020 --> 00:01:04,170
+switch component, if we want to make sure that new posts can't be reached,
+
+11
+00:01:04,170 --> 00:01:08,340
+we can simply render this conditionally.
+
+12
+00:01:08,340 --> 00:01:16,670
+So let's say we have some auth state here, I add state and that state auth is false initially,
+
+13
+00:01:18,050 --> 00:01:25,430
+now what I can of course do is I can go down into my render statement and either now use a variable
+
+14
+00:01:25,430 --> 00:01:31,530
+which returns null or that route or to use the quick and dirty inline solution,
+
+15
+00:01:31,700 --> 00:01:39,350
+I can check if this state auth is true in which case I want to render that route, otherwise I return null.
+
+16
+00:01:39,380 --> 00:01:45,890
+Now there is no way the user can access new post if he's not authenticated, so if the auth state is false
+
+17
+00:01:46,070 --> 00:01:50,340
+because this route is basically unknown then because it's not rendered.
+
+18
+00:01:50,660 --> 00:01:56,750
+So now if I save this and keep in mind, the default state now is that auth is false,
+
+19
+00:01:56,750 --> 00:02:04,350
+if this is the case and I click on new post, I'm redirected back to the starting page because what essentially
+
+20
+00:02:04,350 --> 00:02:08,250
+is happening here is that redirect kicks in here.
+
+21
+00:02:08,370 --> 00:02:15,630
+As I said from here basically just is used as a prefix and therefore it catches everything which isn't
+
+22
+00:02:15,660 --> 00:02:19,740
+caught before and redirects me to posts,
+
+23
+00:02:19,740 --> 00:02:21,590
+this is a guard.
+
+24
+00:02:21,630 --> 00:02:27,480
+It's totally different that we use guards in Angular or any any other framework
+
+25
+00:02:27,570 --> 00:02:32,610
+but in the end, this is how you can conveniently control whether the user is allowed to access this
+
+26
+00:02:32,610 --> 00:02:34,440
+page or not.
+
+27
+00:02:34,440 --> 00:02:42,230
+Of course an alternative to this would be to go to the guarded page and inside componentDidMount here,
+
+28
+00:02:42,450 --> 00:02:49,080
+you could also check if the user is authenticated and it of course depends on the application from
+
+29
+00:02:49,140 --> 00:02:51,200
+where you are getting that information
+
+30
+00:02:51,480 --> 00:03:01,060
+but then you could also check that here and simply use this.props.history.replace posts.
+
+31
+00:03:01,260 --> 00:03:04,940
+if user is authenticated for example like that.
+
+32
+00:03:05,190 --> 00:03:11,460
+So this also is an alternative, using componentDidMount to essentially redirect the user if it's not
+
+33
+00:03:11,490 --> 00:03:12,780
+true.
+
+34
+00:03:12,780 --> 00:03:19,680
+This is how you work with the react router, this is how I want you to think about it. You control a
+
+35
+00:03:19,680 --> 00:03:20,620
+lot of it
+
+36
+00:03:20,740 --> 00:03:23,080
+by the way you render its components.
+
+37
+00:03:23,160 --> 00:03:27,240
+And if that route isn't rendered, you can't reach that route,
+
+38
+00:03:27,240 --> 00:03:32,790
+the definition isn't rendered so the component connected to it can't be loaded.
+
+39
+00:03:33,240 --> 00:03:38,310
+This is how you have to think about it and how you have to structure your application.
+
+40
+00:03:38,460 --> 00:03:44,070
+Wrap your head around this this is really crucial to get right and crucial to understand.
+

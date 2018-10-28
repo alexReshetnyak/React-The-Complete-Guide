@@ -1,0 +1,452 @@
+1
+00:00:02,170 --> 00:00:09,640
+Artk temel ekirdek Bergere Boulder ilevsellii bittiine ve sylediim gibi bunu bu derste daha sonra bu
+
+2
+00:00:09,640 --> 00:00:15,790
+sunucudaki bu uygulamada birden ok sayfaya sahip olmak iin gndermek zere tekrar gzden
+
+3
+00:00:15,790 --> 00:00:16,580
+geireceiz.
+
+4
+00:00:16,750 --> 00:00:23,860
+DS saplamasna doru hareket etmeden nce bir bar ve bir taraf ekleyerek tatl bitirelim.
+
+5
+00:00:23,890 --> 00:00:30,160
+Tabii ki bu ok nemlidir, nk daha sonra birden fazla sayfa eklediimizde orada gezinmenin bir yolunu bulmamz
+
+6
+00:00:30,160 --> 00:00:30,680
+gerekir.
+
+7
+00:00:30,880 --> 00:00:33,850
+Ve her uygulamann muhtemelen bir ara ubuu olmaldr.
+
+8
+00:00:33,880 --> 00:00:35,810
+Daha iyi grnmesini salar.
+
+9
+00:00:35,980 --> 00:00:41,590
+imdi bileenlerin klasrndeki Bergere klasrndeki bileenleri kapatalm ve ykle ve buradan temiz bir
+
+10
+00:00:41,590 --> 00:00:44,480
+alma projemiz var, bunu izole edelim.
+
+11
+00:00:44,650 --> 00:00:50,220
+Ve u an orada bileen klasrne yeni bir klasr ekleyelim.
+
+12
+00:00:50,740 --> 00:00:57,790
+Buraya navigasyon diyeceim nk yan ekmece gibi ara ubuu gibi tm gezinme ile
+
+13
+00:00:57,790 --> 00:01:03,700
+ilgili bileenleri ve ara ubuunu aslnda ne balayacamla birlikte depolamak istiyorum.
+
+14
+00:01:03,880 --> 00:01:09,100
+Dolaysyla, navigasyonda bana yeni bir klasr ara ubuu eklememe izin verin.
+
+15
+00:01:09,100 --> 00:01:14,120
+artc olmayan bir ekilde ara ubuu nokta js dosyas ekleyelim.
+
+16
+00:01:14,440 --> 00:01:23,110
+js dosyas, ara ubuu nasl aslnda ilevsel bir bileen olacak gibi grneceine nasl emin grnyor.
+
+17
+00:01:23,110 --> 00:01:24,900
+imdi, ara ubuu
+
+18
+00:01:24,910 --> 00:01:27,550
+nk oradaki herhangi bir devleti ynetmek zorunda deilsiniz.
+
+19
+00:01:28,000 --> 00:01:36,080
+Baz sahne takmlarn oraya getirmeyi umuyoruz ve o zaman bu nedenle baz GSX ktklarn biliyorsun.
+
+20
+00:01:36,160 --> 00:01:44,080
+imdi re-act'ten yeniden aktarmay buraya aktaralm ve bu ara ubuu ilevini buraya bu dosyann varsaylan
+
+21
+00:01:44,110 --> 00:01:45,820
+olarak da aktaralm.
+
+22
+00:01:45,820 --> 00:01:50,750
+Ara ubuu nasl kabua GSX perspektifinden bakt.
+
+23
+00:01:50,950 --> 00:01:58,630
+Web uygulamamn ara ubuu ISDE stbilgisi ve ieride sonunda bir ift e olmasn istiyorum
+
+24
+00:01:58,630 --> 00:02:02,290
+nk kaydrma bir stbilgi esi istiyorum.
+
+25
+00:02:02,380 --> 00:02:09,910
+Yan ekmeceyi aan bir dmenin olmasn istiyorum ve burada bu kukla yerini kaldrp daha
+
+26
+00:02:09,910 --> 00:02:12,900
+sonra gerek dme ile deitirelim.
+
+27
+00:02:12,900 --> 00:02:14,980
+Fakat imdilik bu dev'i burada tutalm.
+
+28
+00:02:15,250 --> 00:02:16,610
+l olmak istiyorum.
+
+29
+00:02:17,000 --> 00:02:28,000
+Sonra da logomu ieren bir div sahibi olmak istiyorum ve bunu eklemek istiyorum ve oraya navigasyon
+
+30
+00:02:28,000 --> 00:02:32,080
+balantlarm ieren bir naff kalemi istiyorum.
+
+31
+00:02:32,080 --> 00:02:38,590
+brakyor bylece u anda yer tutucular bu eleri kendi bileenleri ile deitirecek bir logo bileeni.
+
+32
+00:02:38,590 --> 00:02:44,730
+kullanabileceimiz bir men bileenini ve hepimizin tekrar kullanmak istediimiz navigasyon eleri bileenlerini yeniden kullanabilir.
+
+33
+00:02:44,800 --> 00:02:50,620
+Yani temel olarak bu, tm balantlar ieren baz srasz liste ierecek ve hepsi imdi
+
+34
+00:02:50,620 --> 00:02:55,860
+listenin erefini kaldrd ve u sralar DOT DOT DOT yer tutucusunu burada
+
+35
+00:02:55,900 --> 00:03:01,780
+Mobil dzenleri iin hepimizin bir yan ekmecesi olacamzdan, ara ubuundaki tm gezinme elerine
+
+36
+00:03:01,780 --> 00:03:02,730
+sahip olmayabiliriz.
+
+37
+00:03:02,740 --> 00:03:08,110
+Bazen bunlar yan ekmeceye kaydrmak ve bu nedenle bu eler iin tekrar kullanlabilir
+
+38
+00:03:08,110 --> 00:03:10,480
+bir bileene sahip olmak ok mantkl.
+
+39
+00:03:10,720 --> 00:03:15,350
+Herhangi bir alt bileen oluturmadan nce, yine de bu temel ara ubuunu oluturalm.
+
+40
+00:03:15,520 --> 00:03:18,600
+Ve tabii ki bu ara ubuu baz stillere ihtiya duyacak.
+
+41
+00:03:18,810 --> 00:03:21,780
+Bunun iin bunun iin ara ubuum nokta C'sini aadaki gibi ekleyeceim.
+
+42
+00:03:21,790 --> 00:03:23,620
+urada iki tane var.
+
+43
+00:03:23,620 --> 00:03:29,680
+Bir ara ubuu oluturacam nk dersleri daha sonra ie aktarabildiimiz snf olarak gryorum nk
+
+44
+00:03:29,680 --> 00:03:37,230
+C'yi elbette modller olarak kullanyoruz ve 56 piksel yksekliinde ve yzde 100 genilie sahip bir ara ubuu istiyorum.
+
+45
+00:03:37,240 --> 00:03:41,690
+imdi burada ama, bu uygulamay mobil ilk nce gelitirmektir.
+
+46
+00:03:41,750 --> 00:03:49,890
+Her eyden nce iki ayar ve ayarlar burada mobil cihazlar iin ayarladktan sonra bir gz atalm.
+
+47
+00:03:49,930 --> 00:03:56,370
+Bu modln ilerleyen ksmlarnda, masast cihazlarda iyi grnmesi iin hepsini ayarlamamz gerekir.
+
+48
+00:03:56,530 --> 00:04:02,130
+imdi bunu kaydrp stte otursak daima stte olacak ekilde dzeltme pozisyonundayz. .
+
+49
+00:04:02,130 --> 00:04:07,780
+Ara ubuu iin ou ayar aslnda hem masastnde hem de daha iyi
+
+50
+00:04:07,780 --> 00:04:10,780
+alyor olmal, bu nedenle ara ubuuyla baladm,
+
+51
+00:04:10,780 --> 00:04:14,740
+Elbette st 0' ayarlamal ve 0' terk etmeliyim.
+
+52
+00:04:15,020 --> 00:04:17,850
+Ara ubuunu arka plan rengi deilim.
+
+53
+00:04:18,010 --> 00:04:21,600
+Ve burada zaten ho kahverengimsi bir renk ald.
+
+54
+00:04:21,670 --> 00:04:24,480
+7 0 3 be 0 9.
+
+55
+00:04:24,820 --> 00:04:32,680
+sra konumlandrma eleridir, nk ara ubuundaki tm elerin birbirine hizalanmas iin ekran esnek hale
+
+56
+00:04:32,680 --> 00:04:39,070
+getirecek ekilde ayarlanmas gerekten gzel grnmelidir. flex bloklar ile ilgili makaleler.
+
+57
+00:04:39,100 --> 00:04:44,230
+Varsaylan ynl esneklik kutusu, blok eleriyse bile birbirinin yanndaki
+
+58
+00:04:44,230 --> 00:04:51,100
+Bu konsept tamamen yeniyse, flex kutusu, ara ubuu tarafndan nasl sarlm elemanlar
+
+59
+00:04:51,100 --> 00:04:54,140
+tanmlayan content zelliini hakl karmak zorundadr.
+
+60
+00:04:54,190 --> 00:04:57,670
+Son e yaylmal.
+
+61
+00:04:57,670 --> 00:05:04,810
+Ve burada, sonsuza kadar bu ara ubuu esinin iindekilerle birlikte mavi yolun boluunu
+
+62
+00:05:04,840 --> 00:05:09,950
+dolduracak ve birbirlerinden biraz mesafe brakacak ekilde boluk kullanmak istiyorum.
+
+63
+00:05:10,320 --> 00:05:13,090
+Ardndan, bir satr esi nasl hizalandrlacan belirler.
+
+64
+00:05:13,090 --> 00:05:16,380
+Biz yasaltk ve iki ana unsur var.
+
+65
+00:05:16,420 --> 00:05:18,440
+Sonunda biraz dolgu ekleyeceim.
+
+66
+00:05:18,620 --> 00:05:21,430
+Burada dolgu, stten ve alttan sfr olmal.
+
+67
+00:05:21,520 --> 00:05:28,930
+Ama soldan saa doru 20 piksel ve ardndan da kutu boyutlandrma ve ara ubuunun dolguyla bile doru boyutta
+
+68
+00:05:29,080 --> 00:05:32,890
+olduundan emin olmak iin bu kutuyu kenarlk kutusuna ayarlayn.
+
+69
+00:05:33,220 --> 00:05:38,300
+Ve nihayet bir dizine ihtiyacm var ve kahraman elbette nemli 90 seecek.
+
+70
+00:05:38,320 --> 00:05:43,450
+Bu numara, arka plan iin setiimiz saydan daha dk olmal.
+
+71
+00:05:43,600 --> 00:05:45,080
+Ve ben 100 setim.
+
+72
+00:05:45,250 --> 00:05:48,790
+nk zemin en azndan ara ubuunun zerinde olmaldr.
+
+73
+00:05:48,820 --> 00:05:54,880
+Burada bu davran yapmak istiyorum, imdi bir kural daha ekleyeceim ve u ekilde:
+
+74
+00:05:55,100 --> 00:06:03,460
+Nasl kontrol etmek istiyorum D-Nev. e elbette orada olaca bir ubuk iine i ie
+
+75
+00:06:03,470 --> 00:06:09,980
+grntlenir Ben navigasyonda daha sonra da ara ubuu yksekliine gre yksekliini kontrol edebilirsiniz bylece
+
+76
+00:06:10,100 --> 00:06:16,520
+yzde 100 bir ykseklik ayarlamak istiyorum ve navigasyon eleri bu ara ubuunun tam
+
+77
+00:06:16,520 --> 00:06:19,880
+yksekliini o bor ile rttrecek ekilde geniletti.
+
+78
+00:06:19,880 --> 00:06:22,410
+imdilik ara ubuuna dnelim.
+
+79
+00:06:22,520 --> 00:06:32,780
+imdi dyor ve biz de bizimkiler ithal edelim. c. snflandrmas ve Barresi SS'ye ie aktarma snflar ekleyin ve
+
+80
+00:06:32,790 --> 00:06:41,610
+sonra bunu benim stme ekleyin veya bir snf ad ekleyin ve bu iki snf ayarlayn ve bunu C S S snfn barndrmak iin kullann.
+
+81
+00:06:41,630 --> 00:06:43,280
+s snflar olarak basite nokta
+
+82
+00:06:43,290 --> 00:06:44,570
+Sadece yarattk.
+
+83
+00:06:44,840 --> 00:06:51,570
+Ve her zaman olduu gibi, bu ithal Hintliler basite birka dizeyi ie aktarrlar.
+
+84
+00:06:51,600 --> 00:06:59,210
+Dinamik olarak C-s snf adlar olarak oluturuldu ve bu bileen iin ykseltilip ayarland
+
+85
+00:06:59,210 --> 00:07:03,120
+ve sonra burada retilen snf adn atadk.
+
+86
+00:07:03,260 --> 00:07:08,380
+imdi bununla birlikte, temel bir alma ara ubuuna sahip olmalyz.
+
+87
+00:07:08,390 --> 00:07:10,430
+Elbette onu kullanmak istiyoruz.
+
+88
+00:07:10,730 --> 00:07:14,830
+Ve o zaman bu ara ubuunu nerede ekleyeceiz.
+
+89
+00:07:14,910 --> 00:07:19,100
+Elbette Briger Bowlinger' dzenlemek istediinizi iddia edebilirsiniz, nk burada st ksmda bir
+
+90
+00:07:19,100 --> 00:07:20,640
+ara ubuu var istiyoruz.
+
+91
+00:07:20,930 --> 00:07:24,620
+Ancak sonunda yklediimiz herhangi bir sayfann st ksmnda bir ara ubuu olmasn istiyoruz.
+
+92
+00:07:24,770 --> 00:07:29,470
+Bu nedenle evet dosyasn kullanabiliriz, ancak tabii ki en iyi yer bizim dzenimizdir.
+
+93
+00:07:29,510 --> 00:07:35,210
+Disneyland sayfamz dzenlemekle ilgilidir ve burada ara ubuu iin baz
+
+94
+00:07:35,210 --> 00:07:36,820
+yer tutucular ekledik.
+
+95
+00:07:36,950 --> 00:07:45,260
+Bylece, dzen bileeninde, yeni oluturulmu ara ubuu bileenini, ara ubuu dosyasndaki gezinme ara ubuu
+
+96
+00:07:45,350 --> 00:07:49,010
+altndan ve ara ubuundan ie aktaralm.
+
+97
+00:07:49,010 --> 00:07:56,540
+J. S. her zamanki gibi dosya uzants yoktur ve daha sonra
+
+98
+00:07:56,600 --> 00:07:59,210
+yer tutucumuzu burada yeni alnan ara ubuu bileeniyle deitirebiliriz.
+
+99
+00:07:59,210 --> 00:08:03,660
+Kendiliinden kapanan bir bileen kullanabilir ve tm dosyalar kaydettiinizden emin olamayz.
+
+100
+00:08:03,650 --> 00:08:09,770
+UM balatma ileminin hala altndan emin olun ve u an ara ubuunu grmelisiniz.
+
+101
+00:08:09,830 --> 00:08:11,020
+Sper gzel deil.
+
+102
+00:08:11,030 --> 00:08:15,770
+Metin muhtemelen beyaz olmal ama sonra bunlar baz gerek ierikle
+
+103
+00:08:15,770 --> 00:08:16,260
+deitireceiz.
+
+104
+00:08:16,260 --> 00:08:25,160
+56 piksellik ara ubuunun yksekliine 16 punto Deese eklemeliyiz C dzeni u ekilde hzlca yaplabilir:
+
+105
+00:08:25,250 --> 00:08:34,160
+Herneyse hepimiz fark edebileceimiz bir ey, burada ana sayfamzn ara ubuuyla akmasdr; burada ana unsurun
+
+106
+00:08:34,220 --> 00:08:40,430
+16 punto stnde bir kenar boluu var, bu ekilde biz kurduumuz
+
+107
+00:08:40,520 --> 00:08:46,700
+Kenar boluunu belirleyen bu sabit maddeyi bulmak iin nerde buluyorum ve 72'ye deitirmek istiyorum,
+
+108
+00:08:46,700 --> 00:08:53,870
+esas olarak ara ubuunun sadece 56 piksel yksekliidir Art 16 piksel ykseklik veya kenar boluu st.
+
+109
+00:08:53,870 --> 00:08:56,230
+Aslnda ben daha nce olmak istedim.
+
+110
+00:08:56,540 --> 00:08:59,090
+imdi visavis kullanm hata ayklayc gzel.
+
+111
+00:08:59,090 --> 00:09:00,960
+Yine pozisyon.
+
+112
+00:09:01,040 --> 00:09:04,160
+Bylece ara ubuunu bir sonraki adma ekledik.
+
+113
+00:09:04,190 --> 00:09:09,020
+Bu logo zerinde alalm ki, bu uygulamada gzel bir logo elde edelim.
+

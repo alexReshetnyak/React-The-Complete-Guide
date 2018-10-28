@@ -1,0 +1,228 @@
+1
+00:00:02,290 --> 00:00:09,990
+Otra caracterstica que javascript de prxima generacin ofrece es escribir cdigo modular para que el cdigo
+
+2
+00:00:09,990 --> 00:00:12,980
+javascript se divida en varios archivos.
+
+3
+00:00:13,170 --> 00:00:17,500
+Y, obviamente, ya podemos dividir nuestro cdigo en varios archivos.
+
+4
+00:00:17,670 --> 00:00:22,720
+Solo tenemos que importarlos en el orden correcto en nuestros archivos html de edad.
+
+5
+00:00:22,920 --> 00:00:30,060
+Y la idea detrs de las declaraciones de exportacin e importacin y los llamados mdulos es que
+
+6
+00:00:30,060 --> 00:00:37,260
+dentro de un archivo javascript podemos importar contenido de una cantidad de archivos para que los archivos
+
+7
+00:00:37,260 --> 00:00:38,850
+javascript conozcan sus dependencias.
+
+8
+00:00:38,850 --> 00:00:40,510
+Podra verse as.
+
+9
+00:00:40,530 --> 00:00:46,830
+Tenemos una persona de la cada que nos toca y all tenemos a esta persona constante que almacena un objeto de
+
+10
+00:00:47,430 --> 00:00:49,380
+JavaScript y esta es la parte interesante.
+
+11
+00:00:49,440 --> 00:00:57,210
+Exportamos esto la palabra clave predeterminada all hace una palabra clave especial marcando esto como la exportacin predeterminada de este
+
+12
+00:00:57,210 --> 00:01:04,290
+archivo y podemos importar esto en otro lugar y la declaracin de importacin se mostrar en un segundo.
+
+13
+00:01:04,290 --> 00:01:10,620
+Tambin podramos tener un nmero de cadas donde exportamos varias cosas aqu, una constante denominada clean que contiene
+
+14
+00:01:10,620 --> 00:01:15,810
+una funcin dnt y datos base que contiene un nmero en un tercer archivo.
+
+15
+00:01:15,810 --> 00:01:24,130
+Es posible que tengamos que importar de la persona s y la utilidad a nosotros tan apto o genial requiere declaraciones de importacin.
+
+16
+00:01:24,180 --> 00:01:29,970
+predeterminada simplemente significa que si solo importamos algo de ese archivo, siempre ser nuestra exportacin predeterminada.
+
+17
+00:01:30,250 --> 00:01:38,460
+Y aqu hay un par de sintaxis de importacin diferente, como ver en la persona del puntaje JSE, como ve, usa la
+
+18
+00:01:38,670 --> 00:01:40,890
+palabra clave predeterminada, la palabra clave
+
+19
+00:01:40,890 --> 00:01:49,470
+Entonces en este caso una persona constante por lo tanto en la persona implorada de la persona s podemos nombrar a la persona lo que queramos
+
+20
+00:01:49,470 --> 00:01:54,480
+que es por qu una persona impresa dos veces o P R S no importa.
+
+21
+00:01:54,480 --> 00:02:00,940
+Siempre se refiere a lo que marc como predeterminado con la palabra clave predeterminada para la utilidad.
+
+22
+00:02:00,990 --> 00:02:03,240
+S, es un poco diferente all.
+
+23
+00:02:03,390 --> 00:02:13,050
+Importamos desde dos constantes diferentes y, por lo tanto, la sintaxis de importacin usa las llaves para orientar
+
+24
+00:02:13,050 --> 00:02:16,170
+explcitamente cosas especficas desde ese archivo.
+
+25
+00:02:16,170 --> 00:02:21,890
+Estas son llamadas exportaciones con nombre porque importamos el material por su nombre.
+
+26
+00:02:21,900 --> 00:02:28,500
+Importamos la constante limpia por su nombre e importamos Baystate por su nombre porque no marcamos nada como
+
+27
+00:02:28,500 --> 00:02:29,410
+el predeterminado.
+
+28
+00:02:29,520 --> 00:02:35,870
+Entonces, para que javascript sepa exactamente a qu apuntamos necesitamos darle el nombre exacto y el nombre
+
+29
+00:02:35,870 --> 00:02:37,860
+va entre abrazos de llamada.
+
+30
+00:02:37,950 --> 00:02:43,770
+Por cierto, tambin podra escribir esto como una declaracin de importacin con Baystate una coma limpia
+
+31
+00:02:43,770 --> 00:02:44,870
+o al revs.
+
+32
+00:02:44,880 --> 00:02:47,910
+Entonces estas son importaciones y exportaciones.
+
+33
+00:02:47,970 --> 00:02:53,570
+Usted escribe todo esto en sus archivos javascript y lo usar en gran medida para todos los puntajes.
+
+34
+00:02:53,760 --> 00:03:00,420
+Ahora, como con todas estas caractersticas javascript de prxima generacin, no se ejecutar as en todos los navegadores.
+
+35
+00:03:00,420 --> 00:03:05,460
+Ni siquiera los navegadores ms modernos admiten todas las funciones que se usarn en este proyecto.
+
+36
+00:03:05,460 --> 00:03:11,700
+Por lo tanto, en el prximo mdulo de curso, tambin te mostrar cmo configurar rpidamente un proyecto que
+
+37
+00:03:11,710 --> 00:03:18,330
+al final solo combina todas estas caractersticas javascript de prxima generacin con las buenas caractersticas generalizadas actuales para que
+
+38
+00:03:18,630 --> 00:03:24,720
+nosotros, como desarrolladores, podamos utilizar javascript de prxima generacin sin nosotros. cdigo de envo que no se ejecuta
+
+39
+00:03:24,720 --> 00:03:25,940
+en ninguna parte.
+
+40
+00:03:25,980 --> 00:03:28,090
+Entonces volvamos a las importaciones y exportaciones.
+
+41
+00:03:28,090 --> 00:03:32,290
+Esta es la sintaxis que usamos y ver que se usa mucho en este curso.
+
+42
+00:03:32,310 --> 00:03:38,370
+Tambin puede ver algunas variaciones porque tambin podemos escribir esto de manera diferente cuando tenemos una
+
+43
+00:03:38,400 --> 00:03:39,330
+exportacin predeterminada.
+
+44
+00:03:39,330 --> 00:03:44,700
+Ya has visto a esa persona es el nombre que puedes elegir por tu cuenta.
+
+45
+00:03:44,760 --> 00:03:47,970
+Aqu no importa si usa persona o PR s.
+
+46
+00:03:48,210 --> 00:03:54,450
+Si tiene una exportacin con nombre, en realidad tiene que usar el nombre exacto definido en el archivo con
+
+47
+00:03:54,450 --> 00:03:55,770
+la palabra clave export.
+
+48
+00:03:55,770 --> 00:03:57,400
+An lo que puedes hacer.
+
+49
+00:03:57,480 --> 00:04:03,540
+Puede asignar un alias que luego puede elegir libremente en el archivo que est importando
+
+50
+00:04:03,540 --> 00:04:09,510
+con la palabra clave as o si tiene mltiples exportaciones con nombre en un archivo.
+
+51
+00:04:09,510 --> 00:04:16,940
+Puede importar todo con este carcter especial de inicio y luego asignar un alias y un paquete.
+
+52
+00:04:16,950 --> 00:04:23,340
+En este caso, sera un objeto javascript que expone todas las constantes y todo lo que exporte en
+
+53
+00:04:23,580 --> 00:04:31,320
+el archivo como propiedades para que simplemente haya incluido los datos basados en Daut incluidos Daut clean para acceder a la
+
+54
+00:04:31,320 --> 00:04:32,430
+exportacin de cosas.
+
+55
+00:04:32,460 --> 00:04:36,780
+Eso depende de ti y me vers utilizar estas cosas para todo el curso.
+
+56
+00:04:36,780 --> 00:04:39,020
+La bsqueda de uso ms comn es la ms alta.
+
+57
+00:04:39,030 --> 00:04:41,700
+Import Cauley braes algo llamado el aumento de.
+

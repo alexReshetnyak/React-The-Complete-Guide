@@ -1,0 +1,20 @@
+1
+00:00:02,340 --> 00:00:08,750
+Benvenuto in questo modulo sugli ultimi due moduli, imparerai le nozioni di base sul relax, imparerai di
+
+2
+00:00:08,750 --> 00:00:11,660
+cosa si tratta e perch potresti volerlo utilizzare.
+
+3
+00:00:11,660 --> 00:00:19,010
+Applichiamo anche questo al nostro progetto buger Boulder in questo modulo ora ci immergeremo pi a fondo nel
+
+4
+00:00:19,010 --> 00:00:26,000
+redox dive nelle funzionalit un po 'pi avanzate e vediamo ad esempio come possiamo eseguire il codice asincrono.
+
+5
+00:00:26,010 --> 00:00:26,840
+Quindi iniziamo.
+

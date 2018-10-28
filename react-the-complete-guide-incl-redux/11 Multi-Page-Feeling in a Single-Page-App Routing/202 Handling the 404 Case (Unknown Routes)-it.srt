@@ -1,0 +1,148 @@
+1
+00:00:02,220 --> 00:00:09,840
+Nell'ultima conferenza ho parlato di Now di Garth da considerare per un caso in modo che stiamo
+
+2
+00:00:09,840 --> 00:00:11,840
+accedendo a una rotta sconosciuta.
+
+3
+00:00:11,910 --> 00:00:18,600
+In realt abbiamo visto un modo di gestirlo con il reindirizzamento qui perch se provassimo ad accedere a nuovi
+
+4
+00:00:18,600 --> 00:00:22,630
+post quando non autenticati questa route  sconosciuta perch non  renderizzata.
+
+5
+00:00:22,670 --> 00:00:29,940
+E come puoi vedere se continuiamo a fare clic su un nuovo post, siamo sostanzialmente reindirizzati per postare.
+
+6
+00:00:29,960 --> 00:00:32,900
+Questo  un modo di gestire quattro richieste.
+
+7
+00:00:32,900 --> 00:00:36,010
+Puoi semplicemente reindirizzare a un'altra rotta.
+
+8
+00:00:36,500 --> 00:00:40,430
+Tuttavia puoi anche gestirli in un modo diverso.
+
+9
+00:00:40,880 --> 00:00:47,750
+Se vuoi gestirli diversamente, devo commentare  fuori dal modo in cui questo catturer
+
+10
+00:00:47,750 --> 00:00:49,100
+eventuali richieste sconosciute.
+
+11
+00:00:49,100 --> 00:00:57,410
+ possibile specificare qui il componente del percorso e se si omette il percorso in modo da non aggiungere il percorso,
+
+12
+00:00:57,410 --> 00:01:06,080
+ sufficiente definire un componente o il metodo di rendering che si apprende a eseguire il rendering di qualsiasi percorso sconosciuto.
+
+13
+00:01:06,080 --> 00:01:09,390
+Quindi qui ho intenzione di riversare non trovato.
+
+14
+00:01:09,440 --> 00:01:16,810
+Ovviamente potresti di nuovo dire che usa componente e renderizza per 0 il componente della pagina di errore che hai creato,
+
+15
+00:01:17,030 --> 00:01:21,900
+ma questa rotta catturer tutte le rotte che non sono gestite prima di essa.
+
+16
+00:01:22,070 --> 00:01:26,450
+Quindi ogni percorso sconosciuto nel nostro caso e lo produrr.
+
+17
+00:01:26,660 --> 00:01:32,170
+Ora non funzioner insieme al reindirizzamento dalla rotta, perch  tutto per catturarci tutti e per qualsiasi
+
+18
+00:01:32,170 --> 00:01:34,600
+ordine tu usi l'una o l'altra vittorie.
+
+19
+00:01:34,610 --> 00:01:39,920
+Quindi l'altro non fa nulla per altri casi d'uso in cui per non si reindirizza
+
+20
+00:01:39,920 --> 00:01:40,660
+dalla rotta.
+
+21
+00:01:40,700 --> 00:01:42,270
+Puoi usarli insieme.
+
+22
+00:01:42,650 --> 00:01:50,390
+Ma qui questa  una bella cattura di tutte le rotte che dovrebbe sempre venire l'ultima e mostrare una pagina appropriata
+
+23
+00:01:50,390 --> 00:01:53,590
+o rendere qualche contenuto fittizio per percorsi sconosciuti.
+
+24
+00:01:53,630 --> 00:01:59,420
+post che  sconosciuto perch non stiamo rendendo quel componente di route a causa del fatto che non siamo autenticati.
+
+25
+00:01:59,420 --> 00:02:02,780
+Lascia che ti mostri questo se ora facciamo clic su un nuovo
+
+26
+00:02:02,900 --> 00:02:07,110
+Vediamo che non abbiamo trovato lo stesso per il percorso in cui sei alibi.
+
+27
+00:02:08,470 --> 00:02:13,180
+L noi non vediamo il tutto perch non  stato definito in questo momento.
+
+28
+00:02:13,180 --> 00:02:15,470
+I post funzionano comunque.
+
+29
+00:02:16,000 --> 00:02:18,190
+Quindi questa  una trappola per tutti i percorsi.
+
+30
+00:02:18,200 --> 00:02:24,930
+Un altro concetto importante in particolare per questo per 4 casi per catturare tutte le rotte sconosciute.
+
+31
+00:02:24,970 --> 00:02:31,930
+Ora, come ho detto, non funzioner con il reindirizzamento se si reindirizza dalla barra se si reindirizza da una pagina
+
+32
+00:02:31,930 --> 00:02:33,560
+e una barra di errore.
+
+33
+00:02:33,580 --> 00:02:34,640
+Funzioner comunque.
+
+34
+00:02:34,690 --> 00:02:40,420
+La ragione per cui non lavorano insieme  che il hear viene trattato come un prefisso e
+
+35
+00:02:40,420 --> 00:02:47,200
+quindi ci cattura tutti i percorsi ci ha chiesto questo e quindi non importa come li ordini, non funzioner insieme.
+
+36
+00:02:47,200 --> 00:02:53,920
+Volevo comunque mostrarti entrambi, perch raramente si ha il caso che due percorsi si scontrino qui e quindi
+
+37
+00:02:53,920 --> 00:02:59,940
+si abbia un modo potente di gestire quattro o quattro casi dell'era con una rotta senza percorso.
+

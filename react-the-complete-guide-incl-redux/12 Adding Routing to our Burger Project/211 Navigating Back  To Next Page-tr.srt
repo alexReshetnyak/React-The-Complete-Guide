@@ -1,0 +1,144 @@
+1
+00:00:02,140 --> 00:00:08,010
+Bu yzden check-out sayfasndaki check-out sayfasnda, hangi iptal ve devam ettirmek
+
+2
+00:00:08,020 --> 00:00:13,190
+iin zet ii kontrol etmenin bir paras olan dmeleri yapalm.
+
+3
+00:00:13,240 --> 00:00:18,460
+imdi bu dmeler elbette onlara bir snfa evirerek onlar halledebilecekleri
+
+4
+00:00:18,460 --> 00:00:27,870
+zet ak zetinde ancak bu olay temelde, kullanm zetini kullanarak kontrol zet bileenini tamamlayan bir kontrol konteyneri iine
+
+5
+00:00:27,870 --> 00:00:34,240
+sergilemek istiyorum sahne ve daha sonra herhangi bir sahne bir tklama zerine
+
+6
+00:00:34,300 --> 00:00:38,930
+yrtlmesi gereken yntem iin bavuru almak iin bekliyoruz.
+
+7
+00:00:39,220 --> 00:00:41,860
+Yani burada isim koyacam.
+
+8
+00:00:41,860 --> 00:00:50,600
+veya sadece kontrol edin nceki adlarm dorultusunda olamaz ve daha sonra sahne kontrol devam etti.
+
+9
+00:00:50,600 --> 00:00:52,650
+Kontrol d brakn
+
+10
+00:00:52,650 --> 00:00:56,340
+imdi kontrol zet bileeni kullanrken bu sahne uygulamak gerekiyor.
+
+11
+00:00:56,490 --> 00:01:05,350
+Yani orada sadece geip bitmeyen okumalar okudum ve iptal edilmitim ve kontrol ettim devam ettim.
+
+12
+00:01:05,610 --> 00:01:10,680
+imdi her iki tarafn zerine bir eyler yapacak herhangi bir yntem ekleyeceim.
+
+13
+00:01:10,710 --> 00:01:17,850
+Bir ey yapmas gereken bir yntem olan iptal edilen ileyiciyi kontrol edin ve orada
+
+14
+00:01:17,850 --> 00:01:26,070
+bu anahtar kelimeyi kullanabilmek iin bu yntem szdizimini kullanacam ve ayrca bakmas gereken devam eden ileyiciyi
+
+15
+00:01:26,580 --> 00:01:28,130
+kontrol edin.
+
+16
+00:01:28,140 --> 00:01:35,310
+eriimi var Propp da iptal edildiinde yrtmek istediim geri dn yntemine sahip.
+
+17
+00:01:35,310 --> 00:01:42,390
+imdi rota bileeni ile yklenen kontrol konteynrndayken, burada da bu sahnelere ve
+
+18
+00:01:42,390 --> 00:01:44,990
+gemite Propp'a ve gemie
+
+19
+00:01:45,000 --> 00:01:52,440
+Bu sadece Arrow durumundaki son sayfaya gider ve buradaki tm kullanm yerine
+
+20
+00:01:52,440 --> 00:02:02,690
+devam etmek istiyorum, bunun yerine geerli rotay deitirmek iin eik izgi konta verisi ile deitirelim; rnein bu
+
+21
+00:02:02,780 --> 00:02:10,010
+blm henz ele almamakla birlikte bu, ksa srede sahip olmadmz iletiim verileri
+
+22
+00:02:10,010 --> 00:02:11,390
+bileenini ykledi.
+
+23
+00:02:11,420 --> 00:02:15,230
+imdi bu ileyicileri oraya sktrmamz gerekiyor.
+
+24
+00:02:15,530 --> 00:02:20,690
+Bu, iptal edilen ileyiciyi kontrol eder ve devam eden ileyici kullanlmaya allmasn kontrol eder.
+
+25
+00:02:20,870 --> 00:02:24,190
+Tm yanllar saklayn ve imdi bunu deneyelim.
+
+26
+00:02:24,230 --> 00:02:29,140
+ptal etmeyi tklatp tklamadm kontrol edin ve Bergrin reticisine geri gtrn.
+
+27
+00:02:29,360 --> 00:02:34,430
+Devam Et'i tklarsam kontrol etmeye devam edeyim.
+
+28
+00:02:34,550 --> 00:02:39,910
+Deiikliklerinizi grrsnz, ancak elbette ki hibir ey yapmaz nk henz ileme koymuyoruz.
+
+29
+00:02:40,010 --> 00:02:43,590
+Bu gelecekte stesinden geleceim bir ey.
+
+30
+00:02:43,820 --> 00:02:50,390
+Borcu ele almadan nce yapmak istediim ey, gerekten kurduum burgeri deil, baz
+
+31
+00:02:50,690 --> 00:02:55,010
+keyfi burgerleri burger sunmak iin burada yapmak istiyorum.
+
+32
+00:02:55,010 --> 00:03:04,010
+Aslnda bultum, burgerim ile ilgili verileri deme sayfasna iletmek zorunda kalacam.
+
+33
+00:03:04,010 --> 00:03:11,030
+Yani burada Bergere Boulder'dan baz burger yapyorum ve u anda sipari veriyorum ve
+
+34
+00:03:11,300 --> 00:03:19,100
+devam edersem malzemelerle ilgili verileri verilerin tesine geen k sayfas felaketine gelecek nesnelere geirmem gerekiyor.
+
+35
+00:03:19,100 --> 00:03:25,960
+Bunu neden bir sorgu ebeveyninin tekrar kendi banza uygulamakta zgrdn anlatmak isterim.
+
+36
+00:03:26,030 --> 00:03:31,380
+Bir sonraki dersin son modl birlikte yapaca gn boyunca ihtiyacnz olan her eyi renirsiniz.
+

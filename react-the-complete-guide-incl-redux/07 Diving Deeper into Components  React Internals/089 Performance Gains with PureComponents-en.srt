@@ -1,0 +1,524 @@
+1
+00:00:02,260 --> 00:00:07,840
+Let me come back to shouldComponentUpdate and show it's important and why you might want to use it,
+
+2
+00:00:08,490 --> 00:00:15,450
+let's edit our app.js, our template a little bit so that we have a demo use case. I'll add a new button above
+
+3
+00:00:15,460 --> 00:00:24,360
+the cockpit, this button should always show the persons. So the difference between the toggle and a cockpit
+
+4
+00:00:24,360 --> 00:00:26,190
+is that it doesn't toggle it,
+
+5
+00:00:26,220 --> 00:00:27,730
+hide them if they are visible,
+
+6
+00:00:27,750 --> 00:00:30,520
+show if they are not visible but always show them.
+
+7
+00:00:30,570 --> 00:00:35,620
+And if they are already visible, it doesn't do anything or so you would think.
+
+8
+00:00:36,060 --> 00:00:44,810
+So let's add our own click listener here and for brevity's sake I won't create a new method handler, I'll
+
+9
+00:00:44,810 --> 00:00:50,350
+execute this all in line here with the arrow function which gets executed upon the click, there
+
+10
+00:00:50,370 --> 00:00:56,760
+I will call this set state which of course can do inline or two and set show persons to true.
+
+11
+00:00:56,910 --> 00:00:58,140
+So always true,
+
+12
+00:00:58,140 --> 00:01:05,560
+again no toggling always true. The button is going to look ugly but it will do the trick here.
+
+13
+00:01:05,580 --> 00:01:09,930
+Now let me go up all the way to shouldUpdate
+
+14
+00:01:09,930 --> 00:01:13,410
+and there we should return true,
+
+15
+00:01:13,530 --> 00:01:15,270
+always true.
+
+16
+00:01:15,270 --> 00:01:22,820
+Now let's go to persons.js and also comment out our check here and instead return true here too
+
+17
+00:01:22,920 --> 00:01:26,820
+which would be the default if we don't implement shouldComponentUpdate.
+
+18
+00:01:27,000 --> 00:01:30,050
+Now let's go back to our application, there
+
+19
+00:01:30,130 --> 00:01:31,360
+If load it
+
+20
+00:01:31,730 --> 00:01:36,400
+Let's click show persons, we see all the persons and it behaves as before.
+
+21
+00:01:36,470 --> 00:01:39,810
+Now I'll clear the console but I didn't reload the page,
+
+22
+00:01:40,060 --> 00:01:42,810
+let me click show persons again,
+
+23
+00:01:42,940 --> 00:01:49,330
+now what you see is that we go through all these life cycles again, shouldComponentUpdate for app.js
+
+24
+00:01:49,360 --> 00:01:56,770
+WillUpdate, render, personsWillReceiveProps shouldUpdate will return true so it will continue.
+
+25
+00:01:56,770 --> 00:02:04,600
+WillUpdate, render, render for all the person component. React goes through the full component tree and all
+
+26
+00:02:04,600 --> 00:02:07,870
+the render methods even though nothing changed,
+
+27
+00:02:07,900 --> 00:02:10,150
+the persons didn't change, the array didn't change,
+
+28
+00:02:10,210 --> 00:02:12,070
+nothing changed.
+
+29
+00:02:12,260 --> 00:02:19,220
+Now don't mistake this for react re-rendering the actual dom, the browser dom,
+
+30
+00:02:19,270 --> 00:02:20,780
+it didn't do that.
+
+31
+00:02:20,800 --> 00:02:29,140
+You can confirm this by going to elements and there if you go to the options here on the right, go to
+
+32
+00:02:29,140 --> 00:02:33,050
+more tools and then rendering,
+
+33
+00:02:33,190 --> 00:02:40,710
+you can turn on paint flashing to see areas that need to be repainted.
+
+34
+00:02:41,050 --> 00:02:47,030
+If you do that and click show persons you'll see only the button needs to be repainted, for toggle person
+
+35
+00:02:47,230 --> 00:02:54,540
+you'll see a lot gets repainted but for show persons, this doesn't happen. So it doesn't touch the real
+
+36
+00:02:54,540 --> 00:02:55,220
+dom,
+
+37
+00:02:55,290 --> 00:02:57,930
+it only and that just happened because i hovered over it
+
+38
+00:02:57,930 --> 00:03:00,230
+by the way and I'll disable this again,
+
+39
+00:03:00,300 --> 00:03:03,490
+it only touched the button, it didn't touch the real dom
+
+40
+00:03:03,810 --> 00:03:08,690
+and I will come back to how react actually does decide whether to touch the real dom or not
+
+41
+00:03:08,700 --> 00:03:15,150
+in the next lectures. But for now we can know that it doesn't necessarily touch the real dom, only if
+
+42
+00:03:15,150 --> 00:03:18,960
+it detects differences to what it sees in the render methods
+
+43
+00:03:19,080 --> 00:03:22,520
+but for that of course it needs to execute the render methods
+
+44
+00:03:22,620 --> 00:03:25,330
+and as you can see in the console, it did do so,
+
+45
+00:03:25,380 --> 00:03:27,150
+it executed all the render methods.
+
+46
+00:03:27,390 --> 00:03:30,820
+This of course is a bit inefficient especially for bigger apps,
+
+47
+00:03:30,840 --> 00:03:37,090
+here it didn't cost us much. But if you have a lot of child nodes, a very long list of persons maybe
+
+48
+00:03:37,530 --> 00:03:41,760
+going through all the render methods even though nothing changed
+
+49
+00:03:41,910 --> 00:03:44,820
+really can be a performance issue.
+
+50
+00:03:44,970 --> 00:03:46,830
+That is why prior to that,
+
+51
+00:03:46,950 --> 00:03:52,450
+we had this check in, shouldComponentUpdate and the persons, I'll comment out true again and re-introduce
+
+52
+00:03:52,450 --> 00:03:53,620
+that.
+
+53
+00:03:53,700 --> 00:03:59,880
+Now here it really checks if there is a difference between the persons and only re-renders if it
+
+54
+00:03:59,880 --> 00:04:01,790
+detects this difference.
+
+55
+00:04:01,830 --> 00:04:07,010
+You can of course add the check for all the other properties too.
+
+56
+00:04:07,260 --> 00:04:16,820
+So if next.prop.persons is different or if next.props changed another property we have here, changed, its
+
+57
+00:04:16,860 --> 00:04:19,670
+difference to the previous implementation of changed.
+
+58
+00:04:19,890 --> 00:04:27,670
+So if this is not equal to this.props changed and finally the same for next.props.
+
+59
+00:04:27,790 --> 00:04:30,980
+clicked if that is not equal to this.props.clicked.
+
+60
+00:04:30,990 --> 00:04:35,430
+So if any of the relevant props changes, we now continue with the updating.
+
+61
+00:04:35,670 --> 00:04:39,270
+But if no property changed, we don't go there,
+
+62
+00:04:39,540 --> 00:04:44,160
+as you can see here, reload, clear, click show persons,
+
+63
+00:04:44,310 --> 00:04:49,920
+we go through all the render methods of course which makes a lot of sense because we need to render
+
+64
+00:04:49,960 --> 00:04:55,920
+the whole list but if i clear this and I click show persons again, you'll see we are inside
+
+65
+00:04:55,950 --> 00:04:56,420
+shouldComponentUpdate
+
+66
+00:04:56,430 --> 00:04:59,820
+app.js, WillUpdate app.js, render app.js
+
+67
+00:04:59,850 --> 00:05:06,630
+because we always return true in shouldComponentUpdate there but then for persons.js, we are
+
+68
+00:05:06,630 --> 00:05:10,950
+at willReceiveProps, shouldComponentUpdate and we're done,
+
+69
+00:05:10,950 --> 00:05:12,120
+We don't continue,
+
+70
+00:05:12,120 --> 00:05:19,070
+we don't call render for persons and the individual person components because we detected in shouldComponentUpdate
+
+71
+00:05:19,080 --> 00:05:24,190
+of persons.js that the props didn't actually change.
+
+72
+00:05:24,540 --> 00:05:31,460
+So our click here didn't trigger a re-rendering or a call of render for all these components,
+
+73
+00:05:31,500 --> 00:05:37,780
+it stopped in persons. Of course we can do the same in app.js, instead of always returning true,
+
+74
+00:05:37,980 --> 00:05:41,120
+we can check if something actually changed our state,
+
+75
+00:05:41,400 --> 00:05:50,510
+so if our nextState.persons, one of the states we have besides other state and show persons
+
+76
+00:05:50,710 --> 00:06:01,750
+So if nextState.persons is not equal to this.state persons or if nextState.showPersons is not equal
+
+77
+00:06:01,750 --> 00:06:11,460
+to this.state.showPersons. With this check in place, we should now see that if I click show persons, we
+
+78
+00:06:11,460 --> 00:06:17,630
+go through all the steps correctly, we render them, if I clear the console though and click show persons again,
+
+79
+00:06:17,910 --> 00:06:23,640
+we only read shouldComponentUpdate and that's it because we detect hey nothing changed,
+
+80
+00:06:23,640 --> 00:06:25,210
+I don't need to continue.
+
+81
+00:06:25,770 --> 00:06:31,020
+If I remove a person though, it does correctly do so and go through all these steps.
+
+82
+00:06:31,110 --> 00:06:37,740
+So this is the best possible way we can handle this right now because we make sure that we only run
+
+83
+00:06:37,740 --> 00:06:43,720
+through the updating process if we need to do that and we skip unnecessary work
+
+84
+00:06:43,980 --> 00:06:46,440
+and of course they are for performance hits
+
+85
+00:06:46,560 --> 00:06:52,710
+if we actually don't need to do updates because we know hey the props didn't change, no need to do
+
+86
+00:06:52,710 --> 00:06:53,830
+all of that.
+
+87
+00:06:53,970 --> 00:06:58,200
+Now for a this check where we see the state properties
+
+88
+00:06:58,320 --> 00:07:03,100
+So all the properties in our state or the props.properties
+
+89
+00:07:03,240 --> 00:07:07,850
+so any property on the props.object, if any of these change, this is a check
+
+90
+00:07:07,860 --> 00:07:10,980
+we don't have to write on our own. If that is what we want to do,
+
+91
+00:07:11,040 --> 00:07:17,880
+make this shallow comparison and I'm saying shallow because it doesn't deeply check these objects,
+
+92
+00:07:18,000 --> 00:07:23,540
+it only detects differences because we update them in an immutable fashion which is important.
+
+93
+00:07:23,910 --> 00:07:30,870
+So if you want to make this shallow check, we actually don't have to implement shouldComponentUpdate
+
+94
+00:07:31,140 --> 00:07:38,740
+instead we can comment this out and inherit from a different type of component, a pure component.
+
+95
+00:07:39,030 --> 00:07:45,350
+This is a different object exposed by the react library and it is exactly the same as the normal component
+
+96
+00:07:45,900 --> 00:07:50,880
+but it has this type of shouldComponentUpdate check already built in.
+
+97
+00:07:50,970 --> 00:07:56,640
+It will basically go through all the properties in the props and compare them to their old versions
+
+98
+00:07:57,030 --> 00:08:02,320
+and only continue updating if it detects differences and it does the same for state.
+
+99
+00:08:02,430 --> 00:08:07,080
+So we can also set app.js to a pure component.
+
+100
+00:08:07,410 --> 00:08:13,450
+So let's import pure component there and extend pure component, with that,
+
+101
+00:08:13,620 --> 00:08:14,940
+let's retry this
+
+102
+00:08:16,400 --> 00:08:17,380
+and yes,
+
+103
+00:08:17,390 --> 00:08:18,890
+thank you for the error message.
+
+104
+00:08:18,890 --> 00:08:22,400
+We should then remove shouldComponentUpdate in a pure component
+
+105
+00:08:22,490 --> 00:08:24,910
+because again this is handled by react.
+
+106
+00:08:25,280 --> 00:08:28,490
+So let's retry this, show persons works
+
+107
+00:08:28,700 --> 00:08:33,110
+clicking it again, we don't see the console log because we don't have our own shouldComponentUpdate
+
+108
+00:08:33,110 --> 00:08:39,040
+method but we would see the console logs of all the other updates as I can prove if I really change something,
+
+109
+00:08:39,170 --> 00:08:45,290
+so we get the same behavior as before but now optimized by react, by this automatic implementation of
+
+110
+00:08:45,320 --> 00:08:47,300
+shouldComponentUpdate.
+
+111
+00:08:47,300 --> 00:08:51,580
+Should you then always use pure components for your entire application
+
+112
+00:08:51,800 --> 00:08:57,590
+and how does this make sense if I also tell you to use functional components as often as possible where
+
+113
+00:08:57,590 --> 00:09:00,770
+you can't use this because you don't extend anything.
+
+114
+00:09:01,080 --> 00:09:05,540
+Well the answer is you shouldn't use pure component everywhere in your application,
+
+115
+00:09:05,720 --> 00:09:11,740
+you should only use it if you know that updates might not be required.
+
+116
+00:09:11,810 --> 00:09:16,620
+On the other hand, you have components which might only depend on one or two props
+
+117
+00:09:16,790 --> 00:09:21,620
+and you know whenever update is triggered for this component, I want to update it because maybe I've got
+
+118
+00:09:21,620 --> 00:09:29,270
+a couple of pure components at top positions in this component tree which prevent the updating of any child
+
+119
+00:09:29,270 --> 00:09:35,090
+component anyways. So don't make everything a pure component because you also can get a performance hit
+
+120
+00:09:35,150 --> 00:09:36,730
+there, in the end,
+
+121
+00:09:36,770 --> 00:09:39,380
+this implemented shouldComponentUpdate for you
+
+122
+00:09:39,530 --> 00:09:43,880
+and it compares all the old props and states to the new props and states.
+
+123
+00:09:43,880 --> 00:09:46,860
+This of course also takes a bit of performance
+
+124
+00:09:47,060 --> 00:09:52,850
+and if you implement it somewhere where it will always succeed because you already did this check in
+
+125
+00:09:52,840 --> 00:09:59,350
+a higher point of these component tree then you're really hurting your application.
+
+126
+00:09:59,360 --> 00:10:01,730
+So not everything should be a pure component,
+
+127
+00:10:01,940 --> 00:10:06,300
+some strategically placed pure components make a lot of sense though.
+
+128
+00:10:06,510 --> 00:10:09,010
+Now to find out where to place them,
+
+129
+00:10:09,140 --> 00:10:15,860
+we need to get a better understanding of how react walks through our component tree and how it actually
+
+130
+00:10:15,860 --> 00:10:19,420
+decides to really update the real dom.
+
+131
+00:10:19,430 --> 00:10:21,430
+let's have a look at this in the next lecture.
+

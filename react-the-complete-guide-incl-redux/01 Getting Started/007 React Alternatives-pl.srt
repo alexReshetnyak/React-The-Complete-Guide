@@ -1,0 +1,60 @@
+1
+00:00:02,010 --> 00:00:04,020
+Teraz nie tylko
+
+2
+00:00:04,030 --> 00:00:08,330
+React; s te alternatywy. Reakcja jest oczywicie tym, co omwimy na tym kursie.
+
+3
+00:00:08,380 --> 00:00:14,350
+Istnieje rwnie Angular i Vue. js, a take inne, takie jak Backbone i
+
+4
+00:00:14,380 --> 00:00:17,730
+Ember, ale Angular i Vue s najpopularniejszymi alternatywami.
+
+5
+00:00:17,950 --> 00:00:22,330
+Mog tylko poleci nurkowanie w tych dwch, aby naprawd wybra ulubionego.
+
+6
+00:00:22,330 --> 00:00:25,250
+Mam te kursy na ich temat, jeli jeste zainteresowany.
+
+7
+00:00:25,600 --> 00:00:32,500
+Wszystkie trzy s wietne w tworzeniu wysoce skalowalnych aplikacji internetowych, ktre wygldaj i dobrze si
+
+8
+00:00:32,500 --> 00:00:34,090
+czuj dla uytkownika.
+
+9
+00:00:34,090 --> 00:00:41,050
+Nie tyle alternatyw jest jQuery; gdzie on moe si wydawa, e tak jest, ale jQuery w rzeczywistoci chodzi tylko
+
+10
+00:00:41,350 --> 00:00:44,820
+o przechodzenie przez DOM i targetowanie elementw w DOM.
+
+11
+00:00:44,830 --> 00:00:51,490
+Teraz, jak widzielimy w naszym przykadzie, React polega wanie na zadeklarowaniu tego, co widzisz i skupieniu
+
+12
+00:00:51,790 --> 00:00:59,050
+si na logice, zamiast skupia si na "jak". Dlatego React, Angular i Vue pozwalaj tworzy bardziej
+
+13
+00:00:59,050 --> 00:01:05,860
+zaawansowane aplikacje, poniewa mona skupi si na logice i modelu biznesowym, a nie na technicznej
+
+14
+00:01:05,860 --> 00:01:08,450
+stronie faktycznego dotarcia do elementu, ktry
+
+15
+00:01:08,500 --> 00:01:09,670
+chcesz zmieni.
+

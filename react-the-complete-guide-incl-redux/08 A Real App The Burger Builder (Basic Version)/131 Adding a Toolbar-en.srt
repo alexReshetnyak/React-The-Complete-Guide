@@ -1,0 +1,452 @@
+1
+00:00:02,170 --> 00:00:09,640
+Now that the core burger builder functionality is finished for now and as I said, we will revisit this
+
+2
+00:00:09,640 --> 00:00:15,790
+later in this course to also submit this to a server, to have multiple pages in this application and
+
+3
+00:00:15,790 --> 00:00:16,580
+much more,
+
+4
+00:00:16,750 --> 00:00:23,860
+before we move towards these steps, let's finish this app by adding a bar and a sideDrawer.
+
+5
+00:00:23,890 --> 00:00:30,160
+This of course is crucial because later once we add multiple pages, we need to have some way of navigating
+
+6
+00:00:30,160 --> 00:00:30,680
+there
+
+7
+00:00:30,880 --> 00:00:33,850
+and every application should probably have a toolbar,
+
+8
+00:00:33,880 --> 00:00:35,810
+it makes it look better.
+
+9
+00:00:35,980 --> 00:00:41,590
+So let's close the components, the burger folder in the components folder and layout in UI so that
+
+10
+00:00:41,590 --> 00:00:44,480
+we have a clean working project here
+
+11
+00:00:44,650 --> 00:00:50,220
+and let's add a new folder in the components folder over there now.
+
+12
+00:00:50,740 --> 00:00:57,790
+I'll call it navigation because I want to store all navigation related components like the toolbar, like
+
+13
+00:00:57,790 --> 00:01:03,700
+the side drawer in there and the toolbar is actually with what I'll start.
+
+14
+00:01:03,880 --> 00:01:09,100
+So in navigation, let me add a new folder toolbar, and in there
+
+15
+00:01:09,100 --> 00:01:14,120
+unsurprisingly, let's add a toolbar.js file.
+
+16
+00:01:14,440 --> 00:01:23,110
+Now that toolbar.js file, how should this look like, how should the toolbar look like? It's actually going
+
+17
+00:01:23,110 --> 00:01:24,900
+to be a functional component
+
+18
+00:01:24,910 --> 00:01:27,550
+because it don't need to manage any state in there.
+
+19
+00:01:28,000 --> 00:01:36,080
+I expect to get some props there and then as you know, we're outputting some jsx. For that reason,
+
+20
+00:01:36,160 --> 00:01:44,080
+let's also import react from react here and let's export this toolbar function here as the default
+
+21
+00:01:44,110 --> 00:01:45,820
+of this file.
+
+22
+00:01:45,820 --> 00:01:50,750
+How shall the toolbar then look like from jsx perspective?
+
+23
+00:01:50,950 --> 00:01:58,630
+I want to have a wrapping header element because the toolbar is the header of my web application and inside
+
+24
+00:01:58,630 --> 00:02:02,290
+there, I want to have a couple of elements in the end,
+
+25
+00:02:02,380 --> 00:02:09,910
+I want to have some button which opens the side drawer and we're going to remove this dummy placeholder
+
+26
+00:02:09,910 --> 00:02:12,900
+here and replace it with real button later on
+
+27
+00:02:12,900 --> 00:02:14,980
+but for now, let's keep this div here.
+
+28
+00:02:15,250 --> 00:02:16,610
+So I want to have that,
+
+29
+00:02:17,000 --> 00:02:28,000
+then I also want to have a div which contains my logo and will have to add this and thereafter, I want
+
+30
+00:02:28,000 --> 00:02:32,080
+to have a nav item which contains my navigation links.
+
+31
+00:02:32,080 --> 00:02:38,590
+So basically this will contain some unordered list with all the links and I'll remove the unordered list
+
+32
+00:02:38,590 --> 00:02:44,730
+for now and just leave the ...placeholder here. So all these are placeholders right now, we'll
+
+33
+00:02:44,800 --> 00:02:50,620
+replace these elements with their own components, a logo component which we can reuse, a menu component
+
+34
+00:02:50,620 --> 00:02:55,860
+which we could use and a navigation items component which we also want to reuse
+
+35
+00:02:55,900 --> 00:03:01,780
+since we also have a side drawer for mobile layouts since we might not always have all navigation items
+
+36
+00:03:01,780 --> 00:03:02,730
+in the toolbar,
+
+37
+00:03:02,740 --> 00:03:08,110
+sometimes you want to shift them to the side drawer and therefore having a reusable component for these
+
+38
+00:03:08,110 --> 00:03:10,480
+items makes a lot of sense.
+
+39
+00:03:10,720 --> 00:03:15,350
+Before creating any subcomponents, let's create that base toolbar though
+
+40
+00:03:15,520 --> 00:03:18,600
+and of course this toolbar will also need some styling.
+
+41
+00:03:18,810 --> 00:03:21,780
+So for that, I'll add my toolbar.css file
+
+42
+00:03:21,790 --> 00:03:23,620
+here too. In there,
+
+43
+00:03:23,620 --> 00:03:29,680
+I'll create a toolbar css class which we can later import because we're using css modules, of
+
+44
+00:03:29,680 --> 00:03:37,230
+course and I want to have a toolbar which has a height of 56px and the width of 100%.
+
+45
+00:03:37,240 --> 00:03:41,690
+Now the goal here is to develop this application mobile first,
+
+46
+00:03:41,750 --> 00:03:49,890
+so I'll first of all set up the toolbar settings here for mobile devices and then, we'll have a look
+
+47
+00:03:49,930 --> 00:03:56,370
+later in this module here where we need to adjust it to also look good on desktop devices.
+
+48
+00:03:56,530 --> 00:04:02,130
+Though for the toolbar, most settings should actually work for both desktop and mobile, which is why
+
+49
+00:04:02,130 --> 00:04:07,780
+I start with the toolbar. So let's now set the position to fix so that it's always at the top even
+
+50
+00:04:07,780 --> 00:04:10,780
+if we scroll and for it to sit on the top,
+
+51
+00:04:10,780 --> 00:04:14,740
+of course I need to set top 0 and left 0.
+
+52
+00:04:15,020 --> 00:04:17,850
+I then give the toolbar a background color,
+
+53
+00:04:18,010 --> 00:04:21,600
+and here I already picked a nice brownish color,
+
+54
+00:04:21,670 --> 00:04:24,480
+#703B09,
+
+55
+00:04:24,820 --> 00:04:32,680
+that should look really nice. I'll set the display to flex so that all the items in the toolbar are aligned
+
+56
+00:04:32,680 --> 00:04:39,070
+next to each other because the default directional flexbox is row, positioning elements next to each
+
+57
+00:04:39,100 --> 00:04:44,230
+other even if they are block elements and check out some articles about flexbox
+
+58
+00:04:44,230 --> 00:04:51,100
+if this concept is totally new to you. Flexbox has this justify content property which defines how the
+
+59
+00:04:51,100 --> 00:04:54,140
+elements which are wrapped by the toolbar
+
+60
+00:04:54,190 --> 00:04:57,670
+class item here should be spread out
+
+61
+00:04:57,670 --> 00:05:04,810
+and here, I want to use space between so that the available space is filled with the elements inside this
+
+62
+00:05:04,840 --> 00:05:09,950
+toolbar element in the end and that they automatically keep some distance from each other.
+
+63
+00:05:10,320 --> 00:05:13,090
+Align-items then determines how they should be aligned
+
+64
+00:05:13,090 --> 00:05:16,380
+vertically and there I want to center elements.
+
+65
+00:05:16,420 --> 00:05:18,440
+Finally I'll add some padding,
+
+66
+00:05:18,620 --> 00:05:21,430
+the padding here should be zero from top and bottom
+
+67
+00:05:21,520 --> 00:05:28,930
+but 20px from left and right and then I'll set up box-sizing and set this to border box to make sure
+
+68
+00:05:29,080 --> 00:05:32,890
+that the toolbar is sized correctly even with the padding.
+
+69
+00:05:33,220 --> 00:05:38,300
+And finally I need a set index and here will pick 90, important of course,
+
+70
+00:05:38,320 --> 00:05:43,450
+this number here has to be lower than the number we picked for the backdrop
+
+71
+00:05:43,600 --> 00:05:45,080
+and there I chose 100
+
+72
+00:05:45,250 --> 00:05:48,790
+because the backdrop should go above the toolbar, at least
+
+73
+00:05:48,820 --> 00:05:54,880
+I want to have this behavior here. Now I'll add one more rule in the css file,
+
+74
+00:05:55,100 --> 00:06:03,460
+I want to control how the nav item is displayed when nested inside a toolbar which it of course will be, there
+
+75
+00:06:03,470 --> 00:06:09,980
+I want to set a height of 100% too so that in the navigation, I can then also control the height
+
+76
+00:06:10,100 --> 00:06:16,520
+relative to the toolbar height and can make sure that the navigation items span the full height of
+
+77
+00:06:16,520 --> 00:06:19,880
+this toolbar. With that, that should do it
+
+78
+00:06:19,880 --> 00:06:22,410
+for now, let's go back to the toolbar.js
+
+79
+00:06:22,520 --> 00:06:32,780
+file now and let's import our css classes, so I'll simply add import classes from ./toolbar
+
+80
+00:06:32,790 --> 00:06:41,610
+css and then I'll add this to my header, I'll there add a class name and set this to classes and use that
+
+81
+00:06:41,630 --> 00:06:43,280
+toolbar css class
+
+82
+00:06:43,290 --> 00:06:44,570
+we just created
+
+83
+00:06:44,840 --> 00:06:51,570
+and as always keep in mind, this import in the end simply imports a couple of strings,
+
+84
+00:06:51,600 --> 00:06:59,210
+the dynamically created css class names which we simply adjusted to be scoped to this component and
+
+85
+00:06:59,210 --> 00:07:03,120
+then, we're assigning the class name which was generated here.
+
+86
+00:07:03,260 --> 00:07:08,380
+Now with that, we should have a basic working toolbar,
+
+87
+00:07:08,390 --> 00:07:10,430
+now of course we want to use it
+
+88
+00:07:10,730 --> 00:07:14,830
+and where shall we add this toolbar then?
+
+89
+00:07:14,910 --> 00:07:19,100
+Now of course you could argue that you want to add it in the burger builder because that is where we want
+
+90
+00:07:19,100 --> 00:07:20,640
+to have a toolbar at the top
+
+91
+00:07:20,930 --> 00:07:24,620
+but in the end, we want to have a toolbar at the top of any page we load.
+
+92
+00:07:24,770 --> 00:07:29,470
+Therefore we could use the app.js file but the best place of course is our layout.
+
+93
+00:07:29,510 --> 00:07:35,210
+This in the end is about laying out our page and this is where we already added some placeholders for the
+
+94
+00:07:35,210 --> 00:07:36,820
+toolbar here.
+
+95
+00:07:36,950 --> 00:07:45,260
+So in the layout component, let's import the newly created toolbar component from that toolbar file under
+
+96
+00:07:45,350 --> 00:07:49,010
+navigation toolbar and then its toolbar.js,
+
+97
+00:07:49,010 --> 00:07:56,540
+as always without the file extension. And then we can simply replace our placeholder here with these
+
+98
+00:07:56,600 --> 00:07:59,210
+newly imported toolbar component,
+
+99
+00:07:59,210 --> 00:08:03,660
+we can use a self-closing component. And now make sure to save all files,
+
+100
+00:08:03,650 --> 00:08:09,770
+make sure npm start is still running and you should see the toolbar like this. Now
+
+101
+00:08:09,830 --> 00:08:11,020
+it's not super pretty,
+
+102
+00:08:11,030 --> 00:08:15,770
+the text probably should be white but we're going to replace all these things with some real content
+
+103
+00:08:15,770 --> 00:08:16,260
+later on
+
+104
+00:08:16,260 --> 00:08:25,160
+anyways. One thing we also can notice is that our main page here is overlapped by the toolbar so that
+
+105
+00:08:25,250 --> 00:08:34,160
+main element here which has a margin top of 16px should probably add these 16px to the toolbar
+
+106
+00:08:34,220 --> 00:08:40,430
+height of 56px which we set up. So we can quickly do that in the layout.css file
+
+107
+00:08:40,520 --> 00:08:46,700
+where I do define this content class which sets the margin top and I want to change this to 72 which
+
+108
+00:08:46,700 --> 00:08:53,870
+essentially is just 56px height of the toolbar plus the 16px height or margin top
+
+109
+00:08:53,870 --> 00:08:56,230
+actually I wanted to add from before.
+
+110
+00:08:56,540 --> 00:08:59,090
+Now if I save this, you see the burger is nicely
+
+111
+00:08:59,090 --> 00:09:00,960
+positioned again.
+
+112
+00:09:01,040 --> 00:09:04,160
+So with that we add the toolbar, in the next step
+
+113
+00:09:04,190 --> 00:09:09,020
+let's work on that logo's so that we get a nice looking logo in this application too.
+

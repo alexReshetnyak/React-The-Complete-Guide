@@ -1,0 +1,204 @@
+1
+00:00:02,100 --> 00:00:06,510
+Quindi nell'ultima conferenza abbiamo scritto il nostro primo test, che ovviamente  bello,
+
+2
+00:00:06,540 --> 00:00:10,360
+ora scriviamo un altro test per lo stesso componente per ora.
+
+3
+00:00:10,530 --> 00:00:16,560
+Quindi copier questa funzione e all'interno della funzione descritta, la incider semplicemente qui, ora
+
+4
+00:00:16,560 --> 00:00:18,460
+che altro potremmo testare?
+
+5
+00:00:18,750 --> 00:00:21,750
+Ovviamente potremmo ovviamente testare il contrario,
+
+6
+00:00:21,780 --> 00:00:29,980
+vogliamo avere tre elementi di navigazione se siamo autenticati, quindi per questo abbiamo semplicemente bisogno di passare
+
+7
+00:00:30,000 --> 00:00:38,280
+il puntello isAuthenticated e regolare il nostro test. Quindi dovremmo rendere tre elementi di navigazione se
+
+8
+00:00:38,640 --> 00:00:42,110
+autenticati, se no, ma se autenticati.
+
+9
+00:00:42,240 --> 00:00:45,930
+Ora per quello, dobbiamo cambiare il componente che rendiamo,
+
+10
+00:00:45,930 --> 00:00:53,340
+non sono pi elementi di navigazione ma gli elementi di navigazione con una propriet sono Autenticati e
+
+11
+00:00:53,340 --> 00:01:00,420
+passarlo cos passer automaticamente come vero, quindi ci aspettiamo di trovare gli elementi di navigazione ma ci
+
+12
+00:01:00,420 --> 00:01:02,350
+aspettiamo di trovarne tre di
+
+13
+00:01:02,610 --> 00:01:05,660
+loro e basta. Con i test npm ancora
+
+14
+00:01:05,670 --> 00:01:09,850
+in esecuzione, tutto ci che devi fare  salvare questo e ora dovresti
+
+15
+00:01:09,910 --> 00:01:12,100
+vedere che sono passati due test.
+
+16
+00:01:12,330 --> 00:01:15,450
+Ora ovviamente possiamo scrivere pi test come questo ma
+
+17
+00:01:15,450 --> 00:01:21,510
+se facciamo costantemente lo stesso all'inizio del test vale a dire che abbiamo reso un wrapper anche se
+
+18
+00:01:21,510 --> 00:01:24,300
+i puntelli sono stati modificati ma possiamo farlo
+
+19
+00:01:24,540 --> 00:01:31,910
+in modo diverso, quindi se facciamo costantemente lo stesso, l  un metodo di supporto che possiamo usare all'interno della funzione descritta qui.
+
+20
+00:01:31,950 --> 00:01:39,360
+ la funzione beforeEach, come suggerisce il nome, questa  una funzione che verr automaticamente eseguita, ma
+
+21
+00:01:39,380 --> 00:01:44,470
+per ognuno dei tuoi test, hai anche una funzione afterEach per la
+
+22
+00:01:44,520 --> 00:01:50,640
+pulizia dopo tutti i test, se necessario. Quindi qui  prima di Each e poi prima di Each,
+
+23
+00:01:50,670 --> 00:01:54,220
+possiamo fare alcune impostazioni generali, ovviamente, prima che una funzione venga considerata come
+
+24
+00:01:54,240 --> 00:01:57,780
+argomento e questa  la funzione che verr eseguita prima di ogni test.
+
+25
+00:01:57,780 --> 00:02:03,030
+Quindi con quello che far creer un wrapper variabile con la
+
+26
+00:02:03,270 --> 00:02:10,670
+parola chiave let e poi in beforeEach, voglio renderizzare questo componente con la funzione shallow e
+
+27
+00:02:10,680 --> 00:02:12,950
+archiviarlo in questa variabile wrapper.
+
+28
+00:02:12,990 --> 00:02:20,370
+Ora poich tutte le funzioni sono eseguite in questa funzione descrittiva esterna, la variabile wrapper  disponibile in tutte e quindi
+
+29
+00:02:20,440 --> 00:02:21,460
+tutto ci che
+
+30
+00:02:21,660 --> 00:02:25,220
+dobbiamo fare  eliminare la parola chiave const, come questa
+
+31
+00:02:25,410 --> 00:02:27,720
+e ora abbiamo accesso al wrapper.
+
+32
+00:02:27,720 --> 00:02:30,740
+Ora, se salviamo questo, dovrebbe eseguire di
+
+33
+00:02:31,050 --> 00:02:34,490
+nuovo tutto e ora, ovviamente, abbiamo un test fallito.
+
+34
+00:02:34,620 --> 00:02:40,510
+Possiamo ora esaminarlo, il test che dovrebbe rendere tre elementi di elementi di navigazione
+
+35
+00:02:40,740 --> 00:02:48,150
+se l'autenticazione fallisce e ha senso che lo faccia perch non siamo mai autenticati, rendiamo il wrapper
+
+36
+00:02:48,180 --> 00:02:52,530
+solo una volta qui e non passiamo isAuthenticated ad esso
+
+37
+00:02:52,560 --> 00:02:54,110
+cos sono non autenticati,
+
+38
+00:02:54,330 --> 00:02:58,570
+questo test utilizza ovviamente lo stesso wrapper e quindi fallisce.
+
+39
+00:02:58,590 --> 00:03:01,970
+Ora quello che possiamo fare qui  due
+
+40
+00:03:01,980 --> 00:03:09,420
+cose, la prima  che possiamo ovviamente usare il wrapper e impostarlo uguale a shallow con gli elementi
+
+41
+00:03:09,420 --> 00:03:17,080
+di navigazione qui e passare isAuthenticated come abbiamo fatto in precedenza, se lo salviamo, entrambi i test hanno successo.
+
+42
+00:03:17,520 --> 00:03:24,000
+Questa  un'opzione, ma possiamo anche usare un altro metodo utile del pacchetto enzimatico, possiamo accedere al wrapper e
+
+43
+00:03:24,000 --> 00:03:24,810
+quindi esiste
+
+44
+00:03:25,050 --> 00:03:29,500
+un metodo di puntamento impostato che possiamo eseguire su quel wrapper, quindi su
+
+45
+00:03:29,580 --> 00:03:37,500
+qualsiasi cosa che memorizzi un elemento superficiale o altro elemento di rendering reso. E per impostare oggetti di scena, passiamo semplicemente un oggetto
+
+46
+00:03:37,500 --> 00:03:43,770
+javascript con coppie di valori chiave in cui le chiavi sono i nomi dell'elica e i
+
+47
+00:03:43,830 --> 00:03:45,740
+valori, bene i valori degli
+
+48
+00:03:45,990 --> 00:03:50,320
+oggetti di scena cos qui potremmo impostare isautentato su true ora.
+
+49
+00:03:50,580 --> 00:03:54,310
+E ora, se salviamo, anche il secondo test passa ancora adesso con il pi
+
+50
+00:03:54,450 --> 00:04:00,420
+elegante metodo di supporto degli oggetti di scena del pacchetto enzimatico.  cos che puoi scrivere pi
+
+51
+00:04:00,420 --> 00:04:03,610
+test e farli lavorare bene insieme.
+

@@ -1,0 +1,192 @@
+1
+00:00:02,180 --> 00:00:07,450
+Entonces, cuando te enfrentas es que todos los accesorios faltan en nuestros componentes envueltos como
+
+2
+00:00:07,450 --> 00:00:09,110
+el nombre y la edad.
+
+3
+00:00:09,120 --> 00:00:14,820
+La razn para esto es que una hora de orden superior con componente de clase que
+
+4
+00:00:15,330 --> 00:00:20,480
+estamos emitiendo componente de rap pero componente envuelto puede ser Jess o la persona Jess.
+
+5
+00:00:20,940 --> 00:00:27,870
+Ahora bien, tanto el ttulo como los accesorios que esperara la persona como componentes faltan
+
+6
+00:00:27,900 --> 00:00:30,250
+porque estos componentes obtienen accesorios.
+
+7
+00:00:30,660 --> 00:00:37,050
+Excepto por ahora ya no lo hacen porque son nuestro componente envolvente y no pasamos ningn
+
+8
+00:00:37,050 --> 00:00:37,950
+accesorio aqu.
+
+9
+00:00:37,950 --> 00:00:43,080
+Ahora, por supuesto, no podemos codificar los accesorios aqu porque no es como si tuviramos que pasar el nombre aqu.
+
+10
+00:00:43,080 --> 00:00:49,470
+Eso funcionara para el componente persona, pero el componente EP o cualquier otro componente que podamos
+
+11
+00:00:49,470 --> 00:00:52,680
+envolver con esto podra requerir accesorios totalmente diferentes.
+
+12
+00:00:53,050 --> 00:00:59,310
+Hay una sola cosa simple que debemos hacer simplemente pasar los accesorios existentes.
+
+13
+00:00:59,460 --> 00:01:01,120
+Ahora, cmo haces eso?
+
+14
+00:01:01,410 --> 00:01:06,840
+Usted lo aprovecha como operador sexual el operador de propagacin.
+
+15
+00:01:07,200 --> 00:01:14,550
+Tenga en cuenta que los accesorios son solo el objeto solo un objeto de pares de valores clave.
+
+16
+00:01:15,540 --> 00:01:19,830
+Ahora puede generar contenido dinmico en este componente empaquetado.
+
+17
+00:01:19,980 --> 00:01:28,020
+Estaban sentados con un solo brazalete y solan marcar el operador de propagacin en el objeto de utilera para simplemente
+
+18
+00:01:28,020 --> 00:01:33,440
+dividirlo en estos pares de valores clave y pasarlos al componente de envolver.
+
+19
+00:01:33,510 --> 00:01:39,320
+Este ndice puede parecer extrao al principio, pero al final simplemente significa pasar los puntales a medida que
+
+20
+00:01:39,380 --> 00:01:42,150
+los obtenga, no haga nada con ellos simplemente pselos.
+
+21
+00:01:42,150 --> 00:01:48,100
+Dividirlos y mantener los pares de valores para que pueda asignarlos de manera vlida al componente dis wrap.
+
+22
+00:01:48,540 --> 00:01:52,040
+Ahora con eso, si guarda esto, ver inmediatamente la recarga.
+
+23
+00:01:52,080 --> 00:01:58,550
+El ttulo est de vuelta y tambin lo estn nuestros datos actuales y todo funciona como lo haca antes.
+
+24
+00:01:58,830 --> 00:02:04,440
+que este componente de orden superior no tiene que devolver un componente funcional como lo hace aqu.
+
+25
+00:02:04,830 --> 00:02:10,430
+Entonces ahora tenemos un componente de orden superior verdaderamente reutilizable y luego hay otra cosa que mencion
+
+26
+00:02:10,470 --> 00:02:13,860
+Depende de lo que quieras hacer en tu componente de orden superior.
+
+27
+00:02:13,860 --> 00:02:19,920
+Si necesita acceso a los anzuelos del ciclo de vida, por ejemplo, si planea llegar a la web
+
+28
+00:02:19,950 --> 00:02:23,860
+y buscar al usuario autenticado actualmente y hacer algo al respecto.
+
+29
+00:02:23,970 --> 00:02:31,200
+Si ese es su plan, necesitar un componente de estado completo y puede hacerlo copiando ese
+
+30
+00:02:31,200 --> 00:02:34,240
+cdigo y duplicando los comentarios all arriba.
+
+31
+00:02:34,620 --> 00:02:37,050
+Y ahora simplemente lo contest de nuevo.
+
+32
+00:02:37,410 --> 00:02:44,670
+el componente o incluso el componente del curso que los dentales necesitan importar del componente de repeticin.
+
+33
+00:02:44,670 --> 00:02:50,510
+En lugar de devolver una funcin, tambin puede devolver una clase que ample
+
+34
+00:02:50,710 --> 00:02:55,080
+Y ahora que ampliamos esto, tenemos una sintaxis normal.
+
+35
+00:02:55,150 --> 00:03:01,440
+Como sabes, donde deberamos tener un mtodo de renderizado en el mtodo de renderizado de Meffert.
+
+36
+00:03:01,530 --> 00:03:04,980
+Al final devolveremos algo de j como x.
+
+37
+00:03:05,040 --> 00:03:12,240
+As como lo hacemos en componentes con estado normal y, como siempre, se puede acceder a las props de las
+
+38
+00:03:12,330 --> 00:03:20,050
+diferencias con estos apoyos, de modo que el estado normal de las diferencias de componentes sea la palabra clave de declasse.
+
+39
+00:03:20,130 --> 00:03:26,690
+No hay nombre porque es como una clase annima donde devolverlo tena una fbrica de clases. Aqu tenemos
+
+40
+00:03:26,700 --> 00:03:32,900
+una funcin que devuelve una clase en el MOND y el nombre de la clase s importa.
+
+41
+00:03:32,910 --> 00:03:38,600
+Lo que nos importa es el mtodo de representacin con el que se envuelve un componente con un div.
+
+42
+00:03:38,610 --> 00:03:41,240
+En este caso, un nombre de clase.
+
+43
+00:03:41,400 --> 00:03:45,150
+Entonces ahora con eso, si lo guardo, funciona perfectamente bien tambin.
+
+44
+00:03:45,150 --> 00:03:48,750
+Ahora tenemos un componente de embalaje que es una clase.
+
+45
+00:03:49,020 --> 00:03:53,350
+Entonces estos son componentes de orden superior y usted vio algunos ejemplos aqu.
+
+46
+00:03:53,460 --> 00:03:55,750
+No los vers de nuevo para el curso.
+
+47
+00:03:55,770 --> 00:04:01,710
+Y como mencion, hay muchos paquetes de terceros que en realidad usan componentes de mayor orden, por lo que
+
+48
+00:04:02,040 --> 00:04:04,800
+es un foro en el que los vers mucho.
+

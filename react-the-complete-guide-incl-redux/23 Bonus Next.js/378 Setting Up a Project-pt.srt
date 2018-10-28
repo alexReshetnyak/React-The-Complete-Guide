@@ -1,0 +1,296 @@
+1
+00:00:02,060 --> 00:00:08,940
+Ento, vamos comear a configurar um projeto nextJS, voc pode encontrar todas as instrues nessa pgina do github
+
+2
+00:00:08,960 --> 00:00:15,230
+e  um timo lugar para se aprofundar. Como voc pode ver l, nextjs na verso mais recente
+
+3
+00:00:15,230 --> 00:00:21,550
+no momento em que estou gravando isso requer reagir 16 que, sob o cap, introduziu algumas mudanas de quebra e qual
+
+4
+00:00:21,620 --> 00:00:24,330
+ a verso que usamos ao longo do curso.
+
+5
+00:00:24,770 --> 00:00:28,150
+Ento estamos bem, vamos usar essa verso aqui
+
+6
+00:00:28,340 --> 00:00:30,550
+tambm e agora vamos instalar
+
+7
+00:00:30,570 --> 00:00:37,290
+nextjs, este pacote com este comando, como voc v, voc ainda instala react e react-dom.
+
+8
+00:00:37,640 --> 00:00:40,100
+Agora para rodar isso, voc precisa de um projeto vazio
+
+9
+00:00:40,100 --> 00:00:43,120
+e aqui eu tenho um j carregado no meu IDE, a nica
+
+10
+00:00:43,130 --> 00:00:46,980
+coisa que tenho aqui  um arquivo gitignore porque eu vou estar usando o git.
+
+11
+00:00:47,240 --> 00:00:53,720
+Agora, antes de tudo, para poder executar comandos npm, precisamos colocar este projeto sob controle de npm, voc faz
+
+12
+00:00:53,720 --> 00:00:59,150
+isso executando npm init, ento voc  perguntado sobre algumas questes que voc pode simplesmente responder
+
+13
+00:00:59,150 --> 00:01:02,840
+com yes apenas pressionando enter . Depois de passar por todas essas
+
+14
+00:01:02,840 --> 00:01:06,510
+perguntas, voc recebe um pacote. arquivo json que  usado para gerenciar as dependncias.
+
+15
+00:01:06,710 --> 00:01:12,830
+Eu falo sobre a criao deste arquivo com um pouco mais de detalhes no mdulo onde criamos nosso prprio projeto
+
+16
+00:01:12,830 --> 00:01:14,180
+a partir do zero.
+
+17
+00:01:14,450 --> 00:01:21,320
+Agora podemos executar o comando que voc viu na pgina do github aqui, npm install --salvar com
+
+18
+00:01:21,500 --> 00:01:23,650
+esses trs pacotes, next, react
+
+19
+00:01:23,700 --> 00:01:28,540
+e react-dom porque nextjs  um aplicativo de construo de biblioteca para
+
+20
+00:01:28,550 --> 00:01:34,280
+reagir, ele oferece recursos extras, mas nos bastidores ou tambm de uma perspectiva de
+
+21
+00:01:34,280 --> 00:01:37,830
+cdigo, o que voc vai escrever, ainda assim tudo reage.
+
+22
+00:01:37,850 --> 00:01:43,400
+Quando esse comando terminar e todos esses pacotes estiverem instalados em suas verses mais recentes, poderemos
+
+23
+00:01:43,400 --> 00:01:46,600
+voltar ao repositrio do github para encontrar mais instrues.
+
+24
+00:01:46,640 --> 00:01:50,520
+Agora devemos adicionar esta seo de scripts ao pacote. json ento vamos
+
+25
+00:01:50,680 --> 00:01:56,900
+fazer isso, no pacote. json, na verdade ns temos uma seo
+
+26
+00:01:56,900 --> 00:02:03,890
+de script, ns podemos substitu-la com a que acabamos de pegar do nosso arquivo github aqui,
+
+27
+00:02:04,090 --> 00:02:06,380
+ento script deve ser adicionado assim.
+
+28
+00:02:06,380 --> 00:02:08,440
+Com isso, podemos comear a
+
+29
+00:02:08,450 --> 00:02:11,090
+us-lo e agora que temos esse
+
+30
+00:02:11,120 --> 00:02:15,880
+importante sistema de arquivos sobre o qual eu estava falando, no nextjs,
+
+31
+00:02:15,920 --> 00:02:24,110
+o sistema de arquivos  nossa API principal, no usamos roteador com nextjs para criar rotas e permitir ao usurio
+
+32
+00:02:24,110 --> 00:02:25,470
+para visitar /
+
+33
+00:02:25,700 --> 00:02:36,290
+auth, / user e assim por diante, em vez disso, criamos pastas e arquivos para refletir nossas URLs no sistema de arquivos e nextJS, o pacote
+
+34
+00:02:36,470 --> 00:02:42,870
+analisar automaticamente isso e usar seu prprio roteador interno para lidar com todo o trabalho pesado.
+
+35
+00:02:42,950 --> 00:02:53,040
+Agora, ao longo do caminho, ele pr-processa o contedo que carregamos como pginas no servidor, ele automaticamente divide o cdigo, ento
+
+36
+00:02:53,120 --> 00:02:58,670
+carrega com preguia que, tudo isso fora da caixa sem configurar nada.
+
+37
+00:02:58,700 --> 00:03:04,170
+ por isso que o prximo pacote  to bom e pode valer a pena dar uma olhada no
+
+38
+00:03:04,190 --> 00:03:10,880
+seu prximo projeto, um monte de coisas  apenas trabalhar fora da caixa, ao preo de ter que manter uma certa estrutura de arquivos.
+
+39
+00:03:11,540 --> 00:03:15,560
+Essa estrutura de arquivos  principalmente sobre
+
+40
+00:03:15,710 --> 00:03:21,820
+essa pasta de pginas, vamos cri-la. Voc pode cri-lo diretamente na pasta raiz ao lado
+
+41
+00:03:21,830 --> 00:03:27,470
+de mdulos do n e os outros arquivos aqui, ento, voc cria uma nova pasta e
+
+42
+00:03:27,470 --> 00:03:34,730
+l, voc cria seus arquivos javascript que sero reagir componente que ir conter e exportar reagir componentes e Agora, esses nomes
+
+43
+00:03:34,760 --> 00:03:40,870
+de arquivos definem os diferentes caminhos que voc tem. Voc tambm pode ter uma subpasta como
+
+44
+00:03:40,940 --> 00:03:47,270
+auth l e adicionar, por exemplo, usurio. js, voc alcanaria este arquivo no seu domnio /
+
+45
+00:03:47,270 --> 00:03:52,440
+auth / user, se voc nomear este ndice. js, voc chegaria em / auth.
+
+46
+00:03:52,520 --> 00:03:56,150
+Vamos tambm adicionar um ndice. js arquivo sob a pasta
+
+47
+00:03:56,210 --> 00:04:02,060
+de pginas, agora temos algo como exemplo. com / e chegaria a esse arquivo e / auth e
+
+48
+00:04:02,060 --> 00:04:02,990
+alcanaria esse arquivo.
+
+49
+00:04:02,990 --> 00:04:05,060
+Agora vamos adicionar um componente em ambos
+
+50
+00:04:05,150 --> 00:04:10,520
+e normalmente aqui, voc usa componentes funcionais, mas  claro que voc tambm pode usar stateful com
+
+51
+00:04:10,520 --> 00:04:13,700
+as palavras-chave class no caso de precisar gerenciar o estado.
+
+52
+00:04:14,120 --> 00:04:16,490
+Ento, vamos criar um funcional aqui,
+
+53
+00:04:16,580 --> 00:04:21,260
+eu vou nomear este indexPage, o nome  at voc e voc
+
+54
+00:04:21,650 --> 00:04:26,330
+sabe que a sintaxe aqui, onde voc poderia receber adereos, retornar algo.
+
+55
+00:04:26,330 --> 00:04:32,750
+Agora o que eu vou fazer  que todos importem reagir de reagir assim como voc aprendeu neste curso, isso
+
+56
+00:04:32,750 --> 00:04:35,430
+no muda porque ns ainda estamos usando jsx
+
+57
+00:04:35,570 --> 00:04:38,150
+aqui, bem, ainda no, mas faremos isso em
+
+58
+00:04:38,150 --> 00:04:40,810
+um segundo e eu exportar indexPage como padro.
+
+59
+00:04:40,820 --> 00:04:41,570
+Isso 
+
+60
+00:04:41,570 --> 00:04:46,720
+importante, voc ainda precisa exportar este otherwsie nextjs no pode fazer nada com isso.
+
+61
+00:04:46,730 --> 00:04:48,730
+Ento agora vamos simplesmente
+
+62
+00:04:48,730 --> 00:05:00,860
+adicionar algum cdigo aqui, como uma div onde dizemos h1 a pgina principal, assim. Agora vou copiar todo esse cdigo e
+
+63
+00:05:00,860 --> 00:05:09,100
+coloc-lo no outro ndice. js arquivo, eu vou nomear este authIndexPage e, claro, portanto, exportar esta constante
+
+64
+00:05:09,320 --> 00:05:12,750
+e l, eu vou dizer a pgina de ndice de autenticao.
+
+65
+00:05:12,770 --> 00:05:13,900
+Agora vamos salvar
+
+66
+00:05:13,910 --> 00:05:17,860
+isso e agora vamos executar um dos scripts que adicionamos, dev.
+
+67
+00:05:17,870 --> 00:05:25,400
+Agora, se voc executar o npm run dev, isso ir criar um servidor de desenvolvimento que construa o seu aplicativo e
+
+68
+00:05:25,400 --> 00:05:29,770
+renderize o servidor, tambm dando a voc coisas como recarga quente para
+
+69
+00:05:29,810 --> 00:05:31,580
+um ambiente de desenvolvimento realmente agradvel.
+
+70
+00:05:31,730 --> 00:05:39,020
+Se voc agora voltar ao navegador, voc pode realmente carregar isso em uma nova aba em localhost: 3000, l voc deve
+
+71
+00:05:39,470 --> 00:05:45,970
+ver sua pgina e se voc agora ir para / auth voc v a pgina de ndice de autenticao.
+
+72
+00:05:46,070 --> 00:05:52,790
+Portanto, sem configurarmos nenhum roteamento, podemos carregar esses dois componentes diferentes como pginas e, como eu disse, esses
+
+73
+00:05:52,790 --> 00:05:55,880
+componentes no precisam ser componentes funcionais, eles tambm
+
+74
+00:05:55,880 --> 00:05:58,030
+podem ser componentes baseados em classes.
+

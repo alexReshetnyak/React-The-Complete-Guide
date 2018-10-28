@@ -1,0 +1,132 @@
+1
+00:00:02,160 --> 00:00:09,220
+Ento, estou de volta ao nosso projeto finalizado, basicamente no mesmo estado em que o
+
+2
+00:00:09,690 --> 00:00:14,170
+implantamos e l, obviamente, se executarmos nosso aplicativo,  assim.
+
+3
+00:00:14,220 --> 00:00:16,080
+Temos o nosso construtor de
+
+4
+00:00:16,080 --> 00:00:19,320
+hambrgueres, podemos autenticar atravs do firebase, basta digitar
+
+5
+00:00:19,500 --> 00:00:25,560
+nossas credenciais, fazer o login e ento podemos comear a construir o hambrguer como sempre
+
+6
+00:00:25,560 --> 00:00:27,420
+fizemos ao longo deste curso,
+
+7
+00:00:27,420 --> 00:00:29,710
+ento nada de espetacular aqui.
+
+8
+00:00:29,850 --> 00:00:33,540
+Se dermos uma olhada no cdigo que deve ser
+
+9
+00:00:33,750 --> 00:00:41,170
+familiar para voc, lidamos com todas essas tarefas assncronas ou, na verdade, quaisquer efeitos colaterais, at mesmo sncronos,
+
+10
+00:00:41,280 --> 00:00:48,660
+ento coisas que no esto diretamente relacionadas  mudana do nosso repositrio redux, lidamos com todas essas coisas
+
+11
+00:00:48,660 --> 00:00:49,920
+criadores de ao.
+
+12
+00:00:49,920 --> 00:00:55,480
+Ento, aqui estou no arquivo de aes auth onde tenho todos os criadores de aes
+
+13
+00:00:55,560 --> 00:00:57,620
+relacionadas  autenticao, temos alguns sncronos
+
+14
+00:00:57,810 --> 00:01:03,860
+aqui, mas tambm temos coisas como acessar o armazenamento local e fazer o logout, que 
+
+15
+00:01:03,870 --> 00:01:07,300
+uma ao sncrona. isso, mas que voc poderia argumentar
+
+16
+00:01:07,440 --> 00:01:13,410
+e, novamente, isso no  necessariamente uma prtica recomendada, mas voc poderia argumentar que isso no
+
+17
+00:01:13,410 --> 00:01:15,900
+est realmente relacionado ao ato de despachar
+
+18
+00:01:15,960 --> 00:01:22,890
+uma ao, ento talvez voc no queira t-la nesse arquivo. E tambm temos aes assncronas, como o tempo limite do check-out, em que temos um tempo
+
+19
+00:01:22,890 --> 00:01:30,120
+limite definido e em que, em seguida, enviamos o logout aps um determinado tempo de expirao. E chegamos  web, fazemos solicitaes
+
+20
+00:01:30,120 --> 00:01:31,320
+de postagem
+
+21
+00:01:31,320 --> 00:01:35,630
+e obviamente temos que esperar que isso termine.
+
+22
+00:01:36,030 --> 00:01:40,230
+Ento, todas essas so coisas que temos nos criadores de ao
+
+23
+00:01:40,500 --> 00:01:43,850
+e como eu disse vrias vezes, isso no 
+
+24
+00:01:44,070 --> 00:01:51,840
+necessariamente ruim, mas voc pode argumentar que quer que os criadores de aes ou toda a idia de aes de
+
+25
+00:01:52,260 --> 00:02:00,480
+despacho sejam muito limpas, que voc no No quero ter nenhum outro cdigo l que no esteja relacionado a despachar uma ao
+
+26
+00:02:00,480 --> 00:02:04,020
+e  aqui que entra a saga do redux.
+
+27
+00:02:04,260 --> 00:02:08,600
+Ento, primeiro de tudo, vamos instal-lo para que possamos ver
+
+28
+00:02:08,850 --> 00:02:15,180
+como ele funciona, ento eu vou rodar o npm install --save e que  o
+
+29
+00:02:15,180 --> 00:02:18,910
+redux-saga, esse  o nome do pacote e como
+
+30
+00:02:19,020 --> 00:02:26,550
+sempre baix-lo, coloque uma entrada no pacote . json e, em seguida, dar-nos acesso a ele neste projeto e
+
+31
+00:02:26,550 --> 00:02:30,300
+vou reiniciar o servidor de desenvolvimento com o npm start novamente.
+
+32
+00:02:30,300 --> 00:02:35,900
+Agora podemos comear a trabalhar no projeto e podemos comear a usar o redux saga,
+
+33
+00:02:36,030 --> 00:02:38,420
+vamos fazer isso comeando no prximo vdeo.
+

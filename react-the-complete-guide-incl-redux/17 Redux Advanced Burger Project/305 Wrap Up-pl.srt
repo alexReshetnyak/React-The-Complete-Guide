@@ -1,0 +1,52 @@
+1
+00:00:02,190 --> 00:00:05,040
+W tym module dodalimy wiele logiki.
+
+2
+00:00:05,220 --> 00:00:12,120
+Teraz mamy zaawansowane wyszukiwanie redux z reduktorami refaktoryzowanymi za pomoc Leana, ktrych instrukcje dotyczce przypadkw
+
+3
+00:00:12,520 --> 00:00:20,730
+posuguj si kodem asynchronicznym z twrcami akcji, do ktrych stosujemy oprogramowanie porednie w naszym indeksie, po prostu dodaj,
+
+4
+00:00:20,730 --> 00:00:25,230
+e dodano funkcj X funk, aby mc mie twrcw akcji asynchronicznych.
+
+5
+00:00:25,230 --> 00:00:29,440
+Robimy duo rzeczy z relaksem, a my wci i to wszystko jest wane.
+
+6
+00:00:29,460 --> 00:00:34,140
+Nie rb wszystkiego, poniewa nie musimy zarzdza wszystkim za pomoc redux, tak jak ci pokazaem.
+
+7
+00:00:34,200 --> 00:00:39,430
+Wci moesz zarzdza jakim stanem, jak modalnym, jeli powinien by pokazywany, czy nie, przez lokalny
+
+8
+00:00:39,450 --> 00:00:40,670
+stan interfejsu uytkownika.
+
+9
+00:00:40,680 --> 00:00:43,810
+Podoba mi si dziaanie naszych aplikacji.
+
+10
+00:00:43,830 --> 00:00:46,820
+Nastpnym krokiem jest dodanie do niego uwierzytelnienia.
+
+11
+00:00:46,980 --> 00:00:50,470
+Poniewa nigdy nie jest to podstawowa funkcja, z ktrej korzysta wiele aplikacji.
+
+12
+00:00:50,610 --> 00:00:53,990
+I chc pokaza, jak edytowa d sposb reakcji.
+
+13
+00:00:54,090 --> 00:00:55,080
+Wic ruszmy to.
+

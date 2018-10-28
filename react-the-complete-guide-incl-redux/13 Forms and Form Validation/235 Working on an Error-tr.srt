@@ -1,0 +1,104 @@
+1
+00:00:02,290 --> 00:00:09,610
+Bu hatann veya alr listemizin deerini deitirdiimizde alglad son dersi sonlandrn, dorulama
+
+2
+00:00:09,610 --> 00:00:16,720
+kontrolmzle ilgili kii veri konteyneri ile ilikili olup onay geerliliini koruyorlar.
+
+3
+00:00:16,720 --> 00:00:19,570
+Kurallarn gerekli olup olmadn kontrol ediyoruz.
+
+4
+00:00:19,570 --> 00:00:21,820
+Sorun kurallardr.
+
+5
+00:00:22,060 --> 00:00:23,050
+Bu ne alyor.
+
+6
+00:00:23,050 --> 00:00:25,920
+Bu argmann kurallar ne anlama gelir?
+
+7
+00:00:26,260 --> 00:00:28,780
+Geerlilii kontrol etmeye nerde olduumuza bir gz atalm.
+
+8
+00:00:28,780 --> 00:00:34,420
+Buna giri deitirme ileyicisi diyoruz ve gncelleme form eleman deerini iletiyoruz.
+
+9
+00:00:34,540 --> 00:00:38,410
+Ve kurallar gncellendi form eleman geerlilii iin.
+
+10
+00:00:38,410 --> 00:00:46,400
+imdi, teslimat yntemi alr kutusu iin bu dorulama nesnesi mevcut deil.
+
+11
+00:00:46,810 --> 00:00:56,290
+Dolaysyla, eriemeyeceimiz bir ey zerinde gerekli olmayan eyleri aratrmaya almazsak, bunu dzeltmek iin iki yol
+
+12
+00:00:56,290 --> 00:00:56,970
+buluruz.
+
+13
+00:00:56,980 --> 00:01:05,770
+Birinci yol, alr kutu denetimine basite bo bir dorulama nesnesi eklemektir.
+
+14
+00:01:05,770 --> 00:01:11,520
+Gerekli dorulamaya erimek baarsz olmayacak, ancak sadece undefined olarak dnecektir.
+
+15
+00:01:11,530 --> 00:01:16,340
+Bu ekilde holanyorum nk imdi tm kontroller eit ekilde kuruldu.
+
+16
+00:01:16,360 --> 00:01:19,510
+Hepsinin dorulama zellii ve geerlilii olan bir mlk var.
+
+17
+00:01:19,510 --> 00:01:23,170
+Ve dorulamaya ihtiya duyulmazlarsa, bo olurlar.
+
+18
+00:01:23,170 --> 00:01:25,400
+Bu yzden onun yaklamndan holanyordum.
+
+19
+00:01:25,590 --> 00:01:32,380
+imdi alternatif de bir kontrol eklemek ve geerlilii kontrol etmek ve kurallar olup olmadn grmek olurdu.
+
+20
+00:01:32,500 --> 00:01:38,890
+Eer bu doruysaysa, yalnzca onu bulmak ve eer Yahudi deilse o halde neden basite
+
+21
+00:01:38,890 --> 00:01:41,390
+nlem iareti ekleyerek doruyu dndrmektir.
+
+22
+00:01:41,500 --> 00:01:47,430
+Hibir dorulama kurallar tanmlanmadysa, her kontrol geerlilii sonucunda her zaman dorudur.
+
+23
+00:01:47,470 --> 00:01:54,490
+Elbette hem iki gvenlik iin de uygulayabiliriz, ancak yine de bu bo dorulama nesnesini
+
+24
+00:01:54,490 --> 00:02:00,250
+en ok ekleyerek yaklam seviyorum nk tm denetimleri eit olarak yaplandryor.
+
+25
+00:02:00,250 --> 00:02:06,840
+imdi bu eklendi imdi bu kaydedersem, alma deerini yine de hatasz olarak deitirebiliriz.
+
+26
+00:02:06,850 --> 00:02:07,600
+Grdn gibi.
+

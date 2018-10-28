@@ -1,0 +1,120 @@
+1
+00:00:02,160 --> 00:00:05,730
+Teraz, kiedy uczymy si publikowa dane w ostatnim wykadzie,
+
+2
+00:00:05,730 --> 00:00:10,110
+poka ci rwnie, jak wysa prob o usunicie, aby naprawd j zawin.
+
+3
+00:00:10,230 --> 00:00:17,520
+Teraz, podobnie jak w przypadku wysyania danych, usunicie tutaj nie usunie adnych danych z zaplecza, tylko
+
+4
+00:00:17,520 --> 00:00:22,240
+odzwierciedla dane, ktre wysyamy, z nasz odpowiedzi, ktr otrzymujemy w zasadzie.
+
+5
+00:00:22,320 --> 00:00:27,570
+Ale wci mog pokaza ci, jak je wysyasz, a uywaby go na jakimkolwiek innym serwerze w ten sam sposb.
+
+6
+00:00:27,570 --> 00:00:34,850
+Oczywicie ten serwer musi zaakceptowa sowo delete HTTP dla danego adresu URL. Teraz przycisk usuwania znajduje si w penym
+
+7
+00:00:34,850 --> 00:00:36,650
+komponencie pocztowym, wic
+
+8
+00:00:36,870 --> 00:00:41,560
+po prostu podczmy ten przycisk do metody, ktra to
+
+9
+00:00:41,580 --> 00:00:42,830
+obsuguje, zaimplementuj
+
+10
+00:00:42,840 --> 00:00:51,090
+t metod tutaj, moe to by deletePostHandler, nie wymaga adnych danych wejciowych i zacznijmy t metod
+
+11
+00:00:51,450 --> 00:00:55,400
+tutaj do onClick, naley wykona t metod deletePostHandler.
+
+12
+00:00:55,500 --> 00:00:57,960
+Tutaj ju importujemy aksios, wic teraz po prostu
+
+13
+00:00:58,200 --> 00:01:05,860
+uyjmy axios i tam moemy uy, aby usun metod wysyania da usunicia. Metoda usuwania, whoops tutaj
+
+14
+00:01:06,080 --> 00:01:08,580
+musz doda
+
+15
+00:01:08,600 --> 00:01:10,890
+znak rwnoci.
+
+16
+00:01:10,940 --> 00:01:17,450
+Metoda Delete pobiera rwnie adres URL i musimy skierowa na niego konkretny wpis. Moemy wic po prostu pobra adres URL, ktrego
+
+17
+00:01:17,450 --> 00:01:20,690
+uywalimy do pobierania pojedynczego wpisu, to ten sam
+
+18
+00:01:20,690 --> 00:01:27,230
+adres URL, ktrego potrzebujemy do usunicia, i nie przekazujemy adnych dodatkowych danych, poniewa ten adres URL
+
+19
+00:01:27,230 --> 00:01:28,820
+zawiera ju wszystkie potrzebne
+
+20
+00:01:28,820 --> 00:01:36,870
+nam dane, dotyczy konkretnego zasobu, ktry powinien by usunite. Bd wtedy czy, poniewa znowu jest to asynchroniczne,
+
+21
+00:01:36,980 --> 00:01:45,560
+otrzymamy odpowied, a nastpnie bd mg zarejestrowa odpowied tutaj, aby zobaczy, co si stao na serwerze.
+
+22
+00:01:45,560 --> 00:01:46,460
+Zobaczmy teraz,
+
+23
+00:01:46,460 --> 00:01:49,710
+zaadujmy post i kliknij usu.
+
+24
+00:01:50,660 --> 00:01:55,200
+I widzisz, z powodzeniem otrzymujemy odpowied, nie otrzymujemy tutaj
+
+25
+00:01:55,250 --> 00:01:56,960
+rzeczywistych danych, wanie
+
+26
+00:01:56,990 --> 00:02:00,140
+to przywraca nam tutaj fikcyjny backend.
+
+27
+00:02:00,290 --> 00:02:03,780
+Ale kod statusu 200 wskazuje, e zakoczyo si
+
+28
+00:02:03,800 --> 00:02:11,960
+sukcesem, znowu tak naprawd nie zosta usunity, ale chc tylko pokaza, e wysyanie da usunicia rwnie jest tak
+
+29
+00:02:12,140 --> 00:02:19,100
+proste, jak wymiana jednej metody, uzyskanie lub wysanie, wymiana dla usunicia i oczywicie porwnywalne dostpne s
+
+30
+00:02:19,100 --> 00:02:21,690
+metody wprowadzania, poprawiania i tak dalej.
+

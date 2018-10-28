@@ -1,0 +1,104 @@
+1
+00:00:02,170 --> 00:00:07,210
+Salaycmz ekleyelim ve bu nedenle her eyden nce yapalm.
+
+2
+00:00:07,400 --> 00:00:12,000
+Re-act redux'dan salayc seildi.
+
+3
+00:00:12,000 --> 00:00:15,430
+Ve dediim gibi app bileenini bununla rtmek zorundayz.
+
+4
+00:00:15,430 --> 00:00:20,330
+Soru u ki tarayc ynlendiricisini ekliyoruz ya da eklemiyoruz.
+
+5
+00:00:21,350 --> 00:00:23,640
+Dions veya salayc.
+
+6
+00:00:23,660 --> 00:00:25,250
+Her eyi sarn.
+
+7
+00:00:25,250 --> 00:00:28,420
+Bu yzden tarayc ynlendiricisinin dna koyacaz.
+
+8
+00:00:28,430 --> 00:00:36,000
+yapar ve tepki verme zelliiyle ilgili bir ey de, reaktif ynlendirici ile tepki verir.
+
+9
+00:00:36,000 --> 00:00:41,630
+Bu, salayc bileeni tarafndan sarlr ve bu, kurulumu kullanmay istediimiz gibi
+
+10
+00:00:41,780 --> 00:00:44,480
+Ve babama geri dneceim ve bunu nasl dzelteceiz.
+
+11
+00:00:44,490 --> 00:00:51,890
+Temel olarak ilevsellii baladnzdan ve ynlendirme ilevselliinin birlikte altndan emin olmakla ilgisi vardr, nk her
+
+12
+00:00:51,940 --> 00:00:57,300
+ikisi de rtl olarak saran bileen zerinde baz sahne alm kuruyorlar.
+
+13
+00:00:57,420 --> 00:01:00,530
+Ve her eyin imdilik orada altndan emin olmalyz.
+
+14
+00:01:00,540 --> 00:01:02,230
+Maazamz da yaratalm.
+
+15
+00:01:02,400 --> 00:01:10,980
+Letonya'y redoks'dan ve ertesi gn sonbahar aylarnda ithal edelim ve hepsi de redktrmz almak iin bir ie
+
+16
+00:01:11,010 --> 00:01:12,270
+aktarma ilemi gerekletirelim.
+
+17
+00:01:12,340 --> 00:01:15,120
+Yani ithalat indirgeyeci.
+
+18
+00:01:15,360 --> 00:01:21,440
+Ve imdi maaza klasrne girmek zorundayz ve redktr dosyasndan aktarlanlar.
+
+19
+00:01:21,600 --> 00:01:28,250
+Daha sonra maazamz oluturabilir ve onu bir deikende veya sabit olarak depolayarak kesin adlandrlm maaza
+
+20
+00:01:28,680 --> 00:01:34,990
+haline getirebiliriz. Belki de redoksdan ithal ettiimiz create store yntemiyle oluturduk ve indirgeyiciye elbette geirdik.
+
+21
+00:01:35,160 --> 00:01:42,150
+Ve bunun zerine salayc bileeninde maaza zelliini ayarlayabilir ve sabit maazada
+
+22
+00:01:42,210 --> 00:01:50,610
+depolanm, ancak bir sr maaza olan ve bunu maaza mlkne geiren yaratlm maazamz geirebiliriz.
+
+23
+00:01:50,610 --> 00:01:56,840
+imdi redox ile yaratlan maazamz yeniden uygulama uygulamalarmza balyoruz.
+
+24
+00:01:56,880 --> 00:02:00,660
+Tabii ki bir sonraki dersin bu kadar fazla yapmayacam.
+
+25
+00:02:00,660 --> 00:02:08,010
+Redktrmz zerinde alalm ve burada malzemelerimizin akkanln ynetmek iin aslnda baz mantklara sahip olduumuzdan emin
+
+26
+00:02:08,030 --> 00:02:08,490
+olalm.
+

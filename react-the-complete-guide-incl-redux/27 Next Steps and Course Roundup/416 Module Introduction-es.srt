@@ -1,0 +1,60 @@
+1
+00:00:02,150 --> 00:00:07,640
+Bienvenido a este mdulo, sobrevivi el curso, aprendi mucho sobre reaccionar y probablemente se
+
+2
+00:00:07,640 --> 00:00:10,380
+est preguntando cules son los prximos pasos.
+
+3
+00:00:10,610 --> 00:00:14,680
+Bueno, obviamente, los siguientes pasos son los que mencion justo al
+
+4
+00:00:14,720 --> 00:00:16,850
+comienzo del curso: prctica, prctica, prctica.
+
+5
+00:00:16,910 --> 00:00:22,010
+Aprendi mucho sobre reaccionar y reaccionar, ya que aprendi que tiene muchos conceptos diferentes y cosas que
+
+6
+00:00:22,010 --> 00:00:23,150
+puede hacer con l.
+
+7
+00:00:23,150 --> 00:00:26,920
+Ahora que este curso los cubri, ahora necesita
+
+8
+00:00:26,960 --> 00:00:31,040
+practicar eso, as que definitivamente vuelva a sumergirse en
+
+9
+00:00:31,130 --> 00:00:37,130
+algunas secciones de este curso, elija las cosas que ya haya olvidado y
+
+10
+00:00:37,190 --> 00:00:44,840
+practquelas en proyectos que usted mismo establezca. Establezca sus propios desafos, proponga proyectos de demostracin que desee construir, con las aplicaciones populares
+
+11
+00:00:44,840 --> 00:00:48,430
+que desea clonar y luego simplemente hgalo y practique las cosas que aprendi, llegar
+
+12
+00:00:48,620 --> 00:00:51,060
+a algunas paredes, pero estoy seguro de que puede hacerlo.
+
+13
+00:00:51,170 --> 00:00:54,290
+Adems de practicar, qu ms puedes hacer,
+
+14
+00:00:54,320 --> 00:00:55,770
+qu tiene sentido?
+
+15
+00:00:55,850 --> 00:00:58,540
+Echemos un vistazo ms de cerca a las prximas conferencias.
+

@@ -1,0 +1,44 @@
+1
+00:00:02,360 --> 00:00:10,040
+Bem, eu venho para este mdulo onde aprenderemos como podemos enviar h aos pedidos do nosso aplicativo de reao em
+
+2
+00:00:10,040 --> 00:00:17,390
+um servidor porque re-agir,  claro,  uma biblioteca que permite que voc crie o front-end do seu aplicativo.
+
+3
+00:00:17,390 --> 00:00:22,530
+Basicamente, o HVM nosso cdigo  o cdigo que est sendo executado no navegador.
+
+4
+00:00:22,670 --> 00:00:27,660
+E se voc estiver criando um aplicativo de pgina nica, algo que voc costuma fazer com a reao.
+
+5
+00:00:27,830 --> 00:00:35,720
+Ento voc tem um aplicativo ainda mais desacoplado mais desacoplado de suas costas e, portanto,  claro que  importante
+
+6
+00:00:35,720 --> 00:00:42,200
+entender como voc realmente pode enviar ajuda para o P ou, uma vez que temos essa
+
+7
+00:00:42,200 --> 00:00:50,000
+dissociao na solicitao de verificao A especificamente da sua frente de reagem e do seu cdigo javascript para o lado
+
+8
+00:00:50,000 --> 00:00:51,800
+traseiro do lado do servidor.
+
+9
+00:00:51,830 --> 00:00:54,680
+Agora, deixe-me mostrar-lhe como isso funciona na prxima palestra.
+
+10
+00:00:54,770 --> 00:00:59,780
+E ento, claro, deixe-me mostrar-lhe como implement-lo em um aplicativo de reao.
+
+11
+00:00:59,900 --> 00:01:01,340
+Ao longo deste mdulo.
+

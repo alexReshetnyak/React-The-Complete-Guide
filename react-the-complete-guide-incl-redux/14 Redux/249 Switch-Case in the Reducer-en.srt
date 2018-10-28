@@ -1,0 +1,136 @@
+1
+00:00:02,210 --> 00:00:08,400
+In the last lecture, we learned how to also pass data with the action, how to retrieve it.
+
+2
+00:00:08,400 --> 00:00:13,880
+Now with that, we learn some of the very core concepts of using redux.
+
+3
+00:00:14,100 --> 00:00:21,450
+Now if we have a look at our reducer here, there is something you will probably notice, it already has
+
+4
+00:00:21,450 --> 00:00:25,200
+a lot of code replication, a lot of if statements.
+
+5
+00:00:25,260 --> 00:00:30,200
+Now there's nothing wrong with using if statements, if you like that, use that approach
+
+6
+00:00:30,660 --> 00:00:36,500
+but we could also use a different type of statement, expression in javascript,
+
+7
+00:00:36,500 --> 00:00:45,630
+the switch statement. We could switch the action type and then define multiple cases like the increment
+
+8
+00:00:45,630 --> 00:00:46,680
+case,
+
+9
+00:00:47,070 --> 00:00:48,250
+then we have a colon
+
+10
+00:00:48,270 --> 00:00:56,820
+so normal javascript syntax and then here, we could return this updated state for the increment case
+
+11
+00:00:57,140 --> 00:00:59,240
+and now we can get rid of that if statement.
+
+12
+00:00:59,430 --> 00:01:01,830
+And now we can of course add more cases here,
+
+13
+00:01:01,830 --> 00:01:08,220
+so one case for decrement and I don't need to add a break statement because return automatically
+
+14
+00:01:08,430 --> 00:01:14,340
+exits out of this function we never reached this line then, only of course if we get into this case in the
+
+15
+00:01:14,340 --> 00:01:15,450
+first place.
+
+16
+00:01:15,750 --> 00:01:19,380
+So for decrement, we would also return a state here,
+
+17
+00:01:19,440 --> 00:01:26,820
+we would return this state. And now we can repeat this of course for all the cases, so I'll quickly add a case
+
+18
+00:01:26,820 --> 00:01:31,130
+for adding and a case for subtracting
+
+19
+00:01:31,380 --> 00:01:36,620
+and of course these identifiers still have to match the identifiers you use when dispatching actions.
+
+20
+00:01:36,810 --> 00:01:45,810
+So the identifier you said here on the type in the counter container and now I'll pull out the code from
+
+21
+00:01:45,810 --> 00:01:46,870
+these if statements and
+
+22
+00:01:46,920 --> 00:01:54,990
+add them, add the code to their respective cases here. Reformat the code and get rid of these if statements
+
+23
+00:01:54,990 --> 00:02:01,560
+and now our reducer is a bit leaner and a bit easier to read because it's very clear that we're looking
+
+24
+00:02:01,560 --> 00:02:06,170
+at the action type and then we're just handling different cases.
+
+25
+00:02:06,420 --> 00:02:12,000
+And if we don't make it into any of these cases, we always have the default return statement here at
+
+26
+00:02:12,000 --> 00:02:15,620
+the end which returns our either initial state
+
+27
+00:02:15,840 --> 00:02:21,810
+or if this was already set, the current state. This is especially important since we have to keep in
+
+28
+00:02:21,810 --> 00:02:28,590
+mind that if we were to dispatch an action which has a type which is not covered here, we would still run
+
+29
+00:02:28,590 --> 00:02:34,740
+through that reducer because when ever you dispatch something, it goes through that single reducer you have
+
+30
+00:02:34,800 --> 00:02:36,390
+in your application.
+
+31
+00:02:36,590 --> 00:02:42,050
+Therefore if that reducer doesn't handle that action type you dispatched,
+
+32
+00:02:42,180 --> 00:02:45,780
+you have to return the current state to not break your application.
+
+33
+00:02:45,780 --> 00:02:52,550
+So with that, let's save all these files and you will see that if you go back, it still works as before
+
+34
+00:02:52,650 --> 00:02:58,760
+but now with these central reducers still but there, with the switch statement.
+

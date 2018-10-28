@@ -1,0 +1,124 @@
+1
+00:00:02,120 --> 00:00:07,250
+Na ltima conferncia, ns nos certificamos de que tambm podemos remover ingredientes do burger
+
+2
+00:00:07,250 --> 00:00:12,560
+saber quando atualizar o preo do hamburguer e exibi-lo como parte desse hambrguer tambm.
+
+3
+00:00:12,740 --> 00:00:18,800
+Agora, na verdade, se eu tivesse muitos ingredientes para um hambrguer, ele  rolvel porque ns o configuramos
+
+4
+00:00:18,800 --> 00:00:19,500
+para ser.
+
+5
+00:00:19,730 --> 00:00:25,370
+Portanto, o preo provavelmente deve ser exibido acima dos controles de construo, digamos.
+
+6
+00:00:25,370 --> 00:00:29,200
+Portanto, os controles em massa aqui alm de produzir os controles.
+
+7
+00:00:29,270 --> 00:00:37,930
+Eu quero mostrar o preo do hambrguer e podemos simplesmente usar um pargrafo aqui onde dizemos o preo atual do clon.
+
+8
+00:00:38,180 --> 00:00:41,410
+E ento eu espero obter o preo passado com adereos.
+
+9
+00:00:41,510 --> 00:00:45,450
+Ento, o preo do prop  algo assim.
+
+10
+00:00:45,560 --> 00:00:49,860
+Agora, o preo  calculado no recipiente Bergere Boulder.
+
+11
+00:00:49,910 --> 00:00:57,500
+Aqui temos o estado do preo total, para que passe esse preo para o controle S10, porque  a
+
+12
+00:00:57,500 --> 00:01:00,670
+que acabei de adicionar o uso dessa propriedade.
+
+13
+00:01:01,010 --> 00:01:02,920
+Ento, vamos adicionar o preo da propriedade.
+
+14
+00:01:02,930 --> 00:01:09,690
+O nome que acabei de escolher em controles de compilao e passar este preo total do estado.
+
+15
+00:01:09,890 --> 00:01:12,750
+Certifique-se de salvar todos os Follett e vamos dar uma olhada.
+
+16
+00:01:13,010 --> 00:01:14,560
+Ns vemos o preo atual aqui.
+
+17
+00:01:14,720 --> 00:01:21,680
+E se eu adicionar ingredientes, voc ver que esse preo aumenta aqui, porm, voltamos com nmeros decimais
+
+18
+00:01:21,740 --> 00:01:27,280
+em javascript, ento devemos corrigir isso e talvez todos ns desejemos imprimir isso.
+
+19
+00:01:27,590 --> 00:01:29,100
+Bem enfatizado.
+
+20
+00:01:29,420 --> 00:01:39,580
+Ento, o que podemos fazer no papel nos controles de compilao para um que est envolvido est na etiqueta forte.
+
+21
+00:01:39,620 --> 00:01:42,560
+O preo para que isso basicamente com o peso da fonte.
+
+22
+00:01:42,560 --> 00:01:48,640
+Negrito e vamos consertar esse preo aqui.
+
+23
+00:01:48,660 --> 00:01:52,810
+Agora, esse preo precisa ser um nmero, mas felizmente .
+
+24
+00:01:52,820 --> 00:01:58,880
+Ento, agora podemos chamar para fixar e corrigi-lo em duas casas decimais.
+
+25
+00:01:58,930 --> 00:02:00,790
+Vamos salvar isso.
+
+26
+00:02:01,060 --> 00:02:03,020
+E agora vemos quatro.
+
+27
+00:02:03,190 --> 00:02:09,910
+E se eu comear a adicionar Voc v o preo subir. Eu acho que as pessoas tm um burger bastante
+
+28
+00:02:09,910 --> 00:02:12,160
+acessvel aqui, o que parece realmente delicioso.
+
+29
+00:02:12,160 --> 00:02:16,530
+Ento, com isso, o construtor de hambrguer est realmente em boa forma.
+
+30
+00:02:16,600 --> 00:02:21,060
+O boto check-out est faltando, mas isso  algo que vou adicionar em um segundo.
+
+31
+00:02:21,310 --> 00:02:26,890
+E, depois disso, precisamos cuidar de toda a navegao que est atingindo aqui no topo.
+

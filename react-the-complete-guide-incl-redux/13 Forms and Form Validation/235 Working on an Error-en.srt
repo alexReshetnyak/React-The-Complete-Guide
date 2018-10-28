@@ -1,0 +1,104 @@
+1
+00:00:02,290 --> 00:00:09,610
+In the last lecture we detected this error when we change the value of our dropdown, it is related
+
+2
+00:00:09,610 --> 00:00:16,720
+to our validation check in the contact data container. There in check validity,
+
+3
+00:00:16,720 --> 00:00:19,570
+we check if rules required,
+
+4
+00:00:19,570 --> 00:00:21,820
+the problem is rules,
+
+5
+00:00:22,060 --> 00:00:23,050
+what does this get,
+
+6
+00:00:23,050 --> 00:00:25,920
+what does rule of this argument refer to?
+
+7
+00:00:26,260 --> 00:00:28,780
+Let's have a look at where we call check validity,
+
+8
+00:00:28,780 --> 00:00:34,420
+we call it in the inputChangedHandler and we pass the update form element value
+
+9
+00:00:34,540 --> 00:00:38,410
+and for rules, updatedFormElement validation.
+
+10
+00:00:38,410 --> 00:00:46,400
+Now the thing is this validation object doesn't exist for the dropdown for delivery method,
+
+11
+00:00:46,810 --> 00:00:56,290
+so if we then try to access required on something which doesn't exist, we get an error. Two ways of fixing
+
+12
+00:00:56,290 --> 00:00:56,970
+that,
+
+13
+00:00:56,980 --> 00:01:05,770
+the first way is simply add an empty validation object to the dropdown control.
+
+14
+00:01:05,770 --> 00:01:11,520
+Now accessing validation required will not fail but simply return undefined,
+
+15
+00:01:11,530 --> 00:01:16,340
+I like this way a lot because now all our controls are set up equally,
+
+16
+00:01:16,360 --> 00:01:19,510
+they all have a validation property and a valid property,
+
+17
+00:01:19,510 --> 00:01:23,170
+and if they don't need validation, then it should just be empty.
+
+18
+00:01:23,170 --> 00:01:25,400
+This is why I like this approach.
+
+19
+00:01:25,590 --> 00:01:32,380
+Now the alternative would have been to also add a check in check validity and see if rules,
+
+20
+00:01:32,500 --> 00:01:38,890
+if this is true-ish which it only is if it is defined and if it is not true-ish, so by adding an exclamation
+
+21
+00:01:38,890 --> 00:01:41,390
+mark, to simply return true then.
+
+22
+00:01:41,500 --> 00:01:47,430
+So always return true for the check validity result if no validation rules are defined.
+
+23
+00:01:47,470 --> 00:01:54,490
+We can of course also implement both for double security but again, I like the approach up here by adding
+
+24
+00:01:54,490 --> 00:02:00,250
+this empty validation object the most because it makes all the controls configured equally.
+
+25
+00:02:00,250 --> 00:02:06,840
+Now with this added, if I save this, now we can change the dropdown value again without getting errors
+
+26
+00:02:06,850 --> 00:02:07,600
+as you can see.
+

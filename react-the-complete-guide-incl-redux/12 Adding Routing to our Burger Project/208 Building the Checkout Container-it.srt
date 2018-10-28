@@ -1,0 +1,572 @@
+1
+00:00:02,120 --> 00:00:03,680
+Quindi implementiamo questo.
+
+2
+00:00:03,680 --> 00:00:11,210
+Il componente Check in che viene effettivamente implementato  un contenitore perch sar un componente che
+
+3
+00:00:11,210 --> 00:00:16,590
+gestisce il proprio stato e lo passa anche ai componenti Avro.
+
+4
+00:00:16,640 --> 00:00:22,690
+Quindi aggiungi una nuova cartella in contenitori e la chiamer checkout e l aggiunger il check out.
+
+5
+00:00:22,730 --> 00:00:27,010
+File JS che dovrebbe contenere il mio componente di controllo.
+
+6
+00:00:27,080 --> 00:00:34,190
+Sar una componente basata su classi e lo stato sar coinvolto e quindi estender l'oggetto
+
+7
+00:00:34,190 --> 00:00:42,380
+componente che devo importare per reagire a Gabr con il pacchetto di re-act stesso da supportare come X. Quindi aggiungiamo questa classe.
+
+8
+00:00:42,680 --> 00:00:45,610
+componente shoat come dovrebbe comportarsi.
+
+9
+00:00:45,830 --> 00:00:53,720
+Esportiamo quindi come un file predefinito per l'ufficio e quindi pianifichiamo come viene visualizzato il
+
+10
+00:00:53,810 --> 00:00:56,000
+Quello che voglio avere nel componente checkout  un piccolo sommario del checkout.
+
+11
+00:00:56,000 --> 00:01:02,970
+Quindi, in pratica quello che l'utente sta per acquistare e il prezzo probabilmente e poi un pulsante
+
+12
+00:01:03,020 --> 00:01:10,290
+per annullare la procedura di checkout e tornare al Bergere Boulder e ovviamente un pulsante per continuare.
+
+13
+00:01:10,310 --> 00:01:15,460
+E immagino che per il riassunto sarebbe bello non mostrare
+
+14
+00:01:15,680 --> 00:01:22,580
+di nuovo solo una lista degli ingredienti ma magari mostrare lo stesso hamburger.
+
+15
+00:01:22,580 --> 00:01:24,210
+Ricostruisci l'hamburger in questo.
+
+16
+00:01:24,230 --> 00:01:26,060
+Controlla il sommario
+
+17
+00:01:26,060 --> 00:01:27,850
+Quindi questo  l'obiettivo qui Sintesi Chaudiere.
+
+18
+00:01:27,950 --> 00:01:30,760
+E poi quando l'utente clicca su continua non voglio caricare il modulo di contatto.
+
+19
+00:01:30,830 --> 00:01:36,700
+Quindi, passo dopo passo, l'obiettivo  quindi quello di creare un modulo
+
+20
+00:01:37,040 --> 00:01:44,780
+di riepilogo checkout che mi permetta di visualizzare un'anteprima dell'hamburger e di mostrare i pulsanti
+
+21
+00:01:44,780 --> 00:01:52,280
+Continua o Annulla per andare nella cartella dei miei componenti e aggiungere una nuova cartella.
+
+22
+00:01:52,370 --> 00:01:55,340
+Come ti chiami.
+
+23
+00:01:55,340 --> 00:01:56,530
+Check out
+
+24
+00:01:56,660 --> 00:02:05,770
+o forse ordinare per mettere tutti i componenti relativi all'ordine ci piace controllare il check out del componente.
+
+25
+00:02:05,780 --> 00:02:05,960
+Dovrebbe essere nominato.
+
+26
+00:02:05,960 --> 00:02:07,740
+Controlla il riassunto forse.
+
+27
+00:02:07,820 --> 00:02:09,980
+E poi l per creare un riassunto del check-out.
+
+28
+00:02:10,130 --> 00:02:13,270
+J. S. cadere in.
+
+29
+00:02:13,330 --> 00:02:14,840
+Controlla il sommario CSSA caduta per lo stile.
+
+30
+00:02:15,020 --> 00:02:20,310
+Ora diamo un'occhiata al sommario di check-out pi dodgiest che sono
+
+31
+00:02:20,540 --> 00:02:27,440
+tutti abituati alla forma funzionale per creare il componente di riepilogo del check out.
+
+32
+00:02:27,440 --> 00:02:29,950
+Quindi, in pratica, controlla la funzione Samari qui come la conosci.
+
+33
+00:02:29,990 --> 00:02:33,580
+Probabilmente riceveremo degli oggetti di scena per rendere l'hamburger e poi restituire alcuni GSX.
+
+34
+00:02:33,700 --> 00:02:39,630
+Quindi, abbiamo sicuramente bisogno di importare re-act dal pacchetto Riak.
+
+35
+00:02:39,680 --> 00:02:44,810
+E ovviamente esporta sempre.
+
+36
+00:02:45,020 --> 00:02:47,260
+Controlla il sommario come predefinito.
+
+37
+00:02:47,270 --> 00:02:50,150
+Ora l'obiettivo  visualizzare un'anteprima di tutti o burger all'anno e quindi mostrare i pulsanti continue o Annulla.
+
+38
+00:02:50,150 --> 00:03:00,180
+Quindi quello che far  nel J  X che voglio tornare qui prima di tutto Raptor
+
+39
+00:03:00,200 --> 00:03:09,500
+in un div che user anche a scopo di stile per dare discommode in qualche stile.
+
+40
+00:03:09,500 --> 00:03:14,900
+Poi voglio avere ogni tag dove dico che speriamo che abbia un buon sapore.
+
+41
+00:03:14,900 --> 00:03:19,640
+Qualcosa del genere e la loro offerta.
+
+42
+00:03:19,640 --> 00:03:22,940
+Ora voglio avere una scatola in un div in cui voglio vedere in anteprima il mio componente Bergere.
+
+43
+00:03:22,960 --> 00:03:29,420
+Davis ha bisogno di fissare i limiti di quella componente di Bergere.
+
+44
+00:03:29,620 --> 00:03:33,650
+E naturalmente ho intenzione di riutilizzare la mia componente Bergere che ho gi.
+
+45
+00:03:33,650 --> 00:03:37,240
+Questa  una cosa interessante.
+
+46
+00:03:37,250 --> 00:03:38,180
+Possiamo riutilizzarlo in
+
+47
+00:03:38,180 --> 00:03:45,590
+modo da impostare uno stile inline qui su quel div wrapping che manterr il mio burger solo per impostare la
+
+48
+00:03:46,040 --> 00:03:55,420
+larghezza di quel salvataggio di 300 pixel e quindi anche la nostra altezza di diciamo 300 pixel e quindi impostiamo anche il margine su auto qui.
+
+49
+00:03:55,430 --> 00:04:00,180
+Ora all'interno di quel div voglio usare i miei componenti burger solo per
+
+50
+00:04:00,180 --> 00:04:06,970
+importarlo e importare Bergere da e ora navigare nella cartella di Bergere e c' Steve J come file.
+
+51
+00:04:06,970 --> 00:04:11,620
+Ora componente Bergere che ora posso aggiungere comodamente in questo modo.
+
+52
+00:04:11,650 --> 00:04:15,730
+Il burger  un tag a chiusura automatica.
+
+53
+00:04:15,740 --> 00:04:17,790
+Devo anche passare i miei ingredienti per pap.
+
+54
+00:04:18,440 --> 00:04:24,050
+Ovviamente sar importante sapere come ho ricevuto questi ingredienti.
+
+55
+00:04:24,050 --> 00:04:29,740
+Presumo che per ora posso semplicemente impostare le propriet degli
+
+56
+00:04:29,750 --> 00:04:37,220
+ingredienti del mio componente burger che si aspetta se diamo un'occhiata al componente burger.
+
+57
+00:04:37,280 --> 00:04:40,080
+Abbiamo gli ingredienti dell'elica l che
+
+58
+00:04:40,220 --> 00:04:47,060
+usiamo quindi dovrei TUTTO il passato  l'ingrediente di oggi nella componente di Tudor.
+
+59
+00:04:47,240 --> 00:04:48,380
+Forse no o fare un sommario check out riepilogo.
+
+60
+00:04:48,440 --> 00:04:50,670
+Eccoci qui.
+
+61
+00:04:50,690 --> 00:04:51,630
+Quindi ci aspettiamo
+
+62
+00:04:51,920 --> 00:04:58,460
+gli ingredienti nel burger, quindi dovremmo passarlo e per ora aspettarci solo nel componente di riepilogo del checkout.
+
+63
+00:04:58,460 --> 00:04:59,970
+utente e l dalla
+
+64
+00:05:00,050 --> 00:05:08,450
+cartella dei pulsanti e quindi il pulsante cade naturalmente e i pulsanti di DS, come probabilmente sapete, supportano due stili diversi.
+
+65
+00:05:08,480 --> 00:05:16,160
+Otterr anche le propriet degli ingredienti che poi trasmetter qui di seguito che non voglio mostrare i miei pulsanti e
+
+66
+00:05:16,160 --> 00:05:24,130
+permettermi di importare i miei pulsanti che ho creato in modo tale che il componente del pulsante dalla cartella dell'interfaccia
+
+67
+00:05:24,170 --> 00:05:25,640
+Abbiamo successo e la
+
+68
+00:05:25,640 --> 00:05:31,850
+classe di pericolo qui che non possiamo passare e passiamo con le propriet del tipo di pulsante.
+
+69
+00:05:31,850 --> 00:05:33,200
+Quindi aggiunger i miei pulsanti qui sotto.
+
+70
+00:05:33,500 --> 00:05:35,900
+Ci sono al primo pulsante.
+
+71
+00:05:35,900 --> 00:05:38,210
+Dove altro al tipo di pulsante.
+
+72
+00:05:38,210 --> 00:05:39,890
+Diciamo pericolo con la D maiuscola perch la FCC ha un nome di classe in cui R sta semplicemente per dire annullare.
+
+73
+00:05:40,430 --> 00:05:48,260
+Forse tutte le maiuscole a solo scopo di stallo e poi sono duplicate
+
+74
+00:05:48,260 --> 00:05:55,850
+a tutti il pulsante di accesso con una S maiuscola dove dir continuer.
+
+75
+00:05:55,850 --> 00:06:00,210
+Quindi questi sono i due pulsanti.
+
+76
+00:06:00,230 --> 00:06:01,800
+Sai anche che i pulsanti
+
+77
+00:06:01,880 --> 00:06:08,510
+mostrano la propriet click che indica semplicemente che abbiamo cliccato sul pulsante, quindi  qualcosa che dovr fare tutti.
+
+78
+00:06:08,510 --> 00:06:11,910
+Dividiamolo su pi righe.
+
+79
+00:06:12,020 --> 00:06:14,210
+L'attrezzo ha cliccato qui e poi fa qualcosa in un clic.
+
+80
+00:06:14,240 --> 00:06:18,460
+Ora questo  qualcosa che aggiunger per ora voglio solo finire lo stile di questo componente.
+
+81
+00:06:18,500 --> 00:06:23,810
+Quindi, con questo abbiamo ottenuto il nostro riassunto JSA X code.
+
+82
+00:06:23,810 --> 00:06:29,970
+Ora lasciami anche assegnare un nome di classe al div wrapping e questa  una classe
+
+83
+00:06:29,990 --> 00:06:36,820
+che voglio impostare e controllare il sommario con esito positivo al check-out sommario vedi business class qui.
+
+84
+00:06:36,820 --> 00:06:42,900
+Perch ricorda che siamo di nuovo nel nostro progetto di corso, stiamo usando i moduli CSSA qui per esaminare i nostri stili.
+
+85
+00:06:42,950 --> 00:06:50,290
+Sono tutti allineati con il testo allineato al centro per centrare tutto o impostare la larghezza su
+
+86
+00:06:50,330 --> 00:06:57,080
+80 percento forse e un margine di auto 2, quindi Centro fa div o fa elemento.
+
+87
+00:06:57,080 --> 00:07:01,440
+Aggiunger una query multimediale in cui verificare se abbiamo un minimo di 600
+
+88
+00:07:01,760 --> 00:07:08,300
+pixel e in quale punto del tempo voglio semplicemente limitare la larghezza in modo che non sia pi una percentuale.
+
+89
+00:07:08,330 --> 00:07:13,110
+Ma qui lo limiter a 500 pixel.
+
+90
+00:07:13,280 --> 00:07:16,730
+Ora con quello che devo importare non vedo
+
+91
+00:07:16,730 --> 00:07:24,560
+come codice o l'oggetto delle classi che dovresti essere preciso dal sommario C S S e poi assegnarlo qui.
+
+92
+00:07:24,560 --> 00:07:27,860
+Quindi qui tutti aggiungono classi.
+
+93
+00:07:27,860 --> 00:07:30,500
+Controlla il sommario
+
+94
+00:07:30,500 --> 00:07:32,050
+Approfittando dei moduli C S S qui.
+
+95
+00:07:32,120 --> 00:07:35,190
+Ora possiamo controllare il componente di riepilogo.
+
+96
+00:07:35,450 --> 00:07:38,280
+componente di riepilogo appena creato dalla cartella dei componenti.
+
+97
+00:07:38,300 --> 00:07:46,640
+So quando utilizzare stat nel mio file di checkout nel mio check out container per essere precisi, quindi ci sar un'importazione veloce che controller il
+
+98
+00:07:46,640 --> 00:07:54,170
+Pertanto, ho creato la cartella degli ordini che contiene la cartella di riepilogo del
+
+99
+00:07:54,170 --> 00:08:01,050
+check out e l il riepilogo del check out Ejay come file.
+
+100
+00:08:01,050 --> 00:08:03,690
+Ora all'interno del mio componente check out dove
+
+101
+00:08:03,740 --> 00:08:11,070
+implementer un metodo di rendering in cui poi ovviamente ritorna Sono GSX l voglio avere un div che avvolge la mia intera
+
+102
+00:08:11,080 --> 00:08:17,270
+pagina perch questo sar usato come una pagina con il router re-act certo e sono tutti ora a.
+
+103
+00:08:17,270 --> 00:08:21,940
+Controlla il sommario come questo.
+
+104
+00:08:21,950 --> 00:08:24,340
+Tieni a mente.
+
+105
+00:08:24,410 --> 00:08:25,250
+Il riepilogo di
+
+106
+00:08:25,280 --> 00:08:32,630
+check out si aspetta di ottenere gli ingredienti come supporto, quindi dovrebbe passare gli ingredienti qui e ovviamente  una domanda interessante.
+
+107
+00:08:32,630 --> 00:08:34,860
+Da dove prendo i miei ingredienti.
+
+108
+00:08:34,880 --> 00:08:38,560
+Per ora passer semplicemente un oggetto fittizio degli ingredienti ma naturalmente questo  qualcosa che sostituir.
+
+109
+00:08:38,560 --> 00:08:46,290
+Aggiunger lo stato al componente checkout e l nello stato aggiunger ingredienti e ingredienti
+
+110
+00:08:46,360 --> 00:08:54,210
+per ora sar insalata uno di carne uno di formaggio e uno di pancetta.
+
+111
+00:08:54,220 --> 00:09:01,700
+E questo  di nuovo solo alcuni dati fittizi che sostituir.
+
+112
+00:09:01,750 --> 00:09:05,430
+il routing per ripassare gli ingredienti pi tardi.
+
+113
+00:09:05,440 --> 00:09:12,330
+Quindi per ora che mi permette di passare questi ingredienti di stato dovremo usare
+
+114
+00:09:12,340 --> 00:09:13,830
+Ora prendiamo l'estate e controlliamo il contenitore qui.
+
+115
+00:09:13,840 --> 00:09:17,930
+So che voglio usarlo ovviamente e per
+
+116
+00:09:18,160 --> 00:09:26,170
+questo sar codificato nella mia apt Cheras caduta proprio sotto il Bergere Boulder.
+
+117
+00:09:26,170 --> 00:09:27,540
+Qui ci sono
+
+118
+00:09:27,760 --> 00:09:38,260
+le importazioni ma dai un'occhiata al contenitore dei contenitori di barre di punti check out checkout solo per vedere come appare.
+
+119
+00:09:38,260 --> 00:09:39,220
+Caricheremo e inoltreremo il routing a breve.
+
+120
+00:09:39,430 --> 00:09:42,700
+Assicurati di salvare tutti i file e assicurati che NPM start sia in esecuzione e che siano offerti con la tua pagina.
+
+121
+00:09:42,700 --> 00:09:49,630
+Riceviamo un errore relativo al listener in clic ma questo non dovrebbe essere un problema in questo momento.
+
+122
+00:09:49,630 --> 00:09:54,500
+Ecco come sembra il nostro.
+
+123
+00:09:54,520 --> 00:09:56,960
+Controlla il componente di riepilogo.
+
+124
+00:09:56,980 --> 00:09:59,360
+Ora possiamo vedere che in qualche
+
+125
+00:09:59,590 --> 00:10:05,470
+modo il rigo con l'hamburger non  veramente centrato, quindi  qualcosa che dovremmo aggiustare.
+
+126
+00:10:05,470 --> 00:10:06,670
+Per questo torner per controllare il riassunto
+
+127
+00:10:06,700 --> 00:10:11,890
+dove ho usato l'hamburger e una cosa che dovrei aggiustare qui  che dovrei usare il 100 percento per prendere tutta la larghezza del componente di riepilogo del check out.
+
+128
+00:10:11,890 --> 00:10:18,070
+Ora con quello che sembra molto meglio sia su dispositivi di piccole dimensioni e dispositivi pi grandi ora e piccolo altrimenti.
+
+129
+00:10:18,070 --> 00:10:25,080
+L'anno scorso abbiamo avuto un po 'di altezza.
+
+130
+00:10:25,080 --> 00:10:29,050
+Questo qualcosa possiamo risolvere disabilitando questa altezza.
+
+131
+00:10:29,180 --> 00:10:32,020
+Non sempre lo si imposta su pixel liberi.
+
+132
+00:10:32,050 --> 00:10:34,630
+Quindi liberiamoci della propriet hide qui.
+
+133
+00:10:34,750 --> 00:10:37,990
+Per lo styling  stato un po 'troppo.
+
+134
+00:10:38,120 --> 00:10:40,970
+Ora possiamo sicuramente usarlo sui dispositivi mobili e sul desktop.
+
+135
+00:10:41,020 --> 00:10:47,020
+Questo sembra buono.
+
+136
+00:10:47,020 --> 00:10:47,870
+dovrebbe essere visualizzato.
+
+137
+00:10:47,880 --> 00:10:55,620
+D Ora ovviamente c' ancora un po 'di spazio ma abbiamo bisogno di spazio per il Burger pi grande, cos 
+
+138
+00:10:56,500 --> 00:11:02,830
+liberare, ma la cosa principale su cui voglio lavorare  che non lo mostro sempre, ma invece
+
+139
+00:11:02,860 --> 00:11:03,770
+Se faccio clic su ordine ora continua quindi voglio caricare per controllare il sommario invece del costruttore di hamburger.
+
+140
+00:11:03,880 --> 00:11:12,130
+Dats l'obiettivo e per i dati, naturalmente, abbiamo bisogno di routing.
+
+141
+00:11:12,150 --> 00:11:15,430
+Ora sentitevi liberi di andare avanti e implementarlo
+
+142
+00:11:15,430 --> 00:11:22,510
+da soli e quindi confrontare la vostra soluzione con la mia che inizier a costruire nella prossima lezione.
+
+143
+00:11:22,510 --> 00:11:24,790
+&nbsp;
+

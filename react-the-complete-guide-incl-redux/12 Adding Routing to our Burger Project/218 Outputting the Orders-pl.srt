@@ -1,0 +1,340 @@
+1
+00:00:02,120 --> 00:00:05,570
+W ostatnim wykadzie dodalimy logik do pobierania
+
+2
+00:00:05,660 --> 00:00:09,050
+zlece, teraz przejrzyjmy je i wyprowad je.
+
+3
+00:00:09,050 --> 00:00:18,000
+Teraz tutaj zrobi to w linii, do tego dojd. stan. porzdkuje i mapuje t tablic, a
+
+4
+00:00:18,000 --> 00:00:21,650
+nastpnie, gdy znasz j w tablicy elementw jsx.
+
+5
+00:00:21,690 --> 00:00:29,130
+Dostaem wic moje indywidualne zamwienie, ktre w zasadzie powinno zosta przeksztacone w taki przedmiot
+
+6
+00:00:29,130 --> 00:00:29,600
+zamwienia,
+
+7
+00:00:29,670 --> 00:00:31,020
+to na razie.
+
+8
+00:00:31,350 --> 00:00:36,730
+Oszczdzamy to, powinnimy zdoby jak najwicej obiektw tutaj, poniewa mamy zamwienia w bazie ogniowej, jak
+
+9
+00:00:36,870 --> 00:00:39,730
+zawsze, musimy rwnie doda t kluczow prop tutaj.
+
+10
+00:00:39,750 --> 00:00:44,110
+Dodajmy wic klucz i ustawmy to tak, abymy teraz
+
+11
+00:00:44,490 --> 00:00:51,270
+mogli uywa identyfikatora zamwienia, poniewa bdzie istnie waciwo id, ten unikalny identyfikator bazy ogniowej,
+
+12
+00:00:51,270 --> 00:00:53,160
+ktry tworzy idealny klucz.
+
+13
+00:00:53,160 --> 00:00:58,350
+Teraz moemy to zapisa i otrzymujemy zamwienia z bazy firebase, oczywicie, e nie uywamy wartoci z tego
+
+14
+00:00:58,350 --> 00:00:59,150
+miejsca, jest to
+
+15
+00:00:59,320 --> 00:01:01,100
+nastpna rzecz, ktr chc zrobi.
+
+16
+00:01:01,350 --> 00:01:04,690
+Dostajemy zamwienia, wykonujemy zamwienie, teraz oczywicie rozsdnie
+
+17
+00:01:04,710 --> 00:01:10,800
+byoby rwnie przekaza informacje o zamwieniu do tego komponentu zamwienia, abymy mogli
+
+18
+00:01:10,800 --> 00:01:12,490
+co tam przekaza.
+
+19
+00:01:12,810 --> 00:01:15,190
+Chcemy przekaza
+
+20
+00:01:15,210 --> 00:01:23,720
+skadniki, aby przekaza skadniki zamwienia, a take przekaza cen.
+
+21
+00:01:23,760 --> 00:01:29,740
+Teraz, jeli spojrzymy na obiekt bazy ogniowej, cena jest przechowywana w nieruchomoci cenowej, wic
+
+22
+00:01:29,910 --> 00:01:31,410
+to jest to, co
+
+23
+00:01:31,410 --> 00:01:39,300
+chc przekaza do ceny bdzie zamwienie. Cena . Dziki temu przekazujemy informacje do zamwienia,
+
+24
+00:01:39,330 --> 00:01:44,940
+teraz wyprowadmy je tam w skadniku zamwienia. Cena jest prosta, po prostu
+
+25
+00:01:44,940 --> 00:01:52,410
+uyj dynamicznej treci wyjciowej z pojedynczymi nawiasami klamrowymi i wyprowadzamy rekwizyty takie jak
+
+26
+00:01:52,440 --> 00:01:55,190
+ta, wic teraz powinnimy ju
+
+27
+00:01:55,350 --> 00:02:04,590
+zobaczy prawdziw cen tutaj, i robimy. Widzimy rwnie, e tutaj chcemy wykorzysta cen. toFixed z 2 miejscami po przecinku, dziaa
+
+28
+00:02:04,650 --> 00:02:09,360
+to tylko na liczbie i domylnie jest to cig znakw.
+
+29
+00:02:09,360 --> 00:02:21,570
+Wic mog po prostu zadzwoni pod numer, parsowa, aby przekonwertowa cig znakw na liczb lub oczywicie doda znak
+
+30
+00:02:21,600 --> 00:02:29,400
+plus w momencie, gdy podajesz go tutaj w komponencie zamwienia, dodajc plus
+
+31
+00:02:29,400 --> 00:02:32,460
+przed zamwienie. cena powinna rwnie zaatwi
+
+32
+00:02:32,460 --> 00:02:39,780
+spraw, obie powinny zadziaa i powinna wyprowadzi t cen. Teraz skadniki s nieco bardziej skomplikowane, poniewa
+
+33
+00:02:39,810 --> 00:02:46,370
+skadniki s tak czsto obiektem i potrzebujemy tablicy do ich przejrzenia i wyprowadzenia.
+
+34
+00:02:46,620 --> 00:02:53,070
+Tak wic w skadniku zamwienia, w ktrym chc uzyska dane wyjciowe moich skadnikw, musz teraz
+
+35
+00:02:53,520 --> 00:03:00,990
+przeksztaci moje skadniki w tablic, a mona to zrobi w kontenerze zamwie lub tutaj w skadniku zamwienia,
+
+36
+00:03:01,170 --> 00:03:03,680
+zrobi to tutaj element zamwienia.
+
+37
+00:03:04,070 --> 00:03:11,880
+Dlatego zmieniem funkcj zamwienia, aby nie tylko zwraca jsx, ale take mie prawdziwe ciao funkcyjne, w ktrym rwnie
+
+38
+00:03:11,880 --> 00:03:16,920
+zwracamy jsx oczywicie, ale gdzie mog uruchomi jaki kod przed wykonaniem tego.
+
+39
+00:03:17,160 --> 00:03:19,900
+Zrbmy to teraz, a
+
+40
+00:03:20,010 --> 00:03:23,990
+teraz dodajmy kod, aby przetworzy moje skadniki.
+
+41
+00:03:24,270 --> 00:03:28,300
+Tak wic dodam skadniki, ktre powinny by tablic skadnikw
+
+42
+00:03:28,590 --> 00:03:34,150
+i mamy logik do przeksztacenia tego wczeniej. W komponencie hamburgerowym, przeksztaconych
+
+43
+00:03:34,180 --> 00:03:36,180
+skadnikach, jest to
+
+44
+00:03:36,180 --> 00:03:43,870
+logika, ktrej moemy uy do przeksztacenia naszych skadnikw w zestaw skadnikw.
+
+45
+00:03:44,190 --> 00:03:46,350
+Chc ci pokaza alternatyw.
+
+46
+00:03:46,590 --> 00:03:50,030
+Wic tutaj skadniki to tylko tablica, na razie pusta tablica,
+
+47
+00:03:50,250 --> 00:03:57,600
+wtedy uyj ptli for / in dla nazwy skadnika w rekwizytach. Skadniki.
+
+48
+00:03:57,600 --> 00:04:00,170
+To wanie mog zrobi, poniewa w
+
+49
+00:04:00,330 --> 00:04:03,580
+ptli for / in element zmienny bdzie nazw
+
+50
+00:04:03,600 --> 00:04:09,330
+waciwoci, a poniewa moje waciwoci s po prostu reprezentacjami skadnikw, nazwa skadnika ma dla
+
+51
+00:04:09,330 --> 00:04:10,500
+mnie sens jako nazw.
+
+52
+00:04:10,500 --> 00:04:19,100
+Tak wic mog nastpnie uy mojej tablicy skadnikw i wepchn na ni ten skadnik,
+
+53
+00:04:19,360 --> 00:04:26,490
+wic tutaj mog sign do rekwizytw. skadniki i dostp do skadnika o nazwie skadnika.
+
+54
+00:04:26,500 --> 00:04:30,600
+To jest warto skadnika, wic 0 1 2
+
+55
+00:04:30,940 --> 00:04:39,610
+i tak dalej, chc popchn obiekt javascript, chocia oczywicie mam rwnie tak ilo, ale przed przechowywaniem tej iloci,
+
+56
+00:04:39,610 --> 00:04:40,500
+chc rwnie
+
+57
+00:04:40,540 --> 00:04:46,540
+zapisa nazw skadnika i to wanie to kluczowa nazwa, nazwa skadnika tutaj.
+
+58
+00:04:46,600 --> 00:04:53,290
+Wic to jest obiekt, ktry teraz popycham na ten ukad skadnikw, bardzo prost transformacj,
+
+59
+00:04:53,290 --> 00:04:58,860
+na pewno nieco krtsz ni druga, dlatego te chciaem pokaza t alternatyw.
+
+60
+00:04:59,200 --> 00:05:07,420
+Teraz, gdy naciskam ten element na tablic skadnikw, mog zasadniczo zamapowa moje skadniki na tekst.
+
+61
+00:05:07,900 --> 00:05:16,950
+Tak wic utworz tutaj now zmienn lub now sta, tak jak jest to staa, ktr nazwabym
+
+62
+00:05:16,950 --> 00:05:24,240
+componentOutput, a componentOutput powinny by skadnikami. mapuj, jak si tego nauczye, otrzymujemy indywidualny
+
+63
+00:05:24,280 --> 00:05:30,670
+skadnik i chcemy zwrci jsx tutaj i tutaj zwrc span, przypisz do
+
+64
+00:05:31,620 --> 00:05:42,090
+niego klasy wkrtce, gdzie wyprowadzam ig z nawiasami klamrowymi ig. name, a nastpnie w nawiasach, a nastpnie w nawiasach
+
+65
+00:05:42,230 --> 00:05:51,310
+klamrowych dla danych dynamicznych, ig. kwota, tak jak w przypadku zamknicia. Teraz wydajmy wyjciowe dane
+
+66
+00:05:51,340 --> 00:05:52,870
+wyjciowe w
+
+67
+00:05:53,740 --> 00:05:58,730
+ten sposb i spjrzmy na to wyjcie tutaj.
+
+68
+00:05:59,050 --> 00:06:01,230
+Uzyskaj dobry stary kluczowy bd tutaj,
+
+69
+00:06:01,240 --> 00:06:03,910
+ale widzimy, e to na og dziaa.
+
+70
+00:06:03,910 --> 00:06:11,170
+Jeli chodzi o klucz, to naprawd mog uy nazwy skadnika jako klucza, poniewa jest tutaj
+
+71
+00:06:11,170 --> 00:06:19,930
+unikatowy, wic mog uy nazwy jako unikalnego klucza i teraz chc nada tej przso-stylu, a ja po prostu
+
+72
+00:06:19,930 --> 00:06:24,470
+nadam jej styl z wewntrzn stylizacj. Przydziel obiekt javascript, uyj
+
+73
+00:06:24,700 --> 00:06:28,330
+transformacji tekstu, aby zamieni pierwsz liter na wielk.
+
+74
+00:06:28,480 --> 00:06:34,590
+Wic kapitalizacja robi dokadnie to, jeli j zachowamy, widzimy, e zaczyna si teraz od litery pocztkowej.
+
+75
+00:06:35,050 --> 00:06:42,630
+A take chc umieci te przsa w maych pudekach, tak aby wyrniay si od
+
+76
+00:06:42,970 --> 00:06:51,600
+siebie, wic bd owija ten obiekt javascript tutaj przez wiele linii, by wywietli wbudowany blok, doda
+
+77
+00:06:52,600 --> 00:06:59,590
+troch marginesu lewego i prawego zera do gry i na dole, wic tylko
+
+78
+00:06:59,590 --> 00:07:11,480
+8px na lewo i na prawo 0 8px i dodaj obramowanie moe 1px solid grey i troch dopenienia jak 5px i moesz
+
+79
+00:07:11,500 --> 00:07:15,370
+oczywicie uy do tego klasy css.
+
+80
+00:07:15,470 --> 00:07:17,310
+W ten sposb chc je
+
+81
+00:07:17,320 --> 00:07:19,330
+zrealizowa, to s moje skadniki,
+
+82
+00:07:19,360 --> 00:07:21,450
+to moja cena, to moje zamwienia.
+
+83
+00:07:21,460 --> 00:07:23,590
+Teraz moemy doda wicej
+
+84
+00:07:23,620 --> 00:07:29,660
+do zamwie, moemy doda logik, aby usun zamwienie lub oznaczy je jako spenione.
+
+85
+00:07:29,890 --> 00:07:32,670
+Na razie tak wanie chc je wypuci.
+

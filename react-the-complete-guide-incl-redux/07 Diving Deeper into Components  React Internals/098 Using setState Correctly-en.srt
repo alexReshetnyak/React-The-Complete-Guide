@@ -1,0 +1,204 @@
+1
+00:00:02,270 --> 00:00:07,340
+Let's leave the world of higher order components for now and let's go back to our demo project and dive
+
+2
+00:00:07,340 --> 00:00:12,980
+into some other useful things you should keep in mind when building react applications because they
+
+3
+00:00:12,980 --> 00:00:14,760
+might become important.
+
+4
+00:00:15,110 --> 00:00:20,780
+One important take away I want you to have is regarding set state.
+
+5
+00:00:21,020 --> 00:00:26,570
+We call it a lot in our application in the app.js file only though because of the way that you should
+
+6
+00:00:26,570 --> 00:00:30,440
+use state, use it only in a few selected components
+
+7
+00:00:30,590 --> 00:00:33,220
+and there, we always use it in an immutable way.
+
+8
+00:00:33,230 --> 00:00:39,410
+So if we assign a persons array, we create a copy of that array so that we don't mutate the original
+
+9
+00:00:39,410 --> 00:00:45,200
+one and then we mutate this copy and assign the changed copy as a new state,
+
+10
+00:00:45,410 --> 00:00:47,660
+that is exactly how you should do it.
+
+11
+00:00:47,870 --> 00:00:54,560
+Now sometimes you have a state update which depends on the old state and is a bit more trivial.
+
+12
+00:00:54,890 --> 00:00:59,060
+Let's say we want to have a counter on how often we click the toggle button,
+
+13
+00:00:59,090 --> 00:01:00,560
+So this.togglePersonsHandler,
+
+14
+00:01:00,560 --> 00:01:06,890
+how often was it executed basically? In our state which we now initialize in the constructor since the
+
+15
+00:01:06,890 --> 00:01:09,700
+lifecycle lectures, there
+
+16
+00:01:09,740 --> 00:01:15,110
+we might have a toggle clicked counter which is 0 initially.
+
+17
+00:01:15,170 --> 00:01:24,940
+Now in our toggle handler here, we call set state and there we would now also of course update toggle
+
+18
+00:01:24,950 --> 00:01:32,030
+clicked and the value of course depends on the old value of toggle click because it should be the old
+
+19
+00:01:32,030 --> 00:01:33,350
+value plus one.
+
+20
+00:01:33,620 --> 00:01:40,430
+So we could say this.state.toggleClicked plus one is the new state.
+
+21
+00:01:40,430 --> 00:01:46,820
+Now if we save this to see if that's the case, we can use the react developer tools,
+
+22
+00:01:46,820 --> 00:01:54,110
+so I will open the react developer tools in my chrome developer tools and now go to the app component
+
+23
+00:01:54,530 --> 00:01:58,270
+where I can inspect the state, toggleClicked 0,
+
+24
+00:01:58,280 --> 00:02:01,190
+Now it's 1, 2, 3,
+
+25
+00:02:01,220 --> 00:02:07,940
+it's working correctly and still does the incorrect way of doing that. Because set state actually is
+
+26
+00:02:07,940 --> 00:02:17,630
+a method executed asynchronously by react which means you can't rely on this.state being called inside
+
+27
+00:02:17,630 --> 00:02:24,260
+set state to really reflect the latest version of the state. If you call set state somewhere else
+
+28
+00:02:24,260 --> 00:02:25,530
+in the application,
+
+29
+00:02:25,700 --> 00:02:32,510
+basically around the same time, the other set state call might finish before this one, so this.state
+
+30
+00:02:32,540 --> 00:02:36,070
+in here might not be correct.
+
+31
+00:02:36,140 --> 00:02:39,720
+So there's a better syntax for calling this set state
+
+32
+00:02:39,830 --> 00:02:47,950
+if you plan on using this state inside of it and this is the functional form, the function syntax
+
+33
+00:02:47,990 --> 00:02:56,370
+of it. It looks like this, set state then takes a function and I'll use an arrow function and there you
+
+34
+00:02:56,370 --> 00:02:57,390
+get two arguments,
+
+35
+00:02:57,390 --> 00:03:01,190
+the previous state which you can safely access then
+
+36
+00:03:01,200 --> 00:03:04,940
+because this definitely is the last state it had at this point of time
+
+37
+00:03:05,370 --> 00:03:07,360
+and any props you might have.
+
+38
+00:03:07,890 --> 00:03:14,970
+And then the function body, you have to return an object which is your updated state.
+
+39
+00:03:15,230 --> 00:03:22,950
+So there you now put in the old code we had but in there we no longer access this.state.toggleClicked,
+
+40
+00:03:23,370 --> 00:03:30,420
+a previous state toggle clicked. And as I just said, this is now safe to be accessed because previous state
+
+41
+00:03:30,530 --> 00:03:33,170
+can't be mutated from anywhere else in the app
+
+42
+00:03:33,270 --> 00:03:36,360
+whilst we are at this set state call.
+
+43
+00:03:36,660 --> 00:03:42,960
+So now with that, if i reload the application, go to the react developer tools and select app,
+
+44
+00:03:43,290 --> 00:03:50,070
+now if I click toggle persons, it works like before and it will work with the bad approach in many
+
+45
+00:03:50,070 --> 00:03:51,450
+other cases too
+
+46
+00:03:51,690 --> 00:03:59,340
+but the best practice case of mutating state if you rely on the previous state as we do here is by
+
+47
+00:03:59,340 --> 00:04:01,480
+calling previous state here.
+
+48
+00:04:01,560 --> 00:04:09,060
+This is just a take away and a better way of mutating the state if you have the danger of interfering
+
+49
+00:04:09,060 --> 00:04:14,960
+with other state versions. Of course we wouldn't have had the danger here because we don't change toggleClicked
+
+50
+00:04:14,960 --> 00:04:16,040
+from anywhere else
+
+51
+00:04:16,230 --> 00:04:19,490
+but if you were to, this is the better approach.
+

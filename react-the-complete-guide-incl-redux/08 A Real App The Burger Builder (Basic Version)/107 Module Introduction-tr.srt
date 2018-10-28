@@ -1,0 +1,44 @@
+1
+00:00:02,390 --> 00:00:07,640
+Bu modle ho geldiniz imdi, temel konularn birounu ve tepki hakknda birok teori kapadk.
+
+2
+00:00:07,940 --> 00:00:13,660
+krler olsun sadece teorik deil, hepimiz bir proje yaptk, ancak bu daha bir demo projesi oldu.
+
+3
+00:00:13,670 --> 00:00:19,880
+Gerek bir yeniden eyleme uygulama zaman geldi, bylece tm bu kavramlarn bir araya geldiini grebiliriz,
+
+4
+00:00:19,880 --> 00:00:26,570
+bylece byle bir uygulamann nasl gerekte planlandnz ve bu bileen aacn nasl kurduunuzu ve rendiiniz tm
+
+5
+00:00:26,930 --> 00:00:31,730
+kavramlar nasl baarl bir ekilde kullandnz renebilirsiniz. imdiye kadar bir bavuruda.
+
+6
+00:00:31,730 --> 00:00:33,870
+Bu yzden bu modlde yapacamz ey budur.
+
+7
+00:00:33,890 --> 00:00:40,790
+burger uygulamas ina edeceiz, bylelikle elimizden gelen bir uygulama veya kullanc dinamik olarak bir burger
+
+8
+00:00:40,790 --> 00:00:47,510
+ekleyebilecek bir ierik katacak ve tabii ki bunu satn almak iin planlama aamasndan balayacak.
+
+9
+00:00:47,510 --> 00:00:48,090
+Bir
+
+10
+00:00:48,290 --> 00:00:52,220
+Ve bu aslnda sonraki dersin iinde bakmak istediim ilk ey.
+
+11
+00:00:52,340 --> 00:00:55,530
+Bavuruyu yeniden planlayacaz.
+

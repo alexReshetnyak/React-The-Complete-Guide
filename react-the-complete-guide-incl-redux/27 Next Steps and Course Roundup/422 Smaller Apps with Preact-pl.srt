@@ -1,0 +1,152 @@
+1
+00:00:02,190 --> 00:00:08,370
+Podczas ostatnich wykadw przyjrzelimy si wielu moliwym kolejnym krokom, w tym bibliotekom
+
+2
+00:00:08,370 --> 00:00:12,700
+takim jak Gatsbyjs lub bibliotekom komponentw, takim jak Material-UI.
+
+3
+00:00:13,050 --> 00:00:16,330
+Oto jeszcze jedna fajna biblioteka,
+
+4
+00:00:16,350 --> 00:00:24,630
+ktr moesz chcie zagbi. Teraz to nie jest literwka, przed ktr moesz przeczyta wicej na temat preactjs. com jest lekk alternatyw do
+
+5
+00:00:24,720 --> 00:00:26,340
+reagowania, ma tylko
+
+6
+00:00:26,460 --> 00:00:34,060
+3 kilobutyty i oferuje prawie tyle samo z pewnymi odchyleniami, ale nie reaguje
+
+7
+00:00:34,130 --> 00:00:37,820
+tak wiele API. Wic czy zawsze uywaby tego,
+
+8
+00:00:37,820 --> 00:00:39,580
+czy twrcy reaguj gupio?
+
+9
+00:00:39,610 --> 00:00:41,580
+Nie s, s rnice
+
+10
+00:00:41,580 --> 00:00:47,910
+i porozmawiam o nich na nastpnym wykadzie, ale na razie pozwl mi wyjani, czym
+
+11
+00:00:47,910 --> 00:00:49,170
+jest preact, zawsze
+
+12
+00:00:49,170 --> 00:00:54,610
+moesz przeczyta t stron oczywicie, ale kliknij tutaj, na tej stronie.
+
+13
+00:00:54,660 --> 00:00:59,250
+Tam po prostu widzisz przykad preact lub preact w
+
+14
+00:00:59,400 --> 00:01:03,080
+akcji, a jeli przeanalizowae ten przykad, rozpoznasz kod.
+
+15
+00:01:03,210 --> 00:01:10,530
+Na przykad tam, mamy normalny komponent w formie funkcjonalnej, uywajc tylko destrukturyzacji tutaj, aby wycign
+
+16
+00:01:10,530 --> 00:01:14,160
+jedn waciwo argumentu rekwizytw, ale w kocu to
+
+17
+00:01:14,340 --> 00:01:17,110
+tylko twj normalny kod jsx, to
+
+18
+00:01:17,190 --> 00:01:23,310
+tylko skadnik funkcjonalny, ktry zostanie uyty. A powyej i mamy klas opart
+
+19
+00:01:23,310 --> 00:01:24,120
+na klasie,
+
+20
+00:01:24,300 --> 00:01:32,970
+ktra rwnie rozszerza komponent, wic ta skadnia wyglda bardzo podobnie do skadni i jest do wikszoci lub
+
+21
+00:01:32,970 --> 00:01:40,860
+do pewnego stopnia, w bardzo duym stopniu. Preact uywa prawie tego samego interfejsu API, ale za kulisami stosuje
+
+22
+00:01:40,860 --> 00:01:41,530
+uproszczony algorytm
+
+23
+00:01:41,580 --> 00:01:47,010
+diffing, wic aby dowiedzie si, czy potrzebuje on aktualizacji prawdziwego domu, ma dla niego cieszy algorytm.
+
+24
+00:01:47,080 --> 00:01:53,850
+Lean wcale nie oznacza lepszego, ale oczywicie prowadzi do znacznie mniejszego rozmiaru
+
+25
+00:01:53,970 --> 00:02:00,090
+pliku, 3kb, jak to wanie pokazaem. Wan rzecz tutaj jest to, e preact i zawsze
+
+26
+00:02:00,090 --> 00:02:00,930
+moesz dowiedzie
+
+27
+00:02:00,930 --> 00:02:06,670
+si wicej tutaj na przewodniku oferuje rwnie pewne rnice, aby reagowa, nawet niektre nowe funkcje, jak si
+
+28
+00:02:06,680 --> 00:02:09,840
+okae, ale wicej na temat rnic w nastpnym wykadzie.
+
+29
+00:02:10,050 --> 00:02:18,270
+Moesz zacz prac z preact, jeli szukasz google na preact-cli, to powiniene znale t stron github, gdzie znajdziesz projekt,
+
+30
+00:02:18,270 --> 00:02:25,230
+ktry jest podobny do tworzenia aplikacji reagowania, ktra pozwala ci tworzy nowe aplikacje preact, ktre uywaj
+
+31
+00:02:25,410 --> 00:02:27,180
+preact zamiast reagowa oczywicie
+
+32
+00:02:27,180 --> 00:02:33,420
+, na podstawie niektrych szablonw, ktre tu znajdziesz. Moesz wic szybko stworzy now aplikacj, w
+
+33
+00:02:33,420 --> 00:02:39,300
+ktrej moesz wykorzysta wikszo rzeczy, ktrych nauczye si w tym kursie, kolejne rnice
+
+34
+00:02:39,300 --> 00:02:47,400
+s wyrnione w nastpnym wykadzie i po prostu uyj tego znacznie mniejszego pakietu, o wiele mniejszej biblioteki.
+
+35
+00:02:47,400 --> 00:02:54,720
+To jest preact-cli, a to jest preact, lekka alternatywa przy uyciu prawie tego samego interfejsu API i
+
+36
+00:02:54,720 --> 00:02:58,890
+dlatego rzeczy, ktrych si nauczye w tym kursie s wane.
+
+37
+00:02:58,890 --> 00:03:04,470
+Teraz zobaczmy, jakie s rnice i kiedy powiniene i nie powiniene uywa reakcji, zrbmy
+
+38
+00:03:04,470 --> 00:03:06,300
+to w nastpnym wykadzie.
+

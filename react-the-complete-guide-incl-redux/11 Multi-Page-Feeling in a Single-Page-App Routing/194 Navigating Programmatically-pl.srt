@@ -1,0 +1,172 @@
+1
+00:00:02,110 --> 00:00:05,560
+Teraz pomylnie przekazujemy parametry i uywamy ich,
+
+2
+00:00:05,690 --> 00:00:09,380
+pozwl mi wrci do tego komponentu Postw ponownie.
+
+3
+00:00:09,650 --> 00:00:15,830
+Teraz uywamy linku do zaadowania pojedynczego wpisu i przejcia do jego strony i nie
+
+4
+00:00:15,830 --> 00:00:17,190
+ma w tym
+
+5
+00:00:17,210 --> 00:00:24,320
+nic zego, jednak teraz chc pokaza wam alternatyw, a do tego skomentuj tutaj ciek linku z
+
+6
+00:00:24,320 --> 00:00:30,470
+normalnym komentarz, poniewa nie jestem w jsx tutaj. Wic nie zawijam tego w linku, dlatego
+
+7
+00:00:30,480 --> 00:00:36,520
+musz doda klucz, aby opublikowa ponownie, poniewa teraz post jest ponownie najwyszym elementem w naszej
+
+8
+00:00:36,520 --> 00:00:37,770
+macierzy, ktr wracamy.
+
+9
+00:00:38,090 --> 00:00:40,490
+Ale teraz ju nie uywam
+
+10
+00:00:40,820 --> 00:00:46,760
+linku, wic mog usun import i faktycznie usun ca instrukcj importu, musz znale
+
+11
+00:00:46,760 --> 00:00:50,220
+inny sposb, aby przej do tego posta
+
+12
+00:00:50,390 --> 00:00:56,150
+i pamita, e mamy tego kliknitego detektora, w ktrym wykonujemy ten postSelectedHandler
+
+13
+00:00:56,150 --> 00:00:57,960
+gdzie rwnie przekazujemy identyfikator.
+
+14
+00:00:58,370 --> 00:00:59,710
+Moemy uy tej
+
+15
+00:00:59,720 --> 00:01:01,950
+metody i tutaj nie chc
+
+16
+00:01:01,960 --> 00:01:04,230
+uywa stanu, zamiast tego chc nawigowa
+
+17
+00:01:04,490 --> 00:01:10,070
+programowo i pokazaem to tutaj jako demo. Oczywicie uywanie tego linku byoby w porzdku
+
+18
+00:01:10,070 --> 00:01:16,640
+dla tego przypadku uycia, ale czasami masz rwnie przypadki uycia, w ktrych chcesz nawigowa po zakoczeniu czego,
+
+19
+00:01:16,640 --> 00:01:17,060
+po
+
+20
+00:01:17,060 --> 00:01:20,080
+wysaniu na przykad dania HTTP, zobaczymy to ponownie pniej.
+
+21
+00:01:20,090 --> 00:01:25,770
+Teraz, aby to zrobi, moemy skorzysta z tego obiektu historii, ktry otrzymalimy na rekwizytach, zapamitywa tutaj
+
+22
+00:01:25,850 --> 00:01:32,600
+w rekwizytach, ktre mamy histori i tam mamy rzeczywicie pewne funkcje, ktre moemy wykona, funkcje do poruszania si po
+
+23
+00:01:32,720 --> 00:01:38,690
+nich, jak cofanie si lub do przodu, ktre zrb dokadnie to, co brzmi, w zasadzie robi to
+
+24
+00:01:38,690 --> 00:01:41,910
+samo z przyciskami do przodu i do tyu.
+
+25
+00:01:41,960 --> 00:01:50,360
+Istnieje rwnie ta metoda push, ktra pozwala na wrzucenie nowej strony na stos stron, poniewa nawigacja
+
+26
+00:01:50,600 --> 00:01:53,860
+w zasadzie dotyczy tylko stosu stron.
+
+27
+00:01:53,900 --> 00:01:59,420
+Dlatego przyciski wstecz i do przodu dziaaj w przegldarce, poniewa moesz wrci
+
+28
+00:01:59,450 --> 00:02:05,100
+do ostatniej strony na stosie lub przej do tej strony na stosie, ktry
+
+29
+00:02:05,120 --> 00:02:07,330
+miae na wierzchu, zanim wrcie.
+
+30
+00:02:07,340 --> 00:02:12,160
+Wic moemy tego uy. rekwizyty. historia. push, a
+
+31
+00:02:12,530 --> 00:02:23,690
+nastpnie cig znakw lub te obiekt, wic w zasadzie to samo, ktrego uywamy w czu routera na stronie
+
+32
+00:02:24,200 --> 00:02:27,080
+waciwoci, aby przej do strony.
+
+33
+00:02:27,110 --> 00:02:36,300
+Tak wic moemy przej do obiektu javascript, w ktrym ustawiam ciek do ukonika, a nastpnie identyfikator, i to jest
+
+34
+00:02:36,410 --> 00:02:41,650
+to samo, co miaem tam z linkiem, uywajc tylko notacji obiektowej,
+
+35
+00:02:41,720 --> 00:02:48,350
+ale znowu alternatyw, ktr skomentuj byoby po prostu przej do slash plus ID, wic
+
+36
+00:02:48,350 --> 00:02:52,220
+wystarczy poda cig znakw. Tak wic obie bd dziaa
+
+37
+00:02:52,680 --> 00:02:53,560
+teraz iz
+
+38
+00:02:53,600 --> 00:02:59,910
+tym, jeli wrc do mojej aplikacji do domu i klikn na post, ktry nadal dziaa.
+
+39
+00:02:59,960 --> 00:03:07,430
+Teraz jednak programowo i tylko po to, aby zademonstrowa, e dziaa on rwnomiernie lub te z inn notacj, pozwl
+
+40
+00:03:07,430 --> 00:03:09,690
+mi to skomentowa w ten sposb.
+
+41
+00:03:09,710 --> 00:03:15,000
+Teraz, gdy wrc do domu i klikn post, nadal bdziemy wchodzi do tego postu.
+
+42
+00:03:15,070 --> 00:03:21,950
+Teraz poruszamy si programowo, co moe by wane od czasu do czasu, najczciej uywane
+
+43
+00:03:22,040 --> 00:03:23,730
+po zakoczeniu danej operacji.
+

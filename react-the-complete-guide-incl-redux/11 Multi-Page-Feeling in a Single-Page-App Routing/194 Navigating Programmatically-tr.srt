@@ -1,0 +1,172 @@
+1
+00:00:02,110 --> 00:00:05,560
+Bylece imdi parametreleri baaryla geirdik ve kullandk.
+
+2
+00:00:05,690 --> 00:00:09,380
+imdi tekrar Post'un bileenine dnmeme izin verin.
+
+3
+00:00:09,650 --> 00:00:15,830
+u anda tek bir yayn yklemek ve sayfasna gitmek iin bir balant kullanyoruz ve bununla ilgili
+
+4
+00:00:15,830 --> 00:00:17,190
+yanl bir ey yok.
+
+5
+00:00:17,210 --> 00:00:24,320
+Ancak imdi sana bir alternatif gstermek ve bunun iin normal bir yorumla link kalbini
+
+6
+00:00:24,320 --> 00:00:30,470
+yorumlamak istiyorum nk burada bir balant iinde raptus yapmadm iin GSX iinde deilim.
+
+7
+00:00:30,480 --> 00:00:36,520
+Bu nedenle tekrar gndermek iin anahtar eklemeliyim nk imdi post, dndmz dizideki en
+
+8
+00:00:36,520 --> 00:00:37,770
+en nemli edir.
+
+9
+00:00:38,090 --> 00:00:40,490
+Ama artk balanty bir daha kullanmyorum.
+
+10
+00:00:40,820 --> 00:00:46,760
+Ve bu nedenle ithalat kaldrabilir ve tm ithalat beyannamesini gerekten kaldrabilirim.
+
+11
+00:00:46,760 --> 00:00:50,220
+Bu greve gitmenin bir baka yolunu bulmalym.
+
+12
+00:00:50,390 --> 00:00:56,150
+Ve unu unutmayn ki bu tklama dinleyicimiz, bu post seili ileyiciyi altrdmz
+
+13
+00:00:56,150 --> 00:00:57,960
+yerde kimlii de iletiriz.
+
+14
+00:00:58,370 --> 00:00:59,710
+Bu yntemi kullanabiliriz.
+
+15
+00:00:59,720 --> 00:01:01,950
+Ve burada onun yerine devlet kullanmak istemiyorum.
+
+16
+00:01:01,960 --> 00:01:04,230
+Programl olarak gezinmek istiyorum.
+
+17
+00:01:04,490 --> 00:01:10,070
+Ve buray bir demo olarak gsteriyordum, tabii ki balanty kullanarak bu kullanm durumu
+
+18
+00:01:10,070 --> 00:01:16,640
+iyi olacakt, ancak bazen HTP istei gnderildikten sonra bir ey bittikten sonra gezinmek istediiniz durumlarda da
+
+19
+00:01:16,640 --> 00:01:17,060
+kullanyorsunuz.
+
+20
+00:01:17,060 --> 00:01:20,080
+rnein bunu daha sonra tekrar greceiz.
+
+21
+00:01:20,090 --> 00:01:25,770
+imdi bunu yapmak iin sahnedeki aldmz tarih nesnesinin avantajlarndan yararlanabiliriz.
+
+22
+00:01:25,850 --> 00:01:32,600
+Burada hatrladmz sahnede hatrla ve oradaki navigasyon ilevlerini yrtebilecek baz ilevlerimiz var,
+
+23
+00:01:32,720 --> 00:01:38,690
+nk geri dnp ileri gitmek, ilerledike ve geriye doru dmelerle yaptnz
+
+24
+00:01:38,690 --> 00:01:41,910
+gibi temelde yaptklar gibi ses karyorlar.
+
+25
+00:01:41,960 --> 00:01:50,360
+Ayrca, sayfalarn ynna yeni bir sayfa basmanz salayan bu itme yntemi de var, nk
+
+26
+00:01:50,600 --> 00:01:53,860
+navigasyon temelde yalnzca bir yn sayfadr.
+
+27
+00:01:53,900 --> 00:01:59,420
+Bu nedenle, geri ve ileri dmeleri taraycda alr; nk, ynn
+
+28
+00:01:59,450 --> 00:02:05,100
+son sayfasna geri dnebilir veya en stteki ynn zerindeki sayfaya ynlendirebilirsiniz.
+
+29
+00:02:05,120 --> 00:02:07,330
+Sen geri dnmeden nce.
+
+30
+00:02:07,340 --> 00:02:12,160
+Dolaysyla bu pervanenin tarih basksn kullanabilirsiniz.
+
+31
+00:02:12,530 --> 00:02:23,690
+Ve sonra da bir dize veya bir nesne bu kadar aslnda ayn biz iki zellii ynlendirici balantsnda
+
+32
+00:02:24,200 --> 00:02:27,080
+bir sayfada gezinmek iin kullann.
+
+33
+00:02:27,110 --> 00:02:36,300
+Dolaysyla bir javascript nesnesine gidebiliriz, burada lbf adnn eik izgi ve art kimlii bulunur.
+
+34
+00:02:36,410 --> 00:02:41,650
+Ve bu, sadece nesne gsterimini kullanmam iin balant ile orada bulunduumla ayn.
+
+35
+00:02:41,720 --> 00:02:48,350
+Ama yine de yorumlayacam alternatif, yalnzca art iareti koymak iin kullanlacakt.
+
+36
+00:02:48,350 --> 00:02:52,220
+Bylece sadece bir dize geerek ikisi de imdi ie yarayacak.
+
+37
+00:02:52,680 --> 00:02:53,560
+Ve birlikte.
+
+38
+00:02:53,600 --> 00:02:59,910
+Evim bavurusuna dnersem ve yine de almakta olan bir postay tklayn.
+
+39
+00:02:59,960 --> 00:03:07,430
+imdi ancak programl ve cazibe, Aberg gsterimi ile bile ie yaradn gstermektedir; bu ekilde
+
+40
+00:03:07,430 --> 00:03:09,690
+yorum yapmama izin verin.
+
+41
+00:03:09,710 --> 00:03:15,000
+imdi eve gidip bir mesaja tklarsak da o postaya devam ederim.
+
+42
+00:03:15,070 --> 00:03:21,950
+imdi programa sihirli bir biimde gidiyoruz, ki bu bazen belirli bir ilem bittikten sonra
+
+43
+00:03:22,040 --> 00:03:23,730
+nemli olan nemli olabilir.
+

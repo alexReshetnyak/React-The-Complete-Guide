@@ -1,0 +1,300 @@
+1
+00:00:02,140 --> 00:00:07,720
+imdi bu jetonu kullanmaya devam etmeden nce, redux maazamzda saklanmadan
+
+2
+00:00:08,140 --> 00:00:13,970
+nce, oturum atmzda ve geri aldmz verileri incelediimizde, bunu hzl
+
+3
+00:00:13,990 --> 00:00:18,240
+bir ekilde yapmama izin verin, oturum amaya
+
+4
+00:00:18,250 --> 00:00:21,410
+geelim, ite bu sona erer .
+
+5
+00:00:21,520 --> 00:00:25,880
+Bu nedenle, jeton sadece 60 dakika geerlidir, bundan sonra
+
+6
+00:00:25,880 --> 00:00:32,440
+bir jeton gerektiren herhangi bir kaynaa gnderdiimiz zaman, istek hibir ekilde hibir belirte
+
+7
+00:00:32,440 --> 00:00:34,220
+gndermemi gibi baarsz olur.
+
+8
+00:00:34,220 --> 00:00:36,400
+imdi bu en iyi kullanc
+
+9
+00:00:36,400 --> 00:00:41,970
+deneyimi deil, muhtemelen bu saatten sonra kullancy aktif olarak kaydetmek istiyoruz.
+
+10
+00:00:42,220 --> 00:00:48,940
+Bir yan not olarak, kullanc uygulamay yeniden yklyorsa, durum yine de
+
+11
+00:00:48,940 --> 00:00:52,200
+kaybolur nk bu, tm uygulama
+
+12
+00:00:52,360 --> 00:00:58,390
+yeniden yklendiinden redux deposunu temizler, bylece, gelecekte UI'yi deitirebiliriz. 'Giri
+
+13
+00:00:58,390 --> 00:01:05,020
+yapmadnz, ancak giri yaptmz ve sayfay gremediimiz bir zamana sahip olabileceimiz
+
+14
+00:01:05,020 --> 00:01:10,760
+bu tuhaf noktaya ulaabileceimiz bir saat iin sayfay yeniden yklemememiz.
+
+15
+00:01:10,840 --> 00:01:20,740
+Bu nedenle yapmak istediim ey, bir saat sonra jetonu geersiz klmak iin bir kod
+
+16
+00:01:21,040 --> 00:01:24,070
+eklemek istiyorum. Bylece, simge
+
+17
+00:01:24,190 --> 00:01:33,490
+artk belirte artk yokken UI'mz da gncelleyebiliriz. Bunu yapmak iin, auth eylemler dosyama gideceim ve
+
+18
+00:01:33,730 --> 00:01:41,240
+yeni bir sabit, yeni bir ilev ekleyeceim esasen checkAuthTimeout ismini vereceim, orada
+
+19
+00:01:41,270 --> 00:01:51,050
+sona erme sresini elde etmeyi bekliyorum ve orada bu ilevi dndreceim Baz async kodlarn altrmak istediim
+
+20
+00:01:51,050 --> 00:01:54,350
+iin argman olarak gnderdiim yer.
+
+21
+00:01:54,860 --> 00:02:02,280
+Bir baar cevabn geri aldmzda bu checkAuthTimeout eylemini gndereceim,
+
+22
+00:02:02,360 --> 00:02:07,870
+bylece authSuccess' da gndereceim, ayrca checkAuthTimeout'u gnderiyorum
+
+23
+00:02:08,030 --> 00:02:11,110
+ve yant verisini ileteceim
+
+24
+00:02:11,420 --> 00:02:13,420
+ve orada, bu
+
+25
+00:02:13,460 --> 00:02:17,570
+expiresIn zelliini grdnzde, expiresIn, hzlca
+
+26
+00:02:17,660 --> 00:02:22,660
+tekrar giri yaparsak oturum amak iin
+
+27
+00:02:22,910 --> 00:02:28,860
+bu mlk hakknda konuuyorum. Bu bir deer, bir say ya
+
+28
+00:02:28,860 --> 00:02:35,370
+da kesin, bir dize, ancak bir say olarak ayrtrlabilir ve bunu burada
+
+29
+00:02:35,660 --> 00:02:43,960
+alabilirim, burada setTimeout'u armak ve belirli bir sre sonra bir ilevi yrtmek istiyorum ve muhtemelen tahmin
+
+30
+00:02:43,970 --> 00:02:48,490
+edebilirsiniz. hangi zaman sresi, burada sona erme zaman.
+
+31
+00:02:48,680 --> 00:02:56,230
+imdi burada setTimeout'ta bir ey yapmak istiyorum ve sadece k yapmak istiyorum, bu zaten ihtiyacm
+
+32
+00:02:56,280 --> 00:02:58,540
+olan yeni bir hareket.
+
+33
+00:02:58,690 --> 00:03:00,460
+Bu yzden, buradan
+
+34
+00:03:00,470 --> 00:03:08,130
+k yapaca bir sabiti vereceim, herhangi bir girdi almayan bir eylem olacak, ezamanl bir
+
+35
+00:03:08,300 --> 00:03:11,820
+eylem yaratcs olacak, tr henz oluturmamam gereken
+
+36
+00:03:11,840 --> 00:03:20,150
+bir tre ayarlayacam imdi olutur, ilem trlerinde AUTH_LOGOUT tanmlaycs ile sabit bir AUTH_LOGOUT vereceim ve imdi
+
+37
+00:03:20,150 --> 00:03:30,630
+bununla birlikte bu eylemi gnderebilirim, bylece buradaki tip actionTypes olacaktr. AUTH_LOGOUT ve bu k eylemi, bu
+
+38
+00:03:30,810 --> 00:03:38,100
+eylem yaratcs burada checkAuthTimeout setTimeout esinde de kullanlacaktr.
+
+39
+00:03:38,400 --> 00:03:46,920
+Bu nedenle, k sresinin sona ermesinden sonra, rnein, bu ilevleri yerine getirmesi iin gnderim
+
+40
+00:03:46,920 --> 00:03:52,690
+ars gnderirim, nk bu, daha sonra gnderilmekte olan eylemi dndrr.
+
+41
+00:03:52,740 --> 00:04:00,480
+imdi bununla birlikte, o zaman aralndan sonra k ilevini yrtyoruz veya gnderiyoruz ve
+
+42
+00:04:00,480 --> 00:04:04,790
+bu da imdi redktrmn iine girmeme izin veriyor.
+
+43
+00:04:04,950 --> 00:04:13,940
+Bu yzden ben orada authLogout adn adlandracam yeni bir ilev ekleyeceim, burada ve ilevde durumu ve
+
+44
+00:04:14,700 --> 00:04:23,370
+durumu alyorum, gncellenmi bir javascript nesnesi dndreceim ve burada gncellenen javascript nesnesi elbette updateObject ile
+
+45
+00:04:24,150 --> 00:04:26,550
+oluturulacaktr benim eski durumumu
+
+46
+00:04:26,610 --> 00:04:35,400
+null olarak belirlediim ve kullanc kimliimi null olarak belirleyemem, bylece oturum am olduum kullanc tarafndan
+
+47
+00:04:35,400 --> 00:04:41,790
+oluturulan tm temel bilgiler artk kaybedildi. Ve elbette bununla
+
+48
+00:04:41,790 --> 00:04:51,580
+baa kmak zorundaym, dava actionTypes. AUTH_LOGOUT, burada durum ve eylemi argman
+
+49
+00:04:51,610 --> 00:05:00,130
+olarak geirdiim auth k ilevinin sonucunu dndrmek istiyorum ve bununla birlikte,
+
+50
+00:05:00,400 --> 00:05:07,060
+bu zamanlaycy bizim action creator'umuzdaki checkAuthTimeout dosyasnda bulduk. daha
+
+51
+00:05:07,060 --> 00:05:11,660
+sonra kullancnn oturumu kapattndan emin olun.
+
+52
+00:05:11,690 --> 00:05:14,740
+Ve imdilik, bu, maazadan temizlenecek ve baka
+
+53
+00:05:14,740 --> 00:05:20,410
+bir ey yapamayacak, herhangi bir grsel geri bildirimi gstermeyecek, ancak kullanc, kullancnn kastl
+
+54
+00:05:20,500 --> 00:05:26,570
+olarak oturum ap kapatmadn belirten kullanc oturumunu atnda bir eyler uygulayacaz. artk giri yapm.
+
+55
+00:05:26,890 --> 00:05:34,700
+imdilik, tm almalarn gnderilip gnderilmediini, gnderilip gnderilmediine, bir daha gzden geirip bakmayacana
+
+56
+00:05:35,740 --> 00:05:36,240
+bakalm,
+
+57
+00:05:36,280 --> 00:05:38,660
+ite aslnda hemen ktm,
+
+58
+00:05:38,980 --> 00:05:42,400
+bu biraz fazla erken kt.
+
+59
+00:05:42,400 --> 00:05:47,110
+Tabii ki son kullanma sresi 3600'dr ancak setTimeout
+
+60
+00:05:47,260 --> 00:05:50,190
+milisaniyeyi almay beklemektedir, bu yzden
+
+61
+00:05:50,200 --> 00:05:53,090
+sadece 3'tr. 6 saniye.
+
+62
+00:05:53,140 --> 00:05:54,250
+Bu iyi
+
+63
+00:05:54,250 --> 00:05:59,960
+bir uygulama, imdi en azndan authLogout'un gnderildiini ve belirtelerin ve kullanc kimliinin
+
+64
+00:06:00,370 --> 00:06:08,310
+ak olduunu grebiliyoruz ama tabii ki, bu deeri milisaniyemi gerek saniyeye evirmek iin bin katna karmak istiyorum,
+
+65
+00:06:08,350 --> 00:06:10,410
+bu yzden imdi bir saat.
+
+66
+00:06:10,420 --> 00:06:16,810
+imdi bunu kaydedip tekrar bu altrmay yaparsam giri yapn, oturum amaya gein, imdi authLogout'u
+
+67
+00:06:16,840 --> 00:06:22,240
+grmemeliyiz nk imdi bir saat kadar bekleyebiliriz, bunu burada yapmayacam, bunu yapmaktan
+
+68
+00:06:22,240 --> 00:06:23,760
+ekinmeyin tabii ki.
+
+69
+00:06:24,130 --> 00:06:25,610
+imdi devam edebiliriz
+
+70
+00:06:25,660 --> 00:06:32,170
+ve nihayet, arka ucumuzdaki kaynaklarn bir ksmn ilk etapta korumak, ardndan
+
+71
+00:06:32,170 --> 00:06:34,770
+da onlara ulamak ve daha
+
+72
+00:06:34,810 --> 00:06:40,660
+sonra UI'muzu gncellemek iin kullanc arabirimimizi gncellemek iin kullanacaz. ve
+
+73
+00:06:41,050 --> 00:06:42,760
+onun gibi eyler.
+
+74
+00:06:42,820 --> 00:06:46,540
+Yani bunlar zerinde alacam sonraki admlar olacak,
+
+75
+00:06:46,660 --> 00:06:48,970
+bir sonraki derslerde bunu yapalm.
+

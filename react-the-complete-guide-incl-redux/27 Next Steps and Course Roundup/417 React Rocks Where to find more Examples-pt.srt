@@ -1,0 +1,72 @@
+1
+00:00:02,160 --> 00:00:05,190
+Aqui est o meu primeiro conselho para voc, reagir. rochas, esta 
+
+2
+00:00:05,250 --> 00:00:07,740
+uma pgina da web
+
+3
+00:00:07,950 --> 00:00:11,820
+que hospeda muitos projetos de reao.
+
+4
+00:00:11,820 --> 00:00:18,600
+Voc tambm pode procurar por certas coisas l, por palavras-chave como redux por exemplo e, em seguida, voc encontrar
+
+5
+00:00:18,600 --> 00:00:21,370
+alguns projetos de reao que voc pode conferir.
+
+6
+00:00:21,390 --> 00:00:23,520
+Estes so todos de cdigo aberto, voc
+
+7
+00:00:23,520 --> 00:00:29,880
+pode clicar neles como no clone da pgina de destino de filmes do Netflix e ento voc encontrar um link
+
+8
+00:00:29,880 --> 00:00:32,170
+de demonstrao onde voc poder visualizar o
+
+9
+00:00:32,170 --> 00:00:36,550
+projeto embora alguns dos projetos estejam desativados, mas voc deve sempre encontrar um link
+
+10
+00:00:36,660 --> 00:00:42,930
+de cdigo, na maioria das vezes levando a github, l voc pode conferir este projeto e isso  o legal.
+
+11
+00:00:42,930 --> 00:00:49,800
+Voc pode conferir esses projetos e mergulhar no cdigo escrito por outros desenvolvedores.
+
+12
+00:00:49,800 --> 00:00:56,160
+Agora, uma coisa importante, esse cdigo no precisa ser 100% correto ou a melhor prtica, mas deve
+
+13
+00:00:56,190 --> 00:01:03,270
+lhe dar algumas idias sobre como voc pode otimizar seu cdigo ou como voc pode resolver certos problemas ou
+
+14
+00:01:03,330 --> 00:01:05,870
+simplesmente pegar um desses projetos, don Verifique
+
+15
+00:01:05,910 --> 00:01:11,880
+o cdigo e, em vez disso, tente cri-lo por conta prpria e, em seguida, compare sua
+
+16
+00:01:12,240 --> 00:01:14,610
+soluo  soluo da oferta original.
+
+17
+00:01:14,610 --> 00:01:18,210
+Ento, definitivamente, cavar em reatraes. com,  um timo recurso
+
+18
+00:01:18,210 --> 00:01:22,590
+para encontrar alguns projetos interessantes para saber mais sobre como reagir.
+

@@ -1,0 +1,276 @@
+1
+00:00:02,020 --> 00:00:05,690
+E l'ultima lezione Modifichiamo il componente di ordine superiore di classe.
+
+2
+00:00:06,120 --> 00:00:11,310
+Questo proprio come il componente del bue  un componente che essenzialmente avvolge i puntelli.
+
+3
+00:00:11,310 --> 00:00:12,040
+Bambini.
+
+4
+00:00:12,150 --> 00:00:18,220
+Quindi la parte con la tassa di apertura e di chiusura e aggiungere qualcosa come In questo caso fino alla morte.
+
+5
+00:00:18,250 --> 00:00:26,010
+Ora questo  un modo per farlo, ma possiamo anche scrivere la componente di ordine superiore di classe in modo diverso.
+
+6
+00:00:26,280 --> 00:00:34,220
+Possiamo chiamarlo con una classe con una minuscola w e con la foratura ho bisogno di cancellare prima quello vecchio.
+
+7
+00:00:34,440 --> 00:00:40,110
+E questa  anche solo una delle convenzioni per questo tipo di componente di ordine superiore che viene usato
+
+8
+00:00:40,110 --> 00:00:42,450
+un po 'diversamente come vedrete in un secondo.
+
+9
+00:00:42,510 --> 00:00:48,750
+E qui ora creer una costante con la classe, ma questa volta non  una funzione che prende
+
+10
+00:00:48,750 --> 00:00:54,540
+gli oggetti di scena ma una funzione che richiede alcune configurazioni come il nome della classe.
+
+11
+00:00:54,540 --> 00:01:03,430
+E quindi questo restituir una funzione che riceve gli oggetti di scena e che alla
+
+12
+00:01:03,480 --> 00:01:13,850
+fine render qualcosa come render un div con il nome della classe uguale al nome della classe.
+
+13
+00:01:13,870 --> 00:01:22,390
+Quindi l'argomento che abbiamo ottenuto non solo otterr il nome della classe, mi aspetto un altro argomento per
+
+14
+00:01:22,960 --> 00:01:29,870
+il componente spostato e il componente spostato verr effettivamente utilizzato nel componente qui incluso.
+
+15
+00:01:29,950 --> 00:01:33,150
+Un tag che si chiude automaticamente.
+
+16
+00:01:33,220 --> 00:01:40,800
+per poter scrivere questo codice GSX e quindi esportare un default di questo con la funzione class.
+
+17
+00:01:40,800 --> 00:01:42,320
+Importer re-act da reagire
+
+18
+00:01:42,560 --> 00:01:48,720
+Ora tieni presente che con la funzione di classe non  un componente funzionale  una
+
+19
+00:01:48,720 --> 00:01:55,070
+normale funzione javascript che prevede due argomenti che restituiscono una funzione che si qualifica come componente funzionale.
+
+20
+00:01:55,290 --> 00:01:57,000
+Questo qui.
+
+21
+00:01:57,030 --> 00:01:59,460
+Ora qual  l'idea alla base di questo approccio.
+
+22
+00:01:59,760 --> 00:02:01,000
+Lascia che ti mostri.
+
+23
+00:02:01,290 --> 00:02:08,870
+Abbiamo un codice GSX valido qui dove stiamo confezionando un componente ma ora possiamo usarlo un po 'diversamente.
+
+24
+00:02:08,940 --> 00:02:16,410
+Possiamo andare al nostro file js dell'app e sbarazzarci di questo wrapper che, naturalmente, generer un errore.
+
+25
+00:02:16,410 --> 00:02:23,340
+Quindi per ora user il mio componente ausiliario poi importato dal file di coda di bue.
+
+26
+00:02:23,340 --> 00:02:26,600
+Quindi lo avvolgo con un tag praticamente invisibile.
+
+27
+00:02:26,660 --> 00:02:28,470
+Questo  ci che Excel fa bene.
+
+28
+00:02:28,500 --> 00:02:30,110
+Restituisce solo i bambini.
+
+29
+00:02:30,120 --> 00:02:33,800
+Non aggiunge un vero elemento hm l.
+
+30
+00:02:33,970 --> 00:02:42,000
+E ora importer anche questo nuovo con la funzione di classe e lo lascer con una lettera minuscola W
+
+31
+00:02:42,000 --> 00:02:47,910
+all'inizio perch non sto per usarlo come componente perch questa funzione ha appena spiegato
+
+32
+00:02:47,910 --> 00:02:50,300
+che non si qualifica come componente.
+
+33
+00:02:50,580 --> 00:02:53,230
+Non restituisce correttamente GSX.
+
+34
+00:02:53,310 --> 00:03:01,660
+Restituisce solo una funzione numerica, quindi ora ho intenzione di importarla dalla cartella Agios see con
+
+35
+00:03:01,660 --> 00:03:03,000
+Class 2.
+
+36
+00:03:03,520 --> 00:03:07,420
+E ora uno da usare con la classe ma non lo uso nel mio codice GSX.
+
+37
+00:03:07,420 --> 00:03:12,740
+Non ho intenzione di avvolgere nulla con esso perch di nuovo non si qualifica come componente.
+
+38
+00:03:13,150 --> 00:03:21,490
+Invece io avvolgo la mia app qui che sto esportando con essa la sto avvolgendo con la funzione
+
+39
+00:03:21,490 --> 00:03:25,950
+class con l'app passante e con l'app per le classi.
+
+40
+00:03:26,020 --> 00:03:32,440
+con la funzione di classe si aspetta che si aspetti il componente che dovrebbe racchiudere e il nome della classe.
+
+41
+00:03:32,440 --> 00:03:36,010
+Quindi, per vederci come classe, voglio assegnare questi 32 argomenti a
+
+42
+00:03:36,010 --> 00:03:41,890
+Ora con questo in atto Facciamo tutto il lavoro sulla persona che James cade dove ancora usiamo con la classe che
+
+43
+00:03:41,890 --> 00:03:42,880
+non esiste pi.
+
+44
+00:03:42,880 --> 00:03:44,290
+Abbiamo cancellato questo.
+
+45
+00:03:44,590 --> 00:03:48,600
+Quindi importiamo con la classe qui dalla nota conosciuta con il file di classe.
+
+46
+00:03:48,670 --> 00:03:50,740
+Minuscolo W. E tutto questo  un componente ausiliario.
+
+47
+00:03:50,930 --> 00:03:55,220
+Quindi con alks qui avvolgiamo questo per
+
+48
+00:03:55,220 --> 00:04:06,050
+avvolgere alks e quindi usarlo con la classe cos come l'abbiamo usato nella nostra app di Alber J. S. file qui.
+
+49
+00:04:06,410 --> 00:04:08,560
+Usiamolo avvolgendo la funzione persona.
+
+50
+00:04:09,690 --> 00:04:14,130
+Stiamo esportando con CLOS in modo che il personale sia tutto incluso.
+
+51
+00:04:14,160 --> 00:04:20,340
+E il secondo argomento dovrebbe essere la classe che vuoi allegare.
+
+52
+00:04:20,340 --> 00:04:23,220
+In questo caso, la persona si
+
+53
+00:04:23,220 --> 00:04:30,750
+assicura che tutti i file siano salvati e ora tornino all'applicazione e dovrebbe funzionare come prima.
+
+54
+00:04:30,750 --> 00:04:33,060
+Tuttavia non fa clic su questo pulsante e sembra che il primo aspetto funzioni correttamente.
+
+55
+00:04:33,060 --> 00:04:40,010
+Ma vedi che a tutti gli elementi dinamici tutti gli oggetti di scena sulle persone manca
+
+56
+00:04:40,230 --> 00:04:46,620
+il nome dell'et che non possiamo digitare o che possiamo digitare ma che non aggiorna.
+
+57
+00:04:47,120 --> 00:04:50,020
+Non riceviamo un errore ma gli oggetti di scena sono mancanti ora.
+
+58
+00:04:50,190 --> 00:04:54,380
+Generalmente il nostro componente di ordine superiore qui sta funzionando.
+
+59
+00:04:54,420 --> 00:04:57,640
+E questo  uno schema che vedrai
+
+60
+00:04:57,750 --> 00:05:06,090
+spesso se pensi di cambiare il tuo componente come questo avvolgendolo o facendo una trasformazione con Aberlour.
+
+61
+00:05:06,420 --> 00:05:09,660
+Una cosa che non dovresti mai fare qui  manipolare il componente avvolto.
+
+62
+00:05:09,660 --> 00:05:14,320
+Usalo come facciamo qui.
+
+63
+00:05:14,370 --> 00:05:16,610
+Non iniziare ad aggiungere o modificare il suo stato o propriet.
+
+64
+00:05:16,620 --> 00:05:20,870
+E come nota a margine non sei limitato a restituire un componente funzionale qui.
+
+65
+00:05:21,120 --> 00:05:26,700
+Puoi anche restituire un componente stateful.
+
+66
+00:05:26,730 --> 00:05:30,050
+Ora scopriamo cosa c' di sbagliato con questi
+
+67
+00:05:30,060 --> 00:05:35,910
+oggetti di scena prima di dare un'occhiata al componente stateful che viene restituito qui per.
+
+68
+00:05:35,910 --> 00:05:36,920
+Daremo un'occhiata a entrambi nella prossima lezione.
+
+69
+00:05:37,140 --> 00:05:39,180
+&nbsp;
+

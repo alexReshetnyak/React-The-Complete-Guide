@@ -1,0 +1,464 @@
+1
+00:00:02,240 --> 00:00:06,970
+Na ltima palestra, ns nos certificamos de que nossos itens de navegao e o logotipo
+
+2
+00:00:06,970 --> 00:00:10,010
+e tudo parea bom em dispositivos desktop e mveis.
+
+3
+00:00:10,030 --> 00:00:10,890
+Isso  legal.
+
+4
+00:00:11,140 --> 00:00:15,480
+Vamos ter certeza de que todos ns temos um pano de fundo por trs dessa barra lateral.
+
+5
+00:00:15,640 --> 00:00:19,830
+E eu, claro, quero garantir que possamos abri-lo e fech-lo dinamicamente.
+
+6
+00:00:19,840 --> 00:00:26,440
+Vamos comear com o pano de fundo, o pano de fundo deve estar para trs na gaveta lateral e j temos
+
+7
+00:00:26,440 --> 00:00:29,190
+um componente de pano de fundo na pasta UI.
+
+8
+00:00:29,230 --> 00:00:32,480
+Mas como melhor adicionamos  gaveta lateral.
+
+9
+00:00:33,040 --> 00:00:40,560
+Bem, assim como eu adicionei o celular a includo no componente modal, fui includo no site
+
+10
+00:00:40,560 --> 00:00:44,360
+para componente tambm porque pertence  gaveta lateral.
+
+11
+00:00:44,410 --> 00:00:54,720
+Ento, para isso, vou importar o pano de fundo do meu lado, desenhe um arquivo de componente, de modo a importar o pano de fundo.
+
+12
+00:00:54,810 --> 00:01:01,420
+E agora vamos subir 2 nveis, depois, na pasta UI para a pasta do contexto e importados do
+
+13
+00:01:01,420 --> 00:01:03,480
+arquivo js do pano de fundo.
+
+14
+00:01:03,790 --> 00:01:07,490
+E vamos adicionar um pano de fundo aqui na gaveta lateral.
+
+15
+00:01:07,510 --> 00:01:15,130
+com D, que, basicamente, a gaveta do lado esquerdo de Stahl e a modelo no devem se afastar  sbia, ela seria
+
+16
+00:01:15,130 --> 00:01:20,470
+contida dentro da gaveta lateral e, claro, no  exatamente o que eu quero fora dela.
+
+17
+00:01:20,470 --> 00:01:22,900
+Agora voc conseguiu esse elemento de embrulho
+
+18
+00:01:22,900 --> 00:01:29,400
+Voc ver o problema de que temos elementos GSX adjacentes, mas podemos simplesmente importar nosso componente auxiliar
+
+19
+00:01:29,710 --> 00:01:31,730
+para ainda poder fazer isso.
+
+20
+00:01:31,960 --> 00:01:38,700
+Ento, vamos navegar todo o caminho at a pasta HLC e importar o componente auxiliar da cadeia de
+
+21
+00:01:38,700 --> 00:01:39,700
+boi como arquivado.
+
+22
+00:01:40,060 --> 00:01:48,760
+Agora, eu simplesmente adicionaria o componente axilar como um invlucro em torno deste componente e agora deveria funcionar e o modal
+
+23
+00:01:49,760 --> 00:01:51,260
+do curso  errado.
+
+24
+00:01:51,260 --> 00:01:52,550
+Este  um cenrio aqui.
+
+25
+00:01:53,670 --> 00:01:59,610
+Ento, ele faz um pano de fundo como parte dos lados se voc recarregar o aplicativo.
+
+26
+00:01:59,610 --> 00:02:02,400
+Ns no vemos isso, porm, onde  o pano de fundo.
+
+27
+00:02:02,850 --> 00:02:08,820
+Bem, se voc inspecionar o pano de fundo,  claro que percebe que ele mostra uma propriedade que
+
+28
+00:02:08,820 --> 00:02:10,570
+precisa ser verdadeira para exibi-la.
+
+29
+00:02:10,590 --> 00:02:16,230
+Ento,  claro, podemos simplesmente configurar um show como este e, como  uma propriedade booleana, no precisamos
+
+30
+00:02:16,230 --> 00:02:22,210
+atribuir um valor apenas adicionando-o, ser definido como verdadeiro se no estiver presente como antes, ele ser configurado como falso.
+
+31
+00:02:22,230 --> 00:02:24,810
+Ento, agora, o cenrio parece legal.
+
+32
+00:02:24,960 --> 00:02:31,360
+Claro que isso nem sempre deve ser visvel, porm as barras laterais s devem ser mostradas s vezes.
+
+33
+00:02:31,410 --> 00:02:35,310
+Depois de clicar no boto de menu essencialmente e tambm deve ser fechado.
+
+34
+00:02:35,310 --> 00:02:37,380
+Depois de clicar no pano de fundo.
+
+35
+00:02:37,730 --> 00:02:41,140
+Ento, para isso, precisamos registrar um ouvinte de cliques no pano de fundo.
+
+36
+00:02:41,460 --> 00:02:44,020
+E na verdade j temos um.
+
+37
+00:02:44,160 --> 00:02:49,880
+Ns temos o ouvinte de clique clicado, que pode desarmar qualquer mtodo que desejemos disparar.
+
+38
+00:02:50,000 --> 00:02:55,980
+Ento, o objetivo  agora ser capaz de lidar com esse mtodo na gaveta lateral.
+
+39
+00:02:56,180 --> 00:03:06,380
+Agora, no celular, simplesmente propagamos, faz o relgio at o nosso recipiente de espera aqui na gaveta
+
+40
+00:03:06,390 --> 00:03:07,050
+lateral.
+
+41
+00:03:07,220 --> 00:03:14,900
+Eu tambm quero fazer isso, ns poderamos ter desviado ou para um componente completo de estado e lidar com o clique
+
+42
+00:03:14,900 --> 00:03:19,030
+aqui com um mtodo e com um estado que mudamos do show.
+
+43
+00:03:19,160 --> 00:03:25,680
+Ento, de verdade a falso e assim por diante e no haveria nada de errado com isso, mas tambm dispararemos
+
+44
+00:03:25,680 --> 00:03:30,820
+uma gaveta lateral da barra de ferramentas no final porque haver seu boto de menu.
+
+45
+00:03:31,070 --> 00:03:36,500
+Ento, no final, tambm precisamos criar uma conexo da barra de ferramentas para a gaveta lateral e j
+
+46
+00:03:36,500 --> 00:03:37,390
+temos essa conexo.
+
+47
+00:03:37,460 --> 00:03:38,910
+ o componente de layout.
+
+48
+00:03:39,160 --> 00:03:40,980
+ aqui que usamos os dois.
+
+49
+00:03:41,000 --> 00:03:46,700
+Ento, na minha opinio, faz mais sentido transformar o componente de layout em um componente de
+
+50
+00:03:46,730 --> 00:03:53,800
+classe onde podemos implementar o mtodo para que possamos ouvir os dois lados ou se fechando clicando no pano de
+
+51
+00:03:54,200 --> 00:03:59,130
+fundo, bem como a barra de ferramentas abrindo o lado ou clicando nesse boto.
+
+52
+00:03:59,210 --> 00:04:01,400
+Portanto, este  o prximo passo.
+
+53
+00:04:01,610 --> 00:04:09,950
+Altere meu layout aqui para um layout de classe e deve estender um componente, portanto, importar
+
+54
+00:04:10,430 --> 00:04:16,760
+componente de reagir e voc simplesmente  estendido com a palavra-chave extensa.
+
+55
+00:04:16,760 --> 00:04:20,650
+Agora, dentro dessa classe de layout, B precisa processar o mtodo conforme voc aprendeu.
+
+56
+00:04:20,750 --> 00:04:24,620
+E ento devemos retornar alguns j como X e ns receberemos o J como x ano.
+
+57
+00:04:24,620 --> 00:04:27,480
+Ento, simplesmente cort-lo e entre aqui.
+
+58
+00:04:27,500 --> 00:04:32,540
+Remova essas coisas l embaixo e os acessos agora podem ser acessados com este suporte, como voc aprendeu.
+
+59
+00:04:32,630 --> 00:04:36,250
+Esse  o caso de todos os componentes baseados em classe.
+
+60
+00:04:36,290 --> 00:04:40,130
+Agora, a mudana de nome para a conveno de nomeao latina para Kapolei LTTE.
+
+61
+00:04:40,250 --> 00:04:43,200
+Ento vamos ter apenas a exportao l embaixo.
+
+62
+00:04:43,310 --> 00:04:46,810
+Agora com isso, nosso componente de rtulo mudou.
+
+63
+00:04:46,810 --> 00:04:48,210
+Agora  uma aula.
+
+64
+00:04:48,230 --> 00:04:57,790
+Agora, podemos implementar um mtodo aqui e irei chamar esse mtodo para desenhar nosso manipulador fechado.
+
+65
+00:04:57,790 --> 00:04:59,690
+Voc pode, claro, tomar qualquer nome que voc deseja.
+
+66
+00:05:00,010 --> 00:05:07,720
+Eu usarei essa sintaxe onde eu atribuo sua funo de seta 6 a uma propriedade para que essa palavra-chave dentro
+
+67
+00:05:07,960 --> 00:05:11,950
+desse mtodo far referncia  classe em todos os momentos.
+
+68
+00:05:12,220 --> 00:05:18,160
+E tambm precisamos gerenciar algum estado em seu estado, que configurar o seu deve
+
+69
+00:05:18,160 --> 00:05:18,860
+conter informaes.
+
+70
+00:05:18,890 --> 00:05:22,440
+Se o site ou  weazel ou no, ento voc est configurado.
+
+71
+00:05:22,440 --> 00:05:27,020
+Mostre a gaveta lateral e configure isso como quedas inicialmente talvez.
+
+72
+00:05:27,090 --> 00:05:30,070
+Vamos definir isso como verdadeiro para testar para que possamos v-lo.
+
+73
+00:05:30,520 --> 00:05:32,380
+E dentro do nosso manipulador fechado.
+
+74
+00:05:32,410 --> 00:05:39,300
+Vou chamar esse estado definido e definir show sightseer ou dois campos,  claro, assim.
+
+75
+00:05:39,310 --> 00:05:48,820
+Ento, agora eu preciso passar este mtodo de manipulador de eventos aqui para a gaveta do meu lado e eu vou nome-lo fechado
+
+76
+00:05:48,850 --> 00:05:52,680
+l, queremos executar este lado desenhar um manipulador fechado.
+
+77
+00:05:52,690 --> 00:05:58,840
+Ento, agora temos que usar essa propriedade prxima na gaveta lateral e depois us-la para simplesmente pass-la
+
+78
+00:05:58,840 --> 00:06:06,360
+para o pano de fundo onde eu tenho essa propriedade clicada que simplesmente me passar o evento de clique basicamente.
+
+79
+00:06:06,490 --> 00:06:10,420
+Ento, eu quero passar os adereos fechados.
+
+80
+00:06:10,470 --> 00:06:16,060
+eu passo a referncia do mtodo para o local onde eu lido o clique no final.
+
+81
+00:06:16,060 --> 00:06:17,990
+Ento, simplesmente configurando essa cadeia onde
+
+82
+00:06:18,000 --> 00:06:22,140
+Ento, com esse show,  claro, tudo est ligado dinamicamente.
+
+83
+00:06:22,140 --> 00:06:30,520
+Os shows devem ser obrigatrios para permitir o que quer que voc queira nomear, digamos o show do prop, o que faz sentido,
+
+84
+00:06:30,550 --> 00:06:32,620
+mas no confunde com esse show.
+
+85
+00:06:32,740 --> 00:06:34,640
+Vamos nome-lo aberto.
+
+86
+00:06:34,960 --> 00:06:38,530
+Ento, esta propriedade aberta que precisa ser configurada na gaveta lateral.
+
+87
+00:06:38,680 --> 00:06:46,030
+Ento, de volta  barra de ferramentas, precisamos passar de volta ao layout que precisamos para a propriedade aberta para o lado
+
+88
+00:06:46,040 --> 00:06:47,040
+ou at agora.
+
+89
+00:06:47,260 --> 00:06:53,560
+E essa deve ser essa gaveta do lado do show do estado porque isso segurar a informao se
+
+90
+00:06:53,560 --> 00:06:56,230
+a porta lateral deve ser aberta ou no.
+
+91
+00:06:56,230 --> 00:07:01,940
+Com essas adies, se ns agora salvar todos os arquivos e ns voltaremos, ainda devemos ter um pano de fundo.
+
+92
+00:07:01,960 --> 00:07:05,650
+Mas se clicarmos sobre isso, deve descartar o pano de fundo.
+
+93
+00:07:05,650 --> 00:07:10,900
+No descarta o site Drori ainda porque no adicionamos nenhuma lgica para faz-lo.
+
+94
+00:07:11,500 --> 00:07:19,270
+Vamos adicionar essa lgica agora e na gaveta lateral lembre-se de que eu adicionei essa classe C S S aberto e fechada dentro do
+
+95
+00:07:19,510 --> 00:07:21,560
+arquivo c S S de gavetas.
+
+96
+00:07:21,730 --> 00:07:26,980
+dentro dela e eles vo jogar uma animao com isso devido a essa propriedade de transio aqui.
+
+97
+00:07:26,980 --> 00:07:32,730
+Eu quero anexar essas classes de forma condicional porque basicamente mover-se-o para fora ou para fora da pgina ou
+
+98
+00:07:33,190 --> 00:07:38,570
+Portanto, portanto, precisamos anexar condicionalmente voc abrir ou fechar como classes.
+
+99
+00:07:38,800 --> 00:07:43,750
+E ento o componente lateral que essa  a parte que eu quero fazer antes de eu retornar o cdigo aqui.
+
+100
+00:07:43,780 --> 00:07:51,540
+Antes de eu retornar J como X, eu quero criar um nome constante de Witchell, as classes anexadas, e
+
+101
+00:07:51,630 --> 00:07:55,160
+isso sempre deve conter minha cidra ou Clauss.
+
+102
+00:07:55,350 --> 00:07:59,240
+Mas o prximo elemento em desire por padro poderia ser fechar a classe.
+
+103
+00:07:59,400 --> 00:08:02,050
+Ento, as aulas se fecham.
+
+104
+00:08:02,160 --> 00:08:06,100
+Isso , naturalmente, referindo-se a Colloseum S-Class.
+
+105
+00:08:06,240 --> 00:08:11,540
+Agora, a classe de reabertura deve estar nela quando abrir essa propriedade  verdadeira.
+
+106
+00:08:12,440 --> 00:08:15,660
+Ento, ento, verifico se o Open est aberto.
+
+107
+00:08:15,830 --> 00:08:22,490
+Se isso for verdade, as clusulas de anexao no devem ter que fechar a classe, mas a classe aberta.
+
+108
+00:08:22,750 --> 00:08:25,370
+Ento, esse retorno faz de uma constante para uma varivel.
+
+109
+00:08:25,520 --> 00:08:33,620
+Ento, eles podem redefinir suas clusulas de anexos de ano, agora devem ser uma matriz onde eu tenho minha porta lateral, mas tambm temos
+
+110
+00:08:33,680 --> 00:08:40,280
+a minha classe aberta e agora eu posso usar o baixo aqui onde eu atribuo um nome de classe.
+
+111
+00:08:40,430 --> 00:08:45,150
+No vou atribuir as classes cyder ou eu vou atribuir minhas classes anexadas em vez disso.
+
+112
+00:08:45,350 --> 00:08:50,450
+uma nica string, toda a escolha que a string em uma nica seqncia com espaos em branco est entre os itens.
+
+113
+00:08:50,450 --> 00:08:53,890
+E uma vez que no podemos passar uma srie de strings aqui, mas deve passar
+
+114
+00:08:53,900 --> 00:09:01,130
+Ento, entre as minhas aulas de siestas, agora, se papai devemos ter um sorteio que na verdade possa desaparecer assim que
+
+115
+00:09:01,130 --> 00:09:03,870
+clicarmos no pano de fundo e isso acontece.
+
+116
+00:09:04,130 --> 00:09:09,260
+O prximo passo  criar esse alvo, mas voc deve mover todo o zoom uma vez que voc clica nesse boto.
+

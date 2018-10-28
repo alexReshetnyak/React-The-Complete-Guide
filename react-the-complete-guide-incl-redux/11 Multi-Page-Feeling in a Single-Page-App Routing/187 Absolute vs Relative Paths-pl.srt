@@ -1,0 +1,124 @@
+1
+00:00:02,170 --> 00:00:10,810
+Jeszcze jedna informacja o utworzonych tutaj linkach, to = '/', to = '/ new-post ", sposb w jaki piszesz tutaj swoje linki,
+
+2
+00:00:10,810 --> 00:00:11,890
+nie decyduje o
+
+3
+00:00:11,980 --> 00:00:15,370
+tym, czy jest to cieka absolutna czy wzgldna.
+
+4
+00:00:15,550 --> 00:00:18,930
+Co waciwie ma warto bezwzgldna i wzgldna?
+
+5
+00:00:19,420 --> 00:00:23,310
+cieka bezwzgldna jest zawsze doczana do Twojej domeny,
+
+6
+00:00:23,440 --> 00:00:29,720
+wic jeli obsugujesz t aplikacj z przykadu. com, a nastpnie chcesz przej do nowego
+
+7
+00:00:29,950 --> 00:00:37,360
+posta, jeli przejdziesz do / new-post, to po prostu oznacza, e zawsze doczaj / nowy-post zaraz po domenie.
+
+8
+00:00:37,420 --> 00:00:45,430
+Nawet jeli wczeniej bye na przykad. com post, nie dodalibycie nowego postu na kocu tego, zamieniajc go
+
+9
+00:00:45,440 --> 00:00:51,890
+na posty / new-post, ale zmieniajc go na przykad. com / new-post i pomijanie postw,
+
+10
+00:00:52,140 --> 00:00:54,550
+to jest absolutna cieka.
+
+11
+00:00:54,550 --> 00:01:00,260
+Teraz, gdy konfigurujesz, nie moesz kontrolowa, czy jest to cieka absolutna czy
+
+12
+00:01:00,340 --> 00:01:06,620
+wzgldna, zawsze traktowana jest jako absolutna cieka. Bez wzgldu na to, czy jest to nowy wpis, czy
+
+13
+00:01:06,730 --> 00:01:11,420
+tylko nowe posty, jest to absolutna cieka i zawsze bdzie doczana do domeny gwnej.
+
+14
+00:01:11,770 --> 00:01:15,990
+A co jeli chciaby zmieni to na wzgldn ciek?
+
+15
+00:01:16,000 --> 00:01:23,080
+Wic jeli chcesz mie pewno, e jeste w domenie / postach, to faktycznie przechodzisz do swojej
+
+16
+00:01:23,080 --> 00:01:28,640
+domeny / postw / nowych postw, wic dodajesz to na kocu biecej cieki.
+
+17
+00:01:28,780 --> 00:01:35,650
+Nastpnie musisz dynamicznie budowa t ciek, biorc pod uwag, e wiesz, na ktrej
+
+18
+00:01:35,650 --> 00:01:37,810
+ciece obecnie si znajdujesz.
+
+19
+00:01:37,810 --> 00:01:41,230
+Pamitaj, e masz dostp do tego. rekwizyty. mecz,
+
+20
+00:01:41,230 --> 00:01:48,620
+sprawdzilimy to w konsoli. Obiekt dopasowania ma obiekt URL, ktry jest aktualnie zaadowan
+
+21
+00:01:48,630 --> 00:01:50,010
+ciek na kocu.
+
+22
+00:01:50,020 --> 00:01:56,860
+Teraz moesz acuch / nowy-post, moesz zbudowa tak dynamiczn ciek.
+
+23
+00:01:56,860 --> 00:02:00,470
+Teraz jest wzgldny, poniewa zajmuje stron, na ktrej aktualnie
+
+24
+00:02:00,490 --> 00:02:07,480
+si znajdujesz, ciek, na ktrej obecnie si znajdujesz i docza j na kocu, i nagle zbudowae wzgldn
+
+25
+00:02:07,480 --> 00:02:08,210
+ciek.
+
+26
+00:02:08,530 --> 00:02:15,110
+Jeli wic chcesz zbudowa link, ktry po prostu doda ciek do koca
+
+27
+00:02:15,150 --> 00:02:16,730
+aktualnej cieki, zastosuj
+
+28
+00:02:17,140 --> 00:02:21,650
+to podejcie inaczej, zawsze generuje to absolutn ciek.
+
+29
+00:02:21,700 --> 00:02:23,910
+Tu nie ma lepszego ani gorszego,
+
+30
+00:02:23,920 --> 00:02:30,060
+to naprawd zaley od tego, ktre zachowanie chcesz, dodaj do domeny gwnej lub doczonej do obecnej cieki,
+
+31
+00:02:30,070 --> 00:02:32,470
+chciaem uwiadomi ci, jak osign oba.
+

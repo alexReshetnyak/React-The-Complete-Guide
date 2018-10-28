@@ -1,0 +1,52 @@
+1
+00:00:02,190 --> 00:00:05,040
+Agregamos mucha lgica en este mdulo.
+
+2
+00:00:05,220 --> 00:00:12,120
+Ahora tenemos una bsqueda de uso de redux avanzada con reductores refactorizados con Lean's que
+
+3
+00:00:12,520 --> 00:00:20,730
+afirmaciones de casos manejaban el cdigo asincrnico con creadores de acciones. Estamos aplicando middleware en nuestro ndice. Solo
+
+4
+00:00:20,730 --> 00:00:25,230
+falta agregar X funk para poder tener creadores de acciones asncronas.
+
+5
+00:00:25,230 --> 00:00:29,440
+Estamos haciendo muchas cosas con relajacin y an as, y eso es todo lo importante.
+
+6
+00:00:29,460 --> 00:00:34,140
+No hagas todo con eso porque no tenemos que administrar todo con redux como te mostr.
+
+7
+00:00:34,200 --> 00:00:39,430
+Est bien todava administrar un estado como un modal si se debe mostrar o no a travs del
+
+8
+00:00:39,450 --> 00:00:40,670
+estado de UI local.
+
+9
+00:00:40,680 --> 00:00:43,810
+Me gusta cmo se comportan nuestras aplicaciones.
+
+10
+00:00:43,830 --> 00:00:46,820
+El siguiente paso es agregarle autenticacin.
+
+11
+00:00:46,980 --> 00:00:50,470
+Dado que esto nunca es una funcin principal, muchas aplicaciones usan.
+
+12
+00:00:50,610 --> 00:00:53,990
+Y quiero mostrarte cmo editar d forma de reaccin.
+
+13
+00:00:54,090 --> 00:00:55,080
+As que vamos a mover eso.
+

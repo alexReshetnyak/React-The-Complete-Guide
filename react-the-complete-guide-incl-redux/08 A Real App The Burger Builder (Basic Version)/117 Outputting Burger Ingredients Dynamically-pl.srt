@@ -1,0 +1,448 @@
+1
+00:00:02,150 --> 00:00:07,550
+W ostatnich wykadach zaczlimy wdraa burgera, ale tak naprawd nie jest on tak dynamiczny.
+
+2
+00:00:07,550 --> 00:00:15,910
+Zrbmy pierwszy wany krok, zajmujc si skadnikami burgera w stanie naszego budowniczego burgerw,
+
+3
+00:00:16,160 --> 00:00:20,290
+poniewa wanie tam ostatecznie je dodamy.
+
+4
+00:00:20,300 --> 00:00:23,910
+To wszystko jest powodem, dla ktrego jest to peny skadnik pastwowy.
+
+5
+00:00:23,930 --> 00:00:25,880
+Teraz dodajemy stan.
+
+6
+00:00:26,090 --> 00:00:30,750
+Zamierzam doda taki stan po prostu zainicjowa go jako rekwizyt. Ale jak pokazaem ci w ostatnim
+
+7
+00:00:30,980 --> 00:00:39,650
+module kursu, moesz rwnie doda konstruktora, z ktrego rekwizyty otrzymuj super rekwizyty.
+
+8
+00:00:39,650 --> 00:00:42,800
+Nigdy tego nie zapominaj, a nastpnie zainicjuj ten stan, poniewa znajdujesz si w takiej metodzie.
+
+9
+00:00:42,800 --> 00:00:52,110
+To te by dziaao.
+
+10
+00:00:52,130 --> 00:00:53,750
+Jest to alternatywa, ktra zostaa
+
+11
+00:00:53,750 --> 00:01:01,670
+skomentowana, poniewa uywa nieco nowoczeniejszej, poniewa krtsza skadnia, ale skadnia konstruktorw bdzie dziaaa absolutnie dobrze, aby wiedzie, co powinno by wewntrz stanu.
+
+12
+00:01:02,090 --> 00:01:08,930
+Chc mie obiekt skadajcy si z p par klucz-warto,
+
+13
+00:01:09,380 --> 00:01:15,830
+gdzie klucze s nazwami skadnikw, a wartoci jest ilo.
+
+14
+00:01:15,830 --> 00:01:19,900
+Wic nie bd mia skadnika saatkowego moe jeden bd mia
+
+15
+00:01:19,940 --> 00:01:27,230
+skadnik bekonowy moe cay ten bd mia skadnik sera moe dwa i spotkanie relient moe wszystkie dwa.
+
+16
+00:01:27,590 --> 00:01:33,520
+Naprawd zbuduj duego burgera.
+
+17
+00:01:33,540 --> 00:01:36,080
+Pniej dodamy jeszcze wicej stanw, takich jak cena.
+
+18
+00:01:36,110 --> 00:01:40,090
+Ale na razie chodmy z podstawami Bergere.
+
+19
+00:01:40,160 --> 00:01:44,330
+Teraz oczywicie otrzymujemy nasze skadniki.
+
+20
+00:01:44,360 --> 00:01:47,090
+Celem jest teraz przekazanie tej tablicy do naszego burgera.
+
+21
+00:01:47,090 --> 00:01:52,030
+Wic w jaki sposb chcemy nada nasz skadnik burgerowi skadniki.
+
+22
+00:01:52,340 --> 00:01:58,310
+Tak wic na nieruchomociach Adriatw chcemy przekaza ten pastwowy skadnik.
+
+23
+00:01:58,400 --> 00:02:04,270
+To jest pomys.
+
+24
+00:02:04,280 --> 00:02:05,660
+Chodzi o to, e burger nie otrzymuje jeszcze adnych skadnikw.
+
+25
+00:02:05,690 --> 00:02:10,200
+Skopiujmy to do komponentu Bruegla i zacznijmy go akceptowa.
+
+26
+00:02:10,380 --> 00:02:16,010
+I zacznijmy teraz dynamicznie dodawa skadniki w skadniku hamburgera.
+
+27
+00:02:16,010 --> 00:02:21,890
+Pamitaj, e przyjmujemy skadniki jako rekwizyt. Ale jeli sprawdzimy
+
+28
+00:02:22,040 --> 00:02:28,700
+skadniki w stanie budowniczego burgera, musisz pamita, e to obiekt.
+
+29
+00:02:28,700 --> 00:02:32,640
+To nie jest tablica.
+
+30
+00:02:32,870 --> 00:02:35,170
+Wic nie moemy uy mapy na tej wiadomej ptli przez to.
+
+31
+00:02:35,270 --> 00:02:38,450
+To jest obiekt.
+
+32
+00:02:38,450 --> 00:02:40,250
+Zamiast tego musimy przeksztaci ten obiekt w tablic.
+
+33
+00:02:40,640 --> 00:02:44,270
+A mwic dokadniej, musimy przeksztaci ten obiekt w tablic wartoci skadnikw.
+
+34
+00:02:44,480 --> 00:02:52,100
+Na szczcie nie jest to takie trudne w funkcji burgera i komponentu hamburgera.
+
+35
+00:02:52,130 --> 00:02:59,620
+Wymienibym now koncepcj, ktr nazwabym skadnikami, a moe wyjani, e nie jest to forma
+
+36
+00:02:59,920 --> 00:03:04,920
+przychodzca ani nazwa, ktra przeksztacia skadniki i mog uywa
+
+37
+00:03:04,920 --> 00:03:13,430
+obiektu obiektu, ktry jest domylnym obiektem javascript, ktry nie jest dostarczany przez reakcj lub cokolwiek tak.
+
+38
+00:03:13,430 --> 00:03:19,370
+Ma kluczow metod, ktra wyodrbnia klucze danego obiektu i zamienia go w tablic.
+
+39
+00:03:19,370 --> 00:03:26,680
+Daje ci wic tablic kluczy.
+
+40
+00:03:26,690 --> 00:03:28,780
+Tak wic dla naszego obiektu daaby
+
+41
+00:03:29,060 --> 00:03:36,530
+nam tablic, ktra zawiera cig wybierz bekon smyczkowy a ser smyczkowy i cig speniajcy wartoci 1 1 2 2 nie s czci tablicy.
+
+42
+00:03:36,620 --> 00:03:42,310
+Wic moe ma skadniki.
+
+43
+00:03:42,740 --> 00:03:45,260
+Teraz mamy na kocu t tablic cigw kluczy.
+
+44
+00:03:45,290 --> 00:03:49,990
+Teraz nasz acuch jest metod do tego.
+
+45
+00:03:50,390 --> 00:03:52,180
+I zrobi to w nowej linii, aby uatwi czytanie.
+
+46
+00:03:52,280 --> 00:03:55,000
+To nadal naley do kluczy obiektowych,
+
+47
+00:03:55,040 --> 00:04:01,850
+wywoaj tutaj metod matematyczn, ktr moemy oczywicie wykona, poniewa znowu klucze zwracaj si jako tablica.
+
+48
+00:04:01,850 --> 00:04:05,320
+Teraz wspominam, e elementy w tablicy to po prostu waciwoci i tak dalej.
+
+49
+00:04:05,330 --> 00:04:10,810
+Wic wiesz, e mapa wykonuje funkcj dla kadego elementu w tablicy wejciowej.
+
+50
+00:04:10,820 --> 00:04:17,660
+Wic cay prezent jest argumentem, ktry otrzymujemy w funkcji klucz
+
+51
+00:04:17,930 --> 00:04:25,910
+IGY dla klucza skadnika, poniewa jest to tylko jedna cz tablicy.
+
+52
+00:04:25,910 --> 00:04:27,540
+I tak dalej.
+
+53
+00:04:27,980 --> 00:04:29,590
+Teraz w
+
+54
+00:04:29,630 --> 00:04:41,300
+tej funkcji chc przeksztaci t warto cigu w tablic z tylu elementw, ile mamy skadnikw dla danego skadnika.
+
+55
+00:04:41,750 --> 00:04:45,180
+Wic jeli mamy dwa skadniki sera,
+
+56
+00:04:45,380 --> 00:04:54,050
+to chc przeksztaci ten cig serowy w tablic, ktra zawiera po prostu dwa elementy.
+
+57
+00:04:54,260 --> 00:04:56,570
+Nie obchodzi mnie, ktre elementy, jeli s to dwie a do tych dwch cokolwiek.
+
+58
+00:04:56,570 --> 00:05:03,100
+Ale powinien mie dugo dwch.
+
+59
+00:05:03,290 --> 00:05:06,010
+Zwrc tutaj tablic i faktycznie uyj
+
+60
+00:05:06,140 --> 00:05:15,140
+do rozprzestrzeniania operatora, aby rozprzestrzeni now tablic, ktr musz skonstruowa, i ktra zostanie skonstruowana przy uyciu metody tablicowej dostarczonej przez javascript.
+
+61
+00:05:15,140 --> 00:05:21,230
+Znowu to nie jest metoda reagowania, czy nie, reaguj na obiekt, to jest domylny obiekt javascript.
+
+62
+00:05:21,220 --> 00:05:28,300
+Moesz tego nie wiedzie, poniewa nie uywasz go tak czsto, ale moesz utworzy z nim tablic.
+
+63
+00:05:28,400 --> 00:05:33,770
+Na przykad array free da ci tablic
+
+64
+00:05:33,860 --> 00:05:41,480
+z trzema pustymi miejscami w zasadzie z wolnymi nieokrelonymi spacjami.
+
+65
+00:05:41,540 --> 00:05:42,670
+Teraz dugo nie jest oczywicie darmowa.
+
+66
+00:05:43,100 --> 00:05:45,400
+Dugo powinna by iloci danego skadnika.
+
+67
+00:05:45,500 --> 00:05:49,880
+A wic tutaj skadniki rekwizytw.
+
+68
+00:05:49,880 --> 00:05:52,020
+A potem uzyskam dostp do podanego
+
+69
+00:05:52,310 --> 00:05:59,600
+tu klucza, poniewa pamitam, e nadal jestemy w tej funkcji naszej metody mapowej, ktra dziaa na tablicy zawierajcej wszystkie nasze klucze.
+
+70
+00:05:59,600 --> 00:06:05,190
+To, co mamy w tym momencie, to po prostu tablica z dwoma elementami.
+
+71
+00:06:05,240 --> 00:06:11,360
+Wartoci nie maj dla nas znaczenia.
+
+72
+00:06:11,360 --> 00:06:13,610
+Teraz wykonam map na tej tablicy.
+
+73
+00:06:14,490 --> 00:06:17,370
+Naley pamita, e nadal znajdujemy si na
+
+74
+00:06:17,370 --> 00:06:23,040
+zewntrznej mapie Meffert Ale istnieje rwnie tablica numerw zwrotnych, w ktrej chc teraz mapowa elementy.
+
+75
+00:06:23,040 --> 00:06:26,220
+Nie dbam o sam element.
+
+76
+00:06:26,360 --> 00:06:30,790
+Dlatego uyj podkrelenia jako nazwy argumentu, aby
+
+77
+00:06:31,160 --> 00:06:37,010
+wskaza pod-planck, ale indeks tego elementu jest dla mnie wany.
+
+78
+00:06:37,010 --> 00:06:39,390
+Wic teraz na tej
+
+79
+00:06:39,830 --> 00:06:48,440
+mapie Meffert zwrc mj skadnik hamburgerowy, poniewa musz zwrci tablic GSX na kocu, gdzie ustawi klucz.
+
+80
+00:06:48,440 --> 00:06:52,880
+Pamitaj, e musimy przypisa klucz, poniewa jest to tablica.
+
+81
+00:06:52,880 --> 00:06:55,550
+Zwracamy tablic elementw GSX do klucza IGY.
+
+82
+00:06:55,550 --> 00:07:00,420
+Plus ja teraz kluczem IGY jest co takiego, jak go sprzeda, a ja po prostu jestem wolny i tak dalej.
+
+83
+00:07:00,500 --> 00:07:06,680
+Tworzy to unikalny klucz dla kadego skadnika, a jego typ to po prostu klucz IGY.
+
+84
+00:07:06,680 --> 00:07:16,240
+Wanie dlatego nie dbam o pierwszy argument tutaj.
+
+85
+00:07:16,240 --> 00:07:20,470
+Nie obchodzi mnie, co to obiekt obszaru zapenia t tablic.
+
+86
+00:07:20,470 --> 00:07:24,230
+Liczy si tylko dugo tej tablicy,
+
+87
+00:07:24,340 --> 00:07:30,540
+poniewa w tym przypadku potrzebuj tablicy o dugoci 2 dla sera.
+
+88
+00:07:30,550 --> 00:07:31,180
+W przypadku boczku
+
+89
+00:07:31,180 --> 00:07:37,210
+miaby on dugo 1, dziki czemu mog utworzy odpowiedni ilo skadnikw skadnikw Bergere, a nastpnie interesuj si tylko typem, ktry otrzymaem od samego pocztku.
+
+90
+00:07:37,750 --> 00:07:42,470
+Poniewa wyodrbniam wszystkie typy wszystkich nazw waciwoci moich skadnikw,
+
+91
+00:07:42,490 --> 00:07:50,700
+tutaj oczywicie oznacza to, e kluczem jest tutaj uycie w hamburgerze Stan Bullersa musi by rwny kluczom.
+
+92
+00:07:50,710 --> 00:07:59,140
+Sprawdzasz miso skadnika Bergere.
+
+93
+00:07:59,140 --> 00:08:02,270
+Ser i boczek.
+
+94
+00:08:02,290 --> 00:08:03,650
+Musz mie t sam obudow i t sam nazw.
+
+95
+00:08:03,730 --> 00:08:07,190
+To jest bardzo wane, poniewa uywam tego, by w kocu stworzy odpowiednie skadniki.
+
+96
+00:08:07,240 --> 00:08:13,680
+Wic to jest to, co w kocu powracam w tej metodzie map
+
+97
+00:08:14,070 --> 00:08:22,540
+wewntrznych, a zatem zamieniam mj obiekt na szereg skadnikw na kocu moe wyglda na bardzo skomplikowane.
+
+98
+00:08:22,600 --> 00:08:28,570
+Zapraszam do wrzucenia niektrych wad. duo czasu pomidzy, aby zobaczy, co masz obecnie lub
+
+99
+00:08:28,570 --> 00:08:34,810
+przej przez to z debuggerem.
+
+100
+00:08:34,960 --> 00:08:36,530
+Ale w kocu jest
+
+101
+00:08:36,700 --> 00:08:43,750
+to tylko sposb na przeksztacenie obiektu kluczowych par wartoci w zestaw skadnikw Bruguery, w ktrych warto tego
+
+102
+00:08:44,110 --> 00:08:52,060
+obiektu jest wana dla mnie, aby zdecydowa, ile skadnikw potrzebuj, a klucz jest wany dla jakiego rodzaju zoci i Potrzebuj.
+
+103
+00:08:52,060 --> 00:08:55,540
+Wic teraz otrzymuj zmienione skadniki i teraz czas je zwrci.
+
+104
+00:08:55,540 --> 00:09:00,390
+Zawsze bd mia chleb na grze i chleb na
+
+105
+00:09:00,400 --> 00:09:07,990
+dole, ale w midzyczasie wyjciowe wzmacniacze Callie przeksztacaj skadniki i zobaczmy, czy to dziaa.
+
+106
+00:09:08,080 --> 00:09:10,990
+Upewnij si, e wszystkie pliki s zapisane i
+
+107
+00:09:10,990 --> 00:09:17,630
+powiniene teraz mie burgera z dwoma kawakami misa do sera, ale tylko jeden bekon i jedn komrk.
+
+108
+00:09:17,710 --> 00:09:19,360
+Jeli pojawi si bd, upewnij si, e ten kod transformacji dziaa tak, jak powinien.
+
+109
+00:09:19,900 --> 00:09:25,280
+I dziki temu zrobilimy nasz pierwszy wany krok w kierunku prawdziwie dynamicznego burgera.
+
+110
+00:09:25,660 --> 00:09:31,120
+Nie jest jeszcze dynamiczna, ale przynajmniej mamy ogln metod wyprowadzania skadnikw.
+
+111
+00:09:31,120 --> 00:09:37,930
+Nastpnie moemy pracowa nad umoliwieniem uytkownikowi dodawania i usuwania skadnikw.
+
+112
+00:09:37,930 --> 00:09:42,100
+&nbsp;
+

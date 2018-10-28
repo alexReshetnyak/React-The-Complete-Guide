@@ -1,0 +1,104 @@
+1
+00:00:02,300 --> 00:00:05,080
+Dodalimy logik, aby zaadowa nasze skadniki.
+
+2
+00:00:05,150 --> 00:00:10,250
+A tak przy okazji, jeli zastanawiasz si, dlaczego saatka jest na dole, bo dzieje
+
+3
+00:00:10,250 --> 00:00:16,700
+si tak, poniewa od momentu zaadowania z bazy ogniowej nie moemy rcznie zamwi waciwoci saatek zamwionych u
+
+4
+00:00:16,700 --> 00:00:17,570
+dou medycznie.
+
+5
+00:00:17,570 --> 00:00:19,280
+I dlatego jest na dole.
+
+6
+00:00:19,280 --> 00:00:26,480
+Q Po prostu musiaby zmieni swj kod, aby rcznie zamienia skadniki, ktre mwi, nie tylko na liczb jako warto,
+
+7
+00:00:26,480 --> 00:00:31,910
+ale na obiekt, w ktrym rwnie znajdujesz pozycj, a nastpnie bdziesz musia dostosowa swj
+
+8
+00:00:31,910 --> 00:00:37,790
+front i kod, aby zaj si tym Pozycjonowanie lub Ty po prostu wybierasz rozwizanie, w ktrym
+
+9
+00:00:37,790 --> 00:00:42,230
+twardo kodujesz swoje skadniki i nie ustawiasz skadnikw rwnych skadnikom, ktre otrzymasz
+
+10
+00:00:42,230 --> 00:00:42,910
+z serwera.
+
+11
+00:00:43,070 --> 00:00:51,320
+Ale do obiektu javascript, w ktrym nie mapujesz rcznie, sprzedaj go do skadnikw akcji, sprzedaj go i tak dalej, oczywicie, traci
+
+12
+00:00:51,320 --> 00:00:58,010
+troch elastycznoci, ktr miae wczeniej, gdy mgby po prostu skorzysta z konfiguracji czegokolwiek, a nastpnie uy tego
+
+13
+00:00:58,100 --> 00:01:04,370
+w Twoja aplikacja z przodu, mimo e nigdy nie miaa takiej elastycznoci, poniewa mamy tylko ograniczon
+
+14
+00:01:04,370 --> 00:01:10,920
+ilo skadnikw obsugiwanych przez nasz. do. s s tutaj kod i
+
+15
+00:01:10,960 --> 00:01:14,300
+waciwo skadnikw, gdzie wszyscy mamy instrukcj case switch.
+
+16
+00:01:14,570 --> 00:01:21,440
+Tak wic, aby ukoczy t myl, moemy dotrze do sera Regans i tak tutaj, aby
+
+17
+00:01:21,440 --> 00:01:28,520
+odwzorowa ten jeden po drugim, kiedy ustawimy skadniki rwnie z misem oczywicie i przy dodawaniu tego
+
+18
+00:01:28,520 --> 00:01:35,000
+zobaczysz to teraz, jeli oszczdzimy to i wr do aplikacji i zacznij dodawa saatk,
+
+19
+00:01:35,000 --> 00:01:39,380
+a wic zamwienie jest poprawne, poniewa teraz mapujemy to rcznie.
+
+20
+00:01:39,380 --> 00:01:45,200
+Z drugiej strony, wad jest to, e musimy to zrobi, naprawd wspieramy tylko te cztery skadniki, ale i tak
+
+21
+00:01:45,200 --> 00:01:46,920
+robimy to w naszej aplikacji.
+
+22
+00:01:47,000 --> 00:01:53,390
+Jak ju powiedziaem na przykad w komponencie skadnikw w Burger Area roku, w ktrym wszyscy mamy
+
+23
+00:01:53,390 --> 00:01:57,900
+instrukcj switch case, w ktrej rwnie popieramy tylko ograniczon liczb komponentw.
+
+24
+00:01:57,920 --> 00:02:03,550
+Tak jest i tak, a teraz przynajmniej kolejno wraca do miejsca, w ktrym bya wczeniej.
+
+25
+00:02:03,560 --> 00:02:06,610
+Jest to zatem jedno z moliwych ulepsze, cakowicie opcjonalne.
+
+26
+00:02:06,650 --> 00:02:10,510
+Chciaem tylko upewni si, e nie jestecie zdezorientowani, dlaczego Senat jest na dole.
+

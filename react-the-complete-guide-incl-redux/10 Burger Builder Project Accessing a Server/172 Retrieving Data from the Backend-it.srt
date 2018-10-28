@@ -1,0 +1,536 @@
+1
+00:00:02,170 --> 00:00:05,240
+Nell'ultima lezione abbiamo fatto in modo che potesse gestire gli errori.
+
+2
+00:00:05,310 --> 00:00:12,030
+E con questo otteniamo una robusta applicazione che ci consente di inviare i nostri ordini al nostro back-end che 
+
+3
+00:00:12,030 --> 00:00:12,750
+gi molto.
+
+4
+00:00:12,750 --> 00:00:14,810
+Ora c' un'altra cosa che voglio fare per.
+
+5
+00:00:15,000 --> 00:00:18,460
+Voglio anche essere in grado di ottenere alcuni dati dal back-end.
+
+6
+00:00:18,900 --> 00:00:23,000
+E perch non prendiamo i nostri ingredienti da l.
+
+7
+00:00:23,040 --> 00:00:25,960
+Quindi gli ingredienti che abbiamo impostato in questo modo.
+
+8
+00:00:26,040 --> 00:00:33,120
+dinamicamente dal back-end per quello andiamo alla Firebase Forest e chiudiamo il nodo degli ordini.
+
+9
+00:00:33,460 --> 00:00:35,620
+Perch non prendiamo gli ingredienti
+
+10
+00:00:35,640 --> 00:00:41,160
+Ora aggiungiamo una nuova nota facendo clic sul segno pi direttamente accanto al nome della radice qui.
+
+11
+00:00:41,160 --> 00:00:50,400
+E diamo un nome a questi ingredienti, quindi aggiungiamo questo pi il tuo a destra per aggiungere un elemento annidato e l
+
+12
+00:00:50,400 --> 00:00:54,740
+in credenza dovrebbero essere solo le nostre coppie di valori chiave.
+
+13
+00:00:54,750 --> 00:00:57,870
+Quindi l potremmo averlo venduto con un valore pari a zero.
+
+14
+00:00:57,870 --> 00:01:03,760
+Fai clic su questo pulsante Aggiungi e ora aggiungi altro e aggiungiamo carne con un valore pari a zero.
+
+15
+00:01:04,080 --> 00:01:08,010
+Aggiungiamo bacon con un valore pari a zero.
+
+16
+00:01:08,010 --> 00:01:11,760
+Quindi sto usando gli stessi ingredienti di prima perch li sostengo solo.
+
+17
+00:01:11,850 --> 00:01:16,600
+Ma ovviamente potresti aggiungere altro al tuo codice frontale e al tuo back-end.
+
+18
+00:01:17,130 --> 00:01:20,490
+E lasciatemi anche aggiungere che lei  qui.
+
+19
+00:01:21,450 --> 00:01:24,480
+E ovviamente potresti anche impostare diversi valori iniziali.
+
+20
+00:01:24,480 --> 00:01:28,240
+Quindi ora prendiamo quella nota sugli ingredienti qui SD Ti sei aggiunto.
+
+21
+00:01:28,320 --> 00:01:32,510
+Per dovrai aggiungere dot Jason a Xs davvero.
+
+22
+00:01:32,610 --> 00:01:39,630
+E ora l'obiettivo  quello di inizializzare i nostri ingredienti qui con gli ingredienti che abbiamo appena conservato sulla base di Firebase.
+
+23
+00:01:39,840 --> 00:01:42,070
+Quindi ancora nella componente burger Bolar.
+
+24
+00:01:42,210 --> 00:01:48,210
+volta impostato lo stato in modo dinamico e hai appreso che un buon posto per il recupero dei dati  la data del componente.
+
+25
+00:01:48,310 --> 00:01:48,740
+E una
+
+26
+00:01:48,760 --> 00:01:51,340
+MT Quindi questo  il metodo che voglio usare.
+
+27
+00:01:51,450 --> 00:01:58,990
+Quindi aggiungilo al tuo componente montato in questo modo e l ora voglio raggiungere le xe.
+
+28
+00:01:59,010 --> 00:02:04,740
+Quindi sto usando Access con una richiesta get e raggiungo quello che sei malato appena copiato con Dot Jason
+
+29
+00:02:04,740 --> 00:02:05,480
+alla fine.
+
+30
+00:02:05,910 --> 00:02:12,600
+Quindi questo ora invier la richiesta di ottenere i nostri ingredienti e quindi aggiungere quindi bloccare il tuo
+
+31
+00:02:12,600 --> 00:02:18,210
+per gestire la risposta che otteniamo e che la risposta dovrebbe naturalmente contenere l'oggetto ingredienti.
+
+32
+00:02:18,210 --> 00:02:25,210
+Quindi ora l'obiettivo  impostare il nostro stato qui gli ingredienti per quell'oggetto.
+
+33
+00:02:25,230 --> 00:02:31,130
+Quindi, in effetti, imposter inizialmente questo valore qui perch ora lo stiamo recuperando dal database.
+
+34
+00:02:31,530 --> 00:02:40,680
+E l chiamer questo stato impostato e imposto gli ingredienti alla risposta.
+
+35
+00:02:40,680 --> 00:02:45,860
+E ci sar un oggetto dati che contiene effettivamente i dati che abbiamo recuperato.
+
+36
+00:02:45,960 --> 00:02:53,970
+Ora se lo salviamo e torniamo alla nostra applicazione qui vedremo che riceviamo un errore, perch ora quando proviamo a
+
+37
+00:02:53,970 --> 00:03:00,420
+cercare i nostri ingredienti all'inizio dell'app che, naturalmente, fallisce perch inizialmente ora sappiamo davvero di recuperarlo
+
+38
+00:03:00,630 --> 00:03:07,110
+l'inizio e questo  un tipico caso d'uso nelle applicazioni che si recuperano i dati quando
+
+39
+00:03:07,110 --> 00:03:08,220
+vengono caricati.
+
+40
+00:03:08,400 --> 00:03:13,490
+Pertanto, alcune parti dell'interfaccia utente che dipendono dai dati non funzioneranno.
+
+41
+00:03:13,830 --> 00:03:21,000
+Ora, ovviamente, questo pu essere facilmente verificato controllando se abbiamo degli ingredienti prima di rendere qualsiasi cosa che
+
+42
+00:03:21,000 --> 00:03:27,420
+dipende da ingredienti come l'hamburger che sai ci sono un paio di modi in cui possiamo gestirli.
+
+43
+00:03:27,630 --> 00:03:29,940
+Voglio gestirlo qui nel mio contenitore.
+
+44
+00:03:29,970 --> 00:03:37,140
+Voglio mostrare uno spinner al posto del burger e invece dei controlli bulled mentre sto aspettando
+
+45
+00:03:37,140 --> 00:03:39,240
+che gli ingredienti vengano caricati.
+
+46
+00:03:39,240 --> 00:03:49,220
+Quindi per farlo aggiungo un'altra variabile qui che chiamer burger e questo sar il burger ei controlli in grassetto,
+
+47
+00:03:49,220 --> 00:03:54,270
+quindi taglialo da l e assegnalo a quella variabile.
+
+48
+00:03:54,320 --> 00:04:02,720
+ora, naturalmente, questo fallir perch noi abbiamo elementi adiacenti qui in JS X che non  piaciuto di default.
+
+49
+00:04:02,720 --> 00:04:03,350
+E
+
+50
+00:04:03,350 --> 00:04:11,060
+Come hai imparato, ma puoi sempre restituire un array o utilizzare il nostro componente helper alks qui essenzialmente.
+
+51
+00:04:11,180 --> 00:04:13,250
+Quindi lo avvolger con quello.
+
+52
+00:04:13,250 --> 00:04:17,570
+Tieni presente che non viene visualizzato nulla sullo schermo, pertanto non stiamo distruggendo il layout.
+
+53
+00:04:17,870 --> 00:04:24,220
+Ma Burger dovrebbe ovviamente essere solo che se abbiamo gli ingredienti, in questo modo sovrascriver
+
+54
+00:04:24,220 --> 00:04:31,500
+il buger variabile che viene impostato prima di quel burger in cui user lo Spener e poi
+
+55
+00:04:31,500 --> 00:04:37,560
+voglio solo sovrascriverlo se gli ingredienti di questo stato sono fondamentalmente non nullo.
+
+56
+00:04:37,620 --> 00:04:40,310
+Quindi ci sar solo il caso se fosse caricato.
+
+57
+00:04:40,350 --> 00:04:46,430
+Quindi sposta il mio codice dove sovrascrivo la variabile del programma all'interno di questa istruzione if.
+
+58
+00:04:46,440 --> 00:04:49,750
+Quindi, per impostazione predefinita, l'hamburger  solo uno spinner.
+
+59
+00:04:49,950 --> 00:04:56,460
+E ora pu emetterlo qui sotto l'uscita modale Bergere con la sola chiamata di Brace.
+
+60
+00:04:56,520 --> 00:05:02,280
+Tuttavia, con tutti i numeri di facce e numeri, il riepilogo dell'ordine utilizzer anche gli ingredienti e
+
+61
+00:05:02,280 --> 00:05:03,050
+quindi fallir.
+
+62
+00:05:03,090 --> 00:05:10,510
+Quindi qui dovremmo semplicemente aggiungere qualcosa nel riassunto di questo ordine a no di default.
+
+63
+00:05:10,890 --> 00:05:16,650
+E poi allo stesso controllo, in realt, abbiamo gi questo controllo del corso in cui sostituiamo
+
+64
+00:05:16,710 --> 00:05:21,810
+la variabile di riepilogo dell'ordine con il riepilogo dell'ordine se gli ingredienti sono impostati.
+
+65
+00:05:21,810 --> 00:05:25,210
+Quindi aggiungiamo che fa il codice di Bruegel qui forse.
+
+66
+00:05:25,380 --> 00:05:30,380
+Quindi ora stiamo sovrascrivendo il riepilogo dell'ordine in quella stessa dichiarazione che abbiamo scambiato un secondo fa.
+
+67
+00:05:30,660 --> 00:05:34,460
+Ovviamente voglio anche assicurarmi di sovrascriverlo.
+
+68
+00:05:34,460 --> 00:05:41,880
+Anche in questo caso, se il caricamento  stato impostato in modo analogo, se Stape e il punto in cui controlliamo gli ingredienti o ADD
+
+69
+00:05:41,880 --> 00:05:47,040
+invecchiano se istruzione in cui controlliamo lo stato di caricamento per sovrascrivere il sommario degli ordini quando necessario.
+
+70
+00:05:47,040 --> 00:05:52,080
+Cos ora, quando salviamo questo e torniamo all'applicazione, hai visto quello spinner per una frazione di secondo e ti stanno
+
+71
+00:05:52,320 --> 00:05:53,220
+dando la caccia.
+
+72
+00:05:53,340 --> 00:05:59,600
+Puoi andare avanti e puoi creare quel burger che puoi vedere ancora gestito correttamente.
+
+73
+00:05:59,640 --> 00:06:01,110
+Quindi tutto funziona.
+
+74
+00:06:01,140 --> 00:06:06,810
+La cosa bella ora  se andiamo a Firebase e aggiorniamo i nostri ingredienti in modo che, ad esempio,
+
+75
+00:06:07,110 --> 00:06:08,720
+iniziamo sempre con la carne.
+
+76
+00:06:09,000 --> 00:06:13,850
+Possiamo semplicemente impostare la carne su un anno e confermare con enter e poi tornare al nostro hamburger.
+
+77
+00:06:13,860 --> 00:06:17,920
+E se ora ricarichiamo vedremo che iniziamo gi con una carne.
+
+78
+00:06:17,940 --> 00:06:19,550
+Quindi  fantastico.
+
+79
+00:06:19,560 --> 00:06:22,560
+Quindi ora stiamo recuperando anche questo dal back-end.
+
+80
+00:06:22,740 --> 00:06:28,770
+E ora abbiamo davvero migliorato la nostra applicazione e abbiamo sia una richiesta per posta che una richiesta.
+
+81
+00:06:28,800 --> 00:06:36,660
+Ora, la cosa buona  che stiamo mostrando il pezzo di ricambio ma se ora stiamo rimuovendo Jason morto e tu sei fuori
+
+82
+00:06:36,660 --> 00:06:43,920
+da tutto, dove stiamo ottenendo il rience solo come esempio se stiamo rimuovendo la morte e torniamo indietro non lo facciamo
+
+83
+00:06:43,950 --> 00:06:46,590
+ottenere l'errore o Modelo che non  bello.
+
+84
+00:06:46,590 --> 00:06:51,140
+Perch non stiamo ottenendo ci che pu essere difficile da individuare.
+
+85
+00:06:51,290 --> 00:06:57,350
+La ragione per cui effettivamente possono essere trovati nella nostra funzione di gestore di aria stiamo allestendo i nostri centri
+
+86
+00:06:57,350 --> 00:06:58,030
+di interesse.
+
+87
+00:06:58,060 --> 00:07:06,020
+Qualsiasi componente ha fatto mount hook e ha funzionato perfettamente per la richiesta di post, ma pensa a quel diagramma del
+
+88
+00:07:06,020 --> 00:07:07,350
+ciclo di vita.
+
+89
+00:07:07,610 --> 00:07:14,570
+Si vede che il componente mount  stato effettivamente chiamato dopo che tutti i componenti figlio sono stati renderizzati,
+
+90
+00:07:14,570 --> 00:07:19,960
+il che significa che un componente  stato completato con un monticello nei componenti figlio.
+
+91
+00:07:19,970 --> 00:07:24,590
+Ora pensa a noi con il gestore degli errori qui.
+
+92
+00:07:24,590 --> 00:07:30,180
+Stiamo confezionando questo componente wrap che  il nostro contenitore Bergere Boulder, ad esempio perch
+
+93
+00:07:30,260 --> 00:07:33,920
+ci stiamo utilizzando con il gestore di aria per l'esportazione.
+
+94
+00:07:34,130 --> 00:07:40,250
+Quindi stiamo essenzialmente avvolgendo il Bergere Boulder e questo naturalmente ha un componente di applicazione montato su
+
+95
+00:07:40,250 --> 00:07:47,960
+Indy con il gestore degli errori che verr chiamato solo una volta che il mount del componente  stato chiamato qui e
+
+96
+00:07:47,960 --> 00:07:54,800
+dal momento che raggiungiamo il web nel componente mount del componente wrap non abbiamo mai installato i nostri intercettori.
+
+97
+00:07:54,830 --> 00:07:58,950
+La correzione  semplice, usiamo il componente verr montato.
+
+98
+00:07:59,090 --> 00:08:05,020
+Questo verr chiamato prima che i componenti figlio siano resi e non stiamo causando effetti collaterali qui.
+
+99
+00:08:05,120 --> 00:08:11,420
+Stiamo solo registrando gli intercettori e vogliamo farlo prima che i componenti secondari vengano renderizzati.
+
+100
+00:08:11,420 --> 00:08:18,530
+Ora se pap se salviamo questo e ricarichiamo l'applicazione otteniamo quell'errore o la motilit Ma poi otteniamo
+
+101
+00:08:18,530 --> 00:08:23,360
+un altro errore che non riusciamo a impostare il nostro stato.
+
+102
+00:08:23,420 --> 00:08:30,680
+La ragione di questo  che il blocco allora viene eseguito nel nostro Bergere Boulder anche se
+
+103
+00:08:30,680 --> 00:08:31,750
+abbiamo un errore.
+
+104
+00:08:32,090 --> 00:08:38,630
+di morire semplicemente  che non stiamo avendo un metodo di cattura qui nel componente montato sulla Bergere Boulder.
+
+105
+00:08:38,630 --> 00:08:39,850
+Ora la ragione
+
+106
+00:08:40,250 --> 00:08:47,570
+Se rileviamo un errore l e semplicemente non facciamo nulla con esso, per esempio,
+
+107
+00:08:47,570 --> 00:08:53,960
+non lo faremo pi perch ora non chiamiamo pi il blocco poi.
+
+108
+00:08:53,960 --> 00:08:58,480
+Possiamo ancora ignorare l'errore di rete e la nostra applicazione  ora interrotta.
+
+109
+00:08:58,520 --> 00:09:06,730
+Quindi probabilmente vorremmo gestire quel caso di errore specifico qui per questa pagina specifica, ad esempio
+
+110
+00:09:06,740 --> 00:09:08,890
+impostando anche DUI qui.
+
+111
+00:09:09,050 --> 00:09:13,740
+Quindi potremmo anche impostare alcuni stati di errore.
+
+112
+00:09:13,790 --> 00:09:22,830
+poi qui dentro se otteniamo un errore se prendiamo questo, chiamiamo lo stato impostato e impostiamo l'errore o.
+
+113
+00:09:22,890 --> 00:09:29,410
+Cos ora nel Bergere Boulder che  inizialmente nullo o guasto forse e
+
+114
+00:09:29,550 --> 00:09:30,490
+Vero.
+
+115
+00:09:30,830 --> 00:09:35,880
+Ora con questo possiamo andare al metodo di rendering e vogliamo generare un messaggio di errore per il
+
+116
+00:09:35,880 --> 00:09:38,480
+caso del disco per la nostra applicazione diventa inutilizzabile.
+
+117
+00:09:38,490 --> 00:09:40,200
+Qui abbiamo impostato Bergere su Spener.
+
+118
+00:09:40,200 --> 00:09:45,650
+Ora in realt non vogliamo mostrare lo spinner, ma la nostra applicazione non  affatto utilizzabile.
+
+119
+00:09:45,750 --> 00:09:50,520
+Messaggio di errore se abbiamo errore D o uguale a true.
+
+120
+00:09:50,700 --> 00:09:56,640
+e in realt vogliamo mostrare un paragrafo o diciamo che gli ingredienti non possono essere caricati.
+
+121
+00:09:56,640 --> 00:10:00,800
+Quindi potremmo verificare se questo errore di stato o se  vero
+
+122
+00:10:01,070 --> 00:10:03,140
+Questo  il nostro peggiore scenario.
+
+123
+00:10:03,180 --> 00:10:07,360
+Altrimenti stiamo mostrando lo spinner o lo sovrascriviamo con gli ingredienti se li otteniamo.
+
+124
+00:10:07,410 --> 00:10:11,640
+Quindi ora se salviamo questo otteniamo lo spinner e poi vediamo che gli ingredienti possono essere caricati.
+
+125
+00:10:11,640 --> 00:10:15,000
+Ora la nostra applicazione  rotta ma almeno lo mostriamo all'utente.
+
+126
+00:10:15,120 --> 00:10:20,840
+Ovviamente una volta sistemato quel collegamento aggiungendo nuovamente il punto Jason alla fine.
+
+127
+00:10:20,850 --> 00:10:23,760
+Ora ovviamente gli ingredienti si caricheranno.
+
+128
+00:10:23,970 --> 00:10:29,260
+frazione di secondo gli ingredienti ci sono e possiamo continuare a usare la nostra applicazione bene.
+
+129
+00:10:29,260 --> 00:10:32,360
+Come puoi vedere qui vediamo lo spinner per una
+
+130
+00:10:32,460 --> 00:10:34,320
+Quindi ora funziona tutto.
+
+131
+00:10:34,320 --> 00:10:40,290
+Ora abbiamo un'applicazione davvero robusta in cui entrambi stiamo memorizzando gli ordini e stiamo recuperando i contenuti.
+
+132
+00:10:40,290 --> 00:10:46,930
+Ora ovviamente potremmo anche implementare il codice per recuperare gli ordini dal nostro database dal nostro back end qui.
+
+133
+00:10:46,950 --> 00:10:53,430
+Quindi i dati sono qualcosa su cui vogliamo lavorare sul prossimo instradamento potendo cambiare pagina anche se
+
+134
+00:10:53,700 --> 00:10:56,910
+tecnicamente abbiamo solo una pagina in quella singola pagina.
+

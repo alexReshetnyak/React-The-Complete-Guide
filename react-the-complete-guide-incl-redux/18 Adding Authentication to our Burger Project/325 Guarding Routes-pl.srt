@@ -1,0 +1,276 @@
+1
+00:00:02,200 --> 00:00:05,940
+Zrobilimy duy postp i zbliamy si do koca tego moduu,
+
+2
+00:00:05,980 --> 00:00:08,560
+s jeszcze dwie rzeczy, ktre chc zrobi.
+
+3
+00:00:08,610 --> 00:00:17,830
+Jeden Chc rwnie przechowywa identyfikator uytkownika w dowolnej kolejnoci, w ktrej umieszczam go tak, aby na zapleczu w zamwieniach, oprcz skadnikw, ale
+
+4
+00:00:17,830 --> 00:00:24,370
+rwnie w danych zamwienia lub jako dodatkowe pole, przechowywalimy rwnie identyfikator uytkownika, ktry wykona ta kolejno,
+
+5
+00:00:24,370 --> 00:00:25,510
+to kolejne mie
+
+6
+00:00:25,510 --> 00:00:31,540
+udoskonalenie naszej aplikacji, dziki czemu moemy mie pewno, e bdziemy tylko pobiera zamwienia od
+
+7
+00:00:31,540 --> 00:00:32,560
+tego uytkownika.
+
+8
+00:00:32,560 --> 00:00:39,250
+Drug rzecz, ktr chc zrobi, jest to, e chc si upewni, e mona odwiedzi tylko
+
+9
+00:00:39,250 --> 00:00:45,430
+stron zamwie i stron kasy, mimo e przekierowujemy tam, jeli nie budujesz burgera, ale
+
+10
+00:00:45,440 --> 00:00:46,420
+moesz odwiedzi
+
+11
+00:00:46,450 --> 00:00:49,280
+oba, tylko jeli jeste zalogowany w.
+
+12
+00:00:49,300 --> 00:00:55,900
+Co chc zrobi, to jeli wylogowae si, poniewa jestem tutaj teraz, jeli odwiedzasz / zamawiasz,
+
+13
+00:00:55,900 --> 00:00:56,950
+nie moesz
+
+14
+00:00:57,010 --> 00:01:01,750
+tam pojecha, ju usunlimy element nawigacyjny, ale rczne odwiedzanie go dziaa.
+
+15
+00:01:01,750 --> 00:01:03,310
+Wic to s rzeczy, ktre
+
+16
+00:01:03,310 --> 00:01:11,240
+chc robi, zacznijmy od ochrony strony zamwie, aby nieuwierzytelnieni uytkownicy nie mogli jej odwiedza. W tym celu nauczyem ci, jak to zrobi w sekcji
+
+17
+00:01:11,470 --> 00:01:15,150
+routingu, jest to bardzo atwe ze wzgldu na sposb dziaania
+
+18
+00:01:15,190 --> 00:01:23,170
+routera reagowania, w kontenerze aplikacji, gdzie mamy wszystkie nasze trasy, jeli nie wyrenderujemy tego komponentu trasy, nie otrzymamy sposb, w jaki
+
+19
+00:01:23,470 --> 00:01:28,090
+tam idziemy, po prostu nie moemy tego osign, poniewa router reagujcy nie
+
+20
+00:01:28,120 --> 00:01:34,590
+jest tego wiadomy i nigdy go nie zaaduje. Z tego powodu moemy po prostu doda
+
+21
+00:01:34,660 --> 00:01:42,190
+sta tutaj do komponentu aplikacji, mapStateToProps, aby uzyska dostp do naszego stanu i zamapowa go
+
+22
+00:01:42,190 --> 00:01:44,330
+na rekwizyty w zaskakujcy
+
+23
+00:01:44,620 --> 00:01:53,710
+sposb, a nastpnie tutaj, chc zwrci obiekt javascript i doda go jako uwierzytelniony i ustawi go rwny stanowi
+
+24
+00:01:53,710 --> 00:02:00,480
+auth i ten stary czek, w ktrym porwnujemy token, aby nie by wartoci null.
+
+25
+00:02:00,970 --> 00:02:04,760
+Przekamy teraz mapStateToProps do funkcji czenia, a teraz
+
+26
+00:02:04,990 --> 00:02:09,080
+moemy uzyska dostp jest uwierzytelniony w naszym kontenerze i
+
+27
+00:02:09,340 --> 00:02:13,340
+tam, chc go uy na zamwienia i stronie kasy.
+
+28
+00:02:13,360 --> 00:02:20,310
+Tak wic, w rzeczywistoci utworz now zmienn, ktr nazwabym trasami zawierajcymi jsx, powinny to
+
+29
+00:02:20,320 --> 00:02:26,810
+by moje domylne trasy, a nastpnie dodam instrukcj if, gdzie sprawdzam, czy to
+
+30
+00:02:26,820 --> 00:02:27,730
+rekwizyty s
+
+31
+00:02:27,730 --> 00:02:32,220
+uwierzytelnione, wic jeli s zalogowani, a trasy bd wyglda inaczej.
+
+32
+00:02:32,560 --> 00:02:37,820
+Tak wic moje nieuwierzytelnione trasy powinny by uwierzytelnione i ukone, wic
+
+33
+00:02:38,020 --> 00:02:43,150
+skopiuj to wszystko tutaj i usu tras wylogowania i musz j
+
+34
+00:02:44,860 --> 00:02:54,570
+oczywicie owin, poniewa nie jest to lubiane przez mj kod jsx tutaj, wic moemy po prostu wyci instrukcj switcha take
+
+35
+00:02:54,640 --> 00:03:00,060
+dlatego, e teraz s to wszystkie nasze trasy, nie potrzebujemy ich
+
+36
+00:03:00,090 --> 00:03:05,960
+tam, to jest routing skonfigurowany dla nieuwierzytelnionych uytkownikw teraz, pasuje do naszych linkw.
+
+37
+00:03:06,340 --> 00:03:13,170
+Teraz konfiguracja dla uwierzytelnionych uytkownikw to pozostae trasy, wic przetnijmy je tutaj i
+
+38
+00:03:13,300 --> 00:03:21,380
+dodajmy je tutaj i pozbdmy si auth route, poniewa nie musz i do / auth, jeli
+
+39
+00:03:21,380 --> 00:03:24,010
+jestem uwierzytelniony, wszystkie pozostae trasy
+
+40
+00:03:24,230 --> 00:03:30,830
+s poprawne, wic autoryzacja i autoryzacja s dostpne dla nieuwierzytelnionych uytkownikw, dla uwierzytelnionych
+
+41
+00:03:30,830 --> 00:03:34,990
+uytkownikw, zamwienia kasowe, wylogowanie i ukonik s dostpne.
+
+42
+00:03:35,140 --> 00:03:40,020
+I teraz w moim kodzie jsx tam po prostu
+
+43
+00:03:40,040 --> 00:03:46,970
+renderuj moje trasy, wic ta zmienna. Dziki temu mamy stranikw w miejscu, teraz nie moemy dotrze
+
+44
+00:03:46,970 --> 00:03:47,900
+do strony zamwie,
+
+45
+00:03:47,990 --> 00:03:49,330
+jeli nie jestemy uwierzytelnieni,
+
+46
+00:03:49,400 --> 00:03:55,370
+moesz ju to zobaczy tutaj, jeli przejd do takich zamwie, nic si nie dzieje, widzisz pust stron.
+
+47
+00:03:55,370 --> 00:03:57,910
+Teraz, aby zobaczy nie tylko
+
+48
+00:03:57,980 --> 00:04:04,340
+pust stron, moemy oczywicie upewni si, e przekierowujemy uytkownika, aby to zrobi, aby
+
+49
+00:04:04,340 --> 00:04:04,580
+przekierowa
+
+50
+00:04:04,580 --> 00:04:15,050
+do ukonika na nieznan tras, na przykad, moemy doda skadnik przekierowania tutaj i doda to do naszej instrukcji switch , przekieruj do
+
+51
+00:04:15,050 --> 00:04:16,330
+po prostu slash.
+
+52
+00:04:16,460 --> 00:04:18,240
+Teraz zamknijmy to tutaj, teraz
+
+53
+00:04:18,500 --> 00:04:24,830
+polecenie przekierowuje nas do budowniczego burgera, uwierzytelnianie wci dziaa, poniewa instrukcja switch wybiera pierwsze trafienie, ale
+
+54
+00:04:24,830 --> 00:04:31,050
+wszystko, co nieznane, w tym zamwienia, ktre nie s znane, poniewa nie powoduj, e ta trasa
+
+55
+00:04:31,050 --> 00:04:34,490
+przekierowuje nas z powrotem na stron gwn .
+
+56
+00:04:34,520 --> 00:04:39,200
+Teraz tak samo dla naszych innych tras tutaj, tam z czegokolwiek nieznanego,
+
+57
+00:04:39,230 --> 00:04:45,320
+ja te chc przej do strony trasy. I dziki temu mamy stranikw, upewniamy si, e nie moemy
+
+58
+00:04:45,320 --> 00:04:45,730
+odwiedza
+
+59
+00:04:45,740 --> 00:04:47,370
+stron, ktrych nie powinnimy mie.
+
+60
+00:04:47,390 --> 00:04:53,260
+Teraz jedna wana uwaga, poniewa jest to oczywicie javascript, ludzie mog oczywicie teoretycznie zagbia
+
+61
+00:04:53,270 --> 00:04:59,310
+si w twj kod rdowy i nadal manipulowa nim, aby nadal i na chronion tras,
+
+62
+00:04:59,430 --> 00:05:04,830
+i dlatego mamy ochron na serwerze, aby nie zwraca adnych danych nieuwierzytelnionym uytkownikom.
+
+63
+00:05:04,880 --> 00:05:06,490
+W ten sposb chronisz swoje
+
+64
+00:05:06,560 --> 00:05:12,260
+dane, dlatego najwaniejszym celem jest zapewnienie uytkownikom wygodnej obsugi i zapobieganie przypadkowemu odwiedzaniu strony, do ktrej
+
+65
+00:05:12,260 --> 00:05:17,030
+nie powinien on mie dostpu, poniewa nie bdzie on w stanie nic zrobi
+
+66
+00:05:17,030 --> 00:05:17,750
+na tym.
+
+67
+00:05:18,110 --> 00:05:21,760
+Tak wic jest to ochrona trasy na frontendach
+
+68
+00:05:21,770 --> 00:05:30,290
+ze stranikami, teraz przejdmy do korzystania z naszych danych uytkownika na naszych zamwieniach, tak e kiedy skadamy zamwienie, kiedy
+
+69
+00:05:30,770 --> 00:05:32,600
+jestemy uwierzytelnieni, rzeczywicie tego uywamy.
+

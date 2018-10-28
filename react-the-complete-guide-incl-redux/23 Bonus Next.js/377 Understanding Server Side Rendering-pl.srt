@@ -1,0 +1,152 @@
+1
+00:00:02,130 --> 00:00:09,390
+Zacznijmy od nextjs, moesz po prostu google dla nextjs, a nastpnie wybierz link
+
+2
+00:00:09,390 --> 00:00:14,990
+do repozytorium github, ktry znajdziesz. Na tej stronie znajdziesz szczegowe instrukcje, jak z
+
+3
+00:00:15,180 --> 00:00:20,190
+niego korzysta, link prowadzcy do innej strony, na ktrej moesz zanurkowa jeszcze gbiej, oraz
+
+4
+00:00:20,190 --> 00:00:21,120
+instrukcje instalacji.
+
+5
+00:00:21,240 --> 00:00:22,740
+Ale co to jest nextjs?
+
+6
+00:00:22,740 --> 00:00:30,240
+Tutaj mwi, e nextjs to minimalistyczna struktura dla aplikacji reagujcych na serwer.
+
+7
+00:00:30,240 --> 00:00:34,890
+Renderowanie po stronie serwera jest do zaawansowan koncepcj reagowania,
+
+8
+00:00:34,890 --> 00:00:38,320
+dlatego kursy koncentruj si wycznie na tym.
+
+9
+00:00:38,640 --> 00:00:45,450
+Mwic w skrcie, renderowanie po stronie serwera oznacza po prostu, e gdy uytkownik wprowadzi adres
+
+10
+00:00:45,450 --> 00:00:52,620
+URL prowadzcy do aplikacji reagowania lub jednej ze stron aplikacji do reagowania, wyrenderuje t stron na
+
+11
+00:00:52,620 --> 00:00:57,330
+serwerze, aby serwer zwrci to wstpnie wyrenderowane. kod HTML, poka,
+
+12
+00:00:57,330 --> 00:00:58,840
+co mam na myli.
+
+13
+00:00:58,890 --> 00:01:00,730
+Jeli spojrzymy na nasz normaln
+
+14
+00:01:00,750 --> 00:01:02,520
+konfiguracj, mamy serwer i
+
+15
+00:01:02,640 --> 00:01:08,760
+klienta i oczywicie nasz kod aplikacji reagujemy iz tym, mam na myli zarwno kod kompilacji
+
+16
+00:01:08,790 --> 00:01:16,330
+w tym folderze kompilacji, ktry mielimy w tym tworzy aplikacj aplikacji reagowania, jak i surow kod w folderze rdowym.
+
+17
+00:01:16,410 --> 00:01:22,430
+Jeli po raz pierwszy odwiedzasz swj serwer, wic po raz pierwszy adujesz
+
+18
+00:01:22,440 --> 00:01:28,980
+stron, serwer zwykle wysya ci indeks. plik html i twj kod, a nastpnie zaadowaby go jako pojedyncz
+
+19
+00:01:28,980 --> 00:01:30,620
+aplikacj strony w swoim kliencie.
+
+20
+00:01:30,630 --> 00:01:39,390
+Problem moe polega na tym, e jeli Twoja strona musi by indeksowana przez wyszukiwarki, roboty takie jak robot
+
+21
+00:01:39,420 --> 00:01:46,320
+indeksujcy google mog nie zrozumie lub poprawnie odczyta twoj stron, szczeglnie jeli uywasz asynchronicznego
+
+22
+00:01:46,320 --> 00:01:48,990
+kodu do zaadowania pocztkowej zawartoci.
+
+23
+00:01:49,230 --> 00:01:54,780
+Wic jeli masz stron, na ktrej pierwsz rzecz, ktr robisz w javascript, jest dotarcie
+
+24
+00:01:54,780 --> 00:01:57,560
+do serwera, a nastpnie wywietlenie wynikw na
+
+25
+00:01:57,780 --> 00:02:04,650
+ekranie po przywrceniu danych, moe to nastpi bardzo szybko dla uytkownika, ale przeszukiwacz zobaczy tylko spinner lub
+
+26
+00:02:04,650 --> 00:02:07,520
+cokolwiek innego, dopki dane nie bd dostpne.
+
+27
+00:02:07,680 --> 00:02:13,360
+Teraz z renderowaniem po stronie serwera, dla zaadowania pierwszej strony, ktra jest zawsze
+
+28
+00:02:13,530 --> 00:02:19,200
+tym, co widzi robak, serwer pobierze i wyrenderuje aplikacj reagowania, aby nie tylko
+
+29
+00:02:19,200 --> 00:02:26,820
+pobra i zwrci j, ale take renderowa j dla odwiedzonej strony, a nastpnie zwraca t wstpnie renderowan stron
+
+30
+00:02:26,820 --> 00:02:32,420
+wraz z pakietem aplikacji reagowania, wic od tej chwili nadal masz jedn aplikacj
+
+31
+00:02:32,430 --> 00:02:34,580
+strony, wic nadal dziaasz jak poprzednio.
+
+32
+00:02:34,650 --> 00:02:41,940
+Chodzi przede wszystkim o to, e adowanie strony pocztkowej jest w zasadzie, teraz nextjs jest pakietem pomagajcym w renderowaniu po stronie
+
+33
+00:02:41,940 --> 00:02:44,860
+serwera, poniewa jest to bardzo trudne do skonfigurowania.
+
+34
+00:02:44,970 --> 00:02:51,380
+A poza tym tylko pomaga ci to, daje ci niestandardow lub specyficzn struktur do pracy.
+
+35
+00:02:51,390 --> 00:02:58,570
+Ta struktura wykorzystuje wymuszenie cisej struktury folderw, z ktrej musisz korzysta, chocia
+
+36
+00:02:58,680 --> 00:03:05,700
+mwimy tylko o jednym folderze, ktry musi by nazwany w okrelony sposb,
+
+37
+00:03:05,700 --> 00:03:10,170
+tak aby wszystkie trasy aplikacji byy generowane automatycznie.
+
+38
+00:03:10,350 --> 00:03:16,560
+Pozwl, e ci poka, o co mi chodzi i jak rozpoczynamy taki projekt nextjs na wykadach nextjs.
+

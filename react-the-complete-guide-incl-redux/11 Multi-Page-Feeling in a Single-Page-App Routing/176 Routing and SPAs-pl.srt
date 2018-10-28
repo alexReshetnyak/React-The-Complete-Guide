@@ -1,0 +1,116 @@
+1
+00:00:02,140 --> 00:00:07,170
+Routing polega na moliwoci wywietlania rnych stron uytkownikowi.
+
+2
+00:00:07,180 --> 00:00:11,200
+Wikszo znanych aplikacji internetowych ma wicej ni jedn
+
+3
+00:00:11,320 --> 00:00:17,940
+stron, maj stron uytkownikw, maj stron postu, stron konta, niezalenie od strony.
+
+4
+00:00:17,950 --> 00:00:22,450
+Oczywicie moesz zastanawia si nad wieloma stronami w jednej
+
+5
+00:00:22,450 --> 00:00:24,600
+aplikacji strony, jak to dziaa?
+
+6
+00:00:24,610 --> 00:00:28,450
+Miejcie na uwadze pomys, ktry kryje si za pojedyncz aplikacj stronow, a
+
+7
+00:00:28,480 --> 00:00:29,290
+co z tego?
+
+8
+00:00:29,290 --> 00:00:36,520
+Pojedyncza strona, pojedynczy plik HTML. Nadal jednak chcemy zapewni uytkownikowi normalne korzystanie z
+
+9
+00:00:36,620 --> 00:00:41,860
+Internetu, ale chcemy pokaza uytkownikom rne strony dla rnych adresw URL.
+
+10
+00:00:41,860 --> 00:00:50,560
+Sztuczka polega na tym, e nie mamy wielu plikw html, ale zamiast tego uywamy javascript
+
+11
+00:00:50,800 --> 00:00:54,740
+do renderowania rnych stron dla rnych cieek.
+
+12
+00:00:54,880 --> 00:01:02,260
+Tak naprawd nie mamy rnych plikw, ale po prostu ponownie renderujemy czci z tej pojedynczej strony, a moe z caej strony,
+
+13
+00:01:02,260 --> 00:01:09,670
+w zalenoci od cieki, ktr uytkownik nawigowa w naszej aplikacji. O to chodzi w routingu, analizowanie tej cieki, czyli
+
+14
+00:01:09,670 --> 00:01:11,780
+o ciek po naszej domenie
+
+15
+00:01:12,020 --> 00:01:21,080
+i pokazywanie odpowiedniego kodu jsx lub kodu komponentu w naszej aplikacji. I do tego, jak ju mwiem, zamierzamy uy
+
+16
+00:01:21,090 --> 00:01:27,280
+pakietu routera, aby doda tak funkcjonalno, abymy nie musieli analizowa tej
+
+17
+00:01:27,280 --> 00:01:35,310
+cieki na wasn rk, co nie jest banalne. Ten pakiet routera ma kilka zada,
+
+18
+00:01:35,320 --> 00:01:42,540
+przede wszystkim musi przeanalizowa ciek URL, aby zrozumie, gdzie uytkownik chce
+
+19
+00:01:42,550 --> 00:01:43,510
+si uda.
+
+20
+00:01:43,610 --> 00:01:51,190
+Nastpnie jako programista musimy skonfigurowa rne cieki w naszej aplikacji, ktr obsugujemy, a pakiet routera moe nastpnie
+
+21
+00:01:51,190 --> 00:01:58,510
+w zasadzie odczyta nasz konfiguracj, aby wiedzie, ktre cieki s obsugiwane i co powinno si sta,
+
+22
+00:01:58,810 --> 00:02:04,940
+gdy uytkownik odwiedza jedn z tych cieek. Jest to trzeci krok, ktry
+
+23
+00:02:05,050 --> 00:02:13,750
+nastpnie wyrenderuje lub zaaduje odpowiedni jsx lub kod komponentu w zalenoci od tego, ktr ciek
+
+24
+00:02:13,750 --> 00:02:14,590
+odwiedzi uytkownik.
+
+25
+00:02:14,650 --> 00:02:22,330
+Jest to idea za routingiem, adowanie rnych kodw, warunkowego jsx lub kodu komponentu dla rnych cieek i
+
+26
+00:02:22,330 --> 00:02:28,660
+uywamy pakietu routera, abymy nie musieli okrela, ktr ciek uytkownik jest wczony na wasn
+
+27
+00:02:28,660 --> 00:02:29,190
+rk.
+
+28
+00:02:29,260 --> 00:02:35,170
+Teraz w tym module przeprowadz ci przez ten pakiet routera za porednictwem funkcji i podpr
+
+29
+00:02:35,170 --> 00:02:41,350
+oraz jak moesz go uy w aplikacji do zaimplementowania wielu stron w aplikacji na jedn stron.
+

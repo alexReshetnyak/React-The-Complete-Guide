@@ -1,0 +1,60 @@
+1
+00:00:02,150 --> 00:00:07,640
+Bu modle ho geldiniz, kurs boyunca yaptnz, tepki hakknda ok ey rendiniz ve muhtemelen
+
+2
+00:00:07,640 --> 00:00:10,380
+bir sonraki admlarn ne olduunu merak ediyorsunuz.
+
+3
+00:00:10,610 --> 00:00:14,680
+Tabii ki, bir sonraki admlar, dersin banda, pratikte,
+
+4
+00:00:14,720 --> 00:00:16,850
+pratikte, pratikte belirttiim admlardr.
+
+5
+00:00:16,910 --> 00:00:22,010
+Tepki verdiiniz ve tepki verdiiniz iin rendiiniz birok farkl kavram ve eyle ilgili
+
+6
+00:00:22,010 --> 00:00:23,150
+ok ey rendiniz.
+
+7
+00:00:23,150 --> 00:00:26,920
+imdi bu kurs onlar kapsyordu, imdi
+
+8
+00:00:26,960 --> 00:00:31,040
+bunu uygulamanz gerekiyor, bu yzden kesinlikle bu
+
+9
+00:00:31,130 --> 00:00:37,130
+kursun baz blmlerine daln, imdiye kadar unutmu olabileceiniz eyleri sein
+
+10
+00:00:37,190 --> 00:00:44,840
+ve kendi banza oluturduunuz projelerde aln. Kendi zorluklarnz belirleyin, oluturmak istediiniz demo projelerden yararlann, klonlamak istediiniz popler
+
+11
+00:00:44,840 --> 00:00:48,430
+uygulamalarla yapn ve daha sonra sadece rendiiniz eyleri pratik yapn, baz
+
+12
+00:00:48,620 --> 00:00:51,060
+duvarlara arpacaksnz ama eminim ki bunu yapabilirsiniz.
+
+13
+00:00:51,170 --> 00:00:54,290
+Pratik yapmann yannda, baka ne
+
+14
+00:00:54,320 --> 00:00:55,770
+yapabilirsiniz, ne mantkl?
+
+15
+00:00:55,850 --> 00:00:58,540
+Gelecek derslere daha yakndan bakalm.
+

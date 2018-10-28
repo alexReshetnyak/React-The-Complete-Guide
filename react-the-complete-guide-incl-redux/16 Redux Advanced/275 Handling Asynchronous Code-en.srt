@@ -1,0 +1,384 @@
+1
+00:00:02,240 --> 00:00:07,110
+In the last video, we introduced some synchronous action creators,
+
+2
+00:00:07,310 --> 00:00:13,670
+now I want to take advantage of them to handle asynchronous code and to handle asynchronous code, we need
+
+3
+00:00:13,670 --> 00:00:16,660
+to add a special middleware to our redux project,
+
+4
+00:00:16,730 --> 00:00:24,130
+a third party library we can add called redux-thunk. Here I'm on the github page, simply google for redux-thunk
+
+5
+00:00:24,140 --> 00:00:29,630
+written like this to find it, here you can find more instructions on that.
+
+6
+00:00:29,630 --> 00:00:36,740
+Generally, this is a library which as I just said adds a middleware to your project which allows your
+
+7
+00:00:36,740 --> 00:00:45,740
+actions to not or your action creators to be precise to not return the action itself but return a
+
+8
+00:00:45,740 --> 00:00:52,460
+function which will eventually dispatch an action. With this little trick,
+
+9
+00:00:52,550 --> 00:00:57,390
+not returning the action itself but a function which will then dispatch one,
+
+10
+00:00:57,410 --> 00:01:05,910
+we can run asynchronous code because the eventually dispatched one part is the part which may run asynchronously,
+
+11
+00:01:05,900 --> 00:01:08,500
+it'll become clearer once we add it.
+
+12
+00:01:08,570 --> 00:01:15,160
+So to add it, let's pause or let's quit npm start and let's install a new package with npm install
+
+13
+00:01:15,170 --> 00:01:21,460
+--save, the name is redux-thunk, written like that.
+
+14
+00:01:21,530 --> 00:01:24,410
+Now with this, this will get downloaded and stored
+
+15
+00:01:24,440 --> 00:01:29,800
+as always and we can then register it as a middleware to our project.
+
+16
+00:01:29,810 --> 00:01:33,580
+Detailed instructions can always be found on the github page of course,
+
+17
+00:01:33,590 --> 00:01:34,670
+there you see that
+
+18
+00:01:34,670 --> 00:01:39,790
+after installing it, in the end we just add it with applyMiddleware.
+
+19
+00:01:40,130 --> 00:01:47,330
+So let's go back into our index.js file where we create the store and add middleware and there, I'll
+
+20
+00:01:47,330 --> 00:01:49,880
+now import this new package.
+
+21
+00:01:50,020 --> 00:01:59,010
+So I'll import something from redux-thunk and that something can be found on their page,
+
+22
+00:01:59,030 --> 00:02:01,710
+they actually have a default export so we don't
+
+23
+00:02:01,740 --> 00:02:05,180
+need curly bracers, we can give it any name we want,
+
+24
+00:02:05,180 --> 00:02:08,420
+I'll stick to thunk but you can rename this to whatever you want,
+
+25
+00:02:08,540 --> 00:02:11,490
+this package essentially just exports the middleware.
+
+26
+00:02:11,660 --> 00:02:13,250
+Now this already is a middleware,
+
+27
+00:02:13,280 --> 00:02:19,550
+so behind the scenes it looks like our custom middleware, couple of nested function calls and therefore
+
+28
+00:02:19,550 --> 00:02:21,530
+we can add it. Now here,
+
+29
+00:02:21,560 --> 00:02:22,720
+in applyMiddleware
+
+30
+00:02:22,810 --> 00:02:23,670
+I'll add it
+
+31
+00:02:23,780 --> 00:02:30,520
+after the logger thunk, so that object we just imported, that function to be precise.
+
+32
+00:02:30,680 --> 00:02:36,260
+So this is the middleware added, with that we can go back to our action creators in the actions.js
+
+33
+00:02:36,440 --> 00:02:44,780
+file and let's say in storeResult, we actually want to execute set timeout and only after 2 seconds
+
+34
+00:02:44,810 --> 00:02:47,660
+we want to store the result.
+
+35
+00:02:47,660 --> 00:02:56,000
+So here in this function which gets executed, somehow in there, we want to return this action after two
+
+36
+00:02:56,000 --> 00:03:03,230
+seconds to simulate that we previously or prior to this action reached out to a server to store it there
+
+37
+00:03:03,320 --> 00:03:10,160
+and only update our state once this one's successful, for example. Now with that, with the current set up
+
+38
+00:03:10,160 --> 00:03:11,710
+here, this won't work
+
+39
+00:03:12,040 --> 00:03:19,460
+but with the thunk middleware added, what we can do is we can change this return statement here and
+
+40
+00:03:19,460 --> 00:03:23,560
+I'll put it right in front of set timeout, we'll clean up the rest here soon,
+
+41
+00:03:23,810 --> 00:03:29,480
+so I will add a new return statement actually which will return a function, that's important.
+
+42
+00:03:29,480 --> 00:03:31,910
+Now you can again use the function keyword,
+
+43
+00:03:31,910 --> 00:03:36,980
+this function receives dispatch as an argument, the dispatch action,
+
+44
+00:03:36,980 --> 00:03:39,000
+now we get dispatch in here
+
+45
+00:03:39,190 --> 00:03:47,510
+due to redux-thunk. I said that middleware runs between the dispatching of an action and the point of
+
+46
+00:03:47,510 --> 00:03:49,800
+time the action reaches the reducer,
+
+47
+00:03:50,120 --> 00:03:56,150
+now the thing we do here is we still dispatch an action but then redux-thunk, the middleware comes in,
+
+48
+00:03:56,300 --> 00:03:59,470
+steps in, has access to the action there,
+
+49
+00:03:59,720 --> 00:04:06,530
+basically blocks the old action we could say and dispatches it again in the future.
+
+50
+00:04:06,530 --> 00:04:13,790
+Now the new action will reach the reducer but in-between, redux-thunk is able to wait because it can dispatch
+
+51
+00:04:13,790 --> 00:04:15,890
+an action whenever it wants.
+
+52
+00:04:15,890 --> 00:04:21,860
+This is the asynchronous part and that is exactly allowing us to execute some asynchronous code inside
+
+53
+00:04:21,860 --> 00:04:22,930
+of this function
+
+54
+00:04:22,980 --> 00:04:29,360
+and of course, we can also use good old ES6 arrow syntax here, like this.
+
+55
+00:04:29,570 --> 00:04:36,850
+So the code inside of this dispatch function here is executed and now inside of set timeout,
+
+56
+00:04:36,890 --> 00:04:45,500
+inside of this function passed to set timeout, we can execute dispatch to now dispatch whichever action
+
+57
+00:04:45,650 --> 00:04:47,480
+we want to dispatch.
+
+58
+00:04:47,480 --> 00:04:55,090
+Now of course, we would create an infinite loop if we again dispatch storeResult here, our action creator.
+
+59
+00:04:55,550 --> 00:05:02,030
+So what do we typically do is we create asynchronous action creators, which in the end dispatch actions created
+
+60
+00:05:02,030 --> 00:05:03,680
+by synchronous ones.
+
+61
+00:05:03,680 --> 00:05:10,180
+So what I'll do is I'll quickly create a new action creator and export it, I'll name it saveResult,
+
+62
+00:05:10,210 --> 00:05:17,420
+this will now still be the action creator as we had it before receiving the result and there, returning
+
+63
+00:05:17,780 --> 00:05:21,780
+the action we use previously with type storeResult,
+
+64
+00:05:23,220 --> 00:05:28,740
+so that is my synchronous action creator. In storeResult
+
+65
+00:05:28,750 --> 00:05:37,440
+however, I will now dispatch exactly that saveResult action creator which returns me this action
+
+66
+00:05:37,530 --> 00:05:42,960
+which actually updates the state and the store because it is the action of the type we handle in the
+
+67
+00:05:42,960 --> 00:05:43,990
+reducer.
+
+68
+00:05:44,040 --> 00:05:47,370
+Now before we see that in action, we should make the flow clearer,
+
+69
+00:05:47,640 --> 00:05:53,580
+there's one thing we have to keep in mind, here in storeResult when we return this function which will
+
+70
+00:05:53,580 --> 00:05:59,310
+get executed by redux-thunk and where we have set timeout, where we then dispatch the action which
+
+71
+00:05:59,310 --> 00:06:01,940
+should run asynchronously and update the store,
+
+72
+00:06:02,190 --> 00:06:09,130
+we need to execute saveResult which is this action creator as a function of course and pass res
+
+73
+00:06:09,150 --> 00:06:09,780
+on
+
+74
+00:06:09,780 --> 00:06:13,480
+so the redo pass the payload to the store. With that,
+
+75
+00:06:13,500 --> 00:06:20,910
+make sure to save all files including the counter.js file and then let's restart npm start to see
+
+76
+00:06:20,910 --> 00:06:21,790
+if this works
+
+77
+00:06:21,840 --> 00:06:31,190
+and to also see the flow of events in our redux dev tools. So the app loaded, we can still manipulate
+
+78
+00:06:31,190 --> 00:06:34,780
+our counter but if I click storeResult here,
+
+79
+00:06:35,000 --> 00:06:40,760
+you see that it took two seconds to actually print storeResult.
+
+80
+00:06:40,880 --> 00:06:42,250
+Now that's the interesting thing,
+
+81
+00:06:42,320 --> 00:06:44,840
+you never saw this other action creator
+
+82
+00:06:44,840 --> 00:06:48,350
+with the set timeout inside of it lead to any output.
+
+83
+00:06:48,480 --> 00:06:54,010
+If I click storeResult, nothing happens immediately, only after two seconds we see storeResult.
+
+84
+00:06:54,210 --> 00:07:00,830
+So only the action dispatch in there after two seconds leaves a footprint because it's our synchronous
+
+85
+00:07:00,830 --> 00:07:08,900
+action and only synchronous actions may edit the store. The other action creators like storeResult
+
+86
+00:07:08,930 --> 00:07:11,630
+which runs some asynchronous code
+
+87
+00:07:11,780 --> 00:07:16,410
+are only possible due to redux-thunk and are caught in between,
+
+88
+00:07:16,670 --> 00:07:18,760
+they never make it to the reducer,
+
+89
+00:07:18,800 --> 00:07:27,050
+we only use them as a utility step in-between to run our asynchronous code which happens to be required
+
+90
+00:07:27,050 --> 00:07:33,860
+to run on a lot of actions and then dispatch the synchronous action to change the state in the store
+
+91
+00:07:33,860 --> 00:07:36,150
+once we are certain that we know what to do there,
+
+92
+00:07:36,170 --> 00:07:41,780
+so once our asynchronous code finished, this is why we see it here. In the console interesting enough,
+
+93
+00:07:42,190 --> 00:07:49,160
+where we have our logger middleware, if I clear that, you'll see that we get more output because the logger
+
+94
+00:07:49,280 --> 00:07:56,630
+logs everything which reaches the action funnel and that includes our function which is returned by
+
+95
+00:07:56,630 --> 00:08:03,820
+the asynchronous action. We never added the state here though because that gets blocked by redux-thunk.
+
+96
+00:08:03,890 --> 00:08:11,890
+So this is how we can work with action creators to handle asynchronous code in our redux store.
+

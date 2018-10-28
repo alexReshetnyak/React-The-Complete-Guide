@@ -1,0 +1,368 @@
+1
+00:00:02,130 --> 00:00:05,510
+Nell'ultima lezione apprendi come rendere selezionabile il post.
+
+2
+00:00:05,660 --> 00:00:10,380
+Ma ovviamente non ha nulla a che fare con gli assiomi o con le richieste HTP.
+
+3
+00:00:10,400 --> 00:00:13,070
+ stata Manila a recitare una bella pratica.
+
+4
+00:00:13,070 --> 00:00:17,230
+Ma ora passiamo e inviamo effettivamente la richiesta HGP.
+
+5
+00:00:17,330 --> 00:00:22,670
+Una volta ottenuto un ID valido ora quale hook del ciclo di vita dovremmo usare qui.
+
+6
+00:00:22,910 --> 00:00:27,630
+Diamo un'occhiata se diamo un'occhiata al gancio del ciclo di vita per l'aggiornamento dei componenti.
+
+7
+00:00:27,740 --> 00:00:34,100
+E stiamo ovviamente parlando dell'aggiornamento del ciclo di vita perch il computer  l
+
+8
+00:00:34,100 --> 00:00:35,060
+fin dall'inizio.
+
+9
+00:00:35,210 --> 00:00:38,900
+Ma i dati dovrebbero essere recuperati una volta ricevuto un nuovo ID prop.
+
+10
+00:00:38,960 --> 00:00:46,030
+Quindi questo  quello che stiamo cercando quindi componente che l'aggiornamento  un buon posto per causare effetti collaterali.
+
+11
+00:00:46,250 --> 00:00:48,110
+Ha anche un problema per.
+
+12
+00:00:48,260 --> 00:00:55,690
+Se aggiorniamo lo stato in l aggiorniamo nuovamente il componente e quindi lo inseriamo in ciclo infinito.
+
+13
+00:00:55,700 --> 00:00:57,890
+Questo  qualcosa che dovremo fare attenzione.
+
+14
+00:00:58,040 --> 00:01:03,000
+Ma prima di tutto facciamo la richiesta HTP e mi dirigo a post completo.
+
+15
+00:01:03,200 --> 00:01:12,620
+post completo nel componente possiamo implementare componente aggiornato e fare la richiesta HTP in modo che possano usare X
+
+16
+00:01:12,620 --> 00:01:21,050
+anni entrare ora o devi scegli un singolo post per ID se diamo un'occhiata al nostro backend Dammy.
+
+17
+00:01:21,460 --> 00:01:29,240
+E prima di tutto dobbiamo importare x anno x anni dal pacchetto X anni poi in
+
+18
+00:01:29,540 --> 00:01:37,910
+C' un percorso per ottenere e quindi postare l'ID in modo che possiamo copiare che si rl e ora fare una richiesta
+
+19
+00:01:37,910 --> 00:01:44,810
+a che tu sei Adell, anche se naturalmente non lo codificher uno in l, ma invece utilizzare pi
+
+20
+00:01:44,900 --> 00:01:49,440
+questo ID puntelli per prendere il ID abbiamo ottenuto sui puntelli.
+
+21
+00:01:49,700 --> 00:01:53,820
+Ovviamente anche noi non vogliamo inviare questa richiesta se l'ID  nullo.
+
+22
+00:01:53,830 --> 00:01:55,630
+Quindi non vogliamo farlo.
+
+23
+00:01:55,910 --> 00:01:57,930
+E se l'idea non  valida.
+
+24
+00:01:58,490 --> 00:02:04,240
+Quindi controllerei se l'idea di prop  considerata vera, il che significa che  un ID valido.
+
+25
+00:02:04,520 --> 00:02:11,030
+E quindi possiamo effettivamente inviare questa richiesta con x 'e ottenere l'indebitamento di Meffert.
+
+26
+00:02:11,030 --> 00:02:23,750
+Ora se eseguo ripetizioni in quel punto, blocca il tuo output di debito con la risposta del log della console e dovremmo vedere una
+
+27
+00:02:23,750 --> 00:02:28,380
+risposta non appena abbiamo fatto clic su un elemento.
+
+28
+00:02:28,400 --> 00:02:32,480
+Quindi se clicco su aliment qui vediamo la risposta.
+
+29
+00:02:32,480 --> 00:02:34,660
+Ora questo funziona bene qui.
+
+30
+00:02:34,850 --> 00:02:36,680
+Tuttavia, ovviamente, lo vuoi produrre.
+
+31
+00:02:36,920 --> 00:02:44,270
+qui e forse abbiamo un post caricato in questo elemento in questo componente che 
+
+32
+00:02:44,270 --> 00:02:54,740
+inizialmente impostato su NULL, quindi anno possiamo pubblicare il titolo del post caricato e il contenuto del post caricato nel nostro post.
+
+33
+00:02:54,920 --> 00:02:57,950
+Quindi dovremmo anche gestire alcuni stati
+
+34
+00:02:57,950 --> 00:03:05,750
+J. S. X contenuto e nel tuo dove ho bloccato la risposta, non lo registro pi.
+
+35
+00:03:05,930 --> 00:03:07,630
+Invece quello che voglio fare qui .
+
+36
+00:03:07,670 --> 00:03:16,190
+Voglio chiamare questo stato impostato e set set caricati dati di risposta post-tooter che saranno il post-edit recuperato dal
+
+37
+00:03:16,230 --> 00:03:23,330
+back-end e un'ora J come codice X, naturalmente, dovremmo caricare gli X-ists in questo stato
+
+38
+00:03:23,570 --> 00:03:32,380
+come quello ora se questo se andiamo alla nostra applicazione e lo ricarichiamo e faccio clic su un post,
+
+39
+00:03:33,130 --> 00:03:38,050
+riceviamo effettivamente un errore di cui non possiamo leggere il titolo.
+
+40
+00:03:38,050 --> 00:03:46,620
+post completo abbiamo immediatamente X-ists questo stato caricato titolo del post e lo facciamo non appena otteniamo una propriet valida.
+
+41
+00:03:46,630 --> 00:03:52,090
+Ora questo ha molto senso perch qui nel nostro codice GSX per il
+
+42
+00:03:52,090 --> 00:03:58,960
+Ora otteniamo una propriet valida prima di avere un post caricato valido perch, come hai appreso, il recupero
+
+43
+00:03:58,960 --> 00:04:00,320
+dei dati  asincrono.
+
+44
+00:04:00,340 --> 00:04:06,940
+Quindi prima prendiamo l'ID e poi un po 'pi tardi riceviamo il post caricato, ma riprendiamo il dormitorio subito dopo
+
+45
+00:04:06,940 --> 00:04:08,770
+che ci siamo fatti un'idea.
+
+46
+00:04:09,310 --> 00:04:15,970
+Possiamo semplicemente risolvere questo problema aggiungendo un controllo per la validit dell'ID con le idee di questo prop
+
+47
+00:04:15,970 --> 00:04:24,910
+gi lo abbiamo e diciamo che in questo caso il post dovrebbe in realt essere un paragrafo ancora, ma forse un paragrafo in cui
+
+48
+00:04:24,910 --> 00:04:31,130
+si dice semplicemente caricamento perch abbiamo selezionato un post ma i dati non ci sono ancora.
+
+49
+00:04:31,180 --> 00:04:37,600
+E poi in fondo in caso di affermazione controlliamo se  stato impostato lo stato caricato post perch inizialmente
+
+50
+00:04:37,600 --> 00:04:40,020
+ ora o sarebbe trattato come falso.
+
+51
+00:04:40,180 --> 00:04:44,470
+Ma non appena ne avremo uno, torneremo alla verit o alla risoluzione.
+
+52
+00:04:44,650 --> 00:04:47,020
+E quindi renderizzeremo questo codice GSX.
+
+53
+00:04:47,230 --> 00:04:53,710
+E ora se ho salvato questo e clicco su un post vediamo il caricamento per una frazione di secondo
+
+54
+00:04:53,710 --> 00:04:55,390
+e poi vediamo il post.
+
+55
+00:04:55,390 --> 00:04:57,320
+Anche qui abbiamo riscontrato un problema.
+
+56
+00:04:57,550 --> 00:05:05,890
+Se apriamo la scheda di rete, vedremo che stiamo rinviando dopo la richiesta dopo la richiesta dopo la richiesta.
+
+57
+00:05:06,100 --> 00:05:08,990
+Possiamo semplicemente ricaricare la pagina per assicurarci che questo si fermi.
+
+58
+00:05:09,190 --> 00:05:20,920
+Ma perch stiamo vedendo questo stiamo vedendo queste infinite richieste perch stiamo aggiornando lo stato dal componente che aggiorna e questo
+
+59
+00:05:20,920 --> 00:05:27,940
+crea un ciclo infinito perch quando chiamiamo detto stato il componente verr aggiornato
+
+60
+00:05:27,940 --> 00:05:31,950
+e il componente verr aggiornato di nuovo.
+
+61
+00:05:32,320 --> 00:05:41,080
+Quindi dobbiamo assicurarci di inviare solo questa richiesta HTP e quindi aggiornare lo stato se abbiamo effettivamente
+
+62
+00:05:41,100 --> 00:05:42,880
+caricato un nuovo post.
+
+63
+00:05:42,880 --> 00:05:44,510
+Quindi, come lo facciamo?
+
+64
+00:05:44,710 --> 00:05:53,470
+inserire se controllare all'interno esterno Se controllo qua e l possiamo mostrare se abbiamo gi caricato post se questo  vero.
+
+65
+00:05:53,470 --> 00:05:55,350
+Siamo in grado di
+
+66
+00:05:55,360 --> 00:05:59,020
+Quindi questo  un primo indicatore che abbiamo gi caricato i post.
+
+67
+00:05:59,230 --> 00:06:06,310
+Poi, naturalmente, vogliamo essere sicuri che i giorni di Ford caricati postati non siano lo stesso ID dei nostri oggetti
+
+68
+00:06:06,310 --> 00:06:12,940
+di scena perch ci significherebbe l'ID per il quale vogliamo recuperare nuovi dati  l'ID che abbiamo gi caricato
+
+69
+00:06:12,940 --> 00:06:16,940
+cos non abbiamo bisogno di fare una richiesta HTP in questo caso.
+
+70
+00:06:17,320 --> 00:06:20,080
+Cos controllabile se abbiamo un post caricato.
+
+71
+00:06:20,080 --> 00:06:29,170
+E poi se questo stato caricato post ID  uguale all'ID prop.
+
+72
+00:06:29,230 --> 00:06:35,770
+di ottenere dati per un nuovo post che va bene, nel qual caso voglio fare richiesta DHC in tutti i nostri casi.
+
+73
+00:06:36,130 --> 00:06:37,200
+Quindi, se essenzialmente cerchiamo
+
+74
+00:06:37,210 --> 00:06:41,740
+Non andr avanti e lo far perch allora stiamo cercando di recuperare i dati per la richiesta di richieste.
+
+75
+00:06:41,770 --> 00:06:47,560
+Abbiamo gi per un post che dobbiamo gi spedire questo prompt, ovviamente.
+
+76
+00:06:47,560 --> 00:06:51,070
+Ora vediamo se carico quella pagina e clicco su un post.
+
+77
+00:06:51,430 --> 00:06:54,010
+Beh, non abbiamo mai ricevuto i dati del post.
+
+78
+00:06:54,010 --> 00:06:57,000
+Quindi in qualche modo il nostro assegno qui sta fallendo.
+
+79
+00:06:57,250 --> 00:07:03,040
+Bene, dobbiamo modificarlo un po 'perch inizialmente fallir perch il post caricato
+
+80
+00:07:03,040 --> 00:07:04,230
+ inizialmente nullo.
+
+81
+00:07:04,270 --> 00:07:07,530
+Quindi questo avrebbe successo solo se avessimo caricato almeno un post.
+
+82
+00:07:07,840 --> 00:07:16,270
+Verificher invece se non abbiamo questo post caricato di stato o se ce l'abbiamo ma se ha anche un
+
+83
+00:07:16,270 --> 00:07:19,600
+ID diverso dall'ID che programmiamo di caricare.
+
+84
+00:07:19,630 --> 00:07:25,660
+Quindi andiamo avanti e facciamo la richiesta anche se non abbiamo un messaggio caricato o se ne abbiamo uno ma gli
+
+85
+00:07:25,660 --> 00:07:26,590
+ID sono diversi.
+
+86
+00:07:26,760 --> 00:07:27,060
+Ops.
+
+87
+00:07:27,100 --> 00:07:28,620
+Questo dovrebbe essere caricato post per.
+
+88
+00:07:28,660 --> 00:07:34,930
+sulla scheda di rete, fai clic su un post che carica e non inizia a inviare richieste di infinito.
+
+89
+00:07:35,020 --> 00:07:37,510
+Quindi, se salviamo questo e torniamo all'applicazione
+
+90
+00:07:37,720 --> 00:07:42,940
+E pu ancora cambiare, ma otteniamo solo una richiesta per switch e questo  esattamente ci che vogliamo.
+
+91
+00:07:42,940 --> 00:07:49,600
+Quindi ora abbiamo un modo di recuperare i dati in modo sicuro nel componente aggiornato e comunque un aggiornamento completato
+
+92
+00:07:49,600 --> 00:07:54,410
+ il posto giusto perch vogliamo recuperare i dati ogni volta che riceviamo nuovi prompt.
+

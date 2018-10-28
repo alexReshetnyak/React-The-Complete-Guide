@@ -1,0 +1,144 @@
+1
+00:00:02,140 --> 00:00:08,010
+Ento, podemos aguardar na pgina de check out na pgina de check-out, vamos fazer os botes
+
+2
+00:00:08,020 --> 00:00:13,190
+que fazem parte do trabalho de resumo do cancelamento para cancelar e continuar o boto.
+
+3
+00:00:13,240 --> 00:00:18,460
+Agora, esses botes so, naturalmente, no resumo do check-in que eu poderia lidar com
+
+4
+00:00:18,460 --> 00:00:27,870
+eles, transformando-o em uma classe, mas eu s quero expor esse evento basicamente em um recipiente de check-out que envolve o componente de resumo do
+
+5
+00:00:27,870 --> 00:00:34,240
+check-out usando a abordagem skittled de usar adereos e, em seguida, todos os adereos que eu espero
+
+6
+00:00:34,300 --> 00:00:38,930
+obter a referncia ao mtodo que deve ser executado com um clique em.
+
+7
+00:00:39,220 --> 00:00:41,860
+Ento, aqui vou chamar nome.
+
+8
+00:00:41,860 --> 00:00:50,600
+confira no pode estar de acordo com meus nomes anteriores e, em seguida, seus adereos check out continuaram.
+
+9
+00:00:50,600 --> 00:00:52,650
+Confira cancelado ou apenas
+
+10
+00:00:52,650 --> 00:00:56,340
+Agora eu preciso implementar esses adereos ao usar o componente de resumo do check-out.
+
+11
+00:00:56,490 --> 00:01:05,350
+Ento, eu no s estou passando a ler os fins, eu tambm tenho check-out cancelado e eu chequei continuou.
+
+12
+00:01:05,610 --> 00:01:10,680
+Agora, qualquer mtodo que faa algo sobre cada um dos dois eu vou adicionar.
+
+13
+00:01:10,710 --> 00:01:17,850
+Confira o manipulador cancelado, que  um mtodo que deve fazer alguma coisa e usarei essa
+
+14
+00:01:17,850 --> 00:01:26,070
+sintaxe do mtodo para poder usar essa palavra-chave dentro de l e verificar o manipulador continuado, que tambm deve
+
+15
+00:01:26,580 --> 00:01:28,130
+se parecer com isso.
+
+16
+00:01:28,140 --> 00:01:35,310
+histrico Propp e o Propp da histria tambm tm um mtodo de retorno que eu quero executar aps o cancelamento.
+
+17
+00:01:35,310 --> 00:01:42,390
+Agora, desde que estou no recipiente de checkout que foi carregado com o componente de rota, ns tambm temos
+
+18
+00:01:42,390 --> 00:01:44,990
+acesso a esses adereos e tambm o
+
+19
+00:01:45,000 --> 00:01:52,440
+Isso simplesmente retorna para a ltima pgina no caso da Seta aqui, onde eu quero continuar todo o
+
+20
+00:01:52,440 --> 00:02:02,690
+uso, substitua, em vez disso, para substituir a rota atual por verificar os dados de contato de barra, por exemplo, no manipulamos essa parte ainda,
+
+21
+00:02:02,780 --> 00:02:10,010
+mas essa deve ser a parte que em breve carrega o componente de dados de contato que no
+
+22
+00:02:10,010 --> 00:02:11,390
+temos mais uma vez.
+
+23
+00:02:11,420 --> 00:02:15,230
+Agora precisamos conectar esses manipuladores at l.
+
+24
+00:02:15,530 --> 00:02:20,690
+Este controle do gerenciador cancelado e check-out do manipulador continuado deve ser usado.
+
+25
+00:02:20,870 --> 00:02:24,190
+Salve todos os falsos e agora vamos tentar isso.
+
+26
+00:02:24,230 --> 00:02:29,140
+Verifique se eu clicar em cancelar e lev-lo de volta ao meu criador Bergrin.
+
+27
+00:02:29,360 --> 00:02:34,430
+Deixe-me voltar a verificar se eu clicar em Continuar.
+
+28
+00:02:34,550 --> 00:02:39,910
+Voc ver suas mudanas, mas  claro que no faz nada porque no estamos lidando com isso.
+
+29
+00:02:40,010 --> 00:02:43,590
+Ento, isso  algo que eu vou ter que lidar no futuro.
+
+30
+00:02:43,820 --> 00:02:50,390
+O que eu quero fazer antes de lidar com a dvida  que eu quero renderizar o hamburguer que
+
+31
+00:02:50,690 --> 00:02:55,010
+eu realmente construo e no um hambrguer arbitrrio aqui para render o hambrguer.
+
+32
+00:02:55,010 --> 00:03:04,010
+Na verdade, eu vou ter que passar os dados respectivos sobre o meu hambrguer para a pgina de pagamento.
+
+33
+00:03:04,010 --> 00:03:11,030
+Ento, da Bergere Boulder aqui, eu construo um hamburguer e, se eu fizer clique agora de fazer pedidos
+
+34
+00:03:11,300 --> 00:03:19,100
+agora e continuar, eu preciso passar dados sobre os ingredientes para o prximo fim da pgina de sada aps os dados.
+
+35
+00:03:19,100 --> 00:03:25,960
+Quero transmitir o motivo por que uma consulta, os pais aqui, novamente, sentem-se livres para implementar isso por conta prpria.
+
+36
+00:03:26,030 --> 00:03:31,380
+Voc aprende tudo o que precisa por dias durante o ltimo mdulo que o far junto na prxima palestra.
+

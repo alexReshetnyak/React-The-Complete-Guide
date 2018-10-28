@@ -1,0 +1,392 @@
+1
+00:00:02,320 --> 00:00:08,470
+Quindi implementiamo questi libri relativi agli aggiornamenti e non li implementer in tutti i componenti perch ci
+
+2
+00:00:08,470 --> 00:00:11,490
+potrebbe far esplodere il nostro log della console.
+
+3
+00:00:11,590 --> 00:00:12,780
+Quindi fallo di persona.
+
+4
+00:00:12,850 --> 00:00:17,470
+S, tutti i componenti li implementano al di sotto di quelli relativi alla discreazione.
+
+5
+00:00:17,530 --> 00:00:23,680
+Ma soprattutto renderlo tra l'altro se ti stai chiedendo perch ho implementato questi metodi in questo
+
+6
+00:00:23,740 --> 00:00:27,830
+modo e non come propriet con funzioni aerodinamiche, potresti assolutamente farlo.
+
+7
+00:00:28,000 --> 00:00:34,870
+questi metodi non vengono chiamati per gli eventi di Dom e quindi non dovremo mai usare questo problema di parole chiave, potremmo
+
+8
+00:00:35,020 --> 00:00:41,350
+anche usare questa sintassi che potresti conoscere da un linguaggio di programmazione per tornare agli aspetti del ciclo di vita.
+
+9
+00:00:41,350 --> 00:00:42,610
+Ma dal momento che
+
+10
+00:00:42,880 --> 00:00:50,540
+Iniziamo con il componente che ricever gli oggetti di scena e poi otterremo i prossimi oggetti di scena come argomento.
+
+11
+00:00:50,770 --> 00:00:56,850
+A questo punto aggiunger un'istruzione di blocco della console in cui stamper le persone che aggiornano.
+
+12
+00:00:56,890 --> 00:00:59,970
+J. S. in modo che possiamo facilmente vedere questo.
+
+13
+00:01:00,400 --> 00:01:10,390
+E tutti dicono che all'interno del componente verranno ricevuti oggetti di scena e stamper anche i prossimi oggetti di scena qui in
+
+14
+00:01:10,390 --> 00:01:12,400
+modo che possiamo vederlo.
+
+15
+00:01:12,400 --> 00:01:15,940
+Lasciatemi salvare questo, vediamo Windass che esegue un'app realty.
+
+16
+00:01:15,940 --> 00:01:20,050
+Non lo vediamo qui perch lo troviamo nel file degli scacchi della persona.
+
+17
+00:01:20,110 --> 00:01:29,140
+Se faccio clic su Attiva / Disattiva le persone analizziamo il Cancellara qui abbiamo ottenuto tutti i metodi correlati della persona
+
+18
+00:01:29,140 --> 00:01:37,660
+in modo che le persone inseguano il costruttore che monta sedie per persone che rendono quindi il nostro componente singolo.
+
+19
+00:01:37,660 --> 00:01:39,910
+Quindi questi sono tutti componenti singoli.
+
+20
+00:01:41,160 --> 00:01:45,440
+E ha fatto MT Nessun aggiornamento relativo stile di vita.
+
+21
+00:01:45,440 --> 00:01:48,440
+Quindi chiarisco molto ma non ha ricaricato la pagina.
+
+22
+00:01:48,570 --> 00:01:51,150
+E ora cambiamo qualcosa.
+
+23
+00:01:51,480 --> 00:01:58,680
+Cerchiamo di rimuovere un manuale di queste persone qui per fare clic su di lui vedrai il rendering  richiamato e in
+
+24
+00:01:58,720 --> 00:02:01,080
+realt  perch lo stato  cambiato.
+
+25
+00:02:01,290 --> 00:02:07,530
+E poi vediamo che il nostro aggiornamento ricever il problema come viene chiamato dove otteniamo gli oggetti di scena
+
+26
+00:02:07,530 --> 00:02:13,980
+aggiornati dove abbiamo persone che sono solo due persone ora e poi siamo all'interno del rendering delle persone e dei
+
+27
+00:02:13,980 --> 00:02:18,390
+componenti di due persone che sono rimasti perch DS aveva bisogno di rendere .
+
+28
+00:02:18,420 --> 00:02:23,030
+Hai visto che anche il metodo render  parte del ciclo di vita dell'aggiornamento.
+
+29
+00:02:23,520 --> 00:02:24,120
+Quindi  grandioso.
+
+30
+00:02:24,120 --> 00:02:25,570
+Aggiungiamo un quartiere.
+
+31
+00:02:25,680 --> 00:02:33,840
+non  solo un metodo di convenienza ma uno in cui possiamo davvero risparmiare alcune prestazioni se lo utilizziamo abilmente l otteniamo i puntelli
+
+32
+00:02:33,840 --> 00:02:40,080
+e lo stato imminenti e aggiunger anche un blocco della console qui dove dir aggiornare le persone J.
+
+33
+00:02:40,080 --> 00:02:51,940
+Un metodo molto importante in realt ha mostrato l'aggiornamento dei componenti che S. all'interno dell'aggiornamento dei componenti arricciati e
+
+34
+00:02:52,570 --> 00:02:59,880
+stamper anche i prossimi oggetti di scena e il prossimo stadio.
+
+35
+00:02:59,890 --> 00:03:04,640
+Ora come ho detto questo metodo dovrebbe restituire true o false se restituisce true.
+
+36
+00:03:04,840 --> 00:03:08,300
+L'aggiornamento continua se restituisce false.
+
+37
+00:03:08,320 --> 00:03:10,510
+Abbiamo fermato l'intero processo.
+
+38
+00:03:10,510 --> 00:03:13,410
+Ora restituiamo false qui per vedere come sarebbe.
+
+39
+00:03:13,720 --> 00:03:18,680
+Se salvo tutto adesso e mi rivolgo a persone che funzionano tutte.
+
+40
+00:03:18,850 --> 00:03:20,850
+Ma ora rimuoviamo il manuale di nuovo.
+
+41
+00:03:21,600 --> 00:03:24,870
+Clicco su di lui ma vedi che non si aggiorna.
+
+42
+00:03:24,870 --> 00:03:32,010
+ possibile fare clic su di esso pi volte si vede anche che il metodo di aggiornamento  chiamato Dovrebbe aggiornamento del
+
+43
+00:03:32,370 --> 00:03:34,490
+componente e degradare le loro modifiche.
+
+44
+00:03:34,500 --> 00:03:41,280
+Le persone detengono solo un elemento qui perch ho eliminato due persone che non si riflettono nel DOM perch abbiamo
+
+45
+00:03:41,610 --> 00:03:47,640
+annullato il processo di aggiornamento, quindi non abbiamo mai raggiunto i metodi di rendering che sarebbero importanti
+
+46
+00:03:47,640 --> 00:03:52,880
+per dire di reagire per verificare se il vero Dom ha bisogno di essere aggiornato.
+
+47
+00:03:52,890 --> 00:03:55,930
+Questo ci mostra la potenza dell'aggiornamento dei componenti.
+
+48
+00:03:56,310 --> 00:04:03,870
+Ora ti potresti chiedere perch mai dovremmo tornare a Fallston perch qui ovviamente si rompe l'app.
+
+49
+00:04:04,070 --> 00:04:07,960
+Ma potresti avere casi in cui sai che non  richiesto alcun aggiornamento.
+
+50
+00:04:08,150 --> 00:04:10,020
+E, naturalmente, di solito non si scrive codice.
+
+51
+00:04:10,040 --> 00:04:11,590
+Vero o falso qui.
+
+52
+00:04:11,700 --> 00:04:17,120
+Invece si controlla quello in base ai probs imminenti o allo stato.
+
+53
+00:04:17,120 --> 00:04:28,690
+Quindi, ad esempio, per esempio, sappiamo che vogliamo continuare solo se le persone che seguono suggeriscono che non sono uguali a
+
+54
+00:04:28,760 --> 00:04:32,420
+queste persone che sono le persone anziane.
+
+55
+00:04:32,420 --> 00:04:36,050
+Ora con questo attrezzo torniamo indietro persone attivate.
+
+56
+00:04:36,060 --> 00:04:41,890
+si fa clic su una persona, si passa attraverso l'intero processo perch l'array di persone  cambiato.
+
+57
+00:04:41,980 --> 00:04:42,840
+Ora, se
+
+58
+00:04:43,220 --> 00:04:50,390
+E dal modo in cui questo  vero solo perch abbiamo usato un approccio immutabile di aggiornamento dell'array della persona, perch
+
+59
+00:04:50,630 --> 00:04:53,410
+questo non controlla profondamente la matrice della persona.
+
+60
+00:04:53,510 --> 00:04:59,500
+Vede solo se si tratta di oggetti diversi ma questi sono oggetti diversi a causa del modo
+
+61
+00:04:59,510 --> 00:05:03,620
+in cui aggiorniamo le persone qui nella nostra app come file l.
+
+62
+00:05:03,620 --> 00:05:07,280
+Quando abbiamo detto alle persone abbiamo detto a un nuovo array.
+
+63
+00:05:07,430 --> 00:05:10,570
+Quindi  un oggetto completamente diverso che  importante.
+
+64
+00:05:10,640 --> 00:05:14,130
+Se un componente aggiornato qui non lo controlla profondamente.
+
+65
+00:05:14,270 --> 00:05:17,150
+Confronta solo gli oggetti radice.
+
+66
+00:05:17,150 --> 00:05:23,100
+I puntatori per essere precisi, ma questi sono diversi perch abbiamo ricreato un nuovo array ma che fuori
+
+67
+00:05:23,120 --> 00:05:29,330
+dal modo in cui ci accadrebbe ora  se in qualche modo cambiamo qualche altra propriet che potrebbe
+
+68
+00:05:29,330 --> 00:05:31,430
+non essere rilevante per questo componente.
+
+69
+00:05:31,430 --> 00:05:35,450
+Questo non innescher un aggiornamento e possiamo risparmiare le prestazioni qui.
+
+70
+00:05:36,110 --> 00:05:38,170
+Quindi  un aggiornamento sicuro per i componenti.
+
+71
+00:05:38,180 --> 00:05:44,120
+componente perch ci significherebbe che dovresti usare componenti stateful dappertutto ed  un po 'controcorrente rispetto a
+
+72
+00:05:44,120 --> 00:05:49,400
+ci che ho detto prima su te che usi componenti funzionali il pi spesso possibile.
+
+73
+00:05:49,400 --> 00:05:51,360
+Non devi necessariamente aggiungerlo a ogni
+
+74
+00:05:51,680 --> 00:05:58,580
+Ma se hai un caso d'uso in cui conosci l'anno scomodo e ricevi molti oggetti di scena ma in realt dovrebbe
+
+75
+00:05:58,580 --> 00:06:02,050
+riorganizzare o solo se uno di questi oggetti di scena cambia.
+
+76
+00:06:02,120 --> 00:06:08,810
+Quindi potresti trasformare il tuo componente in uno stato pieno e implementare l'aggiornamento dei componenti per verificare se
+
+77
+00:06:08,960 --> 00:06:14,960
+questo singolo puntello che  importante per te  cambiato o meno e ignorare tutti gli altri.
+
+78
+00:06:15,410 --> 00:06:21,870
+Quindi con questo otteniamo questo controllo extra e possiamo continuare ad implementare il ciclo di vita. Lokes il ciclo
+
+79
+00:06:22,040 --> 00:06:26,000
+di vita successivo dopo l'aggiornamento del componente Se il componente verr aggiornato.
+
+80
+00:06:26,030 --> 00:06:28,650
+Ora abbiamo deciso che stiamo per aggiornare qui.
+
+81
+00:06:28,690 --> 00:06:31,770
+Ho anche ricevuto il prossimo stato e oggetti di scena.
+
+82
+00:06:31,910 --> 00:06:34,930
+Quindi ora chiudiamo anche questo al console.
+
+83
+00:06:35,250 --> 00:06:37,910
+Sono le persone che aggiornano Lauck.
+
+84
+00:06:37,970 --> 00:06:51,480
+J. S. il componente interno aggiorner e registrer i prossimi oggetti di scena e il
+
+85
+00:06:51,480 --> 00:06:58,990
+prossimo stato qui con quello diciamo se questo  vediamo il tempo reale di dialogo chiaro di una persona eliminare la persona
+
+86
+00:06:59,440 --> 00:07:06,070
+che vediamo in realt un componente di resa ricever oggetti di scena se l'aggiornamento dei componenti verr aggiornato e quindi
+
+87
+00:07:06,070 --> 00:07:09,100
+la render map mette tutti i componenti rilevanti perfetti.
+
+88
+00:07:09,160 --> 00:07:13,000
+Ora il prossimo metodo che il computer aggiorner  il rendering.
+
+89
+00:07:13,030 --> 00:07:14,540
+L'abbiamo gi capito.
+
+90
+00:07:14,710 --> 00:07:20,870
+Il prossimo metodo che segue  il componente che ha aggiornato i loro.
+
+91
+00:07:21,020 --> 00:07:31,370
+Ora possiamo causare effetti collaterali proprio come qualsiasi componente ha montato e stamper rapidamente questi due.
+
+92
+00:07:31,550 --> 00:07:38,130
+Qui non abbiamo i prossimi oggetti di scena prossimo stato perch  spesso l'aggiornamento che abbiamo solo questi oggetti di scena e
+
+93
+00:07:38,360 --> 00:07:44,360
+misstates i nuovi probs e il nuovo stato devono verificarsi oggetti di scena e lo stato attuale in questo momento.
+
+94
+00:07:44,540 --> 00:07:50,690
+In modo che ci ha salvato ancora una volta le persone bersaglio chiaro blocco eliminare la persona e fino in fondo.
+
+95
+00:07:50,720 --> 00:07:53,540
+Il componente Usie in basso  stato aggiornato.
+
+96
+00:07:53,630 --> 00:07:55,580
+Questo  il ciclo di vita dell'aggiornamento.
+
+97
+00:07:55,660 --> 00:08:02,960
+Se l'aggiornamento viene attivato dall'esterno a causa di problemi di modifica, come nel caso delle persone, l'aeroporto
+
+98
+00:08:03,030 --> 00:08:03,920
+ cambiato.
+

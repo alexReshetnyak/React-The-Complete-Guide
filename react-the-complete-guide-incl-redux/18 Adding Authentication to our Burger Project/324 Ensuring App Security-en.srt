@@ -1,0 +1,144 @@
+1
+00:00:02,190 --> 00:00:05,310
+Now let's talk about security a little bit,
+
+2
+00:00:05,430 --> 00:00:09,350
+let me log in again. As you learned,
+
+3
+00:00:09,360 --> 00:00:16,290
+we manage our auth state here with the token and we automatically log the user in if we have a valid
+
+4
+00:00:16,320 --> 00:00:22,790
+token. That token is only valid for 60 minutes though, that is for security reasons
+
+5
+00:00:22,800 --> 00:00:27,000
+because if the token gets stolen, anyone can access your data of course,
+
+6
+00:00:27,000 --> 00:00:29,010
+now that sounds very bad.
+
+7
+00:00:29,010 --> 00:00:36,150
+Keep in mind though it's stored in your application in local storage, local storage can be accessed with
+
+8
+00:00:36,150 --> 00:00:43,800
+cross-site scripting attacks and cross-site scripting attacks are prevented by Angular, you can't output
+
+9
+00:00:43,890 --> 00:00:45,760
+insecure code by default.
+
+10
+00:00:46,020 --> 00:00:48,500
+So you got a lot of protection from that side,
+
+11
+00:00:48,750 --> 00:00:55,020
+so your data and local storage should be safe, an additional safety net then is again that the token
+
+12
+00:00:55,020 --> 00:00:57,050
+expires after one hour.
+
+13
+00:00:57,060 --> 00:01:02,520
+Now firebase would theoretically also give you that refreshed token if we inspect the response we get
+
+14
+00:01:02,520 --> 00:01:03,900
+back, here
+
+15
+00:01:03,960 --> 00:01:08,080
+that refresh token. The refresh token doesn't expire,
+
+16
+00:01:08,130 --> 00:01:14,640
+you could store that too in local storage and then there is a specific end point on the firebase auth rest
+
+17
+00:01:14,640 --> 00:01:22,200
+API where you can exchange a refreshed token for an ID token, you just send your refreshed token
+
+18
+00:01:22,350 --> 00:01:27,010
+to this API endpoint and you get back a new ID token.
+
+19
+00:01:27,180 --> 00:01:29,130
+Theoretically that's a cool pattern,
+
+20
+00:01:29,130 --> 00:01:34,590
+you can always do that with every HTTP request you send, with every request you send you send an
+
+21
+00:01:34,590 --> 00:01:40,410
+additional one where you exchange your refresh token for a new ID token even if the ID token hasn't
+
+22
+00:01:40,410 --> 00:01:41,510
+expired yet
+
+23
+00:01:41,610 --> 00:01:46,890
+so that you always get new ID tokens and you could also get a new one when the user is automatically
+
+24
+00:01:46,890 --> 00:01:53,760
+signed in with the functionality we added over the last lectures, I opted to not use that here.
+
+25
+00:01:53,820 --> 00:01:59,730
+It's also safe because we can store the refresh token in local storage and as I mentioned, this is only
+
+26
+00:01:59,730 --> 00:02:02,410
+accessible with cross-site scripting attacks.
+
+27
+00:02:02,730 --> 00:02:09,210
+Still, having a token which never expires and which you can exchange for a token which gives you access
+
+28
+00:02:09,210 --> 00:02:16,890
+to everything could lead to security issues or at least you should be very careful about protecting
+
+29
+00:02:16,890 --> 00:02:20,340
+it if you are using the refresh token.
+
+30
+00:02:20,340 --> 00:02:22,220
+That's just something I wanted to add,
+
+31
+00:02:22,260 --> 00:02:27,930
+you can enhance the user experience by using the refresh token, you can essentially make sure the user
+
+32
+00:02:27,930 --> 00:02:34,980
+is never logged out because as the refreshed token never expires, you can refresh the main token even
+
+33
+00:02:34,980 --> 00:02:36,220
+after a week
+
+34
+00:02:36,480 --> 00:02:39,240
+just check for the token being valid, it isn't,
+
+35
+00:02:39,410 --> 00:02:44,280
+take the refresh token and get a new one but due to that security thing,
+
+36
+00:02:44,280 --> 00:02:48,140
+I opted to not use it and I wanted to bring this to your attention.
+

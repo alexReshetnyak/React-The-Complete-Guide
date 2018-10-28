@@ -1,0 +1,152 @@
+1
+00:00:02,130 --> 00:00:09,390
+Iniziamo con nextjs, puoi semplicemente google per nextjs e quindi selezionare il
+
+2
+00:00:09,390 --> 00:00:14,990
+link repository github che trovi. In questa pagina troverai istruzioni dettagliate su come usarlo, un
+
+3
+00:00:15,180 --> 00:00:20,190
+link che porta ad un'altra pagina in cui puoi immergerti ancora pi a fondo e anche le istruzioni
+
+4
+00:00:20,190 --> 00:00:21,120
+su come installarlo.
+
+5
+00:00:21,240 --> 00:00:22,740
+Ma cos' nextjs?
+
+6
+00:00:22,740 --> 00:00:30,240
+Qui sta dicendo che nextjs  un framework minimalista per un server che reagisce alle applicazioni.
+
+7
+00:00:30,240 --> 00:00:34,890
+Ora il rendering lato server  un concetto di reazione piuttosto avanzato,
+
+8
+00:00:34,890 --> 00:00:38,320
+pertanto ci sono corsi incentrati interamente su questo.
+
+9
+00:00:38,640 --> 00:00:45,450
+In poche parole, il rendering lato server significa semplicemente che quando un utente inserisce un URL che porta alla
+
+10
+00:00:45,450 --> 00:00:52,620
+tua app di reazione o a una delle tue pagine della tua app, effettuer il pre-rendering della pagina sul server
+
+11
+00:00:52,620 --> 00:00:57,330
+in modo che il server restituisca tale pre-rendering codice html, lascia che ti
+
+12
+00:00:57,330 --> 00:00:58,840
+mostri cosa intendo.
+
+13
+00:00:58,890 --> 00:01:00,730
+Se diamo un'occhiata al nostro normale
+
+14
+00:01:00,750 --> 00:01:02,520
+setup, abbiamo un server e
+
+15
+00:01:02,640 --> 00:01:08,760
+un client e ovviamente il nostro codice di app reattivo e con questo, voglio dire sia il codice
+
+16
+00:01:08,790 --> 00:01:16,330
+di build in questa cartella di build che abbiamo creato in quella applicazione reattiva all'app e anche il raw codice nella cartella sorgente.
+
+17
+00:01:16,410 --> 00:01:22,430
+Se visiti il tuo server per la prima volta, quindi carichi la pagina per la prima
+
+18
+00:01:22,440 --> 00:01:28,980
+volta, il server ti spedir in genere l'indice. file html e il tuo codice e poi lo si dovrebbe caricare
+
+19
+00:01:28,980 --> 00:01:30,620
+come applicazione singola pagina nel client.
+
+20
+00:01:30,630 --> 00:01:39,390
+Il problema pu essere che se la tua pagina deve essere sottoposta a scansione dai motori di ricerca, i crawler come il
+
+21
+00:01:39,420 --> 00:01:46,320
+crawler di Google potrebbero non capire o leggere correttamente la tua pagina, specialmente se stai utilizzando il
+
+22
+00:01:46,320 --> 00:01:48,990
+codice asincrono per caricare il contenuto iniziale.
+
+23
+00:01:49,230 --> 00:01:54,780
+Quindi se hai una pagina in cui la prima cosa che fai in javascript  raggiungere un server
+
+24
+00:01:54,780 --> 00:01:57,560
+e quindi visualizzare i risultati sullo schermo quando i
+
+25
+00:01:57,780 --> 00:02:04,650
+dati sono tornati, ci potrebbe accadere in maniera super veloce all'utente, ma il crawler vedr solo il spinner o qualunque cosa tu
+
+26
+00:02:04,650 --> 00:02:07,520
+mostri fino a quando i dati sono l.
+
+27
+00:02:07,680 --> 00:02:13,360
+Ora con il rendering lato server, per il caricamento della prima pagina che  sempre quello che
+
+28
+00:02:13,530 --> 00:02:19,200
+vede il crawler, il server recuperer e renderizzer l'app in modo che non venga solo recuperata e
+
+29
+00:02:19,200 --> 00:02:26,820
+restituita, ma venga anche visualizzata per quella pagina visitata e quindi restituisce quella pagina pre-renderizzata insieme al pacchetto di app reattivo in modo
+
+30
+00:02:26,820 --> 00:02:32,420
+che da questo punto in poi, si abbia ancora un'applicazione a una sola pagina in modo da
+
+31
+00:02:32,430 --> 00:02:34,580
+poter continuare a lavorare come prima.
+
+32
+00:02:34,650 --> 00:02:41,940
+Si tratta essenzialmente del carico iniziale della pagina, ora nextjs  un pacchetto che ti aiuta con il rendering
+
+33
+00:02:41,940 --> 00:02:44,860
+lato server, perch  molto complicato da configurare.
+
+34
+00:02:44,970 --> 00:02:51,380
+E oltre a darti una mano, ti d una struttura personalizzata o specifica su cui lavorare.
+
+35
+00:02:51,390 --> 00:02:58,570
+Questa struttura sfrutta l'applicazione di una rigida struttura di cartelle che devi usare anche se stiamo
+
+36
+00:02:58,680 --> 00:03:05,700
+parlando di una sola cartella che deve essere nominata in un certo modo, in modo che
+
+37
+00:03:05,700 --> 00:03:10,170
+tutti i percorsi della tua applicazione vengano effettivamente generati automaticamente.
+
+38
+00:03:10,350 --> 00:03:16,560
+Lascia che ti mostri cosa intendo e come avremo avviato un progetto nextj nelle prossime conferenze.
+

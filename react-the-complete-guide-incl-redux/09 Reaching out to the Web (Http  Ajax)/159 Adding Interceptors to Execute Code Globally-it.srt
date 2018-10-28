@@ -1,0 +1,308 @@
+1
+00:00:02,290 --> 00:00:09,130
+Gestire localmente gli errori nei componenti ha molto senso perch probabilmente vuoi fare cose diverse con
+
+2
+00:00:09,130 --> 00:00:12,900
+errori a seconda del componente in cui ti trovi.
+
+3
+00:00:12,910 --> 00:00:17,410
+Forse qui vuoi mostrare qualcosa che  andato storto e una componente integrale che vuoi mostrare qualcosa
+
+4
+00:00:17,410 --> 00:00:17,980
+di diverso.
+
+5
+00:00:18,070 --> 00:00:22,650
+Ma a volte in alcuni posti potresti voler eseguire del codice a livello globale.
+
+6
+00:00:22,660 --> 00:00:31,480
+Quindi non importa quale richiesta HTP tu mandi da quale componente vuoi fare qualcosa quando quella richiesta
+
+7
+00:00:31,480 --> 00:00:35,950
+viene inviata e o quando la risposta ritorna.
+
+8
+00:00:36,370 --> 00:00:41,190
+Puoi farlo con X anni con l'aiuto dei cosiddetti interest setter.
+
+9
+00:00:41,200 --> 00:00:47,470
+Queste sono funzioni che puoi definire globalmente e che verranno eseguite per ogni richiesta lasciando la tua
+
+10
+00:00:47,650 --> 00:00:50,370
+app e ogni risposta che ritorna in essa.
+
+11
+00:00:50,380 --> 00:00:56,830
+ particolarmente utile, ad esempio, per impostare alcune intestazioni comuni come l'offerta di head o forse
+
+12
+00:00:57,220 --> 00:00:58,980
+o per le risposte.
+
+13
+00:00:58,990 --> 00:01:06,670
+Se vuoi registrare le risposte o 1 per gestire gli errori a livello globale, ti mostrer come aggiungere
+
+14
+00:01:06,670 --> 00:01:08,400
+interceptor in questa lezione.
+
+15
+00:01:08,410 --> 00:01:14,200
+Andiamo al prossimo file genio perch questo  il file pi globale che abbiamo un'ora di re-act app.
+
+16
+00:01:14,260 --> 00:01:19,740
+ un file profondo in cui effettivamente iniziamo a reagire montandolo all'alba.
+
+17
+00:01:19,780 --> 00:01:28,000
+Quindi ora desidero anche importare x anni dal pacchetto Xs e tutte queste importazioni X anni
+
+18
+00:01:28,000 --> 00:01:31,060
+effettivamente condividono tutte la stessa configurazione.
+
+19
+00:01:31,120 --> 00:01:37,600
+Ecco perch non possiamo nemmeno usare l'accesso qui, una X  un oggetto di interesse speciale setter.
+
+20
+00:01:37,660 --> 00:01:43,300
+E anche questo sar condiviso non solo in questo file ma in tutti i file del tuo progetto.
+
+21
+00:01:43,300 --> 00:01:47,130
+Quindi influenzer tutte le richieste dette da qualsiasi punto della tua app.
+
+22
+00:01:47,560 --> 00:01:55,790
+L possiamo accedere all'oggetto della richiesta e ora aggiungere semplicemente l'uso per registrare un nuovo intercettore che
+
+23
+00:01:55,790 --> 00:02:03,540
+interessa Sadr come funzione di input che riceve il conflitto o la richiesta che potresti dire.
+
+24
+00:02:03,670 --> 00:02:10,330
+Ora blocchiamo semplicemente la richiesta per essere cancellata per ora in modo che possiamo vedere cosa c' dentro.
+
+25
+00:02:10,330 --> 00:02:15,770
+Lo chiamo richiesta ma principalmente  solo per richiedere conflitti che  importante tenere a mente.
+
+26
+00:02:15,820 --> 00:02:17,340
+Ora salviamo questo.
+
+27
+00:02:17,740 --> 00:02:21,020
+E se torniamo all'app possiamo vedere qualcosa nel registro.
+
+28
+00:02:21,090 --> 00:02:28,450
+La richiesta ISDE a cui  stata inviata la configurazione della richiesta almeno vede le intestazioni che vengono aggiunte
+
+29
+00:02:28,780 --> 00:02:29,280
+e.
+
+30
+00:02:29,350 --> 00:02:29,760
+Si.
+
+31
+00:02:29,800 --> 00:02:31,580
+Questa  la nostra richiesta.
+
+32
+00:02:31,660 --> 00:02:35,070
+Questo  quello che abbiamo ricevuto qui quando abbiamo ricevuto i post.
+
+33
+00:02:35,320 --> 00:02:41,300
+Ora qualcosa  andato storto qui, anche se in questo momento stiamo bloccando le loro richieste.
+
+34
+00:02:41,590 --> 00:02:50,520
+Nella tua funzione di setter di interesse qui devi sempre restituire la richiesta o la richiesta.
+
+35
+00:02:50,830 --> 00:02:53,260
+Altrimenti stai bloccando la richiesta.
+
+36
+00:02:53,260 --> 00:02:58,360
+Ora ovviamente puoi anche modificare il conflitto di richiesta prima di restituirlo.
+
+37
+00:02:58,360 --> 00:03:00,230
+Questa  l'idea dietro l'intercettore.
+
+38
+00:03:00,310 --> 00:03:03,260
+Puoi aggiungere intestazioni che fanno cose del genere.
+
+39
+00:03:03,610 --> 00:03:09,360
+Quindi ora se salviamo questo otteniamo i post e se clicco su uno vedrai un blocco numerico perch  stata inviata
+
+40
+00:03:09,370 --> 00:03:11,410
+una richiesta di numero e quattro morti.
+
+41
+00:03:11,410 --> 00:03:15,690
+Anche l'intercettatore funzionava anche se era stato sparato da un altro componente.
+
+42
+00:03:15,760 --> 00:03:21,580
+Come ho detto, tutti i componenti di tutte le aree d'Europa sono coperti da questo.
+
+43
+00:03:22,180 --> 00:03:24,480
+Ora per intercettore morto qui.
+
+44
+00:03:24,640 --> 00:03:31,210
+Possiamo anche passare una seconda funzione oltre alla funzione di modifica della configurazione della richiesta.
+
+45
+00:03:31,210 --> 00:03:35,150
+Possiamo aggiungere una funzione che gestisce eventuali errori.
+
+46
+00:03:35,260 --> 00:03:40,060
+Quindi qui possiamo registrare un errore come questo.
+
+47
+00:03:40,090 --> 00:03:47,860
+nuovo con il metodo catch, se hai qualche attivit locale che vuoi fare come mostrare qualcosa sull'interfaccia utente, ma anche a livello globale
+
+48
+00:03:47,860 --> 00:03:53,590
+si desidera collegarlo nel file di registro che si invia a un server o qualcosa del genere.
+
+49
+00:03:53,590 --> 00:04:00,340
+Dovremmo anche restituire l'errore di rifiuto di promessa qui, anche se in questo modo lo inoltriamo alla nostra richiesta mentre
+
+50
+00:04:00,340 --> 00:04:04,040
+lo hai scritto in un componente in cui possiamo gestirlo di
+
+51
+00:04:04,450 --> 00:04:05,930
+Quindi vediamo come funziona.
+
+52
+00:04:05,950 --> 00:04:13,510
+Se ora salver quel file e ora trasformo i miei post, i miei messaggi get non saranno pi validi.
+
+53
+00:04:15,200 --> 00:04:21,410
+Ora vedi che qualcosa  andato storto qui, ma in realt non vedi molto i costi dal
+
+54
+00:04:21,410 --> 00:04:23,020
+gestore degli errori dell'intercettore.
+
+55
+00:04:23,090 --> 00:04:28,390
+La ragione di questo  che questo airier  legato all'invio della richiesta.
+
+56
+00:04:28,430 --> 00:04:32,900
+Ad esempio se non avessi connettivit Internet o qualcosa del genere dovrebbe apparire.
+
+57
+00:04:33,080 --> 00:04:40,670
+Quindi, se richiedi l'invio di Fales, possiamo anche aggiungere un intercettore per gestire le risposte, anche se lo facciamo nello
+
+58
+00:04:40,670 --> 00:04:46,190
+stesso modo in cui lo fai per la richiesta, ma usiamo l'oggetto risposta sull'oggetto interceptors.
+
+59
+00:04:46,190 --> 00:04:52,470
+Quindi usiamo anche due funzioni qui una funzione e la sto copiando dall'alto.
+
+60
+00:04:52,670 --> 00:05:00,250
+Una funzione che ricever la risposta di successo possiamo anche registrarla qui e dovremmo restituirla in
+
+61
+00:05:00,350 --> 00:05:05,370
+modo che possiamo ancora usarla nel componente nel blocco allora.
+
+62
+00:05:05,450 --> 00:05:11,390
+Questo  un modo in cui dovremmo restituirlo e recuperiamo tutti gli errori e dovremmo anche ricontrollarli
+
+63
+00:05:11,600 --> 00:05:16,760
+qui in modo che possiamo ancora gestirli nel blocco catch localmente in un componente.
+
+64
+00:05:16,790 --> 00:05:23,150
+pap ha aggiunto quella risposta e ha detto o aggiunto e la funzione di errore  presente, torniamo indietro.
+
+65
+00:05:23,150 --> 00:05:23,930
+Ora se
+
+66
+00:05:23,930 --> 00:05:28,330
+In realt vediamo il log qui e lo gestiamo ancora localmente.
+
+67
+00:05:28,730 --> 00:05:30,790
+Quindi entrambi funzionano.
+
+68
+00:05:30,800 --> 00:05:33,760
+Se ora vado nel container del blocco e accendo il mio.
+
+69
+00:05:33,760 --> 00:05:36,170
+Sei portato a un valido sei di nuovo malato.
+
+70
+00:05:36,380 --> 00:05:39,350
+Vediamo solo una serratura per la risposta.
+
+71
+00:05:39,350 --> 00:05:43,460
+Quindi questo proviene dall'intercettatore, come si pu capire dal nome del file e dal numero di riga.
+
+72
+00:05:43,730 --> 00:05:52,160
+ un altro modo ovviamente per manipolare potenzialmente questa risposta qui o registrarla o fare quello che vuoi.
+
+73
+00:05:52,160 --> 00:05:53,260
+E questo
+
+74
+00:05:53,360 --> 00:05:57,740
+Quindi essere in grado di definire gli intercettori Deis pu essere abbastanza potente.
+
+75
+00:05:57,770 --> 00:06:04,640
+Anche in questo caso, un caso d'uso molto comune  che l'interceptor della richiesta aggiunga alcune intestazioni comuni.
+
+76
+00:06:04,640 --> 00:06:13,970
+Ad esempio un'intestazione di autorizzazione, anche se abbiamo anche un modo diverso di accedere alla configurazione di accesso globale.
+
+77
+00:06:13,970 --> 00:06:16,580
+Ti mostrer come funziona nella prossima immagine.
+

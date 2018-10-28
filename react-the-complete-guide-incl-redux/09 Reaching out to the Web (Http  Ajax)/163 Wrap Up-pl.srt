@@ -1,0 +1,32 @@
+1
+00:00:02,160 --> 00:00:07,920
+W tym module nauczylimy si duo o wysyaniu da HTTP, aby zareagowa. Dowiedziae si, e to dziaa poprzez wysyanie da Ajax
+
+2
+00:00:07,920 --> 00:00:13,650
+i e najlepiej jest uywa pakietu takiego jak aksios. W przypadku osi, nauczye si,
+
+3
+00:00:13,650 --> 00:00:20,700
+jak to dziaa i moesz ustawi domyln konfiguracj w przechwytywaczach lub nawet podzieli konfiguracj
+
+4
+00:00:20,700 --> 00:00:22,790
+za pomoc niestandardowych instancji.
+
+5
+00:00:22,800 --> 00:00:29,440
+Teraz, oczywicie, praktykowanie zawsze jest najlepsz rzecz, jak moesz zrobi, aby poczu si komfortowo przy uyciu
+
+6
+00:00:29,670 --> 00:00:36,730
+okrelonego narzdzia i dlatego w nastpnym module dodamy rwnie funkcj HTTP do naszego builera, tak aby po
+
+7
+00:00:36,750 --> 00:00:43,200
+klikniciu tego przycisku zamwienia naprawd wylij zapytanie do naszego serwera co najmniej o faszywe, e
+
+8
+00:00:43,200 --> 00:00:44,660
+naprawd zoylimy zamwienie.
+

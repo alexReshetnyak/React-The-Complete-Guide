@@ -1,0 +1,148 @@
+1
+00:00:01,980 --> 00:00:05,630
+Over the last lectures we learned a lot about nextjs,
+
+2
+00:00:05,630 --> 00:00:07,270
+now there is more to learn about it
+
+3
+00:00:07,280 --> 00:00:13,700
+I will not doubt that. You can always visit the official github page I showed you a couple of times throughout
+
+4
+00:00:13,700 --> 00:00:20,240
+this module and you can visit learnnextjs.com, an official page by the creators of nextjs
+
+5
+00:00:20,540 --> 00:00:27,400
+which requires a github account to log in but which then step by step walks you through the core features.
+
+6
+00:00:27,470 --> 00:00:32,390
+With that, you should be able to really utilize this together with the react knowledge you gained throughout
+
+7
+00:00:32,450 --> 00:00:36,820
+this course because you are still building a react application in the end
+
+8
+00:00:36,830 --> 00:00:42,230
+to build a react that which is server side rendered by default where you don't need to worry about
+
+9
+00:00:42,230 --> 00:00:47,810
+code splitting and routing and where you therefore might have an easier time creating the react app
+
+10
+00:00:47,810 --> 00:00:49,400
+you're looking to create.
+
+11
+00:00:49,760 --> 00:00:55,520
+Let me finish this module by showing you how you actually prepared this for deployment then. Let's quit
+
+12
+00:00:55,550 --> 00:01:00,250
+our development server and let's revisit the package.json file.
+
+13
+00:01:00,320 --> 00:01:02,610
+Remember we added three scripts here,
+
+14
+00:01:02,810 --> 00:01:10,430
+build and start are two other scripts. Build is the script you want to execute to build the project for deployment,
+
+15
+00:01:10,430 --> 00:01:17,320
+so by simply running npm run build, it will now compile and optimize all that code and spit it out,
+
+16
+00:01:17,360 --> 00:01:20,070
+ready for you to ship to a server.
+
+17
+00:01:20,090 --> 00:01:24,120
+Now once npm run build is done, you get the .next folder,
+
+18
+00:01:24,140 --> 00:01:27,170
+this now contains all the build content.
+
+19
+00:01:27,170 --> 00:01:34,940
+Now this folder here is what actually needs to be deployed but you would deploy the entire project folder
+
+20
+00:01:35,120 --> 00:01:39,060
+because you also need to install node modules and so on.
+
+21
+00:01:39,230 --> 00:01:46,040
+So you would deploy the entire project folder here to a host like AWS elastic beanstalk or Heroku.
+
+22
+00:01:46,580 --> 00:01:47,700
+And that's important,
+
+23
+00:01:47,840 --> 00:01:53,900
+you need a host, a service which is able to run nodeJS because nextjs
+
+24
+00:01:53,960 --> 00:02:01,820
+uses nodejs and only works on nodejs, all the files you deploy are javascript files. So
+
+25
+00:02:01,850 --> 00:02:02,620
+you need a nodejs
+
+26
+00:02:02,620 --> 00:02:10,700
+ready host and then you ship your entire project there and just execute npm start, the third
+
+27
+00:02:10,700 --> 00:02:11,360
+script.
+
+28
+00:02:11,360 --> 00:02:15,320
+We can also run this locally since we got nodejs installed here.
+
+29
+00:02:15,440 --> 00:02:19,110
+this will now still serve the app on localhost:3000
+
+30
+00:02:19,370 --> 00:02:25,130
+but now it's the app we prepared for deployment, it works as before but it's actually using the optimized
+
+31
+00:02:25,150 --> 00:02:31,430
+files where everything is minified and so on and it shows that everything works and therefore
+
+32
+00:02:31,520 --> 00:02:39,260
+if you ship the entire project and then execute npm install followed by npm start on your server, you
+
+33
+00:02:39,260 --> 00:02:46,370
+have your react nextjs application running on a real server with all the benefits nextjs
+
+34
+00:02:46,370 --> 00:02:47,480
+gives you.
+
+35
+00:02:47,810 --> 00:02:50,370
+Again if you want to learn more about nextjs,
+
+36
+00:02:50,480 --> 00:02:56,430
+don't miss the chance of diving into the official docs here on the github repo or on learnnextjs.com
+
+37
+00:02:56,480 --> 00:02:57,470
+.
+

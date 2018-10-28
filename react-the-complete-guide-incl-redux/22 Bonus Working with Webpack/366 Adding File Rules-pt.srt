@@ -1,0 +1,172 @@
+1
+00:00:02,130 --> 00:00:05,260
+Na ltima aula, configuramos a configurao bsica do webpack,
+
+2
+00:00:05,350 --> 00:00:07,320
+mas est longe de ser finalizada.
+
+3
+00:00:07,540 --> 00:00:14,370
+Uma coisa importante que temos que acrescentar  garantir que o webpack seja anexado automaticamente. js no final dessas importaes
+
+4
+00:00:14,440 --> 00:00:20,170
+aqui para que seja capaz de importar isso corretamente.
+
+5
+00:00:20,230 --> 00:00:27,490
+Agora, para conseguir que ele se comporte assim, temos que configur-lo de uma certa maneira, em nossa configurao do Webpack no mesmo nvel que a sada
+
+6
+00:00:27,910 --> 00:00:34,270
+de entrada e assim por diante, adicionamos a configurao de resoluo. Isso leva um objeto javascript e l podemos
+
+7
+00:00:34,270 --> 00:00:41,230
+resolver algumas extenses, ento basicamente podemos dizer ao webpack que ele deve estar ciente de certas extenses
+
+8
+00:00:41,230 --> 00:00:42,990
+e se ele encontrar
+
+9
+00:00:43,090 --> 00:00:49,270
+uma importao sem uma extenso, ele deve tentar essas extenses e ver se ele encontra
+
+10
+00:00:49,270 --> 00:00:50,970
+um arquivo de um desses.
+
+11
+00:00:50,980 --> 00:00:53,090
+Ento essa  uma matriz
+
+12
+00:00:53,230 --> 00:01:01,210
+de extenses possveis e eu quero apoiar. js e. jsx aqui para que ele veja se ele encontra um
+
+13
+00:01:01,210 --> 00:01:05,020
+arquivo com essa extenso se nenhuma extenso for definida, isso  uma coisa importante.
+
+14
+00:01:05,020 --> 00:01:13,870
+Agora, a prxima e mais importante coisa  nossa loaders embora onde eu quero ter certeza que ns manipulamos corretamente diferentes tipos
+
+15
+00:01:13,960 --> 00:01:16,330
+de arquivos, isto  feito com
+
+16
+00:01:16,420 --> 00:01:22,540
+uma configurao especial no mesmo nvel da sada e resolve qual mdulo  chamado porque
+
+17
+00:01:22,930 --> 00:01:27,260
+eu importo uma dependncia  referido como um mdulo, ento voc
+
+18
+00:01:27,370 --> 00:01:30,520
+poderia meio que traduzir mdulo com arquivo.
+
+19
+00:01:30,640 --> 00:01:38,290
+Ento, aqui ns configuramos o que o Webpack deve fazer com os arquivos individuais e controlamos isso com um array de regras.
+
+20
+00:01:38,290 --> 00:01:46,720
+Agora cada regra  um objeto javascript e cada regra agora precisa primeiro de todo teste, o que significa testar
+
+21
+00:01:46,780 --> 00:01:52,150
+se um determinado arquivo, um webpack de arquivo identificado preenche um determinado critrio,
+
+22
+00:01:52,330 --> 00:01:59,920
+esse critrio  o nome do arquivo e  verificado com uma expresso regular, Expresso regular geralmente verifica
+
+23
+00:01:59,920 --> 00:02:04,470
+a extenso do arquivo. Ento podemos dizer qualquer coisa que termine. js e eu tenho
+
+24
+00:02:04,510 --> 00:02:07,230
+que escapar do ponto aqui desde que estamos
+
+25
+00:02:07,250 --> 00:02:11,610
+em uma expresso regular e, caso contrrio, se referiria a qualquer caractere.
+
+26
+00:02:11,770 --> 00:02:13,310
+Se estamos em um. js
+
+27
+00:02:13,370 --> 00:02:14,300
+arquivo,
+
+28
+00:02:14,320 --> 00:02:21,060
+ento se termina com. js, ento eu vou querer aplicar um determinado carregador, agora
+
+29
+00:02:21,220 --> 00:02:25,870
+um carregador  como um plugin de terceiros que faz algo para o arquivo.
+
+30
+00:02:25,900 --> 00:02:27,510
+Agora, para arquivos js,
+
+31
+00:02:27,520 --> 00:02:30,990
+tambm quero adicionar uma configurao adicional que  exclude,
+
+32
+00:02:31,210 --> 00:02:34,090
+o que me permite excluir determinados padres.
+
+33
+00:02:34,090 --> 00:02:35,900
+Tambm uma expresso regular,
+
+34
+00:02:36,040 --> 00:02:43,570
+eu s quero verificar para mdulos de n no caminho do arquivo, por isso no deve tentar transformar
+
+35
+00:02:43,570 --> 00:02:47,230
+nada em mdulos de n, uma vez que estas
+
+36
+00:02:47,230 --> 00:02:48,740
+so bibliotecas de terceiros
+
+37
+00:02:48,880 --> 00:02:50,730
+que j importamos, no
+
+38
+00:02:50,830 --> 00:02:53,590
+queremos transform-los novamente , eles j esto
+
+39
+00:02:53,590 --> 00:02:56,470
+otimizados, s devem tocar nossos prprios arquivos.
+
+40
+00:02:56,500 --> 00:02:59,240
+Agora, e esse carregador?
+
+41
+00:02:59,770 --> 00:03:04,650
+Bem, para o javascript, usaremos o carregador do babel, o babel
+
+42
+00:03:04,960 --> 00:03:11,990
+ o padro para o transpiling da prxima gerao de javascript para o atual javascript gen,
+
+43
+00:03:12,190 --> 00:03:16,090
+ento vamos instalar e configurar o babel na prxima aula.
+

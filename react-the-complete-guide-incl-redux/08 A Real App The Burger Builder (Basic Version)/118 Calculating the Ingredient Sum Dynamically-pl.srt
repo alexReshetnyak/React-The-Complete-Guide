@@ -1,0 +1,248 @@
+1
+00:00:02,170 --> 00:00:08,830
+W ostatnim wykadzie pracowalimy nad komponentem Bergere i upewnilimy si, e moemy wypisa list
+
+2
+00:00:08,830 --> 00:00:16,240
+skadnikw burgera, a waciwie list, ktra zacza si jako obiekt i ktr nastpnie przeksztacamy w tablic.
+
+3
+00:00:16,240 --> 00:00:24,580
+Teraz pierwszy wany krok zosta podjty, co si dzieje teraz, jeli mamy burgera, ktry zaczyna si od
+
+4
+00:00:24,580 --> 00:00:26,860
+wszystkich skadnikw ustawionych na Ciro.
+
+5
+00:00:26,870 --> 00:00:30,770
+Chocia teraz widzimy, e teraz jest w porzdku.
+
+6
+00:00:30,770 --> 00:00:32,480
+Nie mamy skadnikw do renderowania.
+
+7
+00:00:32,510 --> 00:00:38,270
+Nie mamy bdu, poniewa mamy po prostu pust tablic, ktr staramy si renderowa, ale
+
+8
+00:00:38,270 --> 00:00:44,820
+byoby jeszcze lepiej, gdybymy mogli pokaza wiadomo, np. Zacznij dodawa skadniki lub co w tym stylu.
+
+9
+00:00:44,840 --> 00:00:51,560
+Teraz, aby pokaza co na wypadek, gdybymy nie mieli skadnikw, musz si
+
+10
+00:00:51,590 --> 00:00:57,830
+dowiedzie, czy nie mamy skadnikw, a teraz przetworzone skadniki zawsze bd ukadem.
+
+11
+00:00:57,950 --> 00:01:00,800
+Po prostu tablica pustych tablic.
+
+12
+00:01:00,800 --> 00:01:01,650
+Na kocu.
+
+13
+00:01:02,090 --> 00:01:06,040
+Ale dane, ktre s dla nas trudne do sprawdzenia.
+
+14
+00:01:06,080 --> 00:01:14,290
+Jak wic moemy si dowiedzie, czy mamy skadniki, czy nie, moemy zredukowa ukad transformowanych skadnikw.
+
+15
+00:01:14,330 --> 00:01:21,050
+Pki co, po prostu piszemy to logicznie, abymy mogli zorientowa si, jak to jest na razie zapisa
+
+16
+00:01:21,570 --> 00:01:28,010
+t chorob, nasz macierz skadow, ktr wyprowadzamy i oczywicie jest to kilka pustych tablic, a wic
+
+17
+00:01:28,010 --> 00:01:30,560
+nie dziaa lub nie dziaa .
+
+18
+00:01:30,590 --> 00:01:32,600
+Ale nic nie wywietla.
+
+19
+00:01:32,600 --> 00:01:36,900
+Sprawdzanie dugoci nie wystarczy, poniewa dugo wynosi cztery.
+
+20
+00:01:37,030 --> 00:01:43,910
+To wanie te wewntrzne tablice s dla nas interesujce, moemy jedynie spaszczy t tablic,
+
+21
+00:01:44,240 --> 00:01:52,070
+aby upewni si, e wycigniemy wartoci tych wewntrznych tablic i wymieniamy tylko jedn tablic, ktra zawiera
+
+22
+00:01:52,070 --> 00:01:53,400
+wszystkie te wartoci.
+
+23
+00:01:53,630 --> 00:02:04,850
+Moemy to zrobi, dodajc redukcj do naszej przeksztaconej logiki skadnikw, tutaj wbudowane w kad funkcj, ktra pozwala
+
+24
+00:02:04,970 --> 00:02:09,240
+nam przeksztaci tablic w co innego.
+
+25
+00:02:09,410 --> 00:02:14,660
+Zajmuje funkcj jako dane wejciowe, a ta funkcja otrzymuje dwa argumenty przekazywane
+
+26
+00:02:14,660 --> 00:02:15,770
+automatycznie przez javascript.
+
+27
+00:02:16,040 --> 00:02:26,780
+Poprzednia warto i aktualna warto metoda redukcji nie tylko akceptuje tutaj Colback, tutaj, ktry jest wykonywany
+
+28
+00:02:26,780 --> 00:02:31,410
+na kadym niespjnym elemencie, ktry tutaj powracamy.
+
+29
+00:02:31,430 --> 00:02:34,030
+Przyjmuje rwnie warto pocztkow.
+
+30
+00:02:34,100 --> 00:02:35,920
+Powiedzmy pust tablic.
+
+31
+00:02:35,980 --> 00:02:39,080
+Tak wic pocztkowa warto zredukowanej wartoci.
+
+32
+00:02:39,080 --> 00:02:44,360
+Teraz oczywicie chcesz dostosowa t zmniejszon warto, zwracajc co.
+
+33
+00:02:45,160 --> 00:02:52,430
+Nastpnie przejrzy wszystkie elementy i po prostu doda je do pocztkowych wartoci krok po kroku.
+
+34
+00:02:52,770 --> 00:03:00,480
+Wic chcesz zwrci zaktualizowane wartoci zaczynajc od pocztkowego, a nastpnie przechowywane w pierwszym argumencie, ktry
+
+35
+00:03:00,480 --> 00:03:03,130
+otrzymamy w kadej ptli tutaj.
+
+36
+00:03:03,420 --> 00:03:04,920
+Wic urzd to.
+
+37
+00:03:04,950 --> 00:03:10,810
+Naszym argumentem jest zawsze aktualizowana trasa, ktr chc w kocu zwrci.
+
+38
+00:03:11,190 --> 00:03:18,750
+Wic po prostu nie bd mg czego zapa, e to po prostu wemie dany element, do
+
+39
+00:03:18,750 --> 00:03:22,350
+ktrego si zaptlilimy i dodalimy do tej tablicy.
+
+40
+00:03:22,350 --> 00:03:25,790
+Teraz, jeli to zapiszemy, otrzymamy pust tablic.
+
+41
+00:03:26,070 --> 00:03:35,010
+I jeli ponownie wprowadz ponownie emitowany jak dwa kawaki sera, otrzymamy tablic z dwoma obiektami, a fakt, e te obiekty wygldaj
+
+42
+00:03:35,010 --> 00:03:41,070
+dziwnie po prostu wie si z faktem, e s to elementy X Jae obsugiwane
+
+43
+00:03:41,070 --> 00:03:42,000
+przez reakcj.
+
+44
+00:03:42,030 --> 00:03:44,330
+Jest tego typu, ale jak wida.
+
+45
+00:03:44,820 --> 00:03:47,420
+Tak wanie teraz spaszczylimy tablic.
+
+46
+00:03:47,460 --> 00:03:53,790
+A jeli to nie jest jasne, zdecydowanie zaleca si sprawdzenie dokumentacji tej domylnej funkcji
+
+47
+00:03:53,850 --> 00:03:57,250
+tablicy javascript, takiej jak mapowanie i zmniejszanie.
+
+48
+00:03:57,720 --> 00:04:02,430
+Tak wic otrzymalimy tablic, ktra jest pusta lub zawiera elementy X.
+
+49
+00:04:02,670 --> 00:04:09,820
+A poniewa moe by pusty, moemy po prostu sprawdzi, czy dugo transformowanych skadnikw jest rwna zeru.
+
+50
+00:04:10,020 --> 00:04:16,950
+Jeli tak jest, to chc wypisa akapit, w ktrym mwi, e zaczynamy dodawa elementy.
+
+51
+00:04:17,060 --> 00:04:18,400
+Bd zatem woa sowo.
+
+52
+00:04:18,420 --> 00:04:23,980
+Jest to stay skadnik zmiennej w systemie iOS 6.
+
+53
+00:04:24,000 --> 00:04:26,270
+Uywamy tego do tego.
+
+54
+00:04:26,880 --> 00:04:35,700
+I tutaj ustawiam transformowane skadniki na rwne akapity, w ktrych po prostu
+
+55
+00:04:35,790 --> 00:04:40,020
+powiem, prosz, zacznij dodawa takie skadniki.
+
+56
+00:04:40,020 --> 00:04:44,010
+Nadal jestemy sabym transferem wyjciowym i skadnikami tam na dole.
+
+57
+00:04:44,010 --> 00:04:50,100
+Zapisz plik i zaktualizuj burgera Bolara, by ju nie mia sera.
+
+58
+00:04:50,410 --> 00:04:56,490
+A teraz, jeli zapiszesz t kolejk, powiniene po prostu zacz dodawa skadniki i oczywicie to te powinno
+
+59
+00:04:56,490 --> 00:04:57,400
+si trzyma.
+
+60
+00:04:57,420 --> 00:04:59,890
+Bez wzgldu na to, jaki jest twj obszar wywietlania.
+
+61
+00:05:00,240 --> 00:05:02,500
+To kolejny wany krok.
+
+62
+00:05:02,530 --> 00:05:08,840
+Teraz kolejnym krokiem jest dodanie tych elementw sterujcych, aby uytkownik mg dodawa i usuwa skadniki.
+

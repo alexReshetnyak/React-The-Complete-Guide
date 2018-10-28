@@ -1,0 +1,84 @@
+1
+00:00:02,450 --> 00:00:09,620
+Now over this module, we did add a lot of forms and validation related functionality and I noticed a
+
+2
+00:00:09,620 --> 00:00:10,210
+bug,
+
+3
+00:00:10,400 --> 00:00:14,990
+I'll be honest I noticed it after I recorded this module.
+
+4
+00:00:15,020 --> 00:00:16,130
+It's not a severe one,
+
+5
+00:00:16,160 --> 00:00:22,610
+we're going to fix it later in this course. In our contact data container where we have the state managing
+
+6
+00:00:22,610 --> 00:00:27,140
+our form controls, delivery method, that's our select element right,
+
+7
+00:00:27,450 --> 00:00:31,430
+and there I set a value of empty string initially.
+
+8
+00:00:31,430 --> 00:00:37,650
+Now we have the options, fastest or cheapest, an empty string doesn't make much sense,
+
+9
+00:00:37,760 --> 00:00:41,680
+now on the UI we will see fastest and cheapest
+
+10
+00:00:41,780 --> 00:00:47,410
+but if we never switch the option, behind the scenes value will always stay an empty string,
+
+11
+00:00:47,410 --> 00:00:50,670
+it will always be updated once we trigger onChange,
+
+12
+00:00:50,690 --> 00:00:57,230
+so once we did change the value once. This will become an issue later when we submit our form to the
+
+13
+00:00:57,230 --> 00:01:02,940
+server, then we will actually submit an empty value in case we never switch the value. Again,
+
+14
+00:01:02,960 --> 00:01:05,180
+I will fix it later in the course
+
+15
+00:01:05,330 --> 00:01:07,650
+just in case you already noted it,
+
+16
+00:01:07,670 --> 00:01:08,580
+good job.
+
+17
+00:01:08,690 --> 00:01:09,910
+Again will be fixed,
+
+18
+00:01:09,920 --> 00:01:17,660
+the fix is as easy as simply entering fastest or cheapest as the default here and you can choose which ever
+
+19
+00:01:17,660 --> 00:01:18,560
+one you want.
+
+20
+00:01:18,770 --> 00:01:20,620
+So that is how to fix this,
+
+21
+00:01:20,690 --> 00:01:23,800
+again I'll leave it as we have it here, will be fixed later.
+

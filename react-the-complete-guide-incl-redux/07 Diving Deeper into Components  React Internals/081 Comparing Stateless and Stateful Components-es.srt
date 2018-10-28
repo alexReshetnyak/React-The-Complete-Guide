@@ -1,0 +1,340 @@
+1
+00:00:02,230 --> 00:00:06,540
+Knouted optimizamos nuestra pequea aplicacin de demostracin aqu.
+
+2
+00:00:06,910 --> 00:00:16,120
+Permtanme sumergirme en el componente con estado de Wurzels o el componente contenedor nuevamente.
+
+3
+00:00:16,150 --> 00:00:21,670
+Bsicamente, los componentes definidos con CLOS amplan el componente, que es una forma de crear un
+
+4
+00:00:21,700 --> 00:00:28,510
+componente y reaccionar, y los componentes que son solo funciones como el resto de los componentes de esta aplicacin.
+
+5
+00:00:28,960 --> 00:00:36,300
+Ahora, como he mencionado mucho en este curso, debes tratar de crear componentes funcionales tan a menudo como sea posible.
+
+6
+00:00:36,360 --> 00:00:37,170
+Por qu.
+
+7
+00:00:38,730 --> 00:00:43,860
+Porque estos componentes tienen un enfoque estrecho y una responsabilidad clara.
+
+8
+00:00:43,860 --> 00:00:50,610
+GSX correctamente, por ejemplo, agregando algunas clases como hacemos aqu en el componente de la cabina.
+
+9
+00:00:50,610 --> 00:00:57,850
+Solo se trata de presentar algo sobre renderizacin de GSX y contienen algo de lgica para mostrar
+
+10
+00:00:57,900 --> 00:00:59,110
+No hacen mucho ms.
+
+11
+00:00:59,130 --> 00:01:03,980
+Y una cosa que definitivamente no hacen y que no pueden hacer es administrar el estado.
+
+12
+00:01:03,990 --> 00:01:09,630
+Y menciono mucho que la razn por la cual tenemos esta separacin es que queremos
+
+13
+00:01:09,630 --> 00:01:16,230
+tener algunos lugares en nuestra aplicacin donde el estado de la aplicacin cambie. Esto asegura que su aplicacin
+
+14
+00:01:16,440 --> 00:01:23,550
+se mantenga sostenible incluso a medida que crece, ya que cuanto ms crece su aplicacin, ms difcil se trata
+
+15
+00:01:23,610 --> 00:01:31,620
+de administrar el estado porque si administra el estado en cada componente individual, es muy difcil hacer un seguimiento del lugar donde
+
+16
+00:01:31,620 --> 00:01:35,040
+edit esta lista de personas donde cre esta nueva publicacin.
+
+17
+00:01:35,040 --> 00:01:41,840
+Si obtienes algunos contenedores donde haces eso y luego simplemente pasas el estado y bajas el resto
+
+18
+00:01:41,850 --> 00:01:42,860
+con nuestros accesorios.
+
+19
+00:01:42,870 --> 00:01:48,510
+Esto es mucho ms fcil de manejar porque siempre se puede ver que el estado se cambia aqu
+
+20
+00:01:48,510 --> 00:01:49,590
+en el Aptera como.
+
+21
+00:01:49,740 --> 00:01:56,640
+Y distribuimos referencias a las funciones que editaron por qu una propiedad pero todos los
+
+22
+00:01:56,940 --> 00:02:00,360
+dems componentes no pueden cambiar el estado.
+
+23
+00:02:00,360 --> 00:02:05,530
+Esta es una de las bases fundamentales de una buena aplicacin de reactivacin.
+
+24
+00:02:05,660 --> 00:02:12,800
+basados en la clase lo menos posible pero, por supuesto, no tema usarlos si tiene sentido.
+
+25
+00:02:12,800 --> 00:02:14,030
+Utilice los componentes
+
+26
+00:02:14,210 --> 00:02:20,540
+Si obtienes un punto central en tu aplicacin y una buena divisin suelen ser varias caractersticas.
+
+27
+00:02:20,540 --> 00:02:27,200
+Entonces, por ejemplo, si tiene una caracterstica de bloqueo y autenticacin en su aplicacin, entonces los componentes raz
+
+28
+00:02:27,310 --> 00:02:34,760
+de estas caractersticas podran ser contenedores que administran el estado para esa rea de caractersticas y ver esto en accin
+
+29
+00:02:34,760 --> 00:02:39,650
+para los puntajes cuando nos sumerjamos en el proyecto de curso ms grande.
+
+30
+00:02:40,160 --> 00:02:47,930
+Pero todos nuestros componentes como se mencionan a menudo deben ser componentes funcionales tambin se sumergen en una diferencia importante
+
+31
+00:02:47,930 --> 00:02:55,700
+adems de la existencia del estado y la capacidad de los mtodos que tiene en los componentes basados en la
+
+32
+00:02:55,700 --> 00:02:56,270
+clase.
+
+33
+00:02:56,270 --> 00:03:01,460
+Me sumergir en una diferencia importante entre los componentes de la clase y los componentes funcionales en las
+
+34
+00:03:01,460 --> 00:03:02,200
+prximas conferencias.
+
+35
+00:03:02,390 --> 00:03:07,610
+Y ese sera el ciclo de vida de un componente antes de sumergirse en el ciclo de vida.
+
+36
+00:03:07,820 --> 00:03:14,210
+Comparemos el estado menos y el estado de los componentes completos de nuevo solo para traer de vuelta a la mente los componentes completos
+
+37
+00:03:14,210 --> 00:03:14,870
+del estado.
+
+38
+00:03:14,870 --> 00:03:19,380
+Tambin se conocen como contenedores y los componentes estatales menos difieren.
+
+39
+00:03:19,430 --> 00:03:24,620
+Pero, de hecho, los componentes completos del estado se crean con la palabra Klasky y el componente
+
+40
+00:03:24,620 --> 00:03:29,060
+extender, mientras que los estados con menos elementos son solo funciones que reciben accesorios.
+
+41
+00:03:29,120 --> 00:03:32,740
+Ahora las diferencias de importacin son, por supuesto, el acceso al estado.
+
+42
+00:03:32,810 --> 00:03:39,950
+Y si esta nueva existencia de enganches de ciclo de vida en contenedores con estado podemos acceder al estado y podemos
+
+43
+00:03:39,950 --> 00:03:46,640
+implementar enganches de ciclo de vida o volver a lo que es en el siguiente estado de conferencia, el ltimo
+
+44
+00:03:46,910 --> 00:03:52,070
+componente nunca tendr acceso a un estado ni podrn implementar ganchos de ciclo de vida.
+
+45
+00:03:52,250 --> 00:03:58,260
+Y si queremos acceder al estado y a los accesorios en contenedores llenos del estado,
+
+46
+00:03:58,610 --> 00:04:09,230
+hacemos esto, por qu agregar que esta palabra clave este estado X Y esta propiedad xy? Y en estado ltima componente, lo hacemos es solo apoyos
+
+47
+00:04:09,260 --> 00:04:11,290
+xy recibimos accesorios como argumento.
+
+48
+00:04:11,540 --> 00:04:18,410
+estado o acceder a los ganchos del ciclo de vida. Use menos componentes estatales en todos los casos de Aberg.
+
+49
+00:04:18,410 --> 00:04:23,860
+Y como se menciona a menudo, solo use los componentes estatales completos si necesita administrar el
+
+50
+00:04:23,870 --> 00:04:31,040
+Y solo porque nunca lo hicimos, quiero resaltar que es esta cosa de los accesorios x y en los componentes completos del estado.
+
+51
+00:04:31,040 --> 00:04:37,520
+Si consideramos nuestro nico componente de estado completo que tenemos aqu, ni siquiera usa accesorios.
+
+52
+00:04:37,520 --> 00:04:41,840
+Solo usa un estado pero tambin tendra acceso a accesorios.
+
+53
+00:04:41,960 --> 00:04:44,130
+Y puedo demostrarte esto.
+
+54
+00:04:44,300 --> 00:04:46,840
+Djame pasar algunos accesorios directamente desde el ndice.
+
+55
+00:04:46,880 --> 00:04:47,720
+S.
+
+56
+00:04:47,870 --> 00:04:58,740
+cadena en la que voy a decir perusas relevantes. Ahora bien, este puede ser el ttulo de nuestra aplicacin en Access, que es un contenedor.
+
+57
+00:04:58,740 --> 00:05:03,910
+Permtanme pasar aqu un artculo de ttulo que puede ser simplemente una
+
+58
+00:05:03,960 --> 00:05:09,540
+Todava podemos acceder a prop's. No es que no tenga acceso a props aqu.
+
+59
+00:05:09,690 --> 00:05:14,290
+Queremos tal vez pasar esto a la cabina para mostrarlo all.
+
+60
+00:05:14,580 --> 00:05:20,300
+As que vamos a definir un nuevo ttulo all, una nueva propiedad puede ser un ttulo apto.
+
+61
+00:05:20,310 --> 00:05:23,220
+No lo confundas con el accesorio que estamos a punto de transmitir.
+
+62
+00:05:23,550 --> 00:05:25,880
+Y ahora sabemos que hay escaleras.
+
+63
+00:05:25,980 --> 00:05:33,530
+Propiedad del ttulo de un ballenero en nuestro componente de aplicacin porque lo dijimos aqu en el ndice Jaspal.
+
+64
+00:05:33,540 --> 00:05:36,440
+Ahora, por supuesto, no podemos acceder de esta manera.
+
+65
+00:05:36,450 --> 00:05:42,230
+No podemos acceder al ttulo de prop porque la variable de prop sera indefinida aqu.
+
+66
+00:05:42,240 --> 00:05:44,040
+Estamos dentro de nuestro mtodo de renderizado
+
+67
+00:05:44,160 --> 00:05:49,620
+Y dentro de este mtodo nunca encontramos accesorios y este mtodo tampoco recibe props como argumento, por lo
+
+68
+00:05:49,920 --> 00:05:51,940
+que prop's no est definido aqu.
+
+69
+00:05:52,470 --> 00:05:57,250
+Pero la clase en s tiene una propiedad de utilera porque ampliamos el componente.
+
+70
+00:05:57,410 --> 00:06:01,800
+Y as como tenemos acceso a un mtodo de estado establecido que nunca encontramos nosotros mismos.
+
+71
+00:06:02,010 --> 00:06:05,870
+Todos tenemos acceso a una propiedad adecuada que nunca nos definimos a nosotros mismos.
+
+72
+00:06:06,090 --> 00:06:13,500
+Nos ha sido dado y poblado por reaccionar y, por lo tanto, podemos acceder a estos accesorios de esta manera.
+
+73
+00:06:13,800 --> 00:06:15,760
+Y en este caso simplemente lo pasamos.
+
+74
+00:06:15,780 --> 00:06:18,980
+Pero, por supuesto, tambin podramos mostrarlo aqu en esta plantilla.
+
+75
+00:06:19,290 --> 00:06:20,950
+Pero ya que lo transmitimos.
+
+76
+00:06:21,080 --> 00:06:28,050
+Ahora ir a la cabina y manejar esta nueva propiedad, tal vez aqu, para mostrarla
+
+77
+00:06:28,360 --> 00:06:36,440
+en su ttulo de utilera aqu, de nuevo, solo usando accesorios porque aqu recibimos accesorios como elemento.
+
+78
+00:06:37,420 --> 00:06:45,160
+Con un colega apoyado en apoyos como justi argumento que recibimos por disfuncin pasado automticamente por reaccin, si guardamos
+
+79
+00:06:45,160 --> 00:06:52,630
+todos los archivos ahora y volvemos a nuestra aplicacin vers un ttulo relevante versus uno nuevo que estamos viendo
+
+80
+00:06:52,630 --> 00:06:58,380
+aqu porque ahora estamos ponindolo en el siguiente archivo de ajedrez y lo pasamos.
+
+81
+00:06:58,420 --> 00:07:02,030
+Y como puede ver, obtenemos tropas en nuestra cola de contenedores.
+
+82
+00:07:02,140 --> 00:07:05,720
+No lo usamos antes porque nunca recibimos algo antes.
+
+83
+00:07:05,800 --> 00:07:12,520
+Pero si quieres usar accesorios aqu, sala con estos accesorios justo cuando usas este estado porque ests en
+
+84
+00:07:12,520 --> 00:07:13,510
+una clase aqu.
+
+85
+00:07:13,510 --> 00:07:18,520
+No ests en una funcin en la que no ests recibiendo accesorios y declaras como argumentos aqu.
+

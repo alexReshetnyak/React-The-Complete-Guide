@@ -1,0 +1,548 @@
+1
+00:00:02,090 --> 00:00:08,240
+Sona yaklatk, uygulamak zordur ama bir tane daha gelimi konsepti kapsayacak kadar
+
+2
+00:00:08,240 --> 00:00:10,580
+gelimi bir konsept var.
+
+3
+00:00:10,970 --> 00:00:15,060
+Bavurunuza geri dnelim ve gerekten ne demek istediimi gstereceiz.
+
+4
+00:00:15,230 --> 00:00:20,550
+zin ver de tekrar tekrar yeni bir yaz yazabileceiz.
+
+5
+00:00:20,690 --> 00:00:23,100
+Artk yklediiniz mesaj grdnz.
+
+6
+00:00:23,120 --> 00:00:27,910
+Ve A sekmesine ve orada gelitirici aralarna geelim.
+
+7
+00:00:27,920 --> 00:00:32,870
+Sayfay ykledikten sonra tm isteklere bir gz atarsak.
+
+8
+00:00:32,870 --> 00:00:38,310
+Dolaysyla, u J paketini yklediimizi grrsnz mesajlar gnderilecek.
+
+9
+00:00:38,330 --> 00:00:40,560
+Bu, tm kaynak kodumuzu ierir.
+
+10
+00:00:40,640 --> 00:00:43,940
+Ve burada nispeten byk nk geliim modundayz.
+
+11
+00:00:43,940 --> 00:00:47,400
+retim iin bize gnderilen ok daha kk rnler olacaktr.
+
+12
+00:00:47,450 --> 00:00:53,430
+G retme i ak otomatik olarak optimize edilir, sonra konulandrdmzda bunu daha sonra konuacaz.
+
+13
+00:00:53,430 --> 00:01:02,210
+Yine de, paketin tamamna sahip olduumuz bir saatlik uygulama gibi belli bir alan sihirbaz etmeyebilecek
+
+14
+00:01:02,210 --> 00:01:10,190
+farkl zelliklere ve farkl alanlara sahip byk bir uygulamanz varsa, tm paketi hl uygulamanzn
+
+15
+00:01:10,340 --> 00:01:14,180
+nndeki tm kodlarla yklemek kt olabilir.
+
+16
+00:01:14,270 --> 00:01:19,840
+Kullanc kazanmad takdirde, bu bileen iin sorumlu kodu ykleyen yeni bir yayn olur.
+
+17
+00:01:20,000 --> 00:01:23,790
+Rotalarmza bakarsak mantkl gelmez.
+
+18
+00:01:23,840 --> 00:01:28,080
+Burada yeni yayn bileeninden bahsediyorum.
+
+19
+00:01:28,130 --> 00:01:33,120
+Bu, yalnzca kullanc aslnda yeni yaynlar kesmek iin dolarsa yklenmelidir.
+
+20
+00:01:33,350 --> 00:01:38,340
+Aksi halde, yeni mesajlar ve potansiyel tm ocuklara asla ihtiya duyulmaz.
+
+21
+00:01:38,480 --> 00:01:46,310
+yleyse neden de-kodu indirmeliyiz ki nmzdeki ksm indirmemek ve bu nedenle indirmek iin daha kk bir
+
+22
+00:01:46,460 --> 00:01:53,510
+ayra parasna sahip olmak ve bunun yerine bu bileen ve ocuklarnn sorumlu olduu de-kodlar indirmek
+
+23
+00:01:53,840 --> 00:01:55,350
+daha iyi olacaktr.
+
+24
+00:01:55,370 --> 00:02:01,880
+kk bir uygulama iin, bu ekstra talebi bir kilobayt falan iin yaptmz iin sper yararl deil.
+
+25
+00:02:01,880 --> 00:02:03,500
+Artk burada olduu gibi
+
+26
+00:02:03,500 --> 00:02:06,310
+Boyutuna gelince, bu bileen ne kadar deerlidir.
+
+27
+00:02:06,560 --> 00:02:12,730
+Bu sper yararl deildir, ancak neredeyse indirdiiniz yerin nerelerde olabileceini bina
+
+28
+00:02:12,730 --> 00:02:17,550
+eden daha byk uygulamalar iin bu tekniin bilinmesi yararldr.
+
+29
+00:02:17,600 --> 00:02:25,430
+Yalnzca ihtiyacnz olan eyin indirilmesi teknii, kod blme veya tembel ykleme olarak bilinir.
+
+30
+00:02:25,880 --> 00:02:33,190
+Ve esas olarak, bileeninizde bileeni yalnzca ihtiyacnz olduunda yklediinizden emin
+
+31
+00:02:33,440 --> 00:02:34,730
+olmak istersiniz.
+
+32
+00:02:34,880 --> 00:02:41,750
+veya tembel ykleme uygulamak iin nasl alr bu uygulama yeniden olutur ve yeniden rota veya ileri hareket oluturun.
+
+33
+00:02:41,750 --> 00:02:42,720
+Kod blme
+
+34
+00:02:43,190 --> 00:02:44,500
+Ve bu nemli.
+
+35
+00:02:44,510 --> 00:02:49,250
+Bu teknik, Robert Ford'u yeniden canlandrmak ve atmak iin tepki verecek.
+
+36
+00:02:49,250 --> 00:02:54,400
+nk kod blme ar kullandnz WePay yaplandrmasna baldr.
+
+37
+00:02:54,440 --> 00:02:56,870
+Sonuta gelimi bir kavramdr.
+
+38
+00:02:56,870 --> 00:03:03,380
+Yani sana gstermekte olduum ey, olduka modern ve iyi bir konfigrasyon olan yeniden yaratma eylemi
+
+39
+00:03:03,380 --> 00:03:11,030
+uygulamas yaratmak iin yaplandrma ile almann yoludur; ans da, herhangi bir terbiyeli olarak WePay projesinde alt gibi, ya
+
+40
+00:03:11,360 --> 00:03:13,920
+da sylediim gibi Bu dersin balangc.
+
+41
+00:03:13,970 --> 00:03:17,390
+Her neyse yeniden olutur onlar kullanmanz iddetle tavsiye ederim.
+
+42
+00:03:17,780 --> 00:03:23,900
+Bu yzden bu kurulumda alabilmek iin daha yksek dereceli bir bileene ihtiyacmz var.
+
+43
+00:03:23,900 --> 00:03:30,710
+imdi yeni bir klasr oluturalm Agios bakn ve hepsi bir senkronizasyon bileeninin async bileenini
+
+44
+00:03:30,980 --> 00:03:33,750
+adlandracak yeni bir bileen eklediler.
+
+45
+00:03:33,760 --> 00:03:34,520
+J. S. nk
+
+46
+00:03:34,640 --> 00:03:41,390
+bu bileen veya bu kod burada bana bir bileen uyumsuz yklememde yardmc olmas gereken javascript dosyas addr. e. yalnzca gerektiinde.
+
+47
+00:03:41,480 --> 00:03:45,320
+imdi burada bu
+
+48
+00:03:45,320 --> 00:03:51,790
+uyumayan bileen dosyasnda bir senkronizasyon bileeni olarak adlandrlacak olan yeni bir nsz ilev oluturacam.
+
+49
+00:03:51,840 --> 00:03:54,290
+Sonunda bir ilev olacak ithalat bileen
+
+50
+00:03:54,580 --> 00:04:03,220
+argmanm almam bekliyorum ve bu asenkron bileen ilevi nasl kullanlacana ve bir sonraki saniye iinde tam olarak nelerin geeceine tekrar bakacam.
+
+51
+00:04:03,220 --> 00:04:10,590
+Yani imdi orada bir eyler dndrmek gerekiyor ve burada bileen uzanan bir snf dnecektir.
+
+52
+00:04:10,660 --> 00:04:18,200
+Bu nedenle normal bir yeniden etki bileeni.
+
+53
+00:04:18,400 --> 00:04:21,020
+Bu nedenle, reaksiyona girmeye
+
+54
+00:04:21,100 --> 00:04:30,490
+ihtiyacm var nk ayn zamanda burada baz snfn gvdesinde yeniden davranmaktan baz GSX ve bileen kullanacak.
+
+55
+00:04:30,490 --> 00:04:32,960
+Elbette bir render yntemine de ihtiyacm var.
+
+56
+00:04:33,180 --> 00:04:35,550
+elde edilecek Bileende uygulanr.
+
+57
+00:04:35,890 --> 00:04:43,870
+Fakat biz buna balamadan nce bir durum kuracam ve burada bir bileen zellii olan bir duruma
+
+58
+00:04:43,870 --> 00:04:51,490
+sahip biri var, burada bileen zellii dinamik olarak yklenen bileene ayarlanacak ve bunun iin kod
+
+59
+00:04:51,490 --> 00:04:56,230
+MT tarihi.
+
+60
+00:04:56,350 --> 00:04:57,610
+Bu yzden bir kere bu bileen burada yksek siparii veren bileen olarak monte edildi.
+
+61
+00:04:57,820 --> 00:05:04,790
+Hayr, sonunda ithalat bileeninin bir ilev referans olmas gerektii sylendi.
+
+62
+00:05:05,260 --> 00:05:10,950
+Dolaysyla yapmak istediim, burada ithalat bileenini altrmak
+
+63
+00:05:11,350 --> 00:05:20,140
+istiyorum ve bu aslnda bir sz olarak dnecek bir ilev olacak.
+
+64
+00:05:20,560 --> 00:05:23,710
+Farkna vardm nk ben bu async bileenini bunun ilevi iinde nasl kullanacam biliyorum.
+
+65
+00:05:23,710 --> 00:05:30,220
+Sonra blok bir argman alabilir CMPD belki ad size kalmtr
+
+66
+00:05:30,250 --> 00:05:37,990
+hangi dinamik olarak yklenen bir bileen olacak bir zellik varsaylan olacaktr.
+
+67
+00:05:38,530 --> 00:05:42,010
+Bu durumda bu kilidi ayarla
+
+68
+00:05:42,340 --> 00:05:52,900
+durum seti arabilirim ve bileeni durumlarm CMPD varsaylanna ayarlayabilirim, nk burada burada tepki yaratmak iin kullanyorum.
+
+69
+00:05:52,900 --> 00:05:56,590
+Elbette, ithalat bileeninin deinecei
+
+70
+00:05:57,100 --> 00:06:04,090
+trden ve bir sonraki dakikada size gstereceim ilevlere baldr.
+
+71
+00:06:04,090 --> 00:06:06,180
+Endielenmiyorum dediim gibi.
+
+72
+00:06:06,190 --> 00:06:08,160
+durum bileeni olmaldr.
+
+73
+00:06:08,260 --> 00:06:15,580
+Dolaysyla, imdi belirli bir noktada kullanmak istediiniz gerek bileeni ykleyeceiz ve durumumuzda depolanacaktr.
+
+74
+00:06:15,580 --> 00:06:23,080
+Dolaysyla render yntemini oluturmak istiyoruz, hepsi C'ye sabit bir isimle davranr ve bu
+
+75
+00:06:23,080 --> 00:06:26,920
+Sonra GSX ve bu render yntemi dnmek istiyor ve C bir dn her ifade ayarlanm olup olmadn kontrol edeceiz.
+
+76
+00:06:27,140 --> 00:06:34,850
+Eer ayarlanrsa, C'yi normal bir yeniden-aktive bileen olarak render edeceim.
+
+77
+00:06:34,970 --> 00:06:40,690
+Bu pervane, bu bileene ihtiyacmz olabilecek herhangi bir
+
+78
+00:06:40,790 --> 00:06:49,910
+sorunu iletmek iin daha hileli yayar ve ayrca c'nin henz ayarlanmadn bilmek iin ayarlar.
+
+79
+00:06:49,910 --> 00:06:53,860
+Dolaysyla bileen henz elbette zlmediyse,
+
+80
+00:06:53,870 --> 00:07:01,550
+imdi de bu async bileen ilevi burada da aktarmamz gerekiyor.
+
+81
+00:07:01,550 --> 00:07:02,570
+imdi bu sonbahar kurtarabiliriz ve imdi yeni mesajlar almamz gereken blok bileene geri dnebiliriz.
+
+82
+00:07:03,500 --> 00:07:10,290
+imdi bunu dinamik olarak yklemek istiyorum.
+
+83
+00:07:10,310 --> 00:07:13,660
+imdiyse u ana kadar Inforum Westpac
+
+84
+00:07:13,670 --> 00:07:21,650
+DB yerleik bir aratan ithal ederek bir eyler ithal ederken buraya byle bir ey getirirken,
+
+85
+00:07:22,280 --> 00:07:29,390
+bu bamllk hakknda sahnelerin arkasnda duruyor ve global pakette yer alyor iini yapyor.
+
+86
+00:07:29,690 --> 00:07:34,230
+imdi tembel bir ykleme iin bu tam olarak ne yapmak istediimizin tam tersi.
+
+87
+00:07:34,700 --> 00:07:39,090
+Paketin iine dahil etmek istemiyoruz.
+
+88
+00:07:39,110 --> 00:07:41,780
+Gerektiinde yklemek istiyoruz.
+
+89
+00:07:41,780 --> 00:07:44,100
+Yine de slak paketin,
+
+90
+00:07:44,110 --> 00:07:51,140
+potansiyel olarak yklenen bu kod iin baz ekstra pandal hazrlayabilmesi gerekir.
+
+91
+00:07:51,140 --> 00:07:52,050
+Bu yzden yapmamz gereken
+
+92
+00:07:52,520 --> 00:07:57,920
+ey, bu eski ie aktarma yntemini yorumlamamz ve onun yerine yeni bir sabit yaratacamz Witchell ad asenk yeni ev sahibi tabii ki size kalm.
+
+93
+00:07:57,920 --> 00:08:03,390
+Bu imdi O C klasrnde oluturduumuz bu yeni uyumsuz bileen ilevi kullanacaktr.
+
+94
+00:08:03,440 --> 00:08:10,040
+Bylece tm senkronizasyon bileeni senkronize edildi.
+
+95
+00:08:10,310 --> 00:08:15,340
+Ve imdi hepsi HAMC klasrne tanr ve bu uyumsuz bileen dosyasndan ie aktarlr.
+
+96
+00:08:15,350 --> 00:08:20,980
+Ve o zaman asenk bileenleri kullanp kullanacam.
+
+97
+00:08:22,080 --> 00:08:28,450
+imdi async bileeni bu ilevi bir bamsz deiken gerektirir ve sana
+
+98
+00:08:28,480 --> 00:08:36,450
+bunun adn verdiimiz bu ilevdeki bu bamsz deikeni, bu bamsz deikenin bir ilev olmas
+
+99
+00:08:36,450 --> 00:08:42,510
+gerektiini syledim, bu yzden Mt'de bir iitme bileeni gibi idam edildi. Bu nedenle, baz ilevleri uyumsuz bileen olarak iletmek zorundayz ve bu, anonim bir ilev olmaldr.
+
+100
+00:08:42,510 --> 00:08:44,430
+Burada 6 Erol ilevi kullanyorum.
+
+101
+00:08:45,030 --> 00:08:52,800
+lgin ksm, bu ileve geri dndmz ey.
+
+102
+00:08:52,800 --> 00:08:56,040
+Unutmayn, hattn ne olduu doru bir satrda yazarsanz derhal iade edilir.
+
+103
+00:08:56,340 --> 00:09:00,020
+Kvrck ayra kullanyorsanz, return anahtar szcyle bir eyi iade etmeniz gerekir.
+
+104
+00:09:00,330 --> 00:09:05,810
+Bu yzden daha uzun bir yaklamda bulunacam.
+
+105
+00:09:05,970 --> 00:09:10,710
+Anahtar kelimeyi bir ilev olarak almak iin hepsi kullanlr.
+
+106
+00:09:10,710 --> 00:09:13,530
+Bu zel bir szdizimi.
+
+107
+00:09:13,530 --> 00:09:17,750
+Dinamik ithal szdizimi, buradaki parantezler arasnda gelen her ey burada yalnzca o ilevin yrtldnde nemlidir
+
+108
+00:09:17,780 --> 00:09:19,900
+ve burada bu ilev yalnzca uyumazlk oluturduumuzda yrtlecektir.
+
+109
+00:09:20,030 --> 00:09:29,790
+Ekran siz gnderdiniz.
+
+110
+00:09:29,910 --> 00:09:38,490
+Yani burada orijinal lbf'imi yeni postaya almadm ve imdi sadece bu sabit bir yere
+
+111
+00:09:38,520 --> 00:09:40,720
+altnda bunu ithal ediyorum.
+
+112
+00:09:41,220 --> 00:09:49,650
+imdi elbette bunu baka bir yerde kullanmak istiyorum.
+
+113
+00:09:49,650 --> 00:09:51,420
+Yeni postay bir bileen olarak kullanmak yerine
+
+114
+00:09:51,420 --> 00:09:53,700
+yeni posta yolunda blok konteynrn altna kullanmak istiyorum.
+
+115
+00:09:53,940 --> 00:10:01,920
+Bir bileen olarak zaman uyumsuz yeni yayn kullanmak istiyorum.
+
+116
+00:10:01,920 --> 00:10:03,250
+Asenkron bileen bir bileeni dndrdnden, sonuta bu bir bileen olacaktr.
+
+117
+00:10:03,390 --> 00:10:06,800
+Yksek mertebeden bir bileene sahibiz.
+
+118
+00:10:06,810 --> 00:10:13,660
+Bir render yntemiyle bir snf dndrr.
+
+119
+00:10:13,680 --> 00:10:15,270
+Yani bu geerli bir bileen.
+
+120
+00:10:15,270 --> 00:10:17,280
+hangi bileenin async bileenine aktardmz ilevle birlikte olacana karar vereceiz.
+
+121
+00:10:17,400 --> 00:10:19,620
+Bu bileen sonunda dinamik olarak yklenen baz bileenleri oluturacak ve
+
+122
+00:10:19,620 --> 00:10:25,830
+imdi bunu kaydedip, uygulamanza geri dndmzde, sa alt tarafta ok izledik.
+
+123
+00:10:25,960 --> 00:10:30,600
+Bir kez yeni mesaja tkladmda, orada tkladmda, aadaki gibi bir para olarak grlecektir.
+
+124
+00:10:30,600 --> 00:10:37,530
+ok kk olan ykl.
+
+125
+00:10:37,540 --> 00:10:44,710
+Bu, oluturulan fazladan web sayfasdr, nk kodumuzu paketlerken kurulumumuzdan dolay bildii bu dinamik
+
+126
+00:10:44,710 --> 00:10:47,400
+szdizimini tespit ettik nk i
+
+127
+00:10:47,400 --> 00:10:55,780
+ak kurulumu oluturmak iin kullanyoruz ve bu nedenle fazladan bant genilii, yeni bir posta bileeni
+
+128
+00:10:55,780 --> 00:11:01,450
+ve tm olas alt bileenleri oluturduk bu bileene zel olanlar.
+
+129
+00:11:01,450 --> 00:11:07,900
+Ama ana paket eklemedi.
+
+130
+00:11:07,900 --> 00:11:09,880
+Bunun yerine, gerektiinde yklemeye hazr.
+
+131
+00:11:09,880 --> 00:11:12,550
+Aslnda async new post'u eklediimizde, yalnzca yeni posta
+
+132
+00:11:12,550 --> 00:11:15,600
+sonlarn izmek iin gezinirken bileenleri ezamansz olarak nasl yklediinizi ekledik.
+
+133
+00:11:15,820 --> 00:11:24,760
+Ve bahsettiim gibi, daha byk uygulamalarda, uygulama rneinde kullanc tarafndan ziyaret edilmeyebilecek daha byk
+
+134
+00:11:24,760 --> 00:11:27,400
+bir kod parasnn bulunduu,
+
+135
+00:11:27,580 --> 00:11:35,470
+bylece kodun yalnzca gerektiinde yklenmesi iin kaydedilebilmesi iin yararl olduu belirtildi. .
+
+136
+00:11:35,470 --> 00:11:42,190
+&nbsp;
+
+137
+00:11:42,190 --> 00:11:46,990
+&nbsp;
+

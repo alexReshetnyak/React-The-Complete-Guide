@@ -1,0 +1,336 @@
+1
+00:00:02,190 --> 00:00:09,600
+Finora nella nostra applicazione abbiamo caricato il singolo post come parte della nostra pagina del blog in modo che quando
+
+2
+00:00:09,600 --> 00:00:15,310
+clicchiamo su un post abbiamo scambiato la pagina del post per una singola pagina post.
+
+3
+00:00:15,330 --> 00:00:18,330
+Ora possiamo assolutamente farlo ovviamente.
+
+4
+00:00:18,330 --> 00:00:25,350
+Tuttavia a volte hai anche una configurazione in cui vuoi creare un percorso nidificato in cui
+
+5
+00:00:25,380 --> 00:00:33,360
+vuoi caricare un determinato componente o dove vuoi rendere un determinato contenuto all'interno di un altro componente che viene
+
+6
+00:00:33,360 --> 00:00:35,540
+caricato anche tramite il routing.
+
+7
+00:00:35,790 --> 00:00:41,850
+Quindi adesso abbiamo solo un livello in cui facciamo il routing qui nel container del blocco
+
+8
+00:00:41,850 --> 00:00:45,810
+caricando componenti diversi per percorsi diversi e questo  assolutamente perfetto.
+
+9
+00:00:45,810 --> 00:00:54,090
+Ora diciamo che vogliamo caricare un host specifico non all'interno del componente del blocco ma all'interno del componente host
+
+10
+00:00:54,330 --> 00:00:56,730
+proprio sotto i nostri post qui.
+
+11
+00:00:57,090 --> 00:01:06,060
+Quindi, per quello, lo far a Dith e aggiunger il mio percorso in l il mio componente di route
+
+12
+00:01:06,180 --> 00:01:09,390
+in l nel post componente aggiunto l.
+
+13
+00:01:09,390 --> 00:01:16,780
+Quindi ovviamente ho anche bisogno di aggiungere un'importazione nella parte superiore in cui importare il percorso dal router
+
+14
+00:01:16,890 --> 00:01:25,350
+re-act su tutto ci nel componente post e ora ho un errore, ovviamente, perch il componente post completo a cui mi
+
+15
+00:01:25,380 --> 00:01:28,740
+riferisco qui  anche non presente in quel file.
+
+16
+00:01:28,770 --> 00:01:33,900
+Quindi ho bisogno di aggiungere un'importazione a questo per importare il post completo da.
+
+17
+00:01:33,900 --> 00:01:39,570
+E ora andiamo a quella cartella postale completa e la importiamo dal file completo del post.
+
+18
+00:01:39,570 --> 00:01:47,890
+E ora posso eseguire il rendering di un singolo post sotto la mia lista di post perch uso la route in un altro componente e questo
+
+19
+00:01:48,300 --> 00:01:51,050
+ in generale qualcosa che puoi ovviamente fare.
+
+20
+00:01:51,120 --> 00:01:56,010
+Puoi utilizzare il componente del percorso ovunque tu voglia nella tua applicazione.
+
+21
+00:01:56,250 --> 00:02:04,110
+Finch la pagina del componente in cui la stai usando viene intrappolata da quel router del browser e questo naturalmente
+
+22
+00:02:04,110 --> 00:02:08,670
+ il caso perch stiamo avvolgendo il componente del blocco con esso.
+
+23
+00:02:08,760 --> 00:02:14,490
+E poich il componente post  solo un componente figlio del componente di blocco caricato
+
+24
+00:02:14,820 --> 00:02:16,680
+attraverso un percorso, questo funziona.
+
+25
+00:02:16,800 --> 00:02:22,000
+Ora l'istruzione switch qui nel componente di blocco, ovviamente,  un po 'ridondante.
+
+26
+00:02:22,010 --> 00:02:29,280
+Ora ho solo un componente l dentro, quindi forse sposto la mia rotta esterna l, anche se tecnicamente questo
+
+27
+00:02:29,280 --> 00:02:34,400
+non  richiesto perch questi due percorsi non combaceranno mai per lo stesso percorso.
+
+28
+00:02:34,470 --> 00:02:40,710
+Cos potremmo rimuovere la dichiarazione di commutazione che lasceremo qui semplicemente come riferimento, in modo che tu
+
+29
+00:02:40,710 --> 00:02:43,700
+possa ancora confrontare il tuo codice con esso.
+
+30
+00:02:43,830 --> 00:02:49,310
+Quello che possiamo fare anche nel componente di blocco ora  che possiamo sbarazzarci dell'importazione post completa che
+
+31
+00:02:49,310 --> 00:02:50,790
+non stiamo pi usando qui.
+
+32
+00:02:51,110 --> 00:02:58,850
+e vai al tuo post componente e fai clic su un singolo post vedrai che sei aggiornato.
+
+33
+00:02:58,850 --> 00:03:01,290
+Ora se salvi tutti i file
+
+34
+00:03:01,520 --> 00:03:05,600
+Ma il post non  reso e anche i post sono spariti.
+
+35
+00:03:05,630 --> 00:03:08,940
+La ragione di ci  che ora creiamo una rotta nidificata.
+
+36
+00:03:09,170 --> 00:03:16,940
+Abbiamo il percorso di instradamento diciamo qui nel contenitore a blocchi  il pi alto livello in cui reagiamo a tutte
+
+37
+00:03:16,970 --> 00:03:22,790
+le modifiche di rotta e quindi il componente di posta che carichiamo da un router.
+
+38
+00:03:22,790 --> 00:03:24,200
+Tienilo a mente che abbiamo caricato.
+
+39
+00:03:24,200 --> 00:03:27,760
+Abbiamo implementato tramite il router in questo componente qui.
+
+40
+00:03:27,980 --> 00:03:29,800
+Ora usiamo di nuovo il percorso.
+
+41
+00:03:29,840 --> 00:03:33,290
+Il problema  per Slash un po 'di ID.
+
+42
+00:03:33,470 --> 00:03:40,640
+Non raggiungeremo questa strada perch abbiamo la corrispondenza esatta per l'ID della barra che non corrisponde
+
+43
+00:03:40,640 --> 00:03:41,870
+a quella rotta.
+
+44
+00:03:41,900 --> 00:03:47,810
+In questo modo il componente Post non viene mai sottoposto a rendering, il che  un peccato
+
+45
+00:03:47,810 --> 00:03:53,840
+perch sarebbe in quel componente che vogliamo rendere il nostro intero componente post per un dato ID.
+
+46
+00:03:53,870 --> 00:04:03,500
+Ora per risolvere questo problema possiamo ovviamente rimuovere exect, quindi questo corrisponder alla barra e taglier una barra due e
+
+47
+00:04:03,500 --> 00:04:04,520
+cos via.
+
+48
+00:04:04,520 --> 00:04:11,120
+ma da quando  stato trovato un nuovo messaggio, questo sar reso prima e il router si fermer in seguito.
+
+49
+00:04:11,120 --> 00:04:17,730
+Dovremmo quindi modificare il tuo ordine in modo tale che la barra non consumi anche i nuovi messaggi prima
+
+50
+00:04:18,020 --> 00:04:24,980
+e ora che ha anche senso di nuovo perch ora questa rotta sarebbe anche resa per un nuovo messaggio barra,
+
+51
+00:04:24,980 --> 00:04:31,290
+Quindi ora con questa configurazione vedrai che in effetti possiamo caricare una singola rotta sotto le nostre rotte.
+
+52
+00:04:31,310 --> 00:04:38,120
+Quindi, se vado alla barra, vediamo solo i post, ma se clicco su un post, lo carichiamo sotto i post.
+
+53
+00:04:38,540 --> 00:04:41,420
+Questa  gi una rotta nidificata.
+
+54
+00:04:41,420 --> 00:04:49,290
+Affrontiamo un problema anche se diciamo che abbiamo messaggi di Slash qui e non taglia nulla.
+
+55
+00:04:49,670 --> 00:04:57,140
+E ovviamente questo significa che nel post componente in cui navighiamo se dovessimo utilizzare un link,
+
+56
+00:04:57,140 --> 00:04:59,660
+dovremmo aggiornarlo per tagliare i post.
+
+57
+00:04:59,810 --> 00:05:06,200
+Lo stesso qui per questo routing programmatico e per quello che stiamo effettivamente utilizzando.
+
+58
+00:05:06,350 --> 00:05:14,000
+Cos ora stiamo navigando per tagliare l'ID dei post e ora se questo  presente, vedrai e dovrei anche
+
+59
+00:05:14,000 --> 00:05:17,970
+aggiornare il link di navigazione qui per tagliare i post.
+
+60
+00:05:18,820 --> 00:05:26,020
+Quindi ora vedrai che se faccio clic sui post qui carichiamo i post e posso fare clic su un post, ovviamente.
+
+61
+00:05:26,020 --> 00:05:34,930
+Ora vedi che tutto questo fallisce anche se otteniamo un errore perch il nostro percorso nidificato qui nel post  componente.
+
+62
+00:05:34,930 --> 00:05:45,340
+Questo percorso analizza lo slash ID e questo non viene aggiunto al percorso della route che era responsabile del
+
+63
+00:05:45,340 --> 00:05:47,230
+caricamento del componente post.
+
+64
+00:05:47,380 --> 00:05:50,460
+Quindi questo non viene risolto automaticamente.
+
+65
+00:05:50,470 --> 00:05:52,030
+ID due post.
+
+66
+00:05:52,030 --> 00:05:54,490
+Questo non sta succedendo.
+
+67
+00:05:54,490 --> 00:06:03,670
+Invece questo  ancora l'ID della barra di percorso della barra, quindi dovremmo aggiornarlo per ridurre l'ID dei post per avere
+
+68
+00:06:03,670 --> 00:06:10,100
+di nuovo il routing annidato con il nostro nuovo you is l che  slash.
+
+69
+00:06:10,110 --> 00:06:14,780
+ID  ovviamente molto ingombrante farlo.
+
+70
+00:06:15,310 --> 00:06:19,000
+Quindi, invece di usare post come questo.
+
+71
+00:06:19,000 --> 00:06:28,990
+Un modo migliore  quello di ottenere il percorso corrente in modo dinamico in modo che questo sia realmente un percorso nidificato dinamico e
+
+72
+00:06:29,080 --> 00:06:35,760
+che i pauvres debbano essere impostati su qualcosa di dinamico qui non su una stringa codificata.
+
+73
+00:06:36,160 --> 00:06:45,700
+E poi probabilmente dovremmo usare questo oggetto di abbinamento mancino e in esso c' una propriet
+
+74
+00:06:45,710 --> 00:06:49,550
+che  fondamentalmente D o l.
+
+75
+00:06:49,570 --> 00:06:50,980
+Abbiamo caricato fino ad ora.
+
+76
+00:06:51,010 --> 00:06:59,630
+Quindi  stato il responsabile del caricamento di questo componente di post e ovviamente non  il caso di partire.
+
+77
+00:06:59,740 --> 00:07:08,610
+Abbiamo bisogno di affiancare la nostra parte flessibile l dopo cos ora possiamo unire questo all'interno delle parentesi graffe Cauley
+
+78
+00:07:08,670 --> 00:07:11,130
+anche se con i nostri ID.
+
+79
+00:07:11,130 --> 00:07:18,350
+Quindi con l'ID dei due Slash e rimuovere l'offerta della parte per chiamare le parentesi graffe.
+
+80
+00:07:18,350 --> 00:07:27,470
+modo diverso diciamo sulla barra di tutti i post, questo verr automaticamente risolto in tutti i post qui perch  dinamico.
+
+81
+00:07:27,530 --> 00:07:33,950
+Ora questo corrisponder all'ID del post e se mai dovessimo caricare questo componente in
+
+82
+00:07:34,340 --> 00:07:41,410
+Cos ora se salviamo questo, otteniamo lo stesso comportamento di prima, ma ci dimostra che funziona.
+
+83
+00:07:41,430 --> 00:07:49,760
+Stiamo aggiungendo dinamicamente i post di slash qui per la nostra rotta nidificata e questo  il modo in cui crei rotte nidificate
+
+84
+00:07:49,760 --> 00:07:53,170
+veramente nella tua applicazione di re-act con re-act rowdier.
+

@@ -1,0 +1,400 @@
+1
+00:00:02,200 --> 00:00:07,070
+Y The Last Lecture lo implementamos o comenzamos a implementar su creador de Burgert.
+
+2
+00:00:07,200 --> 00:00:09,020
+Pero falta mucho.
+
+3
+00:00:09,090 --> 00:00:16,020
+Ahora es el momento de continuar nuestro trabajo all y asegurarnos de agregar los componentes relacionados con Buger y
+
+4
+00:00:16,020 --> 00:00:22,410
+especialmente los ingredientes de la hamburguesa. Ir a la carpeta de componentes y cambiar una nueva subcarpeta
+
+5
+00:00:22,410 --> 00:00:23,020
+que nombrar.
+
+6
+00:00:23,020 --> 00:00:23,730
+Hamburguesa.
+
+7
+00:00:23,910 --> 00:00:26,870
+Todo lo relacionado con hamburguesas debe ir all.
+
+8
+00:00:27,240 --> 00:00:34,050
+componentes, ya que es una buena prctica y reacciona para crear componentes granulares y no grandes.
+
+9
+00:00:34,050 --> 00:00:41,040
+Y de nuevo esta es una buena forma de estructurar su proyecto porque, como se puede
+
+10
+00:00:41,040 --> 00:00:46,440
+imaginar en proyectos ms grandes y grandes, puede ser difcil administrar todos estos
+
+11
+00:00:46,440 --> 00:00:51,840
+Ahora bien, si tiene muchos componentes, tiene muchos archivos y para mantener estos archivos manejables, desea crear
+
+12
+00:00:51,840 --> 00:00:58,530
+una estructura de carpetas que no solo est dividida en componentes y contenedores, sino tambin dentro de los componentes en los
+
+13
+00:00:58,650 --> 00:01:00,140
+que se encuentran los contenedores.
+
+14
+00:01:00,240 --> 00:01:06,510
+Tambin lo divide por rea de caractersticas para que sepa rpidamente si necesito trabajar en la hamburguesa. Debo
+
+15
+00:01:06,840 --> 00:01:10,140
+ir a la carpeta de Bergere que est all.
+
+16
+00:01:10,140 --> 00:01:12,660
+Aadiremos un par de componentes Suppe.
+
+17
+00:01:12,660 --> 00:01:21,060
+Por ejemplo, agregar el archivo burger js, que debera ser la hamburguesa que realmente estamos procesando en
+
+18
+00:01:21,060 --> 00:01:22,180
+la pantalla.
+
+19
+00:01:22,650 --> 00:01:26,510
+Ahora siempre puedo decir que la hamburguesa sola no servir de nada.
+
+20
+00:01:26,700 --> 00:01:34,100
+Necesitamos ingredientes en esa hamburguesa como el pan para vender a la carne el queso el tocino.
+
+21
+00:01:34,470 --> 00:01:37,390
+Entonces, para eso, todos crean una subcarpeta aqu.
+
+22
+00:01:37,560 --> 00:01:39,940
+El ingrediente de la hamburguesa
+
+23
+00:01:40,200 --> 00:01:44,150
+Y luego todos agregan un ingrediente de hamburguesa.
+
+24
+00:01:44,340 --> 00:01:50,610
+con ese ingrediente porque bueno, eso es realmente lo que necesitamos para renderizar algo en la pantalla.
+
+25
+00:01:50,820 --> 00:01:53,170
+JS file y realmente quiero comenzar
+
+26
+00:01:53,580 --> 00:01:58,040
+Ahora para los ingredientes de la hamburguesa prepar una cada de C S S.
+
+27
+00:01:58,050 --> 00:02:05,700
+Puede encontrar adjuntar a este video que contiene una gran cantidad de cdigo C S para procesar ingredientes de hamburguesas con
+
+28
+00:02:05,730 --> 00:02:09,890
+CSSA solo sin importar ninguna imagen que por supuesto es excelente.
+
+29
+00:02:09,890 --> 00:02:18,540
+Desde la perspectiva de Fauzia, significa que el usuario final no tiene que descargar mucho cdigo o contenido.
+
+30
+00:02:18,570 --> 00:02:24,850
+Ahora puede descargar cdigo CSSA muerto y pegarlo en un archivo recin creado.
+
+31
+00:02:24,870 --> 00:02:28,070
+El ingrediente de Bergere C S S file.
+
+32
+00:02:28,110 --> 00:02:33,270
+C-s de la siguiente manera. Necesita procesar los ingredientes de Bergere, pero eso solo, por supuesto, no har nada.
+
+33
+00:02:33,270 --> 00:02:36,840
+Una vez que haya copiado lo que acabo de compartir, tiene todas las
+
+34
+00:02:36,840 --> 00:02:40,440
+Todos necesitamos un ingrediente completo de hamburguesa con vida.
+
+35
+00:02:40,770 --> 00:02:43,010
+Eso como siempre ser una funcin.
+
+36
+00:02:43,050 --> 00:02:50,610
+As que un componente menos estatal y lo llamar ingrediente de Burger y espero obtener algunos accesorios y quiero devolver
+
+37
+00:02:50,610 --> 00:02:56,190
+algo y usar las llaves, porque en realidad quiero ejecutar un poco de lgica antes
+
+38
+00:02:56,190 --> 00:02:56,880
+de volver.
+
+39
+00:02:56,890 --> 00:03:03,650
+GSX Voy a modificar o reaccionar aqu porque voy a escribir algo de GSX al final.
+
+40
+00:03:03,960 --> 00:03:07,610
+Y, por supuesto, exportar esto como el predeterminado.
+
+41
+00:03:07,770 --> 00:03:16,050
+Esta funcin y usted puede muy bien escribir un fragmento para su editor para crear un componente menos estado porque
+
+42
+00:03:16,320 --> 00:03:18,070
+siempre se ve as.
+
+43
+00:03:18,120 --> 00:03:21,240
+Reactive una funcin de importacin y la exportacin.
+
+44
+00:03:21,300 --> 00:03:24,410
+Sintase libre de escribir un fragmento para su editor.
+
+45
+00:03:24,420 --> 00:03:32,370
+Ahora volvamos a nuestro componente, aunque obtuvimos nuestro ingrediente de Bergere y le dije que necesitara un poco de
+
+46
+00:03:32,700 --> 00:03:35,450
+lgica para representar el cdigo GSX.
+
+47
+00:03:35,520 --> 00:03:42,150
+Esta lgica es necesaria porque hay diferentes tipos de ingredientes y espero obtener la
+
+48
+00:03:42,150 --> 00:03:44,290
+informacin sobre qu ingrediente representar.
+
+49
+00:03:44,340 --> 00:03:51,660
+Por qu subir props ahora? Aqu crear una variable de ingrediente y la definir como nula inicialmente.
+
+50
+00:03:51,720 --> 00:03:54,110
+Entonces, inicialmente, no renderizaremos nada.
+
+51
+00:03:54,120 --> 00:04:02,700
+Por ejemplo, si se pasa algo no vlido ahora, cambiar la declaracin de cambio de javascript normal y analizar
+
+52
+00:04:02,730 --> 00:04:09,260
+el tipo de mi ingrediente, as que escriba como una propiedad que espero recibir.
+
+53
+00:04:09,930 --> 00:04:12,430
+Y ahora tenemos un par de casos diferentes.
+
+54
+00:04:12,510 --> 00:04:14,790
+Por ejemplo, Brad bottom.
+
+55
+00:04:15,000 --> 00:04:18,230
+Usted es libre de definir este caso como lo desee.
+
+56
+00:04:18,240 --> 00:04:20,320
+Solo asegrate de usarlo fraudulentamente.
+
+57
+00:04:20,340 --> 00:04:22,830
+La aplicacin si planeas pasar.
+
+58
+00:04:22,920 --> 00:04:28,730
+Bueno, la parte inferior de Brad de tus clases de hamburguesas CSSA para todas estas cosas fue para encontrar aqu.
+
+59
+00:04:28,770 --> 00:04:33,850
+Los aplicaremos pronto y DS aplicar para corregir Starling.
+
+60
+00:04:33,960 --> 00:04:40,610
+Entonces, digamos que tenemos un caso de Brad abajo, entonces mi ingrediente debera ser.
+
+61
+00:04:40,750 --> 00:04:44,670
+Estimado con el siguiente nombre de clase.
+
+62
+00:04:44,800 --> 00:04:51,610
+Ahora necesitaba importar mis clases, as que agregar rpidamente las clases de importacin del
+
+63
+00:04:51,610 --> 00:04:58,810
+archivo C S S de Bruguera y luego quiero asignarles las clases que prefiera.
+
+64
+00:04:59,020 --> 00:05:01,300
+Y se puede ver que los ndices de DC de la clase como.
+
+65
+00:05:01,310 --> 00:05:02,700
+Aqu Brad abajo.
+
+66
+00:05:02,710 --> 00:05:04,380
+Todos tenemos esa cima.
+
+67
+00:05:04,510 --> 00:05:11,710
+Tenemos asientos para el mocoso y luego tenemos ensalada de queso de carne y tocino.
+
+68
+00:05:11,800 --> 00:05:16,460
+As que aqu creamos el pan de fondo as como as.
+
+69
+00:05:16,490 --> 00:05:20,960
+Djame agregar un punto y coma y luego romper.
+
+70
+00:05:20,960 --> 00:05:23,000
+Ahora agreguemos otro caso.
+
+71
+00:05:23,300 --> 00:05:28,520
+El segundo caso que quiero verificar es que tenemos la parte superior del pan.
+
+72
+00:05:28,520 --> 00:05:35,780
+diferente, no solo una muerte, sino que en el pan superior habr algunos asientos.
+
+73
+00:05:35,840 --> 00:05:38,100
+Esto realmente requiere un ingrediente
+
+74
+00:05:38,120 --> 00:05:48,220
+As que aqu en realidad devuelvo un J de varias lneas como X, donde el div externo tambin recibe el nombre de Clauss y luego
+
+75
+00:05:49,000 --> 00:05:51,660
+la parte superior del pan de Klaas.
+
+76
+00:05:52,450 --> 00:05:58,630
+Pero dentro de all necesito un dispositivo Obert que represente los asientos.
+
+77
+00:05:58,630 --> 00:06:08,870
+Entonces en el primer da de todos en el nombre de la clase y luego tengo las clases de asientos uno y voy a duplicar esto para
+
+78
+00:06:08,870 --> 00:06:11,980
+que todos tengan un div con asientos tambin.
+
+79
+00:06:12,020 --> 00:06:14,090
+Entonces esta es la alternativa.
+
+80
+00:06:14,090 --> 00:06:24,080
+el siguiente caso es que nos hemos reunido digamos que si tenemos carne, entonces debera agregarse ingrediente.
+
+81
+00:06:24,080 --> 00:06:28,590
+Tomemos un descanso aqu y ahora podemos continuar
+
+82
+00:06:28,970 --> 00:06:36,950
+Y ese da si usaremos el nombre de la clase y adivinaste que las clases se encuentran ahora.
+
+83
+00:06:37,000 --> 00:06:44,140
+Sintase libre de completar esto para todos los gradientes promedio, puede ver cules estn en el archivo C S
+
+84
+00:06:44,860 --> 00:06:50,570
+S y simplemente crear todos los casos para todos los ingredientes que puede identificar aqu.
+
+85
+00:06:50,620 --> 00:06:55,040
+Te dar la oportunidad de hacer pasta contigo y probar esto por tu cuenta y luego lo haremos juntos.
+
+86
+00:06:57,870 --> 00:07:01,050
+Si tuviera xito, no completemos esto juntos.
+
+87
+00:07:01,320 --> 00:07:03,320
+En realidad es bastante sencillo.
+
+88
+00:07:03,510 --> 00:07:11,640
+el queso donde aplicamos las clases de queso y luego el tocino donde aplicamos la clase de tocino.
+
+89
+00:07:11,640 --> 00:07:20,230
+No podemos simplemente copiar la carne e ingresarla un par de veces aqu para tambin tener cajas para
+
+90
+00:07:20,400 --> 00:07:25,640
+Y finalmente, la ensalada donde aplicamos la clase de ensalada.
+
+91
+00:07:25,800 --> 00:07:31,680
+Y, por cierto, si quiere implementar esto de manera diferente y ciertamente existen alternativas a esta gran
+
+92
+00:07:31,680 --> 00:07:36,280
+caja de interruptores abierta, por supuesto que es ms que libre de hacerlo.
+
+93
+00:07:36,360 --> 00:07:41,520
+Ahora que todo est configurado un caso predeterminado aqu en caso de que se pase algo incorrecto.
+
+94
+00:07:41,520 --> 00:07:50,430
+Y una vez ms, Ingredion Shelby null ahora, despus de esta declaracin de cambio gigantesca, aqu podemos devolver el ingrediente de
+
+95
+00:07:50,910 --> 00:07:56,510
+forma segura aqu e Ingredion es alguna vez o una de nuestras muchas muertes.
+
+96
+00:07:56,520 --> 00:08:04,230
+con validacin de tipo Propp porque queremos asegurarnos de recibir una propiedad de tipo.
+
+97
+00:08:04,230 --> 00:08:10,970
+Ahora podemos hacer algo y lo haremos en la prxima conferencia que podamos
+
+98
+00:08:11,040 --> 00:08:12,720
+Ahora prueba esto por tu cuenta.
+
+99
+00:08:12,720 --> 00:08:19,350
+Sintase libre de probar esto por su cuenta en el mundo de la conferencia siguiente a Gabr despus de empaquetar las
+
+100
+00:08:19,350 --> 00:08:26,110
+tuberas de Prop y agregar a Rob Taieb para verificar que la propiedad de tipo realmente se pasa a este componente.
+

@@ -1,0 +1,32 @@
+1
+00:00:02,280 --> 00:00:05,730
+Whoa, w tym module omwilimy wiele
+
+2
+00:00:05,760 --> 00:00:10,960
+aspektw, dodalimy tak wiele funkcjonalnoci, aby nasza aplikacja bya bezpieczniejsza.
+
+3
+00:00:11,010 --> 00:00:16,050
+Dodalimy uwierzytelnianie z funkcj sprawdzania poprawnoci, autoSignUp.
+
+4
+00:00:16,050 --> 00:00:21,880
+Pokazaem ci, jak zarzdza tokenem i jak wdraa uwierzytelnianie w aplikacjach na jednej stronie.
+
+5
+00:00:21,900 --> 00:00:28,410
+Wykorzystalimy nasze dane do odwzorowania naszych zamwie na danego uytkownika, przekierowujemy uytkownika, gdy prbuje zrobi
+
+6
+00:00:28,410 --> 00:00:30,510
+co podejrzanego i wiele wicej.
+
+7
+00:00:30,780 --> 00:00:36,680
+Nauczye si wielu wanych poj, ktre moesz potrzebowa w kolejnej aplikacji, wic mam nadziej, e
+
+8
+00:00:36,780 --> 00:00:41,970
+ten modu by bardzo pomocny przy kadym przyszym projekcie, z ktrym moesz si zmierzy.
+

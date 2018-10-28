@@ -1,0 +1,124 @@
+1
+00:00:02,250 --> 00:00:08,020
+Agora, voc aprender a ler e entender as mensagens de seta e como encontrar erros lgicos.
+
+2
+00:00:08,100 --> 00:00:13,860
+s vezes, voc quer saber o estado atual do seu aplicativo de reator e, embora possa
+
+3
+00:00:13,860 --> 00:00:17,500
+descobrir isso com as ferramentas do desenvolvedor, pode ser inconveniente.
+
+4
+00:00:17,970 --> 00:00:24,120
+Felizmente, existe uma excelente extenso que voc pode adicionar s ferramentas de desenvolvimento do Chrome d re-act.
+
+5
+00:00:24,120 --> 00:00:25,730
+Vamos instal-lo juntos.
+
+6
+00:00:25,950 --> 00:00:32,760
+Voc pode google o re-atualizar ferramentas do desenvolvedor e voc encontrar o repositrio get up onde voc pode aprender
+
+7
+00:00:32,760 --> 00:00:38,700
+mais sobre eles como us-los e pode at contribuir para o projeto ou voc teve direito na
+
+8
+00:00:38,700 --> 00:00:39,610
+Chrome Web Store.
+
+9
+00:00:39,630 --> 00:00:39,890
+No.
+
+10
+00:00:39,900 --> 00:00:40,400
+No se preocupe.
+
+11
+00:00:40,400 --> 00:00:42,930
+Estes so gratuitos na web.
+
+12
+00:00:42,930 --> 00:00:48,630
+Eu j os adicionei ao Chrome, mas voc pode clicar em adicionar ao Chrome se voc no tiver feito isso.
+
+13
+00:00:48,630 --> 00:00:54,960
+Depois de edit-los, voc provavelmente precisa reiniciar para Roma e eles esto depois nas ferramentas de desenvolvimento do Chrome.
+
+14
+00:00:54,960 --> 00:00:59,210
+Voc pode escolher re-agir esta nova guia deve ser a.
+
+15
+00:00:59,220 --> 00:01:06,810
+Agora, h uma coisa legal, pois agora voc v seu aplicativo de re-ao como voc criou.
+
+16
+00:01:06,870 --> 00:01:12,330
+de DOM que voc v seus componentes como o componente da pessoa aqui ou o componente do aplicativo.
+
+17
+00:01:12,810 --> 00:01:19,260
+Se voc clicar na pessoa de alternncia, voc ver algo que difere da guia de elementos normais, embora voc no
+
+18
+00:01:19,260 --> 00:01:20,670
+veja apenas os elementos
+
+19
+00:01:21,090 --> 00:01:26,840
+E, l embaixo, voc tambm v adereos e estado desse componente.
+
+20
+00:01:27,000 --> 00:01:29,590
+Ento, para o componente do aplicativo, voc v a matriz da pessoa.
+
+21
+00:01:29,680 --> 00:01:33,500
+E se eu clicar em uma pessoa, remova isso tambm  atualizado.
+
+22
+00:01:33,510 --> 00:01:39,860
+Ento, aqui, voc pode ver seu estado tambm pode mud-lo l e encaminhar um componente de pessoa.
+
+23
+00:01:39,870 --> 00:01:47,430
+Voc v que no tem um estado, mas tem adereos e quais propriedades so tambm podem destacar
+
+24
+00:01:47,700 --> 00:01:51,480
+as atualizaes para que voc veja destacado aqui.
+
+25
+00:01:51,540 --> 00:01:56,430
+O que mudou em seu cdigo, como a adio deste nome de classe, por exemplo.
+
+26
+00:01:56,430 --> 00:01:58,070
+Ento tambm  muito legal.
+
+27
+00:01:58,080 --> 00:02:04,650
+Ele permite que voc compreenda rapidamente o estado de seus componentes do seu aplicativo e manipule-o e fornea algumas idias
+
+28
+00:02:04,650 --> 00:02:10,560
+que voc no pode obter facilmente com as ferramentas normais do desenvolvedor porque isso vai alm de mostrar
+
+29
+00:02:10,590 --> 00:02:11,850
+o que foi processado.
+
+30
+00:02:11,910 --> 00:02:15,500
+Isso mostra o que h nos bastidores do que est embaixo do cap.
+
+31
+00:02:15,510 --> 00:02:16,140
+Basicamente.
+

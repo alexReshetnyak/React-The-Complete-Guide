@@ -1,0 +1,76 @@
+1
+00:00:02,190 --> 00:00:06,680
+Portanto, queremos configurar nosso prprio fluxo de trabalho de construo e usaremos o webpack para
+
+2
+00:00:06,780 --> 00:00:10,800
+isso. Vamos analisar primeiro quais so os requisitos de nosso fluxo de trabalho.
+
+3
+00:00:10,830 --> 00:00:16,650
+Certamente, queremos oferecer suporte aos recursos de javascript da prxima gerao, por isso precisamos compilar
+
+4
+00:00:16,890 --> 00:00:22,620
+o cdigo javascript da prxima gerao para o cdigo javascript gen atual, que  executado
+
+5
+00:00:22,620 --> 00:00:23,850
+nos principais navegadores atualmente.
+
+6
+00:00:23,850 --> 00:00:32,610
+Alm disso, queremos ser capazes de lidar com o jsx para que possamos usar o jsx em nossos arquivos de script, em
+
+7
+00:00:32,790 --> 00:00:34,300
+nosso projeto de resposta.
+
+8
+00:00:34,320 --> 00:00:43,560
+Tambm queremos adicionar o prefixo automtico css para que possamos escrever regras css simples e obter prefixos automticos para que
+
+9
+00:00:43,800 --> 00:00:49,760
+ofeream suporte  melhor sintaxe em todos os navegadores que nossos aplicativos suportam.
+
+10
+00:00:49,910 --> 00:00:55,780
+E tambm queremos oferecer suporte a imagens,  claro, poderemos importar imagens como fizemos
+
+11
+00:00:55,790 --> 00:01:00,660
+em nosso aplicativo de criao de respostas e us-las em nosso modelo.
+
+12
+00:01:00,670 --> 00:01:07,300
+Por fim, queremos otimizar o cdigo, antes de criarmos esse bundler ou cuspi-lo, ele
+
+13
+00:01:07,300 --> 00:01:13,690
+deve ser otimizado para reduzir nosso cdigo javascript para o menor tamanho possvel.
+
+14
+00:01:13,690 --> 00:01:15,160
+Estes so os requisitos, que
+
+15
+00:01:15,160 --> 00:01:20,940
+ basicamente o que cria a reao nos d, no entanto, que tambm nos d mais como lintagem e assim por
+
+16
+00:01:21,190 --> 00:01:23,800
+diante, mas estes so os principais requisitos que eu tambm
+
+17
+00:01:23,800 --> 00:01:25,620
+quero construir neste fluxo de trabalho personalizado.
+
+18
+00:01:25,660 --> 00:01:30,820
+Ento, vamos nos aprofundar nisso e vamos ver quais dependncias precisamos instalar e como
+
+19
+00:01:30,820 --> 00:01:33,850
+as gerenciamos de fato e como configuramos o webpack.
+

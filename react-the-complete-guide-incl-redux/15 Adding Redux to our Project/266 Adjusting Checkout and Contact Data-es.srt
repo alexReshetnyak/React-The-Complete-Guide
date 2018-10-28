@@ -1,0 +1,444 @@
+1
+00:00:02,250 --> 00:00:07,230
+Seal que estamos manejando todo lo relacionado con los ingredientes para redux.
+
+2
+00:00:07,230 --> 00:00:13,850
+Por supuesto, tambin deberamos ajustar los componentes promedio donde usamos ese ingrediente Dator, es decir, los
+
+3
+00:00:13,860 --> 00:00:21,030
+datos de salida y contacto, especialmente los datos de salida y contacto, ahora son geniales y usamos
+
+4
+00:00:21,450 --> 00:00:28,260
+redireccionamientos porque hasta ahora utilizamos programas de consulta para pasar nuestros ingredientes al componente de pago. .
+
+5
+00:00:28,270 --> 00:00:31,230
+Esto es algo de lo que finalmente podemos deshacernos.
+
+6
+00:00:31,410 --> 00:00:38,730
+Entonces, en el componente Bolar Burger, donde pasamos nuestros ingredientes a travs de los padres Cuore,
+
+7
+00:00:38,730 --> 00:00:42,600
+compra aqu. Continuar hndler ya no necesitamos hacer eso.
+
+8
+00:00:42,750 --> 00:00:45,540
+Simplemente podemos eliminar este mtodo.
+
+9
+00:00:45,680 --> 00:00:49,360
+En cambio, tenemos que manejar esto.
+
+10
+00:00:49,380 --> 00:00:58,650
+Ahora es probable que todava deseemos seguir navegando, pero ya no quiero pasar a los padres de Clarie, as que puedo deshacerme de
+
+11
+00:00:58,650 --> 00:01:06,240
+todo el cdigo padre Kohary aqu y tambin puedo hacer que este mtodo sea un poco ms corto ahora
+
+12
+00:01:06,240 --> 00:01:13,610
+e ir a la barra de herramientas aqu y simplemente podemos obtener los ingredientes de all leer X store.
+
+13
+00:01:13,770 --> 00:01:20,610
+As que nuestras compras continan manejando Lifson y la hamburguesa Bolar, pero es mucho ms delgado y, de hecho, echa
+
+14
+00:01:20,610 --> 00:01:22,110
+un vistazo al contenedor.
+
+15
+00:01:22,110 --> 00:01:29,360
+Ya no necesitamos obtener nuestros ingredientes y el componente se montar as.
+
+16
+00:01:29,450 --> 00:01:33,800
+En cambio, podemos deshacernos del componente que se montar aqu por completo.
+
+17
+00:01:33,910 --> 00:01:37,770
+No podemos deshacernos de nuestro estado, que solo maneja los ingredientes y el precio.
+
+18
+00:01:37,780 --> 00:01:47,180
+Lo conseguimos y nos relajamos y ahora podemos importar conect de react-redux de nuevo porque
+
+19
+00:01:47,180 --> 00:01:51,800
+obviamente tambin queremos conectar este contenedor con Rydex.
+
+20
+00:01:52,310 --> 00:01:58,490
+Entonces, si bajamos hasta el fondo del contenedor, todos nuevamente creamos un mapa constante
+
+21
+00:01:58,590 --> 00:02:06,260
+del estado de props y all todava tengo una funcin que obtiene el estado y NTN devuelve un
+
+22
+00:02:06,290 --> 00:02:14,360
+objeto javascript donde mapeamos bien nuestro estado almacenado y redux store a los puntales de este contenedor y all
+
+23
+00:02:14,360 --> 00:02:16,910
+podramos tener IAG tambin es propiedad.
+
+24
+00:02:16,970 --> 00:02:22,410
+Sin embargo, puedes ponerle el nombre que quieras y esto debera contener ingredientes estatales.
+
+25
+00:02:22,430 --> 00:02:24,800
+No se puede nombrar lo que quieras.
+
+26
+00:02:24,800 --> 00:02:28,490
+Esto tiene que ser propiedad como lo nombre en su estado.
+
+27
+00:02:28,490 --> 00:02:35,370
+Entonces, como ingredientes reductores de una hora y, por supuesto, todos necesitamos el precio aqu.
+
+28
+00:02:35,370 --> 00:02:40,380
+As que busquemos el precio que es el precio total del estado.
+
+29
+00:02:40,380 --> 00:02:44,330
+Ese es el nombre de la propiedad que usamos el reductor.
+
+30
+00:02:44,340 --> 00:02:50,310
+Ahora no necesitamos el despacho del mapa a los accesorios aqu porque no estamos despachando nada en este contenedor,
+
+31
+00:02:50,310 --> 00:02:55,790
+simplemente navegamos un poco, pero no hacemos esto a travs de la tienda Rydex. Hacemos esto desde
+
+32
+00:02:55,800 --> 00:02:56,930
+el router de reaccin.
+
+33
+00:02:57,120 --> 00:03:00,330
+Entonces no hay nada que se despache aqu.
+
+34
+00:03:00,330 --> 00:03:05,760
+As que por ahora solo necesitamos el estado del mapa para el de Prop. No lo hice para Raptor con CONNECT.
+
+35
+00:03:05,970 --> 00:03:15,480
+Y aqu paso el estado de mapa a props como el primer argumento y simplemente omito el segundo porque no tenemos un
+
+36
+00:03:15,750 --> 00:03:20,670
+despacho de mapa al campo de datos de prop que queremos transmitir.
+
+37
+00:03:20,930 --> 00:03:29,030
+Por cierto, si solo tienes un mapa enviado a apoyos y no hay un estado de mapa para apuntalar, simplemente estableceras el estado del
+
+38
+00:03:29,030 --> 00:03:36,030
+mapa Propst ahora y pasaras el mapa enviado a apuntalar porque el mapa de este parche siempre tiene que ser el
+
+39
+00:03:36,030 --> 00:03:39,750
+segundo argumento del estado del mapa para el apuntalamiento. el primero.
+
+40
+00:03:39,780 --> 00:03:45,570
+no es necesario, simplemente configrelo como nulo aqu; sin embargo, el primero es el nico que nos interesa.
+
+41
+00:03:45,570 --> 00:03:46,770
+Entonces, si el primero
+
+42
+00:03:46,770 --> 00:03:54,540
+Solo necesitamos el estado del mapa para apuntalar con eso conseguimos Ingredion algn premio disponible a travs de accesorios
+
+43
+00:03:54,560 --> 00:03:55,780
+en este componente.
+
+44
+00:03:56,030 --> 00:03:57,050
+Vamos a usarlo
+
+45
+00:03:57,050 --> 00:04:04,880
+Entonces, cada vez que accedemos a los ingredientes de este estado, este es ahora el accesorio y el queso.
+
+46
+00:04:04,880 --> 00:04:07,880
+Y cuando usamos el precio Bueno, esto es ahora.
+
+47
+00:04:07,940 --> 00:04:11,230
+Sin embargo, el precio de los accesorios.
+
+48
+00:04:11,360 --> 00:04:17,490
+Realmente solo lo necesitamos aqu donde usamos nuestro pequeo truco para cargar los datos de contacto.
+
+49
+00:04:17,840 --> 00:04:25,220
+Ahora, gracias a nuestra tienda redux, ya no necesitamos usar los trucos, por lo que en realidad ni siquiera necesitamos el precio aqu
+
+50
+00:04:25,220 --> 00:04:28,940
+porque no lo usamos en ningn otro lado en este componente.
+
+51
+00:04:28,940 --> 00:04:35,930
+As que vamos a deshacernos de este puntal de premio aqu en el estado de mapa para apoyos y vamos a deshacernos del mtodo
+
+52
+00:04:35,930 --> 00:04:36,570
+Raeder aqu.
+
+53
+00:04:37,290 --> 00:04:45,920
+Los pasos de Editha solo configuran un componente que queremos cargar y an deberan ser nuestros componentes de datos de contacto.
+
+54
+00:04:46,080 --> 00:04:55,020
+Pero ahora no est incluido como componente GSX, sino que solo lo seala en la propiedad del componente de la ruta.
+
+55
+00:04:55,020 --> 00:05:01,860
+Con eso, tambin tenemos que ajustar nuestros datos de contacto porque, como saben, tambin usamos los ingredientes
+
+56
+00:05:01,860 --> 00:05:07,010
+que obtenemos en los accesorios y el precio antes de los redireccionamientos.
+
+57
+00:05:07,020 --> 00:05:09,960
+Lo conseguimos con este pequeo truco que acabamos de eliminar.
+
+58
+00:05:09,990 --> 00:05:15,560
+Ahora simplemente podemos conectar este contenedor aqu para relajarnos tambin.
+
+59
+00:05:15,600 --> 00:05:27,330
+As que para eso el contenedor de datos de contacto que tambin es import connect from re-act reduce un todo en la parte inferior vamos a
+
+60
+00:05:27,330 --> 00:05:36,130
+crear el estado del mapa al ao de prop para asignar la funcin que recibe el estado y devolver
+
+61
+00:05:36,190 --> 00:05:42,880
+nuestro objeto donde mapeamos el estado relevante que Necesito en este componente apoyos y desafo.
+
+62
+00:05:42,880 --> 00:05:49,280
+Quiero obtener mi audiencia sobre los ingredientes estatales y mi premio sobre el estado.
+
+63
+00:05:49,360 --> 00:05:53,380
+El precio total fue para nombrar y luego como antes.
+
+64
+00:05:53,410 --> 00:05:56,090
+Vamos a envolver esto con CONNECT pasado.
+
+65
+00:05:56,110 --> 00:06:02,940
+El estado del mapa es propicio y omite el argumento de la diseccin porque tampoco enviamos nada aqu.
+
+66
+00:06:03,130 --> 00:06:08,850
+Y luego, pase los datos de conexin a la funcin de retorno por la funcin de conexin.
+
+67
+00:06:10,140 --> 00:06:16,320
+Ahora, por supuesto, necesitamos actualizar este componente dondequiera que usemos los ingredientes de este accesorio.
+
+68
+00:06:16,320 --> 00:06:23,220
+Ahora podemos usar las elegas de este pilar, por supuesto, para actualizar lo ms rpido posible, simplemente usar los ingredientes aqu como un
+
+69
+00:06:23,220 --> 00:06:26,370
+nombre propio porque ese es el nombre que ya usamos.
+
+70
+00:06:26,550 --> 00:06:32,200
+Pero para evitar la confusin con estos ingredientes obtenemos del estado que eleg para usar un nombre diferente.
+
+71
+00:06:32,310 --> 00:06:33,880
+Entonces ahora cualquier informacin de contacto.
+
+72
+00:06:33,900 --> 00:06:39,260
+Actualicemos todo lo que utiliza los problemas de DS para los que obtuvimos el pedido.
+
+73
+00:06:39,390 --> 00:06:45,750
+Definitivamente no requiere actualizacin y ocupa la mayor parte del lugar en este archivo.
+
+74
+00:06:45,930 --> 00:06:47,650
+El manejador de pedidos aqu.
+
+75
+00:06:47,700 --> 00:06:48,610
+Echemos un vistazo.
+
+76
+00:06:48,630 --> 00:06:54,730
+Tomamos mucha informacin de nuestros 4 y el ao en que aprobamos los ingredientes del puntal.
+
+77
+00:06:54,750 --> 00:06:56,120
+Esto debera ser accesorios I.
+
+78
+00:06:56,130 --> 00:07:05,360
+El precio de Geez todava es correcto porque an lo asignamos a una propiedad de precio en estado de mapa para props, por lo que no es
+
+79
+00:07:05,820 --> 00:07:07,350
+necesario que lo reemplacemos.
+
+80
+00:07:07,350 --> 00:07:12,420
+Ya se referir a una tienda redux, tal como lo hacemos con los ingredientes.
+
+81
+00:07:12,690 --> 00:07:16,320
+As que continuemos todo lo dems aqu me parece bien.
+
+82
+00:07:17,540 --> 00:07:20,930
+Y toda nuestra validacin de entrada se ve bien para m.
+
+83
+00:07:20,930 --> 00:07:28,600
+El controlador de entrada modificada tambin debe estar relacionado con nuestros ingredientes o con el precio.
+
+84
+00:07:28,640 --> 00:07:31,220
+Agregue el mtodo Raeder aqu.
+
+85
+00:07:31,340 --> 00:07:40,060
+Simplemente tambin nos ocupamos de nuestro foro en el que realmente no nos importan los ingredientes o el precio, as que
+
+86
+00:07:40,070 --> 00:07:42,770
+todo esto est relacionado con el extranjero.
+
+87
+00:07:42,770 --> 00:07:46,330
+Esa es la razn por la cual este contenedor es tan grande como lo es.
+
+88
+00:07:46,760 --> 00:07:50,390
+Entonces la informacin que necesitamos debe estar all.
+
+89
+00:07:50,630 --> 00:07:54,680
+Probemos ahora todo y veamos si funciona como debera funcionar.
+
+90
+00:07:54,680 --> 00:07:56,660
+Asegrese de guardar todos los archivos.
+
+91
+00:07:56,660 --> 00:07:58,390
+Regresa a tu aplicacin.
+
+92
+00:07:59,230 --> 00:08:01,570
+Construye un ejemplo de Bergere aqu.
+
+93
+00:08:01,810 --> 00:08:02,110
+Hacer clic.
+
+94
+00:08:02,110 --> 00:08:03,360
+Ordenar ahora.
+
+95
+00:08:03,700 --> 00:08:04,940
+El resumen se ve bien.
+
+96
+00:08:05,020 --> 00:08:06,640
+Hagamos clic en continuar.
+
+97
+00:08:06,680 --> 00:08:08,170
+Eso se ve bien para ti.
+
+98
+00:08:08,370 --> 00:08:10,010
+Piernas, haga clic en continuar.
+
+99
+00:08:10,240 --> 00:08:14,230
+Los LED ingresan datos ficticios aqu.
+
+100
+00:08:17,130 --> 00:08:19,220
+As que todo esto funciona bien.
+
+101
+00:08:19,510 --> 00:08:24,480
+Haz clic en "orden" y nos redireccionaron aqu.
+
+102
+00:08:24,610 --> 00:08:29,340
+Ahora tambin comprueba firebase all en tu base de datos.
+
+103
+00:08:29,410 --> 00:08:31,010
+En ordenes
+
+104
+00:08:31,180 --> 00:08:35,420
+Deberas ver el orden que acabas de colocar.
+
+105
+00:08:35,420 --> 00:08:41,590
+Desiste la orden para que todos los trabajos pasen por nuestro estado de redeco con
+
+106
+00:08:41,590 --> 00:08:45,570
+xito sin trucos de fantasa que realmente aprovechen el redux.
+
+107
+00:08:45,580 --> 00:08:50,170
+Y esto tambin con suerte muestra dnde brilla el redux.
+
+108
+00:08:50,170 --> 00:08:55,500
+Esta no es una aplicacin sper grande, pero es un poco ms avanzada que simplemente tener una lista de tareas pendientes.
+
+109
+00:08:55,570 --> 00:08:59,360
+Y aqu realmente lo hacemos mucho ms fcil para nosotros mismos.
+
+110
+00:08:59,620 --> 00:09:06,380
+Si usamos redireccionamientos tenemos un flujo de datos predecible y hacemos pasar datos en nuestra aplicacin.
+
+111
+00:09:06,400 --> 00:09:08,550
+Sper sper simple.
+

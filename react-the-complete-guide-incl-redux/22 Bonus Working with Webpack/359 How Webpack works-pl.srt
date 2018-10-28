@@ -1,0 +1,116 @@
+1
+00:00:02,160 --> 00:00:09,450
+To jest wikszy obraz tego, czym jest i co robi pakiet, zrozummy, jak dziaa za kulisami, poniewa jest to
+
+2
+00:00:09,450 --> 00:00:16,470
+tak wane narzdzie do obsugi caego procesu tworzenia kompilacji. Za kulisami, pakiet internetowy ma cztery
+
+3
+00:00:16,470 --> 00:00:20,180
+wane rzeczy, cztery wane funkcje, zawsze potrzebuje
+
+4
+00:00:20,490 --> 00:00:23,250
+co najmniej jednego punktu wejcia,
+
+5
+00:00:23,250 --> 00:00:25,040
+moesz mie wiele.
+
+6
+00:00:25,050 --> 00:00:32,460
+To moe by nasza aplikacja. plik js, nasz gwny plik javascript, ktry montuje nasz
+
+7
+00:00:32,460 --> 00:00:39,360
+aplikacj reagujc na dom, ktra wywouje reakcj renderowania dom, na przykad, potrzebuje tego pliku, poniewa nastpnie
+
+8
+00:00:39,360 --> 00:00:45,870
+analizuje zalenoci tego pliku, a gwny plik wejciowy bdzie zaleny od innego pliku, ktry to
+
+9
+00:00:45,870 --> 00:00:52,450
+z kolei ma wicej zalenoci, wic webpack moe zbudowa wykres zalenoci rozpoczynajcy si od tego
+
+10
+00:00:52,670 --> 00:00:56,280
+gwnego pliku wejciowego, aby mg zrozumie, ktre pliki
+
+11
+00:00:56,320 --> 00:01:03,390
+tworz nasz aplikacj, jeli damy jej nasz plik wejciowy. Nastpnie analizuje wszystkie zalenoci i czy
+
+12
+00:01:03,450 --> 00:01:03,960
+je
+
+13
+00:01:03,960 --> 00:01:10,100
+w wynik, ktry okrelamy jako pakiet. Plik js w folderze dist, podajemy nazw pliku i miejsce, w ktrym powinien si znajdowa.
+
+14
+00:01:10,470 --> 00:01:17,100
+I tam umieci wszystkie te zalenoci w tym pliku, poprawnie uporzdkowane i w
+
+15
+00:01:17,220 --> 00:01:19,010
+jednym poczonym pliku wyjciowym.
+
+16
+00:01:19,110 --> 00:01:22,840
+Jest to podstawowa funkcjonalno, ale, jak ju powiedziaem, jest to co
+
+17
+00:01:22,990 --> 00:01:26,780
+wicej, w midzyczasie istniej dwie inne wane cechy, ktre moemy wykorzysta.
+
+18
+00:01:26,940 --> 00:01:34,350
+Dla jednego s tak zwane adowarki, adowniki s stosowane na poziomie pliku, wic moemy na
+
+19
+00:01:34,660 --> 00:01:41,880
+przykad powiedzie, e wszystkie pliki javascript powinny by obsugiwane przez loaderX, wszystkie pliki css powinny
+
+20
+00:01:41,880 --> 00:01:49,740
+by obsugiwane przez loaderY, babel-loader i css-loader s dwa popularne przykady, ktre s uywane w wielu
+
+21
+00:01:49,740 --> 00:01:56,320
+projektach, wic adowarki s zalene od pliku lub stosuj transformacje zalene od plikw.
+
+22
+00:01:56,340 --> 00:02:03,030
+Mamy te wtyczki, w ktrych adowniki s nakadane na jeden plik, podcz
+
+23
+00:02:03,040 --> 00:02:09,330
+zamiast tego poczone pliki, wic pakiet, ale zanim zostanie zapisany na wyjciu.
+
+24
+00:02:09,360 --> 00:02:15,120
+Tutaj moemy zastosowa oglne transformacje lub optymalizacje, takie jak uglify, wic jest to
+
+25
+00:02:15,420 --> 00:02:20,950
+na poziomie globalnym i dzieje si po tym, jak adowarki wykonay swoj prac.
+
+26
+00:02:20,970 --> 00:02:24,950
+W ten sposb dziaa Webpack, co dzieje si za
+
+27
+00:02:25,110 --> 00:02:31,110
+kulisami i wszystko to jest skonfigurowane w pliku konfiguracyjnym Webpack, ktry skonfigurujemy razem
+
+28
+00:02:31,110 --> 00:02:32,510
+w tym module.
+
+29
+00:02:32,760 --> 00:02:37,920
+Wic bez dalszych cereggie zagbimy si w budowanie wasnego projektu.
+

@@ -1,0 +1,44 @@
+1
+00:00:02,390 --> 00:00:07,640
+Witaj w tym module. Omwilimy teraz wiele podstaw i wiele teorii na temat reakcji.
+
+2
+00:00:07,940 --> 00:00:13,660
+Na szczcie nie tylko teoria, z ktrej wszyscy zbudowalimy projekt, ale by to raczej projekt demonstracyjny.
+
+3
+00:00:13,670 --> 00:00:19,880
+Czas stworzy prawdziw aplikacj do ponownego dziaania, abymy mogli zobaczy wszystkie te koncepcje razem, aby
+
+4
+00:00:19,880 --> 00:00:26,570
+mg zorientowa si, jak faktycznie planujesz tak aplikacj i jak zbudowae to drzewo komponentw i z
+
+5
+00:00:26,930 --> 00:00:31,730
+powodzeniem wykorzystae wszystkie koncepcje, ktrych si nauczye do tej pory w aplikacji.
+
+6
+00:00:31,730 --> 00:00:33,870
+Tak wanie zrobimy w tym module.
+
+7
+00:00:33,890 --> 00:00:40,790
+Zamierzamy zbudowa aplikacj burgerow, a wic aplikacj, w ktrej moemy lub uytkownik moe dynamicznie budowa burgera
+
+8
+00:00:40,790 --> 00:00:47,510
+dodawa skadniki, a nastpnie koniec oczywicie wszystko, aby go kupi, rozpocznie si wraz z faz
+
+9
+00:00:47,510 --> 00:00:48,090
+planowania.
+
+10
+00:00:48,290 --> 00:00:52,220
+I to jest pierwsza rzecz, na ktr chc spojrze w nastpnym wykadzie.
+
+11
+00:00:52,340 --> 00:00:55,530
+Jak planujemy ponown aplikacj.
+

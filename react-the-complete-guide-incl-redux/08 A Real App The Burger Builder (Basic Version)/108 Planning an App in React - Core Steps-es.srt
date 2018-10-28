@@ -1,0 +1,128 @@
+1
+00:00:02,170 --> 00:00:07,660
+Ahora aprender toda la teora sobre cmo funcionan los componentes cmo pasa los datos sobre cmo funcionan los
+
+2
+00:00:07,660 --> 00:00:08,350
+accesorios, etc.
+
+3
+00:00:08,350 --> 00:00:12,760
+Y eso est muy bien, pero cmo se planifica una aplicacin de reactivacin?
+
+4
+00:00:12,760 --> 00:00:14,260
+Cmo funciona.
+
+5
+00:00:14,260 --> 00:00:18,470
+Ahora, por supuesto, puede dividir esto en pasos ms granulares y luego sin engaos.
+
+6
+00:00:18,490 --> 00:00:25,840
+Pero aqu hay tres pasos muy importantes que veo y paso con frecuencia cuando planifico una aplicacin de reactivacin.
+
+7
+00:00:25,930 --> 00:00:30,810
+El primer paso es planificar la estructura del componente componente.
+
+8
+00:00:30,880 --> 00:00:38,620
+bsicamente haya creado un diseo de aplicacin por su cuenta y ahora depende de usted dividirlo en componentes reactivos.
+
+9
+00:00:38,620 --> 00:00:42,760
+Es probable que haya sido diseado por su diseador o
+
+10
+00:00:42,760 --> 00:00:48,880
+Y es absolutamente normal que los resultados que pueda tener al final puedan parecer diferentes a los
+
+11
+00:00:48,880 --> 00:00:54,610
+componentes inicialmente planeados, pero es muy importante tener una idea sobre qu debe incluir su propio
+
+12
+00:00:54,700 --> 00:00:55,950
+componente y qu no.
+
+13
+00:00:56,110 --> 00:01:00,640
+La parte importante de su solicitud, por supuesto, es el estado de la aplicacin.
+
+14
+00:01:00,640 --> 00:01:06,820
+Todos los traductores pueden usar los datos que planea usar y manipular en su aplicacin, por ejemplo, y
+
+15
+00:01:06,830 --> 00:01:11,270
+por supuesto lo harn durante las prximas conferencias en nuestra aplicacin de Bergere.
+
+16
+00:01:11,350 --> 00:01:16,600
+eso determinar lo que debemos procesar y tambin lo que el usuario debe pagar al final.
+
+17
+00:01:16,600 --> 00:01:20,650
+Necesitamos hacer un seguimiento de los ingredientes que un usuario agreg porque
+
+18
+00:01:20,650 --> 00:01:27,280
+Ahora, una vez que sepa la descomposicin y la estructura de su aplicacin y declare que la va a utilizar,
+
+19
+00:01:27,280 --> 00:01:30,100
+no puede planificar componentes en lugar de contenedores.
+
+20
+00:01:30,190 --> 00:01:35,650
+Entonces, qu componentes de su aplicacin deberan ser aptridas o funcionales?
+
+21
+00:01:35,680 --> 00:01:42,690
+A veces tambin se los conoce como componentes tontos y qu componentes tienen que ser componentes completos del
+
+22
+00:01:42,700 --> 00:01:49,030
+estado creados con esa palabra clave de clase porque necesitan administrar algn estado y distribuirlo a
+
+23
+00:01:49,180 --> 00:01:52,910
+sus componentes ms blandos al estado con menos componentes.
+
+24
+00:01:52,960 --> 00:01:59,360
+Estos son los tres pasos que paso regularmente y estos son los pasos que quiero seguir con gabber.
+
+25
+00:01:59,590 --> 00:02:05,890
+Vamos a planificar nuestra estructura de componentes componentes y luego vamos a ver qu estado necesitamos
+
+26
+00:02:05,890 --> 00:02:10,540
+y qu puede ser un componente y qu debe ser un contenedor.
+
+27
+00:02:10,540 --> 00:02:13,570
+Y luego comenzaremos a construir la aplicacin.
+
+28
+00:02:13,600 --> 00:02:19,570
+Y como ver, incluso podramos agregar ms componentes de los inicialmente planeados porque vemos que
+
+29
+00:02:19,570 --> 00:02:21,320
+podemos dividirnos an ms.
+
+30
+00:02:21,370 --> 00:02:22,660
+O tal vez sea una divisin.
+
+31
+00:02:22,660 --> 00:02:27,650
+Planeamos no tiene sentido una vez que comenzamos a implementarlo y eso es perfectamente normal.
+
+32
+00:02:27,730 --> 00:02:29,950
+Pero tener un plan es, por supuesto, muy importante.
+

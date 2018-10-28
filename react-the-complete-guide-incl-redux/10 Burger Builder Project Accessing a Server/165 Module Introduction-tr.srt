@@ -1,0 +1,88 @@
+1
+00:00:02,110 --> 00:00:07,510
+Bergere Boulder Bergere Boulder artk olduka harika bir
+
+2
+00:00:07,510 --> 00:00:07,920
+proje.
+
+3
+00:00:07,930 --> 00:00:12,610
+Onunla birlikte bu tr bir uygulama iin ok kt gelmeyen burger retebiliriz.
+
+4
+00:00:12,610 --> 00:00:15,000
+imdi kontrol ve okumaya devam edebiliriz.
+
+5
+00:00:15,010 --> 00:00:19,240
+imdi bu tkladmzda hibir ey bu uyarnn dnda olur.
+
+6
+00:00:19,240 --> 00:00:24,430
+imdi son modlde, aslnda HTP isteklerini nasl gnderebileceimizi rendik.
+
+7
+00:00:24,430 --> 00:00:28,680
+Dolaysyla, bu sipariin gerekte saklanmas iin harika bir frsat gibi grnyor.
+
+8
+00:00:28,730 --> 00:00:35,570
+ve onlara bir gz atmamz gerektiini bildikten sonra sizi daha sonra uygulamanzda bulacak.
+
+9
+00:00:35,570 --> 00:00:40,840
+Artk mterilere bir sunucuya yerletirmek zereyken, tek sayfa uygulamamzda nasl
+
+10
+00:00:40,840 --> 00:00:42,280
+farkl sayfalar oluturacamz
+
+11
+00:00:42,490 --> 00:00:50,350
+Fakat imdi siparii saklamak ve siparilerimizi uygulamamzda artc bir ilerleme olacak ekilde almak iin.
+
+12
+00:00:50,350 --> 00:00:57,340
+Dolaysyla bu modelin amac arka plan uygulayacak, bylece emirlerimizi saklam ve bylece bunlar geri almann
+
+13
+00:00:57,580 --> 00:00:59,580
+bir yolunu bulmu oluyoruz.
+
+14
+00:00:59,710 --> 00:01:07,780
+Firebase firebase' kullanacamz arka utaki hikayemiz iin sayfamz yeniden yklendikten sonra bile Google tarafndan
+
+15
+00:01:07,780 --> 00:01:09,760
+sunulan bir hizmet.
+
+16
+00:01:09,970 --> 00:01:15,890
+Aslnda geri alyor ve bir veritaban ieren kutudan kt.
+
+17
+00:01:15,910 --> 00:01:22,840
+Serin bir ey, onu cretsiz olarak kullanabilmemiz ve bu ders projesinde uygulayacamz yakt miktar
+
+18
+00:01:22,840 --> 00:01:29,410
+iin cretsiz kalacamz ve tabii ki diskurlarn hakknda deil, herhangi bir sunucu taraf
+
+19
+00:01:29,440 --> 00:01:36,170
+kodu yazmamz gerekmiyor. ancak Firebase ile iletiim kurmamz dier arka ularla iletiim kurmamz gibidir.
+
+20
+00:01:36,190 --> 00:01:40,220
+Srtnz temsil eden ve projenizde de yle.
+
+21
+00:01:40,390 --> 00:01:47,080
+imdi bununla dalalm ve bir sonraki dersimize ateli en iyi projemi
+
+22
+00:01:47,110 --> 00:01:50,150
+hazrlayalm, bylece emirlerimizi burada saklayabiliriz.
+

@@ -1,0 +1,144 @@
+1
+00:00:02,120 --> 00:00:07,670
+In the last lecture I showed you how to add interceptors. Now sometimes, you don't want to intercept
+
+2
+00:00:07,670 --> 00:00:12,270
+the request but you want to set up some global configuration.
+
+3
+00:00:12,470 --> 00:00:18,420
+Let's say the URL you are sending the requests to in your application is always the same,
+
+4
+00:00:18,560 --> 00:00:25,040
+so it's always jsonplaceholder.typeicode in our case here and then slash something.
+
+5
+00:00:25,040 --> 00:00:27,840
+So that starting part is always the same
+
+6
+00:00:28,130 --> 00:00:34,040
+so it would be nice if we could cut it out here and just send the request to get posts and automatically
+
+7
+00:00:34,260 --> 00:00:37,980
+append this to some comments starting URL.
+
+8
+00:00:38,000 --> 00:00:44,100
+Turns out we can do that in the index.js file which is a good place because it runs first, it starts
+
+9
+00:00:44,100 --> 00:00:45,160
+to react app,
+
+10
+00:00:45,440 --> 00:00:52,040
+We can use axios and there access to defaults object to set up defaults which are true for all requests
+
+11
+00:00:52,070 --> 00:00:59,600
+which are being sent. And there we can define a baseURL and this URL will now be used, well
+
+12
+00:00:59,600 --> 00:01:05,420
+as the names suggests, as a baseURL to which the other paths are then simply appended.
+
+13
+00:01:05,450 --> 00:01:11,110
+Now with that set up here, whoops set by the way important should be baseURL with capital characters
+
+14
+00:01:11,130 --> 00:01:13,650
+here for the URL, casing is important here.
+
+15
+00:01:13,790 --> 00:01:18,480
+Now we already removed it from get all posts here in the block container,
+
+16
+00:01:18,680 --> 00:01:23,730
+now in new post, we can also get rid of it when posting data
+
+17
+00:01:24,110 --> 00:01:31,760
+and in the full post, there we have two places, one where we get to single post and one where we delete
+
+18
+00:01:31,840 --> 00:01:37,550
+the single post. So we can get rid of that starting URL everywhere and if we go back to the app, you
+
+19
+00:01:37,550 --> 00:01:39,440
+see it still loads, it still works,
+
+20
+00:01:39,440 --> 00:01:47,810
+everything still works fine here because we didn't really change the way we sent requests but we
+
+21
+00:01:47,810 --> 00:01:52,750
+made it a bit easier for us because of that global configuration.
+
+22
+00:01:52,760 --> 00:01:56,560
+Now you're also not limited to just setting the baseURL here,
+
+23
+00:01:56,720 --> 00:02:05,030
+you can also access defaults headers and there set a common header, so on that common object of authorization,
+
+24
+00:02:05,240 --> 00:02:11,450
+common headers are simply the general headers which are set for all types of requests, and there you could
+
+25
+00:02:11,450 --> 00:02:15,730
+set this to your auth token if you had one or whatever that is.
+
+26
+00:02:15,830 --> 00:02:23,350
+You can also set headers just for specific request types, like for post requests only where you maybe
+
+27
+00:02:23,370 --> 00:02:30,110
+want to set the content type you're sending to application.json, which you don't need to, that's the
+
+28
+00:02:30,120 --> 00:02:32,160
+default anyways, just to show this.
+
+29
+00:02:32,420 --> 00:02:38,420
+So now if you do this, if you go back to the application and you inspect the request which was sent, you
+
+30
+00:02:38,420 --> 00:02:42,620
+will see that under headers, we've got the authorization auth token
+
+31
+00:02:42,950 --> 00:02:50,570
+and for a post request here, if we do that, you will see that there if we inspect the request configuration
+
+32
+00:02:50,860 --> 00:02:53,810
+we got the authorization header and Content-Type
+
+33
+00:02:53,810 --> 00:02:55,970
+application.json.
+
+34
+00:02:55,970 --> 00:02:58,280
+So that's another cool feature of axios,
+
+35
+00:02:58,400 --> 00:03:04,640
+setting a default configuration which will be used application wide, super awesome,
+
+36
+00:03:04,640 --> 00:03:08,140
+helps you to optimize your code quite a lot.
+

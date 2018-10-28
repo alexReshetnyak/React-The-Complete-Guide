@@ -1,0 +1,36 @@
+1
+00:00:02,270 --> 00:00:08,290
+Estamos llegando al final de las funciones de reaccin central, creamos nuestra aplicacin de reaccin increble a lo
+
+2
+00:00:08,310 --> 00:00:12,830
+largo del curso e incluso agregamos un poco de prueba en el ltimo mdulo.
+
+3
+00:00:12,830 --> 00:00:19,230
+Ahora es el momento de implementar esta aplicacin para que realmente podamos verla ejecutar en algn lugar de Internet.
+
+4
+00:00:19,640 --> 00:00:21,470
+Entonces, al implementar aplicaciones de
+
+5
+00:00:21,470 --> 00:00:22,790
+reaccin, cmo funciona eso?
+
+6
+00:00:22,790 --> 00:00:24,820
+De qu tenemos que estar atentos?
+
+7
+00:00:24,830 --> 00:00:26,840
+Afortunadamente es muy fcil, estos son
+
+8
+00:00:26,840 --> 00:00:27,980
+los pasos y, por
+
+9
+00:00:27,980 --> 00:00:31,000
+supuesto, tambin te mostrar un ejemplo en este mdulo.
+

@@ -1,0 +1,308 @@
+1
+00:00:02,320 --> 00:00:06,310
+Podczas ostatnich wykadw przyjrzelimy si rekwizytom. Rekwizyty, po prostu obiekt,
+
+2
+00:00:06,340 --> 00:00:12,950
+ktry daje nam dostp do wszystkich atrybutw, ktre przekazujemy naszym wasnym komponentom.
+
+3
+00:00:13,050 --> 00:00:20,530
+Teraz czasami nie chcesz otrzymywa informacji z zewntrz, ale chcesz je mie wewntrz
+
+4
+00:00:20,590 --> 00:00:23,880
+komponentu i zmienia take z niego.
+
+5
+00:00:24,310 --> 00:00:35,220
+Tak na przykad tutaj, w naszej aplikacji. Plik js, powiedzmy, e chcemy rwnie doda przycisk, ktry po klikniciu
+
+6
+00:00:35,420 --> 00:00:38,850
+przecza jedn z nazw, ktrych tutaj uywamy.
+
+7
+00:00:38,920 --> 00:00:42,550
+Wic jeli po prostu umiecimy podpis Nazwa Przecznika, dobrze,
+
+8
+00:00:43,150 --> 00:00:47,160
+przyjdziemy do obsugi tego zdarzenia kliknicia w nastpnych wykadach.
+
+9
+00:00:47,320 --> 00:00:55,060
+Ale przede wszystkim musimy zdefiniowa te nazwy tutaj w sposb nieskodowany, teraz jest to zakodowane w naszym
+
+10
+00:00:55,060 --> 00:00:57,840
+kodzie jsx i jest to w
+
+11
+00:00:57,850 --> 00:01:04,720
+porzdku tutaj, ale jeli pniej chcemy to zmieni, musimy przechowywa je w jakiej zmiennej lub
+
+12
+00:01:04,720 --> 00:01:05,650
+co podobnego e.
+
+13
+00:01:06,070 --> 00:01:12,080
+C, faktycznie jest to klasa i klasa ma waciwoci, nie
+
+14
+00:01:12,130 --> 00:01:17,190
+dotyczy to tylko javascript, ale take innych jzykw programowania.
+
+15
+00:01:17,350 --> 00:01:22,790
+Moesz myle o wasnoci jako zmiennej klasy, wic w normalnym
+
+16
+00:01:22,810 --> 00:01:29,300
+kodzie javascript wystarczy napisa, e co w tym stylu rwna si pewnej wartoci.
+
+17
+00:01:30,710 --> 00:01:32,650
+To nie dziaa w
+
+18
+00:01:32,810 --> 00:01:38,710
+klasie, moesz tam po prostu napisa co rwnego jakiej wartoci, wic
+
+19
+00:01:38,940 --> 00:01:40,380
+troch krcej.
+
+20
+00:01:40,410 --> 00:01:48,030
+ale w kocu to samo mona powiedzie. Istnieje jedna specjalna waciwo, ktr moesz zdefiniowa w dowolnym
+
+21
+00:01:48,030 --> 00:01:49,630
+komponencie, ktry rozszerza komponent,
+
+22
+00:01:49,770 --> 00:01:52,360
+wic nie moesz tego zrobi osobicie,
+
+23
+00:01:52,380 --> 00:01:56,840
+moesz tutaj zdefiniowa waciwoci, poniewa jest to normalna funkcja, wic tutaj
+
+24
+00:01:56,850 --> 00:02:02,940
+musiaby uy pewnych staych lub niektrych zmiennych. Wci to, co robimy, dziaa
+
+25
+00:02:03,030 --> 00:02:07,480
+tylko w komponentach tworzonych przez rozszerzenie komponentu.
+
+26
+00:02:07,740 --> 00:02:17,340
+Tam moemy zdefiniowa specjalny stan nazwy waciwoci, podczas gdy rekwizyty s ustawiane i przekazywane z zewntrz jak nazwa
+
+27
+00:02:17,340 --> 00:02:24,900
+i wiek do komponentu osoby, stan jest zarzdzany z wntrza komponentu, a stan jest
+
+28
+00:02:24,900 --> 00:02:31,700
+dostpny tylko w komponentach, ktre s uywane przez rozszerzenie komponentu, ktry jest importowany
+
+29
+00:02:31,710 --> 00:02:35,480
+z reagowa, nie jest dostpny w komponentach funkcji.
+
+30
+00:02:35,760 --> 00:02:43,260
+Nadal powiniene uywa skadnikw funkcji tak czsto, jak to moliwe, poniewa powiniene uywa stanu ostronie, poniewa posiadanie stanu i wszystkich
+
+31
+00:02:43,680 --> 00:02:49,640
+skadnikw i manipulowanie nim z dowolnego miejsca w aplikacji sprawia, e twoja aplikacja staje si szybko
+
+32
+00:02:49,650 --> 00:02:54,580
+nieprzewidywalna i trudna w zarzdzaniu, zwaszcza gdy ronie, co oczywicie nie ma znaczenia.
+
+33
+00:02:54,660 --> 00:02:57,060
+nie znaczy, e nie powiniene go
+
+34
+00:02:57,120 --> 00:02:59,230
+uywa, ale tutaj ma to sens.
+
+35
+00:02:59,310 --> 00:03:05,050
+Inicjujemy go, przypisujc warto, a ta warto jest obiektem
+
+36
+00:03:05,070 --> 00:03:14,160
+javascript, ponownie jest to sowo zarezerwowane i powinnimy go uy, jeli chcemy dobrze zarzdza
+
+37
+00:03:14,250 --> 00:03:14,690
+niektrymi
+
+38
+00:03:14,690 --> 00:03:22,820
+wewntrznymi danymi komponentw, ktre powinnimy powiedzie. Wic teraz pastwo moe mie kilka osb, to zaley wycznie od
+
+39
+00:03:22,830 --> 00:03:28,980
+ciebie, po prostu tworz waciwo persons w tym obiekcie javascript i bdzie to tablica, i moesz ustawi
+
+40
+00:03:29,160 --> 00:03:36,210
+dowolny rodzaj danych, ktre chcesz w tym obiekcie stanu. Moesz ustawi waciwo nazwy, ktra jest
+
+41
+00:03:36,210 --> 00:03:40,940
+jaka nazwa, moesz naprawd zarzdza, co chcesz,
+
+42
+00:03:40,950 --> 00:03:44,090
+tutaj chc zarzdza szereg osb.
+
+43
+00:03:44,370 --> 00:03:52,050
+Teraz tablica tej osoby znowu jest tablic obiektw javascript, w ktrej kady obiekt ma nazw, moe
+
+44
+00:03:52,080 --> 00:04:00,720
+Max i wiek, moe 28, liczba tutaj, a nie cig, w przeciwiestwie do tam, gdzie przekazujemy cig, ale
+
+45
+00:04:00,720 --> 00:04:03,270
+liczba jest w porzdku std .
+
+46
+00:04:03,450 --> 00:04:07,510
+Chc te mie tu jeszcze jedn,
+
+47
+00:04:07,530 --> 00:04:11,970
+imi Manu i wiek 29, a
+
+48
+00:04:12,000 --> 00:04:19,130
+trzeci, jak si domylacie, dla Stephanie, ktra ma 26 lat.
+
+49
+00:04:19,240 --> 00:04:21,560
+Teraz jest to mj stan, moemy teraz
+
+50
+00:04:21,640 --> 00:04:24,860
+uzyska dostp do waciwoci takiej jak ta, i nie
+
+51
+00:04:24,910 --> 00:04:32,110
+jest to prawd tylko dla stanu, ale dla jakiejkolwiek waciwoci w naszej metodzie renderowania, po prostu wyprowadzajc co dynamicznego za
+
+52
+00:04:32,110 --> 00:04:41,570
+pomoc pojedynczych nawiasw klamrowych, jak si go nauczyo, a nastpnie tego sowa kluczowego. Odnosi si to do klasy z powodu naszej skadni ES6,
+
+53
+00:04:42,060 --> 00:04:45,360
+ktrej uywamy, a na naszej klasie mamy
+
+54
+00:04:45,730 --> 00:04:52,530
+metod renderowania, ktr moglibymy nazwa, nie powinnimy tego robi, chocia reagujemy na to, ale
+
+55
+00:04:52,540 --> 00:04:54,550
+mamy waciwo stanu.
+
+56
+00:04:54,640 --> 00:04:59,200
+Jak ju powiedziaem, moesz take zdefiniowa swoje wasne waciwoci, ale stany s wyjtkowe, czego
+
+57
+00:04:59,200 --> 00:05:00,880
+nauczysz si podczas kolejnych wykadw.
+
+58
+00:05:00,880 --> 00:05:06,510
+Tak wic moemy wtedy uzyska dostp do tego stanu i stanu, moja
+
+59
+00:05:06,610 --> 00:05:12,580
+tablica osb moe by pierwszym elementem za pomoc indeksu 0, a nastpnie nazwy.
+
+60
+00:05:12,850 --> 00:05:20,080
+Wic zamiast kodowania twardego, mam teraz dostp do tej waciwoci w tym obiekcie tutaj w
+
+61
+00:05:20,260 --> 00:05:22,520
+tablicy osb we waciwoci stanu.
+
+62
+00:05:22,540 --> 00:05:29,400
+Teraz skopiuj ten kod tutaj i zastpi go take swoim wiekiem, tam oczywicie chc uzyska dostp
+
+63
+00:05:29,440 --> 00:05:31,910
+do waciwoci wieku, a ja powtrz
+
+64
+00:05:32,930 --> 00:05:34,920
+to dla Manu, ale
+
+65
+00:05:34,950 --> 00:05:37,810
+tutaj jest to oczywicie pierwszy element,
+
+66
+00:05:37,850 --> 00:05:44,870
+drugi element z indeksem jeden w tej tablicy. A dla wieku bd take mia dostp
+
+67
+00:05:44,900 --> 00:05:51,540
+do elementu pierwszego i oczywicie do wieku. I dla Stephanie prawdopodobnie to odgade, indeks
+
+68
+00:05:51,710 --> 00:05:59,870
+drugi, a take dla indeksu wieku i wasnoci wieku. Z tym, jeli to zapiszemy i wrcimy do aplikacji,
+
+69
+00:06:00,170 --> 00:06:02,240
+zobaczymy przycisk, ktry nic nie
+
+70
+00:06:02,420 --> 00:06:07,570
+robi i widzimy to samo wyjcie jak poprzednio, tym razem przy
+
+71
+00:06:07,700 --> 00:06:09,650
+uyciu waciwoci, wasnoci stanu.
+
+72
+00:06:09,650 --> 00:06:12,810
+Teraz powiedziaem, e stan bdzie specjaln wasnoci, ale
+
+73
+00:06:12,830 --> 00:06:21,920
+jak dotd nie uywamy go w szczeglny sposb, ale moemy to zmieni. Pastwo moe zosta zmienione, a jeli si zmieni i
+
+74
+00:06:21,950 --> 00:06:26,510
+to jest wyjtkowa rzecz i dziaa tylko na tej
+
+75
+00:06:26,510 --> 00:06:35,880
+wasnoci pastwowej, jeli si zmieni, to doprowadzi to do ponownego renderowania naszej domeny lub do aktualizacji domeny, ktr powinienem powiedzie.
+
+76
+00:06:36,230 --> 00:06:45,380
+Jeli wic zmienimy na przykad nazw Max na przykad, doprowadzi to do ponownego renderowania i
+
+77
+00:06:45,620 --> 00:06:51,660
+poka ci, jak sucha zdarze, takich jak kliknicie tego przycisku.
+

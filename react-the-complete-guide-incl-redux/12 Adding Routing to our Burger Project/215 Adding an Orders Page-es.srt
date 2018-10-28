@@ -1,0 +1,256 @@
+1
+00:00:02,180 --> 00:00:08,730
+Vamos a trabajar en la pgina de mis pedidos y reenviarlo todo, cree una nueva carpeta
+
+2
+00:00:08,740 --> 00:00:13,610
+en la carpeta de contenedores, asgnele un nombre y obviamente crear rdenes.
+
+3
+00:00:13,640 --> 00:00:20,490
+J. S. cada que debe contener o se crearn 40 rdenes con la clase de palabra clave de la clase.
+
+4
+00:00:20,510 --> 00:00:29,360
+El pedido extiende el componente es codificar y quiere escribir all y all todas las importaciones reaccionan y el
+
+5
+00:00:29,840 --> 00:00:32,480
+componente Q puede crear un componente.
+
+6
+00:00:32,480 --> 00:00:37,850
+De esta forma, y luego toda la exportacin, Klosters ordena clases o der.
+
+7
+00:00:37,880 --> 00:00:44,690
+Cl. disclpeme ordena las leyes como el valor predeterminado ahora all obviamente
+
+8
+00:00:44,690 --> 00:00:48,870
+tendremos un mtodo de renderizado donde devolvemos el JS X para este componente.
+
+9
+00:00:48,950 --> 00:00:55,070
+La pregunta, por supuesto, es qu queremos presentar all y cul es el resultado de mis pedidos en
+
+10
+00:00:55,070 --> 00:00:56,040
+esta pgina, obviamente.
+
+11
+00:00:56,110 --> 00:01:03,400
+Para eso crear un nuevo componente en la carpeta de componentes de orden, el componente de orden mismo ordenar
+
+12
+00:01:03,410 --> 00:01:11,840
+J como una orden C S S de Dud y ahora, por supuesto, la pregunta es cmo debera ser una orden nica
+
+13
+00:01:11,990 --> 00:01:12,920
+en esta pgina.
+
+14
+00:01:13,280 --> 00:01:20,720
+Bueno, lo tratar como una funcin. Recibir accesorios y devolver MJM x.
+
+15
+00:01:20,750 --> 00:01:28,850
+desde volver a actuar aqu y exportamos estas funciones para caer en default con ese orden debera ser un div que recibir un
+
+16
+00:01:29,720 --> 00:01:36,530
+poco de estilo y el final del curso y simplemente quiero mostrar los ingredientes y el precio aqu .
+
+17
+00:01:36,530 --> 00:01:39,120
+Obviamente, como siempre importamos volver a actuar
+
+18
+00:01:39,130 --> 00:01:49,790
+Digamos que quiero tener algo como un prrafo aqu en ese prrafo. Podra decir ingredientes
+
+19
+00:01:50,720 --> 00:01:51,490
+colon.
+
+20
+00:01:51,560 --> 00:01:57,600
+Y luego tengo dos ingredientes como ensalada y luego entre parntesis despus de DDM como
+
+21
+00:01:57,620 --> 00:01:59,340
+1 o algo as.
+
+22
+00:01:59,840 --> 00:02:08,540
+Y luego podra tener algo como las puntas de los precios en un prrafo y en un texto fuerte para enfatizarlo,
+
+23
+00:02:08,930 --> 00:02:18,500
+entonces el valor como US dollar 5 dot 45 es cmo debera verse una orden y, por supuesto, los ingredientes y el precio
+
+24
+00:02:18,500 --> 00:02:20,990
+de algo que necesitar para recibir.
+
+25
+00:02:20,990 --> 00:02:25,090
+Por qu son accesorios, as que necesito un poco de estilo sin embargo.
+
+26
+00:02:25,240 --> 00:02:29,540
+Todos los pedidos se ven como Claassen el orden de ver es el siguiente.
+
+27
+00:02:29,780 --> 00:02:33,640
+Los pedidos deben abarcar todo el ancho, digamos.
+
+28
+00:02:33,890 --> 00:02:42,860
+Entonces, con el 100 por ciento quiero tener un borde de un pxel slido y es de color gris, y agregar una
+
+29
+00:02:42,860 --> 00:02:52,240
+sombra de cuadro de pxel libre de 0 2 pxeles y este color gris cambiar el color del borde a uno ligeramente ms brillante.
+
+30
+00:02:53,340 --> 00:02:57,590
+Todos agregan algo de relleno. 10 pxeles agregan un margen.
+
+31
+00:02:57,600 --> 00:03:06,330
+Digamos 10 pxeles en la parte superior e inferior, pero no en dos, a la izquierda y a la derecha en establecer el tamao de la caja en el
+
+32
+00:03:06,330 --> 00:03:13,300
+borde del cuadro para que el relleno est incluido en el tamao de la caja y con esto debera ser un orden agradable.
+
+33
+00:03:13,310 --> 00:03:21,250
+Ahora puedo importar las clases de este C-s de la siguiente manera de los pedidos C es el siguiente.
+
+34
+00:03:21,650 --> 00:03:23,330
+Y los asign aqu.
+
+35
+00:03:23,330 --> 00:03:28,260
+As que el nombre de la clase ahora puede ser el orden de Pensius Clausius.
+
+36
+00:03:28,370 --> 00:03:33,100
+As que as es como debe verse una orden en el componente de pedidos.
+
+37
+00:03:33,110 --> 00:03:40,430
+Siempre quiero dar salida a mltiples pedidos en realidad tantos pedidos como sea necesario y los pedidos que necesito para la
+
+38
+00:03:40,430 --> 00:03:43,490
+salida del curso deben ser obtenidos desde el back-end.
+
+39
+00:03:43,550 --> 00:03:44,540
+Ahora para eso.
+
+40
+00:03:44,630 --> 00:03:46,310
+Primero que todo ve a Firebase.
+
+41
+00:03:46,340 --> 00:03:51,640
+Y de hecho voy a limpiar mis pedidos aqu porque tengo tantos.
+
+42
+00:03:51,860 --> 00:03:57,080
+Para facilitar esto, eliminar todo el nodo de pedidos y simplemente crear algunos nuevos all despus
+
+43
+00:03:57,500 --> 00:04:02,440
+de que todo lo dicho se rena con Siria Gansevoort comenzamos con una hamburguesa vaca.
+
+44
+00:04:02,510 --> 00:04:09,410
+Ahora con eso regresemos a la aplicacin y aqu en el componente de pedidos, por ahora solo damos
+
+45
+00:04:09,410 --> 00:04:11,590
+salida a 1 pedido de Dhami.
+
+46
+00:04:11,660 --> 00:04:13,880
+Entonces importe ese componente de orden.
+
+47
+00:04:13,880 --> 00:04:20,690
+Acabamos de crear y luego navegar en la carpeta de componentes a la carpeta de pedidos y tomar ese orden.
+
+48
+00:04:20,690 --> 00:04:24,140
+JS archivo y luego ests en James X. Como dije aqu tendr a Dave envuelto alrededor de esta pgina y en realidad solo hay salida.
+
+49
+00:04:24,290 --> 00:04:31,110
+Digamos dos rdenes hoy que podemos ver cmo se ve.
+
+50
+00:04:31,340 --> 00:04:35,090
+Ahora antes de poblar esto con datos reales.
+
+51
+00:04:35,090 --> 00:04:38,140
+Carguemos esta ruta y, por supuesto, deberamos
+
+52
+00:04:38,240 --> 00:04:45,700
+cargar la pgina de pedidos en lugar del generador de hamburguesas o la pgina de pago.
+
+53
+00:04:45,690 --> 00:04:47,240
+As que es en la aplicacin
+
+54
+00:04:47,480 --> 00:04:52,990
+de la cada del Che donde establecemos las rutas donde todos quieren establecer una ruta para reenviar pedidos para pap.
+
+55
+00:04:53,120 --> 00:04:55,140
+En primer lugar, los pedidos de importacin desde contenedores de barra diagonal reducen las rdenes de corte de barras.
+
+56
+00:04:55,160 --> 00:05:05,440
+J. S. Y luego agregar esta nueva ruta, digamos rdenes de corte.
+
+57
+00:05:05,440 --> 00:05:07,070
+Quiero ir al componente de pedidos que est fuera de una aplicacin.
+
+58
+00:05:07,410 --> 00:05:12,560
+S.
+
+59
+00:05:12,720 --> 00:05:16,990
+Ahora, para ver cul ser su ruta, tendr que hacer algo que an no hemos hecho.
+
+60
+00:05:17,040 --> 00:05:18,100
+Tenemos que agregar un enlace.
+
+61
+00:05:18,330 --> 00:05:22,890
+Y para eso tenemos que tocar nuestros artculos de navegacin aqu.
+
+62
+00:05:23,040 --> 00:05:25,120
+Hagamos esto en la prxima conferencia.
+
+63
+00:05:25,290 --> 00:05:29,850
+&nbsp;
+
+64
+00:05:30,000 --> 00:05:32,520
+&nbsp;
+

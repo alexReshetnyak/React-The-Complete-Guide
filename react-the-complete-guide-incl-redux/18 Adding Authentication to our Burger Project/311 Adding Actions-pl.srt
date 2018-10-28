@@ -1,0 +1,284 @@
+1
+00:00:02,150 --> 00:00:05,970
+Upewnijmy si wic, e po przyciniciu tego przycisku dzieje
+
+2
+00:00:06,110 --> 00:00:11,990
+si co uytecznego, dodam, e dodam twrcw akcji, poniewa oczywicie chc wysa akcj
+
+3
+00:00:12,590 --> 00:00:14,870
+po jej naciniciu. Wic w
+
+4
+00:00:14,870 --> 00:00:22,940
+folderze akcji mojego sklepu dodam nowy plik auth . js i tam chc ustawi akcje zwizane
+
+5
+00:00:23,000 --> 00:00:29,720
+z uwierzytelnianiem, teraz ustawi te niektre typy akcji w pliku typw
+
+6
+00:00:29,720 --> 00:00:30,510
+akcji,
+
+7
+00:00:30,590 --> 00:00:38,610
+wyeksportuj je, a dodaj typ akcji AUTH_START, dlatego te jest AUTH_START, a potem
+
+8
+00:00:38,750 --> 00:00:42,210
+dwukrotnie go dwukrotnie, aby rwnie utworzy
+
+9
+00:00:42,230 --> 00:00:45,640
+typ dziaania AUTH_SUCCESS i typ dziaania
+
+10
+00:00:45,710 --> 00:00:50,340
+AUTH_FAIL, poniewa oczywicie uwierzytelnianie moe rwnie zawie.
+
+11
+00:00:50,930 --> 00:00:51,390
+&nbsp;
+
+12
+00:00:51,400 --> 00:01:01,480
+Teraz w auth. js, zaimportuj wszystkie typy dziaa z typw dziaania. / actionTypes, a nastpnie chc
+
+13
+00:01:01,480 --> 00:01:05,540
+utworzy kilku twrcw akcji, wyeksportuj je wszystkie.
+
+14
+00:01:05,680 --> 00:01:10,410
+Pierwszym z nich jest AUTH_START, twrca akcji, sprawi, e bdzie to
+
+15
+00:01:10,450 --> 00:01:12,870
+oczywicie funkcja, ja waciwie nie dam
+
+16
+00:01:12,970 --> 00:01:16,960
+ani nie wymagam adnych wej tutaj, po prostu chc
+
+17
+00:01:17,020 --> 00:01:24,580
+zwrci obiekt javascript, w ktrym typem jest typ actionTypes. AUTH_START, nie przekazuj tutaj adnego adunku,
+
+18
+00:01:24,730 --> 00:01:27,040
+zasadniczo uyj tej
+
+19
+00:01:27,070 --> 00:01:34,710
+akcji, aby ustawi stan adowania i ewentualnie pokaza spinner, jeli chc.
+
+20
+00:01:34,750 --> 00:01:39,120
+Nastpnie dodam const, authSuccess, ta funkcja
+
+21
+00:01:39,150 --> 00:01:45,150
+tutaj dostanie troch danych, auth danych i tutaj chc
+
+22
+00:01:45,490 --> 00:01:52,530
+rwnie zwrci obiekt javascript, typ bdzie typu AUTH_SUCCESS, oczywicie i
+
+23
+00:01:52,900 --> 00:01:55,480
+przeka dane auth ,
+
+24
+00:01:55,510 --> 00:02:01,920
+zobaczymy, co bdzie pniej. Teraz potrzebujemy innego twrcy
+
+25
+00:02:02,010 --> 00:02:04,230
+akcji tutaj, AUTH_FAIL,
+
+26
+00:02:04,290 --> 00:02:10,420
+tutaj dostaniemy potencjalnego bdu i zwrc tutaj take
+
+27
+00:02:10,680 --> 00:02:19,880
+obiekt javascript, typem bdzie actionTypes. AUTH_FAIL i ja przekaemy
+
+28
+00:02:19,890 --> 00:02:27,400
+bd, tak jak to. Na koniec dodam jeden ostatni typ akcji,
+
+29
+00:02:27,400 --> 00:02:28,680
+ktry bdzie
+
+30
+00:02:28,690 --> 00:02:30,930
+tym, ktry trzyma kod
+
+31
+00:02:30,960 --> 00:02:37,840
+asynchroniczny, wykonujcy uwierzytelnianie. Po prostu nadam mu nazw, tutaj spodziewam si otrzyma e-mail
+
+32
+00:02:37,840 --> 00:02:40,810
+i haso, a nastpnie zwrc wysyk,
+
+33
+00:02:40,870 --> 00:02:47,880
+wic funkcja, ktra dostaje spedycj jako argument dziki redux-thunk i tam, teraz chc uwierzytelni uytkownika.
+
+34
+00:02:47,890 --> 00:02:55,370
+Teraz na razie wyl tutaj authStart, aby przynajmniej ustawi ten stan, teraz oczywicie musimy poczy nasze
+
+35
+00:02:55,580 --> 00:03:02,210
+dziaania z naszymi kontenerami, abymy mogli je wysa, wic udam si do kontenera auth
+
+36
+00:03:02,690 --> 00:03:09,100
+i tam, chc zaimportowa moje dziaania. Aby to zrobi, dodam moich auth
+
+37
+00:03:09,110 --> 00:03:13,260
+action twrcw do indeksu. plik js, w ktrym
+
+38
+00:03:13,300 --> 00:03:17,790
+pakuj wszystkie moje eksporty z tego folderu dziaa.
+
+39
+00:03:18,140 --> 00:03:24,520
+Wic wyeksportuj wszystko, czego potrzebuj. / auth bez rozszerzenia pliku
+
+40
+00:03:24,620 --> 00:03:27,350
+i teraz, tak naprawd
+
+41
+00:03:27,540 --> 00:03:31,130
+jest to tylko metoda auth.
+
+42
+00:03:31,130 --> 00:03:37,130
+Teraz moemy powrci do kontenera auth i zaimportowa wszystkie akcje tutaj, wic
+
+43
+00:03:37,340 --> 00:03:40,680
+zaimportuj wszystko jak akcje od, a
+
+44
+00:03:40,730 --> 00:03:49,970
+teraz przejdmy do sklepu, do akcji i do indeksu. js, a teraz moemy doda nasz star
+
+45
+00:03:49,970 --> 00:03:59,100
+sta const mapDispatchToProps, aby mc wysa co tutaj przez rekwizyty w tym komponencie.
+
+46
+00:03:59,820 --> 00:04:07,340
+Tak jak zawsze, zwrc obiekt javascript i tam chc utworzy protok onAuth, ktry mog wykorzysta
+
+47
+00:04:07,340 --> 00:04:15,660
+jako metod, ktra w zwizku z tym zawiera odniesienie do metody, w ktrej ostatecznie wyl moje dziaanie
+
+48
+00:04:15,870 --> 00:04:19,020
+i chc wysa akcj auth .
+
+49
+00:04:19,050 --> 00:04:24,240
+Teraz, kiedy zobaczye, e to ustawilimy, akcja auth wymaga e-maila i
+
+50
+00:04:24,240 --> 00:04:31,140
+hasa, wic spodziewam si, e otrzymam to tutaj, gdy wykonamy t waciwo w zasadzie,
+
+51
+00:04:31,140 --> 00:04:38,410
+tak, e mog j przekaza podczas wykonywania auth. mapDispatchToProps ma sens tylko wtedy, gdy poczymy go
+
+52
+00:04:38,700 --> 00:04:43,490
+z tym kontenerem, wic teraz zaimportuj poczenie z react-redux, abymy mogli
+
+53
+00:04:43,740 --> 00:04:52,400
+to zrobi, wic importuj poczenie z react-redux, tak jak to. Dziki temu moemy wrci do koca pliku i
+
+54
+00:04:52,400 --> 00:05:00,280
+teraz wykona connect i przekaza null dla mapStateToProps, poniewa nie mamy tego jeszcze, a mapDispatchToProps
+
+55
+00:05:00,280 --> 00:05:02,710
+jako drugi argument, a ja
+
+56
+00:05:02,960 --> 00:05:06,170
+oczywicie rwnie zawinie mj kontener auth.
+
+57
+00:05:06,500 --> 00:05:12,710
+Dziki temu moemy wykona onAuth na naszych rekwizytach w tym kontenerze i chc to zrobi za kadym razem, gdy
+
+58
+00:05:12,710 --> 00:05:13,760
+formularz zostanie przesany.
+
+59
+00:05:14,090 --> 00:05:22,200
+Dodam tutaj handler onSubmit i wykonam procedur obsugi submitw, dodam
+
+60
+00:05:22,250 --> 00:05:25,420
+t metod do tego
+
+61
+00:05:25,610 --> 00:05:33,650
+kontenera, handler'a submit. Spodziewam si, e wydarzenie si tam pojawi, poniewa przede wszystkim musz zadzwoni na wydarzenie. Zapobiegnij Defaultowi, aby zapobiec
+
+62
+00:05:33,710 --> 00:05:42,590
+przeadowaniu strony, a potem, chc nazwa te rekwizyty, onAuth i wykona je, i oczywicie
+
+63
+00:05:42,590 --> 00:05:43,470
+musz
+
+64
+00:05:43,490 --> 00:05:46,010
+przekaza e-mail i haso,
+
+65
+00:05:46,160 --> 00:05:56,130
+wic sign po to. stan. kontroluje warto e-mail i to. stan. kontroluje warto hasa.
+
+66
+00:05:57,610 --> 00:06:02,070
+Z tym, uratujmy to i zobaczmy, czy to dziaa.
+
+67
+00:06:02,110 --> 00:06:10,080
+Wracajc do naszego projektu, mog wprowadzi tutaj adres e-mail i haso, jeli klikn przycisk submit
+
+68
+00:06:10,080 --> 00:06:15,060
+i przejd do redux, widzimy, e authStart zosta pomylnie wywoany.
+
+69
+00:06:15,060 --> 00:06:18,200
+To dziaa, ale oczywicie nic innego jeszcze nie dziaa.
+
+70
+00:06:18,240 --> 00:06:24,480
+Nastpnym krokiem jest uruchomienie kodu asynchronicznego, ktry faktycznie si uwierzytelnia i jak ju powiedziaem,
+
+71
+00:06:24,480 --> 00:06:26,550
+zrobimy to za pomoc firebase.
+

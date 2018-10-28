@@ -1,0 +1,60 @@
+1
+00:00:02,220 --> 00:00:09,330
+Bem-vindo a este mdulo, voc aprendeu muito sobre react, redux e todos os recursos principais de ambas as bibliotecas.
+
+2
+00:00:09,600 --> 00:00:12,410
+Ns construmos uma aplicao incrvel com todas essas ferramentas.
+
+3
+00:00:12,510 --> 00:00:18,690
+Mas uma coisa est faltando, uma coisa que no est realmente relacionada a reagir necessariamente, mas
+
+4
+00:00:18,690 --> 00:00:22,110
+o que voc tem em muitos aplicativos, autenticando usurios.
+
+5
+00:00:22,470 --> 00:00:28,400
+E quero mostrar a voc como isso funcionaria em um aplicativo de pgina nica, aplicativo de
+
+6
+00:00:28,470 --> 00:00:33,600
+pgina nica, porque se voc tiver um aplicativo de vrias pginas no qual renderizar
+
+7
+00:00:33,600 --> 00:00:40,200
+pginas diferentes para solicitaes diferentes do servidor, voc manipular a autenticao da maneira tradicional de ter uma sesso
+
+8
+00:00:40,470 --> 00:00:46,740
+no servidor e retornando pginas diferentes aps verificar a validade do usurio ou o status de autenticao
+
+9
+00:00:46,740 --> 00:00:47,470
+no servidor.
+
+10
+00:00:47,550 --> 00:00:53,730
+Agora, a coisa especial sobre autenticao no reagir  que voc tem apenas um arquivo e depois
+
+11
+00:00:53,730 --> 00:00:55,200
+disso, voc no obtm
+
+12
+00:00:55,350 --> 00:01:02,970
+nenhum novo arquivo, ento voc pode verificar o status de autenticao do usurio no servidor, mas no em cada solicitao, pelo
+
+13
+00:01:02,970 --> 00:01:04,780
+menos no no modelo tradicional .
+
+14
+00:01:04,980 --> 00:01:08,020
+Ento  isso que vamos dar uma olhada, como isso
+
+15
+00:01:08,070 --> 00:01:12,030
+funciona para reagir e, claro, tambm implementaremos a autenticao em nosso projeto de hambrguer.
+

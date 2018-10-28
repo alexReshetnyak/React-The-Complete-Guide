@@ -1,0 +1,216 @@
+1
+00:00:02,220 --> 00:00:06,240
+Bu nedenle son derslerde eylem yaratclarmz ekledik.
+
+2
+00:00:06,240 --> 00:00:08,750
+u anda sadece sadelik kodu ile urayoruz.
+
+3
+00:00:08,910 --> 00:00:13,580
+Ancak elbette ki fikrin AYSON ve Rose kodunu orada kullanmas gerektiini belirtmek isterim.
+
+4
+00:00:13,620 --> 00:00:19,830
+En azndan bunu yapmadan nce emirleri ele almaya gelince, bileenimizi bileenden
+
+5
+00:00:19,830 --> 00:00:26,710
+getirmek iin kullandmz burger Buhler konteynrnda hemen altrabildiimiz bir para asenkron kod alyoruz
+
+6
+00:00:26,730 --> 00:00:31,720
+ve bunu okumaya getiimizde bunu geici olarak saladk x.
+
+7
+00:00:31,960 --> 00:00:34,500
+imdi tekrar vereceim zaman.
+
+8
+00:00:34,800 --> 00:00:37,470
+Ve alabileceiniz iki gzergah var.
+
+9
+00:00:37,470 --> 00:00:42,750
+Bize ulatmz eski kodu ve bileeni, veriyi aldmz gvenlik
+
+10
+00:00:43,290 --> 00:00:50,910
+duvar arka ucumuza yorumlayabilir ve burada bu kme durumunu armak yerine, bazlarn reducto
+
+11
+00:00:50,910 --> 00:00:55,230
+deposundaki maddelerimizi gncelleyen eylem hazrlamak zere gnderebilirsiniz.
+
+12
+00:00:55,350 --> 00:01:01,980
+Ardndan, bileeninizdeki ezamz kodunu altrrsnz ve gerekte oluturuculara hi ihtiyacnz olmaz nk
+
+13
+00:01:01,980 --> 00:01:04,470
+sonunda yalnzca normal ilemleri gnderirsiniz.
+
+14
+00:01:04,470 --> 00:01:11,130
+Yant, mkemmel bir ekilde yaplmas gzel olan yant deil, fakat ection yaratclarnn arkasndaki
+
+15
+00:01:11,130 --> 00:01:14,590
+fikir, redksiyon dnyasna async kodunuzu koyabilmenizdir.
+
+16
+00:01:14,670 --> 00:01:20,340
+kacam ve NPM kurulum izgi izgi ile tm kurulum redoks izgi phunk'n kaydedeceim.
+
+17
+00:01:20,340 --> 00:01:27,870
+Ve daha nce de belirttiim gibi burada almak istediim rota bu yzden ncelikle redux phunk'u kurmam gerekiyor, bylece
+
+18
+00:01:27,900 --> 00:01:29,200
+NPM balatma srecinden
+
+19
+00:01:29,430 --> 00:01:36,510
+Bu, asenkron kod ve eylem yaratclarn, gnderme eyleminin etrafnda sarmalayan ara katman
+
+20
+00:01:36,600 --> 00:01:42,180
+sayesinde ve azing kod tamamlanncaya kadar istei engellediinden, NPM
+
+21
+00:01:42,180 --> 00:01:49,100
+balatma ilemini yeniden balatp imdi yeniden eklemek isteyebileceimiz bu ara katman. katman.
+
+22
+00:01:49,110 --> 00:01:52,320
+yleyse ne yapacam hepsi endekste balyor.
+
+23
+00:01:52,510 --> 00:01:54,450
+Evet stte.
+
+24
+00:01:54,450 --> 00:01:57,450
+e aktarma ie aktarmay ekleyeceim.
+
+25
+00:01:57,480 --> 00:02:04,890
+Rydex func'dan istediinizi adlandrabilirsiniz ve u an kullandnz bu Funt, Middleware Uygula's
+
+26
+00:02:04,890 --> 00:02:05,850
+ile eklenmelidir.
+
+27
+00:02:05,940 --> 00:02:10,980
+Bu yzden redoksdan bir ey getireceim ve bunun bir ey katman yazlm olduunu sylyor.
+
+28
+00:02:11,250 --> 00:02:17,760
+Ve ayrca, zerinde d dev aralar var nk biz de alp import
+
+29
+00:02:17,790 --> 00:02:20,030
+aralarmz ayarlamamz gerektiini reneceksiniz.
+
+30
+00:02:20,310 --> 00:02:26,680
+gereken kurulumun, redoks paketinden dbx dev tools deikenini veya yerli kompozisyon fonksiyonunu kullandmz
+
+31
+00:02:26,770 --> 00:02:33,950
+bir yant eyi oluturduu ve daha sonra olutur ve aktarma fonksiyonuyla maazamz yarattmz grmek iin
+
+32
+00:02:34,350 --> 00:02:40,410
+yeniden oluturabiliriz Bu da bize ara katmann bir argman olarak uygulanmasn salad.
+
+33
+00:02:40,470 --> 00:02:43,010
+Deftones sayfasna tekrar danabiliriz, kullanmamz
+
+34
+00:02:43,440 --> 00:02:45,170
+Kurulum da burada ok kullanyor mu?
+
+35
+00:02:45,390 --> 00:02:52,240
+Bu kodu, yalnzca bu deikene veya onu alan ie aktarma ilevine eritiim
+
+36
+00:02:52,240 --> 00:02:59,180
+yer iin burada saklamak iin hazrlama sayfasndaki kodu kopyalayp dizin paylamlarna yaptracam.
+
+37
+00:02:59,180 --> 00:02:59,420
+&nbsp;
+
+38
+00:02:59,550 --> 00:03:05,700
+Oluturmann, kendi gelitiriciler grubumuzu oluturmamza izin verdiini ve katman aracnn yalnzca bir eit zenginletirici
+
+39
+00:03:05,700 --> 00:03:06,410
+olduunu unutmayn.
+
+40
+00:03:06,450 --> 00:03:08,490
+Def aletleri baka bir rnek olurdu.
+
+41
+00:03:08,880 --> 00:03:12,760
+Dolaysyla, kompozisyon yantlarmz sabit tutuldu.
+
+42
+00:03:12,780 --> 00:03:14,860
+imdi kalk sayfasna bir gz atalm.
+
+43
+00:03:14,910 --> 00:03:19,930
+Maazay geerek yaratmalyz ve sonra gei orta katman bir argman olarak uyguluyoruz.
+
+44
+00:03:20,070 --> 00:03:25,600
+yleyse, hadi hadi bunu yapalm, maazay yaratmak iin ikinci bir argman olarak aktardmz eski
+
+45
+00:03:25,620 --> 00:03:30,220
+koddan kurtulalm ve burada kompozisyon ve cevaplar bir ilev olarak kullanalm.
+
+46
+00:03:30,330 --> 00:03:35,120
+imdi bu ileve okumak biraz daha kolay hale getirmek iin bunu yeni bir satra koyacam.
+
+47
+00:03:35,340 --> 00:03:36,250
+Ben almayaym.
+
+48
+00:03:36,270 --> 00:03:41,500
+Katman yazlmn uygulayn ve ara katman yazlmn gemiteki tm phunk uygulamak iin kullann.
+
+49
+00:03:41,550 --> 00:03:47,200
+Aadaki veri func ile uygulamak istiyorum burada kilidini ve iyi almas gereken kilidi.
+
+50
+00:03:47,240 --> 00:03:49,650
+Dev aralar tm hala iyi almaldr.
+
+51
+00:03:49,650 --> 00:03:53,130
+Sayfay yeniden yklersek yine de onlar grmeliyiz iyi grnyor.
+
+52
+00:03:53,430 --> 00:03:57,680
+imdi, eylem yaratclarmza uyumsuz kod yazmaya balayabiliriz.
+
+53
+00:03:57,840 --> 00:04:01,590
+Maddeleri getirmek iin bunu yapalm.
+
+54
+00:04:01,590 --> 00:04:03,570
+Bir sonraki ders ekleyebiliriz.
+

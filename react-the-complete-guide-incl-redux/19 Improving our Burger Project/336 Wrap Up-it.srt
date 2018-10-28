@@ -1,0 +1,40 @@
+1
+00:00:02,170 --> 00:00:08,380
+Con il caricamento pigro aggiunto, abbiamo completato l'ottimizzazione del nostro progetto. Sentiti libero di fare di pi, organizzare le
+
+2
+00:00:08,380 --> 00:00:13,400
+tue cartelle in modo diverso o esternalizzare pi funzioni in funzioni di aiuto.
+
+3
+00:00:13,420 --> 00:00:20,020
+Penso che abbiamo un'applicazione ottimizzata e ben funzionante che sembra buona, che si comporta esattamente
+
+4
+00:00:20,020 --> 00:00:21,080
+come dovrebbe
+
+5
+00:00:21,130 --> 00:00:27,790
+comportarsi, anche sui dispositivi mobili e che ci consente di presentare all'utente un'esperienza piacevole all'utente
+
+6
+00:00:27,880 --> 00:00:31,300
+e utilizzare molte delle funzionalit che reagisce .
+
+7
+00:00:31,480 --> 00:00:36,490
+Ora nei prossimi moduli, metteremo a punto questa applicazione per essere pronta per
+
+8
+00:00:36,490 --> 00:00:41,920
+l'implementazione, con ci che in realt significa soprattutto che ti mostrer come testare l'applicazione automaticamente.
+
+9
+00:00:41,920 --> 00:00:47,610
+Quindi lo distribuiremo e quindi avremo un'applicazione di reazione completamente finita.
+
+10
+00:00:47,620 --> 00:00:48,650
+Quindi andiamo avanti.
+

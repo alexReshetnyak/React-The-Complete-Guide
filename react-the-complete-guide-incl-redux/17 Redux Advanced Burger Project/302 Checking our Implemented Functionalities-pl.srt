@@ -1,0 +1,96 @@
+1
+00:00:02,180 --> 00:00:04,070
+Mielimy wiele funkcji.
+
+2
+00:00:04,160 --> 00:00:10,220
+Zobaczmy teraz, czy to naprawd wszystko dziaa lub zbuduj nowego burgera bekonowego burgera z serem lub
+
+3
+00:00:10,610 --> 00:00:11,810
+moe nawet saatki.
+
+4
+00:00:11,810 --> 00:00:12,390
+Wic zagrajmy.
+
+5
+00:00:12,470 --> 00:00:13,430
+Kontynuuj tutaj.
+
+6
+00:00:13,550 --> 00:00:18,410
+Kontynuuj tutaj i wprowad troch danych Quantic i nie interesuj mnie dane, dlatego wanie
+
+7
+00:00:18,410 --> 00:00:19,470
+przewracam swoj klawiatur.
+
+8
+00:00:19,760 --> 00:00:22,820
+Wic szybko dodajmy wszystkie te dane.
+
+9
+00:00:22,830 --> 00:00:26,470
+Twoje najtasze zamwienie na kliknicie.
+
+10
+00:00:26,560 --> 00:00:29,500
+To wszystko dziaa, to jest strona twojego zamwienia.
+
+11
+00:00:29,620 --> 00:00:34,080
+Tata wyglda jak burger, ktry wanie stworzylimy, jest martwy, wszystko wyglda dobrze.
+
+12
+00:00:34,390 --> 00:00:37,550
+Zrbmy cay skan, e nie widzimy tu adnych bdw.
+
+13
+00:00:37,870 --> 00:00:45,520
+A jeli spojrzymy na firebase tam, widzimy take oba zoone zamwienia, dane o zamwieniach rwnie dobrze
+
+14
+00:00:45,520 --> 00:00:46,450
+mi wygldaj.
+
+15
+00:00:46,600 --> 00:00:47,280
+Podnosi wicej.
+
+16
+00:00:47,290 --> 00:00:52,420
+Weszlimy do skadnikw oczywicie s poprawne, poniewa widzimy je na stronie zamwienia
+
+17
+00:00:52,420 --> 00:00:54,390
+i robi to z serwera.
+
+18
+00:00:54,430 --> 00:00:56,720
+Wszystko dziaa dobrze.
+
+19
+00:00:56,740 --> 00:00:58,750
+Mamy dobr dziaajc aplikacj.
+
+20
+00:00:58,750 --> 00:01:05,050
+Teraz moesz zdecydowanie i naprzd, a Hans, aby zobaczy jeszcze wicej, moesz doda przycisk usuwania, aby
+
+21
+00:01:05,110 --> 00:01:06,100
+pozby si zamwie.
+
+22
+00:01:06,310 --> 00:01:13,540
+Ale chc skupi si na kodzie i Hansonach i zaimplementowa niektre z rzeczy, ktrych dotknem w ostatnim module, na przykad, w
+
+23
+00:01:13,750 --> 00:01:19,130
+jaki sposb moemy sprawi, by nasze reduktory byy odrobin szczuplejsze, nie dzielc ich jeszcze bardziej.
+
+24
+00:01:19,150 --> 00:01:21,610
+Skupmy si na tym w nastpnych Electra.
+

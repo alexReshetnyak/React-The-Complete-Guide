@@ -1,0 +1,188 @@
+1
+00:00:02,130 --> 00:00:07,900
+Nell'ultima lezione, abbiamo creato il nostro generatore di saga qui e non sembra troppo utile in
+
+2
+00:00:08,210 --> 00:00:11,200
+questo momento, beh, dobbiamo collegarlo al nostro negozio.
+
+3
+00:00:11,390 --> 00:00:20,120
+Ora per farlo, dobbiamo andare nel luogo in cui creiamo il nostro negozio nell'indice. js file e l, ora non voglio
+
+4
+00:00:20,120 --> 00:00:22,890
+solo creare il negozio, ma
+
+5
+00:00:22,940 --> 00:00:30,680
+voglio anche registrare le mie saghe e assicurarmi che siano qualcosa di cui
+
+6
+00:00:30,680 --> 00:00:43,190
+il mio negozio  a conoscenza e che possono usare. Per questo, ho bisogno di importare qualcos'altro, importer il middleware di saga di
+
+7
+00:00:43,280 --> 00:00:52,280
+creare da saga di Redux, come questo e importer anche qualcos'altro, importer la saga che ho appena creato, prima
+
+8
+00:00:52,280 --> 00:00:55,800
+che nella mia auth. js file nella cartella sagas,
+
+9
+00:00:56,020 --> 00:01:02,420
+aggiunger una parola chiave export di fronte alla mia funzione di generatore e salver il file.
+
+10
+00:01:02,620 --> 00:01:18,470
+Quindi torna all'indice. js, posso quindi importare la mia saga di logout qui da. / storeSagas auth. js e per essere coerente
+
+11
+00:01:18,470 --> 00:01:20,770
+con la denominazione,
+
+12
+00:01:20,840 --> 00:01:27,200
+torner effettivamente all'autore. js file nella cartella sagas e chiama questo logoutSaga come
+
+13
+00:01:27,200 --> 00:01:30,730
+un nome generatore e quindi importer anche questo nome, questo 
+
+14
+00:01:30,740 --> 00:01:35,880
+opzionale ma rende anche chiaro di cosa si tratta. Ora con quello importato, cosa
+
+15
+00:01:36,140 --> 00:01:44,240
+possiamo fare, possiamo anche eseguire la funzione middleware create saga, memorizzare il risultato in una costante,
+
+16
+00:01:44,240 --> 00:01:54,780
+quindi chiamer il costante sagaMiddleware e quindi eseguir creare sagaMiddleware, proprio cos senza argomenti e ora quando creiamo il negozio,
+
+17
+00:01:54,780 --> 00:02:00,180
+sto chiamando applyMiddleware qui e l, non voglio solo applicare
+
+18
+00:02:00,180 --> 00:02:05,310
+il middleware thunk ma anche il mio middleware della saga,
+
+19
+00:02:05,610 --> 00:02:08,980
+quindi lo aggiunger come argomento per applicareMiddleware.
+
+20
+00:02:09,480 --> 00:02:16,680
+Infine, dopo tutto questo, posso usare il mio sagaMiddleware che  anche registrato nel negozio e l, posso eseguire
+
+21
+00:02:16,680 --> 00:02:18,890
+una saga, quindi qui posso eseguire
+
+22
+00:02:19,080 --> 00:02:28,470
+la mia saga di logout che abbiamo anche importato in questo file, giusto. Ora con quello, se salvo tutto ci e
+
+23
+00:02:28,470 --> 00:02:35,250
+torniamo alla nostra applicazione e la ricarichiamo, bene non vediamo nulla
+
+24
+00:02:35,640 --> 00:02:38,360
+di spettacolare qui, vero?
+
+25
+00:02:38,760 --> 00:02:44,970
+Andiamo nei nostri strumenti di redux dev e l vediamo qualcosa di interessante,
+
+26
+00:02:45,120 --> 00:02:50,390
+vediamo che il logout  stato eseguito qui un paio di
+
+27
+00:02:50,640 --> 00:02:59,100
+volte, ora che ha senso perch nel nostro creatore di azioni auth, abbiamo anche inviato l'azione di logout
+
+28
+00:02:59,100 --> 00:03:03,050
+nella nostra azione di stato check dove proviamo
+
+29
+00:03:03,150 --> 00:03:13,270
+ad accedere automaticamente all'utente se non troviamo un token valido. Ora a scopo di test, commentiamo tutti i dispacci di logout, quindi
+
+30
+00:03:13,410 --> 00:03:19,650
+se salviamo questo file e torniamo alla nostra applicazione, se ora ricarichiamo questa applicazione,
+
+31
+00:03:19,650 --> 00:03:24,980
+vediamo ancora che il logout dell'autorizzazione  stato inviato e che proviene
+
+32
+00:03:25,230 --> 00:03:33,150
+dalla nostra saga, come Posso provare che vanno all'indice. js file e commento questo sagaMiddleware, eseguo logout saga
+
+33
+00:03:33,150 --> 00:03:33,710
+line.
+
+34
+00:03:33,900 --> 00:03:39,890
+Se lo faccio e torno indietro e ora ricarico la pagina, non vedi pi che viene inviato.
+
+35
+00:03:40,020 --> 00:03:43,730
+Quindi sembriamo fare qualcosa con la nostra saga,
+
+36
+00:03:43,830 --> 00:03:45,940
+la chiamiamo sempre cos lasciatemi
+
+37
+00:03:46,030 --> 00:03:52,920
+commentare in tutte le cose che abbiamo commentato perch sempre chiamare questa saga non sembra
+
+38
+00:03:52,920 --> 00:03:55,230
+troppo utile, vero? Proprio ora, all'inizio
+
+39
+00:03:55,290 --> 00:04:02,070
+quando abbiamo creato l'applicazione, quando abbiamo iniziato, eseguiamo la nostra saga di logout che, nonostante questo strano
+
+40
+00:04:02,070 --> 00:04:08,550
+generatore di roba in corso, fa semplicemente una cosa, rimuove tutti questi elementi dallo storage locale
+
+41
+00:04:08,850 --> 00:04:11,490
+e invia l'azione di autorizzazione all'uscita.
+
+42
+00:04:11,490 --> 00:04:15,250
+Ovviamente non vogliamo eseguire questo all'avvio dell'applicazione, ma vogliamo
+
+43
+00:04:15,510 --> 00:04:23,790
+eseguire questo codice nel posto in cui abbiamo precedentemente eseguito il nostro creatore di azioni di disconnessione, dove lo abbiamo
+
+44
+00:04:23,820 --> 00:04:25,570
+usato, quindi l'obiettivo deve
+
+45
+00:04:25,680 --> 00:04:31,650
+essere che effettivamente inviamo un azione a cui possiamo ascoltare con la saga di
+
+46
+00:04:31,650 --> 00:04:38,030
+Redux in modo che il nostro generatore di saga possa essere eseguito una volta riconosciuta l'azione.
+
+47
+00:04:38,220 --> 00:04:40,470
+Lavoriamo su questo nella prossima lezione.
+

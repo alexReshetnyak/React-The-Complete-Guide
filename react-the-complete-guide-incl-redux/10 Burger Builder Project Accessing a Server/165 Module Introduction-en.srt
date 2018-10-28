@@ -1,0 +1,88 @@
+1
+00:00:02,110 --> 00:00:07,510
+So welcome back to our course project, our burger builder. Now the burger builder is already pretty
+
+2
+00:00:07,510 --> 00:00:07,920
+great,
+
+3
+00:00:07,930 --> 00:00:12,610
+we can build burgers with it, which doesn't sound too bad for this kind of application.
+
+4
+00:00:12,610 --> 00:00:15,000
+Now we can continue to check out and right
+
+5
+00:00:15,010 --> 00:00:19,240
+now when we click this, nothing happens except for this alert.
+
+6
+00:00:19,240 --> 00:00:24,430
+Now in the last module we learned how we can actually send HTTP requests,
+
+7
+00:00:24,430 --> 00:00:28,680
+so this sounds like a great opportunity to actually store that order
+
+8
+00:00:28,730 --> 00:00:35,570
+the customer's about to place on a server. Now we'll then find through this application later in
+
+9
+00:00:35,570 --> 00:00:40,840
+the course once we know how to create different pages in our single page app and therefore for show a check
+
+10
+00:00:40,840 --> 00:00:42,280
+out for them and so on.
+
+11
+00:00:42,490 --> 00:00:50,350
+But for now, storing the order and getting the orders that would be an amazing advancement in our application.
+
+12
+00:00:50,350 --> 00:00:57,340
+So this is what this module is about, we'll implement the backend so that we can actually store our orders
+
+13
+00:00:57,580 --> 00:00:59,580
+so that we have a way of retrieving them
+
+14
+00:00:59,710 --> 00:01:07,780
+even after our page was reloaded. For that storing on the backend, I'm going to use firebase. Firebase is
+
+15
+00:01:07,780 --> 00:01:09,760
+a service offered by Google
+
+16
+00:01:09,970 --> 00:01:15,890
+it's essentially out of the box working backend which includes a database.
+
+17
+00:01:15,910 --> 00:01:22,840
+The cool thing is we can use it for free and for the amount of usage we're going to apply in this course
+
+18
+00:01:22,840 --> 00:01:29,410
+project, it's going to stay free and we don't have to write any server side code which this course of course
+
+19
+00:01:29,440 --> 00:01:36,170
+is not about. But the way we communicate with firebase is the same we communicate with any other backend,
+
+20
+00:01:36,190 --> 00:01:40,220
+so this is representative for your backend in your project.
+
+21
+00:01:40,390 --> 00:01:47,080
+Now with that let's dive into that and let's create our firebase project in the next lecture so that
+
+22
+00:01:47,110 --> 00:01:50,150
+we then can start storing our orders there.
+

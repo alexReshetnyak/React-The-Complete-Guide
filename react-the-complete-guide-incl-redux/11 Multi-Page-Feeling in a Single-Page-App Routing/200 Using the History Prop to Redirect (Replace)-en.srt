@@ -1,0 +1,136 @@
+1
+00:00:02,120 --> 00:00:05,370
+In the last lecture we learn how to conditionally redirect
+
+2
+00:00:05,480 --> 00:00:12,020
+and that is a nice way of redirecting. Now to be honest, the way we redirect in the new post component
+
+3
+00:00:12,410 --> 00:00:19,560
+is maybe not the way you're always going to do that. In the end after submitting a post successfully,
+
+4
+00:00:19,700 --> 00:00:26,090
+you just want to switch to page and for that you can of course also use that history prop which you
+
+5
+00:00:26,090 --> 00:00:35,240
+get on every component which is loaded inside a browser router wrapped component and new post is
+
+6
+00:00:35,250 --> 00:00:36,680
+in the end loaded through blog
+
+7
+00:00:36,680 --> 00:00:43,280
+so therefore it is wrap by browser router. In there, we have access to that match location and history
+
+8
+00:00:43,310 --> 00:00:45,070
+prop I showed you earlier
+
+9
+00:00:45,380 --> 00:00:51,260
+and that history prob has a couple of convenience methods we can use for replacing the current route
+
+10
+00:00:51,350 --> 00:00:53,170
+or pushing a new route.
+
+11
+00:00:53,540 --> 00:01:02,330
+So we can also change the page here without changing the state and therefore by never rendering that
+
+12
+00:01:02,390 --> 00:01:09,740
+redirect component but instead by accessing this.props.history and there the push method which allows
+
+13
+00:01:09,740 --> 00:01:11,330
+us to push a new page.
+
+14
+00:01:11,330 --> 00:01:18,130
+So here we could also go to /posts and this will essentially lead to the same behavior as before.
+
+15
+00:01:18,710 --> 00:01:20,570
+We can go to new posts,
+
+16
+00:01:20,750 --> 00:01:27,780
+we can enter a new post and once this is done, we push a new page and we are redirected. Technically
+
+17
+00:01:27,890 --> 00:01:30,850
+push pushes this page onto the stack,
+
+18
+00:01:30,950 --> 00:01:37,670
+so if we click the back button, we go back to the new post page. Whereas redirect replaces current
+
+19
+00:01:37,670 --> 00:01:38,290
+page
+
+20
+00:01:38,390 --> 00:01:42,700
+so if we then click the back button and you can of course try this out after you comment this in
+
+21
+00:01:42,710 --> 00:01:48,330
+again, if you click the back button after redirecting and not by pushing,
+
+22
+00:01:48,650 --> 00:01:54,830
+you can go back but you won't go back to the last page because redirect replaces the current page on
+
+23
+00:01:54,830 --> 00:02:00,290
+a stack, it doesn't push a new one. Though you can also replicate this behavior by not using push
+
+24
+00:02:00,620 --> 00:02:04,750
+but replace here on the history object. If you use that,
+
+25
+00:02:04,760 --> 00:02:08,350
+you go to new post, if you now enter something here,
+
+26
+00:02:08,510 --> 00:02:12,320
+we also leave the page but now if we press the back button
+
+27
+00:02:12,470 --> 00:02:19,940
+we're still on post because we were there before we visited new post, because new post was replaced on
+
+28
+00:02:19,940 --> 00:02:21,460
+a stack of pages.
+
+29
+00:02:21,770 --> 00:02:27,650
+So replace basically does the same as redirecting and therefore you can use it as an alternative.
+
+30
+00:02:27,680 --> 00:02:32,780
+I wanted to show you both methods though because maybe you have a use case where you want to render
+
+31
+00:02:32,780 --> 00:02:35,070
+that redirect component conditionally
+
+32
+00:02:35,150 --> 00:02:37,720
+and then this is an easy way of doing it.
+
+33
+00:02:37,910 --> 00:02:44,360
+If you don't want to use the approach of rendering that component, replace or push also is a way
+
+34
+00:02:44,450 --> 00:02:47,630
+of changing the page after some operation finished.
+

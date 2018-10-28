@@ -1,0 +1,292 @@
+1
+00:00:02,340 --> 00:00:08,680
+Quindi abbiamo ottenuto la nostra fetta dello stato qui e abbiamo emesso il CTA con i nostri oggetti di scena.
+
+2
+00:00:09,060 --> 00:00:12,030
+Ora voglio anche essere in grado di inviare azioni.
+
+3
+00:00:12,630 --> 00:00:20,790
+E per questo abbiamo bisogno di scoprire come possiamo tutti inviare azioni dai nostri componenti.
+
+4
+00:00:20,820 --> 00:00:27,350
+Ora, quando usiamo solo relax stand alone, abbiamo semplicemente chiamato la spedizione nello store.
+
+5
+00:00:27,570 --> 00:00:31,760
+Ora non abbiamo accesso al negozio nel nostro contenitore, almeno non direttamente.
+
+6
+00:00:31,860 --> 00:00:33,900
+Abbiamo comunque accesso libero.
+
+7
+00:00:34,140 --> 00:00:40,630
+E cos come siamo stati in grado di passare alcune informazioni su quale tipo di stato o quale fetta
+
+8
+00:00:40,630 --> 00:00:44,820
+dello stato che si desidera ottenere, possiamo anche passare una seconda configurazione.
+
+9
+00:00:44,910 --> 00:00:53,010
+Chiamer l'invio delle mappe a oggetti di scena, perch qui dir quale tipo di azioni voglio
+
+10
+00:00:53,100 --> 00:00:55,190
+inviare in questo contenitore.
+
+11
+00:00:55,230 --> 00:01:03,630
+Dispone di tutti i negozi una funzione che ricever la funzione di invio che possiamo eseguire come argomento proprio
+
+12
+00:01:04,320 --> 00:01:07,570
+come abbiamo dispo- nibile nell'anno del negozio.
+
+13
+00:01:07,620 --> 00:01:15,000
+Se accediamo direttamente al negozio reagisci, noi pacchetto x ci d fondamentalmente aiuto o funzione
+
+14
+00:01:15,210 --> 00:01:19,200
+che chiameremo spedizione nello store dietro le quinte.
+
+15
+00:01:19,440 --> 00:01:25,860
+Non sentiamo tutto il ritorno di un oggetto javascript dove possiamo trovare alcuni nomi
+
+16
+00:01:25,890 --> 00:01:32,360
+propri che terranno un riferimento a una funzione che dovrebbe essere eseguita per inviare un'azione.
+
+17
+00:01:32,370 --> 00:01:37,780
+Ora puoi scegliere qualsiasi nome di propriet che vuoi qui. Lo chiamer sul contatore incrementale.
+
+18
+00:01:37,800 --> 00:01:39,410
+Ma di nuovo il nome spetta a te.
+
+19
+00:01:39,510 --> 00:01:46,110
+Questa propriet ora ha un valore ovviamente e quel valore dovrebbe essere una funzione anonima.
+
+20
+00:01:46,140 --> 00:01:50,010
+Quindi sei a tutti gli effetti in ogni funzione di 6 frecce come questa.
+
+21
+00:01:50,010 --> 00:01:54,870
+E user la versione molto breve dove se  scritta in una riga viene
+
+22
+00:01:54,870 --> 00:01:57,790
+automaticamente restituita la parte sul lato destro della freccia.
+
+23
+00:01:57,900 --> 00:02:01,000
+Quindi vuoi restituire una chiamata per la spedizione.
+
+24
+00:02:01,650 --> 00:02:03,970
+E questo  Decore quello che voglio fare qui.
+
+25
+00:02:04,380 --> 00:02:12,230
+Questa funzione alla fine sar disponibile da questa propriet e quindi ogni volta che questa propriet viene
+
+26
+00:02:12,510 --> 00:02:14,430
+eseguita come una funzione.
+
+27
+00:02:14,430 --> 00:02:20,890
+Ad esempio, se lo assegniamo a un gestore di clic on, questo metodo di invio verr eseguito.
+
+28
+00:02:21,330 --> 00:02:26,700
+E con questo metodo posso ora passare un oggetto javascript dove dobbiamo impostare il tipo.
+
+29
+00:02:26,700 --> 00:02:34,480
+Mentre impari e imposter il tipo per incrementare il tuo con che abbiamo una propriet possiamo anche usare il
+
+30
+00:02:34,480 --> 00:02:35,300
+nostro contenitore.
+
+31
+00:02:35,470 --> 00:02:40,690
+Bene, almeno possiamo farlo quando lo passiamo come secondo argomento per connetterci.
+
+32
+00:02:40,690 --> 00:02:46,960
+azioni ma non ha bisogno di una fetta di lo stato passerai semplicemente null come primo argomento da connettere.
+
+33
+00:02:46,960 --> 00:02:52,960
+E a proposito, se mai hai un caso in cui non hai azioni nel tuo contenitore, lo lasci
+
+34
+00:02:52,960 --> 00:02:57,950
+fuori come facevamo prima o se hai un contenitore che ha solo bisogno di inviare
+
+35
+00:02:58,120 --> 00:02:59,700
+Proprio come una nota a margine.
+
+36
+00:03:00,250 --> 00:03:05,860
+Quindi torniamo al nostro set up anche se ora sto passando per mappare questa pagina per puntare anche al metodo di connessione.
+
+37
+00:03:05,980 --> 00:03:09,730
+E con questo ho accesso al metodo del contatore incrementale qui.
+
+38
+00:03:09,730 --> 00:03:11,490
+Quindi usiamo quella propriet.
+
+39
+00:03:11,770 --> 00:03:17,440
+Copier il nome sul contatore incrementale e voglio usarlo qui nel mio controllo contro-colpo di stato,
+
+40
+00:03:17,440 --> 00:03:24,640
+dove ho il pulsante di incremento qui proprio ora sul puntello clic che  solo un puntello ho passato il riferimento.
+
+41
+00:03:24,640 --> 00:03:30,250
+Quello che voglio eseguire fino al contro-controllo in modo da poter passare una funzione che dovrebbe essere
+
+42
+00:03:30,300 --> 00:03:32,640
+eseguita e clicco su questo oggetto qui.
+
+43
+00:03:32,650 --> 00:03:39,970
+Ora non voglio pi passare questa funzione anonima, ma questo sul contatore incrementale senza eseguirlo.
+
+44
+00:03:39,970 --> 00:03:40,160
+&nbsp;
+
+45
+00:03:40,210 --> 00:03:42,340
+Quindi senza parentesi come questa.
+
+46
+00:03:42,490 --> 00:03:48,460
+Questo far quindi riferimento a questo oggetto che contiene un riferimento a questa funzione
+
+47
+00:03:48,460 --> 00:03:55,300
+anonima che verr poi eseguita e che quindi invier questa azione con il dispacciamento e l'azione.
+
+48
+00:03:55,300 --> 00:04:01,040
+Ora vediamo anche come cambiarlo per contrastare tornando al riduttore.
+
+49
+00:04:01,150 --> 00:04:04,210
+E naturalmente regolandolo per gestire questa azione.
+
+50
+00:04:04,210 --> 00:04:12,340
+Quindi conosci l'istruzione if per verificare il tipo di azione in quel modo e vedr se il tipo di azione 
+
+51
+00:04:12,340 --> 00:04:13,110
+uguale a.
+
+52
+00:04:13,390 --> 00:04:19,060
+E ora ho bisogno di prendere lo stesso identificatore come specificato qui perch questo  ovviamente
+
+53
+00:04:19,090 --> 00:04:21,100
+l'identificatore che identifica questa azione esatta.
+
+54
+00:04:21,100 --> 00:04:23,530
+Quindi un errore e non funzioner.
+
+55
+00:04:23,780 --> 00:04:31,180
+dell'incremento e controller che il tipo di azione sia uguale a quello interno del tuo Non voglio restituire il mio stato
+
+56
+00:04:31,540 --> 00:04:38,230
+aggiornato immutabilmente creando un nuovo oggetto javascript e non ho nemmeno bisogno di copiare il mio vecchio afferma qui.
+
+57
+00:04:38,230 --> 00:04:40,070
+Cos vecchio copia il testo
+
+58
+00:04:40,090 --> 00:04:42,060
+Prima per potremmo farlo.
+
+59
+00:04:42,340 --> 00:04:48,430
+Per ora restituir semplicemente un nuovo oggetto con la propriet counter, perch  l'equivalente di copiare tutto
+
+60
+00:04:48,430 --> 00:04:52,880
+perch in ogni caso hai solo la propriet counter nel nostro vecchio stato.
+
+61
+00:04:53,290 --> 00:05:00,010
+Quindi qui torner contatore e set equivale a contatore di stato pi uno come quello.
+
+62
+00:05:00,400 --> 00:05:08,070
+Quindi, se quell'utente  impostato per tornare al contenitore contatore, assicurati che il mio contatore qui
+
+63
+00:05:08,100 --> 00:05:09,520
+invii questa azione.
+
+64
+00:05:09,520 --> 00:05:17,010
+Ora, se hai un aspetto oh ecco qui un errore tra l'altro raccogli dove ci riferiamo all'incontro di introduzione.
+
+65
+00:05:17,090 --> 00:05:22,680
+Questo naturalmente non  un metodo di classe come dovrebbe essere se lo chiamiamo cos.
+
+66
+00:05:22,700 --> 00:05:24,270
+ passato a un materiale di scena.
+
+67
+00:05:24,440 --> 00:05:32,030
+Quindi questo puntello sul contatore degli incrementi  corretto perch  solo un sostegno. Riceviamo una propriet con un
+
+68
+00:05:32,030 --> 00:05:34,720
+riferimento a questa funzione.
+
+69
+00:05:34,730 --> 00:05:40,490
+Ora se questi cambiamenti sono in atto se salviamo tutto salviamo tutti i file e torniamo all'applicazione
+
+70
+00:05:40,490 --> 00:05:41,320
+vedremo che Nanavati.
+
+71
+00:05:41,390 --> 00:05:48,710
+Ma questo fa tutto tranne l'incremento, ma incrementa un contatore ma ora  gestito tramite Rydex.
+
+72
+00:05:48,860 --> 00:05:49,850
+Questo e spettacolare.
+
+73
+00:05:49,850 --> 00:05:51,310
+Ora rompiamo un po 'questo.
+

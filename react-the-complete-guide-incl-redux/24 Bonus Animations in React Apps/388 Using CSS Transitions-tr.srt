@@ -1,0 +1,236 @@
+1
+00:00:02,130 --> 00:00:08,680
+Bu nedenle, modal' gstermek ve gizlemek istiyoruz ve genel olarak, tepki uygulamalarndaki animasyonlarla
+
+2
+00:00:08,680 --> 00:00:11,610
+alrken, bunu yapmann birok yolu var.
+
+3
+00:00:11,680 --> 00:00:18,270
+En kolay ve anlalr yol, css geilerini ve animasyonlarn kullanarak tepkiyle hibir ilgisi
+
+4
+00:00:18,280 --> 00:00:19,690
+olmayan bir yoldur.
+
+5
+00:00:19,690 --> 00:00:25,910
+Bunu modal rneinde gstermeme izin verin, diyelim ki tepeden
+
+6
+00:00:25,930 --> 00:00:29,920
+umak ve ayn zamanda opakl deitirmek
+
+7
+00:00:29,920 --> 00:00:40,390
+ve onu kapattmzda ayn eyi yapmak isteriz, modal aksa bir opakl ayarlayarak bunu yapabiliriz. ekli
+
+8
+00:00:40,390 --> 00:00:48,670
+ve y ekseni zerinde kaydran dntrmek iin dntrme zelliini kullanarak 0 ile.
+
+9
+00:00:48,670 --> 00:00:51,750
+Yani bu temelde, sahip olmas
+
+10
+00:00:51,790 --> 00:00:52,930
+gereken pozisyonu
+
+11
+00:00:52,930 --> 00:00:56,230
+kullanr, bu ekilde html kodumuza yerletiririz,
+
+12
+00:00:56,230 --> 00:00:58,890
+bylece bu durumda varsaylan konum.
+
+13
+00:00:58,990 --> 00:01:02,120
+imdi ayn modal kapal olarak
+
+14
+00:01:02,230 --> 00:01:05,300
+ekleyebiliriz, ama imdi burada
+
+15
+00:01:05,310 --> 00:01:13,090
+opaklk 0 olur ve translateY -100% -e doru yakn snfa eklendiinde
+
+16
+00:01:13,120 --> 00:01:15,830
+bunu% 100 yukar tayabiliriz.
+
+17
+00:01:15,970 --> 00:01:25,300
+imdi eer bunu kaydedersek ve ak modal' tklatrsak ve reddedersek, hibir fark grmyoruz, imdi de modal'a bir
+
+18
+00:01:25,480 --> 00:01:33,370
+gei zellii ekleyelim ve bu, css zelliklerinin belirtilmesi gereken baz css zelliklerini belirtmemizi salayan
+
+19
+00:01:33,370 --> 00:01:40,210
+varsaylan bir css zelliidir. annda uygulanr ancak bunun yerine zamanla animasyonlu hale
+
+20
+00:01:40,210 --> 00:01:42,930
+gelir, yine tepkimeyle ilgisi yoktur.
+
+21
+00:01:43,090 --> 00:01:46,930
+Ve burada tm zellikleri deitirmek istediimizi syleyebiliriz
+
+22
+00:01:46,960 --> 00:01:54,640
+ki, eer opakl deitirirsek ya da dntrrsek, bunu canlandrmak isteriz, sonra uzunluu tanmlayabiliriz, o zaman
+
+23
+00:01:54,640 --> 00:01:55,250
+bunu
+
+24
+00:01:55,270 --> 00:01:58,090
+yapmak istediimizi syleyelim. 3 saniye, ayrca
+
+25
+00:01:58,120 --> 00:02:05,350
+300 milisaniye yazabilir ve geiler hakkndaki tm detaylar, bu modln sonunda balantl bir makalede
+
+26
+00:02:05,350 --> 00:02:07,150
+bulunabilir, bu hzl
+
+27
+00:02:07,150 --> 00:02:12,080
+bir giritir, tabi ki bu bir css kursu deildir.
+
+28
+00:02:12,090 --> 00:02:18,730
+Bitti. 3 saniye sonra temelde animasyonun o zamana
+
+29
+00:02:19,000 --> 00:02:21,810
+nasl daldn tanmlayan bir zamanlama fonksiyonu
+
+30
+00:02:21,880 --> 00:02:27,940
+tanmlayabiliriz, her zaman ayn hzda hareket etmek iin lineer kullanabilirsiniz, ancak kolaylk ile, aslnda
+
+31
+00:02:28,000 --> 00:02:31,010
+baladnzdan emin olursunuz daha hzl sonra bitiyor.
+
+32
+00:02:31,480 --> 00:02:36,700
+imdi, bu dosyay canlandrmak istediimizden emin oluyoruz, eer imdi bu dosyay kaydedersek,
+
+33
+00:02:36,700 --> 00:02:37,220
+geri
+
+34
+00:02:37,240 --> 00:02:39,260
+dnp ak modeli tklayp reddediyoruz,
+
+35
+00:02:39,370 --> 00:02:41,820
+daha nce olduu gibi gryoruz.
+
+36
+00:02:41,860 --> 00:02:49,330
+Bunun nedeni de ekran, grnt blounu ve hibirini deitirmememizdir, bu temel olarak herhangi bir
+
+37
+00:02:49,330 --> 00:02:55,630
+canlandrmann geile gereklemesini engeller nk css, css iin canlandrmann mantkl olduunu fark
+
+38
+00:02:55,630 --> 00:03:01,410
+etmez, nk varsaylan olarak zaten gizlidir ve Anlk olarak gsteriliyor, neden
+
+39
+00:03:01,420 --> 00:03:07,000
+aralarnda bir ey canlandryorsunuz, animasyonlar yine de sona erene ve ekran
+
+40
+00:03:07,000 --> 00:03:10,370
+zellii gei yapana kadar gizlenmi olurdu.
+
+41
+00:03:10,810 --> 00:03:15,530
+yleyse ekran grntsn buradan kaldralm, bunun gibi, eer imdi
+
+42
+00:03:15,550 --> 00:03:16,500
+geri dnersek,
+
+43
+00:03:16,510 --> 00:03:18,430
+modal' hala grmyoruz, fakat
+
+44
+00:03:18,450 --> 00:03:22,830
+ak modal' tklarsam, kaydrarak gryorum, eer reddedersem kayar.
+
+45
+00:03:23,020 --> 00:03:30,820
+Bu etkinin nedeni, varsaylan olarak, modal yakn snfn, gsterme zellii yanlsa ve
+
+46
+00:03:30,820 --> 00:03:38,880
+ak modal dmeyi tklamadmz srece yanl olduu iin, modaln artk bu opakl
+
+47
+00:03:38,960 --> 00:03:39,910
+0 olmasdr.
+
+48
+00:03:40,240 --> 00:03:42,820
+Bu nedenle, imdi bu gzel animasyonu
+
+49
+00:03:43,030 --> 00:03:49,670
+aldk ve imdi burada nemli bir paket servis, bu mkemmel bir animasyon gibi ve bu tr
+
+50
+00:03:49,750 --> 00:03:56,860
+bir animasyon iin, olabilme olasl olan yerli css zelliklerini kullandnz iin bile mmkn olan en iyi zm
+
+51
+00:03:56,860 --> 00:04:00,770
+olabilir. Olduka iyi performans gsteren ve bundan daha fazla
+
+52
+00:04:00,940 --> 00:04:04,920
+kontrole ihtiyacnz yoksa, ihtiyacnz olan her eye sahip olursunuz, modaln
+
+53
+00:04:04,990 --> 00:04:07,750
+almas ve kapatlmas iin animasyonlar elde ederiz.
+
+54
+00:04:07,900 --> 00:04:09,390
+Yani bu nemli
+
+55
+00:04:09,400 --> 00:04:16,120
+bir paket, css geileri, css'de bir ok eyi canlandrmann iyi bir yolu ve aslnda
+
+56
+00:04:16,120 --> 00:04:18,950
+bizim ders projemizde de bir css
+
+57
+00:04:19,030 --> 00:04:24,660
+geii kullanyor olacanz herhangi bir css kursunda reneceiniz gibi modal iin.
+
+58
+00:04:24,670 --> 00:04:30,410
+Yine de dier baz seeneklere ve ayrca css geilerinin snrlamalarna dalmak istiyorum, bu yzden
+
+59
+00:04:30,610 --> 00:04:32,370
+baka neler kullanabileceimizi grelim.
+

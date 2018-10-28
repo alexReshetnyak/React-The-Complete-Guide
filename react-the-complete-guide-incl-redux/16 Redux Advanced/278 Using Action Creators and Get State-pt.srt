@@ -1,0 +1,160 @@
+1
+00:00:02,190 --> 00:00:07,490
+Na ltima palestra, falei sobre onde colocar sua lgica de transformao de dados.
+
+2
+00:00:07,950 --> 00:00:15,270
+Agora, na mesma pgina, se voc escolheu os anos do criador de ao e todo mtodo de utilidade que voc queira
+
+3
+00:00:15,270 --> 00:00:17,460
+saber ao trabalhar com o Funk.
+
+4
+00:00:17,460 --> 00:00:25,320
+Ento, com o cdigo assncrono tratado pelo redux phunk, por exemplo, nosso assalto  loja, devolvemos uma funo que
+
+5
+00:00:25,560 --> 00:00:31,410
+envia a expedio como argumento por redux phunk, que podemos chamar para despachar a
+
+6
+00:00:31,410 --> 00:00:40,370
+ao assim que o nosso cdigo assncrono  feito realmente ler a funo x passar como um argumento adicional obter estado.
+
+7
+00:00:40,710 --> 00:00:45,360
+Esse  um mtodo que podemos executar para obter o estado atual.
+
+8
+00:00:45,370 --> 00:00:52,830
+seu cdigo assncrono, voc precisa poder chegar ao estado antes do seu envio para ao.
+
+9
+00:00:52,830 --> 00:00:54,220
+s vezes, no
+
+10
+00:00:54,480 --> 00:01:01,170
+Digamos que voc deseja salvar alguns dados para um determinado usurio e voc tem a idia do usurio armazenado em
+
+11
+00:01:01,170 --> 00:01:05,450
+seu estado Giudecca, ento voc pode obt-lo com o estado de obteno.
+
+12
+00:01:05,460 --> 00:01:13,880
+Por exemplo, aqui podemos obter o contador antigo, executando obter estado aqui e simplesmente acessar o estado do contador obter estado
+
+13
+00:01:13,910 --> 00:01:20,550
+nos dar o estado completo, que, claro, tem uma propriedade Count ou para ser preciso, uma vez
+
+14
+00:01:20,550 --> 00:01:24,320
+que nossos redutores compem o estado e temos dois deles.
+
+15
+00:01:24,600 --> 00:01:31,050
+Ns podemos obter o contador, assim como no continer do contador no estado do mapa, para que possamos acessar
+
+16
+00:01:31,050 --> 00:01:33,700
+a nossa cidade, para que possamos fazer isso.
+
+17
+00:01:33,700 --> 00:01:42,890
+Seu ponto CPR nosso contador de ces no criador de ao, graas ao segundo argumento passado por
+
+18
+00:01:42,890 --> 00:01:44,060
+redux phunk.
+
+19
+00:01:44,120 --> 00:01:47,840
+Agora, este contador antigo pode ser exibido aqui.
+
+20
+00:01:49,110 --> 00:01:52,850
+Old counter e eu vi que tenho um erro de digitao.
+
+21
+00:01:53,660 --> 00:01:54,710
+Vamos consertar isso.
+
+22
+00:01:55,100 --> 00:01:58,390
+Ento, agora eu salvei isso e eu armazeno meu resultado.
+
+23
+00:01:59,160 --> 00:02:05,500
+Na verdade, tenho a minha contagem antiga ou imprimo o que voc est  direita no console, o azul 10 aqui.
+
+24
+00:02:05,550 --> 00:02:13,290
+eu tenho direito antes de despachar esse evento que, em seguida, leva a decodificao executada no redutor.
+
+25
+00:02:13,300 --> 00:02:16,030
+Esse  o contador antigo que
+
+26
+00:02:16,110 --> 00:02:20,480
+Agora, isso  um pouco relacionado ao que eu disse na ltima palestra.
+
+27
+00:02:20,910 --> 00:02:23,710
+Se voc precisar,  uma boa funo de utilidade.
+
+28
+00:02:23,790 --> 00:02:25,690
+No abuse demais.
+
+29
+00:02:26,010 --> 00:02:34,130
+Eu tentei escrever meus criadores de ao e produtores de uma maneira que eu no tenho que usar obter estado em vez disso.
+
+30
+00:02:34,350 --> 00:02:41,820
+Voc pode passar todos os dados que voc precisa em seu criador de ao assncrono, como o ID do usurio,
+
+31
+00:02:41,820 --> 00:02:43,400
+aceitando-o como um argumento.
+
+32
+00:02:43,470 --> 00:02:48,810
+ao seu criador de ao e ao continer onde voc realmente envia a ao que leva ao criador de ao.
+
+33
+00:02:48,810 --> 00:02:52,820
+Isso,  claro, significa que voc precisa ter acesso aos dados que voc precisa e
+
+34
+00:02:52,980 --> 00:02:57,450
+Ento, a histria  slida, o que leva ao criador de ao assncrono.
+
+35
+00:02:57,450 --> 00:03:02,000
+Aqui, teramos que passar por essa ID de usurio ou o que quer que seja e estamos mortos.
+
+36
+00:03:02,100 --> 00:03:06,500
+Ns,  claro, precisamos ter acesso a essa identificao de usurio em nosso continer.
+
+37
+00:03:06,690 --> 00:03:11,830
+Mas isso  algo que poderamos esperar e devemos construir nosso aplicativo de acordo.
+
+38
+00:03:11,850 --> 00:03:17,700
+Se voc simplesmente no pode fazer isso ou no quer que voc tenha estado como um retorno e voc pode usar adicionar.
+
+39
+00:03:17,910 --> 00:03:19,580
+Apenas no use demais.
+
+40
+00:03:19,590 --> 00:03:25,690
+No coloque muita lgica l, pelo menos,  a rota que eu aceito em minhas aplicaes maiores de reao.
+

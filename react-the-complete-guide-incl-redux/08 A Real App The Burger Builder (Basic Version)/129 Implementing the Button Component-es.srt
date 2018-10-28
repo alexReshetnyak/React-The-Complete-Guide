@@ -1,0 +1,228 @@
+1
+00:00:02,200 --> 00:00:05,980
+Termina la ltima conferencia creamos nuestro propio componente de botn.
+
+2
+00:00:06,170 --> 00:00:10,110
+Ahora vamos a usarlo en el resumen de la orden donde tenemos dos botones.
+
+3
+00:00:10,550 --> 00:00:21,080
+En primer lugar, en ese componente todos importan mi propio botn desde la carpeta de la interfaz de usuario desde el fondo desde la
+
+4
+00:00:21,350 --> 00:00:25,070
+carpeta del botn al archivo js del botn.
+
+5
+00:00:25,610 --> 00:00:34,380
+Y ahora podemos reemplazar el ao predeterminado pero nuevo con mi propio botn, ya que lo configuramos para enviar mensajes de
+
+6
+00:00:34,400 --> 00:00:43,970
+texto a los nios. Aqu simplemente podemos ajustar el texto que desea poner en el botn con nuestro propio elemento de botn.
+
+7
+00:00:43,970 --> 00:00:50,770
+Ahora hay dos propiedades que debemos encontrar en el botn Recopilar y Tipo de botn.
+
+8
+00:00:51,170 --> 00:00:53,050
+Entonces, hagamos eso rpidamente.
+
+9
+00:00:53,060 --> 00:00:59,870
+Comencemos con el tipo de botn tal vez para el cancelador. Quiero poner el tipo de botn en peligro y me
+
+10
+00:00:59,870 --> 00:01:07,150
+aseguro de usar una D mayscula porque es necesario que coincida con el nombre que usamos aqu en el botn C de asfalto.
+
+11
+00:01:07,160 --> 00:01:08,600
+Peligro y xito
+
+12
+00:01:08,600 --> 00:01:10,580
+Estos son los dos valores que podemos usar.
+
+13
+00:01:10,590 --> 00:01:13,140
+Usted, por supuesto, cambiarlos o agregar nuevos.
+
+14
+00:01:13,220 --> 00:01:15,630
+Pero estos son los que trato iSuppli.
+
+15
+00:01:16,160 --> 00:01:17,700
+As que el botn tipo peligro.
+
+16
+00:01:17,870 --> 00:01:28,100
+Y en el segundo botn, escriba xito as y, por supuesto, como dije, hay escaleras.
+
+17
+00:01:28,410 --> 00:01:33,580
+Haga clic en la propiedad que tambin utiliza y que tambin utiliza el componente de botn.
+
+18
+00:01:33,810 --> 00:01:36,140
+As que tambin deberamos configurar el cobro.
+
+19
+00:01:36,330 --> 00:01:43,170
+Esto se activar cuando se haga clic en el botn y, por supuesto, aqu queremos ejecutar algn mtodo
+
+20
+00:01:43,620 --> 00:01:50,280
+que, como estamos en el componente de resumen de orden, tambin tenemos que recibir aqu de forma dinmica.
+
+21
+00:01:50,340 --> 00:01:56,500
+Ahora el orden del componente de resumen se usa en el componente o contenedor del constructor de Bergere.
+
+22
+00:01:56,760 --> 00:02:04,770
+Entonces, deberamos pasar una propiedad para ordenar un resumen o dos propiedades, en realidad una que pasar una referencia en el caso
+
+23
+00:02:04,770 --> 00:02:10,380
+de que deseemos seguir comprando una referencia a un mtodo que luego maneja este caso
+
+24
+00:02:10,380 --> 00:02:14,150
+y una referencia a un mtodo que maneja el caso .
+
+25
+00:02:14,170 --> 00:02:16,310
+No queremos continuar
+
+26
+00:02:16,320 --> 00:02:21,100
+Ya tenemos un mtodo para no continuar con el controlador de cancelacin de compras.
+
+27
+00:02:21,390 --> 00:02:23,360
+Ahora agregar un tercer mtodo.
+
+28
+00:02:23,540 --> 00:02:27,250
+Purchase continue handler.
+
+29
+00:02:27,510 --> 00:02:33,750
+Tambin definir esto con esta sintaxis de la funcin de flecha y, por lo tanto,
+
+30
+00:02:34,140 --> 00:02:41,150
+ahora simplemente seguir la alerta para continuar porque eso es todo lo que podemos hacer por ahora.
+
+31
+00:02:41,180 --> 00:02:49,160
+Ahora pasemos estas dos referencias de mtodos al resumen ordenado y podemos elegir cualquier nombre de propiedad
+
+32
+00:02:49,160 --> 00:02:50,150
+que desee.
+
+33
+00:02:50,150 --> 00:03:00,160
+As que agregar un evento cancelado por Che aqu o el nombre de la propiedad donde deseo ejecutar el
+
+34
+00:03:00,200 --> 00:03:09,320
+pre-Chase cance Landler y agregar la propiedad de compra continua que contiene una referencia al controlador de continuacin
+
+35
+00:03:09,320 --> 00:03:10,950
+de la compra.
+
+36
+00:03:10,950 --> 00:03:15,620
+Ahora con eso vamos a implementar estos dos hubs cancelados con otros dos sin embargo.
+
+37
+00:03:16,170 --> 00:03:20,600
+Implementemos estas dos propiedades en el resumen de la orden.
+
+38
+00:03:21,000 --> 00:03:23,610
+Ah tenemos los botones.
+
+39
+00:03:23,730 --> 00:03:29,780
+Si hace clic en el botn cancelar, entonces queremos ejecutar la compra del accesorio cancelada.
+
+40
+00:03:30,060 --> 00:03:36,720
+ejecutar props por Che, continuamos con la propiedad que contiene el mtodo correcto al que se hace referencia en ese momento.
+
+41
+00:03:36,720 --> 00:03:39,130
+Si el botn Continuar de la camarilla queremos
+
+42
+00:03:39,210 --> 00:03:44,610
+Veamos si eso funciona si guardamos esto y aadimos los ingredientes y hacemos clic en el orden.
+
+43
+00:03:44,610 --> 00:03:47,220
+Ahora aqu estn los botones.
+
+44
+00:03:47,430 --> 00:03:56,610
+Si hago clic en Cancelar, hace lo mismo que hacer clic en el fondo, descarta el modal para hacer clic en continuar.
+
+45
+00:03:56,610 --> 00:04:00,120
+Recibo la alerta que dice que continas.
+
+46
+00:04:00,260 --> 00:04:04,090
+Ahora bien, este es el modal y la deshonestidad.
+
+47
+00:04:04,130 --> 00:04:10,270
+Constructor de hamburguesas por lo que podemos construirlo para construir el lado de la hamburguesa.
+
+48
+00:04:10,610 --> 00:04:17,630
+una base de datos en un servidor real donde probablemente procesaremos el pedido si esa fuera una aplicacin real.
+
+49
+00:04:17,630 --> 00:04:24,010
+Ms adelante en el curso tambin se agregar funcionalidad para realmente hacer la compra y almacenarla en
+
+50
+00:04:24,350 --> 00:04:30,610
+Y tambin agregaremos ms pginas para que el usuario tambin pueda ver una pgina de los pedidos que realiz.
+
+51
+00:04:30,680 --> 00:04:37,700
+Y, por supuesto, en caso de que ya sepa leer x sin preocupaciones, tambin revisar esta aplicacin con Rydex.
+
+52
+00:04:37,700 --> 00:04:39,320
+Sin embargo, an no hemos terminado.
+
+53
+00:04:39,410 --> 00:04:40,270
+Eche un vistazo a nuestra aplicacin.
+
+54
+00:04:40,280 --> 00:04:41,410
+Lo que falta
+
+55
+00:04:41,810 --> 00:04:45,750
+El decider de la barra de herramientas es el teln de fondo del sitio.
+
+56
+00:04:45,770 --> 00:04:49,940
+Bueno, al menos tenemos el teln de fondo, pero aqu todava tenemos trabajo por hacer.
+
+57
+00:04:49,940 --> 00:04:51,920
+El deseo es en lo que nos enfocaremos a continuacin.
+

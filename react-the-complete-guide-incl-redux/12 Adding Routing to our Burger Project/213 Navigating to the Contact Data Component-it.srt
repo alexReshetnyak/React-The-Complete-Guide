@@ -1,0 +1,424 @@
+1
+00:00:02,210 --> 00:00:09,320
+Aggiungiamo il componente dei dati di contesto e in realt questo sar anche un contenitore non solo perch
+
+2
+00:00:09,320 --> 00:00:16,940
+ caricato nel nostro routing, ma perch gestir il proprio stato soprattutto una volta che avremo risolto i forum.
+
+3
+00:00:16,940 --> 00:00:25,640
+Quindi permettimi di modificare come sottocartella il check-in nella cartella contenitori nella cartella dei dati di contatto con
+
+4
+00:00:25,910 --> 00:00:27,940
+i dati di contatto.
+
+5
+00:00:28,150 --> 00:00:35,930
+Gli errori e il mio componente di dati di contatto e tutti li creano come dati di contatto
+
+6
+00:00:35,930 --> 00:00:40,930
+di classe e, quindi, estendono questo elemento componente questo oggetto componente.
+
+7
+00:00:40,940 --> 00:00:48,790
+Quindi per reagire e componenti come questo reagiscono.
+
+8
+00:00:49,130 --> 00:00:51,710
+Ora vediamo come lo mostriamo.
+
+9
+00:00:51,710 --> 00:00:56,050
+I creatori sono ci che dovrebbe andare all'interno di questo componente di dati di contatto.
+
+10
+00:00:56,240 --> 00:01:04,460
+Prima di tutto, anche se tutta la classe di dati di contatto per l'esportazione ora  disponibile, possiamo recuperare i dati
+
+11
+00:01:04,460 --> 00:01:11,300
+di contatto che desideriamo e istituir gli stati per gestire tutti questi input e non lavorer sul modulo.
+
+12
+00:01:11,300 --> 00:01:17,120
+Non lo finir in questo modulo perch avremo un intero modulo sui moduli e sulla convalida delle
+
+13
+00:01:17,360 --> 00:01:19,230
+forme dopo il discorso di Marchal.
+
+14
+00:01:19,250 --> 00:01:22,980
+Ancora voglio recuperare diciamo il nome utente qui.
+
+15
+00:01:23,030 --> 00:01:31,650
+Forse voglio prendere una email e forse voglio recuperare un indirizzo che  anche un
+
+16
+00:01:31,650 --> 00:01:37,580
+oggetto in cui mi piace la strada e un codice postale.
+
+17
+00:01:37,740 --> 00:01:39,000
+Quindi qualcosa del genere.
+
+18
+00:01:39,030 --> 00:01:44,620
+Questi potrebbero essere i dati che voglio recuperare all'anno e possiamo sempre continuare a lavorarci su.
+
+19
+00:01:44,640 --> 00:01:47,390
+Ho anche bisogno del mio metodo render, ovviamente.
+
+20
+00:01:47,400 --> 00:01:50,210
+E come ho detto sono andato ad avere un quattro in l.
+
+21
+00:01:50,300 --> 00:02:00,140
+Quindi nel metodo di rendering restituiremo alcuni GSX e l ho bisogno di un dispositivo che fondamentalmente lo .
+
+22
+00:02:00,210 --> 00:02:04,500
+Bene, il wrapper per il mio contenitore di dati di contatto.
+
+23
+00:02:04,740 --> 00:02:15,060
+questo giorno se voglio avere il modulo che uso ora anche all'et di 14 anni, dove dico inserendo i tuoi dati di contatto
+
+24
+00:02:15,210 --> 00:02:25,830
+come questo e sotto di esso un modulo usando l'elemento form HMO dove posso aggiungere a 4 nel modo in cui voglio aggiungere aggiungere.
+
+25
+00:02:25,830 --> 00:02:26,800
+E in
+
+26
+00:02:26,970 --> 00:02:29,600
+Ora come ho detto A non passer troppo tempo sul modulo qui.
+
+27
+00:02:29,640 --> 00:02:31,950
+Lo far nei moduli da quel momento in poi.
+
+28
+00:02:31,950 --> 00:02:40,320
+Quindi per ora tutti in realt creano solo un anno di forma veloce con un paio di input input di testo tipo per il mio
+
+29
+00:02:40,320 --> 00:02:41,380
+nome in sostanza.
+
+30
+00:02:41,400 --> 00:02:47,130
+Quindi, dove imposter il nome uguale ai nomi in modo che possiamo vedere per quello che dovrebbe essere l.
+
+31
+00:02:47,250 --> 00:02:57,060
+Aggiunger un segnaposto o pronuncer il tuo nome e questo dovrebbe chiudersi automaticamente e poi ne aggiunger uno per
+
+32
+00:02:57,060 --> 00:03:02,740
+l'email del tipo di email e poi avremo questa parte dell'indirizzo.
+
+33
+00:03:02,780 --> 00:03:13,820
+Quindi ho bisogno di uno per la strada e una WIPs Street scritta cos e una per il codice postale.
+
+34
+00:03:14,130 --> 00:03:22,430
+Quindi qui dovevo scrivere il codice forse qui scriviamo la tua mail e il tuo nome con la N maiuscola come il debito e poi, naturalmente,
+
+35
+00:03:23,550 --> 00:03:27,570
+aggiungo anche un pulsante e user il mio componente pulsante per questo.
+
+36
+00:03:27,570 --> 00:03:30,420
+Quindi importa rapidamente i pulsanti da.
+
+37
+00:03:30,420 --> 00:03:37,800
+E ora andiamo alla cartella dei componenti l nella cartella dell'interfaccia utente nella cartella dei pulsanti e il
+
+38
+00:03:37,810 --> 00:03:39,300
+pulsante Jr cadr l.
+
+39
+00:03:40,110 --> 00:03:43,950
+E poi usiamolo, ma nell'anno seguente tutti i nostri input.
+
+40
+00:03:43,950 --> 00:03:51,970
+quello  il pulsante finale dopo il quale ordiniamo il tipo di pulsante, quindi dovremmo avere successo qui.
+
+41
+00:03:52,060 --> 00:03:56,540
+Sei come un componente ovviamente per dire ordine qui perch
+
+42
+00:03:56,560 --> 00:04:00,480
+E, naturalmente, in seguito aggiungeremo anche un ascoltatore di clic.
+
+43
+00:04:00,500 --> 00:04:09,170
+Ora una volta che il regalo  il modulo di contatto qui alcuni stili quindi aggiungi un dato di contatto che C-s come segue.
+
+44
+00:04:09,200 --> 00:04:13,870
+E naturalmente potresti anche creare un sottocomponente che gestisce lo stile se vuoi farlo.
+
+45
+00:04:14,150 --> 00:04:23,750
+Quindi qui aggiungo i dati di contesto, magari aggiungo un margine superiore e inferiore e centrato con auto, quindi aggiungo
+
+46
+00:04:23,870 --> 00:04:28,750
+con l'80% e allineo tutto il testo al centro diciamo.
+
+47
+00:04:28,940 --> 00:04:35,330
+E aggiungiamo anche una media query per limitare la larghezza su pick the Wise, proprio come lo abbiamo fatto per il
+
+48
+00:04:35,330 --> 00:04:36,440
+sommario del check out.
+
+49
+00:04:36,590 --> 00:04:42,180
+Quindi i tuoi dati di contatto avranno quindi una larghezza di 500 pixel al massimo.
+
+50
+00:04:42,200 --> 00:04:44,500
+Con ci otteniamo il componente dei dati di contatto.
+
+51
+00:04:44,510 --> 00:04:51,830
+Ora ho intenzione di caricarlo attraverso il routing e lo far in un check-out container con un percorso annidato
+
+52
+00:04:51,830 --> 00:04:58,160
+sotto i riepiloghi quindi non dovrebbe essere posto per controllare il riassunto, anche se ovviamente potremmo farlo.
+
+53
+00:04:58,190 --> 00:05:04,130
+Invece voglio caricarlo al di sotto di tutto per mostrare che questo  ovviamente qualcosa che
+
+54
+00:05:04,130 --> 00:05:06,130
+usi in realt due percorsi nidificati.
+
+55
+00:05:06,230 --> 00:05:16,020
+mio check out container e poi uso il route qui sotto il mio check out summary per caricare qualcosa per un
+
+56
+00:05:16,020 --> 00:05:23,640
+percorso che ora dovrebbe dipendere dal percorso in cui ci troviamo attualmente pi i dati di contatto.
+
+57
+00:05:23,640 --> 00:05:27,220
+Quindi importa il percorso dal router re-act nel
+
+58
+00:05:27,510 --> 00:05:29,900
+Quindi justis puntelli.
+
+59
+00:05:30,270 --> 00:05:41,700
+E poi possiamo usare match u r l o anche per i payoff e le rotte di Boulding che potresti usare puffier pi i dati
+
+60
+00:05:42,000 --> 00:05:43,860
+di contatto della barra.
+
+61
+00:05:44,220 --> 00:05:50,390
+E questo dovrebbe anche essere parte della parte dinamica qui questa stringa.
+
+62
+00:05:50,400 --> 00:05:52,530
+Quindi ora stiamo caricando questo percorso in questo caso.
+
+63
+00:05:52,530 --> 00:05:55,900
+Ovviamente abbiamo bisogno di definire quale componente rendere.
+
+64
+00:05:55,950 --> 00:06:04,010
+per importare tutto il mio contenitore dei dati di contatto dai dati di contatto della barra dei punti immessi nei dati di contatto J.
+
+65
+00:06:04,040 --> 00:06:05,310
+Quindi S. autunno.
+
+66
+00:06:05,640 --> 00:06:12,820
+Quindi prendiamo i dati Quantic e configuriamoli come un componente laggi su questo componente del percorso.
+
+67
+00:06:12,870 --> 00:06:19,400
+Quindi ci sono il componente pastie Propp e passano i dati di contatto proprio cos.
+
+68
+00:06:19,570 --> 00:06:22,780
+Con ci salviamo tutti i file.
+
+69
+00:06:23,160 --> 00:06:25,520
+E ora se il clic continua qui.
+
+70
+00:06:25,980 --> 00:06:28,320
+Ecco i dati di contatto.
+
+71
+00:06:28,410 --> 00:06:36,130
+Ora sembra piuttosto brutto per essere onesti perch ho dimenticato di usare i miei dati di contatto come.
+
+72
+00:06:36,210 --> 00:06:45,240
+di Klaas e quindi assegnare quest'anno al div wrapping con il nome della classe e quindi i dati di contatto delle classi.
+
+73
+00:06:45,240 --> 00:06:51,080
+Ovviamente ho bisogno di importare i dati di contatto da barra di punti C-s s
+
+74
+00:06:51,120 --> 00:06:54,190
+Facciamo rapidamente quello e da allora in poi.
+
+75
+00:06:54,200 --> 00:06:55,350
+Ecco come appare ora.
+
+76
+00:06:55,390 --> 00:06:59,520
+Se carichiamo questa pagina ricaricandola come abbiamo appena fatto automaticamente.
+
+77
+00:06:59,680 --> 00:07:03,590
+Vedi la query i genitori sono spariti e quindi l'hamburger  vuoto.
+
+78
+00:07:03,640 --> 00:07:11,480
+ ancora l perch anche se i genitori sono persi non sovrascrive il vecchio stato perch abbiamo impostato lo stato e in
+
+79
+00:07:11,670 --> 00:07:17,320
+realt non lo fa rendere questo componente come hai appreso quindi il componente su cui abbiamo
+
+80
+00:07:17,380 --> 00:07:24,550
+costruito il Burga in cui impostiamo lo stato in base ai perms della query non viene eseguito di nuovo.
+
+81
+00:07:24,640 --> 00:07:30,430
+Ora se ci vado diversamente costruendo un hamburger e continuando e poi se clicco e continuo
+
+82
+00:07:30,430 --> 00:07:31,270
+il burger
+
+83
+00:07:31,390 --> 00:07:37,050
+Solo perch abbiamo caricato un nuovo componente, ecco perch il burger  ancora cos.
+
+84
+00:07:37,060 --> 00:07:43,440
+Quindi se andiamo l facendo clic sui vari passaggi avremo un hamburger ben bloccato.
+
+85
+00:07:43,450 --> 00:07:46,600
+Ora di nuovo la forma non  super bella.
+
+86
+00:07:46,600 --> 00:07:52,690
+La ragione di questo  che non lo finir in questo modulo su cui lavorer pi tardi.
+
+87
+00:07:52,690 --> 00:07:58,540
+L'unica cosa che voglio fare  che voglio assicurarmi che tutti gli input che hai almeno abbiano
+
+88
+00:07:58,540 --> 00:08:02,800
+una loro linea ciascuno in modo da avere un ritorno a capo.
+
+89
+00:08:02,860 --> 00:08:09,880
+E che il pulsante ha anche una sua linea e per ottenere tutto ci basta aggiungere uno stile
+
+90
+00:08:09,910 --> 00:08:18,580
+per l'elemento di input, quindi aggiunger una nuova classe di input, dove altrimenti il display dovrebbe essere Block e questo aggiunger automaticamente un
+
+91
+00:08:18,580 --> 00:08:27,290
+ritorno a capo perch  ora un elemento di blocco, quindi aggiunger classi di nome classe a tutti questi input e con quello
+
+92
+00:08:27,830 --> 00:08:29,980
+sembra un po 'pi bello.
+
+93
+00:08:30,020 --> 00:08:32,820
+Bene, ora ovviamente seduto a sinistra qui.
+
+94
+00:08:32,830 --> 00:08:34,710
+Ma di nuovo ci lavoreremo.
+
+95
+00:08:35,210 --> 00:08:37,480
+Quindi questo  il nostro modulo d'ordine.
+
+96
+00:08:37,490 --> 00:08:44,030
+ancora migliorare lo stile dei dati di contatto formano un po 'andando a contattare i dati.
+
+97
+00:08:44,030 --> 00:08:46,780
+Il nostro sommario qui sopra che possiamo
+
+98
+00:08:47,030 --> 00:08:55,070
+Aggiungendo un guscio di scatola di 0 0 pixel liberi a questo grigio chiaro e un bordo di grigio pi chiaro
+
+99
+00:08:55,220 --> 00:08:59,400
+come questo e aggiungendo un po 'di padding al suo interno.
+
+100
+00:08:59,760 --> 00:09:03,840
+Quello  poi tutto il ridimensionamento della casella dell'insieme ai POC del bordo.
+
+101
+00:09:03,860 --> 00:09:10,510
+Quindi questo  solo uno stile sul componente dei dati di contatto con quello che sembra un po 'pi bello, credo.
+
+102
+00:09:10,670 --> 00:09:13,870
+Quindi con questo siamo in grado di caricare il componente dei dati di contatto.
+
+103
+00:09:13,970 --> 00:09:20,900
+Il prossimo passo  fare in modo che quando clicchiamo sul pulsante dell'ordine, effettivamente mandiamo queste richieste
+
+104
+00:09:20,990 --> 00:09:22,110
+al nostro server.
+
+105
+00:09:22,130 --> 00:09:28,610
+Ora costruiamo questo insieme nella prossima lezione perch ottenere gli ingredienti nel componente dei dati di
+
+106
+00:09:28,610 --> 00:09:31,790
+contatto ora  un po 'complicato come vedrai.
+

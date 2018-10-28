@@ -1,0 +1,568 @@
+1
+00:00:02,050 --> 00:00:08,990
+Son videoda burger yapc yan etkilerini kendi destanmza tadk, imdi
+
+2
+00:00:09,110 --> 00:00:16,640
+bu modln tamamn ya da projenin dnmn sipari eylemi yaratclar zerinde
+
+3
+00:00:16,640 --> 00:00:17,810
+alarak deitirelim.
+
+4
+00:00:17,930 --> 00:00:21,760
+Bu dosyaya bir gz attk, imdiden, bu dosyada baz
+
+5
+00:00:21,830 --> 00:00:25,020
+yan etkiler yaptmz iin, ie aktarma eksenlerini grebiliyoruz.
+
+6
+00:00:25,040 --> 00:00:27,390
+lk aksiyon ierik oluturucular saf
+
+7
+00:00:27,560 --> 00:00:35,840
+olsa da, satn aldmz baz yan etkileri olduu iin satn aldk. Ayrca baz yan etkilere sahip
+
+8
+00:00:35,840 --> 00:00:38,140
+olduumuz fetchOrder'leri de var.
+
+9
+00:00:38,180 --> 00:00:40,490
+imdi satn almayla balayalm.Burger,
+
+10
+00:00:40,550 --> 00:00:44,330
+bu mant imdi bir destan haline getirelim.
+
+11
+00:00:44,630 --> 00:00:52,040
+Bunun iin, tm bu kodu alp, sipari vereceim yeni bir dosya oluturacam. sagas klasrnde js, yeni
+
+12
+00:00:52,040 --> 00:00:55,900
+jeneratr ihra edeceim ve
+
+13
+00:00:56,360 --> 00:01:02,420
+bu jeneratr satn alacamBurgerSaga, yani satn almaBurgerSaga,
+
+14
+00:01:02,780 --> 00:01:12,140
+bunun gibi, buradaki eylemi gerekletirin ve elbette deitireceimiz bu kodu altrn.
+
+15
+00:01:13,260 --> 00:01:14,100
+Srayla.
+
+16
+00:01:14,110 --> 00:01:19,120
+lemler klasrnde js dosyas, zel
+
+17
+00:01:19,190 --> 00:01:27,940
+axios rneini kullandmz gryoruz. Siparie geri dneceim. js dosyas sagas klasrnde ve bu ie aktarmay en ste ekler.
+
+18
+00:01:27,970 --> 00:01:32,750
+Ayrca redux destan etkisinden de ithal edeceiz,
+
+19
+00:01:32,980 --> 00:01:40,960
+bu yzden bu ithalat da ekleyelim ve ayn zamanda baz eylemleri esasen
+
+20
+00:01:40,960 --> 00:01:48,220
+baz eylemleri buraya gndermeyi planladmzdan, tm eylemleri eylemlerim klasrnden ie aktaracaz.
+
+21
+00:01:48,370 --> 00:01:51,340
+Burada eylemler yapmaya balayabiliriz, bu
+
+22
+00:01:51,340 --> 00:01:54,890
+yzden satn alma ileminiBurgerStart'a gnderiyoruz, imdi
+
+23
+00:01:54,910 --> 00:02:00,740
+bir destan olduumuzdan beri kullanyoruz. Bunun iin, satn alma ilemininBurgerStart'n gerekten
+
+24
+00:02:00,740 --> 00:02:01,890
+da aktarldndan
+
+25
+00:02:01,930 --> 00:02:08,610
+emin olmalyz, bu yzden dizine gidersem. eylemler klasrnde js dosyas, ben sipari dosyasndan, satn
+
+26
+00:02:08,650 --> 00:02:10,970
+almaBurgerStart ihra emin olun, ve
+
+27
+00:02:12,120 --> 00:02:18,780
+ayn zamanda satn alma iin uygun olacaktrBurgerSuccess ve ayn zamanda burada nihayetinde gndeririz baarsz olsun,
+
+28
+00:02:18,780 --> 00:02:19,370
+hem
+
+29
+00:02:19,620 --> 00:02:27,750
+de satn almaBurgerFail ve satn almaBurgerSuccess iin ihra emin olun. Siparie geri dn.
+
+30
+00:02:27,750 --> 00:02:28,080
+&nbsp;
+
+31
+00:02:28,080 --> 00:02:30,240
+js dosyas, sagas klasr,
+
+32
+00:02:30,240 --> 00:02:35,340
+daha sonra put (purchaseBurgerStart ()), bunun gibi, ancak tm
+
+33
+00:02:35,340 --> 00:02:41,460
+eylem ithalat demetleri bu eylemler nesnesi zerinde yrtlr, sonra verim verim
+
+34
+00:02:41,460 --> 00:02:49,180
+aktaran post ve daha nce olduu gibi burada yantm alacam Baarl olup olmadn grmek
+
+35
+00:02:49,220 --> 00:02:52,500
+iin bir deneme blouna sarn.
+
+36
+00:02:52,700 --> 00:03:04,050
+yleyse onu buraya tayalm ve eer baarl olursa, eylemler yapacam. satn almaBurgerSuccess ve yant veri isminden
+
+37
+00:03:04,050 --> 00:03:10,860
+geip, eski kodumuzda da gryoruz, biz de burada
+
+38
+00:03:10,860 --> 00:03:18,260
+eylem yaratcmzda argman olarak aldmz emir verilerden getik.
+
+39
+00:03:18,360 --> 00:03:27,610
+imdi bu fikir, sadece destanmza ve eylemimize eriim salamaktr, bu yzden aksiyon siparii verisini iletin,
+
+40
+00:03:27,630 --> 00:03:32,190
+bununla birlikte bu ilemin burada yaplmas gerekmektedir,
+
+41
+00:03:32,190 --> 00:03:35,790
+bylece anahtar olacak veri isminin yan
+
+42
+00:03:35,820 --> 00:03:40,480
+sra eylem sras verileri de iletilecektir. Firebase'de oluturuldu.
+
+43
+00:03:40,620 --> 00:03:47,790
+imdi yapmamz gereken baka bir ey, burada belirte eklediimiz ve sipari verisini
+
+44
+00:03:48,000 --> 00:03:55,810
+sunucuya aktardmz yer, tabii ki bu ikisini de aldmz eylemden karmalyz, bylece bunu iletebiliriz.
+
+45
+00:03:55,980 --> 00:03:58,590
+Bu durumda, baarl bir vakaya
+
+46
+00:03:58,620 --> 00:04:06,460
+sahibiz, imdi bir hatay yakalayabilirim ve sonra bir hatay yaparsak bu eylemi buraya gnderirim,
+
+47
+00:04:06,660 --> 00:04:07,690
+bu yzden
+
+48
+00:04:07,680 --> 00:04:09,570
+burada eylemler gerekletireceim.
+
+49
+00:04:09,670 --> 00:04:16,470
+satnBurgerFail ve sadece bu eylem yaratcs iin hatay iletmek.
+
+50
+00:04:16,470 --> 00:04:25,910
+Bununla, tm bunlar kaldrabilirim, bunu kaydedebilir ve daha sonra eylem yaratcsnda bir ileriye dnk sipari verisi
+
+51
+00:04:25,960 --> 00:04:33,160
+ve belirteci zerinde alabilir ve dinleyebileceimiz bir eylemi gerekletirebiliriz, bylece bu destan
+
+52
+00:04:33,160 --> 00:04:34,430
+gerekletiinde altrabiliriz.
+
+53
+00:04:34,590 --> 00:04:36,280
+Bunun iin ncelikle hareket
+
+54
+00:04:36,280 --> 00:04:40,020
+trlerine gideceim, bir burger satn almak istiyoruz, bunu unutmayn.
+
+55
+00:04:40,240 --> 00:04:42,310
+Bu yzden, ilem
+
+56
+00:04:42,310 --> 00:04:53,350
+trlerinde, imdi buraya gideceim ve isminde bir tanmlayc olarak ismini alan bir const purchaseBurger
+
+57
+00:04:53,350 --> 00:04:58,410
+vereceim, bylece srayla. js dosyas, buradaki
+
+58
+00:04:58,710 --> 00:05:05,520
+tm eski kodu kaldrabilirim ve bunun yerine actionTypes kullandmz
+
+59
+00:05:05,520 --> 00:05:13,200
+eylem olan javascript nesnesini dndrebilirim. satn almaBurger ve eylem yaratcsnda bir argman olarak
+
+60
+00:05:13,230 --> 00:05:18,380
+aldmz sipari verisini getiimizde ve eylemcinin daha nce olduu gibi alt
+
+61
+00:05:18,510 --> 00:05:23,160
+iin uygulamada herhangi bir kodu deitirmememiz iin belirteten getiimiz yerde,
+
+62
+00:05:23,160 --> 00:05:27,660
+sadece imdi baz kodlar altrmak yerine eylem oluturur, ancak
+
+63
+00:05:27,810 --> 00:05:34,560
+bu destan iinde gerekletirilecek ve bunun baarl olmas iin, bu satn alma iin bir
+
+64
+00:05:34,560 --> 00:05:35,910
+gzlemci oluturmanz gerekir.BurgerSaga.
+
+65
+00:05:35,910 --> 00:05:42,240
+Yani endekste. sagas klasrnde js dosyas, watchOrder
+
+66
+00:05:42,780 --> 00:05:47,190
+ismini vereceim baka bir jeneratr fonksiyonu yaratacam nk
+
+67
+00:05:47,220 --> 00:05:50,580
+sipariimi sagas'mla izlediimden ve buradan nce
+
+68
+00:05:50,640 --> 00:05:59,950
+bir ithalat ekleyeceim, yani bir eyleri ie aktaracam. / sipari ve bir ey bu yaratld.BurgerSaga yeni
+
+69
+00:05:59,950 --> 00:06:00,880
+oluturduk.
+
+70
+00:06:01,030 --> 00:06:04,300
+Burada watchOrder'da, TakeEvery eylem
+
+71
+00:06:04,420 --> 00:06:13,090
+trlerini elde edeceim, orada yarattmz buyBurger eylem tr var ve bu
+
+72
+00:06:13,300 --> 00:06:18,030
+gerekletiinde oluan satn almaBurgerSaga'y altrmak istiyoruz.
+
+73
+00:06:18,040 --> 00:06:24,460
+imdi her ey birbirine bal ve hala alveri yapabilmeliyiz ama imdi destanmz kullanarak, durumun
+
+74
+00:06:24,460 --> 00:06:26,360
+byle olup olmadn grelim.
+
+75
+00:06:27,180 --> 00:06:30,280
+Tm dosyalar saklayalm ve bavurumuza geri
+
+76
+00:06:32,440 --> 00:06:34,770
+dnelim, hadi yeniden yklememiz ve
+
+77
+00:06:34,960 --> 00:06:37,740
+kimlik dorulamas yapalm. Bu yzden, buradan
+
+78
+00:06:37,810 --> 00:06:40,170
+oturum aacam, giri yapalm.
+
+79
+00:06:40,250 --> 00:06:43,660
+imdi biraz hamburger yapp sipari vereyim,
+
+80
+00:06:43,760 --> 00:06:46,160
+devam et, devam et,
+
+81
+00:06:46,310 --> 00:06:47,770
+biraz veri girelim.
+
+82
+00:06:49,970 --> 00:06:55,380
+Tm bu girilenlerle, siparii ve satn almay tklayalmBurger burada yrtlyor, baka
+
+83
+00:06:56,620 --> 00:06:58,660
+bir ey grmyoruz, ama
+
+84
+00:06:58,660 --> 00:06:59,700
+nedenini biliyor musunuz?
+
+85
+00:07:01,320 --> 00:07:03,710
+nemli bir adm atladmzdan, saat
+
+86
+00:07:03,780 --> 00:07:11,590
+dzeni jeneratr yarattk ama bunu asla dizinde altrmyoruz. maazamz oluturduumuz js, destan
+
+87
+00:07:11,610 --> 00:07:23,010
+middleware run'u altrmal ve imdi yeni oluturulmu watchOrder jeneratr altrmalyz.
+
+88
+00:07:23,130 --> 00:07:28,650
+Bu yzden, burada almay armak iin WatchOrder'a bir referans gsterelim, hadi
+
+89
+00:07:28,800 --> 00:07:31,750
+onu kaydedelim ve imdi tekrar deneyelim.
+
+90
+00:07:31,770 --> 00:07:32,720
+Hala giri
+
+91
+00:07:32,750 --> 00:07:36,050
+yaptm, bu hamburgeri abucak yeniden ina
+
+92
+00:07:36,090 --> 00:07:45,350
+et, izin ver ve ayn verileri tekrar gir ve imdi tekrar deneyelim, siparii tklayalm ve bu ok daha
+
+93
+00:07:45,370 --> 00:07:46,620
+iyi grnyor,
+
+94
+00:07:46,630 --> 00:07:49,370
+imdi satn aldmz grBurgerSuccess burada
+
+95
+00:07:49,390 --> 00:07:54,090
+grndmz gibi grnyor aslnda baarl bir satn alm yapmak.
+
+96
+00:07:54,210 --> 00:07:55,410
+Bu gerekten harika,
+
+97
+00:07:55,410 --> 00:07:59,810
+bu yzden siparileri bir destandan aldmzdan emin olalm, bylece tm bu
+
+98
+00:07:59,880 --> 00:08:06,710
+Action Creator dosyalarnda gerekten sadece saf aksiyon yaratclarna sahibiz. Bunun iin
+
+99
+00:08:06,720 --> 00:08:15,540
+sipariime gideceim. jag dosya sagas klasrnde ve orada, ben yeni
+
+100
+00:08:15,540 --> 00:08:18,570
+bir jeneratr fonksiyonu oluturmak ve
+
+101
+00:08:18,810 --> 00:08:23,890
+sipari yaratcs fetchOrders ismini verdim, bu yzden burada destan
+
+102
+00:08:24,080 --> 00:08:28,460
+ismini vereceim fetchOrdersSaga, eylemimi alacam ve eylemde
+
+103
+00:08:28,470 --> 00:08:37,000
+sahip olduum kodu kopyalayacam imdiye kadar yaratcs. Sonu olarak, endekste olduundan emin olmamz iin fetchOrdersStart,
+
+104
+00:08:37,020 --> 00:08:41,070
+fetchOrdersSuccess ve fetchOrdersFail'i gndereceiz. eylemler klasrnn js
+
+105
+00:08:41,100 --> 00:08:51,300
+dosyas, aslnda tm bu eylemleri ihra ediyoruz. Yani fetchOrdersSuccess, fetchOrdersStart ve
+
+106
+00:08:51,300 --> 00:08:53,190
+fetchOrdersFail, hepsini
+
+107
+00:08:53,310 --> 00:08:55,420
+ihracata ekledim.
+
+108
+00:08:55,740 --> 00:09:06,590
+Bu destan fileminde geri gnderim eylemlerine gnderimimizi yaparak balayabiliriz.
+
+109
+00:09:06,620 --> 00:09:13,490
+Getiriciyi gstermek iin fetchOrdersStart. Ardndan, belirte ve kullanc kimliini
+
+110
+00:09:13,490 --> 00:09:20,030
+kardmz sorgu parametrelerini ayarlyoruz, onlara eriebilmek iin onlara erimemizi beklemekteyiz,
+
+111
+00:09:20,030 --> 00:09:29,290
+bu yzden ileme ekleyelim. ikisinin nnde. Sonra bir HTTP talebi yaparz ve bunu
+
+112
+00:09:29,380 --> 00:09:30,670
+nasl yapacanz rendiniz,
+
+113
+00:09:31,520 --> 00:09:38,880
+bunu nasl adlandrrsanz veriniz, genel olarak bir cevapta veya sabit olarak saklayn, bir deneme / yakalama blounu bitirmek
+
+114
+00:09:39,730 --> 00:09:44,150
+iin beklediinizden emin olmak iin verim kullann hatalar da ilemek iin.
+
+115
+00:09:44,200 --> 00:09:52,780
+Bu yzden, get isteklerini burada yrtmeye alacam, bununla birlikte aldnzdan emin olun,
+
+116
+00:09:53,940 --> 00:09:57,800
+ancak karlaabileceimiz hatalar da yakalayacam.
+
+117
+00:09:58,050 --> 00:10:00,180
+lk nce baar durumu zerinde
+
+118
+00:10:00,360 --> 00:10:03,370
+alalm ve daha sonra blokta kullandmz kodu kullanalm.
+
+119
+00:10:03,420 --> 00:10:11,220
+Yani burada bizim deneme bloumuzda, daha nce altmz kodda yaptrrz, daha sonra bo dizimizi
+
+120
+00:10:11,340 --> 00:10:15,460
+yaratrz, yant verilerinin iinden geerek bu diziye aktarrz.
+
+121
+00:10:15,600 --> 00:10:25,780
+Ve sonunda, burada ya da burada fetchOrdersSuccess gnderdik, ben sadece eylemler koyacaz. fetchOrdersSuccess ve biz bu fetchedOrders
+
+122
+00:10:25,870 --> 00:10:33,160
+dizisi biz nfuz. Bu durumda, daha sonra blok yaplr, biz bu
+
+123
+00:10:33,160 --> 00:10:41,770
+ilevsellii bizim destanmza ekledik, ok durumunda sadece eylemler vermemiz gerekiyor. fetchOrdersFail ve hatay
+
+124
+00:10:41,950 --> 00:10:45,130
+ilet, hepsi
+
+125
+00:10:45,280 --> 00:10:46,910
+bu.
+
+126
+00:10:46,940 --> 00:10:55,450
+imdi bununla birlikte, unu keselim, burada yapmam gereken bir ey, res verilerine eriiyorum,
+
+127
+00:10:55,480 --> 00:10:57,640
+aslnda yant bu
+
+128
+00:10:57,810 --> 00:11:01,990
+yzden bu sabit ismi kullanalm, kodu yeniden
+
+129
+00:11:02,190 --> 00:11:07,670
+yaplandralm ve iimiz bitti, biz bunu yaptk destanmza, fetchOrdersSaga'ya.
+
+130
+00:11:08,100 --> 00:11:17,520
+imdi fetchOrders eylemi yaratcs eylem nesnesini gerekten oluturmal, bunun iin her zaman olduu gibi
+
+131
+00:11:17,520 --> 00:11:24,280
+yeni bir eylem tr oluturacam, bu yeni eylem tr fetchOrders
+
+132
+00:11:24,390 --> 00:11:30,340
+olacak, bu yzden bir fetchOrders adnda sabit verelim.
+
+133
+00:11:30,410 --> 00:11:37,880
+Bunu bir string tanmlayc olarak ve ardndan action creator dzeninde kullanacaz. js, actionTypes
+
+134
+00:11:37,970 --> 00:11:43,730
+trn ayarlayacam. FETCH_ORDERS ve hem desemdeki hem
+
+135
+00:11:43,970 --> 00:11:49,250
+de kullanc kimliinden, hem destanmzdaki eylemden karacamz gibi.
+
+136
+00:11:49,250 --> 00:11:56,020
+Son olarak, endekste bu eylem tipine fetchOrders' dinlemeliyiz. sagas klasrnde js dosyas,
+
+137
+00:11:56,140 --> 00:12:08,540
+burada watchOrder var, takeEvery actionTypes vereceim. FETCH_ORDERS ve yeni oluturulan fetchOrdersSaga'y kullann, bu yzden
+
+138
+00:12:08,600 --> 00:12:10,270
+bu eylem
+
+139
+00:12:10,490 --> 00:12:19,600
+trn her algladmzda yrtmek istediim ey budur. Tm bunlar saklayalm ve bununla birlikte, uygulamay
+
+140
+00:12:19,600 --> 00:12:26,530
+yeniden ykleyebileceimiz bir kurulum yapmalyz, otomatik olarak giri yaptk ve siparilerimizi
+
+141
+00:12:26,800 --> 00:12:30,500
+ziyaret ettik ve imdi de bir
+
+142
+00:12:30,520 --> 00:12:32,350
+destan araclyla alyor.
+

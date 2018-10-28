@@ -1,0 +1,132 @@
+1
+00:00:01,990 --> 00:00:07,330
+Entonces en la ltima conferencia llegamos a este proyecto de base de fuego y cambiamos las reglas.
+
+2
+00:00:07,470 --> 00:00:14,730
+Ahora comencemos a enviar solicitudes HTB a este punto final y a enviar solicitudes HTP.
+
+3
+00:00:14,730 --> 00:00:18,970
+Por supuesto, deberamos instalar un nuevo paquete en nuestro proyecto de curso.
+
+4
+00:00:19,050 --> 00:00:25,830
+Hacemos esto con NPM install dash dash save x yes es el paquete que quiero instalar porque
+
+5
+00:00:25,830 --> 00:00:27,690
+eres como cualquier mdulo HTP.
+
+6
+00:00:27,730 --> 00:00:31,890
+Quiero usar ejes para establecer mi edad para mantener las solicitudes.
+
+7
+00:00:31,890 --> 00:00:38,210
+Por supuesto, puedes utilizar diferentes paquetes de Ajax, pero en realidad es realmente genial y solo puedo recomendarlo.
+
+8
+00:00:38,250 --> 00:00:43,260
+A partir de entonces podemos reiniciar el daemon que se abre con el inicio de NPM.
+
+9
+00:00:43,530 --> 00:00:47,290
+Y ahora, por supuesto, queremos agregar acceso a nuestra aplicacin.
+
+10
+00:00:47,550 --> 00:00:55,020
+En el ltimo mdulo del curso, use todas las formas diferentes de agregarlo y agregarlo creando una
+
+11
+00:00:55,290 --> 00:01:00,000
+instancia de acceso o simplemente importndola y configurando algunos predeterminados.
+
+12
+00:01:00,000 --> 00:01:08,700
+Ahora aadir agregando la instancia de xes, pero tambin podra importarla globalmente y establecer estos valores predeterminados globales que
+
+13
+00:01:08,700 --> 00:01:10,940
+vio en el ltimo mdulo.
+
+14
+00:01:11,010 --> 00:01:12,900
+Definitivamente jugar con ambos.
+
+15
+00:01:12,930 --> 00:01:15,110
+Elija el que ms le guste.
+
+16
+00:01:15,210 --> 00:01:22,900
+necesito importar x aos. del paquete ex-US y luego llama a X para crear y pasar un objeto javascript para configurarlo.
+
+17
+00:01:23,310 --> 00:01:30,600
+Ahora, para crear una instancia de X aos, voy a crear un nuevo archivo y voy a nombrar las
+
+18
+00:01:30,630 --> 00:01:38,010
+ordenes de estas X, punto, Jess, porque voy a usar eso para todas las cosas relacionadas con la orden
+
+19
+00:01:38,010 --> 00:01:38,780
+all, ahora
+
+20
+00:01:38,790 --> 00:01:46,050
+Ahora hay una base de datos configurada para ese lbf. Acabo de copiar desde la base de firesovers para que usted sea Alwar
+
+21
+00:01:46,050 --> 00:01:50,760
+a quien desea enviar su solicitud para almacenar sus datos en la base de datos.
+
+22
+00:01:50,820 --> 00:01:55,260
+Y de nuevo, por si te lo perdiste, es esta parte.
+
+23
+00:01:55,440 --> 00:02:02,280
+la base de datos Dator que es lo que configur como mi base predeterminada su L aqu, por supuesto, dice
+
+24
+00:02:02,330 --> 00:02:08,820
+que lo que se crea aqu debe almacenarse en algunas constantes o una constante o variable y nombrarla aqu.
+
+25
+00:02:08,820 --> 00:02:09,910
+Puede ver en
+
+26
+00:02:10,110 --> 00:02:13,520
+Y luego puedo exportar esto como el archivo predeterminado.
+
+27
+00:02:13,530 --> 00:02:18,100
+Ahora tengo mi propia instancia de acceso configurada para esto, tu et al.
+
+28
+00:02:18,140 --> 00:02:23,670
+Esta es tambin la razn por la que uso este enfoque de instancia porque ms adelante en el curso,
+
+29
+00:02:23,760 --> 00:02:27,230
+cuando agreguemos la autenticacin, todos usaremos un archivo diferente con x s.
+
+30
+00:02:27,240 --> 00:02:34,230
+As que no quiero configurarlo ni como un valor predeterminado global, aunque por el momento podra hacerlo.
+
+31
+00:02:34,260 --> 00:02:36,640
+Entonces ahora obtenemos la instancia de acceso creada.
+
+32
+00:02:36,690 --> 00:02:37,570
+Eso es genial.
+
+33
+00:02:37,590 --> 00:02:40,440
+Ahora vamos a enviar realmente el solicitante.
+

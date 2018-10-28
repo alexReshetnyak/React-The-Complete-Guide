@@ -1,0 +1,268 @@
+1
+00:00:02,030 --> 00:00:08,340
+En la ltima conferencia que hice, el proyecto utilizar y por X aos el paquete que recomiendo para
+
+2
+00:00:08,460 --> 00:00:11,970
+hacer solicitudes HTP y volver a actuar en las aplicaciones.
+
+3
+00:00:12,000 --> 00:00:14,510
+No hagamos tal solicitud de HTP.
+
+4
+00:00:14,730 --> 00:00:20,960
+Y para ese imbcil de vuelta y estamos usando, ya te indiqu que ests listo para enviar la
+
+5
+00:00:21,130 --> 00:00:23,700
+solicitud para obtener una variedad de publicaciones.
+
+6
+00:00:23,700 --> 00:00:27,990
+Ahora quiero renderizar ese conjunto de publicaciones en mi contenedor de bloques.
+
+7
+00:00:28,180 --> 00:00:30,930
+Ah tengo que publicar componentes individuales.
+
+8
+00:00:30,930 --> 00:00:37,410
+deben ser generados dinmicamente, lista de publicaciones, una lista de publicaciones que hemos obtenido de un servidor para ser precisos.
+
+9
+00:00:37,410 --> 00:00:39,230
+Y, por supuesto, los datos
+
+10
+00:00:39,240 --> 00:00:47,820
+Ahora, dnde hacemos esta solicitud de HTP? Echemos un vistazo a las diapositivas del ciclo de vida nuevamente para pap.
+
+11
+00:00:47,850 --> 00:00:51,180
+Quizs encontremos un gancho apropiado para el ciclo de vida all.
+
+12
+00:00:51,240 --> 00:00:56,250
+Si echamos un vistazo al ciclo de vida de Hooke, nos encontramos con la creacin de componentes.
+
+13
+00:00:56,250 --> 00:00:59,660
+Hay un ciclo de vida que debemos usar para los efectos secundarios.
+
+14
+00:00:59,700 --> 00:01:04,520
+El componente se mont y la solicitud de HGP es un efecto secundario.
+
+15
+00:01:04,590 --> 00:01:11,520
+tiene el efecto secundario de obtener nuevos datos y si la aplicacin del reactor est emitiendo dinmicamente algunos datos,
+
+16
+00:01:11,530 --> 00:01:18,230
+es probable que el cambio de datos sea, por supuesto, un efecto secundario que afecte su aplicacin .
+
+17
+00:01:18,270 --> 00:01:22,670
+No afecta su lgica de reactivacin ni nada por el estilo, pero
+
+18
+00:01:23,010 --> 00:01:29,560
+Entonces, el componente MT es un gran lugar para causar efectos secundarios pero no para actualizar el estado ya
+
+19
+00:01:29,560 --> 00:01:30,770
+que desencadena el renderizado.
+
+20
+00:01:31,020 --> 00:01:37,560
+Todava actualizaremos el estado aqu una vez que la solicitud de HTP a Stallin nos haya proporcionado nuevos datos
+
+21
+00:01:37,560 --> 00:01:39,480
+porque realmente queremos actualizar la pgina.
+
+22
+00:01:39,480 --> 00:01:46,640
+Entonces, en realidad, este es un comportamiento deseado, por lo que el componente MT es el mejor lugar para enviar la solicitud HTP.
+
+23
+00:01:46,740 --> 00:01:53,790
+Entonces, en el contenedor de bloques implementamos el componente mount y ahora necesitamos acceso para enviar esa solicitud.
+
+24
+00:01:53,880 --> 00:01:57,460
+As que importar axiomas del paquete real.
+
+25
+00:01:57,680 --> 00:02:05,640
+Y ahora podemos usarlo aqu en el componente en Mt X aos ofrece un mtodo de envo para
+
+26
+00:02:05,820 --> 00:02:07,900
+que adivine que reciba solicitudes.
+
+27
+00:02:07,920 --> 00:02:10,540
+Este mtodo necesita al menos un argumento.
+
+28
+00:02:10,580 --> 00:02:14,120
+D Usted es quien debe enviar esta solicitud de obtencin.
+
+29
+00:02:14,170 --> 00:02:20,870
+As que aqu ests. Copi desde la pgina de marcador ficticia con las publicaciones de Slash al final.
+
+30
+00:02:20,880 --> 00:02:26,700
+Ahora tambin puede pasar un segundo argumento para configurar esta solicitud y puede obtener ms informacin sobre todas
+
+31
+00:02:26,700 --> 00:02:28,520
+las opciones de configuracin, etc.
+
+32
+00:02:28,590 --> 00:02:33,000
+En esa pgina de inicio se discute, por supuesto, no se trata principalmente de Xs.
+
+33
+00:02:33,060 --> 00:02:39,170
+As que no voy a caminar para toda la configuracin que posiblemente pueda agregar aqu, pero esta pgina es un gran punto de partida.
+
+34
+00:02:39,180 --> 00:02:43,880
+Todava estamos a punto de ver algunas de las cosas que puede hacer con X para este mdulo.
+
+35
+00:02:44,220 --> 00:02:47,130
+Aqu, sin embargo, no necesito ninguna configuracin especfica.
+
+36
+00:02:47,130 --> 00:02:51,310
+Solo quiero enviar un vainilla normal para obtener solicitudes para eso o para otra cosa.
+
+37
+00:02:51,750 --> 00:02:59,430
+La cosa, por supuesto, es que esto debera devolver algunas publicaciones, pero intentar almacenarlas en una constante de
+
+38
+00:02:59,430 --> 00:03:05,110
+publicacin no funcionar porque, por supuesto, la solicitud de obtencin ocurre de forma asncrona.
+
+39
+00:03:05,310 --> 00:03:07,050
+No termina de inmediato.
+
+40
+00:03:07,080 --> 00:03:10,710
+Necesita algo de tiempo para ir al servidor y obtener los datos.
+
+41
+00:03:11,220 --> 00:03:15,510
+Javascript, sin embargo, ejecuta su cdigo de forma sncrona.
+
+42
+00:03:15,570 --> 00:03:22,440
+Entonces, despus de esta lnea, la siguiente lnea se ejecutar inmediatamente, no se detendr hasta que esto termine, as que
+
+43
+00:03:22,440 --> 00:03:25,550
+no almacenar las publicaciones y las publicaciones constantes aqu.
+
+44
+00:03:25,830 --> 00:03:33,210
+Este es el comportamiento deseado porque no queremos bloquear la ejecucin de nuestra aplicacin solo porque estamos
+
+45
+00:03:33,210 --> 00:03:35,400
+esperando que finalice esta solicitud.
+
+46
+00:03:35,790 --> 00:03:36,820
+X s.
+
+47
+00:03:36,810 --> 00:03:42,600
+Por lo tanto, usa promesas como un objeto JavaScript predeterminado introducido con ESX.
+
+48
+00:03:42,690 --> 00:03:46,330
+Y gracias a nuestro flujo de trabajo que estamos usando con create reaccionar.
+
+49
+00:03:46,590 --> 00:03:52,950
+Tambin disponible en navegadores ms antiguos, ya que el cdigo se compila en cdigo que tambin funciona
+
+50
+00:03:53,610 --> 00:04:01,620
+en navegadores ms antiguos, Access usa promesas y devuelve una promesa para que podamos cambiarla entonces simplemente es un mtodo que
+
+51
+00:04:01,620 --> 00:04:08,640
+toma una entrada SD de funcin y esta funcin se obtendr ejecutado una vez que la promesa se resuelve.
+
+52
+00:04:08,700 --> 00:04:16,170
+Entonces, una vez que los datos del back-end estn ah, podemos decir que la funcin recibe un objeto de
+
+53
+00:04:16,200 --> 00:04:17,340
+respuesta como entrada.
+
+54
+00:04:17,340 --> 00:04:23,850
+Esto se pasar a la funcin automticamente por X-ists. Y por ahora, simplemente imprmalo en la
+
+55
+00:04:23,850 --> 00:04:27,560
+consola para que podamos ver lo que hay dentro.
+
+56
+00:04:27,570 --> 00:04:34,320
+de reactivacin y volver a cargar la pgina e inmediatamente veremos que este objeto se imprime en la consola.
+
+57
+00:04:34,320 --> 00:04:36,820
+Guardar este cdigo, volver a la aplicacin
+
+58
+00:04:36,900 --> 00:04:43,860
+Si ampliamos eso, vemos el cdigo de estado aqu y todas estas propiedades aqu son solo propiedades proporcionadas por
+
+59
+00:04:43,860 --> 00:04:45,480
+el paquete de acceso.
+
+60
+00:04:45,480 --> 00:04:48,820
+As que obtuvimos el status quo 200 Entonces fue exitoso.
+
+61
+00:04:48,840 --> 00:04:53,900
+Vemos la solicitud que fue enviada, vemos los encabezados de respuesta e importante para nosotros.
+
+62
+00:04:53,940 --> 00:04:58,240
+Tenemos el objeto de datos que contiene los datos devueltos por el servidor.
+
+63
+00:04:58,260 --> 00:05:05,780
+Enviamos la solicitud a este servicio ficticio de marcador de posicin y para este, simplemente se trata de una matriz
+
+64
+00:05:05,810 --> 00:05:09,560
+de objetos JavaScript donde cada objeto debera representar una publicacin.
+
+65
+00:05:09,830 --> 00:05:15,540
+Como puede ver, obtuvimos un ttulo, un cuerpo, una A y una propiedad de identificacin de usuario.
+
+66
+00:05:15,560 --> 00:05:21,380
+Ahora podemos trabajar con esa informacin y, por supuesto, una para trabajar con ella para mostrarla
+
+67
+00:05:21,380 --> 00:05:27,020
+dinmicamente en la pantalla y publicar algunas publicaciones en lugar del contenido ficticio que tengo ahora.
+

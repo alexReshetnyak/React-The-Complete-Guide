@@ -1,0 +1,220 @@
+1
+00:00:02,140 --> 00:00:08,140
+Para demonstrar o encaminhamento, voltei a este pequeno aplicativo de bloco que criamos, onde criamos postagens
+
+2
+00:00:08,170 --> 00:00:14,220
+no blog, podemos selecionar uma postagem no blog e onde tambm podemos criar uma nova postagem.
+
+3
+00:00:14,260 --> 00:00:17,680
+Agora, tudo est sentado em uma e na mesma pgina.
+
+4
+00:00:17,680 --> 00:00:22,350
+E, claro, no  realmente a experincia do usurio que queremos fornecer.
+
+5
+00:00:22,390 --> 00:00:29,380
+Em vez disso, provavelmente queremos mostrar alguns links no topo para permitir que o usurio troque de
+
+6
+00:00:29,470 --> 00:00:31,580
+pginas e carregue pginas diferentes.
+
+7
+00:00:31,690 --> 00:00:38,530
+Ento, comecemos por adicionar esses links antes de comear a implementar o roteamento e apoiar
+
+8
+00:00:38,530 --> 00:00:39,730
+esses diferentes links.
+
+9
+00:00:39,790 --> 00:00:45,490
+Agora, os links podem ser adicionados ao continer do bloco e, claro, voc tambm pode
+
+10
+00:00:45,490 --> 00:00:47,170
+terceiriz-los em seu prprio componente.
+
+11
+00:00:47,170 --> 00:00:51,810
+Mas eu quero manter essa inclinao para que eu possa me concentrar na funcionalidade de roteamento.
+
+12
+00:00:51,910 --> 00:00:59,130
+Em seguida, veremos um mundo real configurado no prximo Marchal onde aplicamos o roteamento para o nosso projeto de curso.
+
+13
+00:00:59,470 --> 00:01:06,910
+Ento, em nossos mtodos de renderizao, eu no s quero exibir minhas postagens, mas acima das postagens, eu
+
+14
+00:01:06,910 --> 00:01:13,780
+quero ter um cabealho onde tambm publique alguns links para adicionar um cabealho aqui e a.
+
+15
+00:01:13,810 --> 00:01:15,450
+Meu nav aliment.
+
+16
+00:01:15,610 --> 00:01:23,830
+E l, normalmente temos uma lista indita, que, por sua vez, contm nossos links dentro dos itens da lista.
+
+17
+00:01:23,990 --> 00:01:29,530
+E por enquanto, simplesmente adicionei-os como links bem normais simplesmente.
+
+18
+00:01:29,530 --> 00:01:36,520
+Ento, temos provavelmente o nosso link inicial, que ser essa pgina inicial que mostra todas as
+
+19
+00:01:36,520 --> 00:01:37,600
+postagens que temos.
+
+20
+00:01:37,600 --> 00:01:45,250
+Ento, podemos ter um link para uma nica publicao e isso  algo que vamos criar mensagens dinamicamente to
+
+21
+00:01:45,270 --> 00:01:45,730
+avanadas.
+
+22
+00:01:45,730 --> 00:01:51,940
+Ns o carregamos e a ltima coisa que eu quero ter aqui na navegao  que voc no
+
+23
+00:01:51,940 --> 00:01:55,830
+publicou um link que poderia levar a novas mensagens ou algo assim.
+
+24
+00:01:55,900 --> 00:02:00,570
+Ento,  assim que agora configuramos nossos links.
+
+25
+00:02:00,580 --> 00:02:05,490
+Agora, deixe-me adicionar um estilo para que eles no vejam brcolis soop para Daddles.
+
+26
+00:02:05,490 --> 00:02:14,680
+Antes de tudo, digite rapidamente a lista DIANORA para no ter um estilo de lista padro, ento a margem e o preenchimento do
+
+27
+00:02:15,340 --> 00:02:16,900
+Ciro tambm so estilo.
+
+28
+00:02:16,900 --> 00:02:24,550
+Todos os itens da lista nos meus componentes de mensagens esto no final que eu tenho e este
+
+29
+00:02:24,550 --> 00:02:36,220
+componente de bloco seus itens de lista devem usar o estilo de bloco inline e ter uma margem de talvez 20 pixels em torno deles e os
+
+30
+00:02:36,310 --> 00:02:45,700
+links em seu D-NC so tags todo o texto removido Decorao, portanto, definir o disco para no dar-lhes uma cor de preto.
+
+31
+00:02:45,700 --> 00:02:48,650
+Agora vamos ver como parece isso se voltarmos.
+
+32
+00:02:48,760 --> 00:02:54,990
+Ns vemos que aqui, no topo, o motivo disso, claro,  que eu tenho um pequeno erro.
+
+33
+00:02:55,180 --> 00:02:58,170
+As postagens so aplicadas a esta primeira seo.
+
+34
+00:02:58,180 --> 00:03:01,350
+Todos precisam definir um nome geral de classe de bloco.
+
+35
+00:03:01,360 --> 00:03:07,330
+Talvez aqui na diviso de wrapping e NDC como asfalto l para todas as postagens de substituio com o Plock aqui para
+
+36
+00:03:07,330 --> 00:03:09,050
+quaisquer itens de ajuda  navegao.
+
+37
+00:03:09,310 --> 00:03:10,710
+Ento, agora temos os links aqui.
+
+38
+00:03:10,780 --> 00:03:17,800
+Vamos talvez tambm centr-los, todos definiram uma largura de 100 por cento para a lista no ordenada e, em seguida,
+
+39
+00:03:17,830 --> 00:03:22,750
+configure o centro de alinhamento de texto para que os links agora estejam centrados.
+
+40
+00:03:22,750 --> 00:03:34,140
+um hover e bloquear um ativo agora pode obter uma cor de talvez f 2:41 F que  uma cor laranja.
+
+41
+00:03:34,230 --> 00:03:39,540
+Agora, possamos tambm adicionar um pequeno estilo hover para bloquear
+
+42
+00:03:39,560 --> 00:03:41,850
+Agora com isso obtivemos nossos links.
+
+43
+00:03:41,870 --> 00:03:45,260
+Isso  claro, mas rpido, o Indie's realmente no faz muito.
+
+44
+00:03:45,260 --> 00:03:46,350
+Carga diferente.
+
+45
+00:03:46,350 --> 00:03:46,770
+Tu es.
+
+46
+00:03:46,820 --> 00:03:48,410
+Como voc pode ver e voc  a Albar.
+
+47
+00:03:48,470 --> 00:03:50,790
+Mas isso no afeta nossa aplicao.
+
+48
+00:03:50,810 --> 00:03:53,270
+Na verdade, ele sempre retorna  mesma pgina.
+
+49
+00:03:53,270 --> 00:03:58,820
+Isso est relacionado  forma como nosso servidor de desenvolvimento est configurado e seu servidor de produo tambm
+
+50
+00:03:58,850 --> 00:03:59,680
+deve ser configurado.
+
+51
+00:03:59,690 --> 00:04:06,220
+Ele sempre retorna o ndice HVM. Eu vou cair em todas as rotas porque, para o servidor, no existem
+
+52
+00:04:06,220 --> 00:04:08,470
+rotas diferentes, h apenas um nico arquivo.
+
+53
+00:04:08,480 --> 00:04:10,470
+Ele retornou o tempo todo.
+
+54
+00:04:10,520 --> 00:04:14,210
+Agora  sobre analisar que voc est no cliente.
+
+55
+00:04:14,240 --> 00:04:20,140
+Isto  o que comear a trabalhar no prximo, adicionando que o pacote do roteador e a configurao de rotas diferentes.
+

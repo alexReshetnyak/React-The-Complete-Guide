@@ -1,0 +1,204 @@
+1
+00:00:02,230 --> 00:00:07,720
+Echemos un vistazo al ciclo de vida de los componentes para actualizar y all realmente tenemos que diferenciar
+
+2
+00:00:07,720 --> 00:00:09,810
+entre las actualizaciones activadas por el padre.
+
+3
+00:00:09,940 --> 00:00:14,350
+As que cambiar los accesorios y las actualizaciones activadas internamente.
+
+4
+00:00:14,410 --> 00:00:21,040
+As que cambiando el estado aqu tendremos el caso de que los accesorios cambiaron para que la actualizacin sea
+
+5
+00:00:21,040 --> 00:00:22,500
+activada por el padre.
+
+6
+00:00:22,600 --> 00:00:28,600
+El primer mtodo que luego se ejecuta si lo implementamos como componente recibir accesorios y obtendremos
+
+7
+00:00:28,600 --> 00:00:31,070
+los prximos accesorios como un argumento aqu.
+
+8
+00:00:31,330 --> 00:00:36,670
+pero obtenga el estado de Baystate. pintar en los accesorios externos si no necesita sincronizar esto.
+
+9
+00:00:36,670 --> 00:00:42,970
+Ahora, una cosa que podramos hacer en este mtodo es que podemos sincronizar nuestro estado local del componente si tenemos
+
+10
+00:00:43,060 --> 00:00:49,470
+uno para las indicaciones, as que inicialice un estado con los accesorios para luego poder cambiar el estado en ese
+
+11
+00:00:49,470 --> 00:00:49,750
+componente,
+
+12
+00:00:49,750 --> 00:00:52,210
+Probablemente no necesites implementar este mtodo.
+
+13
+00:00:52,510 --> 00:00:58,360
+Lo que no debes hacer aqu es causar efectos secundarios, por lo que no te acerques a la web y obtengas datos
+
+14
+00:00:58,360 --> 00:01:04,380
+o algo por el estilo, ya que esto generar una representacin real del componente y, por lo tanto, dos problemas de rendimiento.
+
+15
+00:01:04,510 --> 00:01:06,930
+Ahora bien, recibir prop's.
+
+16
+00:01:07,030 --> 00:01:10,980
+Un esfuerzo muy interesante se ejecuta la actualizacin del componente de la camisa.
+
+17
+00:01:11,290 --> 00:01:13,460
+Y ah realmente obtenemos dos argumentos.
+
+18
+00:01:13,630 --> 00:01:16,690
+Los prximos accesorios y el prximo estado.
+
+19
+00:01:16,690 --> 00:01:21,350
+As que, bsicamente, los accesorios y el estado que desencadenaron esta actualizacin.
+
+20
+00:01:21,450 --> 00:01:25,960
+Este es un mtodo que puede cancelar el proceso de actualizacin.
+
+21
+00:01:25,960 --> 00:01:28,510
+Puedes decidir si se muestra o no.
+
+22
+00:01:28,510 --> 00:01:32,410
+Porque si regresas cierto aqu la actualizacin contina.
+
+23
+00:01:32,590 --> 00:01:37,380
+Si devuelve falso, la actualizacin se detiene en todos los otros mtodos.
+
+24
+00:01:37,390 --> 00:01:39,040
+Nunca devuelves nada
+
+25
+00:01:39,040 --> 00:01:41,630
+Pero aqu puedes devolver verdadero o falso.
+
+26
+00:01:41,650 --> 00:01:43,100
+Eso tiene un impacto.
+
+27
+00:01:43,300 --> 00:01:49,000
+Si devuelve falso, bsicamente se trata de un rendimiento seguro, ya que no es necesario volver a actuar a
+
+28
+00:01:49,000 --> 00:01:52,060
+travs de todos los componentes y ejecutar el procesamiento, etc.
+
+29
+00:01:52,270 --> 00:01:57,280
+Pero, por supuesto, eso tambin puede mostrar a su aplicacin que muestra un estado incorrecto o
+
+30
+00:01:57,280 --> 00:01:59,780
+que bsicamente tiene una representacin de Dom incorrecta.
+
+31
+00:01:59,950 --> 00:02:05,180
+Si usa esto de forma incorrecta ahora veremos esto en la prxima dcada.
+
+32
+00:02:05,200 --> 00:02:11,140
+si continuar o no continuar con la actualizacin, pero como siempre, no debe causar efectos secundarios.
+
+33
+00:02:11,140 --> 00:02:15,920
+No se preocupe, al final, lo que debe hacer aqu es decidir
+
+34
+00:02:16,910 --> 00:02:22,760
+Ahora supongamos que permitiste que el proceso de actualizacin continuara si lo hicieras.
+
+35
+00:02:22,760 --> 00:02:29,600
+Pero si permites que llegues al componente se actualizar aqu, tambin obtendrs acceso a los futuros apoyos
+
+36
+00:02:29,600 --> 00:02:31,260
+y al prximo estado.
+
+37
+00:02:31,400 --> 00:02:36,990
+Una vez ms, puedes sincronizar tu estado con accesorios y no deberas causar efectos secundarios.
+
+38
+00:02:37,100 --> 00:02:42,980
+Puede ser un mejor lugar para sincronizar sus estados con prop's porque a diferencia del componente
+
+39
+00:02:42,980 --> 00:02:46,850
+que recibir accesorios aqu, usted sabe que continuar con la actualizacin.
+
+40
+00:02:46,880 --> 00:02:52,890
+Por lo tanto, es posible que no gaste esfuerzos y recursos en algo que, de todos modos, no importa.
+
+41
+00:02:53,420 --> 00:03:00,890
+One Steere's ha ejecutado con xito, ha llegado a un mtodo de renderizado de nuevo, por lo tanto, presenta la J como un axin
+
+42
+00:03:00,910 --> 00:03:01,960
+que dice reaccionar.
+
+43
+00:03:02,210 --> 00:03:06,880
+Cul ser en realidad el resultado de su componente actualizado?
+
+44
+00:03:07,340 --> 00:03:13,370
+Y una vez ms, como siempre, debes preparar y estructurar tu cdigo GSX.
+
+45
+00:03:13,370 --> 00:03:19,770
+A partir de entonces, se volver a ejecutar y actualizar todos los componentes secundarios para que sean
+
+46
+00:03:20,730 --> 00:03:26,040
+precisos y, por supuesto, puede desencadenar actualizaciones para los componentes secundarios de la misma
+
+47
+00:03:26,070 --> 00:03:32,030
+manera que activ una actualizacin para este componente y luego llamara al componente actualizado en Dnt. .
+
+48
+00:03:32,270 --> 00:03:36,620
+Ah ahora puede causar efectos secundarios como en Mt. No debe actualizar aqu el estado porque esto activar una nueva representacin.
+
+49
+00:03:36,830 --> 00:03:41,100
+Por lo tanto, es bsicamente comparable con el montaje del componente solo para el caso de actualizacin.
+
+50
+00:03:41,150 --> 00:03:46,520
+Ahora implementemos estos enlaces para ver cundo se ejecuta y cmo se comporta.
+
+51
+00:03:46,520 --> 00:03:52,570
+&nbsp;
+

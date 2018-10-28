@@ -1,0 +1,268 @@
+1
+00:00:02,030 --> 00:00:08,340
+Nell'ultima lezione che ho seguito per il progetto useremo e per X anni il pacchetto che
+
+2
+00:00:08,460 --> 00:00:11,970
+raccomando per fare richieste HTP e re-actare le applicazioni.
+
+3
+00:00:12,000 --> 00:00:14,510
+Non facciamo una richiesta HTP del genere.
+
+4
+00:00:14,730 --> 00:00:20,960
+E per quel manichino indietro e stiamo usando ho gi mostrato che sei pronto a inviare la
+
+5
+00:00:21,130 --> 00:00:23,700
+richiesta per ottenere una serie di post.
+
+6
+00:00:23,700 --> 00:00:27,990
+Ora voglio rendere quella matrice di messaggi nel mio contenitore di blocchi.
+
+7
+00:00:28,180 --> 00:00:30,930
+L ho i singoli componenti del post.
+
+8
+00:00:30,930 --> 00:00:37,410
+essere generati dinamicamente nell'elenco dei post un elenco di post che abbiamo recuperato da un server per essere precisi.
+
+9
+00:00:37,410 --> 00:00:39,230
+E ovviamente i dati dovrebbero
+
+10
+00:00:39,240 --> 00:00:47,820
+Ora, dove facciamo questa richiesta HTP, diamo nuovamente un'occhiata alle diapositive del ciclo di vita per pap.
+
+11
+00:00:47,850 --> 00:00:51,180
+Forse troveremo un gancio di ciclo di vita adeguato l.
+
+12
+00:00:51,240 --> 00:00:56,250
+Se guardiamo al ciclo di vita di Hooke, abbiamo riscontrato l'utilizzo della creazione di componenti.
+
+13
+00:00:56,250 --> 00:00:59,660
+C' un ciclo di vita che dovremmo usare per gli effetti collaterali.
+
+14
+00:00:59,700 --> 00:01:04,520
+Il componente  stato montato e la richiesta HGP  un effetto collaterale.
+
+15
+00:01:04,590 --> 00:01:11,520
+ha l'effetto collaterale di recuperare nuovi dati e se l'applicazione del reattore sta emettendo dinamicamente alcuni dati
+
+16
+00:01:11,530 --> 00:01:18,230
+che probabilmente  il cambio di dati, ovviamente  un effetto collaterale che interessa l'applicazione .
+
+17
+00:01:18,270 --> 00:01:22,670
+Non influisce sulla logica del re-act o qualcosa del genere ma
+
+18
+00:01:23,010 --> 00:01:29,560
+Quindi la componente MT ha un posto fantastico per causare effetti collaterali ma non per lo stato di aggiornamento poich
+
+19
+00:01:29,560 --> 00:01:30,770
+attiva il re rendering.
+
+20
+00:01:31,020 --> 00:01:37,560
+Continueremo ad aggiornare lo stato qui una volta che la richiesta HTP a Stallin ci ha dato nuovi dati perch
+
+21
+00:01:37,560 --> 00:01:39,480
+in realt vogliamo aggiornare la pagina.
+
+22
+00:01:39,480 --> 00:01:46,640
+Quindi qui  in realt un comportamento ricercato, quindi il componente MT  il posto migliore per inviare la richiesta HTP.
+
+23
+00:01:46,740 --> 00:01:53,790
+Quindi nel contenitore dei blocchi Implementiamo il componente montato e ora abbiamo bisogno di accedere alla richiesta inviata.
+
+24
+00:01:53,880 --> 00:01:57,460
+Quindi importer gli assiomi dal pacchetto reale.
+
+25
+00:01:57,680 --> 00:02:05,640
+E ora possiamo usarlo qui nel componente X degli anni X offre un metodo per l'invio che hai
+
+26
+00:02:05,820 --> 00:02:07,900
+indovinato per ottenere le richieste.
+
+27
+00:02:07,920 --> 00:02:10,540
+Questo metodo richiede almeno un argomento.
+
+28
+00:02:10,580 --> 00:02:14,120
+D Tu sei colui a cui inviare questa richiesta.
+
+29
+00:02:14,170 --> 00:02:20,870
+Quindi eccovi qui che ho copiato dalla falsa pagina segnaposto con i messaggi di Slash alla fine.
+
+30
+00:02:20,880 --> 00:02:26,700
+Ora puoi anche passare un secondo argomento per configurare questa richiesta e puoi imparare di pi su tutte le
+
+31
+00:02:26,700 --> 00:02:28,520
+opzioni di configurazione e cos via.
+
+32
+00:02:28,590 --> 00:02:33,000
+In quella pagina, le discours ovviamente non riguardano principalmente Xs.
+
+33
+00:02:33,060 --> 00:02:39,170
+Quindi non camminer per tutto il set che potresti aggiungere qui, ma questa pagina  un ottimo punto di partenza.
+
+34
+00:02:39,180 --> 00:02:43,880
+Stiamo ancora per vedere alcune delle cose che puoi fare con X per questo modulo.
+
+35
+00:02:44,220 --> 00:02:47,130
+Qui per non ho bisogno di alcuna configurazione specifica.
+
+36
+00:02:47,130 --> 00:02:51,310
+Voglio solo mandare a vanilla normali richieste in questo modo.
+
+37
+00:02:51,750 --> 00:02:59,430
+Il fatto  che questo dovrebbe restituire alcuni post, ma il tentativo di archiviarli in una
+
+38
+00:02:59,430 --> 00:03:05,110
+costante non funzioner perch ovviamente la richiesta viene eseguita in modo asincrono.
+
+39
+00:03:05,310 --> 00:03:07,050
+Non finisce immediatamente.
+
+40
+00:03:07,080 --> 00:03:10,710
+Ha bisogno di tempo per andare al server e ottenere i dati.
+
+41
+00:03:11,220 --> 00:03:15,510
+Javascript per esegue il codice in modo sincrono.
+
+42
+00:03:15,570 --> 00:03:22,440
+Quindi, dopo questa riga, la riga successiva viene eseguita immediatamente e non si fermer fino a quando non sar terminata,
+
+43
+00:03:22,440 --> 00:03:25,550
+quindi non memorizzer qui i post e i post.
+
+44
+00:03:25,830 --> 00:03:33,210
+Questo  il comportamento voluto perch non vogliamo bloccare l'esecuzione della nostra applicazione solo perch stiamo
+
+45
+00:03:33,210 --> 00:03:35,400
+aspettando che questa richiesta finisca.
+
+46
+00:03:35,790 --> 00:03:36,820
+X si.
+
+47
+00:03:36,810 --> 00:03:42,600
+Pertanto usa promette un oggetto javascript predefinito introdotto con ESX.
+
+48
+00:03:42,690 --> 00:03:46,330
+E grazie al nostro flusso di lavoro che usiamo con create react.
+
+49
+00:03:46,590 --> 00:03:52,950
+Disponibile anche nei browser pi vecchi poich il codice viene compilato in codice che funziona anche con
+
+50
+00:03:53,610 --> 00:04:01,620
+browser meno recenti, quindi Access utilizza le promesse e ottiene una promessa, quindi  possibile cambiarlo e quindi  semplicemente un
+
+51
+00:04:01,620 --> 00:04:08,640
+metodo che accetta una funzione input SD e questa funzione otterr eseguito una volta che la promessa si risolve.
+
+52
+00:04:08,700 --> 00:04:16,170
+Quindi, una volta che i dati dal back-end sono l, possiamo dire che la funzione riceve un oggetto
+
+53
+00:04:16,200 --> 00:04:17,340
+risposta come input.
+
+54
+00:04:17,340 --> 00:04:23,850
+Questo verr passato automaticamente alla funzione da X-ists e per ora basta stamparlo sulla console
+
+55
+00:04:23,850 --> 00:04:27,560
+in modo che possiamo vedere cosa c' dentro.
+
+56
+00:04:27,570 --> 00:04:34,320
+re-act e ricaricher la pagina e vedremo immediatamente questo oggetto che viene stampato sulla console.
+
+57
+00:04:34,320 --> 00:04:36,820
+Salver questo codice tornando all'applicazione di
+
+58
+00:04:36,900 --> 00:04:43,860
+Se espandiamo, vediamo qui il codice di stato e tutte queste propriet qui sono solo propriet fornite
+
+59
+00:04:43,860 --> 00:04:45,480
+dal pacchetto di accesso.
+
+60
+00:04:45,480 --> 00:04:48,820
+Quindi abbiamo ottenuto lo status quo 200 Quindi ha avuto successo.
+
+61
+00:04:48,840 --> 00:04:53,900
+Vediamo la richiesta che  stata inviata vediamo le intestazioni di risposta e importanti per noi.
+
+62
+00:04:53,940 --> 00:04:58,240
+Abbiamo l'oggetto dati che contiene i dati restituiti dal server.
+
+63
+00:04:58,260 --> 00:05:05,780
+Abbiamo inviato la richiesta a e per questo servizio fittizio di segnaposto semplicemente una serie di oggetti
+
+64
+00:05:05,810 --> 00:05:09,560
+javascript in cui ogni oggetto dovrebbe rappresentare un post.
+
+65
+00:05:09,830 --> 00:05:15,540
+Come puoi vedere, abbiamo un titolo un corpo, una A D e una propriet di identificazione utente.
+
+66
+00:05:15,560 --> 00:05:21,380
+Ora possiamo lavorare con quei dati e ovviamente uno con cui lavorarci per renderlo in modo
+
+67
+00:05:21,380 --> 00:05:27,020
+dinamico sullo schermo qui e produrre alcuni post invece di quel contenuto fittizio che ho adesso.
+

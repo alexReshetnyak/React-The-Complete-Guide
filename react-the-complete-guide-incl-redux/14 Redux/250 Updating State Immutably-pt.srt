@@ -1,0 +1,668 @@
+1
+00:00:02,240 --> 00:00:06,860
+Knouted aprenderemos como reestruturar nosso redutor um pouco aqui.
+
+2
+00:00:07,160 --> 00:00:10,650
+Vamos mergulhar em mais gerenciamento de estado.
+
+3
+00:00:10,940 --> 00:00:13,670
+Vamos adicionar um novo estgio aqui.
+
+4
+00:00:13,800 --> 00:00:19,420
+Vamos talvez chamar isso de assaltos para uma nova propriedade para o nosso estado, devo dizer e inicialmente deveria estar em
+
+5
+00:00:19,420 --> 00:00:20,280
+uma disposio vazia.
+
+6
+00:00:20,300 --> 00:00:25,100
+Agora vamos ao nosso contador aqui e ali.
+
+7
+00:00:25,400 --> 00:00:27,570
+Quero adicionar um novo boto.
+
+8
+00:00:27,590 --> 00:00:34,320
+de mais, adicione uma linha horizontal com apenas um elemento de auto-fechamento e eu vou adicionar um boto normal aqui.
+
+9
+00:00:34,320 --> 00:00:35,010
+Ento, antes
+
+10
+00:00:35,080 --> 00:00:45,710
+Ns simplesmente digo um resultado da loja desse tipo e esse resultado deve ser adicionado a uma lista ordenada.
+
+11
+00:00:45,710 --> 00:00:50,490
+Tudo isso no tem nenhum estilo agora que eu crio abaixo desse boto.
+
+12
+00:00:50,510 --> 00:01:01,070
+Agora, a idia  que, quando eu clicar no resultado da loja, eu simplesmente adiciono o valor do contador atual  minha lista de
+
+13
+00:01:01,070 --> 00:01:02,120
+resultados aqui.
+
+14
+00:01:02,540 --> 00:01:09,290
+Ento, para isso, claro, eu quero enviar uma ao sempre que este boto  clicado e, em seguida, empurrar 
+
+15
+00:01:09,290 --> 00:01:11,310
+novo ataque para testar os resultados.
+
+16
+00:01:11,330 --> 00:01:13,730
+Aere update that array with it.
+
+17
+00:01:14,210 --> 00:01:17,130
+E, claro, pegue o contador atual como entrada.
+
+18
+00:01:17,510 --> 00:01:23,900
+Alm disso, se eu clicar em um desses resultados para que um desses itens da lista eu fui remov-lo
+
+19
+00:01:23,900 --> 00:01:24,520
+da matriz.
+
+20
+00:01:24,830 --> 00:01:28,580
+Ento, deveria ter uma idia de algo como a morte pela qual eu possa identific-lo.
+
+21
+00:01:28,910 --> 00:01:37,480
+E uma vez que voc remove o item da lista de dados, depois disso, eu primeiro vou comear aqui no
+
+22
+00:01:37,490 --> 00:01:38,190
+meu continer.
+
+23
+00:01:38,390 --> 00:01:44,240
+Embora eu no tenha trabalhado no redutor ou qualquer coisa assim, simplesmente adicionarei dois novos adereos
+
+24
+00:01:44,240 --> 00:01:51,560
+para mapear esta pgina para adereos, porque eu preciso de duas novas funes basicamente duas novas funes de despacho.
+
+25
+00:01:51,560 --> 00:01:54,570
+Um poderia estar no resultado da loja.
+
+26
+00:01:54,890 --> 00:02:00,920
+Isso deve conter uma funo annima onde um despacho envio um objeto javascript que precisa
+
+27
+00:02:00,920 --> 00:02:02,020
+ter um tipo.
+
+28
+00:02:02,090 --> 00:02:08,680
+Isso pode ser o resultado da loja e o valor deve ser o valor do contador atual,  claro.
+
+29
+00:02:08,690 --> 00:02:14,750
+Agora, isso  algo que eu no preciso passar como uma carga til, porque, como o contador faz
+
+30
+00:02:14,750 --> 00:02:20,360
+parte do meu estado de aplicao, eu terei acesso a ele no meu redutor Anyways depois.
+
+31
+00:02:20,360 --> 00:02:22,680
+Ento eu no preciso pass-lo aqui como carga til.
+
+32
+00:02:22,730 --> 00:02:28,130
+voc deseja armazenar alguns resultados do usurio, ento voc passaria como um valor do seu componente aqui.
+
+33
+00:02:28,130 --> 00:02:31,430
+Claro que voc tambm pode ter casos de uso em que
+
+34
+00:02:31,430 --> 00:02:35,050
+No entanto, no  necessrio ou duplicar isso.
+
+35
+00:02:35,240 --> 00:02:42,170
+E eu tambm configurarei uma propriedade que ir nomear em excluir o resultado real, onde eu quero despachar uma
+
+36
+00:02:42,180 --> 00:02:45,580
+verdade, digamos, com o resultado de excluso do identificador.
+
+37
+00:02:45,590 --> 00:02:50,720
+Agora eu tenho esses dois adereos e eu vou conect-los no meu recipiente aqui.
+
+38
+00:02:50,990 --> 00:02:58,250
+Eu adicionarei o ouvinte no ouvido do clique no boto de assalto da loja e eu executarei este resultado
+
+39
+00:02:58,820 --> 00:03:05,570
+na loja sem parnteses como sempre faz apenas uma referncia a um mtodo e ele ser executado automaticamente.
+
+40
+00:03:05,960 --> 00:03:12,130
+E no item da lista aqui esto todos os ouvintes de um clique, onde mais dizem  esquerda.
+
+41
+00:03:12,140 --> 00:03:17,000
+Ento, isso mostra o sal de Leatrice.
+
+42
+00:03:17,030 --> 00:03:22,970
+Agora,  claro, esta lista ainda no possui contedo e criar, dinamicamente, uma lista de itens aqui.
+
+43
+00:03:23,060 --> 00:03:30,790
+Ento, por enquanto, vamos nos concentrar neste boto aqui com o suporte ao resultado da loja. Bem, clicamos neste boto.
+
+44
+00:03:31,060 --> 00:03:34,990
+Agora eu tenho que cancelar o aberto, nada acontece.
+
+45
+00:03:34,990 --> 00:03:38,310
+Tambm no recebemos um erro ou notamos isso.
+
+46
+00:03:38,710 --> 00:03:44,190
+Ento, voc pode enviar aes que voc realmente no manipula.
+
+47
+00:03:44,210 --> 00:03:52,150
+Esse  o primeiro takeaway importante que estamos despachando o resultado da loja aqui porque estamos vinculando o assalto
+
+48
+00:03:52,150 --> 00:03:54,600
+s lojas que executa esse mtodo.
+
+49
+00:03:54,910 --> 00:03:56,780
+Estamos vinculando a dvida com o boto.
+
+50
+00:03:56,830 --> 00:04:04,060
+Ento, esta ao  despachada e atinge o produtor, porque ns s temos um nico redutor em nosso
+
+51
+00:04:04,060 --> 00:04:09,370
+aplicativo de reao e, portanto, todas as aes fazem isso atravs desse produtor.
+
+52
+00:04:09,430 --> 00:04:18,850
+Mas desde que eu simplesmente ignoro isso, no tenho nenhuma ao de manipulao de casos com a loja de tipo vendida. Chego
+
+53
+00:04:18,850 --> 00:04:22,600
+ linha aqui onde eu retorno ao estado atual.
+
+54
+00:04:22,660 --> 00:04:23,490
+ isso a.
+
+55
+00:04:23,500 --> 00:04:28,330
+Acabei de retornar ao estado atual, o que tambm significa que, se eu alterei a conta ou da
+
+56
+00:04:28,690 --> 00:04:31,960
+minha volta aqui e eu clique em D'Este, no restaurei o estado.
+
+57
+00:04:31,960 --> 00:04:33,800
+No devolvo o estado inicial.
+
+58
+00:04:33,880 --> 00:04:36,160
+Voltei ao estado atual.
+
+59
+00:04:36,160 --> 00:04:38,120
+Ento, esse  o primeiro takeaway importante.
+
+60
+00:04:38,500 --> 00:04:40,290
+Mas vamos agora lidar com isso.
+
+61
+00:04:40,450 --> 00:04:48,700
+Vamos criar um novo caso, crie o resultado da loja e h um para retornar.
+
+62
+00:04:48,700 --> 00:04:55,890
+Agora quero retornar o que eu quero retornar uma verso atualizada do meu estado.
+
+63
+00:04:56,080 --> 00:05:04,810
+E devemos este imutvel agora mesmo em todos os casos sempre retornaremos um novo objeto javascript, onde apenas
+
+64
+00:05:04,810 --> 00:05:11,920
+atualizamos o contador pelo singular motivo pelo qual apenas temos a propriedade do contador l.
+
+65
+00:05:11,950 --> 00:05:17,950
+Todo o estado anteriormente foi composto apenas pela conta ou propriedade.
+
+66
+00:05:17,950 --> 00:05:24,220
+Agora tambm temos uma propriedade de resultado que  uma matriz e, portanto, agora, se incrementarmos
+
+67
+00:05:24,280 --> 00:05:31,480
+o decremento, adicione ou subtrai, basicamente, removemos isso do nosso estado porque devolvemos a verso atualizada do estado
+
+68
+00:05:31,480 --> 00:05:38,190
+e  apenas um Optik de javascript com o contador atualizado, mas sem uma propriedade de resultados.
+
+69
+00:05:38,630 --> 00:05:42,440
+E, ao contrrio dos Estados estabelecidos, reagiram.
+
+70
+00:05:42,550 --> 00:05:46,670
+Isso no  mesclado com o estado antigo ou algo assim.
+
+71
+00:05:46,690 --> 00:05:49,480
+Este  o novo estado.
+
+72
+00:05:49,810 --> 00:05:52,880
+Ento, aqui em um novo estado, j no tem resultados.
+
+73
+00:05:53,110 --> 00:05:57,060
+Ento, na verdade, no  assim que devemos atualizar o estado.
+
+74
+00:05:57,100 --> 00:06:04,070
+Em vez disso, devemos copiar as propriedades do estado antigo e, em seguida, atualizar apenas as que precisam de
+
+75
+00:06:04,120 --> 00:06:04,580
+atualizaes.
+
+76
+00:06:04,600 --> 00:06:14,500
+De forma imutvel, o que no fazemos  que no estabelecemos o estado de notcias Konst igual ao estado e, em seguida, disse que
+
+77
+00:06:14,500 --> 00:06:22,530
+o novo contador de estado  igual a contador de estados mais 1 e depois devolvemos um novo estado aqui.
+
+78
+00:06:22,540 --> 00:06:24,620
+No  assim que fazemos isso.
+
+79
+00:06:24,700 --> 00:06:26,330
+Por que no fazemos isso assim?
+
+80
+00:06:26,470 --> 00:06:29,260
+Porque estamos mutando o estado antigo aqui.
+
+81
+00:06:29,740 --> 00:06:33,300
+Em vez disso, o que fazemos  copiar o estado antigo.
+
+82
+00:06:33,400 --> 00:06:41,140
+Agora, uma maneira de fazer isso  chamar o objeto de um sinal passando um JavaScript vazio Optik ns para
+
+83
+00:06:41,140 --> 00:06:47,420
+o primeiro argumento e o antigo objeto javascript que queremos copiar como o segundo estado aqui.
+
+84
+00:06:48,520 --> 00:06:49,900
+Como Det.
+
+85
+00:06:49,990 --> 00:06:55,240
+Agora isso basicamente ir clonar o objeto antigo da maneira imutvel.
+
+86
+00:06:55,660 --> 00:07:02,950
+Dando-nos um novo desafio, o objeto que tem todas as propriedades do objeto antigo, mas  um objeto tecnicamente
+
+87
+00:07:02,950 --> 00:07:09,700
+diferente e, claro,  importante devido  forma como os objetos e a matriz funcionam em Javascript
+
+88
+00:07:09,970 --> 00:07:14,980
+com os tipos de referncia, os tipos primitivos de dados no so claros.
+
+89
+00:07:14,980 --> 00:07:16,210
+Definitivamente, verifique isso.
+
+90
+00:07:16,210 --> 00:07:19,290
+ um conceito central de javascript.
+
+91
+00:07:19,330 --> 00:07:24,150
+Agora, com isso, recebemos uma cpia embora importante, no um clone profundo.
+
+92
+00:07:24,190 --> 00:07:32,170
+Portanto, nossa matriz de resultados ainda  o mesmo objeto que est aqui no estado inicial, mas aqui importa que obtenhamos
+
+93
+00:07:32,170 --> 00:07:35,130
+uma cpia do nosso estado do novo estado.
+
+94
+00:07:35,170 --> 00:07:41,140
+Agora, se mudarmos para o contador, no estamos fazendo isso no estado antigo, mas nesse estado
+
+95
+00:07:41,140 --> 00:07:43,960
+copiado e estamos retornando esse estado copiado atualizado.
+
+96
+00:07:44,170 --> 00:07:51,070
+Isso se tornar o novo estado e  um objeto tecnicamente novo e isso  importante.
+
+97
+00:07:51,160 --> 00:07:52,980
+Agora voc pode escrever assim.
+
+98
+00:07:53,110 --> 00:07:59,890
+O caminho mais curto  simplesmente retornar um objeto javascript e, em seguida, distribuir todas as propriedades do
+
+99
+00:07:59,890 --> 00:08:06,500
+estado antigo que voc pode fazer para espalhar o estado do operador como este ponto dot dot state.
+
+100
+00:08:07,390 --> 00:08:12,430
+Isso simplesmente diz o retorno javascript do objeto javascript.
+
+101
+00:08:12,730 --> 00:08:18,860
+Pegue todas as propriedades e valores de cada argumento de estado que  o nosso estado antigo.
+
+102
+00:08:18,970 --> 00:08:27,160
+Distribua essas propriedades com seus valores neste novo objeto e ento, uma vez que definimos uma propriedade adicional nesta
+
+103
+00:08:27,160 --> 00:08:35,410
+propriedade para o objeto ou se j estava presente devido  distribuio dos EUA, o estado antigo, como era
+
+104
+00:08:35,410 --> 00:08:39,120
+antes de encontrar, faz parte do estado antigo .
+
+105
+00:08:39,430 --> 00:08:43,630
+Substitua isso, mas apenas deixa os resultados intactos.
+
+106
+00:08:43,630 --> 00:08:49,690
+Isso  o que est acontecendo aqui, onde distribuir um estado antigo em que o contador  inexistente
+
+107
+00:08:49,690 --> 00:08:50,900
+quando no toca resultados.
+
+108
+00:08:51,130 --> 00:08:54,830
+Ento,  assim que devemos atualizar o estado em todos os casos.
+
+109
+00:08:54,970 --> 00:09:03,490
+No imutavelmente no toque no estado antigo, no apenas devolva um novo objeto sem cobrir todas as propriedades do
+
+110
+00:09:03,490 --> 00:09:04,540
+estado antigo.
+
+111
+00:09:04,660 --> 00:09:09,530
+Ou voc est prestes a excluir propriedades do seu estado como fizemos anteriormente.
+
+112
+00:09:10,000 --> 00:09:17,020
+resultado da loja tambm retornamos um objeto javascript onde distribumos o estado antigo, mantendo o contador.
+
+113
+00:09:17,020 --> 00:09:18,420
+E com o
+
+114
+00:09:18,850 --> 00:09:21,250
+Mas depois dissemos resultados aqui.
+
+115
+00:09:21,280 --> 00:09:24,200
+Ento, isso resolve a propriedade que queremos atualizar.
+
+116
+00:09:24,520 --> 00:09:32,650
+Ns estabelecemos resultados iguais aos de estado e ento podemos chamar a Comcast, que simplesmente  como a Porsche,
+
+117
+00:09:32,660 --> 00:09:35,650
+mas a Porsche manipula o valor original.
+
+118
+00:09:35,670 --> 00:09:43,520
+Concord retorna uma nova matriz que  a taxa mais antiga, alm do argumento que voc adiciona para concat.
+
+119
+00:09:43,660 --> 00:09:47,510
+Portanto,  uma maneira imutvel de atualizar uma matriz adicionando um item.
+
+120
+00:09:47,620 --> 00:09:51,140
+Ele retorna uma nova matriz que  a chave do seu.
+
+121
+00:09:51,280 --> 00:09:54,230
+Como os arrays tambm so tipos de referncia.
+
+122
+00:09:54,310 --> 00:09:55,920
+Se voc ligasse para a Porsche.
+
+123
+00:09:56,040 --> 00:10:01,660
+Voc est tocando a propriedade do resultado original no estado original mesmo que voc usasse
+
+124
+00:10:01,660 --> 00:10:02,670
+o operador aqui.
+
+125
+00:10:02,680 --> 00:10:04,670
+Isso no impede que voc faa isso.
+
+126
+00:10:04,840 --> 00:10:06,700
+E esta no  uma boa prtica.
+
+127
+00:10:06,730 --> 00:10:07,970
+No como voc deve fazer isso.
+
+128
+00:10:07,990 --> 00:10:11,440
+Voc foi gerente de estado torna-se imprevisvel se voc fizer isso.
+
+129
+00:10:11,440 --> 00:10:16,090
+Ento use concat e agora empurre o que quiser adicionar a esta matriz.
+
+130
+00:10:16,090 --> 00:10:23,020
+Por exemplo, podemos adicionar contador de estado, pois voc deseja armazenar uma instantneo do contador e empurr-lo para
+
+131
+00:10:23,020 --> 00:10:24,440
+a matriz de resultados.
+
+132
+00:10:25,630 --> 00:10:31,180
+Agora, com a morte, atualizamos nosso estado de forma imutvel para todos os casos.
+
+133
+00:10:31,480 --> 00:10:34,380
+Voc aprender a atualizar uma matriz em seu estado.
+
+134
+00:10:34,390 --> 00:10:37,580
+Imutinamente com concreto, adicionando um novo item.
+
+135
+00:10:38,290 --> 00:10:43,970
+componente l, podemos agora lig-lo no estado do mapa para adereos para um novo suporte,
+
+136
+00:10:43,970 --> 00:10:52,600
+podem ser os resultados armazenados Propp, que deve ser o estado resultados referentes ao nome da propriedade que voc configurou no recurso do produtor.
+
+137
+00:10:52,630 --> 00:10:59,800
+E agora podemos retornar ao estado aqui onde ns retornamos aqui e realmente podemos us-lo em nossa conta ou
+
+138
+00:10:59,800 --> 00:11:00,960
+Isso deve ser igual.
+
+139
+00:11:00,970 --> 00:11:07,580
+Ento, estamos recuperando a propriedade do estado e agora podemos usar o recurso armazenado que podemos acessar a
+
+140
+00:11:07,610 --> 00:11:11,880
+partir de adereos de disco aqui no nosso mtodo de renderizao.
+
+141
+00:11:12,230 --> 00:11:17,830
+Ento, aqui para o item da lista onde eu quero exibi-los, eu vou fazer isso aqui com fraldas.
+
+142
+00:11:18,020 --> 00:11:27,680
+Posso dizer o mapa de resultados armazenados deste suporte e, agora, mapear cada um deles,  armazenado o assalto Bittle armazenado neste
+
+143
+00:11:27,690 --> 00:11:31,890
+argumento, voc est mapeado para este item da lista.
+
+144
+00:11:31,950 --> 00:11:39,150
+Meffert aqui como sempre mapeie essa matriz de resultados armazenados em uma matriz de itens da lista GSX e l.
+
+145
+00:11:39,150 --> 00:11:44,100
+Ento, simplesmente embrulharei o item da minha lista e coloc-lo no meu mapa.
+
+146
+00:11:44,100 --> 00:11:51,860
+Agora, temos nosso novo item de lista, onde, claro, podemos produzir resultados armazenados.
+
+147
+00:11:52,140 --> 00:11:54,440
+E agora este seria o nosso resultado.
+
+148
+00:11:54,690 --> 00:11:58,890
+Mas, na verdade, eu quero voltar ao redutor e mudar um pouco.
+
+149
+00:11:58,890 --> 00:12:01,000
+Eu no quero apenas armazenar um nmero.
+
+150
+00:12:01,290 --> 00:12:07,140
+Eu quero criar um objeto e isso  um tipo de opo aqui, mas eu quero faz-lo, porque eu no
+
+151
+00:12:07,140 --> 00:12:09,350
+quero apenas ter o meu valor de resultado.
+
+152
+00:12:09,510 --> 00:12:12,970
+E voc poderia nomear este vale V o que quiser.
+
+153
+00:12:12,990 --> 00:12:18,090
+Eu tambm quero criar uma idia aqui e essa idia deve ser algo nico.
+
+154
+00:12:18,390 --> 00:12:24,540
+Ento, eu simplesmente usarei uma nova data, que  simplesmente um instantneo da data em que isso foi adicionado.
+
+155
+00:12:24,540 --> 00:12:28,650
+Agora eu tenho uma idia e um valor e no volto no componente do contador.
+
+156
+00:12:28,680 --> 00:12:37,130
+Eu posso usar o valor de resultado armazenado referente  propriedade do valor do dbito aqui no objeto.
+
+157
+00:12:37,130 --> 00:12:41,690
+Um impulso para obter uma taxa em que eu concato para dizer para ser preciso.
+
+158
+00:12:41,910 --> 00:12:50,480
+E uma vez que temos uma lista, precisamos definir uma chave que pode configurar essa chave para a ID de assalto armazenada, esse instantneo de data.
+
+159
+00:12:50,910 --> 00:12:57,330
+Agora, se isso fosse retornar ao aplicativo e clicar em Adicionar 10 e clicar no resultado da loja, veremos 10
+
+160
+00:12:57,360 --> 00:12:58,300
+anos no meio.
+
+161
+00:12:58,320 --> 00:12:59,580
+Deixe-me adicionar 10 novamente.
+
+162
+00:12:59,580 --> 00:13:02,010
+Agora ns armazenamos 20 como um segundo valor.
+
+163
+00:13:02,010 --> 00:13:03,000
+Ento, nossa histria.
+
+164
+00:13:03,030 --> 00:13:07,140
+Todos esses valores clicando neles no fazem muito.
+
+165
+00:13:07,140 --> 00:13:10,980
+Tambm no segue um erro, mas  claro que no estamos lidando com isso.
+
+166
+00:13:10,980 --> 00:13:16,150
+Clique em Lisner onde eu quero excluir o resultado e, portanto, enviar o resultado de excluso.
+
+167
+00:13:16,290 --> 00:13:18,810
+Ento vamos implementar isso na prxima palestra.
+

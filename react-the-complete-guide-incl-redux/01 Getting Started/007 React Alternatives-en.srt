@@ -1,0 +1,59 @@
+0
+00:02.010 --> 00:04.020
+Now, there's not just React;
+
+1
+00:04.030 --> 00:08.330
+there are also alternatives. React, of course, is what we'll cover in this course.
+
+2
+00:08.380 --> 00:14.350
+There is also Angular and Vue.js as well as others like Backbone and Ember, but
+
+3
+00:14.380 --> 00:17.730
+Angular and Vue are the most popular alternatives.
+
+4
+00:17.950 --> 00:22.330
+I can only recommend diving into these two to really pick your favorite.
+
+5
+00:22.330 --> 00:25.250
+I've also got courses on them if you're interested.
+
+6
+00:25.600 --> 00:32.500
+All three of them are great at creating highly-scalable web applications that look and feel good to
+
+7
+00:32.500 --> 00:34.090
+the user.
+
+8
+00:34.090 --> 00:41.050
+Not so much an alternative is jQuery; where he you might think it is, but jQuery is really only about
+
+9
+00:41.350 --> 00:44.820
+traversing the DOM and targeting elements in the DOM.
+
+10
+00:44.830 --> 00:51.490
+Now, as you saw in our example, React is about just declaring what you see and focusing on the logic
+
+11
+00:51.790 --> 00:59.050
+instead of focusing on the 'how'. Therefore, React, Angular and Vue allow you to create more powerful
+
+12
+00:59.050 --> 01:05.860
+applications because you can focus on the logic and your business model and not so much on the technical
+
+13
+01:05.860 --> 01:08.450
+side of actually reaching an element
+
+14
+01:08.500 --> 01:09.670
+you want to change.

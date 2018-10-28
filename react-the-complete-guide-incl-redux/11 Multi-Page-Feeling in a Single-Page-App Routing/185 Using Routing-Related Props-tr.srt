@@ -1,0 +1,160 @@
+1
+00:00:02,130 --> 00:00:05,970
+u anda bavurumuzda gezinebilmekteyiz.
+
+2
+00:00:06,030 --> 00:00:10,330
+Sayfay yeniden yklemeden bunu yapabiliyoruz.
+
+3
+00:00:10,350 --> 00:00:15,690
+imdi, yklemeye ynelik bileenlerde elde ettiimiz bilgilere bir gz atalm nk yeniden
+
+4
+00:00:15,690 --> 00:00:20,240
+ynlendirici ynlendirici, ykl roud meyve sahas hakknda bize ek bilgi verir.
+
+5
+00:00:20,340 --> 00:00:26,340
+Bileeni gerekten de kaldrld ve DOM'a her zaman eklendii iin bir
+
+6
+00:00:26,370 --> 00:00:30,690
+sayfay deitirdiimizde yrtlecek olan Da'nda bulunan yazlara bakalm.
+
+7
+00:00:30,690 --> 00:00:33,610
+Orada yalnzca Web'e ulamakla kalmyoruz.
+
+8
+00:00:33,810 --> 00:00:40,720
+Sahip olduumuz sahne takmlarn da sadece bu sahne koyarak kalm.
+
+9
+00:00:40,730 --> 00:00:43,080
+imdi burada ne var bir gz atalm.
+
+10
+00:00:43,250 --> 00:00:49,100
+imdi eve felaket sahne nesne ve gemii konum ve ma giderseniz.
+
+11
+00:00:49,110 --> 00:00:51,280
+Bu, kurduumuz bir ey deil.
+
+12
+00:00:51,320 --> 00:00:53,520
+Bu, tekrar aktr ynlendirici tarafndan iletilir.
+
+13
+00:00:53,690 --> 00:00:54,260
+Eleme yok.
+
+14
+00:00:54,260 --> 00:01:01,130
+Bize kurabileceiniz kuraklk hakknda kesin bilgi vermek iin yol gsterici olduumuzu ve bu nedenle bulduunuz
+
+15
+00:01:01,140 --> 00:01:07,340
+ve potansiyel ebeveynlerin hepsinin ebeveynlerin daha sonra neler olduunu greceiniz hakknda bilgi verin.
+
+16
+00:01:07,430 --> 00:01:13,210
+Bulunduunuz yer hakknda daha fazla bilgi edinin ve rnein arama yapmaya cesaret edersiniz.
+
+17
+00:01:13,220 --> 00:01:19,880
+Hazrladmz ebeveynler ya da buna benzer bir ey ve karma para ve tarihin gemii Optik,
+
+18
+00:01:19,880 --> 00:01:28,040
+bununla etkileime girmek ve bir link bileene ihtiya duymadan programl bir ekilde yeni bir sayfa basmak gibi kullanabileceimiz
+
+19
+00:01:28,040 --> 00:01:29,660
+baz yntemlere sahiptir.
+
+20
+00:01:29,660 --> 00:01:32,420
+Bunlarn hepsi daha sonra gstereceim bir ey.
+
+21
+00:01:32,420 --> 00:01:39,640
+imdi paralarmza geri dnelim ve sahteleri de yeni yaynda kilitleyelim.
+
+22
+00:01:39,830 --> 00:01:46,650
+Orada da bileen ekleyebiliriz, burada montaj ve igr var.
+
+23
+00:01:46,670 --> 00:01:52,590
+Para ve arama parantezleri ile ilgili daha fazla bilgi grmeliyiz nk sahteleri
+
+24
+00:01:52,590 --> 00:01:54,160
+de kartmak istiyorum.
+
+25
+00:01:54,210 --> 00:02:01,700
+Bu yzden yeni yaynlar tklayn ve Propst'i inceleyin ve imdi orada bulduumuz yolu eletirelim.
+
+26
+00:02:01,710 --> 00:02:04,830
+Ayn zamanda tam bir eleme olduunu da gryorsunuz.
+
+27
+00:02:04,830 --> 00:02:07,460
+imdi burada tam eleme oluturmadk.
+
+28
+00:02:07,470 --> 00:02:11,340
+Kesin seenee sahip deiliz, ancak yeni grev yapyoruz.
+
+29
+00:02:11,340 --> 00:02:18,900
+Bunu el ile eklediim yeni yaynda olsaydm bunu hala gerekletirebilirdik, nk tam
+
+30
+00:02:18,900 --> 00:02:25,410
+eleme oluturmadysak da eleme mlknde tam bir eleme olmadn greceksiniz.
+
+31
+00:02:25,410 --> 00:02:29,450
+Dolaysyla bu gerekten tam yolun tam olduunu bize syler.
+
+32
+00:02:29,640 --> 00:02:34,980
+atmaya kurduumuz yol ya da deil, konum hakknda daha fazla bilgi var.
+
+33
+00:02:35,010 --> 00:02:40,500
+Sonunda eklediiniz bu aramay greceksiniz ve sorgu parantezlerini almak iin bunu manuel
+
+34
+00:02:40,500 --> 00:02:41,400
+olarak ayrtrabilirsiniz.
+
+35
+00:02:41,640 --> 00:02:47,590
+Ve sayfanzn belirli bir blmne atlamak iin kullanabileceiniz karma paracklarnz ya da
+
+36
+00:02:47,590 --> 00:02:50,380
+istediiniz yerde kaydrarak sorunsuzca kaydrdnz gryorsunuz.
+
+37
+00:02:50,850 --> 00:02:54,130
+Bu, aldmz baz ek bilgi.
+
+38
+00:02:54,160 --> 00:03:01,530
+Bu sahne blmnn bir parasdr ve bunu, rnein, dutlu ebeveynlerini kark bir paraya ayklamak iin
+
+39
+00:03:01,530 --> 00:03:05,060
+kullanabilir veya yapmanz gereken her eyi yapabilirsiniz.
+
+40
+00:03:05,220 --> 00:03:10,350
+Daha sonra, bu gemi nesnesini bize salayan bir yntem kullanmak iin nasl kullandmz greceiz.
+

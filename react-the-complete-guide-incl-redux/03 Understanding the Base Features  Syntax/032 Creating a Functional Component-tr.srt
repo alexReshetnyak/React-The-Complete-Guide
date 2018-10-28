@@ -1,0 +1,368 @@
+1
+00:00:02,210 --> 00:00:08,480
+zellikle hakl olmak ve anlamak iin sper nemi olan bu dahi X eyini yeniden hareket
+
+2
+00:00:08,480 --> 00:00:14,930
+etmenin ekirdek temelleri hakknda ok ey rendik, ancak dersin ilk modlnde reaktrn uygulamanzla oluturduunuz bileenlerle
+
+3
+00:00:15,140 --> 00:00:21,890
+ilgili olduunu da belirttim. bileenleri oluturabilir ve bu bileenleri ok kolay bir ekilde ina etmeyi salayan
+
+4
+00:00:21,890 --> 00:00:24,410
+bir ktphane olarak reaksiyona girer.
+
+5
+00:00:24,590 --> 00:00:27,590
+imdilik sadece bir bileen kullanyoruz.
+
+6
+00:00:27,620 --> 00:00:33,870
+Bunu deitirmek iin zaman ve bunun iin projemin kaynak klasrne yeni bir dosya ekleyeceim.
+
+7
+00:00:33,890 --> 00:00:39,020
+Aslnda yeni bir klasr ekleyeceim ve bakente P olan kiiye isim vereceim.
+
+8
+00:00:39,100 --> 00:00:41,220
+Bu tr bir konvansiyon tepki verdi.
+
+9
+00:00:41,240 --> 00:00:48,620
+Bunu yapmak zorunda deilsiniz, ancak bileenlerini sermaye balangc karakterleri oluturduunuz dosyalara veriyorsunuz
+
+10
+00:00:48,620 --> 00:00:54,380
+ve bu bileenin alan olduunu ve dolaysyla bu kiinin
+
+11
+00:00:54,380 --> 00:01:01,490
+klasrnde saklanan bir kii hakknda baz bilgi vermek istiyorum. Kaynak klasr
+
+12
+00:01:01,490 --> 00:01:04,120
+veya js dosyasn kii.
+
+13
+00:01:04,220 --> 00:01:09,410
+Yine bir sermaye balama karakterine sahip olma ve bu bileenin ne
+
+14
+00:01:09,410 --> 00:01:16,420
+hakknda olduunu aklayan bu szlemeyi takiben bir bileen oluturmak istiyorum ve bunu zaten yapmtk.
+
+15
+00:01:16,520 --> 00:01:23,750
+Aslnda bunu, dnce JS dosyasndaki yeniden ileme kitaplndan bileen snfn
+
+16
+00:01:23,750 --> 00:01:25,580
+genileterek kutudan kardk.
+
+17
+00:01:25,670 --> 00:01:31,940
+Kesinlikle bu yaklam kullanabiliriz ve ileride, rendiiniz alma zamannda bileeninizi temel olarak deitirmenize
+
+18
+00:01:32,300 --> 00:01:37,800
+izin veren devlet hakknda daha fazla bilgi edinmeniz daha da nem kazanacaktr.
+
+19
+00:01:38,060 --> 00:01:43,850
+Ancak ou zaman farkl bir bileen biimi kullanmanz gerekir.
+
+20
+00:01:43,850 --> 00:01:51,620
+Veya bileenleri oluturmak iin basit bir javascript ilevi daha iyi bir ilevdir nk en
+
+21
+00:01:51,950 --> 00:01:58,480
+basit biiminde bir bileen yalnzca baz GSX baz HVM'yi dndren bir ilevdir.
+
+22
+00:01:58,520 --> 00:02:03,040
+unu syleyebilirsiniz: Elbette, bir ilev anahtaryla bir ilev oluturabilirsiniz.
+
+23
+00:02:03,050 --> 00:02:08,290
+Buraya bir kongre niteliindeki kk harfli bir balang karakteri ile birisini buraya isimlendirebilirsiniz.
+
+24
+00:02:08,330 --> 00:02:13,970
+Yine de bakent kullanabilirsin, sonra da burada bir dahi X dndrebilirsin.
+
+25
+00:02:13,970 --> 00:02:16,050
+Kesinlikle yapabilirsin.
+
+26
+00:02:16,070 --> 00:02:22,550
+Diest'i, sonunda sonuta ayn ekilde sonulanacak bir ilevi olan bir deiken yaratmann
+
+27
+00:02:22,550 --> 00:02:24,570
+be szdizimini de kullanabilirsiniz.
+
+28
+00:02:25,070 --> 00:02:29,450
+Ancak bunu yapmam nerdiim bu derste alt olarak kullanacam.
+
+29
+00:02:29,450 --> 00:02:32,700
+Riak projelerini tedavi ederken bu en iyi uygulamadr.
+
+30
+00:02:32,720 --> 00:02:36,080
+Birok yeni ve modern zelliklere erimenizi salar.
+
+31
+00:02:36,170 --> 00:02:42,650
+Dolaysyla, bir deikene anahtar kelime deil, Konski szc ile davranacam, nk bu deikeni
+
+32
+00:02:42,650 --> 00:02:45,950
+etkili bir ekilde sabit tutmay deitirmeyi planlamyorum.
+
+33
+00:02:46,070 --> 00:02:48,410
+Ve dolaysyla byle pazarlamalyz.
+
+34
+00:02:48,530 --> 00:02:51,430
+Ona kk harfli bir karakter ad vereceim.
+
+35
+00:02:51,730 --> 00:02:59,930
+Dediim gibi, kiiyi P harfi byklnde seebilirdiniz, ancak sk sk ilev adnn hepsini kk harflerle gryorsunuz.
+
+36
+00:02:59,930 --> 00:03:06,980
+Aksi takdirde, dosya isminizle ayn ismi veya Asti bileen ismini kullanmak istiyorsunuz.
+
+37
+00:03:07,100 --> 00:03:12,380
+Sonra bu deikene veya sabitin kesin olmas iin bir deer atayacam.
+
+38
+00:03:12,560 --> 00:03:14,330
+Ve bu bir ilev olmaldr.
+
+39
+00:03:14,380 --> 00:03:18,880
+Artk ilevi burada tekrar kullanabilirim, ama aslnda evet olarak kullanmak istiyorum.
+
+40
+00:03:18,920 --> 00:03:20,580
+Alt ilev szdizimi.
+
+41
+00:03:20,690 --> 00:03:29,810
+Bu ok fonksiyonu szdizimi bylece eit argman listesi ok fonksiyonu vcut diyebilirim.
+
+42
+00:03:29,810 --> 00:03:31,310
+Bu sadece alt.
+
+43
+00:03:31,310 --> 00:03:35,090
+Function anahtar szcyle oluturulan ilevle edeerdir.
+
+44
+00:03:35,090 --> 00:03:41,480
+zellikle bu anahtar kelime sz konusu olduunda baz avantajlar barndryor, bu yzden bu szdizimini
+
+45
+00:03:41,480 --> 00:03:43,520
+kullanmanz iddetle tavsiye ederim.
+
+46
+00:03:43,520 --> 00:03:49,970
+Eer bu sizin iin yeni ise, imdi bunu biliyorsunuz ve genel olarak
+
+47
+00:03:49,970 --> 00:03:57,890
+bazlarna 6 ders ya da renme materyalleri dal yapmak istiyorsanz, evet 6'nn bu gibi sunmas
+
+48
+00:03:57,890 --> 00:04:00,140
+gereken tm mthi zellikleri reniyorsunuz.
+
+49
+00:04:00,140 --> 00:04:01,800
+Szle geri dnn.
+
+50
+00:04:01,970 --> 00:04:08,510
+Burada etkili bir iimize sahibiz ve en basit biiminde sylediim gibi bir bileen, baz J S x
+
+51
+00:04:08,510 --> 00:04:10,020
+deerini dndren bir ilevdir.
+
+52
+00:04:10,010 --> 00:04:11,010
+O halde bunu yapalm.
+
+53
+00:04:11,240 --> 00:04:22,770
+Baz j'leri X olarak dndrelim ve u anda yalnzca bir kii olduumu syleyen bir paragraf burada geri getirebiliriz.
+
+54
+00:04:22,790 --> 00:04:30,970
+Bu tek bana bir bileen olarak kullanabileceimiz geerli bir ilevi yaratr, ancak iki ey yapmak zorundayz.
+
+55
+00:04:30,980 --> 00:04:36,020
+Ne yapmamz gerektiine dair bir fikriniz var m?
+
+56
+00:04:36,090 --> 00:04:44,850
+szdiziminin element yaratmaya tepki olarak deitiini ve bu yntemi armann mmkn olduunu unutmayn.
+
+57
+00:04:44,940 --> 00:04:49,220
+Birincisi reddetmek gerek nk bu GSX
+
+58
+00:04:49,260 --> 00:04:55,500
+Alnmas gereken bir sermaye ile tepki vermemiz gereken ey, yeniden hareket paketinden gelmektedir.
+
+59
+00:04:55,500 --> 00:05:03,800
+Yani Abchurch'de yaptmz gibi Evet, burada bileen gerekmiyor nk burada bileeni genileten
+
+60
+00:05:03,800 --> 00:05:05,830
+bir snf kullanmyoruz.
+
+61
+00:05:05,960 --> 00:05:08,270
+Bunun yerine bir ilev oluturuyoruz.
+
+62
+00:05:08,720 --> 00:05:14,300
+Bu dosyann varsaylan olarak yine de bu ilevi da aktarmamz gerekiyor.
+
+63
+00:05:14,300 --> 00:05:21,890
+bu Daut'un burada grlebilmesi iin takip edilmesi gvende olann ve sadece apraz gryoruz
+
+64
+00:05:21,890 --> 00:05:29,360
+ve imdi bu bileeni projemizin dier ynlerinde, yani yalnzca bileende kullanmaya balayabiliriz kk bileenimiz.
+
+65
+00:05:29,450 --> 00:05:35,930
+Burada bu kiiyi, bu ileve sahip olan Konstant'a ihra ediyoruz, bylece
+
+66
+00:05:35,930 --> 00:05:40,570
+Hala Hindistan, JS'nin oraya dtn dnd.
+
+67
+00:05:40,580 --> 00:05:45,290
+Bir ithalat ekleyeceim ve insan ithal edeceim.
+
+68
+00:05:45,290 --> 00:05:50,420
+Bu ad tamamen size kalm, ancak bileenlerinizin ba harf karakteriyle balayan
+
+69
+00:05:50,420 --> 00:05:51,370
+ad olmal.
+
+70
+00:05:52,630 --> 00:06:01,210
+Nokta eik izgiden nk greli bir dl olan kii klasrdr.
+
+71
+00:06:01,360 --> 00:06:08,320
+Dolaysyla, dizst bilgisayar ile ayn yoldaki dis klasrne atfta bulunmaktan dolay, js dosyasn
+
+72
+00:06:08,380 --> 00:06:15,700
+oluturan kii olsa da, J i parasn atlayabiliriz, nk i ak otomatik olarak eklenir.
+
+73
+00:06:15,700 --> 00:06:21,140
+imdi bunu byk harfle balayan bir ad olarak vermeniz nemlidir.
+
+74
+00:06:21,250 --> 00:06:26,320
+Birka bileeni isimlendirmek iin mantkl olsa da, kii olmak zorunda
+
+75
+00:06:26,320 --> 00:06:34,000
+kalmayan baka herhangi bir ad kullanabilirsiniz ama, nk GSX'de tepki olarak 1 yan altndaki div
+
+76
+00:06:34,000 --> 00:06:40,740
+gibi kk harfli karakterlerle balayan, tepki veren karakter olmaldr. yerli HVM eleri.
+
+77
+00:06:41,050 --> 00:06:47,710
+Bylece, div olarak adlandrdnz kendi bileeninizi D harfi ile yaratabilirdiniz ve daha sonra
+
+78
+00:06:47,710 --> 00:06:53,800
+Riette bunu kullanabilirdi, nk normal def ile etkileim kurmazd ve ayn nedenle,
+
+79
+00:06:53,800 --> 00:06:59,710
+tekrar eyleme tanmlamak iin kiinize byk harf vermelisiniz. zel bir bileen olarak.
+
+80
+00:07:00,040 --> 00:07:07,150
+kullanabiliriz ya da babamn arasnda bir ey yuva yapmamamza ya da babamza ve sonraki derslere geri dnmemize neden olabiliriz.
+
+81
+00:07:07,150 --> 00:07:11,550
+O halde insan burada kullanalm ve al ve kapan etiketini bu ekilde
+
+82
+00:07:11,830 --> 00:07:19,730
+Ayrca, bu sonbaharda tasarruf ettiyseniz, eik izginin bulunduu bir kendiliinden kapan etiketini ve daha sonra byk olan
+
+83
+00:07:19,730 --> 00:07:20,740
+borla imzalayabilirsiniz.
+
+84
+00:07:20,740 --> 00:07:26,560
+Q Artk NPM ile halen terminalde almaya balarken bavurunuza geri dnyorsunuz.
+
+85
+00:07:26,600 --> 00:07:32,700
+Gryorsunuz ki, uygulama bileeni ieriinin altnda bir kii olduumu gryorsunuz.
+
+86
+00:07:32,750 --> 00:07:35,210
+Bu artk kendi bileenimizden geliyor.
+
+87
+00:07:35,300 --> 00:07:40,970
+Ve bunu incelersek, sonunu grdmzde zel elerimizi grmediimizi grrsek ie ihra ettiimiz
+
+88
+00:07:40,970 --> 00:07:45,130
+paragraf grrz ve aslnda olmas gerektii anlamna geliyor.
+
+89
+00:07:45,620 --> 00:07:53,300
+Bu yzden u anda bizim houmuza giden bileenin kulland tek bileenimiz
+
+90
+00:07:53,300 --> 00:08:01,270
+u ki bu gibi davranmann faydas tam olarak apt nesnelerine doru kodu
+
+91
+00:08:01,280 --> 00:08:02,470
+eklemek yerine.
+
+92
+00:08:02,510 --> 00:08:07,200
+Bir sonraki derste bu yarar grmek iin bu bileenle daha fazlasn yapalm.
+

@@ -1,0 +1,104 @@
+1
+00:00:02,050 --> 00:00:03,670
+So we learned quite a bit about nextjs
+
+2
+00:00:03,690 --> 00:00:10,820
+and I'm already nearing the end of this module since it is again not a full nextjs course
+
+3
+00:00:10,980 --> 00:00:13,110
+but there still are some things I want to touch on.
+
+4
+00:00:13,230 --> 00:00:21,450
+Let's go back to the github page of nextjs and if we scroll to the summary here, to the content we can
+
+5
+00:00:21,450 --> 00:00:23,500
+go through, there
+
+6
+00:00:23,520 --> 00:00:29,520
+we can also have a look at custom error handling because right now, we already have routes in our nextjs
+
+7
+00:00:29,520 --> 00:00:30,440
+application
+
+8
+00:00:30,440 --> 00:00:37,920
+but if I enter an invalid route here, we get this default 404 error, better than nothing but we can customize
+
+9
+00:00:37,920 --> 00:00:45,270
+this. As described here in the github repository of nextjs, you can create your own error handler
+
+10
+00:00:45,510 --> 00:00:48,770
+by creating an _error.js
+
+11
+00:00:48,810 --> 00:00:51,470
+file in the pages folder.
+
+12
+00:00:51,560 --> 00:00:56,350
+So let's do that, in pages let's create error.js with the underscore at the beginning
+
+13
+00:00:56,580 --> 00:01:00,680
+and that is a normal javascript react component.
+
+14
+00:01:00,960 --> 00:01:02,840
+So let me copy the content from index.js
+
+15
+00:01:02,880 --> 00:01:08,550
+and I'll name this error page but the name of course doesn't really matter
+
+16
+00:01:08,850 --> 00:01:14,690
+and then I can say, whoops something went wrong
+
+17
+00:01:15,680 --> 00:01:23,660
+and maybe here, we say try and then on the link, we say going back. So we still import the link, don't need
+
+18
+00:01:23,670 --> 00:01:24,510
+the button though so
+
+19
+00:01:24,510 --> 00:01:29,280
+let's also get rid of router import and on the link, I want to go to just slash.
+
+20
+00:01:29,730 --> 00:01:37,200
+If we now restart npm run dev, we need to do that because we exchanged that error page and therefore
+
+21
+00:01:37,200 --> 00:01:38,820
+we overwrote the default,
+
+22
+00:01:38,820 --> 00:01:44,610
+now if we enter a route we don't know, we get our custom error page and now we can go back to our main
+
+23
+00:01:44,610 --> 00:01:48,540
+page and it automatically continues working thereafter.
+
+24
+00:01:48,540 --> 00:01:54,900
+So this is how we can handle errors in nextjs and how we can render our own custom error page which of
+
+25
+00:01:54,900 --> 00:01:56,610
+course is quite important
+
+26
+00:01:56,760 --> 00:01:59,460
+if we really want to build a real application with that.
+

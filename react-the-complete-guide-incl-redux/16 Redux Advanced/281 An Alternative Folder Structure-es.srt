@@ -1,0 +1,104 @@
+1
+00:00:02,290 --> 00:00:09,700
+Con los ajustes de las ltimas conferencias conseguimos reducir o disminuir ms, generalmente dividimos nuestras acciones en reductores
+
+2
+00:00:09,700 --> 00:00:16,570
+entre muchos fans y creamos muchos cdigos repetitivos aqu para un proyecto pequeo como lo hace
+
+3
+00:00:16,570 --> 00:00:16,970
+uno.
+
+4
+00:00:16,990 --> 00:00:23,160
+Esto es claramente exagerado, pero tambin me permite mostrarte lo que puedes hacer y eso ser importante a
+
+5
+00:00:23,410 --> 00:00:25,510
+medida que construyas aplicaciones ms grandes.
+
+6
+00:00:25,540 --> 00:00:31,060
+Ya veremos algunas ventajas en la aplicacin Bergere Boulder, que volver a funcionar en el prximo
+
+7
+00:00:31,060 --> 00:00:32,280
+mdulo del curso.
+
+8
+00:00:32,440 --> 00:00:39,610
+reductoras delgadas y comprensibles y reaccionar de la manera ms general posible.
+
+9
+00:00:39,610 --> 00:00:46,300
+Quera resaltar estas posibles mejoras o reestructuraciones para que pueda utilizar acciones
+
+10
+00:00:46,300 --> 00:00:53,110
+Ahora otra cosa en la que quiero sumergirme rpidamente es una estructura de carpeta alternativa.
+
+11
+00:00:53,170 --> 00:00:59,110
+Ahora la estructura de carpetas realmente es algo en lo que puedes encontrar miles de enfoques diferentes.
+
+12
+00:00:59,110 --> 00:01:04,360
+El enfoque que eleg en este curso es el que siempre ver los proyectos que ms vuelven a actuar.
+
+13
+00:01:04,450 --> 00:01:09,760
+Es bastante bueno con la diferenciacin de contenedores y componentes y luego con la tienda.
+
+14
+00:01:09,940 --> 00:01:16,480
+Ahora, a medida que su tienda crezca, puede agregar ms y ms acciones y reducir o caer, y notar
+
+15
+00:01:16,480 --> 00:01:22,510
+que algunos de sus archivos reductores hacen referencia a algunos contenedores y otros reducen Faas a otro contenedor.
+
+16
+00:01:22,510 --> 00:01:30,910
+contenedor y luego solo agregar el reductor y las acciones para el contenedor dado muerto a esa tienda.
+
+17
+00:01:31,270 --> 00:01:39,060
+Por esa razn y una estructura de proyecto alternativa, podra crear una subcarpeta de almacenamiento en cada
+
+18
+00:01:39,100 --> 00:01:45,010
+Y si tuviera ms contenedores, cada carpeta contenedora tena una carpeta de tienda, no tendra
+
+19
+00:01:45,010 --> 00:01:50,560
+esa carpeta de tienda global y tendra muchas acciones en reductores para cada contenedor
+
+20
+00:01:50,560 --> 00:01:54,140
+que luego an combinen juntos en su ndice jazz Faldo.
+
+21
+00:01:54,160 --> 00:01:55,970
+Entonces esta es una alternativa.
+
+22
+00:01:56,050 --> 00:02:02,080
+Tambin puedes mezclar dicho en una tienda global para algunas operaciones globales o compartidas que puedas necesitar en todas
+
+23
+00:02:02,460 --> 00:02:08,240
+partes. Deaderick es algo que puedes encontrar como humano y donde puedes leer muchos artculos con muchas opiniones.
+
+24
+00:02:08,440 --> 00:02:11,950
+Encuentra el enfoque que te gusta para muchos proyectos.
+
+25
+00:02:11,950 --> 00:02:16,800
+El enfoque que se muestra aqu con una carpeta de tienda central debera estar bien.
+
+26
+00:02:16,870 --> 00:02:20,810
+Pero tenga en cuenta que puede desviarse de eso cuando sea necesario.
+

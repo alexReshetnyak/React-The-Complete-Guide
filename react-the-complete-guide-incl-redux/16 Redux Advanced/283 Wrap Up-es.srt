@@ -1,0 +1,48 @@
+1
+00:00:02,180 --> 00:00:03,560
+Entonces aprenders mucho sobre Rydex.
+
+2
+00:00:03,590 --> 00:00:09,650
+En las ltimas conferencias y mdulos, hice hincapi en que hay alternativas y le mostr algunas
+
+3
+00:00:09,650 --> 00:00:14,380
+buenas prcticas, buenas prcticas y formas de optimizar sus reducciones y acciones.
+
+4
+00:00:14,630 --> 00:00:21,990
+Aprendi a ejecutar cdigo asncrono con creadores de acciones como este para usar el middleware de middleware de
+
+5
+00:00:22,080 --> 00:00:23,950
+redux para hacer eso.
+
+6
+00:00:24,200 --> 00:00:31,100
+Aprendi cmo combinar reductores y cmo usar las herramientas de lectura de desarrollo X para obtener informacin sobre su tienda e
+
+7
+00:00:31,400 --> 00:00:34,840
+incluso viajar atrs en el tiempo si as lo desea.
+
+8
+00:00:34,850 --> 00:00:41,630
+en muchas aplicaciones de reactivacin, ahora tambin volver a nuestro Berger ms audaz y mejorada es un poco ms.
+
+9
+00:00:41,630 --> 00:00:47,310
+Todas estas son herramientas tiles y la relajacin es una biblioteca extremadamente poderosa que ver
+
+10
+00:00:47,330 --> 00:00:53,090
+BI, por ejemplo, agrega cdigo asncrono y junto con redox y es probable que tambin trabaje
+
+11
+00:00:53,090 --> 00:00:55,220
+con l en su prximo proyecto.
+
+12
+00:00:55,250 --> 00:00:58,600
+Los conceptos bsicos de este mdulo deben tenerlo bien preparado.
+

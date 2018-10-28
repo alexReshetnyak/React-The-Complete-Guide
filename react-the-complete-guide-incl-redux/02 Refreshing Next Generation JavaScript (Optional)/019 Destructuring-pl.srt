@@ -1,0 +1,164 @@
+1
+00:00:02,160 --> 00:00:04,340
+Wic dowiedzielimy si o odpoczynku i rozprzestrzenianiu si.
+
+2
+00:00:04,350 --> 00:00:11,110
+Jest jeszcze jedna funkcja nowej generacji, ktr zdecydowanie chc obj i nazywa si to destructuring.
+
+3
+00:00:11,250 --> 00:00:18,070
+Destructuring pozwala atwo wyodrbni elementy tablicy lub waciwoci obiektu i przechowywa je w zmiennych.
+
+4
+00:00:18,180 --> 00:00:23,460
+Kiedy po raz pierwszy usyszysz o tym, moe to brzmie dokadnie tak samo, jak operator rozprzestrzeniania, ale w rzeczywistoci
+
+5
+00:00:23,460 --> 00:00:24,840
+jest to co zupenie innego.
+
+6
+00:00:24,890 --> 00:00:32,300
+Spread usuwa wszystkie elementy z wszystkich waciwoci i rozdziela je w nowej tablicy lub obiekcie lub
+
+7
+00:00:32,300 --> 00:00:33,630
+gdziekolwiek go uywasz.
+
+8
+00:00:33,810 --> 00:00:41,820
+Destructuring pozwala wycign pojedyncze elementy lub waciwoci i przechowywa je w zmiennych dla
+
+9
+00:00:42,270 --> 00:00:43,820
+tablic i obiektw.
+
+10
+00:00:43,950 --> 00:00:46,130
+Teraz dla tablic wyglda to tak.
+
+11
+00:00:46,140 --> 00:00:48,050
+Jeli mamy tablic z dwoma elementami.
+
+12
+00:00:48,130 --> 00:00:54,900
+Witaj i max, wtedy moemy uy tych dziwnie wygldajcych skadni po lewej stronie znaku
+
+13
+00:00:54,900 --> 00:01:03,480
+rwnoci, ktry wyglda tak, jak my tworzymy tablic, ale nie mamy przypisywa zmiennych aib do cze i
+
+14
+00:01:03,480 --> 00:01:12,630
+Max odpowiednio i dla destruktury obiektu to jest ta sama skadnia z nawiasami klamrowymi i gdzie w destrukturyzacji
+
+15
+00:01:12,640 --> 00:01:17,090
+tablicy kolejno definiuje, ktr waciwo przyjmujemy, dla destruktury obiektu.
+
+16
+00:01:17,130 --> 00:01:24,180
+Jest to nazwa waciwoci, wic nazwa nawiasw klamrowych po lewej stronie wskazuje na waciwo nazwy
+
+17
+00:01:24,180 --> 00:01:30,150
+obiektu po prawej stronie i wyciga warto, dlatego wiek logowania byby niezdefiniowany.
+
+18
+00:01:30,180 --> 00:01:33,120
+Nie wycigamy tego tutaj z obiektu.
+
+19
+00:01:33,120 --> 00:01:34,730
+To jest destrukturyzacja.
+
+20
+00:01:34,830 --> 00:01:42,280
+Przyjrzyjmy si rwnie temu w praktyce w jsbin, zacznijmy od naszej tablicy liczb,
+
+21
+00:01:42,580 --> 00:01:46,430
+ktra ma numery 1 2 i 3.
+
+22
+00:01:46,630 --> 00:01:49,450
+A teraz powiedzmy, e chcemy uzyska liczby 1 i 2.
+
+23
+00:01:49,840 --> 00:01:55,750
+Nastpnie moemy uy tej skadni tablicowej po lewej stronie znaku rwnoci i wybra dowolne nazwy
+
+24
+00:01:55,810 --> 00:02:02,980
+zmiennych wedug naszego wyboru, takie jak num1 i num2, a my przypiszemy t liczb do liczby jako tablicy.
+
+25
+00:02:03,380 --> 00:02:12,200
+Jeli teraz zbieram log num1 i num2 i uruchomi to widz, e loguj si 1 i 2, poniewa
+
+26
+00:02:12,200 --> 00:02:14,890
+wycigam te dwie z tablicy.
+
+27
+00:02:14,900 --> 00:02:18,050
+Nie wycigam 3, jeli chc dosta trzy.
+
+28
+00:02:18,060 --> 00:02:21,130
+Przy okazji po prostu dodaj tutaj num3.
+
+29
+00:02:21,170 --> 00:02:27,740
+Nie musisz zmienia nazwy, a pominiesz jedno miejsce z pustym miejscem w deklaracji
+
+30
+00:02:28,340 --> 00:02:30,140
+po lewej stronie.
+
+31
+00:02:30,140 --> 00:02:33,630
+Teraz, jeli ucieke, dostaniesz jeden i trzy.
+
+32
+00:02:33,650 --> 00:02:35,710
+To jest destrukcja tablicy.
+
+33
+00:02:35,750 --> 00:02:42,910
+Teraz destrukcja obiektu jest wspierana przez nasz projekt, poniewa wykorzystamy go w tym kursie.
+
+34
+00:02:42,920 --> 00:02:46,250
+Jednak nie jest to obsugiwane przez jsbin.
+
+35
+00:02:46,250 --> 00:02:47,750
+Wic nie mog ci tego pokaza.
+
+36
+00:02:47,780 --> 00:02:50,320
+Ale pokazaem skadni na slajdzie.
+
+37
+00:02:50,480 --> 00:02:56,600
+Jest to skadnia, w ktrej uywasz nawiasw klamrowych po lewej i celujesz w waciwo z jej
+
+38
+00:02:56,600 --> 00:02:57,170
+nazw waciwoci.
+
+39
+00:02:57,170 --> 00:03:03,620
+W tym kursie nie bd uywa tych skadni destruktywnych zbyt czsto, ale chc, eby by wiadomy
+
+40
+00:03:03,620 --> 00:03:09,800
+ich istnienia i e s one miymi sposobami wygodnego wycigania pewnych elementw z tablicy lub waciwoci
+
+41
+00:03:09,800 --> 00:03:11,840
+z ich wartoci z obiektu.
+

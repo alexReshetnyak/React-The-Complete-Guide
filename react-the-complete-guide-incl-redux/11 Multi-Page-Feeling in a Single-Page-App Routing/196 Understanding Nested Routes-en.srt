@@ -1,0 +1,336 @@
+1
+00:00:02,190 --> 00:00:09,600
+Thus far in our application we loaded the single post route as part of our blog page so that when we
+
+2
+00:00:09,600 --> 00:00:15,310
+click on a post, we exchanged the posts page for the single post page.
+
+3
+00:00:15,330 --> 00:00:18,330
+Now we can absolutely do that of course,
+
+4
+00:00:18,330 --> 00:00:25,350
+however sometimes you also have a set up where you want to create a nested route. So where you want to
+
+5
+00:00:25,380 --> 00:00:33,360
+load a certain component or where you want to render certain content inside of another component which
+
+6
+00:00:33,360 --> 00:00:35,540
+is also loaded via routing.
+
+7
+00:00:35,790 --> 00:00:41,850
+So right now we have only one level where we do routing, here in the blog container we load different
+
+8
+00:00:41,850 --> 00:00:45,810
+components for different routes and that's absolutely fine.
+
+9
+00:00:45,810 --> 00:00:54,090
+Now let's say we want to load a specific host not inside the blog component but inside the post component
+
+10
+00:00:54,330 --> 00:00:56,730
+right beneath our posts here.
+
+11
+00:00:57,090 --> 00:01:06,060
+So for that I will wrap this in a div and add my route in there, my route component in there, so now, I'm
+
+12
+00:01:06,180 --> 00:01:09,390
+in the post component added there.
+
+13
+00:01:09,390 --> 00:01:16,780
+Therefore of course, I also need to add an import at the top where I import route from react-router-dom
+
+14
+00:01:16,890 --> 00:01:25,350
+all of that in the post component and I now get an error of course because the full post component
+
+15
+00:01:25,380 --> 00:01:28,740
+I'm referring to here is also not present in that file.
+
+16
+00:01:28,770 --> 00:01:33,900
+So I need to add an import to that too. import FullPost from
+
+17
+00:01:33,900 --> 00:01:39,570
+and now let's go to that full post folder and import it from the full post file.
+
+18
+00:01:39,570 --> 00:01:47,890
+And now I can render a single post beneath my list of posts because I use route in a different component
+
+19
+00:01:48,300 --> 00:01:51,050
+and this is in general something you can of course do.
+
+20
+00:01:51,120 --> 00:01:56,010
+You can use the route component where ever you want in your application
+
+21
+00:01:56,250 --> 00:02:04,110
+as long as the page the component where you are using it is wrapped by that browser router and that
+
+22
+00:02:04,110 --> 00:02:08,670
+of course is the case because we're wrapping the blog component with it.
+
+23
+00:02:08,760 --> 00:02:14,490
+and since the post component is just a child component of the blog component loaded through a route,
+
+24
+00:02:14,820 --> 00:02:16,680
+this works.
+
+25
+00:02:16,800 --> 00:02:22,000
+Now the switch statement here in the blog component of course is a bit redundant
+
+26
+00:02:22,010 --> 00:02:29,280
+now, I only have one component in there so maybe I move my outer route in there though technically this
+
+27
+00:02:29,280 --> 00:02:34,400
+is not required because these two routes will never match for the same path.
+
+28
+00:02:34,470 --> 00:02:40,710
+So we could remove the switch statement, I'll leave it here simply as a reference so that you can still
+
+29
+00:02:40,710 --> 00:02:43,700
+compare your code to it.
+
+30
+00:02:43,830 --> 00:02:49,310
+What we can also do in the blog component now is we can get rid of the full post import which we're
+
+31
+00:02:49,310 --> 00:02:50,790
+not using here anymore.
+
+32
+00:02:51,110 --> 00:02:58,850
+Now if you save all the files and you go to your post component and you click on a single post, you will
+
+33
+00:02:58,850 --> 00:03:01,290
+see that URL updates
+
+34
+00:03:01,520 --> 00:03:05,600
+but the post isn't rendered and the posts are gone too.
+
+35
+00:03:05,630 --> 00:03:08,940
+The reason for this is that we now create a nested route,
+
+36
+00:03:09,170 --> 00:03:16,940
+we have the root route let's say here in the blog container, this is the top most level where we react
+
+37
+00:03:16,970 --> 00:03:22,790
+to any route changes, and then the post component which we load through a router.
+
+38
+00:03:22,790 --> 00:03:24,200
+Keep that in mind we load it,
+
+39
+00:03:24,200 --> 00:03:27,760
+we implement it through the router in this component here.
+
+40
+00:03:27,980 --> 00:03:29,800
+We now again use route,
+
+41
+00:03:29,840 --> 00:03:33,290
+the issue is for /someID,
+
+42
+00:03:33,470 --> 00:03:40,640
+We're not going to reach that route because we have the exact matching for just slash. So slash ID doesn't
+
+43
+00:03:40,640 --> 00:03:41,870
+match that route,
+
+44
+00:03:41,900 --> 00:03:47,810
+so the post component never gets rendered which is too bad because it would be in that component that
+
+45
+00:03:47,810 --> 00:03:53,840
+we want to render our full post component for a given ID.
+
+46
+00:03:53,870 --> 00:04:03,500
+Now to fix this we can of course remove exact then this will match slash and /1, /2 and
+
+47
+00:04:03,500 --> 00:04:04,520
+so on.
+
+48
+00:04:04,520 --> 00:04:11,120
+We should then change the order though so that slash doesn't also consume the new posts first and
+
+49
+00:04:11,120 --> 00:04:17,730
+now switch also makes sense again because now, this route would also be rendered for a /new-post
+
+50
+00:04:18,020 --> 00:04:24,980
+but since /new-post is found first, this will be rendered first and the router will then stop thereafter.
+
+51
+00:04:24,980 --> 00:04:31,290
+So now with this set up you will see that indeed we can load a single route beneath our routes.
+
+52
+00:04:31,310 --> 00:04:38,120
+So if I go to just slash, we see just the posts but if I click on a post we load that beneath the posts.
+
+53
+00:04:38,540 --> 00:04:41,420
+This already is a nested route.
+
+54
+00:04:41,420 --> 00:04:49,290
+We face an issue though, let's say we have /posts here and not slash nothing
+
+55
+00:04:49,670 --> 00:04:57,140
+and of course this means that in the post component where we navigate, if we were to use a link we would
+
+56
+00:04:57,140 --> 00:04:59,660
+have to update this to /posts.
+
+57
+00:04:59,810 --> 00:05:06,200
+The same here for this programmatic routing and for the one we're actually using
+
+58
+00:05:06,350 --> 00:05:14,000
+so that now we're navigating to /posts ID. And now with this in place, you will see and I should also
+
+59
+00:05:14,000 --> 00:05:17,970
+update the navigational link here to /posts
+
+60
+00:05:18,820 --> 00:05:26,020
+so now you will see that if I click on posts here, we load the posts and I can click on a post of course.
+
+61
+00:05:26,020 --> 00:05:34,930
+Now you see also that it fails though, we get an error because our nested route here in the post component,
+
+62
+00:05:34,930 --> 00:05:45,340
+this route, parses /ID and this is not appended to the path of the route which was responsible for
+
+63
+00:05:45,340 --> 00:05:47,230
+loading the post component.
+
+64
+00:05:47,380 --> 00:05:50,460
+So this is not automatically resolved
+
+65
+00:05:50,470 --> 00:05:52,030
+to posts ID,
+
+66
+00:05:52,030 --> 00:05:54,490
+this is not happening.
+
+67
+00:05:54,490 --> 00:06:03,670
+Instead this still is /route /ID. So we would have to update this to /posts:id too, to have
+
+68
+00:06:03,670 --> 00:06:10,100
+working nested routing again with our new URL which is /posts /id
+
+69
+00:06:10,110 --> 00:06:14,780
+is of course very cumbersome to do so.
+
+70
+00:06:15,310 --> 00:06:19,000
+So instead of using post like this,
+
+71
+00:06:19,000 --> 00:06:28,990
+a better way is to get the current path dynamically so that this really is a dynamic, a flexible nested
+
+72
+00:06:29,080 --> 00:06:35,760
+route and for that path should be set to something dynamic here not a hardcoded string.
+
+73
+00:06:36,160 --> 00:06:45,700
+And in there, we probably should use this.props.match this match object and in there there is a URL
+
+74
+00:06:45,710 --> 00:06:49,550
+property which is basically the URL
+
+75
+00:06:49,570 --> 00:06:50,980
+we loaded thus far.
+
+76
+00:06:51,010 --> 00:06:59,630
+So the URL which was responsible for loading this posts component and that of course is exactly the path
+
+77
+00:06:59,740 --> 00:07:08,610
+we need to prepend to our flexible path thereafter. So we can now merge this inside of the curly braces
+
+78
+00:07:08,670 --> 00:07:11,130
+though with our ID,
+
+79
+00:07:11,130 --> 00:07:18,350
+so with /:id and remove the path after the curly braces.
+
+80
+00:07:18,350 --> 00:07:27,470
+Now this will match.posts.id and if we ever were to load this component differently, let's say on /
+
+81
+00:07:27,530 --> 00:07:33,950
+allposts, then this would automatically resolve to all posts here because it is dynamic.
+
+82
+00:07:34,340 --> 00:07:41,410
+So now with that, if we save this, we get the same behavior as before but this just proves that it's working.
+
+83
+00:07:41,430 --> 00:07:49,760
+We're dynamically adding /posts here for our nested route and this is how you create truly nested
+
+84
+00:07:49,760 --> 00:07:53,170
+routes in your react application with react router.
+

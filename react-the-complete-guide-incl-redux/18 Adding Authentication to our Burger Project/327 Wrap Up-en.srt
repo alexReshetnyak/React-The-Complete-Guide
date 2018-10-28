@@ -1,0 +1,32 @@
+1
+00:00:02,280 --> 00:00:05,730
+Whoa, over this module we covered a lot of ground,
+
+2
+00:00:05,760 --> 00:00:10,960
+we added so many functionalities to really make our application more secure.
+
+3
+00:00:11,010 --> 00:00:16,050
+We added authentication with validation, autoSignUp.
+
+4
+00:00:16,050 --> 00:00:21,880
+I showed you how to manage token and how to implement authentication in single page apps.
+
+5
+00:00:21,900 --> 00:00:28,410
+We used our data to map our orders to a given user, we redirect the user when he tries to do something
+
+6
+00:00:28,410 --> 00:00:30,510
+fishy and much more.
+
+7
+00:00:30,780 --> 00:00:36,680
+You learned a lot of important concepts which you might need in your next react application too
+
+8
+00:00:36,780 --> 00:00:41,970
+so I hope this module was a great help with any future project you might face.
+

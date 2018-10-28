@@ -1,0 +1,264 @@
+1
+00:00:02,170 --> 00:00:06,130
+As que asegurmonos de que podamos ver un spinner mientras esperamos una
+
+2
+00:00:06,130 --> 00:00:12,250
+respuesta, asegurmonos tambin de que si ingresamos algo no vlido, tambin recibimos un mensaje de error visual aqu
+
+3
+00:00:12,250 --> 00:00:13,420
+en la pgina.
+
+4
+00:00:13,420 --> 00:00:16,080
+Comencemos con el spinner y para eso,
+
+5
+00:00:16,090 --> 00:00:20,250
+ir a mi contenedor de autenticacin y en la parte
+
+6
+00:00:20,260 --> 00:00:22,350
+superior de l, importar mi
+
+7
+00:00:22,630 --> 00:00:26,000
+componente spinner, se llama spinner y lo obtendremos
+
+8
+00:00:26,050 --> 00:00:28,730
+de los componentes UI spinner spinner, realmente
+
+9
+00:00:28,760 --> 00:00:33,600
+podemos ver cmo estos componentes reutilizables tienen mucho sentido para reaccionar aqu.
+
+10
+00:00:33,610 --> 00:00:37,920
+Ahora quiero mostrar el spinner siempre que lo estemos cargando y para
+
+11
+00:00:37,930 --> 00:00:44,640
+eso, necesito saber si estamos cargando y estamos almacenando esa informacin en nuestro estado de autenticacin, para eso necesito
+
+12
+00:00:44,650 --> 00:00:49,040
+obtener un pedazo de ese estado en mi contenedor de autenticacin y
+
+13
+00:00:49,240 --> 00:00:52,840
+eso, por supuesto, es un caso para el despacho del
+
+14
+00:00:52,970 --> 00:01:00,750
+mapa de const disclpeme, mapStateToProps, all obtenemos el estado y ahora podemos asignar una porcin de l a nuestros accesorios locales.
+
+15
+00:01:01,320 --> 00:01:04,080
+As que devolver un objeto donde hago este mapeo y
+
+16
+00:01:04,080 --> 00:01:12,290
+quiero obtener el estado de carga por ahora, as que voy a mapear el estado. Ahora en estado, tenemos que acceder a autenticacin ya que
+
+17
+00:01:12,520 --> 00:01:17,520
+esto es lo que conduce al auth reductor al final debido a
+
+18
+00:01:18,190 --> 00:01:27,620
+los reductores combinados, as que tenemos que acceder a la autenticacin estatal y ahora, la propiedad de carga que configuramos en nuestro estado
+
+19
+00:01:27,640 --> 00:01:32,870
+de auth reductores, esto uno aqu. Con eso, tenemos eso disponible
+
+20
+00:01:32,900 --> 00:01:39,720
+aqu, necesitamos pasar mapStateToProps a nuestra funcin connect y ahora aqu en
+
+21
+00:01:39,770 --> 00:01:44,250
+nuestro mtodo de renderizado, podemos renderizar un spinner.
+
+22
+00:01:44,270 --> 00:01:48,920
+Entonces, lo que har es renderizar la forma o si la estamos cargando, la ruleta.
+
+23
+00:01:49,190 --> 00:01:58,790
+As que verifico despus de que se creo el formulario si la carga de estos apoyos es verdadera porque si lo es, entonces la forma
+
+24
+00:01:59,210 --> 00:02:07,780
+ya no ser un const sino un let, una variable luego la forma ser igual al spinner, as como as, para mostrar
+
+25
+00:02:07,790 --> 00:02:11,470
+un spinner si estamos cargando, eso debera ser todo.
+
+26
+00:02:11,680 --> 00:02:16,420
+Con eso, si ingresamos algunos datos aqu, no importa si son
+
+27
+00:02:16,640 --> 00:02:22,310
+vlidos o no, si presento esto, vemos brevemente un girador porque es muy rpido.
+
+28
+00:02:22,310 --> 00:02:25,410
+Ahora asegurmonos de que veamos los mensajes
+
+29
+00:02:25,490 --> 00:02:32,030
+de error si enviamos datos incorrectos y, para ver eso, por supuesto necesito aprovechar el hecho
+
+30
+00:02:32,030 --> 00:02:35,410
+de que almaceno posibles errores en mi tienda.
+
+31
+00:02:35,810 --> 00:02:42,570
+Entonces, antes que nada, necesito obtener ese error agregando otro mapeo en el contenedor de autenticacin, error
+
+32
+00:02:43,040 --> 00:02:50,750
+y ese debera ser el estado. auth. error porque almaceno cualquier error en mi estado aqu
+
+33
+00:02:50,750 --> 00:02:55,350
+en esta propiedad de error y lo hago en la accin de falla de autenticacin.
+
+34
+00:02:55,580 --> 00:03:03,500
+Con eso, ahora necesito volver al contenedor de autenticacin y Firebase nos da un bonito mensaje de error,
+
+35
+00:03:03,500 --> 00:03:06,860
+tu backend tambin puede hacer esto o puedes
+
+36
+00:03:06,890 --> 00:03:13,460
+crear el tuyo propio, voy a tomar el de firebase y como tenemos este mensaje,
+
+37
+00:03:13,460 --> 00:03:22,050
+lo que puedo hacer es mostrar un mensaje de error. As que puedo crear un nuevo error const error que, por
+
+38
+00:03:22,050 --> 00:03:27,050
+defecto, podra ser nulo y, por lo tanto, debera ser un let tambin,
+
+39
+00:03:27,140 --> 00:03:37,620
+pero luego agregar una instruccin if aqu, si es as. accesorios. error, si tenemos que establecer, si no es nulo, entonces el mensaje de
+
+40
+00:03:37,650 --> 00:03:46,850
+error realmente ser un jsx, un prrafo digamos que simplemente lo publico. accesorios. error y all, dado que firebase
+
+41
+00:03:46,920 --> 00:03:50,950
+me da eso, habr una propiedad de mensaje.
+
+42
+00:03:50,950 --> 00:03:56,670
+Una vez ms, esta propiedad de mensaje solo est disponible porque estoy usando el error, ya que proviene
+
+43
+00:03:56,680 --> 00:04:01,630
+de Firebase y resulta ser un objeto de JavaScript que tiene una propiedad de mensaje, este
+
+44
+00:04:01,650 --> 00:04:06,430
+podra no ser el caso para tu propio back-end, por supuesto, ajstalo a tus necesidades.
+
+45
+00:04:07,230 --> 00:04:15,530
+Quiero el resultado de este elemento de mensaje de error, tal vez por encima de mi formulario aqu, mostrar el mensaje de error y,
+
+46
+00:04:15,600 --> 00:04:19,210
+por supuesto, podramos darle ms estilo, hacerlo rojo, lo que queramos.
+
+47
+00:04:19,230 --> 00:04:24,440
+Ahora, antes de que veamos algo, debemos asegurarnos de que realmente almacenamos ese error,
+
+48
+00:04:24,660 --> 00:04:33,180
+as que tengo que ir a mi archivo de autenticacin en la carpeta de acciones y podemos acceder al mensaje de error, el
+
+49
+00:04:33,180 --> 00:04:40,590
+objeto de error que obtenemos de firebase sobre este error Objeto aqu accediendo a la respuesta original y eso se
+
+50
+00:04:40,620 --> 00:04:46,440
+debe a axios, estamos usando axios aqu y simplemente envuelve la respuesta en este objeto de
+
+51
+00:04:46,860 --> 00:04:48,750
+error y all, todava tendremos
+
+52
+00:04:48,780 --> 00:04:51,230
+datos y all, tendremos este objeto de error.
+
+53
+00:04:51,230 --> 00:04:56,250
+Siempre puede confirmar esto mediante la respuesta de error de registro de la consola y ver que
+
+54
+00:04:56,250 --> 00:05:00,740
+obtiene los mismos campos que en una respuesta normal, solo con un cdigo de error.
+
+55
+00:05:00,960 --> 00:05:07,750
+Con esto, si guardamos todo y enviamos un formulario vaco, obtenemos un correo electrnico no vlido, si ahora uso
+
+56
+00:05:07,830 --> 00:05:14,610
+ese correo electrnico que ya tenemos en uso y no me estoy registrando, pero se inscribe, recibimos un correo
+
+57
+00:05:14,610 --> 00:05:15,690
+electrnico. .
+
+58
+00:05:15,690 --> 00:05:20,400
+Ahora bien, esto claramente no es un buen mensaje de error, sera mejor obtener un buen
+
+59
+00:05:20,400 --> 00:05:23,760
+texto que podamos leer fcilmente, aunque s dice qu est mal.
+
+60
+00:05:23,910 --> 00:05:28,670
+Por supuesto, puede asignar estos cdigos a sus propios mensajes de error, es
+
+61
+00:05:28,680 --> 00:05:34,050
+algo que no voy a hacer aqu por ahora, pero definitivamente algo que puede tener
+
+62
+00:05:34,420 --> 00:05:39,300
+en cuenta como una mejora, asigne esto a su direccin de correo electrnico favorita.
+
+63
+00:05:39,300 --> 00:05:44,760
+Siempre puede averiguar qu errores potenciales puede obtener al consultar la documentacin de la
+
+64
+00:05:44,820 --> 00:05:52,590
+API de firebase auth rest aqu y all, ver cdigos de error comunes como correo electrnico no encontrado, contrasea no
+
+65
+00:05:52,590 --> 00:05:55,170
+vlida o para iniciar sesin que actualmente
+
+66
+00:05:55,170 --> 00:06:01,230
+intentamos, que habra correo electrnico, demasiados intentos o correo electrnico no vlido como acabas de ver.
+

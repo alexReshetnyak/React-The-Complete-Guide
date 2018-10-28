@@ -1,0 +1,140 @@
+1
+00:00:02,180 --> 00:00:07,030
+Son derste, javascript'le alrken aklda tutmak iin sper nem
+
+2
+00:00:07,030 --> 00:00:09,800
+tayan ilkel trlere atflara baktk.
+
+3
+00:00:10,030 --> 00:00:14,260
+Bu derste greceiniz baka bir ey daha ilevdir.
+
+4
+00:00:14,260 --> 00:00:17,240
+Filtreyi birka tane Electress nce grdk.
+
+5
+00:00:17,350 --> 00:00:20,550
+Ayrca Saward haritas da var.
+
+6
+00:00:20,860 --> 00:00:22,670
+Ne demek istediimi hzlca gstereyim.
+
+7
+00:00:22,810 --> 00:00:27,560
+yi eski say 1 2 ve 3 dizisidir.
+
+8
+00:00:27,970 --> 00:00:34,510
+imdi, bunu her say iki katna karlan bir diziye dntrmek istediimizi dnelim.
+
+9
+00:00:34,540 --> 00:00:41,370
+Dolaysyla, bor gibi bir eyleri ikiye katlamalyz, bunun iin bir dizi ilevi kullanabiliriz.
+
+10
+00:00:41,440 --> 00:00:45,050
+Saylar dizisini alabilir ve haritay arayabiliriz.
+
+11
+00:00:45,130 --> 00:00:47,150
+Harita, yerleik bir dizi yntemidir.
+
+12
+00:00:47,170 --> 00:00:49,070
+Ve bu yntemlerin birou var.
+
+13
+00:00:49,420 --> 00:00:51,610
+Onlardan epeyce kullanacam ve olmaz.
+
+14
+00:00:51,610 --> 00:00:57,940
+Gelecek jenerasyon javascript tm bu yntemleri bir girdi olarak ilev alrlarsa da ayn
+
+15
+00:00:57,940 --> 00:01:04,750
+ekilde alrlar ve burada bir ok ilevi olan ancak normal bir ilev olabilir bu
+
+16
+00:01:04,820 --> 00:01:09,050
+ilev, burada dizideki her e zerinde basite yrtlr.
+
+17
+00:01:09,070 --> 00:01:13,830
+Bylece, 0 8 1 ve 2 ve 3 numaralardaki her e zerinde.
+
+18
+00:01:14,260 --> 00:01:18,200
+Dolaysyla bu ok ilevinde ne elde ettik sonunda bir saydr.
+
+19
+00:01:18,220 --> 00:01:22,260
+Ancak burada ne isterseniz, bu argmana isim verebilirsiniz.
+
+20
+00:01:22,260 --> 00:01:24,400
+Daha sonra sadece bir eyler iade edebiliriz.
+
+21
+00:01:24,610 --> 00:01:30,660
+Ve bu dahili ileve yapmanz gereken ey, hangi ilev alann kullandnza baldr.
+
+22
+00:01:30,670 --> 00:01:37,010
+Mevcut alan ilevleri hakknda daha fazla bilgi edinmek iin d Mozilla Developer Network dokmanlar gibi yerlerde
+
+23
+00:01:37,100 --> 00:01:38,470
+dokmanlar kontrol edin.
+
+24
+00:01:38,470 --> 00:01:44,770
+getirmeliyiz, bylece bazen de geri dnebiliriz, nk buradaki her element zerinde altrlr.
+
+25
+00:01:44,770 --> 00:01:49,440
+Dolaysyla harita fonksiyonunda eskisini deitirmek istediimiz yeni deeri geri
+
+26
+00:01:49,450 --> 00:01:55,890
+4 ve 6'ya dner ve tm dnleri yeni bir dizi ile rahata eletirir.
+
+27
+00:01:55,900 --> 00:02:00,720
+Bylece gerek bir yeni dizi daha sonra ift hafzada saklanr.
+
+28
+00:02:01,060 --> 00:02:12,520
+Peki k numaralarm ve bu gibi iki kez uyuukluk dizisi var ve bir saat sonra eski numarann deimediini greceksiniz,
+
+29
+00:02:12,580 --> 00:02:19,750
+ancak yeni bir say iki katna kt ve bu ilevlerin ne zaman
+
+30
+00:02:19,750 --> 00:02:21,620
+kullanldn aklayacam. elbette.
+
+31
+00:02:21,850 --> 00:02:24,590
+Sadece onlar imdi dikkatinize getirmek istiyorum.
+
+32
+00:02:24,670 --> 00:02:30,730
+sonraki nesil javascript olmadn, ancak normal javascriptlerin aslnda onlar karlamaya hazr olduklarn aklayn.
+
+33
+00:02:30,760 --> 00:02:36,190
+Her e zerinde yrtlen bu ileve her zaman sahip olduklarn ve
+
+34
+00:02:36,190 --> 00:02:41,600
+Onlar grdmzde ne yaptklarn aklayacam ve onlar hakknda daha fazla bilgi edinmek iin her zaman Mozilla
+
+35
+00:02:41,600 --> 00:02:43,840
+veya gelitirici a gibi dokmanlara dalmaktan ekinmeyin.
+

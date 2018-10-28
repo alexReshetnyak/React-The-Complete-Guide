@@ -1,0 +1,112 @@
+1
+00:00:02,220 --> 00:00:03,750
+Quindi cos' lo stato.
+
+2
+00:00:03,900 --> 00:00:05,970
+Lasciatemi fare alcuni esempi.
+
+3
+00:00:06,000 --> 00:00:09,690
+State per esempio sono due ingredienti che abbiamo aggiunto al nostro hamburger.
+
+4
+00:00:09,690 --> 00:00:15,730
+Fa parte della nostra applicazione lo stato dell'applicazione della nostra applicazione burger Boulder.
+
+5
+00:00:16,080 --> 00:00:20,940
+Le informazioni che gli ingredienti che abbiamo aggiunto sono cruciali perch determinano ci che dobbiamo rendere
+
+6
+00:00:20,940 --> 00:00:21,660
+sullo schermo.
+
+7
+00:00:21,840 --> 00:00:24,410
+Come dovrebbe apparire la nostra anteprima di hamburger l.
+
+8
+00:00:24,420 --> 00:00:30,600
+ingredienti nella richiesta HTP e l'esempio di Navaira sarebbe la domanda che ogni utente  autenticato o meno.
+
+9
+00:00:30,600 --> 00:00:36,780
+ tutto importante dietro le quinte quando conserviamo quel burger su un server e abbiamo bisogno di inviare
+
+10
+00:00:36,780 --> 00:00:37,650
+tutti questi
+
+11
+00:00:37,650 --> 00:00:43,530
+Questo pu essere molto importante in quanto potrebbe determinare le opzioni che mostriamo nel menu o
+
+12
+00:00:43,530 --> 00:00:46,290
+l'accesso che stiamo concedendo a determinati componenti.
+
+13
+00:00:46,290 --> 00:00:53,190
+ interessante anche che tu dichiari che un determinato modal aperto  uno sfondo aperto nel caso fosse aperto.
+
+14
+00:00:53,220 --> 00:00:54,640
+Anche questo  molto importante.
+
+15
+00:00:54,720 --> 00:01:01,740
+Sono meno dati come gli ingredienti e l'autenticazione dell'utente, si tratta pi del nostro puro stato dell'interfaccia
+
+16
+00:01:01,740 --> 00:01:02,290
+utente.
+
+17
+00:01:02,400 --> 00:01:05,070
+Potrebbe essere rilevante solo per un singolo componente.
+
+18
+00:01:05,070 --> 00:01:10,810
+Ancora questo  anche un esempio per uno stato pi locale rispetto a uno stato a livello di applicazione.
+
+19
+00:01:10,890 --> 00:01:16,890
+Ma continua a determinare cosa dovrebbe essere reso allo schermo e quello  nel suo nucleo
+
+20
+00:01:16,890 --> 00:01:21,230
+ci che puoi far bollire per indicare ci che vedi sullo schermo.
+
+21
+00:01:21,600 --> 00:01:26,250
+Quindi, quindi, l'esempio di allot sarebbe un elenco di post di blocco che rendiamo che potresti vacillare o
+
+22
+00:01:26,250 --> 00:01:29,690
+potremmo aver bisogno di sapere quali di questi post sono stati creati dall'utente.
+
+23
+00:01:29,700 --> 00:01:34,110
+Anche lo stato importante che potrebbe essere necessario nella nostra applicazione.
+
+24
+00:01:34,320 --> 00:01:36,300
+E naturalmente l'elenco potrebbe continuare all'infinito.
+
+25
+00:01:36,300 --> 00:01:39,090
+Puoi aggiungere altri e pi esempi qui.
+
+26
+00:01:39,090 --> 00:01:44,670
+Ora questi sono solo alcuni esempi di ci che ora  cos complesso riguardo allo stato.
+
+27
+00:01:44,670 --> 00:01:47,320
+Perch abbiamo bisogno di una libreria extra per questo.
+
+28
+00:01:47,460 --> 00:01:48,820
+Diamo un'occhiata pi da vicino.
+

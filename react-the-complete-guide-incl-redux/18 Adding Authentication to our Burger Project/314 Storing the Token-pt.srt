@@ -1,0 +1,368 @@
+1
+00:00:02,190 --> 00:00:07,650
+Recebemos o token e toda essa informao quando nos inscrevemos e entramos, obviamente queremos armazen-lo para
+
+2
+00:00:07,650 --> 00:00:16,290
+poder acessar os recursos do nosso servidor que esto protegidos no futuro. Para armazenar esse token, irei agora para a minha pasta de
+
+3
+00:00:16,350 --> 00:00:23,210
+redutores e crie uma nova autenticao de arquivo redutor. js, l eu quero lidar com essas aes
+
+4
+00:00:23,230 --> 00:00:29,360
+de autenticao e meu estado de autenticao. Para isso, primeiro importarei todos os
+
+5
+00:00:29,400 --> 00:00:36,330
+meus tipos de ao aqui da pasta actions e l, dos tipos de ao,
+
+6
+00:00:36,330 --> 00:00:43,890
+porque eu preciso deles na minha instruo switch case e, em seguida, vou criar minha funo
+
+7
+00:00:43,890 --> 00:00:51,430
+reducer, como sempre recebendo o estado eo ao, vou exportar isso como o padro deste arquivo.
+
+8
+00:00:51,710 --> 00:01:01,070
+Eu tambm vou configurar um estado inicial, ento o estado inicial deve ser um objeto javascript e l neste objeto
+
+9
+00:01:01,130 --> 00:01:07,520
+javascript, eu quero ter meu token que  nulo inicialmente, eu quero tambm
+
+10
+00:01:07,520 --> 00:01:12,660
+talvez armazenar meu ID de usurio que  nulo inicialmente, Ns
+
+11
+00:01:12,860 --> 00:01:20,720
+tambm podemos armazenar um erro aqui inicialmente nulo e talvez tambm carregando o que  falso.
+
+12
+00:01:20,720 --> 00:01:26,490
+Agora no meu redutor, adicionarei essa instruo switch case, alternarei o tipo
+
+13
+00:01:26,720 --> 00:01:29,570
+de ao e l, verificarei meus
+
+14
+00:01:29,900 --> 00:01:36,600
+casos agora, o primeiro caso  actionTypes. AUTH_START e l eu s quero retornar
+
+15
+00:01:36,620 --> 00:01:44,550
+o meu estado e agora podemos, claro, usar a nossa funo de utilidade para atualizar um
+
+16
+00:01:44,780 --> 00:01:56,270
+objeto, ento eu vou importar isso aqui tambm, vou importar o updateObject do arquivo de utilitrio para retornar o estado atualizado com updateObject
+
+17
+00:01:56,690 --> 00:02:05,560
+passando o estado antigo e atualizando apenas o erro, configure-o para null novamente caso ele tenha mudado
+
+18
+00:02:05,600 --> 00:02:13,030
+e carregado, configure-o para true aqui porque ns apenas comeamos a carregar aqui obviamente.
+
+19
+00:02:13,370 --> 00:02:17,320
+Tambm precisamos configurar um caso padro para se livrar desse erro
+
+20
+00:02:17,460 --> 00:02:20,460
+do IDE, l apenas retornarei meu estado, assim.
+
+21
+00:02:20,510 --> 00:02:25,060
+Agora ns otimizamos todos os outros redutores para ter instrues de caso de switch lean,
+
+22
+00:02:25,050 --> 00:02:26,380
+vamos fazer isso aqui tambm.
+
+23
+00:02:26,480 --> 00:02:34,160
+Vou criar uma nova funo aqui que eu vou chamar authStart onde eu obtenho estado e ao
+
+24
+00:02:34,160 --> 00:02:44,030
+e onde eu simplesmente quero retornar este cdigo aqui, ento retorne meu objeto de estado atualizado para que neste caso aqui eu
+
+25
+00:02:44,030 --> 00:02:51,900
+possa apenas chamar authStart, retornar para ser preciso, porque eu ainda preciso retornar um estado aqui no meu
+
+26
+00:02:51,910 --> 00:02:54,950
+redutor, authStart e transmitir estado e ao.
+
+27
+00:02:55,510 --> 00:03:03,040
+Agora vou adicionar outra funo ao meu redutor de autenticao, authSuccess, aqui tambm
+
+28
+00:03:03,040 --> 00:03:12,600
+esperamos estado e ao, claro, e l, eu tambm retornarei um objeto atualizado, ento eu chamarei
+
+29
+00:03:12,660 --> 00:03:17,440
+updateObject aqui e retornarei para o meu estado.
+
+30
+00:03:17,460 --> 00:03:22,790
+Agora, o que precisa mudar em um estado em um caso de sucesso? Em um caso de sucesso, desejo definir o
+
+31
+00:03:22,920 --> 00:03:28,020
+token e o ID do usurio e o erro e o carregamento, portanto, tudo.
+
+32
+00:03:28,440 --> 00:03:35,370
+Assim, em um caso de sucesso, configurarei o token para digamos token de ID de
+
+33
+00:03:35,370 --> 00:03:38,620
+ao, espero obter essa propriedade em minha
+
+34
+00:03:38,640 --> 00:03:42,680
+ao ID de usurio para ID de usurio de
+
+35
+00:03:42,680 --> 00:03:47,080
+ao, tambm espero obter isso, erro para null e
+
+36
+00:03:47,100 --> 00:03:53,190
+carregamento para false porque est feito. Agora eu tambm vou criar
+
+37
+00:03:53,200 --> 00:03:57,650
+outra funo, authFail, l eu tambm recebo
+
+38
+00:03:58,040 --> 00:04:06,550
+state e action e aqui, vou retornar o estado updateObject e aqui vou
+
+39
+00:04:06,770 --> 00:04:14,630
+configurar erro error action que espero receber e ainda carregar para false
+
+40
+00:04:14,630 --> 00:04:16,100
+claro.
+
+41
+00:04:16,100 --> 00:04:23,600
+Agora, essas duas aes, obviamente, precisam ser tratadas com casos, ento vamos adicionar um actionTypes ao caso. AUTH_SUCCESS, whoops, AUTH_SUCCESS, aqui eu quero
+
+42
+00:04:23,640 --> 00:04:33,620
+retornar o resultado da funo authSuccess que acabei de criar, transmitir estado e ao de
+
+43
+00:04:33,620 --> 00:04:39,890
+curso e case actionTypes. AUTH_FAIL, aqui eu quero retornar o resultado
+
+44
+00:04:40,100 --> 00:04:43,660
+da minha funo authFail onde eu tambm passo
+
+45
+00:04:43,670 --> 00:04:46,080
+estado e ao, ento estas
+
+46
+00:04:46,190 --> 00:04:52,880
+so duas funes que acabei de criar. Com isso eu recebo um bom redutor de
+
+47
+00:04:52,880 --> 00:04:55,080
+autenticao que deveria ser capaz
+
+48
+00:04:55,220 --> 00:04:59,470
+de fazer algo com meus dados, agora  claro que
+
+49
+00:04:59,540 --> 00:05:11,460
+eu quero combin-lo com meus outros redutores no meu ndice principal. arquivo js, eu vou importar o redutor de autenticao de. / store reducers auth, assim e adicione-o
+
+50
+00:05:12,310 --> 00:05:14,790
+para combinar os redutores no
+
+51
+00:05:14,830 --> 00:05:23,230
+domnio auth, assim em uma propriedade chamada auth. Com isso, adicionamos ao nosso redutor de raiz global, mas no
+
+52
+00:05:23,650 --> 00:05:27,890
+obteremos todas as informaes que desejamos, ID de identificao, ID do
+
+53
+00:05:27,920 --> 00:05:33,180
+usurio, extramos tudo isso da ao, agora, se dermos uma olhada em nossa ao
+
+54
+00:05:33,250 --> 00:05:40,030
+aqui, ns no estamos realmente passando esses dados. Ento vamos inspecionar a resposta que voltamos para ver
+
+55
+00:05:40,030 --> 00:05:44,980
+como extramos os dados que queremos passar para o authSuccess e assim por diante.
+
+56
+00:05:44,980 --> 00:05:53,170
+Ento, vamos voltar ao nosso aplicativo e recarreg-lo e obter esse erro porque no redutor para autenticao, eu esqueci uma coisa
+
+57
+00:05:53,180 --> 00:05:55,160
+importante, o estado do curso
+
+58
+00:05:55,270 --> 00:06:01,020
+tem que ser definido para o estado inicial caso contrrio ele  indefinido no incio.
+
+59
+00:06:01,200 --> 00:06:07,810
+Ento agora, com isso, est funcionando novamente e vamos agora tentar entrar, entrar porque esse endereo de e-mail j
+
+60
+00:06:07,810 --> 00:06:09,340
+est pronto, l ns
+
+61
+00:06:09,340 --> 00:06:16,660
+recebemos uma resposta e agora ns vemos o ID local que  o ID do usurio e ns obter o token
+
+62
+00:06:16,660 --> 00:06:17,400
+de ID,
+
+63
+00:06:17,410 --> 00:06:18,980
+isso tambm  interessante para mim.
+
+64
+00:06:19,360 --> 00:06:23,380
+Ento, essas so duas coisas que salvarei, no salvarei o token de
+
+65
+00:06:23,470 --> 00:06:26,270
+atualizao, portanto, atualizar o token no ser possvel aqui,
+
+66
+00:06:26,290 --> 00:06:32,020
+isso  algo que voc teria que fazer se quiser garantir que os tokens no expirem aps 1
+
+67
+00:06:32,200 --> 00:06:36,450
+hora, no meu aplicativo, as pessoas precisaro fazer login novamente aps uma hora.
+
+68
+00:06:36,760 --> 00:06:42,110
+Ento, para salvar esses dados no ID local e no token de
+
+69
+00:06:42,340 --> 00:06:51,010
+ID, recebo no meu arquivo de autenticao na pasta actions, aqui onde postamos nossa solicitao de autenticao e recebemos uma
+
+70
+00:06:51,010 --> 00:06:53,870
+resposta, em dados de resposta, temos o
+
+71
+00:06:54,040 --> 00:07:02,380
+token de ID e o campo ID local e preciso passar isso para o authSuccess porque o authSuccess precisa
+
+72
+00:07:02,400 --> 00:07:07,640
+pass-lo adiante, passando adiante digamos o token, ento espero obter meu token
+
+73
+00:07:07,660 --> 00:07:16,870
+e o ID do usurio aqui para que eu possa passar o token e o ID do usurio como adereos que
+
+74
+00:07:16,870 --> 00:07:19,860
+Eu ento tento extrair meu redutor.
+
+75
+00:07:19,960 --> 00:07:26,050
+L eu tento extrair token, ID token e user id, ento seu token de ID vamos renome-lo
+
+76
+00:07:26,230 --> 00:07:34,650
+para isso em nosso arquivo de ao auth, deve ser uma propriedade chamada token ID e para o erro, ele  chamado error,
+
+77
+00:07:34,690 --> 00:07:42,430
+que j  o que eu tento extrair para que funcione. Com isso, precisamos voltar ao arquivo de autenticao aqui e
+
+78
+00:07:42,550 --> 00:07:50,130
+espero obter meu token e ID de usurio na funo authSuccess, o que significa que, quando eu enviar essa funo
+
+79
+00:07:50,200 --> 00:07:57,330
+aqui, no caso de sucesso, preciso pass-la on, ento eu preciso passar os dados de resposta e, em seguida,
+
+80
+00:07:57,400 --> 00:08:04,450
+ele foi chamado de token de ID e como um segundo argumento, os dados de resposta e o ID
+
+81
+00:08:04,450 --> 00:08:11,260
+do usurio foram armazenados em uma propriedade de ID local e voc sempre pode verificar isso no log
+
+82
+00:08:11,260 --> 00:08:11,750
+do
+
+83
+00:08:11,800 --> 00:08:16,960
+console, token de ID e ID local. Com isso eu estou salvando esses
+
+84
+00:08:17,320 --> 00:08:19,060
+dados e agora vamos
+
+85
+00:08:19,070 --> 00:08:23,150
+ver se isso funciona, vamos enviar esses dados mais uma
+
+86
+00:08:23,150 --> 00:08:30,780
+vez, mudar para entrar, ir para o redux e clicar em enviar e no sucesso se agora inspecionarmos
+
+87
+00:08:31,050 --> 00:08:37,110
+o estado, vemos que no auth ns realmente temos o token e temos o id
+
+88
+00:08:37,110 --> 00:08:44,310
+do usurio aqui armazenado, de modo que funcionou tudo. Com isso, estamos armazenando o status de autenticao, o que no estamos fazendo
+
+89
+00:08:44,310 --> 00:08:45,310
+ que no estamos
+
+90
+00:08:45,320 --> 00:08:47,140
+exibindo um controle giratrio enquanto estamos autenticando.
+
+91
+00:08:47,400 --> 00:08:54,600
+Vamos adicionar isso e tambm o tratamento de erros antes de continuarmos a usar esse token ao tentar acessar
+
+92
+00:08:54,600 --> 00:08:58,230
+os recursos que de outra forma no conseguiramos acessar.
+

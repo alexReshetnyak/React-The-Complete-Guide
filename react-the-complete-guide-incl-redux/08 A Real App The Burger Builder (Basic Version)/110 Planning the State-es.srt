@@ -1,0 +1,216 @@
+1
+00:00:02,170 --> 00:00:09,910
+Entonces, en la ltima conferencia identificamos el diseo de la aplicacin y el rbol de componentes aqu.
+
+2
+00:00:09,970 --> 00:00:12,590
+Eso es, por supuesto, un paso muy importante.
+
+3
+00:00:12,610 --> 00:00:14,640
+Ahora esta es solo una parte.
+
+4
+00:00:14,650 --> 00:00:18,490
+Todos necesitamos saber qu estado vamos a usar en nuestra aplicacin.
+
+5
+00:00:18,500 --> 00:00:24,310
+Este estado se vuelve importante porque tambin nos permite identificar qu debe ser un componente y qu debe
+
+6
+00:00:24,310 --> 00:00:25,300
+ser un contenedor.
+
+7
+00:00:25,330 --> 00:00:30,230
+Entonces, qu debera ser un componente menos estatal y qu debera ser un componente estatal completo?
+
+8
+00:00:30,280 --> 00:00:38,410
+nuestra aplicacin, establezca o resuma el estado de la aplicacin tal como lo planeamos aqu.
+
+9
+00:00:38,410 --> 00:00:39,840
+Ahora, pensemos en
+
+10
+00:00:40,030 --> 00:00:48,050
+Ahora en el estado, definitivamente necesitamos administrar los ingredientes de las hamburguesas. Los ingredientes
+
+11
+00:00:48,070 --> 00:00:57,900
+que el usuario agreg probablemente sern algunos objetos de javascript donde tenemos algo as como carne, 1
+
+12
+00:00:58,530 --> 00:01:01,790
+veces, dos veces, y as sucesivamente.
+
+13
+00:01:01,860 --> 00:01:03,530
+Entonces estos podran ser los ingredientes.
+
+14
+00:01:03,720 --> 00:01:09,330
+Tambin queremos saber si el usuario est revisando la hamburguesa.
+
+15
+00:01:09,340 --> 00:01:18,380
+Entonces, si hace clic en pre-Chase o no se vende o algo as como Per chaced y eso podra ser cierto
+
+16
+00:01:18,380 --> 00:01:20,030
+o, por supuesto, falso.
+
+17
+00:01:20,660 --> 00:01:24,020
+Eso en realidad debera ser casi todo.
+
+18
+00:01:24,110 --> 00:01:33,380
+Lo nico que probablemente sea el precio total que necesitamos para poder ver siempre cul es el precio
+
+19
+00:01:33,380 --> 00:01:35,180
+y calcularlo dinmicamente.
+
+20
+00:01:35,240 --> 00:01:40,460
+Y, por supuesto, todos los resultados. Ahora ese es nuestro estado.
+
+21
+00:01:40,460 --> 00:01:42,490
+Sper simple no muy difcil derecha.
+
+22
+00:01:42,560 --> 00:01:49,300
+Pero nos permite crear esa hamburguesa dinmica y generar toda la informacin relevante para el usuario.
+
+23
+00:01:49,310 --> 00:01:52,020
+Ahora, dnde gestionamos ese estado?
+
+24
+00:01:52,100 --> 00:01:59,270
+podra decir que deberamos establecer en el componente de la aplicacin aqu en la parte superior, pero no estoy de acuerdo con eso.
+
+25
+00:01:59,270 --> 00:01:59,740
+Se
+
+26
+00:01:59,750 --> 00:02:01,250
+No lo haremos aqu.
+
+27
+00:02:01,310 --> 00:02:05,200
+En cambio, deberamos hacerlo en el generador de hamburguesas aqu.
+
+28
+00:02:05,360 --> 00:02:06,210
+Por qu.
+
+29
+00:02:06,500 --> 00:02:14,210
+Porque el estado que enumer aqu a la derecha solo est relacionado con la construccin de una hamburguesa si luego agregamos
+
+30
+00:02:14,240 --> 00:02:17,300
+una nueva pgina de pago o algo as.
+
+31
+00:02:17,480 --> 00:02:24,630
+Entonces, bsicamente, tendremos una pgina donde queremos ver todos los pedidos del usuario y no estamos interesados en
+
+32
+00:02:24,730 --> 00:02:28,470
+los ingredientes del uso de hamburguesas de forma recurrente.
+
+33
+00:02:28,670 --> 00:02:34,520
+Por lo tanto, la gestin de este estado en el nivel de aplicacin no es correcta en mi opinin, ya que no afecta a
+
+34
+00:02:34,520 --> 00:02:37,420
+toda la aplicacin, solo afecta a esta pgina de generador de hamburguesas.
+
+35
+00:02:37,490 --> 00:02:41,060
+Y por ahora esta va a ser nuestra aplicacin completa bsicamente.
+
+36
+00:02:41,060 --> 00:02:45,700
+Pero no es as como se mantendr nuestra aplicacin una vez que agreguemos esa pgina de pago y as sucesivamente.
+
+37
+00:02:46,070 --> 00:02:51,170
+Entonces, el generador de hamburguesas debe ser un componente de estado completo.
+
+38
+00:02:51,350 --> 00:02:53,970
+Debera ser un contenedor bsicamente.
+
+39
+00:02:54,110 --> 00:02:56,760
+As que declara completo.
+
+40
+00:02:56,990 --> 00:03:04,600
+los fabricantes de hamburguesas. Todos los componentes de Avro pueden ser componentes. Los componentes de volcado pueden contener menos componentes.
+
+41
+00:03:04,610 --> 00:03:06,980
+Eso es lo que deben hacer
+
+42
+00:03:06,980 --> 00:03:12,530
+Ahora el componente predeterminado y luego el proyecto es un estado completo tratado con la palabra clave.
+
+43
+00:03:12,770 --> 00:03:18,650
+Por supuesto, siempre podemos dejar que sea uno pero tambin podemos convertirlo en un componente de volcado
+
+44
+00:03:18,650 --> 00:03:19,850
+si as lo quisiramos.
+
+45
+00:03:19,850 --> 00:03:24,880
+Ahora estamos pensando en componentes puros o deberamos actualizar los componentes.
+
+46
+00:03:24,920 --> 00:03:32,300
+Ambos implementarn esto o lo implementarn cuando creamos la aplicacin y veremos si podemos identificar algunos
+
+47
+00:03:32,300 --> 00:03:35,990
+lugares donde necesitamos optimizar nuestro ciclo de actualizacin.
+
+48
+00:03:36,230 --> 00:03:42,050
+podra simplemente preparar el escenario para algo que ya estaba configurado, as que podra ser el caso.
+
+49
+00:03:42,050 --> 00:03:47,810
+Pero debido a la simplicidad de nuestra propiedad y la estructura de nuestra aplicacin aqu, tambin podra
+
+50
+00:03:47,810 --> 00:03:54,480
+darse el caso de que nunca tengamos que implementar un componente puro porque sabemos que si el estado o algunos
+
+51
+00:03:54,480 --> 00:03:58,050
+accesorios cambian realmente cambi que no tener un botn que
+
+52
+00:03:58,100 --> 00:04:04,430
+Veremos esto y nos ocuparemos de implementarlo correctamente y posiblemente convertir algo en un
+
+53
+00:04:04,460 --> 00:04:07,010
+componente puro si es necesario.
+
+54
+00:04:07,010 --> 00:04:11,410
+Entonces con eso dira que creemos un proyecto y empecemos con eso.
+

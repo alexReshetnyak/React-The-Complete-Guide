@@ -1,0 +1,220 @@
+1
+00:00:02,160 --> 00:00:08,190
+Zacznijmy od ustawienia adowania na true, gdy zaczynamy pobiera dane, lub do tego potrzebuj nowego
+
+2
+00:00:08,190 --> 00:00:15,800
+typu akcji, ktry zosta dodany do pliku z wpisanym przeze mnie folderem. Przepraszam, a ja nazw go na burgera Che.
+
+3
+00:00:15,990 --> 00:00:20,360
+Rozpocznij i to bdzie rwnie mj identyfikator.
+
+4
+00:00:21,720 --> 00:00:23,890
+Teraz Altria stworzona do tego.
+
+5
+00:00:24,000 --> 00:00:25,950
+Mamy taki, ktry nazywa si tak.
+
+6
+00:00:25,950 --> 00:00:30,860
+Ale to ma nasz kod asynchroniczny i dlatego nie zwraca pola akcji.
+
+7
+00:00:30,870 --> 00:00:33,160
+Waciwie Reflektor to robi.
+
+8
+00:00:33,300 --> 00:00:35,780
+Dodam te nowego twrc akcji.
+
+9
+00:00:35,940 --> 00:00:45,060
+Ta nazwa kupuje pocztek Bergere, a stara nazwa zmienia si, by kupi Bergere, teraz kup teraz
+
+10
+00:00:45,060 --> 00:00:46,370
+pocztek Burgera.
+
+11
+00:00:46,410 --> 00:00:53,640
+Nie oczekuj w ogle adnych argumentw, ktre chc zrobi, to zwrci obiekt javascript, w ktrym typ
+
+12
+00:00:53,640 --> 00:01:00,450
+jest ustawiony na typy akcji, kupi Bergere start, tak, ebym mg obsuy to i redux,
+
+13
+00:01:00,450 --> 00:01:05,040
+poniewa to asynchroniczna normalna akcja osiga redukcj, ktra musi zmniejszy.
+
+14
+00:01:05,580 --> 00:01:10,190
+Teraz potrzebuj zmieni nazw tylko na zakup Burgera, ktry bdzie musia zaj si
+
+15
+00:01:10,200 --> 00:01:14,060
+tym w indeksie, albo eksportujemy go, eksportujemy teraz zakup Bergere.
+
+16
+00:01:14,400 --> 00:01:21,200
+A teraz w kolejnoci Jaspal nadal, gdy wysaem to zanim wysaem moj prob o wpis.
+
+17
+00:01:21,210 --> 00:01:29,290
+Poszedem do egzekucji Bergere uruchom t funkcj, aby wysa t akcj na samym pocztku.
+
+18
+00:01:29,310 --> 00:01:31,080
+Oczywicie nie chc tego wykonywa w ten sposb.
+
+19
+00:01:31,080 --> 00:01:38,430
+Chc go wykona w opakowaniu, tak aby akcja zwrcona przez zakup Burgas start zostaa
+
+20
+00:01:38,640 --> 00:01:41,370
+wysana do sklepu z martwymi.
+
+21
+00:01:41,390 --> 00:01:49,220
+Musz pracowa nad danymi kontaktowymi, poniewa nadal wysyam ponowny zakup, a zamiast tego powinienem
+
+22
+00:01:49,370 --> 00:01:51,180
+wysa kupno Bergere.
+
+23
+00:01:51,380 --> 00:01:57,290
+Dodatkowo wystpi bd w tej funkcji, w ktrej otrzymujemy wysyk.
+
+24
+00:01:57,290 --> 00:02:01,550
+Powinnimy oczywicie zwrci map funkcji do funkcji.
+
+25
+00:02:01,700 --> 00:02:07,910
+Tak wic ta cz musi przej do takiego obiektu javascript.
+
+26
+00:02:07,940 --> 00:02:11,840
+Teraz powinnimy poczy nasze dziaania.
+
+27
+00:02:11,840 --> 00:02:18,200
+Moemy teraz wrci do odczytu x do reduktora, a take do obsugi przypadku, ktry wanie rozpoczlimy.
+
+28
+00:02:18,290 --> 00:02:20,440
+Ten nowy akt i dodalimy sekund temu.
+
+29
+00:02:20,780 --> 00:02:22,480
+Wic dodam tutaj now spraw.
+
+30
+00:02:22,490 --> 00:02:25,240
+Pozycja nie ma znaczenia, ale dodam j na grze.
+
+31
+00:02:25,640 --> 00:02:32,390
+A twoje imi jako typy ego kupuj pocztek Burgera i tam chc zwrci obiekt javascript
+
+32
+00:02:32,420 --> 00:02:34,910
+jak zawsze skopiuje stary stan.
+
+33
+00:02:34,910 --> 00:02:42,670
+Aby zachowa moje stare zamwienia, ale powiedziaem, e adowanie jest prawidowe z dugiem, przeczamy adowanie.
+
+34
+00:02:42,670 --> 00:02:49,900
+Teraz oczywicie musimy si upewni, e kontener danych kontaktowych adujemy z naszego stanu.
+
+35
+00:02:49,900 --> 00:02:55,900
+Teraz z Rydexu, poniewa uywamy tam adowania, aby pokaza Spenera. W tej chwili mamy na
+
+36
+00:02:55,900 --> 00:02:57,050
+myli adowanie stanw.
+
+37
+00:02:57,190 --> 00:03:01,050
+To jest co, czego nie potrzebujemy ju w tym pojemniku.
+
+38
+00:03:01,120 --> 00:03:07,180
+Zostawi wszystkie kontrole, ale w rzeczywistoci pozbdzie si tam wasnoci zaadunku.
+
+39
+00:03:07,420 --> 00:03:14,340
+Zamiast tego mapuje stan do wniosku, dodam adujcy si Propp i zmapuj go do stanu.
+
+40
+00:03:14,770 --> 00:03:20,950
+A teraz moemy sign po adowanie, ale w rzeczywistoci wkrtce poczymy naszych producentw, wic bdziemy
+
+41
+00:03:20,950 --> 00:03:28,720
+musieli si zmieni, aby zobaczy, kiedy wzi kawaek taty, wyrzuci z tego uporzdkowanego douceura w stanie mapy do wniosku
+
+42
+00:03:28,870 --> 00:03:30,810
+w kontenerze danych kontaktowych.
+
+43
+00:03:30,850 --> 00:03:36,140
+Na razie zostawi to w ten sposb, ale wkrtce zmieni go z prawdopodobiestwem zaadowania udostpnionym rok.
+
+44
+00:03:36,300 --> 00:03:42,880
+Powinienem oczywicie dotrze do tego waciwego zaadunku tutaj, a nie tylko do stanu zaadowania czeku, jeli ma
+
+45
+00:03:42,880 --> 00:03:45,050
+on jakiekolwiek miejsca zaadunku w Aberdeen.
+
+46
+00:03:45,220 --> 00:03:46,960
+Nie, nie mamy.
+
+47
+00:03:46,960 --> 00:03:53,890
+Ostatni byem w tym samym pliku i kontener danych kontaktowych, aby rwnie uy mapy dla rekwizytw i doda do
+
+48
+00:03:54,100 --> 00:03:56,860
+funkcji czenia, przekaza go jako drugi argument.
+
+49
+00:03:56,950 --> 00:04:01,000
+Wic to jest naprawd rozwaane przez reakcj odczytu x.
+
+50
+00:04:01,000 --> 00:04:03,640
+Wic jeli to stare bezpieczne nic nie zadziaa.
+
+51
+00:04:03,790 --> 00:04:06,980
+Jeli wrcisz, zobaczymy, e mamy tutaj problem.
+
+52
+00:04:07,120 --> 00:04:14,400
+Prbujemy pobra skadniki, a to nie dziaa i wszyscy wiemy, e nigdy nie bdziemy w stanie
+
+53
+00:04:14,580 --> 00:04:17,580
+dotrze do naszego innego stanu tutaj.
+
+54
+00:04:17,610 --> 00:04:21,440
+Kolejno jest stanowa, poniewa nie czymy adnych reduktorw.
+
+55
+00:04:21,600 --> 00:04:26,190
+Najpierw naprawmy ten bd, a nastpnie popracuj nad poczeniem reduktorw.
+

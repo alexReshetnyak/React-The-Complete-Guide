@@ -1,0 +1,348 @@
+1
+00:00:02,350 --> 00:00:08,770
+So the goal is to now get a token from the backend and we're using firebase but the approach of course
+
+2
+00:00:08,770 --> 00:00:09,810
+works with any backend
+
+3
+00:00:09,810 --> 00:00:14,600
+given that the backend has appropriate API endpoints to connect to.
+
+4
+00:00:14,890 --> 00:00:22,060
+If you're looking for instructions on how to validate a user e-mail on the server, how to create that
+
+5
+00:00:22,090 --> 00:00:24,250
+token, that's the wrong course,
+
+6
+00:00:24,250 --> 00:00:27,670
+this has nothing to do with react and therefore isn't covered here.
+
+7
+00:00:27,970 --> 00:00:31,060
+A general API building course for your service and
+
+8
+00:00:31,090 --> 00:00:36,790
+language of choice would be more appropriate since you should learn things like that in such courses
+
+9
+00:00:36,910 --> 00:00:40,300
+or you take a full stack react course, of course.
+
+10
+00:00:40,300 --> 00:00:47,350
+I will show you the react site and firebase, the easy to use backend we are using gives us
+
+11
+00:00:47,380 --> 00:00:49,660
+authentication out of the box.
+
+12
+00:00:49,840 --> 00:00:56,590
+If we click on authentication there, we have to set up a sign in method and there, I can choose e-mail
+
+13
+00:00:56,590 --> 00:01:01,220
+and password, this will store the user data in our own firebase project.
+
+14
+00:01:01,510 --> 00:01:04,630
+I click on enable there and save this
+
+15
+00:01:04,960 --> 00:01:12,880
+and now we can reach certain rest API endpoints to sign up users and get a token. To find out to which
+
+16
+00:01:12,880 --> 00:01:14,600
+address we need to send that,
+
+17
+00:01:14,620 --> 00:01:22,330
+it's not our database address we used thus far, we simply can google for firebase rest auth.
+
+18
+00:01:22,420 --> 00:01:26,820
+and here it's a second result, the firebase auth rest API.
+
+19
+00:01:27,190 --> 00:01:34,780
+Here you find to which API endpoints you can send your authentication data to sign a user up or in,
+
+20
+00:01:34,780 --> 00:01:40,450
+so let's start with signing up and here you see that we have to send a post request to this endpoint
+
+21
+00:01:40,450 --> 00:01:41,160
+here.
+
+22
+00:01:41,590 --> 00:01:42,150
+So I'll
+
+23
+00:01:42,150 --> 00:01:43,850
+copy that endpoint
+
+24
+00:01:44,170 --> 00:01:46,170
+and now I want to send a request.
+
+25
+00:01:46,300 --> 00:01:49,690
+We could create another axios instance for this,
+
+26
+00:01:49,690 --> 00:01:55,360
+we definitely can't use the axios orders instance because here we have a base URL which would be wrong
+
+27
+00:01:55,870 --> 00:02:01,990
+but I'll use the default axios service and not the instance here and also create not a new one because
+
+28
+00:02:01,990 --> 00:02:03,770
+I only will send two requests
+
+29
+00:02:03,850 --> 00:02:10,840
+so I don't need to set up that baseURL thing. In the auth file in my actions folder, I'll now therefore
+
+30
+00:02:10,870 --> 00:02:15,760
+import axios from the axios package
+
+31
+00:02:16,210 --> 00:02:18,550
+and then I can start sending requests.
+
+32
+00:02:18,700 --> 00:02:25,270
+So here in the auth action creator in that function we return, I'll reach out to axios, send a post request
+
+33
+00:02:25,490 --> 00:02:27,620
+to the URL i just copied.
+
+34
+00:02:27,940 --> 00:02:35,620
+Now there we have this strange API key, we have to replace that with the API key of our firebase project,
+
+35
+00:02:35,620 --> 00:02:42,430
+you can find this in your firebase project if you click on authentication and there on web set up, in
+
+36
+00:02:42,430 --> 00:02:43,720
+the top right corner,
+
+37
+00:02:43,990 --> 00:02:45,560
+it's this key here,
+
+38
+00:02:45,700 --> 00:02:53,760
+this whole key you can see there, API key. Copy the whole key without the quotation marks and replace
+
+39
+00:02:53,760 --> 00:02:57,980
+the square brackets with API key in between with that key,
+
+40
+00:02:58,000 --> 00:03:01,280
+this identifies your application to firebase.
+
+41
+00:03:01,300 --> 00:03:07,630
+Now this post data there, the data we need to post can be found in the documentation where we just
+
+42
+00:03:07,630 --> 00:03:08,610
+were on,
+
+43
+00:03:08,770 --> 00:03:15,520
+we need to pass a javascript object which will be transformed to json by axios automatically which
+
+44
+00:03:15,520 --> 00:03:17,220
+has an email, a password
+
+45
+00:03:17,380 --> 00:03:23,770
+and this return secure token property, that return secure token property is a boolean and indicates
+
+46
+00:03:23,770 --> 00:03:25,660
+whether we want to get a token or not,
+
+47
+00:03:25,720 --> 00:03:30,570
+it should always be true as it says here and password and email should be clear.
+
+48
+00:03:30,580 --> 00:03:38,270
+So let's go back to our application and let's set up some auth data here, a javascript object where we set
+
+49
+00:03:38,270 --> 00:03:44,350
+up an email property which holds the email we receive as an argument, the same for the password
+
+50
+00:03:44,600 --> 00:03:49,670
+and last but not least, let's set this return secure token to true.
+
+51
+00:03:50,120 --> 00:03:54,670
+And it's this auth data object which I then want to attach to this post request,
+
+52
+00:03:54,830 --> 00:04:02,000
+so as a second argument to the post method, I'll pass auth data, axios then gives us a promise so we can
+
+53
+00:04:02,000 --> 00:04:09,590
+call then and catch. In the catch case. I want to log that error
+
+54
+00:04:09,710 --> 00:04:17,830
+and I also went to dispatch authFail executed as a function, in the succcss case,
+
+55
+00:04:17,830 --> 00:04:19,660
+we'll get a response,
+
+56
+00:04:19,760 --> 00:04:28,020
+I want to log that response and I want to dispatch authSuccess here, like this.
+
+57
+00:04:28,130 --> 00:04:33,420
+I also will pass the response on to or the response data,
+
+58
+00:04:33,470 --> 00:04:39,710
+so the data we get in response onto authSuccess and the error onto authFail.
+
+59
+00:04:40,100 --> 00:04:42,710
+Let's now save this and see if it works,
+
+60
+00:04:42,770 --> 00:04:52,130
+let's head over to our application and enter some valid sign up data again, hit submit and we see
+
+61
+00:04:52,130 --> 00:04:54,250
+authStart and authSuccess
+
+62
+00:04:54,320 --> 00:05:00,800
+and if you go to the console, we see what we got back on a successful authentication requests. In data,
+
+63
+00:05:00,980 --> 00:05:04,990
+we got back information how long the token is valid,
+
+64
+00:05:05,270 --> 00:05:09,100
+so 3600 seconds, that's one hour.
+
+65
+00:05:09,410 --> 00:05:15,950
+Then the ID token itself, this long cryptic string which can be decrypted to a javascript object if we want
+
+66
+00:05:15,950 --> 00:05:23,900
+to, then this refresh token which is used to get a new ID token because as you can see the ID token expires
+
+67
+00:05:23,960 --> 00:05:26,270
+relatively fast, after one hour
+
+68
+00:05:26,270 --> 00:05:27,860
+for security reasons
+
+69
+00:05:28,100 --> 00:05:33,620
+but you can generate a new one with the refresh token but only you and your application can do that
+
+70
+00:05:33,620 --> 00:05:34,790
+of course.
+
+71
+00:05:34,790 --> 00:05:36,400
+So these are our options,
+
+72
+00:05:36,410 --> 00:05:42,770
+we also see the email address for which we created the user. And on our firebase backend, if we go to authentication
+
+73
+00:05:42,980 --> 00:05:50,460
+and we refresh this users page, we see the user with his ID that was generated automatically in here.
+
+74
+00:05:50,810 --> 00:05:53,040
+So this is how we sign users up
+
+75
+00:05:53,210 --> 00:05:57,920
+and I didn't add validation so let's see what happens if I enter an invalid password,
+
+76
+00:05:57,920 --> 00:06:01,000
+we can still click the submit button.
+
+77
+00:06:01,040 --> 00:06:10,190
+Now we get an error here and in the error, if we have a look at the action here, in the error itself,
+
+78
+00:06:10,370 --> 00:06:18,170
+we got scrolling issue here as it seems, we get data about the error where we have a message where it
+
+79
+00:06:18,170 --> 00:06:21,030
+says that the password is not long enough.
+
+80
+00:06:21,790 --> 00:06:28,150
+In the console, we would also see this if we click on the erroneous request and inspect that
+
+81
+00:06:28,150 --> 00:06:31,300
+here, we see it here and the response preview too.
+
+82
+00:06:31,630 --> 00:06:35,620
+So in our error, we got this message, this issue.
+
+83
+00:06:36,130 --> 00:06:38,710
+So this is what we get back on
+
+84
+00:06:38,710 --> 00:06:40,650
+sign up requests
+
+85
+00:06:41,080 --> 00:06:48,670
+and importantly, we have that token and that refreshed token as well as the expiry time, we should use
+
+86
+00:06:48,670 --> 00:06:52,930
+that information to authenticate ourselves for subsequent requests
+
+87
+00:06:52,930 --> 00:06:57,010
+but before that, let's make sure we also can log in.
+

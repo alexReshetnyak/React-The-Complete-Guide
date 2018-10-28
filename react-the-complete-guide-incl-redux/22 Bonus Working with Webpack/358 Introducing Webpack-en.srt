@@ -1,0 +1,52 @@
+1
+00:00:02,170 --> 00:00:04,160
+So what is webpack?
+
+2
+00:00:04,410 --> 00:00:12,770
+Webpack is a bundler but it actually is more than that, a bundler alone would just concatenate files, webpack
+
+3
+00:00:12,820 --> 00:00:13,710
+does that
+
+4
+00:00:13,840 --> 00:00:20,860
+but it also allows you to optimize your files and you hook in various plugins and so-called loaders
+
+5
+00:00:21,190 --> 00:00:23,260
+to also transform your files
+
+6
+00:00:23,290 --> 00:00:30,520
+and for example transpile next generation javascript to current generation javascript. But in its core,
+
+7
+00:00:30,670 --> 00:00:40,620
+the idea behind webapck is to have multiple javascript, css, image, whatever files and bundle them together.
+
+8
+00:00:40,930 --> 00:00:48,220
+It analyzes connections between these files like imports and then bundles everything together, allows
+
+9
+00:00:48,220 --> 00:00:49,410
+you to optimize it
+
+10
+00:00:49,540 --> 00:00:57,160
+and as I said, allows you to also run some additional logic to transform your code or do whatever you
+
+11
+00:00:57,160 --> 00:00:58,830
+need to do with it.
+
+12
+00:00:58,870 --> 00:01:06,450
+This is what webpack does and webpack is the de-facto standard for setting up projects these days.
+
+13
+00:01:06,760 --> 00:01:12,640
+That's why we'll also use it in this module for setting up our own react workflow and project.
+

@@ -1,0 +1,96 @@
+1
+00:00:02,340 --> 00:00:07,460
+Quindi ci siamo gi sporcati le mani e abbiamo visto come reagisce Bulgar.
+
+2
+00:00:07,970 --> 00:00:12,620
+Ora tutte le risposte sul perch potremmo voler usare reagiscono.
+
+3
+00:00:12,630 --> 00:00:13,730
+C' anche di pi.
+
+4
+00:00:13,730 --> 00:00:20,760
+Ci sono pi motivi per cui vogliamo utilizzare reagire in modalit re-act che ci aiuta a
+
+5
+00:00:20,760 --> 00:00:28,900
+risolvere un problema con il normale stato javascript DUI diventa difficile da gestire in applicazioni javascript pi grandi.
+
+6
+00:00:28,980 --> 00:00:34,520
+Devi bersagliare manualmente gli elementi nella tua dom e se non cambi la struttura della tua et,
+
+7
+00:00:34,530 --> 00:00:41,470
+ probabile che il codice Jammal cambi il modo in cui bersagli i tuoi elementi perch hai usato il selettore di Cuore.
+
+8
+00:00:41,580 --> 00:00:47,610
+hai usato Shakeri per attraversare il dormitorio  pi facile, ma  sempre qualcosa che devi tenere a mente.
+
+9
+00:00:47,610 --> 00:00:48,590
+O anche se
+
+10
+00:00:48,730 --> 00:00:55,020
+E se hai applicazioni web pi complesse in cui aggiungi e rimuovi gli elementi in modo dinamico, questo pu
+
+11
+00:00:55,020 --> 00:01:02,640
+diventare ingombrante nel nostro progetto di tribunali che abbiamo lanciato AB che  altamente dinamico dove siamo in grado di costruire un hamburger
+
+12
+00:01:02,640 --> 00:01:06,000
+e aggiungere o rimuovere gli ingredienti in modo dinamico.
+
+13
+00:01:06,180 --> 00:01:10,040
+Se lo scrivi con il normale codice javascript, sar un incubo.
+
+14
+00:01:10,140 --> 00:01:16,370
+Quindi il re-act ci aiuta rendendo l'intera gestione dello stato dell'interfaccia utente un problema.
+
+15
+00:01:16,410 --> 00:01:21,440
+Ci consente di concentrarci sulla nostra logica aziendale invece di impedire che la nostra applicazione esploda.
+
+16
+00:01:21,540 --> 00:01:26,400
+Inoltre, il re-act  gestito da una grande comunit.
+
+17
+00:01:26,400 --> 00:01:31,510
+Quindi  probabile che il codice di reazione sia scritto meglio di quanto avremmo potuto mai scrivere.
+
+18
+00:01:31,740 --> 00:01:34,480
+Quindi  altamente efficiente e veloce.
+
+19
+00:01:34,560 --> 00:01:38,850
+E pi grande  la tua applicazione, pi questo  importante.
+
+20
+00:01:38,850 --> 00:01:45,370
+Infine, re-act presenta un enorme ecosistema e una comunit estremamente attiva, il che significa che c' una
+
+21
+00:01:45,370 --> 00:01:51,210
+grande possibilit che per un determinato problema affrontato trovi una soluzione o un pacchetto extra che
+
+22
+00:01:51,210 --> 00:01:52,770
+puoi aggiungere per risolverlo.
+
+23
+00:01:52,770 --> 00:01:57,960
+Tutti questi sono motivi per cui il re-act  fantastico e perch dovresti considerarlo sicuramente per il tuo prossimo
+
+24
+00:01:57,960 --> 00:02:01,440
+progetto e perch hai fatto la scelta giusta per iniziare con questo corso.
+

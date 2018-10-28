@@ -1,0 +1,148 @@
+1
+00:00:02,220 --> 00:00:09,840
+W ostatnim wykadzie mwiem o stranikach, teraz chc, eby rozway spraw, abymy mieli
+
+2
+00:00:09,840 --> 00:00:11,840
+dostp do nieznanej trasy.
+
+3
+00:00:11,910 --> 00:00:18,600
+Tak naprawd widzielimy jeden sposb obsugi tego przekierowania tutaj, poniewa jeli sprbujemy uzyska dostp do nowych postw
+
+4
+00:00:18,600 --> 00:00:22,630
+po nieuwierzytelnieniu, ta trasa jest nieznana, poniewa nie jest renderowana
+
+5
+00:00:22,670 --> 00:00:29,940
+i jak widzisz, jeli nadal klikasz na nowy post, jestemy w zasadzie przekierowywani z powrotem do posta .
+
+6
+00:00:29,960 --> 00:00:32,900
+Jest to jeden ze sposobw obsugi 404
+
+7
+00:00:32,900 --> 00:00:36,010
+da, moesz po prostu przekierowa na inn tras.
+
+8
+00:00:36,500 --> 00:00:40,430
+Jednak moesz te obsugiwa je w inny sposb,
+
+9
+00:00:40,880 --> 00:00:47,750
+jeli chcesz obsugiwa je inaczej, musz to skomentowa, w przeciwnym razie spowoduje to przechwycenie
+
+10
+00:00:47,750 --> 00:00:49,100
+wszelkich nieznanych da.
+
+11
+00:00:49,100 --> 00:00:57,410
+Moesz okreli tutaj komponent trasy, a jeli pomin ciek, aby nie dodawa cieki, moesz
+
+12
+00:00:57,410 --> 00:01:06,080
+po prostu zdefiniowa komponent lub metod renderowania, ktrej uczysz si renderowa co dla nieznanej trasy.
+
+13
+00:01:06,080 --> 00:01:09,390
+Tak wic tutaj mam zamiar wyj nie znalezionym,
+
+14
+00:01:09,440 --> 00:01:16,810
+oczywicie mona go po prostu ustawi, uy komponentu i wyrenderowa komponent strony bdu 404, ktry utworzye, ale
+
+15
+00:01:17,030 --> 00:01:21,900
+ta trasa bdzie przechwytywa wszystkie trasy, ktre nie s wczeniej obsugiwane.
+
+16
+00:01:22,070 --> 00:01:26,450
+Wic wszelkie nieznane trasy w naszym przypadku i to wyprowadzi to.
+
+17
+00:01:26,660 --> 00:01:32,170
+Teraz nie bdzie dziaa razem z przekierowaniem z gwnej trasy, poniewa to rwnie przycignie wszystko
+
+18
+00:01:32,170 --> 00:01:34,600
+i co kiedykolwiek zamwisz, jeden lub
+
+19
+00:01:34,610 --> 00:01:39,920
+drugi wygrywa, a drugi nic nie robi. W przypadku innych przypadkw uycia, w ktrych nie przekierowujesz
+
+20
+00:01:39,920 --> 00:01:40,660
+z trasy
+
+21
+00:01:40,700 --> 00:01:42,270
+trasy, moesz uy ich razem.
+
+22
+00:01:42,650 --> 00:01:50,390
+Ale tutaj jest to niezy haczyk na caej trasie, ktry zawsze powinien by ostatni i pokaza
+
+23
+00:01:50,390 --> 00:01:53,590
+odpowiedni stron lub wyrenderowa obojtn tre na
+
+24
+00:01:53,630 --> 00:01:59,420
+nieznane trasy, pozwl mi to pokaza. Jeli klikniemy teraz na nowy wpis, ktry jest
+
+25
+00:01:59,420 --> 00:02:02,780
+nieznany, poniewa nie renderujemy tego komponentu trasy, poniewa nie
+
+26
+00:02:02,900 --> 00:02:07,110
+jest on uwierzytelniany, nie widzimy. To samo dla adresu URL trasy
+
+27
+00:02:08,470 --> 00:02:13,180
+przy okazji, tam rwnie widzimy, nie znaleziono, poniewa nie jest on zdefiniowany
+
+28
+00:02:13,180 --> 00:02:15,470
+w tej chwili, posty nadal dziaa.
+
+29
+00:02:16,000 --> 00:02:18,190
+Jest to wic chwyt
+
+30
+00:02:18,200 --> 00:02:24,930
+caej trasy, kolejna wana koncepcja, szczeglnie w 404 przypadkach, aby zapa nieznane trasy.
+
+31
+00:02:24,970 --> 00:02:31,930
+Teraz, jak ju powiedziaem, nie bdzie dziaa razem z przekierowaniem, jeli przekierujesz z ukonika, jeli przekierujesz si z
+
+32
+00:02:31,930 --> 00:02:33,560
+dowolnej strony bdu ni
+
+33
+00:02:33,580 --> 00:02:34,640
+slash, to zadziaa.
+
+34
+00:02:34,690 --> 00:02:40,420
+Powodem, dla ktrego nie dziaaj razem, jest to, e tutaj jest traktowany jako przedrostek i dlatego
+
+35
+00:02:40,420 --> 00:02:47,200
+wszystkie te drogi s przechwytywane, a wic bez wzgldu na to, jak je zamwisz, nie bdzie dziaa razem.
+
+36
+00:02:47,200 --> 00:02:53,920
+Nadal chciaem pokaza wam oba, poniewa rzadko zdarza si, e zderzaj si tu dwie trasy,
+
+37
+00:02:53,920 --> 00:02:59,940
+a nastpnie macie mocny sposb obsugi 404 przypadkw bdu z tras bez cieki.
+

@@ -1,0 +1,240 @@
+1
+00:00:02,150 --> 00:00:05,740
+Ustawienie domylnej konfiguracji dla osi jest cakiem niesamowite, ale co
+
+2
+00:00:05,840 --> 00:00:11,570
+jeli nie chcesz uywa tego samego baseURL dla caej aplikacji, ale tylko dla jej czci
+
+3
+00:00:11,570 --> 00:00:17,060
+i dla innych czci, masz inny URL i to samo z Oczywicie dla nagwkw i
+
+4
+00:00:17,060 --> 00:00:17,960
+tak dalej.
+
+5
+00:00:18,350 --> 00:00:24,770
+W takim przypadku mona zrobi prodek, tworzc fajn funkcj dostarczan przez axios, ktra
+
+6
+00:00:24,860 --> 00:00:26,510
+nazywa si instancjami.
+
+7
+00:00:26,510 --> 00:00:27,880
+Pozwl mi utworzy
+
+8
+00:00:27,900 --> 00:00:30,430
+nowy plik, axios. js w folderach
+
+9
+00:00:30,430 --> 00:00:38,780
+rdowych, wic na tym samym poziomie co indeks. plik js. Tam zaimportuj aksios z pakietu axios i axios,
+
+10
+00:00:38,840 --> 00:00:45,650
+moemy wykona specjaln funkcj lub metod tworzenia, aby by precyzyjnym. Przechowam wynik w staej, ktra bdzie nazw
+
+11
+00:00:45,650 --> 00:00:47,870
+instancji i ponownie, uywam
+
+12
+00:00:47,870 --> 00:00:49,850
+teraz tworzenia Axios, tworzy
+
+13
+00:00:49,850 --> 00:00:56,330
+to instancj osi, podobnie jak kopi obiektu axios, ktry mona powiedzie, i mona
+
+14
+00:00:56,330 --> 00:00:58,340
+utworzy wiele takich kopii.
+
+15
+00:00:58,340 --> 00:01:05,150
+Teraz tutaj przekazuj obiekt Javascript, aby skonfigurowa to i ustawi baseURL, a ja
+
+16
+00:01:05,150 --> 00:01:06,120
+wezm ten
+
+17
+00:01:06,130 --> 00:01:09,910
+baseURL, ktry rwnie skonfiguruj w konfiguracji gwnej.
+
+18
+00:01:10,100 --> 00:01:14,290
+Teraz w axios. js, po prostu ustawi to tutaj i
+
+19
+00:01:14,570 --> 00:01:17,780
+teraz, skomentuj to w indeksie. plik js.
+
+20
+00:01:18,640 --> 00:01:23,660
+Teraz mamy jedn cz caoci, ale nie jestemy skoczeni.
+
+21
+00:01:23,890 --> 00:01:29,800
+Przechodzimy teraz do naszej wasnej instancji typu axios i moesz oczywicie tworzy wiele instancji w
+
+22
+00:01:30,100 --> 00:01:32,580
+rnych plikach dla rnych czci aplikacji.
+
+23
+00:01:32,590 --> 00:01:36,190
+Poka ci, jak uywa tych instancji w cigu sekundy.
+
+24
+00:01:36,190 --> 00:01:43,140
+Domylnie instancja tutaj przyjmuje domyln konfiguracj tutaj, ale zastpuje wszystko, co
+
+25
+00:01:43,140 --> 00:01:46,000
+ustawia w samej instancji.
+
+26
+00:01:46,000 --> 00:01:52,800
+Na przykad mog zostawi tutaj nagwek autoryzacji, ale chc te ustawi
+
+27
+00:01:53,000 --> 00:01:55,620
+go dla wasnej instancji.
+
+28
+00:01:55,790 --> 00:01:59,490
+Po utworzeniu instancji, w ktrej moemy przypisa baseUR, teraz
+
+29
+00:01:59,630 --> 00:02:07,160
+dla nagwkw, zastpuj aksios. domylnie z instancj. domylne. nagwki. czsto i tak dalej,
+
+30
+00:02:07,220 --> 00:02:14,810
+a teraz tutaj, mog ustawi to na token uwierzytelniajcy z instancji, aby nadpisa go dla wszystkich da wysyanych
+
+31
+00:02:14,810 --> 00:02:16,550
+za pomoc tej instancji.
+
+32
+00:02:16,680 --> 00:02:23,810
+Wane, e musimy wyeksportowa t instancj jako plik domylny, abymy mogli go uy w innych plikach, a teraz poka, jak
+
+33
+00:02:23,810 --> 00:02:24,980
+z niego korzysta.
+
+34
+00:02:25,220 --> 00:02:30,390
+Powiedzmy, e kontener blogu, w ktrym uywamy osi, aby uzyska wszystkie
+
+35
+00:02:30,620 --> 00:02:37,390
+posty na blogu, powiedzmy, e nie importujemy ju osi z pakietu axios, ale ustawiamy t
+
+36
+00:02:37,400 --> 00:02:45,890
+zmienn axios tutaj lub sta na nasz instancj osiow, wskazujc na plik, do ktrego eksportujemy t instancj jako domylny.
+
+37
+00:02:46,010 --> 00:02:49,780
+Moesz oczywicie nazwa t instancj lub co, czego
+
+38
+00:02:50,000 --> 00:02:54,390
+chcesz, zostawiam tutaj aksiosa, eby nie musie dopasowywa mojego kodu.
+
+39
+00:02:54,650 --> 00:03:00,630
+Upewnij si, e wszystkie pliki zostay zapisane, a jeli wrcisz do aplikacji, powinna ona nadal dziaa poprawnie.
+
+40
+00:03:00,680 --> 00:03:08,720
+Teraz jednak zauwaysz jedn rzecz: nie widzisz ju przechwytywacza drukujcego dziennik dla wysanego dania i
+
+41
+00:03:08,720 --> 00:03:15,110
+odpowiedzi, ktra zostaa pobrana, poniewa przechwytywacz zosta skonfigurowany dla globalnego obiektu axios,
+
+42
+00:03:15,110 --> 00:03:23,990
+ktrego ju nie uywamy w tym miejscu. kontener blogu. Jeli teraz sprbuj opublikowa kilka postw, dostaniemy nawet bd, poniewa teraz adres
+
+43
+00:03:24,470 --> 00:03:31,200
+URL jest niepoprawny, poniewa usuwam wskanik baseURL z indeksu. js, skomentowaem to i umieciem
+
+44
+00:03:31,500 --> 00:03:31,880
+w
+
+45
+00:03:31,880 --> 00:03:38,490
+mojej instancji, ktrej uywam tylko w kontenerze blogu, wszdzie indziej
+
+46
+00:03:38,510 --> 00:03:43,670
+w mojej aplikacji nadal importuj pakiet axios.
+
+47
+00:03:44,060 --> 00:03:51,450
+Mogabym wic oczywicie rwnie doda komentarz do domylnego baseURL, abymy mogli uywa pakietu axios z jego domylnymi ustawieniami,
+
+48
+00:03:51,470 --> 00:03:57,650
+ale take uywa naszego wasnego wystpienia w miejscach, w ktrych chcemy go uy w naszej
+
+49
+00:03:57,920 --> 00:04:04,920
+aplikacji, aby nadpisa niektre ustawienia dla miejsca, w ktrych korzystamy z tej instancji zamiast domylnego obiektu.
+
+50
+00:04:04,970 --> 00:04:07,060
+A teraz otrzymujemy najlepsze z
+
+51
+00:04:07,130 --> 00:04:13,280
+obu wiatw, mamy wasn instancj skonfigurowan do pobierania wszystkich postw, ale do publikowania postu, ponownie
+
+52
+00:04:13,280 --> 00:04:14,200
+uywamy pakietu
+
+53
+00:04:14,240 --> 00:04:17,550
+domylnego, dlatego te nadal obserwujemy prac naszych przechwytujcych.
+
+54
+00:04:17,840 --> 00:04:24,140
+I oczywicie moemy doda interpretery do naszej wasnej instancji, wystarczy uy instancji. przechwytujce. request, tak jak
+
+55
+00:04:24,140 --> 00:04:31,130
+zrobie to dla domylnej instancji, domylnego obiektu axios.
+
+56
+00:04:31,250 --> 00:04:37,880
+Chciaem ci to pokaza, poniewa moliwo korzystania z instancji zapewnia elastyczno, ktrej
+
+57
+00:04:37,880 --> 00:04:39,260
+potrzebujesz w swojej
+
+58
+00:04:39,260 --> 00:04:46,670
+aplikacji, pozwala ci szczegowo kontrolowa, w ktrej czci aplikacji chcesz uywa domylnych ustawie.
+
+59
+00:04:47,060 --> 00:04:53,360
+Niesamowita funkcja i co, co zaowocuje tym moduem, w ktrym masz nadziej, e dobrze
+
+60
+00:04:53,360 --> 00:05:01,370
+zrozumiesz, w jaki sposb wysae dania HTTP i jak ten pakiet axios moe da ci wiele przyjemnych funkcji.
+

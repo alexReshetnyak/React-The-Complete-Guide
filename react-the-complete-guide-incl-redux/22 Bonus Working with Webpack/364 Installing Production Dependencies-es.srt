@@ -1,0 +1,72 @@
+1
+00:00:02,190 --> 00:00:08,220
+En la ltima conferencia cre una aplicacin de reaccin bsica que
+
+2
+00:00:08,220 --> 00:00:09,620
+ahora descarg o
+
+3
+00:00:09,630 --> 00:00:11,850
+donde sigui, ahora es
+
+4
+00:00:11,910 --> 00:00:20,380
+el momento de instalar algunas dependencias, por ejemplo, la aplicacin de reaccin obviamente usa reaccionar o
+
+5
+00:00:20,610 --> 00:00:24,140
+reaccionar-dom y el enrutador de reaccin, entonces
+
+6
+00:00:24,150 --> 00:00:30,930
+deberamos instalar todo estas dependencias de produccin, hacemos esto con npm instalado --save,
+
+7
+00:00:30,930 --> 00:00:41,540
+not --save-dev porque queremos indicar que estas son dependencias de produccin y luego reaccionan con react-dom y reac-router-dom, as.
+
+8
+00:00:41,540 --> 00:00:46,520
+Estas tres dependencias estn todas separadas por espacios en blanco y ahora estn instaladas y,
+
+9
+00:00:46,520 --> 00:00:52,550
+por lo tanto, ubicadas en la carpeta del mdulo de nodo, las entradas correspondientes con las ltimas versiones
+
+10
+00:00:52,550 --> 00:00:55,490
+tambin se agregan al paquete. json archivo como puedes ver.
+
+11
+00:00:55,490 --> 00:00:57,510
+Con eso instalamos reaccionar, ya instalamos
+
+12
+00:00:57,530 --> 00:01:00,680
+el paquete web hace un tiempo, ahora necesitamos instalar
+
+13
+00:01:00,800 --> 00:01:07,130
+un par de otras dependencias para construir un flujo de trabajo y las agregar paso a paso
+
+14
+00:01:07,130 --> 00:01:09,080
+cada vez que las necesitemos.
+
+15
+00:01:09,110 --> 00:01:16,880
+Entonces, lo que quiero hacer es comenzar a configurar la configuracin del paquete web de manera que
+
+16
+00:01:16,880 --> 00:01:19,280
+pueda manejar javascript, css, imgenes
+
+17
+00:01:19,300 --> 00:01:22,220
+de ltima generacin y todo lo divertido.
+
+18
+00:01:22,310 --> 00:01:24,800
+Comencemos con esto en la prxima conferencia.
+

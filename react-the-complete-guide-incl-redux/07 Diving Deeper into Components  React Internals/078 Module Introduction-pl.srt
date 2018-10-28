@@ -1,0 +1,36 @@
+1
+00:00:02,250 --> 00:00:07,220
+Teraz, gdy dowiedzielimy si o tak wielu podstawowych funkcjach i podstawach
+
+2
+00:00:07,220 --> 00:00:14,780
+reakcji, nadszed czas, aby zanurkowa gbiej w komponenty, po tym jak wszystkie komponenty s rdzeniem budowy
+
+3
+00:00:15,080 --> 00:00:16,890
+i cech biblioteki reakcji.
+
+4
+00:00:17,060 --> 00:00:22,850
+Musimy wic upewni si, e wiemy, jak dziaaj, co dzieje si za kulisami i co moemy
+
+5
+00:00:22,850 --> 00:00:24,070
+z nimi zrobi.
+
+6
+00:00:24,320 --> 00:00:29,750
+Dowiesz si ju sporo o tym, ale wci s pewne martwe pola, ktre pokrywaj
+
+7
+00:00:29,750 --> 00:00:31,310
+si w tym module.
+
+8
+00:00:31,310 --> 00:00:39,470
+Przejdmy wic gbiej w komponenty, a nie tylko stron techniczn, ale take w jaki sposb moemy podzieli nasz aplikacj
+
+9
+00:00:39,740 --> 00:00:40,790
+na komponenty.
+

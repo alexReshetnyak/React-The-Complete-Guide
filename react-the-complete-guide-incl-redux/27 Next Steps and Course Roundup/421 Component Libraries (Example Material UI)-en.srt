@@ -1,0 +1,148 @@
+1
+00:00:02,160 --> 00:00:07,510
+In the last lecture we had a look at react native, an amazing library and I can only recommend you
+
+2
+00:00:07,510 --> 00:00:08,910
+to dive into it.
+
+3
+00:00:08,920 --> 00:00:10,750
+Now let's move back to reactjs
+
+4
+00:00:10,750 --> 00:00:17,410
+though and let's have a look at Material-UI. Material-UI is another library
+
+5
+00:00:17,410 --> 00:00:19,440
+you can use together with react
+
+6
+00:00:19,690 --> 00:00:25,050
+but unlike nextjs or Gatsbyjs, it's not building up on react,
+
+7
+00:00:25,180 --> 00:00:28,620
+it's a component library instead and it's not the only one.
+
+8
+00:00:28,930 --> 00:00:33,180
+There are a lot of component libraries you can import into your react project
+
+9
+00:00:33,310 --> 00:00:40,490
+and as the name suggests, component libraries are libraries that give you pre-built and pre-styled
+
+10
+00:00:40,510 --> 00:00:42,940
+components. You can still write your own ones
+
+11
+00:00:43,000 --> 00:00:50,070
+but for example Material-UI gives you beautiful nice working material design components.
+
+12
+00:00:50,230 --> 00:00:53,790
+If you go on their website, make sure to click on that yeah
+
+13
+00:00:53,970 --> 00:00:57,650
+version one is coming link if it's still showing up for you at the top of the page.
+
+14
+00:00:57,950 --> 00:01:04,510
+There on their web page, you can click on component demos and actually see the many components you
+
+15
+00:01:04,510 --> 00:01:08,410
+can easily import and use in your projects,
+
+16
+00:01:08,410 --> 00:01:11,270
+you can always find the source code for a given demo
+
+17
+00:01:11,320 --> 00:01:17,140
+if you click on that source code icon here on the top right corner of the example and then you see what
+
+18
+00:01:17,140 --> 00:01:19,650
+you need to import from that library,
+
+19
+00:01:19,690 --> 00:01:21,480
+granted that you have it installed,
+
+20
+00:01:21,520 --> 00:01:26,990
+you'll learn how to install it on the Getting Started link and then you can quickly add nicely styled and
+
+21
+00:01:27,000 --> 00:01:31,050
+looking components without having to build them on your own.
+
+22
+00:01:31,060 --> 00:01:35,800
+That's a powerful feature if you are building very big applications where you want to have a uniform
+
+23
+00:01:35,800 --> 00:01:41,040
+look, you can of course sketch out and build all the core components on your own
+
+24
+00:01:41,170 --> 00:01:46,690
+but if you know that you want to follow the material look, definitely have a look at Material-UI.
+
+25
+00:01:46,700 --> 00:01:47,030
+.
+
+26
+00:01:47,290 --> 00:01:48,800
+And if you want another look,
+
+27
+00:01:48,880 --> 00:01:55,760
+have a look at other popular component libraries, like for example bootstrap react.
+
+28
+00:01:55,760 --> 00:02:01,690
+If you search for bootstrap react, you should find that react bootstrap library here where you can
+
+29
+00:02:01,690 --> 00:02:08,770
+also find components that take the bootstrap styling but work nicely in react and are easily integrated
+
+30
+00:02:08,800 --> 00:02:10,560
+into react apps.
+
+31
+00:02:10,600 --> 00:02:14,360
+So that's the general thing I want to bring to you with this lecture,
+
+32
+00:02:14,380 --> 00:02:16,390
+dive into component libraries,
+
+33
+00:02:16,390 --> 00:02:20,760
+be aware that they exist and consider them for your next projects
+
+34
+00:02:20,830 --> 00:02:22,580
+if you need uniform styling,
+
+35
+00:02:22,690 --> 00:02:28,720
+don't want to build all these components on your own and just want to have nice react components as
+
+36
+00:02:28,720 --> 00:02:30,160
+you would have build them on your own
+
+37
+00:02:30,220 --> 00:02:34,700
+but just ready to be dropped in into your own react application.
+

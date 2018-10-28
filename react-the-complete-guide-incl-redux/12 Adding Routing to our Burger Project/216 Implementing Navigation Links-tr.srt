@@ -1,0 +1,268 @@
+1
+00:00:02,270 --> 00:00:09,610
+Gezinti elerimize dokunun ve onlar rotamzla birlikte bulunduumuz yeni dnyaya ayarlayalm.
+
+2
+00:00:09,980 --> 00:00:17,240
+Dolaysyla bu snftaki gezinme esinde, balanty nereye aktardmz gezinme esi bileenlerimize
+
+3
+00:00:17,240 --> 00:00:19,120
+ait linklerimiz var.
+
+4
+00:00:19,220 --> 00:00:21,910
+imdi burada bir eyi ayarlamak istiyorum zaten.
+
+5
+00:00:21,950 --> 00:00:26,780
+Burger kurucumuz var ve POF kesinlikle eik izgi olmaldr.
+
+6
+00:00:27,230 --> 00:00:34,850
+Ancak ikinci e, eik izgi siparilerine yol amal ve aslnda siparilerin bir balna sahip olmal nk
+
+7
+00:00:34,850 --> 00:00:40,840
+gezinme esinin de ayarlanmas gerekiyor nk u anda normal bir apa etiketi kullanyoruz.
+
+8
+00:00:40,850 --> 00:00:45,380
+imdi rota kullanrken rendiiniz gibi bunu gerekten yapmak istemiyorum.
+
+9
+00:00:45,410 --> 00:00:52,210
+Bunun yerine yeniden ynlendirici ynlendiricinin salad balanty kullanmak istiyorum.
+
+10
+00:00:52,280 --> 00:00:56,360
+Yeniden ynlendirici ynlendirici Domm'den paket pakette.
+
+11
+00:00:56,630 --> 00:01:03,530
+Ancak imdi normal balant bileenini kullanmak istemiyorum nk NAV balantsn kullanyorum, nk aktif balanty stil etmek istiyor
+
+12
+00:01:03,530 --> 00:01:10,520
+ve aslnda C adl S snf olduu iin aktif olarak adlandrlm bir C S S snfnn varsaylann
+
+13
+00:01:10,520 --> 00:01:11,460
+kullanmak istiyorum.
+
+14
+00:01:11,480 --> 00:01:14,610
+Benim C S hatamda da tanmladm.
+
+15
+00:01:14,750 --> 00:01:20,990
+Burada farkl bir snf ad setiyseniz, ynlendirme modlnde gsterildii gibi bir deniz
+
+16
+00:01:20,990 --> 00:01:24,870
+yolu balantsyla atanan snf adn ayarlamanz gerekir.
+
+17
+00:01:24,890 --> 00:01:33,250
+e aktarlan mantling ile, ref yerine balama etiketi yerine kullanmak istiyorum, bu nedenle iki olur ve
+
+18
+00:01:33,260 --> 00:01:35,480
+snf ad hi gerekmez.
+
+19
+00:01:35,480 --> 00:01:38,100
+Etkin olup olmadn tanmlamak zorunda deiliz.
+
+20
+00:01:38,150 --> 00:01:41,320
+Bunu otomatik olarak belirleyecektir.
+
+21
+00:01:41,320 --> 00:01:44,590
+Elbette ki burada kapan etiketi tm Appling olmaldr.
+
+22
+00:01:44,710 --> 00:01:50,680
+Artk aktif olup olmamasna bakmakszn bilgileri aktarmamz gerekmediinden, navigasyon esine geri
+
+23
+00:01:50,920 --> 00:01:55,510
+dnebilir ve artk bu Propp eylemini burada ayarlamam gerekmez.
+
+24
+00:01:55,510 --> 00:01:57,900
+Bu yzden de ondan kurtulalm.
+
+25
+00:01:57,940 --> 00:02:02,040
+imdi tm dosyalar kaydetmek ve uygulamamza geri dnelim.
+
+26
+00:02:02,260 --> 00:02:09,550
+Grdnz gibi gncellenmi gezinme elerini gryoruz, ancak aktif bir e grmyoruz.
+
+27
+00:02:09,550 --> 00:02:14,760
+imdi bu enin zerine gelelim ve aktif snfa sahip olduunu greceksin.
+
+28
+00:02:14,830 --> 00:02:16,330
+Neden almadn biliyor musun
+
+29
+00:02:16,330 --> 00:02:24,180
+Bu nokta bulmak zor ama bu snfn herhangi bir etkisinin grmediini mkemmel bir mantkl klyor.
+
+30
+00:02:26,490 --> 00:02:29,220
+Modl olarak grmekle alakaldr.
+
+31
+00:02:29,220 --> 00:02:36,040
+Balantnn, otomatik olarak aktif adl bir snf ekledii yere eklediini unutmayn.
+
+32
+00:02:36,720 --> 00:02:42,600
+Ve elbette burada etkin snf bir gezinti esi C S S. olarak kurduk.
+
+33
+00:02:42,900 --> 00:02:50,700
+Ancak, C S S modllerinin aslnda snf adlarmz burada alp benzersiz snf
+
+34
+00:02:50,760 --> 00:02:52,630
+adlarna dntreceini unutmayn.
+
+35
+00:02:52,650 --> 00:02:58,010
+Dolaysyla burada S nin C'sinde faaliyete getiimizde faal olarak ortaya kmaz.
+
+36
+00:02:58,080 --> 00:03:00,560
+Buna biraz karma eklenecek.
+
+37
+00:03:00,570 --> 00:03:02,350
+Benzersiz olacak.
+
+38
+00:03:02,610 --> 00:03:10,080
+Bu nedenle, alma saatlerinde martarak eklenen snfn hareketi aktif snfmza uymaz.
+
+39
+00:03:10,140 --> 00:03:18,420
+Naff balant elemannn kurabileceimiz ek zelliklere sahip olmasna ramen bunu kolayca dzeltebiliriz.
+
+40
+00:03:18,660 --> 00:03:22,300
+renirken kendi aktif snf ismini belirleyebiliriz.
+
+41
+00:03:22,560 --> 00:03:26,240
+Aktif snf sonuna kadar buraya ekleyebilirsiniz.
+
+42
+00:03:26,240 --> 00:03:34,450
+Daha sonra, C S S dmden gelen snflarm nesnesine atfta bulunarak tekrar aktif dersler kullanmak isteyecektim.
+
+43
+00:03:34,500 --> 00:03:41,840
+C snf dnm tkettiinde, bu artk snf adnn bir kusurudur.
+
+44
+00:03:41,900 --> 00:03:48,000
+imdi bunu kaydettiysek, imdi etkinletiini grrsnz, nk aslnda snf ad altndadr
+
+45
+00:03:48,030 --> 00:03:55,630
+ki gezinme esi altizgi altizgi altn iziyor baz karma bizleri de emir zerine tklayabileceimiz
+
+46
+00:03:55,660 --> 00:03:57,480
+benzersiz snf adlarn gsteriyor.
+
+47
+00:03:57,820 --> 00:04:00,530
+Ve grdnz gibi emir verdik.
+
+48
+00:04:00,550 --> 00:04:04,840
+Aktif ama ilk link hala aktif.
+
+49
+00:04:04,850 --> 00:04:06,880
+imdi bunu muhtemelen dzelteceksin.
+
+50
+00:04:06,880 --> 00:04:08,730
+Kesinlikle devam edin ve yapn.
+
+51
+00:04:09,100 --> 00:04:12,660
+Ve aksi halde, sana bu fikrini bir saniye iinde gstereceim.
+
+52
+00:04:14,120 --> 00:04:20,530
+Bu, elbette, sklmenin etkin rotay yorumlama ekli nedeniyle de aktiftir.
+
+53
+00:04:20,810 --> 00:04:27,350
+Unutmayn, burada demek, etkin rota olup olmadn belirleyen eydir ve renirken bir
+
+54
+00:04:27,370 --> 00:04:29,460
+nek olarak kabul edilmektedir.
+
+55
+00:04:29,690 --> 00:04:36,310
+imdiki pauvr'larmz bu blmle baladka, bu balant aktif olarak deerlendirilir.
+
+56
+00:04:36,530 --> 00:04:40,120
+Ve sadece eik izgi iin her rota bundan balar.
+
+57
+00:04:40,340 --> 00:04:43,990
+Dolaysyla, bunu tam olarak buradan ekleyerek dzeltebilirsiniz.
+
+58
+00:04:44,180 --> 00:04:48,530
+Ve bununla, eriilirse bunun yalnzca kullanlmasn salyoruz.
+
+59
+00:04:48,570 --> 00:04:52,290
+Elbette, tm nav balantlarna eriimi ekleyeceiz.
+
+60
+00:04:52,430 --> 00:04:58,640
+Yalnzca bunun bir yerde olmas gerektiini biliyorsanz, yalnzca mlke yeni
+
+61
+00:04:58,640 --> 00:05:05,900
+bir mlkiyetle geebilir veya navigasyon esine iyi geebilirsiniz ve navigasyon esinde artk
+
+62
+00:05:06,200 --> 00:05:10,490
+NAV balantsnn Propp'sunu tam olarak geeceinize balayabilirsiniz. Dardan.
+
+63
+00:05:10,490 --> 00:05:17,170
+imdi bu aslnda sadece ilk satra sadece eik izgi ile, ikinci srada da emirle kullanlacak.
+
+64
+00:05:17,210 --> 00:05:22,910
+yalnzca Bergere kaya zerindeysek aktif olur, emirlerimiz varsa emirler aktif olur.
+
+65
+00:05:22,910 --> 00:05:25,980
+Sonu yine de ayndr Bergere Boulder,
+
+66
+00:05:26,180 --> 00:05:29,330
+imdi balantlar bu ekilde uyguluyoruz.
+
+67
+00:05:29,330 --> 00:05:33,400
+imdi siparileri sunucudan aldmzdan emin olalm.
+

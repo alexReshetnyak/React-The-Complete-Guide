@@ -1,0 +1,72 @@
+1
+00:00:02,190 --> 00:00:08,220
+Na ostatnim wykadzie stworzyem podstawow aplikacj, ktr teraz albo pobierzesz,
+
+2
+00:00:08,220 --> 00:00:09,620
+albo gdzie
+
+3
+00:00:09,630 --> 00:00:11,850
+ledzie, teraz czas na
+
+4
+00:00:11,910 --> 00:00:20,380
+zainstalowanie pewnych zalenoci, na przykad aplikacja reagujca oczywicie uywa reakcji lub reagowania i routera,
+
+5
+00:00:20,610 --> 00:00:24,140
+wic powinnimy zainstalowa wszystkie te zalenoci
+
+6
+00:00:24,150 --> 00:00:30,930
+produkcyjne, robimy to za pomoc npm installed --save, not --save-dev, poniewa
+
+7
+00:00:30,930 --> 00:00:41,540
+chcemy wskaza, e s to zalenoci produkcyjne, a nastpnie reaguj na reakcje-dom i react-router-dom, w ten sposb.
+
+8
+00:00:41,540 --> 00:00:46,520
+Te trzy zalenoci s rozdzielone spacjami biaymi i s teraz instalowane,
+
+9
+00:00:46,520 --> 00:00:52,550
+a zatem umieszczane w folderze moduu wzowego, do pakietu dodawane s rwnie odpowiednie wpisy
+
+10
+00:00:52,550 --> 00:00:55,490
+z najnowszymi wersjami. plik json, jak wida.
+
+11
+00:00:55,490 --> 00:00:57,510
+Po zainstalowaniu reagujemy, ju zainstalowalimy
+
+12
+00:00:57,530 --> 00:01:00,680
+Webpack jaki czas temu, musimy teraz zainstalowa
+
+13
+00:01:00,800 --> 00:01:07,130
+kilka innych zalenoci, aby zbudowa przepyw pracy, a dodam je krok po kroku, kiedy
+
+14
+00:01:07,130 --> 00:01:09,080
+tylko bdziemy ich potrzebowa.
+
+15
+00:01:09,110 --> 00:01:16,880
+Tak wic chc teraz rozpocz konfigurowanie konfiguracji webpacka tak, aby bya w stanie obsuy
+
+16
+00:01:16,880 --> 00:01:19,280
+javascript, css, obrazy i
+
+17
+00:01:19,300 --> 00:01:22,220
+wszystkie inne fajne rzeczy nastpnej generacji.
+
+18
+00:01:22,310 --> 00:01:24,800
+Zacznijmy od tego w nastpnym wykadzie.
+

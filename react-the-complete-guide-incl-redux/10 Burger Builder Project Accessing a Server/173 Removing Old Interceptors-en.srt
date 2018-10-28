@@ -1,0 +1,392 @@
+1
+00:00:02,180 --> 00:00:07,040
+Now in this module, we obviously added a lot of logic to our burger builder again.
+
+2
+00:00:07,130 --> 00:00:14,510
+There is one improvement or fix we should apply to it though, can be subtle to spot but it really improves
+
+3
+00:00:14,510 --> 00:00:15,780
+our application.
+
+4
+00:00:16,100 --> 00:00:21,030
+Let's have a look at this withErrorHandler higher order component. There
+
+5
+00:00:21,110 --> 00:00:27,110
+we obviously added our interceptors in componentWillMount and of course it makes sense to add them
+
+6
+00:00:27,110 --> 00:00:34,160
+there because we wanted to make sure that we can reset errors and hence show this error modal we
+
+7
+00:00:34,160 --> 00:00:36,620
+set up in this higher order component.
+
+8
+00:00:36,800 --> 00:00:44,290
+We have one issue though this withErrorHandler method can be wrapped around multiple components,
+
+9
+00:00:44,300 --> 00:00:47,790
+that's the whole idea of having this higher order component
+
+10
+00:00:47,840 --> 00:00:52,940
+otherwise we could have put death code directly into the burger builder if that were the only component
+
+11
+00:00:52,940 --> 00:00:54,260
+where we want to use that.
+
+12
+00:00:54,260 --> 00:00:56,880
+Right now, it is the only component we're using it
+
+13
+00:00:56,900 --> 00:01:02,760
+but again our higher order component is of course not limited to the burger builder.
+
+14
+00:01:03,170 --> 00:01:12,710
+The problem we have is if we add this higher order component withErrorHandler to other components, we'll
+
+15
+00:01:12,710 --> 00:01:19,070
+call componentWillMount again and again of course because the class component we return in this higher
+
+16
+00:01:19,070 --> 00:01:26,270
+order component is created every time this is wrapped around an existing component.
+
+17
+00:01:26,270 --> 00:01:34,840
+So every time we call withErrorHandler on the element we're exporting as we do in the burger builder.
+
+18
+00:01:34,940 --> 00:01:40,440
+So we're actually attaching multiple interceptors in our application and we're attaching them to the
+
+19
+00:01:40,440 --> 00:01:42,740
+same axios instance.
+
+20
+00:01:43,040 --> 00:01:48,020
+The problem of course is we don't have to right now but we will face later in the course
+
+21
+00:01:48,090 --> 00:01:54,920
+the mentioned routing will lead to the problem once we have more pages where we might use
+
+22
+00:01:54,920 --> 00:01:55,910
+withErrorHandler
+
+23
+00:01:55,910 --> 00:02:03,130
+We of course create this instance here multiple times, this component here and therefore all the old
+
+24
+00:02:03,130 --> 00:02:03,950
+interceptors
+
+25
+00:02:03,980 --> 00:02:09,740
+So all the interceptors we set up when we wrapped this around another component which might not be needed
+
+26
+00:02:09,740 --> 00:02:12,170
+anymore still exist.
+
+27
+00:02:12,170 --> 00:02:18,260
+So we have a lot of dead interceptors sitting in memory which actually are not dead but which still
+
+28
+00:02:18,440 --> 00:02:21,430
+react to our requests
+
+29
+00:02:21,560 --> 00:02:29,630
+and in the worst case they lead to errors or do somehow change the state of our application.
+
+30
+00:02:29,690 --> 00:02:36,410
+But even in the best case, they leak memory because that's code that still runs that is not required
+
+31
+00:02:36,410 --> 00:02:37,250
+anymore.
+
+32
+00:02:37,490 --> 00:02:43,850
+So we should actually remove the interceptors when this component gets unmounted.
+
+33
+00:02:43,880 --> 00:02:50,470
+So when this specific instance of our withErrorHandler wrapper is not needed anymore
+
+34
+00:02:50,570 --> 00:02:59,360
+and there actually is a lifecycle for this too, it's componentWillUnmount.
+
+35
+00:02:59,420 --> 00:03:06,470
+Now as the name suggests, this is a lifecycle method which is executed at the point of time a component
+
+36
+00:03:06,560 --> 00:03:08,590
+isn't required anymore.
+
+37
+00:03:09,200 --> 00:03:16,910
+Now to be able to remove an interceptor here, we need to store a reference to the interceptors we create
+
+38
+00:03:17,210 --> 00:03:19,840
+in properties of this class.
+
+39
+00:03:19,880 --> 00:03:22,190
+Now we have to state property already
+
+40
+00:03:22,310 --> 00:03:25,550
+we can simply add new properties.
+
+41
+00:03:25,550 --> 00:03:34,340
+So for that I will simply create a new property on the fly by using this, the this keyword to refer to
+
+42
+00:03:34,340 --> 00:03:36,890
+the class and then any name of your choice.
+
+43
+00:03:37,100 --> 00:03:46,880
+I'll name this the request interceptor or maybe like this reqInterceptor and we'll store the result
+
+44
+00:03:46,940 --> 00:03:54,140
+of our interceptor set up which is just a reference to the interceptor passed back by axios automatically
+
+45
+00:03:54,310 --> 00:03:58,490
+and I'll do the same for the response interceptor here.
+
+46
+00:03:58,520 --> 00:04:07,190
+So now I have two new properties in my class and I can now use these properties in will unmount to remove
+
+47
+00:04:07,190 --> 00:04:09,400
+the interceptors. There
+
+48
+00:04:09,410 --> 00:04:18,050
+we can now simply use axios interceptors just like we created them but now we can access request
+
+49
+00:04:18,080 --> 00:04:19,070
+and response there
+
+50
+00:04:19,080 --> 00:04:24,670
+and call eject, and eject now requires the reference to the interceptor.
+
+51
+00:04:24,830 --> 00:04:33,390
+So here this request interceptor and I'll simply duplicate this to also do the same for the response. So for
+
+52
+00:04:33,410 --> 00:04:34,560
+the response object,
+
+53
+00:04:34,580 --> 00:04:39,210
+I'll also call eject and then call response interceptor.
+
+54
+00:04:39,590 --> 00:04:41,360
+And now with that, we got this set up
+
+55
+00:04:41,370 --> 00:04:48,160
+and componentWillUnmount and we should remove our interceptors with that preventing memory leaks.
+
+56
+00:04:48,200 --> 00:04:54,530
+Now to quickly see if that works, I'll save that file and then I'll go into the app.js file which
+
+57
+00:04:54,530 --> 00:04:56,600
+is where we add the burger builder
+
+58
+00:04:56,960 --> 00:05:03,760
+and I want to add some code to remove it after some time, just to see if will unmount gets called.
+
+59
+00:05:04,040 --> 00:05:13,340
+So there I will simply console log will unmount and I want to output this request interceptor and this
+
+60
+00:05:13,610 --> 00:05:19,080
+response interceptor, the two properties we added to see if they are set at the beginning of will unmount
+
+61
+00:05:19,100 --> 00:05:21,450
+because I'm using them thereafter.
+
+62
+00:05:21,860 --> 00:05:27,050
+So now if that's saved let's go back to app.js and to make sure that burger builder disappears
+
+63
+00:05:27,080 --> 00:05:31,920
+after a while, I'll temporarily adding state to my app component,
+
+64
+00:05:32,030 --> 00:05:37,850
+it is a class based component so I can of course do this and I will simply a show property which is
+
+65
+00:05:37,850 --> 00:05:45,110
+true initially and I will then use it here with this stage show to show the burger builder or show
+
+66
+00:05:45,110 --> 00:05:50,510
+null which essentially removes the burger builder of course because it's only added to the dom if
+
+67
+00:05:50,510 --> 00:05:51,640
+show is true.
+
+68
+00:05:51,860 --> 00:05:53,910
+So now I just need a way to
+
+69
+00:05:53,960 --> 00:05:57,550
+well unset show after a while and for that
+
+70
+00:05:57,560 --> 00:05:59,500
+and again this is all just for testing,
+
+71
+00:05:59,570 --> 00:06:05,750
+I'll add componentDidMount here and there I will simply use to normal set timeout method provided by
+
+72
+00:06:05,750 --> 00:06:06,750
+Javascript
+
+73
+00:06:06,950 --> 00:06:14,990
+and after five seconds, I want to execute this function here and in that function I'll call set state
+
+74
+00:06:15,320 --> 00:06:17,170
+and set show to false.
+
+75
+00:06:17,180 --> 00:06:19,810
+And again I will remove this code in a second,
+
+76
+00:06:19,820 --> 00:06:23,240
+it's only there to test if this works,
+
+77
+00:06:23,330 --> 00:06:25,900
+if it does call will unmount.
+
+78
+00:06:26,210 --> 00:06:28,150
+So with all that,let's save this
+
+79
+00:06:28,370 --> 00:06:31,590
+and now let's reload the application we see the burger, and
+
+80
+00:06:32,000 --> 00:06:33,480
+let's wait five seconds
+
+81
+00:06:34,880 --> 00:06:41,050
+and we should then see will unmount and we see 00 and that's actually correct because these are simply
+
+82
+00:06:41,050 --> 00:06:42,070
+the IDs,
+
+83
+00:06:42,220 --> 00:06:49,690
+there are ideas being kept the memory by axios for both the request and response interceptors, so two
+
+84
+00:06:49,690 --> 00:06:53,170
+different lists of interceptors and they start with index zero.
+
+85
+00:06:53,200 --> 00:06:56,700
+We added one to each list, one request and one response interceptor
+
+86
+00:06:56,710 --> 00:06:58,960
+so that is why we see two zeros here.
+
+87
+00:06:59,110 --> 00:07:01,630
+So what we can see is it does work.
+
+88
+00:07:01,660 --> 00:07:09,740
+We can now remove that console log statement for unmount, it does successfully get this reference to the
+
+89
+00:07:09,790 --> 00:07:17,110
+interceptor and we can rely on eject working and this will just ensure that whenever we don't need
+
+90
+00:07:17,680 --> 00:07:20,560
+the burger builder or component anymore
+
+91
+00:07:20,560 --> 00:07:25,810
+and of course it is not the case right now in the application but will soon be, that we clean up the
+
+92
+00:07:25,820 --> 00:07:33,200
+interceptors which we attached due to using withErrorHandler on the burger builder so that if we really
+
+93
+00:07:33,200 --> 00:07:39,490
+was withErrorHandler in our application we don't create more and more interceptors with the old ones
+
+94
+00:07:39,490 --> 00:07:40,810
+living on.
+
+95
+00:07:40,810 --> 00:07:48,700
+So with that, I can remove my code here at the app.js file to have a normal working application
+
+96
+00:07:48,700 --> 00:07:55,570
+again so remove all the code we added, the state and the component that mount with the set time timeout so that
+
+97
+00:07:55,570 --> 00:07:58,680
+we have the same app component as before
+
+98
+00:07:58,810 --> 00:08:04,470
+but now again with the improved application where we actually remove interceptors we don't need anymore.
+

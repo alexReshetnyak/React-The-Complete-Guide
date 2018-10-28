@@ -1,0 +1,428 @@
+1
+00:00:02,750 --> 00:00:08,810
+E abbiamo esaminato i riferimenti, diamo un'occhiata a una caratteristica impressionante numero introdotta da re-act 16
+
+2
+00:00:08,820 --> 00:00:11,210
+per liberare la nuova API di contesto.
+
+3
+00:00:11,380 --> 00:00:14,900
+Un grande strumento per il passaggio dello stato globale in giro per l'Europa.
+
+4
+00:00:14,900 --> 00:00:22,790
+Ora, cosa intendo con questo, diciamo che nella nostra cabina di pilotaggio qui nella cabina di guida, abbiamo un nuovo pulsante
+
+5
+00:00:22,970 --> 00:00:25,070
+sotto il pulsante che abbiamo gi.
+
+6
+00:00:25,160 --> 00:00:29,360
+Aggiunger un secondo e alla fine dico lock in.
+
+7
+00:00:29,360 --> 00:00:36,260
+Ora questo pulsante, una volta cliccato, dovrebbe in realt impostare alcuni livelli di accesso globale su true
+
+8
+00:00:36,320 --> 00:00:38,560
+e modificare qualcosa su diversi componenti.
+
+9
+00:00:38,560 --> 00:00:45,750
+Quindi aggiungi un ascoltatore su clic e diciamo che abbiamo un sostegno qui, quindi user oggetti di scena.
+
+10
+00:00:45,890 --> 00:00:48,110
+E poi abbiamo avuto accesso.
+
+11
+00:00:48,200 --> 00:00:54,350
+Quindi abbiamo bisogno di passare un lock in prop a death cockpit component che dovrebbe contenere un riferimento a una
+
+12
+00:00:54,350 --> 00:00:57,590
+funzione che questo viene eseguita quando abbiamo cliccato sul pulsante.
+
+13
+00:00:57,630 --> 00:01:02,350
+Quindi vai sull'asfalto in realt, dove  qui che utilizziamo il componente del cockpit.
+
+14
+00:01:02,900 --> 00:01:06,260
+E aggiunger il mio nuovo registro nella propriet qui.
+
+15
+00:01:06,290 --> 00:01:09,800
+Quello  quello che abbiamo tramandato stiamo estraendo nella cabina di pilotaggio.
+
+16
+00:01:09,800 --> 00:01:13,380
+Ora questo dovrebbe contenere un riferimento a un metodo che viene eseguito.
+
+17
+00:01:13,380 --> 00:01:21,140
+Quindi aggiungiamo il nostro metodo di gestione degli accessi qui nel nostro file Apogee e poi qui voglio cambiare uno stato di stato
+
+18
+00:01:21,390 --> 00:01:23,870
+true commuta lo stato di indicazione off.
+
+19
+00:01:23,870 --> 00:01:30,440
+Diciamo prima di tutto che assegniamo il gestore di accesso come una funzione per il log e Propp e poi
+
+20
+00:01:30,440 --> 00:01:32,620
+andr al mio stato dello zapper.
+
+21
+00:01:32,660 --> 00:01:39,610
+S, cadi fin qui e poi aggiungi semplicemente una nuova propriet a tutto ci che  indicato come falso ora.
+
+22
+00:01:39,920 --> 00:01:45,420
+E dovrebbe essere vero una volta che clicchiamo su quel pulsante diciamolo cos e poi il gestore di
+
+23
+00:01:45,420 --> 00:01:48,930
+accesso chiama tutto questo stato impostato e io selezioner il messaggio vero.
+
+24
+00:01:48,950 --> 00:01:50,340
+Questo  tutto ci che sto facendo qui.
+
+25
+00:01:50,390 --> 00:01:53,340
+Ora diciamo che voglio cambiare qualcosa nel mio componente di persona ogni volta.
+
+26
+00:01:53,420 --> 00:01:55,130
+Questo  impostato su true.
+
+27
+00:01:55,340 --> 00:02:00,830
+Ora, ci che possiamo fare  che possiamo provare a passare i nostri stati alle persone.
+
+28
+00:02:00,830 --> 00:02:09,320
+Possiamo fare quest'anno che nell'Ira di questa persona stiamo impostando  autenticato Propp e lo impostiamo
+
+29
+00:02:09,320 --> 00:02:14,420
+uguale a questo stato di sindacato nel componente della persona.
+
+30
+00:02:14,420 --> 00:02:18,730
+Stiamo ottenendo questo nuovo oggetto di supporto e possiamo passarlo al componente singolo.
+
+31
+00:02:18,890 --> 00:02:27,170
+Possiamo passare all'autenticazione e questo si riferir a questo processo  autenticato, quindi probabilmente solo
+
+32
+00:02:27,170 --> 00:02:28,850
+impostare e cadere.
+
+33
+00:02:29,240 --> 00:02:33,980
+E poi il componente persona possiamo quindi produrre del testo se siamo offesi.
+
+34
+00:02:34,010 --> 00:02:41,540
+Quindi qui usiamo un'espressione ternaria che potremmo dire se questo richiede tutto confermato se questo  vero
+
+35
+00:02:41,540 --> 00:02:45,680
+allora su uno sfogo diciamo un paragrafo per dire tutto.
+
+36
+00:02:45,700 --> 00:02:46,710
+Rivendicato.
+
+37
+00:02:47,700 --> 00:02:50,530
+Oberweis se questo non  vero per una uscita.
+
+38
+00:02:50,580 --> 00:02:51,300
+Adesso.
+
+39
+00:02:51,590 --> 00:02:57,060
+Ora con quello sul posto se lo salviamo e ricarichiamo per fare clic su Mostra persone funziona bene.
+
+40
+00:02:57,080 --> 00:03:01,620
+E se un clic fa il login, ma qui vediamo che sono autenticato e tutti gli utenti.
+
+41
+00:03:01,630 --> 00:03:04,360
+Quindi  questo il modo in cui stiamo trasmettendo i dati.
+
+42
+00:03:04,380 --> 00:03:10,310
+Ora questo  il modo predefinito di passare i dati ed  il modo consigliato per la maggior parte dei casi d'uso.
+
+43
+00:03:10,310 --> 00:03:17,090
+Tuttavia, a volte si dispone di uno stato globale come lo stato di autenticazione o, ad esempio, di
+
+44
+00:03:17,090 --> 00:03:19,570
+un colore di tema globale impostato dall'utente.
+
+45
+00:03:19,700 --> 00:03:20,960
+Cose come.
+
+46
+00:03:21,290 --> 00:03:26,570
+Ora il passaggio dei valori  certamente un'opzione, ma puoi utilizzarla nell'API di contesto per renderla
+
+47
+00:03:26,570 --> 00:03:27,770
+un po 'pi semplice.
+
+48
+00:03:27,770 --> 00:03:30,150
+Funziona cos nell'app.
+
+49
+00:03:30,200 --> 00:03:30,690
+S.
+
+50
+00:03:30,750 --> 00:03:32,560
+Prima di tutto creare un contesto.
+
+51
+00:03:32,600 --> 00:03:39,380
+Facciamo questo fuori dalla classe offerto gli input e memorizzati in una costante e lo chiamer fuori
+
+52
+00:03:39,380 --> 00:03:40,550
+contesto come questo.
+
+53
+00:03:40,550 --> 00:03:46,800
+Lo facciamo con re-act, creare un contesto in modo tale che un nuovo metodo introdotto da re-act 16 sia libero.
+
+54
+00:03:47,420 --> 00:03:53,360
+E l posso impostare un valore predefinito come false per l'autenticazione false.
+
+55
+00:03:53,480 --> 00:03:55,110
+Questo  opzionale per.
+
+56
+00:03:55,400 --> 00:03:58,390
+La parte pi importante  come abbiamo usato il contesto off.
+
+57
+00:03:58,610 --> 00:04:06,250
+Lo facciamo nel nostro codice GSX e / o contesto o contesto in generale funziona con fornitori e consumatori.
+
+58
+00:04:06,260 --> 00:04:12,540
+Abbiamo parti nel nostro laboratorio in cui forniamo il contesto ed  dove consumiamo l'asfalto conosciuto.
+
+59
+00:04:12,590 --> 00:04:17,150
+Questo  dove lo forniamo perch qui abbiamo gestito il tuo stato di rivendicazione.
+
+60
+00:04:17,150 --> 00:04:24,410
+Quindi ora stiamo avvolgendo tutti i componenti in cui pianifichiamo di estrarre quel valore dal contesto con un
+
+61
+00:04:24,410 --> 00:04:28,130
+componente speciale che ti allontana dal componente di contesto.
+
+62
+00:04:28,160 --> 00:04:31,800
+Ora il nome del componente  semplicemente il nome di questa costante qui.
+
+63
+00:04:31,850 --> 00:04:36,350
+Quindi creare contesto crea un componente che puoi usare GSX.
+
+64
+00:04:36,500 --> 00:04:38,990
+Quindi ora abbiamo il componente di contesto disattivato.
+
+65
+00:04:38,990 --> 00:04:41,790
+Tuttavia non usiamo fuori contesto come questo.
+
+66
+00:04:41,900 --> 00:04:49,430
+Invece accediamo al provider di punti un sottocomponente creato reagendo per cos dire e questo  anche ci che chiudiamo qui
+
+67
+00:04:49,430 --> 00:04:57,310
+con il tag di chiusura ora le persone sono avvolte con il contesto off per un blocco pi ampio e importante.
+
+68
+00:04:57,310 --> 00:04:58,820
+Ora  di valore.
+
+69
+00:04:58,990 --> 00:05:04,750
+Ora otteniamo quel valore iniziale o falso perch inizializzato creiamo il contesto con false.
+
+70
+00:05:04,870 --> 00:05:10,780
+Ma se vuoi avere un valore dinamico che pu cambiare, aggiungiamo il valore prop e l'avviso deve essere
+
+71
+00:05:10,780 --> 00:05:17,250
+chiamato valore per il debito fuori dal componente del provider contex e lo impostiamo uguale al valore che vogliamo usare.
+
+72
+00:05:17,350 --> 00:05:19,490
+E il disvalore pu ovviamente cambiare.
+
+73
+00:05:19,570 --> 00:05:25,600
+Quindi qui avrei impostato questo stato autenticato e cambier ogni volta che lo stato cambia.
+
+74
+00:05:25,600 --> 00:05:32,380
+Quindi ora forniamo questo contesto a tutti i componenti figlio, indipendentemente dal livello in cui si trovano.
+
+75
+00:05:32,380 --> 00:05:36,610
+Quindi per dire e questo naturalmente  solo un anno ma questo potrebbe essere pi.
+
+76
+00:05:36,760 --> 00:05:40,280
+E questo componente in realt contiene pi di un componente.
+
+77
+00:05:40,360 --> 00:05:46,450
+Quindi nel componente delle persone possiamo ora sbarazzarci di quel Propp autenticato che stiamo tramandando
+
+78
+00:05:46,450 --> 00:05:55,210
+ad una singola persona e sulla cattura S possiamo anche sbarazzarci di  di averlo corretto stiamo passando a persone e
+
+79
+00:05:55,210 --> 00:06:02,180
+con che rimosso possiamo scendere a un componente di una singola persona e questo  dove vogliamo
+
+80
+00:06:02,180 --> 00:06:04,250
+usare il nostro contesto giusto.
+
+81
+00:06:04,250 --> 00:06:06,780
+Quindi prima di tutto dobbiamo essere in grado di importarlo.
+
+82
+00:06:06,860 --> 00:06:13,040
+Quindi torniamo alla caduta estatica e semplicemente esportiamo il nostro fuori contesto qui.
+
+83
+00:06:13,040 --> 00:06:19,820
+Questo lo rende una baleniera al di fuori di questo Faltu che ora possiamo andare alla nostra singola persona non cade in due persone.
+
+84
+00:06:19,850 --> 00:06:28,220
+Questo  difficile da lavorare su ma persona e qui nel nostro componente persona ora importiamo semplicemente
+
+85
+00:06:28,400 --> 00:06:29,580
+questo contesto.
+
+86
+00:06:29,750 --> 00:06:32,640
+Quindi importiamo tutto il contesto da.
+
+87
+00:06:32,660 --> 00:06:36,490
+E ora dobbiamo andare fino alla nostra app.
+
+88
+00:06:36,550 --> 00:06:43,770
+Il file JS viene importato fuori contesto e ora abbiamo bisogno di avvolgere l'elemento in cui vogliamo usare quel valore
+
+89
+00:06:43,770 --> 00:06:44,590
+di contesto.
+
+90
+00:06:44,670 --> 00:06:52,850
+Nel nostro caso  questa prima riga qui l che ora creo una nuova componente di contesto ma che ora non
+
+91
+00:06:52,940 --> 00:06:59,210
+ provider ma consumer perch ora consumer quel valore memorizzato nel contesto e mi limiter a
+
+92
+00:06:59,210 --> 00:07:04,270
+racchiudere l'intera espressione qui con il nostro componente consumer di contesto off.
+
+93
+00:07:04,310 --> 00:07:10,670
+Ora, qui in questo componente consumer, utilizziamo ancora solo parentesi graffe, ma dobbiamo eseguire un
+
+94
+00:07:10,670 --> 00:07:13,990
+metodo che verr eseguito da re-act per noi.
+
+95
+00:07:14,060 --> 00:07:20,570
+Questo metodo riceve un argomento e fa questo i dati che stiamo passando con il contesto.
+
+96
+00:07:20,570 --> 00:07:23,880
+Questo potrebbe naturalmente essere un oggetto nel nostro caso  un booleano.
+
+97
+00:07:24,020 --> 00:07:30,600
+Quindi qui  il nostro stato off e torniamo a GSX che vogliamo rendere.
+
+98
+00:07:30,740 --> 00:07:33,970
+Ora nel nostro caso non abbiamo pi bisogno di verificare l'autenticit del prop.
+
+99
+00:07:34,100 --> 00:07:40,880
+Verifichiamo solo se quello che ricorda  un miliardo per noi  vero nel qual caso stiamo entrando in questo.
+
+100
+00:07:40,880 --> 00:07:42,800
+Altrimenti non rendiamo nulla.
+
+101
+00:07:43,100 --> 00:07:48,290
+E ora stiamo sfruttando il contesto API re-act 600 usato Intrade gratuito.
+
+102
+00:07:48,350 --> 00:07:53,180
+E possiamo passare i dati in giro senza dover impostare questa catena di oggetti di scena.
+
+103
+00:07:53,540 --> 00:07:57,530
+Ora ricarichiamo questo componente facendo clic su Mostra persone hanno un clic di accesso.
+
+104
+00:07:57,680 --> 00:07:59,210
+Vediamo ancora che sono spesso negato.
+
+105
+00:07:59,240 --> 00:08:05,670
+Ma ora, senza passare per i puntelli, l'approccio dei puntelli  raccomandato nella maggior parte dei casi.
+
+106
+00:08:05,720 --> 00:08:10,310
+Rende i tuoi componenti pi riutilizzabili e non li lega pi di tanto.
+
+107
+00:08:10,310 --> 00:08:14,420
+Tuttavia, l'API di contesto  davvero eccezionale per impostazioni globali come questa.
+

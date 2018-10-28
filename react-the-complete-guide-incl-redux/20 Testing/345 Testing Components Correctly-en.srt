@@ -1,0 +1,112 @@
+1
+00:00:02,080 --> 00:00:04,970
+So over the last lectures we wrote some tests,
+
+2
+00:00:04,990 --> 00:00:08,910
+now are these all the tests we can ride for navigation items?
+
+3
+00:00:09,100 --> 00:00:14,180
+They might be, we might also want to test the class we get here or something like that.
+
+4
+00:00:14,530 --> 00:00:21,870
+But in general this looks like a good test coverage for me, writing good tests is complicated,
+
+5
+00:00:21,970 --> 00:00:28,600
+it's easy to write 100 tests for a given component and test all kind of things while it's missing the one important
+
+6
+00:00:28,600 --> 00:00:34,450
+thing you should have tested and on the other way around, you might only need one test to really verify
+
+7
+00:00:34,570 --> 00:00:37,870
+if a component behaves the way you want it to behave.
+
+8
+00:00:37,870 --> 00:00:43,870
+Now I can only encourage you to just practice and write a lot of tests for different components, test
+
+9
+00:00:43,870 --> 00:00:49,390
+for different things no matter if they makes sense to be tested or not, learn how to test how to think
+
+10
+00:00:49,450 --> 00:00:56,920
+in test environments and learn how to use the different functions provided by enzyme and jest.
+
+11
+00:00:57,250 --> 00:01:03,700
+It really is all about practicing and testing takes experience, the best way to start with testing is
+
+12
+00:01:03,700 --> 00:01:10,540
+to always have a look at your component or your function or whatever you are testing and see what are
+
+13
+00:01:10,540 --> 00:01:17,860
+the crucial things that change depending on some external influences like here, the isAuthenticated part
+
+14
+00:01:17,890 --> 00:01:19,790
+which changes what gets rendered.
+
+15
+00:01:20,050 --> 00:01:23,290
+And then this should be what you write the test for,
+
+16
+00:01:23,290 --> 00:01:29,290
+so that whenever you change something in the navigation items component and you accidentally mess up like
+
+17
+00:01:29,290 --> 00:01:36,490
+here, if I remove the exclamation mark before this check, now we got failed tests if I save this component
+
+18
+00:01:36,730 --> 00:01:40,510
+because this also re-executes tests if you change your normal code
+
+19
+00:01:40,690 --> 00:01:42,290
+and now I got failed tests
+
+20
+00:01:42,430 --> 00:01:49,540
+and you see that here indeed, this should render three navigation items if authenticated fails, because now
+
+21
+00:01:49,750 --> 00:01:56,230
+we render a different amount, that by the way is referring to the third test where I didn't update my
+
+22
+00:01:56,230 --> 00:01:56,870
+naming,
+
+23
+00:01:57,000 --> 00:02:06,590
+this should of course showed an exact logout button. But still, the case holds true,
+
+24
+00:02:06,630 --> 00:02:07,930
+it fails here
+
+25
+00:02:08,370 --> 00:02:12,030
+and it also fails the previous test.
+
+26
+00:02:12,150 --> 00:02:18,650
+So always then have a look at your test errors and identify crucial parts just like that,
+
+27
+00:02:18,900 --> 00:02:23,700
+what can I easily break and what would then totally break my application behavior?
+
+28
+00:02:23,700 --> 00:02:26,300
+And then you write tests for exactly that.
+

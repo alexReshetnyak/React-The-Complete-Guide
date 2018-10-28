@@ -1,0 +1,160 @@
+1
+00:00:02,190 --> 00:00:07,490
+In the last lecture I talked about where to put your data transforming logic.
+
+2
+00:00:07,950 --> 00:00:15,270
+Now on the same page, if you chose the action creator, here's another utility method you might want to
+
+3
+00:00:15,270 --> 00:00:17,460
+know when working with thunk,
+
+4
+00:00:17,460 --> 00:00:25,320
+so with asynchronous code handled by redux-thunk, for example our storeResult here. We return a function
+
+5
+00:00:25,560 --> 00:00:31,410
+which gets dispatch handed into it as an argument by redux-thunk, which we can call to dispatch the action
+
+6
+00:00:31,410 --> 00:00:40,370
+once our async code is done, actually redux-thunk can pass as an additional argument, getState,
+
+7
+00:00:40,710 --> 00:00:45,360
+that is a method we can execute to get the current state.
+
+8
+00:00:45,370 --> 00:00:52,830
+Sometimes in your asynchronous code, you need to be able to reach out to the state prior to your to-be-
+
+9
+00:00:52,830 --> 00:00:54,220
+dispatched action,
+
+10
+00:00:54,480 --> 00:01:01,170
+let's say you want to save some data for a given user and you have the id of the user stored in your
+
+11
+00:01:01,170 --> 00:01:05,450
+redux state, you can then get it with getState,
+
+12
+00:01:05,460 --> 00:01:13,880
+for example here, we can get the old counter by executing getState here and simply accessing the counter
+
+13
+00:01:13,910 --> 00:01:20,550
+property, getState will give us the complete state which of course has a counter property or to be precise
+
+14
+00:01:20,550 --> 00:01:24,320
+since our reducers make up the state and we have two of them,
+
+15
+00:01:24,600 --> 00:01:31,050
+we can get the counter just as in the counter container in mapStateToProps, we have to access ctr.counter.
+
+16
+00:01:31,050 --> 00:01:33,700
+So we can do that
+
+17
+00:01:33,700 --> 00:01:42,890
+here, .ctr.counter in the action creator, thanks to the second argument passed into it by redux
+
+18
+00:01:42,890 --> 00:01:44,060
+thunk.
+
+19
+00:01:44,120 --> 00:01:47,840
+Now this old counter can then be output here,
+
+20
+00:01:49,110 --> 00:01:52,850
+old counter and I saw I have a typo there,
+
+21
+00:01:53,660 --> 00:01:54,710
+let's fix that.
+
+22
+00:01:55,100 --> 00:01:58,390
+So now if I save this and I store my result,
+
+23
+00:01:59,160 --> 00:02:05,500
+I actually get my old counter printed here on the right in the console, the blue 10 here.
+
+24
+00:02:05,550 --> 00:02:13,290
+That's the old counter I get right before dispatching this event which then actually leads to the code
+
+25
+00:02:13,300 --> 00:02:16,030
+executed in the reducer.
+
+26
+00:02:16,110 --> 00:02:20,480
+Now this is kind of related to what I said in the last lecture,
+
+27
+00:02:20,910 --> 00:02:23,710
+if you need it, it's a nice utility function,
+
+28
+00:02:23,790 --> 00:02:25,690
+don't overuse it though.
+
+29
+00:02:26,010 --> 00:02:34,130
+I try to write my action creators and reducers in a way that I don't have to use getState, instead
+
+30
+00:02:34,350 --> 00:02:41,820
+you can pass all the data you need in your async action creator like the user id into it by accepting
+
+31
+00:02:41,820 --> 00:02:43,400
+it as an argument.
+
+32
+00:02:43,470 --> 00:02:48,810
+That of course means that you need to have access to the data you need in your action creator in the
+
+33
+00:02:48,810 --> 00:02:52,820
+container where you actually dispatch the action leading to the action creator.
+
+34
+00:02:52,980 --> 00:02:57,450
+So here storeResult which leads to the async action creator,
+
+35
+00:02:57,450 --> 00:03:02,000
+here we would then have to pass this user ID or whatever it is and for that,
+
+36
+00:03:02,100 --> 00:03:06,500
+we of course need to have access to that user id in our container.
+
+37
+00:03:06,690 --> 00:03:11,830
+But that is something we might be able to expect and we should build our app accordingly.
+
+38
+00:03:11,850 --> 00:03:17,700
+If you just can't do that or don't want to, you have getState as a fallback and you can use it,
+
+39
+00:03:17,910 --> 00:03:19,580
+just don't over use it.
+
+40
+00:03:19,590 --> 00:03:25,690
+Don't put too much logic in there, at least is the route I take in my bigger react applications.
+

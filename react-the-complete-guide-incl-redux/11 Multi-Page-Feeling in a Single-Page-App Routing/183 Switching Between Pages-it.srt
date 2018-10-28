@@ -1,0 +1,104 @@
+1
+00:00:02,220 --> 00:00:09,070
+Ora impariamo come caricare i componenti, aggiungiamo qui pi percorsi per caricare diversi componenti come quando pubblichi
+
+2
+00:00:09,090 --> 00:00:16,260
+un componente in modo che duplichiamo il mio Apotheker e ora cerchiamo nuovi post e qui potremmo anche
+
+3
+00:00:16,260 --> 00:00:23,910
+rimuovere l'esatto perch forse vogliamo gestire tutti i percorsi che iniziano con Slash e postalo con quello o esci
+
+4
+00:00:24,660 --> 00:00:29,670
+esatto tranne se vuoi veramente gestire lo slash e pubblicare e non
+
+5
+00:00:29,670 --> 00:00:31,540
+tagliare e pubblicarne uno.
+
+6
+00:00:31,870 --> 00:00:37,030
+E ora qui il componente naturalmente non  un post ma un componente che dobbiamo importare.
+
+7
+00:00:37,380 --> 00:00:44,900
+Dobbiamo importare un nuovo post da ovviamente slash nuovi post nuovi post proprio come questo.
+
+8
+00:00:44,910 --> 00:00:52,480
+Questo  un Graben che pubblichi qui e modifica come questo nuovo post lo ha salvato.
+
+9
+00:00:52,500 --> 00:00:54,300
+Ora vedi che vediamo i post qui.
+
+10
+00:00:54,450 --> 00:01:00,250
+Ma se clicco su un nuovo post, vediamo il nuovo componente del post e non nei nostri post.
+
+11
+00:01:00,460 --> 00:01:03,070
+Ti sta gi mostrando come funziona il routing.
+
+12
+00:01:03,210 --> 00:01:08,180
+Al momento la nostra applicazione ha un problema, anche se possiamo fare clic su questi collegamenti.
+
+13
+00:01:08,220 --> 00:01:15,120
+Si tratta di un normale testo di ancoraggio, ma ogni volta che la nostra applicazione si ricarica effettivamente come pu vedere se ti
+
+14
+00:01:15,120 --> 00:01:15,770
+guardavi ricaricare.
+
+15
+00:01:15,780 --> 00:01:18,170
+Posso sentire vicino a te o Albar.
+
+16
+00:01:18,540 --> 00:01:20,600
+Ora questo non  un problema qui.
+
+17
+00:01:20,670 --> 00:01:27,450
+Ma in teoria un'applicazione di ricarica significa che il tuo codice javascript sta iniziando un nuovo
+
+18
+00:01:27,480 --> 00:01:31,140
+e quindi tutti i precedenti stati dell'applicazione sono persi.
+
+19
+00:01:31,140 --> 00:01:37,940
+Questo  davvero ci che volevi per la tua applicazione di re-act fintanto che l'utente naviga in esso.
+
+20
+00:01:37,950 --> 00:01:44,940
+Non vuoi ricaricare la pagina che vuoi semplicemente rendere la pagina nelle parti in cui deve
+
+21
+00:01:44,940 --> 00:01:47,880
+essere pre-renderizzata per assomigliare alla nuova pagina.
+
+22
+00:01:47,880 --> 00:01:53,490
+Quindi abbiamo bisogno di cambiare comportamento in modo da non avere un link normale qui che ricarica
+
+23
+00:01:53,490 --> 00:01:59,910
+la pagina ma che invece impediamo la ricostruzione della pagina e lasciamo solo il re-act del router Re-Read per
+
+24
+00:01:59,910 --> 00:02:06,090
+le parti della dom o tell re -fare cosa rileggere o per essere precisi che deve essere reso nuovamente.
+
+25
+00:02:06,090 --> 00:02:13,560
+Quindi, nella prossima lezione, scopriremo come possiamo essere sicuri di rimanere all'interno della nostra applicazione e
+
+26
+00:02:13,590 --> 00:02:15,090
+non ricaricarla continuamente.
+

@@ -1,0 +1,184 @@
+1
+00:00:02,220 --> 00:00:08,340
+W ostatnim wykadzie dowiesz si, e w 16 reakcji moesz zwrci
+
+2
+00:00:08,340 --> 00:00:13,800
+ssiednie elementy w pewnych okolicznociach. Dla jednego z warunkw rekwizyty dla dzieci,
+
+3
+00:00:13,860 --> 00:00:16,110
+stworzylimy ten pomocniczy komponent i powiedziaem
+
+4
+00:00:16,200 --> 00:00:22,500
+ci, e jest to komponent wyszego rzdu o nazwie tak jak to, poniewa wszystko, co robi,
+
+5
+00:00:22,500 --> 00:00:29,320
+to zasadniczo owija inny komponent, tak naprawd nie robi duo wicej, ale robi co z tym zawijaniem
+
+6
+00:00:29,400 --> 00:00:35,940
+skadnik, w tym przypadku po prostu wyprowad go z rekwizytami, abymy mogli wykorzysta t przewag lub
+
+7
+00:00:35,940 --> 00:00:38,800
+wykorzysta t now funkcj reagowania 16.
+
+8
+00:00:38,850 --> 00:00:44,520
+Teraz moesz rwnie tworzy komponenty wyszego rzdu, a przy okazji czsto bdziesz
+
+9
+00:00:44,520 --> 00:00:46,040
+korzysta z niektrych
+
+10
+00:00:46,050 --> 00:00:52,860
+pakietw zewntrznych, ktre dodadz pewn logik do komponentu. Niektre logiki, ktrych moesz potrzebowa w wielu komponentach, ktrych
+
+11
+00:00:52,860 --> 00:00:54,410
+nie chcesz zapisywa w
+
+12
+00:00:54,630 --> 00:01:01,120
+kadym z nich, na przykad udostpni zalogowanego uytkownika, w tym kursie zobaczysz komponenty wyszego rzdu, dodajmy jednak
+
+13
+00:01:01,350 --> 00:01:07,050
+do naszego projektu demonstracyjnego tutaj. Dla osoby. Skadnik js, zawijamy go
+
+14
+00:01:07,170 --> 00:01:17,290
+w div z klasami, osoba jako nazwa klasy, w aplikacji. js robimy to samo, div z klasami aplikacji, ale byoby fajnie,
+
+15
+00:01:17,320 --> 00:01:18,490
+gdybymy mogli
+
+16
+00:01:18,870 --> 00:01:23,490
+uy komponentu wyszego rzdu, ktry to robi, teraz s dwa
+
+17
+00:01:23,630 --> 00:01:31,990
+podejcia, ktre moglibymy zastosowa, poka oba. Pierwszy to by moe z klas. plik js, ktry
+
+18
+00:01:32,060 --> 00:01:40,270
+jest sta withClass rwn funkcji oczywicie, gdzie wszystko, co robimy,
+
+19
+00:01:41,050 --> 00:01:51,270
+to zwracamy jsx gdzie mamy ten pakujcy div i tam moemy ustawi nazw
+
+20
+00:01:51,840 --> 00:01:59,640
+klasy, otrzyma klasy rekwizytw, to jest oczekiwanie tego komponentu, a
+
+21
+00:02:00,150 --> 00:02:04,510
+nastpnie wyjcie wspiera dzieci pomidzy.
+
+22
+00:02:04,520 --> 00:02:11,520
+Nastpnie musimy oczywicie zaimportowa reagowa z reakcji, poniewa zostanie on przeksztacony, aby reagowa
+
+23
+00:02:11,580 --> 00:02:16,730
+na element create, a nastpnie wyeksportowa domyln warto withClass.
+
+24
+00:02:16,740 --> 00:02:19,640
+Teraz moemy korzysta z
+
+25
+00:02:19,680 --> 00:02:30,780
+wrappera Class tutaj, na przykad w aplikacji. plik js, sprbujmy szybko zaimportowa go, zaimportujmy z klas od jednego poziomu
+
+26
+00:02:30,780 --> 00:02:31,830
+do klasy,
+
+27
+00:02:31,950 --> 00:02:33,910
+a teraz, owijmy go.
+
+28
+00:02:34,110 --> 00:02:39,490
+Wic zawimy nasz komponent za pomoc komponentu withClass,
+
+29
+00:02:39,630 --> 00:02:45,220
+tutaj mamy teraz withClass i zamykamy z klas.
+
+30
+00:02:45,250 --> 00:02:47,140
+Wic zamieniamy element
+
+31
+00:02:47,320 --> 00:02:54,310
+div i gdy skonfigurowalimy withClass, spodziewamy si, e klasy zostan uyte jako wasno.
+
+32
+00:02:54,610 --> 00:02:59,530
+Powinnimy to przekaza, rekwizyty oczywicie s czci, ktr przekazalimy midzy
+
+33
+00:02:59,530 --> 00:03:08,670
+tagami otwierajcymi i zamykajcymi, wic ta cz, ale potrzebujemy wasnoci klasy i oczywicie powinna to by aplikacja klas.
+
+34
+00:03:08,680 --> 00:03:14,840
+Wic w zasadzie zastpilimy div, ktry ma nazw klasy z klas, ktra jest klas, wic
+
+35
+00:03:14,860 --> 00:03:17,980
+zapisalimy kilka znakw, ktre nastpnie spanowalimy zamiast div.
+
+36
+00:03:18,070 --> 00:03:23,300
+Nadal jest to dobry przykad dla jednego moliwego wyszego rzdu komponentu, nie
+
+37
+00:03:23,320 --> 00:03:28,900
+robi nic poza zawiniciem zawartoci w div i przypisanie tej klasy css.
+
+38
+00:03:29,260 --> 00:03:37,420
+Jeli teraz to zapisamy, otrzymaj taki sam styl i zachowanie jak wczeniej z withClasses i oczywicie
+
+39
+00:03:37,420 --> 00:03:42,600
+moemy doda to do osoby, w ktrej mamy takie samo
+
+40
+00:03:42,790 --> 00:03:44,130
+zachowanie, pakowanie div.
+
+41
+00:03:44,440 --> 00:03:48,160
+Zrbmy to szybko, zaimportujmy tutaj rwnie klasClass, przejdmy o kilka
+
+42
+00:03:48,370 --> 00:03:51,370
+poziomw, a osigniemy najwyszy poziom, przejdmy do hoc,
+
+43
+00:03:51,370 --> 00:03:58,120
+zaimportujmy klas, a nastpnie ponownie, jak poprzednio, w aplikacji. Plik js, zamie ten element
+
+44
+00:03:58,210 --> 00:04:03,730
+tutaj z klas i klas teraz na klasy,
+
+45
+00:04:03,720 --> 00:04:08,030
+poniewa jest to waciwo, ktrej oczekuje klasaClass.
+
+46
+00:04:08,030 --> 00:04:13,870
+A teraz, jeli powiemy to ponownie, uzyskaj tak sam stylizacj jak poprzednio z naszym niestandardowym komponentem wyszego rzdu.
+

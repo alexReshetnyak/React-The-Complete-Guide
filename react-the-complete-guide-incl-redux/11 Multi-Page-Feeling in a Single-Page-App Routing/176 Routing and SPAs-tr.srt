@@ -1,0 +1,116 @@
+1
+00:00:02,140 --> 00:00:07,170
+Ynlendirme, kullancya farkl sayfalar gsterebilme yeteneidir.
+
+2
+00:00:07,180 --> 00:00:11,200
+Bildiiniz birok web uygulamas muhtemelen birden fazla sayfaya sahiptir.
+
+3
+00:00:11,320 --> 00:00:17,940
+Kullanc sayfalar var, sayfa ne olursa olsun bir Post's Page hesab sayfas var.
+
+4
+00:00:17,950 --> 00:00:22,450
+Elbette tek bir sayfa uygulamasnda birden ok sayfay merak edebilirsiniz.
+
+5
+00:00:22,450 --> 00:00:24,600
+Bunun nasl birlikte altn.
+
+6
+00:00:24,610 --> 00:00:28,450
+Unutmayn aklda tek bir sayfa uygulamas arkasnda fikir sahip olmaktr.
+
+7
+00:00:28,480 --> 00:00:29,290
+yleyse tahmin et.
+
+8
+00:00:29,290 --> 00:00:36,520
+sunmak istiyoruz ancak yine de farkl bir grnm veya baka bir kullanc iin farkl sayfalar gstermek istiyoruz.
+
+9
+00:00:36,620 --> 00:00:41,860
+Tek bir sayfa tek bir HVM'ye dosya olarak kullancya normal bir web deneyimi
+
+10
+00:00:41,860 --> 00:00:50,560
+Hile sadece aslnda birden fazla HVM eksilerini yok olmasdr. Fakat bunun yerine farkl yollar
+
+11
+00:00:50,800 --> 00:00:54,740
+iin farkl sayfalar oluturmak iin javascript kullanyoruz.
+
+12
+00:00:54,880 --> 00:01:02,260
+Dolaysyla gerekten farkl dosyalarmz yok, ancak uygulamanzda hangi yolda dolatna bal olarak,
+
+13
+00:01:02,260 --> 00:01:09,670
+tek sayfadan veya belki de tm tek sayfadan render ksmlarn okuyoruz, ayrtrma
+
+14
+00:01:09,670 --> 00:01:11,780
+ynlendirme de bu.
+
+15
+00:01:12,020 --> 00:01:21,080
+Dediim gibi bunun iin byle bir ilevsellik eklemek iin bir ynlendirici paketi kullanacaz, bylece bu yolu
+
+16
+00:01:21,090 --> 00:01:27,280
+ayrtrmamz gerekmiyor nemsiz olmayan kendi ynlendirici paketi birka grevleri vardr kendi.
+
+17
+00:01:27,280 --> 00:01:35,310
+Paul sody, alanmz teklif ediyor ve uygulamanzda uygun GSX veya bileen kodunu gsteriyor mu?
+
+18
+00:01:35,320 --> 00:01:42,540
+Her eyden nce, kullancnn nereye gitmek istediini anlamak iin bu yolu paralara
+
+19
+00:01:42,550 --> 00:01:43,510
+ayrmanz gerekir.
+
+20
+00:01:43,610 --> 00:01:51,190
+Sonra bir gelitirici olarak uygulamanzda desteklediimiz farkl paralar yaplandrmamz gerekiyor ve ynlendirici paketi
+
+21
+00:01:51,190 --> 00:01:58,510
+yaplandrmamz temel olarak okuyabiliyor ve bylece hangi blmlerin desteklendiini ve kullanc bu
+
+22
+00:01:58,810 --> 00:02:04,940
+blmlerden birini sihirbaz ederken ne olacan biliyor Bu ilk adm.
+
+23
+00:02:05,050 --> 00:02:13,750
+Daha sonra, uygun GSX'i veya bileen kodunu, kullancnn hangi paraya baktna bal olarak oluturup
+
+24
+00:02:13,750 --> 00:02:14,590
+ykleyecektir.
+
+25
+00:02:14,650 --> 00:02:22,330
+Bu, farkl demeler iin farkl kod koullu J x veya bileen kodunu yklemenin ardnda yatan bir fikirdir
+
+26
+00:02:22,330 --> 00:02:28,660
+ve biz kendi yolumuzda kullanclarn hangi yolda olduunu belirlemek zorunda kalmamak iin bir ynlendirici
+
+27
+00:02:28,660 --> 00:02:29,190
+paketi kullanrz.
+
+28
+00:02:29,260 --> 00:02:35,170
+imdi bu modlde portlarn zellikleri araclyla ynlendirici paketini ve uygulamanzda
+
+29
+00:02:35,170 --> 00:02:41,350
+tek sayfa uygulamasnda birden fazla sayfa uygulamak iin nasl kullanacanz anlatacam.
+

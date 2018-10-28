@@ -1,0 +1,272 @@
+1
+00:00:02,190 --> 00:00:07,830
+Back in the auth.js file in the actions folder, we already outsourced quite a lot of logic into the
+
+2
+00:00:07,830 --> 00:00:14,430
+saga folder, into the saga as we created and therefore we get a very lean action creator file here already
+
+3
+00:00:14,850 --> 00:00:17,440
+where I no longer even need to import axios,
+
+4
+00:00:17,460 --> 00:00:23,670
+we can remove that import and now we only have action creators that return actions, that really do just
+
+5
+00:00:23,670 --> 00:00:24,110
+that,
+
+6
+00:00:24,150 --> 00:00:27,490
+they create actions, well with one exception.
+
+7
+00:00:27,690 --> 00:00:35,370
+At the very bottom of this file, we got the authCheckState action creator which we execute at the
+
+8
+00:00:35,370 --> 00:00:40,600
+time our application starts to see if we can log the user in automatically,
+
+9
+00:00:40,950 --> 00:00:43,480
+this should also go into a saga
+
+10
+00:00:43,710 --> 00:00:52,110
+so last but not least, let's add the saga here too. I'll name it just as we named the action creator
+
+11
+00:00:52,110 --> 00:00:54,190
+authCheckStateSaga here,
+
+12
+00:00:55,200 --> 00:00:57,920
+so I'll name it authCheckStateSaga,
+
+13
+00:00:58,020 --> 00:01:07,130
+that's the name, receive my action here as an argument and I will again copy all the code from my auth.js
+
+14
+00:01:07,140 --> 00:01:07,380
+.
+
+15
+00:01:07,380 --> 00:01:11,260
+file in the actions folder and replace it step by step.
+
+16
+00:01:11,670 --> 00:01:13,320
+So what do we do here?
+
+17
+00:01:13,530 --> 00:01:16,390
+We get the token from local storage,
+
+18
+00:01:16,440 --> 00:01:22,230
+I'll add yield in here too as I do for all steps I execute in my sagas.
+
+19
+00:01:22,380 --> 00:01:28,380
+So now we get the token that is a synchronous task here though, I then check if the token does really
+
+20
+00:01:28,380 --> 00:01:29,880
+exist and if it doesn't,
+
+21
+00:01:30,210 --> 00:01:38,810
+I of course still want to dispatch logout here, I'll put actions.logout to basically dispatch this and
+
+22
+00:01:38,810 --> 00:01:42,610
+I will add yield here too. Now
+
+23
+00:01:42,630 --> 00:01:50,460
+the next thing we do is if we have a valid token, we check the expiration date, we calculate it, I'll also
+
+24
+00:01:50,460 --> 00:01:57,150
+yield that and then if this is well earlier than our current date,
+
+25
+00:01:57,300 --> 00:02:03,050
+I also want to yield put logout because we have an invalid expiration date.
+
+26
+00:02:03,180 --> 00:02:11,280
+Else I will get a user ID from local storage and also yield that and then we were successful, so here I'll
+
+27
+00:02:11,280 --> 00:02:14,780
+yield put authSuccess and pass on token
+
+28
+00:02:14,790 --> 00:02:16,070
+and user ID,
+
+29
+00:02:16,080 --> 00:02:23,010
+however here both there and authSuccess should be accessed on the actions object we import to use these
+
+30
+00:02:23,010 --> 00:02:27,530
+action creators and I also want to yield
+
+31
+00:02:27,540 --> 00:02:30,310
+put actions
+
+32
+00:02:30,340 --> 00:02:38,290
+checkAuthTiemout referring to this action creator which well, returns this
+
+33
+00:02:38,290 --> 00:02:43,330
+authCheckoutTimeout action which in turn will trigger another saga.
+
+34
+00:02:43,330 --> 00:02:52,790
+This is actually all, these are all the changes we need, that's my authCheckStateSaga.
+
+35
+00:02:53,060 --> 00:03:00,240
+Now we want to hook this up and make sure that this gets executed at the time we start the application,
+
+36
+00:03:00,350 --> 00:03:07,210
+for this I'll go to the auth.js action creator file and return all the code in this function
+
+37
+00:03:07,210 --> 00:03:09,180
+there, I don't need it anymore.
+
+38
+00:03:09,620 --> 00:03:16,460
+Instead here, I simply want to return my action object and I will create a new action type for this, I'll
+
+39
+00:03:16,460 --> 00:03:25,900
+name it AUTH_CHECK_INITIAL_STATE for example, the name of course is totally up to you,
+
+40
+00:03:26,900 --> 00:03:29,390
+use this here too or maybe not,
+
+41
+00:03:29,510 --> 00:03:36,410
+let's just name it AUTH_CHECK_STATE to be more in line with our action creator name, so AUTH_CHECK_STATE
+
+42
+00:03:37,580 --> 00:03:38,780
+and then down there,
+
+43
+00:03:38,880 --> 00:03:47,520
+I'll return my action of type actionTypes.AUTH_CHECK_STATE and I don't need to pass any arguments or
+
+44
+00:03:47,520 --> 00:03:49,800
+anything with that action,
+
+45
+00:03:49,830 --> 00:03:57,410
+this now should trigger my authCheckStateSaga here and to enable it to do so,
+
+46
+00:03:57,600 --> 00:04:02,020
+I need to set up a listener in the index.js file, there I will yield
+
+47
+00:04:02,040 --> 00:04:14,120
+takeEvery for actionTypes.AUTH_CHECK_STATE and import my newly created authCheckStateSaga which
+
+48
+00:04:14,120 --> 00:04:15,530
+I will execute
+
+49
+00:04:15,590 --> 00:04:22,340
+once this action type is detected. Let's save all files we changed,
+
+50
+00:04:22,410 --> 00:04:30,760
+let's go back and reload the application, we see authSuccess so it did login us automatically successfully.
+
+51
+00:04:30,980 --> 00:04:33,390
+Let's now logout and reload again
+
+52
+00:04:33,890 --> 00:04:41,630
+and now you see still it initiates the check state call here but then initiates logout because it doesn't
+
+53
+00:04:41,630 --> 00:04:44,150
+find a valid token and so on.
+
+54
+00:04:44,180 --> 00:04:52,790
+So now we replaced all the side effects we handled in the auth.js action creator file with code
+
+55
+00:04:52,790 --> 00:04:54,680
+in our saga file,
+
+56
+00:04:54,880 --> 00:05:02,480
+the sagas I executed due to our listeners, our watchers here which in turn is executed here in the index.js
+
+57
+00:05:02,480 --> 00:05:06,130
+file where we run it on our saga middleware.
+
+58
+00:05:06,440 --> 00:05:12,990
+And with that, we made redux-thunk totally redundant for the auth part of our application,
+
+59
+00:05:13,040 --> 00:05:20,210
+now to be able to totally remove it, we of course also need to make it redundant for the burger builder
+
+60
+00:05:20,210 --> 00:05:23,440
+part and the order part
+
+61
+00:05:23,660 --> 00:05:26,250
+and this would already be a great practice for you.
+
+62
+00:05:26,270 --> 00:05:27,450
+So if you feel like it,
+
+63
+00:05:27,530 --> 00:05:29,490
+definitely try this on your own.
+
+64
+00:05:29,510 --> 00:05:31,420
+Try adding more sagas,
+
+65
+00:05:31,490 --> 00:05:33,040
+maybe in new files,
+
+66
+00:05:33,170 --> 00:05:40,390
+set up watchers and replace the code you have in burgerBuilder.js in the actions folder and in order.js
+
+67
+00:05:40,400 --> 00:05:48,290
+in the actions folder with saga code to outsource all your side effects into sagas. We'll do this
+
+68
+00:05:48,290 --> 00:05:50,660
+together starting with the next video.
+

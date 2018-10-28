@@ -1,0 +1,276 @@
+1
+00:00:02,020 --> 00:00:05,690
+E a ltima leitura editamos o componente de ordem superior da classe.
+
+2
+00:00:06,120 --> 00:00:11,310
+Isso, assim como o componente de boi,  um componente que essencialmente envolve os adereos.
+
+3
+00:00:11,310 --> 00:00:12,040
+Crianas.
+
+4
+00:00:12,150 --> 00:00:18,220
+Ento, a parte com o imposto de abertura e encerramento e adicione algo como neste caso at a morte.
+
+5
+00:00:18,250 --> 00:00:26,010
+Agora, esta  uma maneira de fazer isso, mas tambm podemos escrever o componente de ordem superior da classe de forma diferente.
+
+6
+00:00:26,280 --> 00:00:34,220
+Ns podemos nome-lo com classe com uma minscula w e forded eu preciso excluir o antigo primeiro.
+
+7
+00:00:34,440 --> 00:00:40,110
+E esta tambm  apenas uma das convenes para este tipo de componente de ordem superior que  usado um
+
+8
+00:00:40,110 --> 00:00:42,450
+pouco diferente, como voc ver em um segundo.
+
+9
+00:00:42,510 --> 00:00:48,750
+E aqui vou criar uma constante com a classe, mas desta vez esta no  uma funo
+
+10
+00:00:48,750 --> 00:00:54,540
+que leva os adereos, mas uma funo que leva alguma configurao como o nome da classe.
+
+11
+00:00:54,540 --> 00:01:03,430
+E ento isso retornar uma funo que recebe os adereos e, no final,
+
+12
+00:01:03,480 --> 00:01:13,850
+render algo como renderizar uma div com o nome da classe igual ao nome da classe.
+
+13
+00:01:13,870 --> 00:01:22,390
+Ento, o argumento que conseguimos l, no s obteremos o nome da classe, espero que outro argumento para
+
+14
+00:01:22,960 --> 00:01:29,870
+o componente envolvido e o componente envolvido sero realmente usados no componente aqui envolvido.
+
+15
+00:01:29,950 --> 00:01:33,150
+Uma marca de auto-fechamento l.
+
+16
+00:01:33,220 --> 00:01:40,800
+reagir para poder escrever este cdigo GSX e, em seguida, exportar um padro desta com funo de classe.
+
+17
+00:01:40,800 --> 00:01:42,320
+Vou importar re-agir de
+
+18
+00:01:42,560 --> 00:01:48,720
+Agora, tenha em mente que a funo de classe no  um componente funcional,  uma funo
+
+19
+00:01:48,720 --> 00:01:55,070
+javascript normal que espera dois argumentos que retornam uma funo que se qualifica como um componente funcional.
+
+20
+00:01:55,290 --> 00:01:57,000
+Este aqui.
+
+21
+00:01:57,030 --> 00:01:59,460
+Agora, qual  a idia por trs dessa abordagem?
+
+22
+00:01:59,760 --> 00:02:01,000
+Deixe-me te mostrar.
+
+23
+00:02:01,290 --> 00:02:08,870
+Ns temos um cdigo GSX vlido aqui, onde estamos envolvendo um componente, mas agora podemos usar isso um pouco diferente.
+
+24
+00:02:08,940 --> 00:02:16,410
+Ns podemos ir ao arquivo do aplicativo js e livrar-se desse invlucro, o que certamente provocar um erro.
+
+25
+00:02:16,410 --> 00:02:23,340
+Ento, por enquanto, usarei o meu componente auxiliar, depois importado do arquivo do rabo de boi.
+
+26
+00:02:23,340 --> 00:02:26,600
+Ento, vou embrulhar isso basicamente com uma tag invisvel.
+
+27
+00:02:26,660 --> 00:02:28,470
+Isso  o que o Excel faz certo.
+
+28
+00:02:28,500 --> 00:02:30,110
+Apenas retorna as crianas.
+
+29
+00:02:30,120 --> 00:02:33,800
+No adiciona um elemento real de h m.
+
+30
+00:02:33,970 --> 00:02:42,000
+E agora tambm vou importar este novo com funo de classe e deixarei isso com um W minsculas no incio,
+
+31
+00:02:42,000 --> 00:02:47,910
+porque no estou prestes a us-lo como um componente porque esta funo acabou de explicar
+
+32
+00:02:47,910 --> 00:02:50,300
+no se qualifica como um componente.
+
+33
+00:02:50,580 --> 00:02:53,230
+Ele no retorna o GSX direito.
+
+34
+00:02:53,310 --> 00:03:01,660
+Apenas retorna uma funo numrica, ento agora vou importar isso da pasta Agios ver com
+
+35
+00:03:01,660 --> 00:03:03,000
+Classe 2.
+
+36
+00:03:03,520 --> 00:03:07,420
+E agora um para usar com a classe, mas eu no uso isso no meu cdigo GSX.
+
+37
+00:03:07,420 --> 00:03:12,740
+Eu no vou embrulhar nada com isso, porque novamente ele no se qualifica como um componente.
+
+38
+00:03:13,150 --> 00:03:21,490
+Em vez disso, envolvo meu aplicativo aqui, estou exportando com ele. Estou envolvendo isso com a funo de
+
+39
+00:03:21,490 --> 00:03:25,950
+classe e passando aplicativo, bem como aplicativo de classes.
+
+40
+00:03:26,020 --> 00:03:32,440
+32 argumentos  funo de classe, espera que o componente que ele deve envolver e o nome da classe.
+
+41
+00:03:32,440 --> 00:03:36,010
+Ento, para nos ver como classe, eu quero atribuir esses
+
+42
+00:03:36,010 --> 00:03:41,890
+Agora com isso no lugar, vamos todo o trabalho sobre a pessoa que James caiu, onde ainda usamos a classe que
+
+43
+00:03:41,890 --> 00:03:42,880
+no existe mais.
+
+44
+00:03:42,880 --> 00:03:44,290
+Ns exclumos isso.
+
+45
+00:03:44,590 --> 00:03:48,600
+Ento vamos importar com classe aqui da nota conhecida com o arquivo de classe.
+
+46
+00:03:48,670 --> 00:03:50,740
+Lowercase W. E vamos envolver isso com um componente auxiliar.
+
+47
+00:03:50,930 --> 00:03:55,220
+Ento, com alks aqui, vamos embrulhar isso
+
+48
+00:03:55,220 --> 00:04:06,050
+para envolver alks e depois usar com a classe exatamente como usamos em nosso app de Alber J. S. arquivo aqui.
+
+49
+00:04:06,410 --> 00:04:08,560
+Vamos us-lo envolvendo a funo da pessoa.
+
+50
+00:04:09,690 --> 00:04:14,130
+Ns estamos exportando com CLOS para que o pessoal seja todo o componente envolvido.
+
+51
+00:04:14,160 --> 00:04:20,340
+E o segundo argumento deve ser a classe que deseja anexar.
+
+52
+00:04:20,340 --> 00:04:23,220
+Nesse caso, a pessoa assegure-se de
+
+53
+00:04:23,220 --> 00:04:30,750
+que todos os arquivos sejam salvos e agora voltem ao aplicativo e deve funcionar como antes.
+
+54
+00:04:30,750 --> 00:04:33,060
+No entanto, ele no faz clique neste boto e parece no primeiro olhar como se ele funcionasse bem.
+
+55
+00:04:33,060 --> 00:04:40,010
+Mas voc v que todos os elementos dinmicos de todos os adereos das pessoas esto faltando
+
+56
+00:04:40,230 --> 00:04:46,620
+o nome da idade que no podemos digitar ou podemos digitar, mas no atualiza.
+
+57
+00:04:47,120 --> 00:04:50,020
+No recebemos um erro, mas os adereos esto faltando agora.
+
+58
+00:04:50,190 --> 00:04:54,380
+Geralmente, nosso componente de ordem superior est funcionando.
+
+59
+00:04:54,420 --> 00:04:57,640
+E este  um padro que voc
+
+60
+00:04:57,750 --> 00:05:06,090
+ver frequentemente se voc planeja mudar seu componente como esse, envolvendo-o ou fazendo alguma transformao Aberlour com ele.
+
+61
+00:05:06,420 --> 00:05:09,660
+Uma coisa que voc nunca deve fazer aqui  manipular o componente envolvido.
+
+62
+00:05:09,660 --> 00:05:14,320
+Basta us-lo como fazemos aqui.
+
+63
+00:05:14,370 --> 00:05:16,610
+No comece a adicionar ou alterar seu estado ou propriedades.
+
+64
+00:05:16,620 --> 00:05:20,870
+E, como nota lateral, voc no se limita a retornar um componente funcional aqui.
+
+65
+00:05:21,120 --> 00:05:26,700
+Voc tambm pode retornar um componente com estado.
+
+66
+00:05:26,730 --> 00:05:30,050
+Agora, vamos descobrir o que h de errado com
+
+67
+00:05:30,060 --> 00:05:35,910
+esses adereos antes de termos uma olhada em que o componente com status seja retornado aqui.
+
+68
+00:05:35,910 --> 00:05:36,920
+Vamos dar uma olhada em ambos na prxima palestra.
+
+69
+00:05:37,140 --> 00:05:39,180
+&nbsp;
+

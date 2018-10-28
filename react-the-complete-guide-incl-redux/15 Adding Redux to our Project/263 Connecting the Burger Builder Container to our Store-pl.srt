@@ -1,0 +1,468 @@
+1
+00:00:02,250 --> 00:00:06,730
+Ich pomysy s na razie skoczone, przynajmniej jeli chodzi o skadniki.
+
+2
+00:00:07,080 --> 00:00:11,310
+Poczmy misk hamburgerow lub pojemnik z naszym sklepem.
+
+3
+00:00:11,400 --> 00:00:16,890
+Ju teraz zakadamy sklep tutaj w cigu najbliszych trzech lat, spadamy po dwch dostawcw i zawijamy
+
+4
+00:00:16,890 --> 00:00:18,060
+wszystko z dostawc.
+
+5
+00:00:18,270 --> 00:00:22,280
+Teraz nadszed czas, aby pracowa nad mynem burgerowym, aby otrzyma te dane.
+
+6
+00:00:22,680 --> 00:00:24,230
+I dowiadujesz si, jak to dziaa.
+
+7
+00:00:24,240 --> 00:00:26,870
+Dziaa z funkcj connectome.
+
+8
+00:00:26,910 --> 00:00:29,980
+Importujemy z reduktora re-act.
+
+9
+00:00:30,030 --> 00:00:38,480
+Wic sprbujmy importowa poczenie z tego reduktora ponownie, tak jak w przypadku tego importu, i pozwlmy
+
+10
+00:00:38,570 --> 00:00:40,650
+sobie na nasz eksport.
+
+11
+00:00:40,730 --> 00:00:47,980
+A dokadniej, nie spieszmy si z tym, po prostu zapakujmy map do rekwizytw i mapujemy stwory
+
+12
+00:00:47,990 --> 00:00:52,860
+do Constance wraz z ni i pastie do niej Berger Boulder.
+
+13
+00:00:53,180 --> 00:01:01,940
+Ale tutaj mamy do czynienia z problemem, w ktrym mamy ju komponent wyszego rzdu owijajcy nasz eksport z komponentem
+
+14
+00:01:01,970 --> 00:01:05,070
+wysokiego poziomu obsugi bdw, ktry tutaj skonfigurowalimy.
+
+15
+00:01:05,570 --> 00:01:07,500
+To waciwie nie jest problem.
+
+16
+00:01:07,520 --> 00:01:11,950
+Moesz mie tyle elementw wyszego rzdu, ile chcesz.
+
+17
+00:01:12,170 --> 00:01:18,320
+W kocu, co zrobi Connect, to po prostu ustawi jakie rekwizyty na zawijanym komponencie.
+
+18
+00:01:18,620 --> 00:01:25,280
+Tak dugo, jak bdziesz przekazywa te rekwizyty we wasnych komponentach wyszego rzdu, powinno to dziaa dobrze,
+
+19
+00:01:25,290 --> 00:01:32,210
+poniewa wszelkie rekwizyty ustawione przez nasze komponenty wyszego rzdu, ktre mog POWTRZY to, bd nadal przekazywane
+
+20
+00:01:32,210 --> 00:01:32,790
+dobrze.
+
+21
+00:01:32,960 --> 00:01:35,690
+To wcale nie powinno stanowi problemu.
+
+22
+00:01:35,930 --> 00:01:43,370
+Zobaczmy wic, czy to dziaa, wrmy do Burger Bolar i potraktujmy nasze Q-Constans, aby znale
+
+23
+00:01:43,370 --> 00:01:53,840
+rekwizyty, ktre dostaniemy do burgerowej mapy Bolerw do rekwizytw i mapujemy stan na rekwizyty Zamieni kolejno, poniewa robiem to wczeniej, wic
+
+24
+00:01:53,840 --> 00:02:02,000
+Conn's map state to prop jest teraz map state, w ktrym rekwizyt posiada funkcj, ktra automatycznie
+
+25
+00:02:02,000 --> 00:02:08,270
+odbiera stan i ktra zwraca obiekt javascript, w ktrym definiujemy, ktra waciwo powinna
+
+26
+00:02:08,270 --> 00:02:10,540
+zawiera Sly's danego stanu.
+
+27
+00:02:10,880 --> 00:02:19,280
+Tak wic moglibymy stworzy jony G dla skadnikw i przypisa skadniki stanu tak, aby uzyska dostp
+
+28
+00:02:19,280 --> 00:02:26,480
+do tej waciwoci skadnika w naszym stanie i wysane do wniosku obecnie otrzymuje funkcj
+
+29
+00:02:26,480 --> 00:02:30,840
+lub peni funkcj, ktra odbiera funkcj wysyki jako argument.
+
+30
+00:02:31,250 --> 00:02:35,360
+A nastpnie wszystkie obiekty zwracane z przypuszczalnie odwzorowaniami funkcji.
+
+31
+00:02:35,360 --> 00:02:43,100
+W tym przypadku i tutaj chc mie do wysania w zasadzie rekwizyty Shabelle lub dwa rekwizyty, ktre
+
+32
+00:02:43,100 --> 00:02:44,480
+mog zosta uruchomione.
+
+33
+00:02:44,480 --> 00:02:53,000
+Bd mia skadnik dodajcy wasno, a ta nazwa wasnoci, jak ta tutaj, jest oczywicie cakowicie zalena
+
+34
+00:02:53,000 --> 00:02:54,130
+od ciebie.
+
+35
+00:02:54,620 --> 00:03:02,690
+Tak wic tutaj dodamy bdzie posiada anonimow funkcj, w ktrej nastpnie wykonuj wysyk i przekazuj pasek kanaw Optik,
+
+36
+00:03:02,690 --> 00:03:09,470
+gdzie typ powinien by teraz moim typem akcji ADD Ingredion i dla tego bd przenosi
+
+37
+00:03:09,470 --> 00:03:18,020
+si a do pliku i importowa wszystko jak akcj typy z tego folderu typw dziaa, ktre moemy znale dwa
+
+38
+00:03:18,020 --> 00:03:21,790
+poziomy w folderze sklepu, a akcje po prostu upadaj.
+
+39
+00:03:21,790 --> 00:03:24,440
+Tutaj s przechowywane typy akcji.
+
+40
+00:03:24,440 --> 00:03:26,600
+Wic teraz to jest to, co tutaj podpisz.
+
+41
+00:03:26,600 --> 00:03:29,960
+Typ to typy dziaa dodaj skadnik.
+
+42
+00:03:30,440 --> 00:03:37,820
+A teraz, jeli spojrzymy na reduktor i prawdopodobnie wszyscy pamitacie skadnik, tak
+
+43
+00:03:37,820 --> 00:03:40,790
+jak skadnik usuwajcy wymaga adunku.
+
+44
+00:03:40,850 --> 00:03:45,070
+Uywamy tam nazwy skadnika i mamy do niej dostp w akcji.
+
+45
+00:03:45,260 --> 00:03:49,470
+Musimy wic poda nazw skadnika wraz z typem.
+
+46
+00:03:49,480 --> 00:03:57,730
+Wic z powrotem w budowniczym burgera typ jest jedn rzecz, ale ustawi te nazw skadnika akcji
+
+47
+00:03:57,760 --> 00:03:59,950
+i nazw skadnika skadnika.
+
+48
+00:03:59,950 --> 00:04:06,480
+Teraz jest co, co spodziewam si uzyska tutaj w tej funkcji, wic po prostu nazw to nazwa jon.
+
+49
+00:04:06,490 --> 00:04:12,880
+Moesz oczywicie nazwa ten argument, a nastpnie podpisz go tutaj jako warto, a
+
+50
+00:04:12,910 --> 00:04:21,490
+nastpnie zduplikuj t waciwo i dodaj wasn waciwo usunit z Ingredion, w ktrej rwnie spenia ona nazw
+
+51
+00:04:21,490 --> 00:04:22,110
+skadnika.
+
+52
+00:04:22,210 --> 00:04:30,520
+Ale tutaj wysaem akcj usuwania skadnika, ale nadal przekazuj nazw skadnika.
+
+53
+00:04:30,520 --> 00:04:37,630
+Teraz mamy te dwie stae mapy, mapujemy dwa rekwizyty i mapujemy t poprawk, dwa skonfigurowane rekwizyty, moemy
+
+54
+00:04:37,630 --> 00:04:39,860
+poczy nasz komponent z redux.
+
+55
+00:04:40,210 --> 00:04:47,470
+Dodajmy wic connect, ktry ju zaimportowalimy i przekazujemy mapy stanw do rekwizytw i mapujemy t poprawk
+
+56
+00:04:47,470 --> 00:04:55,120
+na props jako argumenty, a nastpnie to wywoanie bdu caej procedury obsugi bdw caej szerokoci, jako argumentu
+
+57
+00:04:55,120 --> 00:04:59,470
+dla funkcji function disconnect call, zwraca nam t konfiguracj.
+
+58
+00:04:59,470 --> 00:05:05,100
+Teraz mamy kontener Bergere Boulder podczony do sklepu.
+
+59
+00:05:05,320 --> 00:05:12,430
+Wykorzystajmy teraz wszystkie te rekwizyty, ktre s dostpne w burger Bergere lub jak ja i ona jest wszdzie
+
+60
+00:05:12,430 --> 00:05:16,480
+tam, gdzie uywamy skadnikw, ktre teraz chcemy wykorzysta nasz energi.
+
+61
+00:05:16,750 --> 00:05:22,120
+I usun z tego skadniki, aby byo jasne, e nie uywamy ju
+
+62
+00:05:22,120 --> 00:05:26,800
+lokalnego stanu dla skadnikw, za cen, ktr teraz przynajmniej bdziemy.
+
+63
+00:05:26,800 --> 00:05:33,940
+Naprawmy to lub ustawmy ten skadnik na skadnik i usu modu obsugi skadnika.
+
+64
+00:05:33,940 --> 00:05:36,890
+Powinnimy to cakowicie usun.
+
+65
+00:05:36,910 --> 00:05:41,760
+Ale zostawi to tutaj, odkd pniej wybrae kod z cen cakowit.
+
+66
+00:05:41,890 --> 00:05:44,000
+Ale nie chcemy ju ich wykonywa.
+
+67
+00:05:44,290 --> 00:05:51,390
+Zamiast tego, jeli przejdziemy do metody renderowania, gdziekolwiek uzyskamy dostp do skadnikw tego stanu,
+
+68
+00:05:51,400 --> 00:05:54,240
+chcemy uy tych rekwizytw zamiast energii.
+
+69
+00:05:54,490 --> 00:05:57,450
+Istnieje wasno ustawiona w stanie mapy.
+
+70
+00:05:57,520 --> 00:06:05,580
+Rekwizyty tutaj, wic to jest to, co chcemy uy metody renderowania godzinowego, ktra rekwizytuje I Algy. Zamiast
+
+71
+00:06:05,610 --> 00:06:09,270
+bdu stanu skadnikw stanu i tak dalej.
+
+72
+00:06:09,300 --> 00:06:11,270
+Pozostaniemy w kontakcie teraz.
+
+73
+00:06:11,580 --> 00:06:16,920
+Ale tutaj na przykad skadniki pastwa okrelaj te rekwizyty i.
+
+74
+00:06:17,300 --> 00:06:20,280
+A tutaj s Bergere, gdzie jestemy przeszymi skadnikami.
+
+75
+00:06:20,280 --> 00:06:21,050
+Zgadnij co.
+
+76
+00:06:21,120 --> 00:06:23,430
+To s rekwizyty I-i.
+
+77
+00:06:23,930 --> 00:06:25,410
+I tak dalej.
+
+78
+00:06:25,640 --> 00:06:32,300
+Teraz najpierw wymieniam wszystkie skadniki, zanim zaczn prac nad zielonym dodatkiem i usuwam rekwizyty tutaj.
+
+79
+00:06:32,360 --> 00:06:34,260
+Pozwl mi i dalej.
+
+80
+00:06:34,260 --> 00:06:40,700
+Caa firma ma rekwizyty I Angie i tak powinno by.
+
+81
+00:06:40,700 --> 00:06:44,990
+Teraz pracujmy nad dodatkiem skadnika i usu funkcje obsugi skadnikw.
+
+82
+00:06:45,320 --> 00:06:46,980
+Ju tego nie nazywamy.
+
+83
+00:06:47,090 --> 00:06:57,770
+Zamiast tego wykonujemy te rekwizyty na dodanym skadniku, a rekwizyty na usunitym skadniku, ale obie funkcje koca
+
+84
+00:06:57,770 --> 00:06:59,330
+wymagaj argumentu.
+
+85
+00:06:59,570 --> 00:07:06,290
+Jeli przewiniemy do naszej mapy t stron, dwa stae podprki widzimy, e funkcja jest przechowywana w
+
+86
+00:07:06,290 --> 00:07:09,540
+tych rekwizytach lub przekazywana na te rekwizyty.
+
+87
+00:07:09,740 --> 00:07:15,250
+Obaj przyjmuj nazw skadnika jako argument, by nas tu wyprzedzi.
+
+88
+00:07:15,260 --> 00:07:18,540
+Przede wszystkim rzumy okiem na nasz komponent kontroli Boltt.
+
+89
+00:07:18,650 --> 00:07:24,620
+Jeli przejdziemy do naszych komponentw i otworzymy folder kontroli rub i przejdziemy
+
+90
+00:07:25,190 --> 00:07:33,550
+do komponentu kontroli zbiorczej, widzimy, e ju przekazalimy tutaj typ kontrolny jako argument do dodanego i usunitego
+
+91
+00:07:33,560 --> 00:07:34,230
+skadnika props.
+
+92
+00:07:34,280 --> 00:07:40,490
+Tak wic do metody, ktra przechodzi przez te rekwizyty i ktra jest wanie t wanie metod, ktr
+
+93
+00:07:40,490 --> 00:07:41,730
+wanie tutaj ustawilimy.
+
+94
+00:07:42,260 --> 00:07:48,830
+Teraz oznacza to, e musimy sprawdzi, czy typ kontrolny jest dokadnie tym, czego szukamy, i to dlatego,
+
+95
+00:07:48,860 --> 00:07:53,860
+e typem kontroli jest ta cz, to typ saatkowy z bekonem i misem.
+
+96
+00:07:54,020 --> 00:08:01,850
+I to ma taki sam format jak nazwy, ktrych uywamy jako waciwoci w naszym paszczu reduktorw i
+
+97
+00:08:01,850 --> 00:08:05,330
+oczywicie powinnimy upewni si, e jest to rwne.
+
+98
+00:08:05,330 --> 00:08:11,600
+Moesz oczywicie posun si tak daleko i zreorganizowa swoj aplikacj, aby poda skadnikowi
+
+99
+00:08:11,600 --> 00:08:16,600
+nazwy waciwoci tutaj, aby utworzy kontrol, a hamburger pogrubiony w kontroli.
+
+100
+00:08:16,750 --> 00:08:23,510
+Skadnik tutaj, ale pozostawiamy go takim, jaki jest, i upewniamy si, e
+
+101
+00:08:23,810 --> 00:08:30,010
+przekazujemy waciw warto naszym dyspozytorom akcji, a nastpnie zapisujemy wszystkie pliki.
+
+102
+00:08:30,310 --> 00:08:31,930
+A teraz wyprbujmy to.
+
+103
+00:08:32,030 --> 00:08:39,560
+Wracajc do naszej dziaajcej aplikacji, dodajmy do tego burgera kilka skadnikw, takich jak ser
+
+104
+00:08:39,890 --> 00:08:42,950
+bekonowy czy miso. Wszystko dziaa dobrze.
+
+105
+00:08:43,280 --> 00:08:51,230
+Oczywicie cena nie jest tutaj aktualizowana, poniewa mamy tu do czynienia z tym, e nie zmieniamy
+
+106
+00:08:51,230 --> 00:08:53,630
+stanu ceny w adnym momencie.
+
+107
+00:08:53,790 --> 00:08:55,960
+Zajmiemy si tym wkrtce.
+
+108
+00:08:56,000 --> 00:08:57,740
+Reszta dziaa.
+
+109
+00:08:58,050 --> 00:09:02,290
+Przycisk "teraz zamwienie" rwnie nie staje si aktywny.
+
+110
+00:09:03,120 --> 00:09:05,750
+Rzumy teraz okiem na ten przycisk teraz.
+
+111
+00:09:05,880 --> 00:09:11,970
+Powodem, dla ktrego nie staje si aktywny, jest to, e w kocu kontroluje on kupowane
+
+112
+00:09:11,970 --> 00:09:12,740
+tu owoce.
+
+113
+00:09:12,900 --> 00:09:18,000
+Rzucilimy okiem na ten wczeniejszy przycisk w marcowym zamwieniu Sodhi, aby wyceni.
+
+114
+00:09:18,000 --> 00:09:23,580
+S to dwie rzeczy, nad ktrymi bdziemy musieli pracowa, ale ju dziaaj wietnie
+
+115
+00:09:23,630 --> 00:09:24,990
+w hamburgerze Boler.
+
+116
+00:09:25,170 --> 00:09:30,510
+Kontynuujmy t drog i upewnijmy si, e przycisk zamwienia teraz dziaa i e
+
+117
+00:09:30,510 --> 00:09:31,230
+aktualizujemy cen.
+

@@ -1,0 +1,112 @@
+1
+00:00:02,190 --> 00:00:06,300
+W ostatnim wykadzie zaczlimy usuwa osoby, robilimy to
+
+2
+00:00:06,300 --> 00:00:11,830
+uzyskujc dostp do wszystkich osb w stanie, usuwajc jeden element, ktry
+
+3
+00:00:11,830 --> 00:00:16,320
+chcielimy usun, uywajc indeksu osoby i aktualizujc stan.
+
+4
+00:00:16,320 --> 00:00:23,700
+Wada tego podejcia polega na tym, e w javascriptie obiekty i tablice s
+
+5
+00:00:23,700 --> 00:00:31,860
+typami referencyjnymi, wic kiedy dostaj osoby z mojego stanu, tak jak ja tutaj, dostaj wskanik
+
+6
+00:00:31,860 --> 00:00:35,370
+do obiektu oryginalnej osoby zarzdzanej przez
+
+7
+00:00:35,370 --> 00:00:43,560
+reakcj, do pierwotnego stanu, ktry powinienem powiedzie . Jeli potem go tutaj spakuj, ju zmutowuj oryginalne dane i
+
+8
+00:00:43,560 --> 00:00:47,180
+chocia dziaa bez popenienia bdu, nie jest tak, jak
+
+9
+00:00:47,190 --> 00:00:52,850
+powiniene to zrobi, moe to prowadzi do nieprzewidywalnych aplikacji i jest zdecydowanie z praktyk.
+
+10
+00:00:52,920 --> 00:01:00,810
+Dobr praktyk jest utworzenie kopii macierzy osb przed jej manipulacj, a
+
+11
+00:01:00,810 --> 00:01:08,430
+prostym sposobem jest wywoanie metody plasterka. Kawaek bez argumentw po prostu kopiuje pen tablic i zwraca
+
+12
+00:01:08,430 --> 00:01:10,950
+now, ktra jest nastpnie przechowywana tutaj.
+
+13
+00:01:11,190 --> 00:01:18,570
+Moesz teraz bezpiecznie edytowa ten nowy, a nastpnie zaktualizowa go do stanu reakcji z now tablic.
+
+14
+00:01:19,400 --> 00:01:28,950
+Alternatyw dla tego podejcia byoby uycie go jako funkcji ES6, operatora rozprzestrzeniania. Moesz po prostu ustawi osoby rwne nowej macierzy,
+
+15
+00:01:28,950 --> 00:01:37,400
+a ta nowa tablica moe teraz uywa operatora rozrzutu, ktry moe wyglda dziwnie, ale
+
+16
+00:01:37,580 --> 00:01:39,540
+jest to operator
+
+17
+00:01:39,540 --> 00:01:43,650
+javascript, do ktrego teraz podchodzisz do osb stanu.
+
+18
+00:01:43,700 --> 00:01:50,180
+To, co to robi, rozkada elementy w tej tablicy na list elementw, ktre po prostu zostaj
+
+19
+00:01:50,180 --> 00:01:56,920
+dodane do tej tablicy, dziki czemu teraz mamy tablic, now tablic, z obiektami ze starej tablicy,
+
+20
+00:01:57,170 --> 00:01:59,480
+ale nie ze star tablic samo.
+
+21
+00:01:59,720 --> 00:02:02,720
+Jest to w zasadzie odpowiednik metody wycinania,
+
+22
+00:02:02,720 --> 00:02:04,350
+uyj tego, ktry preferujesz,
+
+23
+00:02:04,490 --> 00:02:11,060
+jest to bardziej nowoczesny i czciej bdziesz widzie tego operatora rozprzestrzeniania si w trakcie kursu.
+
+24
+00:02:11,080 --> 00:02:16,050
+Dziki temu uzyskujemy takie samo zachowanie jak poprzednio i nie naprawilimy komunikatw o bdach,
+
+25
+00:02:16,060 --> 00:02:21,790
+nadal dziaa tak jak poprzednio, ale mog powiedzie, e jest to lepsze podejcie do aktualizacji stanu.
+
+26
+00:02:21,800 --> 00:02:28,160
+Powiniene zawsze aktualizowa stan w niezmienny sposb, bez uprzedniego zmutowania oryginalnego stanu.
+
+27
+00:02:28,430 --> 00:02:33,780
+Utwrz kopi, zmie j, a nastpnie zaktualizuj stan na wymieniony stan.
+
+28
+00:02:33,830 --> 00:02:37,590
+Nadal istniej rzeczy, ktre moemy i powinnimy poprawi na naszej licie.
+

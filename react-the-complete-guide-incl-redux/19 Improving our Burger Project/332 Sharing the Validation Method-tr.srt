@@ -1,0 +1,124 @@
+1
+00:00:02,140 --> 00:00:06,690
+Son derste, updateObject, bu yardmc program ilevini kullandk.
+
+2
+00:00:06,690 --> 00:00:13,830
+imdi birden fazla dosyada paylatmz bir baka zellik daha var ve bu yzden d kaynak
+
+3
+00:00:13,830 --> 00:00:14,350
+kullanmak
+
+4
+00:00:14,670 --> 00:00:16,940
+mantkl gelecektir, ben dorulama mant,
+
+5
+00:00:17,100 --> 00:00:18,500
+checkValidity hakknda konuuyorum.
+
+6
+00:00:18,570 --> 00:00:22,820
+Bu, auth kapsaycsnda ve iletiim veri kabnda ayn yntemdir, bu nedenle
+
+7
+00:00:23,070 --> 00:00:30,690
+checkValidity'i kapmak ve paylalan klasrmze yardmc programa koymak anlamldr. rnein js dosyas, ayrca yeni
+
+8
+00:00:30,690 --> 00:00:31,680
+bir
+
+9
+00:00:31,710 --> 00:00:36,300
+dorulama da oluturabilirsiniz. js dosyas, ne istersen.
+
+10
+00:00:36,300 --> 00:00:38,360
+Bu yzden checkValidity kullanacam, tabiki
+
+11
+00:00:38,490 --> 00:00:42,330
+artk bir yntem deil, bunun yerine bir fonksiyon var, bu
+
+12
+00:00:42,330 --> 00:00:46,910
+yzden onu iki argman bekler bir ok fonksiyonu olarak ihra edelim.
+
+13
+00:00:46,960 --> 00:00:52,250
+Bu, onu yeniden yaplandrarak basitletirir, const eittir iaretini ve bir hatay da aktarr
+
+14
+00:00:52,650 --> 00:00:58,380
+ve ilev iinde hibir ey deimez, nk biz sadece iyi bir ileve sahip olmamz
+
+15
+00:00:58,380 --> 00:01:01,050
+gerektii gibi, orada ilev argmanlaryla alacaz.
+
+16
+00:01:01,380 --> 00:01:07,710
+Bu yzden, imdi irtibat verilerinde ve auth konteynrnda checkValidity'i kullanabiliriz, hadi auth kapsaycsn balatalm,
+
+17
+00:01:07,710 --> 00:01:09,620
+nk onu yeni kaldrdm
+
+18
+00:01:09,750 --> 00:01:16,370
+ve bunun iin ben de updateObject 'i de ithal ettiim yardmc programdan ithal edeceim.
+
+19
+00:01:16,770 --> 00:01:24,030
+Ve imdi sadece arlarm deitirmem gerekiyor. Sadece ithalat ekledim sadece checkValidity ile checkValidity ve
+
+20
+00:01:24,060 --> 00:01:26,200
+hepsi bu ve bu dosya
+
+21
+00:01:26,250 --> 00:01:30,840
+biraz daha yaln yapar ve bu gereksiz kod oaltma kaldrr.
+
+22
+00:01:31,140 --> 00:01:33,320
+imdi iletiim verileri iin
+
+23
+00:01:33,540 --> 00:01:39,960
+ayn eyi yapalm, orada da checkValidity'i yardmc program dosyasndan ie aktaracam ve
+
+24
+00:01:39,960 --> 00:01:46,530
+daha sonra bu checkValidity ile kullandm yerde sadece checkValidity'i arayacam ve elbette
+
+25
+00:01:46,530 --> 00:01:50,050
+ki imdi kaldrabileceim anlamna gelir checkValidity yntemi.
+
+26
+00:01:50,190 --> 00:01:54,130
+Her iki dosyay da kaydedelim ve bunun hala ie yarayp yaramadn grelim.
+
+27
+00:01:54,300 --> 00:01:58,490
+Uygulamaya geri dnersek ve bir burger yapmaya balarsak,
+
+28
+00:01:58,620 --> 00:02:01,480
+oradaki iletiim bilgilerimize bir bakalm.
+
+29
+00:02:01,890 --> 00:02:06,580
+Bunu boaltrsam, dorulama hala iyi alyor gibi grnyor, bu yzden
+
+30
+00:02:06,660 --> 00:02:08,270
+her ey hala alyor,
+
+31
+00:02:08,340 --> 00:02:14,290
+ancak imdi elbette, checkValidity'i kendi dosyasna d kaynak kullanarak kodu byk lde gelitirdik.
+

@@ -1,0 +1,144 @@
+1
+00:00:02,190 --> 00:00:05,310
+Porozmawiajmy teraz troch o bezpieczestwie, pozwl
+
+2
+00:00:05,430 --> 00:00:09,350
+mi zalogowa si ponownie. Jak si dowiedzielimy,
+
+3
+00:00:09,360 --> 00:00:16,290
+zarzdzamy naszym stanem uwierzytelnienia tutaj z tokenem i automatycznie logujemy
+
+4
+00:00:16,320 --> 00:00:22,790
+uytkownika, jeli mamy wany token. Ten token jest wany tylko przez 60 minut, ze
+
+5
+00:00:22,800 --> 00:00:27,000
+wzgldw bezpieczestwa, poniewa jeli token zostanie skradziony, kady moe uzyska dostp do
+
+6
+00:00:27,000 --> 00:00:29,010
+danych oczywicie, teraz brzmi bardzo le.
+
+7
+00:00:29,010 --> 00:00:36,150
+Pamitaj, e jest przechowywany w aplikacji w pamici lokalnej, dostp do lokalnej pamici jest moliwy
+
+8
+00:00:36,150 --> 00:00:43,800
+przy uyciu atakw typu cross-site scripting, a ataki cross-site scripting s blokowane przez Angular, domylnie nie
+
+9
+00:00:43,890 --> 00:00:45,760
+moesz wyprowadza niezabezpieczonego kodu.
+
+10
+00:00:46,020 --> 00:00:48,500
+Tak wic masz duo ochrony od
+
+11
+00:00:48,750 --> 00:00:55,020
+tej strony, wic twoje dane i lokalna pami masowa powinny by bezpieczne, dodatkowa sie bezpieczestwa, to
+
+12
+00:00:55,020 --> 00:00:57,050
+znowu token wygasa po godzinie.
+
+13
+00:00:57,060 --> 00:01:02,520
+Teraz baza ogniowa teoretycznie daaby ci rwnie ten odwieony token, jeli sprawdzimy
+
+14
+00:01:02,520 --> 00:01:03,900
+odpowied, ktr otrzymujemy,
+
+15
+00:01:03,960 --> 00:01:08,080
+tutaj ten odwieony token. Odnowienie tokena nie wygasa, moesz
+
+16
+00:01:08,130 --> 00:01:14,640
+zapisa to rwnie w pamici lokalnej, a nastpnie jest okrelony punkt kocowy interfejsu API auts
+
+17
+00:01:14,640 --> 00:01:22,200
+odpoczynku firebase, w ktrym moesz wymieni odwieony token na token ID, po prostu odelij swj odwieony token
+
+18
+00:01:22,350 --> 00:01:27,010
+do tego Punkt kocowy interfejsu API i otrzymasz nowy token identyfikatora.
+
+19
+00:01:27,180 --> 00:01:29,130
+Teoretycznie jest to fajny wzorzec,
+
+20
+00:01:29,130 --> 00:01:34,590
+zawsze moesz to zrobi przy kadym wysyanym daniu HTTP, przy kadym wysyanym daniu przesyaj
+
+21
+00:01:34,590 --> 00:01:40,410
+dodatkowy, w ktrym wymieniasz token odwieania na nowy token tosamoci, nawet jeli token identyfikatora jeszcze
+
+22
+00:01:40,410 --> 00:01:41,510
+nie wygas, wic
+
+23
+00:01:41,610 --> 00:01:46,890
+e zawsze otrzymujesz nowe tokeny identyfikacyjne i moesz rwnie otrzyma nowe, gdy uytkownik
+
+24
+00:01:46,890 --> 00:01:53,760
+automatycznie zaloguje si z funkcjami dodanymi przez nas podczas ostatnich wykadw, zdecydowaem si nie uywa tego tutaj.
+
+25
+00:01:53,820 --> 00:01:59,730
+Jest take bezpieczny, poniewa moemy przechowywa token odwieania w lokalnej pamici i jak wspomniaem, jest to dostpne
+
+26
+00:01:59,730 --> 00:02:02,410
+tylko w przypadku atakw typu cross-site scripting.
+
+27
+00:02:02,730 --> 00:02:09,210
+Jednak posiadanie tokena, ktry nigdy nie wygasa i ktre mona wymieni na token,
+
+28
+00:02:09,210 --> 00:02:16,890
+ktry daje dostp do wszystkiego, moe prowadzi do problemw z bezpieczestwem lub przynajmniej naley zachowa ostrono
+
+29
+00:02:16,890 --> 00:02:20,340
+w jego ochronie, jeli uywasz tokena odwieania.
+
+30
+00:02:20,340 --> 00:02:22,220
+To jest co, co
+
+31
+00:02:22,260 --> 00:02:27,930
+chciaem doda, moesz poprawi wraenia uytkownika uywajc tokena odwieania, moesz zasadniczo upewni si,
+
+32
+00:02:27,930 --> 00:02:34,980
+e uytkownik nigdy si nie wyloguje, poniewa odwieony token nigdy nie wygasa, moesz odwiey gwny token nawet
+
+33
+00:02:34,980 --> 00:02:36,220
+po tygodniu sprawd,
+
+34
+00:02:36,480 --> 00:02:39,240
+czy token jest wany, nie jest, we
+
+35
+00:02:39,410 --> 00:02:44,280
+odwieajcy token i uzyskaj nowy, ale z powodu tego zabezpieczenia zdecydowaem si
+
+36
+00:02:44,280 --> 00:02:48,140
+go nie uywa i chciaem zwrci na to uwag.
+

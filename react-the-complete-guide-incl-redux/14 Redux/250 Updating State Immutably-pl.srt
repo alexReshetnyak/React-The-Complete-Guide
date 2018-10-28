@@ -1,0 +1,668 @@
+1
+00:00:02,240 --> 00:00:06,860
+W skrcie dowiemy si, jak tu troch zrestrukturyzowa nasz reduktor.
+
+2
+00:00:07,160 --> 00:00:10,650
+Zanurzmy si w wikszym zarzdzaniu pastwem.
+
+3
+00:00:10,940 --> 00:00:13,670
+Dodajmy teraz nowy etap.
+
+4
+00:00:13,800 --> 00:00:19,420
+Moe nazwijmy to atakiem tak now waciwo do naszego stanu, e powinienem powiedzie i pocztkowo powinien by
+
+5
+00:00:19,420 --> 00:00:20,280
+na pustej tablicy.
+
+6
+00:00:20,300 --> 00:00:25,100
+Przejdmy teraz do naszego komponentu licznika tu i tam.
+
+7
+00:00:25,400 --> 00:00:27,570
+Chc doda nowy przycisk.
+
+8
+00:00:27,590 --> 00:00:34,320
+Przede wszystkim dodaj lini poziom z samym elementem samozamykajcym, a dodam tutaj normalny
+
+9
+00:00:34,320 --> 00:00:35,010
+przycisk.
+
+10
+00:00:35,080 --> 00:00:45,710
+Po prostu powiemy wynik sklepu tak, a ten wynik powinien zosta dodany do uporzdkowanej listy.
+
+11
+00:00:45,710 --> 00:00:50,490
+To wszystko nie ma teraz adnej stylizacji, ktr tworz poniej tego przycisku.
+
+12
+00:00:50,510 --> 00:01:01,070
+Teraz chodzi o to, e po klikniciu wyniku sklepu po prostu dodaj biec warto licznika do mojej listy
+
+13
+00:01:01,070 --> 00:01:02,120
+wynikw tutaj.
+
+14
+00:01:02,540 --> 00:01:09,290
+Tak wic oczywicie chc wysa akcj po klikniciu tego przycisku, a nastpnie popchn nowy
+
+15
+00:01:09,290 --> 00:01:11,310
+atak do wynikw testu.
+
+16
+00:01:11,330 --> 00:01:13,730
+Aere aktualizuje t tablic.
+
+17
+00:01:14,210 --> 00:01:17,130
+I oczywicie we biecy licznik jako dane wejciowe.
+
+18
+00:01:17,510 --> 00:01:23,900
+Dodatkowo, jeli klikn jeden z tych wynikw, to jeden z tych elementw listy wybraem z
+
+19
+00:01:23,900 --> 00:01:24,520
+tablicy.
+
+20
+00:01:24,830 --> 00:01:28,580
+Powinien wic mie pomys na co podobnego do mierci, dziki ktremu mog go zidentyfikowa.
+
+21
+00:01:28,910 --> 00:01:37,480
+A kiedy usuniesz element listy danych po tym, to najpierw zaczn tutaj w moim komponencie
+
+22
+00:01:37,490 --> 00:01:38,190
+kontenera.
+
+23
+00:01:38,390 --> 00:01:44,240
+Chocia nie pracowaem nad reduktorem ani nic takiego, po prostu dodam dwa nowe rekwizyty,
+
+24
+00:01:44,240 --> 00:01:51,560
+aby odwzorowa t stron na rekwizyty, poniewa potrzebuj dwch nowych funkcji w zasadzie dwch nowych funkcji wysykowych.
+
+25
+00:01:51,560 --> 00:01:54,570
+Jeden moe by wynikiem sklepu.
+
+26
+00:01:54,890 --> 00:02:00,920
+Powinno to mie anonimow funkcj, w ktrej wysyk wysyam obiekt javascript, ktry musi
+
+27
+00:02:00,920 --> 00:02:02,020
+mie typ.
+
+28
+00:02:02,090 --> 00:02:08,680
+Moe to by wynik przechowywania, a warto powinna by oczywicie biec wartoci licznika.
+
+29
+00:02:08,690 --> 00:02:14,750
+Teraz jest to co, czego nie musz przekazywa jako adunek, poniewa poniewa licznik jest czci mojego
+
+30
+00:02:14,750 --> 00:02:20,360
+stanu aplikacji, bd mia do niego dostp w moim reduktorze W kadym razie pniej.
+
+31
+00:02:20,360 --> 00:02:22,680
+Nie musz wic przekazywa go tutaj jako adunek.
+
+32
+00:02:22,730 --> 00:02:28,130
+Oczywicie moesz rwnie uy przypadkw, w ktrych chcesz zapisa wynik, a nastpnie
+
+33
+00:02:28,130 --> 00:02:31,430
+wprowadzi go jako warto ze swojego komponentu.
+
+34
+00:02:31,430 --> 00:02:35,050
+Jednak nie jest to wymagane ani duplikowanie tego.
+
+35
+00:02:35,240 --> 00:02:42,170
+I ustawi rwnie waciwo, ktra bdzie nazywa si przy usuwaniu prawdziwego wyniku, w ktrym chc
+
+36
+00:02:42,180 --> 00:02:45,580
+wysa faktycznie powiedzmy z identyfikatorem usun wynik.
+
+37
+00:02:45,590 --> 00:02:50,720
+Teraz mam te dwa rekwizyty i pocz je w moim pojemniku.
+
+38
+00:02:50,990 --> 00:02:58,250
+Dodam odbiornik kliknicia do przycisku napadu sklepu, a ja wykonam te rekwizyty w wynikach sklepu
+
+39
+00:02:58,820 --> 00:03:05,570
+bez nawiasw, jak zawsze tylko odwoanie do metody i zostanie ono wykonane automatycznie.
+
+40
+00:03:05,960 --> 00:03:12,130
+I tutaj na licie znajduj si wszystkie detektory klikni, w ktrych jeszcze powiedz po lewej.
+
+41
+00:03:12,140 --> 00:03:17,000
+To podpowiada sl Leatrice.
+
+42
+00:03:17,030 --> 00:03:22,970
+Oczywicie ta lista nie zawiera jeszcze adnych treci, a nastpnie dynamicznie utworzy list elementw tutaj.
+
+43
+00:03:23,060 --> 00:03:30,790
+A wic skupmy si teraz na tym przycisku z propozycj wynikw sklepu. Dobrze kliknlimy ten przycisk.
+
+44
+00:03:31,060 --> 00:03:34,990
+Teraz musz anulowa otwarte nic si nie dzieje.
+
+45
+00:03:34,990 --> 00:03:38,310
+Nie dostrzegamy te tego bdu.
+
+46
+00:03:38,710 --> 00:03:44,190
+Moesz wic wysya akcje, ktrych w rzeczywistoci nie obsugujesz.
+
+47
+00:03:44,210 --> 00:03:52,150
+To jest pierwszy wany na wynos, na ktry wysyamy wynik sklepu, poniewa wiemy atak na
+
+48
+00:03:52,150 --> 00:03:54,600
+sklep, ktry wykonuje t metod.
+
+49
+00:03:54,910 --> 00:03:56,780
+Wiemy dug z przyciskiem.
+
+50
+00:03:56,830 --> 00:04:04,060
+Akcja ta jest wysyana i dociera do producenta, poniewa mamy tylko jeden reduktor w naszej aplikacji
+
+51
+00:04:04,060 --> 00:04:09,370
+do ponownego oznaczania i dlatego wszystkie dziaania przechodz przez tego producenta.
+
+52
+00:04:09,430 --> 00:04:18,850
+Ale poniewa po prostu zignorowaem to tutaj, nie mam adnej akcji postpowania ze sprzedanym sklepem typu, dostaj
+
+53
+00:04:18,850 --> 00:04:22,600
+si tutaj, gdzie wracam do obecnego stanu.
+
+54
+00:04:22,660 --> 00:04:23,490
+to jest to!
+
+55
+00:04:23,500 --> 00:04:28,330
+Wanie wrciem do obecnego stanu, co oznacza rwnie, e jeli zmieniem konto lub z
+
+56
+00:04:28,690 --> 00:04:31,960
+mojego tutaj, a nastpnie kliknem D'Este, nie resetuj stanu.
+
+57
+00:04:31,960 --> 00:04:33,800
+Nie zwracam stanu pocztkowego.
+
+58
+00:04:33,880 --> 00:04:36,160
+Wrciem do obecnego stanu.
+
+59
+00:04:36,160 --> 00:04:38,120
+To pierwszy wany na wynos.
+
+60
+00:04:38,500 --> 00:04:40,290
+Ale zaatwmy to teraz.
+
+61
+00:04:40,450 --> 00:04:48,700
+Stwrzmy nowy przypadek, powiedzmy, wynik sklepu i tam, ktry powrci.
+
+62
+00:04:48,700 --> 00:04:55,890
+Teraz chc zwrci to, co chc, aby zwrci zaktualizowan wersj mojego stanu.
+
+63
+00:04:56,080 --> 00:05:04,810
+I powinnimy teraz to niezmiennie we wszystkich przypadkach zawsze zwraca nowy obiekt javascript, w ktrym
+
+64
+00:05:04,810 --> 00:05:11,920
+aktualizujemy tylko licznik z wyjtkowego powodu, dla ktrego mamy tam tylko wasno licznika.
+
+65
+00:05:11,950 --> 00:05:17,950
+Cay stan poprzednio by tworzony tylko przez konto lub wasno.
+
+66
+00:05:17,950 --> 00:05:24,220
+Teraz mamy rwnie waciwo wyniku, ktra jest tablic, a wic teraz, jeli zwikszamy
+
+67
+00:05:24,280 --> 00:05:31,480
+ubytek dodawania lub odejmowania, w zasadzie usuwamy go z naszego stanu, poniewa zwracamy zaktualizowan wersj
+
+68
+00:05:31,480 --> 00:05:38,190
+stanu i jest to po prostu javascript Optik ze zaktualizowanym licznikiem, ale bez waciwoci wynikw.
+
+69
+00:05:38,630 --> 00:05:42,440
+I w przeciwiestwie do ustawionych pastw zareagowao.
+
+70
+00:05:42,550 --> 00:05:46,670
+To nie jest poczone ze starym stanem ani czym podobnym.
+
+71
+00:05:46,690 --> 00:05:49,480
+To jest nowe pastwo.
+
+72
+00:05:49,810 --> 00:05:52,880
+Tak wic tutaj w nowym stanie nie ma ju wynikw.
+
+73
+00:05:53,110 --> 00:05:57,060
+Tak naprawd nie jest tak, jak powinnimy aktualizowa stan.
+
+74
+00:05:57,100 --> 00:06:04,070
+Zamiast tego powinnimy skopiowa stare waciwoci stanu, a nastpnie zaktualizowa tylko te, ktre wymagaj
+
+75
+00:06:04,120 --> 00:06:04,580
+aktualizacji.
+
+76
+00:06:04,600 --> 00:06:14,500
+Niezmiennie Wic nie robimy tego, e nie ustawiamy stanu wiadomoci Konst jako rwnego stanowi, a nastpnie mwimy, e
+
+77
+00:06:14,500 --> 00:06:22,530
+nowy licznik stanu jest rwny licznikowi stanu plus 1, a nastpnie zwracamy tutaj nowy stan.
+
+78
+00:06:22,540 --> 00:06:24,620
+To nie jest sposb, w jaki to robimy.
+
+79
+00:06:24,700 --> 00:06:26,330
+Dlaczego nie robimy tego w ten sposb.
+
+80
+00:06:26,470 --> 00:06:29,260
+Poniewa tutaj mutujemy stary stan.
+
+81
+00:06:29,740 --> 00:06:33,300
+Zamiast tego, kopiujemy stary stan.
+
+82
+00:06:33,400 --> 00:06:41,140
+Teraz jednym ze sposobw jest wywoanie obiektu znakiem przechodzcym przez puste javascript Optik nas do
+
+83
+00:06:41,140 --> 00:06:47,420
+pierwszego argumentu i stary obiekt javascript, ktry chcemy skopiowa jako drugi stan tutaj.
+
+84
+00:06:48,520 --> 00:06:49,900
+Podobnie jak Det.
+
+85
+00:06:49,990 --> 00:06:55,240
+Teraz to w zasadzie sklonuje stary obiekt w niezmienny sposb.
+
+86
+00:06:55,660 --> 00:07:02,950
+Dajc nam nowy obiekt wyzwanie, ktry ma wszystkie waciwoci starego obiektu, ale jest technicznie inny
+
+87
+00:07:02,950 --> 00:07:09,700
+obiekt i e oczywicie jest wana ze wzgldu na sposb dziaania obiektw i tablica
+
+88
+00:07:09,970 --> 00:07:14,980
+w JavaScript z typw odniesienia sw prymitywne rodzaje danych jest niejasna.
+
+89
+00:07:14,980 --> 00:07:16,210
+Zdecydowanie to sprawd.
+
+90
+00:07:16,210 --> 00:07:19,290
+Jest to podstawowa koncepcja javascript.
+
+91
+00:07:19,330 --> 00:07:24,150
+Teraz otrzymujemy kopi, ale wane, nie jest to gboki klon.
+
+92
+00:07:24,190 --> 00:07:32,170
+Zatem nasza tablica wynikw wci jest tym samym obiektem, co tutaj, w stanie pocztkowym, ale tutaj ma znaczenie, e
+
+93
+00:07:32,170 --> 00:07:35,130
+otrzymamy kopi naszego stanu w nowym stanie.
+
+94
+00:07:35,170 --> 00:07:41,140
+Teraz, jeli zmienimy si na counter, nie robimy tego w starym stanie, ale w tym skopiowanym
+
+95
+00:07:41,140 --> 00:07:43,960
+stanie i wracamy do zaktualizowanego skopiowanego stanu.
+
+96
+00:07:44,170 --> 00:07:51,070
+To stanie si nowym stanem i jest to nowy technicznie obiekt i to jest wane.
+
+97
+00:07:51,160 --> 00:07:52,980
+Teraz moesz to tak napisa.
+
+98
+00:07:53,110 --> 00:07:59,890
+Najkrtszym sposobem jest po prostu zwrcenie obiektu javascript, a nastpnie rozprowadzenie wszystkich waciwoci starego stanu,
+
+99
+00:07:59,890 --> 00:08:06,500
+ktry mona zrobi, aby rozprzestrzeni stan operatora, tak jak ten punkt dot dot dot.
+
+100
+00:08:07,390 --> 00:08:12,430
+To po prostu mwi zwrot javascript obiektu javascript.
+
+101
+00:08:12,730 --> 00:08:18,860
+We wszystkie waciwoci i wartoci kadego argumentu o stanie, ktry jest naszym starym stanem.
+
+102
+00:08:18,970 --> 00:08:27,160
+Roz te waciwoci za pomoc ich wartoci w tym nowym obiekcie, a nastpnie, poniewa definiujemy dodatkow waciwo
+
+103
+00:08:27,160 --> 00:08:35,410
+w tej waciwoci do obiektu lub jeli ju bya obecna z powodu dystrybucji w USA, stary stan,
+
+104
+00:08:35,410 --> 00:08:39,120
+tak jak wczeniej, by czci starego stanu .
+
+105
+00:08:39,430 --> 00:08:43,630
+Zastp to, ale pozostawia niezmienione wyniki.
+
+106
+00:08:43,630 --> 00:08:49,690
+Tak wanie dzieje si w przypadku dystrybucji starego stanu, w ktrym nadrzdny licznik
+
+107
+00:08:49,690 --> 00:08:50,900
+nie dotyka wynikw.
+
+108
+00:08:51,130 --> 00:08:54,830
+Tak wic powinnimy aktualizowa stan we wszystkich przypadkach.
+
+109
+00:08:54,970 --> 00:09:03,490
+Czy to niezmiennie nie dotykaj starego stanu, nie zwr po prostu nowego obiektu bez zasaniania wszystkich waciwoci
+
+110
+00:09:03,490 --> 00:09:04,540
+starego stanu.
+
+111
+00:09:04,660 --> 00:09:09,530
+Lub masz zamiar usun waciwoci ze stanu, tak jak poprzednio.
+
+112
+00:09:10,000 --> 00:09:17,020
+Z tym wynikiem w sklepie zwracamy rwnie obiekt javascript, w ktrym rozprowadzamy stary stan, zachowujc
+
+113
+00:09:17,020 --> 00:09:18,420
+tym samym licznik.
+
+114
+00:09:18,850 --> 00:09:21,250
+Ale potem mwilimy o wynikach tutaj.
+
+115
+00:09:21,280 --> 00:09:24,200
+To rozwizuje waciwo, ktr chcemy zaktualizowa.
+
+116
+00:09:24,520 --> 00:09:32,650
+Ustawiamy wynik rwny stanowi, a nastpnie moemy nazwa Comcast, ktry po prostu jest jak Porsche,
+
+117
+00:09:32,660 --> 00:09:35,650
+ale jestemy Porsche manipuluje oryginaln wartoci.
+
+118
+00:09:35,670 --> 00:09:43,520
+Concord zwraca now tablic, ktra jest starsz stawk plus argument dodawany do konkat.
+
+119
+00:09:43,660 --> 00:09:47,510
+Jest to niezmienny sposb aktualizowania tablicy przez dodanie elementu.
+
+120
+00:09:47,620 --> 00:09:51,140
+Zwraca now tablic, ktra jest kluczow rzecz.
+
+121
+00:09:51,280 --> 00:09:54,230
+Poniewa tablice s rwnie typami referencyjnymi.
+
+122
+00:09:54,310 --> 00:09:55,920
+Gdyby zadzwoni do Porsche.
+
+123
+00:09:56,040 --> 00:10:01,660
+Dotykasz waciwoci oryginalnego wyniku w pierwotnym stanie, nawet jeli uye do rozoenia
+
+124
+00:10:01,660 --> 00:10:02,670
+operatora tutaj.
+
+125
+00:10:02,680 --> 00:10:04,670
+To nie przeszkadza ci w tym.
+
+126
+00:10:04,840 --> 00:10:06,700
+I nie jest to dobra praktyka.
+
+127
+00:10:06,730 --> 00:10:07,970
+Nie w jaki sposb powiniene to zrobi.
+
+128
+00:10:07,990 --> 00:10:11,440
+Bye zarzdzaniem pastwem staje si nieprzewidywalne, jeli to zrobisz.
+
+129
+00:10:11,440 --> 00:10:16,090
+Tak wic uyj concat i teraz nacinij, co chcesz doda do tej tablicy.
+
+130
+00:10:16,090 --> 00:10:23,020
+Na przykad tutaj moemy doda licznik stanw, poniewa chcemy zapisa migawk licznika i wcisn j
+
+131
+00:10:23,020 --> 00:10:24,440
+do tablicy wynikw.
+
+132
+00:10:25,630 --> 00:10:31,180
+Teraz ze zmarymi zaktualizowalimy nasz stan niezmiennie dla wszystkich przypadkw.
+
+133
+00:10:31,480 --> 00:10:34,380
+Dowiesz si, jak zaktualizowa tablic w swoim stanie.
+
+134
+00:10:34,390 --> 00:10:37,580
+Niezmiennie z betonem, dodajc nowy element.
+
+135
+00:10:38,290 --> 00:10:43,970
+A teraz moemy wrci do stanu tutaj, do ktrego wracamy tutaj waciwie i moemy
+
+136
+00:10:43,970 --> 00:10:52,600
+go uy na naszym koncie lub komponencie tam moemy go teraz powiza w stanie mapy do rekwizytw do nowego wniosku mog by
+
+137
+00:10:52,630 --> 00:10:59,800
+przechowywane wyniki Propp, ktry powinien by stanem wyniki odnoszce si do tej nazwy waciwoci ustawionej w zasobach producenta.
+
+138
+00:10:59,800 --> 00:11:00,960
+To musi by rwne.
+
+139
+00:11:00,970 --> 00:11:07,580
+Pobieramy wic waciwo stanu, a teraz moemy uy przechowywanego zasobu, do ktrego mamy
+
+140
+00:11:07,610 --> 00:11:11,880
+dostp z rekwizytw dyskowych w naszej metodzie renderowania.
+
+141
+00:11:12,230 --> 00:11:17,830
+Wic tutaj dla elementu listy, na ktrym chc je wypisa, zrobi to tutaj z nawiasami klamrowymi.
+
+142
+00:11:18,020 --> 00:11:27,680
+Mog powiedzie, e ta mapa wynikw jest przechowywana, a teraz kady z nich jest przechowywany w napadzie Bittle zapisanym w tym
+
+143
+00:11:27,690 --> 00:11:31,890
+argumencie, a wszyscy jestecie zmapowani do tego elementu listy.
+
+144
+00:11:31,950 --> 00:11:39,150
+Wic po prostu zapakuj element listy i umieciem go w mojej mapie Meffert tutaj, tak jak zawsze
+
+145
+00:11:39,150 --> 00:11:44,100
+zamapuje t tablic zapisanych wynikw do tablicy elementw listy GSX i tam.
+
+146
+00:11:44,100 --> 00:11:51,860
+Teraz mamy nasz nowy element listy, w ktrym oczywicie moemy wypisa wynik zapisany.
+
+147
+00:11:52,140 --> 00:11:54,440
+A teraz to byby nasz wynik.
+
+148
+00:11:54,690 --> 00:11:58,890
+Ale tak naprawd chc wrci do reduktora i odrobin zmieni.
+
+149
+00:11:58,890 --> 00:12:01,000
+Nie chc po prostu przechowywa numeru.
+
+150
+00:12:01,290 --> 00:12:07,140
+Chc utworzy obiekt i jest to opcjonalne, ale chc to zrobi, poniewa nie chc
+
+151
+00:12:07,140 --> 00:12:09,350
+po prostu mie wartoci wynikowej.
+
+152
+00:12:09,510 --> 00:12:12,970
+I moesz nazwa t dolin V, jak tylko chcesz.
+
+153
+00:12:12,990 --> 00:12:18,090
+Chc te tutaj stworzy pomys i ten pomys powinien by czym wyjtkowym.
+
+154
+00:12:18,390 --> 00:12:24,540
+Tak wic po prostu uywam nowej daty, ktra jest po prostu migawk daty, kiedy zostaa dodana.
+
+155
+00:12:24,540 --> 00:12:28,650
+Teraz mam pomys i warto, i nie ma powrotu w komponencie licznika.
+
+156
+00:12:28,680 --> 00:12:37,130
+Mog uy w obiekcie zarwno zapamitanej wartoci wyniku odnoszcej si do wasnoci wartoci dugu.
+
+157
+00:12:37,130 --> 00:12:41,690
+Nacisk, aby uzyska stawk, w ktrej zgadzam si z precyzyjnie.
+
+158
+00:12:41,910 --> 00:12:50,480
+A poniewa mamy list, musimy ustawi klucz, ktry moe ustawi ten klucz na przechowywany ID ataku, ktry miga dacie.
+
+159
+00:12:50,910 --> 00:12:57,330
+Teraz jeli wrcimy do aplikacji i klikniemy Dodaj 10, a nastpnie klikniemy w wynik sklepu, zobaczymy 10-letni
+
+160
+00:12:57,360 --> 00:12:58,300
+dodatek w rodku.
+
+161
+00:12:58,320 --> 00:12:59,580
+Pozwl mi jeszcze raz doda 10.
+
+162
+00:12:59,580 --> 00:13:02,010
+Teraz przechowujemy 20 jako drug warto.
+
+163
+00:13:02,010 --> 00:13:03,000
+A wic nasza historia.
+
+164
+00:13:03,030 --> 00:13:07,140
+Wszystkie te wartoci, ktre klikaj na nich, niewiele daj.
+
+165
+00:13:07,140 --> 00:13:10,980
+Nie popenia rwnie bdu, ale oczywicie nie zajmujemy si tym.
+
+166
+00:13:10,980 --> 00:13:16,150
+Kliknij Lisner, gdzie chc usun wynik, a nastpnie wylij wynik usunicia.
+
+167
+00:13:16,290 --> 00:13:18,810
+Wic zastosujmy to w nastpnym wykadzie.
+

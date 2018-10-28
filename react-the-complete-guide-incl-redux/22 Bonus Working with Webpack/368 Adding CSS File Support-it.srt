@@ -1,0 +1,308 @@
+1
+00:00:02,160 --> 00:00:04,140
+Quindi abbiamo aggiunto Babel nell'ultima
+
+2
+00:00:04,170 --> 00:00:09,720
+lezione, ora supportiamo anche file e immagini css. Per questo, aggiunger una nuova regola e voglio iniziare
+
+3
+00:00:09,720 --> 00:00:10,640
+con css, quindi
+
+4
+00:00:10,680 --> 00:00:14,670
+testiamo i file che terminano con. css, questo 
+
+5
+00:00:14,760 --> 00:00:17,150
+il nostro semplice test.
+
+6
+00:00:17,190 --> 00:00:23,470
+Voglio anche escludere qualsiasi cosa nei moduli di nodo qui solo per essere sicuro
+
+7
+00:00:23,880 --> 00:00:29,370
+e quindi possiamo definire il tipo di caricatore che vogliamo usare qui.
+
+8
+00:00:29,460 --> 00:00:34,560
+Ora per i CSS, in realt ho bisogno di un setup pi complesso, per js abbiamo anche
+
+9
+00:00:34,560 --> 00:00:39,900
+un set abbastanza complesso ma questo  tutto gestito da babel e dalla nostra babel config, per css
+
+10
+00:00:39,900 --> 00:00:42,820
+lo configureremo qui nel file di configurazione del webpack.
+
+11
+00:00:42,840 --> 00:00:46,830
+Quindi invece di loader posso usare qui,  il modulo lungo,
+
+12
+00:00:46,980 --> 00:00:52,580
+il caricatore  la forma molto breve se vogliamo solo configurare un caricatore senza alcuna configurazione,
+
+13
+00:00:52,740 --> 00:00:57,620
+se vogliamo configurare pi caricatori o un caricatore con configurazione, dovremmo usare l'uso qui.
+
+14
+00:00:57,750 --> 00:01:00,870
+Ci vuole una serie di caricatori che
+
+15
+00:01:01,260 --> 00:01:05,210
+vogliamo applicare e qui, ora voglio installare due caricatori,
+
+16
+00:01:05,280 --> 00:01:13,170
+lo far con npm install --save-dev e ho bisogno di un caricatore che in pratica dice al webpack
+
+17
+00:01:13,170 --> 00:01:16,430
+cosa fare con questi. importazioni di
+
+18
+00:01:16,650 --> 00:01:23,930
+css e il caricatore di stili. Questo  un programma di caricamento che estrae il codice CSS dai
+
+19
+00:01:23,940 --> 00:01:26,870
+file css e lo inserisce nella parte superiore del nostro
+
+20
+00:01:26,910 --> 00:01:30,790
+file html, riducendo quindi la quantit di download di file che dobbiamo fare.
+
+21
+00:01:30,810 --> 00:01:36,660
+Quindi installer entrambi qui e ora voglio aggiungerli ovviamente, per quello nel mio uso array,
+
+22
+00:01:36,780 --> 00:01:44,490
+aggiunger un oggetto javascript che ha di nuovo una propriet loader dove definisco il caricatore di stile,  seguito e
+
+23
+00:01:44,940 --> 00:01:50,390
+l'ordine fa importa qui da un altro oggetto con un caricatore, il caricatore css.
+
+24
+00:01:50,490 --> 00:01:53,120
+Ora importante e questo  facile da incasinare,
+
+25
+00:01:53,340 --> 00:01:59,720
+il webpack analizza i caricatori in questo array di utilizzo e li applica da destra a sinistra, quindi dal
+
+26
+00:01:59,730 --> 00:02:02,660
+basso verso l'alto se lo scriviamo in questo modo.
+
+27
+00:02:02,820 --> 00:02:09,210
+Quindi prima prende il caricatore di css che dovrebbe perch questo fa capire le importazioni di css
+
+28
+00:02:09,210 --> 00:02:10,750
+e non lancia un
+
+29
+00:02:11,100 --> 00:02:16,140
+errore e quindi applica il caricatore di stile sul codice css estratto e questo
+
+30
+00:02:16,410 --> 00:02:19,120
+ esattamente l'ordine che ci serve qui.
+
+31
+00:02:19,140 --> 00:02:25,730
+Ora possiamo anche dare il loader css che  responsabile per l'analisi e
+
+32
+00:02:25,730 --> 00:02:35,770
+la gestione del css un'altra propriet che  chiamata opzioni. Ora le opzioni sono un oggetto javascript in cui possiamo configurare
+
+33
+00:02:35,770 --> 00:02:36,660
+questo caricatore,
+
+34
+00:02:37,060 --> 00:02:45,400
+ora qui voglio impostare il modulo su true per abilitare i moduli css e imposter il nome ident
+
+35
+00:02:45,400 --> 00:02:52,660
+locale per definire come dovrebbero apparire le classi css generate dovute ai moduli css .
+
+36
+00:02:52,830 --> 00:03:00,160
+E qui prender il nome della classe che abbiamo definito, due underscore quindi il nome del modulo, quindi il nome
+
+37
+00:03:00,160 --> 00:03:07,630
+del componente e poi un hash avranno davvero nomi univoci, questo  lo stesso set che abbiamo aggiunto nel modulo
+
+38
+00:03:07,630 --> 00:03:13,080
+di stile per fare il ci ha dato la configurazione di creare l'app di reazione.
+
+39
+00:03:13,420 --> 00:03:15,710
+Non abbiamo finito con css,
+
+40
+00:03:15,790 --> 00:03:22,000
+voglio anche aggiungere il prefisso automatico e per questo installer un altro pacchetto con --save-dev
+
+41
+00:03:22,000 --> 00:03:26,260
+post css loader, ora post css suona come se facesse
+
+42
+00:03:26,260 --> 00:03:30,700
+qualcosa in css dopo averlo analizzato , qui verr effettivamente eseguito
+
+43
+00:03:30,790 --> 00:03:38,830
+prima del css loader, si immerger nel file css e regoler il nostro codice prima che css loader lo
+
+44
+00:03:38,920 --> 00:03:47,170
+estrae e aggiorni i nomi delle classi e cos via. Il loader di post css  semplicemente un caricatore che ci permette
+
+45
+00:03:47,170 --> 00:03:49,540
+di trasformare il css, ad esempio potremmo
+
+46
+00:03:49,570 --> 00:03:55,320
+anche usare il caricatore di post css per gestire sass e cose del genere, qui per
+
+47
+00:03:55,320 --> 00:04:00,820
+lo aggiunger semplicemente come un altro loader e quindi in terza posizione perch dovrebbe essere eseguito
+
+48
+00:04:00,820 --> 00:04:02,780
+prima di quel css loader.
+
+49
+00:04:03,010 --> 00:04:10,600
+Qui imposter il mio loader che  post css loader e ho bisogno di impostare le mie opzioni su quel loader
+
+50
+00:04:11,690 --> 00:04:18,870
+con la chiave delle opzioni dove ora voglio impostare l'opzione ident, che  importante internamente qui, ma pi importanti sono
+
+51
+00:04:19,070 --> 00:04:24,350
+i plugin, che in realt accetta una funzione che restituisce un array e questi sono
+
+52
+00:04:24,470 --> 00:04:28,950
+ora i passaggi che dovremmo applicare o che vogliamo applicare per trasformare tutto.
+
+53
+00:04:29,270 --> 00:04:36,120
+E qui voglio eseguire il prefisso automatico, ora deve essere installato il prefisso automatico.
+
+54
+00:04:36,140 --> 00:04:37,530
+ uno strumento separato.
+
+55
+00:04:37,880 --> 00:04:43,990
+Quindi eseguir l'installazione di npm --save-dev prefisso automatico, che  una
+
+56
+00:04:44,360 --> 00:04:52,040
+libreria di terze parti che  in grado di auto-prefixare le nostre propriet css,
+
+57
+00:04:52,130 --> 00:04:53,530
+dobbiamo importarlo nel
+
+58
+00:04:53,540 --> 00:05:03,400
+file di configurazione quindi creer un nuovo const, autoPrefixer che usa la sintassi richiesta per importare autoPrefixer, come questo.
+
+59
+00:05:03,410 --> 00:05:08,120
+Ora con l'importazione aggiunta, possiamo aggiungere questo all'array plugins qui, quindi qui
+
+60
+00:05:08,120 --> 00:05:11,510
+aggiunger autoPrefixer e questa  in realt una funzione
+
+61
+00:05:11,660 --> 00:05:17,450
+che dobbiamo eseguire e passiamo un oggetto javascript ad essa per configurarlo e anche qui
+
+62
+00:05:17,450 --> 00:05:17,770
+passiamo
+
+63
+00:05:17,900 --> 00:05:24,110
+un elenco dei browser, quindi i browser sono un elenco e possiamo prendere l'elenco che abbiamo
+
+64
+00:05:24,110 --> 00:05:26,830
+configurato in babelrc, ovvero l'elenco dei browser
+
+65
+00:05:26,840 --> 00:05:27,890
+che desidero supportare,
+
+66
+00:05:28,040 --> 00:05:31,810
+lo incollo semplicemente nell'elenco dei browser per AutoPrefixer.
+
+67
+00:05:31,940 --> 00:05:38,300
+Quindi ora prefiggiamo css come richiesto per questi browser che supportiamo e individuer
+
+68
+00:05:38,330 --> 00:05:41,450
+automaticamente quali browser sono per noi.
+
+69
+00:05:41,450 --> 00:05:43,830
+Questa  la configurazione minima che voglio usare.
+
+70
+00:05:44,060 --> 00:05:50,030
+Ora, dal momento che eseguiamo un caricatore aggiuntivo prima di css loader, in realt dobbiamo informarne il caricatore di css,
+
+71
+00:05:50,030 --> 00:05:50,550
+che 
+
+72
+00:05:50,570 --> 00:05:53,210
+solo una configurazione speciale richiesta dal css loader.
+
+73
+00:05:53,510 --> 00:06:00,950
+Quindi aggiungo i caricatori di importazione e ne imposto uno perch eseguiamo un caricatore prima che venga applicato il caricatore
+
+74
+00:06:00,950 --> 00:06:01,860
+di CSS.
+
+75
+00:06:02,210 --> 00:06:06,290
+E questa  la nostra configurazione di gestione dei CSS, dovrebbe andare bene,
+
+76
+00:06:06,320 --> 00:06:08,920
+vedremo presto se funziona. Detto ci,
+
+77
+00:06:08,930 --> 00:06:16,820
+continuiamo e assicuriamoci che ora possiamo anche gestire le immagini poich le importiamo anche queste.
+

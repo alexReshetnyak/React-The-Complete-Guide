@@ -1,0 +1,308 @@
+1
+00:00:02,120 --> 00:00:08,210
+Ento, ns tivemos que o cenrio que editamos a lgica para se livrar do lado ou o prximo passo
+
+2
+00:00:08,270 --> 00:00:10,190
+ implementar este boto alternativo aqui.
+
+3
+00:00:10,220 --> 00:00:16,040
+Ento, para implementar algum componente que nos permite clicar e que ir desencadear algo
+
+4
+00:00:16,130 --> 00:00:20,840
+que mostra decidir ou no  um bom exerccio para voc.
+
+5
+00:00:20,870 --> 00:00:25,720
+Naturalmente, envolve alguns passos e certamente h mais do que uma maneira de alcanar isso.
+
+6
+00:00:25,880 --> 00:00:31,520
+criando um componente e simplesmente conectando esse dev com um ouvinte de clique para assumir a
+
+7
+00:00:31,520 --> 00:00:38,660
+rota mais fcil ou terceirizar isso em seu prprio componente, talvez crie um hamburger. Posso torn-lo clicvel e no termine
+
+8
+00:00:38,660 --> 00:00:45,620
+certifique-se de que, de alguma forma, obtenha o componente de layout e ajuste o estado para esse lado, muito verdadeiro.
+
+9
+00:00:45,950 --> 00:00:49,530
+Mas sinta-se livre para tentar isso por conta prpria, no
+
+10
+00:00:49,880 --> 00:00:58,100
+Defina-o como falso inicialmente Dearden e certifique-se de que agora voc pode de alguma forma clicar em algo na barra de ferramentas.
+
+11
+00:00:58,100 --> 00:01:04,460
+Defina o cenrio aqui como um conjunto simples e, portanto, altere abrir a propriedade aberta da gaveta lateral porque
+
+12
+00:01:04,460 --> 00:01:07,650
+depende do estado da porta do lado do show.
+
+13
+00:01:07,670 --> 00:01:09,070
+Agora  uma boa prtica.
+
+14
+00:01:09,140 --> 00:01:13,280
+Vou dar-lhe alguns segundos para publicar o vdeo
+
+15
+00:01:13,280 --> 00:01:19,840
+e tentar isso por conta prpria e ento vou mostrar-lhe minha abordagem.
+
+16
+00:01:19,840 --> 00:01:21,820
+Ento, onde voc  bem-sucedido?
+
+17
+00:01:22,030 --> 00:01:23,170
+Vamos agora resolver isso juntos.
+
+18
+00:01:23,170 --> 00:01:25,480
+Mas eu realmente exorto voc a tentar por conta prpria.
+
+19
+00:01:25,480 --> 00:01:33,430
+Primeiro, queremos ter certeza de que podemos clicar neste boto de menu na barra de ferramentas e eu quero terceirizar
+
+20
+00:01:33,430 --> 00:01:41,110
+o menu em seu prprio componente, que eu tambm quero estilo como um hamburger. POSSO todo esse componente na
+
+21
+00:01:41,110 --> 00:01:48,670
+pasta da gaveta do site porque pertence ao gaveta lateral e eu irei nomear uma alternncia de caracteres em
+
+22
+00:01:48,670 --> 00:01:52,000
+l, adicione uma opo de gaveta que js arquivo.
+
+23
+00:01:52,030 --> 00:01:59,100
+Este ser um componente simples, j que a maioria dos nossos componentes  uma funo que recebe adereos e
+
+24
+00:01:59,100 --> 00:02:00,380
+retorna algum GSX.
+
+25
+00:02:00,820 --> 00:02:09,800
+E para isso,  claro, precisamos importar re-agir de re-agir, ento toda a exportao faz.
+
+26
+00:02:09,840 --> 00:02:11,140
+Como padro.
+
+27
+00:02:11,190 --> 00:02:13,990
+Portanto, export drop target  um padro.
+
+28
+00:02:14,310 --> 00:02:18,430
+E por enquanto, simplesmente adicionei fez com o menu de texto aqui.
+
+29
+00:02:18,570 --> 00:02:24,420
+Mas vou mudar isso, como acabei de dizer que vou mudar isso para um hambrguer que eu possa no futuro.
+
+30
+00:02:24,540 --> 00:02:26,710
+Por enquanto vamos usar isso.
+
+31
+00:02:26,790 --> 00:02:34,580
+barra de ferramentas e importar importar desenhar ou alternar de importado do criptografia ou pasta da pasta de
+
+32
+00:02:34,650 --> 00:02:44,580
+alternar a gaveta e da gaveta alta as cadeiras caem e substituir este espao reservado aqui com o fechamento automtico componente Tauriel da gaveta.
+
+33
+00:02:44,580 --> 00:02:52,320
+Ento, certifique-se de salvar esse arquivo de alternar a gaveta e, em seguida, mova para o arquivo da
+
+34
+00:02:52,980 --> 00:02:59,060
+Agora, o objetivo  adicionar o ouvinte de clique ao dia, se voc for assim, clique no boto clicar.
+
+35
+00:02:59,400 --> 00:03:05,670
+E eu no queria ligar isso a alguma propriedade que eu esperava receber a propriedade click que
+
+36
+00:03:05,750 --> 00:03:11,690
+deveria, como sempre, neste caso, manter uma referncia ao mtodo que deveria ser executado com um clique.
+
+37
+00:03:11,700 --> 00:03:18,150
+Ento, agora, no componente da barra de ferramentas, vamos adicionar essa propriedade clicada ao desenho ou alternar
+
+38
+00:03:18,180 --> 00:03:25,830
+e, claro, todos ns no temos esse mtodo definido aqui, mas usaremos a barra de ferramentas no componente de layout
+
+39
+00:03:25,830 --> 00:03:27,780
+onde iremos adicionar esse mtodo.
+
+40
+00:03:27,780 --> 00:03:34,250
+Ento, finalmente, estabelecemos algumas propriedades na barra de ferramentas e passamos a referncia Mefford a partir da.
+
+41
+00:03:34,590 --> 00:03:39,640
+Ento, vamos esperar que esta propriedade seja configurada na barra de ferramentas e eu vou nome-la.
+
+42
+00:03:39,640 --> 00:03:42,800
+Desenhe a gaveta do bastidor da gaveta.
+
+43
+00:03:43,020 --> 00:03:47,610
+Este ser um suporte ou recebimento que contenha uma referncia ao mtodo que deve ser executado.
+
+44
+00:03:47,640 --> 00:03:49,840
+Ento, desenhe falar e coletar.
+
+45
+00:03:49,940 --> 00:03:50,220
+Por essa.
+
+46
+00:03:50,220 --> 00:03:55,250
+Vamos colocar o componente e todos esto na gaveta lateral.
+
+47
+00:03:55,470 --> 00:03:57,330
+Controlador de alternncia.
+
+48
+00:03:57,720 --> 00:04:00,180
+Agora, ele funcionar como alternar.
+
+49
+00:04:00,180 --> 00:04:02,750
+Ento, de aberto para fechar e vice-versa.
+
+50
+00:04:03,050 --> 00:04:08,660
+Mas uma hora Abu nunca conseguir ver essa funcionalidade prxima porque o site  esmagado sobreposto.
+
+51
+00:04:08,790 --> 00:04:14,010
+Eu ainda vou fech-lo dessa maneira porque, se alguma vez ns devemos adicionar essa alternncia em algum
+
+52
+00:04:14,020 --> 00:04:16,760
+outro lugar, NEAP, ele realmente funcionaria como um todo.
+
+53
+00:04:17,160 --> 00:04:19,710
+Agora, de qualquer forma, eu sei, como acabei de dizer.
+
+54
+00:04:19,750 --> 00:04:22,590
+Quer falar com tudo o que exibe o estado.
+
+55
+00:04:22,630 --> 00:04:31,490
+Offsider, ou seja, podemos chamar esse estado e agora mostra a porta lateral do show para o que ainda no .
+
+56
+00:04:31,500 --> 00:04:36,890
+Nem esta etapa mostra-se centeio de modo a mostrar ou  verdade.
+
+57
+00:04:36,960 --> 00:04:42,830
+Agora ele ser configurado como falso e, por outro lado, essa abordagem tem uma falha.
+
+58
+00:04:42,840 --> 00:04:51,770
+Voc v o que eu mencionei anteriormente que, se voc planeja usar o estado de inseres de estado, no deve faz-lo
+
+59
+00:04:51,770 --> 00:04:58,310
+assim porque, devido  natureza assncrona do referido Estado, isso pode levar a resultados inesperados.
+
+60
+00:04:58,490 --> 00:05:08,450
+Ento, use a funo para um estado prvio esperado, pois coloquei l, simplesmente, devolva o objeto que deseja definir como um
+
+61
+00:05:08,450 --> 00:05:12,070
+novo estado ou que deseja fundir no estado.
+
+62
+00:05:12,080 --> 00:05:17,750
+Eu deveria dizer e, claro, Devar l, voc no acessa este estado, mas voc usa o estado
+
+63
+00:05:17,750 --> 00:05:20,780
+anterior em que voc passou para a disfuno automaticamente.
+
+64
+00:05:20,780 --> 00:05:25,480
+Este  o modo limpo de configurar o estado quando depende do estado antigo.
+
+65
+00:05:25,490 --> 00:05:31,270
+Agora, temos uma maneira segura de alternar isso e a mudana mostra a gaveta lateral.
+
+66
+00:05:31,400 --> 00:05:38,780
+Agora,  claro, queremos chamar isso e devemos pass-lo como uma referncia  barra de ferramentas agora, porque na barra de
+
+67
+00:05:38,900 --> 00:05:44,960
+ferramentas esperamos armazenar em direo  propriedade de clique que contm uma referncia ao mtodo que deve
+
+68
+00:05:44,960 --> 00:05:47,960
+ser executado quando o alternar  clicado .
+
+69
+00:05:47,990 --> 00:05:53,690
+Ento, vamos usar isso no componente de layout aqui na barra de ferramentas. O jar toggle clicado foi um
+
+70
+00:05:54,200 --> 00:05:58,740
+nome de propriedade e passamos uma referncia para o recm-criado site ou manipulador de alternncia.
+
+71
+00:05:59,120 --> 00:06:03,890
+E, como sempre, nunca execute esse mtodo apenas passe uma referncia.
+
+72
+00:06:04,280 --> 00:06:05,940
+Certifique-se de salvar todos os arquivos.
+
+73
+00:06:05,940 --> 00:06:13,160
+Agora vamos voltar para o aplicativo e vamos levar Manue e, de fato, ele desliza em um pano de fundo, remove
+
+74
+00:06:13,610 --> 00:06:16,130
+e dissemos e podemos ir e voltar.
+
+75
+00:06:16,160 --> 00:06:17,090
+Ento, isso est funcionando.
+
+76
+00:06:17,090 --> 00:06:18,120
+Isso  bem legal.
+
+77
+00:06:18,260 --> 00:06:25,490
+Vamos agora transformar esse texto de menu aborrecido e no to bonito aqui em um hambrguer que eu posso na prxima palestra.
+

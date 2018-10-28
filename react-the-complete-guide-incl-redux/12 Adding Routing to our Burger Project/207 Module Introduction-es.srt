@@ -1,0 +1,76 @@
+1
+00:00:02,240 --> 00:00:05,200
+De vuelta, estamos a una hora del proyecto de Bergere.
+
+2
+00:00:05,200 --> 00:00:12,460
+Es hora de agregarle algo de ruta y usar las cosas que aprendimos en el ltimo mdulo del curso en
+
+3
+00:00:12,460 --> 00:00:14,150
+una aplicacin de reaparicin real.
+
+4
+00:00:14,350 --> 00:00:20,560
+Ahora, definitivamente, sintete libre de adelantar de vez en cuando el video y poner en prctica alguna funcin.
+
+5
+00:00:20,560 --> 00:00:24,580
+Estoy a punto de mostrarte cmo practicar el uso del enrutador.
+
+6
+00:00:25,060 --> 00:00:32,760
+Quiero comenzar agregando una pgina que nos permita verificar nuestro Bergere, no leer, verificar que se
+
+7
+00:00:32,760 --> 00:00:33,550
+vea as.
+
+8
+00:00:33,550 --> 00:00:39,700
+en continuar y luego ya enviamos la solicitud al reverso y enviamos esa hamburguesa y la guardamos all.
+
+9
+00:00:39,700 --> 00:00:43,890
+Agregamos un ingrediente con el que hacemos clic y ahora hacemos clic
+
+10
+00:00:43,960 --> 00:00:50,980
+Ahora me gustara cambiar esto para que tenga que ingresar cierta informacin en un cheque para l
+
+11
+00:00:51,220 --> 00:00:54,000
+antes de que realmente guardemos la hamburguesa.
+
+12
+00:00:54,250 --> 00:00:59,130
+As que esta debera ser la primera pgina que quiero tener en la pgina de pago.
+
+13
+00:00:59,140 --> 00:01:05,630
+Tambin tengo un enlace aqu en la parte superior que podra permitirnos navegar all aunque probablemente nos
+
+14
+00:01:05,630 --> 00:01:10,620
+sustituir por este mdulo con mi pgina de pedidos porque tiene ms sentido.
+
+15
+00:01:10,630 --> 00:01:16,840
+Pero comencemos con el componente de pago y comencemos con la deuda de Boulding en la prxima conferencia.
+
+16
+00:01:16,840 --> 00:01:21,610
+s es una buena prctica pero no est relacionado con el enrutamiento. .
+
+17
+00:01:21,610 --> 00:01:27,520
+Definitivamente, sintete libre de saltar por tu cuenta pero tambin sintete libre de hacerlo conmigo porque obviamente
+
+18
+00:01:27,520 --> 00:01:32,330
+hay muchas formas diferentes de crear componentes de check-out y crear el componente en
+
+19
+00:01:32,380 --> 00:01:33,700
+Nos vemos en la prxima conferencia.
+

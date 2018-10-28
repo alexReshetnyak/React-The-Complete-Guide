@@ -1,0 +1,360 @@
+1
+00:00:02,280 --> 00:00:07,230
+As que en la ltima conferencia usamos un token para acceder a los recursos protegidos,
+
+2
+00:00:07,230 --> 00:00:13,530
+ahora quiero asegurarme de que podamos ver en nuestra interfaz de usuario en la aplicacin si estamos autenticados o no.
+
+3
+00:00:13,530 --> 00:00:18,000
+En este momento, siempre vemos autenticar aqu, lo que nos lleva
+
+4
+00:00:18,240 --> 00:00:26,100
+al formulario de autenticacin, pero incluso si iniciamos sesin con xito aqu, an vemos autenticar aqu, sera mejor cerrar la
+
+5
+00:00:26,100 --> 00:00:30,980
+sesin aqu si nos autenticamos para que podamos ver si estamos autenticados.
+
+6
+00:00:31,050 --> 00:00:31,590
+Por supuesto,
+
+7
+00:00:31,590 --> 00:00:34,690
+tambin podra mostrar algo como el usuario para acceder a su perfil.
+
+8
+00:00:34,860 --> 00:00:37,060
+Sin embargo, me limitar a cerrar la sesin.
+
+9
+00:00:37,200 --> 00:00:43,080
+Esto sera una gran adicin a nuestra aplicacin y es fcil de implementar.
+
+10
+00:00:43,170 --> 00:00:50,760
+Gestionamos lo que vemos en el rea de navegacin aqu, en la carpeta de componentes en los
+
+11
+00:00:50,850 --> 00:00:52,510
+elementos de navegacin de
+
+12
+00:00:52,530 --> 00:01:01,170
+navegacin, en este componente, definimos lo que est dentro de nuestro men tanto el receptivo como este escritorio de navegacin.
+
+13
+00:01:01,230 --> 00:01:06,410
+Ahora la idea es mostrar solo el elemento de navegacin con autenticacin en
+
+14
+00:01:06,510 --> 00:01:08,370
+l si no est autenticado,
+
+15
+00:01:08,430 --> 00:01:14,810
+por lo que si necesita registrarse o iniciar sesin y mostrar un enlace de cierre de
+
+16
+00:01:14,910 --> 00:01:17,690
+sesin en su lugar si est conectado.
+
+17
+00:01:17,700 --> 00:01:25,920
+Entonces, para eso tenemos que verificar nuestro estado, nuestro estado de inicio de sesin en los elementos de navegacin, los elementos de navegacin, por supuesto,
+
+18
+00:01:25,920 --> 00:01:30,490
+es un componente de presentacin, por lo que no podemos conectar esto a redux.
+
+19
+00:01:30,540 --> 00:01:36,160
+Aunque podramos, podramos simplemente convertirlo en uno de clase y luego usar Connect en este
+
+20
+00:01:36,450 --> 00:01:37,550
+componente, puedes hacerlo,
+
+21
+00:01:37,590 --> 00:01:38,830
+no lo recomendara,
+
+22
+00:01:38,880 --> 00:01:44,370
+esto rompe la idea de tener algunos componentes de contenedor que estn conectados al
+
+23
+00:01:44,370 --> 00:01:47,660
+almacenar y tener muchos componentes tontos que no conocen
+
+24
+00:01:47,910 --> 00:01:55,530
+sobre la tienda, as que no recomendara usar ese enfoque. Un mejor enfoque sera elegir un contenedor apropiado que en realidad cargue
+
+25
+00:01:55,530 --> 00:01:57,720
+elementos de navegacin y aqu no est
+
+26
+00:01:57,990 --> 00:02:03,780
+en la carpeta del contenedor sino en la carpeta de diseo simplemente porque lo usamos para envolver otros componentes.
+
+27
+00:02:04,290 --> 00:02:12,510
+El diseo js file es un componente basado en clases y all, implementamos la barra de herramientas y
+
+28
+00:02:12,600 --> 00:02:16,650
+el sidedrawer que son, por supuesto, los componentes que usan elementos de navegacin al final.
+
+29
+00:02:16,680 --> 00:02:26,250
+Por lo tanto, tendra sentido conectar el diseo aqu a nuestra tienda para que podamos pasar la informacin de autenticacin a la barra de herramientas y
+
+30
+00:02:26,250 --> 00:02:33,090
+al panel lateral, que a su vez podra pasarla a los elementos de navegacin, esto es exactamente lo que
+
+31
+00:02:33,090 --> 00:02:34,040
+quiero hacer.
+
+32
+00:02:34,260 --> 00:02:45,020
+As que importar connect from react-redux aqu y conectar mi diseo, ahora estoy interesado en algn estado as que agregar la
+
+33
+00:02:45,040 --> 00:02:51,990
+constante mapStateToProps aqu, esta ser una funcin donde recibir el estado como siempre
+
+34
+00:02:52,060 --> 00:02:57,580
+y devuelvo un objeto javascript donde asigno algunos accesorios a sectores
+
+35
+00:02:57,580 --> 00:03:06,650
+de mi estado y deseo crear una propiedad que nombrar como autenticada y la vincular al estado
+
+36
+00:03:07,430 --> 00:03:09,360
+y ahora cmo podemos
+
+37
+00:03:09,710 --> 00:03:15,980
+averiguar si el usuario est autenticado? Al final, si echamos un vistazo a nuestro auth
+
+38
+00:03:16,220 --> 00:03:22,230
+reductor, vemos que en el estado que tenemos relevante para la autenticacin, si el token es nulo,
+
+39
+00:03:22,240 --> 00:03:25,520
+el usuario no est autenticado, si el token no
+
+40
+00:03:25,520 --> 00:03:28,200
+es nulo, el usuario est autenticado, eso es
+
+41
+00:03:28,280 --> 00:03:32,420
+especialmente cierto, ya que borramos un token automticamente una vez que caduca,
+
+42
+00:03:32,420 --> 00:03:37,970
+ese es el cdigo que agregamos antes. As que podemos confiar en el token que nos da una indicacin acerca
+
+43
+00:03:37,970 --> 00:03:40,520
+de si el usuario est autenticado o no. Con eso en mente,
+
+44
+00:03:40,550 --> 00:03:47,510
+podemos volver al diseo y simplemente establecer isAuthenticated igual al estado. auth. token y compararlo con nulo,
+
+45
+00:03:47,930 --> 00:03:49,680
+si no es igual
+
+46
+00:03:49,790 --> 00:03:57,500
+a nulo, lo que esta verificacin comprueba que est autenticado es verdadero porque estamos autenticados.
+
+47
+00:03:58,370 --> 00:04:08,110
+Ahora usar eso junto con connect, as que pasar esto para conectar y envolver el, yuuu, envolver el componente de diseo con la funcin return por la
+
+48
+00:04:08,290 --> 00:04:15,910
+funcin connect y puedo usar isAuthenticated como prop en mi cdigo jsx aqu o en cualquier lugar en este componente, por
+
+49
+00:04:15,940 --> 00:04:21,880
+supuesto, y quiero pasarlo a mi barra de herramientas, as que agregar un nuevo accesorio aqu
+
+50
+00:04:21,940 --> 00:04:30,470
+y lo nombrar por ejemplo, y lo pasar. accesorios. Est autenticado, por lo que esta propiedad
+
+51
+00:04:30,520 --> 00:04:37,190
+que acabamos de mapear all y voy a hacer lo mismo para el cajn lateral.
+
+52
+00:04:38,340 --> 00:04:42,650
+Ahora, por supuesto, necesito editar estos dos componentes para poder usar ese nuevo accesorio, as que
+
+53
+00:04:42,900 --> 00:04:47,070
+ir al componente de la barra de herramientas aqu y all, ahora recibo esa nueva informacin
+
+54
+00:04:47,070 --> 00:04:52,550
+de soporte y debo pasarla a los elementos de navegacin. Aqu, nombrar este accesorio como autenticado y
+
+55
+00:04:52,550 --> 00:04:55,760
+cambiar estos nombres solo para asegurarme de que no
+
+56
+00:04:55,770 --> 00:05:00,540
+confundas lo que est entrando y lo que estamos transmitiendo, por lo que
+
+57
+00:05:00,540 --> 00:05:01,610
+aqu est autenticado
+
+58
+00:05:01,860 --> 00:05:09,030
+se pasar a los artculos de navegacin como un accesorio y le pasamos los accesorios isAuth, isAuth porque eso
+
+59
+00:05:09,690 --> 00:05:17,580
+es lo que acabamos de elegir en el diseo, isAuth. Lo mismo para el cajn lateral, por supuesto, en el cajn lateral, all tambin
+
+60
+00:05:17,580 --> 00:05:19,170
+tenemos los elementos de navegacin
+
+61
+00:05:19,260 --> 00:05:23,500
+y yo ato est autenticado as que el nombre de utilera que acabo de elegir
+
+62
+00:05:23,550 --> 00:05:29,070
+en la barra de herramientas y le paso accesorios. isAuth.
+
+63
+00:05:29,340 --> 00:05:31,890
+Con eso guardo ambos componentes
+
+64
+00:05:31,890 --> 00:05:39,270
+y ahora en los tems de navegacin, s que recibo este apoyo autenticado que es
+
+65
+00:05:39,270 --> 00:05:40,430
+verdadero o falso.
+
+66
+00:05:40,440 --> 00:05:44,750
+As que ahora aqu, simplemente puedo renderizar este elemento de navegacin condicionalmente,
+
+67
+00:05:44,950 --> 00:05:47,240
+puedo hacer esto en lnea o por
+
+68
+00:05:47,300 --> 00:05:53,550
+separado, lo har en lnea y simplemente comprobar si los accesorios que recibo aqu los agrego como argumento,
+
+69
+00:05:54,000 --> 00:06:01,050
+si Los accesorios estn autenticados, eso es por supuesto el accesorio que acabamos de definir en el cajn lateral y
+
+70
+00:06:01,860 --> 00:06:04,060
+la barra de herramientas, si est
+
+71
+00:06:04,230 --> 00:06:11,370
+autenticado es verdadero, entonces quiero renderizar este elemento de navegacin, lo dividir en varias lneas para que sea un poco ms
+
+72
+00:06:11,370 --> 00:06:12,240
+fcil de leer.
+
+73
+00:06:12,240 --> 00:06:22,440
+La alternativa es representar un elemento de navegacin en el que realmente enlace / logout y donde digo logout, ahora / logout nos lleva
+
+74
+00:06:22,740 --> 00:06:29,400
+a una ruta que an no hemos registrado, pero esa es la lgica que quiero usar.
+
+75
+00:06:29,640 --> 00:06:33,480
+Vamos a guardar esto y podemos ver este botn de desconexin aqu
+
+76
+00:06:33,480 --> 00:06:37,070
+en el men aunque ahora mismo, es incorrecto, muestra el cierre
+
+77
+00:06:37,080 --> 00:06:41,630
+de sesin cuando no estamos autenticados porque no estamos autenticados cuando la aplicacin se
+
+78
+00:06:41,760 --> 00:06:45,770
+recarga as que revisemos rpidamente la lgica en el contenedor de diseo ,
+
+79
+00:06:45,780 --> 00:06:50,100
+isAuthenticated est vinculado al estado del token que es nulo inicialmente, por lo que
+
+80
+00:06:50,100 --> 00:06:56,610
+es correcto, pero en los elementos de navegacin tengo un error lgico, si estoy autenticado, por supuesto, no quiero mostrar
+
+81
+00:06:56,610 --> 00:06:58,850
+la autentificacin, sino el cierre de sesin.
+
+82
+00:06:59,010 --> 00:07:03,020
+As que verificar todo lo contrario si no me autentican agregando un signo de
+
+83
+00:07:03,150 --> 00:07:04,420
+admiracin, luego mostrar autenticar,
+
+84
+00:07:04,680 --> 00:07:08,010
+de lo contrario cerrar la sesin, en este orden tiene sentido.
+
+85
+00:07:08,010 --> 00:07:09,960
+As que ahora guardemos este archivo nuevamente
+
+86
+00:07:10,170 --> 00:07:13,570
+y ahora si esta aplicacin se recarga, ver que autenticar es el predeterminado.
+
+87
+00:07:13,590 --> 00:07:18,950
+Ahora bien, si hacemos login, entonces cambiaremos para iniciar sesin y enviar, ver que
+
+88
+00:07:19,050 --> 00:07:21,540
+se intercambiar por el cierre de sesin.
+
+89
+00:07:21,810 --> 00:07:28,200
+As que ahora que actualizamos la IU, en la prxima conferencia nos aseguraremos de que cuando hagamos clic en cerrar sesin, en realidad hagamos
+
+90
+00:07:28,200 --> 00:07:30,540
+algo porque en este momento esta ruta no existe.
+

@@ -1,0 +1,268 @@
+1
+00:00:02,230 --> 00:00:06,430
+Es hora de ver leer X en accin en un proyecto real.
+
+2
+00:00:06,520 --> 00:00:08,980
+As que estoy de vuelta en el jugador de bolos de Bergere en el estado.
+
+3
+00:00:08,980 --> 00:00:10,560
+La ltima vez que la dejamos fue.
+
+4
+00:00:10,780 --> 00:00:17,620
+Y ahora veamos dnde podemos agregar un poco de magia redox Keywood para hacer que la administracin estatal sea un poco ms fcil
+
+5
+00:00:17,620 --> 00:00:18,210
+para pap.
+
+6
+00:00:18,370 --> 00:00:25,060
+En esta primera conferencia quiero analizar nuestro proyecto existente para descubrir qu tipo de estado
+
+7
+00:00:25,060 --> 00:00:26,180
+queremos gestionar.
+
+8
+00:00:26,220 --> 00:00:33,970
+la administracin del estado se lleva a cabo en contenedores y, por lo tanto, no necesitamos explorar todos los componentes.
+
+9
+00:00:33,970 --> 00:00:41,080
+Frue Rydex As que vamos a sumergirnos en nuestros contenedores porque, afortunadamente, ya tenemos una estructura donde toda
+
+10
+00:00:41,080 --> 00:00:44,060
+Es solo un estado que administramos en contenedores.
+
+11
+00:00:44,140 --> 00:00:47,310
+Probablemente deseamos relajarnos en el futuro.
+
+12
+00:00:47,320 --> 00:00:49,310
+Comencemos con el constructor de Bergere.
+
+13
+00:00:49,450 --> 00:00:55,900
+Si inspeccionamos el estado en esta clase de constructores de hamburguesas aqu, vemos que obtuvimos los
+
+14
+00:00:55,900 --> 00:01:01,990
+ingredientes de la hamburguesa, actualmente estamos construyendo el precio y luego un par de campos estatales.
+
+15
+00:01:01,990 --> 00:01:09,640
+En cuanto al estado actual que tenemos cuando se trata de comprar esa hamburguesa, por ejemplo, por persecucin es un estado
+
+16
+00:01:09,910 --> 00:01:17,380
+que usamos si nos desplazamos hacia abajo al mtodo de renderizado que usamos para mostrar u ocultar condicionalmente ese modal.
+
+17
+00:01:17,500 --> 00:01:20,710
+Entonces aqu las compras estatales se usan para eso.
+
+18
+00:01:20,890 --> 00:01:30,370
+Con ese orden, la carga de resumen se usa para mostrar un giro y el error tambin se usa aqu para representar
+
+19
+00:01:30,370 --> 00:01:31,250
+contenido diferente.
+
+20
+00:01:31,480 --> 00:01:39,490
+Entonces, si echamos un vistazo a nuestro estado, podramos argumentar que, por persecucin, la carga y el error son nuestro tipo
+
+21
+00:01:39,610 --> 00:01:41,570
+de estado de UI local.
+
+22
+00:01:41,770 --> 00:01:47,620
+Los usamos aqu para determinar si mostramos un modal donde sea que mostremos o un mensaje de error.
+
+23
+00:01:47,620 --> 00:01:52,870
+Por supuesto, tambin podramos gestionar eso a travs de redox y yo dira que esto sera malo.
+
+24
+00:01:52,870 --> 00:01:58,270
+puede administrar todo a travs de CDEX. Pero puede que tampoco sea necesario hacerlo.
+
+25
+00:01:58,270 --> 00:01:59,310
+En absoluto, definitivamente
+
+26
+00:01:59,620 --> 00:02:05,410
+Entonces, lo que definitivamente es interesante para gestionar redox son los ingredientes y el precio total
+
+27
+00:02:05,410 --> 00:02:07,360
+de la hamburguesa por Chasuble.
+
+28
+00:02:07,390 --> 00:02:15,040
+Si echamos un vistazo al lugar donde utilizamos la estadstica, podemos ver que si nos desplazamos hacia abajo pasamos a
+
+29
+00:02:15,040 --> 00:02:19,920
+nuestros controles de cinturn y all para desbloquear el botn de orden.
+
+30
+00:02:20,050 --> 00:02:25,350
+Entonces, si inspeccionamos el componente de control de pernos de Bergere y vemos qu hacemos con el
+
+31
+00:02:25,350 --> 00:02:28,230
+Propst adquirible, lo usamos para cambiar a un botn aqu.
+
+32
+00:02:28,240 --> 00:02:32,930
+El botn de orden ahora puede habilitarse y viceversa.
+
+33
+00:02:32,950 --> 00:02:36,000
+Entonces esto tambin es ms estado de DUI.
+
+34
+00:02:36,010 --> 00:02:39,070
+Cambiamos algo en la interfaz de usuario.
+
+35
+00:02:39,070 --> 00:02:45,100
+Sin embargo, puede que no sea muy importante para nosotros gestionar eso a travs de una reduccin.
+
+36
+00:02:45,160 --> 00:02:52,820
+Por supuesto, tambin podra decirse que el valor que se adquiere depende al final del Bergere que configuramos.
+
+37
+00:02:52,960 --> 00:02:55,600
+Entonces tendremos que ver dnde estamos en esto.
+
+38
+00:02:56,050 --> 00:02:57,680
+Definitivamente una caja reductora.
+
+39
+00:02:57,700 --> 00:03:00,180
+Nuestros ingredientes y el precio total sin embargo.
+
+40
+00:03:00,610 --> 00:03:01,890
+Echemos un vistazo al pago.
+
+41
+00:03:01,920 --> 00:03:08,560
+Si vas al componente de check out ah, si nos desplazamos hacia arriba, vemos rpidamente que todos tenemos ingredientes
+
+42
+00:03:08,560 --> 00:03:09,710
+y precios aqu.
+
+43
+00:03:09,880 --> 00:03:16,260
+Ya hay un caso fuerte para usar redirecciones porque tenemos ese problema de aprobar ttulos de padres queery
+
+44
+00:03:16,300 --> 00:03:19,910
+y eso sera increble si podemos deshacernos de la deuda.
+
+45
+00:03:20,020 --> 00:03:25,990
+Tambin sera increble si en el mtodo de renderizado del componente de pago pudiramos cambiar la forma en
+
+46
+00:03:25,990 --> 00:03:33,220
+que procesamos esta ruta, de modo que no tengamos que usarla de esta manera solo para lograr que Regans contacte datos.
+
+47
+00:03:33,310 --> 00:03:40,210
+restablecer en nuestra tienda redox, no podemos simplemente presentar este componente aqu y en los datos contextuales podemos conectar
+
+48
+00:03:40,450 --> 00:03:48,520
+esto a travs de la desconexin de tiendas de componentes de mayor orden tudy redux para que podamos obtener los ingredientes aqu.
+
+49
+00:03:48,520 --> 00:03:50,210
+Una vez que realmente logramos
+
+50
+00:03:50,220 --> 00:03:56,500
+P Porque en el componente de datos de contacto si echamos un vistazo al estado, por supuesto obtuvimos
+
+51
+00:03:56,560 --> 00:04:02,090
+nuestro formulario de todos estos controles y quiero dejarlos aqu porque eso tambin es local.
+
+52
+00:04:02,260 --> 00:04:07,290
+Realmente no necesitamos informacin sobre nuestro formulario aqu ni en ningn otro lado de la aplicacin.
+
+53
+00:04:07,690 --> 00:04:13,780
+Pero tambin, por supuesto, aprovechamos los ingredientes que obtenemos a travs de props, por lo que no los vemos
+
+54
+00:04:13,780 --> 00:04:15,230
+en el estado aqu.
+
+55
+00:04:15,310 --> 00:04:22,180
+Entonces, en ese contexto, el estado es realmente el estado de DUI aqu manejando el formulario, pero aqu
+
+56
+00:04:22,180 --> 00:04:28,260
+tenemos algunos accesorios que en el futuro podran obtenerse directamente de la tienda reutilizada en lugar
+
+57
+00:04:28,330 --> 00:04:35,010
+de pasarlos aqu con este trabajo que actualmente estamos usando en un checkout container ahora en el
+
+58
+00:04:35,020 --> 00:04:42,220
+orden como componente all tambin tenemos los pedidos en el estado ahora los pedidos son realmente obtenidos del servidor
+
+59
+00:04:42,310 --> 00:04:49,240
+y hemos aprendido cmo obtener datos de un servidor cmo manejar acciones asincrnicas, ya que las solicitudes HTP,
+
+60
+00:04:49,270 --> 00:04:51,630
+por supuesto, estn junto con relajarse.
+
+61
+00:04:51,670 --> 00:04:58,390
+Entonces, los pedidos son algo que analizar ms adelante una vez que hayamos examinado ms de cerca cmo manejar el
+
+62
+00:04:58,390 --> 00:05:00,110
+cdigo asncrono y los redireccionamientos.
+
+63
+00:05:00,130 --> 00:05:07,820
+Por ahora, centrmonos en el cdigo y en las prximas clases. Implementemos read X, mueva nuestro escenario hacia l
+
+64
+00:05:07,820 --> 00:05:10,190
+y conecte nuestros contenedores a redux.
+
+65
+00:05:10,370 --> 00:05:16,160
+Definitivamente, sintete libre de moverte por tu cuenta y luego resulvelo conmigo en las prximas conferencias.
+
+66
+00:05:16,280 --> 00:05:23,000
+Pero si no se siente tan cmodo, intente lo mejor que haga hasta que sepa cmo hacer las cosas
+
+67
+00:05:23,000 --> 00:05:24,640
+y luego construiremos esto juntos.
+

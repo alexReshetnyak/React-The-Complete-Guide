@@ -1,0 +1,112 @@
+1
+00:00:02,220 --> 00:00:03,750
+Peki devlet ne demektir.
+
+2
+00:00:03,900 --> 00:00:05,970
+Sana baz rnekler vereyim.
+
+3
+00:00:06,000 --> 00:00:09,690
+rnein, burgerimize eklediimiz iki e devlettir.
+
+4
+00:00:09,690 --> 00:00:15,730
+Bu, uygulama durumumuzun paras olan burger Boulder uygulamamzn uygulama durumudur.
+
+5
+00:00:16,080 --> 00:00:20,940
+Eklediimiz katk maddeleri ok nemli nk ekrana ne sunmamz gerektiini
+
+6
+00:00:20,940 --> 00:00:21,660
+belirliyor.
+
+7
+00:00:21,840 --> 00:00:24,410
+Burger nizlememiz nasl olmaldr?
+
+8
+00:00:24,420 --> 00:00:30,600
+gerekiyor ve Navaira rnei, her kullancnn kimlii dorulanm olsun veya olmasn soru olacaktr.
+
+9
+00:00:30,600 --> 00:00:36,780
+Bu burger' bir sunucuda saklam olduumuzda sahnelerin arkasnda nemli ve tm bu malzemeleri HTP
+
+10
+00:00:36,780 --> 00:00:37,650
+isteinde gndermemiz
+
+11
+00:00:37,650 --> 00:00:43,530
+Bu, mende gsterdiimiz seenekleri veya belirli bileenlere verdiimiz eriimi
+
+12
+00:00:43,530 --> 00:00:46,290
+belirleyebileceinden ok nemli olabilir.
+
+13
+00:00:46,290 --> 00:00:53,190
+Ayrca ilgin bir haliniz var gibi belli bir modal ak ise ak olmas gereken bir zemin aktr.
+
+14
+00:00:53,220 --> 00:00:54,640
+Bu da sper nemlidir.
+
+15
+00:00:54,720 --> 00:01:01,740
+Bileenler ve kullanc kimlik dorulamas gibi verilerle ilgili daha az ey, yalnzca kullanc arabiriminin saf olduu durumumuzla
+
+16
+00:01:01,740 --> 00:01:02,290
+ilgilidir.
+
+17
+00:01:02,400 --> 00:01:05,070
+Bu yalnzca tek bir bileenle alakal olabilir.
+
+18
+00:01:05,070 --> 00:01:10,810
+Yine de, bu, ayn zamanda, bir uygulama geneline gre daha fazla yerel bir eyalete rnektir.
+
+19
+00:01:10,890 --> 00:01:16,890
+Ancak halen ekrana ne getirilmesi gerektii belirlenmekte ve ekirdeinde, ekranda
+
+20
+00:01:16,890 --> 00:01:21,230
+grdnz eyleri devlet etkisine kaynatp neyin kaynatabileceini belirlemektedir.
+
+21
+00:01:21,600 --> 00:01:26,250
+Dolaysyla bu rnekler tahakkuk ettirdiimiz blok mesajlarn bir listesi veya
+
+22
+00:01:26,250 --> 00:01:29,690
+bu mesajlarn hangisinin kullanc tarafndan yaratldn bilmemiz gerekebilir.
+
+23
+00:01:29,700 --> 00:01:34,110
+Uygulamamzda da ihtiyacmz olabilecek nemli bir durum.
+
+24
+00:01:34,320 --> 00:01:36,300
+Ve tabii ki liste uzayp gidiyor.
+
+25
+00:01:36,300 --> 00:01:39,090
+Burada daha fazla rnek ekleyebilirsiniz.
+
+26
+00:01:39,090 --> 00:01:44,670
+imdi bunlar gerekten sadece devlet hakknda ok karmak olan baz rneklerdir.
+
+27
+00:01:44,670 --> 00:01:47,320
+Bunun iin neden ek ktphaneye ihtiyacmz var.
+
+28
+00:01:47,460 --> 00:01:48,820
+Hadi daha yakndan bakalm.
+

@@ -1,0 +1,252 @@
+1
+00:00:02,000 --> 00:00:08,070
+Konteynrlar nasl test edeceimizi rendik ve nemli olan ksmn redux balantsn test
+
+2
+00:00:08,070 --> 00:00:09,060
+etmediinizden, redux'u
+
+3
+00:00:09,270 --> 00:00:12,630
+nasl test edeceinizden, hi test etmediinden bahsetmitim.
+
+4
+00:00:12,630 --> 00:00:17,340
+Cevap evet, biz test ediyoruz ama ne test ettiimiz konusunda dikkatli olmalyz.
+
+5
+00:00:17,340 --> 00:00:24,100
+Muhtemelen ok karmak eylem zincirleri ve indirgeyici ve devlet zincirlerini test etmek
+
+6
+00:00:24,100 --> 00:00:30,540
+istemiyoruz. Sonu olarak, redktrler test etmek istediimiz etlerdir, zellikle de eylem yaratclarna
+
+7
+00:00:30,540 --> 00:00:36,740
+ok fazla mantk getirmeme modelini izlersek. Daha sonra redktrleri test etmek ok basit,
+
+8
+00:00:36,840 --> 00:00:42,000
+senkronizasyon var, bu yzden asenkron kod ile uramak zorunda kalmyoruz ve sadece
+
+9
+00:00:42,000 --> 00:00:43,260
+fonksiyonlar var, bir
+
+10
+00:00:43,410 --> 00:00:48,110
+eyleri ieri aktaryoruz, rnein kimlik dorulamas iin bir eyler elde ediyoruz,
+
+11
+00:00:48,180 --> 00:00:50,600
+diyelim ki bir test yazmak istiyoruz bu.
+
+12
+00:00:50,640 --> 00:00:57,510
+Yani bir kimlik ekleyin. lek. js dosyas, burada bile enzime ihtiya
+
+13
+00:00:57,510 --> 00:00:58,230
+duymuyoruz nk
+
+14
+00:00:58,230 --> 00:01:05,820
+herhangi bir reaksiyon bileenini test etmiyoruz, hibir ey yapmamz gerekmiyor, sadece normal javascript kodunu test ediyoruz, fonksiyonlar test ediyoruz, redktr fonksiyonunu.
+
+15
+00:01:06,270 --> 00:01:16,230
+Yani burada yaptm ey test dosyasnda, ncelikle redktr fonksiyonunu ithal ediyorum. / Kimlik dorulama. Bu dosyada js, bu durumda bunun gibi
+
+16
+00:01:16,230 --> 00:01:20,790
+ve imdi de eylem trlerini ie aktarmam gerekiyor, bu yzden
+
+17
+00:01:20,910 --> 00:01:26,970
+eylem trleri, her eyi ieri aktaryorum. / eylemleri eylem trleri
+
+18
+00:01:26,970 --> 00:01:28,810
+ve imdi sadece
+
+19
+00:01:29,010 --> 00:01:30,730
+testi yazyoruz.
+
+20
+00:01:30,900 --> 00:01:32,680
+Yani yine tanmladk,
+
+21
+00:01:33,030 --> 00:01:39,730
+imdi bunu auth redksiyonu gibi konsolda grebildiimiz ak bir aklama verdim ve
+
+22
+00:01:40,170 --> 00:01:44,200
+sonra burada fonksiyonumuzda sahip olduumuz birok testi yazabiliriz.
+
+23
+00:01:44,340 --> 00:01:49,140
+Akas, eer gerekirse, baz genel konfigrasyonlar yapmak iin BeforeEach'
+
+24
+00:01:49,440 --> 00:01:51,730
+kullanabiliriz, ancak testlerle doru
+
+25
+00:01:51,810 --> 00:01:52,800
+ekilde balamanz
+
+26
+00:01:52,800 --> 00:01:59,550
+istiyorum, o zaman ve imdi neyi test edeceimizi grelim, rnein, eer biz gerekten
+
+27
+00:01:59,550 --> 00:02:02,680
+doru bir balang durumuna sahip olduumuzu
+
+28
+00:02:02,730 --> 00:02:08,340
+test edelim. geersiz bir ilem tr iletmek, bu yzden ilk durumu
+
+29
+00:02:08,340 --> 00:02:09,920
+dndrmelidir, burada aklama olabilir.
+
+30
+00:02:10,620 --> 00:02:18,060
+Ve sonra javascript ilevimi geiriyorum ve orada, imdi indirgeyicemde beklerim imdi beklediimde, test
+
+31
+00:02:18,240 --> 00:02:19,350
+etmek istediim
+
+32
+00:02:19,350 --> 00:02:25,140
+kodu altryorum, tpk sarcyla olduu gibi imdi ama normal bir
+
+33
+00:02:25,140 --> 00:02:31,860
+javascript ileviyle aslnda burada tanmlanmam bir balang durumu olarak geiyorsunuz, bu durum
+
+34
+00:02:31,860 --> 00:02:39,840
+devletin bizim uygulamanzn balangcnda yeni ayarland ve eylemin sadece bo bir nesne olduu durumda,
+
+35
+00:02:39,850 --> 00:02:42,250
+bu yzden belirli bir eylem yok.
+
+36
+00:02:42,270 --> 00:02:47,470
+Bu durumda, durumumun eit olmasn beklerim ve imdi
+
+37
+00:02:47,730 --> 00:02:53,910
+de redktr fonksiyonunda tanmlanm ilk durumumun eit olmas gerekir, bu
+
+38
+00:02:54,000 --> 00:02:56,660
+yzden javascript nesnesi, tam
+
+39
+00:02:56,880 --> 00:02:58,550
+olarak test ettiim
+
+40
+00:02:58,560 --> 00:03:01,560
+ey, o nesneye eit olmaldr.
+
+41
+00:03:01,560 --> 00:03:05,080
+imdi bu dosyay kaydedersek, bu da idam edilmeli ve
+
+42
+00:03:05,220 --> 00:03:08,060
+bu bir hakszlk. lek. js orada altrlyor, imdi
+
+43
+00:03:08,370 --> 00:03:13,710
+bunun baarl olduunu gryoruz ve bu bir redktr ne kadar kolay test edebileceinizdir. Tabii ki belirli
+
+44
+00:03:13,710 --> 00:03:21,030
+durumlar iin de test edebilirsiniz, bu yzden girite jetonu
+
+45
+00:03:21,170 --> 00:03:23,760
+saklayacamz baka bir
+
+46
+00:03:23,760 --> 00:03:34,340
+test yazabiliriz ve imdi bu fonksiyonda, aslnda ilk durumu diyelim ki bir redktr
+
+47
+00:03:34,340 --> 00:03:38,920
+fonksiyonunu yrtmeyi umuyorum ve bunu ayarlayabiliriz. ncesinde
+
+48
+00:03:39,110 --> 00:03:39,460
+Bu
+
+49
+00:03:39,470 --> 00:03:48,190
+yzden, redktr fonksiyonunu balang durumu ile ve tipin actionTypes olduu bir eylemle yrtyorum. AUTH_SUCCESS ve imdi elbette bu ilemle de doru
+
+50
+00:03:48,200 --> 00:03:54,360
+yk aktarmalyz, bu yzden bu tr eylemlerin sadece tr deil, ayn
+
+51
+00:03:54,500 --> 00:03:58,570
+zamanda yk de i yk dosyamzda tabii
+
+52
+00:03:58,750 --> 00:04:03,710
+ki bu yk grebiliriz. AUTH_SUCCESS'de, kimlik jetonunu ve kullanc
+
+53
+00:04:03,770 --> 00:04:07,890
+kimliini de geiririz, bu yzden burada da geirmemiz
+
+54
+00:04:07,890 --> 00:04:17,120
+gereken bir ey vardr ve bu, baz belirteler olabilir, tabii ki testin kesin deeri ve baz kullanc kimlii nemlidir.
+
+55
+00:04:17,500 --> 00:04:21,040
+imdi bu redktr ilevi, onu nasl yrtyoruz.
+
+56
+00:04:21,040 --> 00:04:27,490
+imdi bu belirteci ve kullanc kimliine saygl olan gncelletirilmi bir durumun tkenmesini bekliyoruz, bu
+
+57
+00:04:27,490 --> 00:04:37,270
+yzden gncellenmi durum genel olarak ilk durumumuza eit olmal, ancak tabii ki belirtecin bir belirteci olmal ve burada burada tam bir
+
+58
+00:04:37,270 --> 00:04:42,650
+deer olmal. o zaman olmasayd, redktrmz iinde bir ey yanl olurdu, bu
+
+59
+00:04:42,790 --> 00:04:44,610
+testin ardndaki fikirdir, bu
+
+60
+00:04:45,620 --> 00:04:48,910
+nedenle kullanc ID'si baz kullanc kimlii olmaldr.
+
+61
+00:04:48,960 --> 00:04:57,600
+imdi bunu kaydedersek, bu da geer ve beklenen deeri baz kullanclara deitirdiimde baarsz olur, nk
+
+62
+00:04:57,840 --> 00:05:00,020
+imdi farkl deerlere sahibiz.
+
+63
+00:05:00,360 --> 00:05:07,410
+Bu yzden redktrleri de test edebiliriz, saf fonksiyonlardr ve bu nedenle test etmek ok kolaydr.
+

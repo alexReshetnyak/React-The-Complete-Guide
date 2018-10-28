@@ -1,0 +1,152 @@
+1
+00:00:02,150 --> 00:00:07,190
+Ora nell'ultima lezione, spostiamo il componente di transizione all'interno del modale e quindi stiamo semplicemente usando
+
+2
+00:00:07,190 --> 00:00:09,050
+la stessa logica in sostanza, ora
+
+3
+00:00:09,200 --> 00:00:12,990
+c' ancora una cosa che potresti aver notato, abbiamo impostato il timer
+
+4
+00:00:13,280 --> 00:00:20,690
+a 300 millisecondi ma l'animazione che suoniamo, abbiamo istituito in modale. il css richiede in
+
+5
+00:00:20,780 --> 00:00:23,230
+realt 400 millisecondi.
+
+6
+00:00:23,330 --> 00:00:24,970
+Ora, questo non  un
+
+7
+00:00:25,010 --> 00:00:28,030
+problema, semplicemente non riprodurr l'intera animazione che  la
+
+8
+00:00:28,100 --> 00:00:31,420
+cosa che, naturalmente, potrebbe essere di nuovo un problema.
+
+9
+00:00:31,610 --> 00:00:38,390
+Il timeout impostato sul componente di transizione determina per quanto tempo si terr lo stato di
+
+10
+00:00:38,390 --> 00:00:42,440
+entrata e di uscita per il quale stiamo controllando,
+
+11
+00:00:42,430 --> 00:00:51,920
+per quanto a lungo questo  sostanzialmente lo stato che utilizza. Se si definisce un timeout che  molto pi breve dell'animazione che
+
+12
+00:00:51,920 --> 00:00:52,700
+si suona,
+
+13
+00:00:52,880 --> 00:00:58,540
+ sufficiente chiudere l'animazione preventivamente perch si  passato uno stato troppo presto, si
+
+14
+00:00:58,580 --> 00:00:59,110
+ passati.
+
+15
+00:00:59,120 --> 00:01:04,400
+per uscire che significher che l'elemento viene rimosso e che naturalmente potrebbe non essere il
+
+16
+00:01:04,400 --> 00:01:05,840
+comportamento che stai cercando.
+
+17
+00:01:05,870 --> 00:01:11,140
+Tuttavia non  necessariamente un problema se lo si imposta in questo modo.
+
+18
+00:01:11,150 --> 00:01:18,140
+Tuttavia, una cosa che potresti voler tenere a mente o che potresti
+
+19
+00:01:18,270 --> 00:01:27,050
+voler configurare in alcuni casi  il timeout. Il timeout in questo momento  solo il nostro valore in
+
+20
+00:01:27,470 --> 00:01:34,960
+millisecondi definito come un numero, e se volessi avere tempi diversi per entrare e uscire, puoi impostarlo, quindi lascia
+
+21
+00:01:34,970 --> 00:01:38,610
+che imposti questo definendo una nuova costante e lo
+
+22
+00:01:38,630 --> 00:01:44,210
+faccio al di fuori di il componente perch questo non cambier in costante non
+
+23
+00:01:44,210 --> 00:01:46,110
+correlato al rendering del componente qui.
+
+24
+00:01:46,580 --> 00:01:53,930
+Questa costante chiamer animationTiming e che sar un oggetto javascript e in quell'oggetto javascript, puoi definire un
+
+25
+00:01:54,200 --> 00:02:02,500
+tasto invio e dargli una durata di dire 400 millisecondi e una chiave di uscita di diciamo 1 secondo, 400
+
+26
+00:02:02,900 --> 00:02:08,880
+millisecondi e uno in secondo luogo in modo che possiamo davvero vedere una differenza.
+
+27
+00:02:08,890 --> 00:02:12,590
+Quindi entra ed esci,  importante, questi sono
+
+28
+00:02:12,610 --> 00:02:19,510
+i due tipi che puoi definire e come potresti indovinare, entra semplicemente definisce la durata
+
+29
+00:02:19,500 --> 00:02:26,080
+che useremo per aggiungere questo elemento, esci definisce la durata che user per rimuoverlo .
+
+30
+00:02:26,080 --> 00:02:34,300
+Cos ora se passiamo animationTiming qui, questo oggetto che abbiamo appena definito per timeout, user questi
+
+31
+00:02:34,420 --> 00:02:38,210
+valori per i due diversi tipi di transizione.
+
+32
+00:02:38,660 --> 00:02:45,530
+Con questo, regoliamo l'animazione nel nostro file css e diciamo che anche il modal chiuso dovrebbe
+
+33
+00:02:45,690 --> 00:02:48,040
+richiedere un secondo. Se ora salviamo
+
+34
+00:02:48,320 --> 00:02:54,950
+questo e torniamo indietro e facciamo clic su open modal, l'animazione  la stessa di prima, ma
+
+35
+00:02:55,040 --> 00:02:58,890
+se lo ignoro,  molto pi lento in un secondo
+
+36
+00:02:58,950 --> 00:03:01,950
+e l puoi vedere le diverse durate utilizzate.
+
+37
+00:03:01,970 --> 00:03:04,580
+Quindi  qualcosa da tenere a
+
+38
+00:03:04,700 --> 00:03:12,170
+mente sui tempi, pu chiudere un'animazione troppo presto e puoi anche definire tempi diversi per entrare e uscire.
+

@@ -1,0 +1,124 @@
+1
+00:00:02,230 --> 00:00:05,850
+Estou de volta ao projeto e agora quero implantar esse aplicativo.
+
+2
+00:00:06,040 --> 00:00:08,050
+Ento esse  o projeto que
+
+3
+00:00:08,080 --> 00:00:10,030
+ns deixamos, eu no mudei nada.
+
+4
+00:00:10,060 --> 00:00:12,450
+Agora, a primeira coisa  o caminho base,
+
+5
+00:00:12,610 --> 00:00:13,730
+podemos ver isso no
+
+6
+00:00:13,910 --> 00:00:14,880
+aplicativo. arquivo
+
+7
+00:00:14,980 --> 00:00:21,870
+js, desculpe-me, no ndice. No arquivo js, onde temos o roteador do navegador, podemos definir a propriedade de
+
+8
+00:00:22,000 --> 00:00:26,830
+nome de base, mas planejamos veicular meu aplicativo de mydomain. com / nada, ento no
+
+9
+00:00:26,830 --> 00:00:29,110
+preciso definir isso. Agora, a prxima coisa
+
+10
+00:00:29,150 --> 00:00:34,640
+ que preciso garantir que o servidor sempre retorne ao ndice. arquivo html, que  algo que todos os
+
+11
+00:00:34,660 --> 00:00:40,560
+hosts estticos normalmente permitem que voc configure e se voc no estiver usando um host esttico mas estiver
+
+12
+00:00:40,560 --> 00:00:46,960
+usando seu servidor nodejs, voc s precisa escrever cdigo, voc precisa configurar uma captura de todas as rotas e
+
+13
+00:00:46,960 --> 00:00:48,170
+retornar ndice. html e
+
+14
+00:00:48,310 --> 00:00:52,810
+a mesma lgica se aplica a qualquer outra linguagem do lado do servidor.
+
+15
+00:00:52,840 --> 00:00:58,550
+Ento, para ns aqui, o prximo passo  construir o projeto e
+
+16
+00:00:58,870 --> 00:01:09,070
+isso  executado com o comando npm, npm run build. Isso agora ir construir o nosso projeto, semelhante ao npm start, mas agora ele
+
+17
+00:01:09,160 --> 00:01:17,040
+tambm vai cuspir uma pasta e no apenas armazenar o resultado na memria, e essa pasta conter nossa build de produo otimizada.
+
+18
+00:01:17,470 --> 00:01:24,010
+Ento l, ns temos esta nova pasta de construo agora na pasta do projeto e se dermos uma
+
+19
+00:01:24,010 --> 00:01:29,910
+olhada nisso, vemos a nossa pgina nica que tambm  otimizada para consumir o menor espao possvel.
+
+20
+00:01:29,920 --> 00:01:36,100
+Voc ver que algumas importaes de script foram adicionadas l, como para este arquivo js principal
+
+21
+00:01:36,100 --> 00:01:38,230
+e  isso que podemos encontrar
+
+22
+00:01:38,290 --> 00:01:45,400
+na pasta esttica, l temos nossos arquivos de mdia, imagens como o logotipo do hambrguer e os arquivos javascript
+
+23
+00:01:45,400 --> 00:01:50,100
+para nossos diferentes pedaos para carregamento lento e o arquivo principal js.
+
+24
+00:01:50,110 --> 00:01:52,540
+Ns tambm temos os mapas de origem aqui,
+
+25
+00:01:52,660 --> 00:01:57,080
+mas agora voc no precisa implantar isso, eles so puramente opcionais, voc pode se
+
+26
+00:01:57,100 --> 00:02:01,880
+concentrar nos arquivos javascript, mas voc tambm pode e  isso que eu vou fazer
+
+27
+00:02:01,890 --> 00:02:05,650
+implantar o contedo de toda a pasta build e isso  importante.
+
+28
+00:02:05,650 --> 00:02:13,000
+O contedo da pasta de compilao, envie esse contedo, todos os arquivos e a pasta esttica para o
+
+29
+00:02:13,000 --> 00:02:13,830
+host esttico.
+
+30
+00:02:13,840 --> 00:02:16,150
+Ento agora vamos implantar isso.
+
+31
+00:02:16,240 --> 00:02:18,420
+Ns faremos isso na prxima aula.
+

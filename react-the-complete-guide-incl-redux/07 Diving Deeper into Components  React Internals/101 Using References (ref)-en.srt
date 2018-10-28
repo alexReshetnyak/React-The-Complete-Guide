@@ -1,0 +1,264 @@
+1
+00:00:02,290 --> 00:00:06,450
+We're nearing the end of this super long module where a lot was covered.
+
+2
+00:00:06,540 --> 00:00:12,400
+Now there's one last feature which I want to show you which you won't use too often but which can
+
+3
+00:00:12,400 --> 00:00:18,950
+be extremely valuable for some tiny convenient things you want to do in your components,
+
+4
+00:00:19,000 --> 00:00:22,760
+mostly when focusing text inputs and stuff like that.
+
+5
+00:00:22,870 --> 00:00:24,730
+Now let me show you what I mean,
+
+6
+00:00:25,000 --> 00:00:33,040
+we do have a text input in person.js and let's say we want to focus text input of the first person
+
+7
+00:00:33,040 --> 00:00:36,650
+here whenever it is rendered to the screen.
+
+8
+00:00:36,940 --> 00:00:43,570
+Now focusing this input is actually not that straightforward here because we would like to call the
+
+9
+00:00:43,570 --> 00:00:49,580
+focus method we can get on this input element at a certain point of time.
+
+10
+00:00:49,600 --> 00:00:56,710
+So for example, after componentDidMount or in this method to be precise so that we know that it exists.
+
+11
+00:00:57,500 --> 00:00:58,330
+Now
+
+12
+00:00:58,390 --> 00:01:04,240
+for that, we need access to the input element so that we can call the focus method from this method.
+
+13
+00:01:04,780 --> 00:01:11,040
+And there might be some work arounds which you can find with setting some state and then rendering this
+
+14
+00:01:11,050 --> 00:01:14,930
+input conditionally in the focused state or unfocused state
+
+15
+00:01:15,370 --> 00:01:21,690
+and actually oftentimes you should try to use these work arounds but especially for focusing,
+
+16
+00:01:21,680 --> 00:01:28,540
+there's a quick and easy way which is perfectly fine to use, a reference. You can add a special property
+
+17
+00:01:28,600 --> 00:01:33,310
+or attributes to input which is called ref, just like key,
+
+18
+00:01:33,340 --> 00:01:40,290
+that's a special property known by react. Ref takes a dynamic input which should be a function
+
+19
+00:01:40,390 --> 00:01:43,170
+so here I'll use an arrow function
+
+20
+00:01:43,480 --> 00:01:47,630
+and in this function, you set up a reference to this element.
+
+21
+00:01:47,740 --> 00:01:52,360
+So as I input, you get access to this element, you can name this whatever you want
+
+22
+00:01:52,360 --> 00:01:54,570
+like inp for input,
+
+23
+00:01:55,000 --> 00:02:00,610
+and in there you can now define a property of this class
+
+24
+00:02:00,620 --> 00:02:02,290
+and this already is important,
+
+25
+00:02:02,290 --> 00:02:06,280
+references are only available in stateful components
+
+26
+00:02:06,280 --> 00:02:13,610
+So in components which are created with class and extends component. There, you can then add a new property
+
+27
+00:02:13,610 --> 00:02:21,470
+to class by simply adding this and then the name of the property, any property you want like input
+
+28
+00:02:21,800 --> 00:02:22,480
+element,
+
+29
+00:02:22,520 --> 00:02:24,960
+again this name is totally up to you.
+
+30
+00:02:24,980 --> 00:02:28,010
+This will create a new property for your entire class,
+
+31
+00:02:28,160 --> 00:02:33,470
+so for the person class which you can therefore use from anywhere in the class and it will be created
+
+32
+00:02:33,470 --> 00:02:35,440
+at a point of time render runs.
+
+33
+00:02:35,450 --> 00:02:41,150
+So if you later try to access it from within componentDidMount, that will work because componentDidMount
+
+34
+00:02:41,150 --> 00:02:45,440
+as you learned is actually executed after render.
+
+35
+00:02:45,440 --> 00:02:47,080
+Now this alone won't do the trick
+
+36
+00:02:47,090 --> 00:02:52,020
+we need to assign a value to this newly created property and the value should be inp,
+
+37
+00:02:52,160 --> 00:02:54,920
+so this input element we got access to.
+
+38
+00:02:54,980 --> 00:03:01,250
+So now we have a property on the class which gives us access to this input element and in componentDidMount
+
+39
+00:03:01,450 --> 00:03:06,210
+we can now call this.inputElement.focus,
+
+40
+00:03:06,340 --> 00:03:09,950
+the focus method is a method available on input elements.
+
+41
+00:03:09,950 --> 00:03:15,720
+Now if we save this and we open this page, you'll see that the last element is focused,
+
+42
+00:03:15,830 --> 00:03:19,560
+The last one because focus was called for everyone
+
+43
+00:03:19,670 --> 00:03:25,040
+and therefore since only one element can be focused at a time, it simply sticks to the last one which
+
+44
+00:03:25,040 --> 00:03:27,920
+was rendered, the last one which called focus.
+
+45
+00:03:27,920 --> 00:03:33,920
+Now if you want to make sure that the first element gets focused, you would need to pass the position
+
+46
+00:03:34,190 --> 00:03:37,860
+which you have in your persons.js file where you loop with the index,
+
+47
+00:03:38,150 --> 00:03:44,510
+you would have to pass this as a prop so that you maybe pass position which in the end is just the index
+
+48
+00:03:44,510 --> 00:03:47,780
+and if position is 0 then you want to call this.
+
+49
+00:03:47,810 --> 00:03:55,670
+And then in person.js, you would simply add if statement where you check if this.props.position is equal
+
+50
+00:03:55,670 --> 00:03:56,270
+to zero,
+
+51
+00:03:56,270 --> 00:04:01,770
+so if this is the first element then you want to call this focus method
+
+52
+00:04:01,790 --> 00:04:03,370
+otherwise, you won't do anything.
+
+53
+00:04:03,380 --> 00:04:08,090
+And now with that, if you click toggle, the first element will be focused.
+
+54
+00:04:08,090 --> 00:04:09,980
+These are references, important,
+
+55
+00:04:10,010 --> 00:04:13,230
+you may only use them in stateful components.
+
+56
+00:04:13,280 --> 00:04:19,910
+You can also use them on your own components, you're not limited to html elements like input and you should
+
+57
+00:04:19,910 --> 00:04:21,500
+use them with care.
+
+58
+00:04:21,500 --> 00:04:29,840
+Don't try to get lazy and certainly don't do things like this input element style background color equals
+
+59
+00:04:29,840 --> 00:04:30,920
+something,
+
+60
+00:04:30,950 --> 00:04:37,460
+do this with the previous tools you learned for dynamically adjusting styles or for doing anything dynamic.
+
+61
+00:04:37,460 --> 00:04:40,520
+This should not be your shortcut for being lazy,
+
+62
+00:04:40,520 --> 00:04:48,710
+it is for a few selected things mostly really about controlling focus or media playback and not for
+
+63
+00:04:48,710 --> 00:04:50,510
+styling or displaying.
+
+64
+00:04:50,510 --> 00:04:52,340
+Use the other tools you learned
+
+65
+00:04:52,340 --> 00:04:54,200
+otherwise you're not doing it
+
+66
+00:04:54,260 --> 00:04:55,340
+the react way.
+

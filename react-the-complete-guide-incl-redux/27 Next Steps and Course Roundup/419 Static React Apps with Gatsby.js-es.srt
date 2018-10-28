@@ -1,0 +1,124 @@
+1
+00:00:02,150 --> 00:00:06,900
+As que echas un vistazo a construir con reaccionar y reaccionar. rocas, ahora alejmonos de
+
+2
+00:00:06,980 --> 00:00:10,550
+los proyectos de demostracin y dems
+
+3
+00:00:10,610 --> 00:00:14,500
+y echemos un vistazo a gatsbyjs.
+
+4
+00:00:14,580 --> 00:00:22,160
+Ahora gatsbyjs es en realidad una biblioteca que se est formando en reaccionar, al igual que lo
+
+5
+00:00:22,160 --> 00:00:25,550
+hizo nextjs, gatsbyjs tiene un propsito diferente y
+
+6
+00:00:25,550 --> 00:00:33,440
+es una biblioteca muy emocionante. Ser honesto contigo. Gatsbyjs es una biblioteca que le permite construir sitios web estticos con reaccionar.
+
+7
+00:00:33,440 --> 00:00:40,210
+Ahora, qu es un sitio web esttico? Un sitio web esttico es una pgina que usa solo html, javascript
+
+8
+00:00:40,310 --> 00:00:46,550
+y css, bueno, eso es cierto para una aplicacin normal de una sola pgina, pero un sitio esttico tambin tiene una
+
+9
+00:00:46,550 --> 00:00:47,930
+cosa especial, normalmente no usa
+
+10
+00:00:48,080 --> 00:00:53,220
+el router de reaccin, usted no lo use directamente al menos, en cambio, lo que tiene es que
+
+11
+00:00:53,330 --> 00:00:59,960
+tiene una estructura de carpetas donde cada carpeta tiene un ndice. archivo html, y los activos correspondientes que
+
+12
+00:00:59,990 --> 00:01:02,780
+pertenecen al archivo en l.
+
+13
+00:01:02,780 --> 00:01:09,320
+Ahora lo mejor de todo es que realmente creas sitios web como lo hiciste en los 90 o
+
+14
+00:01:09,320 --> 00:01:17,180
+en ese momento, pero ests usando reaccionar, ests construyendo esto como una aplicacin de reaccin y gatsbyjs, esta tecnologa, esta biblioteca
+
+15
+00:01:17,180 --> 00:01:19,780
+luego hace el Descanse para usted, divide
+
+16
+00:01:19,770 --> 00:01:25,700
+todo y con un determinado comando, genera esta estructura de carpetas donde obtuvo un par de
+
+17
+00:01:25,700 --> 00:01:30,520
+carpetas con archivos html en funcin de la reaccin que usted haya creado.
+
+18
+00:01:30,560 --> 00:01:33,510
+Puede obtener ms informacin al respecto en gatsbyjs. com, es una
+
+19
+00:01:33,530 --> 00:01:39,830
+biblioteca increble y en realidad proporcionara suficiente contenido para su propio curso.
+
+20
+00:01:39,860 --> 00:01:42,140
+Ahora no tengo un curso as en
+
+21
+00:01:42,170 --> 00:01:46,880
+este momento, puedes comenzar con los documentos aqu para aprender a usarlo y definitivamente
+
+22
+00:01:46,880 --> 00:01:53,630
+jugar con l un poco para aprender ms sobre cmo funciona y si tiene sentido para ti, comparable Las alternativas mencionadas
+
+23
+00:01:53,660 --> 00:01:56,930
+en la pgina de caractersticas de gatsbyjs seran Jekyll, pero
+
+24
+00:01:56,960 --> 00:02:00,940
+all no se usan los sistemas de gestin de contenido o respuesta
+
+25
+00:02:00,980 --> 00:02:04,810
+como Wordpress, pero hay que escribir un cdigo del lado del servidor,
+
+26
+00:02:04,850 --> 00:02:11,780
+se necesita una base de datos SQL y todo eso. Gatsbyjs trabaja con reaccionar y eso
+
+27
+00:02:11,780 --> 00:02:13,280
+ofrece bastantes ventajas.
+
+28
+00:02:13,280 --> 00:02:15,730
+As que considere esto para su prximo proyecto, revise
+
+29
+00:02:15,740 --> 00:02:20,610
+los documentos y la pgina de caractersticas en su pgina para saber si es la opcin correcta para
+
+30
+00:02:20,840 --> 00:02:25,610
+usted y una vez que decida que es interesante para usted, sintase libre de sumergirse en ella.
+
+31
+00:02:25,610 --> 00:02:29,370
+Quera hacerte consciente de ello porque es un proyecto realmente increble.
+

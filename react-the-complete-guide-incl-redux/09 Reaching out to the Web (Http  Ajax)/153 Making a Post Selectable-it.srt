@@ -1,0 +1,188 @@
+1
+00:00:02,010 --> 00:00:09,620
+Ora imparerai le nozioni di base sull'invio di richieste nel nostro esempio qui con l'aiuto di anni e utilizzando tali dati passiamo oltre
+
+2
+00:00:09,620 --> 00:00:15,500
+e non vediamo come possiamo essere sicuri di poter fare clic su uno di questi post e
+
+3
+00:00:15,860 --> 00:00:20,900
+quindi caricare il post dichiarato l sono stati recuperati i dati per il post deselezionato.
+
+4
+00:00:20,960 --> 00:00:26,850
+Quando lo abbiamo scelto per questo, ovviamente, significa che possiamo fare clic qui e sui nostri post singoli.
+
+5
+00:00:27,080 --> 00:00:33,440
+Quindi nel post componente di prima cosa aggiungo un listener all'intero articolo aliment e l mi aspetto di
+
+6
+00:00:33,440 --> 00:00:39,070
+ottenere una propriet che contenga un riferimento al metodo che dovrebbe essere eseguito con un click.
+
+7
+00:00:39,260 --> 00:00:43,730
+Quindi qui chiamer il raccoglitore nel contenitore del blocco.
+
+8
+00:00:43,730 --> 00:00:49,880
+come ho appena detto dovrebbe contenere quel riferimento al metodo che dovrebbe essere eseguito con un clic .
+
+9
+00:00:49,880 --> 00:00:56,930
+Ora devo passare la coda di puntata dead click per postare e lo divider su pi righe per renderlo un po 'pi
+
+10
+00:00:56,930 --> 00:00:59,130
+facile da leggere e fare clic qui,
+
+11
+00:00:59,150 --> 00:01:03,780
+Quindi abbiamo un contenitore basato sulla classe, aggiungiamo un tale metodo.
+
+12
+00:01:03,920 --> 00:01:12,450
+Il post ha fatto clic o forse post gestore selezionato e l mi aspetto di ottenere un argomento.
+
+13
+00:01:12,530 --> 00:01:20,440
+L'idea del post che  stato selezionato ora laggi dove abbiamo reso una lista di post che posso
+
+14
+00:01:20,510 --> 00:01:27,620
+passare e la funzione E-6 come funzione di riferimento che dovrebbe essere eseguita quando clicchiamo su un
+
+15
+00:01:27,620 --> 00:01:31,470
+post e non vogliamo eseguire post seleziona quel gestore.
+
+16
+00:01:31,640 --> 00:01:35,920
+Ma ora posso passare post ID come argomento per quel metodo.
+
+17
+00:01:36,110 --> 00:01:42,830
+Quindi ora ho un'idea con cui lavorare ora che l'ID dovrebbe essere passato al componente completo del post.
+
+18
+00:01:43,070 --> 00:01:51,260
+Quindi dovremmo probabilmente archiviarlo nello stato sulla propriet del post forse selezionata come questo ID di
+
+19
+00:01:51,260 --> 00:01:59,990
+post selezionato in modo che in post completo possiamo ascoltarci ottenendo un nuovo ID e che hanno
+
+20
+00:02:00,010 --> 00:02:01,170
+recuperato l'ID.
+
+21
+00:02:01,220 --> 00:02:08,280
+Quindi ora dobbiamo creare la propriet id dei messaggi selezionati per il debito nello stato del container del
+
+22
+00:02:08,360 --> 00:02:17,060
+blocco e quindi i loro post come quel gestore possiamo chiamare questo stato impostato e impostare l'ID del post selezionato sull'ID che abbiamo
+
+23
+00:02:17,090 --> 00:02:18,640
+ricevuto come argomento qui.
+
+24
+00:02:18,650 --> 00:02:21,810
+Quindi ora passava quell'ID al componente completo del post.
+
+25
+00:02:23,000 --> 00:02:27,010
+E forse dovresti anche definire il post ID Selecta come iniziale.
+
+26
+00:02:27,010 --> 00:02:29,430
+Ora forse qui sullo stato.
+
+27
+00:02:29,780 --> 00:02:31,640
+Quindi ora abbiamo aggiunto quel codice.
+
+28
+00:02:31,640 --> 00:02:36,530
+Ora dobbiamo andare al componente post completo e fare qualcosa con l'idea qui.
+
+29
+00:02:36,710 --> 00:02:40,870
+Ora, prima di tutto, possiamo usare l'ID per produrre entrambi.
+
+30
+00:02:40,880 --> 00:02:47,410
+Seleziona il post o il post deselezionato a seconda che abbiamo o meno un ID.
+
+31
+00:02:47,420 --> 00:02:52,850
+Quindi diciamo che il valore predefinito dovrebbe essere 3 3C per favore seleziona il post e aggiunger
+
+32
+00:02:52,850 --> 00:02:57,270
+alcuni stili in linea qui per centrare semplicemente impostando il testo allineato al centro.
+
+33
+00:02:57,860 --> 00:03:02,380
+E ora voglio controllare se questo richiede ID.
+
+34
+00:03:02,600 --> 00:03:11,210
+Se questo  vero, l'ID iniziale di ish nel container del blocco  nullo e lo passiamo al post completo e
+
+35
+00:03:11,570 --> 00:03:13,700
+NULL viene trattato come falso.
+
+36
+00:03:13,700 --> 00:03:16,400
+Quindi inizialmente controlla qui.
+
+37
+00:03:16,550 --> 00:03:21,070
+Restituir false quindi non entreremo nel blocco if.
+
+38
+00:03:21,350 --> 00:03:28,480
+Se riusciamo a entrare all'interno di ci che facciamo una volta che l'ID  qualcosa che non  trattato come falso.
+
+39
+00:03:28,520 --> 00:03:35,540
+Quindi qualcosa sopra 1 o uguale o superiore a 1 e tutti gli ID che otteniamo dal server sono uguali
+
+40
+00:03:35,540 --> 00:03:36,910
+o superiori a 1.
+
+41
+00:03:37,040 --> 00:03:40,100
+Una volta che questo  il caso, voglio pubblicare quel post.
+
+42
+00:03:40,280 --> 00:03:45,970
+Quindi ora dovremmo avere il seguente comportamento che, se avessi salvato questo, ora possiamo fare clic su uno di questi post.
+
+43
+00:03:46,190 --> 00:03:47,580
+E ora lo vediamo.
+
+44
+00:03:47,690 --> 00:03:51,760
+E come hai visto prima ho cliccato e vediamo la polizia selezionare post.
+
+45
+00:03:51,980 --> 00:03:52,920
+Quindi funziona.
+
+46
+00:03:52,940 --> 00:03:58,070
+Ora nella prossima lezione assicuriamoci di recuperare anche i dati per quel dato post.
+
+47
+00:03:58,190 --> 00:03:59,330
+Una volta che l'abbiamo selezionato.
+

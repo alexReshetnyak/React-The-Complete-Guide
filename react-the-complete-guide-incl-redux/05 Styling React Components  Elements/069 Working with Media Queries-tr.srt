@@ -1,0 +1,88 @@
+1
+00:00:02,240 --> 00:00:09,220
+Yalanc seicileri nasl kullanacanz ve yuva snflarn nasl oluturduumuzu ve bir nceki
+
+2
+00:00:09,220 --> 00:00:12,890
+dersdeyken o snf nesnesine nasl aktardmz rendik.
+
+3
+00:00:12,970 --> 00:00:15,080
+imdi medya sorgular ile ilgilenmek istiyoruz.
+
+4
+00:00:15,090 --> 00:00:19,350
+Ve bu, orada anta snfmda yapmak istediim bir eydi.
+
+5
+00:00:19,420 --> 00:00:27,660
+C S S snf kiiyi d lmne tayin ettim ve aslnda kodu nceden ekledim.
+
+6
+00:00:27,700 --> 00:00:34,630
+Gvenlik nedeniyle C S S dosyasna gre ayarlandndan 500
+
+7
+00:00:34,630 --> 00:00:43,750
+pikoden daha geni olan yeni bir panonuz varsa ve bu kii snfn
+
+8
+00:00:43,840 --> 00:00:46,140
+yine de alacaktr.
+
+9
+00:00:46,140 --> 00:00:49,270
+Buradaki Klaas'n nesnesinde iyi.
+
+10
+00:00:49,510 --> 00:00:55,330
+Bu acil sorguda olsa bile, greceimiz ey, uygulamay yeniden
+
+11
+00:00:55,330 --> 00:01:01,780
+yklersem ve ben grntportunu arttrrsam burada rettiim kutunun genilii deimez.
+
+12
+00:01:01,810 --> 00:01:04,240
+Yeterince kkse, yalnzca deiir.
+
+13
+00:01:04,240 --> 00:01:08,180
+Orada geniliin yzde 60' olacak.
+
+14
+00:01:08,560 --> 00:01:14,890
+bu snf nesnesini burada CSS snfnzn Stahl'lar olarak Cs'nizin bir dizge
+
+15
+00:01:15,280 --> 00:01:23,320
+iine erimesini salayan bir javascript nesnesi olarak dndnden, elinizi sarmak iin biraz zor olabilir.
+
+16
+00:01:23,470 --> 00:01:31,390
+ac benzersiz olmas iin dzenlenmi bir snftr, bylece yalnzca birinci snfnz bir eye benzeyecektir.
+
+17
+00:01:31,960 --> 00:01:36,220
+Bu sper basitti ve Wozzeck, bu modln
+
+18
+00:01:36,340 --> 00:01:36,810
+Kii.
+
+19
+00:01:36,810 --> 00:01:44,380
+Belirli bir bileende bu snf kullandnzda DC'nin kaleminin bulunduu tek yer olduu gvenli olmasn
+
+20
+00:01:44,380 --> 00:01:49,130
+ve emin olabilmeniz iin benzersiz bir nbellek altn izin.
+
+21
+00:01:49,240 --> 00:01:53,510
+Bulunduunuz yerdeki baka hibir yerde bulak bezinin herhangi bir etkisi yoktur.
+
+22
+00:01:53,530 --> 00:01:56,750
+C-lerin modller olarak dnlmesi de budur.
+

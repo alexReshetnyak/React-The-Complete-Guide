@@ -1,0 +1,220 @@
+1
+00:00:02,160 --> 00:00:08,190
+So let's start by setting loading to true when we start fetching a burger, for that I need a new action
+
+2
+00:00:08,190 --> 00:00:15,800
+type, I'll add it to my action types folder, file excuse me and I'll name it PURCHASE_BURGER_START
+
+3
+00:00:15,990 --> 00:00:20,360
+and that will also be my identifier.
+
+4
+00:00:21,720 --> 00:00:23,890
+Now I'll create an action creator for this,
+
+5
+00:00:24,000 --> 00:00:25,950
+we have one which is named like this
+
+6
+00:00:25,950 --> 00:00:30,860
+but this has our async code and therefore doesn't return an action, so I'll
+
+7
+00:00:30,870 --> 00:00:33,160
+actually refactor this
+
+8
+00:00:33,300 --> 00:00:35,780
+and I'll add a new action creator.
+
+9
+00:00:35,940 --> 00:00:45,060
+This one I'll name purchaseBurgerStart and the old one I'll rename to just purchaseBurger. Now in purchase
+
+10
+00:00:45,060 --> 00:00:46,370
+BurgerStart
+
+11
+00:00:46,410 --> 00:00:53,640
+I don't expect any arguments and all I want to do is I want to return a javascript object where the type is
+
+12
+00:00:53,640 --> 00:01:00,450
+set to actionTypes.PURCHASE_BURGER_START so that I can handle this in redux because this being a
+
+13
+00:01:00,450 --> 00:01:05,040
+async normal action reaches redux which has the reducer.
+
+14
+00:01:05,580 --> 00:01:10,190
+Now I renamed this to purchaseBurger so we'll have to take care about this in the index.js file
+
+15
+00:01:10,200 --> 00:01:14,060
+where we export it, we export purchaseBurger now.
+
+16
+00:01:14,400 --> 00:01:21,200
+And now in the order.js file still when I dispatch this, before I sent my post request,
+
+17
+00:01:21,210 --> 00:01:29,290
+I want to execute purchaseBurgerStart, this function to dispatch this action right at the start.
+
+18
+00:01:29,310 --> 00:01:31,080
+Of course I don't want to execute it like this
+
+19
+00:01:31,080 --> 00:01:38,430
+I want to execute it wrapped in a dispatch so that the action returned by purchaseBurgerStart is dispatched
+
+20
+00:01:38,640 --> 00:01:41,370
+to the store. With that,
+
+21
+00:01:41,390 --> 00:01:49,220
+I need to work on contact data because there, I still dispatch purchaseBurgerStart and I should dispatch
+
+22
+00:01:49,370 --> 00:01:51,180
+purchaseBurger instead.
+
+23
+00:01:51,380 --> 00:01:57,290
+Additionally there is an error in this function here where we get dispatch,
+
+24
+00:01:57,290 --> 00:02:01,550
+we of course should return a map of props to functions,
+
+25
+00:02:01,700 --> 00:02:07,910
+so this part here has to go into the return javascript object, like that.
+
+26
+00:02:07,940 --> 00:02:11,840
+Now with this we should have our action connected,
+
+27
+00:02:11,840 --> 00:02:18,200
+we can now go back to redux, to the reducer and also handle the case that we just started,
+
+28
+00:02:18,290 --> 00:02:20,440
+This new action we added a second ago,
+
+29
+00:02:20,780 --> 00:02:22,480
+so I'll add a new case here,
+
+30
+00:02:22,490 --> 00:02:25,240
+the position doesn't matter but I'll add it at the top
+
+31
+00:02:25,640 --> 00:02:32,390
+and here I'll name this actionTypes.PURCHASE_BURGER_START and there, I want to return a javascript object
+
+32
+00:02:32,420 --> 00:02:34,910
+as always, we'll copy the old state
+
+33
+00:02:34,910 --> 00:02:42,670
+to keep my old orders but set loading to true. With that we switch loading,
+
+34
+00:02:42,670 --> 00:02:49,900
+we of course now have to make sure that the contact data container, we get loading from our state
+
+35
+00:02:49,900 --> 00:02:55,900
+now, from redux because we're using loading in there to show the spinner and right now, we're referring
+
+36
+00:02:55,900 --> 00:02:57,050
+to state loading,
+
+37
+00:02:57,190 --> 00:03:01,050
+well that is something we don't need anymore in the state of this container,
+
+38
+00:03:01,120 --> 00:03:07,180
+I'll leave all the controls but i'll actually get rid of the loading property there.
+
+39
+00:03:07,420 --> 00:03:14,340
+Instead in mapStateToProps, I'll add the loading prop and map it to state,
+
+40
+00:03:14,770 --> 00:03:20,950
+and now we can reach out to loading but actually we'll soon combine our reducers so we will have to
+
+41
+00:03:20,950 --> 00:03:28,720
+change to see this soon to take the slice of that reducer, of the order reducer here in mapStateToProps
+
+42
+00:03:28,870 --> 00:03:30,810
+in the contact data container.
+
+43
+00:03:30,850 --> 00:03:36,140
+So for now, I'll leave it like this but we'll soon change it, with the loading prop made available here,
+
+44
+00:03:36,300 --> 00:03:42,880
+I of course should reach out to this props loading here and not this state loading, let's check if we got
+
+45
+00:03:42,880 --> 00:03:45,050
+any other this.state.loading places,
+
+46
+00:03:45,220 --> 00:03:46,960
+no we haven't.
+
+47
+00:03:46,960 --> 00:03:53,890
+The last step is in the same file, in the contact data container to also use mapDispatchToProps and add it
+
+48
+00:03:54,100 --> 00:03:56,860
+to the connect function, pass it as a second argument
+
+49
+00:03:56,950 --> 00:04:01,000
+so that this really is considered by react-redux.
+
+50
+00:04:01,000 --> 00:04:03,640
+So with that all saved, nothing would work,
+
+51
+00:04:03,790 --> 00:04:06,980
+if we go back, we see that we have a problem here,
+
+52
+00:04:07,120 --> 00:04:14,400
+we're trying to fetch ingredients and this doesn't work and we also will never be able to
+
+53
+00:04:14,580 --> 00:04:17,580
+reach our other state here,
+
+54
+00:04:17,610 --> 00:04:21,440
+the order state because we're not combining any reducers.
+
+55
+00:04:21,600 --> 00:04:26,190
+So let's fix this error first and let's then start working on combining reducers.
+

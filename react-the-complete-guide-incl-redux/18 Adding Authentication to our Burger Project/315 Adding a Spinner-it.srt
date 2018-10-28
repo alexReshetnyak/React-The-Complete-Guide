@@ -1,0 +1,264 @@
+1
+00:00:02,170 --> 00:00:06,130
+Quindi assicuriamoci di vedere uno spinner mentre aspettiamo una risposta,
+
+2
+00:00:06,130 --> 00:00:12,250
+assicuriamoci inoltre che se inseriamo qualcosa di non valido, riceviamo anche un feedback visivo degli errori
+
+3
+00:00:12,250 --> 00:00:13,420
+qui sulla pagina.
+
+4
+00:00:13,420 --> 00:00:16,080
+Iniziamo con lo spinner e per
+
+5
+00:00:16,090 --> 00:00:20,250
+quello, andr al mio contenitore auth e in cima
+
+6
+00:00:20,260 --> 00:00:22,350
+ad esso, importer il mio
+
+7
+00:00:22,630 --> 00:00:26,000
+componente spinner, si chiama spinner e lo otteniamo
+
+8
+00:00:26,050 --> 00:00:28,730
+dai componenti spinner dell'interfaccia utente, possiamo
+
+9
+00:00:28,760 --> 00:00:33,600
+davvero vedere come queste componenti riutilizzabili abbiano molto senso reagire qui.
+
+10
+00:00:33,610 --> 00:00:37,920
+Ora voglio visualizzare lo spinner per tutto il tempo che stiamo caricando e
+
+11
+00:00:37,930 --> 00:00:44,640
+per quello, ho bisogno di sapere se stiamo caricando e stiamo memorizzando quelle informazioni nel nostro stato di autenticazione, per
+
+12
+00:00:44,650 --> 00:00:49,040
+questo ho bisogno di ottenere un pezzo di quello stato in il mio
+
+13
+00:00:49,240 --> 00:00:52,840
+contenitore di autenticazione e che ovviamente  un caso per la
+
+14
+00:00:52,970 --> 00:01:00,750
+spedizione di mappe const mi scusi, mapStateToProps, l otteniamo lo stato e ora possiamo mapparne una porzione ai nostri oggetti di scena locali.
+
+15
+00:01:01,320 --> 00:01:04,080
+Quindi restituir un oggetto dove faccio questa mappatura
+
+16
+00:01:04,080 --> 00:01:12,290
+e voglio ottenere lo stato di caricamento per ora, quindi mapper lo stato. Ora in stato, dobbiamo accedere ad auth poich questo
+
+17
+00:01:12,520 --> 00:01:17,520
+ ci che porta alla fine l'auth reducer a causa di
+
+18
+00:01:18,190 --> 00:01:27,620
+riduttori combinati, quindi dobbiamo accedere all'autent di stato e ora, la propriet di caricamento che abbiamo impostato nel nostro stato di
+
+19
+00:01:27,640 --> 00:01:32,870
+auth reducers, questo uno qui. Con questo, abbiamo ottenuto quello disponibile
+
+20
+00:01:32,900 --> 00:01:39,720
+qui, abbiamo bisogno di passare mapStateToProps alla nostra funzione di connessione per e ora qui
+
+21
+00:01:39,770 --> 00:01:44,250
+nel nostro metodo di rendering, possiamo rendere uno spinner.
+
+22
+00:01:44,270 --> 00:01:48,920
+Quindi quello che far  che render il modulo o se stiamo caricando, lo spinner.
+
+23
+00:01:49,190 --> 00:01:58,790
+Quindi controller dopo che il modulo  stato creato se questo caricamento di oggetti di scena  vero perch se lo , allora la
+
+24
+00:01:59,210 --> 00:02:07,780
+forma non sar pi un const ma un let, una variabile quindi la forma sar uguale allo spinner, proprio cos, per
+
+25
+00:02:07,790 --> 00:02:11,470
+mostrare uno spinner se stiamo caricando, dovrebbe essere tutto.
+
+26
+00:02:11,680 --> 00:02:16,420
+Con questo se inseriamo alcuni dati qui, non importa se 
+
+27
+00:02:16,640 --> 00:02:22,310
+valido o meno, se lo invio, vedremo brevemente uno spinner perch  cos veloce.
+
+28
+00:02:22,310 --> 00:02:25,410
+Ora assicuriamoci anche di vedere i messaggi
+
+29
+00:02:25,490 --> 00:02:32,030
+di errore se inviamo dati errati e per vederlo, ovviamente devo approfittare del fatto
+
+30
+00:02:32,030 --> 00:02:35,410
+che memorizzo potenziali errori nel mio negozio.
+
+31
+00:02:35,810 --> 00:02:42,570
+Quindi prima di tutto ho bisogno di ottenere quell'errore aggiungendo un'altra mappatura nel contenitore auth,
+
+32
+00:02:43,040 --> 00:02:50,750
+errore e che dovrebbe essere stato. auth. errore perch memorizzo eventuali errori nel mio stato
+
+33
+00:02:50,750 --> 00:02:55,350
+qui in questa propriet di errore e lo faccio nell'azione di autenticazione fallita.
+
+34
+00:02:55,580 --> 00:03:03,500
+Con questo, ora devo tornare al contenitore auth e Firebase ci d un bel messaggio di errore, il
+
+35
+00:03:03,500 --> 00:03:06,860
+tuo backend potrebbe anche fare questo o tu
+
+36
+00:03:06,890 --> 00:03:13,460
+costruisci il tuo, prender quello da Firebase e dato che abbiamo questo messaggio, quello che
+
+37
+00:03:13,460 --> 00:03:22,050
+posso fare  che posso visualizzare un messaggio di errore. Cos posso creare un nuovo errore const messaggio che di
+
+38
+00:03:22,050 --> 00:03:27,050
+default potrebbe essere nullo e quindi dovrebbe essere una let anche
+
+39
+00:03:27,140 --> 00:03:37,620
+ma poi aggiunger un'istruzione if qui, se questo. puntelli. errore, se dobbiamo impostare, se non  nullo, il messaggio di errore sar
+
+40
+00:03:37,650 --> 00:03:46,850
+in realt un jsx, un paragrafo diciamo dove ho semplicemente emesso questo. puntelli. errore e l, dato che Firebase
+
+41
+00:03:46,920 --> 00:03:50,950
+me lo fornisce, ci sar una propriet message.
+
+42
+00:03:50,950 --> 00:03:56,670
+Anche in questo caso questa propriet del messaggio  disponibile solo perch sto usando l'errore mentre ritorna da
+
+43
+00:03:56,680 --> 00:04:01,630
+Firebase e che si tratta di un oggetto javascript che ha una propriet message, questo
+
+44
+00:04:01,650 --> 00:04:06,430
+potrebbe non essere il caso per il tuo backend, ovviamente aggiustalo a I tuoi bisogni.
+
+45
+00:04:07,230 --> 00:04:15,530
+Voglio che l'output questo elemento messaggio di errore quindi, forse sopra il mio modulo qui verr visualizzato un messaggio di errore e, naturalmente, potremmo
+
+46
+00:04:15,600 --> 00:04:19,210
+dare questo pi stile, renderlo rosso, tutto ci che vogliamo.
+
+47
+00:04:19,230 --> 00:04:24,440
+Ora, prima di vedere qualcosa, dobbiamo assicurarci di archiviare davvero quell'errore, quindi
+
+48
+00:04:24,660 --> 00:04:33,180
+devo andare al mio file auth nella cartella delle azioni e possiamo accedere al messaggio di errore, l'oggetto errore che
+
+49
+00:04:33,180 --> 00:04:40,590
+torniamo da Firebase su questo errore oggetto qui accedendo alla risposta originale e ci  dovuto a axios,
+
+50
+00:04:40,620 --> 00:04:46,440
+stiamo usando axios qui e semplicemente avvolge la risposta in questo oggetto error e
+
+51
+00:04:46,860 --> 00:04:48,750
+l, ancora avremo i dati
+
+52
+00:04:48,780 --> 00:04:51,230
+e l, avremo questo oggetto error.
+
+53
+00:04:51,230 --> 00:04:56,250
+Puoi sempre confermarlo tramite la risposta all'errore di registrazione della console e vedrai che ottieni
+
+54
+00:04:56,250 --> 00:05:00,740
+gli stessi campi di una normale risposta, solo con un codice di errore.
+
+55
+00:05:00,960 --> 00:05:07,750
+Con questo, se salviamo tutto e inviamo un modulo vuoto, riceviamo e-mail non valide, se ora utilizzo
+
+56
+00:05:07,830 --> 00:05:14,610
+quella e-mail che abbiamo gi in uso e non sto effettuando l'accesso ma effettuando la registrazione, riceviamo
+
+57
+00:05:14,610 --> 00:05:15,690
+l'e-mail .
+
+58
+00:05:15,690 --> 00:05:20,400
+Ora questo chiaramente non  un bel messaggio di errore, sarebbe pi bello ottenere un testo
+
+59
+00:05:20,400 --> 00:05:23,760
+piacevole che possiamo facilmente leggere, suppongo che dica cosa  sbagliato per.
+
+60
+00:05:23,910 --> 00:05:28,670
+Puoi ovviamente mappare questi codici ai tuoi messaggi di errore, 
+
+61
+00:05:28,680 --> 00:05:34,050
+qualcosa che non far qui per ora ma sicuramente qualcosa che puoi tenere
+
+62
+00:05:34,420 --> 00:05:39,300
+a mente come un miglioramento, mappalo al tuo indirizzo e-mail preferito.
+
+63
+00:05:39,300 --> 00:05:44,760
+Puoi sempre scoprire quali potenziali errori si possono ottenere consultando la documentazione API
+
+64
+00:05:44,820 --> 00:05:52,590
+firebase auth rest qui e l, si vedono codici di errore comuni come e-mail non trovati, password non valida
+
+65
+00:05:52,590 --> 00:05:55,170
+o per la registrazione che abbiamo
+
+66
+00:05:55,170 --> 00:06:01,230
+attualmente provato, che sarebbe l'e-mail esistente, troppi tentativi o e-mail non valide come hai appena visto.
+

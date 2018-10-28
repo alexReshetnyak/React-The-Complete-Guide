@@ -1,0 +1,356 @@
+1
+00:00:02,200 --> 00:00:07,450
+Bir denetleyicinin, bir burgerin sahip olmas gereken eyleri kontrol edebilmesi
+
+2
+00:00:07,480 --> 00:00:14,830
+iin baz kontrol ekleme zaman geldi ve bunun iin kaln kontrolleri eklemeliyiz ve bu
+
+3
+00:00:14,830 --> 00:00:21,630
+bileen burger klasrne eklenir veya yeni bir alt klasr ekleriz yap denetimleri adn verin.
+
+4
+00:00:21,730 --> 00:00:26,930
+Ve burada yap denetimli bir balang js dosyas ekleyeceim.
+
+5
+00:00:26,980 --> 00:00:35,830
+imdi yap denetimleri fonksiyonel bir bileen olacak, bu yzden her iki kontrol de sahne alan ve
+
+6
+00:00:35,830 --> 00:00:40,020
+sonunda baz GSX'i geri getirecek bir ilevdir.
+
+7
+00:00:40,030 --> 00:00:48,310
+Bu nedenle elbette ayrca reak' tepki alanndan ie aktarmamz gerekiyor ve bellenmi kontrol
+
+8
+00:00:48,340 --> 00:00:50,520
+ilevini varsaylan olarak verebiliyoruz.
+
+9
+00:00:50,530 --> 00:00:54,420
+imdi nasl kontroller ina etmeliyiz bakalm.
+
+10
+00:00:54,520 --> 00:00:56,500
+Elbette alma her zaman size kalmtr.
+
+11
+00:00:56,500 --> 00:01:03,370
+Bu alana biraz ekillendirme yapmak iin kullanacam bir div olmas ve orada eitli yap
+
+12
+00:01:03,520 --> 00:01:04,970
+denetimlerimin olmasn istiyorum.
+
+13
+00:01:05,070 --> 00:01:08,530
+imdi o alan ekillendirmeyle balayalm.
+
+14
+00:01:08,800 --> 00:01:17,790
+Bunun iin, ina edilmi kontroll C S S yeni bir dosya oluturacam ve bir yap denetimleri ekleyeceim.
+
+15
+00:01:18,070 --> 00:01:18,600
+Affedersiniz.
+
+16
+00:01:18,610 --> 00:01:21,490
+Aadakiler her iki kontroln de adlandrlmas gerekir.
+
+17
+00:01:21,490 --> 00:01:27,790
+Tpk J dosyasnn oul olduu gibi J'de olduu gibi C'de asfalt vardr ve yerleik kontroller ekleyeceim.
+
+18
+00:01:27,790 --> 00:01:29,440
+C s S snf.
+
+19
+00:01:29,640 --> 00:01:35,200
+Yapm kontrolmm yzde 100'lk genilie, geri renk iin gzel
+
+20
+00:01:35,200 --> 00:01:38,250
+turuncu kahverengimsi bir renk setim.
+
+21
+00:01:38,260 --> 00:01:41,330
+Cf 8 F e e.
+
+22
+00:01:41,620 --> 00:01:49,030
+Tm bu cvata kontrollerini doru bir ekilde yerletirmek iin Shelby flex kutusunda bunun iin bu rengi severim.
+
+23
+00:01:49,030 --> 00:01:54,290
+Flex ak Cullinan', bir satr yerine bir stunda birbirinin altna yerletirmek
+
+24
+00:01:54,290 --> 00:01:55,110
+iin ayarlayacam.
+
+25
+00:01:55,630 --> 00:02:05,920
+Kutumda vermek istediim ortadaki tm metni, yalnzca alttaki bir piksel yaylmnda kk bir kutu glgesi hizalamak
+
+26
+00:02:06,160 --> 00:02:11,010
+istiyorum ve glge rengi olarak sadece harika.
+
+27
+00:02:11,220 --> 00:02:11,950
+Marj.
+
+28
+00:02:11,950 --> 00:02:19,860
+Oto ve 10 piksel ve soldan ve sadan 0'lk bir dolgu ekleyin.
+
+29
+00:02:19,870 --> 00:02:21,140
+nk merkezlenecek metin.
+
+30
+00:02:21,150 --> 00:02:24,770
+Her neyse, imdi benim teknem kontrol alanm.
+
+31
+00:02:24,910 --> 00:02:30,490
+Elbette top kontrol alanna biraz ierik eklemeliyiz ve orada birka kontrol
+
+32
+00:02:30,640 --> 00:02:31,870
+ina ettirmek istiyorum.
+
+33
+00:02:31,870 --> 00:02:33,040
+Tahmin ettin.
+
+34
+00:02:33,040 --> 00:02:39,040
+Bence bu yap denetimlerini d kaynak kullanmak mantkl bir ilem nk tek bir dme deil.
+
+35
+00:02:39,100 --> 00:02:44,840
+Bu bir etiket ve daha sonra iki dme ve temelde tekrar kullanlabilir bir edir.
+
+36
+00:02:44,980 --> 00:02:49,440
+Dolaysyla onu kendi bileenine tama ok mantkl.
+
+37
+00:02:49,480 --> 00:02:57,130
+Dolaysyla, dahili kontrollerin tm kabadaylan kontrol klasrn ekliyor ve kabark kontroll Jr'nin d var
+
+38
+00:02:57,370 --> 00:03:03,360
+ve bina kontrol C-s'yi bundan sonra stil iin aadaki gibi yapyor.
+
+39
+00:03:03,580 --> 00:03:06,630
+J'de de balayalm yine de.
+
+40
+00:03:06,750 --> 00:03:14,650
+siz deima bildiiniz gibi tepki veriyor ve her iki denetimi de varsaylan deer olarak verecektir.
+
+41
+00:03:14,740 --> 00:03:23,670
+Bolt kontrol bu bileene de sahip olacak bir ilev olacak, X'in alaca ithalat ve iadeler alacak ve
+
+42
+00:03:23,680 --> 00:03:26,860
+imdi bir cvatal kontroln nasl olmas gerektiine karar vermeliyiz.
+
+43
+00:03:26,870 --> 00:03:34,900
+imdi div'yi bir sarc veya bir styling iin kullanacam ve sonra cesur kontrolmn sonunda o cesur kontrol iin
+
+44
+00:03:34,960 --> 00:03:37,900
+metni ieren bir div olmas gerekiyor.
+
+45
+00:03:37,900 --> 00:03:41,270
+Temelde metin Ingredion'un adn eklemek istiyorum.
+
+46
+00:03:41,590 --> 00:03:45,000
+Yani orada dinamik bir ey kt istiyorum.
+
+47
+00:03:45,130 --> 00:03:49,990
+Bunun iin bir istek alacam ve onu etiket olarak isimlendirmek istiyorum.
+
+48
+00:03:50,020 --> 00:03:52,310
+Elbette istediiniz herhangi bir ad seebilirsiniz.
+
+49
+00:03:52,310 --> 00:03:56,860
+Yannda ne istersen ona madde etiketi koyabilirim.
+
+50
+00:03:56,860 --> 00:03:58,780
+Sadece iki dme var.
+
+51
+00:03:58,870 --> 00:04:03,350
+lk dme bu nedenle tabii ki son bir madde kaldrlyor.
+
+52
+00:04:03,610 --> 00:04:09,130
+Ve daha sonra bir dmeye daha sahip olmak iin tekrarlarm.
+
+53
+00:04:09,130 --> 00:04:13,940
+imdi iki dme var ki bu maddeler kaldrp eklememe izin veriyor.
+
+54
+00:04:13,960 --> 00:04:15,340
+imdi bazlarna ihtiyacm olacak.
+
+55
+00:04:15,330 --> 00:04:18,060
+C bunun iin iyi grnmesi iin yerleik kontrol istedi.
+
+56
+00:04:18,100 --> 00:04:21,930
+yleyse D'ye gidelim. C. knn dosyas orada.
+
+57
+00:04:21,970 --> 00:04:25,130
+Dahili kontrol ekleyelim.
+
+58
+00:04:25,150 --> 00:04:27,260
+Bu C S snfdr.
+
+59
+00:04:27,360 --> 00:04:35,360
+Div'i metinle konumlandrmak iin flex bloklar kullanmak istiyorum ve flex flow yazacak dmeler var.
+
+60
+00:04:35,400 --> 00:04:36,660
+yleyse varsaylan.
+
+61
+00:04:37,050 --> 00:04:44,370
+Onlar birbirinden biraz uzak tutacak ekilde boluklar halinde datmanz ve kelimenin eit
+
+62
+00:04:44,410 --> 00:04:52,050
+hizalanmas iin ortadaki tm ierii hizalayacam ve stten alta kadar be piksel
+
+63
+00:04:52,130 --> 00:04:58,680
+bir kenar boluu atayacam. Bireysel cvata denetimleri arasndaki boluk, ancak top
+
+64
+00:04:58,750 --> 00:05:02,550
+kontrolnde soldan saa hi sfr yok.
+
+65
+00:05:02,550 --> 00:05:07,850
+Elbette bir dmeyiz ve sopa gsterilmeli.
+
+66
+00:05:08,310 --> 00:05:12,800
+Normalde inline duyulabilir kayt bir blok stil dmesi olacak.
+
+67
+00:05:14,120 --> 00:05:25,150
+Veya bir kez fonunuzu miras aldysanz ve dolguyu 5 piksellik sfra veya 80 pikseli 5 piksele ayarlamanz
+
+68
+00:05:25,360 --> 00:05:26,390
+iyi grnmelidir.
+
+69
+00:05:26,620 --> 00:05:36,970
+Snr bir piksel kat olacak ve 6 8 7 3 1 8 1 7 zr dilerim ki ayn zamanda kahverengi bir renk.
+
+70
+00:05:37,510 --> 00:05:40,050
+Kirsner bir iareti olmal.
+
+71
+00:05:40,330 --> 00:05:45,040
+Ve varsaylan olarak bu tasla kaldrmak istiyorum.
+
+72
+00:05:45,040 --> 00:05:50,290
+Artk butona ve tm etikete stil eklemek iin daha fazla stil var.
+
+73
+00:05:50,290 --> 00:05:57,600
+Bunu ksaltmak iin btn stout'lara bir dosya ekleyeceim ve bunlar aada basite ekleyebilirsiniz.
+
+74
+00:05:57,670 --> 00:06:01,630
+Aslnda ekteki dosya bu dosyann kalemi ierecektir.
+
+75
+00:06:01,630 --> 00:06:05,160
+Yani burada bulunan her eyi onunla deitirebilirsiniz.
+
+76
+00:06:05,200 --> 00:06:09,570
+Bunlarn hepsi Q snf snflarmz olduundan emin olmak iin sadece stiller.
+
+77
+00:06:09,730 --> 00:06:14,820
+Daha az dme farkl ve hatta devre d brak dmeleri.
+
+78
+00:06:15,130 --> 00:06:21,680
+Bununla birlikte sanrm sanrm hepiniz iin olan koda tepki vermek iin javascript sonbaharmza geri dnelim.
+
+79
+00:06:21,690 --> 00:06:28,160
+imdi, bu snf nesnesini s'lerden alalm. c. s'yi snflar olarak
+
+80
+00:06:28,160 --> 00:06:33,880
+kullanmaya balayabilmemiz ve sarmalamal div ylna bir snf eklemeliyiz.
+
+81
+00:06:33,880 --> 00:06:37,640
+Bu yap denetim snf olacak.
+
+82
+00:06:37,750 --> 00:06:42,620
+Ayrca burada Def etiketi iin bir snfa ihtiyacm var.
+
+83
+00:06:42,730 --> 00:06:51,220
+Klaas' kullanacam ve daha sonra bunu etiketlediiniz C'nin sadece yanndaki maddeleri ve snf
+
+84
+00:06:51,280 --> 00:06:53,800
+adlarn alacak dmeleri etiketledi.
+
+85
+00:06:53,800 --> 00:07:02,560
+Baba iin son BOTTEN son snfa sahibim ve bu buton iin daha fazla buton tahmin edemiyor
+
+86
+00:07:02,560 --> 00:07:07,870
+olabilirsin ama orada byle bir buton ya da buton var.
+
+87
+00:07:07,940 --> 00:07:16,510
+imdi tek bir cvata kontrol bir sonraki derste yapacak sonraki admla ekillendirilir, bylece
+
+88
+00:07:16,510 --> 00:07:22,350
+yerleik denetimler bileeninde byle yap denetimlerinin bir dizinini oluturmaktr.
+
+89
+00:07:22,600 --> 00:07:25,090
+Bunu bir sonraki dersimizde birlikte yapalm.
+

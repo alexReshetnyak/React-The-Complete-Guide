@@ -1,0 +1,72 @@
+1
+00:00:02,190 --> 00:00:08,220
+Na ltima palestra eu criei uma aplicao bsica que voc baixou
+
+2
+00:00:08,220 --> 00:00:09,620
+ou onde
+
+3
+00:00:09,630 --> 00:00:11,850
+voc seguiu, agora 
+
+4
+00:00:11,910 --> 00:00:20,380
+hora de instalar algumas dependncias, por exemplo, o aplicativo reage obviamente usa react ou react-dom
+
+5
+00:00:20,610 --> 00:00:24,140
+e o roteador reage ento devemos
+
+6
+00:00:24,150 --> 00:00:30,930
+instalar todos essas dependncias de produo, fazemos isso com o npm instalado
+
+7
+00:00:30,930 --> 00:00:41,540
+--save, no --save-dev porque queremos indicar que so dependncias de produo e ento ele reage react-dom e react-router-dom, assim.
+
+8
+00:00:41,540 --> 00:00:46,520
+Essas trs dependncias so todas separadas por espaos em branco e agora esto instaladas
+
+9
+00:00:46,520 --> 00:00:52,550
+e, portanto, colocadas na pasta do mdulo do n, entradas apropriadas com as verses mais recentes tambm
+
+10
+00:00:52,550 --> 00:00:55,490
+so adicionadas ao pacote. arquivo json como voc pode ver.
+
+11
+00:00:55,490 --> 00:00:57,510
+Com isso ns instalamos o react,
+
+12
+00:00:57,530 --> 00:01:00,680
+ns j instalamos o webpack h um tempo, agora
+
+13
+00:01:00,800 --> 00:01:07,130
+precisamos instalar algumas outras dependncias para construir um fluxo de trabalho e eu vou adicion-los passo a
+
+14
+00:01:07,130 --> 00:01:09,080
+passo sempre que precisarmos deles.
+
+15
+00:01:09,110 --> 00:01:16,880
+Ento, o que eu quero fazer  agora eu quero comear com a configurao do webpack de forma que ele  capaz
+
+16
+00:01:16,880 --> 00:01:19,280
+de lidar com a prxima gerao de
+
+17
+00:01:19,300 --> 00:01:22,220
+javascript, css, imagens e todas essas coisas divertidas.
+
+18
+00:01:22,310 --> 00:01:24,800
+Vamos comear com isso na prxima aula.
+

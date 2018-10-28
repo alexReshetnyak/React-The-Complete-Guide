@@ -1,0 +1,64 @@
+1
+00:00:02,140 --> 00:00:07,790
+Obtuvimos una aplicacin atractiva aadimos mucha funcionalidad en las ltimas conferencias.
+
+2
+00:00:08,030 --> 00:00:15,320
+Ahora, por supuesto, queremos tener una aplicacin realmente buena no solo por el aspecto sino tambin por la forma en
+
+3
+00:00:15,320 --> 00:00:16,480
+que la estructuramos.
+
+4
+00:00:16,490 --> 00:00:20,460
+Trabajamos con l ahora desde la creacin de esta aplicacin.
+
+5
+00:00:20,480 --> 00:00:26,900
+Ya te mostr muchas mejores prcticas para construir que compart mi proceso de pensamiento sobre cmo
+
+6
+00:00:26,900 --> 00:00:32,230
+estructurar y planificar la aplicacin y te di algunas alternativas en algunos momentos
+
+7
+00:00:32,390 --> 00:00:34,540
+sobre cmo dividir algo en componentes.
+
+8
+00:00:34,580 --> 00:00:38,410
+Aqu realmente tenemos una estructura de componentes relativamente granular.
+
+9
+00:00:38,510 --> 00:00:41,970
+Sin duda podra combinar algunos de los componentes que estamos usando.
+
+10
+00:00:42,410 --> 00:00:45,640
+Pero tambin puedes mejorar algunas cosas.
+
+11
+00:00:45,950 --> 00:00:52,960
+Vamos a sumergirnos en dos cosas importantes que aprendimos sobre los tipos de Propp y los componentes puros.
+
+12
+00:00:53,000 --> 00:00:54,750
+Entonces, una breve actualizacin de componentes.
+
+13
+00:00:54,920 --> 00:01:00,420
+Echemos un vistazo a todos estos mtodos de ciclo de vida que conoce en general.
+
+14
+00:01:00,620 --> 00:01:01,840
+Los usamos all?
+
+15
+00:01:01,850 --> 00:01:06,450
+Por qu no los usamos en cualquier momento en donde los usemos?
+
+16
+00:01:06,680 --> 00:01:09,400
+Vamos a responder estas preguntas en las prximas conferencias.
+

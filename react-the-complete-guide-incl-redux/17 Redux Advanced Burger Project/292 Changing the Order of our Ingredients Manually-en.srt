@@ -1,0 +1,104 @@
+1
+00:00:02,300 --> 00:00:05,080
+We did add logic to load our ingredients
+
+2
+00:00:05,150 --> 00:00:10,250
+and by the way, if you're wondering why the salad is at the bottom, that happens because since we loaded
+
+3
+00:00:10,250 --> 00:00:16,700
+from firebase and there we can't order the properties manually, the salad is ordered at the bottom alphabetically
+
+4
+00:00:16,700 --> 00:00:17,570
+.
+
+5
+00:00:17,570 --> 00:00:19,280
+and therefore, it's at the bottom here
+
+6
+00:00:19,280 --> 00:00:26,480
+too. You would simply have to adjust your code to manually turn your ingredients let's say into not just
+
+7
+00:00:26,480 --> 00:00:31,910
+a number as a value but an object where you also define the position and then you would have to adjust
+
+8
+00:00:31,910 --> 00:00:37,790
+your frontend code to take care about this position too or you of course simply choose a solution where
+
+9
+00:00:37,790 --> 00:00:42,230
+you hard code your ingredients and don't set ingredients equal to the ingredients you get back from
+
+10
+00:00:42,230 --> 00:00:42,910
+the server
+
+11
+00:00:43,070 --> 00:00:51,320
+but to a javascript object where you then manually map salad to action.ingredients.salad and so
+
+12
+00:00:51,320 --> 00:00:58,010
+on, this of course then loses a bit of the flexibility you had before where you could simply take advantage
+
+13
+00:00:58,100 --> 00:01:04,370
+of setting up anything and then using it in your frontend app, though you never had all that flexibility
+
+14
+00:01:04,370 --> 00:01:10,920
+anyways because we have only a limited amount of ingredients supported with our css code here and
+
+15
+00:01:10,960 --> 00:01:14,300
+the ingredients property where we also have a switch case statement.
+
+16
+00:01:14,570 --> 00:01:21,440
+So just to complete that thought here, we can reach out to action.ingredients.cheese and so on here to map
+
+17
+00:01:21,440 --> 00:01:28,520
+this one by one when we set the ingredients, also with the meat of course and with all that added, you
+
+18
+00:01:28,520 --> 00:01:35,000
+would see that now if we save this and go back to the application and start adding salad and so on, the
+
+19
+00:01:35,000 --> 00:01:39,380
+order is correct again because now, we're mapping this manually.
+
+20
+00:01:39,380 --> 00:01:45,200
+Again the downside is since we have to do this, we really only support these four ingredients but we're
+
+21
+00:01:45,200 --> 00:01:46,920
+doing this anyway in our application
+
+22
+00:01:47,000 --> 00:01:53,390
+as I just said, for example in the ingredients component, in the burger area here where we also have a
+
+23
+00:01:53,390 --> 00:01:57,900
+switch case statement where we also only support a limited amount of components.
+
+24
+00:01:57,920 --> 00:02:03,550
+So this is the case anyways and now at least, the ordering is back to where it was before.
+
+25
+00:02:03,560 --> 00:02:06,610
+So this is one possible improvement, purely optional
+
+26
+00:02:06,650 --> 00:02:10,510
+just wanted to make sure you are not confused why the salad is at the bottom.
+

@@ -1,0 +1,131 @@
+0
+00:02.250 --> 00:08.470
+So, in the last lecture I explained that React is all about components and that components are awesome.
+
+1
+00:08.700 --> 00:12.760
+Let's actually see this on a real web page. Here's reactjs.org,
+
+2
+00:12.810 --> 00:15.280
+which is the official web page
+
+3
+00:15.310 --> 00:17.030
+of the React team.
+
+4
+00:17.250 --> 00:21.550
+If we have a look at it, it is actually built with React (of course).
+
+5
+00:21.570 --> 00:27.530
+This looks like a normal web page and it is; but we can split this up into components.
+
+6
+00:27.540 --> 00:33.380
+We've got this Header component and in there we've got these Single Navigation Item components.
+
+7
+00:33.390 --> 00:42.030
+We've got this Starting Image/Call-To-Action component here and we've got all our elements down here
+
+8
+00:42.030 --> 00:49.860
+where they advertise React and what it is about. We see more components here like these Image Code Snippet
+
+9
+00:49.860 --> 00:53.040
+components with some descriptions to the left of them.
+
+10
+00:53.130 --> 00:59.400
+All these things are basically building blocks which we can of course easily consider as reusable pieces
+
+11
+00:59.610 --> 01:02.880
+and actually they are reusing this element here.
+
+12
+01:02.880 --> 01:09.890
+We've got one element here and then the same element with different content being used below it.
+
+13
+01:09.900 --> 01:15.810
+Now, you can hard-code all this with just HTML, JavaScript and CSS, but then you will
+
+14
+01:15.810 --> 01:22.050
+have to repeat your code over and over again. Here, with components,  you build your own HTML elements,
+
+15
+01:22.050 --> 01:24.970
+so to say, and then you just reuse those elements.
+
+16
+01:25.110 --> 01:31.560
+Behind the scenes, this HTML element has all this content already inside of it and we'll see this
+
+17
+01:31.560 --> 01:33.680
+in detail in a second.
+
+18
+01:34.030 --> 01:40.080
+Another good example would be Udemy. Here on the Udemy page where I searched for Vue.js
+
+19
+01:40.170 --> 01:42.130
+(an alternative to React),
+
+20
+01:42.150 --> 01:44.880
+we see there are a lot of components too.
+
+21
+01:44.900 --> 01:47.830
+We've got this whole Header with the Search Bar component.
+
+22
+01:47.880 --> 01:53.580
+We've got this Search Results Summary component that allows us to filter the search results
+
+23
+01:54.090 --> 01:56.290
+and we also have the search results themselves.
+
+24
+01:56.430 --> 01:59.540
+We've got reused List Item components here.
+
+25
+01:59.670 --> 02:02.060
+Each of them has an image and a different title,
+
+26
+02:02.250 --> 02:04.680
+but in the core they are all the same.
+
+27
+02:04.680 --> 02:06.390
+They all have the same structure
+
+28
+02:06.510 --> 02:13.440
+and Udemy also uses a JavaScript framework to achieve this and to allow for easier development and,
+
+29
+02:13.560 --> 02:14.760
+this is important,
+
+30
+02:14.850 --> 02:16.820
+maintaining and updating this page.
+
+31
+02:16.950 --> 02:22.970
+So this is why components are awesome and why we as a developer probably want to use components and that
+
+32
+02:22.970 --> 02:25.680
+is why React is all about components.

@@ -1,0 +1,568 @@
+1
+00:00:02,200 --> 00:00:07,750
+Vamos a poner los elementos de entrada en sus propios componentes para eso ir a mi carpeta de cpulas y
+
+2
+00:00:07,750 --> 00:00:11,010
+ah tenemos ese Eifel o al que esper hace mucho tiempo.
+
+3
+00:00:11,310 --> 00:00:14,850
+Ahora, todos crean una nueva subcarpeta que nombrar la entrada.
+
+4
+00:00:14,860 --> 00:00:20,470
+Incluso podras crear una nueva subcarpeta a la que llamaste foros en la que no creaste la subcarpeta
+
+5
+00:00:20,830 --> 00:00:23,260
+de entrada, pero seguir con este enfoque all.
+
+6
+00:00:23,260 --> 00:00:29,930
+Obviamente, quiero crear o importar archivos js y la entrada es tan importante para el estilo.
+
+7
+00:00:29,930 --> 00:00:34,330
+Y ahora pensemos en el componente de entrada la cada de la entrada Jr.
+
+8
+00:00:34,510 --> 00:00:36,280
+Quiero usar la forma funcional.
+
+9
+00:00:36,280 --> 00:00:43,010
+Por lo tanto, cree una funcin que requiera algunos accesorios y la India, por supuesto, devolver IMJ como cdigo X.
+
+10
+00:00:43,060 --> 00:00:50,050
+Por esa razn, como siempre, necesitamos importar la accin desde el paquete Riak y luego exportaremos esta
+
+11
+00:00:50,110 --> 00:00:54,340
+funcin de importacin como el valor predeterminado de este archivo.
+
+12
+00:00:54,340 --> 00:00:57,640
+Ahora, con respecto a cada da como cdigo X, queremos volver all.
+
+13
+00:00:57,700 --> 00:01:00,150
+De hecho, quiero usar un div como entrada.
+
+14
+00:01:00,180 --> 00:01:03,650
+Ahora no solo el elemento de entrada en s sino como un contenedor para l.
+
+15
+00:01:03,650 --> 00:01:06,270
+Porque tendr mltiples elementos all.
+
+16
+00:01:06,490 --> 00:01:11,520
+Quiero tener un elemento de etiqueta donde, por supuesto, establecemos la etiqueta desde el exterior.
+
+17
+00:01:11,590 --> 00:01:18,450
+De modo que agregar un accesorio que espero que aparezca en mi componente de entrada personalizado, que puede etiquetar.
+
+18
+00:01:18,720 --> 00:01:21,870
+A partir de entonces, por supuesto, quiero tener mi elemento de entrada.
+
+19
+00:01:21,880 --> 00:01:28,240
+Ahora, esto no es sper flexible porque solo permite poner elementos si queremos escribir de
+
+20
+00:01:28,240 --> 00:01:31,180
+una forma ms genrica o ms genrica.
+
+21
+00:01:31,270 --> 00:01:38,500
+Podramos realmente activar esta funcin aqu, que simplemente devuelve J como X en una funcin que tiene un
+
+22
+00:01:38,500 --> 00:01:46,330
+cuerpo de funcin real donde tambin devolvemos J como X. Por supuesto, pero tambin tenemos algn control antes de hacerlo,
+
+23
+00:01:46,330 --> 00:01:48,870
+donde comprobamos cul es realmente nuestra entrada.
+
+24
+00:01:48,880 --> 00:01:56,920
+que es nulo inicialmente, digamos que tu elemento de entrada equivale a ingresar algo as como muerto.
+
+25
+00:01:56,920 --> 00:02:05,440
+Entonces podramos tener una declaracin de cambio aqu donde quizs cambiemos por operaciones y luego importemos el tipo de
+
+26
+00:02:05,440 --> 00:02:15,130
+propiedad o nombre de propiedad que elijamos y luego podramos manejar casos como la entrada donde al final establecemos nuestra variable, la
+
+27
+00:02:15,940 --> 00:02:19,330
+cual creo una variable llamada elemento de entrada
+
+28
+00:02:19,330 --> 00:02:22,000
+Definitivamente necesitamos agregar ms valores all.
+
+29
+00:02:22,240 --> 00:02:30,070
+As que este es un enfoque ms genrico que podemos configurar y puede alcanzar cualquier complejidad aqu porque
+
+30
+00:02:30,070 --> 00:02:35,020
+ahora, por supuesto, todos tienen diferentes atributos por elemento que pueda tener.
+
+31
+00:02:35,020 --> 00:02:41,350
+Por lo tanto, si tambin tiene el rea de texto del caso, un rea de texto no toma las mismas entradas o los
+
+32
+00:02:41,770 --> 00:02:44,000
+mismos atributos que el elemento de colocacin normal.
+
+33
+00:02:44,020 --> 00:02:52,150
+As que aqu si agregamos el rea de texto y, por lo tanto, establecemos el elemento de entrada igual al rea de texto.
+
+34
+00:02:52,150 --> 00:02:55,830
+Ahora, de repente, podramos enfrentar ciertas restricciones.
+
+35
+00:02:55,960 --> 00:02:59,760
+Como nota al margen, un rea de texto es un elemento de cierre automtico y reacciona.
+
+36
+00:02:59,770 --> 00:03:06,880
+As que esto es algo de complejidad que tendremos que manejar ya sea creando mltiples componentes personalizados para diferentes tipos de
+
+37
+00:03:06,910 --> 00:03:08,470
+entrada que pueda tener.
+
+38
+00:03:08,560 --> 00:03:14,940
+As que bsicamente tenemos un componente envoltorio para entradas normales para reas de texto.
+
+39
+00:03:15,100 --> 00:03:19,360
+O simplemente agregando una declaracin de cambio aqu.
+
+40
+00:03:19,360 --> 00:03:25,140
+Ahora opta por el enfoque de declaracin de cambio y tambin aadir un descanso despus de este.
+
+41
+00:03:25,570 --> 00:03:34,380
+Y aqu para usted y tal vez devuelva un valor predeterminado aqu donde tenemos el elemento de entrada es igual a la entrada.
+
+42
+00:03:34,520 --> 00:03:40,460
+Y ahora, para manejar el caso de que todos tenemos diferentes atributos, espero obtener los atributos
+
+43
+00:03:40,460 --> 00:03:44,990
+que desea establecer en una entrada como accesorios para nuestro contenedor de entrada.
+
+44
+00:03:45,200 --> 00:03:49,340
+Esto me permite simplemente distribuirlos en el elemento de entrada.
+
+45
+00:03:49,340 --> 00:03:53,360
+Entonces, cualquier atributo HDL predeterminado que quiera establecer en su entrada.
+
+46
+00:03:53,510 --> 00:03:59,420
+Solo necesita establecer el tipo de entrada y luego pasar los atributos normales que pasara al tipo
+
+47
+00:03:59,450 --> 00:04:00,060
+de datos.
+
+48
+00:04:00,230 --> 00:04:05,270
+interior de mi componente de entrada personalizado, no tengo que preocuparme por el tipo exacto que tenemos.
+
+49
+00:04:05,300 --> 00:04:11,840
+Entonces, si tiene un rea de texto o simplemente pasa el puntal normal que desea que pase desde el exterior y el
+
+50
+00:04:11,840 --> 00:04:17,880
+Confo en que usars el envoltorio correctamente y pasars los atributos femeninos envejecidos normales correctos.
+
+51
+00:04:17,930 --> 00:04:23,970
+Esta es una forma de reducir la complejidad aqu, de modo que solo tengo que establecer el elemento correcto.
+
+52
+00:04:24,140 --> 00:04:27,330
+Y luego cudate de los accesorios.
+
+53
+00:04:27,350 --> 00:04:32,300
+Ahora podemos agregar ms elementos aqu, por supuesto, podemos agregar un elemento de seleccin desplegable y as sucesivamente.
+
+54
+00:04:32,300 --> 00:04:40,810
+Por ahora vamos con esta configuracin y ahora quiero enviar mis elementos de entrada aqu, as que ingrese l l elemento de entrada
+
+55
+00:04:40,850 --> 00:04:46,800
+esta variable donde almaceno la entrada o el rea de texto que est obteniendo resultados aqu.
+
+56
+00:04:47,150 --> 00:04:48,470
+Y eso es todo por ahora.
+
+57
+00:04:48,470 --> 00:04:52,410
+Podramos volver a visitar esto ms adelante, pero por ahora esta es la configuracin de lo que uso.
+
+58
+00:04:52,700 --> 00:04:55,180
+Obviamente no quiero resolver esto ahora.
+
+59
+00:04:55,280 --> 00:04:58,160
+As que ahora tambin vaya a mi entrada C es la siguiente.
+
+60
+00:04:58,250 --> 00:05:01,630
+Y luego agregar mi clase de entrada personalizada con una Y mayscula
+
+61
+00:05:01,810 --> 00:05:10,340
+Ahora, aqu en primer lugar, quiero asegurarme de que la definicin que utilizar para asignar esta clase
+
+62
+00:05:10,340 --> 00:05:13,710
+envuelva todo el ancho del espacio disponible.
+
+63
+00:05:13,820 --> 00:05:14,970
+As que 100 por ciento.
+
+64
+00:05:14,970 --> 00:05:23,930
+para que tambin tengamos cierta distancia a cualquier elemento que se encuentre arriba o debajo de mi entrada.
+
+65
+00:05:23,930 --> 00:05:29,600
+Digamos que tambin quiero configurar algo de relleno digamos 10 pxeles
+
+66
+00:05:29,600 --> 00:05:38,870
+Tambin voy a configurar el tamao de la caja para ordenar Boxter. Despus de terminar con esa configuracin, ahora puedo Stollear los
+
+67
+00:05:38,960 --> 00:05:39,910
+elementos all.
+
+68
+00:05:40,310 --> 00:05:45,280
+Entonces aqu obviamente tenemos la etiqueta de que tenemos una entrada o un rea de texto.
+
+69
+00:05:45,290 --> 00:05:49,830
+Ahora simplemente usar diferentes clases para eso tambin.
+
+70
+00:05:49,880 --> 00:05:58,430
+As que todos aaden la clase de etiqueta aqu y mi etiqueta debe tener un peso de fuente que sea negrita, de modo que tendr una etiqueta
+
+71
+00:05:58,520 --> 00:06:02,650
+gruesa. La etiqueta de mi da tambin debera ser de bloques de visualizacin.
+
+72
+00:06:02,690 --> 00:06:10,230
+Tome todo el ancho para tomar su propia lnea su propia fila en nuestro documento html por as decirlo.
+
+73
+00:06:10,670 --> 00:06:18,990
+Tambin quiero tener un poco de margen hacia abajo para el elemento de entrada, digamos 8 pxeles.
+
+74
+00:06:19,130 --> 00:06:21,130
+Y con eso eso es todo para mi etiqueta.
+
+75
+00:06:21,410 --> 00:06:29,360
+Luego agregar el estilo de mi elemento de entrada aqu y all, puede que necesite diferentes clases para diferentes tipos de
+
+76
+00:06:29,360 --> 00:06:31,370
+elementos de entrada, por supuesto.
+
+77
+00:06:31,370 --> 00:06:33,060
+Ahora aqu configur una genrica.
+
+78
+00:06:33,140 --> 00:06:40,710
+No quiero tener un esquema as que el esquema sobre Quiero establecer el orden de un pxel es slido y
+
+79
+00:06:40,720 --> 00:06:42,020
+tiene un aspecto gris.
+
+80
+00:06:42,020 --> 00:06:45,770
+Quiero establecer el color de fondo en blanco.
+
+81
+00:06:45,770 --> 00:06:52,750
+Tambin quiero configurar la fuente para que herede para usar la configuracin de fuente normal que tenemos para el resto de la aplicacin.
+
+82
+00:06:53,060 --> 00:06:59,120
+Quiero configurar un relleno, digamos seis pxeles de arriba y abajo y 10 pxeles de izquierda a derecha.
+
+83
+00:06:59,410 --> 00:07:01,790
+Y tambin cuidemos el elemento de salida.
+
+84
+00:07:01,790 --> 00:07:09,380
+Cuando lo enfocamos con el pseudo selector de foco, quiero establecer el contorno en on, pero quiero establecer
+
+85
+00:07:09,380 --> 00:07:11,680
+el color de fondo para usted.
+
+86
+00:07:11,780 --> 00:07:15,060
+Digamos que Drage mira aqu tambin.
+
+87
+00:07:15,290 --> 00:07:18,040
+Ahora puedes definir mucho ms estilos.
+
+88
+00:07:18,110 --> 00:07:26,120
+una celda deshabilitada o lo que quiera hacer, simplemente cree una envoltura de elemento de entrada no muy compleja.
+
+89
+00:07:26,150 --> 00:07:27,090
+Puede agregar
+
+90
+00:07:27,140 --> 00:07:32,340
+Definitivamente puedes ir all-in y crear uno extremadamente complejo.
+
+91
+00:07:32,360 --> 00:07:40,390
+Ahora con eso asignar mi clase de creatividad aqu a todos estos elementos, por lo tanto, aqu con nombre de clase, todos asignaron
+
+92
+00:07:40,430 --> 00:07:42,700
+la clase de elemento de entrada.
+
+93
+00:07:42,710 --> 00:07:49,160
+Acabo de configurar y para eso, por supuesto, primero tengo que importar mis clases de las clases
+
+94
+00:07:49,160 --> 00:07:57,180
+de importacin de asfalto de pensamiento barra y poner C S y luego de nuevo agregarlos a todos mis elementos aqu con
+
+95
+00:07:57,410 --> 00:08:00,290
+clases y haba elemento de entrada, por supuesto.
+
+96
+00:08:00,290 --> 00:08:03,090
+Ahora tambin quiero asignar una clase a diff.
+
+97
+00:08:03,170 --> 00:08:08,500
+Entonces el nombre de la clase aqu es clases en Woodwards el nombre de la clase.
+
+98
+00:08:08,630 --> 00:08:10,890
+Y definimos uno hacia adelante para etiquetar dos.
+
+99
+00:08:11,030 --> 00:08:14,060
+Aqu debera ser la etiqueta de las clases.
+
+100
+00:08:14,180 --> 00:08:18,430
+Y ahora me acabo de dar cuenta de que olvid algo para la clase de elemento de entrada aqu.
+
+101
+00:08:18,470 --> 00:08:25,850
+El elemento Poner debera mostrarse bloqueado y tomar todo el disponible, digamos, para que realmente tome
+
+102
+00:08:25,910 --> 00:08:28,950
+todo el ancho que puede tomar.
+
+103
+00:08:29,030 --> 00:08:35,270
+Ahora con esa configuracin volvamos a nuestra pgina de datos de contacto y usemos nuestro elemento de entrada de Them.
+
+104
+00:08:35,570 --> 00:08:44,870
+luego en la carpeta de entrada y tomar ese elemento de entrada y, por supuesto, no usar esa entrada, as que lo tomar.
+
+105
+00:08:44,870 --> 00:08:52,330
+As que aqu ahora importar rpidamente la entrada de y luego navegar en la carpeta de componentes y
+
+106
+00:08:52,360 --> 00:08:54,250
+all en la carpeta y
+
+107
+00:08:54,250 --> 00:08:55,320
+Baja al mo
+
+108
+00:08:55,360 --> 00:08:58,700
+Cul es su y todas las entradas de reemplazo.
+
+109
+00:08:58,710 --> 00:09:02,850
+Ao en deuda configurado con mi propio elemento de entrada.
+
+110
+00:09:03,220 --> 00:09:09,700
+Ahora puedo deshacerme de mi clase aqu si me pones CLOS porque el elemento de entrada ya tiene un poco de estilo
+
+111
+00:09:09,750 --> 00:09:16,560
+que acabamos de configurar, as que tambin puedo deshacerte del estilo de entrada aqu en mis carpetas de datos de contacto de la
+
+112
+00:09:16,620 --> 00:09:17,260
+siguiente manera.
+
+113
+00:09:17,290 --> 00:09:20,220
+Solo era tipo de bloqueo DB.
+
+114
+00:09:20,230 --> 00:09:27,370
+Pero todas las dems cosas aqu son marcador de posicin, y as sucesivamente, deberan pasarse ahora porque pasamos a prop's, que
+
+115
+00:09:27,370 --> 00:09:30,640
+es lo que definimos en nuestro componente de entrada.
+
+116
+00:09:30,670 --> 00:09:34,670
+Un Propp adicional que tenemos que pasar es ingresar el tipo ahora.
+
+117
+00:09:34,840 --> 00:09:40,950
+As que hazlo rpidamente todo el tipo de entrada en todas estas entradas y deberan ser entradas normales aqu.
+
+118
+00:09:40,990 --> 00:09:44,710
+As que simplemente lo configurar para que ingrese as.
+
+119
+00:09:44,710 --> 00:09:48,480
+Ahora, vamos a estar a salvo. Echemos un vistazo a nuestra aplicacin en ejecucin.
+
+120
+00:09:48,520 --> 00:09:54,970
+As que asegrese de que el inicio de NPM se est ejecutando y, a partir de entonces, con usted con su hamburguesa y cree uno aqu.
+
+121
+00:09:55,030 --> 00:09:57,770
+Ir a la pgina de pago y continuar.
+
+122
+00:09:57,850 --> 00:10:04,380
+Aqu tenemos un error del que puede ocuparse en un segundo, pero vemos que nuestro estilo se aplica.
+
+123
+00:10:04,400 --> 00:10:06,840
+Ahora hay una regla de estilo adicional que debemos agregar.
+
+124
+00:10:06,880 --> 00:10:14,560
+Solo me di cuenta del elemento de entrada que debe recibir el cuadro de borde de tamao de caja para que el ancho
+
+125
+00:10:14,560 --> 00:10:15,700
+se calcule correctamente.
+
+126
+00:10:15,700 --> 00:10:17,560
+Ahora a Starling est bien.
+
+127
+00:10:17,560 --> 00:10:22,710
+Tambin podemos ver que podemos resaltar estos y poner elementos, pero qu pasa con este error?
+
+128
+00:10:23,040 --> 00:10:31,650
+de 16 Adeste en todos los aos de utilera y el tipo de entrada debido a su carcasa no se puede utilizar como valor predeterminado.
+
+129
+00:10:31,700 --> 00:10:36,670
+Ahora bien, este mensaje de error se deriva de un cambio en la repeticin
+
+130
+00:10:36,700 --> 00:10:41,760
+H-G Malaprop porque h Tim Allen el DOM no distingue entre maysculas y minsculas.
+
+131
+00:10:42,010 --> 00:10:46,170
+Por lo tanto, arroja este error en el pasado antes de reaccionar 16.
+
+132
+00:10:46,330 --> 00:10:49,790
+No habra pasado en este apoyo superior que no sabe.
+
+133
+00:10:49,870 --> 00:10:54,810
+Ahora lo hace y nos advierte que la deuda es invlida debido a la carcasa.
+
+134
+00:10:55,000 --> 00:11:01,120
+Entonces, una forma de solucionar esto es simplemente cambiar solo dos tipos de entrada.
+
+135
+00:11:01,390 --> 00:11:05,780
+Todas las minsculas hacen una solucin rpida y fcil para este problema.
+
+136
+00:11:05,830 --> 00:11:10,120
+Si usamos eso y, por supuesto, tambin lo usamos aqu al asignar esto.
+
+137
+00:11:10,270 --> 00:11:12,980
+Ahora deberamos ver que ya no obtenemos este error.
+
+138
+00:11:13,030 --> 00:11:16,680
+Y puede ver que nuestros accesorios como el marcador de posicin se transmiten.
+
+139
+00:11:16,690 --> 00:11:18,990
+Entonces ese es nuestro elemento de entrada de envoltura.
+
+140
+00:11:19,000 --> 00:11:20,080
+Cralo.
+
+141
+00:11:20,080 --> 00:11:24,480
+Ahora veamos cmo podemos manejar diferentes tipos de datos con l.
+
+142
+00:11:24,700 --> 00:11:28,390
+Y creemos una forma real con los datos que realmente necesitamos.
+

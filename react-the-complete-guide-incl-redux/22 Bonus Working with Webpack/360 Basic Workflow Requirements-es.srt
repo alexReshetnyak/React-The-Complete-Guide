@@ -1,0 +1,76 @@
+1
+00:00:02,190 --> 00:00:06,680
+Por lo tanto, queremos configurar nuestro propio flujo de trabajo de compilacin y usaremos el paquete
+
+2
+00:00:06,780 --> 00:00:10,800
+web para l, primero analicemos cules son los requisitos de nuestro flujo de trabajo.
+
+3
+00:00:10,830 --> 00:00:16,650
+Ciertamente, queremos respaldar las caractersticas de javascript de prxima generacin, por lo que debemos poder compilar ese
+
+4
+00:00:16,890 --> 00:00:22,620
+cdigo javascript de prxima generacin con el cdigo actual de javascript que se ejecuta en todos los
+
+5
+00:00:22,620 --> 00:00:23,850
+navegadores ms importantes actualmente.
+
+6
+00:00:23,850 --> 00:00:32,610
+Adems, queremos ser capaces de manejar jsx para que podamos usar jsx en nuestros archivos de script, en nuestro
+
+7
+00:00:32,790 --> 00:00:34,300
+proyecto de reaccin.
+
+8
+00:00:34,320 --> 00:00:43,560
+Tambin queremos agregar css auto-prefixing para que podamos escribir reglas css simples y obtener prefixing automtico para que
+
+9
+00:00:43,800 --> 00:00:49,760
+soporte la mejor sintaxis en todos los navegadores compatibles con nuestras aplicaciones.
+
+10
+00:00:49,910 --> 00:00:55,780
+Y tambin queremos respaldar imgenes, por supuesto, deberamos poder importar imgenes tal como lo
+
+11
+00:00:55,790 --> 00:01:00,660
+hicimos en nuestra aplicacin crear reaccin y luego usarla en nuestra plantilla.
+
+12
+00:01:00,670 --> 00:01:07,300
+Finalmente, queremos optimizar el cdigo, antes de construirlo o escupirlo, debe optimizarse
+
+13
+00:01:07,300 --> 00:01:13,690
+para reducir nuestro cdigo JavaScript a un tamao lo ms pequeo posible.
+
+14
+00:01:13,690 --> 00:01:15,160
+Estos son los requisitos, eso
+
+15
+00:01:15,160 --> 00:01:20,940
+es bsicamente lo que crea que reacciona nos da aunque eso tambin nos da ms como pelusa, pero estos
+
+16
+00:01:21,190 --> 00:01:23,800
+son los requisitos bsicos que tambin quiero construir
+
+17
+00:01:23,800 --> 00:01:25,620
+en este flujo de trabajo personalizado.
+
+18
+00:01:25,660 --> 00:01:30,820
+As que profundicemos en eso y veamos qu dependencias necesitamos instalar y cmo
+
+19
+00:01:30,820 --> 00:01:33,850
+las administramos y cmo configuramos el paquete web.
+

@@ -1,0 +1,340 @@
+1
+00:00:02,250 --> 00:00:07,680
+Descubrimos que tenamos una mirada tan cercana a los componentes estatales completos y estatales.
+
+2
+00:00:07,700 --> 00:00:13,100
+Deberamos echarle un vistazo al ciclo de vida de los componentes, algo que mencion, pero que no hemos examinado ms
+
+3
+00:00:13,100 --> 00:00:13,550
+de cerca.
+
+4
+00:00:13,730 --> 00:00:15,990
+Entonces, cul es el ciclo de vida de los componentes?
+
+5
+00:00:16,280 --> 00:00:22,580
+Al final, cuando reaccionamos a Yates, un componente para nosotros que significa instancias y procesadores que
+
+6
+00:00:23,180 --> 00:00:31,840
+para nosotros se ejecuta a travs de mltiples fases de ciclo de vida y podemos definir mtodos en un componente de estado
+
+7
+00:00:31,840 --> 00:00:38,840
+completo solo en componentes de estado completo porque no puede definir mtodos y componentes funcionales podemos encontrar mtodos
+
+8
+00:00:39,110 --> 00:00:46,170
+que reaccionan ejecutar lo cual nos permite ejecutar algn cdigo durante algunas de estas fases del ciclo de vida.
+
+9
+00:00:46,490 --> 00:00:53,940
+Echemos un vistazo a todos estos mtodos del ciclo de vida de los componentes y veamos cul de estos se ejecuta.
+
+10
+00:00:54,500 --> 00:01:01,790
+Importante como acabo de mencionar, estos son solo componentes completos de estado disponibles que no estn en componentes con menos estados.
+
+11
+00:01:01,930 --> 00:01:04,930
+Y ah tenemos los siguientes mtodos.
+
+12
+00:01:04,930 --> 00:01:09,370
+Ahora estos son muchos como se puede ver. El componente constructor se montar.
+
+13
+00:01:09,370 --> 00:01:12,060
+Se actualizar hizo montar renderizar.
+
+14
+00:01:12,280 --> 00:01:18,640
+Es posible que conozca algunos de estos, algunos de los cuales pueden ser intuitivos cuando se ejecutan,
+
+15
+00:01:18,640 --> 00:01:23,370
+pero eso todava es Analizar cundo se ejecuta uno de estos mtodos.
+
+16
+00:01:23,770 --> 00:01:27,280
+Echemos un vistazo a la creacin de componentes primero.
+
+17
+00:01:27,640 --> 00:01:34,540
+No todos los ganchos del ciclo de vida se ejecutan, no todos estos mtodos se ejecutan durante la creacin.
+
+18
+00:01:34,660 --> 00:01:37,210
+Solo estos mtodos se ejecutan.
+
+19
+00:01:37,420 --> 00:01:42,400
+Constructor montar la montura y renderizar.
+
+20
+00:01:42,400 --> 00:01:47,520
+Ahora echemos un vistazo ms de cerca al proceso del ciclo de vida del componente de creacin.
+
+21
+00:01:47,590 --> 00:01:55,060
+En primer lugar, el constructor se ejecuta y el constructor es en realidad una caracterstica de seis clases por
+
+22
+00:01:55,060 --> 00:01:55,600
+defecto.
+
+23
+00:01:55,600 --> 00:02:03,310
+No es un mtodo definido por volver a actuar lo que hace el re-acto, aunque crea un componente al final.
+
+24
+00:02:03,310 --> 00:02:09,940
+Entonces lo instancia y pasa cualquier problema que este componente reciba al constructor.
+
+25
+00:02:09,970 --> 00:02:15,790
+Por lo tanto, si implementamos este mtodo constructor y no tenemos que hacerlo hasta ahora en nuestro proyecto de demostracin,
+
+26
+00:02:15,790 --> 00:02:16,580
+no lo hicimos.
+
+27
+00:02:16,870 --> 00:02:24,290
+Si implementamos el mtodo de constructor, tenemos que llamar a super y pasar las llamadas de prop al
+
+28
+00:02:24,290 --> 00:02:26,180
+constructor de la clase padre.
+
+29
+00:02:26,350 --> 00:02:33,310
+Y dado que solo podemos implementar este mtodo en componentes con estado, la clase padre es
+
+30
+00:02:33,550 --> 00:02:41,680
+este objeto componente que importamos de reaccionar y llamando a super y pasando cosas como props que necesitamos usar
+
+31
+00:02:41,680 --> 00:02:47,470
+en cualquier otro lugar del componente para ser poblado o administrado por reaccionar.
+
+32
+00:02:47,500 --> 00:02:54,700
+sper y pasa prop's si implementas el constructor. Qu ms puedes hacer aqu? Y eso, por supuesto, es opcional.
+
+33
+00:02:54,820 --> 00:02:56,430
+As que siempre llama
+
+34
+00:02:56,710 --> 00:03:00,040
+Puede inicializar el estado en el constructor.
+
+35
+00:03:00,040 --> 00:03:04,010
+Lo hicimos simplemente definiendo una propiedad estatal.
+
+36
+00:03:04,090 --> 00:03:10,390
+Pero tambin podra definir esta propiedad aqu en el constructor y en fragmentos de cdigo ms antiguos que tenan
+
+37
+00:03:10,390 --> 00:03:13,460
+acceso a las nuevas caractersticas de javascript que estbamos usando.
+
+38
+00:03:13,570 --> 00:03:14,820
+Usted vio ese comentario.
+
+39
+00:03:14,890 --> 00:03:18,270
+Inicializ el estado en el constructor.
+
+40
+00:03:18,490 --> 00:03:22,950
+Lo que nunca deberas hacer all es causar efectos secundarios.
+
+41
+00:03:23,170 --> 00:03:27,600
+Qu son los efectos secundarios, por ejemplo, llegar a un servidor web?
+
+42
+00:03:27,730 --> 00:03:34,540
+Entonces, las solicitudes que regresan y luego editan el estado de los datos de su aplicacin Vea el efecto secundario.
+
+43
+00:03:34,540 --> 00:03:40,180
+No debe hacer eso en el constructor porque esto puede conducir a una representacin real de su aplicacin y, por
+
+44
+00:03:40,330 --> 00:03:42,310
+lo tanto, a dos problemas de rendimiento.
+
+45
+00:03:42,310 --> 00:03:50,240
+Tambin puede llevar a que su estado se vuelva impredecible. Ofrezca al constructor una cantidad de funciones
+
+46
+00:03:50,240 --> 00:03:55,520
+que se ejecutarn. Esta funcin es el componente que montar el mtodo.
+
+47
+00:03:55,670 --> 00:04:01,430
+un mtodo definido por reaccionar y es una forma de hacerlo porque extendemos que el
+
+48
+00:04:01,430 --> 00:04:09,710
+componente del componente de biblioteca de rplicas se montar por razones histricas. En realidad, ya no lo usa con tanta frecuencia.
+
+49
+00:04:09,710 --> 00:04:11,080
+Ahora bien, este es
+
+50
+00:04:11,330 --> 00:04:14,090
+Si lo usa, no lo usara para actualizar su estado.
+
+51
+00:04:14,120 --> 00:04:19,840
+Ests haciendo algunas optimizaciones de Lassman pero an as no deberas causar efectos secundarios aqu.
+
+52
+00:04:19,850 --> 00:04:21,580
+No deberas llegar a la web.
+
+53
+00:04:21,740 --> 00:04:25,110
+Ahora, como mencion, ya no la usas tan a menudo.
+
+54
+00:04:25,160 --> 00:04:32,740
+Todava existe, pero es probable que no lo implemente en su aplicacin. Se montar el componente de oferta.
+
+55
+00:04:32,990 --> 00:04:34,880
+El componente renderizar.
+
+56
+00:04:34,980 --> 00:04:41,980
+Ahora, ejecutar el mtodo de renderizado no significa que est muerto si accede a la Dom real.
+
+57
+00:04:42,050 --> 00:04:50,460
+Volver a cmo exactamente volver a actuar representa de nuevo la Dom real y las actualizaciones de Don en este mdulo.
+
+58
+00:04:50,540 --> 00:04:56,960
+Por ahora deberas saber que renderizar ejecutando el mtodo render representa una idea reactiva de lo que
+
+59
+00:04:56,960 --> 00:04:58,780
+debera representar cmo se vera.
+
+60
+00:04:58,880 --> 00:05:02,920
+Si luego llega a la Dom real y la manipula.
+
+61
+00:05:02,990 --> 00:05:06,590
+Depende de cmo se ve el Dom real.
+
+62
+00:05:06,680 --> 00:05:11,290
+Si no es necesario realizar ningn cambio, no se procesa previamente de todos modos.
+
+63
+00:05:11,600 --> 00:05:17,690
+Pero el mtodo de renderizado es un paso importante porque define claramente cmo debe ser su aplicacin o cmo debe verse este
+
+64
+00:05:17,690 --> 00:05:21,380
+componente desde un H. T. perspectiva masculina
+
+65
+00:05:21,650 --> 00:05:28,400
+Por lo tanto, es en el mtodo de renderizado donde usted prepara y estructura su cdigo GSX definiendo
+
+66
+00:05:28,400 --> 00:05:30,800
+qu contenido se procesa para este componente.
+
+67
+00:05:30,890 --> 00:05:37,580
+Ahora estn despus de volver a actuar, por supuesto, en los componentes secundarios que tiene este componente porque al final,
+
+68
+00:05:37,580 --> 00:05:44,150
+una vez que llamas renderizado y encuentras tu cdigo GSX, tambin sabes qu componentes incluiste all como el componente
+
+69
+00:05:44,150 --> 00:05:47,340
+de la persona en nuestro proyecto de demostracin. .
+
+70
+00:05:47,480 --> 00:05:51,260
+Entonces, seguiremos adelante y procesaremos todos estos componentes secundarios.
+
+71
+00:05:51,260 --> 00:05:58,760
+Bsicamente, la ejecucin de este proceso para cada componente secundario y, a continuacin, llamar
+
+72
+00:05:58,760 --> 00:06:04,730
+al componente import bsicamente para decirle que este componente se mont correctamente.
+
+73
+00:06:04,730 --> 00:06:07,110
+Ahora hay un componente que se mont.
+
+74
+00:06:07,280 --> 00:06:09,330
+Usted puede causar efectos secundarios.
+
+75
+00:06:09,390 --> 00:06:14,540
+Este es el momento en el que desea comunicarse con la Web, por ejemplo, para obtener algunos datos.
+
+76
+00:06:14,810 --> 00:06:20,880
+Lo que no debes hacer aqu es actualizar el estado, porque eso activar un pre-renderizado para
+
+77
+00:06:20,900 --> 00:06:22,660
+que tengas algo en cuenta.
+
+78
+00:06:22,700 --> 00:06:26,480
+No llame a este estado de ajuste en el componente que se monte.
+
+79
+00:06:26,600 --> 00:06:32,390
+un renderizado real y si se est preguntando qu tan exacto sera llegar a la Web
+
+80
+00:06:32,390 --> 00:06:38,510
+y usar la resolucin de ese acceso web hace algo, tambin tendr un aspecto en este curso.
+
+81
+00:06:38,510 --> 00:06:39,140
+Esto activar
+
+82
+00:06:39,140 --> 00:06:46,790
+Una vez que comenzamos a agregar acceso web a nuestras aplicaciones ahora es bueno ver este diagrama aqu, pero
+
+83
+00:06:46,790 --> 00:06:48,390
+sigue siendo muy abstracto.
+
+84
+00:06:48,460 --> 00:06:54,350
+As que volvamos a nuestro proyecto y implementemos estos ganchos y tal vez bloqueemos algo en la
+
+85
+00:06:54,620 --> 00:06:58,230
+consola para que realmente podamos ver el flujo de nuestra aplicacin.
+

@@ -1,0 +1,128 @@
+1
+00:00:02,230 --> 00:00:08,900
+As que en las ltimas conferencias presentamos tres actos y ahora estamos gestionando todo el estado central
+
+2
+00:00:08,900 --> 00:00:09,890
+de nuestra aplicacin.
+
+3
+00:00:10,120 --> 00:00:17,470
+Bueno, muchos pedidos de contenedores y no gestionamos pedidos de comida en este momento porque los pedidos realmente estn
+
+4
+00:00:17,470 --> 00:00:25,030
+relacionados con el cdigo asincrnico y queremos manejar la obtencin de datos y el manejo de acciones asincrnicas con redux
+
+5
+00:00:25,030 --> 00:00:32,080
+primero en el siguiente mdulo antes de usar tambin redox en este, por lo tanto es una especie
+
+6
+00:00:32,080 --> 00:00:36,950
+de verdad para la hamburguesa Boulder donde previamente recogimos los ingredientes del servidor.
+
+7
+00:00:37,000 --> 00:00:38,440
+No estamos haciendo esto ahora mismo.
+
+8
+00:00:38,440 --> 00:00:42,720
+Vamos a reintroducir Eustice en la prxima conferencia sobre los prximos mdulos.
+
+9
+00:00:42,820 --> 00:00:51,050
+Pero lo que estamos haciendo es administrar los ingredientes bsicos a travs de relajar lo que tambin mencion es que,
+
+10
+00:00:51,410 --> 00:00:57,470
+por ejemplo, los datos de contacto todava tenemos mucho estado en nuestra propiedad estatal.
+
+11
+00:00:57,470 --> 00:00:59,270
+Todo el foro est adentro.
+
+12
+00:00:59,270 --> 00:01:01,370
+La validez de nuestros controles
+
+13
+00:01:01,460 --> 00:01:07,630
+Y realmente quiero resaltar que puede administrar todo eso a travs de redirecciones.
+
+14
+00:01:07,760 --> 00:01:09,110
+Usted puede hacer eso.
+
+15
+00:01:09,110 --> 00:01:16,120
+usuario y poner toda la lgica que tiene en ese contenedor aqu en lectura X para comprobar la
+
+16
+00:01:16,130 --> 00:01:24,890
+validez de los controles en Rydex que actualiza los valores de control de formulario para redireccionamientos que ha ledo X para todo .
+
+17
+00:01:24,890 --> 00:01:29,210
+Puede despachar acciones con cada pulsacin de tecla que haga el
+
+18
+00:01:29,360 --> 00:01:31,510
+Usted puede hacer eso absolutamente.
+
+19
+00:01:31,700 --> 00:01:38,640
+Y si quieres hacer esto, realmente depende del estilo que quieras tener en tu aplicacin.
+
+20
+00:01:39,650 --> 00:01:43,250
+Desea tener componentes muy delgados en contenedores?
+
+21
+00:01:43,460 --> 00:01:49,610
+Hay uno aqu, obviamente, no es que tenga que poner todo en Rydex,
+
+22
+00:01:49,610 --> 00:01:53,590
+quiere que la administracin estatal se ubique donde corresponde?
+
+23
+00:01:53,720 --> 00:01:56,960
+Entonces di que realmente es tu estado de hielo.
+
+24
+00:01:56,960 --> 00:01:58,520
+Solo es relevante.
+
+25
+00:01:58,550 --> 00:02:06,590
+Es componente y no debera afectar a ninguno de los componentes que pueda tener aqu en este
+
+26
+00:02:06,590 --> 00:02:07,280
+contenedor.
+
+27
+00:02:07,640 --> 00:02:11,920
+Entonces esto es realmente algo que tienes que decidir Bopha es correcto.
+
+28
+00:02:11,930 --> 00:02:18,380
+Sin duda, vale la pena entrenarse para poner todo ese estado en actos de lectura con el conocimiento
+
+29
+00:02:18,380 --> 00:02:19,770
+que tienes hasta ahora.
+
+30
+00:02:19,850 --> 00:02:23,930
+Pero para m estoy contento con el estado actual de la aplicacin.
+
+31
+00:02:24,110 --> 00:02:30,590
+Quiero mover nuestro prximo mdulo de curso sumergindome en estas cosas ms avanzadas acerca de redux
+
+32
+00:02:30,590 --> 00:02:36,770
+como el cdigo Headly asynchronous y luego volviendo a esta aplicacin para mejorarla an ms.
+

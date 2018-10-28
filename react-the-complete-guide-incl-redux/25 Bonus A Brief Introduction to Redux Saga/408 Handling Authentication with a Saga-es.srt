@@ -1,0 +1,492 @@
+1
+00:00:02,130 --> 00:00:08,590
+En la ltima conferencia, continuamos subcontratando contenido de nuestro archivo creador de acciones en nuestra saga de auth.
+
+2
+00:00:08,670 --> 00:00:17,610
+Continuemos con eso y sigamos con nuestra auth. js file en la carpeta de acciones, aqu donde
+
+3
+00:00:17,610 --> 00:00:27,720
+realmente autenticamos, all enviamos auth start y luego al final solo tenemos nuestra solicitud de Ajax aqu donde tratamos
+
+4
+00:00:27,810 --> 00:00:35,640
+de autenticar bien y donde simplemente intentamos registrarnos o iniciar sesin, por lo que objetivo
+
+5
+00:00:35,640 --> 00:00:43,380
+sera manejar esto con una saga ahora. Para hacer esto, por supuesto, crea una nueva
+
+6
+00:00:43,380 --> 00:00:53,440
+funcin de generador, as que una funcin con la estrella y podemos nombrar a este authSaga o authenticateUserSaga, asgnele el
+
+7
+00:00:53,440 --> 00:00:56,180
+nombre authUserSaga. Ah tambin recibo
+
+8
+00:00:56,180 --> 00:01:01,110
+mi accin y ahora podemos volver a ejecutar el cdigo aqu.
+
+9
+00:01:01,250 --> 00:01:09,200
+Ahora en nuestro creador de acciones, lo que hicimos fue enviar el inicio de autenticacin y luego hacer nuestra solicitud de HTTP,
+
+10
+00:01:09,200 --> 00:01:14,210
+dejarme copiar todo ese cdigo en la saga y reemplazarlo paso a paso all.
+
+11
+00:01:14,390 --> 00:01:18,610
+En primer lugar, aprendiste que no llamamos a dispatch como
+
+12
+00:01:18,860 --> 00:01:21,310
+este en la saga, sino que
+
+13
+00:01:21,320 --> 00:01:30,830
+lo llamamos put, as que lo primero que hacemos es ceder el paso y llegar a acciones donde ahora quiero usar mi inicio de
+
+14
+00:01:30,920 --> 00:01:33,140
+autenticacin. accin, para esto vamos al
+
+15
+00:01:33,140 --> 00:01:34,130
+ndice. js
+
+16
+00:01:34,150 --> 00:01:41,060
+file en la carpeta de acciones, asegurmonos de que authStart se exporte all para que podamos importarlo en
+
+17
+00:01:41,060 --> 00:01:41,360
+otros
+
+18
+00:01:41,360 --> 00:01:49,850
+archivos, agregu esta exportacin ahora y de nuevo en la autenticacin. js archivo en la carpeta
+
+19
+00:01:49,850 --> 00:01:58,020
+saga, ahora puedo usar acciones. authInicie aqu y ejecute esta funcin para obtener la accin que esto despacha.
+
+20
+00:01:58,040 --> 00:02:00,570
+Entonces eso es lo primero que ponemos aqu.
+
+21
+00:02:00,770 --> 00:02:05,900
+Luego creamos nuestros datos de autenticacin donde usamos correo electrnico y contrasea, y
+
+22
+00:02:05,900 --> 00:02:13,330
+as sucesivamente, ahora aqu debo extraer el correo electrnico de la accin y la contrasea de la accin,
+
+23
+00:02:13,330 --> 00:02:21,280
+esto tambin significa que debemos asegurarnos de que cada vez que se ejecuta authUserSaga, la accin en realidad contiene esta
+
+24
+00:02:21,730 --> 00:02:28,350
+informacin, lo aseguraremos en el prximo paso, antes de hacer esto, sigamos con el cdigo aqu.
+
+25
+00:02:28,540 --> 00:02:31,290
+Configuramos una URL y luego tenemos una verificacin if
+
+26
+00:02:31,480 --> 00:02:35,830
+all, tambin voy a establecer una accin. isSignUp con un cheque.
+
+27
+00:02:35,830 --> 00:02:40,060
+Luego tenemos nuestra solicitud HTTP donde usamos axios,
+
+28
+00:02:40,110 --> 00:02:44,190
+ahora en la autenticacin. js file importamos axios desde axios,
+
+29
+00:02:44,200 --> 00:02:46,450
+no estamos usando nuestra instancia personalizada.
+
+30
+00:02:46,450 --> 00:02:52,730
+As que vamos a nuestro archivo de saga y simplemente agregamos esa importacin tambin, importamos axios de axios.
+
+31
+00:02:54,040 --> 00:02:57,530
+Ahora en nuestra saga, esto ya no arroja un error,
+
+32
+00:02:57,760 --> 00:03:04,830
+pero ahora que se hace algo importante, voy a cambiar la forma en que usamos esta post promesa que
+
+33
+00:03:04,940 --> 00:03:10,490
+nos devuelve, ahora mismo obtenemos la respuesta y luego hacemos algo con la respuesta .
+
+34
+00:03:10,510 --> 00:03:16,780
+Voy a cambiar esto, crear una nueva constante, responder y asignar la publicacin de axios, aunque esto sera
+
+35
+00:03:16,840 --> 00:03:22,750
+incorrecto porque la publicacin axios devuelve una promesa, pero ahora agregar la palabra clave yield, que al
+
+36
+00:03:23,140 --> 00:03:28,990
+igual que una nota lateral no est expuesta por redux saga pero son caractersticas de javascript de
+
+37
+00:03:29,080 --> 00:03:32,200
+prxima generacin conectadas a este concepto de generador.
+
+38
+00:03:32,200 --> 00:03:34,210
+Ahora al hacer esto, en
+
+39
+00:03:34,210 --> 00:03:37,360
+realidad ya no devolver una promesa aqu, pero
+
+40
+00:03:37,480 --> 00:03:45,330
+espere a que esta promesa se resuelva o rechace y luego almacene lo que tengamos de vuelta en esta constante,
+
+41
+00:03:45,520 --> 00:03:48,960
+por lo que ya no necesito encadenar aqu.
+
+42
+00:03:49,090 --> 00:03:57,600
+Esto significa que ya no lo necesito aqu, puedo eliminarlo, tambin lo quitaremos pronto y, por supuesto, tambin significa que
+
+43
+00:03:57,600 --> 00:04:02,510
+todo el cdigo que depende de la respuesta ahora se puede ejecutar
+
+44
+00:04:02,670 --> 00:04:10,390
+de forma sincronizada porque la ejecucin se detendr aqu hasta que este la promesa se resuelve o rechaza.
+
+45
+00:04:10,440 --> 00:04:19,560
+Entonces, extraemos la fecha de vencimiento aqu, mantenemos nuestro clculo tal como est, hacemos lo mismo con el almacenamiento
+
+46
+00:04:19,560 --> 00:04:21,940
+local al que accedemos aqu,
+
+47
+00:04:23,220 --> 00:04:28,400
+as como lo hicimos antes y luego enviamos nuevas acciones.
+
+48
+00:04:28,400 --> 00:04:31,890
+Aunque aprendi que no redistribuimos las acciones aqu, en
+
+49
+00:04:32,120 --> 00:04:43,320
+cambio cedemos aqu y accedemos a las acciones. authSuccess. Para eso tenemos que ir al ndice. js en la carpeta de
+
+50
+00:04:43,330 --> 00:04:51,570
+acciones y asegrate de que exportamos todas las acciones que queremos poner dentro de nuestra
+
+51
+00:04:51,570 --> 00:04:56,690
+saga para que sea authSuccess y eventualmente tambin necesitaremos
+
+52
+00:04:56,820 --> 00:05:01,070
+authFail as que ya exportaremos esto aqu, authFail.
+
+53
+00:05:01,930 --> 00:05:08,860
+Con eso en la saga, ahora estoy cediendo esto puesto aqu,
+
+54
+00:05:08,860 --> 00:05:12,630
+authSuccess y ceder otro en el
+
+55
+00:05:14,330 --> 00:05:16,630
+que ejecute las acciones
+
+56
+00:05:16,620 --> 00:05:25,090
+checkAuthTimeout, ahora esta es una funcin que tambin necesitamos exportar aqu, checkAuthTimeout, as.
+
+57
+00:05:25,100 --> 00:05:28,340
+Esto es lo que quiero ejecutar aqu, ahora
+
+58
+00:05:28,640 --> 00:05:34,020
+tambin podemos agregar declaraciones de rendimiento frente a las llamadas de almacenamiento local como
+
+59
+00:05:34,070 --> 00:05:40,160
+lo hicimos anteriormente, aunque el almacenamiento local es una accin sncrona, as que no necesitamos detenernos
+
+60
+00:05:40,160 --> 00:05:40,610
+all,
+
+61
+00:05:40,610 --> 00:05:48,160
+pero an podemos hacer eso, podemos agregar rendimiento aqu para tener un enfoque consistente, tambin podramos agregar un rendimiento aqu
+
+62
+00:05:49,870 --> 00:05:56,640
+frente a una nueva fecha y ahora con eso, tenemos toda nuestra funcin casi terminada, pero qu pasa
+
+63
+00:05:56,850 --> 00:05:59,110
+con este caso de error aqu?
+
+64
+00:06:00,530 --> 00:06:03,540
+Bueno, ahora podemos manejar esto de una manera
+
+65
+00:06:03,950 --> 00:06:09,200
+muy elegante, extractamos la respuesta aqu porque dije que el rendimiento detendra esto
+
+66
+00:06:09,200 --> 00:06:12,140
+y esperara la promesa de resolver o
+
+67
+00:06:12,140 --> 00:06:18,710
+rechazar, ahora podemos usar una construccin javascript predeterminada para manejar tanto un xito como un error. caso,
+
+68
+00:06:18,710 --> 00:06:21,750
+podemos envolver esto con un bloque de prueba.
+
+69
+00:06:22,070 --> 00:06:25,440
+As que probamos el siguiente cdigo, esperamos la
+
+70
+00:06:25,460 --> 00:06:29,640
+respuesta y luego hacemos nuestro trabajo de xito con ella.
+
+71
+00:06:30,310 --> 00:06:40,200
+Sin embargo, si eso falla, realmente captaremos el error y luego ejecutaremos este cdigo alternativo y all tomar
+
+72
+00:06:40,840 --> 00:06:45,060
+mi accin de despacho aqu y no la
+
+73
+00:06:45,990 --> 00:06:52,590
+despachar realmente, pero ceder put authFail y as sucesivamente, y aqu nombr
+
+74
+00:06:52,770 --> 00:06:57,420
+este error, as que debera hacer entonces aqu
+
+75
+00:06:57,690 --> 00:07:01,880
+tambin y usa acciones. authFail.
+
+76
+00:07:02,010 --> 00:07:10,680
+Ahora con eso, obtenemos la manera ms fcil de manejar esto, usando el rendimiento para pausar la ejecucin, poner
+
+77
+00:07:10,680 --> 00:07:17,690
+authStart y luego intentar si podemos obtener una respuesta exitosa y, de lo contrario, despachar authFail.
+
+78
+00:07:18,210 --> 00:07:24,240
+Con todas estas cosas cambiadas, lo nico que tenemos que hacer es asegurarnos de
+
+79
+00:07:24,240 --> 00:07:30,730
+que authUserSaga realmente se ejecute cuando intentamos crear o asignar un usuario, por lo que debemos
+
+80
+00:07:30,900 --> 00:07:34,190
+volver a nuestra autenticacin. js archivo creador de
+
+81
+00:07:34,320 --> 00:07:41,420
+acciones y all, tenemos este creador de acciones de autenticacin que enviamos en nuestro cdigo.
+
+82
+00:07:41,430 --> 00:07:49,380
+Ahora aqu, ahora ya no deberamos ejecutar este cdigo anterior que tenamos all, sino que simplemente devolvemos
+
+83
+00:07:49,380 --> 00:07:53,320
+una accin y para eso, crearemos un nuevo
+
+84
+00:07:53,760 --> 00:08:04,860
+tipo de accin aqu, la exportar aqu, exportar const authUser tal vez, authUser y en el archivo creador de acciones de autenticacin, ahora ejecutar
+
+85
+00:08:05,130 --> 00:08:10,330
+esto o devolver el tipo actionTypes. authUser, este tipo de accin
+
+86
+00:08:10,350 --> 00:08:17,460
+recin creado, pronto configuraremos un vigilante para luego usar nuestra saga recin creada cada
+
+87
+00:08:17,480 --> 00:08:26,250
+vez que ocurra esta accin y muy importante, en nuestra funcin authUserSaga o generador aqu, por supuesto,
+
+88
+00:08:26,280 --> 00:08:34,260
+extraemos el correo electrnico, la contrasea y, por supuesto, una registrarse en la accin, as que
+
+89
+00:08:34,290 --> 00:08:35,040
+necesitamos
+
+90
+00:08:35,070 --> 00:08:40,040
+pasar esa informacin, necesitamos pasar esa informacin cuando creamos la accin.
+
+91
+00:08:40,140 --> 00:08:43,400
+Lo conseguimos aqu como argumentos en el creador
+
+92
+00:08:43,500 --> 00:08:51,870
+de la accin, as que simplemente deberamos pasar el correo electrnico en una propiedad de correo electrnico, la contrasea en una
+
+93
+00:08:51,930 --> 00:08:56,060
+propiedad de contrasea y esSignUp en una propiedad isSignUp, como esta.
+
+94
+00:08:56,080 --> 00:08:57,030
+Ahora con
+
+95
+00:08:57,270 --> 00:08:58,900
+eso, esta es la
+
+96
+00:08:58,930 --> 00:09:06,270
+manera de la saga, lo nico que falta es que conectemos nuestro authUserSaga recin generado aqu con un observador.
+
+97
+00:09:06,490 --> 00:09:11,980
+Entonces en el ndice. js file en la
+
+98
+00:09:11,990 --> 00:09:14,040
+carpeta sagas, agregar
+
+99
+00:09:14,050 --> 00:09:23,890
+otro rendimiento, takeEvery y all usar actionTypes. authUser y quiero ejecutar mi nueva saga aadida, que importar en
+
+100
+00:09:23,890 --> 00:09:30,560
+primer lugar, que es por supuesto el authUserSaga que acabamos de crear aqu, esto es
+
+101
+00:09:30,620 --> 00:09:32,720
+lo que quiero ejecutar aqu,
+
+102
+00:09:32,810 --> 00:09:38,000
+como siempre sin parntesis, simplemente pasando un puntero a este funcin.
+
+103
+00:09:38,360 --> 00:09:39,420
+Ahora guardemos esto,
+
+104
+00:09:39,650 --> 00:09:43,750
+regresemos a nuestro generador de hamburguesas y volvamos a cargar esta
+
+105
+00:09:44,150 --> 00:09:45,830
+pgina, probemos si esto funciona.
+
+106
+00:09:45,950 --> 00:09:51,960
+Intentar iniciar sesin as que cambiar para iniciar sesin y presionar enviar,
+
+107
+00:09:51,960 --> 00:09:57,690
+esto funciona, como se puede ver, hemos iniciado authSuccess y authCheckTimeout.
+
+108
+00:09:57,840 --> 00:10:04,430
+Tambin he cerrado la sesin despus de un corto perodo y esto simplemente
+
+109
+00:10:04,440 --> 00:10:11,250
+sucede porque olvid algo, en auth. js en la carpeta sagas donde retras el tiempo de expiracin, ahora el
+
+110
+00:10:11,250 --> 00:10:14,690
+tiempo de expiracin es solo un dato que obtenemos de la respuesta, el
+
+111
+00:10:14,910 --> 00:10:16,720
+campo expiresIn y eso est en segundos.
+
+112
+00:10:16,770 --> 00:10:19,110
+Sin embargo, el retraso funciona con
+
+113
+00:10:19,110 --> 00:10:23,060
+milisegundos, por lo que simplemente necesito multiplicar esto por 1000.
+
+114
+00:10:23,070 --> 00:10:25,570
+Sin embargo, la clave es que funcion,
+
+115
+00:10:25,590 --> 00:10:28,120
+intentmoslo de nuevo ahora con este error
+
+116
+00:10:28,380 --> 00:10:34,860
+reparado, si vuelvo a autenticarme y me conecto una vez ms, esta vez no debera volver a cerrar sesin
+
+117
+00:10:34,860 --> 00:10:35,450
+tan rpido,
+
+118
+00:10:35,580 --> 00:10:36,860
+as que djenme enviar
+
+119
+00:10:36,900 --> 00:10:43,050
+esto, vers authSuccess y configuraremos el temporizador para que todo funcione como antes pero ahora usando la saga.
+
+120
+00:10:43,290 --> 00:10:49,530
+Bueno, permtanme cerrar la sesin y dejar que intente crear un nuevo usuario, as que crear una nueva direccin de
+
+121
+00:10:49,620 --> 00:10:52,680
+correo electrnico aqu y pulso enviar, y esto tambin funciona.
+
+122
+00:10:52,830 --> 00:10:58,870
+Entonces obtenemos el mismo comportamiento que antes pero ahora manejamos esto a travs de la
+
+123
+00:10:58,870 --> 00:11:05,180
+saga, ahora sigamos poniendo cosas de la autenticacin. js archivo en la carpeta de acciones en nuestro archivo de saga.
+

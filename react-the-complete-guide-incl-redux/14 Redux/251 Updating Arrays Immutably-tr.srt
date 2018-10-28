@@ -1,0 +1,408 @@
+1
+00:00:02,200 --> 00:00:09,190
+Son konferansta, devletin deimez halini nasl gncelleyeceimizi ve ayrca, javascript'teki bu
+
+2
+00:00:09,280 --> 00:00:16,870
+referans trleri nedeniyle Optix'e benzeyen bir diziyi ynetebileceini rendik ve onunla Kong
+
+3
+00:00:16,870 --> 00:00:20,250
+kedi kullanarak almanz gerektiini rendiniz.
+
+4
+00:00:20,350 --> 00:00:24,270
+imdi bir sonucu sildiim davay halletmek istiyorum.
+
+5
+00:00:24,400 --> 00:00:26,650
+Ve bunun iin silme gnderiyoruz.
+
+6
+00:00:26,650 --> 00:00:27,690
+Sonu burada.
+
+7
+00:00:28,550 --> 00:00:35,890
+Artk redktrde tabii ki kolay bir blm yalnzca n-tuzu sildikten sonra bunun iin bir vaka eklemek ve
+
+8
+00:00:36,710 --> 00:00:41,490
+sonra da ilk nce eski durumun kopyalanaca bir javascript nesnesi dndrmek.
+
+9
+00:00:41,720 --> 00:00:42,480
+Ve imdi ne var.
+
+10
+00:00:42,480 --> 00:00:49,600
+Russels'n Concat ile mmkn olmayan bir eyi kalc olarak eklemesinden ne yapacaz.
+
+11
+00:00:49,640 --> 00:00:55,610
+imdi, genellikle, kaldrmak istediiniz enin dizinini kullanarak bir dizideki eleri kaldrrsnz.
+
+12
+00:00:55,610 --> 00:01:01,940
+Diyelim ki burada bulduk, dinamik olarak yaknda leps alacak gibi olsayd, imdi
+
+13
+00:01:01,940 --> 00:01:02,750
+bunu yapabilirsin.
+
+14
+00:01:02,750 --> 00:01:08,420
+Ardndan, dizi maaza sonularmz ve kod eklememizi kullanabiliriz.
+
+15
+00:01:08,420 --> 00:01:14,120
+Ardndan, ilk argmandan ve silmek istediimiz unsurlarn miktarndan balamak istiyoruz fikrini
+
+16
+00:01:14,120 --> 00:01:14,950
+yerine getirirsek.
+
+17
+00:01:14,990 --> 00:01:20,210
+kinci argman, bu elemanlar diziden karyor.
+
+18
+00:01:20,270 --> 00:01:25,040
+Ancak bu, orijinal diziyi deitiriyor ve bu nedenle bunu nasl yapmamz gerekmiyor.
+
+19
+00:01:25,040 --> 00:01:26,720
+Deimez deil.
+
+20
+00:01:26,720 --> 00:01:31,590
+Peki bunu deimez bir ekilde nasl yapacaz ki birka yol var.
+
+21
+00:01:31,620 --> 00:01:33,100
+Sana iki gstereceim
+
+22
+00:01:33,180 --> 00:01:42,960
+Birincisi, dizinin bir kopyasn oluturduunuzdan, yeni dizinin oluturduunuz yeni bir dizi olabileceini ve daha sonra
+
+23
+00:01:42,960 --> 00:01:50,960
+durum sonularndaki tm eleri yeni bir diziye datmak iin yaylma ileci'ni kullanmanzdr.
+
+24
+00:01:51,030 --> 00:01:58,380
+olduklar iin aslnda nesneler olduklar halde daha nce yaptklar nesneleri iaret ediyorlar.
+
+25
+00:01:58,590 --> 00:02:06,690
+Yeni bir dizi eklemek iin bir kopyasn yarattnzdan nemli eleri ve durum sonularn nesneler
+
+26
+00:02:06,960 --> 00:02:10,700
+yleyse, elerden birinde bir zellii deitirirseniz.
+
+27
+00:02:10,890 --> 00:02:18,270
+Sadece byle bir dizinin yaratlmas, bir nesneyi kaldrmay planlyorsanz yeterli
+
+28
+00:02:18,260 --> 00:02:23,070
+deildir, ancak diziden yeni kaldrdnz nesneye dokunmazsnz.
+
+29
+00:02:23,070 --> 00:02:24,250
+Bu bir fark.
+
+30
+00:02:24,750 --> 00:02:33,240
+Yeni dizinin bir kopyasn burada alyoruz ve sonra yeni diziyi burada ekleme ilemimizde kullanabilir
+
+31
+00:02:33,240 --> 00:02:41,640
+ve sonra sonular eski dizinin bir kopyas olan ancak gncellenmi yeni diziye eit olarak
+
+32
+00:02:41,640 --> 00:02:43,040
+ayarladmz durumu dndrebiliriz.
+
+33
+00:02:43,190 --> 00:02:46,150
+Ve kopyaladmzdan beri eski diziye hi dokunmadk.
+
+34
+00:02:46,320 --> 00:02:48,180
+Yani bunu yapmann bir yolu.
+
+35
+00:02:48,210 --> 00:02:54,980
+Daha sk gren yol Folder yntemini kullanmak olsa da, bunu yorumlayacam.
+
+36
+00:02:55,090 --> 00:03:02,250
+imdi bunun iin sadece yeni bir sabit oluturamazsnz; bu, belki gncellenmi dizi ne isterseniz onu
+
+37
+00:03:02,250 --> 00:03:02,670
+belirtmektir.
+
+38
+00:03:02,670 --> 00:03:07,610
+Elbette yeni bir dizi adn da verebilirsin orda orjinalini aldn ya da.
+
+39
+00:03:07,710 --> 00:03:11,030
+Durum sonularn ve filtre yntemini arn.
+
+40
+00:03:11,310 --> 00:03:18,930
+yeni bir diziye dnerse eskisine dokunmazsa yeni bir dizi dndrr filtrelenir girdi olarak ilev alr.
+
+41
+00:03:18,930 --> 00:03:20,190
+Eer filtre
+
+42
+00:03:20,190 --> 00:03:28,620
+lev, dizideki her e zerinde, bu enin tam olarak belirli koullara izin verilip gnderilmediini,
+
+43
+00:03:28,620 --> 00:03:33,850
+faulter tarafndan dndrlen yeni diziye dntrlmesi iin altrlr.
+
+44
+00:03:33,870 --> 00:03:39,610
+Bireysel eleman, buradaki element veya bir saatlik Hastey bazaltnn girdisi olarak alyoruz, ismini verdik
+
+45
+00:03:40,140 --> 00:03:42,790
+ve sonra da doru veya yanl vermeliyiz.
+
+46
+00:03:43,020 --> 00:03:49,290
+Doruyu dndrrsek ve bu sadece bir ok ilevi iin ksayol szdizimini kullanrsa, satr
+
+47
+00:03:49,290 --> 00:03:51,890
+ii yazarsanz return anahtar kelimesini atlayabilirsiniz.
+
+48
+00:03:52,350 --> 00:03:57,810
+dnerseniz, dn her e iin yaplr ve bu nedenle eski dizinin bir kopyasn oluturmu olursunuz.
+
+49
+00:03:57,810 --> 00:03:58,530
+Eer geri
+
+50
+00:03:58,530 --> 00:04:01,130
+Szdiziminin sadece daha uzun bir formu.
+
+51
+00:04:01,440 --> 00:04:06,680
+Elbette, yeni diziye dahil edilmesi gereken yalnzca 40 eye dnmek istemezsiniz.
+
+52
+00:04:07,050 --> 00:04:14,160
+yleyse, eleman silmek istediimizden, burada belirli bir kimlie sahip olmayan veya burada belirli
+
+53
+00:04:14,220 --> 00:04:19,020
+bir indizde olmayan her e iin true dndrrz.
+
+54
+00:04:19,140 --> 00:04:23,930
+Dizi iindeki elemann dizinini alrsak, ikinci bir argman alrz.
+
+55
+00:04:23,940 --> 00:04:28,870
+Burada, bu geri arama ilevinde, tekrarlayan olarak enin dizinini elde ederiz.
+
+56
+00:04:28,890 --> 00:04:36,510
+o zaman, l indeksin, onu kaldrmak istediiniz elemann indeksine eit olduu takdirde, doruyu syleyebiliriz.
+
+57
+00:04:36,680 --> 00:04:40,200
+Bylece, hangi ilev bozukluunun yrtld ve
+
+58
+00:04:40,200 --> 00:04:48,780
+u anda durumumuzdaki indekslerden bahsedecek olursak, burada bu unsurlar bir deer ve
+
+59
+00:04:48,780 --> 00:04:56,120
+her e iin benzersiz bir kimlie sahip ORU elemanlar durumuna sahibiz.
+
+60
+00:04:56,430 --> 00:05:00,510
+Bu yzden aslnda bir kimlik alacaz ve bu fikri alabiliriz.
+
+61
+00:05:00,530 --> 00:05:03,590
+Yani dizin DEL dizinin konumu deil.
+
+62
+00:05:03,630 --> 00:05:09,930
+Bu, e hakknda bir fikirdir ve burada bu ilev, her e zerinde yrtlmekte olduundan, bu enin
+
+63
+00:05:09,930 --> 00:05:13,380
+hangi dizinde bulunduu hakknda bilgi edinmemize gerek yoktur.
+
+64
+00:05:13,380 --> 00:05:21,550
+Sadece dizideki enin kimlii u anda aryorken doruyu dndmz syleyemeyiz.
+
+65
+00:05:21,580 --> 00:05:24,660
+Bu eye her e zerinde eriiyoruz.
+
+66
+00:05:24,660 --> 00:05:33,410
+Bu nedenle, kimlie eitse, bu eylemle alakal olduumuz kimlie eit deil mazeret.
+
+67
+00:05:33,420 --> 00:05:41,840
+Bu yzden eylemi iin d sonu esi kimlii veya ne istersek onu yklemek isterim.
+
+68
+00:05:42,000 --> 00:05:46,530
+Kimliini kullanabileceiniz ok uzun bir isim var ama bunun nereden geldiini
+
+69
+00:05:46,530 --> 00:05:47,700
+gerekten netletirmek istiyorum.
+
+70
+00:05:47,700 --> 00:05:50,350
+Yani bu, bu eylemin bir ykdr.
+
+71
+00:05:50,370 --> 00:05:52,480
+Elbette bu yk ne zaman geireceim.
+
+72
+00:05:52,680 --> 00:05:58,750
+Ancak ncelikle Dennis'in bu gncelletirilmi diziyi kullanmamza izin verelim, sonu olarak burada dndmz devletin iinde.
+
+73
+00:05:58,980 --> 00:06:05,640
+Bu, kimliin eyleme getiimiz kimlie eit olmad tm eler iin doru olan, kouturmak iin
+
+74
+00:06:05,670 --> 00:06:08,510
+tamamen yeni bir i parac dizisidir.
+
+75
+00:06:08,520 --> 00:06:10,850
+O halde imdi bir hareketle kimlii geelim.
+
+76
+00:06:11,040 --> 00:06:15,260
+Tezgah kutusuna gidelim ve saldry silelim.
+
+77
+00:06:15,300 --> 00:06:19,430
+Introducer'a eriirken imdi ayn ad tayan bir mlk ayarlamalyz.
+
+78
+00:06:19,530 --> 00:06:21,770
+Sonu olarak ben id.
+
+79
+00:06:21,870 --> 00:06:29,500
+Aslnda benim eritiim mlk Aslnda imdi, bu sadece Baba Kimlii almak
+
+80
+00:06:29,530 --> 00:06:33,140
+iin tkladm unsur fikri olmal.
+
+81
+00:06:33,250 --> 00:06:37,010
+Bu ii burada yapmamz lazm.
+
+82
+00:06:37,120 --> 00:06:41,140
+Yani cesaretle bu bilgiyi almam gerekiyor.
+
+83
+00:06:41,470 --> 00:06:47,890
+Bu yzden burada kimlii bu anonim ileve geirmeyi bekliyorum.
+
+84
+00:06:48,020 --> 00:06:55,060
+Seebileceiniz rasgele bir argman ad var mdr ve ben de szlerinizi almak
+
+85
+00:06:55,060 --> 00:07:01,140
+iin eylemimle birlikte gndermek istiyorum, bu zellii burada Leite sonucunda kullanrz.
+
+86
+00:07:01,210 --> 00:07:03,350
+te imdi o kimlii gemek zorundayz.
+
+87
+00:07:03,400 --> 00:07:06,160
+Yani burada bunu anonim bir ilev olarak uyguluyorsunuz.
+
+88
+00:07:07,420 --> 00:07:15,340
+fonksiyonda elenmi veya sarlm olduundan, bu bileen u anda render edildii srada yrtlmeyecektir.
+
+89
+00:07:15,370 --> 00:07:20,230
+Dezavantajlar yrtldnde ilev bozukluu yerine getirilecek ve artk
+
+90
+00:07:20,230 --> 00:07:23,230
+parantez ekleyebilirsiniz nk bu esiz
+
+91
+00:07:23,290 --> 00:07:30,440
+Ve burada, o yeni tarih anlk grntsn anmsatarak maaza sonu kimlii gemi olabilir.
+
+92
+00:07:30,790 --> 00:07:38,560
+imdi hepsini kaydedip, baz sonular eklemeye balarsak, 30'a tklarsak
+
+93
+00:07:38,560 --> 00:07:39,700
+kaldrlr.
+
+94
+00:07:39,880 --> 00:07:44,800
+Elbette, sonular iin tklarsak, deimez bir ekilde yine ayn olur.
+
+95
+00:07:44,980 --> 00:07:51,460
+kullanc ARABIRIMINDAN UI'YE almak iin sahiplik yapmay ve daha sonra bunu
+
+96
+00:07:51,460 --> 00:07:59,620
+ileten bir argman bekleyerek, UI'lerinizdeki eylemleri bir ileme nasl geireceinizi rendiniz. eylemle birlikte.
+
+97
+00:07:59,620 --> 00:08:06,260
+Ve burada, nemli unsurlarn birou, unsurlar filtreyle deitirilemeyeceinizi rendiniz ve MAP'taki
+
+98
+00:08:06,370 --> 00:08:13,780
+Ve elbette bu argman geerek UI'nizin iinden, ilev ars ile
+
+99
+00:08:13,990 --> 00:08:21,940
+birlikte veri geirmeyi salayan anonim bir ilevde yrttnz bu pervaz sararak
+
+100
+00:08:21,940 --> 00:08:22,890
+beklediinizi dnyoruz.
+
+101
+00:08:22,900 --> 00:08:30,670
+Bu sper nemlidir ve baka bir kayt birimi, Leitz zerinde deimez bir ekilde alan ve bir
+
+102
+00:08:30,760 --> 00:08:37,120
+haritann maazaya siparii veren bir harita zerinden kullanc arayznden aksiyon ykleri alannn geiidir.
+

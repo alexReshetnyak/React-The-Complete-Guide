@@ -1,0 +1,200 @@
+1
+00:00:02,160 --> 00:00:09,570
+Criamos um frum que simplesmente configuramos no javascript, o que ns manuseamos dinamicamente com nosso prprio
+
+2
+00:00:09,570 --> 00:00:17,550
+componente de entrada e nosso manipulador alterado de entrada, onde atualizamos imutavelmente qualquer efeito que os elementos estrangeiros.
+
+3
+00:00:17,550 --> 00:00:21,080
+Agora vamos nos certificar de que tambm possamos enviar este formulrio.
+
+4
+00:00:21,330 --> 00:00:23,530
+Para isso, temos o boto com o manipulador clicado.
+
+5
+00:00:23,550 --> 00:00:26,210
+E eu no quero usar para colecionar o manipulador.
+
+6
+00:00:26,220 --> 00:00:27,930
+Na verdade, existe.
+
+7
+00:00:27,930 --> 00:00:35,220
+Ao enviar o manipulador de eventos, podemos usar no formulrio em si e l, eu quero agora executar
+
+8
+00:00:35,220 --> 00:00:39,990
+o mtodo usado para que o manipulador de pedidos seja submetido.
+
+9
+00:00:40,350 --> 00:00:45,530
+Agora, no manipulador de ordens, agora,  claro, ainda quero evitar o padro.
+
+10
+00:00:45,540 --> 00:00:49,320
+Ainda recebemos um objeto de evento que voc automaticamente passou por reagir.
+
+11
+00:00:49,320 --> 00:00:53,730
+Agora eu quero evitar o padro, porque no quero enviar a
+
+12
+00:00:53,730 --> 00:00:56,440
+solicitao automaticamente, o que recarregaria minha pgina.
+
+13
+00:00:56,530 --> 00:00:58,810
+Agora preciso extrair os dados.
+
+14
+00:00:58,950 --> 00:01:05,040
+Eu quero enviar e a coisa legal  que todos os dados j so gerenciados neste estado e nosso objeto
+
+15
+00:01:05,040 --> 00:01:11,610
+de formulrio aqui, que  atualizado o tempo todo com duas vinculativas, o valor  atualizado pelo menos e o valor 
+
+16
+00:01:11,610 --> 00:01:13,140
+certamente o que me interessa.
+
+17
+00:01:13,140 --> 00:01:14,430
+Posso criar uma nova constante.
+
+18
+00:01:14,460 --> 00:01:22,920
+Vamos talvez nomear dados forma e l eu quero obter os dados do meu estado e eu quero basicamente obter o meu objeto de formulrio
+
+19
+00:01:22,920 --> 00:01:28,780
+de pedido aqui, embora eu no me importo com o tipo de elemento e o conflito de elemento.
+
+20
+00:01:28,950 --> 00:01:33,800
+Eu s quero obter o nome e, em seguida, o valor diretamente mapeado entre eles.
+
+21
+00:01:33,840 --> 00:01:42,960
+Ento, eu vou transform-lo um pouco para este formulrio, os dados podem ser um objeto vazio inicialmente e, em seguida, todo
+
+22
+00:01:43,030 --> 00:01:45,520
+o loop atravs da minha forma.
+
+23
+00:01:45,520 --> 00:01:54,930
+Ento, eles so todos, tenho meu identificador de elemento de formulrio neste formulrio de pedido de estado.
+
+24
+00:01:55,030 --> 00:02:02,340
+Ento este elemento de forma muito longo e o fogo  simplesmente um pas de e-mail e assim por diante.
+
+25
+00:02:03,600 --> 00:02:11,670
+E ento eu quero definir dados de formulrio para um determinado identificador de elemento de formulrio igual a este formulrio de ordem de
+
+26
+00:02:12,290 --> 00:02:16,400
+estado para o identificador de elemento de formulrio e exista valor.
+
+27
+00:02:16,440 --> 00:02:22,420
+Ento eu simplesmente crio pares de valores-chave onde eu tenho que adicionar uma nova propriedade a dados estrangeiros.
+
+28
+00:02:22,620 --> 00:02:26,090
+Uma propriedade como pas, como email e assim por diante.
+
+29
+00:02:26,250 --> 00:02:32,060
+E eu configurei o valor dessa propriedade no igual a um objeto, mas simplesmente ao valor que o usurio inseriu.
+
+30
+00:02:32,550 --> 00:02:35,490
+E agora com isso eu tenho esse mapeamento simples.
+
+31
+00:02:35,700 --> 00:02:38,570
+Agora posso usar isso para envi-lo.
+
+32
+00:02:38,640 --> 00:02:43,830
+Ento, aqui os dados do meu formulrio, no final, o que eu quero passar.
+
+33
+00:02:43,860 --> 00:02:49,720
+Ento, eu vou adicionar uma propriedade de data de ordem ao objeto do meu pedido e definir como igual a dados externos.
+
+34
+00:02:50,100 --> 00:02:53,420
+E agora vamos ver se isso funciona da maneira que eu quero que ele funcione.
+
+35
+00:02:53,640 --> 00:02:56,400
+Vamos tambm para a base de fogo para isso.
+
+36
+00:02:56,420 --> 00:02:58,700
+Ento, em firebase, aqui esto minhas ordens.
+
+37
+00:02:58,800 --> 00:03:04,190
+Vamos agora adicionar uma nova ordem e ver se isso funciona para eu passar pelo processo completo.
+
+38
+00:03:04,260 --> 00:03:07,350
+Todo o burger do comerciante clica no pedido agora.
+
+39
+00:03:07,360 --> 00:03:11,770
+Continue continuando aqui e depois configure alguns dados.
+
+40
+00:03:11,770 --> 00:03:21,290
+Seu cdigo postal de rua algum cdigo aleatrio Estados Unidos talvez teste no ponto de teste com.
+
+41
+00:03:21,580 --> 00:03:24,480
+Vamos escolher mais barato aqui e clicar em ordem.
+
+42
+00:03:24,790 --> 00:03:28,480
+Ns somos redirecionados, no vamos dar uma olhada na base de fogo, uma nova ordem foi adicionada.
+
+43
+00:03:28,630 --> 00:03:33,370
+E ento ns pedimos dados onde realmente temos todos esses mapeamentos onde temos os
+
+44
+00:03:33,370 --> 00:03:38,630
+dados que o usurio inseriu, ento enviar o formulrio funciona bem e de forma muito dinmica.
+
+45
+00:03:38,650 --> 00:03:40,980
+Veja como  fcil adicionar uma nova entrada.
+
+46
+00:03:40,990 --> 00:03:47,050
+Voc simplesmente adiciona uma nova propriedade ao seu formulrio de pedido no estado configurado no tipo de elemento,
+
+47
+00:03:47,060 --> 00:03:51,170
+configure-o aqui e atribua um valor e rapidamente adicionou uma nova entrada.
+
+48
+00:03:51,190 --> 00:03:58,090
+tempo de execuo para que voc possa adicionar novas propriedades dinamicamente novas entradas ou remov-las ou alterar a configurao.
+
+49
+00:03:58,240 --> 00:04:05,230
+E, claro, uma vez que este est no estado, voc pode mesmo manipular esse formulrio de forma imutvel no
+
+50
+00:04:05,230 --> 00:04:09,150
+ por isso que uma maneira to dinmica de criar um frum  to incrvel.
+

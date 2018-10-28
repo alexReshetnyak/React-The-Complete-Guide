@@ -1,0 +1,124 @@
+1
+00:00:02,250 --> 00:00:08,020
+imdi oku okumay ve ok mesajlarn nasl anlayacanz ve mantksal hatalar nasl bulacanz reneceksiniz.
+
+2
+00:00:08,100 --> 00:00:13,860
+Bazen reaktr uygulamanzn halihazrdaki durumunu renmek ve gelitirici
+
+3
+00:00:13,860 --> 00:00:17,500
+aralaryla uygunsuz olabileceini dnmek isteyebilirsiniz.
+
+4
+00:00:17,970 --> 00:00:24,120
+Neyse ki Chrome'a ekleyebileceiniz ve gelitirici aralarn yeniden oynatabileceiniz harika bir uzant var.
+
+5
+00:00:24,120 --> 00:00:25,730
+Birlikte kuralm.
+
+6
+00:00:25,950 --> 00:00:32,760
+Yeniden hareket eden gelitirici aralar iin google' kullanabilirsiniz ve bunlar nasl kullanacanz hakknda daha fazla
+
+7
+00:00:32,760 --> 00:00:38,700
+bilgi edinebileceiniz ve projeye katkda bulunabileceiniz veya Chrome Web maazasna hak kazandnz get
+
+8
+00:00:38,700 --> 00:00:39,610
+up deposunu bulacaksnz.
+
+9
+00:00:39,630 --> 00:00:39,890
+Yok hayr.
+
+10
+00:00:39,900 --> 00:00:40,400
+Telaa gerek yok.
+
+11
+00:00:40,400 --> 00:00:42,930
+Bunlar web maazasnda cretsiz.
+
+12
+00:00:42,930 --> 00:00:48,630
+Zaten bunlar Chrome'a ekledim ancak bunu yapmadysanz Chrome'a ekle'yi tklayabilirsiniz.
+
+13
+00:00:48,630 --> 00:00:54,960
+Onlar dzenledikten sonra, muhtemelen Roma'ya yeniden balamanz gerekir ve bunlar, krom gelitirici aralarnda peinde.
+
+14
+00:00:54,960 --> 00:00:59,210
+Yeniden hareket etmeyi seebilirsiniz bu yeni sekme olmaldr a.
+
+15
+00:00:59,220 --> 00:01:06,810
+imdi, hareket halindeyken oluturduunuz uygulamay grdnz gibi imdi harika bir ey var.
+
+16
+00:01:06,870 --> 00:01:12,330
+bileeni bileenini veya uygulama bileeni gibi grnen DOM elerini grmyorsunuzdur.
+
+17
+00:01:12,810 --> 00:01:19,260
+Gei yap esini tklarsanz, normal eler sekmesinden farkl bir ey grrsnz, ancak
+
+18
+00:01:19,260 --> 00:01:20,670
+yalnzca bileenleri bileen
+
+19
+00:01:21,090 --> 00:01:26,840
+Ve alt ksmnda orada da bileen ve sahne bakn.
+
+20
+00:01:27,000 --> 00:01:29,590
+Yani uygulama bileeni iin kiinin dizisini grrsnz.
+
+21
+00:01:29,680 --> 00:01:33,500
+Ve bir kiiyi tklarsam kaldrrm da bu gncellenir.
+
+22
+00:01:33,510 --> 00:01:39,860
+Bylece burada devletinizin de orada deitirebileceini ve bir kii bileenini ilerlettiini grebilirsiniz.
+
+23
+00:01:39,870 --> 00:01:47,430
+Gryorsunuz ki bir devlete sahip deil, sahne bulunuyor ve burada hangi
+
+24
+00:01:47,700 --> 00:01:51,480
+zelliklerin vurgulanm grndnden gncellemeleri vurgulayabiliyorlar.
+
+25
+00:01:51,540 --> 00:01:56,430
+Kodunuzda, rnein bu snf adnn eklenmesi gibi ne deiti.
+
+26
+00:01:56,430 --> 00:01:58,070
+Bu da ok gzel.
+
+27
+00:01:58,080 --> 00:02:04,650
+Uygulamanzdaki bileenlerin durumunu hzl bir ekilde anlamanza ve nesnenizi deitirmenize ve normal gelitirici
+
+28
+00:02:04,650 --> 00:02:10,560
+aralaryla kolayca edemediiniz baz grlere izin vermenizi salar; nk bu, ie yarayan
+
+29
+00:02:10,590 --> 00:02:11,850
+eylerin tesine geer.
+
+30
+00:02:11,910 --> 00:02:15,500
+Kapan altnda neler olduunu sahnelerin arkasnda ne gsteriyor.
+
+31
+00:02:15,510 --> 00:02:16,140
+Temelde.
+

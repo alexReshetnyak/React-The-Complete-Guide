@@ -1,0 +1,104 @@
+1
+00:00:02,300 --> 00:00:05,080
+Abbiamo aggiunto la logica per caricare i nostri ingredienti.
+
+2
+00:00:05,150 --> 00:00:10,250
+E a proposito, se ti stai chiedendo perch un'insalata  nella parte inferiore, perch poich
+
+3
+00:00:10,250 --> 00:00:16,700
+abbiamo caricato la base di fuoco e l non possiamo ordinare manualmente le propriet delle insalate ordinate sul fondo
+
+4
+00:00:16,700 --> 00:00:17,570
+di un medicinale.
+
+5
+00:00:17,570 --> 00:00:19,280
+E quindi  in fondo qui.
+
+6
+00:00:19,280 --> 00:00:26,480
+non solo in un numero come valore ma in un oggetto in cui devi anche trovare una posizione e poi dovresti regolare
+
+7
+00:00:26,480 --> 00:00:31,910
+la parte anteriore e il codice per occuparti di questo posizione o semplicemente scegli semplicemente una
+
+8
+00:00:31,910 --> 00:00:37,790
+soluzione in cui codificare i tuoi ingredienti e non impostare ingredienti uguali agli ingredienti che torni dal server.
+
+9
+00:00:37,790 --> 00:00:42,230
+Q Dovresti semplicemente regolare il tuo codice per trasformare manualmente i tuoi ingredienti
+
+10
+00:00:42,230 --> 00:00:42,910
+che dicono
+
+11
+00:00:43,070 --> 00:00:51,320
+Ma per un oggetto javascript in cui non si mappano manualmente venderlo agli ingredienti azione venderlo e cos via ovviamente perde un po 'della flessibilit
+
+12
+00:00:51,320 --> 00:00:58,010
+che si aveva prima, in cui si poteva semplicemente trarre vantaggio dall'impostare qualsiasi cosa e quindi utilizzarla in la tua app
+
+13
+00:00:58,100 --> 00:01:04,370
+di front end anche se non hai mai avuto tutta quella flessibilit comunque perch abbiamo solo una quantit limitata
+
+14
+00:01:04,370 --> 00:01:10,920
+di ingredienti supportati con i nostri s. c. Il codice s qui e la propriet
+
+15
+00:01:10,960 --> 00:01:14,300
+degli ingredienti in cui tutti abbiamo una dichiarazione caso switch.
+
+16
+00:01:14,570 --> 00:01:21,440
+iniziare l'aggiunta di insalata e cos l'ordine  corretto di nuovo perch ora stiamo mappando manualmente.
+
+17
+00:01:21,440 --> 00:01:28,520
+Quindi, per completare questo pensiero, possiamo raggiungere effettivamente il formaggio Regans e cos via per mapparlo uno
+
+18
+00:01:28,520 --> 00:01:35,000
+per uno quando impostiamo gli ingredienti anche con la carne, ovviamente e con tutto ci che
+
+19
+00:01:35,000 --> 00:01:39,380
+aggiungiamo lo vedremo ora se salviamo questo e tornare all'applicazione e
+
+20
+00:01:39,380 --> 00:01:45,200
+Ancora una volta il lato negativo  che dobbiamo fare questo in realt supportiamo solo questi quattro ingredienti, ma lo
+
+21
+00:01:45,200 --> 00:01:46,920
+stiamo facendo comunque nella nostra applicazione.
+
+22
+00:01:47,000 --> 00:01:53,390
+Come ho appena detto ad esempio nella componente ingredienti nell'Amberer Area anno in cui tutti abbiamo una
+
+23
+00:01:53,390 --> 00:01:57,900
+dichiarazione caso-interruttore in cui supportiamo anche solo la quantit limitata di componenti.
+
+24
+00:01:57,920 --> 00:02:03,550
+Quindi questo  il caso comunque e ora almeno l'ordine  tornato a dove era prima.
+
+25
+00:02:03,560 --> 00:02:06,610
+Quindi questo  un possibile miglioramento puramente opzionale.
+
+26
+00:02:06,650 --> 00:02:10,510
+Volevo solo essere sicuro di non essere confuso perch il Senato  in fondo.
+

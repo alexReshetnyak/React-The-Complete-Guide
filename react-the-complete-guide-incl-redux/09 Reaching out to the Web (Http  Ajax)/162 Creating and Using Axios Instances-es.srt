@@ -1,0 +1,240 @@
+1
+00:00:02,150 --> 00:00:05,740
+Poder establecer una configuracin predeterminada para X es bastante impresionante.
+
+2
+00:00:05,840 --> 00:00:11,570
+Pero, qu sucede si realmente no desea utilizar la misma base para toda su aplicacin sino solo
+
+3
+00:00:11,570 --> 00:00:17,060
+cuatro partes y para otras partes tiene un Eurail diferente y lo mismo para los encabezados
+
+4
+00:00:17,060 --> 00:00:17,960
+y dems?
+
+5
+00:00:18,350 --> 00:00:24,770
+En tal caso, puede hacer una medida a medias creando una caracterstica interesante proporcionada por X-ists
+
+6
+00:00:24,860 --> 00:00:26,510
+que se llama instancias.
+
+7
+00:00:26,510 --> 00:00:27,880
+Djame crear un nuevo archivo.
+
+8
+00:00:27,900 --> 00:00:30,430
+EXISTE Arjay como en las carpetas fuente.
+
+9
+00:00:30,430 --> 00:00:38,780
+Entonces, en el mismo nivel que el ndice que Cheras cae all, importar x aos del paquete
+
+10
+00:00:38,840 --> 00:00:45,650
+real y en ex-U. S. podemos ejecutar una funcin o mtodo de creacin especial para ser precisos o
+
+11
+00:00:45,650 --> 00:00:47,870
+almacenar el resultado en una constante a la que he llamado instancia.
+
+12
+00:00:47,870 --> 00:00:49,850
+Y de nuevo utilizo X-ists create.
+
+13
+00:00:49,850 --> 00:00:56,330
+Ahora esto crea una instancia de X aos como una copia del objeto Xs que podra decir y
+
+14
+00:00:56,330 --> 00:00:58,340
+puede crear varias de esas copias.
+
+15
+00:00:58,340 --> 00:01:05,150
+Ahora aqu estn todos los caminos de Java que podran oponerse a configurar esto y establecer la base en la que se encuentran l y
+
+16
+00:01:05,150 --> 00:01:06,120
+yo tomar esa base.
+
+17
+00:01:06,130 --> 00:01:09,910
+Ya est todo configurado en la configuracin raz.
+
+18
+00:01:10,100 --> 00:01:14,290
+Ahora cuando X es la cada de Chase, simplemente configurar tu.
+
+19
+00:01:14,570 --> 00:01:17,780
+Y ahora una palabra comentada en la prxima silla de la siguiente manera.
+
+20
+00:01:18,640 --> 00:01:23,660
+Ahora si eso tenemos una parte de todo el asunto, pero no hemos terminado.
+
+21
+00:01:23,890 --> 00:01:29,800
+Ahora accedemos a nuestra propia instancia de Xs y, por supuesto, puede crear varias instancias en diferentes
+
+22
+00:01:30,100 --> 00:01:32,580
+archivos para diferentes partes de su aplicacin.
+
+23
+00:01:32,590 --> 00:01:36,190
+Le mostrar cmo usar estas instancias en un segundo.
+
+24
+00:01:36,190 --> 00:01:43,140
+asumir que la configuracin predeterminada de su extremo invalidar todo lo que configure en la instancia en s.
+
+25
+00:01:43,140 --> 00:01:46,000
+Ahora, de forma predeterminada, la instancia tambin
+
+26
+00:01:46,000 --> 00:01:52,800
+Por ejemplo, podra dejar la autorizacin que se est configurando aqu.
+
+27
+00:01:53,000 --> 00:01:55,620
+Pero tambin quiero configurarlo para mi propia instancia.
+
+28
+00:01:55,790 --> 00:01:59,490
+Entonces, despus de crear la instancia en la que podemos asignarle a la base tu l.
+
+29
+00:01:59,630 --> 00:02:07,160
+Ahora, para las letras, reemplace los valores predeterminados de X con los valores predeterminados de las instancias Hatteras comunes, y as sucesivamente.
+
+30
+00:02:07,220 --> 00:02:14,810
+Y ahora aqu puedo configurar estos dos tokens de instancia para anularlos para todas las solicitudes que se
+
+31
+00:02:14,810 --> 00:02:16,550
+envan utilizando esta instancia.
+
+32
+00:02:16,680 --> 00:02:23,810
+exportar esta instancia como valores predeterminados de cada y podemos usar Abra Foz y ahora djame mostrarte cmo usarla.
+
+33
+00:02:23,810 --> 00:02:24,980
+Ahora tenemos que
+
+34
+00:02:25,220 --> 00:02:30,390
+Eso dice el contenedor de bloques donde usamos X aos para obtener todas las publicaciones del bloque.
+
+35
+00:02:30,620 --> 00:02:37,390
+Digamos que ya no importamos exis del paquete de axiomas, pero establecemos que estos X aos
+
+36
+00:02:37,400 --> 00:02:45,890
+variables aqu son una constante para nuestra x 'instancia apuntando a ese archivo donde exportamos esa instancia como el valor predeterminado.
+
+37
+00:02:46,010 --> 00:02:49,780
+Por supuesto, tambin puedes nombrar como x 'instancia o lo que quieras.
+
+38
+00:02:50,000 --> 00:02:54,390
+Dejar X aqu para que no tenga que ajustar mi cdigo all.
+
+39
+00:02:54,650 --> 00:03:00,630
+Asegrese de guardar todos los archivos y si luego vuelve a su aplicacin, debera funcionar bien.
+
+40
+00:03:00,680 --> 00:03:08,720
+publicacin, incluso recibimos un error porque ahora eres Ellas incorrecta porque elimin dbase tu L del archivo de ndice.
+
+41
+00:03:08,720 --> 00:03:15,110
+Ahora notar una cosa, aunque ya no vea el interceptor imprimiendo el registro de
+
+42
+00:03:15,110 --> 00:03:23,990
+la solicitud que se envi y la respuesta que se obtuvo porque el interceptor se configur para el objeto de
+
+43
+00:03:24,470 --> 00:03:31,200
+acceso global que ya no usamos aqu en el bloque contenedor si ahora intento publicar
+
+44
+00:03:31,500 --> 00:03:31,880
+alguna
+
+45
+00:03:31,880 --> 00:03:38,490
+Lo coment y lo puse en mi instancia que solo estoy usando en un contenedor de bloques, aunque en
+
+46
+00:03:38,510 --> 00:03:43,670
+todos los dems lugares de mi aplicacin todava estoy importando el paquete en s.
+
+47
+00:03:44,060 --> 00:03:51,450
+usar el paquete real con su valor predeterminado, pero tambin usar nuestra propia instancia en los lugares donde queremos utilizar nuestra aplicacin
+
+48
+00:03:51,470 --> 00:03:57,650
+para anular algunas de las configuraciones de los lugares donde usamos esa instancia en lugar del objeto predeterminado.
+
+49
+00:03:57,920 --> 00:04:04,920
+As que, por supuesto, tambin podra comentar la base predeterminada en la que est de nuevo, de modo que podamos
+
+50
+00:04:04,970 --> 00:04:07,060
+Y ahora tenemos lo mejor de ambos mundos.
+
+51
+00:04:07,130 --> 00:04:13,280
+Tenemos nuestra propia instancia configurada para recuperar todas las publicaciones, pero para publicar una publicacin usamos el
+
+52
+00:04:13,280 --> 00:04:14,200
+paquete predeterminado nuevamente.
+
+53
+00:04:14,240 --> 00:04:17,550
+Por eso tambin seguimos viendo nuestros interceptores trabajando aqu.
+
+54
+00:04:17,840 --> 00:04:24,140
+Y, por supuesto, tambin podramos agregar interceptores a nuestra propia instancia de IN; simplemente puede usar la
+
+55
+00:04:24,140 --> 00:04:31,130
+solicitud de interceptores de instancia tal como lo hizo para la instancia predeterminada para el objeto predeterminado de ejes.
+
+56
+00:04:31,250 --> 00:04:37,880
+porque el hecho de poder usar instancias puede brindarle la flexibilidad que necesita en su aplicacin.
+
+57
+00:04:37,880 --> 00:04:39,260
+Quera mostrarle esto
+
+58
+00:04:39,260 --> 00:04:46,670
+Le permite controlar en detalle en qu parte de su aplicacin desea usar qu configuracin predeterminada y qu
+
+59
+00:04:47,060 --> 00:04:53,360
+caracterstica ms destacada, y redondea este mdulo donde, con un poco de suerte, obtendr una
+
+60
+00:04:53,360 --> 00:05:01,370
+buena comprensin de cmo envi las solicitudes HTP y cmo X usa el paquete. darle muchas caractersticas agradables de conveniencia.
+

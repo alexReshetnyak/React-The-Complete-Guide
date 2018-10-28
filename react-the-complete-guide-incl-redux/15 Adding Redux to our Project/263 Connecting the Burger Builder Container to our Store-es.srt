@@ -1,0 +1,468 @@
+1
+00:00:02,250 --> 00:00:06,730
+Con sus ideas estn terminadas por ahora al menos con respecto a los ingredientes.
+
+2
+00:00:07,080 --> 00:00:11,310
+Conectemos un tazn de hamburguesa o un recipiente a nuestra tienda.
+
+3
+00:00:11,400 --> 00:00:16,890
+Ya configuramos la tienda aqu en los prximos tres aos, pasamos por dos proveedores y envolvemos
+
+4
+00:00:16,890 --> 00:00:18,060
+todo con el proveedor.
+
+5
+00:00:18,270 --> 00:00:22,280
+As que ahora es el momento de trabajar en el bombn de hamburguesas para recibir esa informacin.
+
+6
+00:00:22,680 --> 00:00:24,230
+Y aprendes cmo funciona eso.
+
+7
+00:00:24,240 --> 00:00:26,870
+Funciona con la funcin de connectome.
+
+8
+00:00:26,910 --> 00:00:29,980
+Importamos desde re-act redux.
+
+9
+00:00:30,030 --> 00:00:38,480
+As que importmosnos desde all conect un redux como este y con ese addas de importacin envolvemos
+
+10
+00:00:38,570 --> 00:00:40,650
+nuestra exportacin con l.
+
+11
+00:00:40,730 --> 00:00:47,980
+Ahora, para ser precisos, no nos apresuremos con esto, simplemente envolvemos el despacho del mapa a los accesorios
+
+12
+00:00:47,990 --> 00:00:52,860
+y mapeamos los estados a Constanza del puntal y a Berger Boulder.
+
+13
+00:00:53,180 --> 00:01:01,940
+Pero aqu nos enfrentamos al problema de que ya tenemos un componente de orden superior que envuelve nuestra exportacin el componente de orden
+
+14
+00:01:01,970 --> 00:01:05,070
+superior de control de errores que configuramos aqu.
+
+15
+00:01:05,570 --> 00:01:07,500
+Bueno, esto en realidad no es un problema.
+
+16
+00:01:07,520 --> 00:01:11,950
+Puede tener tantos componentes de orden superior all como desee.
+
+17
+00:01:12,170 --> 00:01:18,320
+Al final, lo que Connect har es establecer algunos accesorios en el componente que est envolviendo.
+
+18
+00:01:18,620 --> 00:01:25,280
+Por lo tanto, siempre y cuando pase estos accesorios en sus propios componentes de orden superior, esto debera
+
+19
+00:01:25,290 --> 00:01:32,210
+funcionar bien porque cualquier accesorio de nuestros componentes de orden superior que pueda REPP este todava se transmitir muy
+
+20
+00:01:32,210 --> 00:01:32,790
+bien.
+
+21
+00:01:32,960 --> 00:01:35,690
+Entonces esto no debera ser un problema en absoluto.
+
+22
+00:01:35,930 --> 00:01:43,370
+que para encontrar los accesorios que obtenemos en la hamburguesa. Boler map dispatch to props and map state
+
+23
+00:01:43,370 --> 00:01:53,840
+to props Invertir el orden porque lo hice antes as que Conn's map state to prop's now map state you prop's tiene una funcin que
+
+24
+00:01:53,840 --> 00:02:02,000
+recibe el estado automticamente y devuelve un objeto javascript donde definimos qu propiedad debe contener qu Sly del estado.
+
+25
+00:02:02,000 --> 00:02:08,270
+As que vamos a ver si esto funciona volvamos a Burger Bolar y vamos a
+
+26
+00:02:08,270 --> 00:02:10,540
+tratar a nuestros Q Constans
+
+27
+00:02:10,880 --> 00:02:19,280
+As que aqu podramos crear iones G para ingredientes y asignarles ingredientes estatales as para tener acceso a esa
+
+28
+00:02:19,280 --> 00:02:26,480
+propiedad de ingrediente en nuestro estado y despachar a prop's ahora recibe una funcin o tiene
+
+29
+00:02:26,480 --> 00:02:30,840
+una funcin que recibe la funcin de despacho como argumento.
+
+30
+00:02:31,250 --> 00:02:35,360
+Y luego todos los objetos devueltos con quizs asignaciones de funcin.
+
+31
+00:02:35,360 --> 00:02:43,100
+En este caso y aqu quiero tener que despachar bsicamente los apoyos de Shabelle o dos apoyos
+
+32
+00:02:43,100 --> 00:02:44,480
+que pueden activarse.
+
+33
+00:02:44,480 --> 00:02:53,000
+Tendr un ingrediente para agregar una propiedad y este nombre de propiedad como este aqu, por supuesto, es totalmente
+
+34
+00:02:53,000 --> 00:02:54,130
+de usted.
+
+35
+00:02:54,620 --> 00:03:02,690
+As que aqu nos agregan mantendr la funcin annima donde luego ejecutar el envo y pasar un canal Optik donde
+
+36
+00:03:02,690 --> 00:03:09,470
+el tipo ahora debera ser mi tipo de accin ADD Ingredion y para eso me mover hasta
+
+37
+00:03:09,470 --> 00:03:18,020
+el archivo e importar todo como accin tipos de esta carpeta de tipos de accin que podemos encontrar dos niveles en
+
+38
+00:03:18,020 --> 00:03:21,790
+la carpeta de la tienda y las acciones simplemente caen.
+
+39
+00:03:21,790 --> 00:03:24,440
+Aqu es donde se almacenan los tipos de accin.
+
+40
+00:03:24,440 --> 00:03:26,600
+As que ahora esto es lo que firmar aqu.
+
+41
+00:03:26,600 --> 00:03:29,960
+Tipo es que los tipos de accin agregan ingrediente.
+
+42
+00:03:30,440 --> 00:03:37,820
+Y ahora si echamos un vistazo al reductor y probablemente todos recuerden que un ingrediente como
+
+43
+00:03:37,820 --> 00:03:40,790
+eliminar ingrediente requiere una carga til.
+
+44
+00:03:40,850 --> 00:03:45,070
+Usamos el nombre del ingrediente all y accedemos a l en la accin.
+
+45
+00:03:45,260 --> 00:03:49,470
+Entonces, necesitamos pasar el nombre del ingrediente junto con el tipo.
+
+46
+00:03:49,480 --> 00:03:57,730
+As que de nuevo en el generador de hamburguesas, aqu el tipo es una cosa, pero tambin voy a configurar mi nombre de ingrediente,
+
+47
+00:03:57,760 --> 00:03:59,950
+propiedad de accin y nombre de ingrediente.
+
+48
+00:03:59,950 --> 00:04:06,480
+Ahora es algo que espero obtener aqu en esta funcin, as que simplemente lo nombrar aqu.
+
+49
+00:04:06,490 --> 00:04:12,880
+Por supuesto, puede nombrar este argumento como quiera y luego lo firmar aqu como un
+
+50
+00:04:12,910 --> 00:04:21,490
+valor y luego duplicar esta propiedad y agregar mi propia propiedad eliminada de Ingredion donde tambin cumple con el nombre
+
+51
+00:04:21,490 --> 00:04:22,110
+del ingrediente.
+
+52
+00:04:22,210 --> 00:04:30,520
+Pero luego aqu envi la accin de quitar ingredientes, pero todava paso mi nombre de ingrediente.
+
+53
+00:04:30,520 --> 00:04:37,630
+Ahora tenemos estas dos constantes: mapa, estado, dos apoyos y mapa de este parche, dos apoyos configurados, podemos
+
+54
+00:04:37,630 --> 00:04:39,860
+conectar nuestro componente al redux.
+
+55
+00:04:40,210 --> 00:04:47,470
+estados de los mapas a props y asignemos este parche a prop's como argumentos y luego pasters todo
+
+56
+00:04:47,470 --> 00:04:55,120
+ancho error manejador aqu como un argumento para la funcin funcin de desconexin llamada nos devuelve con esta configuracin.
+
+57
+00:04:55,120 --> 00:04:59,470
+As que agreguemos connect que ya lo importamos y pasemos los
+
+58
+00:04:59,470 --> 00:05:05,100
+Ahora tenemos nuestro contenedor de Bergere Boulder conectado a la tienda.
+
+59
+00:05:05,320 --> 00:05:12,430
+Ahora usemos todos estos accesorios disponibles en la hamburguesa Bergere o como yo y ella est en
+
+60
+00:05:12,430 --> 00:05:16,480
+todas partes donde usamos ingredientes, ahora queremos usar nuestras energas.
+
+61
+00:05:16,750 --> 00:05:22,120
+Y eliminar los ingredientes de aqu para dejar muy claro que ya no estamos usando
+
+62
+00:05:22,120 --> 00:05:26,800
+el estado local para los ingredientes por un precio que al menos ahora pagaremos.
+
+63
+00:05:26,800 --> 00:05:33,940
+As que arreglemos esto o establezcamos esto como ingrediente y eliminando el manejador de ingredientes.
+
+64
+00:05:33,940 --> 00:05:36,890
+Deberamos poder eliminarlo por completo.
+
+65
+00:05:36,910 --> 00:05:41,760
+Pero lo dejar aqu ya que luego seleccion un cdigo actualizado de precio total desde all.
+
+66
+00:05:41,890 --> 00:05:44,000
+Pero no queremos ejecutarlos ms.
+
+67
+00:05:44,290 --> 00:05:51,390
+En cambio, si nos desplazamos hacia abajo al mtodo de renderizado dondequiera que tengamos acceso a los ingredientes de este
+
+68
+00:05:51,400 --> 00:05:54,240
+estado, queremos utilizar en su lugar estas energas.
+
+69
+00:05:54,490 --> 00:05:57,450
+Hay propiedades que configuramos en el estado del mapa.
+
+70
+00:05:57,520 --> 00:06:05,580
+Apoyos aqu, as que esto es lo que queremos usar, un mtodo de renderizacin de una hora, estos apoyos. Algy's En lugar de
+
+71
+00:06:05,610 --> 00:06:09,270
+los ingredientes del estado, indican el error y as sucesivamente.
+
+72
+00:06:09,300 --> 00:06:11,270
+Nos mantendremos en contacto por ahora.
+
+73
+00:06:11,580 --> 00:06:16,920
+Pero aqu, por ejemplo, los ingredientes del estado s lo indican.
+
+74
+00:06:17,300 --> 00:06:20,280
+Y luego aqu estn Bergere donde tenemos ingredientes pasados.
+
+75
+00:06:20,280 --> 00:06:21,050
+Adivina qu.
+
+76
+00:06:21,120 --> 00:06:23,430
+Es este apoyo I-y.
+
+77
+00:06:23,930 --> 00:06:25,410
+Y as.
+
+78
+00:06:25,640 --> 00:06:32,300
+Ahora primero voy a reemplazar todos los ingredientes antes de trabajar en el complemento verde y quitar los accesorios aqu.
+
+79
+00:06:32,360 --> 00:06:34,260
+Djame seguir aqu.
+
+80
+00:06:34,260 --> 00:06:40,700
+Todo el negocio apuntala I Angie's y debera ser eso.
+
+81
+00:06:40,700 --> 00:06:44,990
+Ahora trabajemos en el ingrediente adicional y eliminemos los manejadores de ingredientes.
+
+82
+00:06:45,320 --> 00:06:46,980
+Ya no llamamos eso.
+
+83
+00:06:47,090 --> 00:06:57,770
+En su lugar, ejecutamos estos accesorios sobre los ingredientes agregados y esto apoya el ingrediente eliminado, pero ambas funciones del final
+
+84
+00:06:57,770 --> 00:06:59,330
+necesitan un argumento.
+
+85
+00:06:59,570 --> 00:07:06,290
+Si nos desplazamos hacia abajo a nuestro mapa en esta pgina dos apoyos constantes vemos que la funcin se almacena
+
+86
+00:07:06,290 --> 00:07:09,540
+en estos accesorios o se pasa a estos accesorios.
+
+87
+00:07:09,740 --> 00:07:15,250
+Ambos toman el nombre del ingrediente como argumento para pasarnos aqu.
+
+88
+00:07:15,260 --> 00:07:18,540
+Primero veamos nuestro componente de control Boltt.
+
+89
+00:07:18,650 --> 00:07:24,620
+Si nos desplazamos a nuestros componentes y abrimos la carpeta de control de pernos y entramos en el
+
+90
+00:07:25,190 --> 00:07:33,550
+componente de controles masivos, vemos que ya pasamos el tipo de control aqu como un argumento para el ingrediente agregado y eliminamos los mtodos de
+
+91
+00:07:33,560 --> 00:07:34,230
+prop.
+
+92
+00:07:34,280 --> 00:07:40,490
+Entonces, para el mtodo que pasa a travs de estos accesorios y que es el mtodo que acabamos
+
+93
+00:07:40,490 --> 00:07:41,730
+de configurar aqu.
+
+94
+00:07:42,260 --> 00:07:48,830
+Ahora eso solo significa que tenemos que verificar si el tipo de control es exactamente lo que estamos buscando y es porque
+
+95
+00:07:48,860 --> 00:07:53,860
+el tipo de control es esta parte aqu, como queso y carne de tocino para ensaladas.
+
+96
+00:07:54,020 --> 00:08:01,850
+nombres que usamos como propiedades en nuestro escudo de reductores y, por supuesto, debemos asegurarnos de que sea igual.
+
+97
+00:08:01,850 --> 00:08:05,330
+Y eso tiene el mismo formato que los
+
+98
+00:08:05,330 --> 00:08:11,600
+Por supuesto, puede ir tan lejos y refactorizar su aplicacin para tomar el ingrediente estado de los nombres de
+
+99
+00:08:11,600 --> 00:08:16,600
+propiedad aqu para crear sus controles y la hamburguesa ms audaz en controles en negrita.
+
+100
+00:08:16,750 --> 00:08:23,510
+Componente aqu, pero lo dejaremos como est y solo nos aseguraremos de que estamos pasando
+
+101
+00:08:23,810 --> 00:08:30,010
+el valor correcto a nuestros despachadores de acciones y entonces guardaremos todos los archivos.
+
+102
+00:08:30,310 --> 00:08:31,930
+Y ahora probemos esto.
+
+103
+00:08:32,030 --> 00:08:39,560
+De vuelta en nuestra aplicacin para correr, agreguemos algunos ingredientes a esa hamburguesa, como vender queso o carne
+
+104
+00:08:39,890 --> 00:08:42,950
+con tocino, y todo est funcionando bien.
+
+105
+00:08:43,280 --> 00:08:51,230
+Ahora, obviamente, el precio no se actualiza aqu porque lo que tenemos aqu es que ya no cambiamos el
+
+106
+00:08:51,230 --> 00:08:53,630
+estado del precio en ningn momento.
+
+107
+00:08:53,790 --> 00:08:55,960
+Nos ocuparemos de esto pronto.
+
+108
+00:08:56,000 --> 00:08:57,740
+El resto est funcionando sin embargo.
+
+109
+00:08:58,050 --> 00:09:02,290
+Bueno, el botn de ordenar ahora tampoco se est activando.
+
+110
+00:09:03,120 --> 00:09:05,750
+Echemos un vistazo a ese botn ahora, entonces.
+
+111
+00:09:05,880 --> 00:09:11,970
+La razn por la que no se est activando es que, al final, aqu se controlan las propiedades
+
+112
+00:09:11,970 --> 00:09:12,740
+fruteras adquiridas.
+
+113
+00:09:12,900 --> 00:09:18,000
+Echamos un vistazo a esto antes en este botn Marchal Sodhi order now to price.
+
+114
+00:09:18,000 --> 00:09:23,580
+Estas son dos cosas en las que tendremos que trabajar solo en los ingredientes, que ya funcionan muy
+
+115
+00:09:23,630 --> 00:09:24,990
+bien en la hamburguesa Boler.
+
+116
+00:09:25,170 --> 00:09:30,510
+Sigamos este camino y asegurmonos de que el botn de "ordenar ahora" funcione y de que actualicemos
+
+117
+00:09:30,510 --> 00:09:31,230
+el precio.
+

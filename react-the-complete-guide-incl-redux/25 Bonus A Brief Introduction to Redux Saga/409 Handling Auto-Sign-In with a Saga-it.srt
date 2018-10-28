@@ -1,0 +1,268 @@
+1
+00:00:02,190 --> 00:00:07,830
+Torna nella auth. js file nella cartella azioni, abbiamo gi esternalizzato
+
+2
+00:00:07,830 --> 00:00:14,430
+un sacco di logica nella cartella saga, nella saga come abbiamo creato e quindi otteniamo un file di azione
+
+3
+00:00:14,850 --> 00:00:17,440
+molto snello qui gi dove non ho
+
+4
+00:00:17,460 --> 00:00:23,670
+pi bisogno di importare assiomi, possiamo rimuovi l'importazione e ora abbiamo solo creatori di azioni che restituiscono azioni,
+
+5
+00:00:23,670 --> 00:00:24,110
+che
+
+6
+00:00:24,150 --> 00:00:27,490
+fanno proprio questo, creano azioni, con una sola eccezione.
+
+7
+00:00:27,690 --> 00:00:35,370
+In fondo a questo file, abbiamo il creatore di azioni authCheckState che eseguiamo nel momento in cui la
+
+8
+00:00:35,370 --> 00:00:40,600
+nostra applicazione inizia a vedere se possiamo registrare l'utente in automatico, questo dovrebbe
+
+9
+00:00:40,950 --> 00:00:43,480
+anche andare in una saga quindi
+
+10
+00:00:43,710 --> 00:00:52,110
+ultimo ma non meno importante, aggiungiamo il anche qui saga. Lo chiamer proprio come abbiamo chiamato il creatore di azioni authCheckStateSaga
+
+11
+00:00:52,110 --> 00:00:54,190
+qui, quindi lo chiamer authCheckStateSaga,
+
+12
+00:00:55,200 --> 00:00:57,920
+questo  il nome, riceverai qui la
+
+13
+00:00:58,020 --> 00:01:07,130
+mia azione come argomento e copier di nuovo tutto il codice dall'autore. js.
+
+14
+00:01:07,380 --> 00:01:11,260
+file nella cartella azioni e sostituirlo passo dopo passo.
+
+15
+00:01:11,670 --> 00:01:13,320
+Quindi cosa facciamo qui?
+
+16
+00:01:13,530 --> 00:01:16,390
+Otteniamo il token dall'archiviazione locale, aggiunger il
+
+17
+00:01:16,440 --> 00:01:22,230
+rendimento anche qui come faccio per tutti i passaggi che eseguo nelle mie saghe.
+
+18
+00:01:22,380 --> 00:01:28,380
+Quindi ora otteniamo il token che  un'attivit sincrona qui per, poi controllo se il token esiste
+
+19
+00:01:28,380 --> 00:01:29,880
+davvero e se non
+
+20
+00:01:30,210 --> 00:01:38,810
+lo fa, ovviamente voglio ancora fare il logout qui, metter le azioni. logout in pratica lo invio e aggiunger
+
+21
+00:01:38,810 --> 00:01:42,610
+anche il rendimento. Ora la prossima cosa
+
+22
+00:01:42,630 --> 00:01:50,460
+che facciamo  se abbiamo un token valido, controlliamo la data di scadenza, lo calcoliamo, lo
+
+23
+00:01:50,460 --> 00:01:57,150
+restituir e poi, se questo  ben prima della nostra data attuale, voglio anche
+
+24
+00:01:57,300 --> 00:02:03,050
+rendere il log out perch abbiamo una data di scadenza non valida.
+
+25
+00:02:03,180 --> 00:02:11,280
+Altrimenti otterr un ID utente dall'archiviazione locale e lo restituir e quindi avremo successo,
+
+26
+00:02:11,280 --> 00:02:14,780
+quindi qui restituir put authSuccess e
+
+27
+00:02:14,790 --> 00:02:16,070
+passer token
+
+28
+00:02:16,080 --> 00:02:23,010
+e user ID, tuttavia qui sia l che authSuccess dovrebbero essere accessibili
+
+29
+00:02:23,010 --> 00:02:27,530
+sull'oggetto actions we importare per usare questi creatori
+
+30
+00:02:27,540 --> 00:02:30,310
+di azioni e voglio anche
+
+31
+00:02:30,340 --> 00:02:38,290
+cedere azioni checkAuthTiemout riferendosi a questo creatore di azioni che bene, restituisce questa azione
+
+32
+00:02:38,290 --> 00:02:43,330
+authCheckoutTimeout che a sua volta innescher un'altra saga.
+
+33
+00:02:43,330 --> 00:02:52,790
+Questo  tutto, questi sono tutti i cambiamenti di cui abbiamo bisogno, questo  il mio authCheckStateSaga.
+
+34
+00:02:53,060 --> 00:03:00,240
+Ora vogliamo collegarlo e assicurarci che questo venga eseguito al momento dell'avvio
+
+35
+00:03:00,350 --> 00:03:07,210
+dell'applicazione, per questo andr all'autore. js action creator file e restituisce tutto il codice in questa
+
+36
+00:03:07,210 --> 00:03:09,180
+funzione l, non ne ho pi bisogno.
+
+37
+00:03:09,620 --> 00:03:16,460
+Invece qui, voglio semplicemente restituire il mio oggetto azione e creer un nuovo tipo
+
+38
+00:03:16,460 --> 00:03:25,900
+di azione per questo, lo chiamer AUTH_CHECK_INITIAL_STATE ad esempio, il nome ovviamente  totalmente a te, usalo anche qui
+
+39
+00:03:26,900 --> 00:03:29,390
+o forse no, facciamo basta
+
+40
+00:03:29,510 --> 00:03:36,410
+chiamarlo AUTH_CHECK_STATE per essere pi in linea con il nostro nome di creatore dell'azione,
+
+41
+00:03:37,580 --> 00:03:38,780
+quindi AUTH_CHECK_STATE
+
+42
+00:03:38,880 --> 00:03:47,520
+e quindi laggi, restituir la mia azione di tipo actionTypes. AUTH_CHECK_STATE e non ho bisogno di passare alcun argomento
+
+43
+00:03:47,520 --> 00:03:49,800
+o qualcosa con quella azione,
+
+44
+00:03:49,830 --> 00:03:57,410
+questo ora dovrebbe attivare il mio authCheckStateSaga qui e per consentirgli di farlo, ho bisogno di
+
+45
+00:03:57,600 --> 00:04:02,020
+impostare un listener nell'indice. js file,
+
+46
+00:04:02,040 --> 00:04:14,120
+ci dar takeEvery per actionTypes. AUTH_CHECK_STATE e importa il mio authCheckStateSaga appena creato che
+
+47
+00:04:14,120 --> 00:04:15,530
+eseguir una
+
+48
+00:04:15,590 --> 00:04:22,340
+volta rilevato questo tipo di azione. Salviamo tutti i file che abbiamo
+
+49
+00:04:22,410 --> 00:04:30,760
+modificato, torniamo indietro e ricarichiamo l'applicazione, vediamo authSuccess cos ci ha fatto accedere automaticamente con successo.
+
+50
+00:04:30,980 --> 00:04:33,390
+Ora facciamo il logout e ricarichiamo
+
+51
+00:04:33,890 --> 00:04:41,630
+di nuovo e ora vedete che avvia la chiamata di stato di controllo qui ma poi avvia il logout perch non
+
+52
+00:04:41,630 --> 00:04:44,150
+trova un token valido e cos via.
+
+53
+00:04:44,180 --> 00:04:52,790
+Cos ora abbiamo sostituito tutti gli effetti collaterali che abbiamo gestito nella auth. js action creator file con codice nel nostro file saga, le saghe che ho
+
+54
+00:04:52,790 --> 00:04:54,680
+eseguito a causa dei nostri ascoltatori,
+
+55
+00:04:54,880 --> 00:05:02,480
+i nostri osservatori qui che a loro volta vengono eseguiti qui nell'indice. js file dove lo eseguiamo
+
+56
+00:05:02,480 --> 00:05:06,130
+sul nostro middleware saga.
+
+57
+00:05:06,440 --> 00:05:12,990
+E con questo, abbiamo reso redux-thunk totalmente ridondante per la parte di autenticazione della nostra applicazione, ora
+
+58
+00:05:13,040 --> 00:05:20,210
+per essere in grado di rimuoverlo completamente, ovviamente abbiamo anche bisogno di renderlo ridondante per la parte del costruttore
+
+59
+00:05:20,210 --> 00:05:23,440
+di hamburger e la parte dell'ordine e questo sarebbe
+
+60
+00:05:23,660 --> 00:05:26,250
+gi essere una grande pratica per te.
+
+61
+00:05:26,270 --> 00:05:27,450
+Quindi se ne
+
+62
+00:05:27,530 --> 00:05:29,490
+hai voglia, sicuramente provalo da solo.
+
+63
+00:05:29,510 --> 00:05:31,420
+Prova ad aggiungere altre saghe, magari in
+
+64
+00:05:31,490 --> 00:05:33,040
+nuovi file, imposta gli osservatori
+
+65
+00:05:33,170 --> 00:05:40,390
+e sostituisci il codice che hai in burgerBuilder. js nella cartella azioni e in ordine. js nella cartella azioni con codice
+
+66
+00:05:40,400 --> 00:05:48,290
+saga per esternalizzare tutti i tuoi effetti collaterali in saghe. Lo faremo insieme a partire
+
+67
+00:05:48,290 --> 00:05:50,660
+dal prossimo video.
+

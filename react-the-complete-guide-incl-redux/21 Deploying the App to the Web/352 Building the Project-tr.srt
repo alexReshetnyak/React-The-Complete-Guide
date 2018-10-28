@@ -1,0 +1,124 @@
+1
+00:00:02,230 --> 00:00:05,850
+Projeye geri dndm ve imdi bu uygulamay datmak istiyorum.
+
+2
+00:00:06,040 --> 00:00:08,050
+Yani bu, braktmz proje,
+
+3
+00:00:08,080 --> 00:00:10,030
+ben hibir eyi deitirmedim.
+
+4
+00:00:10,060 --> 00:00:12,450
+imdi ilk ey temel yol,
+
+5
+00:00:12,610 --> 00:00:13,730
+bunu uygulamada
+
+6
+00:00:13,910 --> 00:00:14,880
+grebiliriz. Js
+
+7
+00:00:14,980 --> 00:00:21,870
+dosyas, zr dilerim, dizinde. js dosyas, tarayc ynlendiriciye sahip, orada basename zelliini
+
+8
+00:00:22,000 --> 00:00:26,830
+ayarlayabiliriz fakat uygulamanz mydomain'den sunmay planlyorum. com / yok bu yzden bunu
+
+9
+00:00:26,830 --> 00:00:29,110
+ayarlamanza gerek yok. imdi sradaki ey,
+
+10
+00:00:29,150 --> 00:00:34,640
+sunucunun her zaman dizine dndnden emin olmamz gerektiidir. html dosyas, tm statik konaklar genellikle
+
+11
+00:00:34,660 --> 00:00:40,560
+yaplandrmanza izin verir ve eer statik bir ana bilgisayar kullanmyorsanz ama nodejs
+
+12
+00:00:40,560 --> 00:00:46,960
+sunucunuzu kullanyorsunuz, sadece kod yazmanz gerekiyor, tm rotay yakalamanz ve geri dnmeniz gerekiyor
+
+13
+00:00:46,960 --> 00:00:48,170
+indeks. html ve
+
+14
+00:00:48,310 --> 00:00:52,810
+ayn mantk elbette dier herhangi bir sunucu taraf dili iin de geerlidir.
+
+15
+00:00:52,840 --> 00:00:58,550
+Yani bizim iin burada, bir sonraki adm projeyi ina etmektir
+
+16
+00:00:58,870 --> 00:01:09,070
+ve bu npm komutuyla altrlr, npm run build. Bu, imdi npm balangcna benzer bir ekilde projemizi ina edecek, ancak
+
+17
+00:01:09,160 --> 00:01:17,040
+imdi bir klasr dar karacak ve sadece sonucu bellekte depolamayacak ve bu klasr, optimize edilmi retim yapmz ierecektir.
+
+18
+00:01:17,470 --> 00:01:24,010
+Bu yzden, bu yeni derleme klasrn imdi proje klasrne alyoruz ve buna bir gz
+
+19
+00:01:24,010 --> 00:01:29,910
+attmzda, mmkn olduunca az alan tketmek iin optimize edilmi tek sayfamz gryoruz.
+
+20
+00:01:29,920 --> 00:01:36,100
+Bu ana js dosyasnda olduu gibi, baz betik aktarmlarnn eklendiini greceksiniz
+
+21
+00:01:36,100 --> 00:01:38,230
+ve statik klasrde bulabildiimiz
+
+22
+00:01:38,290 --> 00:01:45,400
+ey, medya dosyalarmz, burger logosu gibi resimler ve farkl paralarmz iin javascript dosyalar
+
+23
+00:01:45,400 --> 00:01:50,100
+var. tembel ykleme ve ana js dosyas iin.
+
+24
+00:01:50,110 --> 00:01:52,540
+Burada da kaynak haritalarmz var,
+
+25
+00:01:52,660 --> 00:01:57,080
+imdi bunlar datmanza gerek yok, bunlar tamamen istee bal,
+
+26
+00:01:57,100 --> 00:02:01,880
+javascript dosyalarna odaklanabiliyorsunuz ama ayn zamanda tm yap klasrnn ieriini
+
+27
+00:02:01,890 --> 00:02:05,650
+datacam ey de budur. ve bu nemli.
+
+28
+00:02:05,650 --> 00:02:13,000
+Oluturma klasrnn ierii, ierii, tm dosyalar ve statik dizini statik sunucunuza
+
+29
+00:02:13,000 --> 00:02:13,830
+gnderir.
+
+30
+00:02:13,840 --> 00:02:16,150
+imdi imdi konualm.
+
+31
+00:02:16,240 --> 00:02:18,420
+Bunu bir sonraki derste yapacaz.
+

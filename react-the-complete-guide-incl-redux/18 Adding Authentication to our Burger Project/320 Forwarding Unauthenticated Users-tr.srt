@@ -1,0 +1,388 @@
+1
+00:00:02,210 --> 00:00:09,050
+ncelikle navigasyon elerinde alalm, orada siparilerin yalnzca dorulanrsak grnr olmasn
+
+2
+00:00:09,140 --> 00:00:12,660
+salamak istiyorum. Tabii ki bu
+
+3
+00:00:12,680 --> 00:00:18,160
+ok zor deil, artl bir ey gstermek iin zaten mantmz var.
+
+4
+00:00:18,310 --> 00:00:26,340
+Yalnzca, isimlendirilmi ispatlar'n doru olup olmadn syleyebiliriz, sadece bu durumda navigasyon eleri sras gsterilmeli,
+
+5
+00:00:26,640 --> 00:00:29,870
+aksi takdirde yerine bo gsterilecektir.
+
+6
+00:00:29,950 --> 00:00:37,330
+Bu, siparileri grmemizi saladmzda, kimlik dorulamas yaplmazsa uygulama yeniden yklemelerinde
+
+7
+00:00:37,330 --> 00:00:40,050
+onaylayabileceimiz gibi siparileri grmememizin
+
+8
+00:00:40,200 --> 00:00:45,360
+hzl ve kolay ve doru bir yoludur.
+
+9
+00:00:45,560 --> 00:00:51,530
+imdi yapmak istediim baka bir ey, baarl bir ekilde giri yaptmzda, bunu artk
+
+10
+00:00:51,530 --> 00:00:56,410
+gstermek iin mantkl olmadndan, kimlik dorulama formunu buradan ynlendirmek istiyorum.
+
+11
+00:00:56,630 --> 00:01:01,790
+Bu, bizim auth konteynrmz iinde kolayca elde edilebilir, ite
+
+12
+00:01:02,000 --> 00:01:07,960
+sonunda bu formun tamamn olutururuz ve ama, Kullanc'y dorulanmsa basite ynlendirmektir.
+
+13
+00:01:08,270 --> 00:01:11,690
+imdi bunu zaten maazamza baladk, bylece
+
+14
+00:01:11,870 --> 00:01:19,370
+yapabileceim ey auth konteynrndaki mapStateToProps'ta olduu gibi, isAuthenticated bilgilerini de alabilir ve bunu
+
+15
+00:01:19,670 --> 00:01:24,390
+devletten alabilirim. auth. belirteci ve bu deeri null
+
+16
+00:01:24,530 --> 00:01:27,270
+ile karlatr, eer belirte bo deilse, biz dorulanrz.
+
+17
+00:01:27,680 --> 00:01:34,220
+Ve sonra tekrar ynlendirici bileenini ynlendiriciden ie aktarr, eer kimlii dorulanmsa kullancy ynlendirir, bylece bunun
+
+18
+00:01:34,220 --> 00:01:38,490
+yaygn bir model olduunu grrsnz, nk ok gl ve kolaydr.
+
+19
+00:01:38,750 --> 00:01:45,890
+Yani burada tepki-ynlendirici-dom, ben ynlendirme ynlendirme ve hangi ynlendirme ileminde aa doru dorulanm
+
+20
+00:01:45,890 --> 00:01:47,680
+olduunda ynlendirmeyi oluturmak
+
+21
+00:01:47,840 --> 00:01:54,750
+istediimiz pakettir. Burada ekleyeceim ey, jsx'i dndrmeden nce basit bir ek ise
+
+22
+00:01:54,750 --> 00:02:02,020
+Sadece bunu kontrol edeceim. sahne. isAuthenticated, biz sadece ekledik
+
+23
+00:02:02,190 --> 00:02:06,150
+bu prop, sonra ynlendirme yapmak istiyorum.
+
+24
+00:02:06,150 --> 00:02:10,170
+Yani bir deiken oluturacam, authRedirect varsaylan olarak null
+
+25
+00:02:10,170 --> 00:02:11,710
+hibir ey ilemek
+
+26
+00:02:12,060 --> 00:02:19,410
+iin null deil, ancak biz kimlik dorulamas yapldnda, authRedirect aslnda ynlendirme bileenimi kullanacak ve
+
+27
+00:02:19,410 --> 00:02:21,840
+sadece eik izgiye ynlendirecektir, diyelim.
+
+28
+00:02:21,850 --> 00:02:28,770
+Ve imdi tabii ki authRedirect'i ilemek zorundaym, bunu burada benim divumun
+
+29
+00:02:29,010 --> 00:02:37,660
+iinde yapacam, bunu byle embellendir, auth ynlendirmesi. Bu basit hile ile, uygulamamz yeniden yklendiinde ve buradan giri yaptmzda,
+
+30
+00:02:37,700 --> 00:02:43,990
+oturum ama ve gnderme iin gei yapmamzn ardndan baarl bir giri yaptktan sonra yeniden ynlendirilebileceimizden emin olabiliriz.
+
+31
+00:02:44,030 --> 00:02:45,410
+Yani hepsi ie
+
+32
+00:02:45,590 --> 00:02:52,130
+yaryor, imdi hamburger reticisi kullanldnda, kimlik dorulamas yaplmasa bile onu kullanabileceimizden emin olalm, tpk burada
+
+33
+00:02:52,160 --> 00:03:00,980
+olduu gibi, ancak bir kere bir tane ina etmeye baladm ve imdi siparie tklyorum, ben ulamyorum Yine de bir ey
+
+34
+00:03:00,980 --> 00:03:07,070
+yapamayacam bir sayfa ama bunun yerine devam etmek iin kaydolduunu yazyor, bylece burger'i kontrol
+
+35
+00:03:07,070 --> 00:03:12,290
+etmeye devam etmek iin kayt olmanz gerekiyor. Bunu yapmak iin
+
+36
+00:03:12,320 --> 00:03:22,040
+burger oluturucu konteynerine gideceim elbette, buras ina kontrollerini de ekledim, bu u an
+
+37
+00:03:22,100 --> 00:03:28,870
+bu emirleri elinde tutuyor ve yap kontrolleri dorulanp tanmadm
+
+38
+00:03:28,880 --> 00:03:30,040
+bilmem gerekiyor.
+
+39
+00:03:30,050 --> 00:03:34,060
+Yani bu eski eski kimlik dorulamas
+
+40
+00:03:34,070 --> 00:03:40,820
+kontroln burger oluturucu kapsaycsndaki mapStateToProps'a da alalm, her zamanki gibi auth
+
+41
+00:03:40,880 --> 00:03:48,050
+jetonuna ulaarak ve null ile karlatrlarak isAuthenticated, ve isAuthenticated derleme kontrollerine aktarlmaldr.
+
+42
+00:03:48,080 --> 00:03:54,430
+Bu yzden bir isAuth prop ekleyeceim ve buna balayacam. sahne. isAuthenticated, biz sadece
+
+43
+00:03:54,440 --> 00:03:58,160
+mapStateToProps iinde eletirilen pervane.
+
+44
+00:03:58,160 --> 00:04:03,980
+imdi, bileen kontrolleri ierisindeki hamburger bileeninde bulabildiimiz yap kontrolleri bileenine yap
+
+45
+00:04:04,010 --> 00:04:08,420
+kontrolleri bileenine geelim, kontroller ina etmeliyiz ve ite
+
+46
+00:04:08,420 --> 00:04:15,820
+bu bilgiyi tutan ve bu dmenin burada ne yaptn belirleyen bir Auth prop var.
+
+47
+00:04:15,830 --> 00:04:22,490
+u anda dmenin yapaca ey u: burger reticisinde, bu sral pervanenin stesinden geldiimiz
+
+48
+00:04:22,490 --> 00:04:29,060
+yerde, sadece butonun tklama olayna bal bir pervane, bu satn alma ileyicisini ve
+
+49
+00:04:29,060 --> 00:04:31,430
+satn alma ileyicisini yrtyoruz. Devleti
+
+50
+00:04:31,430 --> 00:04:37,910
+satn almaya koyuyoruz ve bu da geri kalan almaya ve devam edeceimiz yerde
+
+51
+00:04:37,910 --> 00:04:40,220
+modal olmamzn yolunu aacak.
+
+52
+00:04:40,220 --> 00:04:47,110
+yleyse fikir u ki, biz devam ettiimizde ya da kesin olduumuzda, modalda yaptmz eyi yapyoruz,
+
+53
+00:04:47,120 --> 00:04:52,250
+bu nedenle devam etmekte olan siparite ne yapmamz gerekiyorsa, satnalmaContinueHandler orada yrtlr
+
+54
+00:04:52,460 --> 00:04:58,520
+ve o zaman bunu kontrol etmek iin bastrrz. Kullanc, burger oluturucudan yeniden ynlendirmemizle kaydolduysa,
+
+55
+00:04:58,640 --> 00:05:05,300
+bir kez daha kaydolmak iin itmeye alyoruz. Bunun iin her eyden nce bu
+
+56
+00:05:05,330 --> 00:05:05,930
+ynlendirme
+
+57
+00:05:05,930 --> 00:05:12,290
+ilemine geri dnmeliyiz, bunun zerinde almak istediimiz bu dme, bu dmenin kimlii
+
+58
+00:05:12,410 --> 00:05:14,690
+dorulanamazsa farkl davranmas gerekir.
+
+59
+00:05:14,690 --> 00:05:20,090
+Bu mantn ounu burger oluturucu kapsaycsnda ele alacam, ancak burada sadece
+
+60
+00:05:20,090 --> 00:05:28,400
+altyazy deitirmek istiyorum, bu yzden onu kal ayralarla sardm ve yap denetimlerinde bir argman olarak aldm
+
+61
+00:05:28,420 --> 00:05:32,090
+paralar kontrol edeceim. Sunum bileeni, isAuth yani
+
+62
+00:05:32,090 --> 00:05:34,460
+biz sadece aa doru pervane,
+
+63
+00:05:34,460 --> 00:05:38,790
+eer doruysa o zaman imdi bir string siparii
+
+64
+00:05:38,900 --> 00:05:44,530
+vereceim aksi takdirde siparie kadar k siparii vereceim, byle bir ey.
+
+65
+00:05:44,540 --> 00:05:47,110
+Bu benim dme tarzm imdi,
+
+66
+00:05:47,180 --> 00:05:51,390
+burger reticisi zerindeki uygulamaya geri dnersek, kimlik dorulamas
+
+67
+00:05:51,390 --> 00:05:52,840
+yaplmazsa, siparie kaydolduunu
+
+68
+00:05:53,030 --> 00:05:58,030
+grrz ve eer giri yaparsak, bunun deieceini grmeliyiz, imdi
+
+69
+00:05:58,190 --> 00:05:59,070
+sipari aldk,
+
+70
+00:05:59,070 --> 00:06:03,460
+imdi bu dmenin doru eyi yaptndan emin olmalyz.
+
+71
+00:06:03,470 --> 00:06:09,300
+Dmeye tkladmzda aklnzda bulundurun, bu bileeni sipari pervanesine gnderen
+
+72
+00:06:09,500 --> 00:06:11,180
+yntemi uygularz.
+
+73
+00:06:11,390 --> 00:06:18,380
+Bu yzden, burger reticisi konteynere geri dnersek, sipari edilen sat aracnn satnalma ileyicisine bal
+
+74
+00:06:18,740 --> 00:06:26,670
+olduunu grrz, satn alma ileyicisi bu durumu satn alma veya satn alma ilemine bu kapsaycda ayarlayarak
+
+75
+00:06:26,780 --> 00:06:27,650
+modal gsterir.
+
+76
+00:06:27,650 --> 00:06:30,340
+imdi sadece kimlik dorulamas yaparsak
+
+77
+00:06:30,440 --> 00:06:34,880
+bunu yapmak istiyorum, aksi takdirde kimlik sayfama ynlendirmek istiyorum.
+
+78
+00:06:34,880 --> 00:06:41,300
+Yani yapabileceimiz ey, satn alma ileyicisine gidebilir ve bu tantclar kontrol
+
+79
+00:06:41,930 --> 00:06:48,380
+edebiliriz, ve prop, mapStateToProps sabitimizde ayarlanr, isauthenticated, bu, kimlik dorulama durumunu
+
+80
+00:06:48,380 --> 00:06:52,220
+koruyan burger oluturucu konteynere aktardmz pervasyondur.
+
+81
+00:06:52,250 --> 00:06:59,530
+Bu yzden, eer kimlik dorulamas yaplrsa, o zaman devleti satn almaya ayarlamak
+
+82
+00:06:59,660 --> 00:07:00,950
+istiyorum. Tarih
+
+83
+00:07:03,860 --> 00:07:05,820
+gemiimi kullanmak istiyorum.
+
+84
+00:07:05,930 --> 00:07:09,190
+Bu, kullanc / auth sayfasna
+
+85
+00:07:09,230 --> 00:07:19,160
+ynlendirmeyi hatrlatrsanz tepki veren ynlendiriciden geliyor. Kayt olmak. imdi, eer uygulamamz korursak ve geri dnersek, imdi
+
+86
+00:07:19,160 --> 00:07:25,940
+burgere bir eyler ekleyebiliriz ve sipari vermek iin kayt olmak iin
+
+87
+00:07:25,940 --> 00:07:31,770
+tklayn ve bu dmeyi tklayarak bizi buraya kayt sayfasna ynlendiririz.
+
+88
+00:07:31,850 --> 00:07:38,300
+Tabii ki u andaki sorun u ki, eer imdi giri yaparsak, sadece burger reticisine geri ynlendirileceiz ve u
+
+89
+00:07:38,420 --> 00:07:41,570
+anda ina edilmi burgerimiz kaybolacak. Dorudan deme sayfasna
+
+90
+00:07:41,570 --> 00:07:48,200
+ynlendirilmek daha iyi olurdu ve orada hala hamburgerimiz var, ikincisi yle
+
+91
+00:07:48,230 --> 00:07:53,300
+olurdu nk hamburger malzemeleri redux deposunda saklanyor ve eer
+
+92
+00:07:53,300 --> 00:07:56,630
+burger reticisine geri dnmezsek sfrlama ancak
+
+93
+00:07:56,750 --> 00:08:01,460
+tabi ki, bu ynlendirme sorun nk biz sadece
+
+94
+00:08:01,460 --> 00:08:07,850
+bu senaryoda yeniden ynlendirmek istiyoruz. Kullanc uygulamaya girdiyse ve kimlik dorulamasn tkladysa, henz hamburger
+
+95
+00:08:07,850 --> 00:08:10,570
+yaplmad iin deme srasnda yeniden ynlendirmek istemiyoruz. deme
+
+96
+00:08:10,610 --> 00:08:12,810
+yapmak iin herhangi bir ierik olmayacak.
+
+97
+00:08:13,130 --> 00:08:16,400
+Bir sonraki derste bu problemi nasl zeceimize bakalm.
+

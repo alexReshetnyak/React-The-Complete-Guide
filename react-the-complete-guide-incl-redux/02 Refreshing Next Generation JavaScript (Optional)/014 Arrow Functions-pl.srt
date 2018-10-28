@@ -1,0 +1,276 @@
+1
+00:00:02,340 --> 00:00:08,140
+Dowiesz si o let i const, kolejn rzecz, ktr zobaczysz na
+
+2
+00:00:08,160 --> 00:00:11,080
+tym kursie s funkcje strzaek.
+
+3
+00:00:11,460 --> 00:00:15,890
+To jest inna skadnia do tworzenia funkcji JavaScript.
+
+4
+00:00:15,960 --> 00:00:18,540
+Oczywicie normalna funkcja javascript wyglda tak.
+
+5
+00:00:18,540 --> 00:00:27,450
+Ze sowem kluczowym function. Moesz rwnie zwrci uwag na skadni, w ktrej masz funkcj var myFunc equals.
+
+6
+00:00:27,540 --> 00:00:30,230
+Teraz funkcja strzaki wyglda tak.
+
+7
+00:00:30,270 --> 00:00:34,160
+Tutaj przechowuj go w staej, a nastpnie po prawej stronie znaku rwnoci.
+
+8
+00:00:34,290 --> 00:00:36,750
+To jest skadnia funkcji strzaki.
+
+9
+00:00:36,840 --> 00:00:42,540
+Lista argumentw tutaj jest pusta, ale moe zawiera pewne argumenty, a nastpnie strzak.
+
+10
+00:00:42,720 --> 00:00:47,280
+Tak wic znak rwnoci i wikszy ni znak, a nastpnie ciao funkcyjne.
+
+11
+00:00:47,280 --> 00:00:52,920
+Funkcja snyntax ze strzak jest nieco krtsza ni normalna skadnia, poniewa pomija sowo
+
+12
+00:00:53,550 --> 00:00:56,700
+kluczowe function i jest to rwnie ogromna korzy.
+
+13
+00:00:56,700 --> 00:00:59,810
+Rozwizuje wiele problemw, z ktrymi czsto miae do czynienia.
+
+14
+00:00:59,810 --> 00:01:02,710
+To sowo kluczowe w javascript.
+
+15
+00:01:02,940 --> 00:01:10,290
+Jeli pracowae troch z javascript, prawdopodobnie wiesz, e to sowo kluczowe nie zawsze odnosi si
+
+16
+00:01:10,290 --> 00:01:15,180
+do tego, czego mgby si spodziewa podczas pisania twojego kodu.
+
+17
+00:01:15,180 --> 00:01:22,830
+Gdy uyjesz tego wewntrz funkcji strzaki, zawsze zachowa ona swj kontekst i nie zmieni go zaskakujco
+
+18
+00:01:22,830 --> 00:01:24,450
+w rodowisku wykonawczym.
+
+19
+00:01:24,450 --> 00:01:28,130
+Przejdmy teraz do jsbina, aby zobaczy skadni funkcji strzaki.
+
+20
+00:01:28,140 --> 00:01:31,320
+W praktyce. Z powrotem w jsbin.
+
+21
+00:01:31,380 --> 00:01:37,980
+stwrzmy normaln funkcj, printMyName w ten sposb.
+
+22
+00:01:38,890 --> 00:01:47,030
+Teraz moemy oczywicie wypisa nazw logu konsoli i nazw pliku jako argument.
+
+23
+00:01:47,220 --> 00:01:54,930
+Teraz, jeli wywoasz w ten sposb funkcj printMyName i nacinie klawisz control, otrzymamy warto undefined,
+
+24
+00:01:54,930 --> 00:01:59,200
+poniewa nic nie przekazuje. Robimy to samo z Maxem przekazanym jako argument.
+
+25
+00:01:59,250 --> 00:02:07,410
+Dostajemy Max. Teraz odpowiednikiem funkcji strzaki jest zapisanie jej jako staej o nazwie printMyName.
+
+26
+00:02:07,410 --> 00:02:09,630
+Mona go rwnie utworzy za pomoc let.
+
+27
+00:02:09,660 --> 00:02:15,410
+Jeli planujesz ponownie przypisa t zmienn printMyName jako sta.
+
+28
+00:02:15,520 --> 00:02:22,450
+A teraz nie zapomnij doda tej strzaki midzy list argumentw a treci funkcji. Jeli teraz wyczycisz i uruchomisz ponownie,
+
+29
+00:02:22,480 --> 00:02:24,610
+nadal bdziesz widzie Maks.
+
+30
+00:02:24,610 --> 00:02:27,630
+A wic zachowuje si dokadnie w ten sam sposb.
+
+31
+00:02:27,640 --> 00:02:30,820
+Teraz to sowo kluczowe jest czym, co zobaczysz w trakcie kursu.
+
+32
+00:02:30,850 --> 00:02:35,060
+Staje si to wane po dodaniu funkcji do obiektw oczywicie.
+
+33
+00:02:35,140 --> 00:02:40,960
+Przede wszystkim pozwl mi pokaza kilka alternatyw dla tej skadni w odniesieniu do listy argumentw.
+
+34
+00:02:40,960 --> 00:02:48,370
+By precyzyjnym. Jeli otrzymasz tylko jeden argument, jak my tutaj, moesz rwnie uy skrtu
+
+35
+00:02:48,430 --> 00:02:49,850
+do pominicia nawiasw wok niego.
+
+36
+00:02:50,020 --> 00:02:56,720
+Jest to wane tylko dla jednego argumentu, nie dla wicej, a nie dla mniej. Tutaj nadal uzyskasz
+
+37
+00:02:56,740 --> 00:03:04,170
+ten sam wynik. Jeli masz funkcj, ktra nie przyjmuje adnych argumentw.
+
+38
+00:03:04,180 --> 00:03:06,270
+To nie jest poprawna skadnia.
+
+39
+00:03:06,340 --> 00:03:11,750
+Musisz poda pust par nawiasw w ten sposb.
+
+40
+00:03:11,860 --> 00:03:15,600
+Jeli wykonamy to teraz, nadal widzimy Max.
+
+41
+00:03:15,610 --> 00:03:19,080
+To dziaa, jeli masz wicej ni jeden argument.
+
+42
+00:03:19,090 --> 00:03:20,740
+Potrzebujesz rwnie nawiasw.
+
+43
+00:03:20,740 --> 00:03:23,410
+Tak wic imi i wiek w ten sposb nie bd dziaa.
+
+44
+00:03:23,470 --> 00:03:26,950
+Bdziesz musia zawin to w nawiasie.
+
+45
+00:03:26,950 --> 00:03:33,550
+Teraz moesz wypisa nazw i wiek i przekaza oba argumenty tutaj.
+
+46
+00:03:33,910 --> 00:03:38,310
+S to dwie rne skadnie, jakie moesz zobaczy odnonie do argumentw.
+
+47
+00:03:38,380 --> 00:03:40,000
+Istnieje rwnie alternatywa.
+
+48
+00:03:40,000 --> 00:03:41,870
+Odnonie ciaa funkcji.
+
+49
+00:03:41,950 --> 00:03:47,780
+A wic po prawej stronie strzaki. Oczywicie wiele funkcji po prostu zwraca co.
+
+50
+00:03:48,010 --> 00:03:58,920
+Powiedzmy, e tak naprawd chcemy co pomnoy i otrzymamy liczb jako argument.
+
+51
+00:03:58,920 --> 00:04:08,490
+Teraz chcemy zwrci numer * 2. Oczywicie moemy zrobi to, abymy mogli skonsolidowa logicznie wynik
+
+52
+00:04:08,490 --> 00:04:09,180
+mnoenia.
+
+53
+00:04:09,180 --> 00:04:12,690
+Wic to, co jest zwracane przez pomnoenie i przekaza dwa tutaj.
+
+54
+00:04:12,870 --> 00:04:16,620
+Jeli teraz to wyjani i uruchomi to, powinnimy zobaczy cztery, a my to zrobimy.
+
+55
+00:04:16,740 --> 00:04:24,960
+Jeli masz taki przypadek, w ktrym wszystko, co robisz w treci funkcji, jest zwracane i
+
+56
+00:04:24,960 --> 00:04:35,010
+nie masz tam innego kodu, moesz pomin nawiasy klamrowe i napisa je w jednym wierszu, a nastpnie musisz rwnie
+
+57
+00:04:35,010 --> 00:04:39,670
+pomin sowo kluczowe return. Jest to bardzo krtka wersja pisania tej funkcji.
+
+58
+00:04:39,690 --> 00:04:44,820
+Troch krtszy, jeli skorzystamy ze skrtu do usuwania nawiasw
+
+59
+00:04:44,820 --> 00:04:46,260
+wok pojedynczego argumentu.
+
+60
+00:04:46,260 --> 00:04:50,310
+A teraz to, co robi, nadal zwraca wynik tego kodu.
+
+61
+00:04:50,310 --> 00:04:54,230
+Tutaj po prostu pomijamy sowo kluczowe return, a my 2 pominielimy.
+
+62
+00:04:54,450 --> 00:05:00,480
+I mamy bardzo zwizy i krtki sposb pisania funkcji, ktra przyjmuje jeden lub wicej argumentw
+
+63
+00:05:00,480 --> 00:05:01,860
+i zwraca co.
+
+64
+00:05:01,860 --> 00:05:05,690
+Tak wic wyczyszczenie i uruchomienie tego nadal daje 4.
+
+65
+00:05:06,090 --> 00:05:11,430
+Wic to jest caa skadnia, ktr moesz zobaczy, a funkcja strzaki w ogle jest czym, co wiele zobaczysz.
+
+66
+00:05:11,430 --> 00:05:13,540
+Widziae rne skadnie.
+
+67
+00:05:13,650 --> 00:05:16,020
+Nie musisz teraz pamita ich wszystkich.
+
+68
+00:05:16,050 --> 00:05:21,240
+Po prostu pamitaj, e istniej rne skadnie, a jeli z nich skorzystamy, szybko
+
+69
+00:05:21,240 --> 00:05:24,960
+wrc do twojego umysu i wiesz, dlaczego uywamy danej skadni.
+

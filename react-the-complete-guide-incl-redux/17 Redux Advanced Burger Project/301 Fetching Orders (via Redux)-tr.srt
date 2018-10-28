@@ -1,0 +1,624 @@
+1
+00:00:02,210 --> 00:00:03,750
+Ben de ate bariyeri temizledim.
+
+2
+00:00:03,770 --> 00:00:07,380
+imdi tabii ki bo olan sipari sayfasnda alabiliriz.
+
+3
+00:00:07,460 --> 00:00:12,850
+Her eyden nce sabit olan hereyden nce standart bur iin yeni bir sipari verelim.
+
+4
+00:00:13,000 --> 00:00:23,000
+Alan testlerine baz iletiim bilgilerini girin, baz posta kodu lke ve e-posta adresini okuyun.
+
+5
+00:00:23,030 --> 00:00:24,470
+Bu emri yerletirelim.
+
+6
+00:00:24,700 --> 00:00:26,860
+Ve sipari sayfasnda grdk.
+
+7
+00:00:26,930 --> 00:00:32,500
+Axford'u okuduk burada web'e uzanyoruz ve bileen tabii ki eylem
+
+8
+00:00:32,510 --> 00:00:38,120
+yaratcs araclyla emirler almaya gittik ve ynetmek istiyorum redoks emirleri.
+
+9
+00:00:38,120 --> 00:00:41,270
+Gerekten kullanmadnz emir konteynerine baktmzda ld
+
+10
+00:00:41,390 --> 00:00:44,550
+Zaten sipariler dizisini eyaletimizde oluturduk.
+
+11
+00:00:44,600 --> 00:00:46,280
+Sadece kullanmyoruz.
+
+12
+00:00:46,310 --> 00:00:52,820
+yleyse eylem yaratcs ile balayalm ve hepsini eylem trleriyle balam olarak verelim veya sizinle szleme
+
+13
+00:00:52,820 --> 00:01:01,180
+yapalm ve onu sipari et getirme adn belki de ki bylece, ykleme bana doru ve daha sonra tetikleyebileceimiz kovalamaca
+
+14
+00:01:01,220 --> 00:01:06,860
+gibi benzer bir kalba sahip olacaz Bu balang sreci internete ulatmzda baar rneimize
+
+15
+00:01:06,860 --> 00:01:09,470
+sahibiz ve byle devam edeceiz.
+
+16
+00:01:09,710 --> 00:01:14,060
+Bylece fecche emir verir ve emirleri getirir.
+
+17
+00:01:14,330 --> 00:01:18,470
+Adn balang ismini verelim nk balang adn Chase burger ncesi balamasn syleyin.
+
+18
+00:01:18,680 --> 00:01:31,680
+Bu yzden balayn ve sonra da srekli bir emir emri elde ettik ve elbette atete edeceimiz ip ile ayn
+
+19
+00:01:31,700 --> 00:01:32,930
+ismi kullandk.
+
+20
+00:01:33,270 --> 00:01:42,300
+Ve nihayetinde te birinde srekli fetch siparileri baarsz olmal ve bunu tahmin ettiysek, eylem adlarn ne olursa
+
+21
+00:01:42,300 --> 00:01:46,470
+olsun, bu ad bir dize tanmlaycs olarak kullanacaz.
+
+22
+00:01:46,470 --> 00:01:52,170
+imdi benim adma J. S. sonbahar ve eylemler klasr eylem yaratclar soya
+
+23
+00:01:52,170 --> 00:01:56,440
+oluturmak ve fonksiyonlar tutan yeni sabitler oluturmak ve hepsi benzer bir desen kullanmak istiyorum birka istiyorum.
+
+24
+00:01:56,460 --> 00:02:03,630
+baa Chase burger bizzat kendilerini Tozlu asenkron kod paras olan bir konteynerden gnderdik.
+
+25
+00:02:03,630 --> 00:02:08,840
+Burger satn almaya geldiimizde, hepimiz eriime kapldk ve batan
+
+26
+00:02:09,120 --> 00:02:13,940
+Bu yzden emirleri getirmek zorundayz.
+
+27
+00:02:14,230 --> 00:02:22,220
+Baar ilevi nerede siparileri bir argman olarak almak iin beklemek, bylece orada yeni bir nesne
+
+28
+00:02:22,220 --> 00:02:23,920
+kelime tr dnebilirsiniz.
+
+29
+00:02:23,980 --> 00:02:32,380
+Bu nedenle tabii eylemlerimiz, eylem trlerinin nereye harekete geirilecei eylemimiz, siparileri baar ve pasta siparilerini bir yk
+
+30
+00:02:32,650 --> 00:02:33,700
+olarak getirir.
+
+31
+00:02:33,700 --> 00:02:42,790
+imdi de yeni bir Constand oluturmak ve emir almak iin bu gibi baarsz olmasn istiyorum, burada potansiyel bir
+
+32
+00:02:42,800 --> 00:02:49,200
+hata var ya da alyorum ve sana tr ayarladm bir javascript nesnesi dndryorum.
+
+33
+00:02:49,330 --> 00:02:59,290
+Buras, tip 2 eylem trleri getirme sipari dosyasn ayarladm ve kullanmak istesem hata
+
+34
+00:02:59,290 --> 00:02:59,910
+iletirim.
+
+35
+00:03:01,030 --> 00:03:07,270
+Getirilecek emirleri oradan balatacam belirtmek isterim.
+
+36
+00:03:07,300 --> 00:03:09,910
+Herhangi bir argman beklemiyorum.
+
+37
+00:03:10,330 --> 00:03:17,380
+Burada yapmak istiyorum ey, elbette bir javascript nesnesi dndrmek istiyorum, burada yazmak
+
+38
+00:03:17,380 --> 00:03:29,470
+iin yaptmz eylem eylem trleridir, ancak eriime balam sipari getirme siparilerini getirin ve bu da, Chase ncesi ilerleme balangn satn almak
+
+39
+00:03:29,480 --> 00:03:37,450
+iin benzer bir ekle sahiptir ve daha sonra Asenk kodumu altrdm sabitime ihtiyacm var.
+
+40
+00:03:37,460 --> 00:03:46,010
+eylem sadece emirlerin alnd yerde hi tartma beklemiyorum, ancak burada siparilerimi almak iin X yl kullanacam.
+
+41
+00:03:46,010 --> 00:03:49,040
+Bu yzden daha byk son
+
+42
+00:03:49,160 --> 00:03:53,590
+Ve hepimiz ifre ve emir dosyasn burada para miktar ile almtk.
+
+43
+00:03:53,750 --> 00:03:56,870
+Aslnda bu kodu burada kopyalayabilirim.
+
+44
+00:03:56,930 --> 00:03:59,850
+Burada zaten hata ilelerini kullandk ve bu iyi.
+
+45
+00:04:00,140 --> 00:04:05,450
+Kodu buradan kopyalayabilirim, ancak bunu gerek yaratcma koyabilirim, ancak elbette ki nce
+
+46
+00:04:05,450 --> 00:04:08,000
+gnderimi alan bir ilevi iade etmeliyim.
+
+47
+00:04:08,030 --> 00:04:09,280
+Biz geri dnyoruz.
+
+48
+00:04:09,440 --> 00:04:13,660
+Ve sonra imdi X ylna uzanyoruz ve emirlerden alyoruz.
+
+49
+00:04:13,700 --> 00:04:19,140
+Jason burada, x 'rneiydi tabii ki durumu devlet demeyeceiz.
+
+50
+00:04:19,310 --> 00:04:27,980
+Bunun yerine, ilemlerimi gndermek istiyorum, bylece tm bu yama siparileri o andaki bloa girdiinizde baarl buluyor ve sonra
+
+51
+00:04:28,670 --> 00:04:34,880
+buradan bir argman olarak dntreceim getirilen siparilerimi iletmek istiyorum ve bunun iin iyi
+
+52
+00:04:34,880 --> 00:04:37,530
+bir argman var nerede dntreceim veri.
+
+53
+00:04:37,820 --> 00:04:43,400
+Burada yapyorum nk geri alyorum verileri aktaryorum Redksiyona koymak istemiyorum
+
+54
+00:04:43,430 --> 00:04:50,300
+nk arka u verilerimi deitirirsem redktrm deitirmek zorunda kalacam ve bu durumda
+
+55
+00:04:50,300 --> 00:04:52,410
+sanrm gerek yaratcm deitir.
+
+56
+00:04:52,460 --> 00:04:58,250
+depolamak istediim formattaki verileri alaca bir drcye sahip olmak benim iin daha doal geliyor.
+
+57
+00:04:58,250 --> 00:04:59,450
+Ancak yine de
+
+58
+00:04:59,650 --> 00:05:06,130
+yi mantksal deiiklikler istedim ve aldm veri biimi nedeniyle hibir eyi deitirmek istemiyorum.
+
+59
+00:05:06,230 --> 00:05:11,230
+Bu yzden, benim ection yaratclarmda byle veri format deiiklikleri yapyorum.
+
+60
+00:05:11,230 --> 00:05:15,830
+Bylece kusur siparileri getirme emri baarsna geirilir.
+
+61
+00:05:16,010 --> 00:05:22,430
+Handler Buraya yklemeyi geirmem gerekiyor, nk bunu redux durumumda yapabilirim ve
+
+62
+00:05:22,430 --> 00:05:30,590
+burada ve catch emirlerini baarsz olarak gnderirim ve tabii ki bunu yrtebilir ve hatam
+
+63
+00:05:30,590 --> 00:05:31,420
+iletmek isterim.
+
+64
+00:05:31,910 --> 00:05:34,760
+Yani bu ii yapyor olsayd.
+
+65
+00:05:34,760 --> 00:05:40,830
+phesiz, bir sonraki adm, redktr kuyruundaki tm bu yeni eylem trlerini idare etmektir.
+
+66
+00:05:41,210 --> 00:05:48,470
+yleyse sipari azaltma derneine gidelim ve cesaret edelim ki imdi davann nnde yeni birka vaka
+
+67
+00:05:48,470 --> 00:05:50,120
+daha eklemek istiyoruz.
+
+68
+00:05:50,120 --> 00:05:56,530
+lki, eylem trleri getirme emirlerinin orada baladdr.
+
+69
+00:05:56,530 --> 00:06:01,930
+Akas, eski durumu kopyaladm ve daha sonra yklemeyi true olarak ayarlamak istediim gncellenmi bir
+
+70
+00:06:01,930 --> 00:06:02,590
+durumu dndreceim.
+
+71
+00:06:02,710 --> 00:06:07,930
+Satn alma sayfasnda kullandmz ykleme zellikleri ayndr, ancak yalnzca deme sayfasnda
+
+72
+00:06:08,010 --> 00:06:09,610
+veya sipari sayfasnda bulunmaktayz.
+
+73
+00:06:09,610 --> 00:06:13,180
+Her iki sayfada da zellii tekrar kullanrsak sorun deil.
+
+74
+00:06:13,180 --> 00:06:16,100
+Burada eyleme gemek istediim tek ey bu.
+
+75
+00:06:16,150 --> 00:06:23,470
+Bir sonraki eylem tr, baarl eriim durumudur, bylece elbette ki fecche siparileri baarya ulam oluruz.
+
+76
+00:06:23,470 --> 00:06:31,870
+Getirdiim emirleri saklamak istiyorum, bylece devletimi alacam ve emirleri ilemeye eit olarak
+
+77
+00:06:31,870 --> 00:06:35,760
+ayarlayacam ve emlak ad sadece emirdi.
+
+78
+00:06:35,800 --> 00:06:42,790
+Bunu, eylem yaratcmzda sipari dosyasndaki sevkiyat getirme talimat baaryla dorulayabilir ve siparileri
+
+79
+00:06:42,910 --> 00:06:44,800
+baaryla geri getirebiliriz.
+
+80
+00:06:44,830 --> 00:06:51,250
+bu yzden bu, bizim yapmcmz Dave'de bu konut iin verebileceimiz emir mlkiyetidir.
+
+81
+00:06:51,250 --> 00:06:52,050
+Emirlerimize sahibiz,
+
+82
+00:06:52,300 --> 00:06:55,040
+Ve hepsi de emirdir.
+
+83
+00:06:55,040 --> 00:07:01,750
+Dnm ilevine bir dizi biiminde bakarsanz, dizimizde saklayabiliriz.
+
+84
+00:07:02,410 --> 00:07:09,550
+Ve eklemek istediim son ey burada gncelleme yapmamn elbette yklemeyi yanl yapmas gerektiidir ve
+
+85
+00:07:09,970 --> 00:07:17,730
+u anda elbette bir eylem eylemi modlne ihtiya duyduuma inanyorum, bylece siparileri getirmek baarsz oluyor.
+
+86
+00:07:17,830 --> 00:07:22,660
+Burada ayrca durumu kopyaladm ve hata ileyebileceim bir javascript nesnesi dndreceim.
+
+87
+00:07:22,660 --> 00:07:28,070
+Hatay burada Arap mlkiyetinde saklayabiliriz, ancak burada kullanmak istemiyorum.
+
+88
+00:07:28,150 --> 00:07:29,950
+Herey basite aadaki gibidir.
+
+89
+00:07:29,950 --> 00:07:35,800
+Hepsi de burada iki hatann yklenmesinin nedeni, en azndan yklenmenin baarsz olmasna ramen yaplddr.
+
+90
+00:07:36,130 --> 00:07:38,460
+Yani gncellenmi indirgeyici budur.
+
+91
+00:07:38,500 --> 00:07:42,550
+Sipari etkinlii oluturan dosyamz gncelledik.
+
+92
+00:07:42,550 --> 00:07:47,490
+imdi sadece dizin dosyasndaki getir emir eylemlerini buraya aktarmak istiyorum.
+
+93
+00:07:47,530 --> 00:07:51,910
+Eylem klasr, tetikleyebilecei ekilde dardan yapar.
+
+94
+00:07:51,910 --> 00:07:55,430
+Ve bununla bavurumuzu balayabiliriz.
+
+95
+00:07:55,570 --> 00:08:01,420
+bunun iin elbette ki yeni harita gndermem gerekiyor.
+
+96
+00:08:01,530 --> 00:08:08,380
+eylem veya yntemi gnderir ve sonra bir harita dndrebilir.
+
+97
+00:08:08,380 --> 00:08:18,070
+imdi bunu emir bileeninde yapalm, burada yeni emir emirleri gndermek isteyen para miktarnda
+
+98
+00:08:18,460 --> 00:08:21,970
+sipari konteynerini sipari ediyorsunuz, ve
+
+99
+00:08:21,970 --> 00:08:29,230
+Yani bir javascript nesnesi nerede olduumu Shabelle ilevlerini gndermek iin sahne haritas yaparm.
+
+100
+00:08:29,470 --> 00:08:36,910
+Dolaysyla ykte veya ekme emirlerinde eylem adlar ile ayn olacak ekilde ad verdim ve anonim
+
+101
+00:08:36,910 --> 00:08:41,540
+bir ilevi yrtmek istiyorum, sonunda sadece oluturduum eylemi gnderdim.
+
+102
+00:08:41,650 --> 00:08:47,150
+Bu nedenle ithalat yapmam gereken her eyi, eylemler gibi ie aktarn.
+
+103
+00:08:47,170 --> 00:08:50,100
+Ve imdi maaza klasrne geelim.
+
+104
+00:08:50,110 --> 00:08:53,300
+Eylemler klasr ve orada dizin dosyas.
+
+105
+00:08:53,350 --> 00:08:58,320
+Yine, i akmzn ileyi ekli nedeniyle index partir'i atlayabiliriz.
+
+106
+00:08:58,540 --> 00:09:05,500
+Ve eklediim eylemler nesnesi iin bir eylem gndermek istiyorum, sipari alma eylemini ie aktaryor ve
+
+107
+00:09:05,500 --> 00:09:09,070
+ilemi gerekletirmek iin bu ilevi yerine getirmeliyiz.
+
+108
+00:09:09,130 --> 00:09:11,960
+Bunlarn eylem yaratclar olduunu unutmayn.
+
+109
+00:09:12,040 --> 00:09:20,230
+imdi eklediimizle Bileenimizdeki getirme emirlerini arabiliriz, MT kanca bu pervane emir getirme emirlerine
+
+110
+00:09:20,340 --> 00:09:27,760
+uygundu fakat elbette bunun almas iin bu sabiti bileenimizle balamamz gerekiyor.
+
+111
+00:09:27,970 --> 00:09:31,590
+Bu yzden re-act redux'ten balanty almalym.
+
+112
+00:09:31,750 --> 00:09:38,610
+Yani ilevi, kurun X'u yeniden yaratmak gibi ileve balamak iin ie aktarn.
+
+113
+00:09:39,030 --> 00:09:47,580
+Ve ses bileenlerinde yaptmz gibi balanmay ekleyelim ve imdi harita durumu yerine bo
+
+114
+00:09:47,580 --> 00:09:48,400
+verelim.
+
+115
+00:09:48,420 --> 00:09:55,440
+ki sahne ve bu yamay, ikinci bir ilevi pervane etkisine gre eletirdikten sonra, hata ileyicisi
+
+116
+00:09:55,830 --> 00:09:58,640
+ve ilev ars ile parantezlerle sarn.
+
+117
+00:09:59,040 --> 00:10:00,920
+imdi bu ie yaramal.
+
+118
+00:10:00,930 --> 00:10:05,520
+Elbette devletle de ilgileniyorum, nk emirlerime ihtiyacm var.
+
+119
+00:10:05,610 --> 00:10:08,610
+u an emirleri ynetiyoruz ve i devlete yklyoruz.
+
+120
+00:10:08,760 --> 00:10:09,770
+Bundan kurtulalm.
+
+121
+00:10:09,780 --> 00:10:10,630
+Bunu yapmayz.
+
+122
+00:10:10,650 --> 00:10:12,190
+Onun yerine okuma X'i kullanyoruz.
+
+123
+00:10:12,420 --> 00:10:21,660
+Peki burada ikinci bir sabit harita durumu ekleyelim, burada durum alyorum ve devlet dilimlerini sahnelere
+
+124
+00:10:21,660 --> 00:10:27,960
+haritalarla eletiren bir javascript nesnesi dndryorum ve devlet sipariiyle devlet
+
+125
+00:10:28,440 --> 00:10:35,790
+sipari emirlerinden aldm siparilerimle ilgileniyorum ve sipari redksiyonuna ve emirlere kadar uzanarak.
+
+126
+00:10:35,790 --> 00:10:43,920
+Sonra redktre ait emir mlklerine uzanyorum ve dieri, devlet siparii yklemesini
+
+127
+00:10:43,920 --> 00:10:52,620
+ykleyen ykleme durumu ve imdi eer harita durumunu mlhaya balayabiliyorsam balant ilevime
+
+128
+00:10:52,890 --> 00:10:58,650
+balayan yk durumudur ve o zaman emirlerimizi kullanabilir.
+
+129
+00:10:58,770 --> 00:11:04,750
+Yani burada devlet emirleri kullanmyoruz, ancak bu sahne emriyle bunun gibi emirler veriliyor.
+
+130
+00:11:04,980 --> 00:11:12,790
+Spiner' gstermek istiyorsak Spener'i ie aktarabilmemiz iin ie aktarma yapmamz gerekirdi.
+
+131
+00:11:12,790 --> 00:11:19,110
+Ve imdi de bileenleri UI bileenleri ve spinner orada ulamak iin uzlamak.
+
+132
+00:11:19,560 --> 00:11:29,770
+Ve ykleme durumu olarak kullanalm, hepsi emirlere yeni bir deiken yklyor ve bu balangta dnmcm olmal
+
+133
+00:11:29,770 --> 00:11:32,660
+ama sonra bir kontrol ekleyeceim.
+
+134
+00:11:32,950 --> 00:11:36,250
+Bu sahne yklyorsa.
+
+135
+00:11:36,280 --> 00:11:49,830
+Tm render detent yklenmedii iin bu doru deilse, bunun yerine bu harita, bu J kodunun burada X olmas gerektii
+
+136
+00:11:49,870 --> 00:11:51,190
+anlamna gelir.
+
+137
+00:11:51,450 --> 00:11:57,430
+Ve herhangi bir HVM esine sarl olmad iin bunu sadece u ekilde yazabiliriz.
+
+138
+00:11:58,330 --> 00:12:07,990
+imdi orada gvenli bir ekilde emir veriyorum ve bu Cauley Brasier'den kurtulmalym.
+
+139
+00:12:08,030 --> 00:12:17,710
+Bu yzden, bavurusuna geri dnp emirler sayfasn yeniden dzenlersem emirlerimi alrm, ancak dncy
+
+140
+00:12:17,710 --> 00:12:18,540
+gremem.
+
+141
+00:12:18,550 --> 00:12:26,100
+Bunun sebebi, emir retmemizin veya dosyalamamzn emri kardmzda fecche'nin bir balangcn
+
+142
+00:12:26,140 --> 00:12:27,430
+sipariini vermemesidir.
+
+143
+00:12:27,460 --> 00:12:29,920
+Doru yklemeyi ayarlamak iin elbette bunu yapmam lazm.
+
+144
+00:12:30,070 --> 00:12:35,210
+Dolaysyla, bu dzeltme ekinin banda getirme emirleri balatlr.
+
+145
+00:12:35,230 --> 00:12:41,260
+imdi gvende olursa, iyi gryoruz, ok hzl bir ekilde ok hzldr
+
+146
+00:12:41,260 --> 00:12:46,790
+ama spinner' bir saniyeliine gryoruz ve burada fecche talimatnn balatldn dorulayabiliriz.
+
+147
+00:12:46,900 --> 00:12:54,270
+Dolaysyla u anda biz onlar maazamzda ynettiimiz redoks siparilerini alyoruz ve biz de
+
+148
+00:12:54,270 --> 00:13:01,540
+sipari verirken ve sipari konteyneri yklerken emirleri her zaman yklediimizden sipari sayfasndaki yan
+
+149
+00:13:01,810 --> 00:13:08,980
+notu ziyaret ettiimizde bunlar ynetiyoruz. Chase Broga'nn Chase Broga'y baaryla tamamladktan sonra New
+
+150
+00:13:09,010 --> 00:13:14,780
+Order'n yeni sipari ald bir redresr pre-Chase sipariini saklamamz nemli deil.
+
+151
+00:13:14,920 --> 00:13:20,250
+Bu gerekten nemli deil, nk sipari sayfasn ziyaret ettiinizde sunucudan sipariler yklyoruz.
+
+152
+00:13:20,470 --> 00:13:25,780
+Ancak, okunmu X dev aralarmzda, onu oradan getirmeden nce sakladmz onaylayabiliriz.
+
+153
+00:13:25,780 --> 00:13:30,610
+Tabii ki nasl depolandmz bilmek gzel ve programl olarak sunucumuza ulamadan
+
+154
+00:13:30,610 --> 00:13:34,490
+sipari verdik, bunun bir ksmn sayfamzda da gerekli grmtk.
+
+155
+00:13:34,810 --> 00:13:40,540
+yleyse emir sayfas da alyorsa, artk uygulamanza bir gz atalm, iyiletirebileceimiz eylere bakmadan nce
+
+156
+00:13:40,540 --> 00:13:43,260
+her eyin ie yarayp yaramayacana bakalm.
+

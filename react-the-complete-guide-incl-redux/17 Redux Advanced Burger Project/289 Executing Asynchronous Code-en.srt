@@ -1,0 +1,216 @@
+1
+00:00:02,220 --> 00:00:06,240
+So over the last lectures, we added our action creators.
+
+2
+00:00:06,240 --> 00:00:08,750
+Right now, we're handling only synchronous code though
+
+3
+00:00:08,910 --> 00:00:13,580
+but I mentioned that the idea of course is to use asynchronous code in there too,
+
+4
+00:00:13,620 --> 00:00:19,830
+at least when it comes to handling orders. Before we do that, we get one piece of asynchronous code we
+
+5
+00:00:19,830 --> 00:00:26,710
+can execute right away though, in the burger builder container, we used to fetch our ingredients from
+
+6
+00:00:26,730 --> 00:00:31,720
+componentDidMount and I paused this temporarily when we switched to redux.
+
+7
+00:00:31,960 --> 00:00:34,500
+Now is the time to again fetch this
+
+8
+00:00:34,800 --> 00:00:37,470
+and there are two routes you can take,
+
+9
+00:00:37,470 --> 00:00:42,750
+you can comment in the old code in componentDidMount where we reach out to our firebase backend,
+
+10
+00:00:43,290 --> 00:00:50,910
+where we fetch the data and instead of calling this.setState here, you could dispatch some to be created
+
+11
+00:00:50,910 --> 00:00:55,230
+action which updates our ingredients in the redux store.
+
+12
+00:00:55,350 --> 00:01:01,980
+Then you would run the async code in your component and you wouldn't need action creators at all because
+
+13
+00:01:01,980 --> 00:01:04,470
+you just dispatch normal actions at the end
+
+14
+00:01:04,470 --> 00:01:11,130
+once the response is there. That is perfectly fine to do but the idea behind action creators is that
+
+15
+00:01:11,130 --> 00:01:14,590
+you can still put your async code into the redux world
+
+16
+00:01:14,670 --> 00:01:20,340
+and as I mentioned earlier, this is the route I want to take here. For that, I first of all need to install
+
+17
+00:01:20,340 --> 00:01:27,870
+redux-thunk so I'll quit my npm start process and with npm install --save, I'll install
+
+18
+00:01:27,900 --> 00:01:29,200
+redux-thunk.
+
+19
+00:01:29,430 --> 00:01:36,510
+That's this middleware which allows us to use asynchronous code in action creators due to the middleware
+
+20
+00:01:36,600 --> 00:01:42,180
+wrapping itself around the dispatch action and blocking the request until the async code is done, so
+
+21
+00:01:42,180 --> 00:01:49,100
+to say. With it installed, we can restart npm start and now I want to add this middleware,
+
+22
+00:01:49,110 --> 00:01:52,320
+so what I'll do is all head over to index.js
+
+23
+00:01:52,510 --> 00:01:54,450
+and then there at the top,
+
+24
+00:01:54,450 --> 00:01:57,450
+I'll add my import, I'll import thunk,
+
+25
+00:01:57,480 --> 00:02:04,890
+you can name it whatever you want, from redux-thunk and this thunk here now has to be added with
+
+26
+00:02:04,890 --> 00:02:05,850
+applyMiddleware.
+
+27
+00:02:05,940 --> 00:02:10,980
+So I'm going to import something from redux and that something is applyMiddleware
+
+28
+00:02:11,250 --> 00:02:17,760
+and since we also have the dev tools added, you'll learn that we also need to import compose and then adjust
+
+29
+00:02:17,790 --> 00:02:20,030
+our dev tools setup.
+
+30
+00:02:20,310 --> 00:02:26,680
+We can consult the dev tools page again to see that set up we should use, we created that composeEnhancers
+
+31
+00:02:26,770 --> 00:02:33,950
+thing where we either used the redux dev tools variable or the native compose function from the redux package
+
+32
+00:02:34,350 --> 00:02:40,410
+and then we created our store with that composeEnhancers function which allows us to then also
+
+33
+00:02:40,470 --> 00:02:43,010
+pass applyMiddleware as an argument.
+
+34
+00:02:43,440 --> 00:02:45,170
+So this is the set up I'll use here too,
+
+35
+00:02:45,390 --> 00:02:52,240
+I'll just copy the code from the github page and paste it into my index.js file before I create
+
+36
+00:02:52,240 --> 00:02:59,180
+a store, this code here where I reach out to this variable or the compose function we just imported
+
+37
+00:02:59,180 --> 00:02:59,420
+.
+
+38
+00:02:59,550 --> 00:03:05,700
+Keep in mind, compose allows us to compose our own set of enhancers and middleware is just one kind of
+
+39
+00:03:05,700 --> 00:03:06,410
+enhancer, the
+
+40
+00:03:06,450 --> 00:03:08,490
+dev tools would be another example.
+
+41
+00:03:08,880 --> 00:03:12,760
+So with that, we got our composeEnhancers constant.
+
+42
+00:03:12,780 --> 00:03:14,860
+Now if we have a look at the github page,
+
+43
+00:03:14,910 --> 00:03:19,930
+we should create a store by passing it and then passing applyMiddleware as an argument,
+
+44
+00:03:20,070 --> 00:03:25,600
+so let's do that. Let's get rid of the old code we passed as a second argument to create store and let's
+
+45
+00:03:25,620 --> 00:03:30,220
+instead use composeEnhancers as a function here.
+
+46
+00:03:30,330 --> 00:03:35,120
+Now to this function and I'll just put this into a new line to make it a bit easier to read,
+
+47
+00:03:35,340 --> 00:03:36,250
+I'll pass
+
+48
+00:03:36,270 --> 00:03:41,500
+applyMiddleware and to applyMiddleware, I'll pass thunk, the middleware
+
+49
+00:03:41,550 --> 00:03:47,200
+I want to apply. With that, the thunk middleware is unlocked and should work fine,
+
+50
+00:03:47,240 --> 00:03:49,650
+the dev tools also still should work fine,
+
+51
+00:03:49,650 --> 00:03:53,130
+we should still see them if we reload the page, looks good.
+
+52
+00:03:53,430 --> 00:03:57,680
+So now we can start writing async code in our action creators.
+
+53
+00:03:57,840 --> 00:04:01,590
+Let's do that for fetching the ingredients
+
+54
+00:04:01,590 --> 00:04:03,570
+we may add in the next lecture.
+

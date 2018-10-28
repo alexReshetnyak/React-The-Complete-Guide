@@ -1,0 +1,64 @@
+1
+00:00:02,300 --> 00:00:09,400
+To fix our validation flaw, what we can do is we can set isValid true by default here at the beginning
+
+2
+00:00:10,010 --> 00:00:12,400
+and then we can add something to each check
+
+3
+00:00:12,400 --> 00:00:18,270
+here. We can say isValid should it be true if this check is true
+
+4
+00:00:18,440 --> 00:00:21,010
+and if isValid already was true
+
+5
+00:00:21,020 --> 00:00:24,400
+so we change && isValid. If we do
+
+6
+00:00:24,400 --> 00:00:30,540
+this in every rule, then just this rule resolving to true alone won't do the trick,
+
+7
+00:00:30,890 --> 00:00:33,380
+all the rules now have to resolve to true.
+
+8
+00:00:33,380 --> 00:00:39,140
+So if we save it with this change in place and I now start entering into the zip code, one digit it's
+
+9
+00:00:39,140 --> 00:00:42,770
+false, no digits it's false,
+
+10
+00:00:42,770 --> 00:00:48,580
+now if I enter five digits, it's true because it's not too long not too short
+
+11
+00:00:48,590 --> 00:00:52,580
+and there, if I interest six digits though, it's false.
+
+12
+00:00:52,580 --> 00:00:58,580
+Now if I have a look at the name and I enter something there, you see it's true because I entered something,
+
+13
+00:00:58,730 --> 00:01:03,560
+if I empty it you'll see it's false because now it's empty.
+
+14
+00:01:03,560 --> 00:01:06,800
+This is now our own validation working,
+
+15
+00:01:06,950 --> 00:01:10,160
+we got our own rules set up in this flexible way,
+
+16
+00:01:10,190 --> 00:01:16,150
+now we can turn our heads towards also outputting some feedback on our validation result.
+

@@ -1,0 +1,68 @@
+1
+00:00:01,950 --> 00:00:05,170
+Nell'ultimo video abbiamo dato un'occhiata ai reactrock. com, ora voglio
+
+2
+00:00:05,250 --> 00:00:09,780
+guidarti a questa ricerca su Google, costruire con reagire.
+
+3
+00:00:09,810 --> 00:00:16,560
+Ora questo potrebbe sembrare stupido, ma se lo guardi, troverai per prima cosa un link ufficiale cos sul repository
+
+4
+00:00:16,560 --> 00:00:22,850
+ufficiale di reazione dove puoi trovare i progetti che stanno usando reagire e puoi guardare attraverso quella lista.
+
+5
+00:00:22,870 --> 00:00:28,710
+Ora se fai clic su uno di questi progetti, verrai reindirizzato alla pagina e non al codice sorgente.
+
+6
+00:00:28,710 --> 00:00:35,160
+Tuttavia, quando ho parlato di praticarlo, questo pu darti qualche idea su cosa puoi costruire perch dato che tutto questo
+
+7
+00:00:35,160 --> 00:00:38,440
+qui  stato costruito con la reazione, beh, certamente non
+
+8
+00:00:38,490 --> 00:00:42,260
+riesci a trovare una scusa che non puoi farlo con la reazione.
+
+9
+00:00:42,540 --> 00:00:47,700
+Quindi sentitevi liberi di giocare qui e di approfondire questi progetti per avere un'idea di
+
+10
+00:00:47,700 --> 00:00:48,540
+cosa potreste costruire.
+
+11
+00:00:48,630 --> 00:00:54,380
+Troverai anche pi siti durante la ricerca di build con reazione, come madewithreact. it, puoi anche verificarlo e poi
+
+12
+00:00:54,570 --> 00:01:00,080
+trovare alcuni progetti l che puoi controllare e l dovresti trovare anche
+
+13
+00:01:00,080 --> 00:01:03,050
+il codice sorgente per il progetto.
+
+14
+00:01:03,060 --> 00:01:09,690
+Quindi, ancora una volta, un altro modo di praticare veramente reagire e scavare nei progetti di altre persone per imparare
+
+15
+00:01:09,690 --> 00:01:11,790
+come si pu migliorare il codice,
+
+16
+00:01:11,790 --> 00:01:15,300
+tuttavia le persone hanno risolto determinati problemi e cos via.
+
+17
+00:01:15,330 --> 00:01:21,940
+Quindi costruisci con reagire, un'altra grande risorsa per saperne di pi su reagire e scoprire come funziona.
+

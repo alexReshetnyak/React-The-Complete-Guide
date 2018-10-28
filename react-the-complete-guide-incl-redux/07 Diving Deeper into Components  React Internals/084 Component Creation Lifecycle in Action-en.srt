@@ -1,0 +1,464 @@
+1
+00:00:02,310 --> 00:00:06,260
+Now that we get more stateful components and hence can really see lifecycle hooks,
+
+2
+00:00:06,360 --> 00:00:11,050
+let's have a look at the lifecycle hooks we learned about for the component creation.
+
+3
+00:00:11,070 --> 00:00:12,290
+Let's start with
+
+4
+00:00:12,300 --> 00:00:13,220
+app.js.
+
+5
+00:00:13,470 --> 00:00:20,610
+There I told you you have this constructor and the constructor receives the props this component gets,
+
+6
+00:00:21,060 --> 00:00:22,170
+only the constructor,
+
+7
+00:00:22,170 --> 00:00:27,330
+so we still can't call props anywhere else in this component class, just in a constructor
+
+8
+00:00:27,330 --> 00:00:30,720
+could we access props.title, everywhere else
+
+9
+00:00:30,750 --> 00:00:33,990
+it has to be this.props.title.
+
+10
+00:00:34,380 --> 00:00:40,150
+Now for this to work, we actually now need to call super(props) otherwise
+
+11
+00:00:40,350 --> 00:00:42,710
+this.props won't succeed.
+
+12
+00:00:42,900 --> 00:00:47,030
+I can actually prove this to you if I comment this out and save this,
+
+13
+00:00:47,160 --> 00:00:50,610
+now you see we get an error, missing super calling constructor,
+
+14
+00:00:50,670 --> 00:00:53,930
+so the error already is pretty clear about what's wrong.
+
+15
+00:00:54,090 --> 00:01:00,630
+Now before we implement the constructor, it worked because react had automatically reach out to the super
+
+16
+00:01:00,630 --> 00:01:01,470
+constructor,
+
+17
+00:01:01,590 --> 00:01:04,640
+so to the constructor of the component we extend.
+
+18
+00:01:04,980 --> 00:01:10,280
+But if we implement our own one, we overwrite react's default and therefore we need to do this though,
+
+19
+00:01:10,400 --> 00:01:15,350
+to call super and pass on props. It's a useless constructor right now
+
+20
+00:01:15,420 --> 00:01:19,090
+as these hooks warns us though because we don't do anything else.
+
+21
+00:01:19,250 --> 00:01:25,980
+So let me log something and I'll create a log statement where I'll say app.js, so that we can easily
+
+22
+00:01:25,980 --> 00:01:30,460
+see where it is coming from, inside constructor.
+
+23
+00:01:30,570 --> 00:01:35,390
+This makes sense and let me also pass props here,
+
+24
+00:01:35,470 --> 00:01:40,690
+now if we save this and our app loads, you see we get this console log here on the right,
+
+25
+00:01:40,720 --> 00:01:41,370
+app.js
+
+26
+00:01:41,410 --> 00:01:42,720
+inside constructor
+
+27
+00:01:42,820 --> 00:01:46,800
+and we see the props as an object where we have this title.
+
+28
+00:01:46,840 --> 00:01:49,760
+Now let's implement the other hooks too.
+
+29
+00:01:50,040 --> 00:01:54,350
+This would be componentWillMount, there
+
+30
+00:01:54,360 --> 00:02:06,340
+I will also console log and say app.js inside componentWillMount, like that.
+
+31
+00:02:06,530 --> 00:02:08,910
+Now with that, let's save this again
+
+32
+00:02:09,700 --> 00:02:15,490
+and once this reloads, you see that first we're executing the constructor and then componentWillMount.
+
+33
+00:02:15,490 --> 00:02:20,980
+Now one more word about the constructor by the way, we're initialising state down here,
+
+34
+00:02:21,010 --> 00:02:26,160
+now as I mentioned, you might still see code snippets where state is instead initialized here.
+
+35
+00:02:26,290 --> 00:02:28,780
+You can do this by calling this.state,
+
+36
+00:02:28,780 --> 00:02:36,430
+make sure to call super first, this.state and then initialize it just as we do it down there.
+
+37
+00:02:36,670 --> 00:02:39,190
+So this is basically an alternative syntax,
+
+38
+00:02:39,520 --> 00:02:44,650
+I don't necessarily recommend using the constructor because it's easier to implement state initialization
+
+39
+00:02:44,650 --> 00:02:47,680
+like we did before but if you do have constructor,
+
+40
+00:02:47,710 --> 00:02:49,160
+you can absolutely do that,
+
+41
+00:02:49,180 --> 00:02:53,040
+it doesn't really make a difference, both is fine and this is code
+
+42
+00:02:53,080 --> 00:02:59,760
+you might still see in some other tutorials because in older versions of react or to be precise, in all
+
+43
+00:02:59,770 --> 00:03:03,270
+the versions of the project set up created for react,
+
+44
+00:03:03,460 --> 00:03:10,630
+we didn't have access to this relatively new way of initializing properties in ES6 classes.
+
+45
+00:03:10,660 --> 00:03:16,570
+So that's why this is the approach which will work in most projects, whereas this will only work in
+
+46
+00:03:16,570 --> 00:03:19,750
+modern project set ups as we use it here.
+
+47
+00:03:19,780 --> 00:03:21,110
+So with that you will see,
+
+48
+00:03:21,160 --> 00:03:22,060
+it still works fine,
+
+49
+00:03:22,060 --> 00:03:25,210
+we get all the same state and behavior as before,
+
+50
+00:03:25,210 --> 00:03:30,440
+now initialising state in the constructor. Back to this lifecycle hooks
+
+51
+00:03:30,460 --> 00:03:33,190
+though, we have the render method
+
+52
+00:03:33,180 --> 00:03:39,520
+next if you recall our slide and we already have this implemented because every stateful component needs
+
+53
+00:03:39,520 --> 00:03:40,490
+to have this,
+
+54
+00:03:40,510 --> 00:03:44,340
+it's the only mandatory one because it needs to know what to render.
+
+55
+00:03:44,470 --> 00:03:56,640
+So there, I will also now console log app.js inside render like that. We save this, we now also see that
+
+56
+00:03:56,640 --> 00:04:01,490
+the render gets called on the third position, just as you saw it on the slide.
+
+57
+00:04:01,820 --> 00:04:04,270
+And now let's implement componentDidMount,
+
+58
+00:04:04,440 --> 00:04:06,230
+now I'll implement that here at the top,
+
+59
+00:04:06,230 --> 00:04:11,030
+the order doesn't matter but typically or often, you will see lifecycle hooks being implemented at the
+
+60
+00:04:11,030 --> 00:04:12,530
+top.
+
+61
+00:04:12,560 --> 00:04:14,400
+componentDidMount here,
+
+62
+00:04:14,780 --> 00:04:18,310
+there we'll also log something, app.js
+
+63
+00:04:18,360 --> 00:04:25,080
+inside componentDidMount, like this.
+
+64
+00:04:25,130 --> 00:04:28,900
+Now if we save this, we can also see that this is called last.
+
+65
+00:04:28,900 --> 00:04:30,460
+Now that's interesting,
+
+66
+00:04:30,460 --> 00:04:36,910
+let's now add these lifecycle hooks to other stateful components too.
+
+67
+00:04:37,140 --> 00:04:44,150
+So I'll copy them and move to persons.js, there I'll paste them in above the render method.
+
+68
+00:04:44,440 --> 00:04:49,660
+I don't want to initialize state here because I don't use state in this component and I need to adjust
+
+69
+00:04:49,690 --> 00:04:51,410
+all these cnsole logs now.
+
+70
+00:04:51,550 --> 00:04:59,320
+So here we have persons.js and we also have that down there and these two logs and the render method,
+
+71
+00:04:59,420 --> 00:05:03,350
+I'll also add a console log statement where I say persons.js
+
+72
+00:05:03,360 --> 00:05:06,610
+inside render.
+
+73
+00:05:06,760 --> 00:05:08,230
+Now it's getting interesting.
+
+74
+00:05:08,260 --> 00:05:14,380
+If we now save this, let's see when all these persons lifecycle hooks get executed,
+
+75
+00:05:15,130 --> 00:05:22,940
+so let's as I said, make sure you save this and reload the page and you see, we don't see them at all.
+
+76
+00:05:22,980 --> 00:05:27,520
+It makes sense because we only showed this persons list conditionally.
+
+77
+00:05:27,840 --> 00:05:32,060
+As soon as I click toggle persons, you see them all,
+
+78
+00:05:32,160 --> 00:05:39,720
+now actually what you could see there is that render of the app.js, so of the root container was recalled
+
+79
+00:05:39,900 --> 00:05:42,420
+which makes sense because the state changed,
+
+80
+00:05:42,540 --> 00:05:45,800
+so it recalled, it reexecuted render.
+
+81
+00:05:46,140 --> 00:05:52,410
+and then you see that the person.js constructor was executed, WillMount render off persons and inside
+
+82
+00:05:52,440 --> 00:05:54,320
+DidMount.
+
+83
+00:05:54,330 --> 00:06:03,930
+Now let's also add all these methods to person.js above render here too, make sure to adjust the log so
+
+84
+00:06:03,930 --> 00:06:12,960
+that you can identify it and implement a log in the render method there to console log person.js
+
+85
+00:06:13,650 --> 00:06:16,380
+inside render.
+
+86
+00:06:16,390 --> 00:06:19,110
+Now let's save this file too
+
+87
+00:06:19,230 --> 00:06:21,140
+and now, let's see this one more time.
+
+88
+00:06:21,410 --> 00:06:25,520
+When the app loads, we only see app.js but now it's going to get crowded
+
+89
+00:06:25,520 --> 00:06:27,510
+once I hit toggle persons
+
+90
+00:06:27,890 --> 00:06:34,300
+So let's dig our way through that, first of all we have the initial app.js calls up until here,
+
+91
+00:06:34,290 --> 00:06:35,210
+componentDidMount
+
+92
+00:06:35,360 --> 00:06:41,720
+then we click the button and this retriggers render of app.js because obviously the state changed, it
+
+93
+00:06:41,720 --> 00:06:44,680
+needs to recall render to see what changed.
+
+94
+00:06:44,750 --> 00:06:52,130
+Then we execute the persons.js methods up until render. In the constructor where we receive the props
+
+95
+00:06:52,130 --> 00:06:53,110
+of persons,
+
+96
+00:06:53,120 --> 00:07:01,130
+so of this component which renders the array inside WillMount and inside render, but then that's important.
+
+97
+00:07:01,280 --> 00:07:05,670
+We don't see persons.js inside componentDidMount,
+
+98
+00:07:05,720 --> 00:07:11,170
+instead we continue with the person.js component and that makes perfect sense.
+
+99
+00:07:11,180 --> 00:07:17,160
+Recall that slide, this step after render, render child components,
+
+100
+00:07:17,530 --> 00:07:24,590
+this is the reason why we don't see componentDidMount yet but why we see person.js inside constructor
+
+101
+00:07:24,600 --> 00:07:34,130
+and so on, because we rendered the list and the list has 3 person, singular, components. That is why we
+
+102
+00:07:34,130 --> 00:07:44,390
+see person.js all the way up to render three times and there after, we see person.js DidMount three
+
+103
+00:07:44,390 --> 00:07:46,440
+times, this is three time here
+
+104
+00:07:46,970 --> 00:07:50,630
+and there are persons.js,componentDidMount,
+
+105
+00:07:50,960 --> 00:07:53,960
+and this is exactly the order you saw on the slide.
+
+106
+00:07:53,960 --> 00:08:00,080
+It goes down the componentry and renders them and in these methods, you would have a chance of running
+
+107
+00:08:00,080 --> 00:08:00,980
+your own code.
+
+108
+00:08:01,160 --> 00:08:07,430
+But even with just logging this, it's interesting to see how react works and how it actually creates
+
+109
+00:08:07,430 --> 00:08:09,500
+this component three
+
+110
+00:08:09,500 --> 00:08:12,160
+Now creating is one interesting thing.
+
+111
+00:08:12,560 --> 00:08:15,890
+and of course it creates functional components in the same way,
+
+112
+00:08:16,010 --> 00:08:18,680
+there we just can't add our lifecycle hooks.
+
+113
+00:08:18,800 --> 00:08:24,650
+But if you don't need to run any logic, you don't need them but creating components is one interesting
+
+114
+00:08:24,650 --> 00:08:25,560
+thing.
+
+115
+00:08:25,580 --> 00:08:29,900
+Let's now have a look at what happens when we actually update components,
+
+116
+00:08:29,900 --> 00:08:31,780
+how does this lifecycle look like.
+

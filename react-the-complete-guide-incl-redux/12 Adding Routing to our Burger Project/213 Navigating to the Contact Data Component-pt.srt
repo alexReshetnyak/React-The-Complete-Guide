@@ -1,0 +1,424 @@
+1
+00:00:02,210 --> 00:00:09,320
+Vamos adicionar o componente de dados de contexto e, na verdade, isso tambm ser um continer, no s porque
+
+2
+00:00:09,320 --> 00:00:16,940
+ele  carregado no nosso roteamento, mas porque ele gerenciar seu prprio estado, especialmente depois de abordarmos os fruns em resposta.
+
+3
+00:00:16,940 --> 00:00:25,640
+Ento, deixe-me editar como uma subpasta para verificar na pasta de continer tudo na pasta de dados de contato l
+
+4
+00:00:25,910 --> 00:00:27,940
+com os dados de contato.
+
+5
+00:00:28,150 --> 00:00:35,930
+Falhas e meu componente de dados de contato e todos eles criam isso como dados de contato de
+
+6
+00:00:35,930 --> 00:00:40,930
+classe e, portanto,  claro, estender este elemento componente desse objeto componente.
+
+7
+00:00:40,940 --> 00:00:48,790
+Ento, para reagir e um componente como este de reagir.
+
+8
+00:00:49,130 --> 00:00:51,710
+Agora vamos ver como mostramos isso.
+
+9
+00:00:51,710 --> 00:00:56,050
+Os criadores so o que deve entrar dentro deste componente de dados de contato.
+
+10
+00:00:56,240 --> 00:01:04,460
+Em primeiro lugar, apesar de toda a classe de dados de contato de exportao agora, podemos buscar quais dados de contato que
+
+11
+00:01:04,460 --> 00:01:11,300
+queremos e eu configurarei os estados para gerenciar todas essas entradas e eu realmente no funcionarei no formulrio.
+
+12
+00:01:11,300 --> 00:01:17,120
+No vou conclu-lo neste mdulo porque teremos todo um mdulo sobre formas e validao de
+
+13
+00:01:17,360 --> 00:01:19,230
+formas aps o discurso Marchal.
+
+14
+00:01:19,250 --> 00:01:22,980
+Ainda quero buscar, digamos, o nome do usurio aqui.
+
+15
+00:01:23,030 --> 00:01:31,650
+Talvez eu queira buscar um e-mail e talvez eu queira buscar um endereo que tambm seja um
+
+16
+00:01:31,650 --> 00:01:37,580
+objeto onde eu tenha como a rua talvez e um cdigo postal.
+
+17
+00:01:37,740 --> 00:01:39,000
+Ento, algo assim.
+
+18
+00:01:39,030 --> 00:01:44,620
+Estes podem ser os dados que eu quero buscar ano e sempre podemos continuar trabalhando nisso.
+
+19
+00:01:44,640 --> 00:01:47,390
+Eu tambm preciso do meu mtodo render,  claro.
+
+20
+00:01:47,400 --> 00:01:50,210
+E como eu disse que fui ter um quatro l dentro.
+
+21
+00:01:50,300 --> 00:02:00,140
+Ento, no mtodo de renderizao, voc retornar algum GSX e l eu preciso de um dispositivo que basicamente seja.
+
+22
+00:02:00,210 --> 00:02:04,500
+Bem, o invlucro para o meu continer de dados de contato.
+
+23
+00:02:04,740 --> 00:02:15,060
+dia, se eu quiser ter o formulrio que uso agora tambm aos 14 anos, onde digo inserir seus dados de contato como este
+
+24
+00:02:15,210 --> 00:02:25,830
+e abaixo desse formulrio usando o elemento de formulrio HMO, onde eu posso adicionar 4 na maneira que eu quero para adicionar adicionar.
+
+25
+00:02:25,830 --> 00:02:26,800
+E neste
+
+26
+00:02:26,970 --> 00:02:29,600
+Agora, como eu disse, A no vai gastar muito tempo no formulrio aqui.
+
+27
+00:02:29,640 --> 00:02:31,950
+Vou fazer isso nos mdulos a partir da.
+
+28
+00:02:31,950 --> 00:02:40,320
+Ento, por enquanto, todos realmente criam um ano de formulrio rpido com algumas entradas de entrada de tipo de texto para o
+
+29
+00:02:40,320 --> 00:02:41,380
+meu nome essencialmente.
+
+30
+00:02:41,400 --> 00:02:47,130
+Ento, onde eu vou definir nome igual a nomes para que possamos ver o que deveria estar l.
+
+31
+00:02:47,250 --> 00:02:57,060
+Eu adicionarei um espao reservado ou digo seu nome e isso deve fechar-se automaticamente e, em seguida, vou adicionar um
+
+32
+00:02:57,060 --> 00:03:02,740
+para o e-mail do email e, em seguida, obtemos esse endereo.
+
+33
+00:03:02,780 --> 00:03:13,820
+Ento eu preciso de um para a rua e um WIPs Street escrito assim e um para o cdigo postal.
+
+34
+00:03:14,130 --> 00:03:22,430
+Ento, aqui eu deveria codificar talvez aqui vamos escrever seu e-mail e seu nome com um N de capital, como dvida e, claro, tambm
+
+35
+00:03:23,550 --> 00:03:27,570
+adicionar um boto e usarei meu prprio componente de boto para isso.
+
+36
+00:03:27,570 --> 00:03:30,420
+Ento, rapidamente, importar botes.
+
+37
+00:03:30,420 --> 00:03:37,800
+E agora vamos para a pasta de componentes l para a pasta UI na pasta do boto e o
+
+38
+00:03:37,810 --> 00:03:39,300
+boto Jr cair l.
+
+39
+00:03:40,110 --> 00:03:43,950
+E vamos ento usar isso, mas no ano abaixo de todas as nossas entradas.
+
+40
+00:03:43,950 --> 00:03:51,970
+ o boto final depois do qual fazemos o tipo de boto para pedir, ento, devemos ser sucesso aqui.
+
+41
+00:03:52,060 --> 00:03:56,540
+Voc  como um componente do curso da ordem, porque esse
+
+42
+00:03:56,560 --> 00:04:00,480
+E, claro, depois adicionaremos um ouvinte de cliques.
+
+43
+00:04:00,500 --> 00:04:09,170
+Agora, uma vez que voc  presente,  um formulrio de contato aqui um estilo, ento adicione um contato de dados que C-s como segue.
+
+44
+00:04:09,200 --> 00:04:13,870
+E, claro, voc tambm pode criar um subcomponente que lida com o estilo se quiser que ele faa isso.
+
+45
+00:04:14,150 --> 00:04:23,750
+Ento, aqui vou adicionar dados de contexto, talvez adicione uma margem de cima e de baixo e centrada com auto, em seguida, adicione
+
+46
+00:04:23,870 --> 00:04:28,750
+com 80 por cento e alinhe todo o texto no centro, digamos.
+
+47
+00:04:28,940 --> 00:04:35,330
+E tambm vamos adicionar uma consulta de mdia para limitar a largura em escolher o Wise's assim como ns fizemos isso para
+
+48
+00:04:35,330 --> 00:04:36,440
+o resumo do check-out.
+
+49
+00:04:36,590 --> 00:04:42,180
+Portanto, seus dados de contato tero uma largura de 500 pixels no mximo.
+
+50
+00:04:42,200 --> 00:04:44,500
+Com isso, obtemos o componente de dados de contato.
+
+51
+00:04:44,510 --> 00:04:51,830
+Agora vou carreg-lo atravs do roteamento e vou fazer isso em um check-out do container chippy uma rota aninhada
+
+52
+00:04:51,830 --> 00:04:58,160
+abaixo dos resumos para que ele no coloque para verificar o resumo, embora possamos, claro, fazer isso.
+
+53
+00:04:58,190 --> 00:05:04,130
+Em vez disso, eu quero carreg-lo abaixo de todos para mostrar que isso , naturalmente, algo que voc
+
+54
+00:05:04,130 --> 00:05:06,130
+usa na realidade duas rotas aninhadas.
+
+55
+00:05:06,230 --> 00:05:16,020
+baixo dentro do meu recipiente de check-out e, em seguida, use a rota aqui abaixo do meu resumo do check-out para carregar algo para
+
+56
+00:05:16,020 --> 00:05:23,640
+um caminho que agora deve depender do caminho em que estamos atualmente mais dados de contato de barra.
+
+57
+00:05:23,640 --> 00:05:27,220
+Ento, importe a rota do roteador de re-atuao para
+
+58
+00:05:27,510 --> 00:05:29,900
+Ento apoios justis.
+
+59
+00:05:30,270 --> 00:05:41,700
+E ento podemos usar a combinao de voc ou tambm para recompensas e rotas do Boulding, voc pode usar dados de contatos mais
+
+60
+00:05:42,000 --> 00:05:43,860
+rpidos e mais complicados.
+
+61
+00:05:44,220 --> 00:05:50,390
+E isso tambm deve ser parte da parte dinmica aqui, essa string.
+
+62
+00:05:50,400 --> 00:05:52,530
+Ento, estamos carregando esta rota neste caso.
+
+63
+00:05:52,530 --> 00:05:55,900
+ claro que precisamos definir o componente a ser processado.
+
+64
+00:05:55,950 --> 00:06:04,010
+para isso tudo importa meu continer de dados de contatos a partir de dados de dados de barra de dados inseridos no contato de dados J.
+
+65
+00:06:04,040 --> 00:06:05,310
+Ento, S. cair.
+
+66
+00:06:05,640 --> 00:06:12,820
+Ento, vamos pegar dados Quantic e vamos configur-lo como um componente l embaixo neste componente de rota.
+
+67
+00:06:12,870 --> 00:06:19,400
+Portanto, h componentes Pastie Propp e passam dados de contato assim.
+
+68
+00:06:19,570 --> 00:06:22,780
+Com isso, vamos salvar todos os arquivos.
+
+69
+00:06:23,160 --> 00:06:25,520
+E agora, se o clique continuar aqui.
+
+70
+00:06:25,980 --> 00:06:28,320
+Aqui esto os dados de contato.
+
+71
+00:06:28,410 --> 00:06:36,130
+Agora parece bastante feio para ser honesto porque eu esqueci de usar meus dados de contato como.
+
+72
+00:06:36,210 --> 00:06:45,240
+s e, em seguida, atribuir este ano na diviso de wrapper com o nome da classe e depois os dados de contato das classes.
+
+73
+00:06:45,240 --> 00:06:51,080
+Eu,  claro, preciso importar os Klaas dos dados de contato de dados de dados C-s
+
+74
+00:06:51,120 --> 00:06:54,190
+Vamos fazer isso rapidamente e depois disso.
+
+75
+00:06:54,200 --> 00:06:55,350
+ assim que parece agora.
+
+76
+00:06:55,390 --> 00:06:59,520
+Se carregarmos esta pgina recarregando-a como acabamos de fazer automaticamente.
+
+77
+00:06:59,680 --> 00:07:03,590
+Voc v a consulta que os pais se foram e, portanto, o hambrguer est vazio.
+
+78
+00:07:03,640 --> 00:07:11,480
+hambrguer ainda est l porque, mesmo que os pais estejam perdidos, ele no sobrescreve o estado antigo, pois estabelecemos o
+
+79
+00:07:11,670 --> 00:07:17,320
+estado e no  realmente processe este componente conforme voc aprendeu, ento o componente
+
+80
+00:07:17,380 --> 00:07:24,550
+que Monte onde construmos o Burga onde configuramos o estado dependendo da consulta perms no est sendo executado novamente.
+
+81
+00:07:24,640 --> 00:07:30,430
+Agora, se eu for diferente, construindo um hambrguer e continuando e, se eu clicar e
+
+82
+00:07:30,430 --> 00:07:31,270
+continuar, o
+
+83
+00:07:31,390 --> 00:07:37,050
+S porque carregamos um novo componente, por isso o hambrguer ainda parece assim.
+
+84
+00:07:37,060 --> 00:07:43,440
+Ento, se ns vamos l, clicando nas vrias etapas, teremos um hamburguer bem estancado.
+
+85
+00:07:43,450 --> 00:07:46,600
+Agora, novamente, o formulrio no  super legal.
+
+86
+00:07:46,600 --> 00:07:52,690
+A razo para isso  que eu no vou terminar em este mdulo vai funcionar mais tarde.
+
+87
+00:07:52,690 --> 00:07:58,540
+A nica coisa que eu quero fazer  que eu quero ter certeza de que todas as entradas que voc est. Voc, pelo
+
+88
+00:07:58,540 --> 00:08:02,800
+menos, tem sua prpria linha cada, de modo que eles tenham uma linha de embrulho l.
+
+89
+00:08:02,860 --> 00:08:09,880
+E que o boto tambm tem sua prpria linha e, para conseguir isso, simplesmente adicione um estilo para o elemento
+
+90
+00:08:09,910 --> 00:08:18,580
+de entrada, ento eu vou adicionar uma nova classe de entrada, talvez, por mais, diga que a exibio deve ser Bloquear e isso ir adicionar
+
+91
+00:08:18,580 --> 00:08:27,290
+automaticamente um embrulho de linha porque agora  um elemento de bloco, ento adicionarei classes de nomes de classes a todas essas entradas e com
+
+92
+00:08:27,830 --> 00:08:29,980
+isso parece um pouco mais agradvel.
+
+93
+00:08:30,020 --> 00:08:32,820
+Bem, claro, sentado  esquerda aqui.
+
+94
+00:08:32,830 --> 00:08:34,710
+Mas novamente ir trabalhar com isso.
+
+95
+00:08:35,210 --> 00:08:37,480
+Ento este  o nosso formulrio de pedido.
+
+96
+00:08:37,490 --> 00:08:44,030
+podemos melhorar o estilo dos dados de contato um pouco, indo aos dados de contato.
+
+97
+00:08:44,030 --> 00:08:46,780
+O nosso resumo aqui acima que ainda
+
+98
+00:08:47,030 --> 00:08:55,070
+Adicionando um shell de caixa de talvez 0 2 pixels de pixels livres neste cinza claro e uma borda de cinza
+
+99
+00:08:55,220 --> 00:08:59,400
+ainda mais claro como este e adicionando algum preenchimento dentro dele.
+
+100
+00:08:59,760 --> 00:09:03,840
+Esse  ento todo o dimensionamento da caixa de ajuste para os POCs de borda.
+
+101
+00:09:03,860 --> 00:09:10,510
+Ento, este  apenas um estilo no componente de dados de contato com o que parece um pouco mais agradvel, eu acredito.
+
+102
+00:09:10,670 --> 00:09:13,870
+Ento, com isso, podemos carregar o componente de dados de contato.
+
+103
+00:09:13,970 --> 00:09:20,900
+O prximo passo  garantir que, quando clicarmos no boto da ordem, enviamos essas solicitaes para
+
+104
+00:09:20,990 --> 00:09:22,110
+o nosso servidor.
+
+105
+00:09:22,130 --> 00:09:28,610
+Agora, vamos construir isso juntos na prxima palestra porque obter os ingredientes no componente de dados de
+
+106
+00:09:28,610 --> 00:09:31,790
+contato agora  um pouco complicado, como voc ver.
+

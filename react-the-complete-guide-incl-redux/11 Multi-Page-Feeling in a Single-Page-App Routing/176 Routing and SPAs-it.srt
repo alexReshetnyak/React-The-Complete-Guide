@@ -1,0 +1,116 @@
+1
+00:00:02,140 --> 00:00:07,170
+Il routing riguarda la possibilit di mostrare pagine diverse all'utente.
+
+2
+00:00:07,180 --> 00:00:11,200
+La maggior parte delle applicazioni Web che conosci probabilmente hanno pi di una pagina.
+
+3
+00:00:11,320 --> 00:00:17,940
+Hanno come pagina degli utenti che hanno una pagina di un post di un account qualunque sia la pagina.
+
+4
+00:00:17,950 --> 00:00:22,450
+Ora ovviamente potresti chiederti pi pagine in un'applicazione singola.
+
+5
+00:00:22,450 --> 00:00:24,600
+Come funziona insieme.
+
+6
+00:00:24,610 --> 00:00:28,450
+Bene, tenete a mente l'idea che sta dietro l'applicazione di una singola pagina.
+
+7
+00:00:28,480 --> 00:00:29,290
+Beh, indovina un po '.
+
+8
+00:00:29,290 --> 00:00:36,520
+normale web utilizzando l'esperienza, anche se vogliamo mostrare all'utente pagine diverse per viste diverse o altro.
+
+9
+00:00:36,620 --> 00:00:41,860
+Una singola pagina, un singolo file HVM, vogliamo ancora fornire all'utente un
+
+10
+00:00:41,860 --> 00:00:50,560
+Il trucco  che non abbiamo in realt pi uscite di HVM, ma poi usiamo javascript
+
+11
+00:00:50,800 --> 00:00:54,740
+per rendere diverse pagine per percorsi diversi.
+
+12
+00:00:54,880 --> 00:01:02,260
+Quindi non abbiamo davvero file diversi, ma semplicemente leggiamo parti di rendering da quella singola pagina o
+
+13
+00:01:02,260 --> 00:01:09,670
+forse l'intera pagina a seconda di quale percorso l'utente ha navigato nella nostra applicazione  ci che
+
+14
+00:01:09,670 --> 00:01:11,780
+il routing riguarda l'analisi.
+
+15
+00:01:12,020 --> 00:01:21,080
+questo, come ho detto, useremo un pacchetto router per aggiungere tale funzionalit in modo che non dobbiamo analizzare quel percorso su il
+
+16
+00:01:21,090 --> 00:01:27,280
+nostro che  non banale che il pacchetto del router ha un paio di compiti.
+
+17
+00:01:27,280 --> 00:01:35,310
+Paul sodia parte offre il nostro dominio e mostrando il codice GSX o componente appropriato nella nostra app e per
+
+18
+00:01:35,320 --> 00:01:42,540
+Prima di tutto, ovviamente, deve analizzare il tuo percorso per capire dove l'utente
+
+19
+00:01:42,550 --> 00:01:43,510
+voleva andare.
+
+20
+00:01:43,610 --> 00:01:51,190
+Quindi, come sviluppatori, dobbiamo configurare diverse parti della nostra applicazione che supportiamo e il pacchetto del router
+
+21
+00:01:51,190 --> 00:01:58,510
+pu quindi leggere la nostra configurazione fondamentalmente in modo che sappia quali parti sono supportate e cosa
+
+22
+00:01:58,810 --> 00:02:04,940
+dovrebbe accadere quando l'utente Crea una di queste pauvres Questa  la prima passo.
+
+23
+00:02:05,050 --> 00:02:13,750
+Quindi render o caricher il codice GSX o componente appropriato in base a quale parte l'utente
+
+24
+00:02:13,750 --> 00:02:14,590
+lo sapr.
+
+25
+00:02:14,650 --> 00:02:22,330
+Questa  l'idea alla base del routing che carica il codice condizionale J code o il codice componente diverso per i diversi
+
+26
+00:02:22,330 --> 00:02:28,660
+payoff e usiamo un pacchetto router in modo che non sia necessario determinare quale percorso gli utenti effettuano
+
+27
+00:02:28,660 --> 00:02:29,190
+autonomamente.
+
+28
+00:02:29,260 --> 00:02:35,170
+Ora in questo modulo ti guider attraverso quel pacchetto di router attraverso le funzionalit delle
+
+29
+00:02:35,170 --> 00:02:41,350
+porte e come potresti usarlo nella tua applicazione per implementare pi pagine nella tua app singola.
+

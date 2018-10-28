@@ -1,0 +1,160 @@
+1
+00:00:02,130 --> 00:00:05,970
+In questo momento nella nostra applicazione siamo in grado di navigare.
+
+2
+00:00:06,030 --> 00:00:10,330
+Siamo in grado di farlo senza ricaricare la pagina.
+
+3
+00:00:10,350 --> 00:00:15,690
+Ora diamo un'occhiata alle informazioni che riceviamo nei componenti per il caricamento perch il router
+
+4
+00:00:15,690 --> 00:00:20,240
+re-act ci fornisce alcune informazioni aggiuntive sui puntelli di frutta roud caricati.
+
+5
+00:00:20,340 --> 00:00:26,340
+Diamo un'occhiata ai post presenti nel componente Mount che verranno eseguiti ogni volta che abbiamo cambiato una pagina
+
+6
+00:00:26,370 --> 00:00:30,690
+perch il componente  davvero rimosso e aggiunto al DOM tutto il tempo.
+
+7
+00:00:30,690 --> 00:00:33,610
+L non solo raggiungiamo il Web.
+
+8
+00:00:33,810 --> 00:00:40,720
+Facciamo anche uscire gli oggetti di scena che abbiamo semplicemente mettendo questi oggetti di scena.
+
+9
+00:00:40,730 --> 00:00:43,080
+Ora diamo un'occhiata a cosa abbiamo ottenuto qui.
+
+10
+00:00:43,250 --> 00:00:49,100
+Se vai a casa ora disastro oggetti e storia posizione e corrispondenza.
+
+11
+00:00:49,110 --> 00:00:51,280
+Questo non  qualcosa che abbiamo creato.
+
+12
+00:00:51,320 --> 00:00:53,520
+Questo  passato dal router re-act.
+
+13
+00:00:53,690 --> 00:00:54,260
+Nessuna corrispondenza.
+
+14
+00:00:54,260 --> 00:01:01,130
+Dacci qualche informazione sulla siccit della partita che hai visto che l'abbiamo definita per essere precisi il percorso e
+
+15
+00:01:01,140 --> 00:01:07,340
+tu sei trovato alid perci ei potenziali genitori tornano a quello che i genitori sono pi tardi.
+
+16
+00:01:07,430 --> 00:01:13,210
+Ottieni maggiori informazioni sulla posizione e ti permetti di vedere ad esempio la ricerca.
+
+17
+00:01:13,220 --> 00:01:19,880
+I genitori che abbiamo creato o qualcosa del genere e il frammento di hash e la storia della storia Optik
+
+18
+00:01:19,880 --> 00:01:28,040
+ha anche alcuni metodi che possiamo usare come push per interagire con quello e spingere una nuova pagina a livello di codice senza bisogno
+
+19
+00:01:28,040 --> 00:01:29,660
+di un componente di collegamento.
+
+20
+00:01:29,660 --> 00:01:32,420
+Questo  tutto ci che ti mostrer pi tardi.
+
+21
+00:01:32,420 --> 00:01:39,640
+Ora torniamo ai nostri componenti e blocchiamo anche gli oggetti di scena nel nuovo post.
+
+22
+00:01:39,830 --> 00:01:46,650
+L, quindi, possiamo anche aggiungere componenti montati e approfonditi l.
+
+23
+00:01:46,670 --> 00:01:52,590
+Ora voglio anche produrre i puntelli perch dovremmo vedere pi informazioni sul frammento e
+
+24
+00:01:52,590 --> 00:01:54,160
+sui parents di ricerca.
+
+25
+00:01:54,210 --> 00:02:01,700
+Quindi, facciamo clic sul nuovo post e ispezioniamo il Propst l e ora vediamo sotto corrisponde al percorso che abbiamo trovato l.
+
+26
+00:02:01,710 --> 00:02:04,830
+Vedi che  anche una corrispondenza esatta.
+
+27
+00:02:04,830 --> 00:02:07,460
+Ora non abbiamo impostato la corrispondenza esatta qui.
+
+28
+00:02:07,470 --> 00:02:11,340
+Non abbiamo l'opzione esatta ma siamo su un nuovo post.
+
+29
+00:02:11,340 --> 00:02:18,900
+Se fossi in un nuovo post, l'ho aggiunto manualmente, lo renderemmo comunque perch non abbiamo impostato la
+
+30
+00:02:18,900 --> 00:02:25,410
+corrispondenza esatta, ma vedremmo anche che non abbiamo una corrispondenza esatta nella propriet della corrispondenza.
+
+31
+00:02:25,410 --> 00:02:29,450
+Quindi questo davvero ci dice che  il pieno percorso.
+
+32
+00:02:29,640 --> 00:02:34,980
+Il percorso che abbiamo avviato nel conflitto o no ci ha anche dato pi informazioni sulla posizione.
+
+33
+00:02:35,010 --> 00:02:40,500
+Vedrai la ricerca che hai aggiunto alla fine e potresti modificarla manualmente per recuperare la
+
+34
+00:02:40,500 --> 00:02:41,400
+query parens.
+
+35
+00:02:41,640 --> 00:02:47,590
+E vedi il tuo frammento di hash a cui potresti quindi usare per saltare a una certa parte della tua
+
+36
+00:02:47,590 --> 00:02:50,380
+pagina o scorrere liberamente l qualunque cosa tu voglia.
+
+37
+00:02:50,850 --> 00:02:54,130
+Quindi questa  un'informazione aggiuntiva che otteniamo.
+
+38
+00:02:54,160 --> 00:03:01,530
+Questo fa parte degli oggetti di scena e puoi usarlo per esempio per estrarre i tuoi genitori equerry spostati su un frammento
+
+39
+00:03:01,530 --> 00:03:05,060
+di hash o fare qualsiasi altra cosa tu debba fare.
+
+40
+00:03:05,220 --> 00:03:10,350
+Vedremo in seguito come abbiamo usato questo oggetto storico per usare un metodo che ci fornisce.
+

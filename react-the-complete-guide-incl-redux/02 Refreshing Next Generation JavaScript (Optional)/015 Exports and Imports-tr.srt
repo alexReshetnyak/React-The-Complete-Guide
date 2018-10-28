@@ -1,0 +1,228 @@
+1
+00:00:02,290 --> 00:00:09,990
+Yeni Nesil javascript'in sunduu bir dier zellik, modler kod yazmaktan ok sayda
+
+2
+00:00:09,990 --> 00:00:12,980
+dosyaya ayrldnz javascript kodudur.
+
+3
+00:00:13,170 --> 00:00:17,500
+Akas, zaten kodumuzu birden ok dosyaya blebiliriz.
+
+4
+00:00:17,670 --> 00:00:22,720
+Onlar yalnzca ya html dosyalarmzda doru srayla ie aktarmak zorundayz.
+
+5
+00:00:22,920 --> 00:00:30,060
+Ve ihracat ve ithalat ifadelerinin ve szde modllerin arkasndaki fikir, bir javascript
+
+6
+00:00:30,060 --> 00:00:37,260
+dosyasnn iinde bir dizi dosyadan ierii ie aktarabilmemizdir, bylece javascript dosyalarnn kendilerinin
+
+7
+00:00:37,260 --> 00:00:38,850
+bamllklarn bilmesi salanr.
+
+8
+00:00:38,850 --> 00:00:40,510
+yle grnebilir.
+
+9
+00:00:40,530 --> 00:00:46,830
+Bize son bir den kii dokunuyor ve orada bir javascript nesnesi saklayan srekli bir insana sahibiz
+
+10
+00:00:47,430 --> 00:00:49,380
+ve bu ilgin bir blm.
+
+11
+00:00:49,440 --> 00:00:57,210
+Bunu varsaylan anahtar kelime olarak veriyoruz, hepsini bu dosyann varsaylan da aktarma olarak iaretleyen zel bir
+
+12
+00:00:57,210 --> 00:01:04,290
+anahtar kelime oluturuyor ve bunu baka bir yere aktarabiliriz ve ie aktarma ifadesi saniyede gsterilir.
+
+13
+00:01:04,290 --> 00:01:10,620
+Ayrca, burada birden fazla i parac ihra ettiimizde bir d yaayabiliriz, burada temiz diye adlandrlan
+
+14
+00:01:10,620 --> 00:01:15,810
+bir fonksiyon dnt ve baz veri nc bir dosyada bir say tutar.
+
+15
+00:01:15,810 --> 00:01:24,130
+Kii evet ve yardmc programmz ie aktarmamz gerekebilir, bu nedenle uygunluk veya dehann ithalat ifadeleri gerekir.
+
+16
+00:01:24,180 --> 00:01:29,970
+dosyadan bir eyler ie aktarrsak her zaman varsaylan da aktarmmz olaca anlamna gelir.
+
+17
+00:01:30,250 --> 00:01:38,460
+Ve burada, puann kiisinde greceiniz gibi birka farkl ithalat szdizimi vardr. Grdnz gibi, varsaylan anahtar kelimeyi kullanan JSE,
+
+18
+00:01:38,670 --> 00:01:40,890
+varsaylan anahtar kelime sadece bu
+
+19
+00:01:40,890 --> 00:01:49,470
+Dolaysyla bu durumda bir kii sabredilen kiiden kiiye srekli olarak evet evet, istediimiz her eyi isimlendirebiliriz, bu nedenle
+
+20
+00:01:49,470 --> 00:01:54,480
+basl bir iki yllk kiinin veya P R S'nin nemi yoktur.
+
+21
+00:01:54,480 --> 00:02:00,940
+Her zaman, varsaylan olarak varsaylan olarak iaretlediiniz eyi, yardmc program iin varsaylan anahtar kelime ile ifade eder.
+
+22
+00:02:00,990 --> 00:02:03,240
+Evet orada biraz farkl.
+
+23
+00:02:03,390 --> 00:02:13,050
+ki farkl sabiteden ie aktaryoruz ve bu nedenle ie aktarma szdizimi, belirli bir eyi o dosyadan aka
+
+24
+00:02:13,050 --> 00:02:16,170
+hedeflemek iin kvrck parantezleri kullanyor.
+
+25
+00:02:16,170 --> 00:02:21,890
+Bunlara adlandrlan da aktarmlar ad veriliyor, nk bunlar adyla ie aktaryoruz.
+
+26
+00:02:21,900 --> 00:02:28,500
+Temiz sabiti adyla ithal ediyoruz ve varsaylan olarak hibir eyi iaretlemediimiz iin Baystate'i adyla
+
+27
+00:02:28,500 --> 00:02:29,410
+ithal ediyoruz.
+
+28
+00:02:29,520 --> 00:02:35,870
+Dolaysyla javascript'in tam olarak neye iaret ettiini bilmek iin tam adn vermemiz gerekir ve
+
+29
+00:02:35,870 --> 00:02:37,860
+ad arlar kabul eder.
+
+30
+00:02:37,950 --> 00:02:43,770
+Bu arada Baystate'i virgl temiz ya da tersi ekilde ieren bir deyim olarak
+
+31
+00:02:43,770 --> 00:02:44,870
+da yazabilirsiniz.
+
+32
+00:02:44,880 --> 00:02:47,910
+Yani bunlar ithalat ve ihracattr.
+
+33
+00:02:47,970 --> 00:02:53,570
+Btn bunlar javascript dosyalarnza yazyorsunuz ve bunu btn puanlar iin ar kullanacaksnz.
+
+34
+00:02:53,760 --> 00:03:00,420
+Artk tm bu yeni nesil javascript zelliklerinde olduu gibi, tm tarayclarda byle almayacak.
+
+35
+00:03:00,420 --> 00:03:05,460
+En modern tarayclar bile bu projede kullanaca tm zellikleri desteklemez.
+
+36
+00:03:05,460 --> 00:03:11,700
+Bu nedenle, bir sonraki ders modlnde, ayn zamanda tm yeni jenerasyon javascript
+
+37
+00:03:11,710 --> 00:03:18,330
+zelliklerini u andaki genelletirilmi iyi zelliklerle birletiren bir projenin nasl hzl bir ekilde
+
+38
+00:03:18,630 --> 00:03:24,720
+kurulacan gstereceim, bylece bir gelitirici olarak bizsiz nesiller javascript kullanabileceiz hibir yerde
+
+39
+00:03:24,720 --> 00:03:25,940
+alan nakliye kodu.
+
+40
+00:03:25,980 --> 00:03:28,090
+Yani ithalat ve ihracat geri.
+
+41
+00:03:28,090 --> 00:03:32,290
+Bu, kullandmz szdizimidir ve bu derste oka kullanacanz greceksiniz.
+
+42
+00:03:32,310 --> 00:03:38,370
+Baz varyasyonlar da grebilirsiniz, nk varsaylan bir da aktarmaya sahipken bunu farkl
+
+43
+00:03:38,400 --> 00:03:39,330
+ekilde yazabiliriz.
+
+44
+00:03:39,330 --> 00:03:44,700
+Zaten kendi bana seebileceiniz kiinin o kiinin olduunu grdn.
+
+45
+00:03:44,760 --> 00:03:47,970
+Burada kii veya PR kullanrsanz nemi yoktur.
+
+46
+00:03:48,210 --> 00:03:54,450
+Adlandrlm bir da aktarmaya sahipseniz, aslnda dosyada export anahtaryla belirtilen tam ad
+
+47
+00:03:54,450 --> 00:03:55,770
+kullanmanz gerekir.
+
+48
+00:03:55,770 --> 00:03:57,400
+Hala yapabilecein ey.
+
+49
+00:03:57,480 --> 00:04:03,540
+As anahtar kelimesiyle ie aktarrken veya bir dosyada birden fazla adlandrlm da
+
+50
+00:04:03,540 --> 00:04:09,510
+aktarma var ise, o zaman tekrar serbeste seebileceiniz bir takma ad atayabilirsiniz.
+
+51
+00:04:09,510 --> 00:04:16,940
+Bu balang zel karakteriyle her eyi ie aktarabilir ve sonra bir takma ad atayabilir ve paket alnabilir.
+
+52
+00:04:16,950 --> 00:04:23,340
+Bu durumda, tm sabitleri ortaya karan bir javascript nesnesi olur ve
+
+53
+00:04:23,580 --> 00:04:31,320
+dosyadaki zellikleri ne olarak veriyorsanz, eylerin ihracatna erimek iin yalnzca Daut tabanl veri paketlenmi
+
+54
+00:04:31,320 --> 00:04:32,430
+Daut'u paketlersiniz.
+
+55
+00:04:32,460 --> 00:04:36,780
+Bu size kalm ve siz bunlar btn ders iin kullandm greceksiniz.
+
+56
+00:04:36,780 --> 00:04:39,020
+En sk kullanlan arama, en stteki arama.
+
+57
+00:04:39,030 --> 00:04:41,700
+thalat Cauley, ykseltme denilen eyleri braes'e balar.
+

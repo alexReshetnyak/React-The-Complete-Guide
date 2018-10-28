@@ -1,0 +1,204 @@
+1
+00:00:02,190 --> 00:00:04,630
+So let's use this firebase service.
+
+2
+00:00:04,680 --> 00:00:09,470
+As I said simply just as kind of a dummy backend because it's easy to get started with it
+
+3
+00:00:09,630 --> 00:00:12,600
+and for our needs here, it's free.
+
+4
+00:00:12,600 --> 00:00:18,480
+Check out the pricing page on firebase.google.com/pricing to learn what's included in
+
+5
+00:00:18,480 --> 00:00:21,580
+the free plan and when it's going to cost money,
+
+6
+00:00:21,600 --> 00:00:28,080
+that's especially important of course if you plan on using this in production environments for your
+
+7
+00:00:28,170 --> 00:00:29,670
+real application.
+
+8
+00:00:29,670 --> 00:00:34,370
+No worries though, if you stay in the free plan you actually can't be charged,
+
+9
+00:00:34,470 --> 00:00:40,080
+you'll just be limited once you exceed the free limits which of course you also don't want to encounter
+
+10
+00:00:40,170 --> 00:00:43,040
+in your production ready application.
+
+11
+00:00:43,050 --> 00:00:46,020
+Now enough of the talking about the pricing it's free for our needs
+
+12
+00:00:46,020 --> 00:00:49,810
+so let's click on go to console, for that you'll need a Google account,
+
+13
+00:00:49,830 --> 00:00:53,530
+so that is something you will need to create before you can continue
+
+14
+00:00:53,670 --> 00:00:57,710
+and on that console, you can now create a new project here.
+
+15
+00:00:57,960 --> 00:01:04,350
+So let's create the project I'm going to name it react my burger, you can choose any name you like
+
+16
+00:01:04,350 --> 00:01:09,450
+and then you choose a country or region here and you can choose the country where you are located.
+
+17
+00:01:09,510 --> 00:01:13,980
+this won't affect where the data will be stored at the end,
+
+18
+00:01:14,310 --> 00:01:16,320
+and then click create project.
+
+19
+00:01:16,450 --> 00:01:21,770
+As I said this will now configure up backend projects for you which automatically gives you some REST
+
+20
+00:01:21,780 --> 00:01:29,430
+API endpoints and MongoDB like database which you can use to store data so that we don't have to write
+
+21
+00:01:29,490 --> 00:01:31,080
+any server side code.
+
+22
+00:01:31,170 --> 00:01:33,300
+The console is going to look like this,
+
+23
+00:01:33,410 --> 00:01:34,520
+now no worries,
+
+24
+00:01:34,520 --> 00:01:37,430
+you don't need any deeper firebase understanding here.
+
+25
+00:01:37,440 --> 00:01:43,490
+We're going to use the database because we want to store data and firebase has this syntax where the
+
+26
+00:01:43,500 --> 00:01:48,810
+API endpoints are directly mapped to endpoints or to tables
+
+27
+00:01:48,840 --> 00:01:51,250
+you could say, in your database.
+
+28
+00:01:51,330 --> 00:01:55,620
+So it's super easy to get started storing data there.
+
+29
+00:01:55,650 --> 00:01:58,910
+Now this is the API endpoint
+
+30
+00:01:58,920 --> 00:02:04,080
+we're going to use so you of course have a different one for your project but this is the endpoint
+
+31
+00:02:04,080 --> 00:02:09,560
+where we can send data to you and then it will automatically be stored in that database.
+
+32
+00:02:09,570 --> 00:02:12,710
+Still we won't be connecting to the database directly,
+
+33
+00:02:12,780 --> 00:02:19,610
+We're just sending HTTP request and firebase is doing the mapping of HTTP endpoints to the database,
+
+34
+00:02:19,620 --> 00:02:25,260
+that's the cool thing about this service. Now for this to be available, there's one thing we need to set
+
+35
+00:02:25,260 --> 00:02:33,660
+up under rules here, on database rules you should set read and write access simply to true.
+
+36
+00:02:33,690 --> 00:02:36,910
+Now by default it's only enabled for authenticated users
+
+37
+00:02:37,000 --> 00:02:40,790
+and this makes sense for production ready application
+
+38
+00:02:41,010 --> 00:02:43,770
+but we haven't implemented user authentication yet
+
+39
+00:02:43,830 --> 00:02:46,070
+So we have no authenticated users.
+
+40
+00:02:46,260 --> 00:02:51,080
+So for the moment let's turn this to true so that everyone can read or write,
+
+41
+00:02:51,120 --> 00:02:55,950
+of course not something you want for your real application which you ship,
+
+42
+00:02:56,070 --> 00:03:00,020
+at least that's the most likely use case that you don't want to give global
+
+43
+00:03:00,030 --> 00:03:01,650
+read or write access.
+
+44
+00:03:01,650 --> 00:03:03,990
+Make sure to publish your updated rules
+
+45
+00:03:04,230 --> 00:03:06,120
+and with that we're already ready to go,
+
+46
+00:03:06,150 --> 00:03:06,930
+that's all.
+
+47
+00:03:06,960 --> 00:03:08,790
+We don't have to configure anything else,
+
+48
+00:03:08,850 --> 00:03:15,750
+we can get started and we can start sending HTTP requests to this endpoint or some nested endpoints as
+
+49
+00:03:15,750 --> 00:03:17,100
+you going to see.
+
+50
+00:03:17,250 --> 00:03:18,820
+Now with that in the next lecture,
+
+51
+00:03:18,840 --> 00:03:25,170
+let's dive right into that and let's start sending HTTP requests to our backend here.
+

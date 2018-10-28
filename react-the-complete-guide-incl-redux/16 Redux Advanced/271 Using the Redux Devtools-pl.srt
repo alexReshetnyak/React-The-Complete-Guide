@@ -1,0 +1,400 @@
+1
+00:00:02,240 --> 00:00:07,490
+W ostatnim wykadzie dodalimy wasne oprogramowanie porednie, ktre jest logowaniem Mitli, gdzie wyprowadzamy co
+
+2
+00:00:07,520 --> 00:00:09,800
+za kadym razem, gdy wysyamy akcj.
+
+3
+00:00:09,800 --> 00:00:15,680
+Nie jest to mie i pozwala nam uzyska wgld w nasz histori, ale tylko wtedy, gdy
+
+4
+00:00:16,310 --> 00:00:20,980
+wylemy akcj, ktra byaby bardziej przydatna, gdyby zawsze mogli zajrze do tej historii.
+
+5
+00:00:21,050 --> 00:00:27,530
+Teraz w dziale debugowania dowiedzielimy si o narzdziach reagowania DAPH, moemy tam spojrze na
+
+6
+00:00:27,530 --> 00:00:31,690
+wszystkie komponenty do komponentw i stan kadego z nich.
+
+7
+00:00:31,970 --> 00:00:37,430
+I na przykad dostawca dostaje ten sklep, ale tam widzimy tylko funkcje narzdzia.
+
+8
+00:00:37,430 --> 00:00:40,130
+Nie wiemy, co jest w sklepie.
+
+9
+00:00:40,250 --> 00:00:43,420
+Wic to nie jest teraz wspaniae.
+
+10
+00:00:43,490 --> 00:00:45,720
+S sposoby na obejcie tego.
+
+11
+00:00:45,800 --> 00:00:50,400
+Klikamy na skadnik licznika, na przykad widzimy aktualn warto licznika Propp.
+
+12
+00:00:50,600 --> 00:00:56,570
+Ale nadal jest to trudne, jeli musimy przej do komponentu, ktry dostaje pewn cz
+
+13
+00:00:56,810 --> 00:01:02,930
+stanu, aby zobaczy, e kawaek bdzie adniejszy, aby mc spojrze na cay sklep, a nawet
+
+14
+00:01:02,930 --> 00:01:06,220
+zobaczy akcje, ktre zostay wysane, moe nawet przewin.
+
+15
+00:01:06,770 --> 00:01:12,660
+No c, istniej specjalne narzdzia dla programistw, ktre moemy zainstalowa, jeli korzystasz z google do odczytu narzdzi programistycznych.
+
+16
+00:01:12,740 --> 00:01:14,080
+Znajdziesz dwa wyniki.
+
+17
+00:01:14,090 --> 00:01:19,840
+Drugi to narzdzia do rozbudowy czytnika ex-staff, a dokadniej trzeci redux dev tools -
+
+18
+00:01:19,850 --> 00:01:21,100
+nichrome web store.
+
+19
+00:01:21,230 --> 00:01:22,760
+To interesujca rzecz.
+
+20
+00:01:23,210 --> 00:01:26,060
+Powiniene zainstalowa to rozszerzenie w Chrome.
+
+21
+00:01:26,060 --> 00:01:30,340
+Da Ci to wietn wtyczk i moesz zajrze do swojego sklepu.
+
+22
+00:01:30,470 --> 00:01:33,510
+Teraz moesz przeczyta wicej instrukcji na temat tego drugiego wyniku.
+
+23
+00:01:33,560 --> 00:01:39,710
+W repozytorium rozszerze narzdzi redux dev znajdziesz wicej instrukcji na temat instalacji i konfiguracji,
+
+24
+00:01:39,710 --> 00:01:44,420
+ale bardzo proste jest tylko pobranie i zainstalowanie tego rozszerzenia i
+
+25
+00:01:44,420 --> 00:01:45,110
+prawie wszystko.
+
+26
+00:01:45,110 --> 00:01:46,780
+Potrzebny jest jeszcze jeden krok.
+
+27
+00:01:46,880 --> 00:01:49,820
+Ale oczywicie przeprowadzi ci przez wymagane kroki.
+
+28
+00:01:49,820 --> 00:01:53,740
+Teraz wane jest, aby nie patrze na pierwszy wynik tutaj.
+
+29
+00:01:53,750 --> 00:01:57,930
+S to wszystkie narzdzia programistyczne, ktre moesz programowo zaimplementowa w swojej aplikacji.
+
+30
+00:01:57,980 --> 00:02:00,280
+Chcemy mie to rozszerzenie przegldarki.
+
+31
+00:02:00,650 --> 00:02:03,410
+Widzimy wic kroki, ktre musimy zastosowa.
+
+32
+00:02:03,440 --> 00:02:10,550
+Teraz, gdy ju zainstalowae narzdzia def, jeli je otworzysz to narzdzia programistyczne, powiniene
+
+33
+00:02:10,550 --> 00:02:12,210
+wybra opcj redux.
+
+34
+00:02:13,810 --> 00:02:17,910
+Moe najpierw musi wrci do konsoli.
+
+35
+00:02:17,950 --> 00:02:21,760
+Powiniene zobaczy narzdzia do tworzenia redox otwarte tutaj po prawej stronie.
+
+36
+00:02:21,760 --> 00:02:27,810
+Teraz nie mona znale sklepu, poniewa nie wykonalimy drugiego kroku, w ktrym musimy zasadniczo
+
+37
+00:02:27,810 --> 00:02:35,830
+poinformowa o tym rozszerzeniu, e istnieje sklep w naszej aplikacji internetowej i dlatego musimy po prostu skonfigurowa tu
+
+38
+00:02:36,160 --> 00:02:43,510
+specjaln zmienn lub przekaza specjaln ulepszon wersj. lub powinnimy powiedzie do naszej metody tworzenia sklepu, poniewa uywamy
+
+39
+00:02:43,570 --> 00:02:46,470
+oprogramowania poredniego, musimy uy konfiguracji z wyprzedzeniem.
+
+40
+00:02:46,510 --> 00:02:52,930
+Ale nadal jest cakiem proste, skopiujmy t dziwnie nazwan zmienn tutaj na obiekt okna.
+
+41
+00:02:52,990 --> 00:02:59,140
+Rozszerzenie narzdzia redux def tools kompiluje tutaj istotnie zmienn, ktra jest wstrzykiwana przez rozszerzenie Chrome
+
+42
+00:02:59,140 --> 00:03:05,500
+do naszego javascript w czasie wykonywania, wic bdzie dostpna z powrotem w naszym kodzie w
+
+43
+00:03:05,530 --> 00:03:06,340
+nastpnej kolejnoci.
+
+44
+00:03:06,340 --> 00:03:07,690
+Tworzymy sklep.
+
+45
+00:03:07,910 --> 00:03:17,320
+Najpierw, zgodnie z instrukcj, utworzymy niestandardow sta, zanim zrobimy cokolwiek w sklepie, wszystkie nazwy
+
+46
+00:03:17,320 --> 00:03:27,370
+i komponujemy, a odpowiedzi bd nasz specjaln zmienn lub na wypadek, gdyby nie mona znale,
+
+47
+00:03:27,720 --> 00:03:32,580
+powrc do domylnej funkcji tworzenia przez redux.
+
+48
+00:03:32,690 --> 00:03:36,190
+Moesz zaimportowa go z pakietu redox.
+
+49
+00:03:36,340 --> 00:03:42,310
+Komponuj teraz troch jak poczone reduktory poczone reduktory pozwalaj nam czy reduktory dobrze komponowa, co
+
+50
+00:03:42,400 --> 00:03:48,880
+pozwala nam si czy, a stosowane przez Hansa oprogramowanie porednie stosuje si tylko do rodka, natomiast
+
+51
+00:03:48,910 --> 00:03:56,500
+jeli mamy wzmacniacze operowe takie jak do przechowywania narzdzi def, musimy uy komponowania, aby skomponowa zestaw odpowiedzi z funkcjami
+
+52
+00:03:56,500 --> 00:03:59,230
+narzdzi def i naszym oprogramowaniem poredniczcym.
+
+53
+00:03:59,380 --> 00:04:08,360
+Dlatego te dodajemy osobnego kompozytora, ktry z nami lub przypisuje tekst dynamicznie wstrzykuje zmienn d wielorybnicz.
+
+54
+00:04:08,380 --> 00:04:14,500
+Ale jeli nie, musimy nadal wraca do rodzimego rozwizania redoks, ktre oczywicie nie daje
+
+55
+00:04:14,500 --> 00:04:16,030
+nam guchy poparcia.
+
+56
+00:04:16,120 --> 00:04:20,410
+Wic teraz wzmacniacze kapo zasadniczo peni tylko funkcj.
+
+57
+00:04:20,440 --> 00:04:22,900
+Wracamy do dokumentacji.
+
+58
+00:04:23,080 --> 00:04:28,540
+Widzimy, e teraz powinnimy stworzy nasz sklep i uy tej nowej funkcji wzmacniania komponentu,
+
+59
+00:04:28,560 --> 00:04:35,420
+ktra wykorzystuje albo funkcj narzdzia def, albo wbudowan wbudowan funkcj, aby nastpnie przekaza mu zastosowanie oprogramowania poredniego.
+
+60
+00:04:35,490 --> 00:04:37,030
+Wic to zrobimy.
+
+61
+00:04:37,080 --> 00:04:44,750
+Owi Zastosuj oprogramowanie porednie w sklepie tworzenia ze wzmacniaczami kompozytorowymi.
+
+62
+00:04:45,010 --> 00:04:52,530
+Tak wic z t sta nazw tutaj komponuj enhancers wrap zastosuj do niej middleware, wic przepu zastosowanie middleware
+
+63
+00:04:52,540 --> 00:04:54,070
+jako funkcj do tego.
+
+64
+00:04:54,250 --> 00:04:58,450
+Nie musisz nic przekazywa o narzdzia def, poniewa zostanie ono przekazane automatycznie, jeli
+
+65
+00:04:58,450 --> 00:05:00,620
+dane wybrane z danych s dostpne.
+
+66
+00:05:00,850 --> 00:05:07,330
+Mamy wic konfiguracj, w ktrej powinnimy mc podczy rozszerzenie przegldarki do sklepu dziaajcego w
+
+67
+00:05:07,330 --> 00:05:08,920
+naszym kodzie JavaScript.
+
+68
+00:05:09,280 --> 00:05:15,550
+Spjrzmy, wrmy do aplikacji ponownie dziaajcej i tam ju powinnicie zobaczy,
+
+69
+00:05:15,550 --> 00:05:19,160
+e widok przeczytany X jest wypeniony yciem.
+
+70
+00:05:19,240 --> 00:05:24,230
+Tutaj widzisz wszystkie akcje, ktre zostay wyemitowane, jak akcja init, ktra dzieje si jako pierwsza.
+
+71
+00:05:24,340 --> 00:05:27,290
+Przeciwdziaa temu, aby uzyska inny pogld na ten temat.
+
+72
+00:05:27,640 --> 00:05:32,930
+I tam widzisz dla kadego dziaania, jaki to by rodzaj lub jaki adunek faktycznie go nosi.
+
+73
+00:05:32,950 --> 00:05:38,390
+Poza tym, cokolwiek oprcz tego, czym jest stan w tym momencie, zmienio stan.
+
+74
+00:05:38,710 --> 00:05:45,610
+Zawsze moesz sprawdzi stan za pomoc tego przycisku stanu w danym momencie.
+
+75
+00:05:45,610 --> 00:05:52,120
+Teraz, jeli wyl now akcj, na przykad odejmujc 15, zobaczysz, e zostanie ona tutaj dodana.
+
+76
+00:05:52,180 --> 00:05:56,780
+A jeli go klikniesz, zobaczymy, jaki jest stan. Czy to dziaa tutaj.
+
+77
+00:05:56,910 --> 00:06:00,280
+Moesz take zobaczy stary stan, jeli klikniesz akcj na akcji jednostki.
+
+78
+00:06:00,400 --> 00:06:06,520
+Widzisz wic stan w rnych momentach, kiedy zobaczysz, jak zmienia si akcja
+
+79
+00:06:06,670 --> 00:06:11,820
+odejmowania, aby wykry 15 z kontuaru, a zobaczysz, co akcja wykonaa.
+
+80
+00:06:12,280 --> 00:06:13,720
+To bardzo przydatne.
+
+81
+00:06:13,720 --> 00:06:19,510
+Teraz moemy dodawa coraz wicej i zawsze moemy zobaczy, jak dostosowalimy nasz stan i jaki jest nasz obecny
+
+82
+00:06:19,510 --> 00:06:21,910
+stan oraz jakie byo nasze pastwo w przeszoci.
+
+83
+00:06:21,910 --> 00:06:28,600
+Dlatego narzdzia deweloperskie Rydex s niezwykle przydatne i zdecydowanie zagbiaj si w dokumentacj, ktr wskazaem, aby
+
+84
+00:06:28,850 --> 00:06:31,150
+dowiedzie si wicej na ich temat.
+
+85
+00:06:31,150 --> 00:06:36,550
+Teraz jedn wan cech, ktr chc ci pokaza, jest czas podry dziki narzdziom redux dev.
+
+86
+00:06:36,640 --> 00:06:38,370
+Moesz podrowa w czasie.
+
+87
+00:06:38,500 --> 00:06:45,070
+Na przykad aplikacja, ktr tu widzimy, odzwierciedla stan po tych wszystkich dziaaniach.
+
+88
+00:06:45,340 --> 00:06:51,670
+Ale jeli chcemy przewin i powiedzie "wrmy do tego odejmowania", mona klikn "odejmuj",
+
+89
+00:06:51,670 --> 00:06:52,930
+a nastpnie "od".
+
+90
+00:06:53,170 --> 00:06:57,770
+A teraz widzisz, e wrcie do martwego punktu, w ktrym odrzucie 50.
+
+91
+00:06:57,930 --> 00:06:59,400
+Teraz stare stany nie s stracone.
+
+92
+00:06:59,400 --> 00:07:02,810
+Zawsze moesz tam wrci, klikajc ponownie.
+
+93
+00:07:03,130 --> 00:07:10,800
+Ale moesz rwnie wrci i na przykad pomi to, aby zaktualizowa swj stan, tak jakby nigdy nie zosta wysany
+
+94
+00:07:10,800 --> 00:07:11,700
+jako akcja.
+
+95
+00:07:11,740 --> 00:07:13,520
+I oczywicie mona to rwnie przerobi.
+
+96
+00:07:13,690 --> 00:07:19,810
+Jest to niezwykle przyjemna funkcja, ktra daje wiele moliwoci debugowania i szczeglnie
+
+97
+00:07:19,810 --> 00:07:21,130
+bardziej zoonych aplikacji.
+
+98
+00:07:21,140 --> 00:07:26,110
+Wspaniale jest upewni si, e wysyane s tylko akcje, ktre oczekuj, e zostan wysane i
+
+99
+00:07:26,110 --> 00:07:28,290
+dowiedzie si, dlaczego stan jest aktualnie dostpny.
+
+100
+00:07:28,330 --> 00:07:30,100
+C, w jakim jest stanie.
+

@@ -1,0 +1,104 @@
+1
+00:00:02,290 --> 00:00:09,610
+Zakocz ostatni wykad, ktry wykrylimy, e ten bd lub kiedy zmienimy warto naszego menu rozwijanego,
+
+2
+00:00:09,610 --> 00:00:16,720
+jest zwizany z nasz kontrol sprawdzania poprawnoci w kontenerze danych kontaktowych, w ktrym s sprawdzane.
+
+3
+00:00:16,720 --> 00:00:19,570
+Sprawdzamy, czy wymagane s reguy.
+
+4
+00:00:19,570 --> 00:00:21,820
+Problemem s zasady.
+
+5
+00:00:22,060 --> 00:00:23,050
+Co to daje.
+
+6
+00:00:23,050 --> 00:00:25,920
+Do czego odnosi si zasada tego argumentu.
+
+7
+00:00:26,260 --> 00:00:28,780
+Rzumy okiem na to, gdzie sprawdzamy poprawno.
+
+8
+00:00:28,780 --> 00:00:34,420
+Nazywamy to zmiennikiem wejciowym zmienionym handler i przekazujemy warto elementu formularza aktualizacji.
+
+9
+00:00:34,540 --> 00:00:38,410
+I dla regu zaktualizowano sprawdzanie elementu formularza.
+
+10
+00:00:38,410 --> 00:00:46,400
+Rzecz w tym, e ten obiekt walidacji nie istnieje dla rozwijanej metody dostawy.
+
+11
+00:00:46,810 --> 00:00:56,290
+Jeli wic nie prbujemy uzyska dostpu do czego, co nie istnieje, otrzymujemy bd na dwa sposoby
+
+12
+00:00:56,290 --> 00:00:56,970
+naprawy.
+
+13
+00:00:56,980 --> 00:01:05,770
+Pierwszym sposobem jest po prostu dodanie pustego obiektu sprawdzania poprawnoci do kontrolki rozwijanej.
+
+14
+00:01:05,770 --> 00:01:11,520
+Teraz dostp do wymaganego sprawdzania poprawnoci nie zakoczy si niepowodzeniem, ale po prostu zwrci undefined.
+
+15
+00:01:11,530 --> 00:01:16,340
+Bardzo lubi ten sposb, poniewa teraz wszystkie nasze kontrole s ustawione rwno.
+
+16
+00:01:16,360 --> 00:01:19,510
+Wszystkie maj waciwo sprawdzania poprawnoci i poprawn waciwo.
+
+17
+00:01:19,510 --> 00:01:23,170
+A jeli nie potrzebuj sprawdzania poprawnoci, powinno by po prostu puste.
+
+18
+00:01:23,170 --> 00:01:25,400
+Dlatego podoba mi si jego podejcie.
+
+19
+00:01:25,590 --> 00:01:32,380
+Alternatyw byoby dodawanie sprawdzania i sprawdzania poprawnoci oraz sprawdzanie regu.
+
+20
+00:01:32,500 --> 00:01:38,890
+Jeli jest to prawda, to jest to tylko, jeli ma znale i jeli nie jest ydowskie, wic dlaczego
+
+21
+00:01:38,890 --> 00:01:41,390
+dodanie znaku wykrzyknika po prostu zwraca true.
+
+22
+00:01:41,500 --> 00:01:47,430
+Dlatego zawsze zwracaj warto true dla kadego wyniku sprawdzania poprawnoci, jeli nie zdefiniowano regu sprawdzania poprawnoci.
+
+23
+00:01:47,470 --> 00:01:54,490
+Moemy oczywicie rwnie wdroy oba zabezpieczenia podwjne, ale znowu podoba mi si podejcie tutaj, poniewa ten
+
+24
+00:01:54,490 --> 00:02:00,250
+pusty obiekt walidacji jest najbardziej potrzebny, poniewa sprawia, e wszystkie kontrolki s jednakowo skonfigurowane.
+
+25
+00:02:00,250 --> 00:02:06,840
+Teraz, jeli to dodano Jeli zapisz teraz, moemy ponownie zmieni warto bez otrzymywania bdw.
+
+26
+00:02:06,850 --> 00:02:07,600
+Jak widzisz.
+

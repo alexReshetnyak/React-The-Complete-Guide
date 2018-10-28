@@ -1,0 +1,84 @@
+1
+00:00:02,080 --> 00:00:07,210
+En la ltima conferencia usamos el enrutador para renderizar algunos cdigos GSX.
+
+2
+00:00:07,210 --> 00:00:13,840
+Y tambin aprendi sobre exect y que puede renderizar tantos Routier como desee.
+
+3
+00:00:13,870 --> 00:00:20,980
+Ahora, en esta conferencia, quiero hacer justicia a todos los comentarios y, por cierto, comentar en J. S. X mediante el uso de un
+
+4
+00:00:20,980 --> 00:00:27,670
+comentario en bloque con la estrella Slash y envolviendo esto con llaves y ahora agregue otra ruta donde
+
+5
+00:00:27,670 --> 00:00:29,690
+analizar todo ser una barra inclinada.
+
+6
+00:00:29,710 --> 00:00:38,260
+Estoy buscando una coincidencia exacta y ahora, sin embargo, no quiero usar render. Quiero usar una propiedad diferente
+
+7
+00:00:38,380 --> 00:00:39,950
+que pueda pasar.
+
+8
+00:00:40,060 --> 00:00:46,420
+su nombre indica, esto nos permite pasar un componente que debera representarse en el lugar de esta ruta.
+
+9
+00:00:46,420 --> 00:00:49,390
+Quiero utilizar la propiedad del componente y, como
+
+10
+00:00:49,390 --> 00:00:55,260
+Ahora el componente no es una cadena, por lo que no escribimos publicaciones aqu que no funcionaran.
+
+11
+00:00:55,330 --> 00:01:02,180
+El componente debe ser una referencia a la funcin o clase que queremos usar.
+
+12
+00:01:02,200 --> 00:01:09,910
+As que aqu simplemente para lo que importamos desde el componente post donde previamente usamos directamente en J como X, simplemente pasamos
+
+13
+00:01:10,690 --> 00:01:14,060
+esto y llamamos a los frenos de esa manera.
+
+14
+00:01:14,110 --> 00:01:21,610
+Y ahora si funciona una caja fuerte y echamos un vistazo a nuestra aplicacin y volvemos a la barra
+
+15
+00:01:21,700 --> 00:01:24,280
+oblicua, vemos todas las publicaciones cargadas aqu.
+
+16
+00:01:24,580 --> 00:01:32,020
+el caso de uso que probablemente va a utilizar. Un poco ms de renderizado es ms importante para los mensajes seguros.
+
+17
+00:01:32,580 --> 00:01:38,380
+Entonces, esto ahora nos muestra cmo podemos cargar componentes al igual que con renderizado, pero con la
+
+18
+00:01:38,380 --> 00:01:40,570
+propiedad del componente, obviamente este es
+
+19
+00:01:40,570 --> 00:01:45,640
+En realidad, no debera renderizar aqu el cdigo de todo un componente, aunque tcnicamente
+
+20
+00:01:45,670 --> 00:01:52,360
+podra hacer eso, pero eso arruinar su cdigo y har que sea muy difcil mantenerlo, pero cargar componentes como
+
+21
+00:01:52,360 --> 00:01:55,330
+este ao es el caso predeterminado que usar mucho.
+

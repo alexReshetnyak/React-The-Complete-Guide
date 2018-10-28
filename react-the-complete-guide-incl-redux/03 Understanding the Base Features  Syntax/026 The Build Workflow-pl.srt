@@ -1,0 +1,408 @@
+1
+00:00:02,610 --> 00:00:07,170
+Dlatego chcemy stworzy lokalny projekt reagowania. Z lokalnym, mam na myli, e
+
+2
+00:00:07,170 --> 00:00:13,430
+nie uywamy codepen, ale zamiast tego bdziemy mieli projekt na naszej maszynie, gdzie bdziemy mogli pracowa
+
+3
+00:00:13,440 --> 00:00:15,600
+z naszym wasnym IDE lub edytorem.
+
+4
+00:00:15,600 --> 00:00:18,010
+Jest to oczywicie sposb, w jaki chcemy
+
+5
+00:00:18,030 --> 00:00:19,810
+pracowa, reagowa, chcemy mie go
+
+6
+00:00:19,830 --> 00:00:21,890
+na naszej maszynie, mamy tam wicej
+
+7
+00:00:21,930 --> 00:00:27,840
+dostpnych funkcji, jest to wygodniejsze ni uycie edytora stron internetowych i kodeku uywanego wczeniej lub JSBin,
+
+8
+00:00:27,840 --> 00:00:33,960
+z ktrego korzystalimy opcjonalny drugi modu to naprawd wicej placw zabaw ni prawdziwe rodowisko pracy dla prawdziwych
+
+9
+00:00:33,960 --> 00:00:34,710
+projektw.
+
+10
+00:00:34,860 --> 00:00:36,990
+Dlatego utworzymy projekt lokalny, a
+
+11
+00:00:37,140 --> 00:00:41,330
+reakcja to co wicej ni tylko import dwch plikw.
+
+12
+00:00:41,350 --> 00:00:43,050
+importowalimy w codepen.
+
+13
+00:00:43,200 --> 00:00:47,020
+Potrzebujemy bardziej skomplikowanego przepywu pracy dla prawdziwych projektw i
+
+14
+00:00:47,130 --> 00:00:51,380
+jest to zalecane zarwno dla aplikacji pojedynczych, jak i wielostronicowych.
+
+15
+00:00:51,390 --> 00:00:57,300
+Pytanie brzmi oczywicie, dlaczego potrzebujemy bardziej skomplikowanego przepywu pracy i jak moemy go osign?
+
+16
+00:00:57,300 --> 00:01:05,270
+Zaczn od tego, dlaczego podczas budowania prawdziwej aplikacji chcemy zoptymalizowa nasz kod.
+
+17
+00:01:05,280 --> 00:01:11,490
+Nie przejmowalimy si tym w projekcie demonstracyjnym w pierwszym module kursu na codepen, ale
+
+18
+00:01:11,490 --> 00:01:19,980
+dla duej aplikacji reagowania, chcemy przesa kod, ktry jest tak may, jak to tylko moliwe i zoptymalizowany, jak to
+
+19
+00:01:20,050 --> 00:01:23,400
+moliwe, oczywicie, poniewa to zwiksza wydajno nasza aplikacja.
+
+20
+00:01:23,400 --> 00:01:25,390
+Dodatkowo i to jest bardzo
+
+21
+00:01:25,470 --> 00:01:28,720
+wane, chcemy wykorzysta te funkcje javascript nastpnej generacji,
+
+22
+00:01:28,770 --> 00:01:32,520
+o ktrych uczyem ci w ostatnim opcjonalnym module.
+
+23
+00:01:32,610 --> 00:01:37,400
+Teraz chcemy tego uy, poniewa znacznie uatwia nam ycie jako programisty, a
+
+24
+00:01:37,650 --> 00:01:43,350
+to jest faktyczny standard reagowania, ktry polega na wykorzystaniu wszystkich nastpnych funkcji genw, poniewa kod
+
+25
+00:01:43,350 --> 00:01:45,970
+jest szczuplejszy, atwiejszy do odczytania, szybszy, mniej
+
+26
+00:01:45,990 --> 00:01:48,980
+podatny na bdy i wiele innych powodw.
+
+27
+00:01:49,020 --> 00:01:51,480
+Wic naprawd powiniene uywa tych funkcji, nie
+
+28
+00:01:51,480 --> 00:01:54,230
+jest to tylko co fajnego, opcjonalne, zdecydowanie polecam
+
+29
+00:01:54,330 --> 00:01:56,550
+uywanie tych funkcji, jest to uwaane
+
+30
+00:01:56,630 --> 00:02:01,560
+za najlepsz praktyk i wanie tego ucz ci w tym kursie, poniewa oczywicie chc
+
+31
+00:02:01,560 --> 00:02:03,170
+ci nauczy najlepszych praktyk.
+
+32
+00:02:03,510 --> 00:02:09,060
+Chcemy wic korzysta z funkcji javascript nastpnej generacji, aby mie atwiejszy czas na napisanie
+
+33
+00:02:09,060 --> 00:02:09,910
+kodu podatnego
+
+34
+00:02:10,320 --> 00:02:16,100
+na bdy, a przy tym wszystkim potrzebujemy przepywu pracy, ktry obsuguje te funkcje, nawet w
+
+35
+00:02:16,140 --> 00:02:22,770
+przypadku kodu poredniego, ktry to zrobi. Pamitasz list preprocesorw, w ktrej przeczylimy si na Babel? To za kulisami odblokowao
+
+36
+00:02:22,770 --> 00:02:31,710
+par narzdzi do kompilacji, ktre analizowayby nasz kod i wspieray JSX, na przykad ten kod HTML
+
+37
+00:02:31,710 --> 00:02:33,140
+w skadni javascript.
+
+38
+00:02:33,300 --> 00:02:35,670
+Chcemy wic wykorzysta te funkcje
+
+39
+00:02:35,760 --> 00:02:43,020
+genw, w zasadzie chcemy mie moliwo napisania kodu ES6 lub wyszego i nadal dostarcza kod, ktry
+
+40
+00:02:43,020 --> 00:02:49,710
+dziaa na jak najwikszej liczbie przegldarek, a nie wiele przegldarek obsuguje wszystkie te funkcje nastpnej generacji.
+
+41
+00:02:49,710 --> 00:02:54,590
+Dlatego potrzebujemy przepywu pracy, ktry faktycznie kompiluje te funkcje.
+
+42
+00:02:54,720 --> 00:02:57,140
+Na koniec chcemy by bardziej produktywni,
+
+43
+00:02:57,180 --> 00:03:02,850
+wczajc w to funkcje javascript nastpnej generacji, ktre czsto pozwalaj nam pisa bardziej skondensowany
+
+44
+00:03:03,180 --> 00:03:06,880
+kod, ale take takie rzeczy jak automatyczne prefiksowanie CSS.
+
+45
+00:03:06,960 --> 00:03:13,410
+By moe wiesz, e prefiksy CSS s rzecz, aby osign jak najszersz obsug przegldarek
+
+46
+00:03:13,410 --> 00:03:14,850
+dla funkcji CSS.
+
+47
+00:03:15,090 --> 00:03:17,860
+Teraz rczne dodawanie tych prefiksw jest do irytujce,
+
+48
+00:03:17,940 --> 00:03:19,990
+wic ich automatyczne dodawanie jest mie.
+
+49
+00:03:20,040 --> 00:03:21,560
+Lub rozway linting,
+
+50
+00:03:21,570 --> 00:03:28,740
+wic narzdzie, ktre faktycznie ostrzega, jeli piszesz sub-optymalny kod, ktry byby miy, aby mie rwnie, nie
+
+51
+00:03:28,800 --> 00:03:34,990
+jest cile wymagane, ale mia funkcja i wszystkie te rzeczy powinny by czci workflow budowy.
+
+52
+00:03:35,100 --> 00:03:41,370
+Teraz, aby je zaimplementowa, potrzebujemy kilku narzdzi, ktre pozwol im uruchomi nasz kod, aby
+
+53
+00:03:41,370 --> 00:03:49,020
+ostrzec nas w przypadku lintingu lub skompilowa kod do kodu, ktry dziaa na jak najwikszej liczbie przegldarek, podczas
+
+54
+00:03:49,170 --> 00:03:57,040
+gdy my jako programista. pisanie bardzo nowoczesnego kodu, ktry sam w sobie nie dziaaby w tak wielu przegldarkach.
+
+55
+00:03:57,420 --> 00:04:04,230
+Oto dlaczego, z kilku powodw, dla ktrych pisanie tego rodzaju kodu jest podane i dlaczego potrzebujemy bardziej zoonego
+
+56
+00:04:04,230 --> 00:04:10,350
+procesu tworzenia kompilacji, ktry faktycznie pozwala nam napisa ten kod, ktry faktycznie optymalizuje kod dla nas,
+
+57
+00:04:11,010 --> 00:04:13,570
+a do tego, jak oczywicie Jest istotna.
+
+58
+00:04:13,800 --> 00:04:16,210
+Jak moemy osign taki przepyw pracy?
+
+59
+00:04:16,230 --> 00:04:19,110
+Przede wszystkim potrzebujemy narzdzia do zarzdzania zalenociami, zalenoci s
+
+60
+00:04:19,140 --> 00:04:25,310
+po prostu bibliotekami stron trzecich, pakietami javascript stron trzecich. React na przykad to zaleno, reakcja
+
+61
+00:04:25,330 --> 00:04:31,640
+dom jest zalenoci, a take wszystkie wbudowane narzdzia, ktrych bdziemy potrzebowa na
+
+62
+00:04:31,710 --> 00:04:32,930
+kocu, to zalenoci.
+
+63
+00:04:33,120 --> 00:04:38,980
+Tak wic kompilator dla nastpnego gen javascript do aktualnego gen javascript, to jest zaleno.
+
+64
+00:04:39,150 --> 00:04:40,860
+I uyjemy tutaj npm,
+
+65
+00:04:40,980 --> 00:04:48,060
+przdza bdzie kolejnym narzdziem, ktrego moesz uy, ale uyjemy menedera pakietw wza npm, narzdzia, ktre
+
+66
+00:04:48,390 --> 00:04:54,130
+pozwala nam tylko zarzdza pakietami i ktry jest tylko standardem defacto do
+
+67
+00:04:54,240 --> 00:04:57,030
+zarzdzania zalenociami rwnie na frontowych projektach.
+
+68
+00:04:57,030 --> 00:05:04,960
+Poza tym narzdziem do zarzdzania zalenociami potrzebujemy pakietu pakujcego, poniewa chcemy pisa kod moduowy i dzieli go na wiele
+
+69
+00:05:04,960 --> 00:05:10,450
+plikw, tak aby kady plik mia jasne zadanie, wyrane skupienie, a zatem jest
+
+70
+00:05:10,480 --> 00:05:12,540
+atwiejszy w utrzymaniu i zarzdzaniu.
+
+71
+00:05:12,850 --> 00:05:19,810
+Ale wtedy chcemy si upewni, e cay ten kod zostanie doczony do kilku plikw w kocu, gdy
+
+72
+00:05:19,810 --> 00:05:26,680
+go wylemy, poniewa przegldarki nie obsuguj nawet plikw podzielonych, starsze przegldarki przynajmniej nie robi, a moe rwnie
+
+73
+00:05:26,980 --> 00:05:33,010
+nawet jeli by to poparli, nie jest tak optymalne, aby wysya tysice prb do wszystkich
+
+74
+00:05:33,010 --> 00:05:35,020
+tych maych, skupionych plikw.
+
+75
+00:05:35,170 --> 00:05:40,120
+Dlatego chcemy mie tego bundlera, a uyjemy webpacka, ktry jest standardem defacto do czenia w
+
+76
+00:05:40,120 --> 00:05:40,720
+te dni.
+
+77
+00:05:40,720 --> 00:05:44,250
+Fajn rzecz w pakiecie internetowym jest to, e
+
+78
+00:05:44,320 --> 00:05:50,140
+nie tylko pakuje pliki, ale pozwala rwnie na zastosowanie kilku innych krokw kompilacji,
+
+79
+00:05:50,140 --> 00:05:57,370
+zanim zrobi to sprzeda pakietowa, na przykad wspomniana kompilacja nastpnego generatora javascript, ktra wymaga innego narzdzia, Babel.
+
+80
+00:05:57,400 --> 00:06:04,420
+Potrzebujemy kompilatora, ktry wykonuje t kompilacj javascript, co oznacza tumaczenie z nowoczesnych funkcji na
+
+81
+00:06:04,690 --> 00:06:12,310
+obejcia, ktre dziaa rwnie na starszych przegldarkach, a my uyjemy Babel oraz ustawie wstpnych, ktre
+
+82
+00:06:12,310 --> 00:06:19,100
+mona podczy do konfiguracji webpacka, aby stanowiy cz tej sprzeday pakietowej i optymalizacji proces.
+
+83
+00:06:19,180 --> 00:06:25,900
+I na koniec chcemy uywa serwera programistycznego do testowania naszej aplikacji lokalnie na naszym komputerze, serwer programistyczny
+
+84
+00:06:25,900 --> 00:06:32,590
+to serwer WWW, ale dziaajcy na naszym komputerze. Moemy otworzy plik HTML, klikajc go dwukrotnie,
+
+85
+00:06:32,590 --> 00:06:39,370
+ale uyjemy tego protokou plikw i nie bdzie poprawnie emulowa aplikacji uruchomionej na
+
+86
+00:06:39,460 --> 00:06:40,570
+serwerze internetowym.
+
+87
+00:06:40,780 --> 00:06:45,300
+Potrzebujemy wic serwera WWW i moemy oczywicie uruchomi go na naszym lokalnym komputerze.
+
+88
+00:06:45,460 --> 00:06:49,760
+Serwer jest wtedy dostpny tylko dla nas, ale to wszystko, czego potrzebujemy jako
+
+89
+00:06:49,870 --> 00:06:55,020
+programista, i tam naprawd moemy zobaczy uruchamianie aplikacji, poniewa bdzie ona dziaa na prawdziwym serwerze.
+
+90
+00:06:55,060 --> 00:06:59,570
+Potrzebujemy tych wszystkich rzeczy i wydaje si, e to bardzo
+
+91
+00:06:59,590 --> 00:07:07,000
+skomplikowane w konfiguracji, dobra jest to, e nie. Przedstawi ci narzdzie, ktre stworzy projekt wspierajcy wszystkie
+
+92
+00:07:07,000 --> 00:07:12,490
+te rzeczy po wyjciu z pudeka z zerow konfiguracj w nastpnych wykadach.
+
+93
+00:07:12,490 --> 00:07:18,010
+Zainstalujemy to narzdzie razem i jest to narzdzie stworzone przez zesp reagujcy i
+
+94
+00:07:18,170 --> 00:07:24,380
+spoeczno oraz oficjalnie zalecany sposb tworzenia nowych aplikacji reagowania, poniewa jest to oglny temat tego
+
+95
+00:07:24,550 --> 00:07:32,000
+kursu, naucz ci rzeczy w najlepszej praktyce i zalecanym sposobie , wic wszystkie ustawienia s do atwe.
+
+96
+00:07:32,080 --> 00:07:38,170
+I na marginesie, jeli nadal chcesz zagbi si w to, jak dziaa to za kulisami i
+
+97
+00:07:38,170 --> 00:07:39,610
+chcesz je skonfigurowa od
+
+98
+00:07:39,610 --> 00:07:46,030
+zera, to dostaem rwnie modu do tego pod koniec kursu, na ktrym zbudujesz aplikacj reagowania, Reakcja na
+
+99
+00:07:46,180 --> 00:07:47,560
+projekt od zera.
+
+100
+00:07:47,560 --> 00:07:50,080
+Teraz, wiesz, czego potrzebujemy i jak,
+
+101
+00:07:50,080 --> 00:07:55,990
+teraz zagbimy si w to narzdzie, o ktrym wspomniaem, i nauczmy si, jak zacz nowy
+
+102
+00:07:55,990 --> 00:07:58,550
+projekt reagowania, wspierajcy wszystkie te funkcje.
+

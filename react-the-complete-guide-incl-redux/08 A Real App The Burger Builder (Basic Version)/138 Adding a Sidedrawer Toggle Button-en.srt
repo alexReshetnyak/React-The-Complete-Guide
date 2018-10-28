@@ -1,0 +1,308 @@
+1
+00:00:02,120 --> 00:00:08,210
+So we added the backdrop, we added the logic to get rid of the sideDrawer, the next step is to implement
+
+2
+00:00:08,270 --> 00:00:10,190
+this toggle button here.
+
+3
+00:00:10,220 --> 00:00:16,040
+So to implement some component which allows us to click on and which will then trigger something which
+
+4
+00:00:16,130 --> 00:00:20,840
+shows the sideDrawer. Now, this is a good exercise for you,
+
+5
+00:00:20,870 --> 00:00:25,720
+it of course involves a couple of steps and there certainly is more than one way of achieving this
+
+6
+00:00:25,880 --> 00:00:31,520
+but feel free to try this on your own either by not creating a component and simply hooking up this
+
+7
+00:00:31,520 --> 00:00:38,660
+div with a click listener to take the easier route or outsource this into its own component, maybe create
+
+8
+00:00:38,660 --> 00:00:45,620
+a hamburger icon there, make it clickable and in the end make sure that you somehow get to the layout component
+
+9
+00:00:45,950 --> 00:00:49,530
+and adjust the state to set showSideDrawer to true.
+
+10
+00:00:49,880 --> 00:00:58,100
+Set it to false initially here then and make sure that you now can somehow click something in the toolbar,
+
+11
+00:00:58,100 --> 00:01:04,460
+set the state here as I just said and therefore change open, the open property of the sideDrawer because
+
+12
+00:01:04,460 --> 00:01:07,650
+it's dependent on the showSideDrawer state.
+
+13
+00:01:07,670 --> 00:01:09,070
+Now this is a good practice,
+
+14
+00:01:09,140 --> 00:01:13,280
+I'll give you a couple of seconds to post the video and try this on your own and then I'll show you
+
+15
+00:01:13,280 --> 00:01:19,840
+my approach.
+
+16
+00:01:19,840 --> 00:01:21,820
+So were are you successful?
+
+17
+00:01:22,030 --> 00:01:23,170
+Let's now solve it together
+
+18
+00:01:23,170 --> 00:01:25,480
+but I really urge you to try it on your own
+
+19
+00:01:25,480 --> 00:01:33,430
+first. We want to make sure that we can click this menu button in the toolbar and I want to outsource menu
+
+20
+00:01:33,430 --> 00:01:41,110
+into its own component which I want to also style as a hamburger icon. I'll place this component in the
+
+21
+00:01:41,110 --> 00:01:48,670
+sideDrawer folder because it belongs to the sideDrawer and I will name it drawerToggle, in there I'll add
+
+22
+00:01:48,670 --> 00:01:52,000
+a drawerToggle.js file.
+
+23
+00:01:52,030 --> 00:01:59,100
+This will be a simple component as most of our components are a function which receives props and returns
+
+24
+00:01:59,100 --> 00:02:00,380
+some jsx
+
+25
+00:02:00,820 --> 00:02:09,800
+and for that of course we need to import react from react. Then I'll export this
+
+26
+00:02:09,840 --> 00:02:11,140
+as a default,
+
+27
+00:02:11,190 --> 00:02:13,990
+so export drawerToggle is a default
+
+28
+00:02:14,310 --> 00:02:18,430
+and for now I'll simply add the div with the text menu here
+
+29
+00:02:18,570 --> 00:02:24,420
+but I will change this as I just said, I will change this to a hamburger icon in the future.
+
+30
+00:02:24,540 --> 00:02:26,710
+For now let's use that though,
+
+31
+00:02:26,790 --> 00:02:34,580
+so make sure to save that drawerToggle file and then move to the toolbar file and import it. Import
+
+32
+00:02:34,650 --> 00:02:44,580
+drawerToggle from imported from the sideDrawer folder, from the drawerToggle folder and drawerToggle.js
+
+33
+00:02:44,580 --> 00:02:52,320
+file and replace this placeholder here with the self-closing drawerToggle component.
+
+34
+00:02:52,980 --> 00:02:59,060
+Now the goal is to add a click listener to the div here, so I'll add on click
+
+35
+00:02:59,400 --> 00:03:05,670
+and I then want to bind this to some property which I expect to receive, the click property which should
+
+36
+00:03:05,750 --> 00:03:11,690
+as always in this case hold a reference to the method which should get executed on a click.
+
+37
+00:03:11,700 --> 00:03:18,150
+So now in the toolbar component, let's add that clicked property to the drawerToggle and there of course
+
+38
+00:03:18,180 --> 00:03:25,830
+we also don't have that method defined in here but we will use the toolbar in the layout component where
+
+39
+00:03:25,830 --> 00:03:27,780
+we will add this method.
+
+40
+00:03:27,780 --> 00:03:34,250
+So ultimately we'll set some property on the tool bar and passed down the method reference from there.
+
+41
+00:03:34,590 --> 00:03:39,640
+So let's expect this property to be set in the tool bar and I'll name it
+
+42
+00:03:39,640 --> 00:03:42,800
+drawerToggleClicked,
+
+43
+00:03:43,020 --> 00:03:47,610
+this will be a prop I'll receive which holds a reference to the method which should get executed,
+
+44
+00:03:47,640 --> 00:03:49,840
+so drawerToggleClicked.
+
+45
+00:03:49,940 --> 00:03:50,220
+With that,
+
+46
+00:03:50,220 --> 00:03:55,250
+let's go to layout component and there I'll add the
+
+47
+00:03:55,470 --> 00:03:57,330
+sideDrawerToggleHandler
+
+48
+00:03:57,720 --> 00:04:00,180
+Now it actually will work as a toggle
+
+49
+00:04:00,180 --> 00:04:02,750
+so from open to close and the other way around
+
+50
+00:04:03,050 --> 00:04:08,660
+but in our app, we will never be able to see that close functionality because the sideDrawer will overlap it,
+
+51
+00:04:08,790 --> 00:04:14,010
+I'm still going to create it in this way because if we ever were to add this toggle in some other place
+
+52
+00:04:14,020 --> 00:04:16,760
+in the app, it would really work as a toggle.
+
+53
+00:04:17,160 --> 00:04:19,710
+Now anyways here, I now as I just said
+
+54
+00:04:19,750 --> 00:04:22,590
+want to toggle the displaying state
+
+55
+00:04:22,630 --> 00:04:31,490
+of the sideDrawer. So we can call this.state and now set showSideDrawer to what it's currently not, to
+
+56
+00:04:31,500 --> 00:04:36,890
+not this.state.showSideDrawer. So if showSideDrawer is true,
+
+57
+00:04:36,960 --> 00:04:42,830
+it will now be set to false and the other way around. This approach here has a flaw though,
+
+58
+00:04:42,840 --> 00:04:51,770
+do you see which? I mentioned earlier that if you plan on using the state, insert state, you shouldn't do
+
+59
+00:04:51,770 --> 00:04:58,310
+it like this because due to the asynchronous nature of set state, this may lead to unexpected outcomes.
+
+60
+00:04:58,490 --> 00:05:08,450
+So instead use the function form, expect the previous state as input and in there, simply return the object
+
+61
+00:05:08,450 --> 00:05:12,070
+you want to set as a new state or you want to merge into the state
+
+62
+00:05:12,080 --> 00:05:17,750
+I should say. And of course therefore in there, you don't access this.state but you use the previous state
+
+63
+00:05:17,750 --> 00:05:20,780
+you get passed into this function automatically.
+
+64
+00:05:20,780 --> 00:05:25,480
+This is the clean way of setting the state when it depends on the old state.
+
+65
+00:05:25,490 --> 00:05:31,270
+Now we have a secure way of toggling that and changing showSideDrawer,
+
+66
+00:05:31,400 --> 00:05:38,780
+now of course we want to call these and we should pass it as a reference to the toolbar now because
+
+67
+00:05:38,900 --> 00:05:44,960
+in the toolbar, we're expecting this drawerToggle click property which holds a reference to the method
+
+68
+00:05:44,960 --> 00:05:47,960
+which should get executed when the toggle is clicked.
+
+69
+00:05:47,990 --> 00:05:53,690
+So let's use that in the layout component here on the toolbar, drawerToggleClicked was the property name
+
+70
+00:05:54,200 --> 00:05:58,740
+and let's pass a reference to the newly created sideDrawerToggleHandler
+
+71
+00:05:59,120 --> 00:06:03,890
+and as always, never execute this method just pass a reference.
+
+72
+00:06:04,280 --> 00:06:05,940
+Make sure to save all files
+
+73
+00:06:05,940 --> 00:06:13,160
+now, let's go back to the application and let's take Manu and indeed it slides in, backdrop removes it
+
+74
+00:06:13,610 --> 00:06:16,130
+and we can go back and forth.
+
+75
+00:06:16,160 --> 00:06:17,090
+So this is working,
+
+76
+00:06:17,090 --> 00:06:18,120
+that's pretty cool.
+
+77
+00:06:18,260 --> 00:06:25,490
+Let's now turn this boring not so pretty menu text here into a hamburger icon in the next lecture.
+

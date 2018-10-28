@@ -1,0 +1,96 @@
+1
+00:00:02,340 --> 00:00:07,460
+As que ya nos ensuciamos las manos y vimos cmo reaccionamos los blgaros.
+
+2
+00:00:07,970 --> 00:00:12,620
+Ahora todas las respuestas sobre por qu es posible que deseemos usar reaccionar.
+
+3
+00:00:12,630 --> 00:00:13,730
+Tambin hay ms.
+
+4
+00:00:13,730 --> 00:00:20,760
+Hay ms razones por las que queremos usar Reactivas. Reaccionar nos ayuda con un problema. El
+
+5
+00:00:20,760 --> 00:00:28,900
+estado normal de DUI de javascript se vuelve difcil de manejar en las aplicaciones de JavaScript ms grandes.
+
+6
+00:00:28,980 --> 00:00:34,520
+Tienes que orientar manualmente los elementos en tu dom y si no cambias la estructura de
+
+7
+00:00:34,530 --> 00:00:41,470
+tu edad, es probable que tengas que cambiar la forma en que apuntas a tus elementos porque usaste el selector Cuore.
+
+8
+00:00:41,580 --> 00:00:47,610
+usaste Shakeri para atravesar el dormitorio, es ms fcil pero siempre es algo que debes tener en cuenta.
+
+9
+00:00:47,610 --> 00:00:48,590
+O incluso si
+
+10
+00:00:48,730 --> 00:00:55,020
+Y si tienes aplicaciones web ms complejas en las que dinmicamente agregas y quitas elementos, esto
+
+11
+00:00:55,020 --> 00:01:02,640
+puede volverse engorroso en nuestro proyecto de tribunales. Apostamos a AB, que es altamente dinmico en donde podemos construir
+
+12
+00:01:02,640 --> 00:01:06,000
+una hamburguesa y agregar o quitar ingredientes dinmicamente.
+
+13
+00:01:06,180 --> 00:01:10,040
+Si escribes esto con el cdigo normal de JavaScript, va a ser una pesadilla.
+
+14
+00:01:10,140 --> 00:01:16,370
+As que volver a actuar nos ayuda al hacer que la gestin del estado de UI no sea un problema.
+
+15
+00:01:16,410 --> 00:01:21,440
+Nos permite enfocarnos en nuestra lgica comercial en lugar de evitar que nuestra aplicacin explote.
+
+16
+00:01:21,540 --> 00:01:26,400
+Y, adems, una gran comunidad mantiene la repeticin.
+
+17
+00:01:26,400 --> 00:01:31,510
+Entonces, es probable que el cdigo de reaccin est escrito mejor de lo que podramos haberlo escrito alguna vez.
+
+18
+00:01:31,740 --> 00:01:34,480
+Por lo tanto, es altamente eficiente y rpido.
+
+19
+00:01:34,560 --> 00:01:38,850
+Y cuanto ms grande sea su aplicacin, ms importa esto tambin.
+
+20
+00:01:38,850 --> 00:01:45,370
+Y finalmente, re-actua cuenta con un gran sistema ecolgico y una comunidad extremadamente activa, lo que significa que hay una gran
+
+21
+00:01:45,370 --> 00:01:51,210
+posibilidad de que, para un problema determinado al que se enfrente, encuentre una solucin o un paquete adicional
+
+22
+00:01:51,210 --> 00:01:52,770
+que pueda agregar para solucionarlo.
+
+23
+00:01:52,770 --> 00:01:57,960
+Todas estas son razones por las que volver a actuar es increble y por qu definitivamente debera considerarlo para su
+
+24
+00:01:57,960 --> 00:02:01,440
+prximo proyecto y por qu tom la decisin correcta para comenzar con este curso.
+

@@ -1,0 +1,124 @@
+1
+00:00:02,150 --> 00:00:06,900
+Bylece reaksiyona tepki gsterip tepki gsterdiniz. Kayalar, imdi demo
+
+2
+00:00:06,980 --> 00:00:10,550
+projelerden uzaklaalm ve bunun
+
+3
+00:00:10,610 --> 00:00:14,500
+yerine gatsbyjs'e bir gz atalm.
+
+4
+00:00:14,580 --> 00:00:22,160
+imdi gatsbyjs aslnda bir sonraki admda olduu gibi tepkiyi ina eden bir ktphanedir, ancak gatsbyjs
+
+5
+00:00:22,160 --> 00:00:25,550
+farkl bir amaca hizmet eder ve size
+
+6
+00:00:25,550 --> 00:00:33,440
+kar drst olacam olduka heyecan verici bir ktphanedir. Gatsbyjs, tepki ile statik web siteleri oluturmanza olanak veren bir ktphanedir.
+
+7
+00:00:33,440 --> 00:00:40,210
+imdi statik bir web sitesi nedir? Statik bir web sitesi sadece html, javascript ve css kullanan
+
+8
+00:00:40,310 --> 00:00:46,550
+bir sayfadr, bu normal, tepki veren tek sayfa uygulamas iin de geerlidir, ancak statik bir site de bunun
+
+9
+00:00:46,550 --> 00:00:47,930
+iin zel bir ey
+
+10
+00:00:48,080 --> 00:00:53,220
+ierir, normalde orada tepki veren ynlendirici kullanmazsnz, En azndan dorudan kullanmayn, bunun yerine sahip olduunuz
+
+11
+00:00:53,330 --> 00:00:59,960
+her klasrn bir dizinine sahip olduu bir klasr yapnz var. html dosyas ve iindeki
+
+12
+00:00:59,990 --> 00:01:02,780
+dosyaya ait varlklar.
+
+13
+00:01:02,780 --> 00:01:09,320
+imdi bunun en gzel yan, 90'larda veya o saatlerde yaptnz gibi gerekten web siteleri
+
+14
+00:01:09,320 --> 00:01:17,180
+kurmanzdr, ancak tepkiyi kullanyorsunuz, bunu bir tepki uygulamas ve gatsbyjs olarak yapyorsunuz, bu teknoloji, bu ktphane daha
+
+15
+00:01:17,180 --> 00:01:19,780
+sonra aslnda Sizin iin dinlenme, her
+
+16
+00:01:19,770 --> 00:01:25,700
+eyi ve belirli bir komut zerine bler, ina ettiiniz tepkiyi temel alarak html
+
+17
+00:01:25,700 --> 00:01:30,520
+dosyalar ieren birka klasrn bulunduu bu klasr yapsn oluturur.
+
+18
+00:01:30,560 --> 00:01:33,510
+Gatsbyjs hakknda daha fazla bilgi edinebilirsiniz. com, inanlmaz
+
+19
+00:01:33,530 --> 00:01:39,830
+bir ktphane ve aslnda kendi ders iin yeterli ierik salar.
+
+20
+00:01:39,860 --> 00:01:42,140
+imdi u anda byle bir
+
+21
+00:01:42,170 --> 00:01:46,880
+kursa sahip deilim, nasl kullanacanz renmek iin buradaki dokmanlar ile balayabilir
+
+22
+00:01:46,880 --> 00:01:53,630
+ve bununla nasl baa kacan ve sizin iin anlaml olup olmadn renmek iin biraz daha fazlasn
+
+23
+00:01:53,660 --> 00:01:56,930
+renebilirsiniz. gatsbyjs zellikler sayfasnda belirtilen alternatifler Jekyll olurdu
+
+24
+00:01:56,960 --> 00:02:00,940
+ama orada Wordpress gibi tepki veya ierik ynetim sistemleri
+
+25
+00:02:00,980 --> 00:02:04,810
+kullanmyorsunuz, ancak baz sunucu yan kodlarn da yazabiliyorsunuz, bir
+
+26
+00:02:04,850 --> 00:02:11,780
+SQL veritaban ve tm bu eylere ihtiyacnz var. Gatsbyjs tepki ile alr ve bu
+
+27
+00:02:11,780 --> 00:02:13,280
+olduka avantaj salar.
+
+28
+00:02:13,280 --> 00:02:15,730
+Bunu bir sonraki projeniz iin dnn,
+
+29
+00:02:15,740 --> 00:02:20,610
+sizin iin doru seim olup olmadn renmek iin sayfanzdaki dokmanlar ve zellikler
+
+30
+00:02:20,840 --> 00:02:25,610
+sayfasna gz atn ve sizin iin ilgin olduuna karar verdiinizde ona dalmaktan ekinmeyin.
+
+31
+00:02:25,610 --> 00:02:29,370
+Farknda olmak istedim nk gerekten harika bir proje.
+

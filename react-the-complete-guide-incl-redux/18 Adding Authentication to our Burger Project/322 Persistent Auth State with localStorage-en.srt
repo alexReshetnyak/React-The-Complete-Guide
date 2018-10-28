@@ -1,0 +1,680 @@
+1
+00:00:02,000 --> 00:00:04,590
+So we added a lot of functionality to our app,
+
+2
+00:00:04,870 --> 00:00:10,860
+we still have the behavior that if we are logged in and we reload the page, the login state is lost.
+
+3
+00:00:10,870 --> 00:00:17,200
+The reason for this is that when we refresh the page, we download the single page application again, we
+
+4
+00:00:17,200 --> 00:00:20,610
+download the javascript again, it gets executed again,
+
+5
+00:00:20,620 --> 00:00:23,920
+it's a totally new application when we look at it like this.
+
+6
+00:00:23,980 --> 00:00:31,100
+Therefore our state stored in redux which is in the end just stored in javascript is of course lost.
+
+7
+00:00:31,240 --> 00:00:36,960
+So we need it to persist our login state across our sessions
+
+8
+00:00:37,270 --> 00:00:39,880
+and this requires a browser API
+
+9
+00:00:39,880 --> 00:00:42,940
+we can use, local storage.
+
+10
+00:00:42,940 --> 00:00:47,530
+Now let's see how we can utilize local storage in this lecture.
+
+11
+00:00:47,530 --> 00:00:55,900
+I'll go to my auth action creator, here where we do successfully login and dispatch authSuccess,
+
+12
+00:00:55,990 --> 00:01:04,060
+there we also pass on the token and it would make sense to also store that token in our browser
+
+13
+00:01:04,060 --> 00:01:11,090
+local storage then. The local storage API is baked into the browser so we can easily use it,
+
+14
+00:01:11,200 --> 00:01:20,350
+we can either use it here in our auth action creator or in authSuccess before we dispatch an action.
+
+15
+00:01:21,220 --> 00:01:23,010
+There we could run some additional code,
+
+16
+00:01:23,020 --> 00:01:28,290
+we get the token here but I don't want to work with just the token,
+
+17
+00:01:28,330 --> 00:01:32,170
+I also want to work with the expire, expiration time.
+
+18
+00:01:32,260 --> 00:01:40,930
+So what I'll do is I'll work or I'll set the token here in my auth action creator where we dispatch authSuccess
+
+19
+00:01:40,930 --> 00:01:49,420
+and authTimeout. There, I'll also access local storage just like that, it's built into javascript and
+
+20
+00:01:49,420 --> 00:01:58,630
+we can call setItem on it to store an item in the local storage, the item I want to store is my token
+
+21
+00:01:58,630 --> 00:01:59,500
+let's say
+
+22
+00:01:59,860 --> 00:02:02,650
+and that's just the key by which we can fetch it.
+
+23
+00:02:02,650 --> 00:02:06,000
+The second argument to setItem is the actual item
+
+24
+00:02:06,190 --> 00:02:13,450
+and this is response data ID token, extracted from our response just as we do it here.
+
+25
+00:02:14,000 --> 00:02:18,870
+Now that's nice but the token alone won't be that useful if we fetch it in the future,
+
+26
+00:02:18,880 --> 00:02:21,270
+we also need to know when it expires.
+
+27
+00:02:21,350 --> 00:02:28,240
+So I'll store something else, setItem and I could store expiresIn but that's just the amount of
+
+28
+00:02:28,420 --> 00:02:30,520
+seconds until it's invalid,
+
+29
+00:02:30,520 --> 00:02:35,350
+that won't tell us much the next time we fetch this from local storage because the number of course
+
+30
+00:02:35,350 --> 00:02:36,490
+won't update.
+
+31
+00:02:36,490 --> 00:02:44,860
+So instead we should store the expiration date, so expiration date and the value should be the expiration
+
+32
+00:02:44,860 --> 00:02:45,140
+date,
+
+33
+00:02:45,140 --> 00:02:48,270
+now I'm going to calculate this and store it in a separate constant,
+
+34
+00:02:48,640 --> 00:02:58,670
+expirationDate can be calculated as new date which gives us the current date plus the expiration time,
+
+35
+00:02:58,750 --> 00:03:08,380
+so response data expires in times 1000 because javascript time works in milliseconds and the time we
+
+36
+00:03:08,380 --> 00:03:10,470
+got was in seconds
+
+37
+00:03:10,690 --> 00:03:18,440
+but just like that it won't work, instead on the new date we generated, we have to extract getTime,
+
+38
+00:03:18,450 --> 00:03:24,490
+it's a function, it gives us the current time of the date and now this gives us the expiration time
+
+39
+00:03:24,490 --> 00:03:30,250
+but to turn this into a date object again, we have to wrap all of that with new date.
+
+40
+00:03:30,250 --> 00:03:36,030
+So new date without arguments like here gives us the current date, new date with arguments
+
+41
+00:03:36,310 --> 00:03:40,160
+gives us a date with the date we passed as an argument,
+
+42
+00:03:40,210 --> 00:03:46,630
+so here this will be the current date plus 10 seconds, plus expiry time in seconds.
+
+43
+00:03:46,630 --> 00:03:48,210
+So this is how that works,
+
+44
+00:03:48,220 --> 00:03:55,980
+now we can store expiration date in our local storage too whenever we acquire a token, before we continue
+
+45
+00:03:55,990 --> 00:03:57,370
+let's see if that works.
+
+46
+00:03:57,430 --> 00:03:59,320
+Let's go back to our browser,
+
+47
+00:03:59,320 --> 00:04:07,560
+click on authenticate, switch to sign in and let's authenticate here, submit and we can inspect our local
+
+48
+00:04:07,560 --> 00:04:12,610
+storage in the Chrome browser dev tools by going to the application tab there.
+
+49
+00:04:14,890 --> 00:04:20,950
+On the application tab, you will find some storage information and you can click on local storage and
+
+50
+00:04:20,950 --> 00:04:23,450
+expand it and click on your domain,
+
+51
+00:04:23,530 --> 00:04:24,670
+you'll see the two fields
+
+52
+00:04:24,670 --> 00:04:32,650
+we set, token and expiration date which is your local date time which makes sense for that given user
+
+53
+00:04:33,010 --> 00:04:35,010
+where you have your well date
+
+54
+00:04:35,020 --> 00:04:36,490
+where this is going to expire
+
+55
+00:04:36,660 --> 00:04:39,820
+and I can say that for me, this date is true here.
+
+56
+00:04:40,330 --> 00:04:41,890
+So this is our expiration date,
+
+57
+00:04:41,890 --> 00:04:49,420
+we can now take advantage of these two fields to check them whenever our application loads, to log the
+
+58
+00:04:49,420 --> 00:04:51,360
+user in if we got a token
+
+59
+00:04:51,550 --> 00:04:56,880
+and if it's still valid, so if we haven't passed the expiration date yet.
+
+60
+00:04:57,130 --> 00:04:59,150
+Otherwise we want to clean this up,
+
+61
+00:04:59,170 --> 00:05:04,370
+we want to clean this up with the logout dispatch action.
+
+62
+00:05:04,630 --> 00:05:11,660
+So in the auth file in the actions folder where we have logout, there
+
+63
+00:05:11,800 --> 00:05:18,340
+I also want to access local storage and I simply want to remove my two items here.
+
+64
+00:05:18,490 --> 00:05:25,780
+So I want to remove the token and I also want to remove the expiration time because both is not needed
+
+65
+00:05:25,780 --> 00:05:27,760
+anymore and shouldn't be stored any more,
+
+66
+00:05:27,790 --> 00:05:32,040
+we aren't loged in anymore so the token will not be valid in the future.
+
+67
+00:05:32,500 --> 00:05:35,810
+So now let's fetch the token when we login,
+
+68
+00:05:36,100 --> 00:05:37,760
+where can we check this?
+
+69
+00:05:38,110 --> 00:05:40,870
+Well we should check it when the application loads,
+
+70
+00:05:40,870 --> 00:05:48,160
+so for example in app.js this is the root component of our app and it's always loaded, no matter which
+
+71
+00:05:48,160 --> 00:05:49,780
+route we visit
+
+72
+00:05:49,840 --> 00:05:57,720
+so therefore this makes for a great app to check our authentication status. For checking this,
+
+73
+00:05:57,730 --> 00:05:59,670
+we will need a new action
+
+74
+00:05:59,860 --> 00:06:06,850
+so let's go to the auth file in the actions folder and there, I essentially want to dispatch authSuccess
+
+75
+00:06:07,270 --> 00:06:08,980
+whenever we are logged in
+
+76
+00:06:09,190 --> 00:06:19,260
+but also execute or dispatch checkAuthTimeout and pass the expiration in amount to still have that
+
+77
+00:06:19,260 --> 00:06:27,840
+functionality going. For that, I'll create a new action creator in the auth.js file, I'll name it
+
+78
+00:06:28,470 --> 00:06:30,380
+authCheckState
+
+79
+00:06:30,410 --> 00:06:38,750
+for example, I won't receive any arguments here but I will return a function here so that I can dispatch
+
+80
+00:06:38,780 --> 00:06:40,440
+multiple actions,
+
+81
+00:06:40,550 --> 00:06:46,740
+I won't run asynchronous code but I still want to dispatch multiple actions from within this action
+
+82
+00:06:47,240 --> 00:06:57,380
+and then here, I want to get my token from local storage with getItem token and I want to get my expiration
+
+83
+00:06:57,380 --> 00:06:58,260
+time.
+
+84
+00:06:58,400 --> 00:07:06,980
+Now before I do that, if token is null so if we can't validate this to be true-ish, then I just want to
+
+85
+00:07:07,010 --> 00:07:11,150
+return in the end because I don't need to do anything here, I don't need to dispatch anything,
+
+86
+00:07:11,240 --> 00:07:15,490
+I could dispatch the logout function but that also shouldn't be required
+
+87
+00:07:15,710 --> 00:07:22,020
+but still, I will call dispatch logout like this.
+
+88
+00:07:22,050 --> 00:07:28,620
+So in the else case that we got a token, I'll also fetch the expiration time and store it in a constant expirationTime,
+
+89
+00:07:28,620 --> 00:07:36,930
+I'll reach out to local storage and get my item expirationTime was the identifier we used for
+
+90
+00:07:36,930 --> 00:07:38,150
+storing it here,
+
+91
+00:07:38,250 --> 00:07:39,630
+expirationDate
+
+92
+00:07:39,630 --> 00:07:42,980
+so let's fix this expirationDate here,
+
+93
+00:07:43,840 --> 00:07:49,630
+we should also remove expirationDate appeared in the logout action creator though,
+
+94
+00:07:50,080 --> 00:07:53,760
+so expirationDate all over the place. With that updated,
+
+95
+00:07:53,770 --> 00:07:58,510
+we got it stored here in a constant, we got the token stored in a constant,
+
+96
+00:07:58,510 --> 00:08:09,070
+now we can use both pieces of information. And I want to dispatch my authSuccess action creator because
+
+97
+00:08:09,100 --> 00:08:11,210
+I know that we are logged in,
+
+98
+00:08:11,290 --> 00:08:15,930
+however I only want to do this if we haven't passed the expiration date.
+
+99
+00:08:16,000 --> 00:08:23,020
+So what I'll do is I'll first of all wrap this with new date because what we retrieve from local storage
+
+100
+00:08:23,020 --> 00:08:30,040
+will be a string but with new date we can convert it into a date object and then I'll check if expirationDate
+
+101
+00:08:30,040 --> 00:08:34,370
+is actually greater than new date which is
+
+102
+00:08:34,370 --> 00:08:39,540
+now, if that's the case then I don't want to login.
+
+103
+00:08:39,560 --> 00:08:47,280
+So in this case, I also want to dispatch logout, else and of course you could restructure this a bit to have
+
+104
+00:08:47,370 --> 00:08:51,250
+less nested if else statements but here I'll leave it like this. Else
+
+105
+00:08:51,270 --> 00:08:54,490
+I know the expiration date is still in the future,
+
+106
+00:08:54,500 --> 00:09:01,320
+now I want to dispatch authSuccess, pass on my token and I need the user id here.
+
+107
+00:09:01,470 --> 00:09:04,300
+Now for that I'll need to fetch it,
+
+108
+00:09:04,380 --> 00:09:09,810
+of course we could also simply store it in local storage and that wouldn't be wrong,
+
+109
+00:09:09,810 --> 00:09:15,430
+you can however also send the request to the firebase auth API to get it from there,
+
+110
+00:09:15,480 --> 00:09:21,930
+if you have a look at the firebase auth API documentation, there you'll see that you can get user data
+
+111
+00:09:21,930 --> 00:09:29,790
+by sending a request to this endpoint with your API key and the ID token as a body payload because this
+
+112
+00:09:29,790 --> 00:09:32,710
+is a post request even though it's called get user data,
+
+113
+00:09:32,720 --> 00:09:34,100
+it's a bit strange.
+
+114
+00:09:34,200 --> 00:09:41,410
+So this would be a way to get the user data, in the response you would have a users object which actually
+
+115
+00:09:41,410 --> 00:09:47,280
+is an array and in the first element of the array, you would have your user and local ID would be the user
+
+116
+00:09:47,280 --> 00:09:47,880
+ID,
+
+117
+00:09:48,060 --> 00:09:50,510
+so this is how you could fetch it from the server,
+
+118
+00:09:50,700 --> 00:09:55,770
+I however will simply store it in local storage because it's a bit easier here.
+
+119
+00:09:55,950 --> 00:10:02,790
+So for that, let's make sure that we also store this in our auth action creator
+
+120
+00:10:02,790 --> 00:10:06,580
+once we got the response, there I'll reach out to local storage
+
+121
+00:10:06,610 --> 00:10:18,980
+set our item, user ID and store response data local ID is the user id there and also remove that of course
+
+122
+00:10:19,010 --> 00:10:25,150
+if we logout, so remove user ID and with that, we can fetch it
+
+123
+00:10:25,190 --> 00:10:32,890
+in our case here. We can fetch a user ID if we are logged in,
+
+124
+00:10:32,910 --> 00:10:42,630
+so here const user ID will be local storage, get item user ID and now I can pass this as a second argument
+
+125
+00:10:42,780 --> 00:10:45,150
+to authSuccess.
+
+126
+00:10:45,170 --> 00:10:52,850
+Now the last thing I want to do is I also want to dispatch this other action, checkAuthTimeout
+
+127
+00:10:53,000 --> 00:10:59,130
+and there I need to pass an argument which is the amounts of seconds, the amount of seconds until we should
+
+128
+00:10:59,130 --> 00:11:00,620
+be logged out,
+
+129
+00:11:00,690 --> 00:11:05,490
+expirationDate however of course is the time when we are logged out
+
+130
+00:11:05,580 --> 00:11:07,960
+not the amount of seconds.
+
+131
+00:11:08,340 --> 00:11:23,690
+What we can do though is we can simply pass expirationDate, get seconds minus new date get seconds.
+
+132
+00:11:23,760 --> 00:11:32,590
+So this is simply passing the difference between the future date and how many seconds these are,
+
+133
+00:11:32,610 --> 00:11:35,570
+so the future date in seconds that's a big number
+
+134
+00:11:35,820 --> 00:11:41,790
+and the current date in seconds and the difference of course is the expiry date, the expiry time in
+
+135
+00:11:41,790 --> 00:11:42,840
+seconds I mean.
+
+136
+00:11:43,260 --> 00:11:46,480
+So with that we're dispatching everything here in authCheckState,
+
+137
+00:11:46,620 --> 00:11:53,340
+so this is a pure utility action creator which dispatches a couple of other actions depending on our
+
+138
+00:11:53,340 --> 00:11:54,910
+current state.
+
+139
+00:11:55,050 --> 00:12:01,800
+And with that, we can dispatch authCheckState to successfully automatically log the user in if we have
+
+140
+00:12:01,800 --> 00:12:03,260
+a valid token.
+
+141
+00:12:03,570 --> 00:12:06,980
+Let's see if this works by going to the app.js container
+
+142
+00:12:07,110 --> 00:12:14,880
+and there I first of all need to import connect to be able to dispatch anything from this container,
+
+143
+00:12:14,880 --> 00:12:18,400
+so let's import connect from react-redux
+
+144
+00:12:18,780 --> 00:12:28,320
+and then here at the bottom before I export the app, I'll create map state, excuse me, mapDispatchToProps, receive
+
+145
+00:12:28,320 --> 00:12:35,670
+that dispatch function and there return my javascript object where I do map my props. Here I'll add the
+
+146
+00:12:35,760 --> 00:12:45,780
+onTryAutoSignUp prop for example and I'll dispatch this one action we just created which I therefore
+
+147
+00:12:45,780 --> 00:12:50,150
+also need to export in the index.js file in my actions folder.
+
+148
+00:12:50,430 --> 00:12:58,560
+So there I'll add my check or my authCheckState argument, my authCheckState action creator we created
+
+149
+00:12:58,560 --> 00:13:03,620
+a second ago and that is the action I want to dispatch in the app container,
+
+150
+00:13:03,810 --> 00:13:07,120
+so here I'll reach out to my actions which I
+
+151
+00:13:07,290 --> 00:13:09,360
+first of all need to import at the top
+
+152
+00:13:09,510 --> 00:13:17,930
+so import everything as actions from that actions file in the store actions index file here,
+
+153
+00:13:18,030 --> 00:13:23,020
+so this actions object contains all the exported action creators.
+
+154
+00:13:23,070 --> 00:13:28,610
+So here we can then reach out to actions.authCheckState, like this,
+
+155
+00:13:28,620 --> 00:13:32,140
+now we just have to connect our container
+
+156
+00:13:32,190 --> 00:13:34,170
+so connect pass
+
+157
+00:13:34,170 --> 00:13:39,870
+mapDispatchToProps and pass null for mapStateToProps because we're not mapping any state
+
+158
+00:13:39,870 --> 00:13:41,190
+to props here.
+
+159
+00:13:41,610 --> 00:13:44,360
+And now let's execute this
+
+160
+00:13:44,430 --> 00:13:56,050
+for example in componentDidMount, there let's call this.props.onTryAutoSignUp. With that if we save
+
+161
+00:13:56,080 --> 00:13:57,100
+everything,
+
+162
+00:13:57,490 --> 00:13:58,800
+let's try this out.
+
+163
+00:13:58,930 --> 00:14:04,510
+Now if we are on that page and click on authenticate, you'll see that doesn't work,
+
+164
+00:14:04,510 --> 00:14:12,100
+we see in the redux dev tools that authLogout was dispatched which makes a lot of sense because it
+
+165
+00:14:12,100 --> 00:14:19,900
+means that our onTryAutoSignUp was dispatched and that we made it into this authCheckState action
+
+166
+00:14:19,900 --> 00:14:21,100
+creator therefore
+
+167
+00:14:21,280 --> 00:14:25,850
+but then we didn't find a token and there indeed isn't one in my local storage right now
+
+168
+00:14:25,960 --> 00:14:28,260
+and therefore logout was dispatched.
+
+169
+00:14:28,360 --> 00:14:31,880
+However why can't we reach authenticate now,
+
+170
+00:14:32,170 --> 00:14:34,480
+let's have a look at this in the next lecture.
+

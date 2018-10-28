@@ -1,0 +1,36 @@
+1
+00:00:02,270 --> 00:00:08,290
+Siamo vicini alla fine delle funzionalit di base del core, abbiamo sviluppato la nostra fantastica applicazione di reazione
+
+2
+00:00:08,310 --> 00:00:12,830
+per tutto il corso e abbiamo persino aggiunto un po 'di test nell'ultimo modulo.
+
+3
+00:00:12,830 --> 00:00:19,230
+Ora  il momento di implementare questa applicazione in modo che possiamo davvero vederla girare da qualche parte su Internet.
+
+4
+00:00:19,640 --> 00:00:21,470
+Quindi, distribuendo le app di
+
+5
+00:00:21,470 --> 00:00:22,790
+reazione, come funziona?
+
+6
+00:00:22,790 --> 00:00:24,820
+A cosa dobbiamo stare attenti?
+
+7
+00:00:24,830 --> 00:00:26,840
+Per fortuna  super facile, ecco
+
+8
+00:00:26,840 --> 00:00:27,980
+i passaggi e
+
+9
+00:00:27,980 --> 00:00:31,000
+ovviamente ti mostrer anche un esempio in questo modulo.
+

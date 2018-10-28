@@ -1,0 +1,136 @@
+1
+00:00:02,210 --> 00:00:08,400
+Na ltima palestra, aprendemos a passar todos os dados com a ao como recuper-lo.
+
+2
+00:00:08,400 --> 00:00:13,880
+Agora, com isso, aprendemos alguns dos conceitos bsicos do uso de ler x.
+
+3
+00:00:14,100 --> 00:00:21,450
+Agora, se ns tivermos uma olhada em nosso redutor aqui, h algo que voc provavelmente notar que
+
+4
+00:00:21,450 --> 00:00:25,200
+j tem muitas replicaes de cdigo muitas afirmaes if.
+
+5
+00:00:25,260 --> 00:00:30,200
+Agora, no h nada de errado ao usar instrues IF, se voc gosta desse uso dessa abordagem.
+
+6
+00:00:30,660 --> 00:00:36,500
+Mas tambm podemos usar um tipo diferente de expresso de declarao no javascript.
+
+7
+00:00:36,500 --> 00:00:45,630
+A declarao do switch pode mudar para o tipo de ao e depois definir vrios casos como o caso
+
+8
+00:00:45,630 --> 00:00:46,680
+do Inkerman.
+
+9
+00:00:47,070 --> 00:00:48,250
+Ento temos um clon.
+
+10
+00:00:48,270 --> 00:00:56,820
+Portanto, a sintaxe do javascript normal e que aqui podemos retornar esse estado atualizado para o caso de incremento e agora
+
+11
+00:00:57,140 --> 00:00:59,240
+podemos livrar-se dessa afirmao if.
+
+12
+00:00:59,430 --> 00:01:01,830
+E agora podemos, naturalmente, adicionar mais casos aqui.
+
+13
+00:01:01,830 --> 00:01:08,220
+Ento, um caso para a Decora significava e eu no precisava adicionar uma declarao de interrupo porque o retorno
+
+14
+00:01:08,430 --> 00:01:14,340
+sai automaticamente de uma disfuno, nunca chegamos a esta linha e apenas, claro, se chegarmos a este caso
+
+15
+00:01:14,340 --> 00:01:15,450
+em primeiro lugar.
+
+16
+00:01:15,750 --> 00:01:19,380
+Portanto, em detrimento de ns, todos os registros teriam um estado aqui.
+
+17
+00:01:19,440 --> 00:01:26,820
+Ns retornaramos este estado e agora podemos repetir isso,  claro, para todos os casos, de forma
+
+18
+00:01:26,820 --> 00:01:31,130
+rpida, adicione um caso para adicionar um caso para subtrair.
+
+19
+00:01:31,380 --> 00:01:36,620
+E  claro que esses identificadores ainda precisam combinar os identificadores que voc usa ao enviar aes.
+
+20
+00:01:36,810 --> 00:01:45,810
+Ento, o identificador que voc disse aqui no tipo no continer e agora todos retiram o cdigo dessas
+
+21
+00:01:45,810 --> 00:01:46,870
+instrues if.
+
+22
+00:01:46,920 --> 00:01:54,990
+Adicione-os ao cdigo para seus respectivos casos, voc est reformatando o cdigo e se livrar dessas instrues if.
+
+23
+00:01:54,990 --> 00:02:01,560
+E agora, nosso produtor  um pouco mais delgado e um pouco mais fcil de ler, porque  muito claro
+
+24
+00:02:01,560 --> 00:02:06,170
+que estamos olhando o tipo de direo e depois estamos lidando com diferentes casos.
+
+25
+00:02:06,420 --> 00:02:12,000
+E se no fizermos isso em nenhum desses casos, sempre temos a declarao de retorno
+
+26
+00:02:12,000 --> 00:02:15,620
+padro aqui no final, que retorna nosso estado inicialmente inicial.
+
+27
+00:02:15,840 --> 00:02:21,810
+Ou se isso j definisse o estado atual, isso  especialmente importante, pois voc deve ter
+
+28
+00:02:21,810 --> 00:02:28,590
+em mente que, se ns tivssemos despachado uma ao que tenha um tipo que no esteja coberto aqui,
+
+29
+00:02:28,590 --> 00:02:34,740
+ainda corremos esse redutor, porque sempre que voc envia algo vai daquele nico redutor que voc
+
+30
+00:02:34,800 --> 00:02:36,390
+tem em sua aplicao.
+
+31
+00:02:36,590 --> 00:02:42,050
+Portanto, se o pai usasse o Besant manipulou esse tipo de ao que voc enviou.
+
+32
+00:02:42,180 --> 00:02:45,780
+Voc deve retornar o estado atual para no quebrar seu aplicativo.
+
+33
+00:02:45,780 --> 00:02:52,550
+Ento, com isso, vamos salvar todos esses arquivos e voc ver que, se voc voltar, ele ainda funciona como antes.
+
+34
+00:02:52,650 --> 00:02:58,760
+Mas agora com esses redutores centrais ainda, mas com a indicao switch.
+

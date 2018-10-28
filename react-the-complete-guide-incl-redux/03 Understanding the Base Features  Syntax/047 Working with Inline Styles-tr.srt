@@ -1,0 +1,212 @@
+1
+00:00:02,130 --> 00:00:07,990
+Son dersimizde, uygulamann stilini belirlemek iin farkl yollar bulduumuzdan bahsettim ve bu dmeyi
+
+2
+00:00:07,990 --> 00:00:15,400
+farkl tarzda stil edelim ve sadece bu dmeyi nerede bulunduumuzu takip etmeliyiz. Bu dmeyi satr ii
+
+3
+00:00:15,400 --> 00:00:18,770
+stiller olarak adlandrlan bir eyle stil etmek istiyoruz.
+
+4
+00:00:18,840 --> 00:00:24,850
+C-s'leri dosya ve snf olarak kullanmann yanl bir yan yoktur ve bu tercih edilen yol olabilir.
+
+5
+00:00:25,330 --> 00:00:32,790
+Ancak sklkla uygulamalar grdnz ve yeniden uyguladnz ey aslnda stilinizi javascript iinde tasarlamanzdr.
+
+6
+00:00:32,800 --> 00:00:34,420
+Bu nasl alyor.
+
+7
+00:00:34,800 --> 00:00:40,080
+imdi, render ilevinde stili adlandracam yeni bir sabit oluturmaya gidelim.
+
+8
+00:00:40,090 --> 00:00:41,660
+Ad sana kalm.
+
+9
+00:00:41,740 --> 00:00:43,460
+Bu bir javascript nesnesi.
+
+10
+00:00:43,480 --> 00:00:50,800
+Ve farknda olabileceiniz gibi D. C. 'nn stil zellikleri gibi, arka
+
+11
+00:00:50,800 --> 00:00:59,170
+plan rengi geersiz olacandan, izgi yerine arka plan rengi deve klf iin javascript bastrma ek aklamalar vardr.
+
+12
+00:00:59,170 --> 00:01:04,140
+Javascript mlkiyet ismini, bunu kullanmak iin trnak iaretleri iine sarabilirsiniz.
+
+13
+00:01:04,360 --> 00:01:09,850
+Deve klfn basl bir temsil iin kullanacam ve sonra bir renk olabilen bir dize olan
+
+14
+00:01:10,210 --> 00:01:11,510
+bir deer atadm.
+
+15
+00:01:11,530 --> 00:01:16,630
+rnein beyaz, yaz tipini miras alacak ekilde ayarlayabiliriz.
+
+16
+00:01:16,630 --> 00:01:26,080
+piksel Sallet'in snr ve daha sonra mavi ayarlayabiliriz ve biz de biraz dolgu ekleyebiliriz.
+
+17
+00:01:26,580 --> 00:01:32,970
+evreleyen fonumuzu kullanmak iin, kenarlk deil kenarlk da sadece bir
+
+18
+00:01:32,980 --> 00:01:34,840
+Belki 8 piksel.
+
+19
+00:01:34,840 --> 00:01:39,760
+Chalis Trottier' yazdmz iin tm bu deerleri trnak iareti iine koyduunuzdan emin olun.
+
+20
+00:01:39,880 --> 00:01:42,840
+Bu dizeler olmal.
+
+21
+00:01:42,860 --> 00:01:49,430
+imdi, bir stil mlk okumak ve eklemek iin biraz daha kolay bir hale getirmek iin yeni bir satra
+
+22
+00:01:49,640 --> 00:01:50,720
+tklama dmesine basabilirim.
+
+23
+00:01:51,080 --> 00:01:58,280
+Bu aslnda J S X tarafndan salanan normal stil niteliidir ve stil sizin de grebileceiniz
+
+24
+00:01:58,280 --> 00:02:01,060
+gibi burada dinamik bir deer almaldr.
+
+25
+00:02:01,320 --> 00:02:09,230
+Tm ABD, buradaki ifadede burada tanmlanan bu stil sabitine atfta bulunarak burada stil geirir; bu ekilde burada
+
+26
+00:02:09,620 --> 00:02:14,630
+bir ifade dndrr ve bylece yalnzca bu gibi eyleri kullanamazsnz.
+
+27
+00:02:14,630 --> 00:02:16,150
+Snf mlk deil.
+
+28
+00:02:16,190 --> 00:02:23,120
+Normal bir deikendir ya da aslnda, bu oluturma ynteminin sabitini asla deitirmiyoruz.
+
+29
+00:02:23,660 --> 00:02:31,840
+Bakalm bu kaydedersek bunun bir etkisi olup olmadn gerekten dmenin imdi farkl grndn gryoruz.
+
+30
+00:02:31,990 --> 00:02:37,750
+Bu hatay dzelterek ve snrlarmzda bir piksel bulundurarak biraz daha gelitirebiliriz, bylece
+
+31
+00:02:37,760 --> 00:02:44,880
+bu stil uygulanr ve iaretiyi imleci iaret ederek elde ederiz, bylece Roker'in zerine geldiimizde
+
+32
+00:02:44,880 --> 00:02:46,460
+veya zerinde gezinirken.
+
+33
+00:02:46,630 --> 00:02:47,700
+imdiye kadar gvende
+
+34
+00:02:47,980 --> 00:02:52,150
+Mavi kenarl gryoruz ve o imleci tekrar gryoruz.
+
+35
+00:02:52,150 --> 00:02:58,780
+Artk gezinme konusunda deimez ve satr ii stilleri kullanrken bu efekt
+
+36
+00:02:58,780 --> 00:03:00,530
+efektini gerekten zorlar.
+
+37
+00:03:00,530 --> 00:03:05,920
+Zaten bir kstlamadr ancak bu derste bir btn modl var, burada
+
+38
+00:03:05,920 --> 00:03:12,790
+sana bir sr dnce koyabilecein bir ey olabilir stil yeniden eyleme bileenlere baz akll
+
+39
+00:03:12,790 --> 00:03:13,650
+zmler gstereceim.
+
+40
+00:03:13,660 --> 00:03:16,720
+Her zaman bir CSR dosyas kullanabileceinizi unutmayn.
+
+41
+00:03:16,930 --> 00:03:19,310
+Bulunduunuz bulak torbalar kresel.
+
+42
+00:03:19,330 --> 00:03:23,590
+Dmeyi burada deitirirsek, tm uygulamanzdaki tm dmeler deitirilecek.
+
+43
+00:03:23,620 --> 00:03:30,940
+stediiniz gibi olmayabilir ancak normalde szdizimi olarak kullanabilirsiniz veya satr ii stilleri
+
+44
+00:03:30,940 --> 00:03:33,250
+burada yaptnz gibi kullanrsnz.
+
+45
+00:03:33,250 --> 00:03:38,860
+Ardndan, stil, bileene veya eklediiniz unsurun kapsamna alnr.
+
+46
+00:03:39,040 --> 00:03:44,250
+Ancak, C-s'lerin tam gcn kullanamamann baz kstlamalar var.
+
+47
+00:03:44,560 --> 00:03:49,870
+Bahsettiim gibi bununla ilgili tam bir modle sahip olacam, nk kapsamn stillerini nerede
+
+48
+00:03:49,870 --> 00:03:54,460
+bulabileceiniz ve tm C S S zelliklerini kullanabileceiniz altn bir yol var.
+
+49
+00:03:54,460 --> 00:03:55,930
+Bununla ilgili daha fazla bilgi iin imdilik.
+
+50
+00:03:55,930 --> 00:04:00,230
+u anda bu iki farkl stil biimine sahip olduumuzun farknda olun.
+
+51
+00:04:00,370 --> 00:04:02,890
+Satr ii stilleri burada yaptmz gibi kullann.
+
+52
+00:04:02,980 --> 00:04:09,980
+Bir kapsamn stilini istediiniz zaman ve yalnzca uygulamanzda veya ayn bileende bu tek e iin ve
+
+53
+00:04:10,060 --> 00:04:13,360
+emiz dndaki eler iin geerli olduundan emin olun.
+

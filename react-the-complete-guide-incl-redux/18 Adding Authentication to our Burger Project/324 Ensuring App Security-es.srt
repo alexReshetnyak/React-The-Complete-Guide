@@ -1,0 +1,144 @@
+1
+00:00:02,190 --> 00:00:05,310
+Ahora hablemos un poco de la seguridad,
+
+2
+00:00:05,430 --> 00:00:09,350
+djame iniciar sesin de nuevo. Como aprendiste, administramos
+
+3
+00:00:09,360 --> 00:00:16,290
+nuestro estado de autenticacin aqu con el token y automticamente registramos al
+
+4
+00:00:16,320 --> 00:00:22,790
+usuario si tenemos un token vlido. Sin embargo, ese token solo es vlido durante 60 minutos, por razones
+
+5
+00:00:22,800 --> 00:00:27,000
+de seguridad, ya que si se roba el token, cualquiera puede acceder a tus datos,
+
+6
+00:00:27,000 --> 00:00:29,010
+por supuesto, ahora eso suena muy mal.
+
+7
+00:00:29,010 --> 00:00:36,150
+Tenga en cuenta que est almacenado en su aplicacin en el almacenamiento local, se puede acceder al almacenamiento local con
+
+8
+00:00:36,150 --> 00:00:43,800
+ataques de secuencias de comandos entre sitios y Angular impide los ataques de secuencias de comandos entre sitios, por defecto no
+
+9
+00:00:43,890 --> 00:00:45,760
+se puede generar cdigo inseguro.
+
+10
+00:00:46,020 --> 00:00:48,500
+As que obtuviste mucha proteccin de ese lado, por
+
+11
+00:00:48,750 --> 00:00:55,020
+lo que tus datos y el almacenamiento local deberan ser seguros, una red de seguridad adicional es, una vez ms, que el
+
+12
+00:00:55,020 --> 00:00:57,050
+token expira despus de una hora.
+
+13
+00:00:57,060 --> 00:01:02,520
+Ahora, en teora, firebase tambin te dar ese token actualizado si inspeccionamos la
+
+14
+00:01:02,520 --> 00:01:03,900
+respuesta que obtenemos,
+
+15
+00:01:03,960 --> 00:01:08,080
+aqu ese token de actualizacin. El token de actualizacin no caduca,
+
+16
+00:01:08,130 --> 00:01:14,640
+puedes almacenarlo tambin en el almacenamiento local y luego hay un punto final especfico en la API de
+
+17
+00:01:14,640 --> 00:01:22,200
+autorizacin de reposo de firebase, donde puedes intercambiar un token actualizado por un token de identificacin. Solo tienes que enviar el
+
+18
+00:01:22,350 --> 00:01:27,010
+token actualizado a este Punto final API y obtienes un nuevo token de ID.
+
+19
+00:01:27,180 --> 00:01:29,130
+Tericamente es un patrn genial, siempre
+
+20
+00:01:29,130 --> 00:01:34,590
+puedes hacerlo con cada solicitud HTTP que enves, con cada solicitud que enves enves una adicional
+
+21
+00:01:34,590 --> 00:01:40,410
+en la que intercambies tu token de actualizacin por un nuevo token de identificacin, incluso si el token
+
+22
+00:01:40,410 --> 00:01:41,510
+de ID an
+
+23
+00:01:41,610 --> 00:01:46,890
+no ha caducado. que siempre obtienes nuevos tokens de identificacin y tambin puedes obtener uno nuevo
+
+24
+00:01:46,890 --> 00:01:53,760
+cuando el usuario inicia sesin automticamente con la funcionalidad que agregamos en las ltimas conferencias, opt por no usar eso aqu.
+
+25
+00:01:53,820 --> 00:01:59,730
+Tambin es seguro porque podemos almacenar el token de actualizacin en el almacenamiento local y, como mencion, esto solo
+
+26
+00:01:59,730 --> 00:02:02,410
+es accesible con ataques de scripting entre sitios.
+
+27
+00:02:02,730 --> 00:02:09,210
+An as, tener un token que nunca caduca y que puede cambiar por un token
+
+28
+00:02:09,210 --> 00:02:16,890
+que le da acceso a todo podra generar problemas de seguridad o, al menos, debe tener mucho cuidado
+
+29
+00:02:16,890 --> 00:02:20,340
+al protegerlo si est utilizando el token de actualizacin.
+
+30
+00:02:20,340 --> 00:02:22,220
+Eso es algo que quera agregar,
+
+31
+00:02:22,260 --> 00:02:27,930
+puede mejorar la experiencia del usuario al usar el token de actualizacin; bsicamente, puede asegurarse de que
+
+32
+00:02:27,930 --> 00:02:34,980
+el usuario nunca cierre la sesin porque, como el token actualizado nunca caduca, puede actualizar el token principal incluso despus de
+
+33
+00:02:34,980 --> 00:02:36,220
+una semana Verifique que
+
+34
+00:02:36,480 --> 00:02:39,240
+el token sea vlido, no lo es, tome
+
+35
+00:02:39,410 --> 00:02:44,280
+el token de actualizacin y obtenga uno nuevo, pero debido a esa cuestin de
+
+36
+00:02:44,280 --> 00:02:48,140
+seguridad, opt por no usarlo y quera llamar su atencin.
+

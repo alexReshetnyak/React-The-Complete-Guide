@@ -1,0 +1,216 @@
+1
+00:00:02,150 --> 00:00:04,200
+Na ltima palestra que tivemos na porta lateral.
+
+2
+00:00:04,250 --> 00:00:09,680
+E, claro, isso parece horrvel porque logo e itens de navegao precisam ser ajustados para
+
+3
+00:00:10,070 --> 00:00:12,200
+se parecerem bons em dispositivos mveis.
+
+4
+00:00:12,200 --> 00:00:14,500
+Vamos comear com o logotipo.
+
+5
+00:00:14,600 --> 00:00:21,470
+No momento,  to grande porque a altura do logotipo est ajustada para 80% e 80% na
+
+6
+00:00:21,830 --> 00:00:25,480
+gaveta lateral significa 80% do tamanho direito direito aqui.
+
+7
+00:00:25,550 --> 00:00:29,150
+Isso,  claro,  um pouco demais.
+
+8
+00:00:29,150 --> 00:00:35,080
+Agora, como podemos ajustar, pois podemos adicionar alguma resposta de design ao logotipo.
+
+9
+00:00:35,220 --> 00:00:41,900
+Veja o arquivo s s pode definir o padro para algo como 11 por cento e adicionar uma consulta de mdia para envolver isso
+
+10
+00:00:41,900 --> 00:00:43,970
+at 80 por cento para telas maiores.
+
+11
+00:00:43,970 --> 00:00:47,990
+Mas isso tornaria nosso logotipo mais difcil de usar em vez disso.
+
+12
+00:00:48,020 --> 00:00:55,790
+Sou f de controlar o DILG Hyatt no lugar onde inserimos em vez do componente do logotipo.
+
+13
+00:00:55,790 --> 00:01:02,150
+Ento, na verdade, at mesmo configurarei o logotipo de volta para 100 por cento e devemos restringir a sua
+
+14
+00:01:02,150 --> 00:01:07,560
+altura na barra de ferramentas e na gaveta lateral para atender s necessidades especficas desses componentes.
+
+15
+00:01:07,580 --> 00:01:09,370
+Ento, vamos comear com a barra de ferramentas.
+
+16
+00:01:09,410 --> 00:01:13,220
+Como eu disse, o logotipo deve ser apenas 80 por cento alto aqui.
+
+17
+00:01:13,460 --> 00:01:21,650
+Podemos conseguir isso de duas maneiras, podemos adicionar um suporte para realmente definir a altura de forma dinmica para
+
+18
+00:01:21,710 --> 00:01:28,430
+que possamos adicionar algo como altura aqui, que podemos definir para dizer 80 por cento.
+
+19
+00:01:28,700 --> 00:01:31,610
+E isso no logotipo podemos aceitar isso.
+
+20
+00:01:31,610 --> 00:01:38,480
+Ns aceitamos adereos aqui e ns podemos definir estilos de linha aqui para substituir as configuraes da classe C S S
+
+21
+00:01:38,510 --> 00:01:43,850
+para basicamente atribuir um objeto javascript aqui, onde definimos a altura para a altura dos adereos.
+
+22
+00:01:44,240 --> 00:01:53,270
+Se salvarmos isso, agora ficar bem na barra de ferramentas ainda e, se a fizermos na cidra ou duas,
+
+23
+00:01:53,270 --> 00:01:56,790
+tambm agora passamos uma altura para o logotipo.
+
+24
+00:01:56,930 --> 00:01:59,220
+No digamos adereos.
+
+25
+00:01:59,320 --> 00:02:03,160
+Deve ser 11 por cento ao ano.
+
+26
+00:02:03,380 --> 00:02:06,280
+Agora, deve ficar bem em uma gaveta lateral tambm.
+
+27
+00:02:06,290 --> 00:02:12,680
+Esta  uma maneira inteligente de ajustar esta configurao a altura como uma propriedade onde simplesmente passamos
+
+28
+00:02:12,680 --> 00:02:19,580
+a altura percentual para o componente do logotipo e, em seguida, o componente atribui-lo dinamicamente aos estilos inline.
+
+29
+00:02:19,580 --> 00:02:22,850
+Nada de errado com esta abordagem deve funcionar bem.
+
+30
+00:02:23,210 --> 00:02:25,520
+Quero mostrar-lhe uma alternativa para isso.
+
+31
+00:02:25,850 --> 00:02:29,960
+Na verdade, eu deixarei essa propriedade configurada aqui para que possamos usar isso.
+
+32
+00:02:30,200 --> 00:02:32,130
+Mas no vou usar isso.
+
+33
+00:02:32,270 --> 00:02:41,930
+Em vez disso, seguirei uma abordagem diferente e envolver o logotipo em uma div na barra lateral e tambm na barra
+
+34
+00:02:42,420 --> 00:02:43,190
+de ferramentas.
+
+35
+00:02:43,280 --> 00:02:50,360
+Ento, vamos embrulhar o logotipo em uma div em ambos os componentes e no usar. A propriedade de altura que novamente apenas
+
+36
+00:02:50,360 --> 00:02:53,270
+para destacar isso no teria sido uma abordagem ruim.
+
+37
+00:02:53,420 --> 00:02:58,070
+E agora esses diffs que envolvem o logotipo devem controlar a altura.
+
+38
+00:02:58,070 --> 00:03:03,500
+Podemos fazer isso com estilos inline ou com osires como classe gosta.
+
+39
+00:03:03,500 --> 00:03:10,270
+Por exemplo, aqui esto o logotipo das duas classes da barra e o bom  que eu posso usar a classe logo
+
+40
+00:03:10,280 --> 00:03:17,060
+aqui, o componente da barra de ferramentas, mesmo que eu j a use no componente do logotipo porque voc nos v como mdulos.
+
+41
+00:03:17,120 --> 00:03:17,870
+Pode funcionar.
+
+42
+00:03:17,870 --> 00:03:25,190
+Meu C  nome de classe em nomes diferentes e para nomes de escopo, de modo que, apesar de eu
+
+43
+00:03:25,190 --> 00:03:32,210
+escrever duas classes idnticas no modo de desenvolvimento, as palavras que podem ser duas classes C S S diferentes
+
+44
+00:03:32,210 --> 00:03:35,100
+que so atribudas para que elas no interfiram.
+
+45
+00:03:35,420 --> 00:03:45,040
+Ento, eu tipo acho essa classe de logotipo na minha barra de ferramentas e posso configurar a altura para 80 por cento e agora posso ir para
+
+46
+00:03:45,040 --> 00:03:52,930
+a gaveta do site e tambm posso definir uma classe de logotipo e ajustar a altura a 11 por cento aqui e
+
+47
+00:03:53,470 --> 00:03:59,860
+agora posso usar que aqui na gaveta lateral e atribua o nome da minha classe l tambm.
+
+48
+00:03:59,980 --> 00:04:06,760
+Ento, todo o logotipo das classes de ativos aqui e novamente eu tenho essa classe de logotipo para encontrar em trs arquivos diferentes.
+
+49
+00:04:06,850 --> 00:04:13,630
+Mas voc v como mdulos realmente se convertem em diferenas gratuitas como classes para que elas no interferissem com
+
+50
+00:04:14,320 --> 00:04:15,810
+todas essas mudanas salvas.
+
+51
+00:04:15,940 --> 00:04:19,820
+Ns temos um logotipo de aparncia agradvel aqui na gaveta do site e na barra de ferramentas.
+
+52
+00:04:19,900 --> 00:04:25,630
+Ento, voc viu diferentes abordagens para ajustar isso dinamicamente e certificando-se de que tudo bem em
+
+53
+00:04:25,690 --> 00:04:27,960
+todos os dispositivos que precisamos suportar.
+
+54
+00:04:28,000 --> 00:04:32,350
+Vamos continuar trabalhando no item de navegao.
+

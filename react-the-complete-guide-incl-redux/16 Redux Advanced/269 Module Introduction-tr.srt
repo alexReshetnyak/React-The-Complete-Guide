@@ -1,0 +1,20 @@
+1
+00:00:02,340 --> 00:00:08,750
+Son iki modl zerinden bu modle ho geldiniz, rahatlamak ile ilgili temel bilgileri reneceksiniz, bunun ne
+
+2
+00:00:08,750 --> 00:00:11,660
+olduunu ve neden onu kullanmak istediinizi reneceksiniz.
+
+3
+00:00:11,660 --> 00:00:19,010
+Bunu, bu modlde Boulder projemiz iin de uyguluyoruz, imdi biraz daha gelimi
+
+4
+00:00:19,010 --> 00:00:26,000
+zelliklere redoks dalna derinlemesine dalacaz ve rnein asenkron kodu nasl altrabileceimizi inceliyoruz.
+
+5
+00:00:26,010 --> 00:00:26,840
+Haydi balayalm.
+

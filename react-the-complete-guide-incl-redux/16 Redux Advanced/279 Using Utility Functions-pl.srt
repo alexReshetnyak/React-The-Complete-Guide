@@ -1,0 +1,384 @@
+1
+00:00:02,230 --> 00:00:10,120
+Wic dziki temu moduowi dowiesz si duo o zaawansowanych rzeczach, ktre moesz zrobi z Rydexem, w szczeglnoci o
+
+2
+00:00:10,120 --> 00:00:17,000
+twrcach akcji i rzeczach porednich Arkie, poniewa pozwalaj nam uruchamia kod asynchroniczny podczas wysyania naszych dziaa.
+
+3
+00:00:17,030 --> 00:00:22,070
+Teraz chc zanurzy si w zaawansowany zestaw reduktorw.
+
+4
+00:00:22,150 --> 00:00:23,640
+W tej chwili mamy dwch uytkownikw odmwicych.
+
+5
+00:00:23,680 --> 00:00:30,340
+Jest nieco zaawansowany, poniewa ju go podzielilimy i uywamy poczonych reduktorw, ale wprowadzajcy wci
+
+6
+00:00:30,340 --> 00:00:37,150
+ma wzgldnie dug instrukcj przeczania, a nawet przy dzieleniu reduktorw na wiele plikw prawdopodobnie nadal
+
+7
+00:00:37,150 --> 00:00:43,060
+istnieje wzgldnie duga instrukcja przeczania case dla wprowadzajcego, przynajmniej jeli obsuguje wicej ni
+
+8
+00:00:43,060 --> 00:00:44,160
+dwa dziaania.
+
+9
+00:00:44,620 --> 00:00:48,730
+Czyszczenie, ktre redukuje Rafaa nieco wicej, moe by pomysem.
+
+10
+00:00:48,850 --> 00:00:51,630
+A ja mwi, e to nie musi.
+
+11
+00:00:51,700 --> 00:00:52,990
+To opcjonalne.
+
+12
+00:00:52,990 --> 00:00:55,500
+To dobra praktyka, ktr powiedziabym.
+
+13
+00:00:55,660 --> 00:00:57,820
+Ale nie musisz tego robi.
+
+14
+00:00:57,880 --> 00:01:03,970
+Chc wam pokaza kilka sposobw oczyszczania tych reduktorw krok po kroku, ale koczc
+
+15
+00:01:03,970 --> 00:01:05,800
+na bardzo czystym reduktorze.
+
+16
+00:01:05,800 --> 00:01:08,270
+Znowu to, co wam poka, jest jednak opcjonalne.
+
+17
+00:01:08,680 --> 00:01:12,950
+Pierwsz rzecz, ktr moemy zrobi, jest zwizana z niezmiennoci.
+
+18
+00:01:13,330 --> 00:01:18,740
+Stale aktualizujemy obiekt tutaj, gdy zwracamy nowy stan.
+
+19
+00:01:18,940 --> 00:01:26,470
+Po prostu zwracamy zaktualizowany obiekt, zwracamy obiekt, ktry kopiuje waciwoci starego stanu,
+
+20
+00:01:26,470 --> 00:01:30,570
+a nastpnie zastpuje jedn z waciwoci.
+
+21
+00:01:30,910 --> 00:01:37,570
+Teraz oczywicie moemy zrobi to w ten sposb, ale moemy stworzy funkcje uytecznoci dla dugw i to
+
+22
+00:01:37,570 --> 00:01:38,960
+samo dla aktualizacji.
+
+23
+00:01:38,970 --> 00:01:46,800
+Erase pozwala nam wtedy wywoa t funkcj uytecznoci i zapisa tutaj pewien kod.
+
+24
+00:01:46,840 --> 00:01:47,960
+Jak to mogo wyglda.
+
+25
+00:01:48,070 --> 00:01:49,290
+Pozwl, e ci poka.
+
+26
+00:01:49,420 --> 00:01:57,700
+W tym celu utworz nowy plik, ktry nazwie nazw narzdzia, a ja go zapisz w folderze sklepu.
+
+27
+00:01:57,700 --> 00:02:02,760
+Moesz przechowywa go w folderze reduktorw, ale nie chc tego mie dla Looked, jakby by producentem.
+
+28
+00:02:03,040 --> 00:02:07,010
+I moesz przechowywa go w innym folderze, ale uyj go tylko w redux.
+
+29
+00:02:07,060 --> 00:02:09,440
+Tak wic dla mnie folder sklepu brzmi wietnie.
+
+30
+00:02:10,300 --> 00:02:14,600
+Wszystkie one tworz funkcj ze stylem funkcji E-6.
+
+31
+00:02:14,680 --> 00:02:21,940
+Tak wic utworz stae przytrzymanie funkcji na kocu, ktra nazwie obiekt aktualizacji, funkcja
+
+32
+00:02:22,180 --> 00:02:27,440
+ta ponownie uywajc skadni strzaki E6 oczekuje dwch argumentw.
+
+33
+00:02:27,550 --> 00:02:36,700
+Stary obiekt, ktry chc skopiowa i zaktualizowa oraz zaktualizowa wartoci w tej funkcji.
+
+34
+00:02:36,900 --> 00:02:40,220
+Po prostu chc zrobi to, co wczeniej zrobiem w moim reduktorze.
+
+35
+00:02:40,440 --> 00:02:43,310
+Chc zwrci zaktualizowany obiekt.
+
+36
+00:02:43,350 --> 00:02:48,520
+Wic skopiuj 1 i zwr go w mojej funkcji uytecznoci tutaj.
+
+37
+00:02:48,610 --> 00:02:56,640
+Przede wszystkim musz rozpowszechnia waciwoci mojego starego obiektu, wic utworz nowy obiekt ze wszystkimi starymi
+
+38
+00:02:56,640 --> 00:02:59,700
+waciwociami obiektu i wartociami wewntrz niego.
+
+39
+00:03:00,000 --> 00:03:03,080
+A potem s pewne czci, ktre prawdopodobnie zostan zaktualizowane.
+
+40
+00:03:03,270 --> 00:03:07,880
+Teraz wiedziaem, e bdzie to licznik dla danego reduktora, z ktrego go wycignem.
+
+41
+00:03:08,010 --> 00:03:15,810
+Tutaj zaktualizowane wartoci i zaktualizowane wartoci na kocu moe by tylko obiekt javascript ze wszystkimi wartociami,
+
+42
+00:03:15,810 --> 00:03:17,450
+ktre chc przesoni.
+
+43
+00:03:17,640 --> 00:03:20,780
+Wic caa dystrybucja otrzymuje zaktualizowane wartoci.
+
+44
+00:03:20,940 --> 00:03:24,840
+Tak wic oczekuj, e zaktualizowane wartoci bd tutaj obiektem Java.
+
+45
+00:03:24,840 --> 00:03:28,800
+To jest moja funkcja narzdzia do aktualizacji obiektu.
+
+46
+00:03:28,800 --> 00:03:33,740
+Teraz poka ci, jak moesz go uy w pliku counter.
+
+47
+00:03:33,750 --> 00:03:35,240
+Wszystko importowane.
+
+48
+00:03:35,450 --> 00:03:42,710
+Zaimportuj co i teraz przejd do narzdzia, ktre wanie spadnie, i co, co zaimportuj.
+
+49
+00:03:42,750 --> 00:03:47,010
+Oczywicie jako moja aktualizacja i ja powinienem j wyeksportowa.
+
+50
+00:03:47,020 --> 00:03:55,440
+Dlatego pozwl mi doda instrukcj eksportowania, wic co, co chc zaimportowa, to funkcja obiektu aktualizacji,
+
+51
+00:03:56,040 --> 00:04:02,000
+ktr mog potem uy, aby j zastpi, gdy chc co zaktualizowa.
+
+52
+00:04:02,250 --> 00:04:09,300
+Tak wic w moim reduktorze po prostu zwracam wywoanie aktualizacji obiektu, w ktrym przekazaem stan jako stary obiekt,
+
+53
+00:04:10,140 --> 00:04:12,760
+a nastpnie obiekt ze wszystkimi nowymi waciwociami.
+
+54
+00:04:12,810 --> 00:04:19,150
+MIKE HAYES obiekt z waciwoci licznika, gdzie nowa warto to licznik stanu minus warto akcji.
+
+55
+00:04:19,560 --> 00:04:27,240
+A teraz jest nieco chudsza, aby ta funkcja narzdzia moga to zrobi we wszystkich naszych
+
+56
+00:04:27,240 --> 00:04:34,580
+przypadkach, aby Optik wyleczy cay stan, a nastpnie obiekt javascript, w ktrym aktualizujemy licznik
+
+57
+00:04:34,580 --> 00:04:40,320
+i musz przekaza obiekt javascript, poniewa roz wartoci tego obiektu na
+
+58
+00:04:41,190 --> 00:04:44,690
+skopiowany stary obiekt w mojej funkcji uytecznoci.
+
+59
+00:04:44,710 --> 00:04:48,770
+Pozwl mi szybko zrobi to dla wszystkich innych zastosowa tutaj.
+
+60
+00:04:48,780 --> 00:04:58,080
+Dla wszystkich przypadkw rednich zawsze aktualizuj stan i przekazuj obiekt javascript ze zaktualizowanymi waciwociami.
+
+61
+00:04:58,320 --> 00:05:06,960
+Ostatnim razem, kiedy musz to zrobi, jest tu mj przyrostowy Mefford. Uywam duszego podejcia do
+
+62
+00:05:07,020 --> 00:05:09,680
+aktualizacji mojego stanu wczeniej.
+
+63
+00:05:09,750 --> 00:05:16,940
+Teraz wszystkie s bardzo krtkie i skondensowane, poniewa wanie wracaj tam powracajcy obiekt aktualizacji.
+
+64
+00:05:17,010 --> 00:05:19,640
+Chc zwikszy licznik tak ostatni.
+
+65
+00:05:20,010 --> 00:05:26,070
+Zrbmy szybko wszystkie pliki, cznie z nowym plikiem narzdziowym japes i zobaczmy, czy to dziaa,
+
+66
+00:05:26,070 --> 00:05:27,810
+kliknij na 10 szkod.
+
+67
+00:05:28,050 --> 00:05:30,660
+Wszystko wydaje si dziaa, wic nasza aplikacja dziaa.
+
+68
+00:05:30,690 --> 00:05:34,450
+Pytaj Przed mona nadal przechowywa, jak wida.
+
+69
+00:05:34,590 --> 00:05:36,740
+Ale teraz uywamy funkcji uytecznoci.
+
+70
+00:05:36,870 --> 00:05:40,470
+Wic do czego uywamy obiektu aktualizacji dogodnie.
+
+71
+00:05:40,590 --> 00:05:42,600
+C, wszyscy oni s przedmiotami.
+
+72
+00:05:42,600 --> 00:05:44,530
+Zrbmy rwnie aktualizacj.
+
+73
+00:05:44,550 --> 00:05:49,940
+Wykorzystanie obiektu jest zaimplementowane w wyniku J jako Falzone aberant reduktor.
+
+74
+00:05:50,170 --> 00:06:01,420
+Zatem zaimportuj obiekt aktualizacji dla AUM, a teraz przejd do narzdzia James Fall, a nastpnie uyjmy tutaj rwnie
+
+75
+00:06:01,420 --> 00:06:02,610
+obiektw aktualizacji.
+
+76
+00:06:02,810 --> 00:06:10,520
+Aby zwrci obiekt aktualizacji, w ktrym przekazalimy stan do zaktualizowanego obiektu, a nastpnie po prostu
+
+77
+00:06:10,520 --> 00:06:14,780
+obiekt javascript z waciwociami, ktre powinny zosta zaktualizowane.
+
+78
+00:06:15,200 --> 00:06:22,940
+I pozwala nam wtedy pozby si starego kodu, ktry tam mielimy, i uy tego krtszego,
+
+79
+00:06:22,940 --> 00:06:26,110
+a take oczywicie do usunicia wyniku.
+
+80
+00:06:26,120 --> 00:06:28,390
+Teraz zawsze aktualizuj tablic.
+
+81
+00:06:28,430 --> 00:06:33,950
+Nie bd pisa funkcji uytecznoci dla dugu, poniewa aktualizacja tablicy zaley od tego, co robimy
+
+82
+00:06:33,950 --> 00:06:34,650
+z tablic.
+
+83
+00:06:34,880 --> 00:06:39,590
+Dodanie nowego elementu dziaa na przykad przy usuwaniu konkatycji z folderu.
+
+84
+00:06:39,620 --> 00:06:44,770
+Dlatego nie jest to tak atwe jak w przypadku obiektu, a funkcja uytecznoci nie ma z tego
+
+85
+00:06:44,780 --> 00:06:45,710
+powodu tyle sensu.
+
+86
+00:06:45,980 --> 00:06:48,450
+Ale na kocu cigle aktualizujemy obiekt.
+
+87
+00:06:48,560 --> 00:06:50,580
+Zawsze robimy z powracaniem do nowego stanu.
+
+88
+00:06:50,810 --> 00:06:56,950
+Tak wic otrzymujemy stary stan, a nastpnie chcemy nadpisa wyniki nasz zaktualizowan tablic.
+
+89
+00:06:57,080 --> 00:07:02,230
+Przekamy to za pomoc obiektu javascript drugiego argumentu.
+
+90
+00:07:02,330 --> 00:07:03,350
+Zapiszmy to wszystko.
+
+91
+00:07:03,360 --> 00:07:05,320
+Zobaczmy take, e teraz jestemy martwi w akcji.
+
+92
+00:07:05,660 --> 00:07:07,130
+Wszystko to wydaje si dziaa.
+
+93
+00:07:07,140 --> 00:07:08,490
+Zapiszmy wynik.
+
+94
+00:07:09,280 --> 00:07:11,130
+Kasowanie dziaa rwnie dziaa.
+
+95
+00:07:11,260 --> 00:07:12,520
+To dobrze wyglda.
+
+96
+00:07:12,520 --> 00:07:18,730
+Czy obiekt aktualizacji ma dobr funkcj uytecznoci, ktr moemy doda, aby nasze reduktory byy odrobin szczuplejsze.
+

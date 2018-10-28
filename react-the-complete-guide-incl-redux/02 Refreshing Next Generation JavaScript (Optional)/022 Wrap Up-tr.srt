@@ -1,0 +1,56 @@
+1
+00:00:01,980 --> 00:00:07,780
+Bu Marchal' bitirmek istediim iin, yeni nesil javascript ve baz nemli javascript kavramlar
+
+2
+00:00:07,780 --> 00:00:09,580
+hakknda ok ey rendim.
+
+3
+00:00:09,580 --> 00:00:15,430
+Genel olarak ders boyunca bu modlde reneceiniz ok eyle karlaacaksnz.
+
+4
+00:00:15,460 --> 00:00:16,790
+Onun tarafndan kartrlmamaldr.
+
+5
+00:00:16,840 --> 00:00:18,330
+Hl javascript.
+
+6
+00:00:18,490 --> 00:00:21,070
+Sadece biraz daha modern zellikler kullanarak.
+
+7
+00:00:21,070 --> 00:00:23,740
+Yeniden eyleme gemek iin yazdklarmz da budur.
+
+8
+00:00:23,890 --> 00:00:26,760
+Bir sonraki modl artk serbest hareketle balayacak.
+
+9
+00:00:26,770 --> 00:00:32,300
+imdi, eski tarayclarda da alan kod tarken, tm bu zellikleri kullanabildiimiz bir proje
+
+10
+00:00:32,340 --> 00:00:36,360
+kurmak iin nasl hzl bir ekilde nasl hazrlandmz gstereceim.
+
+11
+00:00:36,440 --> 00:00:38,200
+Bununla iyi hazrlanmsn.
+
+12
+00:00:38,200 --> 00:00:43,660
+Nasl altn unuttuysanz ve kursta tantysanz ve bilgilerinizi yenilemek istiyorsanz, her zaman bu yetkiye
+
+13
+00:00:43,660 --> 00:00:47,640
+geri dnmekten ve belli bir zellie bir gz atmaktan ekinmeyin.
+
+14
+00:00:47,710 --> 00:00:50,080
+Ve bununla birlikte yeniden canlandrmaya balayalm.
+

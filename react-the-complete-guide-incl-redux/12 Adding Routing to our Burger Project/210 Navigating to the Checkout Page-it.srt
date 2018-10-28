@@ -1,0 +1,224 @@
+1
+00:00:02,140 --> 00:00:08,230
+L'ultima lezione che ho impostato non ha condotto nessuno a dimostrarlo e voglio assicurarmi
+
+2
+00:00:08,230 --> 00:00:16,240
+che quando clicco su continui in quella modalit qui nel riepilogo dell'ordine, in realt io carico una rotta diversa.
+
+3
+00:00:16,570 --> 00:00:21,220
+Ora  la caccia continuata hndler un anno che  interessante.
+
+4
+00:00:21,290 --> 00:00:25,630
+Pap  il gestore che viene licenziato quando faccio clic su Continua.
+
+5
+00:00:25,630 --> 00:00:33,170
+In questo momento ho detto che caricare su true e dove ho quindi effettuato il mio ordine e inviarlo al web.
+
+6
+00:00:33,310 --> 00:00:39,340
+Commenter tutto questo codice perch non desidero pi memorizzarlo su Firebase immediatamente qui.
+
+7
+00:00:39,490 --> 00:00:42,920
+Sono andato invece al componente check out.
+
+8
+00:00:42,940 --> 00:00:51,490
+loro percorso verso tutte le aree del nostro progetto, abbiamo accesso al luogo della partita e agli oggetti di scena della storia.
+
+9
+00:00:51,490 --> 00:00:55,500
+Ora che hai imparato da quando Burgard Boulder fa parte del
+
+10
+00:00:55,510 --> 00:01:01,950
+Posso provare questo aggiungendo Konsole bloccare questo oggetti nel componente.
+
+11
+00:01:02,010 --> 00:01:03,920
+MT Diamo un'occhiata.
+
+12
+00:01:03,940 --> 00:01:08,040
+Vediamo il problema con la posizione della cronologia e la corrispondenza.
+
+13
+00:01:08,150 --> 00:01:16,930
+Ora, a proposito, visto che qui dentro usiamo anche un paio di componenti come il componente rotto, nel caso ti stia chiedendo
+
+14
+00:01:16,930 --> 00:01:21,010
+di avere anche accesso a questi oggetti di scena qui.
+
+15
+00:01:21,280 --> 00:01:27,160
+Blocciamo semplicemente i puntelli nella funzione Bergere nel componente Bergere.
+
+16
+00:01:27,160 --> 00:01:30,110
+Qui vedi che abbiamo solo due ingredienti.
+
+17
+00:01:30,220 --> 00:01:35,840
+Non abbiamo accesso alla partita e cos via perch mentre questo  ovviamente parte
+
+18
+00:01:35,890 --> 00:01:44,720
+del burger di zona Roudebush non viene caricato attraverso un oggetto del percorso solo burger burglarious burger Bolar viene caricato per questo percorso
+
+19
+00:01:44,770 --> 00:01:50,830
+e tutto ci che viene caricato per un percorso ma solo i componenti diretti sono
+
+20
+00:01:50,830 --> 00:01:56,990
+solo Burgard Boulder stesso che fa innestare questi componenti speciali di puntelli all'interno del costruttore Bergrin.
+
+21
+00:01:57,040 --> 00:02:00,720
+Non capirli, dovremmo passarli manualmente.
+
+22
+00:02:00,730 --> 00:02:08,830
+C' un modo in cui possiamo ancora ottenere gli oggetti di scena nella componente burger e questo  davvero un po 'avanzato
+
+23
+00:02:08,830 --> 00:02:11,940
+e non qualcosa di cui abbiamo bisogno qui.
+
+24
+00:02:11,950 --> 00:02:14,380
+Ma voglio mostrarlo comunque.
+
+25
+00:02:14,380 --> 00:02:19,600
+Consentitemi di reintrodurre quella dichiarazione di blocco per vedere il problema e abbiamo visto che non abbiamo
+
+26
+00:02:19,600 --> 00:02:21,000
+la partita e la cronologia.
+
+27
+00:02:21,340 --> 00:02:31,570
+Se usiamo uno speciale componente di ordine superiore fornito dal re-act router Dom, possiamo effettivamente iniettarlo o
+
+28
+00:02:32,350 --> 00:02:38,410
+renderli disponibili per iniettare questi oggetti speciali in qualsiasi componente.
+
+29
+00:02:38,800 --> 00:02:47,230
+Il componente di ordine superiore  denominato con router e se avvolgiamo la nostra esportazione con esso in questo
+
+30
+00:02:47,230 --> 00:02:51,440
+modo con il router Bergere qui ora salvo questo.
+
+31
+00:02:51,580 --> 00:02:59,140
+delle partite e abbinabili alla partita pi vicina cos alla rotta pi vicina che  stata abbinata in passato in
+
+32
+00:02:59,230 --> 00:03:07,090
+questo caso la rotta che corrisponde al Berger pi audace che fa  qualcosa che volevo anche condividere con te.
+
+33
+00:03:07,150 --> 00:03:11,750
+Ora vedete che nel router Abbiamo anche la posizione e la cronologia
+
+34
+00:03:11,770 --> 00:03:14,870
+Lo useremo pi tardi quando ne avremo davvero bisogno.
+
+35
+00:03:14,890 --> 00:03:16,630
+Voglio solo mostrare questo piccolo trucco.
+
+36
+00:03:16,750 --> 00:03:24,190
+Se  necessario un accesso diretto alla cronologia delle corrispondenze in qualsiasi posizione e non si desidera passarlo manualmente
+
+37
+00:03:24,190 --> 00:03:28,760
+dal componente di livello superiore che  possibile utilizzare con il router.
+
+38
+00:03:28,900 --> 00:03:31,610
+Ho gi detto questo nella sezione di routing.
+
+39
+00:03:31,810 --> 00:03:40,990
+Torniamo al nostro compito originale nel componente Bergere Boulder nel metodo che viene eseguito quando si fa
+
+40
+00:03:40,990 --> 00:03:43,140
+clic su Continue there.
+
+41
+00:03:43,150 --> 00:03:45,910
+Naturalmente ho avuto accesso a questi oggetti di scena.
+
+42
+00:03:45,910 --> 00:03:49,380
+La storia  uno di questi oggetti di scena speciali forniti dal router.
+
+43
+00:03:49,480 --> 00:03:55,240
+E l abbiamo questo puntello che ci consente di passare fondamentalmente alla pagina porzionando la
+
+44
+00:03:55,240 --> 00:03:57,450
+pagina su quella pila di pagine.
+
+45
+00:03:57,460 --> 00:04:03,210
+Quindi ora posso semplicemente dire che voglio andare al checkout della barra.
+
+46
+00:04:03,430 --> 00:04:09,880
+Se salviamo questo, vediamo cosa succede se comincio a tirare qui il mio Bergere e clicco su ordine
+
+47
+00:04:09,880 --> 00:04:11,530
+ora e clicchi su continua.
+
+48
+00:04:11,530 --> 00:04:13,360
+Ora sono sulla pagina di pagamento.
+
+49
+00:04:13,360 --> 00:04:16,520
+Ottengo un errore perch gli ascoltatori non sono ancora collegati.
+
+50
+00:04:16,690 --> 00:04:20,800
+Ma oltre a ci sta funzionando ora non si connetter.
+
+51
+00:04:20,800 --> 00:04:27,010
+Basta controllare il link di navigazione qui perch ho intenzione di sostituirlo con le mie imbragature presto comunque,
+
+52
+00:04:27,550 --> 00:04:34,570
+quindi  qualcosa che non far qui ma il prossimo passo che voglio fare  aggiungere pi funzionalit in modo
+
+53
+00:04:34,570 --> 00:04:38,710
+che quando si fa clic su Annulla qui in realt siamo ripresi.
+
+54
+00:04:38,710 --> 00:04:45,940
+Torniamo al Berggruen Boulder mentre quando clicchiamo, ci mostriamo dove possiamo inserire
+
+55
+00:04:45,940 --> 00:04:46,920
+alcuni dati.
+
+56
+00:04:47,110 --> 00:04:48,810
+Questo  ci che voglio costruire successivamente.
+

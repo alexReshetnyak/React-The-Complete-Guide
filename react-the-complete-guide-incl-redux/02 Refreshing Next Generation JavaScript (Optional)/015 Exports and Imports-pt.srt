@@ -1,0 +1,228 @@
+1
+00:00:02,290 --> 00:00:09,990
+Outra caracterstica que o Next-Generation javascript oferece  escrever cdigo modular, portanto, o cdigo javascript
+
+2
+00:00:09,990 --> 00:00:12,980
+que voc dividiu em vrios arquivos.
+
+3
+00:00:13,170 --> 00:00:17,500
+E, obviamente, j podemos dividir nosso cdigo em vrios arquivos.
+
+4
+00:00:17,670 --> 00:00:22,720
+Ns apenas precisamos import-los na ordem correta nos arquivos html da nossa idade.
+
+5
+00:00:22,920 --> 00:00:30,060
+E a idia por trs das declaraes de exportao e importao e os chamados mdulos  que,
+
+6
+00:00:30,060 --> 00:00:37,260
+dentro de um arquivo javascript, podemos importar contedo de uma srie de arquivos para que os prprios arquivos
+
+7
+00:00:37,260 --> 00:00:38,850
+javascript conheam suas dependncias.
+
+8
+00:00:38,850 --> 00:00:40,510
+Pode parecer assim.
+
+9
+00:00:40,530 --> 00:00:46,830
+Ns temos uma pessoa de outono nos toca e l ns temos essa pessoa constante que armazena um objeto javascript e
+
+10
+00:00:47,430 --> 00:00:49,380
+ento essa  a parte interessante.
+
+11
+00:00:49,440 --> 00:00:57,210
+Ns exportamos essa palavra-chave padro, tudo isso significa que uma palavra-chave especial marcada como a exportao padro desse arquivo
+
+12
+00:00:57,210 --> 00:01:04,290
+e podemos importar isso em outro lugar e a declarao de importao ser mostrada em um segundo.
+
+13
+00:01:04,290 --> 00:01:10,620
+Ns tambm podemos ter uma srie de queda onde exportamos vrias coisas aqui, uma constante chamada clean, que
+
+14
+00:01:10,620 --> 00:01:15,810
+contm uma funo dnt e dados base que contm um nmero em um terceiro arquivo.
+
+15
+00:01:15,810 --> 00:01:24,130
+Podemos precisar importar de pessoa sim e utilidade para ns, de modo que o apt ou o genius requer declaraes de importao.
+
+16
+00:01:24,180 --> 00:01:29,970
+padro simplesmente significa que, se apenas importarmos algo desse arquivo, ser sempre nossa exportao padro.
+
+17
+00:01:30,250 --> 00:01:38,460
+E aqui esto algumas sintaxes de importao diferentes, como voc ver na pessoa da pontuao JSE, como voc v, usa
+
+18
+00:01:38,670 --> 00:01:40,890
+a palavra-chave padro, a palavra-chave
+
+19
+00:01:40,890 --> 00:01:49,470
+Ento, neste caso, uma pessoa constante, portanto, em pessoa implorada da pessoa sim, podemos nomear a pessoa o que quisermos, e  por
+
+20
+00:01:49,470 --> 00:01:54,480
+isso que uma pessoa impressa duas vezes ou P R S no importa.
+
+21
+00:01:54,480 --> 00:02:00,940
+Ele sempre se refere  coisa que voc marcou como padro com a palavra-chave padro para o utilitrio.
+
+22
+00:02:00,990 --> 00:02:03,240
+Sim,  um pouco diferente l.
+
+23
+00:02:03,390 --> 00:02:13,050
+Ns importamos a partir de duas constantes diferentes e, portanto, a sintaxe de importao usa as chaves curly para
+
+24
+00:02:13,050 --> 00:02:16,170
+direcionar especificamente coisas especficas desse arquivo.
+
+25
+00:02:16,170 --> 00:02:21,890
+Estas so as chamadas exportaes nomeadas porque importamos o material pelo seu nome.
+
+26
+00:02:21,900 --> 00:02:28,500
+Ns importamos a constante limpa por seu nome e importamos o Baystate pelo nome porque no marcamos nada
+
+27
+00:02:28,500 --> 00:02:29,410
+como padro.
+
+28
+00:02:29,520 --> 00:02:35,870
+Ento, para o javascript, saber o que exatamente estava apontando, precisamos dar o nome exato e o nome
+
+29
+00:02:35,870 --> 00:02:37,860
+vai entre os abraos de chamadas.
+
+30
+00:02:37,950 --> 00:02:43,770
+Pela maneira, voc tambm pode escrever isso como uma declarao de importao com o Baystate com uma vrgula
+
+31
+00:02:43,770 --> 00:02:44,870
+limpa ou vice-versa.
+
+32
+00:02:44,880 --> 00:02:47,910
+Portanto, estas so importaes e exportaes.
+
+33
+00:02:47,970 --> 00:02:53,570
+Voc escreve tudo isso em seus arquivos javascript e usar isso fortemente para todas as pontuaes.
+
+34
+00:02:53,760 --> 00:03:00,420
+Agora, como com todos esses recursos de javascript de prxima gerao, ele no ser executado assim em todos os navegadores.
+
+35
+00:03:00,420 --> 00:03:05,460
+Nem mesmo os navegadores mais modernos suportam que todos os recursos sero usados neste projeto.
+
+36
+00:03:05,460 --> 00:03:11,700
+Portanto, no prximo mdulo do curso, eu tambm vou mostrar como configurar rapidamente um projeto que, no final,
+
+37
+00:03:11,710 --> 00:03:18,330
+apenas agrupa todos esses recursos de javascript da prxima gerao para os bons recursos generalizados atualmente, para que ns,
+
+38
+00:03:18,630 --> 00:03:24,720
+como desenvolvedor, possamos usar o javascript da prxima gerao sem ns cdigo de transporte que no  executado
+
+39
+00:03:24,720 --> 00:03:25,940
+em nenhum lado.
+
+40
+00:03:25,980 --> 00:03:28,090
+Ento, de volta s importaes e exportaes.
+
+41
+00:03:28,090 --> 00:03:32,290
+Esta  a sintaxe que usamos e voc ver se usar muito neste curso.
+
+42
+00:03:32,310 --> 00:03:38,370
+Voc tambm pode ver algumas variaes porque tambm podemos escrever isso de forma diferente quando temos
+
+43
+00:03:38,400 --> 00:03:39,330
+uma exportao padro.
+
+44
+00:03:39,330 --> 00:03:44,700
+Voc j viu essa pessoa o nome que voc pode escolher totalmente por conta prpria.
+
+45
+00:03:44,760 --> 00:03:47,970
+No importa se voc usar pessoa ou RP.
+
+46
+00:03:48,210 --> 00:03:54,450
+Se voc tiver uma exportao com nome, voc precisar usar o nome exato definido no arquivo com
+
+47
+00:03:54,450 --> 00:03:55,770
+a palavra-chave de exportao.
+
+48
+00:03:55,770 --> 00:03:57,400
+Ainda o que voc pode fazer.
+
+49
+00:03:57,480 --> 00:04:03,540
+Voc pode atribuir um alias que voc pode novamente escolher livremente no arquivo que voc est
+
+50
+00:04:03,540 --> 00:04:09,510
+importando com a palavra-chave as ou se voc tiver vrias exportaes nomeadas em um arquivo.
+
+51
+00:04:09,510 --> 00:04:16,940
+Voc pode importar tudo com esse caractere inicial e, em seguida, atribuir um alias e empacotar.
+
+52
+00:04:16,950 --> 00:04:23,340
+Neste caso, seria um objeto javascript que expe todas as constantes e tudo o que voc
+
+53
+00:04:23,580 --> 00:04:31,320
+exporta no arquivo como propriedades para que voc simplesmente tenha dados Daut empacotados fornecidos Daut limpo para acessar a
+
+54
+00:04:31,320 --> 00:04:32,430
+exportao de coisas.
+
+55
+00:04:32,460 --> 00:04:36,780
+Isso depende de voc e voc me ver usar essas coisas para todo o curso.
+
+56
+00:04:36,780 --> 00:04:39,020
+A pesquisa de uso mais comum  a principal.
+
+57
+00:04:39,030 --> 00:04:41,700
+Importar Cauley prepara algo chamado de raise from.
+

@@ -1,0 +1,136 @@
+1
+00:00:02,120 --> 00:00:05,370
+Na ltima palestra, aprendemos a redirecionar condicionalmente.
+
+2
+00:00:05,480 --> 00:00:12,020
+E essa  uma boa maneira de redirecionar agora para ser honesto, a maneira como redirecionamos no novo componente de
+
+3
+00:00:12,410 --> 00:00:19,560
+postagem talvez no seja a maneira como voc sempre vai fazer isso no final depois de enviar uma postagem com sucesso.
+
+4
+00:00:19,700 --> 00:00:26,090
+Voc s quer mudar para a pgina e para papai, voc tambm pode, claro, usar essa histria
+
+5
+00:00:26,090 --> 00:00:35,240
+do Propp, que voc obtm em cada componente que  carregado dentro de um navegador ou componente envolvente do roteador e sua postagem 
+
+6
+00:00:35,250 --> 00:00:36,680
+carregada para bloquear.
+
+7
+00:00:36,680 --> 00:00:43,280
+Portanto, portanto,  um encadernador pelo roteador do navegador l, temos acesso a essa situao de correspondncia e ao problema
+
+8
+00:00:43,310 --> 00:00:45,070
+da histria, mostrei-lhe mais cedo.
+
+9
+00:00:45,380 --> 00:00:51,260
+E esse problema de histria tem alguns mtodos de convenincia que podemos usar para substituir a rota atual
+
+10
+00:00:51,350 --> 00:00:53,170
+ou empurrar uma nova rota.
+
+11
+00:00:53,540 --> 00:01:02,330
+Ento, tambm podemos mudar a pgina aqui sem alterar o estado e, portanto, nunca renderizando esse componente de redirecionamento, mas, ao
+
+12
+00:01:02,390 --> 00:01:09,740
+mesmo tempo, acessando o histrico do suporte de disco e o mtodo de envio que nos permite
+
+13
+00:01:09,740 --> 00:01:11,330
+fazer parte da pgina.
+
+14
+00:01:11,330 --> 00:01:18,130
+Ento, aqui, todos ns podemos ir para barras de mensagens e isso levar essencialmente ao mesmo comportamento que antes,
+
+15
+00:01:18,710 --> 00:01:20,570
+podemos ir para novas postagens.
+
+16
+00:01:20,750 --> 00:01:27,780
+Ns podemos inserir uma nova postagem e, uma vez que  feito, ns empurramos uma nova pgina e ns somos redirecionados tecnicamente.
+
+17
+00:01:27,890 --> 00:01:30,850
+Porsche empurra esta pgina para a pilha.
+
+18
+00:01:30,950 --> 00:01:37,670
+Ento, se voc clicar na mochila aberta, voltem para a nova pgina da publicao onde o redirecionamento substitui a
+
+19
+00:01:37,670 --> 00:01:38,290
+pgina atual.
+
+20
+00:01:38,390 --> 00:01:42,700
+Ento, se ns, ento, clique no boto Voltar e, claro, tente isso depois de comentar isso.
+
+21
+00:01:42,710 --> 00:01:48,330
+E novamente, se voc clicar no boto Voltar frequentemente redirecionando e no pressionando.
+
+22
+00:01:48,650 --> 00:01:54,830
+Voc pode voltar, mas voc no voltar para a ltima pgina porque o redirecionamento substitui a pgina atual
+
+23
+00:01:54,830 --> 00:02:00,290
+na pilha, no empurra uma nova, embora voc tambm possa replicar esse comportamento ao no usar
+
+24
+00:02:00,620 --> 00:02:04,750
+a Porsche, mas substitua o objeto de histrico se voc usar dados.
+
+25
+00:02:04,760 --> 00:02:08,350
+Voc vai para uma nova postagem se agora inserir algo aqui.
+
+26
+00:02:08,510 --> 00:02:12,320
+Ns tambm deixamos a pgina, mas agora pressionamos o boto Voltar.
+
+27
+00:02:12,470 --> 00:02:19,940
+Ainda estamos no post porque estvamos l antes de visitar uma nova postagem porque a nova postagem foi substituda em
+
+28
+00:02:19,940 --> 00:02:21,460
+uma pilha de pginas.
+
+29
+00:02:21,770 --> 00:02:27,650
+Ento, substitua basicamente o mesmo que redirecionar e, portanto, voc pode us-lo como uma alternativa.
+
+30
+00:02:27,680 --> 00:02:32,780
+Eu queria mostrar-lhe ambos os mtodos, porque talvez voc tenha um caso de uso em que voc
+
+31
+00:02:32,780 --> 00:02:35,070
+deseja tornar esse componente de redirecionamento condicionalmente.
+
+32
+00:02:35,150 --> 00:02:37,720
+E ento, esta  uma maneira fcil de faz-lo.
+
+33
+00:02:37,910 --> 00:02:44,360
+Se voc no quiser usar a abordagem de renderizao, o componente substitua ou a Porsche ou h uma maneira
+
+34
+00:02:44,450 --> 00:02:47,630
+de mudar a pgina depois de alguma operao ter terminado.
+

@@ -1,0 +1,248 @@
+1
+00:00:02,170 --> 00:00:08,830
+En la ltima conferencia trabajamos en nuestro componente de Bergere y nos aseguramos de que podemos generar una
+
+2
+00:00:08,830 --> 00:00:16,240
+lista de ingredientes de hamburguesas en realidad una lista que comenz como un objeto y que luego transformamos en una matriz.
+
+3
+00:00:16,240 --> 00:00:24,580
+Ahora con ese primer paso importante se tom lo que sucede ahora si realmente tenemos una hamburguesa que comienza con
+
+4
+00:00:24,580 --> 00:00:26,860
+todos los ingredientes establecidos para Ciro.
+
+5
+00:00:26,870 --> 00:00:30,770
+Aunque ahora vemos que ahora eso est perfectamente bien.
+
+6
+00:00:30,770 --> 00:00:32,480
+No tenemos ingredientes para renderizar.
+
+7
+00:00:32,510 --> 00:00:38,270
+No obtenemos un error porque solo tenemos una matriz vaca que tratamos de procesar, pero
+
+8
+00:00:38,270 --> 00:00:44,820
+sera an mejor si pudiramos mostrar algn mensaje, por ejemplo, comencemos a agregar ingredientes o algo as.
+
+9
+00:00:44,840 --> 00:00:51,560
+Ahora, para mostrar algo en caso de que no tengamos ingredientes, necesito averiguar
+
+10
+00:00:51,590 --> 00:00:57,830
+si no tenemos ingredientes, pero ahora los ingredientes transformados siempre sern un arreglo.
+
+11
+00:00:57,950 --> 00:01:00,800
+Solo una matriz de matrices vacas.
+
+12
+00:01:00,800 --> 00:01:01,650
+En el final.
+
+13
+00:01:02,090 --> 00:01:06,040
+Pero los datos son algo difcil de verificar para nosotros.
+
+14
+00:01:06,080 --> 00:01:14,290
+Entonces, cmo podemos saber si tenemos ingredientes o no? Podemos reducir la matriz de ingredientes transformados.
+
+15
+00:01:14,330 --> 00:01:21,050
+para que tengamos una idea de cmo se ve por ahora, guarde esta enfermedad, nuestra matriz de ingredientes que producimos
+
+16
+00:01:21,570 --> 00:01:28,010
+y, por supuesto, es un par de matrices vacas y, por lo tanto, no funciona o no funciona .
+
+17
+00:01:28,010 --> 00:01:30,560
+Por ahora solo vamos a consolar el registro
+
+18
+00:01:30,590 --> 00:01:32,600
+Pero no muestra nada.
+
+19
+00:01:32,600 --> 00:01:36,900
+Por lo tanto, verificar la longitud no servir porque la longitud es cuatro.
+
+20
+00:01:37,030 --> 00:01:43,910
+Son estos arreglos internos los que nos interesan. Lo que podemos hacer es simplemente aplanar este
+
+21
+00:01:44,240 --> 00:01:52,070
+conjunto para asegurarnos de que extraemos los valores de estos arreglos internos y negociar un solo arreglo que contenga
+
+22
+00:01:52,070 --> 00:01:53,400
+todos estos valores.
+
+23
+00:01:53,630 --> 00:02:04,850
+Podemos hacer eso agregando reducir a nuestra lgica de ingredientes transformados, aqu reduce las funciones integradas en cada funcin, lo que
+
+24
+00:02:04,970 --> 00:02:09,240
+nos permite transformar una matriz en otra cosa.
+
+25
+00:02:09,410 --> 00:02:14,660
+Toma una funcin como entrada y esta funcin recibe dos argumentos pasados
+
+26
+00:02:14,660 --> 00:02:15,770
+automticamente por javascript.
+
+27
+00:02:16,040 --> 00:02:26,780
+El valor anterior y el valor actual del mtodo de reduccin no solo aceptan la Colback de dear aqu, que se ejecuta
+
+28
+00:02:26,780 --> 00:02:31,410
+en todos los elementos en desorden que devolvemos aqu.
+
+29
+00:02:31,430 --> 00:02:34,030
+Tambin acepta un valor inicial.
+
+30
+00:02:34,100 --> 00:02:35,920
+Digamos una matriz vaca.
+
+31
+00:02:35,980 --> 00:02:39,080
+Entonces el valor inicial del valor reducido.
+
+32
+00:02:39,080 --> 00:02:44,360
+Ahora, por supuesto, desea ajustar este valor reducido devolviendo algo.
+
+33
+00:02:45,160 --> 00:02:52,430
+Y luego recorrer todos los elementos y simplemente los agregar a los valores iniciales paso a paso.
+
+34
+00:02:52,770 --> 00:03:00,480
+Entonces, si desea devolver los valores actualizados comenzando con el inicial, entonces se almacena en el primer argumento
+
+35
+00:03:00,480 --> 00:03:03,130
+que recibimos en cada ciclo aqu.
+
+36
+00:03:03,420 --> 00:03:04,920
+Entonces arregla esto.
+
+37
+00:03:04,950 --> 00:03:10,810
+Nuestro argumento es la ruta siempre actualizada aere que quiero devolver al final.
+
+38
+00:03:11,190 --> 00:03:18,750
+As que simplemente no puedo capturar algo para ese concat l. Esto simplemente tomar el elemento dado para
+
+39
+00:03:18,750 --> 00:03:22,350
+el que estamos bucleando y agregando a este conjunto.
+
+40
+00:03:22,350 --> 00:03:25,790
+Ahora si guardamos esto, obtenemos una matriz vaca.
+
+41
+00:03:26,070 --> 00:03:35,010
+Y si vuelvo a introducir un re-aireado como dos piezas de queso, obtenemos una matriz con dos objetos y el hecho de que estos objetos se
+
+42
+00:03:35,010 --> 00:03:41,070
+vean extraos simplemente est relacionado con el hecho de que estos son los elementos X de Jae
+
+43
+00:03:41,070 --> 00:03:42,000
+manejados por reaccionar.
+
+44
+00:03:42,030 --> 00:03:44,330
+Es del tipo que ella piensa, como puedes ver.
+
+45
+00:03:44,820 --> 00:03:47,420
+As que as es como ahora aplanamos la matriz.
+
+46
+00:03:47,460 --> 00:03:53,790
+Y si esto no est claro, le recomiendo que revise la documentacin de estas funciones de
+
+47
+00:03:53,850 --> 00:03:57,250
+matriz de JavaScript predeterminadas como map y reduce.
+
+48
+00:03:57,720 --> 00:04:02,430
+Entonces con eso tenemos una matriz que est vaca o contiene los elementos X.
+
+49
+00:04:02,670 --> 00:04:09,820
+Y como puede estar vaco, simplemente podemos verificar si la longitud de los ingredientes transformados es igual a cero.
+
+50
+00:04:10,020 --> 00:04:16,950
+Si ese es el caso, entonces quiero dar salida a un prrafo donde digo que comencemos a agregar elementos.
+
+51
+00:04:17,060 --> 00:04:18,400
+Por lo tanto, voy a llamar palabra.
+
+52
+00:04:18,420 --> 00:04:23,980
+Este ingrediente constante a una variable en iOS 6.
+
+53
+00:04:24,000 --> 00:04:26,270
+Usamos eso para esto.
+
+54
+00:04:26,880 --> 00:04:35,700
+Y luego, establecer ingredientes transformados iguales a un prrafo en el que simplemente dir
+
+55
+00:04:35,790 --> 00:04:40,020
+que comiencen a agregar ingredientes como este.
+
+56
+00:04:40,020 --> 00:04:44,010
+Y todava tenemos una baja transferencia de salida e ingredientes ah abajo.
+
+57
+00:04:44,010 --> 00:04:50,100
+Guarde el archivo y actualice la hamburguesa Bolar para que ya no tenga queso.
+
+58
+00:04:50,410 --> 00:04:56,490
+Y ahora, si guardas esa cola, simplemente debes comenzar a agregar ingredientes y, por supuesto, esto tambin
+
+59
+00:04:56,490 --> 00:04:57,400
+debera seguir.
+
+60
+00:04:57,420 --> 00:04:59,890
+No importa cul sea su ventana grfica.
+
+61
+00:05:00,240 --> 00:05:02,500
+Ese es otro paso importante.
+
+62
+00:05:02,530 --> 00:05:08,840
+Ahora el siguiente paso es comenzar a agregar estos controles para permitir que el usuario agregue y elimine los ingredientes.
+

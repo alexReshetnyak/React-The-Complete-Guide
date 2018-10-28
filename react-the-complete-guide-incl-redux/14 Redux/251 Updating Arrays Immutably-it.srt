@@ -1,0 +1,408 @@
+1
+00:00:02,200 --> 00:00:09,190
+Nell'ultima lezione impariamo come aggiornare immutabilmente il nostro stato e anche gestire un array qui che
+
+2
+00:00:09,280 --> 00:00:16,870
+ proprio come Optix speciale a causa di quel tipo di riferimento in javascript e si impara che
+
+3
+00:00:16,870 --> 00:00:20,250
+si dovrebbe lavorare con esso usando Kong cat.
+
+4
+00:00:20,350 --> 00:00:24,270
+Ora voglio gestire il caso che elimini un risultato.
+
+5
+00:00:24,400 --> 00:00:26,650
+E per questo inviamo cancellare.
+
+6
+00:00:26,650 --> 00:00:27,690
+Risultato qui.
+
+7
+00:00:28,550 --> 00:00:35,890
+Ora nel riduttore la parte facile naturalmente  semplicemente aggiungere un caso per quello dopo il caso eliminare il pre-sale e
+
+8
+00:00:36,710 --> 00:00:41,490
+quindi restituiamo un oggetto javascript in cui prima di tutto copia il vecchio stato.
+
+9
+00:00:41,720 --> 00:00:42,480
+E adesso.
+
+10
+00:00:42,480 --> 00:00:49,600
+Cosa facciamo di Russels aggiungendo un articolo immutabilmente ci che  possibile con Concat.
+
+11
+00:00:49,640 --> 00:00:55,610
+Ora in genere si rimuovono gli elementi da una matrice ottenendo l'indice dell'elemento che si desidera rimuovere.
+
+12
+00:00:55,610 --> 00:01:01,940
+Quindi diciamo che abbiamo qui potrebbe essere si otterr questo dinamico presto leps per ora basta farlo in
+
+13
+00:01:01,940 --> 00:01:02,750
+questo modo.
+
+14
+00:01:02,750 --> 00:01:08,420
+E poi potremmo usare i risultati del nostro array store e il codice splice.
+
+15
+00:01:08,420 --> 00:01:14,120
+Se poi passiamo l'idea di voler iniziare dal primo argomento e dalla quantit di elementi che
+
+16
+00:01:14,120 --> 00:01:14,950
+vogliamo eliminare.
+
+17
+00:01:14,990 --> 00:01:20,210
+Il secondo argomento  quello di rimuovere questi elementi dall'array.
+
+18
+00:01:20,270 --> 00:01:25,040
+Questo per muta l'array originale e quindi non  come dovremmo farlo.
+
+19
+00:01:25,040 --> 00:01:26,720
+Non  immutabile.
+
+20
+00:01:26,720 --> 00:01:31,590
+Quindi, come possiamo farlo in un modo immutabile che ci sono un paio di modi.
+
+21
+00:01:31,620 --> 00:01:33,100
+Te ne mostrer due.
+
+22
+00:01:33,180 --> 00:01:42,960
+Il primo  che si crea una copia dell'array in modo che il nuovo array possa essere un nuovo array creato e
+
+23
+00:01:42,960 --> 00:01:50,960
+quindi utilizzare l'operatore di spread per distribuire tutti gli elementi nei risultati di stato in un nuovo array.
+
+24
+00:01:51,030 --> 00:01:58,380
+oggetti cos come sono gli oggetti stessi che puntano ancora agli stessi oggetti che avevano fatto prima.
+
+25
+00:01:58,590 --> 00:02:06,690
+Con questo hai creato una copia per aggiungere nuovi elementi importanti di array e i risultati dello stato erano
+
+26
+00:02:06,960 --> 00:02:10,700
+Quindi, se si modifica una propriet in uno degli elementi stessi.
+
+27
+00:02:10,890 --> 00:02:18,270
+La semplice creazione di un nuovo array come questo non  sufficiente se si pianifica di rimuovere un oggetto,
+
+28
+00:02:18,260 --> 00:02:23,070
+anche se questo  OK perch non si toccher l'oggetto appena rimosso dall'array.
+
+29
+00:02:23,070 --> 00:02:24,250
+Questa  una differenza.
+
+30
+00:02:24,750 --> 00:02:33,240
+Quindi otteniamo una copia del nuovo array qui e quindi potremmo semplicemente usare quel nuovo array qui nella nostra operazione di
+
+31
+00:02:33,240 --> 00:02:41,640
+splicing e quindi restituire lo stato in cui impostiamo i risultati uguali al nuovo array che  una copia del vecchio
+
+32
+00:02:41,640 --> 00:02:43,040
+array ma aggiornato.
+
+33
+00:02:43,190 --> 00:02:46,150
+E dal momento che l'abbiamo copiato, non abbiamo mai toccato il vecchio array.
+
+34
+00:02:46,320 --> 00:02:48,180
+Quindi questo  un modo per farlo.
+
+35
+00:02:48,210 --> 00:02:54,980
+Ho intenzione di commentarlo anche se il modo in cui vedi pi spesso  quello di utilizzare il metodo di cartella.
+
+36
+00:02:55,090 --> 00:03:02,250
+Ora per questo semplicemente non puoi creare una nuova costante che  forse l'array aggiornato, qualunque sia il nome che
+
+37
+00:03:02,250 --> 00:03:02,670
+vuoi.
+
+38
+00:03:02,670 --> 00:03:07,610
+Potresti anche nominare una nuova serie e l prendi il tuo originale o.
+
+39
+00:03:07,710 --> 00:03:11,030
+Stato risultati e chiama il metodo di filtro.
+
+40
+00:03:11,310 --> 00:03:18,930
+restituisce un nuovo array non tocca quello vecchio restituisce uno nuovo filtrato prende una funzione come input.
+
+41
+00:03:18,930 --> 00:03:20,190
+Se il filtro
+
+42
+00:03:20,190 --> 00:03:28,620
+La funzione viene eseguita su ogni elemento dell'array che determina se questo elemento completa la condizione determinata
+
+43
+00:03:28,620 --> 00:03:33,850
+per trasformarlo nel nuovo array restituito da Faulter o meno.
+
+44
+00:03:33,870 --> 00:03:39,610
+Quindi otteniamo l'elemento individuale come input qui l'elemento o un'ora Hastey basalt potremmo nominarlo
+
+45
+00:03:40,140 --> 00:03:42,790
+e quindi dobbiamo restituire true o false.
+
+46
+00:03:43,020 --> 00:03:49,290
+Se restituiamo true e questo  solo uso sintassi di scelta rapida per una funzione di freccia in cui se scrivi una
+
+47
+00:03:49,290 --> 00:03:51,890
+riga in linea puoi omettere la parola chiave return.
+
+48
+00:03:52,350 --> 00:03:57,810
+restituisci true, return fa per ogni elemento e quindi hai appena creato una copia del vecchio array.
+
+49
+00:03:57,810 --> 00:03:58,530
+Quindi, se
+
+50
+00:03:58,530 --> 00:04:01,130
+Quindi solo una forma pi lunga della sintassi.
+
+51
+00:04:01,440 --> 00:04:06,680
+Ovviamente non sempre si desidera tornare a soli 40 elementi che dovrebbero essere inclusi nel nuovo array.
+
+52
+00:04:07,050 --> 00:04:14,160
+Quindi, dal momento che vogliamo eliminare l'elemento qui, restituiamo true per ogni elemento che non ha un
+
+53
+00:04:14,220 --> 00:04:19,020
+determinato ID o che non si trova in un determinato indice qui.
+
+54
+00:04:19,140 --> 00:04:23,930
+Quindi, se abbiamo l'indice dell'elemento nell'array, prenderemmo un secondo argomento.
+
+55
+00:04:23,940 --> 00:04:28,870
+Otteniamo qui in questa funzione di callback l'indice dell'elemento per ricorrenza a.
+
+56
+00:04:28,890 --> 00:04:36,510
+quindi potremmo semplicemente dire return true se l'indice dead  uguale all'indice dell'elemento a cui vuoi rimuoverlo.
+
+57
+00:04:36,680 --> 00:04:40,200
+Quindi, in cui vengono eseguite le disfunzioni e
+
+58
+00:04:40,200 --> 00:04:48,780
+Quindi se stiamo parlando di indici degli elementi ora nel nostro caso qui abbiamo uno stato di oggetti di elementi
+
+59
+00:04:48,780 --> 00:04:56,120
+ORU in cui abbiamo elementi di questa forma un valore e un ID univoco per ogni elemento.
+
+60
+00:04:56,430 --> 00:05:00,510
+Quindi riceveremo un ID e possiamo prendere questa idea.
+
+61
+00:05:00,530 --> 00:05:03,590
+Quindi NON l'indice non la posizione nell'array.
+
+62
+00:05:03,630 --> 00:05:09,930
+Questa  un'idea dell'elemento e poich questa funzione viene eseguita su ogni elemento non  necessario
+
+63
+00:05:09,930 --> 00:05:13,380
+ottenere informazioni su quale indice questo elemento .
+
+64
+00:05:13,380 --> 00:05:21,550
+Non possiamo semplicemente dire che restituiamo true se l'ID dell'elemento nell'array stava attualmente guardando.
+
+65
+00:05:21,580 --> 00:05:24,660
+Stiamo accedendo a questa propriet ID su ciascun elemento.
+
+66
+00:05:24,660 --> 00:05:33,410
+Quindi se c' un ID uguale quindi scusami non uguale all'ID che stiamo ottenendo con questa azione.
+
+67
+00:05:33,420 --> 00:05:41,840
+Quindi per la sua azione mi aspetto di ottenere un carico utile di ID elemento d risultato o qualsiasi altra cosa vogliamo nominare.
+
+68
+00:05:42,000 --> 00:05:46,530
+C' un nome molto lungo che potresti usare solo ID, ma voglio chiarire da
+
+69
+00:05:46,530 --> 00:05:47,700
+dove viene questo.
+
+70
+00:05:47,700 --> 00:05:50,350
+Quindi questo  un carico utile di questa azione.
+
+71
+00:05:50,370 --> 00:05:52,480
+Ovviamente quando passare questo carico utile.
+
+72
+00:05:52,680 --> 00:05:58,750
+Ma prima di tutto, usiamo questo array aggiornato per Dennis, che come risultato qui nello stato torniamo.
+
+73
+00:05:58,980 --> 00:06:05,640
+ un array un thread totalmente nuovo da annullare che restituisce true per tutti gli elementi in cui l'ID
+
+74
+00:06:05,670 --> 00:06:08,510
+non  uguale all'ID che passiamo con l'azione.
+
+75
+00:06:08,520 --> 00:06:10,850
+Quindi ora passiamo un ID con l'azione allora.
+
+76
+00:06:11,040 --> 00:06:15,260
+Andiamo al contenitore contatore e avanti eliminiamo l'assalto.
+
+77
+00:06:15,300 --> 00:06:19,430
+Dovremmo ora impostare una propriet con lo stesso nome quando si accede a introduttore.
+
+78
+00:06:19,530 --> 00:06:21,770
+Quindi risultato l id.
+
+79
+00:06:21,870 --> 00:06:29,500
+Questa  la propriet a cui sto accedendo qui sul mio In realt ora dovrebbe essere solo l'idea dell'elemento su
+
+80
+00:06:29,530 --> 00:06:33,140
+cui abbiamo fatto clic per ottenere l'ID del padre.
+
+81
+00:06:33,250 --> 00:06:37,010
+Abbiamo bisogno di ottenere questo su questa funzione qui.
+
+82
+00:06:37,120 --> 00:06:41,140
+Quindi oso in qualche modo ho bisogno di ottenere queste informazioni.
+
+83
+00:06:41,470 --> 00:06:47,890
+Quindi qui mi aspetto di ottenere l'ID passato a questa funzione anonima qui.
+
+84
+00:06:48,020 --> 00:06:55,060
+Qualsiasi nome di argomento arbitrario che puoi scegliere e voglio inviarlo insieme alla mia azione,
+
+85
+00:06:55,060 --> 00:07:01,140
+naturalmente, per ricevere quella tua parola, usiamo questa propriet qui sul risultato Leite.
+
+86
+00:07:01,210 --> 00:07:03,350
+Ora dobbiamo passare quell'ID.
+
+87
+00:07:03,400 --> 00:07:06,160
+Quindi qui vengono eseguiti come una funzione anonima.
+
+88
+00:07:07,420 --> 00:07:15,340
+verr eseguito al momento del rendering di questo componente perch  mappato o avvolto all'interno di questa funzione anonima.
+
+89
+00:07:15,370 --> 00:07:20,230
+E quando vengono eseguite le disfunzioni, allora verr eseguita la disfunzione e
+
+90
+00:07:20,230 --> 00:07:23,230
+ora potr aggiungere parentesi perch questo non
+
+91
+00:07:23,290 --> 00:07:30,440
+E qui posso quindi passare l'ID del risultato del negozio in riferimento a quella nuova istantanea della data.
+
+92
+00:07:30,790 --> 00:07:38,560
+Ora con quello se salviamo tutto questo e iniziamo ad aggiungere alcuni risultati qui e clicchiamo sul 30 che
+
+93
+00:07:38,560 --> 00:07:39,700
+ stato rimosso.
+
+94
+00:07:39,880 --> 00:07:44,800
+Lo stesso vale per i risultati se clicchiamo su di essi ma in modo immutabile ancora.
+
+95
+00:07:44,980 --> 00:07:51,460
+il filtro e hai imparato come passare le azioni dall'interno dell'interfaccia utente a un'azione
+
+96
+00:07:51,460 --> 00:07:59,620
+prevedendo l'argomento per ottenere dall'interfaccia utente in Invio MAP agli oggetti di scena e quindi passarlo insieme all'azione.
+
+97
+00:07:59,620 --> 00:08:06,260
+E un sacco di cose importanti qui hai imparato come eliminare immutabilmente gli elementi con
+
+98
+00:08:06,370 --> 00:08:13,780
+E ovviamente passando questo argomento ti stai aspettando dall'interno dell'interfaccia utente, avvolgendo questo oggetto che
+
+99
+00:08:13,990 --> 00:08:21,940
+esegui in una funzione anonima che ti consente di passare i dati insieme alla chiamata di
+
+100
+00:08:21,940 --> 00:08:22,890
+funzione.
+
+101
+00:08:22,900 --> 00:08:30,670
+Questo  molto importante e un altro record building funziona immutabilmente sul Leitz e passa i
+
+102
+00:08:30,760 --> 00:08:37,120
+payload di azione dall'interfaccia utente a un dispaccio cartografico per puntellare al negozio.
+

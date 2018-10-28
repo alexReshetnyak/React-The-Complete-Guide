@@ -1,0 +1,344 @@
+1
+00:00:02,080 --> 00:00:06,970
+Duo mwio si o przeczeniu midzy dwiema rnymi stronami, ale wane
+
+2
+00:00:06,970 --> 00:00:10,370
+jest oczywicie, aby wiedzie, jak pracowa z routerem.
+
+3
+00:00:10,780 --> 00:00:16,600
+Teraz jednak chc si upewni, e moemy rwnie klikn na jeden wpis i nadal go adowa, poniewa w
+
+4
+00:00:16,630 --> 00:00:19,430
+tej chwili nic si nie dzieje, kiedy to robimy.
+
+5
+00:00:19,450 --> 00:00:20,820
+Nie otrzymujemy rwnie bdu,
+
+6
+00:00:20,830 --> 00:00:22,570
+ale nic si nie dzieje.
+
+7
+00:00:22,570 --> 00:00:29,860
+Powodem tego jest oczywicie to, e w naszym komponencie posts, gdzie mamy ten handler
+
+8
+00:00:29,860 --> 00:00:36,280
+do obsugi kliknicia postu, postSelectedHandler ustawia jaki stan, ktry jest nieistotny, poniewa
+
+9
+00:00:36,310 --> 00:00:38,310
+nie obsuguj ju stanu,
+
+10
+00:00:38,320 --> 00:00:40,610
+nie nawet tutaj ustawi domylne.
+
+11
+00:00:40,930 --> 00:00:47,450
+Teraz, po klikniciu na to, teraz chc zaadowa cay post. W tym celu oczywicie musimy
+
+12
+00:00:47,450 --> 00:00:52,750
+rwnie ustali, gdzie powinien by pokazany ten peny wpis.
+
+13
+00:00:52,750 --> 00:00:58,080
+Moglibymy renderowa go w komponencie blogu zamiast w naszym postie,
+
+14
+00:00:58,300 --> 00:01:02,450
+moemy zaadowa peny wpis w tym miejscu, jest
+
+15
+00:01:02,460 --> 00:01:05,580
+to jedna opcja. Tutaj jednak lub niezalenie
+
+16
+00:01:05,770 --> 00:01:14,350
+od tego, gdzie waciwie si posugujemy, musimy mie moliwo uzyskania parametru dynamicznego routingu, poniewa jeli przyjrzymy si wynikom naszych
+
+17
+00:01:14,440 --> 00:01:18,920
+postw, kady post ma identyfikator, a ten identyfikator jest oczywicie
+
+18
+00:01:19,120 --> 00:01:24,610
+wany, poniewa po klikniciu na post , musimy wiedzie, ktry post by,
+
+19
+00:01:24,610 --> 00:01:30,150
+ktry post chcemy zaadowa i ktry nie zmienia si, gdy uywamy rnych tras.
+
+20
+00:01:30,520 --> 00:01:33,970
+Na szczcie mamy sposb na uzyskanie identyfikatora, wic
+
+21
+00:01:34,090 --> 00:01:42,460
+teraz musimy przekaza ten identyfikator jako cz adresu URL, tak aby w komponencie pocztowym, penym komponencie pocztowym, po jego zaadowaniu,
+
+22
+00:01:42,910 --> 00:01:49,770
+moemy uzyska ten parametr i zaadowa odpowiedni wpis. W tym celu, podczas definiowania
+
+23
+00:01:49,770 --> 00:01:57,660
+trasy, musimy poinformowa router o tym, e mamy teraz dynamiczny element w
+
+24
+00:01:57,690 --> 00:01:59,780
+tym adresie URL.
+
+25
+00:02:00,030 --> 00:02:06,900
+Oczywicie bdziemy mie posty o ID 1, 2 3 i nie bdziemy tego zakodowa
+
+26
+00:02:06,900 --> 00:02:08,400
+na stae, to
+
+27
+00:02:08,460 --> 00:02:10,590
+byby koszmar i 99.
+
+28
+00:02:10,590 --> 00:02:16,760
+9 procent aplikacji, nie wiesz nawet, ile moliwych wartoci masz tutaj.
+
+29
+00:02:16,770 --> 00:02:25,470
+Zamiast wic kodowa rne identyfikatory, definiujemy elastyczny, zmienny parametr trasy z dwukropkiem, a nastpnie dowoln
+
+30
+00:02:25,770 --> 00:02:34,130
+wybran przez Ciebie nazw, jak ID lub postID, po prostu uyj identyfikatora, poniewa jest krtszy.
+
+31
+00:02:34,260 --> 00:02:36,550
+Zostanie to zastpione dynamicznie
+
+32
+00:02:36,570 --> 00:02:44,200
+lub zasadniczo informuje router reagowania, gdy masz co ukonik, ta trasa tutaj jest przeznaczona,
+
+33
+00:02:44,210 --> 00:02:47,470
+wic po prostu zadzwo do ID.
+
+34
+00:02:47,790 --> 00:02:54,720
+I tak to przeszkadza w tej drodze, zajmie mi to za chwil, po prostu zmieniajc
+
+35
+00:02:54,720 --> 00:02:58,140
+pozycje, poniewa jest analizowany od gry do dou.
+
+36
+00:02:58,230 --> 00:03:06,330
+Tak wic nowy post jest rozpoznawany jako pierwszy, a to przypadkowo go nie apie, poniewa nowe posty
+
+37
+00:03:06,330 --> 00:03:12,120
+oczywicie mog by interpretowane jako identyfikator, poniewa wszystko, co mwimy, to co dynamicznego.
+
+38
+00:03:12,540 --> 00:03:15,900
+A wic jest to parametr
+
+39
+00:03:15,900 --> 00:03:22,780
+trasy, teraz oczywicie chcemy rwnie upewni si, e przekazujemy
+
+40
+00:03:22,780 --> 00:03:30,360
+ten parametr, klikajc teraz tras. W tym celu musimy obsuy kliknicie na jeden post w komponencie pocztowym i
+
+41
+00:03:30,360 --> 00:03:31,790
+byyby na to dwa sposoby.
+
+42
+00:03:31,800 --> 00:03:36,850
+Pierwszym z nich jest po prostu oblanie tego komponentu postu, ktry tu wyprowadzamy, z czem i
+
+43
+00:03:37,110 --> 00:03:39,190
+byoby to cakiem w porzdku, moe to
+
+44
+00:03:39,280 --> 00:03:41,740
+by domylny sposb, w jaki to robisz.
+
+45
+00:03:41,790 --> 00:03:50,970
+Wic pozwl mi szybko to zrobi, zaimportuj link w nawiasach z routera-domena i uyj linku, a nie linku nav, poniewa nie planuj
+
+46
+00:03:51,000 --> 00:03:57,630
+stylizacji aktywnego postu, cho oczywicie moesz to zrobi. Teraz tutaj, zawijam ten element postu tutaj
+
+47
+00:03:57,630 --> 00:03:58,010
+z
+
+48
+00:03:58,020 --> 00:04:06,930
+tym komponentem cza, wanie tak, a ja zapakuj go w nawiasy, tak e mog podzieli je na wiele
+
+49
+00:04:07,170 --> 00:04:12,760
+linii, poniewa to sprawia, e jest to nieco atwiejsze do odczytania.
+
+50
+00:04:13,080 --> 00:04:20,070
+Teraz w zasadzie zwracamy link i musimy teraz ustawi co dynamicznego, a ta
+
+51
+00:04:20,070 --> 00:04:22,550
+dynamika powinna by naszym identyfikatorem.
+
+52
+00:04:22,800 --> 00:04:27,990
+Potencjalnie, oczywicie, jeli masz dusze adresy URL, w ktrych masz co takiego jak post /, a nastpnie identyfikator,
+
+53
+00:04:27,990 --> 00:04:28,830
+moesz rwnie miesza
+
+54
+00:04:28,860 --> 00:04:34,110
+cig znakw, a nastpnie swj identyfikator lub cokolwiek innego. Tutaj jednak zajmiemy si
+
+55
+00:04:34,110 --> 00:04:38,430
+tylko ukonikiem, a nastpnie bezporednio identyfikatorem, wic
+
+56
+00:04:38,550 --> 00:04:41,250
+przed identyfikatorem nie ma
+
+57
+00:04:41,310 --> 00:04:49,530
+cieki acuchowej, wystarczy poda identyfikator. Wic chc i do wysania. id tutaj, to jest zasadniczo to,
+
+58
+00:04:49,530 --> 00:04:51,650
+co chc zrobi, chc przej
+
+59
+00:04:51,650 --> 00:04:58,430
+do tego adresu URL i nadal moesz dodawa slash przed nim w ten sposb.
+
+60
+00:04:58,440 --> 00:05:01,860
+Wic teraz, mijamy post. id powrmy teraz
+
+61
+00:05:02,220 --> 00:05:11,130
+do komponentu blogu i upewnij si, e adujemy komponent wiadomoci po przejciu na t
+
+62
+00:05:11,210 --> 00:05:12,440
+tras tutaj.
+
+63
+00:05:12,720 --> 00:05:16,260
+Tak wic dla tego i komponentu bloga dodam import.
+
+64
+00:05:16,260 --> 00:05:18,150
+Opublikuj i teraz
+
+65
+00:05:18,150 --> 00:05:21,130
+w penym skadniku pocztowym,
+
+66
+00:05:21,210 --> 00:05:22,060
+FullPost. js, a wic moe to take nazwa tego penego
+
+67
+00:05:22,080 --> 00:05:22,870
+posta tutaj, a nastpnie zaadujmy cay post tam.
+
+68
+00:05:22,920 --> 00:05:31,460
+Teraz mamy peny komponent posta, teraz zapiszmy wszystkie pliki i wrmy do aplikacji i
+
+69
+00:05:31,470 --> 00:05:34,050
+otrzymajmy ten kluczowy bd,
+
+70
+00:05:34,260 --> 00:05:37,530
+poniewa oczywicie o tym zapomnielimy. W komponencie po zaptleniu wszystkich tych elementw
+
+71
+00:05:39,090 --> 00:05:47,280
+link jest teraz zewntrznym elementem w naszej tablicy elementw
+
+72
+00:05:47,280 --> 00:05:52,100
+dla postw, wic teraz waciwo kluczowa powinna zosta dodana do cza,
+
+73
+00:05:52,090 --> 00:05:58,400
+a nie do postu, zawsze musi by wczona najbardziej zewntrzny element w twojej ptli.
+
+74
+00:05:58,470 --> 00:06:02,020
+Po tym jednak pozbylimy si komunikatu o bdzie,
+
+75
+00:06:02,490 --> 00:06:05,300
+a teraz, gdy klikn w ten
+
+76
+00:06:05,460 --> 00:06:14,830
+wpis, moesz zobaczy, e w adresie URL znajduje si identyfikator, a zobaczysz prosz, wybierz wpis, ktry nie ma ju zbyt duego sensu.
+
+77
+00:06:14,990 --> 00:06:18,580
+Ma to sens w jeden sposb, ale nie adujemy tych wpisw z powodzeniem, poniewa to. rekwizyty. Identyfikator id w penym komponencie pocztowym nie jest
+
+78
+00:06:18,740 --> 00:06:27,290
+ju ustawiony, nie jest tak, jak
+
+79
+00:06:27,290 --> 00:06:30,410
+pobierano parametr, przez ktry przechodzimy przez URL.
+
+80
+00:06:30,440 --> 00:06:35,510
+Tak wic to nie dziaa, co dziaa, chocia moemy to potwierdzi w naszej
+
+81
+00:06:35,660 --> 00:06:37,160
+aplikacji, e moemy klika
+
+82
+00:06:37,370 --> 00:06:39,070
+posty i adowa rne identyfikatory.
+
+83
+00:06:39,260 --> 00:06:46,450
+To dziaa, adujemy rwnie
+
+84
+00:06:46,460 --> 00:06:47,390
+komponent.
+
+85
+00:06:47,420 --> 00:06:49,160
+Teraz musimy po prostu pracowa nad wyodrbnianiem tego parametru.
+
+86
+00:06:49,190 --> 00:06:52,750
+&nbsp;
+

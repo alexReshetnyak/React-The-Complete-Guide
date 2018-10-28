@@ -1,0 +1,136 @@
+1
+00:00:02,280 --> 00:00:06,200
+Quindi quali passi dobbiamo seguire quando distribuiamo un'app di reazione?
+
+2
+00:00:06,480 --> 00:00:11,410
+Prima di tutto abbiamo bisogno di controllare e possibilmente regolare il percorso di
+
+3
+00:00:11,430 --> 00:00:16,890
+base, questo  importante solo quando usiamo il router react e l quando si avvolge
+
+4
+00:00:16,890 --> 00:00:24,840
+l'app nel router del browser,  possibile impostare la propriet basename. Ci  sempre necessario quando la tua app viene servita da qualcos'altro
+
+5
+00:00:24,840 --> 00:00:25,140
+rispetto
+
+6
+00:00:25,150 --> 00:00:32,040
+alla root route, il dominio del percorso. Se stai servendo la tua app dall'esempio. com / my-app, quindi dovrai
+
+7
+00:00:32,160 --> 00:00:36,920
+impostare il basename sulla mia app affinch il router funzioni correttamente.
+
+8
+00:00:37,020 --> 00:00:38,910
+Questa  la prima cosa
+
+9
+00:00:38,910 --> 00:00:44,850
+importante, la seconda cosa importante  che abbiamo bisogno di costruire un progetto ottimizzato, questo 
+
+10
+00:00:44,850 --> 00:00:47,060
+fatto con un comando conveniente nella
+
+11
+00:00:47,160 --> 00:00:54,630
+nostra applicazione, npm run build in create react app projects. Questo costruir automaticamente il progetto e ottimizzer tutti i
+
+12
+00:00:54,690 --> 00:00:58,920
+nostri bundle javascript per avere un codebase molto piccolo che poi
+
+13
+00:00:58,920 --> 00:01:04,680
+caricher su un server, perch ovviamente vuoi spedire il minor numero possibile di codice
+
+14
+00:01:04,830 --> 00:01:07,800
+dal momento che sar il pi veloce possibile.
+
+15
+00:01:07,830 --> 00:01:16,650
+Ora un'altra cosa importante da tenere a mente  che il server deve sempre servire l'indice. file html anche e soprattutto in 404
+
+16
+00:01:16,650 --> 00:01:23,910
+casi, ci  richiesto a causa del modo in cui Internet funziona.
+
+17
+00:01:23,940 --> 00:01:32,350
+Se il tuo utente visita la mia app. com / utenti, quindi il server  il primo a ricevere quella rotta e
+
+18
+00:01:32,460 --> 00:01:38,550
+le probabilit sono che il server non conosca il percorso / utenti perch lo hai definito nella tua app di reazione.
+
+19
+00:01:39,090 --> 00:01:42,240
+Ora, per non generare un errore, la tua app di reazione deve avere la
+
+20
+00:01:42,360 --> 00:01:48,140
+possibilit di analizzare il percorso e lo fa solo se restituisci l'indice. file html per quella
+
+21
+00:01:48,130 --> 00:01:51,520
+rotta sconosciuta, alla fine
+
+22
+00:01:51,600 --> 00:01:54,360
+ sconosciuto al server.
+
+23
+00:01:54,360 --> 00:01:59,190
+Quindi restituisci sempre l'indice. html in 404 casi
+
+24
+00:01:59,190 --> 00:02:05,160
+altrimenti le applicazioni di reazione dipendenti da routing non funzioneranno.
+
+25
+00:02:05,160 --> 00:02:12,600
+Infine carica gli artefatti di build che ottieni dal secondo passaggio, crea e ottimizza il progetto su un server statico,
+
+26
+00:02:12,600 --> 00:02:13,390
+non hai
+
+27
+00:02:13,620 --> 00:02:17,980
+bisogno di un server con PHP o Node o qualcosa del genere.
+
+28
+00:02:18,120 --> 00:02:24,570
+Alla fine, ci che distribuirai qui  un'applicazione singola pagina composta da html e un po 'di
+
+29
+00:02:24,660 --> 00:02:26,440
+css e un sacco di
+
+30
+00:02:26,490 --> 00:02:34,140
+javascript, nessuno di questi ha bisogno di un linguaggio lato server, quindi un server statico come AWS S3, pagine Github o
+
+31
+00:02:34,230 --> 00:02:41,420
+Firebase o qualsiasi altro server lo far e basta caricare gli artefatti di costruzione, non l'intera cartella del progetto.
+
+32
+00:02:41,460 --> 00:02:47,200
+Gli artefatti di costruzione verranno archiviati in una cartella / build e te lo mostrer
+
+33
+00:02:47,610 --> 00:02:53,150
+tra un secondo e questo  tutto.  cos facile distribuire la tua domanda di reazione.
+
+34
+00:02:53,400 --> 00:02:56,040
+Facciamo ora questo insieme nella prossima lezione.
+

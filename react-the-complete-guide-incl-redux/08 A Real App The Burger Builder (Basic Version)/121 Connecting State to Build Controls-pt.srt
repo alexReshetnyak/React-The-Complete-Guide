@@ -1,0 +1,384 @@
+1
+00:00:02,190 --> 00:00:04,350
+At agora, j construmos muito.
+
+2
+00:00:04,360 --> 00:00:07,240
+Ns adicionamos muita lgica.
+
+3
+00:00:07,240 --> 00:00:09,510
+Ns adicionamos muitas coisas  nossa IU.
+
+4
+00:00:09,670 --> 00:00:16,090
+Agora  hora de amarrar os controles do barco com nossos ingredientes reais para que possamos realmente
+
+5
+00:00:16,090 --> 00:00:19,650
+gerenciar esse hambrguer por conta prpria ou o usurio pode.
+
+6
+00:00:20,220 --> 00:00:27,670
+Para isso, precisamos de alguns mtodos no controlador de compilao e o construtor de hambrguer
+
+7
+00:00:27,850 --> 00:00:32,680
+desculpe-me para atualizar nossos ingredientes para adicionar ingredientes ou remov-los.
+
+8
+00:00:32,680 --> 00:00:42,010
+dois mtodos aqui o ADD ingrediente hndler que receber o tipo de ingrediente para o qual eu quero adicionar um.
+
+9
+00:00:42,010 --> 00:00:43,470
+Ento, vou adicionar
+
+10
+00:00:43,720 --> 00:00:50,350
+E, claro, o removedor de ingredientes hndler, que tambm precisa saber para qual tipo deve remover
+
+11
+00:00:50,350 --> 00:00:50,850
+um.
+
+12
+00:00:50,980 --> 00:00:54,550
+Bem, vamos comear com a adio ao ingrediente.
+
+13
+00:00:54,550 --> 00:00:58,660
+Antes de mais, eu preciso saber o que  o ingrediente antigo.
+
+14
+00:00:58,660 --> 00:01:06,790
+Ento adicione varivel de contagem antiga ou constante para ser preciso um estado de estado de existncia para o
+
+15
+00:01:06,820 --> 00:01:08,100
+tipo dado assim.
+
+16
+00:01:08,440 --> 00:01:14,530
+Ento eu vou calcular a contagem atualizada que simplesmente  a contagem mais mais uma.
+
+17
+00:01:14,680 --> 00:01:19,240
+E sim, voc poderia, claro, fazer isso em menos linhas, eu s quero ser explcito sobre o
+
+18
+00:01:19,240 --> 00:01:20,380
+que est acontecendo aqui.
+
+19
+00:01:20,800 --> 00:01:23,280
+Agora eu preciso atualizar meus ingredientes.
+
+20
+00:01:23,500 --> 00:01:29,880
+Eu vou tentar e voc pode enviar ingredientes atualizados porque, como voc soube, o estado
+
+21
+00:01:29,880 --> 00:01:38,650
+deve ser atualizado de forma imutvel, ento ele tentar um novo objeto javascript e usar esse como 6 operadores espalhados
+
+22
+00:01:38,650 --> 00:01:47,860
+esses pontos livres para distribuir as propriedades do estado dos ingredientes antigos o novo objeto e criando aqui e depois eu
+
+23
+00:01:48,760 --> 00:01:55,030
+estou levando meu objeto de ingredientes atualizados para acessar o tempo para o qual
+
+24
+00:01:55,360 --> 00:02:03,790
+eu tenho que atualizar os ingredientes e definir a contagem do valor que  apenas a quantidade de ingredientes
+
+25
+00:02:03,790 --> 00:02:07,990
+igual a atualiz-lo contagem atualizada e contado para atualizao conta assim.
+
+26
+00:02:07,990 --> 00:02:17,740
+Agora, se esse cara pode chamar esse estado definido para atualizar meus ingredientes no meu estado, eu tambm quero comear a acompanhar
+
+27
+00:02:17,740 --> 00:02:27,280
+o preo, ento eu vou adicionar uma propriedade de preo total aos meus ingredientes e digamos o preo base para o hambrguer
+
+28
+00:02:27,280 --> 00:02:32,290
+sem importar O que est acontecendo  de US $ 4.
+
+29
+00:02:32,350 --> 00:02:35,050
+Agora escolha qualquer preo que voc deseja,  claro.
+
+30
+00:02:35,080 --> 00:02:37,210
+Agora, esse  o meu preo base.
+
+31
+00:02:37,330 --> 00:02:41,660
+Agora, eu quero atualizar esse preo.
+
+32
+00:02:41,980 --> 00:02:48,250
+Ento eu preciso ter um mapeamento de qual ingrediente custa o que.
+
+33
+00:02:48,520 --> 00:02:51,940
+Para isso vou tentar a nova constante fora da classe.
+
+34
+00:02:51,940 --> 00:02:59,860
+Mas na mesma queda que eu vou nomear ingrediente e eu vou dar-lhe um nome de capital, os preos de
+
+35
+00:02:59,860 --> 00:03:07,200
+ingredientes que voc costuma nomear Constance que deseja usar como constantes globais em todos os caracteres de capital.
+
+36
+00:03:07,780 --> 00:03:11,700
+Ento, os prmios do Ingredion so um objeto javascript onde eu digo OK, vend-lo.
+
+37
+00:03:11,710 --> 00:03:13,520
+Talvez seja ponto 5.
+
+38
+00:03:13,860 --> 00:03:17,210
+Ela pode ser um ponto para eu no sei.
+
+39
+00:03:17,290 --> 00:03:22,540
+Pode ser 1 3 e isso diz que bacon  Daut 7.
+
+40
+00:03:22,540 --> 00:03:24,330
+Ou assim.
+
+41
+00:03:24,340 --> 00:03:27,920
+Ento, estes podem ser os Thaller Bryce's para cada ingrediente.
+
+42
+00:03:28,330 --> 00:03:34,850
+Agora eu quero atualizar o prmio total com o prmio pelo tipo que adicionamos.
+
+43
+00:03:35,170 --> 00:03:45,740
+Ento eu sei que a edio do prmio basicamente  o preo dos ingredientes para um determinado tipo.
+
+44
+00:03:45,910 --> 00:03:51,070
+Porque tenha em mente que tambm estou usando os mesmos tipos que estou usando em qualquer outro lugar no queijo Uppsala
+
+45
+00:03:51,070 --> 00:03:52,890
+com a mesma embalagem e assim por diante.
+
+46
+00:03:53,320 --> 00:03:56,470
+Ento, para esse tipo, posso buscar o preo.
+
+47
+00:03:56,590 --> 00:04:01,510
+E como eu sempre adiciono uma unidade como um tempo eu no preciso multiplicar aqueles com qualquer coisa.
+
+48
+00:04:01,510 --> 00:04:14,910
+do estado e definir o novo preo igual ao preo antigo acrescido de adio de preo e sim novamente voc poderia fazer isso em menos linhas.
+
+49
+00:04:15,500 --> 00:04:20,380
+Ento, agora posso tirar meu preo antigo desse preo total
+
+50
+00:04:20,700 --> 00:04:31,050
+Mas com isso agora posso chamar o estado definido, e agora posso definir o preo total para o novo preo e
+
+51
+00:04:31,050 --> 00:04:33,160
+posso definir o preo.
+
+52
+00:04:33,300 --> 00:04:33,930
+Com licena.
+
+53
+00:04:33,930 --> 00:04:38,530
+Ingredientes equivalentes a ingredientes atualizados.
+
+54
+00:04:38,550 --> 00:04:39,900
+Ento, esta  agora uma Atualizao do Estado.
+
+55
+00:04:39,900 --> 00:04:46,760
+Eu quero fazer quando um novo ingrediente  adicionado gradientes de atualizao e atualizar o preo.
+
+56
+00:04:46,830 --> 00:04:53,810
+Com isso vamos ligar o manipulador Ed Ingredion at o boto mais em nossos controles de compilao.
+
+57
+00:04:54,640 --> 00:05:07,820
+Para fazer isso, eu preciso passar uma propriedade para ambos os controles e l, eu simplesmente adicionarei a propriedade de edio do Ingredion, que contm
+
+58
+00:05:08,360 --> 00:05:15,380
+uma referncia a este ingrediente de suplemento agora no interior dos controles embutidos.
+
+59
+00:05:15,380 --> 00:05:18,610
+Agora preciso distribuir isso corretamente.
+
+60
+00:05:18,830 --> 00:05:25,160
+Ento, vamos copiar o nome da propriedade que escolhemos aqui no Bergere Boulder e isso  tudo para construir
+
+61
+00:05:25,830 --> 00:05:26,450
+controles l.
+
+62
+00:05:26,480 --> 00:05:30,860
+Eu preciso passar para o controle de bala individual que temos.
+
+63
+00:05:30,950 --> 00:05:33,720
+Ento, no temos apenas que chavear e o rtulo.
+
+64
+00:05:33,740 --> 00:05:36,080
+Ns tambm temos o boto mais l.
+
+65
+00:05:36,320 --> 00:05:44,470
+Ento, quando adicionado ou quando mais foi clicado e voc pode nomear esses adereos, claro, tudo o que voc quiser.
+
+66
+00:05:44,470 --> 00:05:53,660
+Ento eu quero passar o ingrediente do prop adicionado para que a propriedade que recebemos na construo controle a propriedade que
+
+67
+00:05:53,750 --> 00:05:58,760
+acabamos de configurar aqui e que estamos passando a criar controles.
+
+68
+00:05:58,830 --> 00:06:07,200
+Agora, com esses controles embutidos, transmito-o ao controle de compilao individual para que esse controle de conta possa
+
+69
+00:06:07,320 --> 00:06:08,530
+chamar de morto.
+
+70
+00:06:08,730 --> 00:06:16,770
+No entanto, eu tambm preciso, claro, acompanhar o controle de exibio do tipo que est desligado.
+
+71
+00:06:16,800 --> 00:06:25,590
+Ento, qual o tipo desse controle e temos essa propriedade de tipo e a matriz de controles que usamos
+
+72
+00:06:25,590 --> 00:06:28,130
+para criar todos esses controles.
+
+73
+00:06:28,200 --> 00:06:38,490
+Ento eu tambm deveria provavelmente transmitir o tipo ao meu ingrediente, agora eu poderia fazer isso, mas, essencialmente, esse 
+
+74
+00:06:38,490 --> 00:06:40,680
+um loop extra desnecessrio.
+
+75
+00:06:40,920 --> 00:06:46,490
+Eu agora implementaria um ouvinte no controle abobadado para retornar tudo de volta.
+
+76
+00:06:46,590 --> 00:06:51,110
+Ento eu no posso simplesmente omitir isso e, em vez disso, configurar na EIAS seis funes aqui.
+
+77
+00:06:51,570 --> 00:06:54,340
+Execute a edio do ingrediente do prop.
+
+78
+00:06:54,420 --> 00:07:02,560
+Ento, a referncia de funo que estamos recebendo nos controles de compilao e eles so simplesmente transferir o tipo de controle.
+
+79
+00:07:02,760 --> 00:07:05,280
+Lembre-se de ter acesso ao controle digite o seu.
+
+80
+00:07:05,330 --> 00:07:12,940
+Nahm adicionado, o que, no final, no levar a mais nada, em seguida, adicione o manipulador de ingredientes que est sendo executado.
+
+81
+00:07:12,940 --> 00:07:18,730
+Como dentro desse loop onde ir percorrer todos os controles e cada controle tem um ingrediente de
+
+82
+00:07:18,730 --> 00:07:19,800
+execuo de tipo
+
+83
+00:07:20,080 --> 00:07:26,710
+E eu espero obter o tipo como um argumento, e  por isso que o estou passando como argumento aqui
+
+84
+00:07:26,740 --> 00:07:28,010
+nos controles de compilao.
+
+85
+00:07:28,090 --> 00:07:35,140
+Agora,  claro, para que isso funcione, esta propriedade adicional, que repassar para um nico controle
+
+86
+00:07:35,140 --> 00:07:37,990
+construdo, precisa ser conectada ao boto mais.
+
+87
+00:07:37,990 --> 00:07:44,920
+Ento, nesse boto, vou adicionar o manipulador de clique no clique Lisner, devo dizer que  fornecido por reagir.
+
+88
+00:07:44,920 --> 00:07:48,540
+Tenha em mente que isso no  uma propriedade porque isso no  um componente personalizado.
+
+89
+00:07:48,640 --> 00:07:53,840
+Isso  um elemento incorporado e l, eu sou x aderente.
+
+90
+00:07:54,070 --> 00:08:00,820
+Ento, esta propriedade adicionada que  passada para baixo dos controles de Build que no deveria ser
+
+91
+00:08:00,820 --> 00:08:02,730
+e desencadeou esse mtodo, ento.
+
+92
+00:08:02,780 --> 00:08:10,470
+Agora, se isso se salvarmos todos os arquivos e ns vamos ao nosso hambrguer Vamos clicar mais e voc
+
+93
+00:08:10,740 --> 00:08:12,200
+deve poder adicionar ingredientes.
+
+94
+00:08:12,350 --> 00:08:14,780
+Muito legal j na minha opinio.
+
+95
+00:08:14,790 --> 00:08:17,030
+Agora,  claro, ainda no podemos remov-los.
+
+96
+00:08:17,070 --> 00:08:20,710
+Ento, vamos trabalhar na remoo de ingredientes no prximo passo.
+

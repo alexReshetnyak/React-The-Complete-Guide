@@ -1,0 +1,124 @@
+1
+00:00:02,230 --> 00:00:05,850
+I'm back in the project and now I want to deploy this application.
+
+2
+00:00:06,040 --> 00:00:08,050
+So this is the project as we left it,
+
+3
+00:00:08,080 --> 00:00:10,030
+I didn't change anything.
+
+4
+00:00:10,060 --> 00:00:12,450
+Now the first thing is the base path,
+
+5
+00:00:12,610 --> 00:00:13,730
+we can see this in the
+
+6
+00:00:13,910 --> 00:00:14,880
+app.js file,
+
+7
+00:00:14,980 --> 00:00:21,870
+excuse me, in the index.js file where we have the browser router, there we could set the basename property
+
+8
+00:00:22,000 --> 00:00:26,830
+but I plan on serving my app from mydomain.com/nothing
+
+9
+00:00:26,830 --> 00:00:29,110
+so I don't need to set this. Now
+
+10
+00:00:29,150 --> 00:00:34,640
+the next thing is that I need to ensure that the server always returns to index.html file,
+
+11
+00:00:34,660 --> 00:00:40,560
+that is something all static hosts typically allow you to configure and if you're not using a static
+
+12
+00:00:40,560 --> 00:00:46,960
+host but you are using your nodejs server, you just need to write code, you need to set up a catch all
+
+13
+00:00:46,960 --> 00:00:48,170
+route and return index.html
+
+14
+00:00:48,310 --> 00:00:52,810
+and the same logic of course applies for any other server side language.
+
+15
+00:00:52,840 --> 00:00:58,550
+So for us here, the next step is to build the project and this is run with the npm command,
+
+16
+00:00:58,870 --> 00:01:09,070
+npm run build. This will now build our project, similar to npm start but now it will also spit out a folder
+
+17
+00:01:09,160 --> 00:01:17,040
+and not just store the result in memory and that folder will contain our optimized production build.
+
+18
+00:01:17,470 --> 00:01:24,010
+So there, we get this new build folder now in the project folder and if we have a look at this, we see
+
+19
+00:01:24,010 --> 00:01:29,910
+our single page which also is optimized to consume as little space as possible.
+
+20
+00:01:29,920 --> 00:01:36,100
+You'll see that some script imports were added there, like to this main js file and that is what we
+
+21
+00:01:36,100 --> 00:01:38,230
+can find in the static folder,
+
+22
+00:01:38,290 --> 00:01:45,400
+there we got our media files, images like the burger logo and the javascript files for our different
+
+23
+00:01:45,400 --> 00:01:50,100
+chunks for lazy loading and the main js file.
+
+24
+00:01:50,110 --> 00:01:52,540
+We also got source maps here,
+
+25
+00:01:52,660 --> 00:01:57,080
+now you don't need to deploy these though, these are purely optional,
+
+26
+00:01:57,100 --> 00:02:01,880
+you can focus on the javascript files but you can also and that is what I'll do deploy
+
+27
+00:02:01,890 --> 00:02:05,650
+the content of the whole build folder and that's important.
+
+28
+00:02:05,650 --> 00:02:13,000
+The content of the build folder, ship that content, all the files there and the static folder to your static
+
+29
+00:02:13,000 --> 00:02:13,830
+host.
+
+30
+00:02:13,840 --> 00:02:16,150
+So now let's deploy this.
+
+31
+00:02:16,240 --> 00:02:18,420
+We'll do this in the next lecture.
+

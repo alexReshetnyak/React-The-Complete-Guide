@@ -1,0 +1,228 @@
+1
+00:00:02,420 --> 00:00:03,710
+Ora che la pianificazione  terminata.
+
+2
+00:00:03,740 --> 00:00:08,060
+Entriamo nel progetto e costruiamo effettivamente questa applicazione.
+
+3
+00:00:08,240 --> 00:00:13,740
+In Florida ho aperto un nuovo progetto creato con l'app di re-act creator.
+
+4
+00:00:13,880 --> 00:00:16,450
+Nulla  stato ancora cambiato qui.
+
+5
+00:00:16,520 --> 00:00:24,230
+Ora in questo progetto desidero innanzi tutto abilitare i moduli CSS in modo che possa essere sicuro che
+
+6
+00:00:24,250 --> 00:00:32,630
+questo C come classi che creiamo in un file CSS possa essere esaminato in un componente specifico nella nostra
+
+7
+00:00:32,630 --> 00:00:39,350
+applicazione in modo che non vengano applicati Clovelly quando vogliamo riutilizzare accidentalmente la stessa classe CSSA.
+
+8
+00:00:39,530 --> 00:00:42,400
+Per quello ho bisogno di mangiare ject per proiettare.
+
+9
+00:00:42,410 --> 00:00:44,690
+Come hai imparato, facciamolo prima.
+
+10
+00:00:44,750 --> 00:00:52,670
+Eseguiamo l'espulsione di NPM nel progetto appena creato e questo ora ci chieder se vogliamo veramente controllare.
+
+11
+00:00:52,670 --> 00:01:00,260
+Quindi lo confermer con Y per s e ora come abbiamo visto prima nel modulo in cui ti ho mostrato come implementare il modulo
+
+12
+00:01:00,260 --> 00:01:05,840
+di Seer come si ottiene l'accesso al conflitto in una cartella di conflitti e ce ne sono
+
+13
+00:01:05,840 --> 00:01:09,100
+due a causa dei file di configurazione del wet pack.
+
+14
+00:01:09,110 --> 00:01:15,410
+Ora analizziamo il primo dei due e cerchiamo la parte in cui devi valutare il test.
+
+15
+00:01:15,440 --> 00:01:24,140
+UN. S. s s caricatore l come ti ho mostrato nel modulo di menzione devi aggiungere moduli true alle
+
+16
+00:01:24,140 --> 00:01:32,030
+opzioni di quel caricatore e all'opzione del tuo nome di identit locale per definire fondamentalmente D. C.  come nome di classe.
+
+17
+00:01:32,030 --> 00:01:34,910
+Genera e assegna automaticamente.
+
+18
+00:01:35,090 --> 00:01:37,630
+Questo dovrebbe prendere il nome originale.
+
+19
+00:01:37,790 --> 00:01:44,360
+Quindi due caratteri di sottolineatura quindi il nome locale del componente e quindi il nostro hash
+
+20
+00:01:44,360 --> 00:01:48,860
+generato a caso con hash colon base 64 carbone e fuoco.
+
+21
+00:01:49,220 --> 00:01:56,380
+Questo generer questi nomi di classi CSX univoci che vengono quindi assegnati automaticamente una volta che li abbiamo
+
+22
+00:01:56,390 --> 00:02:02,540
+importati da quell'oggetto dal file C S S come vi ho mostrato in quel modulo.
+
+23
+00:02:02,540 --> 00:02:09,490
+Ora copia queste due linee con i moduli e il nome di idone locale e vai al conflitto WePay del pergolato Faltu.
+
+24
+00:02:09,620 --> 00:02:14,960
+loader cos che entrambi i file di configurazione di WePay sono stati modificati e salvati.
+
+25
+00:02:14,960 --> 00:02:23,720
+Lo fa per condannare il file per la build di produzione e ovviamente ci vogliamo anche assicurare che possiamo usare i moduli di caesuras
+
+26
+00:02:23,750 --> 00:02:30,830
+quindi inseriscilo qui nelle opzioni assicurati di chiudere quella stringa che hai inserito nelle opzioni per DC come suo
+
+27
+00:02:30,830 --> 00:02:35,150
+E con questo abbiamo creato il nostro progetto e possiamo iniziare.
+
+28
+00:02:35,210 --> 00:02:36,670
+Ora facciamo un po 'di pulizia.
+
+29
+00:02:36,830 --> 00:02:43,070
+Rimuoviamo quel logo verso ogni file che  stato creato automaticamente Non
+
+30
+00:02:43,080 --> 00:02:50,450
+sono morto e quindi, per quanto possiamo eliminare l'importazione del file, possiamo anche ripulire l'app.
+
+31
+00:02:50,450 --> 00:02:52,270
+J. S. contenuto qui.
+
+32
+00:02:52,370 --> 00:03:00,890
+Rimuovi il nome della classe dalla morte e rimuovi le importazioni di D C S S qui o persino e rimuovi il deepsea in autunno.
+
+33
+00:03:00,920 --> 00:03:03,000
+Non ho bisogno di disegnare qui adesso.
+
+34
+00:03:03,290 --> 00:03:06,040
+Comunque lascer lo stile globale.
+
+35
+00:03:06,200 --> 00:03:13,370
+Ma negli indici come Fall in cui ho impostato il mio stile globale del corpo e che continuo
+
+36
+00:03:13,370 --> 00:03:19,100
+ad importare normalmente tra virgolette facendo riferimento al file e non importando l'oggetto di Klaas.
+
+37
+00:03:19,250 --> 00:03:24,030
+Quindi quindi verr applicato a indici globali come file.
+
+38
+00:03:24,200 --> 00:03:30,050
+Voglio impostare la famiglia di font su un numero di font che potremmo ovviamente usare step ma ne ho scelto
+
+39
+00:03:30,050 --> 00:03:32,220
+uno diverso che trovo un po 'pi bello.
+
+40
+00:03:32,220 --> 00:03:40,760
+cercare i moduli di Google e nella pagina dei font di Google, come appena menzionato, apre il senso per qui.
+
+41
+00:03:40,760 --> 00:03:46,110
+Fondamentalmente sono andato ad usare il senso aperto e per questo puoi semplicemente
+
+42
+00:03:46,160 --> 00:03:51,480
+Ora, una volta selezionato questo, puoi fare clic in basso per personalizzarlo e l.
+
+43
+00:03:51,500 --> 00:03:53,650
+Non voglio solo scegliere quello normale.
+
+44
+00:03:53,810 --> 00:03:56,400
+Prendiamo tutti quello in grassetto nel caso avessimo bisogno di questo.
+
+45
+00:03:56,480 --> 00:04:00,320
+Nel caso in cui si desideri avere del testo in grassetto, ad esempio per le intestazioni.
+
+46
+00:04:00,410 --> 00:04:07,880
+Ora con quello andiamo a male e l trovi un link al CDN di Google da cui puoi importare
+
+47
+00:04:07,880 --> 00:04:08,500
+questo fondo.
+
+48
+00:04:08,630 --> 00:04:12,160
+E quelli perfettamente bene fanno esattamente l'approccio quando uso.
+
+49
+00:04:12,650 --> 00:04:18,500
+Quindi ora con quel collegamento Torniamo alla cartella del nostro progetto nella cartella pubblica e all'indice
+
+50
+00:04:18,540 --> 00:04:19,350
+h L5.
+
+51
+00:04:19,610 --> 00:04:22,210
+E sono tutti aggiunti proprio sopra il titolo.
+
+52
+00:04:22,220 --> 00:04:30,590
+Ora parlando del titolo giustizia anche al mio burger perch bene questo dovrebbe essere il nome della mia applicazione
+
+53
+00:04:30,590 --> 00:04:31,150
+qui.
+
+54
+00:04:31,640 --> 00:04:35,960
+Con ci l'insieme del progetto  praticamente finito.
+
+55
+00:04:35,960 --> 00:04:43,790
+Ora possiamo iniziare a scrivere la nostra applicazione di re-act e implementare quella componente che abbiamo progettato nelle
+
+56
+00:04:43,790 --> 00:04:44,660
+ultime lezioni.
+
+57
+00:04:44,690 --> 00:04:48,750
+Quindi andiamo avanti e cominciamo a sviluppare questi componenti nella prossima lezione.
+

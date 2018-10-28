@@ -1,0 +1,200 @@
+1
+00:00:02,180 --> 00:00:08,810
+Nella nostra applicazione possiamo aggiornare il prezzo che va bene possiamo aumentare gli ingredienti ma l'ordine ora, ma
+
+2
+00:00:08,810 --> 00:00:10,160
+non viene mai sbloccato.
+
+3
+00:00:11,000 --> 00:00:18,420
+La ragione di ci  che la propriet che determina se questo  sbloccato o meno  propriet
+
+4
+00:00:18,440 --> 00:00:21,700
+acquistabile in cui si imposta sui controlli compilati.
+
+5
+00:00:21,980 --> 00:00:25,120
+Possiamo verificarlo semplicemente immergendolo in entrambi i controlli.
+
+6
+00:00:25,150 --> 00:00:27,730
+L vediamo che il pulsante  disabilitato.
+
+7
+00:00:27,830 --> 00:00:31,310
+Se l'oggetto di acquisto  falso.
+
+8
+00:00:31,580 --> 00:00:37,750
+Quindi quello che dobbiamo fare  aggiornare il Propp acquistabile ogni volta che cambiano i nostri ingredienti.
+
+9
+00:00:38,690 --> 00:00:45,990
+Nel Bergere Boulder siamo riusciti finora a essere acquistabili nello stato.
+
+10
+00:00:46,040 --> 00:00:47,710
+Ora possiamo rimuoverlo da l.
+
+11
+00:00:47,720 --> 00:00:54,200
+Non voglio pi gestirlo qui e quindi posso anche spostare l'aggiornamento secondo il metodo di stato
+
+12
+00:00:54,740 --> 00:00:55,520
+di Che.
+
+13
+00:00:55,520 --> 00:01:00,890
+Per ora voglio lasciarlo qui perch abbiamo una buona logica per determinare quando aggiornarlo.
+
+14
+00:01:00,890 --> 00:01:03,910
+Qui ora abbiamo due opzioni.
+
+15
+00:01:03,950 --> 00:01:11,760
+Potremmo lasciare il metodo e aggiungere semplicemente un pochino per tornare al risultato del nostro controllo
+
+16
+00:01:11,760 --> 00:01:12,550
+booleano qui.
+
+17
+00:01:13,250 --> 00:01:21,850
+Quindi di qualche pi grande  0 e calcoliamo ancora la somma qui con gli ingredienti che passiamo ad aggiornare
+
+18
+00:01:21,860 --> 00:01:23,540
+per stato di inseguimento.
+
+19
+00:01:23,540 --> 00:01:26,410
+Potremmo quindi scendere al nostro metodo Redner.
+
+20
+00:01:27,170 --> 00:01:34,640
+E l dove siamo passati all'acquirente potremmo semplicemente non raggiungere la strada di St. propriet acquistabile perch non lo
+
+21
+00:01:34,640 --> 00:01:36,370
+abbiamo pi.
+
+22
+00:01:36,680 --> 00:01:46,200
+Ma per la nostra app il metodo per chase state che ora restituisce VERO o FALSO Edward ha trasformato un risultato di
+
+23
+00:01:46,200 --> 00:01:47,860
+questa chiamata di funzione.
+
+24
+00:01:47,970 --> 00:01:51,340
+Quindi potremmo chiamare questo stato di Paperchase qui.
+
+25
+00:01:51,360 --> 00:01:56,570
+Qui abbiamo bisogno di eseguire questo perch vogliamo eseguire questo quando viene eseguito il re
+
+26
+00:01:56,580 --> 00:02:02,510
+rendering in modo da recuperare il risultato aggiornato e ora dobbiamo passare i nostri ingredienti come argomento.
+
+27
+00:02:02,640 --> 00:02:05,840
+Possiamo semplicemente passare il ferro di questo prop.
+
+28
+00:02:06,180 --> 00:02:13,590
+In alternativa, naturalmente, potremmo anche ottenere direttamente i nostri ingredienti da questa propriet e aggiornare lo stato pre-Chase
+
+29
+00:02:13,590 --> 00:02:18,330
+non aspettandoci un argomento ma accedendo a questi oggetti di scena.
+
+30
+00:02:18,450 --> 00:02:24,070
+Lei  qui nella stessa classe, dopo tutto quello che facciamo e salviamo tutto.
+
+31
+00:02:24,090 --> 00:02:32,550
+Ora vedi che il pulsante viene abilitato e disabilitato di nuovo perch ora riceviamo costantemente informazioni ovunque
+
+32
+00:02:32,580 --> 00:02:34,720
+sia vero o falso.
+
+33
+00:02:34,770 --> 00:02:38,160
+Per questo metodo questo  un modo per farlo.
+
+34
+00:02:38,170 --> 00:02:42,870
+Questo  assolutamente valido perch potresti considerarlo come stato dell'interfaccia utente locale.
+
+35
+00:02:42,900 --> 00:02:48,390
+Potresti anche dire di no, questo  qualcosa che voglio gestire nel mio stato Rydex.
+
+36
+00:02:48,390 --> 00:02:55,020
+E hai sempre casi come questo e spesso non c' un chiaro uso giusto o sbagliato che ti sembra
+
+37
+00:02:55,110 --> 00:02:58,890
+pi semplice e che rende la tua applicazione migliore per te.
+
+38
+00:02:59,130 --> 00:03:07,470
+Cos, naturalmente, potresti anche essere in uno stato acquistabile in Frue, il tuo
+
+39
+00:03:07,470 --> 00:03:14,730
+produttore, aggiungendo qualcosa come acquistabile e poi aggiornarlo quando cambiano gli ingredienti.
+
+40
+00:03:14,740 --> 00:03:20,000
+metodo dello stato dell'inseguimento nel villaggio di Boulder e chiamandolo dal nostro metodo di resa di Julias.
+
+41
+00:03:20,000 --> 00:03:23,400
+Ora seguir l'approccio che ho appena mostrato, disponendo dell'aggiornamento per il
+
+42
+00:03:23,650 --> 00:03:27,820
+Ma volevo portare alla nostra attenzione che puoi usare entrambi.
+
+43
+00:03:27,820 --> 00:03:35,170
+Con ci per facciamo molto sui nostri ingredienti e vedi che il nostro stato si  ridotto molto.
+
+44
+00:03:35,170 --> 00:03:38,320
+Ora abbiamo solo l'acquisto di un errore in caricamento.
+
+45
+00:03:38,320 --> 00:03:45,730
+E come ho menzionato all'inizio di questo modulo, questi sono tutti stati in cui la propriet dello stato  piuttosto
+
+46
+00:03:45,730 --> 00:03:52,700
+che per il nostro stato occhi solo se dovessimo visualizzare una modale dovremmo mostrare un messaggio di errore.
+
+47
+00:03:52,720 --> 00:03:56,890
+Nulla che dobbiamo necessariamente gestire per il nostro negozio di lettori globale.
+
+48
+00:03:56,890 --> 00:03:59,080
+Ecco perch li lascer qui.
+
+49
+00:03:59,290 --> 00:04:02,440
+Possono coesistere insieme a Rydex.
+
+50
+00:04:02,440 --> 00:04:05,950
+Puoi mettere tutto in lettura X ma non devi.
+

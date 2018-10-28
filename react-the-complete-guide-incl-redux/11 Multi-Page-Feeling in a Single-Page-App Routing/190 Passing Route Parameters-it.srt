@@ -1,0 +1,344 @@
+1
+00:00:02,080 --> 00:00:06,970
+Questo  stato un gran parlare per passare tra due pagine diverse.
+
+2
+00:00:06,970 --> 00:00:10,370
+Ma era importante sapere come lavorare con il router.
+
+3
+00:00:10,780 --> 00:00:16,600
+Ora per voglio assicurarmi che tutti possiamo cliccare su un singolo post e caricarlo ancora perch in
+
+4
+00:00:16,630 --> 00:00:19,430
+questo momento non succede nulla quando lo facciamo.
+
+5
+00:00:19,450 --> 00:00:20,820
+Anche noi non riceviamo un errore.
+
+6
+00:00:20,830 --> 00:00:22,570
+Ma non sta succedendo nulla.
+
+7
+00:00:22,570 --> 00:00:29,860
+ovviamente che nel nostro componente di post in cui abbiamo questo gestore per gestire un clic sul post qui
+
+8
+00:00:29,860 --> 00:00:36,280
+il gestore post selezionato sta inviando uno stato che  irrilevante perch non sto pi gestendo lo stato.
+
+9
+00:00:36,310 --> 00:00:38,310
+La ragione di ci 
+
+10
+00:00:38,320 --> 00:00:40,610
+Non ho nemmeno impostato un valore predefinito qui.
+
+11
+00:00:40,930 --> 00:00:47,450
+Ora quando clicco su questo in realt ora voglio caricare il post completo per questo.
+
+12
+00:00:47,450 --> 00:00:52,750
+Ovviamente abbiamo anche bisogno di determinare dove deve essere mostrato il post completo.
+
+13
+00:00:52,750 --> 00:00:58,080
+Potremmo renderlo nel componente del blocco invece del nostro post qui.
+
+14
+00:00:58,300 --> 00:01:02,450
+Potremmo caricare il post completo in questo posto.
+
+15
+00:01:02,460 --> 00:01:05,580
+Questa  comunque un'opzione qui.
+
+16
+00:01:05,770 --> 00:01:14,350
+di ottenere parametri di routing dinamici, perch se diamo un'occhiata ai nostri post, ogni post ha un ID.
+
+17
+00:01:14,440 --> 00:01:18,920
+O a prescindere da dove usiamo, dobbiamo essere in grado
+
+18
+00:01:19,120 --> 00:01:24,610
+E questa idea  ovviamente importante perch quando clicchiamo su un post, abbiamo bisogno di sapere
+
+19
+00:01:24,610 --> 00:01:30,150
+quale post era il post che vogliamo caricare e che non cambia quando usiamo percorsi diversi.
+
+20
+00:01:30,520 --> 00:01:33,970
+Per fortuna abbiamo un modo per ottenere l'ID.
+
+21
+00:01:34,090 --> 00:01:42,460
+Quindi ora dobbiamo passare quell'ID come parte della directory in modo che nel componente post il componente completo del
+
+22
+00:01:42,910 --> 00:01:49,770
+post quando lo carichiamo possiamo ottenere questo parametro e caricare il post appropriato per questo.
+
+23
+00:01:49,770 --> 00:01:57,660
+Quando trovi il percorso, dobbiamo informare il router di re-act sul fatto che ora abbiamo un elemento
+
+24
+00:01:57,690 --> 00:01:59,780
+dinamico in questo URL.
+
+25
+00:02:00,030 --> 00:02:06,900
+Ovviamente avremo post con ID da 1 a 3 e non codificheremo in questo modo.
+
+26
+00:02:06,900 --> 00:02:08,400
+Quello sarebbe un incubo.
+
+27
+00:02:08,460 --> 00:02:10,590
+E nel 99.
+
+28
+00:02:10,590 --> 00:02:16,760
+Il 9 percento delle applicazioni non sa nemmeno quanti valori possibili hai qui.
+
+29
+00:02:16,770 --> 00:02:25,470
+Quindi, invece di codificare in modo rigido i diversi ID, definiamo un parametro di route variabile flessibile con due punti
+
+30
+00:02:25,770 --> 00:02:34,130
+e quindi qualsiasi nome di tua scelta come ID ID host o ID di Alceste perch  pi breve.
+
+31
+00:02:34,260 --> 00:02:36,550
+Questo sar sostituito dinamicamente.
+
+32
+00:02:36,570 --> 00:02:44,200
+hey ogni volta che si ha Slash qualcosa durante l'anno, quindi  sufficiente chiamare un ID.
+
+33
+00:02:44,210 --> 00:02:47,470
+O essenzialmente dice al router del reattore
+
+34
+00:02:47,790 --> 00:02:54,720
+E s, questo interferir con questa rotta, ci penseremo tutti in un secondo semplicemente cambiando le
+
+35
+00:02:54,720 --> 00:02:58,140
+posizioni perch  analizzato dall'alto verso il basso.
+
+36
+00:02:58,230 --> 00:03:06,330
+Quindi, il nuovo post  riconosciuto per primo e questo non viene accidentalmente catturato perch i nuovi post, naturalmente, potrebbero essere interpretati
+
+37
+00:03:06,330 --> 00:03:12,120
+come ID perch tutto ci che stiamo dicendo  che abbiamo qualcosa di dinamico qui.
+
+38
+00:03:12,540 --> 00:03:15,900
+Quindi questo  il parametro Route.
+
+39
+00:03:15,900 --> 00:03:22,780
+Ora, naturalmente, vogliamo anche assicurarci di passare quel parametro quando clicchiamo su una rotta.
+
+40
+00:03:22,780 --> 00:03:30,360
+dobbiamo hndler fare clic su un singolo post nel componente del post e ci sarebbero due modi per farlo.
+
+41
+00:03:30,360 --> 00:03:31,790
+Ora per questo
+
+42
+00:03:31,800 --> 00:03:36,850
+Il primo  quello di avvolgere semplicemente quel componente del post che produciamo qui con un link.
+
+43
+00:03:37,110 --> 00:03:39,190
+E quello andrebbe perfettamente bene.
+
+44
+00:03:39,280 --> 00:03:41,740
+Potrebbe essere il diavolo nel modo in cui lo fai.
+
+45
+00:03:41,790 --> 00:03:50,970
+Quindi permettimi di eseguire rapidamente questo collegamento di importazione nei braccialetti di Cali dal re-act router Dom e io uso link e non
+
+46
+00:03:51,000 --> 00:03:57,630
+nav link perch non ho intenzione di stilare il post attivo anche se ovviamente potresti farlo ora
+
+47
+00:03:57,630 --> 00:03:58,010
+qui.
+
+48
+00:03:58,020 --> 00:04:06,930
+e lo racchiuder tra parentesi in modo che io possa dividerlo su pi righe perch questo rende pi facile leggere.
+
+49
+00:04:07,170 --> 00:04:12,760
+Quindi avvolger questo elemento host qui con questo componente di collegamento proprio cos
+
+50
+00:04:13,080 --> 00:04:20,070
+Quindi ora stiamo essenzialmente restituendo un link e ora dobbiamo impostare due a qualcosa di dinamico e quella
+
+51
+00:04:20,070 --> 00:04:22,550
+dinamica dovrebbe essere la nostra idea.
+
+52
+00:04:22,800 --> 00:04:27,990
+Naturalmente, se hai pi tempo o altrove, hai qualcosa come la barra dei messaggi e
+
+53
+00:04:27,990 --> 00:04:28,830
+poi l'ID.
+
+54
+00:04:28,860 --> 00:04:34,110
+Potresti anche mischiare una stringa e poi il tuo ID o qualunque cosa sia qui.
+
+55
+00:04:34,110 --> 00:04:38,430
+Tuttavia stiamo solo gestendo la barra e quindi direttamente l'ID.
+
+56
+00:04:38,550 --> 00:04:41,250
+Quindi non c' nessuna parte di stringa davanti all'ID.
+
+57
+00:04:41,310 --> 00:04:49,530
+Devo solo passare l'ID stesso, quindi voglio andare all'ID dell'host qui.
+
+58
+00:04:49,530 --> 00:04:51,650
+Questo  essenzialmente ci che voglio fare.
+
+59
+00:04:51,650 --> 00:04:58,430
+Voglio navigare fino a questo punto e puoi ancora aggiungere la barra di fronte come in questo caso.
+
+60
+00:04:58,440 --> 00:05:01,860
+Quindi ora stiamo passando l'ID del post.
+
+61
+00:05:02,220 --> 00:05:11,130
+Torniamo ora al componente di blocco e assicuriamoci di caricare il componente di post quando andiamo a
+
+62
+00:05:11,210 --> 00:05:12,440
+questo Routier.
+
+63
+00:05:12,720 --> 00:05:16,260
+Quindi per quello e il componente di blocco o aggiungere l'importazione di.
+
+64
+00:05:16,260 --> 00:05:18,150
+Posta da
+
+65
+00:05:18,150 --> 00:05:21,130
+E ora questo  nel componente post completo.
+
+66
+00:05:21,210 --> 00:05:22,060
+Post completo
+
+67
+00:05:22,080 --> 00:05:22,870
+J. S. E quindi forse  anche chiamato come post completo qui e poi cariciamo il post completo laggi.
+
+68
+00:05:22,920 --> 00:05:31,460
+Ora abbiamo il componente post completo.
+
+69
+00:05:31,470 --> 00:05:34,050
+Ora salviamo tutti i file e torniamo all'applicazione.
+
+70
+00:05:34,260 --> 00:05:37,530
+E ottieni questo errore chiave perch ovviamente lo hai
+
+71
+00:05:39,090 --> 00:05:47,280
+dimenticato nel componente del post quando il collegamento di tutti questi elementi  ora l'elemento esterno nella nostra matrice di elementi.
+
+72
+00:05:47,280 --> 00:05:52,100
+Per i post in modo che la propriet della chiave non debba essere aggiunta al link e non al post.
+
+73
+00:05:52,090 --> 00:05:58,400
+Deve sempre essere l'elemento pi esterno del tuo ciclo.
+
+74
+00:05:58,470 --> 00:06:02,020
+Con ci tuttavia ci siamo sbarazzati del messaggio di errore.
+
+75
+00:06:02,490 --> 00:06:05,300
+E ora se clicco sul post
+
+76
+00:06:05,460 --> 00:06:14,830
+puoi effettivamente vedere che c' l'ID nella tua L e devi semplicemente selezionare il post qui che non ha pi senso.
+
+77
+00:06:14,990 --> 00:06:18,580
+Ha senso in un modo, anche se non
+
+78
+00:06:18,740 --> 00:06:27,290
+cariciamo i messaggi con successo perch questo ID di oggetti di scena nel componente post completo non  pi impostato.
+
+79
+00:06:27,290 --> 00:06:30,410
+Non  il modo in cui abbiamo recuperato il parametro che stiamo passando per la tua strada.
+
+80
+00:06:30,440 --> 00:06:35,510
+Quindi questo non funziona.
+
+81
+00:06:35,660 --> 00:06:37,160
+Che cosa funziona per.
+
+82
+00:06:37,370 --> 00:06:39,070
+Possiamo confermare che nella nostra applicazione  possibile fare clic sui post e caricare diversi ID.
+
+83
+00:06:39,260 --> 00:06:46,450
+Questo  noi stiamo truccando.
+
+84
+00:06:46,460 --> 00:06:47,390
+Stiamo anche caricando sul componente.
+
+85
+00:06:47,420 --> 00:06:49,160
+Ora, per, dobbiamo solo lavorare sull'estrazione di quel parametro.
+
+86
+00:06:49,190 --> 00:06:52,750
+&nbsp;
+

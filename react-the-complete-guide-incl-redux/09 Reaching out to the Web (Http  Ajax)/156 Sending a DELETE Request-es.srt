@@ -1,0 +1,120 @@
+1
+00:00:02,160 --> 00:00:05,730
+Ahora aprendimos cmo publicar datos en la ltima conferencia.
+
+2
+00:00:05,730 --> 00:00:10,110
+Permtame tambin mostrarle cmo enviar la solicitud de eliminacin para terminar realmente.
+
+3
+00:00:10,230 --> 00:00:17,520
+Ahora, al igual que para publicar datos, eliminarlos aqu no eliminar realmente ningn dato de la parte posterior y
+
+4
+00:00:17,520 --> 00:00:22,240
+simplemente reflejar los datos que enviamos con nuestra respuesta que obtenemos bsicamente.
+
+5
+00:00:22,320 --> 00:00:27,570
+Pero an puedo mostrarte cmo lo envas y lo usaras en cualquier otro servidor de la misma manera.
+
+6
+00:00:27,570 --> 00:00:34,850
+Por supuesto, el servidor debe aceptar la palabra HTP eliminada para un dado, ahora el botn eliminar est en
+
+7
+00:00:34,850 --> 00:00:36,650
+el componente de publicacin completa.
+
+8
+00:00:36,870 --> 00:00:41,560
+Entonces simplemente nos conectan con un mtodo que maneja esto.
+
+9
+00:00:41,580 --> 00:00:42,830
+Implementar este mtodo aqu.
+
+10
+00:00:42,840 --> 00:00:51,090
+Es posible que el controlador de la publicacin principal no requiera ninguna entrada y esperemos que este mtodo hasta sus dos al hacer
+
+11
+00:00:51,450 --> 00:00:55,400
+clic deba ejecutar este controlador de eliminacin de publicaciones o Befort.
+
+12
+00:00:55,500 --> 00:00:57,960
+Ya importamos acceso aqu.
+
+13
+00:00:58,200 --> 00:01:05,860
+As que ahora simplemente usemos X-ists y all podemos usar para eliminar Meffert para emitir solicitudes de
+
+14
+00:01:06,080 --> 00:01:08,580
+eliminacin y luego eliminar Meffert oscuro.
+
+15
+00:01:08,600 --> 00:01:10,890
+Necesito agregar un signo igual.
+
+16
+00:01:10,940 --> 00:01:17,450
+a una publicacin especfica para que podamos llevarlo a usted o si lo usamos para obtener una sola publicacin.
+
+17
+00:01:17,450 --> 00:01:20,690
+El mtodo Delete tambin requiere una URL y debemos dirigirnos
+
+18
+00:01:20,690 --> 00:01:27,230
+Es lo mismo que necesitamos para eliminar y no pasamos datos adicionales porque su celda ya est muerta y contiene
+
+19
+00:01:27,230 --> 00:01:28,820
+todos los datos que necesitamos.
+
+20
+00:01:28,820 --> 00:01:36,870
+Se dirige a un recurso especfico que debe eliminarse y luego cambiarse porque nuevamente esto es asincrnico.
+
+21
+00:01:36,980 --> 00:01:45,560
+Obtendremos alguna respuesta y luego puedo bloquear la respuesta aqu para ver qu sucedi en el servidor.
+
+22
+00:01:45,560 --> 00:01:46,460
+Veamos ahora esos.
+
+23
+00:01:46,460 --> 00:01:49,710
+Carguemos una publicacin y hagamos clic en Eliminar.
+
+24
+00:01:50,660 --> 00:01:55,200
+Y puede ver que recuperamos una respuesta con xito.
+
+25
+00:01:55,250 --> 00:01:56,960
+No obtenemos datos reales aqu.
+
+26
+00:01:56,990 --> 00:02:00,140
+Eso es exactamente lo que devuelve el maniqu y nos devuelve aqu.
+
+27
+00:02:00,290 --> 00:02:03,780
+Pero el estado ha matado a doscientos indica que fue exitoso.
+
+28
+00:02:03,800 --> 00:02:11,960
+De nuevo, no fue realmente borrado, pero solo quiero mostrarle que enviar solicitudes de eliminacin tambin es tan simple como
+
+29
+00:02:12,140 --> 00:02:19,100
+intercambiar un mtodo get o post exchange para eliminar y, por supuesto, hay mtodos comparables disponibles para
+
+30
+00:02:19,100 --> 00:02:21,690
+el parche Port y as sucesivamente.
+

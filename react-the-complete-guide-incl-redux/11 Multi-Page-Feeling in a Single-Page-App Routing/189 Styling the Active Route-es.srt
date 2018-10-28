@@ -1,0 +1,268 @@
+1
+00:00:02,230 --> 00:00:07,860
+As que, al trabajar en el enrutamiento, obtuvimos informacin sobre los accesorios que recibimos del enrutador de reactivacin.
+
+2
+00:00:08,080 --> 00:00:14,530
+No sera agradable tambin ver qu ruta est activa el ao al disearla adecuadamente?
+
+3
+00:00:14,530 --> 00:00:21,640
+Como que queremos agregar una C-s S-Class especial al enlace que est activo para que podamos usar esa clase
+
+4
+00:00:21,640 --> 00:00:23,300
+para cambiar el estilo.
+
+5
+00:00:23,620 --> 00:00:29,450
+Ahora mismo si inspeccionamos que aqu ver que es una etiqueta ms larga que se cre detrs de las escenas.
+
+6
+00:00:29,470 --> 00:00:35,980
+Pero, nuevamente, la etiqueta de anclaje administrada por el enrutador de reactivacin evita que el predeterminado sea enviar
+
+7
+00:00:36,010 --> 00:00:37,220
+realmente esa solicitud.
+
+8
+00:00:37,450 --> 00:00:41,670
+Pero tambin ves que no se agrega ninguna clase.
+
+9
+00:00:41,680 --> 00:00:46,210
+Aunque tcnicamente en este momento todava est activa la pgina.
+
+10
+00:00:46,210 --> 00:00:52,930
+Entonces, lo que tenemos que hacer es decirles manualmente al enrutador de reactivacin que lo hagamos y lo hacemos al
+
+11
+00:00:52,930 --> 00:00:56,310
+no usar un enlace sino un tipo diferente de enlace.
+
+12
+00:00:56,520 --> 00:00:59,090
+El componente naftaleno.
+
+13
+00:00:59,380 --> 00:01:06,760
+Es bastante similar al enlace pero tiene algunos accesorios adicionales que nos permiten definir algunos
+
+14
+00:01:06,760 --> 00:01:12,060
+estilos para el acto de enlace reemplacemos el enlace con Naphtol.
+
+15
+00:01:12,460 --> 00:01:15,880
+Y asegrese de importarlo como acabo de hacer.
+
+16
+00:01:15,880 --> 00:01:23,170
+un enlace aqu en la parte superior de la ruta activa, que es nuevo. La publicacin en mi caso ha cambiado.
+
+17
+00:01:23,170 --> 00:01:27,160
+Ahora, si vuelves a la aplicacin, ves el elemento re-inspeccionado, que es
+
+18
+00:01:27,160 --> 00:01:29,700
+Hay una clase activa agregada.
+
+19
+00:01:29,700 --> 00:01:36,640
+Ahora esto es porque la clase no estaba presente antes de que, por supuesto, ahora nos permita aplicar un poco de estilo.
+
+20
+00:01:36,700 --> 00:01:45,640
+As que en el Bloque C Ss simplemente puedo agregar una nueva regla y no solo cambiar el color del enlace a naranja si estamos sobre l
+
+21
+00:01:45,640 --> 00:01:50,720
+o haciendo clic en l, sino todos para todos los enlaces que tienen la clase activa.
+
+22
+00:01:50,890 --> 00:01:56,260
+Si ahorramos esto ahora, en realidad ambos son de color naranja.
+
+23
+00:01:56,260 --> 00:02:03,020
+inicio, solo el hogar es naranja. Por qu? Es algo que aprendimos antes. El enrutador predeterminado acta como
+
+24
+00:02:03,020 --> 00:02:11,390
+Steese Pasir como prefijo y lo mismo ocurre con los enlaces cuando se comprueba si un enlace est activo o no. .
+
+25
+00:02:11,750 --> 00:02:14,200
+Si hago clic en la pgina de
+
+26
+00:02:14,210 --> 00:02:16,440
+Trata esto como un prefijo.
+
+27
+00:02:16,550 --> 00:02:25,250
+Por lo tanto, tenemos que agregar el ao exacto como en la ruta para indicarle al enrutador de reactivacin No se debe hacer el pop completo.
+
+28
+00:02:25,400 --> 00:02:27,840
+Para que esto sea el enlace activo.
+
+29
+00:02:28,130 --> 00:02:31,030
+Entonces esto no cambia el enlace al que estamos apuntando.
+
+30
+00:02:31,100 --> 00:02:37,380
+Siempre ser el camino a la multa, pero para la clase activa tomara esto como un prefijo.
+
+31
+00:02:37,520 --> 00:02:39,250
+Anulamos eso con Access.
+
+32
+00:02:39,380 --> 00:02:45,980
+Ahora el pago completo tiene que ser recortado por das para recibir esta clase activa de C Ss.
+
+33
+00:02:46,280 --> 00:02:52,550
+Por lo tanto, con la expectativa aadida al primer enlace no es necesario para el segundo porque
+
+34
+00:02:52,550 --> 00:02:57,590
+no tenemos realmente ningn enlace anidado que no deba activar la clase activa aqu.
+
+35
+00:02:57,950 --> 00:03:00,560
+Tan exacto agregado para el primer enlace.
+
+36
+00:03:00,560 --> 00:03:03,490
+Ahora tenemos el enlace de Inicio todava destacado.
+
+37
+00:03:03,500 --> 00:03:09,930
+Si estamos en la pgina raz, pero si hacen clic en una nueva publicacin, solo se resaltar la nueva.
+
+38
+00:03:09,980 --> 00:03:13,030
+Entonces, as es como podemos configurar clases activas.
+
+39
+00:03:13,260 --> 00:03:20,360
+Ahora, a veces no desea utilizar el valor predeterminado de la deuda como un nombre de clase activo.
+
+40
+00:03:20,390 --> 00:03:25,890
+Tal vez quieras usar mi Dasch active o highlight o lo que quieras.
+
+41
+00:03:26,060 --> 00:03:29,960
+Es por eso que puede anular la clase que debe agregarse.
+
+42
+00:03:30,260 --> 00:03:35,660
+Puede agregar accesorios adicionales y solo estoy dividiendo esto en varias lneas para que sea ms fcil de leer.
+
+43
+00:03:35,990 --> 00:03:42,020
+Puede agregar el nombre de clase activo y establecerlo en una cadena.
+
+44
+00:03:42,260 --> 00:03:46,620
+Y esto ahora podra ser mi activo y ahora para ti.
+
+45
+00:03:46,880 --> 00:03:53,370
+Mi activo se agregar como una clase C S S activa y no como el valor predeterminado de activo.
+
+46
+00:03:53,390 --> 00:03:55,630
+Entonces, ahora ves si volvemos a cargar.
+
+47
+00:03:55,680 --> 00:04:00,880
+cambi nada, pero ahora no recibe el estilo activo porque, como puede ver, esperamos
+
+48
+00:04:01,370 --> 00:04:07,700
+que a la derecha tenga una clase de CSS activa. porque eso es lo que establecemos aqu.
+
+49
+00:04:07,970 --> 00:04:13,330
+Gnuplot todava estaba instalado porque todava tiene el acto de clase porque all no
+
+50
+00:04:13,370 --> 00:04:19,670
+Nombre de la clase activa mi activo ahora cambia a activo, que es redundante porque de todos modos
+
+51
+00:04:19,790 --> 00:04:23,980
+es el predeterminado, pero solo para dejarlo aqu como referencia, puede configurarlo.
+
+52
+00:04:24,020 --> 00:04:28,820
+Tampoco tiene que trabajar con clases CSSA si no quiere.
+
+53
+00:04:28,820 --> 00:04:31,870
+Tambin puede establecer el estilo activo en su lugar.
+
+54
+00:04:32,180 --> 00:04:36,730
+As que volvamos esto a mi activo, que no aplicara ningn estilo.
+
+55
+00:04:37,010 --> 00:04:40,150
+Y vamos a decir el estilo activo aqu.
+
+56
+00:04:40,450 --> 00:04:42,300
+Este es un valor dinmico.
+
+57
+00:04:42,440 --> 00:04:47,880
+Es un objeto de JavaScript y realmente funciona igual que si usara el estilo en lnea.
+
+58
+00:04:47,900 --> 00:04:57,200
+Aqu puede configurar cualquier C-s como estilos como quizs color y configurarlo para f a 9 para liberar f, que es el color que usamos
+
+59
+00:04:57,200 --> 00:05:03,400
+y C S s tambin, pero esa es toda la decoracin de texto establecida para subrayar.
+
+60
+00:05:03,410 --> 00:05:08,600
+Ahora, si guardamos esto y volvemos a la aplicacin, ver a los desamparados de color naranja y subrayados.
+
+61
+00:05:08,930 --> 00:05:17,040
+Mientras que la publicacin nueva es solo naranja porque la nueva publicacin usa esta clase activa de la clase C S S.
+
+62
+00:05:17,060 --> 00:05:22,080
+Sin embargo, cuando estoy activo, recibo mi acto de clase que no hace nada.
+
+63
+00:05:22,280 --> 00:05:26,140
+Pero luego tambin recibe un poco de estilo en lnea de diseo en lnea.
+
+64
+00:05:26,140 --> 00:05:32,410
+Configuramos con un estilo activo, as que as es como se puede disear el acto de los sondeos.
+
+65
+00:05:32,420 --> 00:05:39,740
+El punto clave es que debe usar para enrutar el objeto de enlace, no el objeto de enlace normal, y puede que
+
+66
+00:05:39,740 --> 00:05:46,700
+necesite usarlo, excepto para asegurarse de que solo da estilo a los enlaces para las rutas que desea disear y no
+
+67
+00:05:46,700 --> 00:05:53,400
+usa las dos partes aqu como un prefijo cuando se trata de determinar si una ruta est activa o no.
+

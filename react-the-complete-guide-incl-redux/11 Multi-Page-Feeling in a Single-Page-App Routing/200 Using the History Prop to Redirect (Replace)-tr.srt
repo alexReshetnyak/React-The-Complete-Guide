@@ -1,0 +1,136 @@
+1
+00:00:02,120 --> 00:00:05,370
+Son derste koullu ynlendirmeyi reneceiz.
+
+2
+00:00:05,480 --> 00:00:12,020
+Ve bu, imdi yeni post bileeninde ynlendirme yolumuza drst olmak gerekirse, yeniden ynlendirmenin
+
+3
+00:00:12,410 --> 00:00:19,560
+gzel bir yoludur belki de, bir postay baaryla gnderdikten sonra daima bunu yapacanz yol deildir.
+
+4
+00:00:19,700 --> 00:00:26,090
+Sadece sayfaya gemek istiyorsunuz ve baba iin elbette ki taraycda veya
+
+5
+00:00:26,090 --> 00:00:35,240
+ynlendiricide ykl olan her bileende elde ettiiniz bu gemii Propp'u da kullanabilirsiniz ve postunuz blok iin
+
+6
+00:00:35,250 --> 00:00:36,680
+yklenmi demektir.
+
+7
+00:00:36,680 --> 00:00:43,280
+Bu nedenle tarayc ynlendirici tarafndan sarlyor, daha nce gsterdiim eleme konumu ve
+
+8
+00:00:43,310 --> 00:00:45,070
+gemii probuna eriebiliyoruz.
+
+9
+00:00:45,380 --> 00:00:51,260
+Gemite, geerli rotay deitirmek veya yeni bir rotaya basmak iin kullanabileceimiz
+
+10
+00:00:51,350 --> 00:00:53,170
+kolaylk yntemleri vardr.
+
+11
+00:00:53,540 --> 00:01:02,330
+Bu nedenle, sayfay devleti deitirmeden de burada deitirebiliriz ve bu nedenle asla ynlendirme bileenini
+
+12
+00:01:02,390 --> 00:01:09,740
+oluturmayarak, ancak disk pervanesi gemiine erierek ve sayfay paylamamza izin veren itme
+
+13
+00:01:09,740 --> 00:01:11,330
+yntemi vardr.
+
+14
+00:01:11,330 --> 00:01:18,130
+Dolaysyla burada tm yazlar kesebiliriz ve bu, aslnda yeni yaynlara gitmeden nceki
+
+15
+00:01:18,710 --> 00:01:20,570
+davrana yol aacaktr.
+
+16
+00:01:20,750 --> 00:01:27,780
+Yeni bir yaz girebiliriz ve tamamlandktan sonra yeni bir sayfa basarz ve teknik olarak yeniden ynlendiriliriz.
+
+17
+00:01:27,890 --> 00:01:30,850
+Porsche bu sayfay desteye itiyor.
+
+18
+00:01:30,950 --> 00:01:37,670
+Dolaysyla srt antasn tklarsanz, ynlendirmenin geerli sayfann yerini ald yeni yayn sayfasna geri
+
+19
+00:01:37,670 --> 00:01:38,290
+dnyoruz.
+
+20
+00:01:38,390 --> 00:01:42,700
+Bu durumda, geri dmesini tklarsak tabii ki bunu yorumladnzda bunu deneyebilirsiniz.
+
+21
+00:01:42,710 --> 00:01:48,330
+Ve tekrar dmesine tklarsan sk sk ynlendirme yaparsn ve iterek geri dmesini tklarsanz.
+
+22
+00:01:48,650 --> 00:01:54,830
+Geri dnebilirsiniz ancak son sayfaya geri dnmeyeceksiniz nk ynlendirme yn geerli sayfann
+
+23
+00:01:54,830 --> 00:02:00,290
+yerini alyor, yeni bir sayfa basmyor, ancak bu davran Porsche kullanmadan
+
+24
+00:02:00,620 --> 00:02:04,750
+da oaltabilir, ancak gemi nesnesinde deitirirsiniz veri kullanrsanz.
+
+25
+00:02:04,760 --> 00:02:08,350
+imdi buraya bireyler girerseniz yeni mesaja gidersiniz.
+
+26
+00:02:08,510 --> 00:02:12,320
+Sayfay terk ediyoruz ama imdi geri dmesine basn.
+
+27
+00:02:12,470 --> 00:02:19,940
+Yeni yaz gnderildi nce biz orada olduumuzdan hala grev sryoruz, nk yeni yaz bir
+
+28
+00:02:19,940 --> 00:02:21,460
+yn sayfalarda deitirildi.
+
+29
+00:02:21,770 --> 00:02:27,650
+Bu nedenle, temel olarak, yeniden ynlendirme ile ayn ey geer ve bu nedenle, alternatif olarak kullanabilirsiniz.
+
+30
+00:02:27,680 --> 00:02:32,780
+Her iki yntemi de gstermek istedim, nk belki yeniden ynlendirme bileenini artl hale
+
+31
+00:02:32,780 --> 00:02:35,070
+getirmek istediiniz bir kullanm durumunuz var.
+
+32
+00:02:35,150 --> 00:02:37,720
+Ve sonra bunu yapmann kolay bir yoludur.
+
+33
+00:02:37,910 --> 00:02:44,360
+Bileeni deitirme veya Porsche oluturma yaklamn kullanmak istemiyorsanz veya baz ilem tamamlandktan
+
+34
+00:02:44,450 --> 00:02:47,630
+sonra sayfay deitirmenin bir yolu var.
+

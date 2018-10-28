@@ -1,0 +1,304 @@
+1
+00:00:02,070 --> 00:00:05,790
+Quindi la preact  fantastica,  pi piccola e ha praticamente la
+
+2
+00:00:05,790 --> 00:00:11,220
+stessa API, quindi dovremmo sempre riutilizzarla  la domanda. E la risposta, come sempre, dipende, scopriamo
+
+3
+00:00:11,220 --> 00:00:13,110
+quali sono le differenze, cerchiamo
+
+4
+00:00:13,290 --> 00:00:17,810
+semplicemente di scoprirlo su preactjs. com, per fare clic sulla guida,
+
+5
+00:00:18,000 --> 00:00:21,520
+ anche possibile fare clic sulle differenze per reagire l.
+
+6
+00:00:21,540 --> 00:00:25,360
+Ora sentiti libero di leggere questo articolo per saperne di pi sulle differenze.
+
+7
+00:00:25,620 --> 00:00:27,390
+Alla fine hai una bella lista
+
+8
+00:00:27,450 --> 00:00:29,060
+qui, vedi cosa  incluso
+
+9
+00:00:29,070 --> 00:00:31,850
+quindi cosa  esattamente lo stesso di come reagire.
+
+10
+00:00:31,890 --> 00:00:37,440
+E queste sono cose come i componenti di ordine superiore, la creazione di componenti, i
+
+11
+00:00:37,440 --> 00:00:38,940
+componenti funzionali e tutto
+
+12
+00:00:38,970 --> 00:00:45,920
+il resto, vedrete anche che per esempio reagire crea elemento diventa h (), una funzione chiamata h ().
+
+13
+00:00:46,020 --> 00:00:51,240
+Questa  una delle piccole differenze che ho menzionato,  praticamente la stessa API ma non del
+
+14
+00:00:51,240 --> 00:00:53,650
+tutto ma questa pagina elenca tutte le differenze.
+
+15
+00:00:53,940 --> 00:00:58,410
+Quindi, ci che  stato aggiunto come ho detto, offre anche alcune nuove funzionalit
+
+16
+00:00:58,500 --> 00:01:04,190
+e, ad esempio, si ottiene questo. oggetti di scena e questo. stato passato come argomento alla funzione
+
+17
+00:01:04,320 --> 00:01:09,740
+di rendering in modo che al suo interno, puoi semplicemente chiamare oggetti di scena e stato
+
+18
+00:01:09,750 --> 00:01:15,070
+senza questa parola chiave, ma puoi anche usare ancora la parola chiave come menziona anche qui.
+
+19
+00:01:15,090 --> 00:01:18,880
+Questa  una bella aggiunta e questo  generalmente il tema
+
+20
+00:01:18,900 --> 00:01:19,400
+delle
+
+21
+00:01:19,410 --> 00:01:20,700
+cose aggiunte, belle aggiunte.
+
+22
+00:01:20,700 --> 00:01:26,250
+Ad esempio, puoi usare la parola chiave class e non devi usare il nome della classe
+
+23
+00:01:26,250 --> 00:01:29,630
+come in risposta, queste sono tutte le minuscole cose aggiunte.
+
+24
+00:01:29,910 --> 00:01:32,050
+Ma ovviamente ci sono anche cose che
+
+25
+00:01:32,160 --> 00:01:35,670
+mancano, ad esempio la convalida del tipo di puntello, anche se
+
+26
+00:01:35,670 --> 00:01:41,480
+i tipi di puntello sono stati inseriti in una libreria separata con l'ultima versione di reagire per essere onesti.
+
+27
+00:01:41,490 --> 00:01:45,410
+Quindi la parte mancante  qui non pertinente, la maggior parte delle cose
+
+28
+00:01:45,460 --> 00:01:50,450
+che mancano sono le cose dietro le quinte. Ecco, queste sono per la maggior parte
+
+29
+00:01:50,460 --> 00:01:55,710
+delle cose cosmetiche anche se tolgono un sacco di codice sorgente, che  certamente qualcosa
+
+30
+00:01:55,770 --> 00:02:02,370
+da considerare e possiamo immaginare che i tipi di puntello siano stati messi in una libreria separata dalla squadra
+
+31
+00:02:02,370 --> 00:02:10,430
+che reagisce per ridurre le dimensioni della reazione biblioteca e avvicinarsi a preact. Ecco le differenze su uno schermo qui, su una
+
+32
+00:02:10,470 --> 00:02:18,060
+pagina e questo articolo dovrebbe essere utile per te se provi a passare dall'API di reazione a quella
+
+33
+00:02:18,060 --> 00:02:20,950
+di preact, come ho detto  praticamente
+
+34
+00:02:21,030 --> 00:02:22,910
+lo stesso, sono piccole
+
+35
+00:02:22,920 --> 00:02:26,950
+cose come la h ( ) invece di reagire
+
+36
+00:02:27,120 --> 00:02:31,260
+creare elemento, ma probabilmente non hai mai chiamato reagire creare
+
+37
+00:02:31,410 --> 00:02:34,920
+manualmente l'elemento comunque e ovviamente jsx  supportato.
+
+38
+00:02:35,070 --> 00:02:40,450
+Ora la pi grande differenza dietro le quinte  probabilmente il modo in cui dom diffing
+
+39
+00:02:40,470 --> 00:02:46,110
+funziona, quindi come la preact scopre se  necessario aggiornare qualcosa e come reagire fa quello.
+
+40
+00:02:46,340 --> 00:02:54,290
+E abbiamo bisogno di un punto di riferimento per scoprire cosa  meglio, se vogliamo misurarlo nel bene e nel male, come categorie.
+
+41
+00:02:54,660 --> 00:03:00,090
+Per rispondere a questa domanda su cosa  meglio, puoi cercare un benchmark di
+
+42
+00:03:00,090 --> 00:03:06,210
+framework javascript e dovresti trovare questo repository github, l, un paio di differenti framework javascript
+
+43
+00:03:06,210 --> 00:03:07,280
+sono confrontati l'uno
+
+44
+00:03:07,380 --> 00:03:09,730
+con l'altro, puoi anche scaricarlo ed
+
+45
+00:03:09,740 --> 00:03:15,210
+eseguirlo sul tuo computer Ti avverto che questo richiede molto tempo ma, convenientemente, puoi
+
+46
+00:03:15,210 --> 00:03:17,890
+trovare gli ultimi risultati di questi benchmark
+
+47
+00:03:17,940 --> 00:03:24,690
+nel repository github se fai clic qui sull'immagine. Quindi ottieni questo tavolo che  abbastanza grande dove puoi
+
+48
+00:03:24,690 --> 00:03:28,000
+vedere molti dei diversi framework javascript confrontati l'uno con l'altro,
+
+49
+00:03:28,170 --> 00:03:34,050
+dovresti sempre fare attenzione quando analizzi tali numeri perch i test qui potrebbero non essere importanti per il
+
+50
+00:03:34,050 --> 00:03:35,800
+tipo di app che stai costruzione.
+
+51
+00:03:35,910 --> 00:03:42,090
+Alla fine ci che viene testato qui sono un paio di operazioni, come ad esempio la creazione
+
+52
+00:03:42,090 --> 00:03:43,650
+e la rimozione di
+
+53
+00:03:43,650 --> 00:03:47,100
+10000 righe di dati e l possiamo trovare react 16,
+
+54
+00:03:47,220 --> 00:03:53,370
+quindi l'ultima versione di react che ho usato per registrare questo corso e anche qui troviamo preact .
+
+55
+00:03:53,550 --> 00:04:02,370
+Ora, se li confrontiamo, vediamo che sono molto vicini in termini di prestazioni, ma quello che possiamo vedere, ad esempio, per
+
+56
+00:04:02,370 --> 00:04:12,060
+il tempo di avvio che  la seconda riga pi bassa qui, reagire alla versione 16 ha 53 millisecondi e il preact ha
+
+57
+00:04:12,130 --> 00:04:16,350
+36 che  piuttosto un un po 'pi veloce
+
+58
+00:04:16,350 --> 00:04:19,860
+La ragione di ci ovviamente  la dimensione pi
+
+59
+00:04:20,190 --> 00:04:27,450
+piccola, possiamo anche vedere che, nonostante le dimensioni pi piccole, per operazioni come la cancellazione di molte righe, la
+
+60
+00:04:27,450 --> 00:04:35,140
+terza riga dal basso, reagisce  pi veloce di quanto non lo sia perch la dimensione del file della libreria
+
+61
+00:04:35,250 --> 00:04:41,360
+non lo fa Ci che conta  quanto performante sia l'algoritmo di diffusione e l'algoritmo di aggiornamento.
+
+62
+00:04:41,400 --> 00:04:48,840
+E ovviamente la preazione deve eliminare alcune cose, reagire d'altra parte sembra essere un po 'pi efficiente quando
+
+63
+00:04:48,840 --> 00:04:50,740
+guardiamo a questo benchmark.
+
+64
+00:04:51,090 --> 00:04:52,860
+Ecco come puoi guardarlo, preact
+
+65
+00:04:52,900 --> 00:04:58,770
+ti fa risparmiare un sacco di tempo quando carichi la tua app, quando la si avvia per la
+
+66
+00:04:58,770 --> 00:04:59,360
+prima volta,
+
+67
+00:04:59,370 --> 00:05:05,840
+ molto pi piccola, non occupa tanto spazio e se si dispone di un applicazione in cui il tempo
+
+68
+00:05:05,840 --> 00:05:13,400
+di download iniziale conta molto e dove si desidera inviare il minor numero possibile di codice attraverso il cavo, la preact potrebbe essere
+
+69
+00:05:13,430 --> 00:05:15,150
+una valida alternativa per reagire.
+
+70
+00:05:15,410 --> 00:05:23,600
+Se stai costruendo un'applicazione aziendale di grandi dimensioni e dalle prestazioni elevate, reagire specialmente nella versione 16 potrebbe
+
+71
+00:05:23,900 --> 00:05:26,010
+essere ancora la scelta migliore.
+
+72
+00:05:26,360 --> 00:05:32,780
+Qualunque cosa scegliate, sentitevi liberi di giocare con il preact, leggere la guida qui per
+
+73
+00:05:32,780 --> 00:05:33,690
+scoprire come
+
+74
+00:05:33,740 --> 00:05:41,990
+usarlo, usare il preact-cli per creare facilmente nuovi progetti con esso ed essere consapevoli che c' questa grande alternativa per
+
+75
+00:05:41,990 --> 00:05:46,970
+reagire quale  fondamentalmente lo stesso, ma molto pi piccolo quando osserviamo
+
+76
+00:05:46,970 --> 00:05:48,800
+le dimensioni della libreria.
+

@@ -1,0 +1,364 @@
+1
+00:00:02,230 --> 00:00:06,720
+Teraz, kiedy ju zapoznaem si z podstawami React i czym jest React, pozwl
+
+2
+00:00:06,760 --> 00:00:11,350
+mi wyjani, o czym jest ten kurs i co bdziemy omawia na tym kursie.
+
+3
+00:00:11,380 --> 00:00:16,690
+Ju prawie zaczynamy. Jest tylko kilka rzeczy, o ktrych chciabym wspomnie,
+
+4
+00:00:16,690 --> 00:00:23,920
+o tym, jak najlepiej wykorzysta ten kurs, a potem opucimy ten modu. Pniej znajdziesz opcjonalny drugi
+
+5
+00:00:23,920 --> 00:00:26,980
+modu. W tym opcjonalnym
+
+6
+00:00:26,980 --> 00:00:31,790
+module omwi najwaniejsze funkcje JavaScript nowej generacji, ktre
+
+7
+00:00:31,870 --> 00:00:37,570
+bdziemy wykorzystywa w tym kursie. Podczas pisania aplikacji React zazwyczaj uywa
+
+8
+00:00:37,570 --> 00:00:42,830
+si wielu funkcji nastpnej generacji, takich jak funkcje strzaek i klasy.
+
+9
+00:00:42,910 --> 00:00:48,790
+Robisz to, poniewa pozwala ci pisa czystszy kod React i jest to standard
+
+10
+00:00:48,790 --> 00:00:53,970
+defacto do uywania wszystkich tych funkcji. Jeli ju czujesz si komfortowo uywajc funkcji
+
+11
+00:00:53,980 --> 00:00:55,190
+JavaScript nowej generacji,
+
+12
+00:00:55,210 --> 00:00:55,720
+wic
+
+13
+00:00:55,770 --> 00:00:57,070
+jeli znasz ju ES6
+
+14
+00:00:57,220 --> 00:01:01,290
+i tak dalej, moesz pomin nastpny modu i wspomn o tym rwnie.
+
+15
+00:01:01,360 --> 00:01:06,850
+W przeciwnym razie masz dobry modu, ktry zapewniamy, e wszyscy jestemy na tej samej stronie i e masz solidne
+
+16
+00:01:06,850 --> 00:01:11,620
+podstawy dotyczce wszystkich tych funkcji, ktre zamierzamy uy. Zawsze moesz wrci do tego moduu,
+
+17
+00:01:11,620 --> 00:01:16,860
+jeli w trakcie kursu natkniesz si na co, co wyglda na dziwne lub nowe.
+
+18
+00:01:17,320 --> 00:01:24,640
+Po tym opcjonalnym module, prawdziwy drugi modu jest moduem, w ktrym zanurkujemy w podstawy React.
+
+19
+00:01:24,670 --> 00:01:31,210
+Jest to oczywicie bardzo wany modu. Dowiesz si, jak moesz tworzy komponenty React, e istnieje
+
+20
+00:01:31,210 --> 00:01:35,820
+wicej ni jeden sposb, aby to zrobi i jak moesz komunikowa si midzy
+
+21
+00:01:35,890 --> 00:01:42,130
+komponentami i jak generalnie jest tworzona aplikacja React. Ta sekcja zawiera rwnie informacje o tym, w jaki sposb
+
+22
+00:01:42,160 --> 00:01:49,280
+moemy wysya listy i jak moemy renderowa niektre treci w sposb warunkowy. Nastpnie nadszed czas, aby zanurkowa w debugowaniu;
+
+23
+00:01:49,450 --> 00:01:51,730
+poniewa wszyscy popeniamy bdy.
+
+24
+00:01:51,790 --> 00:01:54,400
+Napiszesz kod, ktry si nie powiedzie.
+
+25
+00:01:54,400 --> 00:01:56,610
+Jest to naturalne i dzieje si kademu.
+
+26
+00:01:56,800 --> 00:02:03,280
+Niezwykle wane jest to, e wiesz, jak odzyska, jak debugowa aplikacj, jak
+
+27
+00:02:03,340 --> 00:02:03,960
+znale
+
+28
+00:02:04,090 --> 00:02:06,090
+bd powodujcy awari programu.
+
+29
+00:02:06,160 --> 00:02:10,980
+Przyjrzymy si temu w module debugowania. Po debugowaniu zajmiemy si stylizacj,
+
+30
+00:02:11,050 --> 00:02:13,090
+jak moemy stylizowa nasze
+
+31
+00:02:13,090 --> 00:02:19,690
+komponenty React i jak moemy si upewni, e styl, ktry stosujemy do komponentu, zostanie
+
+32
+00:02:20,140 --> 00:02:24,880
+zastosowany tylko do tego komponentu, a nie do innych komponentw.
+
+33
+00:02:24,880 --> 00:02:27,410
+Przyjrzymy si temu w tym module.
+
+34
+00:02:27,430 --> 00:02:34,600
+Nastpnie zanurzymy si gbiej w komponenty. Dowiedzielimy si ju wiele na ich temat, ale tutaj dowiemy
+
+35
+00:02:34,600 --> 00:02:36,850
+si, podajc za tym cyklem ycia.
+
+36
+00:02:37,060 --> 00:02:43,870
+Dowiemy si, jak moemy sprytnie kontrolowa, czy React powinien sprawdza dostpno aktualizacji
+
+37
+00:02:43,990 --> 00:02:50,440
+komponentu, czy nie, i wiele wicej. Jest to naprawd wany modu, ktry sprawi,
+
+38
+00:02:50,470 --> 00:02:57,170
+e zrozumiesz wntrze React i masz narzdzia potrzebne do wikszych i bardziej zaawansowanych aplikacji React.
+
+39
+00:02:57,360 --> 00:03:03,790
+Potem dowiesz si duo o komponentach. Ale daleko nam do koca. Przeanalizujemy nastpnie dania HTTP, w
+
+40
+00:03:03,790 --> 00:03:05,210
+jaki sposb moemy
+
+41
+00:03:05,260 --> 00:03:09,100
+poczy nasz aplikacj React ze wiatem zewntrznym, w jaki
+
+42
+00:03:09,130 --> 00:03:13,510
+sposb moemy pobra dane z serwera lub wysa na ten serwer,
+
+43
+00:03:13,780 --> 00:03:21,130
+jak moemy to wszystko zrobi na jednej stronie lub w jednym miejscu. wielostronicowa aplikacja z asynchronicznymi daniami HTTP
+
+44
+00:03:21,370 --> 00:03:28,720
+(Ajax); to wanie obejrzymy w tym module. Nastpnie zagbimy si w routing. Routing jest podstawow cech przy
+
+45
+00:03:28,720 --> 00:03:35,540
+budowaniu aplikacji z jedn stron, poniewa dziki routingowi moemy faktycznie obsugiwa rne adresy
+
+46
+00:03:35,540 --> 00:03:44,590
+URL (jak / user i / products) i renderowa rne strony; mimo e, technicznie, mamy tylko jedn
+
+47
+00:03:44,590 --> 00:03:52,600
+stron HTML i po prostu parsujemy URL za pomoc JavaScriptu i ponownie renderujemy czci DOM,
+
+48
+00:03:52,600 --> 00:03:57,190
+ktre wymagaj ponownego renderowania, aby wywietli now "stron".
+
+49
+00:03:57,190 --> 00:04:03,520
+Brzmi to bardzo skomplikowanie i dlatego uyjemy do tego pakietu. Routing jest zatem
+
+50
+00:04:03,520 --> 00:04:05,670
+bardzo wanym
+
+51
+00:04:05,660 --> 00:04:13,330
+i kluczowym moduem tego kursu. Teraz jedn wan nut w tym momencie jest to, e wszystkie te pojcia s zawsze nauczane w
+
+52
+00:04:13,330 --> 00:04:15,030
+teorii i przy pomocy niewielkich projektw demonstracyjnych.
+
+53
+00:04:15,280 --> 00:04:22,150
+Bdziemy mieli take nadrzdny projekt kursu, Burger Builder, i regularnie bdziemy wraca do tego projektu
+
+54
+00:04:22,150 --> 00:04:27,830
+i zastosowa funkcje, ktrych si nauczye w poprzednim module do projektu kursu.
+
+55
+00:04:27,850 --> 00:04:33,190
+Zaczniemy od planowania i tworzenia. Nastpnie wykorzystamy zaawansowane koncepcje komponentw. Zastosujemy stylizacj, a take
+
+56
+00:04:33,190 --> 00:04:40,210
+zastosujemy routing, abymy stopniowo mogli zobaczy, jak nasz projekt staje si coraz lepszy, aby zawsze
+
+57
+00:04:40,210 --> 00:04:40,930
+mia
+
+58
+00:04:40,930 --> 00:04:47,380
+wietny sposb na ogldanie wszystkich tych rzeczy; nie tylko w teorii lub w
+
+59
+00:04:47,380 --> 00:04:50,630
+maych projektach demonstracyjnych, ale w prawdziwym projekcie.
+
+60
+00:04:50,650 --> 00:04:54,460
+A wic rzeczy, o ktrych tutaj wspomniaem, s tylko nadrzdnymi tematami.
+
+61
+00:04:54,490 --> 00:04:59,860
+Ten kurs ma w rzeczywistoci wicej moduw, poniewa mamy wszystkie te moduy zorientowane na praktyk. Po routingu zanurkujemy w formularzach i W niemal kadej aplikacji internetowej, ktr tworzysz, musisz pobra dane wejciowe od uytkownika i w tym module poka ci,
+
+62
+00:05:00,250 --> 00:05:01,500
+Wracamy jednak do konturu. sprawdzamy poprawno. jak to zrobi w sposb
+
+63
+00:05:02,030 --> 00:05:07,600
+dynamiczny i jak rwnie sprawdzi poprawno danych wprowadzanych przez uytkownika. Nastpnie nadszed czas na Redux, Redux i wicej Redux.
+
+64
+00:05:07,640 --> 00:05:12,770
+Zanurzymy si gboko w Redux; niezalena biblioteka strony trzeciej, ktra
+
+65
+00:05:12,770 --> 00:05:19,410
+jest uywana w wielu projektach React. Zaczniemy od podstaw, uczc si, dlaczego moemy chcie uywa Redux. Wtedy nauczymy si bardziej zaawansowanych przypadkw
+
+66
+00:05:19,460 --> 00:05:25,850
+uycia, takich jak uywanie asynchronicznych akcji w Redux i wiele wicej.
+
+67
+00:05:25,880 --> 00:05:32,090
+To jest wany modu i nie
+
+68
+00:05:32,090 --> 00:05:38,240
+mog si doczeka, aby zagbi si w to, a nastpnie zastosowa go rwnie do projektu kursu razem z tob. Po Redux zajmiemy si uwierzytelnianiem.
+
+69
+00:05:38,240 --> 00:05:42,280
+Prawdopodobnie kada aplikacja internetowa posiada uwierzytelnienie umoliwiajce uytkownikom rejestracj i logowanie.
+
+70
+00:05:42,320 --> 00:05:49,130
+Tutaj poka
+
+71
+00:05:49,130 --> 00:05:55,070
+ci, jak to zaimplementowa.
+
+72
+00:05:55,430 --> 00:05:55,850
+Zawsze, podobnie jak we
+
+73
+00:05:55,880 --> 00:05:57,810
+wszystkich tych moduach, bd koncentrowa si na stronie klienta; wic po stronie Reakcji, a nie po stronie serwera.
+
+74
+00:05:57,830 --> 00:06:01,750
+Ale oczywicie wyjani, jak zaimplementowa uwierzytelnianie, aby dziaao
+
+75
+00:06:01,790 --> 00:06:05,000
+z dowolnym zapleczem obsugujcym tego rodzaju uwierzytelnianie. Oczywicie zastosujemy to rwnie do projektu kursu.
+
+76
+00:06:05,180 --> 00:06:11,690
+Po uwierzytelnieniu zanurkujemy na testy; tylko uczciwe wprowadzenie, poniewa testowanie wystarcza lub moesz stworzy wystarczajco duo
+
+77
+00:06:11,690 --> 00:06:17,380
+treci o testowaniu, aby wypeni cay kurs. Ale chc przedstawi testowanie aplikacji
+
+78
+00:06:17,380 --> 00:06:24,560
+React, narzdzi, z ktrych korzystasz i jak myle o testowaniu React apps.
+
+79
+00:06:24,560 --> 00:06:31,160
+Po przetestowaniu oczywicie dowiemy si rwnie,
+
+80
+00:06:31,160 --> 00:06:37,280
+jak wdroy aplikacj React; wic jak wysa go do prawdziwego serwera.
+
+81
+00:06:38,000 --> 00:06:43,400
+Odtd mam mnstwo dodatkowych
+
+82
+00:06:43,430 --> 00:06:44,910
+treci. Na przykad cay modu o animacji
+
+83
+00:06:45,200 --> 00:06:45,980
+React aplikacji, moliwe
+
+84
+00:06:46,030 --> 00:06:53,750
+kolejne kroki, w ktre mona zagbi si po ukoczeniu tego moduu, modu o NextJS (ktry
+
+85
+00:06:53,750 --> 00:06:57,140
+jest w zasadzie bibliotek budujc si na React i sprawiajc, e aplikacje renderowane
+
+86
+00:06:57,140 --> 00:07:04,100
+po stronie serwera s proste), modu, w ktrym zbudujemy wasny workflow, wasny projekt od zera z Webpack i kilka narzdzi do budowania - i wiele wicej.
+
+87
+00:07:04,100 --> 00:07:11,480
+W tym kursie jest duo treci.
+
+88
+00:07:11,480 --> 00:07:15,310
+Ma on dugo, ktra ma swj koniec i nie mog si doczeka, aby zagbi si w to razem z tob.
+
+89
+00:07:15,350 --> 00:07:18,080
+Dlaczego tego nie zrobimy i zaczniemy od kursu.
+
+90
+00:07:18,080 --> 00:07:23,030
+&nbsp;
+
+91
+00:07:23,030 --> 00:07:26,480
+&nbsp;
+

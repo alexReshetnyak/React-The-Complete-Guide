@@ -1,0 +1,152 @@
+1
+00:00:02,050 --> 00:00:09,660
+Son dersde, rota parametrelerini gemek iin kod ekledik ve bunu, bunu yaparken,
+
+2
+00:00:09,660 --> 00:00:16,860
+eleman bir eritte sarmalayarak yapacanz syleyerek bunu mutlak bir yola evirmek iin
+
+3
+00:00:17,160 --> 00:00:23,680
+kullanmyor ve post kimliini Buradan esnek bir yol belirlediimiz iin alabiliyoruz.
+
+4
+00:00:23,790 --> 00:00:27,560
+Bununla birlikte imdi bu parametreyi de almamz gerekiyor.
+
+5
+00:00:27,600 --> 00:00:30,030
+Dolaysyla tam post bileeninde var.
+
+6
+00:00:30,120 --> 00:00:33,220
+imdi bu pervane kimlii artk almyor.
+
+7
+00:00:33,810 --> 00:00:34,800
+Bunu ben basarm.
+
+8
+00:00:34,800 --> 00:00:36,080
+Konsola n sipariler.
+
+9
+00:00:36,090 --> 00:00:38,710
+Daha nce olsa tefti edilirse.
+
+10
+00:00:38,830 --> 00:00:40,430
+Bu drt farkl bileen.
+
+11
+00:00:40,440 --> 00:00:43,310
+Ancak nesne daima ayn yapdadr.
+
+12
+00:00:43,380 --> 00:00:45,140
+Man altnda olduunu gryor musun?
+
+13
+00:00:45,270 --> 00:00:47,870
+Aslnda ebeveyn nesnesi var.
+
+14
+00:00:48,270 --> 00:00:59,580
+Ve eer konsol yazdrabilirsek, bu sahne dolanmz tam yaz bileenimizde kilitleyeceiz ve nemli olan bu gncellemeyi
+
+15
+00:00:59,580 --> 00:01:05,420
+balayan bileene de eviririz nk imdi bunu gncellemiyoruz.
+
+16
+00:01:05,580 --> 00:01:08,850
+Gn doumundan ve gn batmndan eklenmekte veya kaldrlmaktadr.
+
+17
+00:01:08,850 --> 00:01:18,260
+Dolaysyla, Mount bileeninde olmas gerekiyorsa, bunu yaparsak, post bileeninde nesneyi grrsek ve bir eleme altndaysa,
+
+18
+00:01:18,620 --> 00:01:23,250
+ebeveynlerin ideal bir ebeveyle sahip olduumuzu gryoruz.
+
+19
+00:01:23,540 --> 00:01:30,950
+Ve buna ben de denir. D. nk blok bileende bu rota
+
+20
+00:01:30,950 --> 00:01:34,590
+tanmndaki bu esnek elemann ad olarak kurduumuz addr.
+
+21
+00:01:35,120 --> 00:01:37,880
+Elbette ki bu onu ayklamamza izin veriyor.
+
+22
+00:01:37,940 --> 00:01:45,530
+Dolaysyla burada sadece log yapamayz, nk bu sahne elemelerine eriebiliriz, ebeveynlerin kimlii balatr ve
+
+23
+00:01:45,530 --> 00:01:52,750
+biz biliyoruz ki bu bileen Paran bu fikrini tanmlayan bu rota zerinden yklendiinden.
+
+24
+00:01:53,060 --> 00:02:01,060
+yzden aldmz hata daha iyi bir ey, gndermekte olduumuz yanl post kimliiyle yanl kimlie erimek.
+
+25
+00:02:01,060 --> 00:02:06,080
+Dolaysyla imdi unu kaydedersek, burada bir hata buluyoruz, bu
+
+26
+00:02:06,220 --> 00:02:12,610
+Bunun nedeni basite tam mesaj eklememizdir, ancak biz bunu HTP isteine dntryoruz, ancak
+
+27
+00:02:12,610 --> 00:02:14,840
+hala disk pervanesi kimliine eriiyoruz.
+
+28
+00:02:14,840 --> 00:02:21,970
+Tabii ki bu da bu pervane elemesi ebeveyn kimlii ve her eyi kaydedersek veri ile olmal ve
+
+29
+00:02:21,970 --> 00:02:28,480
+imdi posta numarasn cretsiz olarak baaryla ykleyen veya bunu drdnc say iin deitirdiimizde uygulamay yeniden
+
+30
+00:02:28,480 --> 00:02:29,070
+ykleyelim.
+
+31
+00:02:29,110 --> 00:02:32,130
+Ve elbette onlara burada tklarsak da.
+
+32
+00:02:32,530 --> 00:02:39,850
+olduumuz bir uygulamamz var nk rotasyon parametrelerini baaryla geiyoruz ve onlar ayklyoruz.
+
+33
+00:02:39,850 --> 00:02:42,770
+Dolaysyla dinamik bir eye sahip
+
+34
+00:02:42,790 --> 00:02:46,840
+imdi hala almak istediimizi sylemeyen baz eyler var.
+
+35
+00:02:46,870 --> 00:02:53,440
+rnein, yeni yayna tklarsanz yeni yaynlar formunu yklyoruz, ancak o tekli yayn
+
+36
+00:02:53,440 --> 00:02:54,580
+da yklyoruz.
+
+37
+00:02:54,580 --> 00:02:57,560
+imdi bunun neden olduunu biliyor musun?
+
+38
+00:02:57,730 --> 00:03:01,360
+imdi bu konuyu daha yakndan inceleyelim ve bir sonraki derste nasl dzelteceiz.
+

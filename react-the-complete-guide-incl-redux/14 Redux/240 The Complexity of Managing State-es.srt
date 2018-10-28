@@ -1,0 +1,136 @@
+1
+00:00:02,150 --> 00:00:11,200
+La administracin estatal puede ser un reactor muy complejo que reacciona a los cambios de estado y actualiza D-y en consecuencia.
+
+2
+00:00:11,360 --> 00:00:16,450
+Pero administrar ese estado puede ser muy difcil a medida que crece nuestra aplicacin.
+
+3
+00:00:16,490 --> 00:00:22,730
+Por supuesto, Riak nos da la propiedad estatal construida que usamos hasta ahora, pero ya pudimos ver
+
+4
+00:00:22,730 --> 00:00:29,750
+en nuestro corredor construir un proyecto que pasar los ingredientes del componente al componente B puede ser muy difcil.
+
+5
+00:00:29,930 --> 00:00:33,230
+Y tuvimos que usar los parmetros de consulta de enrutamiento para muertos.
+
+6
+00:00:33,440 --> 00:00:36,840
+Sin duda, una solucin, pero no muy elegante.
+
+7
+00:00:36,860 --> 00:00:39,750
+Entonces, la administracin estatal debera ser ms fcil.
+
+8
+00:00:39,770 --> 00:00:45,980
+es un ejemplo clsico de nada de consentimiento especial o aplicacin de dis que no es el que construimos.
+
+9
+00:00:46,160 --> 00:00:47,870
+El ejemplo de Burga Buller
+
+10
+00:00:47,980 --> 00:00:54,090
+Es una aplicacin con el componente de la aplicacin raz y luego un usuario se encuentra en un contenedor de productos y algunos subcomponentes.
+
+11
+00:00:54,440 --> 00:01:00,890
+Ahora digamos que tenemos autenticacin agregada a esta aplicacin para que los usuarios puedan registrarse e iniciar sesin en X en el
+
+12
+00:01:00,890 --> 00:01:06,800
+panel y en el rea de usuarios que necesitamos para verificar si el usuario est registrado y solo otorgar acceso
+
+13
+00:01:06,800 --> 00:01:08,670
+si eso se convierte en VERDADERO.
+
+14
+00:01:08,930 --> 00:01:14,570
+Ahora verificar eso no es muy difcil porque probablemente estamos administrando el estado de autenticacin y
+
+15
+00:01:14,590 --> 00:01:16,540
+el componente de apagado por all.
+
+16
+00:01:16,550 --> 00:01:22,130
+manera tenemos que crear una conexin. entre el componente off y un componente de tarjeta aqu.
+
+17
+00:01:22,130 --> 00:01:28,160
+El problema ahora es si todos necesitamos esa informacin en un rea totalmente diferente de nuestra aplicacin,
+
+18
+00:01:28,160 --> 00:01:34,670
+como en Bergere Buller, donde necesitamos ingredientes en un rea totalmente diferente en el proceso de pago si necesitamos
+
+19
+00:01:34,700 --> 00:01:35,720
+informacin, de alguna
+
+20
+00:01:35,900 --> 00:01:42,260
+Bueno, eso es sper complejo y una cadena muy larga de props o padres Querrey o como
+
+21
+00:01:42,260 --> 00:01:44,240
+sea que logramos pasar datos.
+
+22
+00:01:44,300 --> 00:01:50,780
+Es una pena que sea tan difcil porque al final estamos escribiendo javascript correctamente y tenemos un
+
+23
+00:01:50,840 --> 00:01:54,830
+archivo javascript incluido como salida o un par de paquetes.
+
+24
+00:01:54,830 --> 00:01:56,300
+Si usamos carga diferida
+
+25
+00:01:56,630 --> 00:02:03,560
+Entonces, al final, por qu no podemos simplemente establecer alguna variable global que sea un objeto javascript que almacena todo el estado
+
+26
+00:02:03,560 --> 00:02:07,130
+de nuestra aplicacin y a la que podemos acceder desde cualquier lugar?
+
+27
+00:02:07,130 --> 00:02:10,630
+Por qu tenemos que tomar la ruta complicada con parmetros de consulta?
+
+28
+00:02:10,730 --> 00:02:18,770
+Si todo lo que hacemos es simplemente usar javascript, al final la razn es que el sistema reactivo de reaccin no reacciona a
+
+29
+00:02:18,800 --> 00:02:21,940
+los cambios en alguna variable local que haya definido.
+
+30
+00:02:22,280 --> 00:02:23,790
+Y es bueno que no.
+
+31
+00:02:23,840 --> 00:02:25,610
+Eso lo hace tan eficiente.
+
+32
+00:02:26,030 --> 00:02:33,320
+tener Esto almacenar todava suena muy interesante y eso es exactamente lo que reduce como aprender.
+
+33
+00:02:33,350 --> 00:02:34,150
+Sin embargo,
+
+34
+00:02:34,340 --> 00:02:40,390
+As que echemos un vistazo ms de cerca a redox antes de que Denne lo implementemos para ver cmo funciona en accin.
+

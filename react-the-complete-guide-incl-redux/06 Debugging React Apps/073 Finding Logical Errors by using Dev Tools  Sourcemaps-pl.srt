@@ -1,0 +1,200 @@
+1
+00:00:02,090 --> 00:00:09,330
+Podczas ostatniego wykadu przyjrzelimy si komunikatom o bdach, na pewno wanym, ale czsto mamy bdy logiczne,
+
+2
+00:00:09,330 --> 00:00:12,210
+ktre s jeszcze trudniejsze do wykrycia.
+
+3
+00:00:12,210 --> 00:00:15,830
+Nie otrzymujesz komunikatu o bdzie, ale jako nie dziaa.
+
+4
+00:00:16,170 --> 00:00:23,160
+Powiedzmy, e nameChangedHandler, kiedy znajdujemy indeks osoby, ktr chcemy zaktualizowa, zamy, e porwnujemy
+
+5
+00:00:23,160 --> 00:00:26,180
+identyfikator uytkownika z ID, a to
+
+6
+00:00:26,460 --> 00:00:30,570
+jest nieprawidowe, osoba nie ma waciwoci identyfikatora uytkownika.
+
+7
+00:00:30,570 --> 00:00:38,640
+Nie spowoduje to jednak bdu, poniewa identyfikator uytkownika jest niezdefiniowany, ale moesz porwna niezdefiniowane z
+
+8
+00:00:38,970 --> 00:00:42,360
+czym, co prawdopodobnie nie znajdzie odpowiedniej osoby.
+
+9
+00:00:42,360 --> 00:00:48,470
+Wic jeli zapisz ten kod, oczywicie naprawiem bd z ostatniego wykadu, wic jeli
+
+10
+00:00:48,950 --> 00:00:56,630
+zapisz ten kod i wrcimy do aplikacji, jeli teraz zaczniemy pisa, nie otrzymamy bdu, ale mog wpisz
+
+11
+00:00:56,820 --> 00:00:58,860
+tyle, ile chc, to
+
+12
+00:00:58,890 --> 00:01:00,030
+si nie
+
+13
+00:01:00,060 --> 00:01:05,370
+zaktualizuje, nie widz tu nawet mojej zaktualizowanej wartoci, poniewa zamaem dwukierunkowe powizanie,
+
+14
+00:01:05,370 --> 00:01:08,450
+poniewa nie poprawiam poprawnie nazwy tej osoby.
+
+15
+00:01:08,460 --> 00:01:11,200
+Co moemy teraz zrobi w takim przypadku?
+
+16
+00:01:11,370 --> 00:01:14,320
+Moemy porusza si po naszym kodzie krok
+
+17
+00:01:14,370 --> 00:01:17,650
+po kroku, dlatego zalecam uywanie narzdzi programistycznych Chrome.
+
+18
+00:01:17,760 --> 00:01:27,630
+Tam moesz przej do zakadki rde, w zakadce rde znajdziesz swoj struktur kodu pokazan pod
+
+19
+00:01:27,630 --> 00:01:29,160
+localhost, tam
+
+20
+00:01:29,160 --> 00:01:34,750
+znajdziesz folder rdowy, a tu znajdziesz swj kod.
+
+21
+00:01:34,770 --> 00:01:39,110
+Teraz jest to moliwe z powodu generowanych map rdowych.
+
+22
+00:01:39,450 --> 00:01:47,220
+Zasadniczo mona powiedzie pliki tumaczeniowe, ktre pozwalaj narzdziom deweloperskim przegldarki wej do twojego kodu
+
+23
+00:01:47,250 --> 00:01:53,730
+podczas pisania i pozwoli na debugowanie tego kodu, mimo e kod wysyany
+
+24
+00:01:54,060 --> 00:01:57,690
+do przegldarki bdzie inny, zoptymalizowany i spakowany.
+
+25
+00:01:57,800 --> 00:02:02,310
+Jest to cakiem fajne, poniewa moesz debugowa kod, ktry napisae, nawet jeli nie jest to
+
+26
+00:02:02,310 --> 00:02:03,630
+kod dziaajcy w przegldarce.
+
+27
+00:02:03,780 --> 00:02:07,210
+W tym miejscu wiemy, e co nie
+
+28
+00:02:07,380 --> 00:02:13,840
+dziaa, kiedy wpisuj kod i wiemy, e nazwaChangedHandler jest uruchamiana podczas pisania.
+
+29
+00:02:13,980 --> 00:02:17,300
+Ustawmy punkt przerwania, klikajc tutaj nowy numer
+
+30
+00:02:17,700 --> 00:02:19,910
+linii i zacznijmy pisa ponownie.
+
+31
+00:02:20,670 --> 00:02:23,890
+Napisaem jedn posta, ktra teraz wstrzymuje to, zobaczysz, e
+
+32
+00:02:24,180 --> 00:02:29,370
+dodaje to i poniewa jest to domylne zachowanie elementu html i nie wykonalimy caego
+
+33
+00:02:29,370 --> 00:02:32,260
+kodu, ktry mgby go nadpisa, i teraz moemy
+
+34
+00:02:32,520 --> 00:02:40,200
+uy zwykego debuggera chrome narzdzia tutaj, aby przej przez nasz kod. I tutaj moemy przej do nastpnego
+
+35
+00:02:40,290 --> 00:02:48,760
+wywoania funkcji, aby wej do funkcji szukania indeksu i zrozumie, co si tam dzieje.
+
+36
+00:02:49,870 --> 00:02:53,950
+Wic teraz w rodku moemy spojrze na dane, ktre
+
+37
+00:02:53,950 --> 00:02:57,510
+mamy tam dostpne, takie jak obiekt p.
+
+38
+00:02:57,520 --> 00:03:03,610
+Teraz widzimy, e jest to dla Max, jest to obiekt, ktry
+
+39
+00:03:03,620 --> 00:03:08,580
+aktualnie przeglda z indeksem find i mamy pomys asfa1.
+
+40
+00:03:08,710 --> 00:03:17,050
+Widzimy rwnie, e to wyraenie jest tutaj niezdefiniowane i porwnalimy je do identyfikatora asfa1 Wic jeli to powinno
+
+41
+00:03:18,250 --> 00:03:26,200
+pasowa do tej osoby, ktra ma ten identyfikator, poniewa mamy dostp do ID uytkownika, widzimy, e jest on
+
+42
+00:03:26,640 --> 00:03:35,530
+niezdefiniowany i wyranie widzimy, e ten identyfikator uytkownika jest niepoprawny identyfikator, poniewa po ponownym najechaniu mysz na t osob widzimy
+
+43
+00:03:35,530 --> 00:03:41,150
+tylko obiekt ID, brak identyfikatora uytkownika. Dziki tym informacjom moemy teraz zakoczy
+
+44
+00:03:41,380 --> 00:03:46,960
+ten proces, powrci do naszego kodu i naprawi nasz logiczny bd.
+
+45
+00:03:47,050 --> 00:03:55,120
+Tak wic automatyczne korzystanie z narzdzi do debugowania chrome z generowanymi automatycznie mapami rdowymi jest potn
+
+46
+00:03:55,120 --> 00:03:57,820
+funkcj do wykrywania bdw logicznych.
+
+47
+00:03:57,850 --> 00:04:03,140
+Moesz pisa swj kod w trakcie pisania, nawet jeli nie jest to kod uruchomiony w przegldarce.
+
+48
+00:04:03,310 --> 00:04:06,200
+To wietne narzdzie, ktre powiniene
+
+49
+00:04:06,340 --> 00:04:13,210
+zna, aby znale i naprawi bdy. Korzystanie z narzdzi programistycznych na karcie rda, do ktrych mona uzyska
+
+50
+00:04:13,210 --> 00:04:15,600
+dostp do oryginalnego kodu z powodu map rdowych.
+

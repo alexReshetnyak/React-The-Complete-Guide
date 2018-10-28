@@ -1,0 +1,268 @@
+1
+00:00:02,030 --> 00:00:08,340
+W ostatnim wykadzie przeprowadziem ci przez projekt, ktrego uyjemy i poprzez aksjos, pakiet zalecany
+
+2
+00:00:08,460 --> 00:00:11,970
+do wysyania da HTTP w reakcji na aplikacje,
+
+3
+00:00:12,000 --> 00:00:14,510
+teraz zrbmy takie danie HTTP.
+
+4
+00:00:14,730 --> 00:00:20,960
+I dla tego dummy backendu, ktrego uywamy, ju pokazaem ci adres URL, ktrego potrzebujesz, aby
+
+5
+00:00:21,130 --> 00:00:23,700
+wysa danie, aby uzyska tablic postw.
+
+6
+00:00:23,700 --> 00:00:27,990
+Teraz chc renderowa t tablic wpisw w moim kontenerze blogu.
+
+7
+00:00:28,180 --> 00:00:30,930
+Tam mam indywidualne komponenty posta i
+
+8
+00:00:30,930 --> 00:00:37,410
+oczywicie powinna to by dynamicznie generowana lista wpisw, lista postw, ktre pobieramy z
+
+9
+00:00:37,410 --> 00:00:39,230
+serwera, eby by precyzyjnym.
+
+10
+00:00:39,240 --> 00:00:47,820
+Gdzie teraz tworzymy to danie HTTP? Rzumy okiem na slajdy cyklu ycia, moe
+
+11
+00:00:47,850 --> 00:00:51,180
+znajdziemy odpowiedni hak do cyklu ycia.
+
+12
+00:00:51,240 --> 00:00:56,250
+Jeli spojrzymy na haki cyklu ycia, ktre napotkalimy podczas tworzenia komponentu,
+
+13
+00:00:56,250 --> 00:00:59,660
+istnieje jeden hak do cyklu ycia, ktry
+
+14
+00:00:59,700 --> 00:01:04,520
+powinnimy zastosowa dla efektw ubocznych, componentDidMount i danie HTTP jest
+
+15
+00:01:04,590 --> 00:01:11,520
+efektem ubocznym, nie ma wpywu na logik reakcji lub co podobnego ale ma to efekt
+
+16
+00:01:11,530 --> 00:01:18,230
+uboczny pobierania nowych danych i jeli twoja aplikacja reaguje dynamicznie na wysyanie pewnych danych,
+
+17
+00:01:18,270 --> 00:01:22,670
+prawdopodobnie jest to efekt uboczny wpywajcy na twoj aplikacj.
+
+18
+00:01:23,010 --> 00:01:29,560
+Wic componentDidMount jest doskonaym miejscem do wywoywania efektw ubocznych, ale nie do aktualizacji stanu, poniewa
+
+19
+00:01:29,560 --> 00:01:30,770
+wyzwala ponowne renderowanie.
+
+20
+00:01:31,020 --> 00:01:37,560
+Wci bdziemy aktualizowa stan tutaj, gdy danie HTTP zniknie i dostarczy nam nowe dane, poniewa
+
+21
+00:01:37,560 --> 00:01:39,480
+faktycznie chcemy ponownie zaktualizowa
+
+22
+00:01:39,480 --> 00:01:46,640
+stron, wic tutaj jest to waciwie podane zachowanie. Wic componentDidMount jest najlepszym miejscem do wysania dania
+
+23
+00:01:46,740 --> 00:01:53,790
+HTTP, wic w kontenerze blogu, zaimplementuj componentDidMount, a teraz potrzebujemy axios do wysania tego dania.
+
+24
+00:01:53,880 --> 00:01:57,460
+Tak wic zaimportuj aksios z pakietu
+
+25
+00:01:57,680 --> 00:02:05,640
+axios, a teraz moemy go uy tutaj w componentDidMount, axios oferuje metod GET do
+
+26
+00:02:05,820 --> 00:02:07,900
+wysyania odgadnicia, dania GET.
+
+27
+00:02:07,920 --> 00:02:10,540
+Ta metoda wymaga co najmniej jednego
+
+28
+00:02:10,580 --> 00:02:14,120
+argumentu, adresu URL, do ktrego chcesz wysa to danie
+
+29
+00:02:14,170 --> 00:02:20,870
+GET, wic tutaj jest adres URL skopiowany z faszywej strony zastpczej z / postami na kocu.
+
+30
+00:02:20,880 --> 00:02:26,700
+Teraz moesz rwnie przekaza drugi argument, aby skonfigurowa to danie, i moesz dowiedzie si wicej
+
+31
+00:02:26,700 --> 00:02:28,520
+o wszystkich opcjach konfiguracji i
+
+32
+00:02:28,590 --> 00:02:33,000
+tym podobnych na tej stronie Github. Oczywicie nie dotyczy to gwnie aksios, wic
+
+33
+00:02:33,060 --> 00:02:39,170
+nie przeprowadz ci przez wszystkie te ustawienia, ktre moesz tutaj doda, ale ta strona jest wietnym punktem wyjcia.
+
+34
+00:02:39,180 --> 00:02:43,880
+Wci mamy zamiar zobaczy niektre z rzeczy, ktre moesz zrobi z aksjami w tym module.
+
+35
+00:02:44,220 --> 00:02:47,130
+Tutaj jednak nie potrzebuj adnej konkretnej konfiguracji,
+
+36
+00:02:47,130 --> 00:02:51,310
+po prostu chc wysa do tego URL-a normalne danie GET.
+
+37
+00:02:51,750 --> 00:02:59,430
+Rzecz oczywicie, e powinno to zwrci kilka postw, ale prba zapisania ich w staej postu
+
+38
+00:02:59,430 --> 00:03:05,110
+nie zadziaa, poniewa oczywicie danie jest realizowane asynchronicznie, nie koczy si
+
+39
+00:03:05,310 --> 00:03:07,050
+natychmiast, potrzebuje troch
+
+40
+00:03:07,080 --> 00:03:10,710
+czasu, aby przej do serwera i uzyska dane.
+
+41
+00:03:11,220 --> 00:03:15,510
+JavaScript jednak wykonuje twj kod w sposb synchroniczny, wic po
+
+42
+00:03:15,570 --> 00:03:22,440
+tym wierszu nastpna linia zostanie natychmiast uruchomiona, nie bdzie pauzy, dopki to si nie skoczy, wic
+
+43
+00:03:22,440 --> 00:03:25,550
+nie bdzie przechowywa tam postw i postw.
+
+44
+00:03:25,830 --> 00:03:33,210
+Jest to podane zachowanie, poniewa nie chcemy blokowa wykonywania naszej aplikacji tylko dlatego, e oczekujemy
+
+45
+00:03:33,210 --> 00:03:35,400
+na zakoczenie tej proby.
+
+46
+00:03:35,790 --> 00:03:36,820
+W zwizku
+
+47
+00:03:36,810 --> 00:03:42,600
+z tym Axios stosuje obietnice, domylny obiekt javascript wprowadzony w ES6, a dziki naszemu
+
+48
+00:03:42,690 --> 00:03:46,330
+workflow, z ktrego korzystamy, tworzymy aplikacj reagowania rwnie dostpn
+
+49
+00:03:46,590 --> 00:03:52,950
+w starszych przegldarkach, poniewa kod zostaje skompilowany do kodu, ktry dziaa rwnie w starszych przegldarkach.
+
+50
+00:03:53,610 --> 00:04:01,620
+Tak wic axios uywa obietnic, a GET zwraca obietnic, abymy mogli na niej acuchowa, to jest po prostu
+
+51
+00:04:01,620 --> 00:04:08,640
+metoda, ktra przyjmuje funkcj jako dane wejciowe i ta funkcja zostanie wykonana, gdy obietnica si rozwie.
+
+52
+00:04:08,700 --> 00:04:16,170
+Wic kiedy dane z zaplecza s tam, moemy powiedzie. Funkcja nastpnie odbiera obiekt odpowiedzi jako dane wejciowe,
+
+53
+00:04:16,200 --> 00:04:17,340
+zostanie to
+
+54
+00:04:17,340 --> 00:04:23,850
+automatycznie przekazane do funkcji przez axios i na razie po prostu wydrukujmy to na
+
+55
+00:04:23,850 --> 00:04:27,560
+konsoli, abymy mogli zobaczy, co jest w rodku.
+
+56
+00:04:27,570 --> 00:04:34,320
+Zapisz ten kod, wrc do aplikacji reagowania i ponownie zaaduj stron i natychmiast zobaczymy, jak
+
+57
+00:04:34,320 --> 00:04:36,820
+ten obiekt jest drukowany na konsoli.
+
+58
+00:04:36,900 --> 00:04:43,860
+Jeli j rozbudujemy, widzimy tutaj kod statusu, a wszystkie te waciwoci to tylko waciwoci dostarczone
+
+59
+00:04:43,860 --> 00:04:45,480
+przez pakiet axios.
+
+60
+00:04:45,480 --> 00:04:48,820
+Otrzymalimy kod statusu 200, wic udao
+
+61
+00:04:48,840 --> 00:04:53,900
+si, widzimy, e wysano danie, widzimy nagwki odpowiedzi i wane
+
+62
+00:04:53,940 --> 00:04:58,240
+dla nas, mamy obiekt danych, ktry zawiera dane
+
+63
+00:04:58,260 --> 00:05:05,780
+zwrcone z serwera, do ktrego wysalimy danie. W przypadku tej sztucznej usugi zastpczej jest to po prostu
+
+64
+00:05:05,810 --> 00:05:09,560
+tablica obiektw javascript, w ktrej kady obiekt powinien reprezentowa post.
+
+65
+00:05:09,830 --> 00:05:15,540
+Jak wida, otrzymalimy tytu, waciwo body i id oraz user id.
+
+66
+00:05:15,560 --> 00:05:21,380
+Teraz moemy pracowa z tymi danymi i oczywicie chc z nim pracowa, aby dynamicznie wywietla
+
+67
+00:05:21,380 --> 00:05:27,020
+je na ekranie i wyprowadza niektre posty zamiast tych faszywych treci, ktre mam teraz.
+

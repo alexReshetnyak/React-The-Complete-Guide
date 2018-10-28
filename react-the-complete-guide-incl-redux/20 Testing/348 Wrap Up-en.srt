@@ -1,0 +1,76 @@
+1
+00:00:02,060 --> 00:00:07,580
+Over this lecture, we had a brief introduction to testing in react apps and I did mention that you can
+
+2
+00:00:07,580 --> 00:00:14,750
+dive deeper, that there are whole courses or articles diving just into testing and I can only encourage
+
+3
+00:00:14,750 --> 00:00:17,850
+you to dive deeper if you want to learn more about testing,
+
+4
+00:00:17,860 --> 00:00:19,680
+this is just a rough introduction.
+
+5
+00:00:19,820 --> 00:00:24,980
+One of the most important things when it comes to testing is the way you think about tests,
+
+6
+00:00:24,980 --> 00:00:32,990
+don't test unnecessary stuff because that unnecessary stuff often is the most difficult to test, if you're
+
+7
+00:00:32,990 --> 00:00:40,810
+testing the whole workflow from I click a button to my state updates to then something changes in another
+
+8
+00:00:40,820 --> 00:00:42,080
+component,
+
+9
+00:00:42,080 --> 00:00:48,500
+then you won't have fun simulating that. That will require a lot of difficult work and code where you
+
+10
+00:00:48,500 --> 00:00:54,350
+need to mock the h to the p calls so that you don't actually reach out to the server during your tests
+
+11
+00:00:55,130 --> 00:00:56,920
+and all of that isn't fun at all.
+
+12
+00:00:56,960 --> 00:01:01,970
+And it's not only no fun, it's also redundant because we don't need to test if we can reach out to
+
+13
+00:01:01,970 --> 00:01:02,860
+the server,
+
+14
+00:01:02,990 --> 00:01:06,620
+we need to test does our reducer work correctly,
+
+15
+00:01:06,680 --> 00:01:10,460
+do we update our components correctly if the input changes,
+
+16
+00:01:10,580 --> 00:01:15,630
+maybe we want to test do we find a correct prop if we click a certain button.
+
+17
+00:01:15,980 --> 00:01:20,210
+All these things can be easily tested in isolated unit tests
+
+18
+00:01:20,210 --> 00:01:22,290
+and this really is the way to think about it
+
+19
+00:01:22,400 --> 00:01:24,860
+and the way I encourage you to practice.
+

@@ -1,0 +1,84 @@
+1
+00:00:02,450 --> 00:00:09,620
+Agora, ao longo desta Marchal, adicionamos muitos formulrios e funcionalidades relacionadas  validao e notei um
+
+2
+00:00:09,620 --> 00:00:10,210
+bug.
+
+3
+00:00:10,400 --> 00:00:14,990
+Serei honesto, notei isso depois de gravar este mdulo.
+
+4
+00:00:15,020 --> 00:00:16,130
+No  grave.
+
+5
+00:00:16,160 --> 00:00:22,610
+Ns vamos corrigi-lo mais tarde neste curso em nosso continer de contatos de contato onde devemos declarar o gerenciamento de
+
+6
+00:00:22,610 --> 00:00:27,140
+nosso mtodo de entrega de controles de formulrio que  o nosso elemento selecionado.
+
+7
+00:00:27,450 --> 00:00:31,430
+E eu estabeleo inicialmente um valor de cadeia vazia.
+
+8
+00:00:31,430 --> 00:00:37,650
+Agora, temos duas opes mais rpidas ou mais baratas, uma string vazia no faz muito sentido.
+
+9
+00:00:37,760 --> 00:00:41,680
+Agora, na UI, veremos mais rpido e mais barato.
+
+10
+00:00:41,780 --> 00:00:47,410
+Mas se nunca mudarmos a opo por trs das cenas, o valor sempre permanecer uma string vazia.
+
+11
+00:00:47,410 --> 00:00:50,670
+Ele sempre ser atualizado depois de ativar a mudana.
+
+12
+00:00:50,690 --> 00:00:57,230
+Ento, uma vez que mudamos de valor, uma vez que isso se tornar um problema mais tarde quando enviarmos nosso
+
+13
+00:00:57,230 --> 00:01:02,940
+frum para o servidor, ento enviaremos um valor vazio no caso de nunca mudar o valor novamente.
+
+14
+00:01:02,960 --> 00:01:05,180
+Eu vou consert-lo mais tarde no curso.
+
+15
+00:01:05,330 --> 00:01:07,650
+Apenas no caso de voc ter notado isso.
+
+16
+00:01:07,670 --> 00:01:08,580
+Bom trabalho.
+
+17
+00:01:08,690 --> 00:01:09,910
+Mais uma vez ser consertado.
+
+18
+00:01:09,920 --> 00:01:17,660
+A correo  to fcil como simplesmente entrar mais rpido ou mais barato que o padro aqui e voc pode escolher o
+
+19
+00:01:17,660 --> 00:01:18,560
+que quiser.
+
+20
+00:01:18,770 --> 00:01:20,620
+Ento,  assim como corrigir isso.
+
+21
+00:01:20,690 --> 00:01:23,800
+Mais uma vez eu vou deix-lo como o temos aqui ser corrigido mais tarde.
+

@@ -1,0 +1,268 @@
+1
+00:00:02,230 --> 00:00:07,860
+Wic pracowalimy routing, otrzymalimy informacje o rekwizytach, ktre otrzymalimy od routera reagowania.
+
+2
+00:00:08,080 --> 00:00:14,530
+Czy nie byoby mio zobaczy, ktra trasa jest tu aktywna, odpowiednio j stylizujc.
+
+3
+00:00:14,530 --> 00:00:21,640
+Chcemy doda specjaln klas css do aktywnego cza, abymy mogli uy tej klasy
+
+4
+00:00:21,640 --> 00:00:23,300
+do zmiany stylu.
+
+5
+00:00:23,620 --> 00:00:29,450
+W tej chwili, jeli sprawdzimy to tutaj, zobaczysz, e jest to znacznik zakotwiczenia, ktry zosta
+
+6
+00:00:29,470 --> 00:00:35,980
+utworzony za kulisami, ale znowu, znacznik zakotwiczenia zarzdzany przez router reagowania, uniemoliwiajcy ustawienie domylne, ktre byoby rzeczywicie
+
+7
+00:00:36,010 --> 00:00:37,220
+wysa to danie.
+
+8
+00:00:37,450 --> 00:00:41,670
+Ale widzisz te, e nie ma do niej adnej
+
+9
+00:00:41,680 --> 00:00:46,210
+klasy, nawet jeli ta techniczna strona jest wci aktywna.
+
+10
+00:00:46,210 --> 00:00:52,930
+Musimy wic rcznie powiedzie routerowi, aby to zrobi, i robimy to,
+
+11
+00:00:52,930 --> 00:00:56,310
+nie uywajc linku, ale innego typu
+
+12
+00:00:56,520 --> 00:00:59,090
+cza, komponentu nav link.
+
+13
+00:00:59,380 --> 00:01:06,760
+Jest podobny do linku, ale ma dodatkowe rekwizyty, ktre pozwalaj nam zdefiniowa niektre
+
+14
+00:01:06,760 --> 00:01:12,060
+stylizacje dla aktywnego linku. Zastpmy ten link odnonikiem nav i
+
+15
+00:01:12,460 --> 00:01:15,880
+upewnijmy si, e go zaimportujemy tak jak wanie.
+
+16
+00:01:15,880 --> 00:01:23,170
+Teraz, jeli wrcisz do aplikacji, zobaczysz element inspekcyjny, ktry jest linkiem na grze dla aktywnej trasy,
+
+17
+00:01:23,170 --> 00:01:27,160
+ktra jest nowa-post w moim przypadku si zmienia, jest
+
+18
+00:01:27,160 --> 00:01:29,700
+teraz aktywna klasa, ta klasa
+
+19
+00:01:29,700 --> 00:01:36,640
+css nie bya " t obecne przed. To oczywicie pozwala nam teraz na zastosowanie niektrych stylizacji.
+
+20
+00:01:36,700 --> 00:01:45,640
+Tak na blogu. css, mog po prostu doda now regu i nie tylko zmieni kolor linku na
+
+21
+00:01:45,640 --> 00:01:50,720
+pomaraczowy, jeli krcimy nad nim lub klikamy go, ale take wszystkie linki, ktre maj aktywn klas.
+
+22
+00:01:50,890 --> 00:01:56,260
+Jeli to zapiszemy, teraz oba s pomaraczowe. Jeli jednak klikn na
+
+23
+00:01:56,260 --> 00:02:03,020
+dom, tylko dom jest pomaraczowy. Dlaczego? Powodem tego jest co, o
+
+24
+00:02:03,020 --> 00:02:11,390
+czym dowiedzielimy si wczeniej, domylnie router reaguje na te cieki tutaj jako przedrostki, a to samo dotyczy linkw.
+
+25
+00:02:11,750 --> 00:02:14,200
+Podczas sprawdzania, czy link jest
+
+26
+00:02:14,210 --> 00:02:16,440
+aktywny, traktuje to jako prefiks,
+
+27
+00:02:16,550 --> 00:02:25,250
+wic musimy doda tutaj dokadnie tak, jak na trasie, aby powiedzie, e router reaguje na nie, pena cieka powinna
+
+28
+00:02:25,400 --> 00:02:27,840
+by tym, aby bya aktywnym czem.
+
+29
+00:02:28,130 --> 00:02:31,030
+To nie zmienia linku, ktry wskazujemy,
+
+30
+00:02:31,100 --> 00:02:37,380
+zawsze bdzie to cieka, ktr zdefiniowalimy, ale dla klasy aktywnej, potraktuje to jako prefiks.
+
+31
+00:02:37,520 --> 00:02:39,250
+Nadpisujemy to dokadnym,
+
+32
+00:02:39,380 --> 00:02:45,980
+teraz pena cieka musi by / aby otrzyma t aktywn klas css.
+
+33
+00:02:46,280 --> 00:02:52,550
+Wic z dokadnym dodaniem do pierwszego linku, nie jest potrzebny na drugi, poniewa nie mamy
+
+34
+00:02:52,550 --> 00:02:57,590
+w rzeczywistoci adnych zagniedonych odnonikw, ktre nie powinny uruchamia tutaj aktywnej klasy.
+
+35
+00:02:57,950 --> 00:03:00,560
+Tak wic przy dokadnym dodawaniu do pierwszego
+
+36
+00:03:00,560 --> 00:03:03,490
+linku, teraz mamy podwietlony link do strony gwnej,
+
+37
+00:03:03,500 --> 00:03:09,930
+jeli jestemy na stronie gwnej, ale jeli klikn na nowy post, tylko nowy wpis jest teraz podwietlony.
+
+38
+00:03:09,980 --> 00:03:13,030
+W ten sposb moemy skonfigurowa aktywne zajcia.
+
+39
+00:03:13,260 --> 00:03:20,360
+Teraz czasami nie chcesz uywa tej domylnej wartoci aktywnej jako aktywnej nazwy klasy.
+
+40
+00:03:20,390 --> 00:03:25,890
+Moe chcesz uy my-active, highlight lub cokolwiek chcesz, dlatego
+
+41
+00:03:26,060 --> 00:03:29,960
+moesz zastpi klas, ktra powinna by doczona.
+
+42
+00:03:30,260 --> 00:03:35,660
+Moesz doda dodatkowe rekwizyty, a ja po prostu dziel to na wiele linii,
+
+43
+00:03:35,990 --> 00:03:42,020
+aby uatwi czytanie, moesz doda aktywn nazw klasy i ustawi j na cig znakw, ktry
+
+44
+00:03:42,260 --> 00:03:46,620
+moe by teraz moim aktywnym. A teraz dla pierwszego
+
+45
+00:03:46,880 --> 00:03:53,370
+cza moja-aktywna zostanie dodana jako aktywna klasa css, a nie jako domylna aktywna.
+
+46
+00:03:53,390 --> 00:03:55,630
+Wic teraz widzisz, czy adujemy nowy
+
+47
+00:03:55,680 --> 00:04:00,880
+post w dalszym cigu w stylu, poniewa nadal ma on aktywn klas, poniewa
+
+48
+00:04:01,370 --> 00:04:07,700
+tam nie zmieniem niczego, ale dom nie ma aktywnego stylu, poniewa jak widzisz, sprawdzamy go po
+
+49
+00:04:07,970 --> 00:04:13,330
+prawej stronie , ma klas css z mojej aktywnej, poniewa to wanie tutaj ustawilimy.
+
+50
+00:04:13,370 --> 00:04:19,670
+Aktywna nazwa klasy, moja-aktywna. Teraz zmieni to na aktywne, ktre jest zbdne, poniewa jest
+
+51
+00:04:19,790 --> 00:04:23,980
+to domylne, ale po prostu zostaw to tutaj dla odniesienia, ktre moesz ustawi.
+
+52
+00:04:24,020 --> 00:04:28,820
+Nie musisz te pracowa z klasami css, jeli nie
+
+53
+00:04:28,820 --> 00:04:31,870
+chcesz, moesz rwnie ustawi aktywny styl.
+
+54
+00:04:32,180 --> 00:04:36,730
+Wrmy wic do mojego aktywnego, ktry nie zastosowaby adnej stylizacji,
+
+55
+00:04:37,010 --> 00:04:40,150
+a zamiast tego powiedzmy tutaj aktywny styl.
+
+56
+00:04:40,450 --> 00:04:42,300
+Jest to warto dynamiczna,
+
+57
+00:04:42,440 --> 00:04:47,880
+jest to obiekt javascript i dziaa tak, jakby uywa wbudowanej stylizacji.
+
+58
+00:04:47,900 --> 00:04:57,200
+Tutaj moesz ustawi dowolne style CSS, na przykad kolor i ustawi to na # fa923f, ktry jest
+
+59
+00:04:57,200 --> 00:05:03,400
+kolorem, ktrego uywamy w css, ale ustawmy rwnie tekstur do podkrelenia.
+
+60
+00:05:03,410 --> 00:05:08,600
+Teraz, jeli to zapiszemy i wrcimy do aplikacji, zobaczysz, e dom jest
+
+61
+00:05:08,930 --> 00:05:17,040
+pomaraczowy i podkrelony, podczas gdy nowy post jest po prostu pomaraczowy, poniewa nowy post uywa tej aktywnej klasy
+
+62
+00:05:17,060 --> 00:05:22,080
+css, jednak gdy jest aktywny, otrzymuje moj aktywn klas, ktra nie
+
+63
+00:05:22,280 --> 00:05:26,140
+robi nic ale potem rwnie otrzymasz troch stylu inline,
+
+64
+00:05:26,140 --> 00:05:32,410
+inline stylizacj, ktr ustawilimy z aktywnym stylem. Wic w ten sposb moesz ksztatowa aktywne linki
+
+65
+00:05:32,420 --> 00:05:39,740
+Kluczowe wyjcie na wynos to uycie do przeniesienia obiektu linku, a nie zwykego obiektu linku i moe by
+
+66
+00:05:39,740 --> 00:05:46,700
+konieczne uycie dokadnego, aby upewni si, e stylujesz tylko linki dla tras, ktre chcesz stylowa. i nie
+
+67
+00:05:46,700 --> 00:05:53,400
+uyjesz tutaj, aby rozdzieli tutaj jako przedrostek, jeli chodzi o ustalenie, czy trasa jest aktywna, czy nie.
+

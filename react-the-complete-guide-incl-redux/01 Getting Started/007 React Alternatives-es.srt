@@ -1,0 +1,60 @@
+1
+00:00:02,010 --> 00:00:04,020
+No, no es solo reaccionar.
+
+2
+00:00:04,030 --> 00:00:08,330
+Tambin hay alternativas para volver a actuar, por supuesto, es lo que cubriremos en este curso.
+
+3
+00:00:08,380 --> 00:00:14,350
+Pero tambin est Engler y se vera el caos y hay avaricia como la columna vertebral o el mbar,
+
+4
+00:00:14,380 --> 00:00:17,730
+pero angular y de vista son las alternativas ms populares.
+
+5
+00:00:17,950 --> 00:00:22,330
+Y solo puedo recomendarte bucear en DS para realmente elegir tu favorito.
+
+6
+00:00:22,330 --> 00:00:25,250
+Tambin recib cursos sobre ellos si ests interesado.
+
+7
+00:00:25,600 --> 00:00:32,500
+Los tres son excelentes para crear aplicaciones web altamente escalables que se ven y se sienten
+
+8
+00:00:32,500 --> 00:00:34,090
+bien para el usuario.
+
+9
+00:00:34,090 --> 00:00:41,050
+No es tanto una alternativa como Jake, donde podra pensar que es uno, pero Shakeri solo trata de
+
+10
+00:00:41,350 --> 00:00:44,820
+atravesar el dormitorio y seleccionar elementos en un dormitorio.
+
+11
+00:00:44,830 --> 00:00:51,490
+Ahora, como vimos en nuestro ejemplo, reactivar es solo declarar lo que ves y enfocarte en la lgica
+
+12
+00:00:51,790 --> 00:00:59,050
+en lugar de enfocarte en cmo y por lo tanto, reaccionar angularmente y ver te permiten crear aplicaciones ms
+
+13
+00:00:59,050 --> 00:01:05,860
+potentes porque puedes enfocarte en la lgica y tu modelo de negocio y no tanto en el aspecto
+
+14
+00:01:05,860 --> 00:01:08,450
+tcnico de llegar realmente al elemento muerto.
+
+15
+00:01:08,500 --> 00:01:09,670
+Usted quera cambiar.
+

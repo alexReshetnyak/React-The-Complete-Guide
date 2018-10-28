@@ -1,0 +1,164 @@
+1
+00:00:02,100 --> 00:00:07,680
+Nell'ultimo video che abbiamo appreso sugli oggetti di scena, possiamo fornire queste informazioni sull'utilit.
+
+2
+00:00:07,850 --> 00:00:14,540
+E riguardo all'oggetto della cronologia, anche i metodi di utilit possono essere utilizzati per navigare
+
+3
+00:00:14,540 --> 00:00:17,080
+o scoprire dove ci troviamo ora.
+
+4
+00:00:17,150 --> 00:00:22,930
+Cosa succede se in realt vogliamo ottenere queste informazioni non in uno dei nostri contenitori.
+
+5
+00:00:23,030 --> 00:00:31,820
+Quindi non in un componente che  stato caricato attraverso una rotta come definita nel blocco come caduta ma in un
+
+6
+00:00:31,850 --> 00:00:38,390
+componente che viene reso come parte di un contenitore del tipo Post come il contenitore del
+
+7
+00:00:38,660 --> 00:00:46,190
+post viene caricato con questa rotta qui nel contenitore del blocco e il post container semplicemente restituisce il
+
+8
+00:00:46,220 --> 00:00:47,200
+componente post allora.
+
+9
+00:00:47,330 --> 00:00:57,080
+Ora, se entriamo in quel componente del post e per un secondo giriamo il post componente in un componente in
+
+10
+00:00:57,620 --> 00:01:01,760
+cui in realt restituiamo J come X come questo.
+
+11
+00:01:01,760 --> 00:01:03,150
+Se osiamo.
+
+12
+00:01:03,290 --> 00:01:06,320
+Ora console registra i puntelli.
+
+13
+00:01:06,680 --> 00:01:12,640
+Quindi vedrai che gli oggetti di scena nel componente del post vedremo che quattro volte
+
+14
+00:01:12,640 --> 00:01:16,710
+perch stiamo visualizzando quattro post  solo un titolo cliccato.
+
+15
+00:01:16,850 --> 00:01:24,560
+Non esiste una cronologia delle posizioni delle partite qui, perch abbiamo nel componente Pleuro dei post non
+
+16
+00:01:24,560 --> 00:01:25,700
+uno solo.
+
+17
+00:01:25,700 --> 00:01:34,100
+Quindi il rel di instradamento non viene passato alla componentistica, non possiamo accedervi in componenti che
+
+18
+00:01:34,100 --> 00:01:39,980
+semplicemente incorporiamo come parte di d. j come codice X di un contenitore.
+
+19
+00:01:39,980 --> 00:01:45,440
+Ora se volevi usare gli oggetti di scena ci sono due modi per ottenere l'accesso.
+
+20
+00:01:45,470 --> 00:01:53,680
+Uno naturalmente  che possiamo passarli con l'operatore di spread e questo props questo passa tutti i puntelli.
+
+21
+00:01:53,690 --> 00:01:57,590
+Questo contenitore di post ha sul componente post.
+
+22
+00:01:57,590 --> 00:02:03,560
+Ovviamente potrebbe anche mirare esplicitamente a determinati oggetti di scena come, per esempio, se si vuole
+
+23
+00:02:03,560 --> 00:02:04,890
+passare la propriet abbinata.
+
+24
+00:02:04,910 --> 00:02:08,320
+Potremmo anche fare questa partita di puntelli.
+
+25
+00:02:08,330 --> 00:02:10,500
+Ora questo  un modo per trasmetterlo.
+
+26
+00:02:10,640 --> 00:02:16,820
+Ma c' anche un componente di ordine superiore che possiamo usare sul componente del post.
+
+27
+00:02:16,850 --> 00:02:24,050
+Possiamo importare qualcosa che viene chiamato con router dal router re-act Daum.
+
+28
+00:02:24,170 --> 00:02:32,070
+Ora con il router si tratta di un componente di ordine superiore che usiamo avvolgendo la nostra esportazione con esso proprio cos.
+
+29
+00:02:32,450 --> 00:02:40,310
+Con questo aggiunto Se ora salviamo tutti i file, vedete che ora che gli oggetti di scena sono prodotti
+
+30
+00:02:40,310 --> 00:02:45,030
+per i singoli post hanno una posizione storica e corrispondono alle propriet.
+
+31
+00:02:45,320 --> 00:02:52,990
+Quindi con i puntelli Anstey del router per i componenti Avro a qualsiasi componente che avvolgeremo con esso.
+
+32
+00:02:53,300 --> 00:03:00,560
+percorso del componente dat, che verr utilizzato o che otterr le informazioni contenenti il puntello per il percorso caricato pi vicino.
+
+33
+00:03:00,890 --> 00:03:05,240
+Quindi, con il router  un buon modo per rendere noto il
+
+34
+00:03:05,240 --> 00:03:11,840
+Quindi in questo caso dal momento che il post  incluso nei post, otteniamo gli stessi probs che riceviamo nei post.
+
+35
+00:03:12,080 --> 00:03:18,170
+Ho intenzione di rimuoverlo qui, ma questo  un modo per ottenere l'accesso ai puntelli relativi
+
+36
+00:03:18,170 --> 00:03:25,910
+al routing di cui potresti aver bisogno per chiamare push sulla cronologia Propp o per ottenere informazioni sulla rotta caricata.
+
+37
+00:03:25,910 --> 00:03:27,980
+Questo  un modo per ottenere l'accesso.
+
+38
+00:03:28,070 --> 00:03:35,420
+Utilizzando questo approccio di accesso a oggetti di scena con il componente di ordine superiore qui.
+
+39
+00:03:35,420 --> 00:03:37,060
+Ora di nuovo lo sto rimuovendo qui.
+
+40
+00:03:37,130 --> 00:03:40,490
+Quindi torner allo stato originale per il mio componente post.
+
+41
+00:03:40,640 --> 00:03:42,780
+Volevo solo condividerlo con te.
+

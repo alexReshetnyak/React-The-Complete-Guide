@@ -1,0 +1,116 @@
+1
+00:00:02,190 --> 00:00:07,420
+imdi bu derste son derste CSSTransition'a bir gz attk,
+
+2
+00:00:07,450 --> 00:00:14,850
+orada bu temel snf adn belirlediimizi, css snflarmzn bu gvdesini ve CSSTransition bileeninin
+
+3
+00:00:14,850 --> 00:00:20,540
+bunu otomatik olarak birka farkl css snfna genileteceini akladm. durum
+
+4
+00:00:20,550 --> 00:00:22,710
+byle. Baz nedenlerden
+
+5
+00:00:22,710 --> 00:00:29,160
+dolay, yine de, modal ak ve kalc olarak kullandnzdan emin olmak isteyebilirsiniz, bylece
+
+6
+00:00:29,160 --> 00:00:32,910
+bu snflar tanmlamanz gerekmez. Bu nedenle, gvdenizle
+
+7
+00:00:32,910 --> 00:00:36,290
+bir dizeyi sadece classNames'e aktaramazsnz,
+
+8
+00:00:36,360 --> 00:00:38,140
+bir javascript nesnesini
+
+9
+00:00:38,340 --> 00:00:46,620
+de geirebilirsiniz ve bu nesnede, farkl kancalar iin kullanlmas gereken eitli css
+
+10
+00:00:46,620 --> 00:00:49,770
+snflarn manuel olarak tanmlayabilirsiniz.
+
+11
+00:00:49,890 --> 00:00:53,320
+Yani bu isimde snf ismine
+
+12
+00:00:53,340 --> 00:01:04,950
+getiniz, enter girii, enter-aktif, exit ve exit-aktif tanmlayabilirsiniz ve orada aslnda tanmlamanz gerekmeyen iki tane
+
+13
+00:01:04,950 --> 00:01:07,550
+daha grnr ve
+
+14
+00:01:07,560 --> 00:01:10,420
+aktif grnebilir. bagajnza eklendi.
+
+15
+00:01:10,650 --> 00:01:16,080
+Bunlar kullanlr, bu yzden grnr ve grnr-aktif ilk kez
+
+16
+00:01:16,200 --> 00:01:19,590
+bir eye dntrlrken deil, rnein bir
+
+17
+00:01:19,590 --> 00:01:21,710
+tula tklatldnda ya da
+
+18
+00:01:21,840 --> 00:01:28,680
+deil, ancak klavyede olduu gibi, Uygulamann. js, h1 ve butonu, yani eer her
+
+19
+00:01:28,680 --> 00:01:34,200
+zaman varsa, fakat uygulama yklyse, tabii ki ilk defa bu doma
+
+20
+00:01:34,200 --> 00:01:39,190
+monte edilir ve bunu canlandrabilirsiniz. Ama burada odaklanmak istediim ey
+
+21
+00:01:39,300 --> 00:01:46,830
+deil, eer girmek iin sylerseniz, herhangi bir ey eklemek istemiyorum, onu tanmlamak zorunda kalmazsnz ya
+
+22
+00:01:46,830 --> 00:01:50,160
+da sadece bo bir dize tanmlamanz yeterlidir.
+
+23
+00:01:50,160 --> 00:01:56,790
+imdi, modal ak olarak eklemek istediiniz belirli css snfn tanmlayabilir ve bundan sonra,
+
+24
+00:01:56,790 --> 00:02:03,050
+bu emann bir gvdeye sahip olmasn ve daha sonra -enter, -enter-active vb.
+
+25
+00:02:03,390 --> 00:02:10,290
+Bylece bu kurulumla, kendi css snflarnz tanmlayabileceksiniz veya eklenmeli veya kullanlmaldr, modal
+
+26
+00:02:10,710 --> 00:02:12,840
+yakn, bu kapan snfdr.
+
+27
+00:02:13,140 --> 00:02:20,150
+Ve eer bunu kaydedersek ve imdi modaleyi asak, daha nce olduu gibi ayn animasyonlar gryoruz
+
+28
+00:02:20,220 --> 00:02:22,710
+ama imdi kendi css snflarmz kullanyoruz.
+
+29
+00:02:22,710 --> 00:02:28,970
+Yani bu kk bir ekleme, bu sizin ihtiyalarnza gerekten ince ayar yapmanz gereken bir esneklik.
+

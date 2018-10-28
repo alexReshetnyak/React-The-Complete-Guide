@@ -1,0 +1,452 @@
+1
+00:00:02,170 --> 00:00:09,640
+Teraz, gdy podstawowa funkcjonalno Bergere Boulder jest ju skoczona i, jak ju powiedziaem, powrcimy do tego pniej w tym
+
+2
+00:00:09,640 --> 00:00:15,790
+kursie, aby przesa to rwnie do serwera, aby mie wiele stron w tej aplikacji i
+
+3
+00:00:15,790 --> 00:00:16,580
+wiele wicej.
+
+4
+00:00:16,750 --> 00:00:23,860
+Zanim przejdziemy do statyww DS, skoczmy deser dodajc pasek i bok.
+
+5
+00:00:23,890 --> 00:00:30,160
+Jest to oczywicie wane, poniewa pniej, gdy dodamy wiele stron, musimy mie jaki sposb
+
+6
+00:00:30,160 --> 00:00:30,680
+nawigacji.
+
+7
+00:00:30,880 --> 00:00:33,850
+I kada aplikacja powinna mie pasek narzdzi.
+
+8
+00:00:33,880 --> 00:00:35,810
+To sprawia, e wyglda lepiej.
+
+9
+00:00:35,980 --> 00:00:41,590
+Wic zamknijmy komponenty w folderze Bergere w folderze komponentw i zaadujmy, a wy
+
+10
+00:00:41,590 --> 00:00:44,480
+izolujemy, e mamy tutaj czysty projekt roboczy.
+
+11
+00:00:44,650 --> 00:00:50,220
+Dodajmy teraz nowy folder w folderze komponentw.
+
+12
+00:00:50,740 --> 00:00:57,790
+Nazw to nawigacj, poniewa chc przechowywa wszystkie komponenty zwizane z nawigacj, takie jak pasek narzdzi, taki
+
+13
+00:00:57,790 --> 00:01:03,700
+jak boczna szuflada, a pasek narzdzi jest faktycznie zgodny z tym, co zaczn.
+
+14
+00:01:03,880 --> 00:01:09,100
+Wic w nawigacji pozwl mi doda nowy pasek narzdzi do dodawania tam.
+
+15
+00:01:09,100 --> 00:01:14,120
+Nieoczekiwanie dodajmy plik dot js z paskiem narzdzi.
+
+16
+00:01:14,440 --> 00:01:23,110
+Teraz, gdy pasek narzdziowy js pokazuje, jak na pewno wyglda, jak powinien wyglda pasek narzdziowy, tak naprawd
+
+17
+00:01:23,110 --> 00:01:24,900
+bdzie to komponent funkcjonalny.
+
+18
+00:01:24,910 --> 00:01:27,550
+Poniewa nie musi zarzdza adnym stanem tam.
+
+19
+00:01:28,000 --> 00:01:36,080
+Spodziewam si, e zdobd jakie rekwizyty, a potem, jak wiesz, z tego powodu wyprowadzamy jaki GSX.
+
+20
+00:01:36,160 --> 00:01:44,080
+Zaimportujmy take ponownie z tego aktu, a nastpnie wyeksportuj t funkcj paska narzdzi jako domyln
+
+21
+00:01:44,110 --> 00:01:45,820
+dla tego pliku.
+
+22
+00:01:45,820 --> 00:01:50,750
+Jak wyglda wtedy pasek narzdzi z perspektywy GSX.
+
+23
+00:01:50,950 --> 00:01:58,630
+Chc mie zawijany element nagwka, poniewa nagwek ISDE paska narzdzi mojej aplikacji internetowej i
+
+24
+00:01:58,630 --> 00:02:02,290
+tam chc mie kilka elementw na kocu.
+
+25
+00:02:02,380 --> 00:02:09,910
+Chc mie jaki przycisk otwierajcy boczn szuflad, a my usuniemy ten sztuczny symbol zastpczy
+
+26
+00:02:09,910 --> 00:02:12,900
+i zastpimy go pniej prawdziwym przyciskiem.
+
+27
+00:02:12,900 --> 00:02:14,980
+Ale na razie trzymajmy to dev tutaj.
+
+28
+00:02:15,250 --> 00:02:16,610
+Wic chc umrze.
+
+29
+00:02:17,000 --> 00:02:28,000
+Wtedy te chc mie element div, ktry zawiera moje logo i bdzie musia doda to i tam, gdy chc mie
+
+30
+00:02:28,000 --> 00:02:32,080
+element naff, ktry zawiera moje linki nawigacyjne.
+
+31
+00:02:32,080 --> 00:02:38,590
+Zasadniczo bdzie to zawierao pewn nieuporzdkowan list ze wszystkimi linkami, a na razie usuno list
+
+32
+00:02:38,590 --> 00:02:44,730
+zaszczytw i po prostu zostaw tutaj symbol zastpczy DOT DOT, wic wszystkie te elementy zastpcze
+
+33
+00:02:44,800 --> 00:02:50,620
+teraz zastpi te elementy wasnymi komponentami elementem logo, ktry moe ponownie uy komponentu menu,
+
+34
+00:02:50,620 --> 00:02:55,860
+ktrego moglibymy uy i elementu elementw nawigacyjnych, ktry wszyscy chcemy ponownie wykorzysta.
+
+35
+00:02:55,900 --> 00:03:01,780
+Poniewa wszyscy bdziemy mie boczn szuflad dla ukadw mobilnych, wic nie zawsze bdziemy mie wszystkie elementy nawigacyjne
+
+36
+00:03:01,780 --> 00:03:02,730
+na pasku narzdzi.
+
+37
+00:03:02,740 --> 00:03:08,110
+Czasami chcesz przesun je do bocznej szuflady, a zatem posiadanie elementu wielokrotnego uytku
+
+38
+00:03:08,110 --> 00:03:10,480
+na te przedmioty ma wiele sensu.
+
+39
+00:03:10,720 --> 00:03:15,350
+Przed utworzeniem podskadnikw Stwrzmy jednak podstawowy pasek narzdzi.
+
+40
+00:03:15,520 --> 00:03:18,600
+Oczywicie ten pasek narzdzi bdzie rwnie wymaga pewnej stylizacji.
+
+41
+00:03:18,810 --> 00:03:21,780
+Dodam wic, e mj pasek narzdzi kropka C wyglda nastpujco.
+
+42
+00:03:21,790 --> 00:03:23,620
+Tutaj s dwa.
+
+43
+00:03:23,620 --> 00:03:29,680
+Stworz pasek narzdzi, ktry zobaczysz jako klas, ktr moemy pniej zaimportowa, poniewa oczywicie
+
+44
+00:03:29,680 --> 00:03:37,230
+uywamy C jako moduw i chc mie pasek narzdzi o wysokoci 56 pikseli i szerokoci 100%.
+
+45
+00:03:37,240 --> 00:03:41,690
+Teraz celem jest opracowanie najpierw tej aplikacji mobilnej.
+
+46
+00:03:41,750 --> 00:03:49,890
+Przede wszystkim skonfigurujcie tutaj dwa ustawienia i ustawienia dla urzdze mobilnych, a wtedy zobaczymy.
+
+47
+00:03:49,930 --> 00:03:56,370
+Pniej w tym module musisz dostosowa go do wszystkich, aby dobrze wyglda na komputerach.
+
+48
+00:03:56,530 --> 00:04:02,130
+Cho w przypadku paska narzdzi wikszo ustawie powinna dziaa zarwno na komputerze, jak i na nim, dlatego
+
+49
+00:04:02,130 --> 00:04:07,780
+zaczem od paska narzdzi, wic teraz jest on w stanie naprawi, dziki czemu zawsze jest na grze,
+
+50
+00:04:07,780 --> 00:04:10,780
+nawet jeli przewijamy i na nim siedzimy. .
+
+51
+00:04:10,780 --> 00:04:14,740
+Oczywicie musz ustawi top 0 i left 0.
+
+52
+00:04:15,020 --> 00:04:17,850
+Pasek narzdzi nie ma koloru ta.
+
+53
+00:04:18,010 --> 00:04:21,600
+I tu ju wybraem adny brzowawy kolor.
+
+54
+00:04:21,670 --> 00:04:24,480
+7 0 3 by 0 9.
+
+55
+00:04:24,820 --> 00:04:32,680
+To powinno wyglda naprawd adnie, gdy ekran jest ustawiony tak, aby wszystkie elementy na pasku narzdzi byy
+
+56
+00:04:32,680 --> 00:04:39,070
+wyrwnane obok siebie, poniewa domylny kierunkowy modu flex to elementy pozycjonujce wiersze obok siebie,
+
+57
+00:04:39,100 --> 00:04:44,230
+nawet jeli s elementami blokowymi i sprawdzaj niektre artykuy o blokach flex.
+
+58
+00:04:44,230 --> 00:04:51,100
+Jeli ta koncepcja jest cakowicie nowa, pole Flex musi uzasadni waciwo content, ktra definiuje sposb, w
+
+59
+00:04:51,100 --> 00:04:54,140
+jaki elementy s pakowane przez pasek narzdzi.
+
+60
+00:04:54,190 --> 00:04:57,670
+Ostatni element powinien zosta rozoony.
+
+61
+00:04:57,670 --> 00:05:04,810
+I tutaj chc uy przestrzeni midzy, aby przestrze wielorybw bya wypeniona elementami wewntrz tego elementu paska
+
+62
+00:05:04,840 --> 00:05:09,950
+narzdziowego na kocu i automatycznie zachowyway one pewn odlego od siebie.
+
+63
+00:05:10,320 --> 00:05:13,090
+Element zamwienia okrela sposb wyrwnania.
+
+64
+00:05:13,090 --> 00:05:16,380
+Bylimy legalnie i s dwa zasadnicze elementy.
+
+65
+00:05:16,420 --> 00:05:18,440
+Na koniec dodam troch dopenienia.
+
+66
+00:05:18,620 --> 00:05:21,430
+Wypenienie tutaj powinno wynosi zero od gry i od dou.
+
+67
+00:05:21,520 --> 00:05:28,930
+Ale 20 pikseli od lewej i prawej strony, a nastpnie rwnie rozmiar pudeka i ustaw to pole graniczne, aby upewni
+
+68
+00:05:29,080 --> 00:05:32,890
+si, e pasek narzdzi jest prawidowo zwymiarowany, nawet z wycik.
+
+69
+00:05:33,220 --> 00:05:38,300
+I na koniec potrzebuj ustalonego indeksu, a bohater wybierze oczywicie 90 wanych rzeczy.
+
+70
+00:05:38,320 --> 00:05:43,450
+Ta liczba musi by mniejsza ni liczba wybrana dla ta.
+
+71
+00:05:43,600 --> 00:05:45,080
+I tam wybraem 100.
+
+72
+00:05:45,250 --> 00:05:48,790
+Poniewa to powinno znajdowa si przynajmniej nad paskiem narzdzi.
+
+73
+00:05:48,820 --> 00:05:54,880
+Chc mie to zachowanie tutaj teraz dodam jeszcze jedn regu i jest nastpujca.
+
+74
+00:05:55,100 --> 00:06:03,460
+Chc kontrolowa, jak D-Nev. pozycja jest wywietlana po zagniedeniu wewntrz prta, ktry oczywicie tam
+
+75
+00:06:03,470 --> 00:06:09,980
+bdzie Chc ustawi wysoko w 100 procentach tak, aby w nawigacji mogem kontrolowa wysoko wzgldem
+
+76
+00:06:10,100 --> 00:06:16,520
+wysokoci paska narzdziowego i upewni si, e elementy nawigacyjne rozcignita na pen wysoko tego paska
+
+77
+00:06:16,520 --> 00:06:19,880
+narzdziowego z tym dugiem powinna to zrobi.
+
+78
+00:06:19,880 --> 00:06:22,410
+Na razie wrmy do paska narzdzi.
+
+79
+00:06:22,520 --> 00:06:32,780
+Upa teraz i zaimportujmy nasze s. do. s jako klasy, po prostu dodaj klasy importu z
+
+80
+00:06:32,790 --> 00:06:41,610
+ukonika do Barresi SS, a nastpnie dodam to do mojego nagwka lub dodaj nazw klasy i ustaw te dwie klasy i uywam tego, aby
+
+81
+00:06:41,630 --> 00:06:43,280
+zaznaczy klas C S S.
+
+82
+00:06:43,290 --> 00:06:44,570
+Wanie stworzylimy.
+
+83
+00:06:44,840 --> 00:06:51,570
+I jak zawsze naley pamita, e importowani Hindusi po prostu importuj kilka cigw.
+
+84
+00:06:51,600 --> 00:06:59,210
+Dynamicznie tworzone C-s jako nazwy klas, ktre mona racjonalnie dopasowa do zakresu tego komponentu, a
+
+85
+00:06:59,210 --> 00:07:03,120
+nastpnie przypisujemy nazw klasy, ktra zostaa tutaj wygenerowana.
+
+86
+00:07:03,260 --> 00:07:08,380
+Teraz powinnimy mie podstawowy dziaajcy pasek narzdzi.
+
+87
+00:07:08,390 --> 00:07:10,430
+Teraz oczywicie chcemy z niego korzysta.
+
+88
+00:07:10,730 --> 00:07:14,830
+I gdzie powinnimy doda ten pasek narzdzi.
+
+89
+00:07:14,910 --> 00:07:19,100
+Teraz moesz oczywicie twierdzi, e chcesz edytowa brylant Briger, poniewa tam wanie chcemy
+
+90
+00:07:19,100 --> 00:07:20,640
+mie pasek narzdzi na grze.
+
+91
+00:07:20,930 --> 00:07:24,620
+Ale na koniec chcemy mie pasek narzdzi u gry kadej adowanej strony.
+
+92
+00:07:24,770 --> 00:07:29,470
+Dlatego moemy uy pliku tak, ale najlepszym miejscem jest oczywicie nasz ukad.
+
+93
+00:07:29,510 --> 00:07:35,210
+Disneyland polega na ukadaniu naszej strony i tutaj ju dodalimy kilka symboli
+
+94
+00:07:35,210 --> 00:07:36,820
+zastpczych dla paska narzdzi.
+
+95
+00:07:36,950 --> 00:07:45,260
+Tak wic w komponencie ukadu zaimportuj nowo utworzony komponent paska narzdzi z tego pliku paska narzdziowego na pasku
+
+96
+00:07:45,350 --> 00:07:49,010
+narzdzi nawigacyjnych, a nastpnie na jego pasku narzdzi.
+
+97
+00:07:49,010 --> 00:07:56,540
+JOT. S. jak zawsze bez rozszerzenia pliku, a nastpnie moemy po prostu
+
+98
+00:07:56,600 --> 00:07:59,210
+zamieni nasz symbol zastpczy na nowo zaimportowany komponent paska narzdzi.
+
+99
+00:07:59,210 --> 00:08:03,660
+Moemy uy komponentu samozamykajcego si i nie musimy zapisywa wszystkich plikw.
+
+100
+00:08:03,650 --> 00:08:09,770
+Upewnij si, e start NPM nadal dziaa i powiniene zobaczy ten pasek narzdzi jak teraz.
+
+101
+00:08:09,830 --> 00:08:11,020
+To nie jest super adne.
+
+102
+00:08:11,030 --> 00:08:15,770
+Tekst prawdopodobnie powinien by biay, ale pniej zastpimy te wszystkie rzeczy prawdziwymi
+
+103
+00:08:15,770 --> 00:08:16,260
+treciami.
+
+104
+00:08:16,260 --> 00:08:25,160
+W kadym razie jedn rzecz, ktr wszyscy moemy zauway, jest to, e nasza gwna strona jest naoona na pasek narzdzi,
+
+105
+00:08:25,250 --> 00:08:34,160
+wic gwny element, ktry ma margines grny z 16 pikseli, powinien prawdopodobnie doda 16-piksele Deese do wysokoci paska narzdziowego 56
+
+106
+00:08:34,220 --> 00:08:40,430
+pikseli, ktre ustawilimy tak, abymy mona to szybko zrobi w ukadzie C jest nastpujca.
+
+107
+00:08:40,520 --> 00:08:46,700
+Gdzie robi, aby znale t sta klauzul, ktra ustawia margines grny i chc go zmieni na
+
+108
+00:08:46,700 --> 00:08:53,870
+72, ktry w zasadzie jest tylko 56 pikselow wysokoci paska narzdziowego Plus 16 pikseli wysokoci lub marginesem gry.
+
+109
+00:08:53,870 --> 00:08:56,230
+Waciwie to chciaem mie wczeniej.
+
+110
+00:08:56,540 --> 00:08:59,090
+Teraz korzystanie z debuggera jest przyjemne.
+
+111
+00:08:59,090 --> 00:09:00,960
+Pozycja ponownie.
+
+112
+00:09:01,040 --> 00:09:04,160
+W ten sposb dodajemy pasek narzdzi w nastpnym kroku.
+
+113
+00:09:04,190 --> 00:09:09,020
+Pracujmy nad tym logo, aby uzyska adne logo w tej aplikacji.
+

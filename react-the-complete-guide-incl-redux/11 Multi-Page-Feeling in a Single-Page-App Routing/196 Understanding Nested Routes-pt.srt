@@ -1,0 +1,336 @@
+1
+00:00:02,190 --> 00:00:09,600
+At agora, na nossa aplicao, carregamos a rota de publicao nica como parte da pgina do nosso blog, de modo que,
+
+2
+00:00:09,600 --> 00:00:15,310
+quando clicamos em uma publicao, trocamos a pgina do Post para uma nica pgina de publicao.
+
+3
+00:00:15,330 --> 00:00:18,330
+Agora podemos absolutamente fazer isso,  claro.
+
+4
+00:00:18,330 --> 00:00:25,350
+No entanto, s vezes, voc tambm possui uma configurao onde voc deseja criar uma rota aninhada
+
+5
+00:00:25,380 --> 00:00:33,360
+para onde deseja carregar um determinado componente ou onde deseja renderizar determinado contedo dentro de outro componente, que
+
+6
+00:00:33,360 --> 00:00:35,540
+tambm  carregado por roteamento.
+
+7
+00:00:35,790 --> 00:00:41,850
+Ento, agora, temos apenas um nvel em que rotegamos aqui no bloco, ns carregamos diferentes
+
+8
+00:00:41,850 --> 00:00:45,810
+componentes para rotas diferentes e isso  absolutamente bom.
+
+9
+00:00:45,810 --> 00:00:54,090
+Agora, digamos que queremos carregar um host especfico no dentro do componente do bloco, mas dentro do componente do host
+
+10
+00:00:54,330 --> 00:00:56,730
+diretamente abaixo de nossas postagens aqui.
+
+11
+00:00:57,090 --> 00:01:06,060
+Ento, para isso, eu vou embrulhar isso no Dith e adicionar minha rota l, meu componente de rota l em algum
+
+12
+00:01:06,180 --> 00:01:09,390
+momento no componente de postagem adicionado l.
+
+13
+00:01:09,390 --> 00:01:16,780
+Portanto,  claro que eu tambm preciso adicionar uma importao no topo, onde eu importo a rota do roteador de reativao
+
+14
+00:01:16,890 --> 00:01:25,350
+em tudo isso no componente de postagem e agora recebo um erro,  claro, porque o componente de publicao completo a que estou me
+
+15
+00:01:25,380 --> 00:01:28,740
+referindo aqui  tambm no esto presentes nesse arquivo.
+
+16
+00:01:28,770 --> 00:01:33,900
+Ento eu preciso adicionar uma importao para isso para importar a publicao completa.
+
+17
+00:01:33,900 --> 00:01:39,570
+E agora vamos para essa pasta de postagem completa e importe-a do arquivo de postagem completo.
+
+18
+00:01:39,570 --> 00:01:47,890
+E agora eu posso renderizar uma nica postagem abaixo da minha lista de postagens porque uso a rota em um componente diferente e isso ,
+
+19
+00:01:48,300 --> 00:01:51,050
+em geral, algo que voc pode, naturalmente, fazer.
+
+20
+00:01:51,120 --> 00:01:56,010
+Voc pode usar o componente de rota sempre que desejar em sua aplicao.
+
+21
+00:01:56,250 --> 00:02:04,110
+Enquanto a pgina o componente onde voc est usando est preso por esse roteador do navegador e, claro, 
+
+22
+00:02:04,110 --> 00:02:08,670
+o caso porque estamos envolvendo o componente do bloco com ele.
+
+23
+00:02:08,760 --> 00:02:14,490
+E uma vez que o componente de postagem  apenas um componente secundrio do componente de bloco carregado
+
+24
+00:02:14,820 --> 00:02:16,680
+atravs de uma rota, isso funciona.
+
+25
+00:02:16,800 --> 00:02:22,000
+Agora, a indicao do interruptor aqui no componente do bloco,  claro,  um pouco redundante.
+
+26
+00:02:22,010 --> 00:02:29,280
+Agora eu s tenho um componente l, ento talvez eu mova minha rota externa l, embora tecnicamente isso
+
+27
+00:02:29,280 --> 00:02:34,400
+no seja necessrio porque essas duas rotas nunca combinaro para o mesmo caminho.
+
+28
+00:02:34,470 --> 00:02:40,710
+Ento, podemos remover a declarao do interruptor, vamos deix-lo aqui simplesmente como uma referncia para que
+
+29
+00:02:40,710 --> 00:02:43,700
+voc ainda possa comparar seu cdigo com ele.
+
+30
+00:02:43,830 --> 00:02:49,310
+O que tambm podemos fazer no componente de bloco agora  que podemos livrar-se da importao de postagem completa que
+
+31
+00:02:49,310 --> 00:02:50,790
+no estamos usando aqui mais.
+
+32
+00:02:51,110 --> 00:02:58,850
+e voc vai ao seu componente de publicao e voc clicar em uma nica publicao, voc ver que voc  uma atualizao.
+
+33
+00:02:58,850 --> 00:03:01,290
+Agora, se voc salvar todos os arquivos
+
+34
+00:03:01,520 --> 00:03:05,600
+Mas a postagem no  processada e as postagens tambm foram.
+
+35
+00:03:05,630 --> 00:03:08,940
+A razo para isso  que agora criamos uma rota aninhada.
+
+36
+00:03:09,170 --> 00:03:16,940
+Ns temos a rota rota, digamos aqui, no bloco, o recipiente faz o nvel mais alto onde reagimos a qualquer rota
+
+37
+00:03:16,970 --> 00:03:22,790
+alterada e, em seguida, o componente de postagem que carregamos a partir de um roteador.
+
+38
+00:03:22,790 --> 00:03:24,200
+Tenha em mente que carregamos.
+
+39
+00:03:24,200 --> 00:03:27,760
+Implementamos atravs do roteador neste componente aqui.
+
+40
+00:03:27,980 --> 00:03:29,800
+Agora, usamos a rota.
+
+41
+00:03:29,840 --> 00:03:33,290
+A questo  para o Slash some ID.
+
+42
+00:03:33,470 --> 00:03:40,640
+Ns no vamos chegar a essa rota porque temos a correspondncia exata para apenas slash slash ID no corresponde
+
+43
+00:03:40,640 --> 00:03:41,870
+a essa rota.
+
+44
+00:03:41,900 --> 00:03:47,810
+Portanto, o componente Post nunca  processado, o que  muito ruim porque seria
+
+45
+00:03:47,810 --> 00:03:53,840
+nesse componente que queremos renderizar nosso componente de postagem completo para um determinado ID.
+
+46
+00:03:53,870 --> 00:04:03,500
+Agora, para corrigir isso, podemos, naturalmente, remover o exato, isso combinar a barra e cortar uma barra de dois e assim
+
+47
+00:04:03,500 --> 00:04:04,520
+por diante.
+
+48
+00:04:04,520 --> 00:04:11,120
+uma vez que a nova publicao  encontrada primeiro, isso ser primeiro e o roteador ir parar depois disso.
+
+49
+00:04:11,120 --> 00:04:17,730
+Deveramos, ento, mudar o seu pedido, de modo que a barra no consuma as novas postagens primeiro e
+
+50
+00:04:18,020 --> 00:04:24,980
+agora, o que tambm faz sentido novamente, porque agora esta rota tambm seria renderizada para uma nova publicao, mas,
+
+51
+00:04:24,980 --> 00:04:31,290
+Ento, agora com esta configurao, voc ver que, de fato, podemos carregar uma nica rota abaixo de nossas rotas.
+
+52
+00:04:31,310 --> 00:04:38,120
+Ento, se eu for apenas a barra, vemos apenas as postagens, mas se eu clicar em uma postagem, carregamos isso abaixo das postagens.
+
+53
+00:04:38,540 --> 00:04:41,420
+Isso j  uma rota aninhada.
+
+54
+00:04:41,420 --> 00:04:49,290
+Ns enfrentamos um problema, porm, dizemos que temos mensagens Slash aqui e no cortar nada.
+
+55
+00:04:49,670 --> 00:04:57,140
+E, claro, isso significa que, no componente de postagem em que navegarmos se usssemos um link, teramos que
+
+56
+00:04:57,140 --> 00:04:59,660
+atualizar isso para barras de mensagens.
+
+57
+00:04:59,810 --> 00:05:06,200
+O mesmo aqui para este roteamento programtico e para o que estamos realmente usando.
+
+58
+00:05:06,350 --> 00:05:14,000
+Ento, agora, estamos navegando para cortar posts ID e agora, se este estiver no lugar, voc ver e eu tambm
+
+59
+00:05:14,000 --> 00:05:17,970
+deveria atualizar o link de navegao aqui para barras de mensagens.
+
+60
+00:05:18,820 --> 00:05:26,020
+Ento, agora voc ver que se eu clicar nas postagens aqui carregamos as postagens e posso clicar em uma postagem,  claro.
+
+61
+00:05:26,020 --> 00:05:34,930
+Agora voc v tudo isso falhar, embora ns obtenha um erro porque nossa rota aninhada aqui na publicao  um componente.
+
+62
+00:05:34,930 --> 00:05:45,340
+Esta rota analisa a ID da barra e isso no  anexado ao caminho da rota responsvel pelo carregamento
+
+63
+00:05:45,340 --> 00:05:47,230
+do componente de publicao.
+
+64
+00:05:47,380 --> 00:05:50,460
+Portanto, isso no  resolvido automaticamente.
+
+65
+00:05:50,470 --> 00:05:52,030
+Duas postagens ID.
+
+66
+00:05:52,030 --> 00:05:54,490
+Isso no est acontecendo.
+
+67
+00:05:54,490 --> 00:06:03,670
+Em vez disso, isso ainda  uma barra diagonal de barra diagonal, ento ns teramos que atualizar isso para cortar mensagens ID para ter
+
+68
+00:06:03,670 --> 00:06:10,100
+roteamento aninhado trabalhando novamente com o nosso novo voc  l, que  barra barraca barraca.
+
+69
+00:06:10,110 --> 00:06:14,780
+A identificao , obviamente, muito complicada para faz-lo.
+
+70
+00:06:15,310 --> 00:06:19,000
+Ento, em vez de usar uma publicao como essa.
+
+71
+00:06:19,000 --> 00:06:28,990
+Uma maneira melhor  obter o caminho atual de forma dinmica, de modo que este seja realmente uma rota dinmica e aninhada e para que
+
+72
+00:06:29,080 --> 00:06:35,760
+a quantidade de valores seja definida como algo dinmico aqui, no uma seqncia de caracteres codificados.
+
+73
+00:06:36,160 --> 00:06:45,700
+E ento, provavelmente, devemos usar o objeto de incompatibilidade de correspondncia deste suporte e l, h uma propriedade de
+
+74
+00:06:45,710 --> 00:06:49,550
+voc que  basicamente D ou l.
+
+75
+00:06:49,570 --> 00:06:50,980
+Ns carregamos at agora.
+
+76
+00:06:51,010 --> 00:06:59,630
+Ento, voc foi responsvel por carregar este componente de posts e, claro,  exceto para partir.
+
+77
+00:06:59,740 --> 00:07:08,610
+Precisamos antecipar a nossa parte flexvel l depois, ento podemos juntar isso dentro das chaves de
+
+78
+00:07:08,670 --> 00:07:11,130
+Cauley com nossos IDs.
+
+79
+00:07:11,130 --> 00:07:18,350
+Ento, com Slash Colon ID e remova a oferta de peas para chamar as chaves.
+
+80
+00:07:18,350 --> 00:07:27,470
+esse componente de forma diferente, digamos, cortar todas as postagens, ento isso resolveria automaticamente todas as postagens aqui porque  dinmico.
+
+81
+00:07:27,530 --> 00:07:33,950
+Agora isso ir corresponder a ID de postagens e se alguma vez devemos carregar
+
+82
+00:07:34,340 --> 00:07:41,410
+Ento, agora com isso, se salvarmos isso, obtemos o mesmo comportamento que antes, mas isso apenas prova que ele est funcionando.
+
+83
+00:07:41,430 --> 00:07:49,760
+Estamos adicionando dinamicamente posts de barra curta aqui para nossa rota aninhada e  assim que voc cria rotas realmente aninhadas
+
+84
+00:07:49,760 --> 00:07:53,170
+em seu aplicativo de reao com re-act rowdier.
+

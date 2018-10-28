@@ -1,0 +1,124 @@
+1
+00:00:02,170 --> 00:00:10,810
+Mais uma informao sobre os links que voc configurou aqui para cortar para reduzir a nova publicao da maneira como voc escreve
+
+2
+00:00:10,810 --> 00:00:11,890
+seus links aqui.
+
+3
+00:00:11,980 --> 00:00:15,370
+No  o fato de ser um caminho absoluto ou relativo.
+
+4
+00:00:15,550 --> 00:00:18,930
+Agora, o que significa absoluto e relativo de qualquer maneira.
+
+5
+00:00:19,420 --> 00:00:23,310
+Uma recompensa absoluta  sempre um pingente para o seu domnio.
+
+6
+00:00:23,440 --> 00:00:29,720
+Ento, se voc estiver servindo este aplicativo a partir do exemplo dot com, ento voc deseja ir para Nova postagem.
+
+7
+00:00:29,950 --> 00:00:37,360
+Se voc navegar para reduzir a nova postagem, simplesmente significa sempre anexar nova publicao logo aps o domnio.
+
+8
+00:00:37,420 --> 00:00:45,430
+no final daquela Tournay, pegue isso para publicar nova postagem, mas transformando-a em um novo post e omitindo postagens.
+
+9
+00:00:45,440 --> 00:00:51,890
+Mesmo se voc j tenha sido um exemplo que composts voc no adicionaria nova postagem
+
+10
+00:00:52,140 --> 00:00:54,550
+ o que  uma paff absoluta.
+
+11
+00:00:54,550 --> 00:01:00,260
+Agora, ao configurar dois, voc no pode controlar se  um POV absoluto ou relativo.
+
+12
+00:01:00,340 --> 00:01:06,620
+ sempre tratado como um POV absoluto, por isso no importa se  uma nova publicao ou apenas novas postagens.
+
+13
+00:01:06,730 --> 00:01:11,420
+ um POV absoluto e sempre ser anexado ao seu domnio raiz.
+
+14
+00:01:11,770 --> 00:01:15,990
+Agora, e se voc quisesse transformar isso em uma parte relativa.
+
+15
+00:01:16,000 --> 00:01:23,080
+Ento, se voc quisesse certificar-se de que, se voc estiver em suas postagens de barra de domnio, voc realmente acessa suas postagens
+
+16
+00:01:23,080 --> 00:01:28,640
+de barras de domnio para expandir novas postagens para que voc adicione isso ao final do caminho atual.
+
+17
+00:01:28,780 --> 00:01:35,650
+Ento voc realmente precisa construir este caminho dinamicamente, levando em vantagem que voc sabe em
+
+18
+00:01:35,650 --> 00:01:37,810
+que POF voc est atualmente.
+
+19
+00:01:37,810 --> 00:01:41,230
+Lembre-se de que voc tem acesso a essa partida de adereos.
+
+20
+00:01:41,230 --> 00:01:48,620
+Ns inspecionamos isso no console, o objeto de correspondncia tem o seu objeto, que  o Hauf
+
+21
+00:01:48,630 --> 00:01:50,010
+carregado no final.
+
+22
+00:01:50,020 --> 00:01:56,860
+Agora voc pode Shane cortar nova postagem no disco, voc pode criar um caminho dinmico como este.
+
+23
+00:01:56,860 --> 00:02:00,470
+Agora,  um relativo porque leva a pgina em que voc est atualmente.
+
+24
+00:02:00,490 --> 00:02:07,480
+que voc est atualmente e anexa permanece no final e, de repente, voc construiu um caminho relativo.
+
+25
+00:02:07,480 --> 00:02:08,210
+A recompensa
+
+26
+00:02:08,530 --> 00:02:15,110
+Ento, se voc quiser construir um link que simplesmente anexe o caminho at o final do caminho atual.
+
+27
+00:02:15,150 --> 00:02:16,730
+Use essa abordagem.
+
+28
+00:02:17,140 --> 00:02:21,650
+Oberweis isso sempre gera um caminho absoluto.
+
+29
+00:02:21,700 --> 00:02:23,910
+No h melhor nem pior aqui.
+
+30
+00:02:23,920 --> 00:02:30,060
+Realmente depende do comportamento que voc deseja adicionar ao domnio raiz ou anexado ao caminho atual.
+
+31
+00:02:30,070 --> 00:02:32,470
+Eu queria fazer voc saber como alcanar os dois.
+

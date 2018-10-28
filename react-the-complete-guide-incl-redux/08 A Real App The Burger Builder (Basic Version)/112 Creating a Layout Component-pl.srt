@@ -1,0 +1,500 @@
+1
+00:00:02,190 --> 00:00:05,400
+W ostatnim wykadzie zakoczylimy zestaw naszych projektw.
+
+2
+00:00:05,450 --> 00:00:09,050
+Teraz chc rozpocz tworzenie aplikacji dla niego.
+
+3
+00:00:09,080 --> 00:00:16,450
+Przede wszystkim Ron NPM zaczyna uruchamia ten serwer programistyczny, abymy mogli zobaczy aplikacj uruchomion
+
+4
+00:00:16,480 --> 00:00:18,180
+na localhost 3000.
+
+5
+00:00:18,200 --> 00:00:23,510
+Upewnij si, e zapisujesz wszystkie pliki, aby nie otrzyma otrzymanych strzaek kompilacji.
+
+6
+00:00:23,510 --> 00:00:29,260
+I w ten sposb zasadniczo nic nie zobaczysz, poniewa oprnilimy aplikacj kropka Jezusa upadku.
+
+7
+00:00:29,270 --> 00:00:31,030
+To tylko pusty div.
+
+8
+00:00:31,040 --> 00:00:33,260
+Oczywicie nie widzimy treci.
+
+9
+00:00:33,290 --> 00:00:39,350
+Teraz zacznijmy wdraa komponenty, ktre nakrelilimy na poprzednich wykadach, a tak
+
+10
+00:00:39,350 --> 00:00:46,560
+naprawd potrzebujemy kilku komponentw, ale moemy oddzieli nasz projekt na dwie gazie.
+
+11
+00:00:46,640 --> 00:00:54,320
+C, oglnie rzecz biorc, w tych projektach mamy komponent, ale poniej mamy w zasadzie elementy zwizane
+
+12
+00:00:54,320 --> 00:01:03,100
+z nawigacj, takie jak pasek narzdzi i boczna szuflada, a my musimy spotka si z nasz aplikacj, budowniczym burgerw.
+
+13
+00:01:03,300 --> 00:01:09,620
+Teraz powiedziabym, e zacznijmy od hamburgera Boler, to chyba bardziej zabawna cz na pocztek.
+
+14
+00:01:09,620 --> 00:01:15,930
+Teraz, po pierwsze, potraktujemy ten komponent, ktry bdzie czym w rodzaju owijki
+
+15
+00:01:16,190 --> 00:01:18,650
+implementujcej pasek narzdzi i burgera.
+
+16
+00:01:18,650 --> 00:01:25,430
+Bolder nastpnie dodaj pniej ten kurs, gdy dodamy do naszej aplikacji ruting i wicej stron.
+
+17
+00:01:25,430 --> 00:01:31,370
+Skorzystamy z tego ukadu, w ktrym pasek narzdzi bdzie zawsze tam, ale gdzie nastpnie
+
+18
+00:01:31,460 --> 00:01:38,570
+bdziemy przecza stron, ktra jest renderowana w obszarze zawartoci ukadu, tak abymy mogli powiedzie, e moemy po
+
+19
+00:01:38,570 --> 00:01:45,200
+prostu zmieni aplikacj tak, aby znalaza si w lay-upie, poniewa Zasadniczo jest to gwny skadnik naszej
+
+20
+00:01:45,200 --> 00:01:47,380
+aplikacji i byoby idealnie w porzdku.
+
+21
+00:01:47,510 --> 00:01:54,200
+Nadal jednak traktowabym osobny komponent, chociaby komponent cakowicie skupia si
+
+22
+00:01:54,200 --> 00:01:55,400
+na ukadzie.
+
+23
+00:01:55,400 --> 00:02:02,220
+Teraz jest ultra-podfolder w folderze rdowym, a ja nazwa go komponentami.
+
+24
+00:02:02,270 --> 00:02:06,970
+Stworz drugi podfolder, ktry nazwaby pojemniki.
+
+25
+00:02:06,980 --> 00:02:13,280
+Pamitajmy, e kontenery s zasadniczo elementami stanowymi, wic zazwyczaj komponenty tworzone za
+
+26
+00:02:13,280 --> 00:02:21,240
+pomoc sowa kluczowego class, podczas gdy komponenty wchodzce do folderu components s ostatnimi komponentami stanu.
+
+27
+00:02:21,260 --> 00:02:23,940
+Zazwyczaj funkcjonalne komponenty.
+
+28
+00:02:24,000 --> 00:02:29,420
+Teraz postaram si rozoy w folderze skadnikw, poniewa teraz nie musz zarzdza adnymi
+
+29
+00:02:29,420 --> 00:02:29,970
+stanami.
+
+30
+00:02:30,230 --> 00:02:37,220
+Tak wic w komponentach wszystkie tworz podfoldery, ktre nadadz nazw duymi literami L, aw ukadzie
+
+31
+00:02:37,220 --> 00:02:44,950
+utworz layout dot J jako plik, tak aby ten komponent ukadu zosta umieszczony w tym folderze.
+
+32
+00:02:45,200 --> 00:02:51,350
+Jest to typowa konfiguracja projektu, w ktrej uywasz i ponownie tworzysz komponenty i folder kontenerw nad
+
+33
+00:02:51,350 --> 00:02:54,350
+folderami, ktre czsto widzisz w naszym folderze zasobw.
+
+34
+00:02:54,350 --> 00:02:56,970
+Wykorzystamy to pniej, gdy dodamy logo.
+
+35
+00:02:57,290 --> 00:03:01,830
+Moesz rwnie mie folder lub plik do przesania do odczytu w X sklepie i tak dalej.
+
+36
+00:03:01,850 --> 00:03:03,550
+Nawet o tym nie wiemy.
+
+37
+00:03:03,560 --> 00:03:05,720
+Dodamy, kiedy to otrzymamy.
+
+38
+00:03:05,990 --> 00:03:12,890
+Wracajc do ukadu, stworzyem wtedy normalny komponent funkcjonalny i zapisaem go w staym
+
+39
+00:03:13,040 --> 00:03:14,250
+nazwanym ukadzie.
+
+40
+00:03:14,450 --> 00:03:16,140
+I jest moja funkcja.
+
+41
+00:03:16,430 --> 00:03:23,150
+A teraz spjrzmy, jak powinna wyglda ta funkcja lub w jaki sposb Julias X eksportowany
+
+42
+00:03:23,150 --> 00:03:26,140
+przez t funkcj powinien wyglda jak Dare.
+
+43
+00:03:26,180 --> 00:03:31,360
+Zasadniczo chc mie dwa obszary, ktre mona powiedzie, wszystkie maj rnic.
+
+44
+00:03:31,400 --> 00:03:40,040
+Na razie tylko symbol zastpczy, ktry przytrzyma mj pasek narzdzi w bocznej szufladzie i prawdopodobnie w bocznej szufladzie
+
+45
+00:03:40,200 --> 00:03:41,750
+lub w tle.
+
+46
+00:03:42,020 --> 00:03:46,430
+Wic bdziesz musia zastpi ten div trzema komponentami pniej.
+
+47
+00:03:46,430 --> 00:03:53,970
+Zrobilimy to rwnie w poprzednich wykadach poniej ta cz bdzie miaa gwny obszar.
+
+48
+00:03:54,140 --> 00:04:02,990
+I to jest normalny gwny element dostarczony przez H M L i tam chc wyprowadzi komponent, ktry zawijamy
+
+49
+00:04:02,990 --> 00:04:04,210
+z tym ukadem.
+
+50
+00:04:04,490 --> 00:04:13,310
+Wic uyj dzieci rekwizytw i do tego oczywicie musz zaimportowa rekwizyty nie s importowane.
+
+51
+00:04:13,310 --> 00:04:16,150
+Przepraszam, we to jako argument.
+
+52
+00:04:16,190 --> 00:04:23,420
+Teraz pozwala nam to po prostu uy tego komponentu ukadu jako opakowania dla podstawowego komponentu treci,
+
+53
+00:04:23,420 --> 00:04:25,510
+jeli chcemy renderowa na ekranie.
+
+54
+00:04:26,120 --> 00:04:34,010
+Teraz otrzymujemy bd w identyfikatorze, poniewa brakuje wanej rzeczy w imporcie paczki reagowania lub reagujesz na
+
+55
+00:04:34,430 --> 00:04:38,720
+obiekt, o ktrym powiniene powiedzie w pakiecie re-act.
+
+56
+00:04:38,720 --> 00:04:46,010
+Gdy ju to zrobilimy, nadal widzimy bd, poniewa mamy ssiadujce elementy Julias X.
+
+57
+00:04:46,070 --> 00:04:51,350
+Teraz nauczyem ci, e zasadniczo istniej dwa rozwizania tego problemu.
+
+58
+00:04:51,470 --> 00:04:52,910
+Czy je pamitasz?
+
+59
+00:04:54,600 --> 00:05:02,610
+C, dla jednego moemy zwrci tablic zamiast J jako X, ktra siedzi obok siebie.
+
+60
+00:05:02,910 --> 00:05:11,640
+Jeli zwrcimy i ocemy i nadamy kademu produktowi klucz, moemy zwrci rodzaj ssiednich elementw.
+
+61
+00:05:11,640 --> 00:05:18,000
+Alternatyw jest stworzenie takiego pomocniczego komponentu wyszego rzdu, ktry pokazaem ci w
+
+62
+00:05:18,000 --> 00:05:19,620
+ostatnim module kursu.
+
+63
+00:05:19,620 --> 00:05:21,640
+Suy tylko jednemu celowi.
+
+64
+00:05:21,750 --> 00:05:24,750
+Zawijanie czego i natychmiastowe wysyanie go.
+
+65
+00:05:24,750 --> 00:05:28,560
+Ale zrcznie wypeniajc wymg posiadania elementu do zawijania.
+
+66
+00:05:28,860 --> 00:05:30,350
+Uyj tego.
+
+67
+00:05:30,450 --> 00:05:36,750
+Mamy rwnie oczywicie opcj odroczonego zawijania wszystkiego w rnym roku lub innym elemencie, ale nie
+
+68
+00:05:36,750 --> 00:05:39,840
+potrzebuj martwego elementu div ani adnego elementu tablicy.
+
+69
+00:05:39,840 --> 00:05:42,350
+Waciwie chc mie ssiednie elementy.
+
+70
+00:05:42,390 --> 00:05:48,870
+Wanie dlatego zastosuj podejcie komponentu wyszego rzdu i utworz dla tego pomocniczy komponent pomocniczy
+
+71
+00:05:49,620 --> 00:05:50,190
+wyszukiwania.
+
+72
+00:05:50,190 --> 00:05:52,430
+Utworz nowy folder w folderze rdowym.
+
+73
+00:05:52,620 --> 00:05:58,640
+Agios zobacz dla komponentu wyszego rzdu i tam sprbuj pliku Oxcart Julias.
+
+74
+00:05:58,680 --> 00:06:01,410
+Teraz komponent zewntrzny jest naprawd bardzo prosty.
+
+75
+00:06:01,410 --> 00:06:06,000
+Jest to zatem skadnik funkcjonalny o mniejszej zawartoci skadnika.
+
+76
+00:06:06,240 --> 00:06:08,070
+I nazw to alks.
+
+77
+00:06:08,280 --> 00:06:13,470
+I tutaj wanie dostaj rekwizyty jako dane wejciowe, a ja wrciem dzieciom rekwizytw nic wicej.
+
+78
+00:06:13,470 --> 00:06:14,840
+Bez elementu owijajcego.
+
+79
+00:06:14,970 --> 00:06:22,730
+Nie mamy nawet js Xon tego pliku, dlatego te nie musimy importowa powtrze z reakcji.
+
+80
+00:06:22,800 --> 00:06:28,610
+Nastpnie wyeksportuj alki jako domylne w tym pliku i zapisz plik.
+
+81
+00:06:28,690 --> 00:06:35,670
+A teraz z powrotem w pliku layoutu mog zaimportowa alby z wielk wartoci A dla wszystkich niestandardowych
+
+82
+00:06:35,670 --> 00:06:37,830
+komponentw, z ktrych chcesz korzysta.
+
+83
+00:06:37,860 --> 00:06:44,340
+A teraz musimy i w gr, a znajdziemy si na poziomie folderu rdowego i tam z folderu HLC
+
+84
+00:06:44,340 --> 00:06:45,510
+z pliku ox.
+
+85
+00:06:45,780 --> 00:06:53,850
+Bez kropki JSA na kocu, poniewa naley pamita, e nasz przepyw pracy do tworzenia
+
+86
+00:06:53,850 --> 00:07:02,230
+rozszerzy automatycznie to rozszerzenie pliku javascript, a teraz moemy zawin wszystko tutaj z tym
+
+87
+00:07:02,250 --> 00:07:07,990
+pomocniczym komponentem, abymy teraz spenili wymg posiadania zawijania gwnego elementu.
+
+88
+00:07:08,040 --> 00:07:14,030
+Na koniec pozwl mi wyeksportowa t funkcj ukadu jako domyln dla tego pliku.
+
+89
+00:07:14,400 --> 00:07:17,410
+Teraz moemy uy go w aplikacji w nastpujcy sposb.
+
+90
+00:07:17,490 --> 00:07:20,200
+W naszym gwnym komponencie.
+
+91
+00:07:20,190 --> 00:07:27,570
+Teraz moesz rwnie przej do importu pliku indeksu, tutaj i po prostu wyrenderowa funkcj ukadu
+
+92
+00:07:27,570 --> 00:07:28,910
+jako skadnik root.
+
+93
+00:07:29,130 --> 00:07:32,350
+To w zasadzie to samo rozwizanie, co wykonanie w nastpujcy sposb.
+
+94
+00:07:32,400 --> 00:07:33,540
+Gwny skadnik.
+
+95
+00:07:33,690 --> 00:07:36,690
+Moesz absolutnie to zrobi i to nie byoby ze.
+
+96
+00:07:36,690 --> 00:07:42,840
+To tylko moja osobista decyzja, aby mie ten skadnik root na wypadek, gdybym kiedykolwiek zdecydowa
+
+97
+00:07:42,840 --> 00:07:49,860
+si zrestrukturyzowa aplikacj na mj gwny skadnik, moe by warunkowo renderowany w rnych ukadach lub robi co
+
+98
+00:07:49,860 --> 00:07:52,320
+takiego dla aplikacji, jak jest.
+
+99
+00:07:52,350 --> 00:07:56,310
+Zdecydowanie moglibymy zmieni skadnik aplikacji w ukad.
+
+100
+00:07:56,730 --> 00:07:58,370
+A teraz wystarczy o tym porozmawia.
+
+101
+00:07:58,530 --> 00:08:03,510
+Zaimportujmy nasz komponent rozplanowania, a nastpnie due L od.
+
+102
+00:08:03,570 --> 00:08:08,930
+A teraz musimy przej do folderu komponentw w folderze layoutu i tam, aby by ukad.
+
+103
+00:08:09,000 --> 00:08:16,320
+Plik JS, a teraz moemy po prostu wyrenderowa ukad, ktry nie powinien by teraz skadnikiem samozamykajcym si,
+
+104
+00:08:16,320 --> 00:08:21,620
+poniewa ide caego ukadu jest to, e mog go zawija i numerowa komponentem.
+
+105
+00:08:21,690 --> 00:08:26,270
+Na razie po prostu zawijamy akapit, eby zobaczy, czy to dziaa.
+
+106
+00:08:26,280 --> 00:08:32,010
+Jeli poprawnie to przekazujemy, ale pniej oczywicie zawiniemy prawdziwy komponent.
+
+107
+00:08:32,130 --> 00:08:35,620
+Strona, ktr tak naprawd chcielimy, gra z tym.
+
+108
+00:08:35,820 --> 00:08:42,030
+Dlatego upewnij si, e wszystkie pliki s zapisane, a nastpnie udaj si na stron lokalnego hosta 3000.
+
+109
+00:08:42,060 --> 00:08:47,960
+Upewnij si, e twj serwer programistyczny jest uruchomiony i tam powiniene zobaczy nasz symbol zastpczy dla wewntrznego
+
+110
+00:08:48,000 --> 00:08:50,690
+paska narzdziowego lub doda to i tak dalej.
+
+111
+00:08:50,820 --> 00:08:55,140
+Widzisz take akapit testowy, ktry wanie dodaem.
+
+112
+00:08:55,530 --> 00:09:02,760
+Jeli spodziewasz si wszystkiego, zauwaysz, e nie uywamy czcionki otwartego interfejsu, poniewa nie dodalimy jej,
+
+113
+00:09:02,790 --> 00:09:04,870
+wic naprawmy to rwnie.
+
+114
+00:09:04,950 --> 00:09:06,240
+Przejdmy do tego dalej.
+
+115
+00:09:06,310 --> 00:09:10,150
+Zobacz nas tak jak w przypadku importu do folderu publicznego.
+
+116
+00:09:10,290 --> 00:09:15,510
+Tak wic musimy po prostu doda sens jako nasz gwny fundusz.
+
+117
+00:09:15,690 --> 00:09:21,320
+I wysyasz Saratha jako fundusz zapasowy, a teraz widzisz, e telefon si zmieni.
+
+118
+00:09:21,570 --> 00:09:22,720
+A nastpnie kart elementw.
+
+119
+00:09:22,800 --> 00:09:25,610
+Widzisz take, e teraz jest zastosowany.
+
+120
+00:09:25,710 --> 00:09:31,170
+Z tym skoczylimy na razie dach naszej aplikacji.
+
+121
+00:09:31,290 --> 00:09:36,810
+Pozostao oczywicie duo pracy w odniesieniu do paska nawigacyjnego i wszystkiego.
+
+122
+00:09:37,200 --> 00:09:42,510
+Ale poniewa nie mamy teraz wielu stron, nie musimy teraz zajmowa si
+
+123
+00:09:42,540 --> 00:09:43,110
+nawigacj.
+
+124
+00:09:43,260 --> 00:09:48,300
+Zamiast tego skupmy si na podstawowej funkcjonalnoci naszej aplikacji.
+
+125
+00:09:48,450 --> 00:09:53,190
+Budowniczy hamburgerw zacznie wdraa to na kolejnych wykadach.
+

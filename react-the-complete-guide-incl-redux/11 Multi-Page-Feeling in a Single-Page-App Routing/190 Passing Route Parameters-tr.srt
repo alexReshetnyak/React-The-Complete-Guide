@@ -1,0 +1,344 @@
+1
+00:00:02,080 --> 00:00:06,970
+Bu sadece iki farkl sayfa arasnda gei yapmak iin ok konuuyordu.
+
+2
+00:00:06,970 --> 00:00:10,370
+Ancak ynlendirici ile nasl alacam bilmek elbette nem tayordu.
+
+3
+00:00:10,780 --> 00:00:16,600
+Ancak imdi, tek bir yayna tklayp hala ykleyebildiinden emin olmak istiyorum, nk u
+
+4
+00:00:16,630 --> 00:00:19,430
+anda bunu yaparken hibir ey olmuyor.
+
+5
+00:00:19,450 --> 00:00:20,820
+Ayrca bir hata da edemiyoruz.
+
+6
+00:00:20,830 --> 00:00:22,570
+Ama hibir ey olmuyor.
+
+7
+00:00:22,570 --> 00:00:29,860
+ki mesajlarmzda burada postaya bir tklama ile ilgilenen bir ileyici olduumuz
+
+8
+00:00:29,860 --> 00:00:36,280
+post seili ileyici devletle ilgilenmiyorum nk alakasz baz durum gnderiyor.
+
+9
+00:00:36,310 --> 00:00:38,310
+Bunun nedeni elbette
+
+10
+00:00:38,320 --> 00:00:40,610
+Burada bir varsaylan ayarlamadm bile.
+
+11
+00:00:40,930 --> 00:00:47,450
+imdi buna tkladmzda bunun iin tam olarak yaz yklemek istiyorum.
+
+12
+00:00:47,450 --> 00:00:52,750
+Elbette, tam postun nerede gsterileceini de belirlememiz gerekir.
+
+13
+00:00:52,750 --> 00:00:58,080
+Buradaki grevimiz yerine blok bileende oluturabiliriz.
+
+14
+00:00:58,300 --> 00:01:02,450
+Bu yazya tam yaz ykleyebiliriz.
+
+15
+00:01:02,460 --> 00:01:05,580
+Ancak burada bir seenek var.
+
+16
+00:01:05,770 --> 00:01:14,350
+parametresini elde edebilmemiz gerekir, nk yaynlar ktsna bakarsak, her yaynn kimlii vardr.
+
+17
+00:01:14,440 --> 00:01:18,920
+Veya nerede kullanyor olursanz olun, dinamik ynlendirme
+
+18
+00:01:19,120 --> 00:01:24,610
+Ve tabii ki bu fikir nemlidir, nk bir postaya tkladmzda
+
+19
+00:01:24,610 --> 00:01:30,150
+hangi postay yklemek istediimizi ve farkl rotalar kullandmzda deimeyeceini bilmeliyiz.
+
+20
+00:01:30,520 --> 00:01:33,970
+Neyse ki kimlii elde etmenin bir yolu var.
+
+21
+00:01:34,090 --> 00:01:42,460
+Dolaysyla, imdi bu kimlii, post bileenin tam post bileeninde yklediimizde, bu parametreyi alp
+
+22
+00:01:42,910 --> 00:01:49,770
+bunun iin uygun postay ykleyebilmemiz iin bir paras olarak gndermeliyiz.
+
+23
+00:01:49,770 --> 00:01:57,660
+Yn bulma konusunda bilgilendirmemiz gerektiinde ynlendiriciyi tekrar ynlendirip u anda bu URL'de dinamik
+
+24
+00:01:57,690 --> 00:01:59,780
+bir eye sahip olduumuzu.
+
+25
+00:02:00,030 --> 00:02:06,900
+Akas Kimliimiz 1 ile 3 arasnda olan yaynlara sahip olacaz ve byle sert kodlanmayacaz.
+
+26
+00:02:06,900 --> 00:02:08,400
+Bu bir kabustur.
+
+27
+00:02:08,460 --> 00:02:10,590
+Ve 99'da.
+
+28
+00:02:10,590 --> 00:02:16,760
+Uygulamalarn yzde 9'unu burada ka muhtemel deeriniz olduunu bile bilmiyorsunuz.
+
+29
+00:02:16,770 --> 00:02:25,470
+Bu nedenle, farkl kimlikleri sabit kodlama yerine, kolon ile esnek bir deiken rota parametresi tanmlyoruz ve daha
+
+30
+00:02:25,770 --> 00:02:34,130
+sonra kimliiniz veya ana makine kimliiniz Alceste kullandnz kimliiniz daha ksa olduundan setiiniz herhangi bir ad.
+
+31
+00:02:34,260 --> 00:02:36,550
+Bu, dinamik olarak deitirilecek.
+
+32
+00:02:36,570 --> 00:02:44,200
+baktnzda, yl boyunca bir eyin getii bir ey olduunu sylemek sadece bir kimlii armak demektir.
+
+33
+00:02:44,210 --> 00:02:47,470
+Veya esas olarak, reaktr ynlendiricisine heyecanla
+
+34
+00:02:47,790 --> 00:02:54,720
+Ve evet, bu rota etkileyecek, nk stten alta ayrtrld iin pozisyonlar
+
+35
+00:02:54,720 --> 00:02:58,140
+deitirerek bir saniye iinde bununla ilgileniyorlar.
+
+36
+00:02:58,230 --> 00:03:06,330
+Dolaysyla yeni mesaj ilk nce tannr ve yanllkla yakalamamaktayz nk yeni yaynlar tabii ki kimlik
+
+37
+00:03:06,330 --> 00:03:12,120
+olarak yorumlanabilir, nk biz sadece burada dinamik bir eyimiz var demektir.
+
+38
+00:03:12,540 --> 00:03:15,900
+Yani bu Rota parametresi.
+
+39
+00:03:15,900 --> 00:03:22,780
+Elbette, bir rotay tklarken bu parametrenin getiinden emin olmak istiyoruz.
+
+40
+00:03:22,780 --> 00:03:30,360
+post bileenlerinde tek bir yayn tklatmamz gerekiyor ve bunu yapmann iki yolu var.
+
+41
+00:03:30,360 --> 00:03:31,790
+Bunun iin
+
+42
+00:03:31,800 --> 00:03:36,850
+Birincisi, burada ktmz yazlan bileeni bir balantyla sarmaktr.
+
+43
+00:03:37,110 --> 00:03:39,190
+Ve bu ok iyi olurdu.
+
+44
+00:03:39,280 --> 00:03:41,740
+eytana yaptnz ekilde olabilir.
+
+45
+00:03:41,790 --> 00:03:50,970
+Bu yzden beni Re-act router Dom'dan Cali bracers'daki tm ithalat balantsn hemen yaparm ve balanty kullanyorum ve
+
+46
+00:03:51,000 --> 00:03:57,630
+balanty nav etmiyorum, nk etkin yaz tarzlandrmay planlamyorum elbette tabii ki buradan
+
+47
+00:03:57,630 --> 00:03:58,010
+yapabilirsiniz.
+
+48
+00:03:58,020 --> 00:04:06,930
+saracam ve parantez iine koyacam, bylece bunlar birden fazla satra blebileceimden biraz daha kolay okunur hale getiriyorum.
+
+49
+00:04:07,170 --> 00:04:12,760
+Daha sonra bu ana eyi burada bu balant bileeni ile
+
+50
+00:04:13,080 --> 00:04:20,070
+imdi esas olarak bir balant dndryoruz ve imdi ikisini dinamik bir ey haline getirmeliyiz ve
+
+51
+00:04:20,070 --> 00:04:22,550
+o dinamik bizim fikrimiz olmaldr.
+
+52
+00:04:22,800 --> 00:04:27,990
+Elbette, elinde daha uzun zamandr ya da baka yerlerde posta yazs ve ardndan kimlik numaras gibi bir ey
+
+53
+00:04:27,990 --> 00:04:28,830
+varsa potansiyel olarak.
+
+54
+00:04:28,860 --> 00:04:34,110
+Ayrca bir dize ve daha sonra kimlii veya burada ne olursa olsun kartrabilirsiniz.
+
+55
+00:04:34,110 --> 00:04:38,430
+Bununla birlikte, yalnzca eik izgi ve ardndan dorudan kimlii ele alyoruz.
+
+56
+00:04:38,550 --> 00:04:41,250
+Bu yzden Kimliin nnde sicim paras yok.
+
+57
+00:04:41,310 --> 00:04:49,530
+Kimliini kendim geirmem gerekiyor, bu yzden burada kimlie ev sahiplii yapmak istiyorum.
+
+58
+00:04:49,530 --> 00:04:51,650
+Aslnda bunu yapmak istiyorum.
+
+59
+00:04:51,650 --> 00:04:58,430
+Buna erimek istiyorum ve yine de bunun gibi eik izgi ekleyebilirsiniz.
+
+60
+00:04:58,440 --> 00:05:01,860
+Bu yzden imdi onunla posta kimlii geiyoruz.
+
+61
+00:05:02,220 --> 00:05:11,130
+imdi blok bileene geri dnelim ve bu Ynlendirici'ye giderken yaz bileenini yklediimizden
+
+62
+00:05:11,210 --> 00:05:12,440
+emin olalm.
+
+63
+00:05:12,720 --> 00:05:16,260
+Yani bunun iin blok bileeni veya ithalat eklemek.
+
+64
+00:05:16,260 --> 00:05:18,150
+Gnderen.
+
+65
+00:05:18,150 --> 00:05:21,130
+Ve imdi bu tam sonras bileeninde.
+
+66
+00:05:21,210 --> 00:05:22,060
+Tam yaz.
+
+67
+00:05:22,080 --> 00:05:22,870
+J. S. Ve bu nedenle belki de burada tam yaz olarak adlandrlm ve oradan tam yaz ykleyelim.
+
+68
+00:05:22,920 --> 00:05:31,460
+imdi tam post bileenine sahibiz.
+
+69
+00:05:31,470 --> 00:05:34,050
+imdi tm dosyalar saklayalm ve uygulamaya geri dnelim.
+
+70
+00:05:34,260 --> 00:05:37,530
+Ve o kilit hatay alalm
+
+71
+00:05:39,090 --> 00:05:47,280
+nk aka bu post bileeninde unuttuysanz, link tm elementler dizisindeki d edir.
+
+72
+00:05:47,280 --> 00:05:52,100
+letiler iin kilit zellik tm postaya deil de balantya eklenmemelidir.
+
+73
+00:05:52,090 --> 00:05:58,400
+Her zaman dngnn en dndaki eleman zerinde olmaldr.
+
+74
+00:05:58,470 --> 00:06:02,020
+Bununla birlikte hata mesajndan kurtulduk.
+
+75
+00:06:02,490 --> 00:06:05,300
+Ve imdi postay tklarsam,
+
+76
+00:06:05,460 --> 00:06:14,830
+L'nizde kimlii olduunu grebilir ve burada artk ok mantkl olmayan postay seersiniz.
+
+77
+00:06:14,990 --> 00:06:18,580
+Postalar tam olarak yklemediimiz halde
+
+78
+00:06:18,740 --> 00:06:27,290
+mantkl geliyor, nk tam posta bileeni iindeki sahne kimlii artk ayarlanmad.
+
+79
+00:06:27,290 --> 00:06:30,410
+Baka bir yolda getiimiz parametre bu ekilde alnamad.
+
+80
+00:06:30,440 --> 00:06:35,510
+Bu ie yaramyor.
+
+81
+00:06:35,660 --> 00:06:37,160
+Ne alyor olsa.
+
+82
+00:06:37,370 --> 00:06:39,070
+Bunu, bavurularmzda, yaynlar tklayp farkl kimlikler ykleyebildiimizden dorulayabiliriz.
+
+83
+00:06:39,260 --> 00:06:46,450
+Bu biz arzalyoruz.
+
+84
+00:06:46,460 --> 00:06:47,390
+Ayrca bileene yklyoruz.
+
+85
+00:06:47,420 --> 00:06:49,160
+imdi sadece o parametrenin kartlmas zerinde almaya ihtiyacmz var.
+
+86
+00:06:49,190 --> 00:06:52,750
+&nbsp;
+

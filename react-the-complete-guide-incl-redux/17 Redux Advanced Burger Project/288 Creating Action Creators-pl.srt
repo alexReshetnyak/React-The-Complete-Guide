@@ -1,0 +1,320 @@
+1
+00:00:02,200 --> 00:00:04,450
+Przygotowalimy nasz struktur folderw.
+
+2
+00:00:04,480 --> 00:00:10,240
+Stwrzmy teraz tych twrcw akcji i zaczn od burgera Bouldera, poniewa taka jest
+
+3
+00:00:10,450 --> 00:00:11,950
+nasza funkcjonalno w teorii.
+
+4
+00:00:12,070 --> 00:00:14,860
+I chc ponownie zama moj aplikacj.
+
+5
+00:00:15,200 --> 00:00:19,750
+A wic najpierw musz zaimportowa moje typy akcji.
+
+6
+00:00:19,750 --> 00:00:26,860
+Tak wic w miseczce z burgerami lub w folderze dziaa wszyscy przechodzicie na slash typy dziaa odnoszce
+
+7
+00:00:26,950 --> 00:00:33,960
+si do martwych plikw javascript, wasze typy reakcji zawieraj pliki javascript, a nastpnie eksportuj sta, do
+
+8
+00:00:34,060 --> 00:00:35,280
+ktrej dodaj skadniki.
+
+9
+00:00:35,440 --> 00:00:41,450
+Podajc za tym wzorem nazw moich twrcw akcji, tak jak identyfikatorw.
+
+10
+00:00:41,560 --> 00:00:45,770
+Ale nie wszystkie czapki z podkreleniami, ale w przypadku Kemel.
+
+11
+00:00:46,220 --> 00:00:48,640
+Skadnikiem jest wic twrca akcji.
+
+12
+00:00:48,640 --> 00:00:51,730
+Na razie zgadlicie, e dodajecie skadnik.
+
+13
+00:00:51,940 --> 00:00:58,210
+A jeli sprawdzimy miejsce, w ktrym faktycznie wysyamy takie dziaanie, ktre znajduje
+
+14
+00:00:58,210 --> 00:01:06,370
+si w pojemniku budowniczego hamburgera, zobaczymy, e jeli przewiniemy do dna na skadnik i przekae
+
+15
+00:01:06,370 --> 00:01:09,320
+nam nazw skadnika jako adunek.
+
+16
+00:01:09,340 --> 00:01:12,320
+Mamy wic ten dodatkowy skadnik o nazwie wasno.
+
+17
+00:01:12,430 --> 00:01:17,650
+I chc zachowa to w moim twrcy akcji lub w akcji stworzonej w
+
+18
+00:01:17,650 --> 00:01:23,790
+twrcy akcji, powinienem powiedzie, e istniejcy kod we wszystkich miejscach, na przykad w reduktorze, nie pka.
+
+19
+00:01:24,040 --> 00:01:29,650
+Musimy wic ustawi t nazw skadnika i moemy si spodziewa, e ta nazwa skadnika zostanie
+
+20
+00:01:29,770 --> 00:01:32,190
+wprowadzona do kreatora akcji z tego powodu.
+
+21
+00:01:32,200 --> 00:01:37,990
+Skadnik jest wic funkcj strzakow, w ktrej faktycznie otrzymaem nazw skadnika,
+
+22
+00:01:37,990 --> 00:01:47,230
+ktra powinna zosta dodana i gdzie nastpnie zwrc obiekt javascript, ktry bdzie mia waciwo Nazwa skadnika, do ktrej
+
+23
+00:01:47,650 --> 00:01:49,470
+przypisaem nazw, ktr otrzymuj.
+
+24
+00:01:49,570 --> 00:01:55,780
+I oczywicie mamy t obowizkow waciwo typu, w ktrej sigam do moich rodzajw dziaa i
+
+25
+00:01:55,840 --> 00:02:01,210
+wybieram skadnik, a nie po prostu duplikuj to dziaanie, czy te tworz drugi.
+
+26
+00:02:01,210 --> 00:02:04,000
+Ten bdzie si nazywa usuniciem skadnika.
+
+27
+00:02:04,120 --> 00:02:09,880
+I tutaj, jeli znowu spojrzymy na Bergere Boulder, otrzymalimy rwnie nazw skadnika,
+
+28
+00:02:09,880 --> 00:02:18,520
+wszystkie skadniki, w ktrych chcemy je usun, wic mog rwnie tam, gdzie powinienem rwnie zaakceptowa t nazw i
+
+29
+00:02:18,610 --> 00:02:26,080
+zasadniczo wyemitowa lub wysa zwrot tak samo jak przy dodawaniu Redan po prostu zmie identyfikator na
+
+30
+00:02:26,080 --> 00:02:31,360
+typ, aby usun skadnik, a to akcja Burgera Bolara koczy si.
+
+31
+00:02:31,360 --> 00:02:35,620
+Teraz moemy uy D. S. Twrcy naszej aplikacji nie mog si zepsu.
+
+32
+00:02:35,620 --> 00:02:41,680
+Musimy rwnie wej do reduktorw i tam musimy zaktualizowa nasz ciek importu, gdzie otrzymujemy
+
+33
+00:02:41,680 --> 00:02:43,150
+nasze typy akcji.
+
+34
+00:02:43,150 --> 00:02:44,970
+To ju nie s akcje cite.
+
+35
+00:02:45,100 --> 00:02:50,800
+Zamiast tego musimy przej do folderu folderw w jednym folderze, a nastpnie wybra typy
+
+36
+00:02:51,100 --> 00:02:57,360
+akcji, ktre tam ponownie spadaj, poniewa zawsze pomijaj rozszerzenie pliku, do ktrego producent przygotowuje si.
+
+37
+00:02:57,640 --> 00:03:03,640
+Oczywicie nadal musimy aktualizowa nasz sklep, gdy tworzymy go tam, gdzie wskazujemy uytkownika
+
+38
+00:03:03,700 --> 00:03:06,200
+czytajcego, poniewa przenielimy reduktor do podfolderu.
+
+39
+00:03:06,430 --> 00:03:12,120
+Wic w indeksie jako jesieni nie importujemy ju producenta z folderu sklepu.
+
+40
+00:03:12,280 --> 00:03:17,490
+Zamiast tego musimy przej do folderu reduktorw, a nastpnie wybra Berger Boler.
+
+41
+00:03:17,590 --> 00:03:19,480
+Wkrtce wszyscy cz uytkownikw Alred.
+
+42
+00:03:19,540 --> 00:03:25,520
+Ale teraz mam tylko jednego burgera Boucliera, tak zwanego tego reduktora budowniczego burgera.
+
+43
+00:03:25,540 --> 00:03:31,000
+I na razie to mj jedyny reduktor, wic wybior to i przeka, eby stworzy sklep.
+
+44
+00:03:31,030 --> 00:03:40,120
+Ostatni, ale nie mniej wany, musz zaktualizowa kontener Burger Boulder, w ktrym mapuj mj stan tutaj, gdzie
+
+45
+00:03:40,300 --> 00:03:41,140
+wysyam akcje.
+
+46
+00:03:41,200 --> 00:03:43,560
+Nie wysyam ich bezporednio.
+
+47
+00:03:43,600 --> 00:03:49,750
+Zamiast tego chc uy moich twrcw akcji, wic pjd a do samej gry, w ktrej jestem lub do moich
+
+48
+00:03:49,750 --> 00:03:52,080
+rodzajw akcji i ju tego nie robi.
+
+49
+00:03:52,100 --> 00:03:57,790
+Zamiast tego zaimportuj moje dziaania lub moe moje mielsze dziaania w burgerach.
+
+50
+00:03:57,880 --> 00:04:02,600
+Jeli chcemy by superprecyzyjni co do nazwy, nazwa kursu zaley od Ciebie.
+
+51
+00:04:02,720 --> 00:04:09,730
+Teraz ponownie przejd do folderu sklepu i wykonaj dwie akcje, a nie chcesz mie jednego pliku centralnego, z
+
+52
+00:04:09,730 --> 00:04:10,890
+ktrego mog importowa.
+
+53
+00:04:11,050 --> 00:04:11,980
+Wic nazw to.
+
+54
+00:04:12,070 --> 00:04:13,180
+Indeks Dot.
+
+55
+00:04:13,230 --> 00:04:15,130
+Tak, rzeczywicie folder akcji.
+
+56
+00:04:15,460 --> 00:04:18,400
+I s tak, jak pokazano w ostatnim module.
+
+57
+00:04:18,400 --> 00:04:25,720
+Chc pogrupowa moje wyczyny, wic wyeksportuj wszystko od kropki slash Bergere Boulder i to samo.
+
+58
+00:04:25,720 --> 00:04:31,920
+Pniej z pliku js zamwienia i oczywicie, co chc wyeksportowa z Bergere Buller jest oczywicie.
+
+59
+00:04:31,960 --> 00:04:37,180
+Dodaj skadnik i usu chciwca, a skonstruuj struktur w wielu liniach, aby
+
+60
+00:04:37,330 --> 00:04:39,820
+bardzo atwo byo tak traktowa.
+
+61
+00:04:39,820 --> 00:04:45,400
+Wic teraz z tym, e w rzeczywistoci zosta asystentem, mog wrci do kontenera budowniczego hamburgerw
+
+62
+00:04:45,400 --> 00:04:48,880
+i dostosowa import, tak aby wskazywa na indeks akcji.
+
+63
+00:04:48,880 --> 00:04:53,500
+Waciwie dziki naszemu przepywowi pracy mona nawet pomin indeks.
+
+64
+00:04:53,500 --> 00:04:55,990
+Automatycznie wybierze indeks w nastpujcy sposb.
+
+65
+00:04:56,020 --> 00:05:01,460
+Jeli wskaesz folder, ale wszystko bdzie bardzo jasne i dodane, ale znowu mona pomin indeks.
+
+66
+00:05:02,250 --> 00:05:08,480
+Dziki temu dostaem, e Berger Boulder, obiekt z odwaniejszymi akcjami, jest plikiem kontenera
+
+67
+00:05:08,480 --> 00:05:16,250
+i mog go uy na dole pliku, w ktrym wysyamy akcje, aby wywoa akcj skadnika ADD.
+
+68
+00:05:16,370 --> 00:05:17,190
+I wane.
+
+69
+00:05:17,300 --> 00:05:21,780
+Musimy przekaza nazw naszego skadnika do funkcji, do ktrej dzwonimy.
+
+70
+00:05:22,190 --> 00:05:26,030
+I oczywicie chc tu rwnie wykona akcj.
+
+71
+00:05:26,210 --> 00:05:31,240
+Wic odwaniejsze dziaania Bergera usuwaj skadnik i przekazuj nazw skadnika tutaj.
+
+72
+00:05:31,250 --> 00:05:37,010
+Q S to dwie akcje, ktre chc wysa z Debbie, mog zapisa ten plik.
+
+73
+00:05:37,040 --> 00:05:40,990
+A jeli wszystkie pliki zostay zapisane, godziny aplikacji znw bd dziaa.
+
+74
+00:05:41,300 --> 00:05:44,440
+Moemy to sprawdzi w uruchomionej aplikacji.
+
+75
+00:05:44,720 --> 00:05:47,850
+Jeli znw zaczniemy dodawa Burgera.
+
+76
+00:05:47,960 --> 00:05:53,280
+Zieloni przepraszam i usuwajc je, powinnimy zobaczy, e dziaa tak jak poprzednio.
+
+77
+00:05:53,390 --> 00:06:00,920
+Ale teraz, oczywicie, przy pomocy naszych twrcw akcji, pierwszym krokiem w kierunku stworzenia
+
+78
+00:06:00,920 --> 00:06:02,210
+twrcw akcji.
+
+79
+00:06:02,240 --> 00:06:06,970
+Oczywicie zrobilimy to, aby uruchomi asynchroniczne Kodo, wic bd to kolejne kroki.
+
+80
+00:06:07,100 --> 00:06:13,730
+Dodanie twrcw ect do zamwie, abymy mogli w kocu obsuy cay proces skadania zamwie dla Rydex.
+

@@ -1,0 +1,392 @@
+1
+00:00:02,150 --> 00:00:08,930
+Asenkron kod altrmaya balamadan nce redux'le alrken sahip olduumuz sper nemli bir gelimi
+
+2
+00:00:08,930 --> 00:00:10,740
+konsepte gememe izin verin.
+
+3
+00:00:10,850 --> 00:00:18,200
+Ve bununla daima X kendi banza tepki verdiiniz veya deil tepki verdiiniz anlamna gelir.
+
+4
+00:00:18,470 --> 00:00:21,370
+Doruya katman yazlm ekleyebilirsiniz.
+
+5
+00:00:21,380 --> 00:00:28,270
+Eyleminiz gnderilirken, reticiye ulatnzda ara katman ekleyebileceiniz yerdir.
+
+6
+00:00:28,350 --> 00:00:35,480
+Sunucu tarafndaki gelitiricinin Express chicest ile almas durumunda katman bilgisini bilmiyor olabilirsiniz rnein
+
+7
+00:00:35,480 --> 00:00:43,490
+orta katman temel olarak ilevler iin kullanlan bir terim veya genel olarak bir ileme eklenip
+
+8
+00:00:43,570 --> 00:00:51,180
+bir paras haline getirilen bir ileme katlm olsa da bir fikriniz olabilir. Bu ilemi durdurmadan.
+
+9
+00:00:51,230 --> 00:00:57,320
+Dolaysyla, katman ekleyebiliriz ve bundan sonra da eylem retime yine de ulaacak
+
+10
+00:00:57,560 --> 00:01:03,860
+ancak reticiye ulamadan nce basite bir ey kaydedebilen bu eylemle bir eyler yapabilir.
+
+11
+00:01:04,040 --> 00:01:10,040
+Fakat her ey daha sonra senkron bir kod yrtmek istediimizde nemli olacak.
+
+12
+00:01:10,280 --> 00:01:17,260
+imdi ara katmann, ara katmann nasl altn gstermek iin projemize ekleyerek harekete getiini grelim.
+
+13
+00:01:17,270 --> 00:01:18,650
+Endekse girmeme izin ver.
+
+14
+00:01:18,720 --> 00:01:22,440
+Evet, aslnda maazay yarattmz yeri izleyin.
+
+15
+00:01:22,910 --> 00:01:30,050
+Bu noktada, projeye katman ekleyebiliriz ve tabii bunun iin tam
+
+16
+00:01:30,050 --> 00:01:33,270
+olarak bunu nasl yapacamz renmeliyiz.
+
+17
+00:01:33,320 --> 00:01:35,750
+ncelikle ara katmana ihtiyacmz var.
+
+18
+00:01:35,990 --> 00:01:42,470
+Dediim gibi bu durumda kt amal yazlm sadece bir kod paras, zellikle de bir ilev.
+
+19
+00:01:42,530 --> 00:01:44,670
+imdi kendi katmanm burada oluturacam.
+
+20
+00:01:44,720 --> 00:01:48,770
+Daha sonra salayclarmz tarafndan salanan ara katmanlar ekleyeceiz.
+
+21
+00:01:48,770 --> 00:01:54,310
+Basite, her eylemi kilitleyen veya yaynladmz basit bir ara katman oluturmanz istiyorum.
+
+22
+00:01:54,320 --> 00:01:57,590
+Bu yzden yapmak istediim, yeni bir sabiti deitirmek ve onu isim vereceim.
+
+23
+00:01:57,630 --> 00:02:02,570
+Logger bu benim ara katmanmn ismi olacak, bu yzden elbette ieriin
+
+24
+00:02:02,570 --> 00:02:06,700
+ad her zaman olduu gibi distend bir ilevi alyor demektir.
+
+25
+00:02:06,830 --> 00:02:10,060
+Ve alt Eros szdizimini kullanacam.
+
+26
+00:02:10,480 --> 00:02:18,230
+Duruma uygun girdi olarak saklanacak nk yaknda kendi ara katmann depolamak iin redux tarafndan
+
+27
+00:02:18,230 --> 00:02:21,330
+salanan belirli bir yntemi kullanacaz.
+
+28
+00:02:21,500 --> 00:02:29,010
+Ve redux tarafndan salanan bu yntem sonunda ara katman fonksiyonumuzu altracak ve bize hikayeyi verecektir.
+
+29
+00:02:29,180 --> 00:02:38,170
+imdi ilev gvdesi kapandnda, baka bir ileve dnmze benzeyen ilev farknda olur.
+
+30
+00:02:38,360 --> 00:02:42,540
+Bu nedenle bu kafa kartrc olabilir, ancak bu ilev sadece baka bir ileve dner.
+
+31
+00:02:42,540 --> 00:02:47,930
+Pekl E-6 ok fonksiyonu szdizimindeki ilevimiz budur.
+
+32
+00:02:47,960 --> 00:02:52,690
+levimiz bir sonraki argman alacak.
+
+33
+00:02:52,820 --> 00:02:58,580
+Bu argman istediiniz gibi adlandrabilirsiniz, ancak bir sonraki mantkl olacak nk bu
+
+34
+00:02:58,580 --> 00:03:04,360
+ilemin azaltcya doru yolculuuna devam etmesine izin verecek ekilde altrabilecek bir ilev olacaktr.
+
+35
+00:03:04,370 --> 00:03:10,210
+Deneyimli bir ekspres gelitirici iseniz, bir sonraki ilevi biliyor olabilirsiniz.
+
+36
+00:03:10,310 --> 00:03:19,100
+Bu yzden burada dndrlen bu ilev redux tarafndan da yrtlecektir ve sonunda ilev grr ve imdi biraz
+
+37
+00:03:19,210 --> 00:03:24,190
+kark hale gelir, ancak bu ilev de bir ilev dndrr.
+
+38
+00:03:24,200 --> 00:03:30,170
+En sonuncusu, bir girdi olarak gnderdiiniz eylemi alacak.
+
+39
+00:03:30,170 --> 00:03:33,640
+Yine bu ilev sizin iin idam edilecektir.
+
+40
+00:03:33,740 --> 00:03:38,230
+Yani bu i ie ileyen parti sadece bir ara katman arac.
+
+41
+00:03:38,230 --> 00:03:45,140
+imdi eylemi alan bu i ilevin iinde bir maazaya ve bir sonraki ileve eriebiliriz.
+
+42
+00:03:45,140 --> 00:03:46,870
+Ve elbette eylemin kendisi.
+
+43
+00:03:47,000 --> 00:03:52,600
+Ve imdi burada eylem ve kltc arasnda altrmak istediiniz kodu altrabiliriz.
+
+44
+00:03:52,610 --> 00:03:57,270
+Yani burada bir kilit deyimi pazar ekledi middleware sordu.
+
+45
+00:03:57,290 --> 00:04:01,520
+Bu sadece bizim iin, bunun nereden geldiini hzla grebilmemiz iin.
+
+46
+00:04:01,520 --> 00:04:10,670
+Ve onlar sevk edileceklerini syleyeceim ve bundan sonra balayacamdan sonra eylemi yazacam.
+
+47
+00:04:10,790 --> 00:04:12,380
+Ve ite burada nemli.
+
+48
+00:04:12,440 --> 00:04:19,610
+azaltlmaya devam etmesine izin verecek, ancak bunu baarmak iin eylemi bir argman olarak ele almamz gerekiyor.
+
+49
+00:04:19,610 --> 00:04:20,860
+Bu artk eylemin
+
+50
+00:04:20,870 --> 00:04:26,030
+imdi nemli olan, nk burada teorik olarak da eylemi burada eriebildiimiz
+
+51
+00:04:26,420 --> 00:04:27,410
+ortada deitirebilirdiniz.
+
+52
+00:04:27,440 --> 00:04:28,750
+Bunu argman olarak alyoruz.
+
+53
+00:04:28,790 --> 00:04:33,650
+Bunu yapmamz gereken dersin trn deitirebiliriz, nk bavurumuzu bozabilir veya bundan
+
+54
+00:04:33,950 --> 00:04:35,390
+daha kt yapabilirsiniz.
+
+55
+00:04:35,390 --> 00:04:38,990
+Beklenmedik davranlar uygulayabiliriz.
+
+56
+00:04:38,990 --> 00:04:42,530
+Bylece burada bir sonraki ampacity'yi deitirilmi bir eylem olarak greceim.
+
+57
+00:04:42,530 --> 00:04:51,740
+Harika olan u ki bu i ileve dnmesi gereken bu ar sonucunu saklayabiliyor,
+
+58
+00:04:51,740 --> 00:04:53,920
+sonularm buraya eviriyorum.
+
+59
+00:04:54,080 --> 00:04:57,730
+imdi bu iki adm arasnda baka bir ey kaydedebilirim.
+
+60
+00:04:57,740 --> 00:05:04,140
+Konsol log burada ve orada bir katman ile ilgili kilit adm gnlk.
+
+61
+00:05:04,170 --> 00:05:10,820
+Maazamza eriebildiim iin bir sonraki duruma geeceim, bylece yalnzca maaza alma durumu diyebilirim.
+
+62
+00:05:10,820 --> 00:05:12,540
+D ilevi gryoruz.
+
+63
+00:05:12,540 --> 00:05:16,130
+Devlet Methot'u almay renen normal X maazas.
+
+64
+00:05:16,320 --> 00:05:19,450
+Bylece elbette ara katmanda da diyebilirim.
+
+65
+00:05:19,860 --> 00:05:24,140
+Dolaysyla bu ilev aac sonunda ne idam edilir.
+
+66
+00:05:24,180 --> 00:05:28,220
+Bunlarn hepsi Reducto tarafndan yaplmaktadr, bu ilevlerden hibirini armak zorunda deiliz.
+
+67
+00:05:28,230 --> 00:05:32,230
+Tek yapmamz gereken bu modeli maazamzda bilerek uygulamak.
+
+68
+00:05:32,460 --> 00:05:34,510
+Peki bunu nasl yapacaz.
+
+69
+00:05:34,560 --> 00:05:38,730
+Her eyden nce Rydex'den bir eyler getirmeliyiz.
+
+70
+00:05:38,730 --> 00:05:45,960
+Dolaysyla, burada taraflar gmen isimleri arptmak iin kendi ara katmanmz eklememize izin verdikleri iin, istihdam
+
+71
+00:05:46,230 --> 00:05:49,540
+edilen ara katman ilev bozukluunu indirgeyicileri birletirdiler.
+
+72
+00:05:50,010 --> 00:05:53,240
+Dolaysyla burada ve maazay balattmz maazay yaratn.
+
+73
+00:05:53,340 --> 00:05:55,110
+Daha fazla argman ekleyebiliriz.
+
+74
+00:05:55,200 --> 00:06:01,270
+Ve ikinci argman burada szde bir glendirici olabilir.
+
+75
+00:06:01,290 --> 00:06:05,720
+imdi bu ve onun yant, rnein bir ara katmann baka bir ey deil.
+
+76
+00:06:05,760 --> 00:06:13,550
+Bylece burada katman uygulamasn arabiliriz ve imdi katman yazlmn uygulamak iin redoks tarafndan geerli bir katman
+
+77
+00:06:13,560 --> 00:06:20,350
+altrlabilir olmasn salayan bu fonksiyon aacn tutan gnle kaydetme sabitini geirebiliriz ve bu nedenle
+
+78
+00:06:20,340 --> 00:06:21,510
+maazaya balarz.
+
+79
+00:06:21,810 --> 00:06:24,050
+Ve her ey burada zaten.
+
+80
+00:06:24,150 --> 00:06:28,750
+Aslnda katman uygulamak iin burada katmanlarn bir listesini geirebilirsiniz.
+
+81
+00:06:28,830 --> 00:06:33,820
+Srayla idam edilecekler, o zaman burada yalnzca bir tane var.
+
+82
+00:06:33,870 --> 00:06:38,910
+Bu yzden bunu kaydedip bu projeye balamak iin NPM start' altralm.
+
+83
+00:06:38,910 --> 00:06:44,400
+Bu, projeyi daha nce sormamza izin vermelidir, ancak konsolda sada
+
+84
+00:06:44,400 --> 00:06:46,350
+ek kt almamz gerekir.
+
+85
+00:06:46,740 --> 00:06:51,680
+Burada, burada iki Lawks' tkladmz gryoruz.
+
+86
+00:06:51,720 --> 00:06:55,700
+Birincisi, gnderdiimiz eylemi grdmz sevkyat gnl.
+
+87
+00:06:55,890 --> 00:06:58,170
+Gnderdiimiz javascript nesnesi bu.
+
+88
+00:06:58,170 --> 00:07:04,080
+durumu grdmz sonraki durum ve tabii ki sevk ettiimiz her eylem iin gerekleiyor.
+
+89
+00:07:04,530 --> 00:07:06,010
+Ve ikincisi, gncellenen
+
+90
+00:07:06,030 --> 00:07:08,390
+Yani bu bizim ara katmann harekete geirici zellii.
+
+91
+00:07:08,460 --> 00:07:14,140
+phesiz elbette, tam da devletinizi gnlne karan ve imdi neler olup
+
+92
+00:07:14,140 --> 00:07:16,820
+bittiini grebileceiniz gzel bir yer.
+
+93
+00:07:16,830 --> 00:07:23,960
+Bir ara katman iin daha kullanl bir kullanm rnei, asenkron kodu ilediimizde daha sonra grlecektir.
+
+94
+00:07:24,270 --> 00:07:29,660
+Ama nce bu duruma biraz kavray getirme fikrine sadk kalnmak istiyorum.
+
+95
+00:07:29,790 --> 00:07:34,440
+Her zaman maazaya bakabilirsek, hata ayklama iin gzel olur.
+
+96
+00:07:34,590 --> 00:07:40,050
+yapsaydk, ancak daha fazla ey gndermesek bile, halihazrdaki hikayeye bakabilirdik.
+
+97
+00:07:40,050 --> 00:07:42,020
+Dolaysyla, baz gnle kayt
+
+98
+00:07:42,090 --> 00:07:45,370
+Bir sonraki konferansta bize neyin yardm edebileceine bir gz atalm.
+

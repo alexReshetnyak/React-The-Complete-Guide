@@ -1,0 +1,216 @@
+1
+00:00:02,190 --> 00:00:07,180
+Teraz podczas ostatnich wykadw przedstawiem wam niektre z najwaniejszych funkcji javascript
+
+2
+00:00:07,180 --> 00:00:10,240
+nastpnej generacji, ktre zobaczycie w tym kursie.
+
+3
+00:00:10,270 --> 00:00:12,810
+S jeszcze dwie rzeczy, ktre znam zdecydowanie.
+
+4
+00:00:12,830 --> 00:00:13,980
+Rwnie chcesz si ukry.
+
+5
+00:00:14,020 --> 00:00:20,650
+Nie s to javascript nastpnej generacji, ale s to funkcje, o ktrych mgby zapomnie lub zapomnie, i s
+
+6
+00:00:20,740 --> 00:00:23,190
+one bardzo wane, aby o nich pamita.
+
+7
+00:00:23,380 --> 00:00:30,220
+Pierwsz cech lub pojciem javascriptu, o ktrym mwi, jest fakt, e masz typy
+
+8
+00:00:30,220 --> 00:00:31,870
+referencyjne i prymitywne.
+
+9
+00:00:31,870 --> 00:00:37,850
+Jeli utworz numer taki jak ten, to jest to typ pierwotny.
+
+10
+00:00:37,900 --> 00:00:44,560
+Oznacza to, e jeli utworz drug liczb o numerze num2 i ustawi j rwn tej
+
+11
+00:00:44,560 --> 00:00:49,240
+liczbie, to faktycznie utworzy ona prawdziw kopi liczby tak naturalnie num2.
+
+12
+00:00:49,240 --> 00:00:53,930
+Teraz, jeli to zapisz, bdzie to rwnie jeden.
+
+13
+00:00:54,450 --> 00:00:58,470
+Ale skopiuje t warto jeden na num2.
+
+14
+00:00:58,710 --> 00:01:06,030
+Teraz liczby, acuchy, booleany s to tak zwane typy pierwotne, gdy zmieniasz przypisanie lub przechowujesz
+
+15
+00:01:06,090 --> 00:01:07,830
+zmienn w innej zmiennej.
+
+16
+00:01:07,860 --> 00:01:12,720
+Skopiuje warto, obiekty i tablice s typami odniesienia.
+
+17
+00:01:12,720 --> 00:01:14,770
+Chocia pozwl mi pokaza, co mam na myli.
+
+18
+00:01:14,910 --> 00:01:23,000
+Tworz swj osobisty obiekt, ktry ma tutaj tylko nazw, a teraz tworz tutaj drug osob i
+
+19
+00:01:23,000 --> 00:01:24,940
+przypisan osob jako warto.
+
+20
+00:01:25,250 --> 00:01:27,120
+Jeli loguj konsol.
+
+21
+00:01:27,140 --> 00:01:35,360
+secondPerson i hit run, wydrukuje tak sam warto jak pierwsza osoba, ale
+
+22
+00:01:35,390 --> 00:01:38,010
+nie skopiuje tej osoby.
+
+23
+00:01:38,150 --> 00:01:46,490
+Osoba, ktrej obiekt jest przechowywany w pamici iw staej osobie przechowujemy wskanik do tego miejsca w pamici.
+
+24
+00:01:46,700 --> 00:01:52,030
+A jeli nastpnie przypisamy osob drugiemu osobie, ten wskanik zostanie skopiowany.
+
+25
+00:01:52,280 --> 00:01:59,450
+Widzimy, e tak jest, jeli zmienilimy osob. nazwa po skopiowaniu.
+
+26
+00:01:59,510 --> 00:02:07,400
+Majc to na uwadze, spodziewalibymy si wydrukowa Max tutaj jeszcze osob o nazwisku Max, poniewa skopiowalimy
+
+27
+00:02:07,400 --> 00:02:11,690
+osob, zapisalimy j w secondPerson, a nastpnie zmienilimy nazw.
+
+28
+00:02:11,690 --> 00:02:15,200
+Jednak jeli wyczyszcz i uruchomi, zobaczysz nazw.
+
+29
+00:02:15,230 --> 00:02:22,010
+Manu tutaj, mimo e drukuj drug osob, wic dla drugiej osoby nazwisko zmienio si rwnie
+
+30
+00:02:22,340 --> 00:02:29,190
+z tego powodu, e po prostu skopiowao wskanik i wskazuje na ten sam obiekt w
+
+31
+00:02:29,210 --> 00:02:30,430
+pamici, co osoba.
+
+32
+00:02:30,470 --> 00:02:35,480
+Wic jeli zmienimy nazwisko na osob, automatycznie zmienimy nazw na secondPerson.
+
+33
+00:02:35,480 --> 00:02:36,530
+Teraz to wane.
+
+34
+00:02:36,530 --> 00:02:38,850
+Pamitaj i to samo dotyczy tablic.
+
+35
+00:02:38,900 --> 00:02:41,840
+Jeli kopiujesz w cudzysowie.
+
+36
+00:02:41,930 --> 00:02:43,310
+Tablica taka jak ta.
+
+37
+00:02:43,430 --> 00:02:45,370
+A nastpnie zmieniasz element tablicy.
+
+38
+00:02:45,410 --> 00:02:49,510
+Wszystko zmieni si w tak zwanej skopiowanej tablicy.
+
+39
+00:02:49,520 --> 00:02:54,540
+Stanie si to wane w React, poniewa moe prowadzi do nieoczekiwanych zachowa.
+
+40
+00:02:54,590 --> 00:03:02,170
+Jeli kopiujesz obiekty lub tablice w ten sposb, moesz manipulowa jednym obiektem w jednym miejscu
+
+41
+00:03:02,250 --> 00:03:09,140
+w aplikacji i przypadkowo manipulowa innym wykorzystaniem tego samego obiektu w innym miejscu aplikacji.
+
+42
+00:03:09,170 --> 00:03:16,850
+Dlatego nauczymy si technik kopiowania tego w niezmienny sposb, co oznacza, e kopiujemy to
+
+43
+00:03:16,850 --> 00:03:24,630
+poprzez prawdziwe kopiowanie obiektu, a nie tylko wskanik, do ktrego moemy uy tego operatora rozprzestrzeniania.
+
+44
+00:03:24,680 --> 00:03:34,020
+Teraz moemy po prostu utworzy tutaj obiekt nowej osoby i rozoy waciwoci osoby.
+
+45
+00:03:34,040 --> 00:03:40,580
+Spowoduje to wycignicie waciwoci i wartoci waciwoci z obiektu i dodanie go do tego
+
+46
+00:03:40,580 --> 00:03:45,500
+nowo utworzonego obiektu tutaj, a my utworzymy nowy z nawiasami klamrowymi.
+
+47
+00:03:45,500 --> 00:03:51,440
+Teraz, jeli uderz czysto i uruchomimy, nadal drukujemy obiekt o nazwie Max, mimo e
+
+48
+00:03:51,440 --> 00:03:55,760
+zmienilimy nazw na Manu, poniewa teraz naprawd stworzylimy prawdziw kopi.
+
+49
+00:03:55,760 --> 00:03:59,390
+Jest to technika, ktr powrc na pniej w tym kursie.
+
+50
+00:03:59,390 --> 00:04:05,530
+Wane jest, aby pamita o tym, e obiekty i tablice s typami referencyjnymi.
+
+51
+00:04:05,600 --> 00:04:11,010
+Jeli zmieniasz przypisanie, kopiujesz wskanik, a nie warto.
+
+52
+00:04:11,270 --> 00:04:17,690
+Dlatego jeli chcesz to zrobi w prawdziwy sposb kopiowania, bdziesz musia stworzy nowy obiekt i
+
+53
+00:04:17,690 --> 00:04:20,950
+po prostu skopiowa waciwoci, a nie cay obiekt.
+
+54
+00:04:20,960 --> 00:04:24,230
+Jest to bardzo wane, o czym naley pamita podczas tego kursu.
+

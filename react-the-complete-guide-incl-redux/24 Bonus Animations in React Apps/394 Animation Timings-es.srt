@@ -1,0 +1,152 @@
+1
+00:00:02,150 --> 00:00:07,190
+Ahora, en la ltima conferencia, movemos el componente de transicin dentro del modal y luego
+
+2
+00:00:07,190 --> 00:00:09,050
+usamos la misma lgica esencialmente, ahora
+
+3
+00:00:09,200 --> 00:00:12,990
+todava hay una cosa que podras haber notado, configuramos el temporizador en
+
+4
+00:00:13,280 --> 00:00:20,690
+300 milisegundos pero la animacin que jugamos, lo configuramos en modal. css en realidad tarda
+
+5
+00:00:20,780 --> 00:00:23,230
+400 milisegundos.
+
+6
+00:00:23,330 --> 00:00:24,970
+Ahora que no es un
+
+7
+00:00:25,010 --> 00:00:28,030
+problema, simplemente no reproducir toda la animacin, que es
+
+8
+00:00:28,100 --> 00:00:31,420
+lo que, por supuesto, podra volver a ser un problema.
+
+9
+00:00:31,610 --> 00:00:38,390
+El tiempo de espera que configura en el componente de transicin determina cunto tiempo se mantendrn
+
+10
+00:00:38,390 --> 00:00:42,440
+los estados de entrada y salida para los que
+
+11
+00:00:42,430 --> 00:00:51,920
+estamos comprobando, por cunto tiempo es bsicamente el estado que usa. Si define un tiempo de espera que es mucho ms corto que
+
+12
+00:00:51,920 --> 00:00:52,700
+la animacin
+
+13
+00:00:52,880 --> 00:00:58,540
+que reproduce, simplemente salga de la animacin preventivamente porque cambi el estado demasiado pronto,
+
+14
+00:00:58,580 --> 00:00:59,110
+cambi.
+
+15
+00:00:59,120 --> 00:01:04,400
+para salir, lo que significar que el elemento se eliminar y que, por supuesto, podra no ser
+
+16
+00:01:04,400 --> 00:01:05,840
+el comportamiento que est buscando.
+
+17
+00:01:05,870 --> 00:01:11,140
+An as, no es necesariamente un problema si lo configuras as.
+
+18
+00:01:11,150 --> 00:01:18,140
+Sin embargo, una cosa que quizs desee tener en cuenta o que quizs quiera
+
+19
+00:01:18,270 --> 00:01:27,050
+configurar en algunos casos es el tiempo de espera. El tiempo de espera en este momento es solo nuestro valor
+
+20
+00:01:27,470 --> 00:01:34,960
+en milisegundos definido como un nmero, pero si queras diferentes tiempos para ingresar y salir, puedes configurarlo, as que
+
+21
+00:01:34,970 --> 00:01:38,610
+djame configurarlo definiendo una nueva constante y hago esto
+
+22
+00:01:38,630 --> 00:01:44,210
+fuera de el componente porque esto no va a cambiar a constante no relacionado
+
+23
+00:01:44,210 --> 00:01:46,110
+con la representacin del componente aqu.
+
+24
+00:01:46,580 --> 00:01:53,930
+Esta constante voy a nombrar animationTiming y que ser un objeto javascript y en ese objeto javascript,
+
+25
+00:01:54,200 --> 00:02:02,500
+puede definir una tecla enter y darle una duracin de, digamos, 400 milisegundos y una clave de salida de, digamos,
+
+26
+00:02:02,900 --> 00:02:08,880
+1 segundo, 400 milisegundos y una segundo para que realmente podamos ver la diferencia.
+
+27
+00:02:08,890 --> 00:02:12,590
+As que ingrese y salga, eso es importante, estos
+
+28
+00:02:12,610 --> 00:02:19,510
+son los dos tipos que puede definir y, como podr adivinar, ingrese simplemente define la duracin
+
+29
+00:02:19,500 --> 00:02:26,080
+que usaremos para agregar este elemento, exit define la duracin que usar para eliminarlo .
+
+30
+00:02:26,080 --> 00:02:34,300
+Entonces, si pasamos animationTiming aqu, este objeto que acabamos de definir para timeout, usar estos valores
+
+31
+00:02:34,420 --> 00:02:38,210
+para los dos tipos diferentes de transicin.
+
+32
+00:02:38,660 --> 00:02:45,530
+Con eso vamos a ajustar la animacin en nuestro archivo css y digamos que cerrar modal tambin debera
+
+33
+00:02:45,690 --> 00:02:48,040
+tomar un segundo. Si ahora guardamos
+
+34
+00:02:48,320 --> 00:02:54,950
+esto y volvemos y hacemos clic en abrir modal, la animacin es la misma que antes, pero si
+
+35
+00:02:55,040 --> 00:02:58,890
+lo dejo, es mucho ms lento en un segundo y all
+
+36
+00:02:58,950 --> 00:03:01,950
+puede ver las diferentes duraciones que se utilizan.
+
+37
+00:03:01,970 --> 00:03:04,580
+As que eso es algo a tener en
+
+38
+00:03:04,700 --> 00:03:12,170
+cuenta acerca del tiempo, puede salir de una animacin demasiado pronto y tambin puede definir diferentes tiempos para ingresar y salir.
+

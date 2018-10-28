@@ -1,0 +1,524 @@
+1
+00:00:02,260 --> 00:00:07,840
+Pozwl mi wrci do shouldComponentUpdate i pokaza, e jest to wane i dlaczego warto
+
+2
+00:00:08,490 --> 00:00:15,450
+z niego skorzysta, edytujmy nasz aplikacj. js, nasz szablon troch tak, e mamy przypadek uycia demo. Dodam nowy przycisk nad
+
+3
+00:00:15,460 --> 00:00:24,360
+kokpitem, ten przycisk powinien zawsze pokazywa osoby. Rnica midzy przecznikiem a kokpitem polega na tym, e nie przecza
+
+4
+00:00:24,360 --> 00:00:26,190
+si, ukrywa je, jeli s
+
+5
+00:00:26,220 --> 00:00:27,730
+widoczne, pokazuj, czy nie
+
+6
+00:00:27,750 --> 00:00:30,520
+s widoczne, ale zawsze je pokazuj.
+
+7
+00:00:30,570 --> 00:00:35,620
+A jeli s ju widoczne, to nic nie da.
+
+8
+00:00:36,060 --> 00:00:44,810
+Dodajmy wic tutaj nasz wasny detektor klikni, a dla zwizoci nie utworz nowego programu obsugi metod, wykonam to wszystko w linii
+
+9
+00:00:44,810 --> 00:00:50,350
+tutaj za pomoc funkcji strzaki, ktra zostanie wykonana po klikniciu, tam wezw ten
+
+10
+00:00:50,370 --> 00:00:56,760
+stan zestawu, ktry oczywicie moe zrobi inline lub dwa i ustawi osoby pokazowe na prawdziwe.
+
+11
+00:00:56,910 --> 00:00:58,140
+Tak zawsze
+
+12
+00:00:58,140 --> 00:01:05,560
+prawdziwe, znowu nie zawsze si to zgadza. Przycisk bdzie wyglda paskudnie, ale to wystarczy.
+
+13
+00:01:05,580 --> 00:01:09,930
+Teraz pozwl mi podej a do punktu, ktry
+
+14
+00:01:09,930 --> 00:01:13,410
+powinienem zaktualizowa i tam powinnimy zwrci
+
+15
+00:01:13,530 --> 00:01:15,270
+prawd, zawsze prawd.
+
+16
+00:01:15,270 --> 00:01:22,820
+Teraz chodmy do osb. js, a take skomentuj nasz check tutaj i zamiast tego
+
+17
+00:01:22,920 --> 00:01:26,820
+zwr tutaj take true, co byoby domylnym, jeli nie zaimplementujemy shouldComponentUpdate.
+
+18
+00:01:27,000 --> 00:01:30,050
+Teraz wrmy do naszej aplikacji, tam Jeli
+
+19
+00:01:30,130 --> 00:01:31,360
+j zaadujemy Kliknijmy,
+
+20
+00:01:31,730 --> 00:01:36,400
+poka osoby, widzimy wszystkie osoby i zachowuje si jak poprzednio.
+
+21
+00:01:36,470 --> 00:01:39,810
+Teraz wyczyszcz konsol, ale nie przeadowaem strony, pozwl mi
+
+22
+00:01:40,060 --> 00:01:42,810
+ponownie klikn osoby, teraz widzisz, e znowu
+
+23
+00:01:42,940 --> 00:01:49,330
+przechodzimy przez wszystkie te cykle ycia, powinnyComponentUpdate dla aplikacji. js WillUpdate, render,
+
+24
+00:01:49,360 --> 00:01:56,770
+personsWillReceiveProps shouldUpdate zwrci warto true, aby kontynuowa.
+
+25
+00:01:56,770 --> 00:02:04,600
+WillUpdate, render, render dla wszystkich skadnikw osoby. React przechodzi przez pene drzewo komponentw i wszystkie metody
+
+26
+00:02:04,600 --> 00:02:07,870
+renderowania, chocia nic si nie zmienio, osoby si
+
+27
+00:02:07,900 --> 00:02:10,150
+nie zmieniy, tablica si nie
+
+28
+00:02:10,210 --> 00:02:12,070
+zmienia, nic si nie zmienio.
+
+29
+00:02:12,260 --> 00:02:19,220
+Teraz nie pomylcie tego, aby zareagowa na ponowne renderowanie rzeczywistego dom, domena przegldarki,
+
+30
+00:02:19,270 --> 00:02:20,780
+nie zrobili tego.
+
+31
+00:02:20,800 --> 00:02:29,140
+Moesz to potwierdzi, przechodzc do elementw i tam, jeli przejdziesz do opcji po prawej
+
+32
+00:02:29,140 --> 00:02:33,050
+stronie, przejd do wikszej liczby narzdzi, a
+
+33
+00:02:33,190 --> 00:02:40,710
+nastpnie renderowania, moesz wczy miganie farby, aby zobaczy obszary, ktre wymagaj przemalowania.
+
+34
+00:02:41,050 --> 00:02:47,030
+Jeli to zrobisz i klikniesz osoby pokazujce, zobaczysz, e tylko przycisk musi zosta przemalowany, aby osoba przeczajca si zobaczya,
+
+35
+00:02:47,230 --> 00:02:54,540
+e wiele zostanie przemalowane, ale dla osb pokazowych, tak si nie stanie. Wic nie dotyka prawdziwego domu, tylko to i to
+
+36
+00:02:54,540 --> 00:02:55,220
+si wanie
+
+37
+00:02:55,290 --> 00:02:57,930
+stao, bo przy okazji zawisem nad
+
+38
+00:02:57,930 --> 00:03:00,230
+nim, a ja znowu to wycz,
+
+39
+00:03:00,300 --> 00:03:03,490
+to tylko dotkno przycisku, nie dotkno prawdziwego domu,
+
+40
+00:03:03,810 --> 00:03:08,690
+a ja przyjd wracajc do tego, jak waciwie reaguje decydowanie, czy dotkn
+
+41
+00:03:08,700 --> 00:03:15,150
+prawdziwego domu, czy nie, w nastpnych wykadach. Ale na razie moemy wiedzie, e nie musi ona
+
+42
+00:03:15,150 --> 00:03:18,960
+dotyka prawdziwego domu, tylko jeli wykryje rnice w stosunku do tego,
+
+43
+00:03:19,080 --> 00:03:22,520
+co widzi w metodach renderowania, ale oczywicie musi wykona metody
+
+44
+00:03:22,620 --> 00:03:25,330
+renderowania i jak wida na konsoli Zrobi to,
+
+45
+00:03:25,380 --> 00:03:27,150
+wykona wszystkie metody renderowania.
+
+46
+00:03:27,390 --> 00:03:30,820
+To oczywicie troch nieskuteczne, zwaszcza w przypadku wikszych
+
+47
+00:03:30,840 --> 00:03:37,090
+aplikacji, tutaj nie kosztowao nas to zbyt wiele. Ale jeli masz duo wzw potomnych, bardzo duga lista
+
+48
+00:03:37,530 --> 00:03:41,760
+osb moe przechodzi przez wszystkie metody renderowania, nawet jeli nic si nie
+
+49
+00:03:41,910 --> 00:03:44,820
+zmienio, moe to by problem z wydajnoci.
+
+50
+00:03:44,970 --> 00:03:46,830
+Dlatego wczeniej mielimy to
+
+51
+00:03:46,950 --> 00:03:52,450
+sprawdzi, powinnimy ComponentUpdate i osoby, bd komentarz prawdziwe ponownie i ponownie
+
+52
+00:03:52,450 --> 00:03:53,620
+wprowadzi to.
+
+53
+00:03:53,700 --> 00:03:59,880
+Teraz tutaj naprawd sprawdza, czy istnieje rnica midzy osobami i tylko ponownie renderuje,
+
+54
+00:03:59,880 --> 00:04:01,790
+jeli wykryje t rnic.
+
+55
+00:04:01,830 --> 00:04:07,010
+Moesz oczywicie doda czek dla wszystkich innych waciwoci.
+
+56
+00:04:07,260 --> 00:04:16,820
+Wic jeli dalej. rekwizyt. osoby s inne lub jeli nastpne. rekwizyty zmieniy inn nieruchomo, ktr tu
+
+57
+00:04:16,860 --> 00:04:19,670
+mamy, zmienilimy, jej odmienno wzgldem poprzedniej implementacji zmieniono.
+
+58
+00:04:19,890 --> 00:04:27,670
+Wic jeli to nie jest rwne temu. rekwizyty zmieniy si i ostatecznie to samo na nastpne. rekwizyty.
+
+59
+00:04:27,790 --> 00:04:30,980
+kliknite, jeli nie jest to rwne. rekwizyty. kliknite.
+
+60
+00:04:30,990 --> 00:04:35,430
+Jeli wic ktrykolwiek z odpowiednich rekwizytw ulegnie zmianie, teraz kontynuujemy aktualizacj.
+
+61
+00:04:35,670 --> 00:04:39,270
+Ale jeli nie zmieni si adna wasno, nie
+
+62
+00:04:39,540 --> 00:04:44,160
+idziemy tam, jak wida tutaj, przeaduj, wyczy, kliknij poka osoby,
+
+63
+00:04:44,310 --> 00:04:49,920
+przechodzimy przez wszystkie metody renderowania oczywicie, co ma sens, poniewa musimy renderowa
+
+64
+00:04:49,960 --> 00:04:55,920
+ca list ale jeli wyczyci to i klikn ponownie Poka osoby, zobaczysz, e
+
+65
+00:04:55,950 --> 00:04:56,420
+jestemy
+
+66
+00:04:56,430 --> 00:04:59,820
+wewntrz aplikacjiComponentUpdate. js, aplikacja WillUpdate. js, renderowanie aplikacji. js, poniewa zawsze
+
+67
+00:04:59,850 --> 00:05:06,630
+zwracamy warto true w funkcji NaleyComponentUpdate, ale w przypadku osb. js, jestemy w willReceiveProps,
+
+68
+00:05:06,630 --> 00:05:10,950
+shouldComponentUpdate i skoczymy, nie kontynuujemy,
+
+69
+00:05:10,950 --> 00:05:12,120
+nie
+
+70
+00:05:12,120 --> 00:05:19,070
+wywoujemy renderowania dla osb i skadnikw poszczeglnych osb, poniewa
+
+71
+00:05:19,080 --> 00:05:24,190
+wykrylimy w shouldComponentUpdate osb. js, e rekwizyty faktycznie si nie zmieniy.
+
+72
+00:05:24,540 --> 00:05:31,460
+Nasze kliknicie tutaj nie spowodowao ponownego renderowania ani wywoania renderowania dla wszystkich tych skadnikw,
+
+73
+00:05:31,500 --> 00:05:37,780
+zatrzymao si u osb. Oczywicie moemy zrobi to samo w aplikacji. js, zamiast zawsze zwraca
+
+74
+00:05:37,980 --> 00:05:41,120
+warto true, moemy sprawdzi, czy co
+
+75
+00:05:41,400 --> 00:05:50,510
+rzeczywicie zmienio nasz stan, wic jeli nasz nastpny stan. osoby, jeden ze stanw, ktre mamy oprcz innego pastwa
+
+76
+00:05:50,710 --> 00:06:01,750
+i pokaza osoby, wic jeli nextState. ludzie nie s rwni temu. osoby stanu lub jeli nextState. showPersons nie jest
+
+77
+00:06:01,750 --> 00:06:11,460
+rwny temu. stan. showPersons. Po sprawdzeniu tego, powinnimy teraz zobaczy, e
+
+78
+00:06:11,460 --> 00:06:17,630
+jeli klikn opcj Poka osoby, przejdziemy przez wszystkie kroki poprawnie, wyrenderujemy je, jeli wyczyciem konsol i ponownie
+
+79
+00:06:17,910 --> 00:06:23,640
+klikn opcj Poka osoby, czytamy tylko opcjComponentUpdate i to wszystko, poniewa wykry hej nic si nie
+
+80
+00:06:23,640 --> 00:06:25,210
+zmienio, nie musz kontynuowa.
+
+81
+00:06:25,770 --> 00:06:31,020
+Jeli jednak usun osob, zrobi to poprawnie i przejdzie przez wszystkie te kroki.
+
+82
+00:06:31,110 --> 00:06:37,740
+Jest to najlepszy moliwy sposb, w jaki moemy teraz sobie z tym poradzi, poniewa upewniamy si,
+
+83
+00:06:37,740 --> 00:06:43,720
+e przechodzimy przez proces aktualizacji tylko wtedy, gdy musimy to zrobi, i pomijamy niepotrzebn
+
+84
+00:06:43,980 --> 00:06:46,440
+prac i oczywicie s one dla
+
+85
+00:06:46,560 --> 00:06:52,710
+wydajnoci, jeli faktycznie nie Potrzebuj aktualizacji, poniewa wiemy, e rekwizyty si nie zmieniy, nie trzeba
+
+86
+00:06:52,710 --> 00:06:53,830
+tego robi.
+
+87
+00:06:53,970 --> 00:06:58,200
+Teraz dla tego sprawdzenia, gdzie widzimy waciwoci stanu Tak wic wszystkie
+
+88
+00:06:58,320 --> 00:07:03,100
+waciwoci w naszym stanie lub rekwizyty. waciwoci, wic wszelkie
+
+89
+00:07:03,240 --> 00:07:07,850
+waciwoci na rekwizytach. obiekt, jeli ktrykolwiek z tych zmian, to jest
+
+90
+00:07:07,860 --> 00:07:10,980
+czek, ktrego nie musimy pisa samodzielnie. Jeli to jest to,
+
+91
+00:07:11,040 --> 00:07:17,880
+co chcemy zrobi, dokonaj tego pytkiego porwnania i mwi pytko, poniewa nie sprawdza on gboko tych
+
+92
+00:07:18,000 --> 00:07:23,540
+obiektw, wykrywa tylko rnice, poniewa aktualizujemy je w niezmienny sposb, ktry jest wany.
+
+93
+00:07:23,910 --> 00:07:30,870
+Wic jeli chcesz zrobi to pytkie sprawdzenie, tak naprawd nie musimy implementowa metody
+
+94
+00:07:31,140 --> 00:07:38,740
+shouldComponentUpdate, zamiast tego moemy to skomentowa i dziedziczy z innego typu komponentu, czystego komponentu.
+
+95
+00:07:39,030 --> 00:07:45,350
+Jest to inny obiekt przedstawiony przez bibliotek reagowania i jest dokadnie taki sam
+
+96
+00:07:45,900 --> 00:07:50,880
+jak normalny komponent, ale ma ju wbudowany test typu shouldComponentUpdate.
+
+97
+00:07:50,970 --> 00:07:56,640
+Zasadniczo przejdzie przez wszystkie waciwoci rekwizytw i porwna je z ich starymi wersjami i
+
+98
+00:07:57,030 --> 00:08:02,320
+bdzie kontynuowa aktualizacj tylko wtedy, gdy wykryje rnice i robi to samo dla stanu.
+
+99
+00:08:02,430 --> 00:08:07,080
+Moemy te ustawi aplikacj. js do czystego komponentu.
+
+100
+00:08:07,410 --> 00:08:13,450
+Wic zaimportujmy czysty komponent i rozbudujmy czysty komponent, z tym, sprbujmy to
+
+101
+00:08:13,620 --> 00:08:14,940
+i tak, dzikuj
+
+102
+00:08:16,400 --> 00:08:17,380
+za komunikat
+
+103
+00:08:17,390 --> 00:08:18,890
+o bdzie.
+
+104
+00:08:18,890 --> 00:08:22,400
+Powinnimy wtedy usun shouldComponentUpdate w czystym komponencie, poniewa
+
+105
+00:08:22,490 --> 00:08:24,910
+ponownie jest to obsugiwane przez reakcj.
+
+106
+00:08:25,280 --> 00:08:28,490
+Powtrzmy to, poka, e osoby pracuj, klikajc to
+
+107
+00:08:28,700 --> 00:08:33,110
+jeszcze raz, nie widzimy dziennika konsoli, poniewa nie mamy wasnej metody
+
+108
+00:08:33,110 --> 00:08:39,040
+shouldComponentUpdate, ale zobaczylibymy dzienniki konsoli wszystkich innych aktualizacji, poniewa mog udowodni, czy naprawd si zmieni.
+
+109
+00:08:39,170 --> 00:08:45,290
+co, wic otrzymujemy to samo zachowanie, co poprzednio, ale teraz zoptymalizowalimy je, reagujc, dziki tej
+
+110
+00:08:45,320 --> 00:08:47,300
+automatycznej implementacji metody shouldComponentUpdate.
+
+111
+00:08:47,300 --> 00:08:51,580
+Czy w takim przypadku zawsze naley stosowa czyste komponenty do caej aplikacji i
+
+112
+00:08:51,800 --> 00:08:57,590
+jak to ma sens, jeli mwi wam rwnie, aby uywa komponentw funkcjonalnych tak czsto, jak to tylko
+
+113
+00:08:57,590 --> 00:09:00,770
+moliwe, gdy nie mona tego uy, poniewa niczego nie rozszerzacie.
+
+114
+00:09:01,080 --> 00:09:05,540
+Odpowied brzmi: nie powiniene uywa czystego komponentu wszdzie w swojej
+
+115
+00:09:05,720 --> 00:09:11,740
+aplikacji, powiniene go uywa tylko wtedy, gdy wiesz, e aktualizacje mog nie by wymagane.
+
+116
+00:09:11,810 --> 00:09:16,620
+Z drugiej strony masz komponenty, ktre mog zalee tylko od jednego
+
+117
+00:09:16,790 --> 00:09:21,620
+lub dwch rekwizytw i wiesz, kiedy uruchamia si aktualizacja dla tego
+
+118
+00:09:21,620 --> 00:09:29,270
+komponentu, chc go zaktualizowa, poniewa by moe mam kilka czystych komponentw na najwyszych pozycjach w tym komponencie drzewo,
+
+119
+00:09:29,270 --> 00:09:35,090
+ktre i tak uniemoliwia aktualizacj jakiegokolwiek komponentu podrzdnego. Wic nie rb wszystkiego czystym komponentem, poniewa moesz
+
+120
+00:09:35,150 --> 00:09:36,730
+rwnie uzyska tam hit
+
+121
+00:09:36,770 --> 00:09:39,380
+wydajnoci, w kocu to zaimplementowane dla ciebieComponentUpdate
+
+122
+00:09:39,530 --> 00:09:43,880
+i porwnuje wszystkie stare rekwizyty i stany do nowych rekwizytw i stanw.
+
+123
+00:09:43,880 --> 00:09:46,860
+To oczywicie wymaga troch wydajnoci i
+
+124
+00:09:47,060 --> 00:09:52,850
+jeli zaimplementujesz go gdzie, gdzie zawsze si to uda, poniewa ju
+
+125
+00:09:52,840 --> 00:09:59,350
+to zrobie w wyszym punkcie drzewa komponentw, to naprawd ranisz twoj aplikacj.
+
+126
+00:09:59,360 --> 00:10:01,730
+Wic nie wszystko powinno by
+
+127
+00:10:01,940 --> 00:10:06,300
+czystym komponentem, niektre strategicznie rozmieszczone czyste komponenty maj jednak sens.
+
+128
+00:10:06,510 --> 00:10:09,010
+Teraz, aby dowiedzie si, gdzie
+
+129
+00:10:09,140 --> 00:10:15,860
+je umieci, musimy lepiej zrozumie, jak reaguje si po naszym drzewie komponentw i jak
+
+130
+00:10:15,860 --> 00:10:19,420
+to naprawd decyduje, aby naprawd zaktualizowa rzeczywisty dom.
+
+131
+00:10:19,430 --> 00:10:21,430
+spjrzmy na to w nastpnym wykadzie.
+

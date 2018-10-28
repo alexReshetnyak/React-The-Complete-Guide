@@ -1,0 +1,144 @@
+1
+00:00:02,120 --> 00:00:07,670
+En la ltima conferencia, le mostr cmo agregar arregladores de intereses. Ahora, a veces,
+
+2
+00:00:07,670 --> 00:00:12,270
+no desea interceptar la solicitud, pero desea establecer alguna configuracin global.
+
+3
+00:00:12,470 --> 00:00:18,420
+Digamos que usted est enviando las solicitudes y su solicitud es siempre la misma.
+
+4
+00:00:18,560 --> 00:00:25,040
+Por lo tanto, siempre hay un cdigo de tipo II ms antiguo o ms antiguo en nuestro caso y luego recortan algo.
+
+5
+00:00:25,040 --> 00:00:27,840
+Entonces esa parte inicial es siempre la misma.
+
+6
+00:00:28,130 --> 00:00:34,040
+Entonces, qu sera bueno si pudiramos recortarlo aqu y simplemente enviar la solicitud para obtener publicaciones y
+
+7
+00:00:34,260 --> 00:00:37,980
+aprender de forma automtica algunos comentarios a partir de su l.
+
+8
+00:00:38,000 --> 00:00:44,100
+hacer eso en el siguiente ndice como cada, que es un buen lugar porque se ejecuta Primero comienza a reaccionar.
+
+9
+00:00:44,100 --> 00:00:45,160
+Resulta que podemos
+
+10
+00:00:45,440 --> 00:00:52,040
+Podemos usar X aos y sus aos anteriores para establecer el valor predeterminado de los objetos que son verdaderos para todas las
+
+11
+00:00:52,070 --> 00:00:59,600
+solicitudes que se envan y all podemos encontrar una base, usted es l y esto es lo que ahora se usar bien, ya que los
+
+12
+00:00:59,600 --> 00:01:05,420
+nombres se digieren como una base de su L a la cual d nuestros puntos de vista son simplemente anexados.
+
+13
+00:01:05,450 --> 00:01:11,110
+Ahora con eso establecido aqu hemos establecido por cierto importante que debe ser Eurail base con maysculas aqu
+
+14
+00:01:11,130 --> 00:01:13,650
+para la carcasa de Ural es importante aqu.
+
+15
+00:01:13,790 --> 00:01:18,480
+Ahora ya lo eliminamos de todas las publicaciones aqu en el contenedor de bloques.
+
+16
+00:01:18,680 --> 00:01:23,730
+Ahora, en una nueva publicacin, todos podemos deshacernos de ella al publicar datos.
+
+17
+00:01:24,110 --> 00:01:31,760
+Y en la publicacin completa tenemos dos lugares, uno en el que accedemos a una sola publicacin y otro en el que eliminamos una sola publicacin
+
+18
+00:01:31,840 --> 00:01:37,550
+para que podamos deshacernos de eso comenzando con la L en todas partes y, si volvemos a la aplicacin,
+
+19
+00:01:37,550 --> 00:01:39,440
+ve que todava la carga todava funciona.
+
+20
+00:01:39,440 --> 00:01:47,810
+Todo sigue funcionando bien aqu porque realmente no cambiamos la forma en que enviamos las solicitudes, pero lo hicimos
+
+21
+00:01:47,810 --> 00:01:52,750
+un poco ms fcil para nosotros debido a esa configuracin global.
+
+22
+00:01:52,760 --> 00:01:56,560
+Ahora tampoco est limitado a solo agregar la base de su L aqu.
+
+23
+00:01:56,720 --> 00:02:05,030
+en ese objeto comn de encabezados comunes de autorizacin o simplemente los encabezados generales que se establecen para todos los tipos de solicitudes
+
+24
+00:02:05,240 --> 00:02:11,450
+y all puede establecer esto a su token si tiene uno o lo que sea es decir.
+
+25
+00:02:11,450 --> 00:02:15,730
+Tambin puede acceder a los encabezados predeterminados y establecer un encabezado comn
+
+26
+00:02:15,830 --> 00:02:23,350
+Tambin puede establecer encabezados solo para tipos de solicitud especficos, como para las solicitudes de publicacin solo en las que tal vez desee
+
+27
+00:02:23,370 --> 00:02:30,110
+establecer el tipo de contenido que est enviando a la aplicacin Chaisson, que no necesita, que es el predeterminado de
+
+28
+00:02:30,120 --> 00:02:32,160
+todos modos solo para mostrar esto.
+
+29
+00:02:32,420 --> 00:02:38,420
+Entonces, si hace esto, si vuelve a la aplicacin e inspecciona la solicitud que fue enviada,
+
+30
+00:02:38,420 --> 00:02:42,620
+ver que debajo de los encabezados, tenemos la oferta de autopen.
+
+31
+00:02:42,950 --> 00:02:50,570
+Y para una solicitud posterior, haremos que veas que all si inspeccionamos la configuracin de la solicitud, recibimos el encabezado
+
+32
+00:02:50,860 --> 00:02:53,810
+de recepcin inaceptable y el tipo de contenido.
+
+33
+00:02:53,810 --> 00:02:55,970
+Aplicacin Jason.
+
+34
+00:02:55,970 --> 00:02:58,280
+Esa es otra caracterstica genial de.
+
+35
+00:02:58,400 --> 00:03:04,640
+Establecer una configuracin predeterminada que se utilizar toda la aplicacin super impresionante.
+
+36
+00:03:04,640 --> 00:03:08,140
+Te ayuda a optimizar tu cdigo bastante.
+

@@ -1,0 +1,392 @@
+1
+00:00:02,180 --> 00:00:07,040
+Agora, neste maro, obviamente, tivemos muita lgica para o burger Boulder novamente.
+
+2
+00:00:07,130 --> 00:00:14,510
+H uma melhoria ou correo que devemos aplicar a ela, embora possa ser sutil ao local, mas realmente melhora
+
+3
+00:00:14,510 --> 00:00:15,780
+a nossa aplicao.
+
+4
+00:00:16,100 --> 00:00:21,030
+Vamos dar uma olhada nisso com componente de ordem superior do manipulador de ar l.
+
+5
+00:00:21,110 --> 00:00:27,110
+Ns, obviamente, adicionamos nossos interceptores no componente ir montar e, claro,  sensato mant-los
+
+6
+00:00:27,110 --> 00:00:34,160
+l, porque queramos garantir que possamos restaurar os erros e, portanto, mostrar esse erro ou motivo que
+
+7
+00:00:34,160 --> 00:00:36,620
+configuramos nesse componente de ordem superior.
+
+8
+00:00:36,800 --> 00:00:44,290
+Ns temos um problema, embora o mtodo do manipulador de erros possa ser enrolado em vrios componentes.
+
+9
+00:00:44,300 --> 00:00:47,790
+Essa  a idia de ter esse componente de ordem superior.
+
+10
+00:00:47,840 --> 00:00:52,940
+Caso contrrio, poderamos colocar o cdigo da morte diretamente no pedregulho do hambrguer se esse fosse o nico componente
+
+11
+00:00:52,940 --> 00:00:54,260
+em que queremos usar isso.
+
+12
+00:00:54,260 --> 00:00:56,880
+Neste momento,  o nico componente em que estamos usando.
+
+13
+00:00:56,900 --> 00:01:02,760
+Mas, novamente, nosso componente de ordem superior,  claro, no est limitado ao criador do programa.
+
+14
+00:01:03,170 --> 00:01:12,710
+O problema que temos  se adicionarmos este componente de ordem superior com o manipulador de erros aos nossos componentes, iremos chamar compote e
+
+15
+00:01:12,710 --> 00:01:19,070
+iremos montando uma e outra vez,  claro, porque o componente de classe que retornamos 
+
+16
+00:01:19,070 --> 00:01:26,270
+um componente de ordem superior que  criado sempre que este  enrolado em torno de um componente existente.
+
+17
+00:01:26,270 --> 00:01:34,840
+Ento, toda vez que chamamos de manipulador de ar no elemento que estamos exportando como fazemos no Bergere Boulder.
+
+18
+00:01:34,940 --> 00:01:40,440
+Ento, estamos anexando vrios interceptores em nosso aplicativo e ns os estamos anexando
+
+19
+00:01:40,440 --> 00:01:42,740
+ mesma instncia de acesso.
+
+20
+00:01:43,040 --> 00:01:48,020
+O problema,  claro,  que no precisamos agora, mas vamos enfrentar mais tarde no curso.
+
+21
+00:01:48,090 --> 00:01:54,920
+O roteamento mencionado por DB levar ao problema uma vez que tivermos mais pginas onde podemos usar com o
+
+22
+00:01:54,920 --> 00:01:55,910
+manipulador de erros.
+
+23
+00:01:55,910 --> 00:02:03,130
+Ns, naturalmente, criamos esta instncia aqui com desconto de vrios tempos e aqui e, portanto, todos os antigos setores
+
+24
+00:02:03,130 --> 00:02:03,950
+de leses.
+
+25
+00:02:03,980 --> 00:02:09,740
+Ento, todos os interceptores que configuramos quando envolvemos isso em torno de outro componente
+
+26
+00:02:09,740 --> 00:02:12,170
+que ainda no precisava mais existe.
+
+27
+00:02:12,170 --> 00:02:18,260
+Ento, temos muitos interceptores mortos sentados na memria, que na verdade no esto mortos,
+
+28
+00:02:18,440 --> 00:02:21,430
+mas que ainda reagem aos nossos pedidos.
+
+29
+00:02:21,560 --> 00:02:29,630
+E o pior caso eles levam a erros ou de alguma forma mudam o estado de nossa aplicao.
+
+30
+00:02:29,690 --> 00:02:36,410
+Mas, mesmo no melhor dos casos, eles escapam de memria porque esse  o cdigo que ainda corre que no
+
+31
+00:02:36,410 --> 00:02:37,250
+ mais necessrio.
+
+32
+00:02:37,490 --> 00:02:43,850
+Ento, devemos realmente remover a satirise quando este componente for desmontado.
+
+33
+00:02:43,880 --> 00:02:50,470
+Ento, quando uma instncia especfica do nosso wrapper de manipulador de erros no  mais necessria.
+
+34
+00:02:50,570 --> 00:02:59,360
+E, na verdade, h um ciclo de vida para que esse componente seja desmontado.
+
+35
+00:02:59,420 --> 00:03:06,470
+Agora, como os nomes de apenas dias  um mtodo de ciclo de vida que  executado no momento,
+
+36
+00:03:06,560 --> 00:03:08,590
+um componente no  mais necessrio.
+
+37
+00:03:09,200 --> 00:03:16,910
+Agora, para poder remover uma intercepo ou aqui precisamos armazenar uma referncia aos interceptores que criamos
+
+38
+00:03:17,210 --> 00:03:19,840
+em propriedades fora da classe.
+
+39
+00:03:19,880 --> 00:03:22,190
+Agora, temos que declarar propriedades j.
+
+40
+00:03:22,310 --> 00:03:25,550
+No podemos simplesmente adicionar novas propriedades.
+
+41
+00:03:25,550 --> 00:03:34,340
+Ento, para isso, eu simplesmente criarei uma nova propriedade ao mesmo tempo, usando essa palavra-chave para se referir  classe
+
+42
+00:03:34,340 --> 00:03:36,890
+que qualquer nome de sua escolha.
+
+43
+00:03:37,100 --> 00:03:46,880
+Todos chamados de solicitao ISDE entram no centro ou talvez como este interceptor de solicitao e armazenamos o resultado de nossa configurao
+
+44
+00:03:46,940 --> 00:03:54,140
+de interceptor que  apenas uma referncia ao centro de endereos passado de volta pelo Access automaticamente.
+
+45
+00:03:54,310 --> 00:03:58,490
+E farei o mesmo para o interceptor de resposta aqui.
+
+46
+00:03:58,520 --> 00:04:07,190
+Ento, agora tenho duas novas propriedades na minha classe e agora posso usar essas propriedades em desmontar para
+
+47
+00:04:07,190 --> 00:04:09,400
+remover os receptores l.
+
+48
+00:04:09,410 --> 00:04:18,050
+usar apenas interceptores de X anos, tal como os criamos, mas agora podemos tambm pedir x e responder l.
+
+49
+00:04:18,080 --> 00:04:19,070
+Agora, podemos
+
+50
+00:04:19,080 --> 00:04:24,670
+O e-mail e ejeo em chamada agora requer a referncia ao interceptor.
+
+51
+00:04:24,830 --> 00:04:33,390
+Ento, aqui, esse interceptor de solicitao e, finalmente, duplicadoras tambm fazem o mesmo para a resposta para o objeto
+
+52
+00:04:33,410 --> 00:04:34,560
+de resposta.
+
+53
+00:04:34,580 --> 00:04:39,210
+Toda a chamada ejetar e depois chamou interceptor de resposta.
+
+54
+00:04:39,590 --> 00:04:41,360
+E agora com isso conseguimos isso configurado.
+
+55
+00:04:41,370 --> 00:04:48,160
+Incomplicvel desconhecido e devemos remover nossos interceptores com a preveno de vazamentos de memria.
+
+56
+00:04:48,200 --> 00:04:54,530
+funciona, guardarei esse arquivo e ento irei para a abertura at onde  que adicionamos o Burgard Boulder.
+
+57
+00:04:54,530 --> 00:04:56,600
+Agora, para ver rapidamente se isso
+
+58
+00:04:56,960 --> 00:05:03,760
+E eu quero adicionar algum cdigo para remov-lo depois de algum tempo, apenas para ver se vamos desmontar,  pego.
+
+59
+00:05:04,040 --> 00:05:13,340
+Ento, eu simplesmente consertarei o bloqueio de bloqueio e eu vou querer enviar este intercepto de solicitao ou nesta resposta e as propriedades do Precentor D2
+
+60
+00:05:13,610 --> 00:05:19,080
+que adicionamos para ver se eles esto configurados no incio da quantidade de vontade que
+
+61
+00:05:19,100 --> 00:05:21,450
+lamento porque eu os uso depois.
+
+62
+00:05:21,860 --> 00:05:27,050
+Ento, agora, se isso for salvo vamos voltar a realmente sim e ter certeza de que Bergere
+
+63
+00:05:27,080 --> 00:05:31,920
+Boulder desaparecer depois de um tempo, todos temporariamente adicionando estado ao componente do meu aplicativo.
+
+64
+00:05:32,030 --> 00:05:37,850
+o pedregulho de Bergere de claro porque s  adicionado ao dormitrio se o Show for verdadeiro.
+
+65
+00:05:37,850 --> 00:05:45,110
+ um componente baseado em classes, ento eu posso, claro, fazer isso e simplesmente vou mostrar uma propriedade verdadeiramente inicial e
+
+66
+00:05:45,110 --> 00:05:50,510
+ento usarei aqui com este show de palco para mostrar o construtor Bergere ou mostrar nulo
+
+67
+00:05:50,510 --> 00:05:51,640
+que essencialmente remove
+
+68
+00:05:51,860 --> 00:05:53,910
+Ento agora eu s preciso de um jeito para voc.
+
+69
+00:05:53,960 --> 00:05:57,550
+Bem desativado, mostre-se por um tempo e morto.
+
+70
+00:05:57,560 --> 00:05:59,500
+E, novamente, isso  tudo apenas para testes.
+
+71
+00:05:59,570 --> 00:06:05,750
+Eu adicionarei um componente que montou aqui e a, eu simplesmente usarei para um mtodo de tempo normal
+
+72
+00:06:05,750 --> 00:06:06,750
+fornecido pelo Javascript.
+
+73
+00:06:06,950 --> 00:06:14,990
+E depois de cinco segundos eu quero executar este ano de funo e nessa funo chamarei o estado definido e
+
+74
+00:06:15,320 --> 00:06:17,170
+configurarei show para 4.
+
+75
+00:06:17,180 --> 00:06:19,810
+E novamente vou remover este cdigo em um segundo.
+
+76
+00:06:19,820 --> 00:06:23,240
+ s l para testar se isso funciona.
+
+77
+00:06:23,330 --> 00:06:25,900
+Se a chamada for desmontada.
+
+78
+00:06:26,210 --> 00:06:28,150
+Ento, se tudo isso nos salvou.
+
+79
+00:06:28,370 --> 00:06:31,590
+E agora vamos recarregar a aplicao que vemos.
+
+80
+00:06:32,000 --> 00:06:33,480
+Vamos esperar cinco segundos.
+
+81
+00:06:34,880 --> 00:06:41,050
+Desejo que o Tennessee seja desmontado e veremos o 0 de Ciro e isso  realmente correto porque estas so
+
+82
+00:06:41,050 --> 00:06:42,070
+simplesmente as idias.
+
+83
+00:06:42,220 --> 00:06:49,690
+H idias que mantm a memria por acesso para os interceptores de solicitao e resposta Ento, duas listas diferentes de
+
+84
+00:06:49,690 --> 00:06:53,170
+centros de interesse e eles comeam com ndice zero.
+
+85
+00:06:53,200 --> 00:06:56,700
+Adicionamos um a cada uma das listas de um pedido e um centro de controle de resposta.
+
+86
+00:06:56,710 --> 00:06:58,960
+Ento  por isso que vemos dois Ciro aqui.
+
+87
+00:06:59,110 --> 00:07:01,630
+Ento o que podemos ver  que ele funciona.
+
+88
+00:07:01,660 --> 00:07:09,740
+objetos, e isso apenas garantir que, sempre que nunca, ns no precisamos mais do Bergere Boulder ou componente.
+
+89
+00:07:09,790 --> 00:07:17,110
+Agora podemos remover esse passo de Cancellara e desmont-lo com sucesso, obtendo essa referncia ao interceptor
+
+90
+00:07:17,680 --> 00:07:20,560
+e podemos confiar no trabalho de
+
+91
+00:07:20,560 --> 00:07:25,810
+E,  claro, no  o caso agora no pedido, mas em breve seremos que
+
+92
+00:07:25,820 --> 00:07:33,200
+limparemos os interceptores que anexamos o dever usando o manipulador de ar no Bergere Boulder para que, se realmente estivssemos
+
+93
+00:07:33,200 --> 00:07:39,490
+com o manipulador de ar em nossa aplicao, ns don ' Crie mais e mais interceptores com
+
+94
+00:07:39,490 --> 00:07:40,810
+os antigos que vivem.
+
+95
+00:07:40,810 --> 00:07:48,700
+na abertura como arquivo para ter um aplicativo de trabalho normal novamente, ento remova todo o cdigo que adicionamos ao estado
+
+96
+00:07:48,700 --> 00:07:55,570
+e o componente que com o tempo limite definido para que possamos ter o mesmo aplicativo que antes.
+
+97
+00:07:55,570 --> 00:07:58,680
+Ento, com isso, posso remover meu cdigo aqui
+
+98
+00:07:58,810 --> 00:08:04,470
+Mas agora novamente com a aplicao melhorada onde realmente removemos interceptores que no precisamos mais.
+

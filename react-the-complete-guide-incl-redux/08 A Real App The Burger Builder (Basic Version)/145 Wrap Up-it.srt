@@ -1,0 +1,72 @@
+1
+00:00:02,100 --> 00:00:09,450
+Quindi, durante le ultime lezioni, il modulo Overdyes  stato piuttosto lungo e abbiamo creato la nostra prima applicazione
+
+2
+00:00:09,810 --> 00:00:14,180
+di re-act che sembra piuttosto interessante e che funziona davvero bene qui.
+
+3
+00:00:14,280 --> 00:00:19,980
+Abbiamo acquisito molte funzionalit che hai appreso nelle sezioni principali precedenti, imparerai come pianificare la tua
+
+4
+00:00:19,980 --> 00:00:25,110
+applicazione come dividerla in componenti in modo che questi componenti comunichino tra loro, perch gli
+
+5
+00:00:25,370 --> 00:00:32,400
+oggetti di scena come passare i riferimenti di metodo ai componenti in modo che Clicco sullo sfondo per attivare un
+
+6
+00:00:32,400 --> 00:00:37,050
+metodo in un altro componente come nel computer di layout nel nostro caso.
+
+7
+00:00:37,170 --> 00:00:45,720
+Questi sono tutti concetti chiave delle moderne applicazioni di re-act che sono consapevoli di come comunicare come strutturarlo come
+
+8
+00:00:45,720 --> 00:00:49,960
+costruire i componenti e le insidie ri-agire le offerte.
+
+9
+00:00:50,220 --> 00:00:58,050
+Essere a conoscenza di concetti come i componenti di ordine superiore ausiliari qui o il meccanismo di aggiornamento dei componenti
+
+10
+00:00:58,050 --> 00:01:02,820
+della camicia  fondamentale per creare app di successo per il re-act.
+
+11
+00:01:02,820 --> 00:01:04,630
+Ora non abbiamo fatto nulla.
+
+12
+00:01:04,650 --> 00:01:10,200
+Ci immergeremo molto pi a fondo nel re-act imparerai come raggiungere il Web per salvare i
+
+13
+00:01:10,200 --> 00:01:17,250
+tuoi dati l o recuperarli da l imparerai come gestire lo stato in un modo migliore su come instradare come fare
+
+14
+00:01:17,250 --> 00:01:20,280
+un sacco di le nostre cose fantastiche con reagire.
+
+15
+00:01:20,280 --> 00:01:26,000
+con questo progetto e lo tormenta un po 'mentre alcune funzioni cambiano lo
+
+16
+00:01:26,190 --> 00:01:33,990
+stile aggiungi altri componenti aggiungi pi ingredienti all'hamburger, qualsiasi cosa ti piaccia gioca con esso e migliorare con reagire.
+
+17
+00:01:33,990 --> 00:01:39,750
+Ma tu hai basi solide e questo non pu che incoraggiarti a giocare
+
+18
+00:01:39,750 --> 00:01:47,460
+I progetti di bowling sono il modo migliore per imparare qualsiasi cosa e questo  ovviamente vero anche per il re-act.
+

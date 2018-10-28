@@ -1,0 +1,220 @@
+1
+00:00:02,160 --> 00:00:08,190
+Comencemos configurando la carga como verdadera cuando comenzamos a buscar o para eso necesito un nuevo tipo
+
+2
+00:00:08,190 --> 00:00:15,800
+de accin, todo agregado a mi archivo de carpeta de accin me disculpa y lo nombrar por cada hamburguesa del Che.
+
+3
+00:00:15,990 --> 00:00:20,360
+Comience y ese tambin ser mi identificador.
+
+4
+00:00:21,720 --> 00:00:23,890
+Ahora Altria la eccin creada para esto.
+
+5
+00:00:24,000 --> 00:00:25,950
+Tenemos uno que se llama as.
+
+6
+00:00:25,950 --> 00:00:30,860
+Pero esto tiene nuestro cdigo asncrono y, por lo tanto, no devuelve un terreno de accin.
+
+7
+00:00:30,870 --> 00:00:33,160
+En realidad, Reflektor s.
+
+8
+00:00:33,300 --> 00:00:35,780
+Y agregar un nuevo Creador de acciones.
+
+9
+00:00:35,940 --> 00:00:45,060
+Este nombre compra Bergere start y el anterior cambian de nombre para simplemente comprar Bergere ahora comprar el
+
+10
+00:00:45,060 --> 00:00:46,370
+inicio de Burger.
+
+11
+00:00:46,410 --> 00:00:53,640
+No espero ningn argumento en absoluto que quiera hacer es devolver un objeto javascript donde el tipo est
+
+12
+00:00:53,640 --> 00:01:00,450
+configurado en tipos de accin comprar Bergere start para que pueda manejar esto y reducir porque es
+
+13
+00:01:00,450 --> 00:01:05,040
+una accin asncrona normal que llega a redux que tiene que reducir.
+
+14
+00:01:05,580 --> 00:01:10,190
+Ahora necesito cambiar el nombre para comprar Burger's. Tendr que ocuparme de esto
+
+15
+00:01:10,200 --> 00:01:14,060
+en el ndice, o exportarlo. Ahora exportamos la compra de Bergere.
+
+16
+00:01:14,400 --> 00:01:21,200
+Y ahora en el orden Jaspal todava cuando lo envi antes de enviar mi solicitud.
+
+17
+00:01:21,210 --> 00:01:29,290
+Fui a ejecutar Persecucin Bergere iniciar esta funcin para enviar esta accin desde el principio.
+
+18
+00:01:29,310 --> 00:01:31,080
+Por supuesto que no quiero ejecutarlo as.
+
+19
+00:01:31,080 --> 00:01:38,430
+Quiero ejecutarlo envuelto en un despacho para que la accin devuelta por la compra Burgas start se
+
+20
+00:01:38,640 --> 00:01:41,370
+enve a la tienda con muertos.
+
+21
+00:01:41,390 --> 00:01:49,220
+Necesito trabajar en los datos de contacto porque todava envo el reinicio de la compra y debera enviar
+
+22
+00:01:49,370 --> 00:01:51,180
+la compra de Bergere.
+
+23
+00:01:51,380 --> 00:01:57,290
+Adems, hay un error en esta funcin aqu donde recibimos el envo.
+
+24
+00:01:57,290 --> 00:02:01,550
+Por supuesto, deberamos devolver un mapa de accesorios a las funciones.
+
+25
+00:02:01,700 --> 00:02:07,910
+As que esta parte aqu tiene que ir al objeto javascript de retorno as.
+
+26
+00:02:07,940 --> 00:02:11,840
+Ahora con esto debemos tener nuestra accin conectada.
+
+27
+00:02:11,840 --> 00:02:18,200
+Ahora podemos volver a leer x al reductor y tambin manejar el caso que acabamos de comenzar.
+
+28
+00:02:18,290 --> 00:02:20,440
+Este nuevo acto y lo agregamos hace un segundo.
+
+29
+00:02:20,780 --> 00:02:22,480
+As que agregar un nuevo caso aqu.
+
+30
+00:02:22,490 --> 00:02:25,240
+La posicin no importa, pero la agregar en la parte superior.
+
+31
+00:02:25,640 --> 00:02:32,390
+Y su nombre como tipos de vista compra el inicio de Burger y all quiero devolver un objeto de JavaScript,
+
+32
+00:02:32,420 --> 00:02:34,910
+ya que siempre copiar el estado anterior.
+
+33
+00:02:34,910 --> 00:02:42,670
+Para mantener mis viejos pedidos pero dijo que la carga es verdadera con la deuda, cambiamos de carga.
+
+34
+00:02:42,670 --> 00:02:49,900
+Por supuesto, ahora debemos asegurarnos de que el contenedor de datos de contacto que cargamos en nuestro estado.
+
+35
+00:02:49,900 --> 00:02:55,900
+Ahora desde Rydex porque estamos usando la carga para mostrar el Spener Y ahora mismo nos estamos refiriendo a
+
+36
+00:02:55,900 --> 00:02:57,050
+la carga de estado.
+
+37
+00:02:57,190 --> 00:03:01,050
+Bueno, eso es algo que ya no necesitamos en el estado de este contenedor.
+
+38
+00:03:01,120 --> 00:03:07,180
+Dejar todos los controles pero en realidad eliminar la propiedad de carga all.
+
+39
+00:03:07,420 --> 00:03:14,340
+En lugar de eso, mapea el estado de Prop's. Agregar el Propp de carga y lo correlacionar con el estado.
+
+40
+00:03:14,770 --> 00:03:20,950
+pap del lado ordenado en el estado del mapa para que aparezca en el contenedor de datos de contacto.
+
+41
+00:03:20,950 --> 00:03:28,720
+Y ahora podemos extender la mano a la carga, pero en realidad pronto combinaremos a nuestros productores, as que tendremos que cambiar para ver
+
+42
+00:03:28,870 --> 00:03:30,810
+cundo sacar a un pedazo de
+
+43
+00:03:30,850 --> 00:03:36,140
+As que por ahora lo dejo as, pero pronto lo cambiar con el problema de carga disponible el ao.
+
+44
+00:03:36,300 --> 00:03:42,880
+Por supuesto, debera extenderme a esta carga adecuada aqu y no solo indicar que estoy cargando un cheque si obtuvo alguno de los
+
+45
+00:03:42,880 --> 00:03:45,050
+lugares de carga del estado de Aberdeen.
+
+46
+00:03:45,220 --> 00:03:46,960
+No, no lo hemos hecho.
+
+47
+00:03:46,960 --> 00:03:53,890
+La ltima vez que estuve en el mismo archivo y un contenedor de datos de contacto para usar tambin map this to props y agregado
+
+48
+00:03:54,100 --> 00:03:56,860
+a la funcin connect lo paso como un segundo argumento.
+
+49
+00:03:56,950 --> 00:04:01,000
+Entonces, esto realmente es considerado por reaccionar leer x.
+
+50
+00:04:01,000 --> 00:04:03,640
+Entonces, si ese viejo seguro nada funcionara.
+
+51
+00:04:03,790 --> 00:04:06,980
+Si vuelves, vemos que tenemos un problema aqu.
+
+52
+00:04:07,120 --> 00:04:14,400
+Estamos tratando de buscar ingredientes y esto no funciona, y todos sabemos que nunca ser capaz
+
+53
+00:04:14,580 --> 00:04:17,580
+de llegar a nuestro otro estado aqu.
+
+54
+00:04:17,610 --> 00:04:21,440
+El orden es el estado porque no estamos combinando ningn reductor.
+
+55
+00:04:21,600 --> 00:04:26,190
+Por lo tanto, solucionemos este error primero y trabajemos en la combinacin de reductores.
+

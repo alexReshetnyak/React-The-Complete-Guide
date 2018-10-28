@@ -1,0 +1,300 @@
+1
+00:00:02,140 --> 00:00:07,720
+Ora, prima di continuare a utilizzare quel token che memorizziamo nel nostro negozio
+
+2
+00:00:08,140 --> 00:00:13,970
+di redux, potresti ricordare che quando effettuiamo l'accesso e ispezioniamo i dati, torniamo
+
+3
+00:00:13,990 --> 00:00:18,240
+indietro, quindi lascia che lo faccia rapidamente, accendi l'accesso, e
+
+4
+00:00:18,250 --> 00:00:21,410
+ci sia anche questo valore expiresIn .
+
+5
+00:00:21,520 --> 00:00:25,880
+Quindi il token  valido solo per 60 minuti, dopodich ogni volta
+
+6
+00:00:25,880 --> 00:00:32,440
+che lo inviamo a qualsiasi risorsa che richiede un token, la richiesta avr esito negativo come se non
+
+7
+00:00:32,440 --> 00:00:34,220
+avessimo inviato alcun token.
+
+8
+00:00:34,220 --> 00:00:36,400
+Ora questa non 
+
+9
+00:00:36,400 --> 00:00:41,970
+la migliore esperienza utente, probabilmente vorremmo registrare l'utente dopo questa ora.
+
+10
+00:00:42,220 --> 00:00:48,940
+Come nota a margine, se l'utente ricarica l'applicazione lo stato  comunque perso perch questo cancella il redux store
+
+11
+00:00:48,940 --> 00:00:52,200
+dal momento che l'intera applicazione si ricarica, quindi l,
+
+12
+00:00:52,360 --> 00:00:58,390
+possiamo quindi cambiare l'interfaccia utente comunque che faremo in futuro per mostrare che noi Non sei loggato
+
+13
+00:00:58,390 --> 00:01:05,020
+ma  lo stato in cui siamo loggati e non ricarichiamo la pagina per un'ora in cui possiamo entrare
+
+14
+00:01:05,020 --> 00:01:10,760
+in questo strano punto di avere un token che non  pi valido senza che noi lo vediamo.
+
+15
+00:01:10,840 --> 00:01:20,740
+Per questo motivo, desidero aggiungere un codice per invalidare quel token dopo un'ora, in modo che
+
+16
+00:01:21,040 --> 00:01:24,070
+possiamo aggiornare la nostra UI
+
+17
+00:01:24,190 --> 00:01:33,490
+anche quando il token non  pi l. Per farlo, andr nel mio file delle azioni auth
+
+18
+00:01:33,730 --> 00:01:41,240
+e aggiunger una nuova costante, una nuova funzione essenzialmente che chiamer checkAuthTimeout, l mi
+
+19
+00:01:41,270 --> 00:01:51,050
+aspetto di ottenere il tempo di scadenza e l, restituir questa funzione dove ricevo la spedizione come argomento
+
+20
+00:01:51,050 --> 00:01:54,350
+perch voglio eseguire un codice asincrono.
+
+21
+00:01:54,860 --> 00:02:02,280
+Spedir questa azione checkAuthTimeout quando torneremo una risposta di successo, quindi dove invier
+
+22
+00:02:02,360 --> 00:02:07,870
+anche authSuccess, invier anche checkAuthTimeout e trasmetter i dati
+
+23
+00:02:08,030 --> 00:02:11,110
+di risposta e l, 
+
+24
+00:02:11,420 --> 00:02:13,420
+questa propriet expiresIn
+
+25
+00:02:13,460 --> 00:02:17,570
+che hai visto, scadeIn, puoi rapidamente vedere
+
+26
+00:02:17,660 --> 00:02:22,660
+che se accediamo di nuovo, passare per accedere,
+
+27
+00:02:22,910 --> 00:02:28,860
+sto parlando di questa propriet scadeIn. Questo contiene un valore, un numero o
+
+28
+00:02:28,860 --> 00:02:35,370
+per essere precisi, una stringa ma che pu essere analizzata come un numero e ottengo
+
+29
+00:02:35,660 --> 00:02:43,960
+questo qui, l ora voglio chiamare setTimeout ed eseguire una funzione dopo un certo periodo di tempo e puoi
+
+30
+00:02:43,970 --> 00:02:48,490
+probabilmente indovinare quale quantit di tempo, il tempo di scadenza qui.
+
+31
+00:02:48,680 --> 00:02:56,230
+Ora qui in setTimeout, voglio fare qualcosa e voglio semplicemente chiamare logout, questa  una nuova azione
+
+32
+00:02:56,280 --> 00:02:58,540
+di cui ho bisogno comunque.
+
+33
+00:02:58,690 --> 00:03:00,460
+Quindi esporter una costante
+
+34
+00:03:00,470 --> 00:03:08,130
+che chiamer logout qui, sar un'azione che non richiede alcun input, sar un creatore di azioni sincrone, imposter
+
+35
+00:03:08,300 --> 00:03:11,820
+il tipo in un tipo che non ho
+
+36
+00:03:11,840 --> 00:03:20,150
+ancora creato quindi facciamo crealo ora, in tipi di azione esporter un costante AUTH_LOGOUT con l'identificatore AUTH_LOGOUT e ora con
+
+37
+00:03:20,150 --> 00:03:30,630
+questo, posso inviare questa azione in modo che qui il tipo sia actionTypes. AUTH_LOGOUT e questa azione di disconnessione, questa
+
+38
+00:03:30,810 --> 00:03:38,100
+azione creatrice qui verr utilizzata anche in setTimeout di checkAuthTimeout.
+
+39
+00:03:38,400 --> 00:03:46,920
+Quindi qui chiamerei l'invio dopo la scadenza per chiamare l'azione di disconnessione, in questo
+
+40
+00:03:46,920 --> 00:03:52,690
+modo eseguirai sempre queste funzioni perch restituisce l'azione effettivamente inviata.
+
+41
+00:03:52,740 --> 00:04:00,480
+Quindi, con questo, eseguiamo o spediamo la funzione di disconnessione dopo questo intervallo di tempo e questo mi permette di andare
+
+42
+00:04:00,480 --> 00:04:04,790
+ora nel mio riduttore e l, gestire il caso di logout.
+
+43
+00:04:04,950 --> 00:04:13,940
+Quindi aggiunger una nuova funzione che chiamer authLogout, ottengo lo stato e l'azione qui e nella funzione, restituir un oggetto
+
+44
+00:04:14,700 --> 00:04:23,370
+javascript aggiornato e quell'oggetto javascript aggiornato qui verr creato con updateObject il mio vecchio stato in cui ho impostato
+
+45
+00:04:24,150 --> 00:04:26,550
+il token su null e
+
+46
+00:04:26,610 --> 00:04:35,400
+l'id utente su null in modo tale che sono sostanzialmente disconnessi perch tutte le informazioni di base che componevano
+
+47
+00:04:35,400 --> 00:04:41,790
+un utente connesso sono ora perse di nuovo. E ho bisogno
+
+48
+00:04:41,790 --> 00:04:51,580
+di gestirlo ovviamente, caso actionTypes. AUTH_LOGOUT, l voglio restituire il risultato della funzione di logout in
+
+49
+00:04:51,610 --> 00:05:00,130
+cui passo lo stato e l'azione come argomenti e con questo, abbiamo attivato questo timer nel file del
+
+50
+00:05:00,400 --> 00:05:07,060
+nostro creatore dell'azione in checkAuthTimeout che verr attivato dopo che qualsiasi firebase ci ha
+
+51
+00:05:07,060 --> 00:05:11,660
+restituito e quale sar quindi assicurarsi che l'utente sia disconnesso.
+
+52
+00:05:11,690 --> 00:05:14,740
+E per ora, questo canceller il negozio e
+
+53
+00:05:14,740 --> 00:05:20,410
+non far molto altro, non mostrer alcun feedback visivo, ma implementeremo qualcosa che avverr quando l'utente
+
+54
+00:05:20,500 --> 00:05:26,570
+si disconnette, incluso quando si disconnette deliberatamente per dare all'utente la sensazione che non sia loggato pi
+
+55
+00:05:26,890 --> 00:05:34,700
+Per ora, vediamo se tutto questo funziona, passate ad accedere e inviate, diamo un'occhiata al redux, l in
+
+56
+00:05:35,740 --> 00:05:36,240
+realt
+
+57
+00:05:36,280 --> 00:05:38,660
+sono immediatamente disconnesso, quindi in qualche
+
+58
+00:05:38,980 --> 00:05:42,400
+modo, questo ha sparato un po 'troppo presto.
+
+59
+00:05:42,400 --> 00:05:47,110
+La ragione, naturalmente,  il tempo di scadenza  3600 ma
+
+60
+00:05:47,260 --> 00:05:50,190
+setTimeout si aspetta di ottenere millisecondi quindi
+
+61
+00:05:50,200 --> 00:05:53,090
+era solo 3. 6 secondi.
+
+62
+00:05:53,140 --> 00:05:54,250
+ una buona
+
+63
+00:05:54,250 --> 00:05:59,960
+pratica, ora possiamo almeno vedere che authLogout  stato inviato e che ha cancellato i
+
+64
+00:06:00,370 --> 00:06:08,310
+token e l'ID utente ma, naturalmente, voglio moltiplicare questo valore con mille per trasformare i miei millisecondi in secondi reali,
+
+65
+00:06:08,350 --> 00:06:10,410
+quindi ora dovrebbe essere un'ora
+
+66
+00:06:10,420 --> 00:06:16,810
+Ora se salvo questo e faccio di nuovo questo esercizio, accedi, passa per accedere, ora non
+
+67
+00:06:16,840 --> 00:06:22,240
+dovremmo vedere authLogout perch ora potremmo aspettare un'ora, non lo far qui, sentiti
+
+68
+00:06:22,240 --> 00:06:23,760
+libero di farlo ovviamente.
+
+69
+00:06:24,130 --> 00:06:25,610
+Ora possiamo continuare e
+
+70
+00:06:25,660 --> 00:06:32,170
+ora finalmente sfruttare il nostro token per proteggere alcune delle risorse sul nostro backend in primo
+
+71
+00:06:32,170 --> 00:06:34,770
+luogo, quindi raggiungerle e quindi, naturalmente, anche
+
+72
+00:06:34,810 --> 00:06:40,660
+aggiornare la nostra interfaccia utente per aggiungere un pulsante di logout per consentire all'utente di
+
+73
+00:06:41,050 --> 00:06:42,760
+disconnettersi e cose cos.
+
+74
+00:06:42,820 --> 00:06:46,540
+Quindi questi saranno i prossimi passi su cui
+
+75
+00:06:46,660 --> 00:06:48,970
+lavorer, facciamolo nelle prossime lezioni.
+

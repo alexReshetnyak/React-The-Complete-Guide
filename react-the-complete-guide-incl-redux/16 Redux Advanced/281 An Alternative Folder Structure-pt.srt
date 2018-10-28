@@ -1,0 +1,104 @@
+1
+00:00:02,290 --> 00:00:09,700
+Com os ajustes das ltimas palestras, reduzimos ou diminumos em geral, dividimos nossas aes em redutores
+
+2
+00:00:09,700 --> 00:00:16,570
+em muitos fs e criamos um grande cdigo aqui para um pequeno projeto, assim como
+
+3
+00:00:16,570 --> 00:00:16,970
+um.
+
+4
+00:00:16,990 --> 00:00:23,160
+Isso  claramente excessivo, mas tambm me permite mostrar o que voc pode fazer e isso se tornar importante
+
+5
+00:00:23,410 --> 00:00:25,510
+ medida que voc cria aplicativos maiores.
+
+6
+00:00:25,540 --> 00:00:31,060
+Ns j veremos algumas vantagens no aplicativo Bergere Boulder, que funcionar novamente no prximo
+
+7
+00:00:31,060 --> 00:00:32,280
+mdulo do curso.
+
+8
+00:00:32,440 --> 00:00:39,610
+como aes redutoras simples e compreensveis e reaja as aplicaes em geral possvel.
+
+9
+00:00:39,610 --> 00:00:46,300
+Eu queria destacar essas possveis melhorias ou reestruturaes para permitir que voc conduza
+
+10
+00:00:46,300 --> 00:00:53,110
+Agora, uma outra coisa em que quero mergulhar rapidamente  uma estrutura de pasta alternativa.
+
+11
+00:00:53,170 --> 00:00:59,110
+Agora, a estrutura da pasta realmente  algo que voc pode encontrar milhares de abordagens diferentes.
+
+12
+00:00:59,110 --> 00:01:04,360
+A abordagem que escolhi neste curso  a que voc sempre ver os projetos de reagem mais frequentemente.
+
+13
+00:01:04,450 --> 00:01:09,760
+ bastante bom com a diferenciao de contineres e componentes e depois com a loja.
+
+14
+00:01:09,940 --> 00:01:16,480
+Agora,  medida que sua loja cresce, voc pode adicionar mais e mais aes e reduzir ou cai e voc
+
+15
+00:01:16,480 --> 00:01:22,510
+notar que alguns de seus arquivos redutores se referem a algum recipiente e outros reduzem Faas para outro recipiente.
+
+16
+00:01:22,510 --> 00:01:30,910
+cada recipiente e, em seguida, apenas adicione o redutor e as aes para o recipiente dado a essa loja.
+
+17
+00:01:31,270 --> 00:01:39,060
+Por essa razo e uma estrutura de projeto alternativa, voc poderia criar uma subpasta de armazenamento em
+
+18
+00:01:39,100 --> 00:01:45,010
+E se voc tivesse mais recipientes, cada pasta de continer tinha uma pasta de loja, no
+
+19
+00:01:45,010 --> 00:01:50,560
+teria essa pasta de loja global e voc teria muitas aes em redutores para cada
+
+20
+00:01:50,560 --> 00:01:54,140
+continer que voc ainda combina em seu ndice jazz Faldo.
+
+21
+00:01:54,160 --> 00:01:55,970
+Ento, esta  uma alternativa.
+
+22
+00:01:56,050 --> 00:02:02,080
+Voc tambm pode misturar isso com uma loja global para algumas operaes globais ou compartilhadas que voc pode precisar em todos
+
+23
+00:02:02,460 --> 00:02:08,240
+os lugares. O Deaderick  algo que pode encontrar humano e onde voc pode ler muitos artigos com muitas opinies.
+
+24
+00:02:08,440 --> 00:02:11,950
+Encontre a abordagem que voc gosta para muitos projetos.
+
+25
+00:02:11,950 --> 00:02:16,800
+A abordagem mostrada aqui com uma pasta central da loja deve estar bem.
+
+26
+00:02:16,870 --> 00:02:20,810
+Mas esteja ciente de que voc pode se desviar disso quando necessrio.
+

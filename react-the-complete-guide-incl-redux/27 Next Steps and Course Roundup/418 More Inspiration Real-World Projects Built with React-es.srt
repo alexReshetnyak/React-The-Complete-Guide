@@ -1,0 +1,68 @@
+1
+00:00:01,950 --> 00:00:05,170
+En el ltimo video echamos un vistazo a los reactrocks. com, ahora quiero
+
+2
+00:00:05,250 --> 00:00:09,780
+guiarte a esta bsqueda de Google, construir con reaccionar.
+
+3
+00:00:09,810 --> 00:00:16,560
+Ahora, esto puede sonar estpido, pero si lo miras, encontrars un enlace oficial para el repositorio oficial de
+
+4
+00:00:16,560 --> 00:00:22,850
+reacciones donde puedes encontrar proyectos que estn usando reaccionar y puedes mirar a travs de esa lista.
+
+5
+00:00:22,870 --> 00:00:28,710
+Ahora, si hace clic en uno de estos proyectos, se le redirigir a la pgina, no al cdigo fuente.
+
+6
+00:00:28,710 --> 00:00:35,160
+An as, cuando habl de practicar eso, esto puede darte algunas ideas sobre lo que puedes construir porque dado que todo
+
+7
+00:00:35,160 --> 00:00:38,440
+lo que est aqu est construido con reaccin, bueno, ciertamente no
+
+8
+00:00:38,490 --> 00:00:42,260
+puedes encontrar una excusa de que no puedas hacerlo con la reaccin.
+
+9
+00:00:42,540 --> 00:00:47,700
+As que definitivamente sintete libre de jugar por aqu y profundizar en estos proyectos para tener una idea de lo
+
+10
+00:00:47,700 --> 00:00:48,540
+que podras construir.
+
+11
+00:00:48,630 --> 00:00:54,380
+Tambin encontrar ms sitios cuando busque construir con reaccionar, como madewithreact. com, tambin puede verificar esto y
+
+12
+00:00:54,570 --> 00:01:00,080
+luego encontrar algunos proyectos all que puede inspeccionar y all tambin debe
+
+13
+00:01:00,080 --> 00:01:03,050
+encontrar el cdigo fuente para el proyecto.
+
+14
+00:01:03,060 --> 00:01:09,690
+De modo que, una vez ms, es otra forma de practicar reaccionar y profundizar en los proyectos de otras personas
+
+15
+00:01:09,690 --> 00:01:11,790
+para aprender cmo puede mejorar su
+
+16
+00:01:11,790 --> 00:01:15,300
+cdigo, sin embargo, las personas resuelven ciertos problemas y as sucesivamente.
+
+17
+00:01:15,330 --> 00:01:21,940
+As que construye con reaccionar, otro gran recurso para aprender ms sobre reaccionar y descubrir cmo funciona.
+

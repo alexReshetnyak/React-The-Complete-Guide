@@ -1,0 +1,224 @@
+1
+00:00:02,220 --> 00:00:06,630
+W ostatnim wykadzie wykonalimy switchNameHandler po jednym klikniciu.
+
+2
+00:00:06,690 --> 00:00:09,370
+Teraz chcemy manipulowa stanem za jednym klikniciem,
+
+3
+00:00:09,780 --> 00:00:18,450
+wic skomentuj t instrukcj logu konsoli i moemy po prostu to zrobi. state docierajc do tej wasnoci pastwowej tutaj i jak ju wspomniaem,
+
+4
+00:00:18,450 --> 00:00:19,590
+bdzie dziaa tylko
+
+5
+00:00:19,710 --> 00:00:22,870
+wtedy, gdy uyje si tej skadni, w przeciwnym
+
+6
+00:00:22,890 --> 00:00:29,450
+razie nie odniesie si tutaj do klasy, a zatem nie bdzie w stanie osign tej waciwoci
+
+7
+00:00:29,560 --> 00:00:39,090
+stanu, ale tutaj bdzie dziaa. Wic to. stan. osoby wtedy moe uzyska dostp do osoby pierwszej
+
+8
+00:00:39,090 --> 00:00:41,170
+i ustawi nazw Maximillian, moje pene imi.
+
+9
+00:00:41,250 --> 00:00:45,360
+Zachowajmy to i zobaczmy, co si stanie, jeli wykonamy ten kod,
+
+10
+00:00:45,570 --> 00:00:51,300
+otrzymamy ju ostrzeenie, ale zignorujmy je teraz, a my klikniemy Przecz nazw nic si nie zmienia,
+
+11
+00:00:51,300 --> 00:00:53,110
+Wci bdziemy widzie Max tutaj.
+
+12
+00:00:53,520 --> 00:01:01,110
+Jak ju powiedziaem, otrzymujemy ostrzeenie na ten temat, nie powinnimy mutowa, co oznacza zmian stanu
+
+13
+00:01:01,110 --> 00:01:02,000
+bezporednio w
+
+14
+00:01:02,160 --> 00:01:07,050
+ten sposb, reagowanie nie rozpozna tego i nie podejmie tej
+
+15
+00:01:07,140 --> 00:01:09,720
+zmiany, wic nie rb tego.
+
+16
+00:01:09,720 --> 00:01:17,910
+Zamiast tego uyj specjalnej metody reagowania daje ci, bdziesz mia do niej dostp, a nastpnie ustawiany stan,
+
+17
+00:01:17,910 --> 00:01:22,700
+nie zdefiniowalimy tej metody, ale pamitaj, e rozszerzamy komponent i
+
+18
+00:01:22,920 --> 00:01:29,820
+jest to udostpniane przez bibliotek reagowania, a obiekt skadowy si dzieje mie ustawion metod
+
+19
+00:01:29,850 --> 00:01:30,760
+stanu.
+
+20
+00:01:31,130 --> 00:01:38,700
+Jest to metoda, ktra pozwala nam aktualizowa t specjaln waciwo stanu tutaj, a nastpnie zapewnia, e
+
+21
+00:01:38,790 --> 00:01:47,880
+reaguje ona na informacje o tej aktualizacji i aktualizuje dom. Ustaw stan przyjmuje obiekt jako argument i
+
+22
+00:01:48,330 --> 00:01:54,290
+spowoduje poczenie tego, co tutaj zdefiniujemy, z naszym istniejcym stanem.
+
+23
+00:01:54,300 --> 00:02:03,660
+Jeli wic tutaj ustawi osoby na zaktualizowan tablic, scal to z istniejcymi danymi.
+
+24
+00:02:03,790 --> 00:02:13,630
+Gdybymy mieli tutaj jaki inny stan, ktry jest jak inn wartoci, to by si nie dotkno, nawet
+
+25
+00:02:13,630 --> 00:02:15,670
+gdybymy tylko aktualizowali osoby.
+
+26
+00:02:15,850 --> 00:02:16,990
+Nie wiem, co mam na
+
+27
+00:02:16,990 --> 00:02:17,950
+myli, pozwl, e ci poka.
+
+28
+00:02:18,190 --> 00:02:26,590
+Kopiuj osoby i zasadniczo dodajemy to jako waciwo do obiektu, ktry zamierzam wykorzysta jako moj
+
+29
+00:02:26,590 --> 00:02:27,550
+aktualizacj tutaj.
+
+30
+00:02:27,580 --> 00:02:37,240
+Mwi wic, e ten stan zestawu i stanu przyjmuje ten nowy obiekt, w ktrym aktualizuj moje osoby,
+
+31
+00:02:37,240 --> 00:02:45,410
+gdzie zmieniam tylko pierwsz osob, a moe zmienimy take Stephanie, zmiemy jej wiek na 27.
+
+32
+00:02:45,440 --> 00:02:54,850
+Teraz, co zrobimy, co zrobi dla nas reakcja, to spojrzy na nasz stan i zobaczy, ktra cz tego jest nadrzdna,
+
+33
+00:02:54,850 --> 00:02:56,770
+zmieniamy ludzi, nie odrzucimy
+
+34
+00:02:56,860 --> 00:03:06,060
+innego stanu, ale po prostu poczymy stary stan z nowym. Zastpimy osoby, poniewa jasno okrelamy now wersj osb tutaj,
+
+35
+00:03:06,120 --> 00:03:10,340
+ale pozostawiamy inne pastwo nietknite, poniewa nie mwimy
+
+36
+00:03:10,480 --> 00:03:16,020
+tutaj nic o tym i nie odrzucimy go, co oczywicie jest
+
+37
+00:03:16,040 --> 00:03:17,030
+dobre, nie
+
+38
+00:03:17,050 --> 00:03:18,520
+t chcesz zaktualizowa
+
+39
+00:03:18,550 --> 00:03:23,410
+wszystko o swoim stanie, kiedy chcesz zmieni tylko drobn rzecz
+
+40
+00:03:23,410 --> 00:03:25,250
+na ten temat.
+
+41
+00:03:25,330 --> 00:03:32,240
+A wic zobaczmy, co si stanie, jeli zapiszemy ten plik. Jeli teraz go zapiszemy i ponownie
+
+42
+00:03:32,230 --> 00:03:38,360
+zaadujemy aplikacj, klikn nazw przecznika, zobacz Max i obejrzyj tam 26 lat.
+
+43
+00:03:38,550 --> 00:03:47,910
+Widzisz to? To Maximillian i 27 lat. Teraz dom zosta zaktualizowany, poniewa reaguje, e
+
+44
+00:03:47,910 --> 00:03:52,500
+zmienia si stan naszej aplikacji i jest to naprawd wyjtkowa sprawa.
+
+45
+00:03:52,530 --> 00:03:57,650
+Nie ma wielu rzeczy, ktre mogyby zareagowa na aktualizacj domeny,
+
+46
+00:03:57,660 --> 00:04:01,480
+tak naprawd s tylko dwa, zmieniajce si stany
+
+47
+00:04:02,040 --> 00:04:05,550
+i co jeszcze mona ju zobaczy w
+
+48
+00:04:06,440 --> 00:04:08,780
+akcji, rekwizyty. Zmieniamy stan, to
+
+49
+00:04:08,810 --> 00:04:16,190
+jest mie, ale pamitaj, e to, co faktycznie produkujemy dla kadej osoby, jest zdefiniowane w tym komponencie osoby i
+
+50
+00:04:16,640 --> 00:04:18,580
+tam nie uywamy stanu i
+
+51
+00:04:18,740 --> 00:04:23,390
+jak ju powiedziaem, nie moemy go tam uy, poniewa uywa tej funkcji skadni.
+
+52
+00:04:23,990 --> 00:04:27,440
+Tutaj uywamy rekwizytw i to jest
+
+53
+00:04:27,440 --> 00:04:32,690
+to, na co reaguj zegarki. Jeli zmiany stanu lub rekwizyty
+
+54
+00:04:32,720 --> 00:04:39,290
+ulegn zmianie, zasadniczo analizuje kod, ktry ju wyrenderowa, do dom i kod, ktry
+
+55
+00:04:39,290 --> 00:04:45,290
+teraz wyrenderowaby, gdyby mia ponownie renderowa wszystko. A nastpnie aktualizuje istniejc domen we wszystkich miejscach, w ktrych musi
+
+56
+00:04:45,290 --> 00:04:53,600
+zaktualizowa, aby odzwierciedli nowy stan i rekwizyty. Nowy stan w aplikacji. Js, nowe rekwizyty osobicie. js.
+

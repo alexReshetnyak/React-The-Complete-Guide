@@ -1,0 +1,212 @@
+1
+00:00:02,050 --> 00:00:05,930
+In the last lecture we learn how to use nested routes.
+
+2
+00:00:05,950 --> 00:00:13,390
+Now you might have noticed one thing maybe even earlier, when we are on a given post and we click on
+
+3
+00:00:13,390 --> 00:00:21,170
+a different post, we don't actually load that though you can see in the URL that the ID changes.
+
+4
+00:00:21,460 --> 00:00:26,110
+So it is registering the click but it isn't loading the new component.
+
+5
+00:00:26,140 --> 00:00:33,340
+Now the reason for this is that react router behind the scenes doesn't replace the component all the
+
+6
+00:00:33,340 --> 00:00:34,230
+time.
+
+7
+00:00:34,300 --> 00:00:41,950
+If you're loading a component on which you're already on, like we are here, it won't re-render the
+
+8
+00:00:41,950 --> 00:00:50,260
+whole component and therefore for the full post, componentDidMount isn't executed again, because why
+
+9
+00:00:50,260 --> 00:00:51,520
+would it do that?
+
+10
+00:00:51,520 --> 00:00:57,850
+The component itself didn't change it would be very inefficient to unmount it and remount it.
+
+11
+00:00:57,850 --> 00:01:05,380
+So since componentsDidMount isn't executed again though, we're not reaching out to the web again.
+
+12
+00:01:05,500 --> 00:01:12,490
+So to fix this what we should do is we should also implement componentDidUpdate to handle this case
+
+13
+00:01:12,780 --> 00:01:16,220
+because did update will be executed again.
+
+14
+00:01:16,600 --> 00:01:25,330
+And I will add a new method, loadData convenience method which will simply hold my old code here where
+
+15
+00:01:25,360 --> 00:01:32,710
+I reach out to the web and load my data because now I want to call this both in componentDidMount and
+
+16
+00:01:32,710 --> 00:01:39,670
+componentDidUpdate. So this loadData will be called in both lifecycle hooks so that I'm prepared
+
+17
+00:01:39,700 --> 00:01:46,520
+both for the first time this single post gets loaded and the second time.
+
+18
+00:01:46,540 --> 00:01:52,220
+Now however you see by the console log already, we have an infinite loop
+
+19
+00:01:52,300 --> 00:01:55,060
+so this is not the perfect solution,
+
+20
+00:01:55,060 --> 00:01:59,470
+I click on a link here and it keeps on loading again.
+
+21
+00:01:59,740 --> 00:02:04,640
+So definitely not what we want to do, what's wrong with our current setup here?
+
+22
+00:02:05,520 --> 00:02:13,540
+Well it's our check in loadData, we're checking if our id changed and we're checking for
+
+23
+00:02:13,620 --> 00:02:14,500
+this.props.id.
+
+24
+00:02:14,610 --> 00:02:21,210
+Now just as everywhere else here, this needs to be this.props.match.params.id, this.props.id will
+
+25
+00:02:21,210 --> 00:02:22,250
+never be set.
+
+26
+00:02:22,410 --> 00:02:27,930
+So we had the same infinite loop problem we had in the HTTP section because our check here wasn't working
+
+27
+00:02:27,930 --> 00:02:33,390
+anymore and we not only need to update this here, we need to update it everywhere in this component where
+
+28
+00:02:33,390 --> 00:02:40,230
+we reference this.props.id. Of course also here, otherwise deleting would never work,
+
+29
+00:02:40,230 --> 00:02:46,580
+and of course also down here where we check if the ID is set.
+
+30
+00:02:46,710 --> 00:02:53,220
+Now with all these changes in place, it would still not work because the ID we're retrieving from the
+
+31
+00:02:53,220 --> 00:02:57,480
+route params is actually going to be a string.
+
+32
+00:02:57,480 --> 00:03:05,270
+Now here we're checking for type equality too and the id stored in the loaded post actually is a number.
+
+33
+00:03:05,280 --> 00:03:12,060
+So we either have to convert these string IDs to a number or simply turn this into a check where we just
+
+34
+00:03:12,060 --> 00:03:14,260
+check for the value.
+
+35
+00:03:14,280 --> 00:03:17,780
+Now if we just check just for the value and we click a post,
+
+36
+00:03:17,910 --> 00:03:20,850
+now you see it's not loading all the time,
+
+37
+00:03:20,850 --> 00:03:26,080
+instead it only loads once but it correctly updates it when we switch to post.
+
+38
+00:03:26,250 --> 00:03:31,440
+Again the alternative would be to leave the type quality check but to convert this into a number by
+
+39
+00:03:31,440 --> 00:03:34,050
+adding a plus in front of it, for example.
+
+40
+00:03:34,050 --> 00:03:38,220
+Now again if I click on a post, we load it, we load it only once,
+
+41
+00:03:38,220 --> 00:03:40,010
+we don't enter the infinite loop.
+
+42
+00:03:40,320 --> 00:03:46,740
+This is an important fix to the full post component in general that we use match.params.id all over
+
+43
+00:03:46,870 --> 00:03:53,950
+in the component and it's also important to understand that you need to handle changes in componentDidUpdate
+
+44
+00:03:53,970 --> 00:04:01,800
+if the post component or if component in general is already loaded through routing because the
+
+45
+00:04:01,800 --> 00:04:07,350
+router will not unmount the old one and mount the same one again with different data,
+
+46
+00:04:07,350 --> 00:04:12,320
+it will reuse the old one and just adjust the route parameter,
+
+47
+00:04:12,390 --> 00:04:20,460
+it's your job to react to this new parameter and you can react to that in componentDidUpdate which
+
+48
+00:04:20,460 --> 00:04:23,010
+will be called because the props changed.
+
+49
+00:04:23,070 --> 00:04:29,840
+You receive a new props with a new match object with a new params object with the new ID,
+
+50
+00:04:29,850 --> 00:04:31,170
+this is what's happening here,
+
+51
+00:04:31,170 --> 00:04:32,830
+this is what we're taking advantage of
+
+52
+00:04:32,910 --> 00:04:34,530
+and this is important to understand
+
+53
+00:04:34,660 --> 00:04:36,780
+when working with nested routes.
+

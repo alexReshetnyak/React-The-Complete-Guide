@@ -1,0 +1,140 @@
+1
+00:00:02,240 --> 00:00:08,570
+Ento estou de volta ao projeto e quero implementar esses mtodos para que possamos ver como a nossa
+
+2
+00:00:08,600 --> 00:00:09,720
+aplicao se comporta.
+
+3
+00:00:10,220 --> 00:00:13,140
+E eu s tenho um componente com estado.
+
+4
+00:00:13,310 --> 00:00:20,900
+Diablo Sim, o Kyle  legal, mas para realmente ver como todos os componentes filho so re rendidos. Eu tambm quero transformar
+
+5
+00:00:20,900 --> 00:00:27,950
+alguns deles em componentes com estado para que possamos implementar esses mtodos do ciclo de vida porque isso  um takeaway
+
+6
+00:00:27,950 --> 00:00:32,010
+importante se voc precisar acessar um mtodo de ciclo de vida .
+
+7
+00:00:32,150 --> 00:00:35,000
+Voc precisa ter um componente com estado.
+
+8
+00:00:35,000 --> 00:00:38,440
+Ento, um componente para lidar com classe e por um componente extensivo.
+
+9
+00:00:38,480 --> 00:00:41,330
+Voc no pode fazer isso para componentes funcionais.
+
+10
+00:00:41,330 --> 00:00:48,020
+Ento, por causa desta priso alternativa e da priso em componentes de estado, eu faria rapidamente isso para ambos
+
+11
+00:00:48,020 --> 00:00:50,870
+e  super fcil de fazer na priso.
+
+12
+00:00:50,890 --> 00:00:54,540
+No outono passado, agora no temos mais pessoas no concerto.
+
+13
+00:00:54,680 --> 00:01:00,010
+Ns temos uma aula e a conveno  oferecer presente  o nome do componente, mas comeando
+
+14
+00:01:00,030 --> 00:01:01,850
+com um personagem de capital j.
+
+15
+00:01:01,880 --> 00:01:09,620
+Agora, esta classe deve se estender com o componente de palavra-chave extente que voc agora precisa importar como
+
+16
+00:01:09,620 --> 00:01:13,240
+uma importao nomeada de um componente re-agir como este.
+
+17
+00:01:13,280 --> 00:01:20,870
+Agora, uma classe, ento, tem um corpo de classe e, ento, teremos esse mtodo de renderizao que acabamos
+
+18
+00:01:20,870 --> 00:01:24,780
+de ver no diagrama e que todos ns vimos anteriormente.
+
+19
+00:01:24,800 --> 00:01:30,670
+Agora queremos retornar alguns j como X para a nossa lista.
+
+20
+00:01:30,830 --> 00:01:37,700
+E, como voc aprende, o suporte no est disponvel aqui, teremos esse suporte. Ento, onde voc use adereos, deve
+
+21
+00:01:37,700 --> 00:01:38,720
+ser esse adereos.
+
+22
+00:01:38,720 --> 00:01:47,900
+Agora, com isso, posso remover o cdigo l embaixo e simplesmente exportar pessoas com um P principal com o que rapidamente nos salvou
+
+23
+00:01:47,910 --> 00:01:51,050
+e vamos ver se nossa aplicao ainda funciona.
+
+24
+00:01:51,060 --> 00:01:53,110
+Verifique se o NPM ainda est em execuo.
+
+25
+00:01:53,460 --> 00:01:54,500
+E isso parece ser bom.
+
+26
+00:01:54,660 --> 00:01:59,550
+Ento, ns transformamos nosso componente de estado menos em um componente completo do estado.
+
+27
+00:01:59,550 --> 00:02:03,040
+Vamos fazer o mesmo para o componente pessoa l.
+
+28
+00:02:03,060 --> 00:02:10,800
+Criamos um nome de classe, pessoa com um componente de extenso P principal, que no precisamos importar como um
+
+29
+00:02:10,800 --> 00:02:18,450
+chamado implorado de reagir, definir o corpo para frente como classe e adicionar um mtodo de renderizao para ele.
+
+30
+00:02:18,740 --> 00:02:28,520
+E, em seguida, simplesmente retornar o J como atos como este e certifique-se de ajustar o padro.
+
+31
+00:02:28,530 --> 00:02:36,670
+Exporte para usar um P principal e perguntar antes do Propst no existir.
+
+32
+00:02:36,670 --> 00:02:40,030
+Este deve ser esse adereos.
+
+33
+00:02:40,030 --> 00:02:41,730
+Agora ajustamos isso tambm.
+
+34
+00:02:41,990 --> 00:02:45,020
+E aqui h mais dois.
+
+35
+00:02:45,050 --> 00:02:52,760
+Agora com isso que todos os adereos so trocados com isso, vamos implementar vidas como olhares na prxima palestra.
+

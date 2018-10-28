@@ -1,0 +1,240 @@
+1
+00:00:02,150 --> 00:00:05,740
+Being able to set a default configuration for axios is pretty awesome
+
+2
+00:00:05,840 --> 00:00:11,570
+but what if you actually don't want to use the same baseURL for your entire application but only for
+
+3
+00:00:11,570 --> 00:00:17,060
+parts of it and for other parts, you have a different URL and the same of course for the headers and
+
+4
+00:00:17,060 --> 00:00:17,960
+so on.
+
+5
+00:00:18,350 --> 00:00:24,770
+In such a case, you can do a half measure by creating a cool feature provided by axios which is called
+
+6
+00:00:24,860 --> 00:00:26,510
+instances.
+
+7
+00:00:26,510 --> 00:00:27,880
+Let me create a new file,
+
+8
+00:00:27,900 --> 00:00:30,430
+axios.js in the source folders
+
+9
+00:00:30,430 --> 00:00:38,780
+so on the same level as the index.js file. There, I will import axios from the axios package and
+
+10
+00:00:38,840 --> 00:00:45,650
+on axios, we can execute a special create function or method to be precise. I'll store the result in a
+
+11
+00:00:45,650 --> 00:00:47,870
+constant which I'll name instance
+
+12
+00:00:47,870 --> 00:00:49,850
+and again, I use axios create
+
+13
+00:00:49,850 --> 00:00:56,330
+now, this creates a instance of axios, like a copy of the axios object you could say and you can create
+
+14
+00:00:56,330 --> 00:00:58,340
+multiple such copies.
+
+15
+00:00:58,340 --> 00:01:05,150
+Now here, I'll pass the Javascript object to configure this and set the baseURL and I'll
+
+16
+00:01:05,150 --> 00:01:06,120
+grab that baseURL
+
+17
+00:01:06,130 --> 00:01:09,910
+I'll also set up in the root configuration.
+
+18
+00:01:10,100 --> 00:01:14,290
+Now in the axios.js file, I will simply set this up here
+
+19
+00:01:14,570 --> 00:01:17,780
+and now, I'll comment it out in the index.js file.
+
+20
+00:01:18,640 --> 00:01:23,660
+Now with that, we got one part of the whole thing but we're not finished.
+
+21
+00:01:23,890 --> 00:01:29,800
+We now get to our own axios instance and you could of course create multiple instances in different files
+
+22
+00:01:30,100 --> 00:01:32,580
+for different parts of your application,
+
+23
+00:01:32,590 --> 00:01:36,190
+I will show you how to use these instances in a second.
+
+24
+00:01:36,190 --> 00:01:43,140
+Now by default, the instance here will also assume the default set up here but overwrite anything which
+
+25
+00:01:43,140 --> 00:01:46,000
+it sets up in the instance itself.
+
+26
+00:01:46,000 --> 00:01:52,800
+For example, I could leave the authorization header being set up here
+
+27
+00:01:53,000 --> 00:01:55,620
+but I also want to set it up for my own instance.
+
+28
+00:01:55,790 --> 00:01:59,490
+So after creating the instance where we can assign the baseURL,
+
+29
+00:01:59,630 --> 00:02:07,160
+now for the headers, I replace axios.defaults with instance.defaults.headers.common and so on
+
+30
+00:02:07,220 --> 00:02:14,810
+and now here, I can set this to auth token from instance to overwrite it for all requests which are sent
+
+31
+00:02:14,810 --> 00:02:16,550
+using this instance.
+
+32
+00:02:16,680 --> 00:02:23,810
+Now important, we have to export this instance as the file default so that we can use it in other files and now let me show
+
+33
+00:02:23,810 --> 00:02:24,980
+you how to use it.
+
+34
+00:02:25,220 --> 00:02:30,390
+Let say the blog container where we use axios to get all the blog posts,
+
+35
+00:02:30,620 --> 00:02:37,390
+let's say we no longer import axios from the axios package but we set this axios variable here or
+
+36
+00:02:37,400 --> 00:02:45,890
+constant to our axios instance by pointing to that file where we export that instance as the default.
+
+37
+00:02:46,010 --> 00:02:49,780
+You can of course also name this axios instance or what ever you want,
+
+38
+00:02:50,000 --> 00:02:54,390
+I'll leave axios here so that I don't have to adjust my code down there.
+
+39
+00:02:54,650 --> 00:03:00,630
+Make sure to save all the files and if you then go back to your application, it should still work fine.
+
+40
+00:03:00,680 --> 00:03:08,720
+Now you will notice one thing though, you no longer see the interceptor printing the log for the request
+
+41
+00:03:08,720 --> 00:03:15,110
+which was sent and the response which was fetched, because the interceptor was set up for the global
+
+42
+00:03:15,110 --> 00:03:23,990
+axios object which we're not using anymore here in the blog container. If I now try to post some posts,
+
+43
+00:03:24,470 --> 00:03:31,200
+we even get an error because now the URL is incorrect because I remove the baseURL from the index.js
+
+44
+00:03:31,500 --> 00:03:31,880
+file,
+
+45
+00:03:31,880 --> 00:03:38,490
+I commented it out and put it into my instance which I'm only using in a blog container though, everywhere
+
+46
+00:03:38,510 --> 00:03:43,670
+else in my application I'm still importing the axios package itself.
+
+47
+00:03:44,060 --> 00:03:51,450
+So I could of course also comment the default baseURL in again so that we are able to use the axios
+
+48
+00:03:51,470 --> 00:03:57,650
+package with its default but also use our own instance in places where we want to use it in our application
+
+49
+00:03:57,920 --> 00:04:04,920
+to overwrite some of the settings for the places where we use that instance instead of the default object.
+
+50
+00:04:04,970 --> 00:04:07,060
+And now we get the best of both worlds,
+
+51
+00:04:07,130 --> 00:04:13,280
+we got our own instance configured for fetching all posts but for posting a post, we use the default
+
+52
+00:04:13,280 --> 00:04:14,200
+package again,
+
+53
+00:04:14,240 --> 00:04:17,550
+so that is why we also still see our interceptors working here.
+
+54
+00:04:17,840 --> 00:04:24,140
+And of course we could also add interceptors to our own instance, you can simply use instance.interceptors.request,
+
+55
+00:04:24,140 --> 00:04:31,130
+just like you did it for the default instance, the default axios object.
+
+56
+00:04:31,250 --> 00:04:37,880
+I wanted to show you this because being able to use instances can give you the flexibility you need
+
+57
+00:04:37,880 --> 00:04:39,260
+in your application,
+
+58
+00:04:39,260 --> 00:04:46,670
+it allows you to control in detail in which part of your app you want to use which default settings.
+
+59
+00:04:47,060 --> 00:04:53,360
+An awesome feature and something which rounds up this module where you hopefully got a good understanding
+
+60
+00:04:53,360 --> 00:05:01,370
+about how you sent HTTP requests and how this axios package can give you a lot of nice convenience features.
+

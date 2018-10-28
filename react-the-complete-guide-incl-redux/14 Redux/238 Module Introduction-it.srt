@@ -1,0 +1,44 @@
+1
+00:00:02,180 --> 00:00:07,900
+Benvenuti in questo modulo Questo  un modulo di base in questo corso.
+
+2
+00:00:07,940 --> 00:00:09,300
+Si tratta di redox.
+
+3
+00:00:09,410 --> 00:00:16,680
+Potresti gi sapere che redox viene spesso chiamato in Gabr con una reazione ma  una libreria indipendente di terze parti.
+
+4
+00:00:16,760 --> 00:00:24,480
+Si tratta di una libreria spesso utilizzata in progetti di re-act anche se per rendere la gestione dello stato la loro gestione dello
+
+5
+00:00:24,480 --> 00:00:26,010
+stato dell'applicazione pi semplice.
+
+6
+00:00:26,060 --> 00:00:30,540
+Perch la morte pu essere difficile in progetti di reazione pi complessi.
+
+7
+00:00:30,590 --> 00:00:37,070
+Abbiamo gi visto che nel nostro progetto del corso c'erano gi alcuni casi in cui dovevamo passare i
+
+8
+00:00:37,070 --> 00:00:42,800
+dati in giro per uno scopo queery dove la gestione dello stato diventava inutilmente difficile.
+
+9
+00:00:42,980 --> 00:00:49,940
+Di conseguenza, il modulo imparer a redox una soluzione a questo problema che pu aiutarci a rendere il
+
+10
+00:00:49,940 --> 00:00:51,360
+nostro stato ancora gestibile.
+
+11
+00:00:51,510 --> 00:00:58,950
+Per questo, prima, capiamo cos' esattamente lo stato e che cos' esattamente un redux e come funziona.
+

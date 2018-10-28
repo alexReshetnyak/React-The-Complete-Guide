@@ -1,0 +1,356 @@
+1
+00:00:02,200 --> 00:00:07,450
+Tempo para adicionar algum controle para que um usurio possa realmente controlar quais ingredientes
+
+2
+00:00:07,480 --> 00:00:14,830
+um hamburguer deve ter ou no deve ter e para isso precisamos adicionar os controles em negrito e vamos adicionar
+
+3
+00:00:14,830 --> 00:00:21,630
+este componente na pasta de hambrguer ou adicionar uma nova subpasta que todos Controles de construo de nomes.
+
+4
+00:00:21,730 --> 00:00:26,930
+E eu vou adicionar um arquivo de inicializao com js gerenciado.
+
+5
+00:00:26,980 --> 00:00:35,830
+Agora, os controles de compilao sero um componente funcional para que ambos os controles sejam uma funo que
+
+6
+00:00:35,830 --> 00:00:40,020
+receba adereos e que retornar algum GSX no final.
+
+7
+00:00:40,030 --> 00:00:48,310
+Portanto,  claro que tambm precisamos importar reac de reagir e podemos ento exportar a funo de
+
+8
+00:00:48,340 --> 00:00:50,520
+controle de tal como padro.
+
+9
+00:00:50,530 --> 00:00:54,420
+Agora, como devemos construir controles, parece.
+
+10
+00:00:54,520 --> 00:00:56,500
+Agora  claro que o estudo sempre depende de voc.
+
+11
+00:00:56,500 --> 00:01:03,370
+Eu quero ter uma div que eu usarei para dar a essa rea um estilo e l eu quero ter meus
+
+12
+00:01:03,520 --> 00:01:04,970
+vrios controles de compilao.
+
+13
+00:01:05,070 --> 00:01:08,530
+Agora vamos comear com o estilo dessa rea.
+
+14
+00:01:08,800 --> 00:01:17,790
+Para isso, criei um novo arquivo com controle C S S criado e ele adicionar controles de compilao.
+
+15
+00:01:18,070 --> 00:01:18,600
+Com licena.
+
+16
+00:01:18,610 --> 00:01:21,490
+O seguinte deve ser chamado de ambos os controles tambm.
+
+17
+00:01:21,490 --> 00:01:27,790
+Assim como J como arquivo  plural, ento no C  asfalto eu adicionarei controles construdos.
+
+18
+00:01:27,790 --> 00:01:29,440
+Classe C S S.
+
+19
+00:01:29,640 --> 00:01:35,200
+E eu quero dar o controle da minha construo a uma largura de 100 por cento e, para
+
+20
+00:01:35,200 --> 00:01:38,250
+a cor para trs, escolhi uma linda cor laranja acastanhada.
+
+21
+00:01:38,260 --> 00:01:41,330
+C f 8 F para e.
+
+22
+00:01:41,620 --> 00:01:49,030
+Eu gosto dessa cor para ele na caixa Shelby Shelbox de exibio para posicionar todos esses controles de parafusos corretamente.
+
+23
+00:01:49,030 --> 00:01:54,290
+Eu configurarei o fluxo flexvel para Cullinan para posicion-los um no outro, ento em uma coluna em vez de
+
+24
+00:01:54,290 --> 00:01:55,110
+em uma linha.
+
+25
+00:01:55,630 --> 00:02:05,920
+Eu quero alinhar todo o texto no centro, eu quero dar a minha caixa uma pequena sombra de caixa apenas na parte inferior de
+
+26
+00:02:06,160 --> 00:02:11,010
+um pixel espalhado e justis excelente como uma cor de sombra.
+
+27
+00:02:11,220 --> 00:02:11,950
+Margem.
+
+28
+00:02:11,950 --> 00:02:19,860
+Auto e adicione um preenchimento que diz 10 pixels e 0 da esquerda e direita.
+
+29
+00:02:19,870 --> 00:02:21,140
+Porque o texto deve ser centrado.
+
+30
+00:02:21,150 --> 00:02:24,770
+De qualquer forma agora esta  a minha rea de controles de barco.
+
+31
+00:02:24,910 --> 00:02:30,490
+Claro que devemos adicionar algum contedo para a rea de controles de bola e eu quero ter
+
+32
+00:02:30,640 --> 00:02:31,870
+alguns controles de compilao.
+
+33
+00:02:31,870 --> 00:02:33,040
+Voc adivinhou.
+
+34
+00:02:33,040 --> 00:02:39,040
+Agora, na minha opinio, faz sentido terceirizar esses controles de compilao porque no  apenas um boto.
+
+35
+00:02:39,100 --> 00:02:44,840
+ um rtulo e, em seguida, dois botes e  basicamente um elemento reutilizvel voc.
+
+36
+00:02:44,980 --> 00:02:49,440
+Ento, transferi-lo para o seu prprio componente faz muito sentido.
+
+37
+00:02:49,480 --> 00:02:57,130
+Ento, dentro dos controles embutidos, todos adicionam a pasta de controle abobadada e, a partir da, o Jr controlado abobadado
+
+38
+00:02:57,370 --> 00:03:03,360
+cai e tudo pronto, o controle de compilao faz C-s como segue para o estilo.
+
+39
+00:03:03,580 --> 00:03:06,630
+Vamos comear no J, como segue.
+
+40
+00:03:06,750 --> 00:03:14,650
+importar reagir de acordo com o que voc sempre conhece e exportar o controle como o padro.
+
+41
+00:03:14,740 --> 00:03:23,670
+Controle de Bolt, este componente tambm ser uma funo que receber adereos e retornos de J, pois o X
+
+42
+00:03:23,680 --> 00:03:26,860
+Agora, temos que decidir como deve ser um controle de parafuso.
+
+43
+00:03:26,870 --> 00:03:34,900
+Agora usar um div como um invlucro ou um para o estilo e, em seguida, meu controle ousado deve, no final, ter uma
+
+44
+00:03:34,960 --> 00:03:37,900
+div que contm o texto para esse controle ousado.
+
+45
+00:03:37,900 --> 00:03:41,270
+Basicamente o texto o nome do Ingredion que eu quero adicionar.
+
+46
+00:03:41,590 --> 00:03:45,000
+Ento, eu quero produzir algo dinamicamente.
+
+47
+00:03:45,130 --> 00:03:49,990
+Vou receber um prompt para isso e eu quero nomear o rtulo.
+
+48
+00:03:50,020 --> 00:03:52,310
+Voc pode, claro, escolher qualquer nome que voc deseja.
+
+49
+00:03:52,310 --> 00:03:56,860
+Eu poderia nomear o rtulo do ingrediente o que voc precisar ao lado dele.
+
+50
+00:03:56,860 --> 00:03:58,780
+Existem apenas dois botes.
+
+51
+00:03:58,870 --> 00:04:03,350
+O primeiro boto , naturalmente, removendo um ingrediente por ltimo.
+
+52
+00:04:03,610 --> 00:04:09,130
+E ento eu vou duplicar para ter tambm um boto mais.
+
+53
+00:04:09,130 --> 00:04:13,940
+Agora eu tenho dois botes que me permitem remover e adicionar ingredientes.
+
+54
+00:04:13,960 --> 00:04:15,340
+Agora vou precisar de alguns.
+
+55
+00:04:15,330 --> 00:04:18,060
+C  solicitado que este seja o controle construdo para ficar bem.
+
+56
+00:04:18,100 --> 00:04:21,930
+Ento vamos para D. C. 's ass file e l.
+
+57
+00:04:21,970 --> 00:04:25,130
+Vamos adicionar o controle construdo.
+
+58
+00:04:25,150 --> 00:04:27,260
+Esta classe C  S.
+
+59
+00:04:27,360 --> 00:04:35,360
+Eu quero usar blocos flex para posicionar a div com o texto e os botes de fluxo flexvel sero escritos.
+
+60
+00:04:35,400 --> 00:04:36,660
+Ento, o padro.
+
+61
+00:04:37,050 --> 00:04:44,370
+Eu quero que voc os distribua com espao entre eles para que eles se mantenham distanciados um do outro
+
+62
+00:04:44,410 --> 00:04:52,050
+e alinharemos todo o contedo no alinhamento igual para o mesmo nome e atribuirei uma margem de cinco pixels de
+
+63
+00:04:52,130 --> 00:04:58,680
+cima para baixo para que haja algum espao entre os controles de parafusos individuais, mas nenhum zero
+
+64
+00:04:58,750 --> 00:05:02,550
+da esquerda para a direita agora no controle de bola.
+
+65
+00:05:02,550 --> 00:05:07,850
+Temos um boto,  claro, e o morcego deve estar em exibio.
+
+66
+00:05:08,310 --> 00:05:12,800
+Normalmente,  uma substituio inesquevel que  ser um boto de estilo de bloco.
+
+67
+00:05:14,120 --> 00:05:25,150
+Ou uma vez que voc herda o fundo e ajuste o preenchimento para 5 pixels de margem para zero ou 5 pixels com 80 pixels deve
+
+68
+00:05:25,360 --> 00:05:26,390
+ficar bem.
+
+69
+00:05:26,620 --> 00:05:36,970
+E a borda ser um pixel slido e que um 6 8 7 3 1 8 1 7 me desculpe, isso tambm  uma cor marrom.
+
+70
+00:05:37,510 --> 00:05:40,050
+Kirsner deve ser um ponteiro.
+
+71
+00:05:40,330 --> 00:05:45,040
+E eu quero remover esse contorno que voc possui por padro.
+
+72
+00:05:45,040 --> 00:05:50,290
+Agora, h mais estilos que podemos adicionar ao estilo do boto e todas as etiquetas.
+
+73
+00:05:50,290 --> 00:05:57,600
+Para encurtar isso eu vou anexar um arquivo com todos os stouts e voc pode simplesmente adicion-los abaixo aqui.
+
+74
+00:05:57,670 --> 00:06:01,630
+Na verdade, o arquivo anexado conter a caneta para todo esse arquivo.
+
+75
+00:06:01,630 --> 00:06:05,160
+Ento, voc pode simplesmente substituir tudo aqui com ele.
+
+76
+00:06:05,200 --> 00:06:09,570
+Todos esses so apenas estilos para se certificar de que temos o estilo de classe Q.
+
+77
+00:06:09,730 --> 00:06:14,820
+Menos e mais botes de forma diferente e at mesmo desativar botes.
+
+78
+00:06:15,130 --> 00:06:21,680
+Com isso, vamos voltar para a queda do javascript para reagir o cdigo pelo qual voc est tudo aqui, eu acho.
+
+79
+00:06:21,690 --> 00:06:28,160
+Ento, vamos agora importar este objeto de classes de nossa s. c. s, da seguinte forma, para que
+
+80
+00:06:28,160 --> 00:06:33,880
+possamos comear a us-los como aulas e vamos anexar uma classe ao nosso ano de diviso.
+
+81
+00:06:33,880 --> 00:06:37,640
+Esta ser a classe de controle de compilao.
+
+82
+00:06:37,750 --> 00:06:42,620
+Eu tambm preciso de uma classe para o meu label Def aqui.
+
+83
+00:06:42,730 --> 00:06:51,220
+Eu usarei o Klaas e, em seguida, rotulo, esta foi uma das clusulas do C como voc apenas import-lo e os botes
+
+84
+00:06:51,280 --> 00:06:53,800
+todos que recebero nomes de classe.
+
+85
+00:06:53,800 --> 00:07:02,560
+O ltimo BOTTEN para o pai, eu tenho a ltima classe e o boto mais para este boto, voc
+
+86
+00:07:02,560 --> 00:07:07,870
+pode no adivin-lo, mas eu tenho esse ou boto como este.
+
+87
+00:07:07,940 --> 00:07:16,510
+Agora, um nico controle de parafuso  denominado o prximo passo que far na prxima conferncia  agora
+
+88
+00:07:16,510 --> 00:07:22,350
+criar uma matriz de tais controles de compilao no componente de controles construdos.
+
+89
+00:07:22,600 --> 00:07:25,090
+Vamos fazer isso juntos na prxima palestra.
+

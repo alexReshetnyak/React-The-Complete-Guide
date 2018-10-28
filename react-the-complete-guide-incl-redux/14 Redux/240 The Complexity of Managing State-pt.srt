@@ -1,0 +1,136 @@
+1
+00:00:02,150 --> 00:00:11,200
+A gesto do estado pode ser um reator muito complexo, timo para reagir s mudanas de estado e atualizar D-y em conformidade.
+
+2
+00:00:11,360 --> 00:00:16,450
+Mas gerenciar esse estado pode ficar muito difcil  medida que nosso aplicativo cresce.
+
+3
+00:00:16,490 --> 00:00:22,730
+Claro, a Riak nos fornece a propriedade do estado construda que usamos at agora, mas j podemos ver
+
+4
+00:00:22,730 --> 00:00:29,750
+em nosso corretor construir um projeto que passar os ingredientes do componente para o componente B pode ser muito difcil.
+
+5
+00:00:29,930 --> 00:00:33,230
+E ns tivemos que usar parmetros de consulta de roteamento para morto.
+
+6
+00:00:33,440 --> 00:00:36,840
+Certamente uma soluo alternativa, mas no muito elegante.
+
+7
+00:00:36,860 --> 00:00:39,750
+Portanto, o gerenciamento do estado deve ser mais fcil.
+
+8
+00:00:39,770 --> 00:00:45,980
+ um exemplo clssico, nada de consentimento especial ou esta aplicao que no  a que construmos.
+
+9
+00:00:46,160 --> 00:00:47,870
+O exemplo do Burga Buller
+
+10
+00:00:47,980 --> 00:00:54,090
+ um aplicativo com o componente da aplicao raiz e, em seguida, um usurio est em um recipiente de produto e alguns subcomponentes.
+
+11
+00:00:54,440 --> 00:01:00,890
+Agora, digamos que temos autenticao adicionada a esta aplicao para que os usurios possam se inscrever e entrar no X
+
+12
+00:01:00,890 --> 00:01:06,800
+no painel e na rea de usurios que precisamos para verificar se o usurio est logado e apenas conceder
+
+13
+00:01:06,800 --> 00:01:08,670
+acesso se isso resolver um VERDADEIRO.
+
+14
+00:01:08,930 --> 00:01:14,570
+Agora verificar isso no  muito difcil porque provavelmente estamos gerenciando o status de autenticao
+
+15
+00:01:14,590 --> 00:01:16,540
+e o componente off l.
+
+16
+00:01:16,550 --> 00:01:22,130
+de alguma forma precisamos criar uma conexo entre o componente desligado e um componente de carto aqui.
+
+17
+00:01:22,130 --> 00:01:28,160
+O problema agora  o que se todos ns precisamos dessas informaes em uma rea totalmente diferente do
+
+18
+00:01:28,160 --> 00:01:34,670
+nosso aplicativo, como no Bergere Buller, onde precisamos de ingredientes em uma rea totalmente diferente no check-out, se precisarmos
+
+19
+00:01:34,700 --> 00:01:35,720
+de informaes, ns
+
+20
+00:01:35,900 --> 00:01:42,260
+Bem, isso  super complexo e uma cadeia muito longa de pais de suporte ou de Querrey ou,
+
+21
+00:01:42,260 --> 00:01:44,240
+no entanto, conseguimos transmitir dados.
+
+22
+00:01:44,300 --> 00:01:50,780
+ uma pena que isso seja difcil porque, no final, estamos escrevendo o javascript certo e estamos com
+
+23
+00:01:50,840 --> 00:01:54,830
+um arquivo javascript includo como sada ou um par de pacotes.
+
+24
+00:01:54,830 --> 00:01:56,300
+Se estamos usando o carregamento lento.
+
+25
+00:01:56,630 --> 00:02:03,560
+Ento, no final, por que no podemos definir apenas uma varivel global, que  um objeto javascript que armazena todo o
+
+26
+00:02:03,560 --> 00:02:07,130
+nosso estado de aplicao e que podemos acessar de qualquer lugar.
+
+27
+00:02:07,130 --> 00:02:10,630
+Por que temos que tomar a rota complicada com parmetros de consulta.
+
+28
+00:02:10,730 --> 00:02:18,770
+Se tudo o que fazemos  apenas usar o javascript no final, o motivo  que reage o sistema de reatividade no reage
+
+29
+00:02:18,800 --> 00:02:21,940
+s mudanas em algumas variveis locais que voc definiu.
+
+30
+00:02:22,280 --> 00:02:23,790
+E  bom que no.
+
+31
+00:02:23,840 --> 00:02:25,610
+Isso o torna to eficiente.
+
+32
+00:02:26,030 --> 00:02:33,320
+ter Isso ir armazenar ainda parece muito interessante e  exatamente sobre o que o redux  como voc aprender.
+
+33
+00:02:33,350 --> 00:02:34,150
+No entanto,
+
+34
+00:02:34,340 --> 00:02:40,390
+Ento, vamos dar uma olhada no redox antes de Denne implementar para ver como ele funciona em ao.
+

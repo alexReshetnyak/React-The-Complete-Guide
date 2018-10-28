@@ -1,0 +1,160 @@
+1
+00:00:02,210 --> 00:00:06,180
+Entonces, cmo funciona la autenticacin en aplicaciones de una sola pgina?
+
+2
+00:00:06,200 --> 00:00:10,390
+Tenemos un servidor y tenemos nuestra aplicacin de una sola pgina ejecutndose en el navegador.
+
+3
+00:00:10,670 --> 00:00:15,980
+Ahora la aplicacin de una sola pgina enva los datos de autenticacin al servidor porque probablemente tenemos un
+
+4
+00:00:15,980 --> 00:00:18,130
+registro o una pgina de inicio de
+
+5
+00:00:18,140 --> 00:00:22,940
+sesin en nuestro SPA y, por lo tanto, obtenemos datos como la direccin de correo electrnico
+
+6
+00:00:23,120 --> 00:00:29,150
+y la contrasea y los enviamos al servidor para validarlos. est ah porque obviamente esa lgica siempre tiene que suceder
+
+7
+00:00:29,150 --> 00:00:30,000
+en el servidor
+
+8
+00:00:30,050 --> 00:00:35,750
+y aqu tambin almacenamos nuestros datos persistentes, en la base de datos en el servidor y el servidor no
+
+9
+00:00:35,750 --> 00:00:38,730
+tiene que ser firebase como en nuestro proyecto, por supuesto.
+
+10
+00:00:38,750 --> 00:00:43,190
+Esto puede ser cualquier servidor, cualquier API relajante para ser precisos, esto es con lo
+
+11
+00:00:43,300 --> 00:00:49,520
+que generalmente nos comunicamos cuando usamos aplicaciones de una sola pgina. A continuacin, el servidor enva algo a cambio
+
+12
+00:00:49,520 --> 00:00:52,670
+y puede pensar que es una sesin, pero
+
+13
+00:00:52,910 --> 00:01:00,630
+como el servidor en un mundo SPA normalmente es una API tranquila sin estado, no recuperamos una sesin porque al
+
+14
+00:01:00,630 --> 00:01:05,630
+servidor no le importan los diferentes clientes que se conectan con l. .
+
+15
+00:01:05,630 --> 00:01:12,810
+En cambio, obtenemos un token, puedes pensar en ese token como un objeto javascript y codificarlo como json, los tokens
+
+16
+00:01:12,920 --> 00:01:16,410
+web json son la forma tpica de tokens que obtienes.
+
+17
+00:01:16,430 --> 00:01:21,800
+Por lo tanto, es un objeto javascript que al final se puede decir y este objeto javascript
+
+18
+00:01:21,800 --> 00:01:22,540
+ahora tiene
+
+19
+00:01:22,640 --> 00:01:29,270
+que almacenarse en el cliente, por ejemplo, en el almacenamiento local. Tambin podramos almacenarlo en nuestra tienda redux pero all se perder cada
+
+20
+00:01:29,270 --> 00:01:31,360
+vez que el usuario actualice la pgina.
+
+21
+00:01:31,370 --> 00:01:37,820
+Por lo tanto, normalmente utilizamos el almacenamiento local, ya que la pgina persiste y nos permite recuperar ese token, incluso
+
+22
+00:01:38,030 --> 00:01:44,440
+si el usuario se fue y revis nuestra pgina, para que podamos dejar al usuario conectado si lo deseamos.
+
+23
+00:01:44,660 --> 00:01:47,330
+Y para qu necesitamos esta ficha?
+
+24
+00:01:47,690 --> 00:01:52,070
+Bueno, imagina que estamos haciendo solicitudes a algn recurso protegido en el servidor, como
+
+25
+00:01:52,250 --> 00:01:58,610
+por ejemplo, intentamos cambiar nuestra contrasea o queremos crear una nueva publicacin en el blog, tales solicitudes, por supuesto, solo
+
+26
+00:01:58,610 --> 00:02:01,380
+estn permitidas para usuarios autenticados y dado que no
+
+27
+00:02:01,430 --> 00:02:06,340
+lo hacemos Constantemente verificamos el estado de autenticacin en el servidor, no tenemos sesin all.
+
+28
+00:02:06,650 --> 00:02:13,760
+Pasamos el token junto con las solicitudes a dichos recursos protegidos, ese token y eso es importante es creado por
+
+29
+00:02:13,760 --> 00:02:15,340
+el servidor y de
+
+30
+00:02:15,530 --> 00:02:21,590
+una manera que el servidor puede verificar si es un token vlido creado por el servidor o no.
+
+31
+00:02:21,740 --> 00:02:24,680
+Para que no podamos falsificar tal smbolo en el
+
+32
+00:02:24,770 --> 00:02:27,310
+cliente, no podemos crearlo all y enviarlo al
+
+33
+00:02:27,350 --> 00:02:28,850
+servidor, eso no funcionara.
+
+34
+00:02:28,910 --> 00:02:33,790
+Solo los tokens enviados por el servidor son aceptados en el servidor.
+
+35
+00:02:33,800 --> 00:02:40,040
+As que as es como nos autenticamos en solicitudes posteriores despus de recibir ese token y ese
+
+36
+00:02:40,040 --> 00:02:43,750
+es el patrn que vamos a implementar en este mdulo.
+
+37
+00:02:43,760 --> 00:02:49,020
+Ahora, como dije, utilizaremos Firebase aqu porque lo usamos como backend porque es muy fcil de
+
+38
+00:02:49,220 --> 00:02:54,830
+configurar, pero ese patrn va a ser el mismo sin importar qu back-end uses, siempre y cuando
+
+39
+00:02:54,830 --> 00:02:55,900
+sea una API relajante.
+
+40
+00:02:56,300 --> 00:03:00,010
+Entonces, cules son los ajustes necesarios en nuestra aplicacin?
+

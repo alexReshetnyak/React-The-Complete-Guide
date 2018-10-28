@@ -1,0 +1,396 @@
+1
+00:00:02,140 --> 00:00:08,000
+En la ltima conferencia, ajustamos el logotipo para que se vea bien tanto en la barra de herramientas como en el cajn Deeside.
+
+2
+00:00:08,230 --> 00:00:15,100
+Ahora ajustamos los elementos de navegacin para leer ahora y luego los elementos de negacin, especialmente los elementos individuales aqu,
+
+3
+00:00:15,210 --> 00:00:18,810
+solo comienzan a verse bien en los dispositivos de escritorio.
+
+4
+00:00:18,820 --> 00:00:21,880
+Ese es, por supuesto, el problema en los dispositivos mviles.
+
+5
+00:00:21,880 --> 00:00:23,650
+Nos deshacemos de ese aspecto de escritorio.
+
+6
+00:00:23,830 --> 00:00:28,600
+Pero en lugar de querer tener algunos elementos que simplemente se sientan uno debajo del otro y que no
+
+7
+00:00:28,600 --> 00:00:31,090
+tienen este borde en la parte inferior y as sucesivamente.
+
+8
+00:00:31,210 --> 00:00:37,240
+elementos de navegacin y lo har con consultas de medios y los elementos de navegacin nos ven como archivo.
+
+9
+00:00:37,270 --> 00:00:39,260
+As que tenemos que ajustar los
+
+10
+00:00:39,280 --> 00:00:46,600
+As que aqu quiero escribir esto en un telfono mvil de manera que mis clases base sean para dispositivos mviles y luego agregar
+
+11
+00:00:46,600 --> 00:00:50,990
+consultas de medios para que se vea bien en dispositivos ms grandes tambin.
+
+12
+00:00:51,040 --> 00:00:57,730
+Para lograr esto, primero agreguemos a este escritorio las consultas de Wise Media o solo los medios extrados en
+
+13
+00:00:57,730 --> 00:01:04,440
+realidad como todos los medios correctos y luego menwith para que el punto de corte aqu sea de 500 pxeles.
+
+14
+00:01:04,460 --> 00:01:07,360
+Pero, por supuesto, puedes elegir uno diferente ahora.
+
+15
+00:01:07,360 --> 00:01:13,650
+Copie todas las clases del vidente existente en ese medio Querrey porque antes escribimos para el escritorio.
+
+16
+00:01:13,660 --> 00:01:19,870
+clases para dispositivos ms amplios y ahora queremos ajustar estas clases bsicas para que se vean bien en dispositivos mviles.
+
+17
+00:01:19,870 --> 00:01:21,940
+As que definitivamente queremos utilizar estas
+
+18
+00:01:21,940 --> 00:01:27,970
+Esto, por ejemplo, incluye tener un margen de 10 pxeles desde la parte superior e inferior y desde cero hasta la parte superior y la derecha.
+
+19
+00:01:28,180 --> 00:01:31,400
+Entonces hay un espacio entre los correos.
+
+20
+00:01:31,440 --> 00:01:40,050
+Tambin quiero establecer el ancho ahora al 100 por ciento, pero no a la altura para ocultar, solo debe tomar la altura
+
+21
+00:01:40,050 --> 00:01:47,120
+que necesita desde una perspectiva de texto y la pantalla no tiene que ser flexible, la pantalla puede
+
+22
+00:01:47,120 --> 00:01:47,670
+bloquearse aqu.
+
+23
+00:01:48,460 --> 00:01:51,990
+Y tampoco necesito un artculo de lnea por ese motivo.
+
+24
+00:01:52,120 --> 00:01:57,580
+Ahora, para un enlace determinado, el color no debe ser blanco porque el fondo del cajn lateral es blanco.
+
+25
+00:01:57,760 --> 00:02:01,600
+Quiero usar un color marrn aqu y usar 8 F 5.
+
+26
+00:02:01,670 --> 00:02:08,770
+Ver para ver el color marrn que utilizamos antes de la creacin de textas, por supuesto, todava no est en la mejor prueba, no
+
+27
+00:02:08,770 --> 00:02:11,800
+el 100 por ciento, pero el ancho s lo es.
+
+28
+00:02:11,930 --> 00:02:17,010
+Tambin quiero asegurarme de que el tamao de la caja sea border borke, as que lo dejamos.
+
+29
+00:02:17,150 --> 00:02:18,530
+Pero no necesito el relleno.
+
+30
+00:02:18,530 --> 00:02:20,410
+No necesito bordear el fondo.
+
+31
+00:02:20,420 --> 00:02:24,410
+Sin embargo, esto puede ir y mostrar an se puede configurar para bloquear.
+
+32
+00:02:25,680 --> 00:02:31,010
+Ahora, para los elementos activos, no quiero configurar el color de fondo en marrn.
+
+33
+00:02:31,010 --> 00:02:36,000
+Quiero configurarlo para mostrar el color en su lugar, no el color de fondo, disclpeme por el color.
+
+34
+00:02:36,030 --> 00:02:39,420
+Entonces el color del texto y yo eliminaremos el color de fondo y el borde inferior.
+
+35
+00:02:39,450 --> 00:02:40,740
+Quiero tener algo de eso.
+
+36
+00:02:40,920 --> 00:02:45,840
+Y como siempre, por supuesto, eres libre de expresar la justicia de una manera que te parezca ms agradable.
+
+37
+00:02:45,840 --> 00:02:48,060
+Entonces estos son mis estilos de Mobot.
+
+38
+00:02:48,150 --> 00:02:54,420
+Ahora vamos a engaar a las configuraciones de estilo duplicadas que tenemos en dispositivos mviles y de escritorio, por ejemplo, el cuadro de borde de
+
+39
+00:02:54,420 --> 00:02:55,050
+tamao de caja.
+
+40
+00:02:55,050 --> 00:02:57,270
+Ya definimos esto en Mobile.
+
+41
+00:02:57,270 --> 00:03:03,240
+No necesitamos redefinirlo aqu porque las consultas de los medios se fusionan con las clusulas originales.
+
+42
+00:03:03,330 --> 00:03:09,360
+Por lo tanto, lo que establezcamos aqu generalmente est limitado y luego podemos anular las propiedades seleccionadas, pero no
+
+43
+00:03:09,360 --> 00:03:13,470
+es necesario sobrescribir el tamao del bloque porque quiere usar el mismo valor.
+
+44
+00:03:13,470 --> 00:03:20,220
+Usar los mismos valores aqu, pero tambin establecer el ancho aunque no use el ancho del
+
+45
+00:03:20,220 --> 00:03:26,570
+100 por ciento que configur en la configuracin mvil, aunque tambin anular la configuracin promedio.
+
+46
+00:03:26,610 --> 00:03:27,990
+As que esto se ve bien para m.
+
+47
+00:03:28,810 --> 00:03:34,720
+Para un enlace seleccionado aqu, ahora quiero establecer el color en blanco.
+
+48
+00:03:34,720 --> 00:03:36,200
+Entonces aqu est marrn.
+
+49
+00:03:36,220 --> 00:03:37,870
+Debera ser blanco para m.
+
+50
+00:03:37,870 --> 00:03:40,960
+La decoracin de texto ya est configurada en la configuracin mvil.
+
+51
+00:03:40,960 --> 00:03:43,330
+Altura y relleno que es importante para m.
+
+52
+00:03:43,420 --> 00:03:45,610
+Border Bawden es importante.
+
+53
+00:03:45,610 --> 00:03:48,160
+Tamao y visualizacin de la caja.
+
+54
+00:03:48,160 --> 00:03:53,450
+Ya tenemos esa configuracin aqu en la configuracin mvil para que podamos deshacernos de ella aqu.
+
+55
+00:03:53,770 --> 00:03:58,150
+Y para los enlaces activos y activos, todo debe configurarse porque tenemos un
+
+56
+00:03:58,150 --> 00:04:00,490
+estilo totalmente diferente para las longitudes mviles.
+
+57
+00:04:00,850 --> 00:04:03,400
+Vemoslo ahora y chale un vistazo.
+
+58
+00:04:03,460 --> 00:04:07,470
+Se ve bien, pero todava estn sentados uno al lado del otro.
+
+59
+00:04:07,480 --> 00:04:08,980
+La razn de esto est muerta.
+
+60
+00:04:08,980 --> 00:04:14,340
+Nuestros artculos de navegacin ven una lista de pedidos que envuelve los enlaces all.
+
+61
+00:04:14,410 --> 00:04:15,820
+Estamos usando Fluxbox.
+
+62
+00:04:15,880 --> 00:04:19,900
+Y eso lleva al elemento sentado uno al lado del otro por defecto.
+
+63
+00:04:19,900 --> 00:04:26,180
+No es un problema, solo tenemos que agregar aqu una consulta de medios con un minuto con 500 pxeles.
+
+64
+00:04:26,400 --> 00:04:33,990
+y establecer el flujo flexible para remar aqu porque tenga en cuenta que para m es igual para los dispositivos de escritorio.
+
+65
+00:04:33,990 --> 00:04:37,410
+Y ahora estoy configurando mi clase de elementos de navegacin
+
+66
+00:04:37,440 --> 00:04:39,840
+Entonces all deben sentarse uno al lado del otro.
+
+67
+00:04:40,110 --> 00:04:47,100
+Pero para los dispositivos mviles establecer un nuevo flujo de Cullom de Flack para que se coloquen uno
+
+68
+00:04:47,100 --> 00:04:48,170
+debajo del otro.
+
+69
+00:04:48,180 --> 00:04:54,350
+Ahora, si dices esto, vemos que los artculos estn apilados uno encima del otro en pantallas ms grandes.
+
+70
+00:04:54,360 --> 00:04:56,220
+Todava tenemos el viejo aspecto.
+
+71
+00:04:56,370 --> 00:05:02,430
+Tambin tenemos un par de problemas aqu por la forma en que el Briga distorsionado cuando se cambia solo se
+
+72
+00:05:02,520 --> 00:05:03,330
+debe al cambio.
+
+73
+00:05:03,330 --> 00:05:09,300
+Una vez que recargue y cargue la aplicacin, el usuario la ver bien pero tenemos problemas
+
+74
+00:05:09,300 --> 00:05:16,230
+aqu, por ejemplo, los elementos de navegacin son visibles en la barra de herramientas en pantallas ms pequeas.
+
+75
+00:05:16,230 --> 00:05:18,140
+Y, por supuesto, ese no debera ser el caso.
+
+76
+00:05:18,150 --> 00:05:22,190
+No quiero tener los elementos de navegacin en la barra de herramientas en pantallas pequeas.
+
+77
+00:05:22,350 --> 00:05:24,450
+Tengo que cyder por eso.
+
+78
+00:05:24,570 --> 00:05:30,740
+Tambin quiero tener un poco ms de espacio entre el logotipo y mis elementos de navegacin aqu en el mvil.
+
+79
+00:05:31,050 --> 00:05:40,570
+en la imagen donde incluyo el logo y los elementos de navegacin, agrego primero un margen al final del logo
+
+80
+00:05:40,570 --> 00:05:48,670
+para que tengamos espacio entre los elementos de navegacin que estn debajo tal vez 42 pxeles.
+
+81
+00:05:49,420 --> 00:05:53,590
+Para arreglar esto, regrese a mi aplicacin y all,
+
+82
+00:05:54,070 --> 00:05:55,420
+As que debera verse mejor.
+
+83
+00:05:55,450 --> 00:05:55,910
+S.
+
+84
+00:05:56,320 --> 00:06:02,560
+Y para eliminar los elementos de navegacin en la barra de herramientas, en realidad necesitamos agregar una
+
+85
+00:06:02,800 --> 00:06:07,210
+nueva C-s S-clase auxiliar que todo lo agregue al elemento de envoltura.
+
+86
+00:06:07,420 --> 00:06:17,120
+Y agregu una consulta inmediata, por lo que esta consulta de medios ahora se verificar con el mximo con 499 pxeles.
+
+87
+00:06:17,170 --> 00:06:24,910
+Entonces, si estamos en un dispositivo mvil, entonces agregar mi escritorio solo como clase S y all
+
+88
+00:06:24,910 --> 00:06:27,140
+establecer la visualizacin en Norm.
+
+89
+00:06:27,250 --> 00:06:30,700
+No tengo esta clase para el caso predeterminado.
+
+90
+00:06:30,700 --> 00:06:36,550
+Por lo tanto, para dispositivos que tienen ms de 500 pxeles, pero eso significa bsicamente que toma el
+
+91
+00:06:36,550 --> 00:06:41,140
+estilo predeterminado que es el bloque de visualizacin y, por lo tanto, se podr ganar.
+
+92
+00:06:41,350 --> 00:06:44,140
+As que solo sobrescribo esto para dispositivos pequeos.
+
+93
+00:06:44,140 --> 00:06:50,980
+Ahora puedo usar esta nueva clase en una barra de herramientas y puedo agregarla aqu al elemento nav en el elemento nav.
+
+94
+00:06:51,100 --> 00:06:53,600
+Solo puedo usar el escritorio de Klaas.
+
+95
+00:06:53,710 --> 00:07:00,180
+Y ahora, en dispositivos ms pequeos, los elementos de navegacin deberan desaparecer y ver el logotipo aqu.
+
+96
+00:07:00,190 --> 00:07:03,810
+Pero creo que se ve bastante bien, as que tal vez lo dejemos aqu.
+
+97
+00:07:03,940 --> 00:07:10,580
+Ahora si tenemos un cajn lateral que se ve mejor, se vera an mejor si tuviera un fondo.
+
+98
+00:07:10,720 --> 00:07:13,980
+Y si pudiramos abrirlo y cerrarlo dinmicamente.
+
+99
+00:07:14,230 --> 00:07:16,560
+Estos son los pasos en los que trabajaremos a continuacin.
+

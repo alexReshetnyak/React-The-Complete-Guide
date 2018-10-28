@@ -1,0 +1,52 @@
+1
+00:00:02,170 --> 00:00:04,160
+Entonces, qu es el paquete web?
+
+2
+00:00:04,410 --> 00:00:12,770
+Webpack es un paquete pero en realidad es ms que eso, un bundler solo concatara los archivos, el paquete web lo
+
+3
+00:00:12,820 --> 00:00:13,710
+hace, pero
+
+4
+00:00:13,840 --> 00:00:20,860
+tambin le permite optimizar sus archivos y conectar varios complementos y los llamados cargadores para tambin transformar sus
+
+5
+00:00:21,190 --> 00:00:23,260
+archivos y para ejemplo transpile
+
+6
+00:00:23,290 --> 00:00:30,520
+javascript de prxima generacin a javascript de la generacin actual. Pero en esencia, la idea
+
+7
+00:00:30,670 --> 00:00:40,620
+detrs de webapck es tener mltiples javascript, css, imagenes, cualquier archivo y agruparlos.
+
+8
+00:00:40,930 --> 00:00:48,220
+Analiza las conexiones entre estos archivos como las importaciones y luego agrupa todo, le permite optimizarlo
+
+9
+00:00:48,220 --> 00:00:49,410
+y, como dije,
+
+10
+00:00:49,540 --> 00:00:57,160
+tambin le permite ejecutar una lgica adicional para transformar su cdigo o hacer lo que tenga que
+
+11
+00:00:57,160 --> 00:00:58,830
+hacer con l.
+
+12
+00:00:58,870 --> 00:01:06,450
+Esto es lo que hace el paquete web y el paquete web es el estndar de facto para configurar proyectos en estos das.
+
+13
+00:01:06,760 --> 00:01:12,640
+Es por eso que tambin lo usaremos en este mdulo para configurar nuestro propio flujo de trabajo y proyecto.
+

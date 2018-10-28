@@ -1,0 +1,64 @@
+1
+00:00:02,160 --> 00:00:09,840
+Ento, ao longo das ltimas palestras, ns movemos todo o cdigo assncrono e eu posso remover a importao de axios do arquivo
+
+2
+00:00:09,840 --> 00:00:12,100
+do criador da ao do pedido.
+
+3
+00:00:12,210 --> 00:00:18,300
+Ento, movemos todo o cdigo assncrono e at mesmo o cdigo de efeito colateral sncrono dos arquivos
+
+4
+00:00:18,300 --> 00:00:21,270
+do criador de aes para as nossas sagas.
+
+5
+00:00:21,660 --> 00:00:26,900
+A vantagem entre aspas porque no  necessariamente melhor, depende
+
+6
+00:00:26,940 --> 00:00:28,700
+do que voc preferir.
+
+7
+00:00:28,920 --> 00:00:33,990
+Ento, a vantagem pode ser que nossos criadores de aes so todos muito enxutos,
+
+8
+00:00:34,110 --> 00:00:36,030
+eles realmente fazem apenas uma
+
+9
+00:00:36,030 --> 00:00:37,600
+coisa, eles criam uma
+
+10
+00:00:37,650 --> 00:00:45,750
+ao que eles no executam nenhum outro cdigo e todo o nosso cdigo de efeitos colaterais, ento o cdigo no est relacionado
+
+11
+00:00:45,810 --> 00:00:49,250
+a reduzir ou s aes est em nossas sagas.
+
+12
+00:00:49,260 --> 00:00:55,500
+ aqui que temos nossas chamadas de API, nossas chamadas de armazenamento local, nas quais podemos at mudar
+
+13
+00:00:55,530 --> 00:00:57,470
+a rota em que estamos atualmente.
+
+14
+00:00:57,470 --> 00:01:03,240
+Esse  um padro que voc no precisa usar, mas leva a criadores de ao mais enxutos.
+
+15
+00:01:03,240 --> 00:01:10,650
+Agora, h algumas outras coisas que eu quero mostrar a voc com a saga do redux, que voc tambm deve
+
+16
+00:01:11,160 --> 00:01:15,430
+estar ciente e que deve permitir que voc construa aplicativos realmente poderosos.
+

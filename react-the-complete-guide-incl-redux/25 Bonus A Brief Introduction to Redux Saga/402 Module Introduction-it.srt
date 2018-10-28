@@ -1,0 +1,64 @@
+1
+00:00:02,360 --> 00:00:09,290
+Benvenuto in questo modulo bonus. In questo corso, ovviamente, abbiamo utilizzato molti redux
+
+2
+00:00:09,380 --> 00:00:17,120
+poich  parte integrante delle applicazioni di reazione. Nel nostro burger builder, lo abbiamo anche usato e,
+
+3
+00:00:17,120 --> 00:00:24,890
+quando si lavora con redux, dobbiamo anche affrontare il problema, tra virgolette, di gestire azioni asincrone come raggiungere
+
+4
+00:00:24,890 --> 00:00:25,980
+un server.
+
+5
+00:00:26,180 --> 00:00:33,140
+Abbiamo risolto questo problema usando redux-thunk in questo corso, redux-thunk solo per riportarlo in memoria  un pacchetto che
+
+6
+00:00:33,140 --> 00:00:40,510
+ci permette di creare creatori di azioni in cui eseguiamo il codice asincrono e dove poi mandiamo altre azioni una
+
+7
+00:00:40,520 --> 00:00:42,520
+volta che siamo ' fatto
+
+8
+00:00:42,530 --> 00:00:47,690
+e non c' niente di sbagliato in questo approccio, questo  davvero importante per me.
+
+9
+00:00:47,930 --> 00:00:55,220
+In questo modulo presenter un'alternativa che non  necessariamente migliore o peggiore,  solo un'alternativa
+
+10
+00:00:55,250 --> 00:00:58,600
+che potrebbe piacerti di pi, ma che
+
+11
+00:00:58,610 --> 00:01:07,130
+potresti anche non gradire di pi, redux saga. Ora la saga di redux  un pacchetto che segue un approccio diverso
+
+12
+00:01:07,130 --> 00:01:12,440
+di lavorare con il codice asincrono e non lo mescola con l'atto delle azioni di dispacciamento.
+
+13
+00:01:12,440 --> 00:01:16,840
+Ora diamo un'occhiata a come funziona e quale posto migliore per esercitarlo
+
+14
+00:01:16,910 --> 00:01:23,080
+rispetto al nostro progetto di costruzione di hamburger, che  dove abbiamo gi tutta la logica, giusto?
+
+15
+00:01:23,180 --> 00:01:24,520
+Quindi tuffiamoci dentro e lascia
+
+16
+00:01:24,620 --> 00:01:27,430
+che ti mostri come funziona la saga di Redux.
+

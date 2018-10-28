@@ -1,0 +1,252 @@
+1
+00:00:01,950 --> 00:00:08,670
+W ostatnim wykadzie zepsulimy nasz aplikacj, przenoszc komponenty do folderu kontenerw, poniewa teraz bdziemy adowa je
+
+2
+00:00:08,670 --> 00:00:14,280
+jako strony poprzez routing, co naprawd zamieni je w pojemniki, poniewa nie s
+
+3
+00:00:14,280 --> 00:00:16,670
+ju uwzgldniane przez jaki inny komponent.
+
+4
+00:00:16,800 --> 00:00:23,940
+Tak, rodzaj routingu, ale tak naprawd s teraz na gwnym poziomie wymienianym dla wczeniejszych
+
+5
+00:00:24,000 --> 00:00:25,490
+komponentw poziomu root.
+
+6
+00:00:25,920 --> 00:00:30,220
+Tak wic, pracujmy nad komponentem post, ktry jest jednym elementem, ktrego teraz brakuje.
+
+7
+00:00:30,240 --> 00:00:32,790
+Zamierzam pobra sekcj tutaj posty
+
+8
+00:00:32,790 --> 00:00:41,220
+z klasami i umieci j w moim komponencie pocztowym, ktry utworz za pomoc sowa kluczowego class,
+
+9
+00:00:41,310 --> 00:00:43,900
+posty klas rozszerzaj komponent.
+
+10
+00:00:43,950 --> 00:00:51,220
+Teraz musimy zaimportowa zarwno reagowanie, jak i komponent, aby zareagowa, a teraz
+
+11
+00:00:51,600 --> 00:00:58,560
+potrzebujemy metody renderowania, w ktrej na koniec zwracamy tylko jsx, ktr
+
+12
+00:00:58,560 --> 00:00:59,910
+wanie skopiowaem.
+
+13
+00:00:59,910 --> 00:01:06,810
+Teraz posty oczywicie tutaj nie istniej, poniewa stworzylimy je dynamicznie w komponencie blogu, wic pobierzmy cay
+
+14
+00:01:06,810 --> 00:01:12,330
+ten kod tutaj, gdzie tworzymy posty, i przeniemy to teraz do metody renderowania.
+
+15
+00:01:12,330 --> 00:01:17,450
+To z drugiej strony zaley teraz od stanu tego komponentu,
+
+16
+00:01:17,610 --> 00:01:23,320
+wic powinnimy poda stan dla postw w komponencie pocztowym, wydaje si rozsdny.
+
+17
+00:01:24,110 --> 00:01:29,170
+Tak wic szybko wemy tutaj stan z komponentu bloga,
+
+18
+00:01:29,480 --> 00:01:34,710
+odetnijmy go stamtd i przeniemy go do komponentu wiadomoci.
+
+19
+00:01:34,710 --> 00:01:41,490
+Tam mamy teraz nasz tablic wpisw i bd oraz wybrany identyfikator wpisu, teraz
+
+20
+00:01:41,510 --> 00:01:47,510
+mam zamiar usun t cz stanu. Tutaj kliknicie opcji PostSelectedHandler spowoduje
+
+21
+00:01:47,560 --> 00:01:49,490
+przesanie identyfikatora posta.
+
+22
+00:01:49,490 --> 00:01:53,600
+Zaimportuj to rwnie z mojego komponentu blogu,
+
+23
+00:01:53,610 --> 00:02:01,140
+tam wezm postSelectedHandler, a take dodaj go do mojej klasy postw w nowo
+
+24
+00:02:01,140 --> 00:02:02,160
+utworzonym komponencie.
+
+25
+00:02:02,450 --> 00:02:08,690
+I na koniec z komponentu blogu zamierzam pobra tutaj kod componentDidMount, tak e
+
+26
+00:02:08,690 --> 00:02:15,740
+mam tylko renderowanie tutaj w komponencie blogu i wrzucam t metod componentDidMount rwnie z
+
+27
+00:02:15,740 --> 00:02:20,100
+powrotem do komponentw mojego postu, tak e montujemy tutaj.
+
+28
+00:02:20,360 --> 00:02:22,050
+Teraz za bd ju go tutaj
+
+29
+00:02:22,080 --> 00:02:27,170
+nie zaatwiam, eby byo troch prostsze, wic po prostu si go loguj, i tak nie powinnimy stawi
+
+30
+00:02:27,200 --> 00:02:28,280
+czoa adnym bdom.
+
+31
+00:02:28,300 --> 00:02:36,110
+Dziki temu otrzymalimy komponent postu, ktry pobiera wasne posty i wywietla je
+
+32
+00:02:36,110 --> 00:02:37,120
+na ekranie.
+
+33
+00:02:37,520 --> 00:02:45,910
+Teraz musimy rwnie zaimportowa aksjomaty w komponencie po wpisie, wic
+
+34
+00:02:45,910 --> 00:02:51,730
+aksiosy i pamitajmy, e uywalimy wasnej instancji.
+
+35
+00:02:51,730 --> 00:02:54,390
+Tak wic wskamy t instancj,
+
+36
+00:02:54,430 --> 00:03:01,840
+wic od teraz musimy przesun si na sam gr, abymy mogli zaimportowa z tego pliku
+
+37
+00:03:01,840 --> 00:03:06,540
+axios, a teraz mamy aplikacj, ktra powinna dziaa ponownie,
+
+38
+00:03:06,690 --> 00:03:12,430
+jeli dla drugiego zaimportujemy nasz nowo utworzony komponent postu w komponencie blogu.
+
+39
+00:03:12,580 --> 00:03:13,940
+Wic pozwl mi
+
+40
+00:03:13,950 --> 00:03:21,210
+szybko to zrobi przejdmy do podfolderu postu z postami. Plik js i zamy post tutaj, wic
+
+41
+00:03:21,220 --> 00:03:29,020
+wczmy takie posty, a nastpnie plik postw, musimy oczywicie zaimportowa komponent postu, poniewa wywietlamy go
+
+42
+00:03:29,020 --> 00:03:31,520
+na ekranie, wic pamitaj o
+
+43
+00:03:31,690 --> 00:03:36,450
+dodaniu wpisw importu do tego nowo utworzonego komponent postu.
+
+44
+00:03:36,760 --> 00:03:39,640
+Wic zaimportuj post od, a teraz musimy pj w
+
+45
+00:03:39,670 --> 00:03:41,090
+gr Potem musimy jeszcze
+
+46
+00:03:41,320 --> 00:03:48,220
+wicej wej do folderu komponentw w folderze postw do postu. pliki js, z ktrych
+
+47
+00:03:48,220 --> 00:03:50,400
+moemy tego uy.
+
+48
+00:03:50,500 --> 00:03:54,660
+I wreszcie musimy zaimportowa troch css rwnie tutaj
+
+49
+00:03:55,000 --> 00:03:58,510
+i oczywicie rwnie wyeksportowa nasz komponent posts.
+
+50
+00:03:58,570 --> 00:04:01,110
+Dodajmy wic domylny eksport do postw. plik js,
+
+51
+00:04:01,190 --> 00:04:06,070
+w ktrym eksportujemy klas tego wpisu.
+
+52
+00:04:06,310 --> 00:04:12,640
+Teraz znowu dla css, tutaj w blogu css, mamy t klas
+
+53
+00:04:12,640 --> 00:04:17,630
+postu, usu j stamtd, z pliku blogu, nie potrzebujemy
+
+54
+00:04:17,640 --> 00:04:24,450
+go tam i wstawiamy do postu. plik css, ktry teraz importujemy w komponencie pocztowym.
+
+55
+00:04:24,580 --> 00:04:29,170
+Tak wic zaimportuj po prostu. / posty. css, pamitajcie, e nie uywamy moduw
+
+56
+00:04:29,180 --> 00:04:29,520
+&nbsp;
+
+57
+00:04:29,590 --> 00:04:33,020
+css, std odmienna skadnia. Gdy wszystko si zmienio, jeli wrcimy do aplikacji, zobaczymy tylko posty i
+
+58
+00:04:33,040 --> 00:04:40,210
+jeli to byo zbyt szybkie, oczywicie nie krpujmy si, aby to pobra, to
+
+59
+00:04:40,210 --> 00:04:44,070
+bya tylko jaka restrukturyzacja zamieniajca nasze komponenty w kontenery i dodajca nowy kontener pocztowy.
+
+60
+00:04:44,110 --> 00:04:51,250
+Teraz otrzymujemy rne komponenty, kontenery, ktre moemy wykorzysta jako strony w naszej
+
+61
+00:04:51,310 --> 00:04:59,620
+aplikacji, poniewa chcemy zaadowa wszystkie posty lub pojedynczy wpis lub now stron postu.
+
+62
+00:04:59,710 --> 00:05:07,240
+Teraz potrzebujemy routingu, aby zaadowa tylko jeden z nich.
+
+63
+00:05:07,240 --> 00:05:10,960
+&nbsp;
+

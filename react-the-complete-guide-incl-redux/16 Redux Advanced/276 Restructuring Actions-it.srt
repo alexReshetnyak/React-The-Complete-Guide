@@ -1,0 +1,324 @@
+1
+00:00:02,260 --> 00:00:08,940
+Cos hanno introdotto i creatori di azioni nelle ultime lezioni e apprendi che sono particolarmente utili quando
+
+2
+00:00:08,940 --> 00:00:10,690
+si lavora con codice asincrono.
+
+3
+00:00:10,870 --> 00:00:17,950
+Poich, insieme a ridondare quel middleware, potremmo fondamentalmente trovare un posto dove eseguire il nostro codice asincrono
+
+4
+00:00:17,950 --> 00:00:25,870
+quando si invia un'azione e bloccare quel dispatching originale per poi semplicemente inviare un'altra azione tutto ci che viene
+
+5
+00:00:26,050 --> 00:00:27,640
+gestito da quello.
+
+6
+00:00:27,640 --> 00:00:29,160
+Redux middleware di phunk.
+
+7
+00:00:29,260 --> 00:00:37,600
+Una volta che il nostro compito asincrono  stato fatto con questo, abbiamo ottenuto nuove azioni che non riguardano solo i
+
+8
+00:00:37,600 --> 00:00:38,960
+nostri tipi di azione.
+
+9
+00:00:39,040 --> 00:00:41,420
+Quindi gli identificatori univoci.
+
+10
+00:00:41,470 --> 00:00:42,490
+Cos per dire.
+
+11
+00:00:42,760 --> 00:00:50,170
+Ma anche tutte queste funzioni di creatore che usano questi identificatori, ovviamente, la nostra caduta qui nel progetto
+
+12
+00:00:50,170 --> 00:00:52,300
+demo non  cos grande.
+
+13
+00:00:52,300 --> 00:00:58,690
+Naturalmente possiamo semplicemente limitarci a un file, ma dividiamo anche i produttori per contrastare il risultato finale e in
+
+14
+00:00:59,260 --> 00:01:04,960
+genere lo fai anche per le azioni man mano che la tua applicazione cresce e lo vedrai.
+
+15
+00:01:04,980 --> 00:01:12,300
+E il progetto Bergere Boulder crea quindi nuove cadute qui. Creer la colpa di un controsoffitto
+
+16
+00:01:12,700 --> 00:01:15,350
+e creer un risultato che cade.
+
+17
+00:01:15,400 --> 00:01:22,450
+Quindi, proprio come nella cartella riduttori, dove le azioni vengono ridenominate, le azioni ricadono sui tipi di azione.
+
+18
+00:01:22,450 --> 00:01:28,680
+Perch qui ora voglio solo esportare questi identificatori univoci  cos morto.
+
+19
+00:01:28,690 --> 00:01:35,840
+Ho un file che fornisce tutti i tipi di azione che la mia applicazione conosce e,
+
+20
+00:01:35,860 --> 00:01:38,970
+teoricamente, potresti ovviamente dividere in pi file.
+
+21
+00:01:39,010 --> 00:01:43,250
+Ora prender i miei creatori di idee e li inserir nei rispettivi file.
+
+22
+00:01:43,270 --> 00:01:49,630
+Quindi per il contatore prender l'incremento che cromato e aggiunger e sottrarr il creatore di ection creato
+
+23
+00:01:49,630 --> 00:01:53,950
+dal file dei tipi di azione e lo metter nella contro caduta.
+
+24
+00:01:54,030 --> 00:02:00,160
+a questa costante non funzioner pi perch quella costante ora vive in un file diverso.
+
+25
+00:02:00,160 --> 00:02:01,590
+Ora ovviamente questo riferimento
+
+26
+00:02:01,690 --> 00:02:10,360
+Quindi dovrei importarlo e importer tutto come tipi di azione dai tipi di azione della barra dei punti che mi consente
+
+27
+00:02:10,360 --> 00:02:17,440
+di impostare i miei tipi accedendo ai tipi di azione e quindi alle costanti che esportiamo in
+
+28
+00:02:17,530 --> 00:02:18,620
+quel file.
+
+29
+00:02:18,760 --> 00:02:27,760
+Far lo stesso per Decora con equipaggio e, naturalmente, anche per aggiungere e sottrarre in questo modo.
+
+30
+00:02:27,970 --> 00:02:30,160
+Finalmente anche per sottrarre.
+
+31
+00:02:30,490 --> 00:02:36,870
+Questo  il punto in cui un contatore J cade con i creatori di azioni per le azioni correlate al contatore.
+
+32
+00:02:36,940 --> 00:02:42,400
+stesso per l'assalto. Prendo il mio assalto per assalto solido e basta eliminare il creatore di Rosol.
+
+33
+00:02:42,400 --> 00:02:43,500
+Certo che far lo
+
+34
+00:02:43,630 --> 00:02:46,650
+Quindi include anche quello asincrono.
+
+35
+00:02:47,110 --> 00:02:54,630
+E poi importa anche tutto come tipi di azione da questi tipi di azione archiviati.
+
+36
+00:02:54,880 --> 00:03:00,220
+E con questo possiamo anche usare i tipi di azione che importiamo per assegnare i tipi giusti qui.
+
+37
+00:03:00,250 --> 00:03:06,460
+Quindi la memorizzazione di sale  memorizzata per risolverlo. Ho solo il motivo per cui il codice
+
+38
+00:03:06,460 --> 00:03:12,080
+asincrono che invia Savir alla fine e poi elimina drizzle, naturalmente, vuole anche eliminare il risultato.
+
+39
+00:03:12,100 --> 00:03:18,670
+Quindi ora i miei creatori hanno esternalizzato il file dei tipi di azione ora contiene solo i miei tipi di azione
+
+40
+00:03:18,670 --> 00:03:19,680
+e li esporta.
+
+41
+00:03:19,780 --> 00:03:24,430
+Ora voglio anche avere un file che esporti tutti i miei creatori di idee.
+
+42
+00:03:24,430 --> 00:03:31,090
+Quindi tutto vero quel punto indice J. S. cadi qui e poi in realt usi una sintassi che
+
+43
+00:03:31,090 --> 00:03:32,180
+potresti non aver visto prima.
+
+44
+00:03:32,410 --> 00:03:35,720
+Esporter semplicemente qualcosa da un file.
+
+45
+00:03:35,740 --> 00:03:39,030
+Posso farlo, quindi non l'ho nemmeno importato in questo autunno.
+
+46
+00:03:39,070 --> 00:03:41,820
+Ho solo una caduta la prossima caduta di Cheras.
+
+47
+00:03:41,950 --> 00:03:42,730
+Quali gruppi
+
+48
+00:03:42,760 --> 00:03:49,330
+facciamo esportiamo qualcosa dal contatore JS fault e che qualcosa in realt sar un elenco di tutto.
+
+49
+00:03:49,420 --> 00:03:57,190
+Tutte le esportazioni da file separati cosicch alla fine posso sempre puntare a deadfall per importare qualcosa da uno qualsiasi
+
+50
+00:03:57,190 --> 00:04:01,650
+dei file o puntare a quel file qui in modo che lo
+
+51
+00:04:01,650 --> 00:04:07,840
+Questo file offre come aggiungere sottrarre incremento e detrimento.
+
+52
+00:04:07,990 --> 00:04:14,740
+E questo  solo un summit di funzionalit avanzate che vogliono utilizzare un tale set up del progetto per gestire un
+
+53
+00:04:14,740 --> 00:04:19,160
+progetto pi grande con molte e molte azioni e creatori di azioni, ovviamente.
+
+54
+00:04:19,210 --> 00:04:26,800
+ eccessivo per questo progetto dimostrativo, ma avr pi senso in seguito quando raggiungeremo il nostro Bergere Buller e
+
+55
+00:04:26,920 --> 00:04:29,510
+voglio insegnarti il concetto gi adesso.
+
+56
+00:04:29,620 --> 00:04:37,640
+anche se ovviamente potrei esportarlo ma non avr mai bisogno in nessun Rafal quindi non includer nel mio gruppo.
+
+57
+00:04:37,730 --> 00:04:43,930
+Quindi tutto l'export qualcosa dal file risultato qui che sar il risultato del negozio e
+
+58
+00:04:43,930 --> 00:04:47,470
+sar deleter assault L'assalto Savery non  esportato qui
+
+59
+00:04:47,470 --> 00:04:54,430
+Ora ci che questo mi permette di fare  importare in seguito dall'indice JS e in realt importare
+
+60
+00:04:54,490 --> 00:04:58,940
+da uno di questi due file che raggruppano in questo indice Jaspal.
+
+61
+00:04:58,960 --> 00:05:06,070
+Ora questo  solo un piccolo miglioramento per rendere i nostri file ancora pi magri ora quello che devo fare 
+
+62
+00:05:06,070 --> 00:05:13,180
+che ho bisogno di regolare il mio file di riduttore dove faccio importare tipi di azione diese quindi incontro geus dove
+
+63
+00:05:13,180 --> 00:05:21,700
+importare tipi di ection che ora vivono nei tipi di azione avviare J come caduta nella cartella delle azioni, la stessa regolazione deve essere fatta
+
+64
+00:05:21,700 --> 00:05:23,680
+e il riduttore dei risultati.
+
+65
+00:05:23,680 --> 00:05:30,460
+Eseguo anche l'importazione dal file dei tipi di azione nella cartella delle azioni e infine nel contatore in
+
+66
+00:05:30,460 --> 00:05:38,050
+cui invio qui ho fatto riferimento ai creatori di azioni e che in realt non dovrei puntare al guasto dell'indice
+
+67
+00:05:38,070 --> 00:05:38,510
+JS.
+
+68
+00:05:38,560 --> 00:05:46,660
+Quindi indice di slash Riavvia velocemente e inizia a vedere se ha davvero problemi o  solo bloccato
+
+69
+00:05:46,660 --> 00:05:48,450
+nel processo di ricostruzione.
+
+70
+00:05:48,490 --> 00:05:51,620
+Troviamo un problema nel guasto del contatore JS.
+
+71
+00:05:52,030 --> 00:05:55,770
+Non mi piace importare i tuoi tipi di azione.
+
+72
+00:05:56,020 --> 00:05:58,270
+Oh, perch ho sbagliato a scrivere qui sono le azioni.
+
+73
+00:05:58,390 --> 00:06:03,700
+Questo  un refuso nel nome del file, il nome del file dovrebbe essere tipi di azione.
+
+74
+00:06:03,700 --> 00:06:10,130
+Ora se il nome del file  cambiato ho bisogno di cambiare tutte le mie importazioni nell'azione media cade a.
+
+75
+00:06:10,420 --> 00:06:16,450
+Stavo facendo riferimento al file sbagliato con tutto ci che  stato adattato per indicare davvero il tipo di azione.
+
+76
+00:06:16,510 --> 00:06:24,070
+Poich dovremmo avere di nuovo un'applicazione funzionante come prima, con lo spazio di archiviazione asincrono disponibile.
+
+77
+00:06:24,310 --> 00:06:31,810
+Ora per con un po 'pi di dividere i creatori di azioni su pi file come ho detto per questo progetto dimostrativo
+
+78
+00:06:32,020 --> 00:06:37,450
+eccessivo ma sicuramente qualcosa che dovresti tenere a mente per progetti pi grandi perch ci che
+
+79
+00:06:37,450 --> 00:06:44,350
+ti permette  che hai file con solo pochi creatori di ection in ciascuno file che rende pi facile trovare
+
+80
+00:06:44,410 --> 00:06:47,750
+un action maker morto che vuoi che cambi o controlli.
+
+81
+00:06:48,070 --> 00:06:53,760
+Ecco perch ho scelto questa impostazione ed  qualcosa che volevo mostrarti per i tuoi progetti pi grandi.
+

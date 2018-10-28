@@ -1,0 +1,368 @@
+1
+00:00:02,180 --> 00:00:10,860
+Burada kar karya olduumuz hata, uygulama konteynerimizi balantyla sarmalamamz ve sadece bizim
+
+2
+00:00:11,490 --> 00:00:20,200
+reaktif ynlendiricimizi krmamz gerei ile ilgilidir. Reaktr-router-dom dan inRouter yksek mertebeden bir bileeni
+
+3
+00:00:20,200 --> 00:00:23,440
+ithal etmemize gerek duyarsak ve
+
+4
+00:00:23,880 --> 00:00:29,220
+bu ekilde her zaman ynlendirme ile birlikte yklemek
+
+5
+00:00:29,220 --> 00:00:36,900
+istediiniz bileeninizi sarmalamakla balantl bir hata alrsanz, bu bileeni kolaylkla zebiliriz. Gzerghnz
+
+6
+00:00:36,900 --> 00:00:42,800
+alamazsnz, sadece bunun gibi withRouter ile buraya balanabilirsiniz.
+
+7
+00:00:43,080 --> 00:00:49,000
+Ve imdi bu ufak deiiklikle, Raptor ile uygulamalarnz hala bileeninize aktarlmaya zorlayacak ve
+
+8
+00:00:49,000 --> 00:00:54,550
+bu yzden tepki veren ynlendirici sayfaya geri dnecek ve bununla ne yklendiini
+
+9
+00:00:54,660 --> 00:00:56,370
+anlayacaz, tekrar alyoruz.
+
+10
+00:00:56,730 --> 00:01:03,730
+imdi test etmek istediimiz eyi deneyelim, buraya giri yapacam yeri ekleyeceim, bu iyi
+
+11
+00:01:03,750 --> 00:01:05,130
+alyor, imdi redux
+
+12
+00:01:05,130 --> 00:01:11,180
+zerinde baarl bir ekilde giri yaptmz gryoruz, uygulama sekmesine gz attmzda,
+
+13
+00:01:11,280 --> 00:01:14,770
+biz Bu  alana sahip olduumuzu gr.
+
+14
+00:01:15,210 --> 00:01:22,900
+imdi uygulamay yeniden yklememe izin verin, temizlediini gryorsunuz ve redux olarak, yetkilendirilmi klar gnderdik,
+
+15
+00:01:22,900 --> 00:01:25,220
+bu yzden doru almyor.
+
+16
+00:01:25,300 --> 00:01:33,550
+Bu izgiye bir ekilde ulatmz auth eylemi yaratcmzn bulunduu yerdeki logut gndericimiz ya da bunun
+
+17
+00:01:33,550 --> 00:01:36,100
+hangisi olduunu, bunun hangisinin olduunu
+
+18
+00:01:36,100 --> 00:01:38,320
+abucak renmemiz gerekecek.
+
+19
+00:01:38,350 --> 00:01:47,400
+Bunu hata ayklamak iin, kaynaklara ve oradaki klasr kaynamza girebiliriz
+
+20
+00:01:47,640 --> 00:01:51,570
+ve maaza eylemlerine, auth
+
+21
+00:01:51,620 --> 00:01:53,270
+dosyasna girelim.
+
+22
+00:01:53,280 --> 00:02:00,410
+Yani imdi bir authCheckState fonksiyonumuzda bir krlma noktas koyabiliriz, burada bir jetonumuz
+
+23
+00:02:00,530 --> 00:02:04,730
+olup olmadn kontrol edeceimiz bir yer verelim.
+
+24
+00:02:05,170 --> 00:02:13,660
+imdi kimlik dorulamas yapalm ve tekrar giri yapalm, bylece geleceimiz iin bir belirteimiz var ve imdi sayfay
+
+25
+00:02:13,660 --> 00:02:21,680
+yeniden ykleyelim, artk burada kaldk nk ayrlma noktas balad ve biz baarl bir ekilde jetonlar getiriyoruz.
+
+26
+00:02:22,480 --> 00:02:29,590
+imdi bunun zerinden geelim, onu baka bir bloa dntryoruz nk bir jetonumuz var ama imdi
+
+27
+00:02:29,590 --> 00:02:35,230
+son kullanma tarihinin bir tarih nesnesi olduunu gryoruz, bu yzden iyi grnyor.
+
+28
+00:02:35,230 --> 00:02:37,880
+Bu nedenle, burada son kullanma tarihi gelecektir ve
+
+29
+00:02:38,200 --> 00:02:44,020
+burada olan ey daha sonra blok ve mkemmel bir anlam ifade eder; nk son kullanma tarihinin bugnk
+
+30
+00:02:44,320 --> 00:02:47,540
+tarih veya gncel tarihten daha byk olup olmadn kontrol
+
+31
+00:02:47,740 --> 00:02:52,480
+ederim ve tabii ki istemiyorum Bu durumda k yapmak iin, nk bu simge geerli
+
+32
+00:02:52,480 --> 00:02:53,230
+olduunda geerlidir.
+
+33
+00:02:53,500 --> 00:02:56,320
+Bu, hata ayklama sayesinde dzeltebildiimiz mantksal
+
+34
+00:02:56,350 --> 00:02:58,180
+bir hatadr, bu yzden
+
+35
+00:02:58,450 --> 00:03:00,980
+yapmamz gereken ey bunu yeniden
+
+36
+00:03:01,000 --> 00:03:07,420
+yazmaktr; son kullanma tarihi, geerli tarihe eit olmasa bile daha kk veya eitse, k
+
+37
+00:03:07,420 --> 00:03:09,130
+yapmak istiyoruz. imdilik,
+
+38
+00:03:09,130 --> 00:03:13,570
+uygulamaya geri dnersek, tekrar giri yapalm, bu
+
+39
+00:03:13,810 --> 00:03:17,670
+yzden hemen yapalm, imdi oturum aalm
+
+40
+00:03:17,860 --> 00:03:20,470
+ve imdi sayfay yeniden
+
+41
+00:03:20,630 --> 00:03:27,100
+ykleyelim. Artk imdi authSuccessa sahip olduumuzu grebiliyoruz ama yine de authLogoutu izliyoruz.
+
+42
+00:03:27,440 --> 00:03:33,800
+Bu yzden tekrar hata ayklayalm, burada neyin yanl gittiini renmek iin buraya
+
+43
+00:03:34,040 --> 00:03:37,910
+bir krlma noktas koyalm, bu yzden kodu
+
+44
+00:03:38,750 --> 00:03:43,710
+buraya hzlca ekleyeceim, gnder ve bu uygulamay tekrar ykleyeceim,
+
+45
+00:03:43,710 --> 00:03:44,710
+imdi bu
+
+46
+00:03:44,900 --> 00:03:52,040
+ekle imdi yapalm. Bunu adm adm atarsak, dier bloa gideriz ve baaryla giri yaparz.
+
+47
+00:03:52,060 --> 00:03:54,450
+imdi kod yrtmeye devam edelim,
+
+48
+00:03:55,630 --> 00:03:58,740
+o zaman neden burada k yaptk?
+
+49
+00:03:58,840 --> 00:04:01,930
+Ayrca, k bilgilerini de gnderdiimiz
+
+50
+00:04:01,930 --> 00:04:04,270
+checkAuthTimeout ilevimizle ilgili olabilir.
+
+51
+00:04:04,270 --> 00:04:12,090
+yleyse, bu durumun nleyici olarak tetiklenip tetiklenmediini grmek iin ltfen k oturumuna bir ayrlma
+
+52
+00:04:12,520 --> 00:04:20,600
+noktas ekleyelim, ite imdi tekrar giri yapacaz, uygulamay yeniden ykleyeceiz, ilk krlma noktasna ulaacaz,
+
+53
+00:04:20,750 --> 00:04:22,690
+sadece ileride atlayabileceimizi
+
+54
+00:04:22,700 --> 00:04:23,810
+biliyoruz. problem
+
+55
+00:04:23,810 --> 00:04:24,940
+ve gerekten
+
+56
+00:04:25,040 --> 00:04:28,120
+de, setTimeout'ta ikinci olana ulayoruz.
+
+57
+00:04:28,370 --> 00:04:30,180
+Bu, ate etmemeli, sorun
+
+58
+00:04:30,620 --> 00:04:34,190
+muhtemelen ayarlanm olan son kullanma zamandr, bu yzden
+
+59
+00:04:34,190 --> 00:04:39,520
+setTimeout zerinde bir kesme noktas yerletirerek bu zamanlaycnn ayarland bir noktaya ulaalm
+
+60
+00:04:39,980 --> 00:04:45,950
+ve imdi devam edelim ve bu deeri bir kez daha deneyelim. aslnda orada
+
+61
+00:04:45,950 --> 00:04:49,690
+sona erme zaman olarak kuruldu nk bu konu olmal.
+
+62
+00:04:50,210 --> 00:04:59,300
+imdi, buradaki uygulamamz imdi yeniden yklediimizde, ilk kesme noktasn atlayabiliriz ve imdi son
+
+63
+00:04:59,300 --> 00:05:05,470
+kullanma sresini grelim, -10'dur ve bunun -10 olmas mantkldr.
+
+64
+00:05:05,600 --> 00:05:07,360
+Burada birka hata alyoruz, o
+
+65
+00:05:07,520 --> 00:05:09,620
+yzden imdi devam edelim ve
+
+66
+00:05:09,770 --> 00:05:10,920
+dzeltelim, ayrca ikinci
+
+67
+00:05:10,940 --> 00:05:12,510
+krlma noktasn da temizleyelim.
+
+68
+00:05:12,950 --> 00:05:19,910
+Peki sorunumuz nedir? Otomatik olarak giri yaptm alttaAuthTimeout'u kontrol etmek iin, gelecekteki
+
+69
+00:05:19,910 --> 00:05:22,390
+tarih ile bugn arasndaki fark geiyorum.
+
+70
+00:05:22,610 --> 00:05:25,040
+Sorun u ki, getSeconds kullanyorum,
+
+71
+00:05:25,090 --> 00:05:27,130
+getTime' kullanmak istedim, bu
+
+72
+00:05:27,290 --> 00:05:28,910
+milisaniye cinsinden sre,
+
+73
+00:05:28,910 --> 00:05:30,750
+kullanmak istediim byk bir say.
+
+74
+00:05:31,040 --> 00:05:36,660
+Bu nedenle getTime bize milisaniye cinsinden doru fark verir,
+
+75
+00:05:36,740 --> 00:05:43,010
+imdi burada checkAuthTimeout ilevimizde, sonra bin ile arpyoruz, imdi bu
+
+76
+00:05:43,010 --> 00:05:44,670
+ok byk olacakt,
+
+77
+00:05:44,810 --> 00:05:48,460
+bylece burada geirdiimiz deer gerekten saniyeler
+
+78
+00:05:48,640 --> 00:05:58,060
+iinde olmal, bu yzden bu hesaplamay burada tamamlayacam parantez iinde ve bylelikle binlere bln.
+
+79
+00:05:58,080 --> 00:06:04,780
+imdi imdi ie yarayp yaramadn grelim, imdi uygulamamza geri dnelim ve imdi
+
+80
+00:06:04,800 --> 00:06:07,080
+doru bir deer elde
+
+81
+00:06:07,080 --> 00:06:16,490
+edip etmediimizi grmek iin checkAuthTimeout'ta bir kesme noktas yerletirelim. Bu sayede oturum amama izin verin, umarm son bir kez almal,
+
+82
+00:06:16,890 --> 00:06:17,420
+gndermeli
+
+83
+00:06:17,450 --> 00:06:20,140
+ve bir bakalm, burada sunucudan geri dndmz
+
+84
+00:06:20,150 --> 00:06:21,310
+3600, sadece atlayabiliriz.
+
+85
+00:06:21,320 --> 00:06:26,520
+lgin olan ey, eer imdi giri yaparsak, orada son kullanma
+
+86
+00:06:26,660 --> 00:06:27,290
+saatini
+
+87
+00:06:27,290 --> 00:06:31,600
+grrz, mantkl, 3600'n biraz altnda, nk 10 saniye geti.
+
+88
+00:06:31,610 --> 00:06:35,450
+Yani imdi devam edersek, oturumu kapatrz, nk
+
+89
+00:06:35,540 --> 00:06:41,570
+k dmesine sahip olduumuzdan ve hala verilerimizle dolu yerel depolamaya sahibiz
+
+90
+00:06:41,570 --> 00:06:47,240
+ve tekrar giri yaparsak orada kalr. Bunu temizlersek ve tekrar
+
+91
+00:06:47,240 --> 00:06:49,500
+giri yaparsak, giri yapmadk.
+
+92
+00:06:49,520 --> 00:06:56,580
+imdi, henz geerliliini yitirmemi geerli bir jeton aldmz srece, imdi otomatik giri ilevselliini elde ettik.
+

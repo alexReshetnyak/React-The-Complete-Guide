@@ -1,0 +1,160 @@
+1
+00:00:02,250 --> 00:00:08,010
+To wspaniae, e teraz wiemy, w jaki sposb moemy wysya proby i jest to bardzo
+
+2
+00:00:08,010 --> 00:00:09,820
+wana cz wikszoci aplikacji internetowych.
+
+3
+00:00:10,030 --> 00:00:13,250
+Jednak wnioski nie zawsze si udaj, musisz rwnie
+
+4
+00:00:13,380 --> 00:00:17,020
+wiedzie, jak moesz radzi sobie z bdami i jest
+
+5
+00:00:17,220 --> 00:00:22,790
+to co, co chc ci teraz pokaza. Obsuga bdw jest bardzo prosta dziki aksjom,
+
+6
+00:00:23,100 --> 00:00:28,500
+powiedzmy, e niepoprawnie pobrano posty i oczywicie moesz sobie poradzi z bdami w sposobie,
+
+7
+00:00:28,500 --> 00:00:28,970
+w
+
+8
+00:00:28,970 --> 00:00:32,150
+jaki poka ci teraz dla kadego typu wysyanego zapytania.
+
+9
+00:00:32,250 --> 00:00:38,400
+Wic tutaj, w kontenerze bloga, powiedzmy, e wysalimy danie do postsssss, to jest niepoprawny
+
+10
+00:00:38,400 --> 00:00:40,750
+URL z wieloma stronami na kocu.
+
+11
+00:00:41,190 --> 00:00:47,380
+Teraz moemy zobaczy, e jeli przeadujemy to, otrzymamy bd tutaj, ale jest on nieobsugiwany, my
+
+12
+00:00:47,670 --> 00:00:49,500
+oczywicie chcemy go obsuy.
+
+13
+00:00:49,710 --> 00:00:56,640
+Teraz, gdy axios uywa obietnic, nie mamy tylko tej metody, ktr moemy poczy, ale
+
+14
+00:00:56,640 --> 00:00:59,180
+moemy te doda drug metod,
+
+15
+00:00:59,230 --> 00:01:06,030
+po prostu acuch po niej, metod catch, jak sugeruj nazwy, to wychwytuje wszelkie otrzymane bdy.
+
+16
+00:01:06,060 --> 00:01:14,520
+A wic, na razie, po prostu wyrubuj log tego bdu. Jeli to zrobi, danie oczywicie nadal si nie powiedzie, poniewa
+
+17
+00:01:14,550 --> 00:01:16,850
+URL nadal jest niepoprawny, ale teraz
+
+18
+00:01:16,890 --> 00:01:22,260
+bd jest obsugiwany i tutaj po prostu drukuj to za pomoc dziennika konsoli.
+
+19
+00:01:22,380 --> 00:01:24,940
+Oczywicie moesz zrobi wicej ni logujc si tutaj,
+
+20
+00:01:24,960 --> 00:01:27,110
+moesz zaktualizowa swj interfejs, moesz zaktualizowa stan,
+
+21
+00:01:27,120 --> 00:01:33,600
+aby pokaza, e co poszo nie tak, pozwl mi to pokaza. Tutaj moemy ustawi waciwo bdu, ktra
+
+22
+00:01:33,780 --> 00:01:42,550
+jest ustawiona na false pocztkowo iw tej metodzie catch tutaj, nie chc rejestrowa bdu, zamiast tego
+
+23
+00:01:42,720 --> 00:01:46,550
+ustawi stan i ustawi bd na true.
+
+24
+00:01:47,130 --> 00:01:54,390
+Teraz moemy zrobi co innego na ekranie. Zamiast zapisywania postu w staej, utworz nowe
+
+25
+00:01:54,390 --> 00:02:02,740
+zmienne, w ktrych pocztkowo powiem, e co poszo nie tak i pozwol sobie szybko doda kilka
+
+26
+00:02:03,930 --> 00:02:12,260
+wewntrznych stylw, aby to wyrodkowa, wic dodam po prostu centrum wyrwnania tekstu i Jeli tylko bd
+
+27
+00:02:12,260 --> 00:02:17,240
+nie zostanie ustawiony, tylko te posty bd nadpisywane bardzo niewiele.
+
+28
+00:02:17,250 --> 00:02:24,480
+Wic jeli to. stan. bd, jeli nie jest to prawd wskazan przez wykrzyknik na pocztku. Nastpnie nadpisz
+
+29
+00:02:24,480 --> 00:02:29,170
+posty do mojej tablicy postw.
+
+30
+00:02:29,250 --> 00:02:33,630
+Wic teraz z tym, jeli to zapiszemy, a centrum powinno
+
+31
+00:02:33,630 --> 00:02:34,400
+by cigiem,
+
+32
+00:02:34,410 --> 00:02:41,950
+dzikuj, jeli teraz to zapisamy, widzimy, e co poszo nie tak, poniewa teraz mamy ten bd.
+
+33
+00:02:41,950 --> 00:02:51,880
+Teraz, jeli wrc do mojej aplikacji i poprawi posty na prawidowy adres URL, zobaczymy ponownie
+
+34
+00:02:51,910 --> 00:02:52,860
+posty.
+
+35
+00:02:53,200 --> 00:02:58,570
+Jest to cakiem fajny sposb radzenia sobie z bdami i jest to co, na co zdecydowanie musisz
+
+36
+00:02:58,570 --> 00:02:59,490
+rwnie zwrci uwag.
+
+37
+00:02:59,680 --> 00:03:05,680
+Sprawy nie zawsze si udaj, wic powiniene mie sposb apania bdw, a nastpnie robienia
+
+38
+00:03:05,680 --> 00:03:12,280
+czego z nimi, rejestrowania ich na konsoli, wysyania da dziennika bdw do wasnego serwera w
+
+39
+00:03:12,670 --> 00:03:19,810
+celu zarejestrowania bdu i lub pokazania czego w interfejsie, aby umoliwi uytkownik nadal kontynuuje lub podaje instrukcje,
+
+40
+00:03:19,810 --> 00:03:21,500
+co powinien zrobi uytkownik.
+

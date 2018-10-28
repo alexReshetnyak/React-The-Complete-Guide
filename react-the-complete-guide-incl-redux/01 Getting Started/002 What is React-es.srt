@@ -1,0 +1,152 @@
+1
+00:00:02,170 --> 00:00:05,940
+Comencemos por reactivar qu y por qu.
+
+2
+00:00:06,160 --> 00:00:08,900
+Comencemos con la pregunta Qu es reactivar?
+
+3
+00:00:08,980 --> 00:00:15,910
+Y permtanme citar una frase del Rea Rea Reactor de la biblioteca javascript para las interfaces de
+
+4
+00:00:15,940 --> 00:00:17,110
+usuario de Boulding.
+
+5
+00:00:17,110 --> 00:00:19,910
+Ahora que es una buena frase, pero qu significa?
+
+6
+00:00:19,930 --> 00:00:23,710
+La primera parte importante es la parte de la biblioteca javascript.
+
+7
+00:00:23,740 --> 00:00:25,320
+Es una biblioteca javascript.
+
+8
+00:00:25,330 --> 00:00:32,360
+Se trata de crear aplicaciones controladas por JavaScript que acten de nuevo en el navegador y no se ejecuten en el servidor.
+
+9
+00:00:32,380 --> 00:00:36,440
+Se ejecutan en el navegador y eso nos da una gran ventaja.
+
+10
+00:00:36,460 --> 00:00:39,980
+Las cosas suceden al instante, ya que ocurren en el navegador del usuario.
+
+11
+00:00:40,060 --> 00:00:45,850
+No tenemos que esperar una respuesta del servidor para obtener una nueva pgina o para renderizar algo nuevo.
+
+12
+00:00:45,850 --> 00:00:47,980
+Tienes una parte importante en esa oracin?
+
+13
+00:00:47,980 --> 00:00:55,750
+Es la interfaz de usuario como las interfaces de usuario de parte son bsicamente lo que el usuario ve y reacciona
+
+14
+00:00:55,750 --> 00:00:58,710
+se trata de utilizar componentes para construir estos.
+
+15
+00:00:58,810 --> 00:01:03,690
+Si lo piensas puedes dividir cualquier pgina web en componentes.
+
+16
+00:01:03,700 --> 00:01:04,750
+Aqu hay un ejemplo.
+
+17
+00:01:04,750 --> 00:01:11,200
+Esta era cualquier pgina web al azar en la que pudiramos pensar que podramos tener esta rea de encabezado en una barra lateral y
+
+18
+00:01:11,200 --> 00:01:13,180
+luego a la derecha un poco de contenido.
+
+19
+00:01:13,180 --> 00:01:16,330
+Ahora claramente podemos dividir esto en componentes.
+
+20
+00:01:16,450 --> 00:01:23,660
+Tendramos un encabezado o componente como componente de la barra lateral y luego un ttulo en el componente de contenido del artculo.
+
+21
+00:01:24,040 --> 00:01:28,480
+Ahora, por qu pensar as es importante o til?
+
+22
+00:01:28,480 --> 00:01:36,670
+Porque si dividimos nuestra aplicacin web o sitio web en tales componentes, podemos
+
+23
+00:01:36,670 --> 00:01:41,460
+construir estos componentes bsicos como componentes de cdigo.
+
+24
+00:01:41,560 --> 00:01:45,960
+No tenemos que construir toda nuestra pgina web como una imagen ms grande.
+
+25
+00:01:46,000 --> 00:01:48,730
+Podemos construir todas estas pequeas cosas por s mismos.
+
+26
+00:01:48,730 --> 00:01:51,040
+Esto, por supuesto, hace que trabajar en equipos sea ms fcil.
+
+27
+00:01:51,130 --> 00:01:57,850
+Pero incluso si trabajamos solos, nos resulta ms fcil mantener nuestro cdigo manejable si cambiamos el
+
+28
+00:01:57,850 --> 00:01:59,150
+titular ms adelante.
+
+29
+00:01:59,170 --> 00:02:04,810
+Solo tenemos que ingresar al componente de deuda y actualizarlo y no tenemos que encontrar ese cdigo en todo
+
+30
+00:02:04,810 --> 00:02:06,610
+el cdigo de nuestra pgina web.
+
+31
+00:02:06,610 --> 00:02:12,700
+los componentes, entonces si tenemos un componente de elemento de lista y queremos generar una lista de estos elementos
+
+32
+00:02:12,760 --> 00:02:20,070
+de lista de pozo, entonces solo tenemos que escribir el cdigo una vez y luego podemos reutilizarlo fcilmente porque eso es importante.
+
+33
+00:02:20,170 --> 00:02:21,350
+Todos podemos reutilizar fcilmente
+
+34
+00:02:21,370 --> 00:02:29,870
+Los componentes de Riette pueden considerarse como elementos HVM personalizados, al final solo est escribiendo elementos de correo HVM
+
+35
+00:02:29,870 --> 00:02:38,110
+personalizados, no reacciona y por lo tanto resuelve el problema de tener que crear interfaces de usuario complejas
+
+36
+00:02:38,110 --> 00:02:46,840
+con lo que HLL y Javascript le brindan al escribir manejable mantenible y piezas reutilizables de ese cdigo que
+
+37
+00:02:47,110 --> 00:02:51,840
+puedes incluir en tu aplicacin web donde sea que necesites usarla.
+
+38
+00:02:51,850 --> 00:02:53,460
+Echemos un vistazo a algunos ejemplos.
+

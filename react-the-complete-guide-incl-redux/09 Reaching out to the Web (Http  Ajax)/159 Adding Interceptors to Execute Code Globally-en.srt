@@ -1,0 +1,308 @@
+1
+00:00:02,290 --> 00:00:09,130
+Handling errors locally in components makes sense a lot because you probably want to do different things
+
+2
+00:00:09,130 --> 00:00:12,900
+with errors depending on in which component you're at.
+
+3
+00:00:12,910 --> 00:00:17,410
+Maybe here you want to show something went wrong and in another component, you want to show something
+
+4
+00:00:17,410 --> 00:00:17,980
+different
+
+5
+00:00:18,070 --> 00:00:22,650
+but sometimes in some places, you maybe want to execute some code globally.
+
+6
+00:00:22,660 --> 00:00:31,480
+So no matter which HTTP request you send, from within which component, you want to do something when that
+
+7
+00:00:31,480 --> 00:00:35,950
+request gets sent and or when the response returns.
+
+8
+00:00:36,370 --> 00:00:41,190
+You can do it with axios with the help of so-called interceptors,
+
+9
+00:00:41,200 --> 00:00:47,470
+these are functions you can define globally which will be executed for every request leaving your app
+
+10
+00:00:47,650 --> 00:00:50,370
+and every response returning into it.
+
+11
+00:00:50,380 --> 00:00:56,830
+This is especially useful for example for setting some common headers like authorization header maybe
+
+12
+00:00:57,220 --> 00:00:58,980
+or for responses
+
+13
+00:00:58,990 --> 00:01:06,670
+if you want to log responses or want to handle errors globally. I will show you how to add interceptors
+
+14
+00:01:06,670 --> 00:01:08,400
+in this lecture.
+
+15
+00:01:08,410 --> 00:01:14,200
+Let's go to the index.js file because this is the most global file we have in our react app,
+
+16
+00:01:14,260 --> 00:01:19,740
+it's the file where we actually start our react app by mounting it to the dom.
+
+17
+00:01:19,780 --> 00:01:28,000
+So here, I now also want to import axios from the axios package and all these axios imports actually
+
+18
+00:01:28,000 --> 00:01:31,060
+all share the same configuration.
+
+19
+00:01:31,120 --> 00:01:37,600
+So that is why we cannot also use axios here and axios is a special interceptor's object,
+
+20
+00:01:37,660 --> 00:01:43,300
+and again, this will be then shared not only in this file but across all files in your project
+
+21
+00:01:43,300 --> 00:01:47,130
+so it will affect all requests sent from anywhere in your app.
+
+22
+00:01:47,560 --> 00:01:55,790
+There we can access the request object and now I'll simply add use to register a new interceptor, that
+
+23
+00:01:55,790 --> 00:02:03,540
+interceptor takes a function as an input which receives the config or the request you could say.
+
+24
+00:02:03,670 --> 00:02:10,330
+Now let's simply log that request to the console for now so that we can see what's inside of it.
+
+25
+00:02:10,330 --> 00:02:15,770
+I'm calling it request but it mainly is just to request config, that's important to keep in mind.
+
+26
+00:02:15,820 --> 00:02:17,340
+Now let's save this
+
+27
+00:02:17,740 --> 00:02:21,020
+and if we go back to the app, we immediately see something in the log.
+
+28
+00:02:21,090 --> 00:02:28,450
+This is the request which was sent, the request configuration at least. You see the headers which are added
+
+29
+00:02:28,780 --> 00:02:29,280
+and
+
+30
+00:02:29,350 --> 00:02:29,760
+yes
+
+31
+00:02:29,800 --> 00:02:31,580
+this is our request,
+
+32
+00:02:31,660 --> 00:02:35,070
+this is what we got sent here when we got the posts.
+
+33
+00:02:35,320 --> 00:02:41,300
+Now something went wrong here though because we actually are blocking the requests right now.
+
+34
+00:02:41,590 --> 00:02:50,520
+In your interceptor function here, you need to always return the request or the request config
+
+35
+00:02:50,830 --> 00:02:53,260
+otherwise you're blocking the request.
+
+36
+00:02:53,260 --> 00:02:58,360
+Now of course you can also edit the request config before you return it,
+
+37
+00:02:58,360 --> 00:03:00,230
+that's the idea behind the interceptor,
+
+38
+00:03:00,310 --> 00:03:03,260
+you can add headers, do stuff like that.
+
+39
+00:03:03,610 --> 00:03:09,360
+So now if we save this, we get the posts and if I click on one, you will see another log because another
+
+40
+00:03:09,370 --> 00:03:11,410
+request was sent and for that,
+
+41
+00:03:11,410 --> 00:03:15,690
+the interceptor also ran even though it was fired from a different component,
+
+42
+00:03:15,760 --> 00:03:21,580
+as I said all components, all areas of your app are covered with that.
+
+43
+00:03:22,180 --> 00:03:24,480
+Now for that interceptor here,
+
+44
+00:03:24,640 --> 00:03:31,210
+we can also pass a second function besides that request configuration changing function,
+
+45
+00:03:31,210 --> 00:03:35,150
+we can add a function which handles any errors.
+
+46
+00:03:35,260 --> 00:03:40,060
+So here we can log an error like this,
+
+47
+00:03:40,090 --> 00:03:47,860
+we should also return promise reject error here though so that we still forward it to our request as
+
+48
+00:03:47,860 --> 00:03:53,590
+we wrote it in a component where we can handle it again with the catch method, this make sense if you
+
+49
+00:03:53,590 --> 00:04:00,340
+have some local task you want to do like show something on the UI but also globally, you want to log
+
+50
+00:04:00,340 --> 00:04:04,040
+it in the log file which you send to a server or something like that.
+
+51
+00:04:04,450 --> 00:04:05,930
+So let's see how this works
+
+52
+00:04:05,950 --> 00:04:13,510
+if I now save that file and now turn my posts, my get posts URL invalid again.
+
+53
+00:04:15,200 --> 00:04:21,410
+Now you see something went wrong here but you don't actually see the console log from the error handler,
+
+54
+00:04:21,410 --> 00:04:23,020
+from the interceptor.
+
+55
+00:04:23,090 --> 00:04:28,390
+The reason for this is that this error here is related to sending the request,
+
+56
+00:04:28,430 --> 00:04:32,900
+for example if you had no internet connectivity or something like that, it should pop up
+
+57
+00:04:33,080 --> 00:04:40,670
+so if the request sending fails. We can also add an interceptor to handle responses though, we do in the
+
+58
+00:04:40,670 --> 00:04:46,190
+same way as you do it for the request but we use the response object on the interceptors object.
+
+59
+00:04:46,190 --> 00:04:52,470
+Then we also use two functions here, one function and I'm copying it from above,
+
+60
+00:04:52,670 --> 00:05:00,250
+one function which will receive the success response, we can also log it here and we should return it
+
+61
+00:05:00,350 --> 00:05:05,370
+so that we can also still use it in the component in the then block.
+
+62
+00:05:05,450 --> 00:05:11,390
+So that is one way we should return it and we also fetch errors and we should also reject them here
+
+63
+00:05:11,600 --> 00:05:16,760
+so that we can still handle them in the catch block locally in a component.
+
+64
+00:05:16,790 --> 00:05:23,150
+Now with that added, with that response interceptor added and the error function being present, now if we go
+
+65
+00:05:23,150 --> 00:05:23,930
+back,
+
+66
+00:05:23,930 --> 00:05:28,330
+we actually see the log here and we still handle it locally,
+
+67
+00:05:28,730 --> 00:05:30,790
+so both works.
+
+68
+00:05:30,800 --> 00:05:33,760
+If I now go to the block container and turn my
+
+69
+00:05:33,760 --> 00:05:36,170
+URL into a valid URL again,
+
+70
+00:05:36,380 --> 00:05:39,350
+we see just the log for the response.
+
+71
+00:05:39,350 --> 00:05:43,460
+So this is coming from the interceptor as you can tell by the file name and line number
+
+72
+00:05:43,730 --> 00:05:52,160
+and this is another way of course of potentially manipulating that response here or logging it or doing
+
+73
+00:05:52,160 --> 00:05:53,260
+whatever you want.
+
+74
+00:05:53,360 --> 00:05:57,740
+So being able to define these interceptors can be quite powerful,
+
+75
+00:05:57,770 --> 00:06:04,640
+again a very common use case is for the request interceptor to add some common headers
+
+76
+00:06:04,640 --> 00:06:13,970
+for example, an authorization header. Though we also have a different way of accessing global axios configuration,
+
+77
+00:06:13,970 --> 00:06:16,580
+I'll show you how this works in the next lecture.
+

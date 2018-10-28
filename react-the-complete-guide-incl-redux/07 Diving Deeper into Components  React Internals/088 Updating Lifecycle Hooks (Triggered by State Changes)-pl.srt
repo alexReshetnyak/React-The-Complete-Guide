@@ -1,0 +1,172 @@
+1
+00:00:02,220 --> 00:00:07,230
+Prawie skoczylimy ju cykle ycia, teraz, gdy przyjrzelimy si aktualizacjom wywoanym od zewntrz
+
+2
+00:00:07,470 --> 00:00:08,970
+przez zmiany w rekwizytach,
+
+3
+00:00:09,060 --> 00:00:14,760
+teraz przyjrzyjmy si procesowi cyklu aktualizacji dla wewntrznych zmian, poniewa ustawiono stan w zasadzie.
+
+4
+00:00:15,300 --> 00:00:15,710
+Tam
+
+5
+00:00:15,750 --> 00:00:20,340
+nie zaczynamy od componentWillReceiveProps, poniewa nie otrzymamy rekwizytw, zamiast tego zaczynamy od
+
+6
+00:00:20,340 --> 00:00:25,320
+razu, co shouldComponentUpdate i otrzymamy nextProps i nextState rwnie tutaj i tak jak
+
+7
+00:00:25,440 --> 00:00:30,960
+poprzednio, moemy anulowa proces aktualizacji tutaj i tak jak przedtem powinnimy zdecydowa czy kontynuowa,
+
+8
+00:00:30,960 --> 00:00:32,000
+czy nie, nie
+
+9
+00:00:32,100 --> 00:00:33,870
+powinnimy wywoywa skutkw ubocznych, wic
+
+10
+00:00:33,870 --> 00:00:36,580
+logika jest taka sama jak poprzednio.
+
+11
+00:00:36,740 --> 00:00:43,620
+Nastpnie osigamy componentWillMount i logika jest taka sama jak poprzednio, nastpnie renderujemy, a nastpnie ponownie
+
+12
+00:00:43,620 --> 00:00:47,490
+renderujemy wszystkie komponenty potomne i DidUpdate na kocu.
+
+13
+00:00:47,730 --> 00:00:53,680
+I szybko to przechodz, poniewa jest to zasadniczo ten sam proces, co wczeniej, dla
+
+14
+00:00:53,730 --> 00:00:55,260
+zewntrznej zmiany, zewntrzny czynnik
+
+15
+00:00:55,500 --> 00:01:01,320
+uruchamiajcy, jedyn rnic jest to, e nie ma tutaj pierwszego haka cyklu yciaReceiveProps.
+
+16
+00:01:01,320 --> 00:01:07,080
+Dlatego nie musimy wcza lub wdraa nowych metod do naszego projektu, poniewa mamy
+
+17
+00:01:07,080 --> 00:01:08,770
+ju wszystkie te metody.
+
+18
+00:01:09,090 --> 00:01:10,710
+Niemniej jednak
+
+19
+00:01:10,740 --> 00:01:15,730
+zaimplementuj je w aplikacji. js, czyli miejsce, w ktrym zmieniamy stan, abymy
+
+20
+00:01:15,740 --> 00:01:18,630
+mogli go tam zobaczy. Wic po DidMount
+
+21
+00:01:18,690 --> 00:01:23,520
+i tak dalej, chc zaimplementowa metody shouldComponentUpdate, WillUpdate i inne.
+
+22
+00:01:23,790 --> 00:01:30,400
+Wic zamierzam skopiowa je od osb. js i przenie je do aplikacji. js po componentDidMount.
+
+23
+00:01:30,600 --> 00:01:39,480
+I oczywicie tam, powinienem dostosowa to odniesienie tutaj, ludzie bd app. js, wic zastpi wszystkie
+
+24
+00:01:39,540 --> 00:01:41,960
+osoby. js referencja w logu
+
+25
+00:01:41,960 --> 00:01:46,200
+konsoli tutaj z aplikacj. js. I shouldComponentUpdate tutaj,
+
+26
+00:01:46,200 --> 00:01:49,170
+rwnie ustawi j na true.
+
+27
+00:01:49,170 --> 00:01:53,960
+Teraz zapiszmy to i zobaczmy teraz, jak wpywa to na nasz aplikacj, jeli
+
+28
+00:01:54,180 --> 00:01:57,300
+przeadujemy j, nie widzimy tutaj adnej metody aktualizacji.
+
+29
+00:01:57,390 --> 00:02:03,030
+Pozwl mi to wyczyci i kliknij przycisk teraz, teraz s zmiany, zobaczysz
+
+30
+00:02:03,060 --> 00:02:08,850
+od razu, jestemy w aplikacji aktualizacji. js shouldComponentUpdate i ma to sens,
+
+31
+00:02:08,850 --> 00:02:15,410
+poniewa kliknicie tego przycisku samo wywouje stan zestawu, a zatem wyzwala aktualizacj tego skadnika.
+
+32
+00:02:15,720 --> 00:02:22,050
+Oczywicie zanim zmienimy rekwizyty i dlatego uruchomimy proces aktualizacji w komponentach potomnych, poniewa zanim
+
+33
+00:02:22,410 --> 00:02:26,570
+bdziemy mogli zmieni komponenty potomne, stan musi zosta zaktualizowany.
+
+34
+00:02:26,970 --> 00:02:33,530
+Tak wic w shouldComponentUpdate, a nastpnie componentWillUpdate, a nastpnie render
+
+35
+00:02:33,630 --> 00:02:37,200
+i teraz wychodzimy do normalnego procesu.
+
+36
+00:02:37,320 --> 00:02:43,440
+Na kocu widzimy jednak wewntrz komponentu ApplicationDidUpdate dla aplikacji. js Wic to
+
+37
+00:02:43,440 --> 00:02:44,630
+jest
+
+38
+00:02:44,790 --> 00:02:50,070
+wane, aplikacja. js update uruchamia si jako pierwsza, poniewa jest wyzwalana po zmianie
+
+39
+00:02:50,070 --> 00:02:52,190
+stanu, co oczywicie jest pierwsz rzecz, ktra si wydarza.
+
+40
+00:02:52,260 --> 00:02:54,480
+To s wszystkie haki cyklu ycia.
+
+41
+00:02:54,480 --> 00:03:00,420
+Teraz wrmy do shouldComponentUpdate i jak moemy poprawi wydajno naszej aplikacji z
+
+42
+00:03:00,420 --> 00:03:01,070
+nim.
+
+43
+00:03:01,080 --> 00:03:02,530
+Pozwl, e poka ci przykad.
+

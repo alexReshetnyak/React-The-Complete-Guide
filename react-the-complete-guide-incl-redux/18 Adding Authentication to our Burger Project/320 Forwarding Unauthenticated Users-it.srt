@@ -1,0 +1,388 @@
+1
+00:00:02,210 --> 00:00:09,050
+Lavoriamo prima sugli elementi di navigazione, voglio assicurarmi che gli ordini siano visibili solo
+
+2
+00:00:09,140 --> 00:00:12,660
+se siamo autenticati. Beh, ovviamente non  troppo
+
+3
+00:00:12,680 --> 00:00:18,160
+difficile, abbiamo gi la logica per mostrare qualcosa in modo condizionale, cos possiamo anche semplicemente avvolgerlo.
+
+4
+00:00:18,310 --> 00:00:26,340
+Possiamo dire solo se gli oggetti di scena sono autentici, ma in questo caso gli oggetti di navigazione dovrebbero essere
+
+5
+00:00:26,640 --> 00:00:29,870
+mostrati altrimenti altrimenti viene reso al suo posto.
+
+6
+00:00:29,950 --> 00:00:37,330
+Questo  il modo rapido, semplice e corretto per garantire che non vediamo mai gli ordini come
+
+7
+00:00:37,330 --> 00:00:40,050
+ possibile confermare nell'app ricaricamenti se
+
+8
+00:00:40,200 --> 00:00:45,360
+non siamo autenticati, non appena effettuo l'accesso qui, tuttavia, gli ordini vengono visualizzati.
+
+9
+00:00:45,560 --> 00:00:51,530
+Ora un'altra cosa che voglio fare  quando abbiamo effettuato il login con successo, voglio
+
+10
+00:00:51,530 --> 00:00:56,410
+reindirizzare il modulo di autenticazione qui perch non ha senso mostrarlo pi.
+
+11
+00:00:56,630 --> 00:01:01,790
+Questo pu essere facilmente ottenuto all'interno del nostro contenitore auth, ci rendiamo
+
+12
+00:01:02,000 --> 00:01:07,960
+alla fine questo modulo completo e l'obiettivo  semplicemente reindirizzare l'utente se  autenticato.
+
+13
+00:01:08,270 --> 00:01:11,690
+Ora abbiamo gi collegato questo al nostro negozio,
+
+14
+00:01:11,870 --> 00:01:19,370
+quindi quello che posso fare  in mapStateToProps nel contenitore auth, posso anche ottenere le informazioni isAuthenticated e
+
+15
+00:01:19,670 --> 00:01:24,390
+ottenere questo dallo stato. auth. token e confronta questo con
+
+16
+00:01:24,530 --> 00:01:27,270
+null, se il token non  nullo, siamo autenticati.
+
+17
+00:01:27,680 --> 00:01:34,220
+E poi di nuovo importer quel componente di reindirizzamento dal router per reindirizzare l'utente se  autenticato in modo tale che
+
+18
+00:01:34,220 --> 00:01:38,490
+si vede che  uno schema comune perch  cos potente e facile.
+
+19
+00:01:38,750 --> 00:01:45,890
+Quindi qui react-router-dom  il pacchetto da cui importare il reindirizzamento e ora vogliamo eseguire il reindirizzamento quando
+
+20
+00:01:45,890 --> 00:01:47,680
+siamo autenticati cos gi
+
+21
+00:01:47,840 --> 00:01:54,750
+nel metodo di rendering, quello che aggiunger  un semplice controllo se prima di restituire il jsx
+
+22
+00:01:54,750 --> 00:02:02,020
+dove io controlleremo solo se questo. puntelli. isAuthenticated, questo oggetto  stato appena
+
+23
+00:02:02,190 --> 00:02:06,150
+aggiunto, quindi voglio eseguire il rendering del mio reindirizzamento.
+
+24
+00:02:06,150 --> 00:02:10,170
+Creer quindi una variabile, authRedirect che, per impostazione predefinita,
+
+25
+00:02:10,170 --> 00:02:11,710
+ null per
+
+26
+00:02:12,060 --> 00:02:19,410
+non eseguire alcun rendering ma, al momento dell'autenticazione, authRedirect utilizzer effettivamente il mio componente di reindirizzamento
+
+27
+00:02:19,410 --> 00:02:21,840
+e reindirizzer alla barra, diciamo.
+
+28
+00:02:21,850 --> 00:02:28,770
+E ora ovviamente ho bisogno di rendere authRedirect, lo far qui dentro il mio
+
+29
+00:02:29,010 --> 00:02:37,660
+div, lo incorporo in questo modo, reindirizzamento dell'autore. Con questo semplice trucco, possiamo assicurarci che quando la nostra applicazione si
+
+30
+00:02:37,700 --> 00:02:43,990
+ricaricher e faremo il login qui, quindi passa ad accedere e inviare, veniamo reindirizzati dopo un login riuscito.
+
+31
+00:02:44,030 --> 00:02:45,410
+Quindi tutto funziona, assicuriamoci
+
+32
+00:02:45,590 --> 00:02:52,130
+ora che quando viene utilizzato il generatore di hamburger, che possiamo usarlo anche se non siamo autenticati,
+
+33
+00:02:52,160 --> 00:03:00,980
+cos come qui ma che una volta che ho iniziato a costruire uno e faccio clic sull'ordine ora, non riesco a raggiungerlo una
+
+34
+00:03:00,980 --> 00:03:07,070
+pagina in cui non posso fare comunque niente ma invece dice di registrarsi per continuare, cos
+
+35
+00:03:07,070 --> 00:03:12,290
+devi registrarti per continuare a controllare l'hamburger. Per farlo, andr naturalmente al
+
+36
+00:03:12,320 --> 00:03:22,040
+mio contenitore per hamburger, qui  dove includo i controlli di compilazione, questo  ci che tiene premuto
+
+37
+00:03:22,100 --> 00:03:28,870
+questo pulsante e i controlli di compilazione devono sapere se sono autenticato
+
+38
+00:03:28,880 --> 00:03:30,040
+o meno.
+
+39
+00:03:30,050 --> 00:03:34,060
+Quindi prendiamo questo buon vecchio controllo di autenticazione in
+
+40
+00:03:34,070 --> 00:03:40,820
+mapStateToProps anche nel contenitore del generatore di hamburger, isAuthenticated come sempre raggiungere lo stato del
+
+41
+00:03:40,880 --> 00:03:48,050
+token di autenticazione e confrontarlo con null e quindi isAuthenticated dovrebbe essere passato ai controlli di compilazione.
+
+42
+00:03:48,080 --> 00:03:54,430
+Quindi aggiunger un puntello isAuth e lo legheremo a questo. puntelli. isAuthenticated, il supporto
+
+43
+00:03:54,440 --> 00:03:58,160
+che abbiamo appena mappato in mapStateToProps.
+
+44
+00:03:58,160 --> 00:04:03,980
+Ora passiamo ai controlli di compilazione per il componente di controllo di build che possiamo trovare
+
+45
+00:04:04,010 --> 00:04:08,420
+nel componente burger nella cartella dei componenti, controlli di compilazione e l
+
+46
+00:04:08,420 --> 00:04:15,820
+ora riceviamo che  puntatore di Auth che detiene quell'informazione e determina ci che fa questo pulsante qui sotto.
+
+47
+00:04:15,830 --> 00:04:22,490
+Ora ci che fa il pulsante adesso  nel generatore di hamburger, dove gestiamo questo oggetto
+
+48
+00:04:22,490 --> 00:04:29,060
+ordinato che alla fine  solo un oggetto collegato all'evento click del pulsante, che eseguiamo questo
+
+49
+00:04:29,060 --> 00:04:31,430
+gestore acquisti e nel gestore acquisti,
+
+50
+00:04:31,430 --> 00:04:37,910
+impostiamo lo stato all'acquisto e questo porter al dispiegamento del resto e alla nostra modale mostrata
+
+51
+00:04:37,910 --> 00:04:40,220
+dove possiamo continuare e cos via.
+
+52
+00:04:40,220 --> 00:04:47,110
+Quindi l'idea  che alla fine facciamo ci che facciamo nel modale quando continuiamo o per essere precisi, cosa facciamo
+
+53
+00:04:47,120 --> 00:04:52,250
+quindi in ordineSummary su continuando, l'acquistoContinueHandler viene eseguito l e poi semplicemente spingiamo a dare
+
+54
+00:04:52,460 --> 00:04:58,520
+un'occhiata in modo che facciamo push al check-out una volta che l'utente si  iscritto se ha effettuato
+
+55
+00:04:58,640 --> 00:05:05,300
+l'accesso tramite il nostro reindirizzamento dal produttore di hamburger. Per questo, prima di tutto abbiamo bisogno del
+
+56
+00:05:05,330 --> 00:05:05,930
+reindirizzamento, quindi
+
+57
+00:05:05,930 --> 00:05:12,290
+torniamo ai controlli di compilazione,  questo pulsante su cui vogliamo lavorare, questo pulsante qui dovrebbe
+
+58
+00:05:12,410 --> 00:05:14,690
+comportarsi diversamente se non siamo autenticati.
+
+59
+00:05:14,690 --> 00:05:20,090
+Gestir la maggior parte di quella logica nel contenitore del generatore di hamburger
+
+60
+00:05:20,090 --> 00:05:28,400
+anche se qui voglio solo modificare la didascalia, quindi in realt la racchiuderemo tra parentesi graffe e controller solo
+
+61
+00:05:28,420 --> 00:05:32,090
+i puntelli che ricevo come argomento nei controlli di
+
+62
+00:05:32,090 --> 00:05:34,460
+compilazione componente di presentazione, isAuth 
+
+63
+00:05:34,460 --> 00:05:38,790
+l'oggetto che abbiamo appena trasmesso, se  vero, emetter un
+
+64
+00:05:38,900 --> 00:05:44,530
+ordine di stringa ora altrimenti eseguir l'iscrizione per ordinare, qualcosa del genere.
+
+65
+00:05:44,540 --> 00:05:47,110
+Quindi questo  lo stile del mio
+
+66
+00:05:47,180 --> 00:05:51,390
+pulsante ora, se torniamo all'applicazione sul burger builder, vediamo che se
+
+67
+00:05:51,390 --> 00:05:52,840
+non siamo autenticati, vediamo
+
+68
+00:05:53,030 --> 00:05:58,030
+registrarsi all'ordine e se effettuiamo il login, dovremmo vedere che questo cambia, ora
+
+69
+00:05:58,190 --> 00:05:59,070
+abbiamo ordine
+
+70
+00:05:59,070 --> 00:06:03,460
+ora, ora dobbiamo assicurarci che questo pulsante faccia la cosa giusta.
+
+71
+00:06:03,470 --> 00:06:09,300
+Tieni presente che quando clicchiamo sul pulsante, eseguiamo semplicemente il metodo che viene inviato a questo
+
+72
+00:06:09,500 --> 00:06:11,180
+componente sul puntello orderd.
+
+73
+00:06:11,390 --> 00:06:18,380
+Quindi, se torniamo al contenitore del generatore di hamburger, vediamo che l'oggetto ordinato  destinato all'acquisto
+
+74
+00:06:18,740 --> 00:06:26,670
+del gestore, il gestore acquisti ci mostra il modale impostando questo stato all'acquisto o all'acquisto su true in
+
+75
+00:06:26,780 --> 00:06:27,650
+questo contenitore.
+
+76
+00:06:27,650 --> 00:06:30,340
+Ora voglio farlo solo se siamo
+
+77
+00:06:30,440 --> 00:06:34,880
+autenticati, altrimenti voglio reindirizzare alla mia pagina di autenticazione.
+
+78
+00:06:34,880 --> 00:06:41,300
+Quindi quello che possiamo fare  andare nel gestore degli acquisti e controllare questi oggetti di scena e
+
+79
+00:06:41,930 --> 00:06:48,380
+l, il puntello  impostato nella nostra costante mapStateToProps, isAuthenticated, questo  il supporto che abbiamo passato al
+
+80
+00:06:48,380 --> 00:06:52,220
+nostro contenitore di hamburger che contiene lo stato di autenticazione.
+
+81
+00:06:52,250 --> 00:06:59,530
+Quindi, se siamo autenticati, allora voglio impostare lo stato all'acquisto altrimenti voglio usare la mia storia,
+
+82
+00:06:59,660 --> 00:07:00,950
+questo proviene dal
+
+83
+00:07:03,860 --> 00:07:05,820
+router di reazione se
+
+84
+00:07:05,930 --> 00:07:09,190
+ti ricordi di spingere l'utente alla pagina
+
+85
+00:07:09,230 --> 00:07:19,160
+/ auth in modo che abbia una possibilit di iscrizione. Ora con quello se salviamo la nostra applicazione e torniamo,
+
+86
+00:07:19,160 --> 00:07:25,940
+ora possiamo aggiungere qualcosa al burger e fare clic su Iscriviti per ordinare e
+
+87
+00:07:25,940 --> 00:07:31,770
+cliccando su questo pulsante ci reindirizza qui alla pagina di registrazione.
+
+88
+00:07:31,850 --> 00:07:38,300
+Ovviamente il problema  che se effettuiamo l'accesso, verremo semplicemente reindirizzati al generatore di hamburger e il nostro
+
+89
+00:07:38,420 --> 00:07:41,570
+hamburger attualmente costruito andr perso. Sarebbe meglio essere reindirizzati
+
+90
+00:07:41,570 --> 00:07:48,200
+direttamente alla pagina di checkout e l, avere ancora il nostro hamburger, quest'ultimo sarebbe il caso
+
+91
+00:07:48,230 --> 00:07:53,300
+perch gli ingredienti degli hamburger sono memorizzati nel negozio di redux e
+
+92
+00:07:53,300 --> 00:07:56,630
+se non torniamo al costruttore di hamburger, questo
+
+93
+00:07:56,750 --> 00:08:01,460
+ha vinto pu essere ripristinato ma, naturalmente, il reindirizzamento  il
+
+94
+00:08:01,460 --> 00:08:07,850
+problema perch vogliamo solo reindirizzare in questo scenario. Se l'utente  appena entrato nell'app e ha fatto clic su Autenticati,
+
+95
+00:08:07,850 --> 00:08:10,570
+non vogliamo reindirizzare alla cassa perch non  stato ancora
+
+96
+00:08:10,610 --> 00:08:12,810
+creato un hamburger, non ci saranno ingredienti da controllare.
+
+97
+00:08:13,130 --> 00:08:16,400
+Diamo un'occhiata a come risolviamo questo problema nella prossima lezione.
+

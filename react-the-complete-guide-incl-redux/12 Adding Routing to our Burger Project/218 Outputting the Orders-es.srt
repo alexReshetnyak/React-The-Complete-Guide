@@ -1,0 +1,340 @@
+1
+00:00:02,120 --> 00:00:05,570
+En la ltima conferencia agregamos la lgica para obtener pedidos.
+
+2
+00:00:05,660 --> 00:00:09,050
+Vamos a recorrerlos y darles salida.
+
+3
+00:00:09,050 --> 00:00:18,000
+Ahora aqu estn DUDAS en lnea, todos llegan a este estado para ordenar y mapear este conjunto y luego, mientras
+
+4
+00:00:18,000 --> 00:00:21,650
+lo conocen, en el conjunto de elementos GSX.
+
+5
+00:00:21,690 --> 00:00:29,130
+As que aqu obtuve mi orden individual que bsicamente debera convertirse en un objeto de pedido como
+
+6
+00:00:29,130 --> 00:00:29,600
+este.
+
+7
+00:00:29,670 --> 00:00:31,020
+Eso es todo por ahora.
+
+8
+00:00:31,350 --> 00:00:36,730
+Guardamos esto, deberamos obtener tantos objetos como ordenes y firebase.
+
+9
+00:00:36,870 --> 00:00:39,730
+Como siempre, tambin debemos agregar que mantenga Propp aqu.
+
+10
+00:00:39,750 --> 00:00:44,110
+As que agreguemos la clave y establezcamos esto.
+
+11
+00:00:44,490 --> 00:00:51,270
+Bueno, ahora podemos usar Order ID porque habr una propiedad de identificacin que har que la identificacin de
+
+12
+00:00:51,270 --> 00:00:53,160
+firebase sea la clave perfecta.
+
+13
+00:00:53,160 --> 00:00:58,350
+Ahora bien, si eso podemos salvarlo y obtenemos las rdenes de la base de fuego, por supuesto, no estamos utilizando
+
+14
+00:00:58,350 --> 00:00:59,150
+devaluar desde all.
+
+15
+00:00:59,320 --> 00:01:01,100
+Esto es lo siguiente que quiero hacer.
+
+16
+00:01:01,350 --> 00:01:04,690
+Recibimos las rdenes que procesamos.
+
+17
+00:01:04,710 --> 00:01:10,800
+Ahora, por supuesto, sera sensato pasar tambin la informacin de la orden a ese componente de orden para
+
+18
+00:01:10,800 --> 00:01:12,490
+que podamos presentar algo all.
+
+19
+00:01:12,810 --> 00:01:15,190
+Queremos transmitir los ingredientes.
+
+20
+00:01:15,210 --> 00:01:23,720
+Entonces, pasar los ingredientes de la orden y tambin quiero pasar el precio.
+
+21
+00:01:23,760 --> 00:01:29,740
+Ahora, si echamos un vistazo al objeto firebase, el precio se almacena en un precio que se encuentra all.
+
+22
+00:01:29,910 --> 00:01:31,410
+Entonces esto es lo que quiero transmitir.
+
+23
+00:01:31,410 --> 00:01:39,300
+Q precio precio de Shelby precio que estamos pasando la informacin para ordenar.
+
+24
+00:01:39,330 --> 00:01:44,940
+Vamos a sacarlo all en el componente de pedido, el precio es simple.
+
+25
+00:01:44,940 --> 00:01:52,410
+Simplemente use salida de contenido dinmico con las llaves y sacamos el precio de prop como este.
+
+26
+00:01:52,440 --> 00:01:55,190
+As que ahora ya deberamos ver el precio real aqu.
+
+27
+00:01:55,350 --> 00:02:04,590
+Y lo hacemos tambin vemos que aqu queremos usar el precio fijado con 2 decimales.
+
+28
+00:02:04,650 --> 00:02:09,360
+Sin embargo, esto solo funcionar en un nmero y, por defecto, es una cadena.
+
+29
+00:02:09,360 --> 00:02:21,570
+Entonces, lo que puedo hacer es simplemente llamar al nmero parse float para convertir una cadena a un nmero o, por supuesto, agregar un signo ms en el momento
+
+30
+00:02:21,600 --> 00:02:29,400
+en que lo pasas aqu en el componente de pedidos agregando un lugar al frente de la orden no
+
+31
+00:02:29,400 --> 00:02:32,460
+el precio debera hacer todo el truco.
+
+32
+00:02:32,460 --> 00:02:39,780
+complejos porque los ingredientes como a menudo son un objeto y necesitamos un rea para recorrerlos y darles salida.
+
+33
+00:02:39,810 --> 00:02:46,370
+Ambos deberan funcionar y el resultado debera ser el precio, no los tratamientos son un poco ms
+
+34
+00:02:46,620 --> 00:02:53,070
+As que en el ao del componente de pedido donde quiero que la salida sea hormigas codiciosas ahora necesito
+
+35
+00:02:53,520 --> 00:03:00,990
+convertir mi paciencia en una matriz y puede hacer esa conversin en el contenedor de pedidos o aqu en el componente de pedido.
+
+36
+00:03:01,170 --> 00:03:03,680
+Lo har aqu en el componente de orden.
+
+37
+00:03:04,070 --> 00:03:11,880
+As que para eso todo cambi mi funcin de orden no solo para devolver JS X, sino que tenemos un cuerpo de funcin real donde Denn todo
+
+38
+00:03:11,880 --> 00:03:16,920
+lo que devolvi J es X, por supuesto, pero donde puedo ejecutar algn cdigo antes de hacerlo.
+
+39
+00:03:17,160 --> 00:03:19,900
+As que hagmoslo as.
+
+40
+00:03:20,010 --> 00:03:23,990
+Y ahora agreguemos el cdigo para transformar mis ingredientes.
+
+41
+00:03:24,270 --> 00:03:28,300
+Aqu todos agregan los ingredientes que deberan ser e ingredientes.
+
+42
+00:03:28,590 --> 00:03:34,150
+Y tenamos la lgica para transformar esto antes en el componente de Bergere aqu.
+
+43
+00:03:34,180 --> 00:03:36,180
+Los ingredientes transformados.
+
+44
+00:03:36,180 --> 00:03:43,870
+Esta es la lgica que podemos usar para convertir nuestros ingredientes en una variedad de ingredientes.
+
+45
+00:03:44,190 --> 00:03:46,350
+Sin embargo, quiero mostrarte una alternativa.
+
+46
+00:03:46,590 --> 00:03:50,030
+Entonces, aqu los ingredientes son solo una matriz por ahora, una matriz vaca.
+
+47
+00:03:50,250 --> 00:03:57,600
+Luego usar un ciclo para el nombre del ingrediente en los ingredientes del accesorio.
+
+48
+00:03:57,600 --> 00:04:00,170
+Esto es lo que puedo hacer porque en un bucle for.
+
+49
+00:04:00,330 --> 00:04:03,580
+El elemento variable ser el nombre de la propiedad.
+
+50
+00:04:03,600 --> 00:04:09,330
+Y dado que mis propiedades son simplemente representaciones de Ingredion, el nombre del ingrediente tiene sentido para
+
+51
+00:04:09,330 --> 00:04:10,500
+m como nombre.
+
+52
+00:04:10,500 --> 00:04:19,100
+Entonces, aqu puedo usar mi matriz de ingredientes e insertar este ingrediente en ella.
+
+53
+00:04:19,360 --> 00:04:26,490
+Entonces, aqu puedo llegar a los ingredientes del accesorio y acceder al ingrediente con el nombre del ingrediente.
+
+54
+00:04:26,500 --> 00:04:30,600
+Esto es de-valor del ingrediente 0 1 2 y as sucesivamente.
+
+55
+00:04:30,940 --> 00:04:39,610
+Quiero presionar un objeto javascript aunque, por supuesto, tambin tengo el importe, pero el para almacenar
+
+56
+00:04:39,610 --> 00:04:40,500
+la cantidad.
+
+57
+00:04:40,540 --> 00:04:46,540
+Tambin quiero guardar el nombre del ingrediente y ese nombre de ingrediente clave aqu.
+
+58
+00:04:46,600 --> 00:04:53,290
+As que este es el objetivo que ahora estoy tratando de lograr y reintegrar una transformacin muy simple, ciertamente un
+
+59
+00:04:53,290 --> 00:04:58,860
+poco ms corta que la otra, as que es por eso que tambin quera mostrar esta alternativa.
+
+60
+00:04:59,200 --> 00:05:07,420
+Ahora que lo empujaron a enojado, puedo mapear por ingredientes y texto bsicamente aqu.
+
+61
+00:05:07,900 --> 00:05:16,950
+Entonces, todos crean una nueva variable aqu o una nueva constante, as como esta es una constante que nombrar.
+
+62
+00:05:16,950 --> 00:05:24,240
+Ingrediente de salida de un ingrediente de salida debe ser el mapa de ingredientes como lo aprendi.
+
+63
+00:05:24,280 --> 00:05:30,670
+pronto, donde produzco ltigos ig con llaves APG nombre y luego entre parntesis y luego
+
+64
+00:05:31,620 --> 00:05:42,090
+con llaves para salida dinmica IGY el lapso de cierre de cantidad como este ahora vamos a producir salida de Ingredion all abajo.
+
+65
+00:05:42,230 --> 00:05:51,310
+Obtenemos el ingrediente individual y queremos devolver algunos actos de jazz aqu y aqu voy a devolver un lapso de tiempo.
+
+66
+00:05:51,340 --> 00:05:52,870
+Asignarle algo de clase
+
+67
+00:05:53,740 --> 00:05:58,730
+Me gusta y echemos un vistazo a esta salida aqu.
+
+68
+00:05:59,050 --> 00:06:01,230
+Obtenga el buen error clave anterior aqu.
+
+69
+00:06:01,240 --> 00:06:03,910
+Pero vemos docenas generalmente trabajando.
+
+70
+00:06:03,910 --> 00:06:11,170
+Ahora, con respecto a la clave, puedo usar el nombre del ingrediente como clave ya que es nico aqu,
+
+71
+00:06:11,170 --> 00:06:19,930
+as que puedo usar el nombre como clave nica y ahora quiero disear este lapso y simplemente lo voy a estilizar con un
+
+72
+00:06:19,930 --> 00:06:24,470
+estilo en lnea aqu, as que ' Asignaremos un objeto javascript.
+
+73
+00:06:24,700 --> 00:06:28,330
+Usa texto transformado para poner en mayscula la primera letra.
+
+74
+00:06:28,480 --> 00:06:34,590
+Entonces, capitalizar lo hace exactamente si guardamos eso, vemos que comienza con la letra inicial ahora.
+
+75
+00:06:35,050 --> 00:06:42,630
+Y tambin quiero poner disbands en pequeas cajas para que se destaquen entre s.
+
+76
+00:06:42,970 --> 00:06:51,600
+As que ajustar este ao de Optix de javascript sobre mltiples lneas para mostrarlas en lnea.
+
+77
+00:06:52,600 --> 00:06:59,590
+BLOCK aade un poco de margen a la izquierda y derecha a cero en la parte superior e inferior, as
+
+78
+00:06:59,590 --> 00:07:11,480
+que solo 8 pxeles a la izquierda y a la derecha 0 8 pxeles y agrega un borde tal vez un pxel gris slido y un poco de relleno como 5 pxeles y
+
+79
+00:07:11,500 --> 00:07:15,370
+podras, por supuesto tambin use una clase de CSS para eso.
+
+80
+00:07:15,470 --> 00:07:17,310
+As es como quiero mostrarlo.
+
+81
+00:07:17,320 --> 00:07:19,330
+Estos son mis ingredientes es mi precio.
+
+82
+00:07:19,360 --> 00:07:21,450
+Estas son mis rdenes.
+
+83
+00:07:21,460 --> 00:07:23,590
+Ahora podemos agregar ms a los pedidos.
+
+84
+00:07:23,620 --> 00:07:29,660
+Podemos agregar lgica para eliminar un pedido o para comercializar como cumplido.
+
+85
+00:07:29,890 --> 00:07:32,670
+Por ahora, as es como quiero darles salida.
+

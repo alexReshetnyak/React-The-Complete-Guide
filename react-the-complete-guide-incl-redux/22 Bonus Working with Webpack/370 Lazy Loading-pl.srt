@@ -1,0 +1,264 @@
+1
+00:00:02,180 --> 00:00:07,450
+W ostatnim wykadzie zakoczylimy konfiguracj regu dodajc regu dla obrazw, teraz chc
+
+2
+00:00:07,460 --> 00:00:12,520
+rzuci okiem na wtyczki, a nastpnie sprawdzi, czy konfiguracja rzeczywicie dziaa.
+
+3
+00:00:12,560 --> 00:00:17,920
+Jeli chodzi o wtyczki, to jest to dla nas naprawd proste, nie
+
+4
+00:00:17,990 --> 00:00:20,360
+potrzebujemy adnego do pracy nad
+
+5
+00:00:20,420 --> 00:00:25,450
+rozwojem, dodamy je pniej, kiedy ustawimy to na produkcj, tam chc
+
+6
+00:00:25,460 --> 00:00:26,950
+doda wtyczk, ale
+
+7
+00:00:27,110 --> 00:00:30,880
+na razie to wszystko, ja nie doda tutaj wtyczki.
+
+8
+00:00:31,310 --> 00:00:38,720
+Z tym moemy przyjrze si konfiguracji, ktrej uywalimy tutaj i sprawdzi, czy zapisujemy plik, jeli to dziaa, jeli
+
+9
+00:00:38,930 --> 00:00:44,900
+uruchomimy nasz skrypt startowy, ktry uruchamia serwer dev, ktry, jak powiedziaem, automatycznie wziby ten
+
+10
+00:00:44,900 --> 00:00:45,740
+plik konfiguracyjny.
+
+11
+00:00:45,860 --> 00:00:50,980
+Wic uruchommy ten skrypt za pomoc npm start, upewnij si, e
+
+12
+00:00:51,200 --> 00:00:58,990
+wszystkie pliki s zapisane i zobaczmy, czy to dziaa, otrzymujemy bd, e cieka nie jest ciek absolutn,
+
+13
+00:00:59,040 --> 00:01:02,240
+wic co z nasz ciek wyjciow jest bdne.
+
+14
+00:01:02,370 --> 00:01:04,390
+Rzumy okiem na to, przejdmy
+
+15
+00:01:04,530 --> 00:01:07,360
+do naszego konfiguratora Webpack, ciek tutaj dla
+
+16
+00:01:07,770 --> 00:01:09,990
+wyjcia, dobrze to zepsuem, prawda?
+
+17
+00:01:10,090 --> 00:01:16,660
+cieka powinna by t czci tutaj, a cieka publiczna powinna by pustym acuchem, wic przy
+
+18
+00:01:16,860 --> 00:01:19,770
+tej poprawce sprbujmy teraz ponownie, rwnie pamitaj
+
+19
+00:01:19,770 --> 00:01:22,260
+o zapisaniu zaktualizowanego pliku konfiguracyjnego.
+
+20
+00:01:23,130 --> 00:01:26,460
+Teraz przynajmniej nie zawiesza si przy
+
+21
+00:01:26,970 --> 00:01:32,580
+uruchamianiu serwera, ale daje nam bd, chocia nie rozumie tej skadni
+
+22
+00:01:32,650 --> 00:01:36,010
+importu, dynamicznej skadni importu, nie rozumie tego.
+
+23
+00:01:36,210 --> 00:01:45,190
+Jak wic moemy zrozumie ten dynamiczny import? Musimy dostosowa nasz konfiguracj, aby mc tworzy dynamicznie generowane dodatkowe fragmenty
+
+24
+00:01:45,190 --> 00:01:48,910
+kodu, a leniwy adowanie oznacza, e jest to dodatkowy
+
+25
+00:01:49,180 --> 00:01:54,850
+pakiet, a nie cz gwnego pakietu, ktry jest pobierany pocztkowo, w celu obsugi podziau
+
+26
+00:01:55,270 --> 00:02:01,420
+kodu w pakiecie sieci Web, a dzielenie kodu jest po prostu inna nazwa dla leniwego
+
+27
+00:02:01,480 --> 00:02:05,000
+adowania, musz doda tutaj parametr chunkFileName do mojej konfiguracji wyjciowej.
+
+28
+00:02:05,120 --> 00:02:12,460
+To po prostu okrela, co te inne pliki, oddzielne pliki, ktre s generowane dla leniwego zaadowanego kodu, ktry
+
+29
+00:02:12,460 --> 00:02:15,040
+oczywicie nie jest zawarty w pakiecie,
+
+30
+00:02:15,040 --> 00:02:17,220
+ktre mogyby zniweczy cel dzielenia
+
+31
+00:02:17,500 --> 00:02:19,540
+kodu, jaka nazwa powinna by nazwana.
+
+32
+00:02:19,690 --> 00:02:24,890
+Musz mie zmienn cz w nazwie, poniewa s generowane dynamicznie przez pakiet WWW,
+
+33
+00:02:25,000 --> 00:02:26,500
+uyj ID. js tutaj,
+
+34
+00:02:26,530 --> 00:02:33,050
+identyfikatory s dynamicznie generowane ID 0, 1, 2 i tak dalej, generowane przez Webpack, dziki czemu funkcja
+
+35
+00:02:33,190 --> 00:02:37,750
+jest zlecana na zewntrz do oddzielnych pakietw otrzymanych z wasnych plikw javascript.
+
+36
+00:02:38,140 --> 00:02:45,090
+Dodatkowo musimy uwiadomi babelowi t dynamiczn skadni importu, ktrej inaczej
+
+37
+00:02:45,400 --> 00:02:50,650
+nie rozumie, wic zrobi to, zainstaluj wtyczk, npm
+
+38
+00:02:50,650 --> 00:02:59,800
+install --save-dev, nazywane jest babel-plugin-syntax dynamic import, a to sprawi, e Babel zrozumie t
+
+39
+00:02:59,800 --> 00:03:01,720
+dynamiczn skadni importu.
+
+40
+00:03:02,020 --> 00:03:08,980
+Po zainstalowaniu tego pliku moemy przej do pliku babelrc i mamy ju gotowe ustawienia,
+
+41
+00:03:08,980 --> 00:03:13,150
+teraz dodam tu take wze wtyczek, ktry rwnie jest
+
+42
+00:03:13,200 --> 00:03:17,490
+tablic i tutaj dodam wtyczk dynamicznego importu skadni, wic
+
+43
+00:03:17,570 --> 00:03:19,730
+to jest nazwa wtyczki.
+
+44
+00:03:19,940 --> 00:03:26,720
+Po dodaniu tego, zapiszmy wszystkie te pliki i powtrzmy npm start i zobaczmy, czy to teraz dziaa,
+
+45
+00:03:26,720 --> 00:03:29,320
+teraz to si kompiluje, ale dostajemy inny
+
+46
+00:03:29,390 --> 00:03:35,270
+bd, otrzymujemy bd, e ta skadnia tutaj, gdzie przypisujemy nasze waciwoci, nie jest podobna .
+
+47
+00:03:35,270 --> 00:03:42,590
+Powodem tego jest to, e preset env, ktrego uywamy, ten tutaj obsuguje tylko najnowsze funkcje przegldarki, ktre
+
+48
+00:03:42,590 --> 00:03:45,550
+s czci specyfikacji, ta specjalna skadnia waciwoci
+
+49
+00:03:45,740 --> 00:03:51,710
+jest tylko w stanie roboczym i nie jest zawarta w predefiniowanym env, isn Problem,
+
+50
+00:03:52,070 --> 00:03:54,790
+chocia musimy doda kolejne ustawienie.
+
+51
+00:03:54,860 --> 00:04:04,550
+Tak wic z npm install save-dev, teraz instalujemy inne ustawienie o nazwie babel-preset-stage-2, ustawienia stage 2
+
+52
+00:04:04,550 --> 00:04:11,300
+to po prostu funkcje robocze, ktre mog by ostatecznie obsugiwane, ale
+
+53
+00:04:11,300 --> 00:04:13,280
+ktrych ju chcemy uywa.
+
+54
+00:04:13,280 --> 00:04:22,040
+W zwizku z tym musimy doda to do naszej konfiguracji tutaj i dodam moje ustawienie w rodku, dodam
+
+55
+00:04:22,670 --> 00:04:25,380
+tutaj stage-2, w ten sposb.
+
+56
+00:04:25,400 --> 00:04:29,240
+Sprbujmy teraz ponownie z npm start, a teraz wyglda
+
+57
+00:04:29,240 --> 00:04:31,200
+to lepiej, przynajmniej nie dostaniemy
+
+58
+00:04:31,460 --> 00:04:33,840
+bdu, jednak napotkamy jeden problem.
+
+59
+00:04:33,860 --> 00:04:41,480
+Aplikacja jest teraz obsugiwana i domylnie jest to robione na localhost8080, wic otwrzmy to, ale nie zobaczymy aplikacji, powodem
+
+60
+00:04:41,960 --> 00:04:44,510
+jest to, e nie poczylimy naszego
+
+61
+00:04:44,750 --> 00:04:51,530
+wyjcia do kompilacji, ktre zreszt nie jest przechowywane w dist folder, gdy korzystamy z dev-server, ale w
+
+62
+00:04:51,530 --> 00:04:57,150
+pamici, e nie poczono tego wyjcia z indeksem. plik html, nie mamy importu w
+
+63
+00:04:57,170 --> 00:04:57,840
+tym
+
+64
+00:04:57,860 --> 00:04:59,730
+pliku, w jaki sposb
+
+65
+00:04:59,750 --> 00:05:01,970
+dodalibymy do niego skrypt?
+
+66
+00:05:02,000 --> 00:05:08,000
+To jest co, co musimy zrobi sami, a zrobimy to w nastpnym wykadzie.
+

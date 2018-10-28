@@ -1,0 +1,48 @@
+1
+00:00:02,240 --> 00:00:09,090
+Witamy w tym module, w tym module zajmiemy si animacj w aplikacjach reagowania.
+
+2
+00:00:09,170 --> 00:00:15,320
+W rzeczywistoci uywamy ju animacji, troch animacji w naszym projekcie kursu w budowniczym burgerw, myl
+
+3
+00:00:15,320 --> 00:00:16,060
+o tym
+
+4
+00:00:16,070 --> 00:00:22,280
+przycisku teraz, ktry pojawia si, gdy staje si aktywny, ale nie robimy wiele z animacjami
+
+5
+00:00:22,310 --> 00:00:28,890
+i s pewne rzeczy, ktre wanie nie mg zrobi lub przynajmniej nie mg zrobi w miy sposb.
+
+6
+00:00:28,970 --> 00:00:31,120
+Zajm si tymi rzeczami w tym module.
+
+7
+00:00:31,190 --> 00:00:37,790
+Oglnym celem tego moduu jest pokazanie, jakie masz rne sposoby i opcje animacji aplikacji reagowania,
+
+8
+00:00:37,790 --> 00:00:42,140
+poniewa animacje s wane, nie s tylko czym, co naley
+
+9
+00:00:42,140 --> 00:00:49,670
+wzi pod uwag w aplikacjach, a zamiast tego animacje s czym, czego moesz potrzebowa w niemale dowolna
+
+10
+00:00:49,760 --> 00:00:53,210
+aplikacja, poniewa animacje kieruj uwag uytkownika, pokazuj uytkownikowi,
+
+11
+00:00:53,210 --> 00:01:00,240
+co si zmienio, sprawiaj, e jest to przyjemniejsze dla oka i dlatego stanowi wan koncepcj.
+
+12
+00:01:00,500 --> 00:01:05,570
+Z tym wic zagbimy si w rne sposoby animowania reagujcych aplikacji, ktre moemy wymyli.
+

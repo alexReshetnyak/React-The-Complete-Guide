@@ -1,0 +1,72 @@
+1
+00:00:02,390 --> 00:00:08,870
+Great job, you made it through this course and therefore you'll learn a lot about react and the whole
+
+2
+00:00:08,870 --> 00:00:10,970
+react ecosystem.
+
+3
+00:00:11,280 --> 00:00:17,990
+You now definitely have all the core fundamentals and way more than that it takes to become a successful
+
+4
+00:00:17,990 --> 00:00:19,520
+react developer.
+
+5
+00:00:19,520 --> 00:00:22,740
+I can of course only wish you all the best for your future
+
+6
+00:00:22,970 --> 00:00:26,650
+and I definitely want to encourage you here to do one important thing,
+
+7
+00:00:26,660 --> 00:00:35,210
+practice, practice, practice. You practice a lot throughout this course but to really excel at something, you have
+
+8
+00:00:35,210 --> 00:00:36,570
+to keep that going
+
+9
+00:00:36,650 --> 00:00:42,590
+and I can only encourage you to set your own goals, your own challenges. Build web apps with react, set
+
+10
+00:00:42,590 --> 00:00:47,190
+your own demo app you want to build and then build it with react.
+
+11
+00:00:47,210 --> 00:00:52,370
+This is how you'll learn the most about it and how you really become better and better using it and
+
+12
+00:00:52,370 --> 00:00:55,610
+how you can build your successful react future.
+
+13
+00:00:55,610 --> 00:01:00,210
+I wish you all the best for that and definitely share anything you build with react,
+
+14
+00:01:00,410 --> 00:01:01,770
+I can't wait to see it
+
+15
+00:01:01,790 --> 00:01:03,260
+and I really mean it like that.
+
+16
+00:01:03,360 --> 00:01:08,690
+So all the best to you, would of course be great to welcome you again in any of my other courses or any
+
+17
+00:01:08,690 --> 00:01:12,890
+future course and I can only encourage you to keep on going,
+
+18
+00:01:13,110 --> 00:01:13,430
+bye.
+

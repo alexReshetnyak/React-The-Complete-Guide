@@ -1,0 +1,184 @@
+1
+00:00:02,220 --> 00:00:08,340
+Na ltima palestra, voc aprender que, na reao 16, voc pode realmente retornar elementos
+
+2
+00:00:08,340 --> 00:00:13,800
+adjacentes em algumas circunstncias para uma das circunstncias dos filhos de prop.
+
+3
+00:00:13,860 --> 00:00:16,110
+Criamos esse componente auxiliar.
+
+4
+00:00:16,200 --> 00:00:22,500
+E eu lhe disse que  um componente de ordem superior chamado assim, porque tudo o que faz
+
+5
+00:00:22,500 --> 00:00:29,320
+ basicamente envolver e um componente realmente no faz muito mais, mas faz algo com esse componente de rechamada.
+
+6
+00:00:29,400 --> 00:00:35,940
+Neste caso, simplesmente  emitido com os filhos do prop para que possamos usar essa vantagem ou
+
+7
+00:00:35,940 --> 00:00:38,800
+aproveitar esta nova caracterstica do re-agir 60.
+
+8
+00:00:38,850 --> 00:00:44,520
+componentes de ordem superior e pela forma como voc usar alguns vezes quando estiver usando para pacotes de festa.
+
+9
+00:00:44,520 --> 00:00:46,040
+Agora, voc tambm pode criar
+
+10
+00:00:46,050 --> 00:00:52,860
+Morto em uma certa lgica para um componente, uma lgica que voc pode precisar em vrios componentes que voc no quer
+
+11
+00:00:52,860 --> 00:00:54,410
+escrever em cada um deles.
+
+12
+00:00:54,630 --> 00:01:01,120
+Por exemplo, compartilhe um usurio bloqueado, voc ver alguns componentes de ordem superior para este curso.
+
+13
+00:01:01,350 --> 00:01:07,050
+Vamos adicionar um para o nosso projeto de demonstrao aqui, no entanto, para a pessoa J. S. componente.
+
+14
+00:01:07,170 --> 00:01:17,290
+Ns o envolvemos em uma div com classe pessoa como um nome de classe e, na verdade, sim, fazemos o mesmo por dia com o
+
+15
+00:01:17,320 --> 00:01:18,490
+aplicativo de classes.
+
+16
+00:01:18,870 --> 00:01:23,490
+Seria legal se pudssemos usar um componente de ordem superior que faz isso.
+
+17
+00:01:23,630 --> 00:01:31,990
+Agora, na verdade, existem duas abordagens que voc pode tirar para mostrar que o primeiro  o
+
+18
+00:01:32,060 --> 00:01:40,270
+talvez com a classe J como queda, que  uma constante com a classe igual a voc.
+
+19
+00:01:41,050 --> 00:01:51,270
+Funo,  claro, somos tudo o que fazemos,  que devolvemos algum j x onde temos de estar envolvendo o Dith
+
+20
+00:01:51,840 --> 00:01:59,640
+e podemos configurar um nome de classe recebido. O Colossus  a expectativa deste componente e,
+
+21
+00:02:00,150 --> 00:02:04,510
+em seguida, a sada mostra as crianas entre eles.
+
+22
+00:02:04,520 --> 00:02:11,520
+Em seguida,  claro que precisamos importar re-agir de reagir porque isso ser transformado para
+
+23
+00:02:11,580 --> 00:02:16,730
+reagir e criar o elemento e exportar padro com a classe.
+
+24
+00:02:16,740 --> 00:02:19,640
+Agora podemos usar isso com o Classen Rapparee aqui.
+
+25
+00:02:19,680 --> 00:02:30,780
+Por exemplo, na queda dos EUA, ele  importado rapidamente, vamos importar com classe de um nvel Agios C
+
+26
+00:02:30,780 --> 00:02:31,830
+com classe.
+
+27
+00:02:31,950 --> 00:02:33,910
+E agora vamos embrulh-lo.
+
+28
+00:02:34,110 --> 00:02:39,490
+Ento vamos envolver nosso componente com o componente de classe aqui.
+
+29
+00:02:39,630 --> 00:02:45,220
+Agora temos com CLOS e fechamos com a classe.
+
+30
+00:02:45,250 --> 00:02:47,140
+Ento, substitumos Dave por isso.
+
+31
+00:02:47,320 --> 00:02:54,310
+E conforme configurado com a classe, esperamos obter as aulas como uma propriedade.
+
+32
+00:02:54,610 --> 00:02:59,530
+mas precisamos da propriedade da classe e isso deve, claro, ser o aplicativo Colossus.
+
+33
+00:02:59,530 --> 00:03:08,670
+Ento, devemos passar os filhos deste prop,  claro,  a parte que passamos entre as tags de abertura e de fechamento, ento essa parte,
+
+34
+00:03:08,680 --> 00:03:14,840
+Ento, basicamente, substitumos Dave, que tem o nome da classe com a classe que tem aulas, ento
+
+35
+00:03:14,860 --> 00:03:17,980
+salvamos alguns personagens que passamos em vez da morte.
+
+36
+00:03:18,070 --> 00:03:23,300
+Ainda  um bom exemplo para uma possvel ordem superior do componente.
+
+37
+00:03:23,320 --> 00:03:28,900
+No faz nada, em seguida, envolve o contedo em uma div e atribuiu uma classe C S S.
+
+38
+00:03:29,260 --> 00:03:37,420
+Por enquanto, salvar obtm o mesmo estilo de um comportamento como antes com as classes e, claro, tambm podemos adicionar
+
+39
+00:03:37,420 --> 00:03:42,600
+isso s pessoas como eu para pessoa, onde temos o mesmo comportamento.
+
+40
+00:03:42,790 --> 00:03:44,130
+Uma diferena de embrulho.
+
+41
+00:03:44,440 --> 00:03:48,160
+Vamos fazer isso rapidamente, vamos importar com classe aqui tambm.
+
+42
+00:03:48,370 --> 00:03:51,370
+Vamos subir alguns nveis at chegar ao nvel superior.
+
+43
+00:03:51,370 --> 00:03:58,120
+V para Agios ver importado com CLOS e, novamente, como antes no outono.
+
+44
+00:03:58,210 --> 00:04:03,730
+Substitua esta morte seu com com clusula e nome da classe.
+
+45
+00:04:03,720 --> 00:04:08,030
+Agora com as aulas porque  a propriedade com o CLOS espera.
+
+46
+00:04:08,030 --> 00:04:13,870
+E agora, com isso, se bloquearmos isso, obtenha o mesmo estilo que antes com nosso componente personalizado de ordem superior.
+

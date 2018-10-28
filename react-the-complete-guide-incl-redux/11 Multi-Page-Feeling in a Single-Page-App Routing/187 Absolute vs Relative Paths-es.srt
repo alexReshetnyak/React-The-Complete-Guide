@@ -1,0 +1,124 @@
+1
+00:00:02,170 --> 00:00:10,810
+Una informacin ms sobre los enlaces que configuraste aqu para recortar la nueva publicacin de la forma en que escribes
+
+2
+00:00:10,810 --> 00:00:11,890
+tus enlaces aqu.
+
+3
+00:00:11,980 --> 00:00:15,370
+No el hecho de si es una ruta absoluta o relativa.
+
+4
+00:00:15,550 --> 00:00:18,930
+Ahora bien, lo que significa absoluto y relativo significa de todos modos.
+
+5
+00:00:19,420 --> 00:00:23,310
+Un pago absoluto es siempre un pendiente de su dominio.
+
+6
+00:00:23,440 --> 00:00:29,720
+Por lo tanto, si est publicando esta aplicacin desde punto com ejemplo, quiere ir a Nueva publicacin.
+
+7
+00:00:29,950 --> 00:00:37,360
+Si navegas para recortar una nueva publicacin que simplemente significa siempre adjuntar barra nueva publicacin justo despus del dominio.
+
+8
+00:00:37,420 --> 00:00:45,430
+Tournay, lo conseguira para publicar una nueva publicacin, pero lo convertiras en ejemplos de una nueva publicacin y omitir las publicaciones.
+
+9
+00:00:45,440 --> 00:00:51,890
+Incluso si anteriormente fueras un ejemplo de compost, no agregaras una nueva publicacin al final de ese
+
+10
+00:00:52,140 --> 00:00:54,550
+Es lo que hace un paff absoluto.
+
+11
+00:00:54,550 --> 00:01:00,260
+Ahora cuando configura dos no puede controlar si es un punto de vista absoluto o relativo.
+
+12
+00:01:00,340 --> 00:01:06,620
+Siempre se trata como un punto de vista absoluto, por lo que no importa si se trata de una publicacin nueva o simplemente nuevas.
+
+13
+00:01:06,730 --> 00:01:11,420
+Es un punto de vista absoluto y siempre se adjuntar a su dominio raz.
+
+14
+00:01:11,770 --> 00:01:15,990
+Ahora bien, qu pasara si quisieras convertir esto en una parte relativa?
+
+15
+00:01:16,000 --> 00:01:23,080
+Por lo tanto, si desea asegurarse de que si est en las publicaciones de barra de su dominio, vaya a las
+
+16
+00:01:23,080 --> 00:01:28,640
+publicaciones de barra oblicua, haga una nueva publicacin y agregue esto al final de la ruta actual.
+
+17
+00:01:28,780 --> 00:01:35,650
+Entonces realmente necesita construir esta ruta dinmicamente tomando ventaja de saber en qu
+
+18
+00:01:35,650 --> 00:01:37,810
+POF se encuentra actualmente.
+
+19
+00:01:37,810 --> 00:01:41,230
+Recuerde que tiene acceso a este partido de utilera.
+
+20
+00:01:41,230 --> 00:01:48,620
+Hemos inspeccionado esto en la consola el objeto de coincidencia tiene un objeto que es el Hauf cargado actualmente
+
+21
+00:01:48,630 --> 00:01:50,010
+en el extremo.
+
+22
+00:01:50,020 --> 00:01:56,860
+Ahora puedes hacer una nueva publicacin de Shane en el disco, puedes construir una ruta dinmica como esta.
+
+23
+00:01:56,860 --> 00:02:00,470
+Ahora es relativo porque toma la pgina en la que se encuentra actualmente.
+
+24
+00:02:00,490 --> 00:02:07,480
+en la que se encuentra actualmente y se agrega permanece al final y de repente construy una ruta relativa.
+
+25
+00:02:07,480 --> 00:02:08,210
+La recompensa
+
+26
+00:02:08,530 --> 00:02:15,110
+Entonces, si alguna vez quieres construir un enlace que simplemente anexe la ruta hasta el final de la ruta actual.
+
+27
+00:02:15,150 --> 00:02:16,730
+Utiliza este enfoque
+
+28
+00:02:17,140 --> 00:02:21,650
+Oberweis esto siempre genera un camino absoluto.
+
+29
+00:02:21,700 --> 00:02:23,910
+No hay mejor o peor aqu.
+
+30
+00:02:23,920 --> 00:02:30,060
+Realmente depende del comportamiento que desee agregar al dominio raz o anexado a la ruta actual.
+
+31
+00:02:30,070 --> 00:02:32,470
+Quera hacerte consciente de cmo lograr ambos.
+

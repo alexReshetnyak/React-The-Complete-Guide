@@ -1,0 +1,60 @@
+1
+00:00:02,220 --> 00:00:09,330
+Benvenuti in questo modulo, avete imparato tanto su come reagire, ridisegnare e tutte le funzionalit principali di entrambe le librerie.
+
+2
+00:00:09,600 --> 00:00:12,410
+Abbiamo creato una fantastica applicazione con tutti questi strumenti.
+
+3
+00:00:12,510 --> 00:00:18,690
+Ma manca una cosa, una cosa che non  realmente correlata a reagire necessariamente, ma ci
+
+4
+00:00:18,690 --> 00:00:22,110
+che si ha in molte applicazioni, autenticare gli utenti.
+
+5
+00:00:22,470 --> 00:00:28,400
+E voglio mostrarvi come funzionerebbe in un'applicazione single page a risposta singola, applicazione a singola pagina,
+
+6
+00:00:28,470 --> 00:00:33,600
+perch se avete un'applicazione multi-pagina in cui eseguite il rendering di pagine diverse per
+
+7
+00:00:33,600 --> 00:00:40,200
+richieste diverse dal vostro server, gestite l'autenticazione nel modo tradizionale di avere una sessione sul server e
+
+8
+00:00:40,470 --> 00:00:46,740
+la restituzione di pagine diverse dopo aver controllato la validit dell'utente o lo stato di autenticazione sul
+
+9
+00:00:46,740 --> 00:00:47,470
+server.
+
+10
+00:00:47,550 --> 00:00:53,730
+Ora la cosa speciale sull'autenticazione in risposta  che si ha un solo file e da quel
+
+11
+00:00:53,730 --> 00:00:55,200
+momento in poi non
+
+12
+00:00:55,350 --> 00:01:02,970
+si ottiene alcun nuovo file, quindi  possibile controllare lo stato di autenticazione dell'utente sul server ma non su ogni richiesta,
+
+13
+00:01:02,970 --> 00:01:04,780
+almeno non nel modello tradizionale .
+
+14
+00:01:04,980 --> 00:01:08,020
+Questo  ci che daremo un'occhiata, come funziona in
+
+15
+00:01:08,070 --> 00:01:12,030
+questo modo e, naturalmente, implementeremo anche l'autenticazione nel nostro progetto burger.
+

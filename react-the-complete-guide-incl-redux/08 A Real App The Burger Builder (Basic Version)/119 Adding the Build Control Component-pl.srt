@@ -1,0 +1,356 @@
+1
+00:00:02,200 --> 00:00:07,450
+Nadszed czas, aby doda kontrol, aby uytkownik mg faktycznie kontrolowa, ktre
+
+2
+00:00:07,480 --> 00:00:14,830
+skadniki powinien mie hamburger, a do tego musimy doda pogrubione elementy sterujce, a dodamy ten
+
+3
+00:00:14,830 --> 00:00:21,630
+komponent do folderu Burger lub dodamy nowy podfolder, z ktrego wszystkie sterowanie budowaniem nazw.
+
+4
+00:00:21,730 --> 00:00:26,930
+Tam dodam plik JS sterowany kompilacj.
+
+5
+00:00:26,980 --> 00:00:35,830
+Teraz elementy sterujce budow bd funkcjonalnym komponentem, wic obie kontrolki to funkcja, ktra odbiera rekwizyty
+
+6
+00:00:35,830 --> 00:00:40,020
+i ktra w kocu zwrci cz GSX.
+
+7
+00:00:40,030 --> 00:00:48,310
+Dlatego oczywicie musimy rwnie zaimportowa reac z reakcji, a nastpnie moemy wyeksportowa funkcj
+
+8
+00:00:48,340 --> 00:00:50,520
+kontroli dzwonka jako domyln.
+
+9
+00:00:50,530 --> 00:00:54,420
+Teraz powinnimy wyglda jak powinnimy budowa kontrole.
+
+10
+00:00:54,520 --> 00:00:56,500
+Oczywicie badanie zawsze naley do Ciebie.
+
+11
+00:00:56,500 --> 00:01:03,370
+Chc mie div, ktrego uyj, aby nada temu obszarowi pewn stylistyk, a tam chc mie
+
+12
+00:01:03,520 --> 00:01:04,970
+rne ustawienia kompilacji.
+
+13
+00:01:05,070 --> 00:01:08,530
+Teraz zacznijmy od stylizacji tego obszaru.
+
+14
+00:01:08,800 --> 00:01:17,790
+W tym celu utworz nowy kontrolowany plik C S S, ktry doda kontrolki kompilacji.
+
+15
+00:01:18,070 --> 00:01:18,600
+Przepraszam.
+
+16
+00:01:18,610 --> 00:01:21,490
+Nastpujce nazwy naley nazwa rwnie kontrolkami.
+
+17
+00:01:21,490 --> 00:01:27,790
+Tak jak J jako plik jest liczb mnog, wic w C jest asfaltem dodam wbudowane sterowanie.
+
+18
+00:01:27,790 --> 00:01:29,440
+C S S klasa.
+
+19
+00:01:29,640 --> 00:01:35,200
+I chc nada kontrol nad budow do szerokoci 100 procent, a dla
+
+20
+00:01:35,200 --> 00:01:38,250
+koloru wstecznego wybraem adny pomaraczowy brzowawy kolor.
+
+21
+00:01:38,260 --> 00:01:41,330
+C f 8 F do e.
+
+22
+00:01:41,620 --> 00:01:49,030
+Podoba mi si ten kolor na wywietlaczu Shelby Flex Box, aby prawidowo ustawi wszystkie te elementy sterowania rubami.
+
+23
+00:01:49,030 --> 00:01:54,290
+Ustawi elastyczny przepyw na Cullinan, aby umieci je pod sob, tak w kolumnie zamiast
+
+24
+00:01:54,290 --> 00:01:55,110
+w rzdzie.
+
+25
+00:01:55,630 --> 00:02:05,920
+Chc wyrwna cay tekst w rodku Chc nada mojemu pudu may cie pudeka tylko na dole
+
+26
+00:02:06,160 --> 00:02:11,010
+jednego piksela i jest idealny jako kolor cienia.
+
+27
+00:02:11,220 --> 00:02:11,950
+Margines.
+
+28
+00:02:11,950 --> 00:02:19,860
+Automatycznie i dodaj dopenienie to powiedzmy 10 pikseli i 0 z lewej i prawej strony.
+
+29
+00:02:19,870 --> 00:02:21,140
+Poniewa tekst ma by wycentrowany.
+
+30
+00:02:21,150 --> 00:02:24,770
+W kadym razie teraz to jest mj obszar kontroli odzi.
+
+31
+00:02:24,910 --> 00:02:30,490
+Oczywicie powinnimy doda troch treci do obszaru kontroli piki i tam chc mie
+
+32
+00:02:30,640 --> 00:02:31,870
+kilka kontroli budowania.
+
+33
+00:02:31,870 --> 00:02:33,040
+Zgade.
+
+34
+00:02:33,040 --> 00:02:39,040
+Moim zdaniem sensowne jest zlecanie tych kontrolek na zewntrz, poniewa nie jest to tylko jeden przycisk.
+
+35
+00:02:39,100 --> 00:02:44,840
+Jest to etykieta, a nastpnie dwa przyciski i jest to w zasadzie element wielokrotnego uytku.
+
+36
+00:02:44,980 --> 00:02:49,440
+Przeniesienie jej do wasnego komponentu ma wiele sensu.
+
+37
+00:02:49,480 --> 00:02:57,130
+Tak wic wewntrz wbudowanych elementw sterujcych dodaje si kontrolowany folder, a tam kontrolowane poraki Jr s
+
+38
+00:02:57,370 --> 00:03:03,360
+kontrolowane i wszystkie gotowe sterowanie budow wykonuje C-s w nastpujcy sposb po stylizacji.
+
+39
+00:03:03,580 --> 00:03:06,630
+Zacznijmy od litery J, jak nastpuje.
+
+40
+00:03:06,750 --> 00:03:14,650
+Kontrola boltw ten komponent bdzie rwnie funkcj otrzymujc rekwizyty i zwroty J, poniewa X
+
+41
+00:03:14,740 --> 00:03:23,670
+bdzie importowa reakcj z reakcji, jak zawsze to wiesz i wyeksportuje obie kontrolki jako domyln.
+
+42
+00:03:23,680 --> 00:03:26,860
+Teraz musimy zdecydowa, jak powinna wyglda kontrola rub.
+
+43
+00:03:26,870 --> 00:03:34,900
+Teraz uyjemy div jako opakowania lub do stylizacji, a nastpnie moja pogrubiona kontrola powinna na kocu mie div,
+
+44
+00:03:34,960 --> 00:03:37,900
+ktry zawiera tekst dla tego pogrubionego sterowania.
+
+45
+00:03:37,900 --> 00:03:41,270
+Zasadniczo tekst to nazwa skadnika, ktry chc doda.
+
+46
+00:03:41,590 --> 00:03:45,000
+Wic chc co dynamicznie wydoby.
+
+47
+00:03:45,130 --> 00:03:49,990
+Otrzymam podpowied i chc nada jej nazw.
+
+48
+00:03:50,020 --> 00:03:52,310
+Moesz oczywicie wybra dowoln nazw.
+
+49
+00:03:52,310 --> 00:03:56,860
+Mgbym nazwa etykiet skadnika, czego potrzebujesz obok.
+
+50
+00:03:56,860 --> 00:03:58,780
+S tylko dwa przyciski.
+
+51
+00:03:58,870 --> 00:04:03,350
+Pierwszym przyciskiem jest oczywicie usunicie ostatniego skadnika.
+
+52
+00:04:03,610 --> 00:04:09,130
+A potem zrobi duplikat, aby mie wicej przycisku.
+
+53
+00:04:09,130 --> 00:04:13,940
+Teraz mam dwa przyciski, ktre pozwalaj mi usuwa i dodawa skadniki.
+
+54
+00:04:13,960 --> 00:04:15,340
+Teraz bd potrzebowa troch.
+
+55
+00:04:15,330 --> 00:04:18,060
+C jest pytany o to, e jest zbudowany pod kontrol, aby wyglda dobrze.
+
+56
+00:04:18,100 --> 00:04:21,930
+Wic przejdmy do D. DO. To jest plik o osobie i tam.
+
+57
+00:04:21,970 --> 00:04:25,130
+Dodajmy wbudowan kontrol.
+
+58
+00:04:25,150 --> 00:04:27,260
+Ta C jest klas S.
+
+59
+00:04:27,360 --> 00:04:35,360
+Chc uy blokw flex, aby umieci div z tekstem, a przyciski flex flow zostan zapisane.
+
+60
+00:04:35,400 --> 00:04:36,660
+Wic domylny.
+
+61
+00:04:37,050 --> 00:04:44,370
+Chc, aby je rozprowadza z odstpem midzy nimi, tak aby zachowali pewn odlego od siebie i
+
+62
+00:04:44,410 --> 00:04:52,050
+wyrwnam ca zawarto w rodku dla wyrwnania sowa i przypisz margines piciu pikseli od gry do dou,
+
+63
+00:04:52,130 --> 00:04:58,680
+tak, e jest troch przestrze pomidzy poszczeglnymi kontrolkami rub, ale nie ma teraz adnej
+
+64
+00:04:58,750 --> 00:05:02,550
+wartoci od lewej do prawej w sterowaniu kulowym.
+
+65
+00:05:02,550 --> 00:05:07,850
+Mamy oczywicie przycisk i nietoperz powinien by na wywietlaczu.
+
+66
+00:05:08,310 --> 00:05:12,800
+Zwykle jest to przycisk, ktry mona usysze podczas suchania w stylu bloku.
+
+67
+00:05:14,120 --> 00:05:25,150
+Lub po odziedziczeniu funduszu i ustawieniu wypenienia na 5 pikseli marginesu na zero lub 5 pikseli przy 80 pikselach powinno
+
+68
+00:05:25,360 --> 00:05:26,390
+dobrze wyglda.
+
+69
+00:05:26,620 --> 00:05:36,970
+Granica bdzie jednopikselow bry, a 6 8 7 3 1 8 1 7 przepraszam, e jest to rwnie brzowy kolor.
+
+70
+00:05:37,510 --> 00:05:40,050
+Kirsner powinien by wskanikiem.
+
+71
+00:05:40,330 --> 00:05:45,040
+I chc usun domylnie ten kontur.
+
+72
+00:05:45,040 --> 00:05:50,290
+Teraz jest znacznie wicej stylw, ktre moemy doda do stylu przycisku i wszystkich etykiet.
+
+73
+00:05:50,290 --> 00:05:57,600
+Aby to skrci, docz plik ze wszystkimi stoutami i moesz po prostu doda je poniej.
+
+74
+00:05:57,670 --> 00:06:01,630
+W rzeczywistoci zaczony plik bdzie zawiera rysik dla tego caego pliku.
+
+75
+00:06:01,630 --> 00:06:05,160
+Wic moesz po prostu zastpi wszystko tutaj.
+
+76
+00:06:05,200 --> 00:06:09,570
+S to tylko style, aby upewni si, e mamy klasy Q stylu.
+
+77
+00:06:09,730 --> 00:06:14,820
+Coraz mniej przyciskw, a nawet wycz przyciski.
+
+78
+00:06:15,130 --> 00:06:21,680
+Powrmy teraz do upadku javascript, aby zareagowa na kod, na ktry wszyscy tu jestecie.
+
+79
+00:06:21,690 --> 00:06:28,160
+Teraz zaimportujmy ten obiekt klasy z naszego s. do. s w nastpujcy sposb, abymy
+
+80
+00:06:28,160 --> 00:06:33,880
+mogli zacz uywa tych klas jako klas i zaczy klas do naszego rocznika div.
+
+81
+00:06:33,880 --> 00:06:37,640
+To bdzie klasa kontroli budowania.
+
+82
+00:06:37,750 --> 00:06:42,620
+Potrzebuj te lekcji dla mojej wytwrni Def tutaj.
+
+83
+00:06:42,730 --> 00:06:51,220
+Bd uywa Klaasa, a nastpnie oznacz, e to jedna z klauzul C as, ktre wanie zaimportowae, a przyciski
+
+84
+00:06:51,280 --> 00:06:53,800
+wszystkie, ktre otrzymaj nazwy klas.
+
+85
+00:06:53,800 --> 00:07:02,560
+Ostatni BOTTEN dla taty Mam ostatni klas i im wicej przycisku tego przycisku, moesz
+
+86
+00:07:02,560 --> 00:07:07,870
+tego nie odgadn, ale mam taki lub taki przycisk.
+
+87
+00:07:07,940 --> 00:07:16,510
+Teraz styl pojedynczej ruby jest stylizowany na nastpny krok, ktry zrobi w nastpnym wykadzie, aby
+
+88
+00:07:16,510 --> 00:07:22,350
+teraz utworzy tablic takich elementw sterujcych budowania w zbudowanym komponencie sterujcym.
+
+89
+00:07:22,600 --> 00:07:25,090
+Zrbmy to razem w nastpnym wykadzie.
+

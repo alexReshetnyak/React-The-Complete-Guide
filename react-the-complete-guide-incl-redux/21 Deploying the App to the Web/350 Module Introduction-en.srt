@@ -1,0 +1,36 @@
+1
+00:00:02,270 --> 00:00:08,290
+We're nearing the end of the core react features, we built our amazing react application throughout the
+
+2
+00:00:08,310 --> 00:00:12,830
+course and we even added a bit of testing to it in the last module.
+
+3
+00:00:12,830 --> 00:00:19,230
+Now it's time to deploy this application so that we can really see it run somewhere in the internet.
+
+4
+00:00:19,640 --> 00:00:21,470
+So deploying react apps,
+
+5
+00:00:21,470 --> 00:00:22,790
+how does that work?
+
+6
+00:00:22,790 --> 00:00:24,820
+What do we have to watch out for?
+
+7
+00:00:24,830 --> 00:00:26,840
+Thankfully it's super easy,
+
+8
+00:00:26,840 --> 00:00:27,980
+here are the steps
+
+9
+00:00:27,980 --> 00:00:31,000
+and of course I'll also show you an example in this module.
+

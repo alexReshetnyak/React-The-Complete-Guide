@@ -1,0 +1,168 @@
+1
+00:00:02,060 --> 00:00:06,620
+imdi, hangi aralar kullandmz ve genel olarak test etmenin neden iyi bir
+
+2
+00:00:06,620 --> 00:00:13,010
+fikir olduunu biliyoruz, tabii ki neyi test etmemiz gerektiini ve orada neyin doru olduunu bulmak zorundayz.
+
+3
+00:00:13,040 --> 00:00:19,760
+Aslnda iyi testler yazmak olduka karmaktr ve ok fazla pratik gerektirmektedir ki bu da bunun
+
+4
+00:00:19,760 --> 00:00:22,520
+tam bir test klavuzunun olmamasnn nedenlerinden
+
+5
+00:00:22,580 --> 00:00:23,700
+biri de deildir.
+
+6
+00:00:24,050 --> 00:00:27,450
+Genel olarak, burada test etmek istemeyeceiniz baz eyler
+
+7
+00:00:27,470 --> 00:00:29,220
+var, ktphaneyi test etmek
+
+8
+00:00:29,240 --> 00:00:33,340
+istemiyorsunuz, tepkiyi veya aksiyomu test etmek istemiyorsunuz ya da kendini
+
+9
+00:00:33,590 --> 00:00:38,270
+yenilemek istemiyorsunuz, bunlar zaten test edilmi olan nc parti ktphaneleridir. gelitiricileri.
+
+10
+00:00:38,270 --> 00:00:40,400
+Doru bir ekilde alp almadklarn test
+
+11
+00:00:40,460 --> 00:00:44,610
+etmenize gerek yoktur, maaza, redux maazasnn dzgn alp almadn test etmenize
+
+12
+00:00:44,720 --> 00:00:45,940
+gerek yoktur, uygulamanza
+
+13
+00:00:45,980 --> 00:00:51,520
+eklediiniz kodu test etmek istersiniz ve burada kodu test etmek istediiniz bu ktphaneyi kullanmaz.
+
+14
+00:00:51,530 --> 00:00:57,830
+rnein, bir akson gnderi istei gnderiyorsanz, bunun baaryla gnderilip gnderilmediini snamanza gerek yoktur. Baarsz olursa muhtemelen
+
+15
+00:00:58,040 --> 00:01:04,100
+nternet balantnz olmaz, bu da Axios ktphanesi deildir. Tipik olarak byle bir kullanm durumunda sunucumdan
+
+16
+00:01:04,100 --> 00:01:10,700
+geri dndnz sahte verileri almak istiyorsunuz ve sadece bu tr geri dndrlen verilerle yaptnz eyi
+
+17
+00:01:10,700 --> 00:01:11,300
+test
+
+18
+00:01:11,420 --> 00:01:14,360
+edin, bylece testin arkasndaki fikir budur.
+
+19
+00:01:14,360 --> 00:01:19,580
+Ek olarak, zellikle tepki olarak ok karmak balantlar test etmek istemezseniz, bir
+
+20
+00:01:19,580 --> 00:01:24,770
+bileendeki bir dmeyi tkladnzdan ve tamamen farkl bir bileendeki bir eyi deitirdiinizden
+
+21
+00:01:24,770 --> 00:01:26,770
+dolay test etme tehlikesi vardr.
+
+22
+00:01:26,780 --> 00:01:33,050
+imdi, tepkinin bir olay yaynlamak ve bunu iletmek iin sahne konseptini kullanp kullanamayacan
+
+23
+00:01:33,050 --> 00:01:33,660
+test
+
+24
+00:01:33,920 --> 00:01:39,080
+etmek zorunda deilsiniz, tepkinizdeki dmenin tklatlmas ilk etapta belirli bir pervane
+
+25
+00:01:39,080 --> 00:01:40,160
+tetikliyorsa veya
+
+26
+00:01:40,310 --> 00:01:46,790
+Bir bileende sahne zerinden aldnz verilerdeki deiiklik, farkl bir sonuca yol aar, yani
+
+27
+00:01:46,850 --> 00:01:48,570
+test etmek istediiniz eydir.
+
+28
+00:01:48,590 --> 00:01:55,320
+Reaksiyon bileenleri iin imdiye kadar sylenen baz test klavuzlar vardr, sadece bir tepkime bileeninin
+
+29
+00:01:55,320 --> 00:01:58,310
+doru ekilde ilendiini test etmeniz gerekir.
+
+30
+00:01:58,310 --> 00:02:04,250
+imdi size farkl eyleri tepki bileenleri ile nasl test edeceinizi gstereceim ama kesinlikle aklnzda
+
+31
+00:02:04,250 --> 00:02:06,830
+bulundurun, ok karmak balantlar test etmeyin.
+
+32
+00:02:06,890 --> 00:02:08,980
+Yani bunlar test etmek istemediiniz
+
+33
+00:02:09,110 --> 00:02:14,210
+eyler, ne zaman test edeceksiniz? Tipik rnekler yaltlm birimlerdir, oluturduunuz
+
+34
+00:02:14,210 --> 00:02:17,160
+redktr fonksiyonunu test etmek istersiniz, yarattnz
+
+35
+00:02:17,270 --> 00:02:20,660
+bu bileen fonksiyonunu test etmek istersiniz, ayrca
+
+36
+00:02:20,660 --> 00:02:23,860
+eer bileeniniz eer bu zellik doruysa, ilenen
+
+37
+00:02:23,960 --> 00:02:31,160
+bir eye neden olan bir zellii varsa, koullu kty test etmek istersiniz Daha sonra bunun
+
+38
+00:02:31,160 --> 00:02:33,430
+gerekten olup olmadn test etmek istersiniz.
+
+39
+00:02:33,590 --> 00:02:36,790
+Bileeninizde baz zellikler deiirse ne olur?
+
+40
+00:02:36,890 --> 00:02:39,150
+Bu k doru olarak etkiler mi?
+
+41
+00:02:39,350 --> 00:02:42,980
+Bunlar nite testlerinde test etmek istediiniz eyler.
+
+42
+00:02:42,980 --> 00:02:48,330
+imdi kazandmz bu bilgi sayesinde, bir tepki uygulamasnda gerekte birim testleri yazdmz renelim.
+

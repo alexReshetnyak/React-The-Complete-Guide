@@ -1,0 +1,280 @@
+1
+00:00:02,110 --> 00:00:06,990
+Entonces en las ltimas conferencias reestructuramos nuestro proyecto para tener diferentes pginas.
+
+2
+00:00:07,180 --> 00:00:10,780
+No, ya no quiero mostrar publicaciones todo el tiempo.
+
+3
+00:00:10,780 --> 00:00:18,820
+Quiero cargar este diminuto qumicamente pendiente en el camino que tenemos en el U R L y para Slash nada.
+
+4
+00:00:18,820 --> 00:00:26,110
+Entonces, para esencialmente la barra localhost 3000 en nuestro caso aqu o cualquiera que sea nuestro dominio, al
+
+5
+00:00:26,110 --> 00:00:29,190
+final quiero cargar el componente de publicacin.
+
+6
+00:00:29,260 --> 00:00:35,430
+Ahora ya encendimos el enrutamiento y los varios caen envolvindolo todo con el enrutador del navegador.
+
+7
+00:00:35,650 --> 00:00:42,670
+Ahora, en el componente del bloque donde quiero cargar mis diferentes pginas, necesito importar algo ms
+
+8
+00:00:42,670 --> 00:00:44,270
+del paquete del enrutador.
+
+9
+00:00:44,270 --> 00:00:46,880
+Por lo tanto, desde el enrutador Re-act Dom.
+
+10
+00:00:46,900 --> 00:00:56,980
+Una vez ms, porque est relacionado con el renderizado desde all, quiero cargar el objeto de ruta, el componente de ruta para
+
+11
+00:00:56,980 --> 00:00:58,110
+ser preciso.
+
+12
+00:00:58,330 --> 00:01:04,400
+Ahora lo usamos como cualquier otro componente en nuestro cdigo J es X y es un componente de cierre automtico.
+
+13
+00:01:04,760 --> 00:01:12,460
+La ruta necesita alguna configuracin, aunque la ruta necesita una propiedad de ruta y todos estos accesorios aqu que estoy configurando
+
+14
+00:01:12,460 --> 00:01:18,910
+son, por supuesto, palabras reservadas, de alguna manera, se espera que as se denominen por este componente.
+
+15
+00:01:18,970 --> 00:01:24,140
+Entonces no puedes cambiar el nombre y paff simplemente es una cadena.
+
+16
+00:01:24,220 --> 00:01:31,720
+Aqu encontrar la ruta para que esta ruta se active, como Poth slash.
+
+17
+00:01:31,720 --> 00:01:36,880
+Luego debe definir qu suceder cuando el ISDE acte como poder.
+
+18
+00:01:36,970 --> 00:01:46,470
+Por lo tanto, cuando el enrutador reaccione descubra que este es DIAK. La ruta ahora en su forma ms simple, ahora puede agregar un objeto
+
+19
+00:01:46,590 --> 00:01:53,800
+de renderizado que en realidad contiene una referencia a una funcin y aqu puede pasar la funcin de flecha
+
+20
+00:01:53,800 --> 00:01:55,510
+a una funcin annima.
+
+21
+00:01:55,530 --> 00:01:59,910
+Entonces, aqu la disfuncin tiene que devolver J como X, que debe representarse.
+
+22
+00:02:00,150 --> 00:02:05,600
+Entonces, simplemente podra renderizar algo as como la etiqueta H-1 donde diga "casa".
+
+23
+00:02:05,700 --> 00:02:11,970
+Y, por supuesto, tambin puede representar un ao GSX estructurado envolvindolo entre parntesis y escribiendo lneas mltiples tal
+
+24
+00:02:12,150 --> 00:02:13,140
+como lo hace.
+
+25
+00:02:13,170 --> 00:02:13,630
+S x.
+
+26
+00:02:13,650 --> 00:02:15,020
+En cualquier otro lugar.
+
+27
+00:02:15,300 --> 00:02:21,170
+Si guardas ese cdigo y vuelves a tu aplicacin, en realidad ves tu casa aqu.
+
+28
+00:02:21,390 --> 00:02:29,160
+Tambin se ve que si se crea una nueva azada y se publica el motivo de esto, se trata de un enrutador de reactivacin
+
+29
+00:02:29,370 --> 00:02:31,640
+para determinar en qu camino se encuentra.
+
+30
+00:02:31,670 --> 00:02:36,270
+CS si su ruta actual comienza con esta ruta.
+
+31
+00:02:36,300 --> 00:02:43,240
+Por lo tanto, si se trata de un prefijo, puede anular este comportamiento agregando un Propp ms exacto.
+
+32
+00:02:43,320 --> 00:02:47,380
+Eso es un Propp booleano. Tan solo agregarlo as lo establece como verdadero.
+
+33
+00:02:47,450 --> 00:02:48,840
+Predeterminado cuando no lo es
+
+34
+00:02:48,840 --> 00:02:50,580
+Y es falso
+
+35
+00:02:50,730 --> 00:02:58,950
+Ahora, con la excepcin de la nueva publicacin nueva, ya no se ve la semilla de inicio Yoli para la pgina de inicio, donde de
+
+36
+00:02:59,010 --> 00:03:01,420
+hecho la ruta completa es barra inclinada.
+
+37
+00:03:01,560 --> 00:03:04,090
+Entonces, ya hay una importante toma de distancia.
+
+38
+00:03:04,170 --> 00:03:08,110
+Utiliza el POF aqu para decirle al enrutador de reactivacin.
+
+39
+00:03:08,160 --> 00:03:13,900
+No comienza mi camino con esto, excepto en el caso que defina exacto?
+
+40
+00:03:13,920 --> 00:03:15,510
+Entonces la pregunta sera.
+
+41
+00:03:15,510 --> 00:03:18,420
+Es mi camino completo como este.
+
+42
+00:03:18,420 --> 00:03:24,990
+Y luego su procesador determina qu reaccin debe generar el enrutador a la pantalla en el lugar de este componente,
+
+43
+00:03:24,990 --> 00:03:28,710
+la ruta de su celda simplemente se reemplaza a s misma.
+
+44
+00:03:28,710 --> 00:03:36,120
+Podra decir con el contenido que define aqu y, por supuesto, puede utilizar mltiples rutas, incluso para
+
+45
+00:03:36,120 --> 00:03:37,460
+la misma ruta.
+
+46
+00:03:37,470 --> 00:03:41,410
+As que aqu simplemente lo duplico y renderizo algo diferente.
+
+47
+00:03:41,440 --> 00:03:48,250
+Y ahora si guardo esto, hacemos que tanto el hogar como el hogar sean Neefe entre s.
+
+48
+00:03:48,360 --> 00:03:52,800
+De modo que puede usar la ruta en cualquier lugar donde desee la una para la otra.
+
+49
+00:03:52,800 --> 00:03:55,790
+Tambin puedes anidar la segunda ruta en un div.
+
+50
+00:03:55,980 --> 00:03:59,080
+Puede usar tantas rutas en la misma pgina como desee.
+
+51
+00:03:59,220 --> 00:04:00,730
+Reactivar Roger Wilfer.
+
+52
+00:04:00,780 --> 00:04:05,100
+Cada uno de ellos verifica si se cumple este criterio aqu.
+
+53
+00:04:05,100 --> 00:04:06,880
+Entonces, si este criterio es tu Asmat.
+
+54
+00:04:06,900 --> 00:04:15,360
+Si POF es la ruta actual o si no especifica exactamente si es el prefijo de la
+
+55
+00:04:15,360 --> 00:04:18,680
+ruta actual y luego renderiza este contenido.
+
+56
+00:04:18,680 --> 00:04:22,560
+Esta es la funcionalidad principal del enrutador hasta el momento.
+
+57
+00:04:22,560 --> 00:04:26,450
+Y aqu, por ejemplo, donde elimin a exec en una segunda ruta.
+
+58
+00:04:26,610 --> 00:04:29,620
+Si guardamos esto, an vemos los dos.
+
+59
+00:04:29,760 --> 00:04:37,530
+Pero si vamos a Nueva publicacin, solo vemos la pgina 2 porque el primer elemento de inicio tiene exect y, por lo tanto, la
+
+60
+00:04:37,530 --> 00:04:41,990
+ruta completa tiene acceso y, por lo tanto, se evala la ruta completa.
+
+61
+00:04:42,090 --> 00:04:44,350
+Que por supuesto es nueva publicacin ahora.
+
+62
+00:04:44,550 --> 00:04:51,810
+La segunda ruta, sin embargo, no usa Sodor POV exacto, solo necesita comenzar con Slash y cada ruta comienza
+
+63
+00:04:51,810 --> 00:04:52,650
+con Slash.
+
+64
+00:04:52,650 --> 00:04:55,100
+Entonces esto siempre ser renderizado.
+
+65
+00:04:55,320 --> 00:04:58,020
+Entonces esta es la funcionalidad principal del enrutador.
+
+66
+00:04:58,080 --> 00:05:04,140
+Por supuesto, no queremos renderizar GSX en nuestro caso, aunque podra ser lo que quieras hacer
+
+67
+00:05:04,140 --> 00:05:05,410
+en algunos casos.
+
+68
+00:05:05,670 --> 00:05:08,730
+Queremos cargar uno de nuestros componentes.
+
+69
+00:05:08,910 --> 00:05:12,210
+El componente Post para solo ruta.
+
+70
+00:05:12,210 --> 00:05:16,730
+As que asegurmonos de cargar este componente en la prxima conferencia.
+

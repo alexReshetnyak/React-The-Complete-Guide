@@ -1,0 +1,104 @@
+1
+00:00:02,170 --> 00:00:07,210
+Vamos adicionar o nosso componente de fornecedor e, portanto, vamos primeiro.
+
+2
+00:00:07,400 --> 00:00:12,000
+ chamado de provedor do re-act redux.
+
+3
+00:00:12,000 --> 00:00:15,430
+E, como eu disse, devemos envolver o componente do aplicativo com isso.
+
+4
+00:00:15,430 --> 00:00:20,330
+A questo  que ns inclumos o roteador do navegador ou no.
+
+5
+00:00:21,350 --> 00:00:23,640
+Dions ou  o provedor.
+
+6
+00:00:23,660 --> 00:00:25,250
+Deveria envolver tudo.
+
+7
+00:00:25,250 --> 00:00:28,420
+Ento, vamos coloc-lo fora do roteador do navegador.
+
+8
+00:00:28,430 --> 00:00:36,000
+que queremos usar e h algo especial sobre como reagir reagir com o roteador reativo.
+
+9
+00:00:36,000 --> 00:00:41,630
+Tudo isso  envolvido pelo componente provedor, como isso, a configurao
+
+10
+00:00:41,780 --> 00:00:44,480
+E eu vou voltar para o pai e como ns corrigimos isso.
+
+11
+00:00:44,490 --> 00:00:51,890
+Basicamente, tem a ver com certificar-se de que voc conecta a funcionalidade ea funcionalidade de roteamento funcionam
+
+12
+00:00:51,940 --> 00:00:57,300
+bem porque ambos implicam, de forma implcita, alguns adereos no componente de embrulho.
+
+13
+00:00:57,420 --> 00:01:00,530
+E temos que nos certificar de que tudo funciona por enquanto.
+
+14
+00:01:00,540 --> 00:01:02,230
+Vamos criar nossa loja.
+
+15
+00:01:02,400 --> 00:01:10,980
+Vamos importar criar loja de redox e no dia seguinte como queda e isso  tudo para importar para
+
+16
+00:01:11,010 --> 00:01:12,270
+importar nosso redutor.
+
+17
+00:01:12,340 --> 00:01:15,120
+Ento, o redutor de importao de.
+
+18
+00:01:15,360 --> 00:01:21,440
+E agora temos que entrar na pasta da loja e eles so importados do arquivo redutor.
+
+19
+00:01:21,600 --> 00:01:28,250
+Podemos ento criar nossa loja e armazen-la em uma varivel ou em uma constante para ser chamada de loja precisa,
+
+20
+00:01:28,680 --> 00:01:34,990
+talvez criemos com o mtodo create store que importamos de redox e passamos o redutor para ele,  claro.
+
+21
+00:01:35,160 --> 00:01:42,150
+E com isso, podemos definir a propriedade da loja no componente do provedor e passar a nossa loja
+
+22
+00:01:42,210 --> 00:01:50,610
+criada, que  armazenada na loja constante, mas  um monte de lojas e passa isso para essa propriedade da loja.
+
+23
+00:01:50,610 --> 00:01:56,840
+Ento, ns conectamos nossa loja que  criada pela redox com nosso aplicativo de reao.
+
+24
+00:01:56,880 --> 00:02:00,660
+Claro que isso no far muito na prxima palestra.
+
+25
+00:02:00,660 --> 00:02:08,010
+Vamos trabalhar no nosso redutor e vamos nos certificar de que realmente temos alguma lgica aqui para gerenciar nossos ingredientes
+
+26
+00:02:08,030 --> 00:02:08,490
+fluidos.
+

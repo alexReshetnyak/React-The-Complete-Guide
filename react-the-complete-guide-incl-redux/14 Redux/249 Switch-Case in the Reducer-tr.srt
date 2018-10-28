@@ -1,0 +1,136 @@
+1
+00:00:02,210 --> 00:00:08,400
+Son konferansta, verilerin hepsini nasl aksiyonla alacamz reneceiz.
+
+2
+00:00:08,400 --> 00:00:13,880
+imdi, read x'i kullanmann temel kavramlarndan bazlarn reneceiz.
+
+3
+00:00:14,100 --> 00:00:21,450
+imdi redktrmze bir gz atalm, muhtemelen oktan ok sayda kod
+
+4
+00:00:21,450 --> 00:00:25,200
+replikasyonuna sahip olduunun farkna varacaksnz.
+
+5
+00:00:25,260 --> 00:00:30,200
+imdi, IF ifadelerini kullanmakta yanl bir ey yok, isterseniz bu yaklam kullann.
+
+6
+00:00:30,660 --> 00:00:36,500
+Ancak, javascript iinde farkl bir deyim ifadesi de kullanabiliriz.
+
+7
+00:00:36,500 --> 00:00:45,630
+Switch ifadesi, ilem trne geebilir ve daha sonra Inkerman davas gibi birden ok
+
+8
+00:00:45,630 --> 00:00:46,680
+vaka tanmlayabiliriz.
+
+9
+00:00:47,070 --> 00:00:48,250
+O zaman kolonumuz var.
+
+10
+00:00:48,270 --> 00:00:56,820
+Yani normal javascript szdizimi ve burada artan durum iin bu gncellenmi durumu dndrebiliriz ve
+
+11
+00:00:57,140 --> 00:00:59,240
+u if ifadesinden kurtulabiliriz.
+
+12
+00:00:59,430 --> 00:01:01,830
+Ve imdi tabii ki burada daha fazla vaka daha ekleyebiliriz.
+
+13
+00:01:01,830 --> 00:01:08,220
+Decora iin bir dava vard ve break deyimi eklememiz gerekmez nk otomatik olarak geri dnme
+
+14
+00:01:08,430 --> 00:01:14,340
+fonksiyon bozukluundan ktmzdan bu satra hi ulamadk ve tabii ki ilk etapta bu davay
+
+15
+00:01:14,340 --> 00:01:15,450
+ele alalm elbette.
+
+16
+00:01:15,750 --> 00:01:19,380
+Dolaysyla, zarar vermemek iin bir durumu burada evirmek iin tm kaytlar olurdu.
+
+17
+00:01:19,440 --> 00:01:26,820
+Bu duruma geri dneceiz ve imdi tm davalar iin bunu tekrarlayabiliriz, bylece hzlca
+
+18
+00:01:26,820 --> 00:01:31,130
+karlmas iin bir dava ekleme davas ekleyebiliriz.
+
+19
+00:01:31,380 --> 00:01:36,620
+Ve elbette bu tanmlayclar, eylemler gnderirken kullandnz tanmlayclarla hala elemelidir.
+
+20
+00:01:36,810 --> 00:01:45,810
+Yani tanmlayc burada saya konteynerinde yazdnz ve imdi hepsi de bu if ifadelerinden
+
+21
+00:01:45,810 --> 00:01:46,870
+kodu karyor.
+
+22
+00:01:46,920 --> 00:01:54,990
+Onlar kodu yeniden biimlendirdiyseniz ve bu ifadelerden kurtulduunuz kendi durumlarna kodu ekleyin.
+
+23
+00:01:54,990 --> 00:02:01,560
+Ve imdi yapmcmz biraz daha yaln ve okumak biraz daha kolay nk yn trne
+
+24
+00:02:01,560 --> 00:02:06,170
+baktmz ve daha sonra farkl davalar ele alacamz ok ak.
+
+25
+00:02:06,420 --> 00:02:12,000
+Ve eer bu davalardan herhangi birine uymazsak, sonunda her zaman balang durumunu
+
+26
+00:02:12,000 --> 00:02:15,620
+dndren sonunda varsaylan dn ifadesine sahip oluruz.
+
+27
+00:02:15,840 --> 00:02:21,810
+Ya da eer imdiden durum belirlenmise bu zellikle nemlidir,
+
+28
+00:02:21,810 --> 00:02:28,590
+nk burada kapsanmayan bir tr olan eylemi gnderirsek, o redktr
+
+29
+00:02:28,590 --> 00:02:34,740
+altrmaya devam edeceiz, nk hi bir eyi gnderemediinizde uygulamanzdaki
+
+30
+00:02:34,800 --> 00:02:36,390
+tek redktrden geiyor.
+
+31
+00:02:36,590 --> 00:02:42,050
+Dolaysyla babanz Besant' gnderirse, gnderdiiniz eylem trn ele alsayd.
+
+32
+00:02:42,180 --> 00:02:45,780
+Bavurunuzu krmamak iin mevcut durumu geri getirmeniz gerekiyor.
+
+33
+00:02:45,780 --> 00:02:52,550
+Bu yzden tm bu dosyalar kaydetmeyelim ve geri dnersen, daha nce olduu gibi alyor greceksin.
+
+34
+00:02:52,650 --> 00:02:58,760
+Ama imdi bu merkezi redktrlerle hala switch deyimi var.
+

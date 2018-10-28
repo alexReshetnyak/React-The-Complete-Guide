@@ -1,0 +1,64 @@
+1
+00:00:02,360 --> 00:00:09,290
+Bienvenido a este mdulo de bonificacin. En este curso, obviamente utilizamos una gran cantidad de redux
+
+2
+00:00:09,380 --> 00:00:17,120
+ya que es una parte integral de las aplicaciones de reaccin. En nuestro generador de hamburguesas, tambin lo usamos y
+
+3
+00:00:17,120 --> 00:00:24,890
+cuando trabajamos con redux, tambin tenemos que lidiar con el problema, entre comillas, de manejar acciones asncronas como llegar
+
+4
+00:00:24,890 --> 00:00:25,980
+a un servidor.
+
+5
+00:00:26,180 --> 00:00:33,140
+Solucionamos este problema usando redux-thunk en este curso, redux-thunk solo para devolverlo a la memoria es un paquete
+
+6
+00:00:33,140 --> 00:00:40,510
+que nos permite crear creadores de acciones donde ejecutamos el cdigo asncrono y donde luego enviamos otras acciones una vez
+
+7
+00:00:40,520 --> 00:00:42,520
+que ' re hecho y
+
+8
+00:00:42,530 --> 00:00:47,690
+no hay nada de malo con este enfoque, eso es realmente importante para m.
+
+9
+00:00:47,930 --> 00:00:55,220
+En este mdulo presentar una alternativa que no es necesariamente mejor o peor, es solo una alternativa
+
+10
+00:00:55,250 --> 00:00:58,600
+que te puede gustar ms pero que tambin
+
+11
+00:00:58,610 --> 00:01:07,130
+es posible que no te guste ms, redux saga. Ahora redux saga es un paquete que sigue un enfoque diferente de
+
+12
+00:01:07,130 --> 00:01:12,440
+trabajar con cdigo asncrono y no se mezcla con el acto de despachar acciones.
+
+13
+00:01:12,440 --> 00:01:16,840
+Ahora echemos un vistazo a cmo funciona y qu mejor lugar para
+
+14
+00:01:16,910 --> 00:01:23,080
+practicar que en nuestro proyecto de creacin de hamburguesas, que es donde ya tenemos toda la lgica, verdad?
+
+15
+00:01:23,180 --> 00:01:24,520
+As que vamos a sumergirnos
+
+16
+00:01:24,620 --> 00:01:27,430
+en eso y djame mostrarte cmo funciona la saga redux.
+

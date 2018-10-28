@@ -1,0 +1,88 @@
+1
+00:00:02,240 --> 00:00:09,220
+Nauczylimy si uywa pseudo selektorw i jak zagnieda klasy i nadal importowa je
+
+2
+00:00:09,220 --> 00:00:12,890
+na tym obiekcie klasy w poprzednim wykadzie.
+
+3
+00:00:12,970 --> 00:00:15,080
+Teraz chc zadba o zapytania o media i to
+
+4
+00:00:15,090 --> 00:00:19,350
+byo co, co chciaem zrobi w klasie mojej osoby. Tam przypisz klas
+
+5
+00:00:19,420 --> 00:00:27,660
+css osoby do zewntrznego div i faktycznie dodaem ju kod wczeniej.
+
+6
+00:00:27,700 --> 00:00:34,630
+Po prostu skomentuj to, zwyke zapytanie o media css, dostosowujce nasz klas Person
+
+7
+00:00:34,630 --> 00:00:43,750
+do tej szerokoci, jeli szeroko ekranu przekracza 500 pikseli. Moesz zapisa poprawiony plik css i nadal bdzie importowa
+
+8
+00:00:43,840 --> 00:00:46,140
+t klas osoby dobrze
+
+9
+00:00:46,140 --> 00:00:49,270
+na tym obiekcie klasy, nawet jeli
+
+10
+00:00:49,510 --> 00:00:55,330
+jest zawijany wewntrz zapytania o media. Powinnimy wic zobaczy, e jeli przeaduj
+
+11
+00:00:55,330 --> 00:01:01,780
+aplikacj i przecz tutaj moje osoby, jeli zwiksz obszar wywietlania, szeroko pl si nie
+
+12
+00:01:01,810 --> 00:01:04,240
+zmieni, zmieni si tylko wtedy,
+
+13
+00:01:04,240 --> 00:01:08,180
+gdy jest wystarczajco maa, tam bdzie 60 procent szeroko.
+
+14
+00:01:08,560 --> 00:01:14,890
+To byo super proste i moe by troch trudnym do objcia gowy moduem
+
+15
+00:01:15,280 --> 00:01:23,320
+css, po prostu pomyl o tym obiekcie klasy tutaj jako obiekcie javascript, ktry daje ci dostp do
+
+16
+00:01:23,470 --> 00:01:31,390
+wersji string twoich stylw css, twojej klasy css ale z klasa css, ktra zostaa dostosowana do wyjtkowoci.
+
+17
+00:01:31,960 --> 00:01:36,220
+Wic po prostu przetumaczysz swoj klas osoby na co podobnego.
+
+18
+00:01:36,340 --> 00:01:36,810
+Person_
+
+19
+00:01:36,810 --> 00:01:44,380
+some unique cache, dziki czemu moesz by bezpieczny i pewny, e gdy uywasz tej klasy w danym
+
+20
+00:01:44,380 --> 00:01:49,130
+komponencie, jest to jedyne miejsce, w ktrym stosowane s style CSS.
+
+21
+00:01:49,240 --> 00:01:53,510
+Nie gdzie indziej w twojej aplikacji mog te style mie jakikolwiek
+
+22
+00:01:53,530 --> 00:01:56,750
+efekt, to jest idea stojca za moduami css.
+

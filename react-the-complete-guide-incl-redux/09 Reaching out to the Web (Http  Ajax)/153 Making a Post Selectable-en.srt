@@ -1,0 +1,188 @@
+1
+00:00:02,010 --> 00:00:09,620
+Now you'll learn the basics about sending requests in our example here with the help of axios and using
+
+2
+00:00:09,620 --> 00:00:15,500
+that data, let's move on and let's now also see how we can make sure that we can click on one of these posts
+
+3
+00:00:15,860 --> 00:00:20,900
+and then load the post data there, so fetch the data for the selected post
+
+4
+00:00:20,960 --> 00:00:26,850
+when we selected it. For this, of course we need to make sure that we can click our single posts here.
+
+5
+00:00:27,080 --> 00:00:33,440
+So in the post component, I'll first of all add a click listener to the whole article element and there, I expect
+
+6
+00:00:33,440 --> 00:00:39,070
+to get a property which holds a reference to the method which should be executed upon a click.
+
+7
+00:00:39,260 --> 00:00:43,730
+So here I'll name the prop clicked, in the blog container
+
+8
+00:00:43,730 --> 00:00:49,880
+I now need to pass that click prop queue to post and I'll just split this over multiple lines to make
+
+9
+00:00:49,880 --> 00:00:56,930
+it a bit easier to read and clicked here, as I've just said, should hold that method reference which should
+
+10
+00:00:56,930 --> 00:00:59,130
+get executed on a click.
+
+11
+00:00:59,150 --> 00:01:03,780
+So since we have a class based container here, let's add such a method,
+
+12
+00:01:03,920 --> 00:01:12,450
+the postClicked or maybe postSelectedHandler and there I expect to get an argument,
+
+13
+00:01:12,530 --> 00:01:20,440
+the id of the post which was selected. Now down there where we rendered that list of posts, I can pass
+
+14
+00:01:20,510 --> 00:01:27,620
+an ES6 function, arrow function, as a reference which should be executed when we click on a post and
+
+15
+00:01:27,620 --> 00:01:31,470
+the other one to execute the postSelectedHandler
+
+16
+00:01:31,640 --> 00:01:35,920
+but now I can pass post ID as an argument to that method.
+
+17
+00:01:36,110 --> 00:01:42,830
+So now I got an id to work with. Now that ID should be passed to the full post component,
+
+18
+00:01:43,070 --> 00:01:51,260
+so we should probably store it in the state or maybe selected post property like this.state.selectedPostID
+
+19
+00:01:51,260 --> 00:01:59,990
+so that inside full post, we can listen to us getting a new ID and then fetch data for that
+
+20
+00:02:00,010 --> 00:02:01,170
+ID.
+
+21
+00:02:01,220 --> 00:02:08,280
+So now we need to create that selected posts id property in the state of the blog container and then in
+
+22
+00:02:08,360 --> 00:02:17,060
+the postSelectedHandler, we can call this.setState and set the selected post ID to the ID we received
+
+23
+00:02:17,090 --> 00:02:18,640
+as an argument here.
+
+24
+00:02:18,650 --> 00:02:21,810
+So now were passing that ID to the full post component
+
+25
+00:02:23,000 --> 00:02:27,010
+and maybe you should also define selectedPostID to be an initial
+
+26
+00:02:27,010 --> 00:02:29,430
+null maybe here on the state.
+
+27
+00:02:29,780 --> 00:02:31,640
+So now we added that code,
+
+28
+00:02:31,640 --> 00:02:36,530
+now we have to go to the full post component and do something with the ID here.
+
+29
+00:02:36,710 --> 00:02:40,870
+Now there first of all, we can use the ID to output either
+
+30
+00:02:40,880 --> 00:02:47,410
+please select a post or deselect a post depending on whether we have an ID or not.
+
+31
+00:02:47,420 --> 00:02:52,850
+So lets say the default should be that we see please select a post and I'll add some inline styling here
+
+32
+00:02:52,850 --> 00:02:57,270
+to center this by simply setting text align to center.
+
+33
+00:02:57,860 --> 00:03:02,380
+And now I want to check if this.props.id,
+
+34
+00:03:02,600 --> 00:03:11,210
+if this is true-ish. Initially, ID in the blog container is null and we're passing this to full post
+
+35
+00:03:11,570 --> 00:03:13,700
+and null is treated as false.
+
+36
+00:03:13,700 --> 00:03:16,400
+So initially this check here
+
+37
+00:03:16,550 --> 00:03:21,070
+will return false, so we won't get inside the if block.
+
+38
+00:03:21,350 --> 00:03:28,480
+If we do get inside, which we only do once the ID is something which is not treated as false
+
+39
+00:03:28,520 --> 00:03:35,540
+so something above 1 or equal to or higher than 1 and all the IDs we get from the server are equal to
+
+40
+00:03:35,540 --> 00:03:36,910
+or higher than 1,
+
+41
+00:03:37,040 --> 00:03:40,100
+once this is the case I want to output that post.
+
+42
+00:03:40,280 --> 00:03:45,970
+So now we should have the following behavior that if I save this, we now can click on one of these posts
+
+43
+00:03:46,190 --> 00:03:47,580
+and now we see it.
+
+44
+00:03:47,690 --> 00:03:51,760
+And as you saw before I clicked it, we see please select a post,
+
+45
+00:03:51,980 --> 00:03:52,920
+so that's working.
+
+46
+00:03:52,940 --> 00:03:58,070
+Now in the next lecture let's make sure that we also fetch the data for that given post
+
+47
+00:03:58,190 --> 00:03:59,330
+once we selected it.
+

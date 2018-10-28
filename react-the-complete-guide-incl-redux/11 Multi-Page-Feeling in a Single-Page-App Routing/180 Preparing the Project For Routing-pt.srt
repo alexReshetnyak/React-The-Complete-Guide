@@ -1,0 +1,252 @@
+1
+00:00:01,950 --> 00:00:08,670
+A ltima conferncia quebramos nosso aplicativo movendo os componentes para a pasta de contineres porque agora vamos carreg-los
+
+2
+00:00:08,670 --> 00:00:14,280
+como pginas para roteamento e isso realmente os transforma em contineres porque eles no esto
+
+3
+00:00:14,280 --> 00:00:16,670
+mais includos como um componente inconformista.
+
+4
+00:00:16,800 --> 00:00:23,940
+Sim, tipo de roteamento, mas eles realmente esto no nvel de raiz sendo trocados por componentes de
+
+5
+00:00:24,000 --> 00:00:25,490
+nvel de raiz anteriormente.
+
+6
+00:00:25,920 --> 00:00:30,220
+Ento, com isso, vamos trabalhar no componente de postagem, que  o nico componente que agora estamos perdendo.
+
+7
+00:00:30,240 --> 00:00:32,790
+Eu vou pegar a seo aqui.
+
+8
+00:00:32,790 --> 00:00:41,220
+coloc-lo no meu componente de publicao que todos criaram com a classe de palavras-chave da classe amplia o componente.
+
+9
+00:00:41,310 --> 00:00:43,900
+Postagens de nome de classe e
+
+10
+00:00:43,950 --> 00:00:51,220
+Agora, portanto, precisamos importar reagir e reagir.
+
+11
+00:00:51,600 --> 00:00:58,560
+E agora, precisamos de um mtodo de renderizao, onde, no final, simplesmente devolvemos algum GSX na seo que
+
+12
+00:00:58,560 --> 00:00:59,910
+acabei de copiar.
+
+13
+00:00:59,910 --> 00:01:06,810
+Atualmente, as postagens no existem aqui porque criamos isso dinamicamente no componente E-block, ento vamos buscar todo esse
+
+14
+00:01:06,810 --> 00:01:12,330
+cdigo aqui onde criamos postagens e vamos mover isso para o mtodo de renderizao.
+
+15
+00:01:12,330 --> 00:01:17,450
+Nenhum ahabolfe decente agora depende do estado desse componente.
+
+16
+00:01:17,610 --> 00:01:23,320
+Portanto, devemos gerenciar o estado para as postagens no componente ps faz sentido que eu acho.
+
+17
+00:01:24,110 --> 00:01:29,170
+Ento, vamos rapidamente tomar o estado aqui do componente do bloco.
+
+18
+00:01:29,480 --> 00:01:34,710
+Deixe Kadare a partir da e mova-o para o componente host.
+
+19
+00:01:34,710 --> 00:01:41,490
+L, agora temos a matriz e o erro de nossos hosts e para selecionar o ID das postagens.
+
+20
+00:01:41,510 --> 00:01:47,510
+Agora vou remover essa parte do estado e voc clicando na publicao selecionar esse manipulador
+
+21
+00:01:47,560 --> 00:01:49,490
+passar o ID da postagem.
+
+22
+00:01:49,490 --> 00:01:53,600
+Tambm irei importar isso do meu componente de bloco l.
+
+23
+00:01:53,610 --> 00:02:01,140
+Eu vou pegar a publicao selecionar esse manipulador e tambm adicionar isso s minhas postagens Claassen, o componente
+
+24
+00:02:01,140 --> 00:02:02,160
+de postagem recm-criado.
+
+25
+00:02:02,450 --> 00:02:08,690
+E, finalmente, a partir do componente de bloco, vou buscar o componente que monte o cdigo aqui
+
+26
+00:02:08,690 --> 00:02:15,740
+para que eu apenas tenha o renderizador aqui e o componente de bloco e coloque esse componente no mtodo
+
+27
+00:02:15,740 --> 00:02:20,100
+Mount novamente nos meus componentes de publicao que esto sendo montados aqui.
+
+28
+00:02:20,360 --> 00:02:22,050
+Agora, para o erro.
+
+29
+00:02:22,080 --> 00:02:27,170
+Eu no estou lidando mais com isso aqui para mant-lo um pouco mais simples, ento, apenas log-lo, no devemos enfrentar
+
+30
+00:02:27,200 --> 00:02:28,280
+erros de qualquer maneira.
+
+31
+00:02:28,300 --> 00:02:36,110
+E com isso, agora, o componente da mangueira criou a criao de suas prprias postagens e as apresentou
+
+32
+00:02:36,110 --> 00:02:37,120
+na tela.
+
+33
+00:02:37,520 --> 00:02:45,910
+Agora, todos ns agora precisamos importar ex-US no componente de postagem.
+
+34
+00:02:45,910 --> 00:02:51,730
+Ento, X anos e tenha em mente que aqui estvamos usando nossa prpria instncia.
+
+35
+00:02:51,730 --> 00:02:54,390
+Ento, apontem para essa instncia.
+
+36
+00:02:54,430 --> 00:03:01,840
+Ento, a partir de agora, temos que avanar at o topo para que possamos importar a partir do arquivo desse X
+
+37
+00:03:01,840 --> 00:03:06,540
+e agora temos um aplicativo que deve funcionar novamente se formos por um segundo.
+
+38
+00:03:06,690 --> 00:03:12,430
+Importe nosso componente de publicao recm-criado no componente de bloco.
+
+39
+00:03:12,580 --> 00:03:13,940
+Ento, deixe-me rapidamente fazer isso.
+
+40
+00:03:13,950 --> 00:03:21,210
+Navegue at a subpasta de postagem com o arquivo js dos posts e deixe tinta incluir o post aqui.
+
+41
+00:03:21,220 --> 00:03:29,020
+Ento, inclua posts como este e, em seguida, as postagens caem, precisamos importar o componente de postagem,  claro,
+
+42
+00:03:29,020 --> 00:03:31,520
+porque estamos processando-o para a tela.
+
+43
+00:03:31,690 --> 00:03:36,450
+Portanto, certifique-se de adicionar a importao para postagens para este componente de postagem recm-criado.
+
+44
+00:03:36,760 --> 00:03:39,640
+Ento importe a publicao de.
+
+45
+00:03:39,670 --> 00:03:41,090
+E agora precisamos fazer um aplicativo.
+
+46
+00:03:41,320 --> 00:03:48,220
+Ento, precisamos subir ainda mais e mais na pasta de componentes para a pasta de postagem na postagem.
+
+47
+00:03:48,220 --> 00:03:50,400
+Arquivos JS que podemos usar.
+
+48
+00:03:50,500 --> 00:03:54,660
+E, finalmente, precisamos importar alguns C S S aqui tambm.
+
+49
+00:03:55,000 --> 00:03:58,510
+E, claro, tambm exportamos nosso componente de postagens.
+
+50
+00:03:58,570 --> 00:04:01,110
+Ento, vamos adicionar uma exportao padro para as postagens.
+
+51
+00:04:01,190 --> 00:04:06,070
+A queda da JR onde importamos exportamos a classe desta publicao.
+
+52
+00:04:06,310 --> 00:04:12,640
+Agora, para o CSSA novamente aqui no bloco C S S, temos esse ps-colapso remov-lo a
+
+53
+00:04:12,640 --> 00:04:17,630
+partir do arquivo de bloco, no precisamos dele e coloc-lo para ser criado.
+
+54
+00:04:17,640 --> 00:04:24,450
+Arquivo ps-inicializao C S S que agora importamos no componente de postagem.
+
+55
+00:04:24,580 --> 00:04:29,170
+Ento, todos eles so importados, simplesmente escreva mensagens aqui.
+
+56
+00:04:29,180 --> 00:04:29,520
+S.
+
+57
+00:04:29,590 --> 00:04:33,020
+Tenha em mente que aqui no estamos usando mdulos C S S.
+
+58
+00:04:33,040 --> 00:04:40,210
+Da a sintaxe diferente com tudo que mudou se voltarmos para o aplicativo, vemos apenas as postagens e se
+
+59
+00:04:40,210 --> 00:04:44,070
+o pai quiser rpido obviamente, sinta-se livre para baixar isso.
+
+60
+00:04:44,110 --> 00:04:51,250
+Foi apenas uma certa reestruturao transformando nossos componentes em contineres e adicionando o novo recipiente de postagem.
+
+61
+00:04:51,310 --> 00:04:59,620
+Agora, recebemos diferentes contineres de componentes que podemos usar como pginas em nosso aplicativo porque queremos carregar
+
+62
+00:04:59,710 --> 00:05:07,240
+e sobre todas as postagens ou uma nica publicao ou a nova pgina de publicao.
+
+63
+00:05:07,240 --> 00:05:10,960
+Agora, precisamos rotear para carregar apenas um deles.
+

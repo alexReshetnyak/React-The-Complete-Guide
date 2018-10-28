@@ -1,0 +1,300 @@
+1
+00:00:02,200 --> 00:00:06,300
+Ento, chegamos a sempre girando o processo de busca aqui.
+
+2
+00:00:06,520 --> 00:00:14,300
+Como voc pode ver se voc inspecionar o console, no temos nenhum erro, mas tambm nunca obtemos nossos ingredientes, o que faz
+
+3
+00:00:14,570 --> 00:00:20,170
+sentido, pois definir regies que so despachadas uma vez que obtemos os ingredientes nunca so manipulados
+
+4
+00:00:20,170 --> 00:00:21,120
+pelo nosso produtor.
+
+5
+00:00:21,200 --> 00:00:22,640
+Ento, hora de mudar isso.
+
+6
+00:00:22,670 --> 00:00:24,970
+O mesmo  verdade para os ingredientes da fecche falharam.
+
+7
+00:00:25,250 --> 00:00:31,680
+Ento, no burger Boulder cair na pasta dos redutores, eu sei quando lidar com esses dois novos casos.
+
+8
+00:00:31,700 --> 00:00:40,010
+adicionar um caso para os tipos de ao, os ingredientes so executados sempre que obtivemos ingredientes do servidor l.
+
+9
+00:00:40,010 --> 00:00:41,940
+Ento, antes de tudo ou
+
+10
+00:00:41,960 --> 00:00:45,950
+Eu quero retornar um novo estado e copiarei o estado antigo primeiro.
+
+11
+00:00:45,950 --> 00:00:51,570
+Por esse motivo e ento eu preciso colocar meus ingredientes aqui.
+
+12
+00:00:51,620 --> 00:01:00,350
+Os ingredientes devem ser ajustados para ingredientes de ao e eu sei que recebi esses ingredientes, porque na tigela
+
+13
+00:01:00,350 --> 00:01:06,860
+de hambrguer ou ao caem, onde estabelecemos ingredientes, eu passo essa propriedade de ingredientes.
+
+14
+00:01:06,860 --> 00:01:13,300
+Ento, eu inicializo onde eu configurei meus reagentes e, teoricamente, poderamos executar esta ao ou despachados como
+
+15
+00:01:13,300 --> 00:01:14,770
+realmente o que quisermos.
+
+16
+00:01:14,870 --> 00:01:22,100
+qualquer objeto JavaScript que represente nossos ingredientes em qualquer ponto que voc deseja, por exemplo, para redefinir para pessoas atuais.
+
+17
+00:01:22,130 --> 00:01:26,420
+Ento, tambm podemos executar este setter com qualquer conjunto de ingredientes com
+
+18
+00:01:26,430 --> 00:01:28,180
+Heri de Berger nunca.
+
+19
+00:01:28,220 --> 00:01:30,900
+Eu s quero us-lo para inicializar nossos ingredientes.
+
+20
+00:01:31,370 --> 00:01:34,350
+Agora com isso eu chamo os ingredientes definidos.
+
+21
+00:01:34,370 --> 00:01:41,750
+Eu tambm gostaria de lidar com o caso de que a busca de ingredientes falhasse l.
+
+22
+00:01:41,750 --> 00:01:49,880
+Tambm retornarei um novo estado onde copiei o estado antigo e, claro, tambm preciso configurar meu erro aqui
+
+23
+00:01:49,880 --> 00:01:53,340
+e quero configur-lo como verdadeiro, ento erro.
+
+24
+00:01:53,480 --> 00:01:54,550
+Verdade.
+
+25
+00:01:55,100 --> 00:02:01,910
+Agora, uma coisa importante quando chamamos os ingredientes definidos aqui quero configurar o meu erro em falso para reinici-lo no caso
+
+26
+00:02:02,060 --> 00:02:04,040
+de ter tido um erro anterior.
+
+27
+00:02:04,130 --> 00:02:06,950
+E agora no tenha mais, ento aceite meu erro.
+
+28
+00:02:07,060 --> 00:02:08,090
+Falso aqui.
+
+29
+00:02:08,090 --> 00:02:11,790
+Ento, com isso, adicionamos nossa lgica de produtor.
+
+30
+00:02:11,810 --> 00:02:14,040
+Agora, precisamos conectar nosso continer.
+
+31
+00:02:14,360 --> 00:02:19,760
+Ento vou dirigir-me ao arquivo Burger Bolar e eles esto no fundo deste recipiente.
+
+32
+00:02:19,790 --> 00:02:26,140
+Ns no precisamos apenas dos ingredientes que precisamos para obter informaes sobre um erro potencial.
+
+33
+00:02:26,390 --> 00:02:29,770
+Ento, aqui eu quero obter meu erro do estado.
+
+34
+00:02:30,020 --> 00:02:32,930
+E agora eles so o ar ou a propriedade.
+
+35
+00:02:33,080 --> 00:02:36,830
+Tenha em mente, at agora, no temos diferentes fatias de estado.
+
+36
+00:02:36,830 --> 00:02:38,330
+Ns s temos um redutor.
+
+37
+00:02:38,330 --> 00:02:40,090
+No estamos combinando nenhum.
+
+38
+00:02:40,370 --> 00:02:43,270
+Ento com isso tenho meu erro.
+
+39
+00:02:43,520 --> 00:02:50,040
+Agora, uma outra coisa que temos  que nunca enviamos nossa ao de ingredientes.
+
+40
+00:02:50,120 --> 00:02:52,400
+Este que realmente atinge a Web.
+
+41
+00:02:52,610 --> 00:02:54,200
+Ns nunca enviamos isso.
+
+42
+00:02:54,200 --> 00:02:56,570
+Ento, isso nunca ser inicializado.
+
+43
+00:02:56,630 --> 00:03:01,530
+Ento eu tambm quero poder despachar isso do Burgert Boulder.
+
+44
+00:03:01,580 --> 00:03:05,910
+Ento, adicione uma nova propriedade aqui para mapear este Peche para adereos.
+
+45
+00:03:05,980 --> 00:03:07,850
+Vou nome-lo nele.
+
+46
+00:03:07,850 --> 00:03:17,430
+Ingredientes e vou despachar minhas aes de extrao de hambrguer aqui e eu preciso adicionar as aes de Bolar de hambrguer
+
+47
+00:03:17,430 --> 00:03:20,820
+aos chips de ndice, onde eu os inclu.
+
+48
+00:03:20,910 --> 00:03:22,630
+Eu preciso adicionar nele.
+
+49
+00:03:22,650 --> 00:03:24,280
+Ingredientes.
+
+50
+00:03:24,330 --> 00:03:31,170
+Ento, agora posso chegar a isso da minha tigela de hambrguer ou arquivo de continer em seus ingredientes e execut-lo.
+
+51
+00:03:31,170 --> 00:03:37,880
+Agora, o ltimo passo  chamar qualquer ingrediente do nosso componente que monte o mtodo aqui.
+
+52
+00:03:38,190 --> 00:03:46,790
+Ento, agora vou executar este processo sobre ele ingredientes como este e o prato deve executar este envio desta
+
+53
+00:03:46,790 --> 00:03:51,180
+ao e, com sorte, buscar com sucesso nossos ingredientes.
+
+54
+00:03:51,180 --> 00:03:57,570
+Por ltimo, mas no menos importante, ns adicionamos isso como nossa propriedade para mape-lo para o nosso estado de erro.
+
+55
+00:03:57,570 --> 00:04:05,170
+Agora,  claro, eu tambm preciso usar isso e posso simplesmente procurar todas as ocorrncias de erro de estado DOT ou
+
+56
+00:04:05,300 --> 00:04:09,580
+no meu arquivo aqui, esses so os locais onde eu preciso usar.
+
+57
+00:04:09,600 --> 00:04:11,350
+Bem, exceto pelo meu estado cai.
+
+58
+00:04:11,420 --> 00:04:17,780
+Ento este lugar aqui  o lugar onde eu agora preciso chamar o erro deste prop, porque agora estamos recebendo isso
+
+59
+00:04:17,780 --> 00:04:19,440
+como adereos com o pai.
+
+60
+00:04:19,440 --> 00:04:24,950
+Vamos salvar todas as falhas e, se voltarmos para o nosso aplicativo, d uma olhada se
+
+61
+00:04:24,950 --> 00:04:27,160
+tivermos setas se recarregarmos o tiap.
+
+62
+00:04:27,400 --> 00:04:28,770
+Isso parece ser bom para mim.
+
+63
+00:04:28,770 --> 00:04:30,610
+Ns temos um hambrguer aqui.
+
+64
+00:04:30,840 --> 00:04:37,830
+nossos ingredientes e agora podemos comear a adicionar ingredientes novamente e tambm podemos inserir esse processo de pedidos aqui.
+
+65
+00:04:37,830 --> 00:04:45,090
+Vamos agora dar uma olhada nas ferramentas redux dev que vemos que os ingredientes definidos foram executados e configuramos
+
+66
+00:04:45,240 --> 00:04:47,020
+Faa isso tudo funcionando bem.
+
+67
+00:04:47,070 --> 00:04:49,580
+Por ltimo, quero verificar se o tratamento de erros funciona.
+
+68
+00:04:49,730 --> 00:04:56,680
+Ento, deixe-me dirigir ao meu criador de ao de burger Boulder e vamos mexer com isso, voc est aqui.
+
+69
+00:04:56,940 --> 00:04:57,890
+Vamos salv-lo.
+
+70
+00:04:58,710 --> 00:05:02,240
+E isso tambm funciona como deveria.
+
+71
+00:05:02,250 --> 00:05:03,230
+Ento, isso  timo.
+
+72
+00:05:03,240 --> 00:05:08,550
+de erros com nossos componentes de ordem superior ainda funciona devido a ns usando um na mesma instncia x '.
+
+73
+00:05:08,550 --> 00:05:09,670
+Podemos ver o tratamento
+
+74
+00:05:09,720 --> 00:05:13,990
+E agora podemos Vonta os outros lugares onde precisamos usar cdigo assncrono.
+
+75
+00:05:14,040 --> 00:05:16,950
+O prximo lugar,  claro,  quando queremos pedir um hambrguer.
+

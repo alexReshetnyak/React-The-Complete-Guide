@@ -1,0 +1,168 @@
+1
+00:00:02,260 --> 00:00:06,170
+Trabajamos un poco en el orden reductor y las acciones de orden.
+
+2
+00:00:06,310 --> 00:00:12,130
+Y antes incluso de combinar a nuestros productores, obtenemos un error o al visitar datos de contacto como este
+
+3
+00:00:12,130 --> 00:00:13,550
+en la pgina de pago.
+
+4
+00:00:13,690 --> 00:00:19,480
+La razn de esto es que en la pgina de salida en un resumen de salida, por supuesto, mostramos una vista previa
+
+5
+00:00:19,480 --> 00:00:21,630
+de nuestra hamburguesa con los ingredientes que tenemos.
+
+6
+00:00:21,760 --> 00:00:28,330
+E inicialmente, antes de cargar los ingredientes, los ingredientes son nulos y, por lo tanto, fallan si
+
+7
+00:00:28,330 --> 00:00:30,130
+tratamos de recorrer nuestros ingredientes.
+
+8
+00:00:30,460 --> 00:00:33,630
+Ahora hay un par de formas de resolver esto.
+
+9
+00:00:33,670 --> 00:00:35,960
+La manera fcil es simplemente no cargar.
+
+10
+00:00:35,980 --> 00:00:42,040
+Mira Samari si los ingredientes no estn cargados an, podemos mostrar un spinner hasta que estn all.
+
+11
+00:00:42,310 --> 00:00:48,940
+Pero dado que en nuestra aplicacin, al menos el nico momento en que los ingredientes no existen, al inicio
+
+12
+00:00:49,300 --> 00:00:54,870
+tambin podemos redireccionar al usuario si no se cargan los ingredientes porque no hay ingredientes all.
+
+13
+00:00:55,000 --> 00:00:58,970
+Bueno, entonces tiene sentido estar en una pgina de pago.
+
+14
+00:00:59,080 --> 00:01:04,450
+Esa es la ruta que tomar aqu, pero tenga en cuenta que, por supuesto, tambin podra mostrarnos a Spener en
+
+15
+00:01:04,450 --> 00:01:05,560
+lugar del resumen aqu.
+
+16
+00:01:05,560 --> 00:01:07,210
+Si quisieras hacer eso.
+
+17
+00:01:07,660 --> 00:01:13,710
+Entonces, qu har, ya que importar algo de Re-Act Rotterdam y ese ser el componente de redireccin?
+
+18
+00:01:13,750 --> 00:01:22,020
+Vimos que en la seccin de enrutamiento y en el render Meffert alter un nuevo resumen constante y
+
+19
+00:01:22,030 --> 00:01:25,830
+este resumen por defecto debera ser el redireccionamiento.
+
+20
+00:01:25,830 --> 00:01:26,590
+Digamos.
+
+21
+00:01:26,800 --> 00:01:31,900
+Entonces todos redirigen y simplemente redirijo a la barra.
+
+22
+00:01:31,990 --> 00:01:38,680
+As que para mi pgina de ruta a la hamburguesa Bolar en la pgina de Burger Boulder tengo un cargador, siempre y cuando no se hayan
+
+23
+00:01:38,690 --> 00:01:39,460
+cargado los ingredientes.
+
+24
+00:01:40,530 --> 00:01:44,090
+Ahora el resumen, por supuesto, no debe redireccionar.
+
+25
+00:01:44,280 --> 00:01:47,370
+Si en cambio este Propst inj.
+
+26
+00:01:47,490 --> 00:01:53,280
+As que solo los ingredientes estn disponibles lo recibimos de nuestro estado Rydex y est disponible una vez que
+
+27
+00:01:53,280 --> 00:01:54,150
+se ha cargado.
+
+28
+00:01:54,510 --> 00:02:02,400
+Una vez que ese es el caso, por supuesto quiero renderizar y, por lo tanto, esto no debera ser un concepto sino una variable
+
+29
+00:02:02,400 --> 00:02:03,190
+con LET.
+
+30
+00:02:03,240 --> 00:02:06,390
+Quiero presentar el resumen que mostramos antes.
+
+31
+00:02:06,600 --> 00:02:08,720
+As que pondr el cdigo de resumen all.
+
+32
+00:02:08,820 --> 00:02:12,220
+Ahora podemos usar esa variable de resumen y generarla aqu.
+
+33
+00:02:12,390 --> 00:02:15,610
+As que simplemente sacar un resumen.
+
+34
+00:02:15,750 --> 00:02:20,370
+Y tampoco necesitamos mostrar la ruta a los datos de contacto.
+
+35
+00:02:20,480 --> 00:02:30,750
+As que simplemente puedo poner esto en mi cheque mi cdigo de resumen aqu para envolverlo con el div debido a
+
+36
+00:02:30,780 --> 00:02:32,530
+tener elementos adyacentes aqu.
+
+37
+00:02:32,680 --> 00:02:39,450
+Y eso tambin me permite simplemente deshacerme del da del ao y simplemente devolver el resumen, que
+
+38
+00:02:39,450 --> 00:02:43,170
+es simplemente una redireccin o el cdigo que vimos anteriormente.
+
+39
+00:02:43,170 --> 00:02:50,580
+Ahora, si guard ese contenedor de verificacin de actualizaciones, vers si voy a la pgina de pago haciendo clic en
+
+40
+00:02:50,640 --> 00:02:57,770
+"ordenar ahora", todo esto funciona, pero si lo vuelvo a cargar con solo presionar "enter" o "refresh" me redirigen.
+
+41
+00:02:58,020 --> 00:03:02,100
+As que esto es Demerara arreglado con este pequeo ajuste.
+
+42
+00:03:02,100 --> 00:03:06,230
+Ahora asegurmonos de que realmente combinemos nuestros reductores.
+

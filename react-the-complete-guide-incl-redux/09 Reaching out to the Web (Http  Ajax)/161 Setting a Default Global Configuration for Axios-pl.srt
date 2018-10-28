@@ -1,0 +1,144 @@
+1
+00:00:02,120 --> 00:00:07,670
+W ostatnim wykadzie pokazaem ci, jak doda interceptory. Czasami nie chcesz przechwytywa
+
+2
+00:00:07,670 --> 00:00:12,270
+dania, ale chcesz skonfigurowa globaln konfiguracj.
+
+3
+00:00:12,470 --> 00:00:18,420
+Powiedzmy, e URL, do ktrego wysyasz proby do aplikacji, jest zawsze taki
+
+4
+00:00:18,560 --> 00:00:25,040
+sam, wic zawsze jest to jsonplaceholder. w naszym przypadku tutaj wpisz kod, a nastpnie co ukonij.
+
+5
+00:00:25,040 --> 00:00:27,840
+Tak wic ta cz pocztkowa jest zawsze taka
+
+6
+00:00:28,130 --> 00:00:34,040
+sama, wic byoby mio, gdybymy mogli j tutaj wyci i po prostu wysa danie, aby uzyska posty
+
+7
+00:00:34,260 --> 00:00:37,980
+i automatycznie doczy to do kilku pocztkowych adresw URL komentarzy.
+
+8
+00:00:38,000 --> 00:00:44,100
+Okazuje si, e moemy to zrobi w indeksie. Plik js, ktry jest dobrym miejscem, poniewa
+
+9
+00:00:44,100 --> 00:00:45,160
+uruchamia si jako
+
+10
+00:00:45,440 --> 00:00:52,040
+pierwszy, zaczyna reagowa na aplikacj, Moemy uy osi i tam dostp do obiektu defaults, aby ustawi
+
+11
+00:00:52,070 --> 00:00:59,600
+wartoci domylne, ktre s prawdziwe dla wszystkich wysyanych da. I tam moemy zdefiniowa baseURL i ten adres URL bdzie
+
+12
+00:00:59,600 --> 00:01:05,420
+teraz uywany, tak jak sugeruj nazwy, jako podstawaURL, do ktrej inne cieki s po prostu doczane.
+
+13
+00:01:05,450 --> 00:01:11,110
+Teraz przy ustawieniu tutaj, whoops ustawione tak na marginesie powinno by baseURL z duymi znakami tutaj
+
+14
+00:01:11,130 --> 00:01:13,650
+dla adresu URL, tutaj obudowa jest wana.
+
+15
+00:01:13,790 --> 00:01:18,480
+Teraz ju usunlimy go ze wszystkich postw tutaj w pojemniku
+
+16
+00:01:18,680 --> 00:01:23,730
+blokowym, teraz w nowym pocie, moemy go rwnie pozby si podczas
+
+17
+00:01:24,110 --> 00:01:31,760
+publikowania danych iw penym pocie, tam mamy dwa miejsca, jeden, w ktrym dostaniemy si do pojedynczego postu
+
+18
+00:01:31,840 --> 00:01:37,550
+i tam, gdzie usuwamy pojedynczy post. Moemy wic pozby si tego pocztkowego adresu
+
+19
+00:01:37,550 --> 00:01:39,440
+URL wszdzie, a jeli wrcimy
+
+20
+00:01:39,440 --> 00:01:47,810
+do aplikacji, zobaczysz, e wci si aduje, to nadal dziaa, wszystko wci dziaa dobrze, poniewa tak naprawd nie zmienilimy sposobu, w
+
+21
+00:01:47,810 --> 00:01:52,750
+jaki wysalimy proby, ale zrobilimy to nieco atwiejsze z powodu tej globalnej konfiguracji.
+
+22
+00:01:52,760 --> 00:01:56,560
+Teraz nie ogranicza si tylko do ustawiania baseURL tutaj,
+
+23
+00:01:56,720 --> 00:02:05,030
+moesz take uzyska dostp do domylnych nagwkw i tam ustawi wsplny nagwek, wic na tym wsplnym obiekcie autoryzacji, wsplne nagwki s
+
+24
+00:02:05,240 --> 00:02:11,450
+po prostu oglnymi nagwkami ustawionymi dla wszystkich typw da , i tam moesz ustawi to
+
+25
+00:02:11,450 --> 00:02:15,730
+na swj token autoryzacji, jeli masz jeden lub cokolwiek to jest.
+
+26
+00:02:15,830 --> 00:02:23,350
+Moesz take ustawi nagwki tylko dla okrelonych typw da, np. Dla postw, tylko wtedy, gdy chcesz
+
+27
+00:02:23,370 --> 00:02:30,110
+ustawi typ zawartoci, ktry wysyasz do aplikacji. json, ktrego nie potrzebujesz, to i tak
+
+28
+00:02:30,120 --> 00:02:32,160
+jest domylne, eby to pokaza.
+
+29
+00:02:32,420 --> 00:02:38,420
+Jeli teraz to zrobisz, jeli wrcisz do aplikacji i sprawdzisz
+
+30
+00:02:38,420 --> 00:02:42,620
+wysan prob, zobaczysz, e pod nagwkami mamy
+
+31
+00:02:42,950 --> 00:02:50,570
+token autoryzacji i tutaj, jeli to zrobimy, zobaczysz, e jeli sprawdzimy konfiguracj dania,
+
+32
+00:02:50,860 --> 00:02:53,810
+otrzymamy nagwek autoryzacji i aplikacj
+
+33
+00:02:53,810 --> 00:02:55,970
+Content-Type. json.
+
+34
+00:02:55,970 --> 00:02:58,280
+Jest to kolejna fajna
+
+35
+00:02:58,400 --> 00:03:04,640
+cecha osi, ustawiajca domyln konfiguracj, ktra bdzie uywana w aplikacji szeroko,
+
+36
+00:03:04,640 --> 00:03:08,140
+super niesamowicie, pomaga zoptymalizowa kod bardzo czsto.
+

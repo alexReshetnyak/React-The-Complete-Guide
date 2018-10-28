@@ -1,0 +1,300 @@
+1
+00:00:02,170 --> 00:00:06,550
+Tak wic teraz, gdy masz ju zaimplementowane linki, pracujmy nad tymi
+
+2
+00:00:06,670 --> 00:00:12,790
+zamwieniami ponownie i na zamwieniach, naprawd chc dopasowa stylizacj do jednego zamwienia, szeroko powinna wynosi
+
+3
+00:00:12,790 --> 00:00:14,890
+tylko 80%, aby nie rozciga
+
+4
+00:00:14,920 --> 00:00:16,690
+si na ca szeroko.
+
+5
+00:00:16,960 --> 00:00:20,130
+Mimo to poszedem pobra te zamwienia z mojego serwera,
+
+6
+00:00:20,350 --> 00:00:22,860
+a przede wszystkim najpierw utworz dwa zamwienia.
+
+7
+00:00:22,900 --> 00:00:31,210
+Wic utwrz dwa hamburgery, moe ten burger pozwoli mi kontynuowa i zamwi i pozwl mi
+
+8
+00:00:31,210 --> 00:00:32,020
+wymieni
+
+9
+00:00:32,020 --> 00:00:34,270
+jeszcze jedno miso i
+
+10
+00:00:34,330 --> 00:00:36,730
+bekon, super zdrowy burger
+
+11
+00:00:36,760 --> 00:00:39,200
+tutaj, kliknijmy dalej, kontynuuj i zamw.
+
+12
+00:00:39,220 --> 00:00:44,120
+A teraz, jeli sprawdzasz baz danych firebase, widzimy tutaj dwa zamwienia,
+
+13
+00:00:44,320 --> 00:00:50,570
+widzimy te, e cena jest tutaj wyczona, ale naprawimy to, wypisujc j poprawnie w zamwieniu.
+
+14
+00:00:50,600 --> 00:00:54,710
+Nadal cz wyjciowa to ta, ktrej teraz nie robimy. W
+
+15
+00:00:55,030 --> 00:01:00,910
+kontenerze zamwie oczywicie chc pobra wszystkie moje zamwienia. Teraz, aby to
+
+16
+00:01:00,910 --> 00:01:04,190
+zrobi, zaimplementuj componentDidMount.
+
+17
+00:01:04,480 --> 00:01:09,430
+Mog tutaj uy componentDidMount, poniewa chc tylko pobiera zamwienia, gdy jest on
+
+18
+00:01:09,430 --> 00:01:13,410
+zaadowany, nie ma mowy, e tam pjdziemy, bez ponownego
+
+19
+00:01:13,450 --> 00:01:16,640
+instalowania. Tak wic nie jest to, czego szukam,
+
+20
+00:01:17,050 --> 00:01:19,250
+componentDidUpdate, wic potrzebuj elementu ComponentDidMount.
+
+21
+00:01:19,270 --> 00:01:20,740
+Potrzebuj te aksiosa.
+
+22
+00:01:20,770 --> 00:01:24,680
+Zamierzam zaimportowa tutaj aksiosa z mojej wasnej instancji.
+
+23
+00:01:24,730 --> 00:01:26,880
+Wic importuj wskaniki od, a
+
+24
+00:01:26,880 --> 00:01:34,330
+teraz idmy w gr, dopki nie otrzymamy zamwie typu "axios". js tu i teraz tutaj chc sign
+
+25
+00:01:34,370 --> 00:01:37,900
+do axios. zdoby zamwienia. json odwoujc
+
+26
+00:01:37,900 --> 00:01:43,830
+si do tego wza zamwie na moim zapleczu i ustawiamy to
+
+27
+00:01:43,930 --> 00:01:50,440
+jako baseURL na naszej wasnej instancji axios, wic nie musz tego dodawa.
+
+28
+00:01:50,510 --> 00:01:57,950
+A potem, gdy dane s ju dostpne, oczywicie czekamy, aby co zrobi z odpowiedzi, chc ustawi stan,
+
+29
+00:01:57,950 --> 00:02:02,080
+ktry faktycznie zawiera moje zamwienia, a nastpnie wyprowadza je.
+
+30
+00:02:02,420 --> 00:02:06,790
+Dodam wic pewien etap do tego komponentu tutaj, teraz w stanie, chc
+
+31
+00:02:06,830 --> 00:02:13,100
+mie moje zamwienia, ktre s tablic, pocztkowo pust tablic i prawdopodobnie bd mia rwnie stan adowania, ktry
+
+32
+00:02:13,100 --> 00:02:17,220
+pocztkowo jest prawdziwy, poniewa bd zacznij adowa, a nastpnie tutaj, w
+
+33
+00:02:17,420 --> 00:02:25,230
+bloku wtedy, zdecydowanie zadzwoni do ustawionego stanu i ustawi adowanie na false. Zrobi to rwnie w bloku
+
+34
+00:02:25,320 --> 00:02:30,520
+catch, w ktrym api potencjalne bdy.
+
+35
+00:02:31,420 --> 00:02:37,090
+Wic na pewno zdecydowanie skopiuj t lini i ustawi adowanie na false. Ale oczywicie chc rwnie
+
+36
+00:02:37,090 --> 00:02:38,810
+przechowywa moje zamwienia.
+
+37
+00:02:38,830 --> 00:02:45,280
+Teraz chodzi o to, kiedy dochodz do wza zamwie, nie otrzymuj tablicy, ale otrzymam obiekt javascript, po
+
+38
+00:02:45,280 --> 00:02:52,540
+prostu wydrukuj go do konsoli, abymy mogli przeanalizowa go. Dane przechowuj dane, ktre otrzymujemy z bazy
+
+39
+00:02:52,540 --> 00:02:54,010
+Firebase, wic spjrzmy
+
+40
+00:02:54,020 --> 00:02:55,390
+na te dane.
+
+41
+00:02:55,390 --> 00:03:03,490
+Udajemy si do naszej aplikacji, otwieramy konsol i przechodzimy do zamwie, to jest obiekt, ktry otrzymamy z firebase i
+
+42
+00:03:03,490 --> 00:03:10,960
+jak widzisz, jest to obiekt javascript, w ktrym klucze s po prostu tymi unikalnymi identyfikatorami Firebase wygenerowanymi dla
+
+43
+00:03:10,960 --> 00:03:14,950
+nas i wartoci to s dane o poszczeglnych zamwieniach.
+
+44
+00:03:15,280 --> 00:03:22,650
+Wic nie otrzymujemy tablicy, ale otrzymujemy obiekt, w ktrym mamy identyfikatory jako waciwoci.
+
+45
+00:03:22,940 --> 00:03:29,860
+Teraz chc to zrobi, oczywicie chc zamieni mj obiekt zamwie w tablic i mog to zrobi za pomoc
+
+46
+00:03:29,890 --> 00:03:31,520
+ptli for / in.
+
+47
+00:03:31,720 --> 00:03:40,060
+Tak wic dla niech klucz w res. dane i pamitaj o danych resztowych to obiekt, ktry wanie
+
+48
+00:03:40,060 --> 00:03:48,070
+wydrukowalimy na konsol, a nastpnie tutaj, chc utworzy ma metod pomocnicz, fetchedOrders lub cokolwiek chcesz, aby pocztkowo bya
+
+49
+00:03:48,110 --> 00:03:55,910
+pust tablic, a ja po prostu zadzwoni do fetchedOrders. naciskaj na kad iteracj lub na
+
+50
+00:03:55,970 --> 00:04:05,150
+kady element, ktry znajduj i chc naciska res. dane dla danego klucza, dostp do wartoci, ktra
+
+51
+00:04:05,240 --> 00:04:06,650
+oczywicie jest zamwieniem.
+
+52
+00:04:06,650 --> 00:04:14,680
+Teraz mamy tablic fetchedOrders, aby nie zgubi identyfikatorw, ale ktre s tutaj kluczami.
+
+53
+00:04:14,690 --> 00:04:16,210
+Zrobi jedn rzecz,
+
+54
+00:04:16,340 --> 00:04:25,280
+nie popchn tego obiektu, zamiast tego wepchn nowy obiekt na t tablic fetchedOrders, gdzie bd dystrybuowa waciwoci z obiektu
+
+55
+00:04:25,280 --> 00:04:32,560
+zamwienia, ktry pobraem z bazy firebase z operatorem rozprzestrzeniania i dodaj jeden obiekt nowy identyfikator
+
+56
+00:04:33,020 --> 00:04:40,160
+nieruchomoci, ktry jest kluczem, poniewa pamitaj, e klucz znajduje si w tym obiekcie, ktry pobralimy
+
+57
+00:04:40,160 --> 00:04:44,050
+z bazy Firebase, gdzie identyfikatory zostay utworzone przez firebase.
+
+58
+00:04:44,120 --> 00:04:51,220
+Teraz mam moj tablic fetchedOrders wypenion obiektami porzdkowymi, ktre rwnie znaj swoje identyfikatory.
+
+59
+00:04:51,230 --> 00:04:55,920
+Teraz mog ustawi tutaj zamwienia na fetchedOrders,
+
+60
+00:04:56,000 --> 00:05:04,490
+oczywicie chc rwnie obsuy ewentualne bdy, wic zaimportuj mj wasny komponent wyszego rzdu, zErrorHandler
+
+61
+00:05:05,300 --> 00:05:07,970
+od, a teraz musimy
+
+62
+00:05:08,220 --> 00:05:16,220
+przej do tego folderu HOC, zErrorHandler / withErrorHandler i owin nasz zamawia komponent
+
+63
+00:05:16,310 --> 00:05:21,350
+z nim, zErrorHandler po prostu tak, owinity w
+
+64
+00:05:22,600 --> 00:05:23,820
+ten sposb.
+
+65
+00:05:23,980 --> 00:05:27,720
+Oczywicie, przepumy tu take axios, w przeciwnym razie
+
+66
+00:05:27,910 --> 00:05:32,740
+to nie zadziaa, a teraz sprbujmy, usuwajc to zakoczenie json
+
+67
+00:05:32,890 --> 00:05:36,370
+tutaj, wrmy i otrzymamy tutaj bd sieci.
+
+68
+00:05:36,580 --> 00:05:38,940
+Wic mamy ten bd,
+
+69
+00:05:38,980 --> 00:05:46,000
+wic to dziaa, obsuga bdw. Oczywicie moesz j dostroi w lokalnej metodzie catch, aby wywietli komunikat
+
+70
+00:05:46,000 --> 00:05:48,100
+o bdzie na ekranie lub cokolwiek chcesz.
+
+71
+00:05:48,100 --> 00:05:49,380
+Wznowi ponownie. json
+
+72
+00:05:49,390 --> 00:05:51,110
+tutaj na chwil
+
+73
+00:05:51,490 --> 00:05:59,050
+iz tym, odbieramy nasze zamwienia. Teraz pobieranie zamwie nie jest oczywicie tym samym, co wysyanie
+
+74
+00:05:59,080 --> 00:05:59,680
+zamwie, wic
+
+75
+00:05:59,770 --> 00:06:01,760
+zrbmy to w nastpnym wykadzie.
+

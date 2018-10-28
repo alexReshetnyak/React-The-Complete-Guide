@@ -1,0 +1,344 @@
+1
+00:00:02,080 --> 00:00:06,970
+Eso fue mucho hablar por solo cambiar entre dos pginas diferentes.
+
+2
+00:00:06,970 --> 00:00:10,370
+Pero era importante, por supuesto, saber cmo trabajar con el enrutador.
+
+3
+00:00:10,780 --> 00:00:16,600
+Ahora, sin embargo, quiero asegurarme de que todos podamos hacer clic en una sola publicacin y seguir cargando eso porque
+
+4
+00:00:16,630 --> 00:00:19,430
+en este momento no sucede nada cuando lo estamos haciendo.
+
+5
+00:00:19,450 --> 00:00:20,820
+Tampoco obtenemos un error.
+
+6
+00:00:20,830 --> 00:00:22,570
+Pero nada est sucediendo.
+
+7
+00:00:22,570 --> 00:00:29,860
+supuesto, que en nuestro componente de publicaciones donde tenemos este controlador para manejar un clic en la publicacin aqu, el administrador
+
+8
+00:00:29,860 --> 00:00:36,280
+de la publicacin posterior est enviando un estado que es irrelevante porque ya no estoy manejando el estado.
+
+9
+00:00:36,310 --> 00:00:38,310
+La razn de esto es, por
+
+10
+00:00:38,320 --> 00:00:40,610
+Ni siquiera configuro un valor predeterminado aqu.
+
+11
+00:00:40,930 --> 00:00:47,450
+Ahora cuando hago clic en esto, en realidad ahora quiero cargar la publicacin completa para esto.
+
+12
+00:00:47,450 --> 00:00:52,750
+Por supuesto, tambin necesitamos determinar dnde se debe mostrar la publicacin completa.
+
+13
+00:00:52,750 --> 00:00:58,080
+Podramos representarlo en el componente de bloque en lugar de nuestro post aqu.
+
+14
+00:00:58,300 --> 00:01:02,450
+Podramos cargar la publicacin completa en este lugar.
+
+15
+00:01:02,460 --> 00:01:05,580
+Esta es una opcin aqu, sin embargo.
+
+16
+00:01:05,770 --> 00:01:14,350
+parmetro de enrutamiento dinmico porque si echamos un vistazo a la salida de nuestras publicaciones, cada publicacin tiene ID.
+
+17
+00:01:14,440 --> 00:01:18,920
+O no importa dnde usemos realmente, necesitamos poder obtener un
+
+18
+00:01:19,120 --> 00:01:24,610
+Y esta idea, por supuesto, es importante porque cuando hacemos clic en una publicacin, necesitamos saber
+
+19
+00:01:24,610 --> 00:01:30,150
+qu publicacin fue la publicacin que queremos cargar y qu no cambia cuando utilizamos rutas diferentes.
+
+20
+00:01:30,520 --> 00:01:33,970
+Afortunadamente tenemos una forma de obtener la ID.
+
+21
+00:01:34,090 --> 00:01:42,460
+Entonces, ahora necesitamos pasar esa identificacin como parte de la red para que en el componente de publicacin, el componente de
+
+22
+00:01:42,910 --> 00:01:49,770
+la publicacin completa cuando la cargamos, podamos obtener este parmetro y cargar la publicacin correspondiente para esto.
+
+23
+00:01:49,770 --> 00:01:57,660
+Cuando descubramos la ruta, debemos informarle al enrutador sobre el hecho de que ahora tenemos un elemento
+
+24
+00:01:57,690 --> 00:01:59,780
+dinmico en esta URL.
+
+25
+00:02:00,030 --> 00:02:06,900
+Obviamente, tendremos publicaciones con ID 1 a 3 y no codificaremos as.
+
+26
+00:02:06,900 --> 00:02:08,400
+Eso sera una pesadilla.
+
+27
+00:02:08,460 --> 00:02:10,590
+Y en 99.
+
+28
+00:02:10,590 --> 00:02:16,760
+El 9 por ciento de las aplicaciones ni siquiera sabe cuntos valores posibles tiene aqu.
+
+29
+00:02:16,770 --> 00:02:25,470
+Entonces, en lugar de codificar los diferentes identificadores, definimos un parmetro de ruta variable flexible con dos puntos y
+
+30
+00:02:25,770 --> 00:02:34,130
+luego cualquier nombre de su eleccin, como ID o ID de host. Alceste use ID porque es ms corto.
+
+31
+00:02:34,260 --> 00:02:36,550
+Esto ser reemplazado dinmicamente.
+
+32
+00:02:36,570 --> 00:02:44,200
+reactor, oiga, siempre que tenga algo sobre Slash durante todo el ao, as que solo llame a una identificacin.
+
+33
+00:02:44,210 --> 00:02:47,470
+O, bsicamente, se lo dice al enrutador del
+
+34
+00:02:47,790 --> 00:02:54,720
+Y s, esto interferir con esta ruta, todos se preocupan por esto en un segundo simplemente cambiando
+
+35
+00:02:54,720 --> 00:02:58,140
+las posiciones porque se analiza de arriba abajo.
+
+36
+00:02:58,230 --> 00:03:06,330
+Por lo tanto, se reconoce primero la publicacin nueva y esto no se detecta accidentalmente porque las nuevas publicaciones por supuesto podran
+
+37
+00:03:06,330 --> 00:03:12,120
+interpretarse como una ID porque todo lo que estamos diciendo es que aqu tenemos algo dinmico.
+
+38
+00:03:12,540 --> 00:03:15,900
+Entonces ese es el parmetro de ruta.
+
+39
+00:03:15,900 --> 00:03:22,780
+Ahora, por supuesto, tambin queremos asegurarnos de pasar ese parmetro al hacer clic en una ruta.
+
+40
+00:03:22,780 --> 00:03:30,360
+necesitamos hacer clic en una sola publicacin en el componente de publicacin y habra dos maneras de hacerlo.
+
+41
+00:03:30,360 --> 00:03:31,790
+Ahora para eso
+
+42
+00:03:31,800 --> 00:03:36,850
+El primero es simplemente envolver ese componente de publicacin que publicamos aqu con un enlace.
+
+43
+00:03:37,110 --> 00:03:39,190
+Y eso estara perfectamente bien.
+
+44
+00:03:39,280 --> 00:03:41,740
+Puede ser el diablo como lo haces.
+
+45
+00:03:41,790 --> 00:03:50,970
+As que permtanme hacer rpidamente este enlace de importacin en brazaletes de Cali desde el enrutador de reanudar Dom y utilizo el enlace y
+
+46
+00:03:51,000 --> 00:03:57,630
+no el de navegacin porque no planeo disear la publicacin activa, aunque por supuesto ahora pueden hacerlo
+
+47
+00:03:57,630 --> 00:03:58,010
+aqu.
+
+48
+00:03:58,020 --> 00:04:06,930
+y lo incluir entre parntesis para poder dividirlos en varias lneas porque eso hace que sea un poco ms fcil de leer.
+
+49
+00:04:07,170 --> 00:04:12,760
+A continuacin, incluir este elemento de host aqu con este componente de enlace
+
+50
+00:04:13,080 --> 00:04:20,070
+As que ahora bsicamente estamos devolviendo un enlace y all tenemos que establecer dos para algo dinmico y
+
+51
+00:04:20,070 --> 00:04:22,550
+esa dinmica debera ser nuestra idea.
+
+52
+00:04:22,800 --> 00:04:27,990
+Potencialmente, por supuesto, si tiene ms tiempo usted o en otro lugar, tiene algo as como la barra de mensajes y
+
+53
+00:04:27,990 --> 00:04:28,830
+luego la ID.
+
+54
+00:04:28,860 --> 00:04:34,110
+Tambin puede mezclar una cadena y luego su ID o lo que sea que est aqu.
+
+55
+00:04:34,110 --> 00:04:38,430
+Sin embargo, solo estamos manejando barras y luego directamente la ID.
+
+56
+00:04:38,550 --> 00:04:41,250
+Entonces, no hay ninguna parte de cadena delante de la ID.
+
+57
+00:04:41,310 --> 00:04:49,530
+Solo necesito pasar el ID, as que quiero ir al ID del servidor aqu.
+
+58
+00:04:49,530 --> 00:04:51,650
+Eso es esencialmente lo que quiero hacer.
+
+59
+00:04:51,650 --> 00:04:58,430
+Quiero navegar hasta este r \ u00e1l y puede agregar slash delante de   l de esta manera.
+
+60
+00:04:58,440 --> 00:05:01,860
+As que ahora con eso estamos pasando la identificacin de la publicacin.
+
+61
+00:05:02,220 --> 00:05:11,130
+Regresemos al componente de bloque y nos aseguramos de cargar el componente de publicacin cuando vayamos a
+
+62
+00:05:11,210 --> 00:05:12,440
+este Routier.
+
+63
+00:05:12,720 --> 00:05:16,260
+Entonces, para eso y el componente del bloque o agregue la importacin de.
+
+64
+00:05:16,260 --> 00:05:18,150
+Publicar desde.
+
+65
+00:05:18,150 --> 00:05:21,130
+Y ahora eso est en el componente de publicacin completa.
+
+66
+00:05:21,210 --> 00:05:22,060
+Publicacin completa.
+
+67
+00:05:22,080 --> 00:05:22,870
+J. S. Y por lo tanto, tal vez tambin se mencione como publicacin completa aqu y luego carguemos la publicacin completa all.
+
+68
+00:05:22,920 --> 00:05:31,460
+Ahora tenemos el componente de publicacin completo.
+
+69
+00:05:31,470 --> 00:05:34,050
+Ahorremos todos los archivos y regresemos a la aplicacin.
+
+70
+00:05:34,260 --> 00:05:37,530
+Y obtienes ese error clave porque obviamente lo olvid
+
+71
+00:05:39,090 --> 00:05:47,280
+en el componente de publicacin cuando recorriendo todos estos elementos el enlace ahora es el elemento externo en nuestra matriz de elementos aqu.
+
+72
+00:05:47,280 --> 00:05:52,100
+Para publicaciones para que la propiedad de clave no se agregue al enlace y no a la publicacin.
+
+73
+00:05:52,090 --> 00:05:58,400
+Siempre tiene que estar en el elemento ms externo de tu ciclo.
+
+74
+00:05:58,470 --> 00:06:02,020
+Con eso, sin embargo, nos deshicimos del mensaje de error.
+
+75
+00:06:02,490 --> 00:06:05,300
+Y ahora si hago clic en
+
+76
+00:06:05,460 --> 00:06:14,830
+la publicacin, puedes ver que hay una ID en tu L y simplemente seleccionas la publicacin que ya no tiene demasiado sentido.
+
+77
+00:06:14,990 --> 00:06:18,580
+Tiene sentido de una manera, aunque no cargamos
+
+78
+00:06:18,740 --> 00:06:27,290
+las publicaciones con xito porque esta ID de utilera en el componente de publicacin completa ya no est configurada.
+
+79
+00:06:27,290 --> 00:06:30,410
+No es cmo recuperamos el parmetro que estamos pasando a travs de la ruta en la que eres ms.
+
+80
+00:06:30,440 --> 00:06:35,510
+Entonces esto no est funcionando.
+
+81
+00:06:35,660 --> 00:06:37,160
+Lo que est funcionando bien.
+
+82
+00:06:37,370 --> 00:06:39,070
+Podemos confirmar que en nuestra aplicacin es que podemos hacer clic en las publicaciones y cargar diferentes ID.
+
+83
+00:06:39,260 --> 00:06:46,450
+Esto es que estamos manipulando.
+
+84
+00:06:46,460 --> 00:06:47,390
+Tambin estamos cargando a componente.
+
+85
+00:06:47,420 --> 00:06:49,160
+Ahora solo tenemos que trabajar en la extraccin de ese parmetro.
+
+86
+00:06:49,190 --> 00:06:52,750
+&nbsp;
+

@@ -1,0 +1,464 @@
+1
+00:00:02,310 --> 00:00:06,260
+Obviamente, obtenemos componentes completos ms serios y, por lo tanto, podemos ver realmente los anzuelos del ciclo de vida.
+
+2
+00:00:06,360 --> 00:00:11,050
+Echemos un vistazo a las personas del ciclo de vida que aprendimos sobre la creacin de componentes en 4-D.
+
+3
+00:00:11,070 --> 00:00:12,290
+Comencemos con Apple.
+
+4
+00:00:12,300 --> 00:00:13,220
+S.
+
+5
+00:00:13,470 --> 00:00:20,610
+Ah te dije que tienes este constructor y el constructor recibe los puntales. Este componente solo
+
+6
+00:00:21,060 --> 00:00:22,170
+obtiene el constructor.
+
+7
+00:00:22,170 --> 00:00:27,330
+As que todava no podemos llamar a prop en ningn otro lado en esta clase de componente solo en un constructor.
+
+8
+00:00:27,330 --> 00:00:30,720
+Podramos acceder al ttulo de utilera en todos lados?
+
+9
+00:00:30,750 --> 00:00:33,990
+Tiene que ser el ttulo de este apoyo.
+
+10
+00:00:34,380 --> 00:00:40,150
+Ahora, para que esto funcione, ahora necesitamos llamar a los sper accesorios Osterweis.
+
+11
+00:00:40,350 --> 00:00:42,710
+Este proceso no tendr xito.
+
+12
+00:00:42,900 --> 00:00:47,030
+De hecho, puedo demostrarte esto si comento esto y guardo esto.
+
+13
+00:00:47,160 --> 00:00:50,610
+Ahora ves que obtenemos un error que falta al constructor de llamadas super.
+
+14
+00:00:50,670 --> 00:00:53,930
+Entonces, el error ya es bastante claro sobre lo que est mal.
+
+15
+00:00:54,090 --> 00:01:00,630
+Ahora, antes de implementar el constructor, funcion porque reaccion de forma automtica al
+
+16
+00:01:00,630 --> 00:01:01,470
+sper constructor.
+
+17
+00:01:01,590 --> 00:01:04,640
+Entonces, para el constructor del componente lo ampliamos.
+
+18
+00:01:04,980 --> 00:01:10,280
+Pero si implementamos el nuestro, anulamos el rechazo de los rechazos y, por lo tanto, tenemos que hacer
+
+19
+00:01:10,400 --> 00:01:15,350
+esto para llamar a super y pasar a prop's, es un constructor intil en este momento.
+
+20
+00:01:15,420 --> 00:01:19,090
+Sin embargo, Eastland nos advierte porque no hacemos nada ms.
+
+21
+00:01:19,250 --> 00:01:25,980
+As que djame bloquear algo y crear un enunciado de bloqueo donde, ms bien, dijera la aplicacin
+
+22
+00:01:25,980 --> 00:01:30,460
+Julias para que podamos ver fcilmente de dnde proviene el constructor.
+
+23
+00:01:30,570 --> 00:01:35,390
+Esto tiene sentido y permtanme pasar accesorios aqu.
+
+24
+00:01:35,470 --> 00:01:40,690
+Ahora, si guardamos esto y nuestra aplicacin carga, ver que obtenemos este registro de la consola aqu a la derecha.
+
+25
+00:01:40,720 --> 00:01:41,370
+Actualmente, si.
+
+26
+00:01:41,410 --> 00:01:42,720
+En ese constructor.
+
+27
+00:01:42,820 --> 00:01:46,800
+Y vemos los accesorios como un objeto donde tenemos este ttulo.
+
+28
+00:01:46,840 --> 00:01:49,760
+Ahora implementemos los otros ganchos tambin.
+
+29
+00:01:50,040 --> 00:01:54,350
+Este sera el componente que se montar all.
+
+30
+00:01:54,360 --> 00:02:06,340
+Tambin consolar el registro y dir la aplicacin punto J. S. el componente interno se montar as.
+
+31
+00:02:06,530 --> 00:02:08,910
+Ahora con Dadley es seguro decirlo de nuevo.
+
+32
+00:02:09,700 --> 00:02:15,490
+Y una vez que esto vuelva a cargar, ver que primero estamos ejecutando el constructor y luego el componente se montar.
+
+33
+00:02:15,490 --> 00:02:20,980
+Ahora una palabra ms sobre el constructor por la forma en que estamos inicializando el estado aqu.
+
+34
+00:02:21,010 --> 00:02:26,160
+Ahora, como mencion, es posible que todava vea fragmentos de cdigo donde el estado se inicializa aqu.
+
+35
+00:02:26,290 --> 00:02:28,780
+Puedes hacer esto llamando a este estado.
+
+36
+00:02:28,780 --> 00:02:36,430
+Asegrate de llamar super bosque a este estado y luego inicialzalo tal como lo hacemos all.
+
+37
+00:02:36,670 --> 00:02:39,190
+Entonces esto es bsicamente una sintaxis alternativa.
+
+38
+00:02:39,520 --> 00:02:44,650
+No necesariamente recomiendo usar el constructor porque es ms fcil implementar la inicializacin de estado como
+
+39
+00:02:44,650 --> 00:02:47,680
+lo hicimos antes, pero es que tienes un constructor.
+
+40
+00:02:47,710 --> 00:02:49,160
+Usted puede hacer eso absolutamente.
+
+41
+00:02:49,180 --> 00:02:53,040
+Realmente no hace la diferencia, bouffe est bien y lo hace es cdigo.
+
+42
+00:02:53,080 --> 00:02:59,760
+Es posible que an vea en otros tutoriales porque, en otras palabras, reaccione o sea preciso en
+
+43
+00:02:59,770 --> 00:03:03,270
+todas las palabras del proyecto creado para el acto.
+
+44
+00:03:03,460 --> 00:03:10,630
+No tuvimos acceso a esta forma relativamente nueva de inicializar propiedades en seis clases.
+
+45
+00:03:10,660 --> 00:03:16,570
+Es por eso que este es el enfoque que funcionar en la mayora de los proyectos, ya que esto solo funcionar
+
+46
+00:03:16,570 --> 00:03:19,750
+en los montajes de proyectos modernos, tal como lo usamos aqu.
+
+47
+00:03:19,780 --> 00:03:21,110
+Entonces con eso vers.
+
+48
+00:03:21,160 --> 00:03:22,060
+Todava funciona bien.
+
+49
+00:03:22,060 --> 00:03:25,210
+Obtenemos el mismo estado y comportamiento que antes.
+
+50
+00:03:25,210 --> 00:03:30,440
+Ahora la inicializacin se mantuvo en el constructor de vuelta al ciclo de vida de Deese.
+
+51
+00:03:30,460 --> 00:03:33,190
+Aunque tenemos que renderizar un mtodo.
+
+52
+00:03:33,180 --> 00:03:39,520
+A continuacin, si recuerda nuestra diapositiva, ya tenemos que implementarla porque todos los componentes con estado
+
+53
+00:03:39,520 --> 00:03:40,490
+deben tener esto.
+
+54
+00:03:40,510 --> 00:03:44,340
+Es el nico obligatorio porque necesitamos saber qu renderizar.
+
+55
+00:03:44,470 --> 00:03:56,640
+Entonces all tambin ahora consolar a Larke el J. S. En el render interno as guardamos esto, tambin vemos a Drenthe
+
+56
+00:03:56,640 --> 00:04:01,490
+a quien llaman para su posicin tal como lo viste en la diapositiva.
+
+57
+00:04:01,820 --> 00:04:04,270
+Y ahora implementemos el componente mount.
+
+58
+00:04:04,440 --> 00:04:06,230
+Ahora implementar esa lgrima en la parte superior.
+
+59
+00:04:06,230 --> 00:04:11,030
+El orden no importa, pero normalmente o con frecuencia ver que se implementan ganchos de ciclo de
+
+60
+00:04:11,030 --> 00:04:12,530
+vida en el componente superior.
+
+61
+00:04:12,560 --> 00:04:14,400
+Mont aqu?
+
+62
+00:04:14,780 --> 00:04:18,310
+Tambin se bloquear algo.
+
+63
+00:04:18,360 --> 00:04:25,080
+J. S. el componente interno se mont as.
+
+64
+00:04:25,130 --> 00:04:28,900
+Ahora, si salvamos las seguridades tambin podemos ver que esto se llama Perdido.
+
+65
+00:04:28,900 --> 00:04:30,460
+Ahora eso es interesante.
+
+66
+00:04:30,460 --> 00:04:36,910
+Aada ahora estos ganchos de ciclo de vida al estado de Arbre para componentes tambin.
+
+67
+00:04:37,140 --> 00:04:44,150
+As que cpialos y muvete a Cheesus all o pgalos en un bfer y / o mtodo.
+
+68
+00:04:44,440 --> 00:04:49,660
+No quiero inicializar el estado aqu porque no uso estado en este componente y necesito ajustar
+
+69
+00:04:49,690 --> 00:04:51,410
+todos estos bloqueos Konsole ahora.
+
+70
+00:04:51,550 --> 00:04:59,320
+Entonces aqu tenemos personas J. S. y tambin tenemos eso all abajo y estas dos cerraduras y el mtodo de renderizado.
+
+71
+00:04:59,420 --> 00:05:03,350
+Tambin agregar una sentencia de bloqueo de consola, por ejemplo, para.
+
+72
+00:05:03,360 --> 00:05:06,610
+J. S. dentro de render.
+
+73
+00:05:06,760 --> 00:05:08,230
+Ahora se est poniendo interesante.
+
+74
+00:05:08,260 --> 00:05:14,380
+Si ahora guardamos esto, veamos cundo se ejecutan todos los enganches de ciclo de vida de estas personas.
+
+75
+00:05:15,130 --> 00:05:22,940
+As que, como dije, asegrate de que nos hayas guardado y recarga la pgina, y vers que no los vemos en absoluto.
+
+76
+00:05:22,980 --> 00:05:27,520
+Tiene sentido porque solo mostramos esta lista de personas condicionalmente.
+
+77
+00:05:27,840 --> 00:05:32,060
+Tan pronto como hago clic en Alternar personas las ves todas.
+
+78
+00:05:32,160 --> 00:05:39,720
+No, en realidad, lo que se puede ver es el renderizado de la apertura cuando se record el contenedor raz Safdar.
+
+79
+00:05:39,900 --> 00:05:42,420
+Lo cual tiene sentido porque el estado cambi.
+
+80
+00:05:42,540 --> 00:05:45,800
+Entonces recuerda que realmente ejecut el render.
+
+81
+00:05:46,140 --> 00:05:52,410
+Y luego ves que la persona que ha ejecutado el constructor montar render a las
+
+82
+00:05:52,440 --> 00:05:54,320
+personas y dentro se mont.
+
+83
+00:05:54,330 --> 00:06:03,930
+Ahora agreguemos los mtodos de Oldys a la persona J como se muestra aqu para asegurarnos de ajustar el bloqueo para que pueda identificarlo e implementar un registro en
+
+84
+00:06:03,930 --> 00:06:12,960
+el mtodo de representacin all para consolar a la persona con bloqueo J. S.
+
+85
+00:06:13,650 --> 00:06:16,380
+dentro de render.
+
+86
+00:06:16,390 --> 00:06:19,110
+Ahora vamos a guardar este archivo para usted.
+
+87
+00:06:19,230 --> 00:06:21,140
+Y ahora veamos esto una vez ms.
+
+88
+00:06:21,410 --> 00:06:25,520
+Cuando se carga la aplicacin, solo vemos a Abdias, pero ahora se va a llenar de gente.
+
+89
+00:06:25,520 --> 00:06:27,510
+Una vez que alcanzo la persistencia del objetivo.
+
+90
+00:06:27,890 --> 00:06:34,300
+As que vamos a abrirnos camino a travs del primero de todos tenemos que iniciar en realidad como llamadas hasta aqu el
+
+91
+00:06:34,290 --> 00:06:35,210
+componente que monte.
+
+92
+00:06:35,360 --> 00:06:41,720
+Luego hacemos clic en el botn y este retroceso no nos rendir porque obviamente el estado ha cambiado,
+
+93
+00:06:41,720 --> 00:06:44,680
+necesita recordar el render para ver qu cambi.
+
+94
+00:06:44,750 --> 00:06:52,130
+Luego ejecutamos los mtodos Jr de la persona hasta que se renderizan en el constructor donde recibimos los puntales
+
+95
+00:06:52,130 --> 00:06:53,110
+de por centavos.
+
+96
+00:06:53,120 --> 00:07:01,130
+De modo que todo este componente que hace que la matriz interna se monte y se renderice en el interior, pero eso es importante.
+
+97
+00:07:01,280 --> 00:07:05,670
+No vemos la persecucin de personas dentro del componente montado.
+
+98
+00:07:05,720 --> 00:07:11,170
+En cambio, continuamos con la persona J. S. componente y eso tiene perfecto sentido.
+
+99
+00:07:11,180 --> 00:07:17,160
+Recuerde que deslice este paso despus de representar los componentes secundarios.
+
+100
+00:07:17,530 --> 00:07:24,590
+Esta es la razn por la cual no vemos que el componente s se haya montado an, pero por
+
+101
+00:07:24,600 --> 00:07:34,130
+qu vemos a la persona J dentro del constructor y dems, porque representamos la lista y la lista tiene 3 por ciento de componentes singulares,
+
+102
+00:07:34,130 --> 00:07:44,390
+es por eso que vemos geus persona hasta rinde tres veces y all despus de que vemos a la persona que Jess mont los tiempos libres, hace
+
+103
+00:07:44,390 --> 00:07:46,440
+su tiempo libre este ao.
+
+104
+00:07:46,970 --> 00:07:50,630
+Y hay personas que componen el componente de Chia.
+
+105
+00:07:50,960 --> 00:07:53,960
+Y este es exactamente el orden que viste en la diapositiva.
+
+106
+00:07:53,960 --> 00:08:00,080
+Desciende los componentes y renderiza el sistema y en estos Meffert tendras la posibilidad de ejecutar tu
+
+107
+00:08:00,080 --> 00:08:00,980
+propio cdigo.
+
+108
+00:08:01,160 --> 00:08:07,430
+Pero incluso con solo iniciar sesin, es interesante ver cmo funciona el re-acto y
+
+109
+00:08:07,430 --> 00:08:09,500
+cmo realmente crea este componente.
+
+110
+00:08:09,500 --> 00:08:12,160
+Ahora crear es una cosa interesante.
+
+111
+00:08:12,560 --> 00:08:15,890
+Y, por supuesto, crea componentes funcionales de la misma manera.
+
+112
+00:08:16,010 --> 00:08:18,680
+All simplemente no podemos agregar nuestros ganchos de ciclo de vida.
+
+113
+00:08:18,800 --> 00:08:24,650
+Pero si no necesitas ejecutar ninguna lgica, no los necesitas, pero crear componentes es una
+
+114
+00:08:24,650 --> 00:08:25,560
+cosa interesante.
+
+115
+00:08:25,580 --> 00:08:29,900
+Echemos un vistazo a lo que ocurre cuando actualizamos los componentes.
+
+116
+00:08:29,900 --> 00:08:31,780
+Cmo se ve este ciclo de vida?
+

@@ -1,0 +1,116 @@
+1
+00:00:02,190 --> 00:00:07,420
+Agora ns tivemos um olhar para CSSTransition neste componente na ltima palestra, l
+
+2
+00:00:07,450 --> 00:00:14,850
+eu expliquei que ns configuramos este nome de classe base, este trunk de nossas classes css e o componente
+
+3
+00:00:14,850 --> 00:00:20,540
+CSSTransition ento expandiria isto automaticamente para um par de diferentes classes css e esse
+
+4
+00:00:20,550 --> 00:00:22,710
+ o caso. Por algum motivo,
+
+5
+00:00:22,710 --> 00:00:29,160
+voc tambm pode querer ter certeza de que voc ainda usa modal aberto e modal fechado, para que voc essencialmente
+
+6
+00:00:29,160 --> 00:00:32,910
+no tenha que definir essas classes. Por essa razo, voc
+
+7
+00:00:32,910 --> 00:00:36,290
+no pode apenas passar uma string com seu
+
+8
+00:00:36,360 --> 00:00:38,140
+trunk aqui para classNames,
+
+9
+00:00:38,340 --> 00:00:46,620
+voc tambm pode passar um objeto javascript e neste objeto, voc pode definir manualmente vrias classes css que
+
+10
+00:00:46,620 --> 00:00:49,770
+devem ser usadas para os diferentes hooks.
+
+11
+00:00:49,890 --> 00:00:53,320
+Ento, nesse objeto que voc passou para
+
+12
+00:00:53,340 --> 00:01:04,950
+o nome da classe, voc pode definir enter, enter-active, exit e exit-active e, na verdade, existem mais dois, aparecer e aparecer- ativos que voc
+
+13
+00:01:04,950 --> 00:01:07,550
+no precisa definir, eles tambm
+
+14
+00:01:07,560 --> 00:01:10,420
+teriam foi adicionado ao seu tronco.
+
+15
+00:01:10,650 --> 00:01:16,080
+Estes so usados, ento aparea e aparea ativo  usado pela primeira vez algo  renderizado
+
+16
+00:01:16,200 --> 00:01:19,590
+para o dom no ao faz-lo condicionalmente, tornando-o, por exemplo,
+
+17
+00:01:19,590 --> 00:01:21,710
+em um clique de boto ou
+
+18
+00:01:21,840 --> 00:01:28,680
+no, mas se voc codific-lo no dom como em nosso aplicativo. js, o h1 e o boto, ento se ele estiver sempre
+
+19
+00:01:28,680 --> 00:01:34,200
+l, mas se o aplicativo carregar,  claro que a primeira vez que isso  montado no dom
+
+20
+00:01:34,200 --> 00:01:39,190
+e voc pode animar isso com o aparecer. Mas aparecer no  o que eu
+
+21
+00:01:39,300 --> 00:01:46,830
+quero focar aqui, em vez disso, se voc disser para entrar, eu no quero anexar nada, ento voc no teria que defini-lo
+
+22
+00:01:46,830 --> 00:01:50,160
+ou apenas definir uma string vazia, para entrar-ativo, voc Agora,
+
+23
+00:01:50,160 --> 00:01:56,790
+podemos definir a classe css especfica que voc deseja adicionar como abertura modal e, em seguida, com isso, voc
+
+24
+00:01:56,790 --> 00:02:03,050
+pode sair desse esquema de ter um tronco e, em seguida, -enter, -enter-active e assim por diante.
+
+25
+00:02:03,390 --> 00:02:10,290
+Ento, com essa configurao voc pode definir suas prprias classes css que devem ser adicionadas ou devem ser usadas, close modal
+
+26
+00:02:10,710 --> 00:02:12,840
+essa  a classe de fechamento.
+
+27
+00:02:13,140 --> 00:02:20,150
+E com isso, se salvarmos isso e agora abrirmos o modal, voc ver que temos as mesmas animaes de antes, mas
+
+28
+00:02:20,220 --> 00:02:22,710
+agora estamos usando nossas prprias classes de CSS.
+
+29
+00:02:22,710 --> 00:02:28,970
+Ento, isso  uma pequena adio, isso  alguma flexibilidade que voc tem que realmente ajustar isso s suas necessidades.
+

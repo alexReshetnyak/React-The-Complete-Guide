@@ -1,0 +1,36 @@
+1
+00:00:02,270 --> 00:00:08,290
+Estamos nos aproximando do fim dos principais recursos de reao, construmos nosso incrvel aplicativo de reao durante todo
+
+2
+00:00:08,310 --> 00:00:12,830
+o curso e at adicionamos um pouco de testes a ele no ltimo mdulo.
+
+3
+00:00:12,830 --> 00:00:19,230
+Agora  hora de implantar este aplicativo para que possamos realmente v-lo rodando em algum lugar na internet.
+
+4
+00:00:19,640 --> 00:00:21,470
+Ento, implantando aplicativos de resposta,
+
+5
+00:00:21,470 --> 00:00:22,790
+como isso funciona?
+
+6
+00:00:22,790 --> 00:00:24,820
+O que temos que ter cuidado?
+
+7
+00:00:24,830 --> 00:00:26,840
+Felizmente  super fcil, aqui esto os
+
+8
+00:00:26,840 --> 00:00:27,980
+passos e  claro
+
+9
+00:00:27,980 --> 00:00:31,000
+que eu tambm vou mostrar um exemplo neste mdulo.
+

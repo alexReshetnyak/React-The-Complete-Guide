@@ -1,0 +1,124 @@
+1
+00:00:02,120 --> 00:00:07,250
+Nell'ultima lezione abbiamo fatto in modo che possiamo anche rimuovere gli ingredienti dal
+
+2
+00:00:07,250 --> 00:00:12,560
+burger sapere quando aggiornare il prezzo dell'hamburger e mostrarlo come parte di quel burger.
+
+3
+00:00:12,740 --> 00:00:18,800
+Ora, in realt se avessi un sacco di ingredienti per un hamburger  scorrevole perch l'abbiamo configurato
+
+4
+00:00:18,800 --> 00:00:19,500
+per essere.
+
+5
+00:00:19,730 --> 00:00:25,370
+Quindi il prezzo dovrebbe probabilmente essere visualizzato sopra i controlli di costruzione, diciamo.
+
+6
+00:00:25,370 --> 00:00:29,200
+Quindi il bulk controlla qui oltre a emettere i controlli.
+
+7
+00:00:29,270 --> 00:00:37,930
+Voglio mostrare il prezzo dell'hamburger e possiamo semplicemente usare un paragrafo qui dove diciamo il valore attuale del colon.
+
+8
+00:00:38,180 --> 00:00:41,410
+E poi mi aspetto di far passare il prezzo con gli oggetti di scena.
+
+9
+00:00:41,510 --> 00:00:45,450
+Quindi il prezzo dell'elica  qualcosa del genere.
+
+10
+00:00:45,560 --> 00:00:49,860
+Ora il prezzo  calcolato nel contenitore Bergere Boulder.
+
+11
+00:00:49,910 --> 00:00:57,500
+Qui abbiamo lo stato del prezzo totale per passare questo prezzo al controllo bullato S10 perch  l
+
+12
+00:00:57,500 --> 00:01:00,670
+che ho appena aggiunto l'utilizzo di quella propriet.
+
+13
+00:01:01,010 --> 00:01:02,920
+Quindi aggiungiamo la propriet del prezzo.
+
+14
+00:01:02,930 --> 00:01:09,690
+Il nome che ho appena preso in fase di compilazione controlla e supera questo prezzo totale.
+
+15
+00:01:09,890 --> 00:01:12,750
+Assicurati di salvare tutti i folletti e diamo un'occhiata.
+
+16
+00:01:13,010 --> 00:01:14,560
+Vediamo il prezzo attuale qui.
+
+17
+00:01:14,720 --> 00:01:21,680
+E se aggiungo gli ingredienti vedi che questo prezzo aumenta qui, ma torniamo con i numeri decimali
+
+18
+00:01:21,740 --> 00:01:27,280
+in javascript, quindi dovremmo risolvere questo problema e forse tutti noi vogliamo stamparlo.
+
+19
+00:01:27,590 --> 00:01:29,100
+Ben enfatizzato.
+
+20
+00:01:29,420 --> 00:01:39,580
+Quindi quello che possiamo fare nella carta nei controlli di compilazione per uno che  avvolto  nel tag forte.
+
+21
+00:01:39,620 --> 00:01:42,560
+Il prezzo in modo che questo fondamentalmente con il peso del carattere.
+
+22
+00:01:42,560 --> 00:01:48,640
+Grassetto e risolviamo fissando questo prezzo qui.
+
+23
+00:01:48,660 --> 00:01:52,810
+Ora per quel prezzo deve essere un numero ma per fortuna lo .
+
+24
+00:01:52,820 --> 00:01:58,880
+Quindi ora possiamo chiamare per risolvere il problema e correggerlo con due cifre decimali.
+
+25
+00:01:58,930 --> 00:02:00,790
+Salviamo questo
+
+26
+00:02:01,060 --> 00:02:03,020
+E ora vediamo quattro.
+
+27
+00:02:03,190 --> 00:02:09,910
+E se comincio ad aggiungere Vedete che il prezzo sale, immagino che le persone abbiano un hamburger
+
+28
+00:02:09,910 --> 00:02:12,160
+piuttosto abbordabile che sembra davvero delizioso.
+
+29
+00:02:12,160 --> 00:02:16,530
+Quindi con quello il costruttore di hamburger  in realt in ottima forma.
+
+30
+00:02:16,600 --> 00:02:21,060
+Il pulsante check out manca ma  qualcosa che aggiunger in un secondo.
+
+31
+00:02:21,310 --> 00:02:26,890
+E da quel momento in poi dovremo occuparci di tutta quella navigazione che sta colpendo qui in alto.
+

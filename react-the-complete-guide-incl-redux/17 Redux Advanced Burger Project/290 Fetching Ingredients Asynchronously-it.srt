@@ -1,0 +1,388 @@
+1
+00:00:02,230 --> 00:00:05,260
+Quindi prendiamo gli ingredienti in modo asincrono.
+
+2
+00:00:05,260 --> 00:00:11,680
+Lo far nella ciotola dell'hamburger o nella cartella delle azioni in cui tutti i nostri creatori di azioni
+
+3
+00:00:11,740 --> 00:00:14,020
+aggiungeranno un nuovo creatore di azioni.
+
+4
+00:00:14,320 --> 00:00:21,960
+Esportare quindi un nuovo Konst e lo chiamer per recuperare gli ingredienti o magari aggiungere un nome.
+
+5
+00:00:22,060 --> 00:00:27,340
+Ingredienti perch vuoi farlo inizialmente per caricare gli ingredienti possiamo usare Newberger Boler.
+
+6
+00:00:27,850 --> 00:00:35,560
+Non mi aspetto alcun argomento su questa funzione e naturalmente desidero restituire un'azione, anche se per
+
+7
+00:00:35,560 --> 00:00:36,610
+essere precisi.
+
+8
+00:00:36,730 --> 00:00:42,790
+funzione qui dove ho ricevuto la funzione di invio che posso quindi utilizzare in questo corpo di funzione.
+
+9
+00:00:42,790 --> 00:00:43,920
+Voglio restituire una
+
+10
+00:00:44,230 --> 00:00:47,490
+E questo  un modo per costruire la sintassi per leggere X funk.
+
+11
+00:00:47,530 --> 00:00:50,770
+Il che mi permette di usare la mia azione Creative come questa.
+
+12
+00:00:50,910 --> 00:00:56,830
+Ora qui posso eseguire il codice asincrono e inviare una nuova azione ogni volta che ho finito.
+
+13
+00:00:56,860 --> 00:01:02,770
+Quindi, in realt, ho bisogno di un secondo creatore di azioni che esporter anche se
+
+14
+00:01:02,770 --> 00:01:08,960
+teoricamente lo user solo internamente e in autunno chiamer qui gli ingredienti di questo creatore.
+
+15
+00:01:08,980 --> 00:01:16,590
+Mi aspetto di ottenere gli ingredienti come argomento e qui torner solo un'azione che voglio inviare.
+
+16
+00:01:16,660 --> 00:01:19,690
+Ora per quello ho bisogno del tipo di azione.
+
+17
+00:01:19,810 --> 00:01:25,040
+Quindi passiamo ai tipi di azione e aggiungiamo un nuovo tipo di azione qui.
+
+18
+00:01:25,050 --> 00:01:30,760
+Lo chiamer set di sottolineatura degli ingredienti e come spesso o come sempre.
+
+19
+00:01:30,800 --> 00:01:37,120
+Lo user come identificatore di stringa per impostare gli ingredienti che sono l'identificatore.
+
+20
+00:01:37,130 --> 00:01:40,740
+Lo ascolter nel mio riduttore pi tardi.
+
+21
+00:01:41,350 --> 00:01:47,400
+E con quello aggiunto posso tornare al file di azione burger puller e poi al creatore di
+
+22
+00:01:47,410 --> 00:01:54,800
+detti ingredienti ere voglio restituire un oggetto in cui il tipo  tipi di azione che impostano gli ingredienti proprio cos.
+
+23
+00:01:55,210 --> 00:02:02,430
+E naturalmente solo per passare un carico utile di ingredienti di propriet nominati e quel nome  totalmente a te.
+
+24
+00:02:02,440 --> 00:02:05,910
+Il valore non  il valore dovrebbe essere un argomento di funzione.
+
+25
+00:02:05,980 --> 00:02:08,510
+In quale anno sono gli ingredienti alternativi.
+
+26
+00:02:08,530 --> 00:02:12,900
+Con ci otteniamo questi creatori di azioni sincrone.
+
+27
+00:02:12,970 --> 00:02:19,930
+Questa  l'azione che alla fine voglio inviare una volta che il codice asincrono negli ingredienti di init  stato fatto.
+
+28
+00:02:19,940 --> 00:02:25,550
+Andiamo al contenitore di proiettili Bergere per recuperare il codice asincrono che vuoi eseguire
+
+29
+00:02:25,550 --> 00:02:26,130
+qui.
+
+30
+00:02:26,540 --> 00:02:33,770
+a ritagliarlo dal componente e monter la funzione l e lo inserir nel mio file Bergere Boulder nella
+
+31
+00:02:33,860 --> 00:02:40,610
+cartella delle azioni qui Voglio raggiungere X e inoltrarlo ovviamente solo per poter accedere ora all'accesso burger
+
+32
+00:02:40,610 --> 00:02:48,050
+Bolar componente abbiamo importato exe da ordini exes che non abbiamo pi bisogno di questo nel Broga Boulder.
+
+33
+00:02:48,050 --> 00:02:49,450
+Quindi mi limiter
+
+34
+00:02:49,460 --> 00:02:55,970
+Quindi posso tagliarlo da l e spostare l'importazione nel file di azione pi audace di Bergere l.
+
+35
+00:02:55,970 --> 00:02:58,140
+Devo raggiungere gli ordini.
+
+36
+00:02:58,220 --> 00:03:01,000
+Devo controllare se il mio Potthast lo corregga effettivamente.
+
+37
+00:03:01,000 --> 00:03:02,590
+Quindi va bene.
+
+38
+00:03:02,590 --> 00:03:09,590
+E ora possiamo raggiungere l'accesso e questo autunno a qui il percorso per Firebase dovrebbe essere ancora corretto.
+
+39
+00:03:09,680 --> 00:03:16,220
+Ma ovviamente quando riceveremo la risposta, non chiamer questo stato triste e non lo far per ottenere
+
+40
+00:03:16,220 --> 00:03:17,010
+un errore.
+
+41
+00:03:17,150 --> 00:03:24,200
+Invece qui voglio spedire il mio detto creatore di azioni ingredienti.
+
+42
+00:03:24,290 --> 00:03:34,580
+Quindi qui eseguir questo come una funzione e, naturalmente, invier i dati di risposta qui su una risposta effettiva che la propriet dei
+
+43
+00:03:34,640 --> 00:03:40,320
+dati contiene i dati che saranno l'oggetto javascript che si desidera utilizzare.
+
+44
+00:03:40,490 --> 00:03:48,050
+Ora, quando si verifica un errore, probabilmente vorremmo anche gestire il debito nella ciotola o nel contenitore dell'hamburger.
+
+45
+00:03:48,050 --> 00:03:54,120
+Abbiamo quell'errore uno stato che dobbiamo caricare stato e tutte queste cose sono state usate qui.
+
+46
+00:03:54,230 --> 00:04:01,070
+Quindi posso sbarazzarmi dell'errore e caricare il mio hamburger Boulder ora perch non riuscir pi a utilizzare i campi di
+
+47
+00:04:01,070 --> 00:04:02,950
+stato qui in deadfall pi.
+
+48
+00:04:02,990 --> 00:04:09,300
+Ora il caricamento  stato utilizzato solo per mostrare uno spinner nel riepilogo dell'ordine nel caso in cui stiamo ancora caricando.
+
+49
+00:04:09,380 --> 00:04:15,410
+Questo per non dovrebbe essere pi richiesto qui perch non stiamo facendo nulla in modo asincrono durante la visualizzazione del
+
+50
+00:04:15,410 --> 00:04:17,720
+motore durante la visualizzazione del riepilogo dell'ordine.
+
+51
+00:04:17,720 --> 00:04:23,180
+Pertanto, ci che  importante  l'ordine qui.
+
+52
+00:04:23,300 --> 00:04:27,620
+Abbiamo detto che il nostro hamburger uguale agli ingredienti non pu essere caricato se abbiamo un errore.
+
+53
+00:04:27,830 --> 00:04:29,260
+E a uno spinner se non lo facciamo.
+
+54
+00:04:29,570 --> 00:04:32,400
+E in effetti l'abbiamo impostato su un vero e proprio hamburger di birra.
+
+55
+00:04:32,510 --> 00:04:34,200
+Se il materiale di scena  accaduto caricato.
+
+56
+00:04:34,370 --> 00:04:38,760
+Quindi abbiamo sicuramente bisogno di impostare questo errore anche se non su uno stato pi.
+
+57
+00:04:38,840 --> 00:04:41,120
+Vogliamo passarlo con oggetti di scena.
+
+58
+00:04:41,480 --> 00:04:50,780
+Quindi per il debito ho bisogno di gestire questo errore come parte del mio stato Rydex per quello andr al mio hamburger
+
+59
+00:04:50,780 --> 00:04:51,860
+tirare il riduttore.
+
+60
+00:04:51,980 --> 00:04:58,550
+E qui prima di tutto abbiamo detto che inizialmente gli ingredienti erano nulli perch ora li stiamo recuperando dal
+
+61
+00:04:58,640 --> 00:05:02,330
+web e non dovrebbero esserlo finch non sono stati scaricati.
+
+62
+00:05:02,570 --> 00:05:07,390
+Questo  tutto ci che  necessario per assicurarsi che questo controllo tu sia nel burger Boulder fallisce.
+
+63
+00:05:07,400 --> 00:05:11,460
+Se non abbiamo ancora gli ingredienti in modo che mostriamo una selezione.
+
+64
+00:05:12,050 --> 00:05:17,610
+Ma ho anche bisogno di aggiungere un nuovo stato al mio burger bowl o allo stato tutto il nome.
+
+65
+00:05:18,110 --> 00:05:20,200
+E qui Utset impostato su a.
+
+66
+00:05:20,210 --> 00:05:27,320
+Inizialmente voglio impostarlo su True anche se il nostro caricamento fallisce con quello aggiunto. Abbiamo bisogno di
+
+67
+00:05:27,320 --> 00:05:28,100
+un'altra azione.
+
+68
+00:05:28,220 --> 00:05:33,640
+Tornando al burger puller che segue la cartella delle azioni, inviamo un'azione se
+
+69
+00:05:33,650 --> 00:05:36,910
+otteniamo ingredienti eccezionali, ma dobbiamo anche inviare un'azione.
+
+70
+00:05:36,950 --> 00:05:45,950
+Se fallisce, possiamo aggiustare la nostra aria o stato nello stato di ridondanza o aggiungere un nuovo tipo
+
+71
+00:05:46,850 --> 00:05:55,550
+di azione e chiamer il recupero degli ingredienti fallito e useremo lo stesso nome dell'identificatore di stringa.
+
+72
+00:05:55,550 --> 00:05:59,680
+Come sempre e poi aggiunger il creatore di azioni qui.
+
+73
+00:05:59,720 --> 00:06:06,320
+Non solo abbiamo impostato gli ingredienti, voglio anche che gli ingredienti recuperati falliscano.
+
+74
+00:06:06,680 --> 00:06:10,900
+Non ricevo un messaggio di errore, quindi non ho bisogno di accettare alcun argomento.
+
+75
+00:06:11,090 --> 00:06:17,720
+Voglio solo restituire qui un oggetto javascript in cui digitare i tipi di azione e recuperare gli
+
+76
+00:06:17,720 --> 00:06:19,120
+ingredienti in questo modo.
+
+77
+00:06:19,120 --> 00:06:23,830
+E questa  l'azione che in realt voglio inviare quando fallisce.
+
+78
+00:06:23,990 --> 00:06:30,230
+Quindi tutta questa patch qualcosa nel caso di errore a tutti gli ingredienti di questo patch non  riuscita e
+
+79
+00:06:30,290 --> 00:06:31,540
+non passa alcun argomento.
+
+80
+00:06:31,850 --> 00:06:34,310
+Quindi con quello sto gestendo entrambi i casi.
+
+81
+00:06:34,410 --> 00:06:42,230
+Ora, ovviamente, dobbiamo gestire queste nuove azioni nel riduttore e accertarci di collegare correttamente il nostro bowler Berger a
+
+82
+00:06:42,290 --> 00:06:49,820
+queste nuove cose, come ad esempio lo stato di errore e una cosa che ho notato che abbiamo
+
+83
+00:06:49,820 --> 00:06:56,400
+ancora bisogno di accedere al contenitore di hamburger Boler per disco con gestore degli errori.
+
+84
+00:06:56,420 --> 00:06:57,990
+Componente di ordine superiore.
+
+85
+00:06:58,130 --> 00:07:04,220
+Quindi prendo rapidamente quell'importazione di accesso dal file di azione Boler dell'hamburger e lo aggiungo
+
+86
+00:07:04,220 --> 00:07:06,190
+al contenitore di hamburger Boler.
+
+87
+00:07:06,230 --> 00:07:13,100
+che possiamo ancora gestire le frecce con il nostro componente di ordine superiore qui perch stiamo usando un'istanza reale, quindi
+
+88
+00:07:13,250 --> 00:07:19,250
+non importa se inviamo la richiesta da un altro posto NEAP come il nostro creatore di azioni asincrone.
+
+89
+00:07:19,280 --> 00:07:21,700
+Ora una nota importante a riguardo 
+
+90
+00:07:21,740 --> 00:07:26,900
+Possiamo ancora caricare con la stessa istanza di accesso che ripassiamo al componente di ordine superiore per mostrare
+
+91
+00:07:26,900 --> 00:07:28,210
+il nostro modello aerodinamico.
+
+92
+00:07:28,250 --> 00:07:30,020
+Che ovviamente  quello che vuoi fare.
+
+93
+00:07:30,020 --> 00:07:34,460
+Ancora vogliamo avere questo posto centrale di gestione degli errori.
+
+94
+00:07:34,460 --> 00:07:40,190
+Ora con tutto ci che  in atto anche se la nostra applicazione non funzionerebbe come previsto perch ora abbiamo
+
+95
+00:07:40,190 --> 00:07:43,490
+bisogno di lavorare sul riduttore per gestire questi nuovi tipi di azione.
+
+96
+00:07:43,490 --> 00:07:46,320
+Abbiamo per prendere gli ingredienti.
+
+97
+00:07:46,400 --> 00:07:48,110
+In questo momento sta girando sempre.
+

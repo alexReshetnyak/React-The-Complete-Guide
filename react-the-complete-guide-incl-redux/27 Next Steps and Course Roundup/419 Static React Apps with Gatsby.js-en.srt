@@ -1,0 +1,124 @@
+1
+00:00:02,150 --> 00:00:06,900
+So you had a look at build with react and react.rocks,
+
+2
+00:00:06,980 --> 00:00:10,550
+now let's move away from demo projects and so on
+
+3
+00:00:10,610 --> 00:00:14,500
+and let's instead have a look at gatsbyjs.
+
+4
+00:00:14,580 --> 00:00:22,160
+Now gatsbyjs is actually a library building up on react, just like nextjs did, gatsbyjs serves a
+
+5
+00:00:22,160 --> 00:00:25,550
+different purpose though and it's a pretty exciting library
+
+6
+00:00:25,550 --> 00:00:33,440
+I'll be honest with you. Gatsbyjs is a library that allows you to build static web sites with react.
+
+7
+00:00:33,440 --> 00:00:40,210
+Now what's a static website? A static website is a page which uses only html, javascript and css,
+
+8
+00:00:40,310 --> 00:00:46,550
+well that's true for normal, react single page application too but a static site also has one special
+
+9
+00:00:46,550 --> 00:00:47,930
+thing going for it,
+
+10
+00:00:48,080 --> 00:00:53,220
+you normally don't use react router there, you don't use it directly at least,
+
+11
+00:00:53,330 --> 00:00:59,960
+instead what you have is you have a folder structure where each folder has an index.html file, and the according
+
+12
+00:00:59,990 --> 00:01:02,780
+assets belonging to the file in it.
+
+13
+00:01:02,780 --> 00:01:09,320
+Now the cool thing with that is that you really build websites like you did in the 90s or around that
+
+14
+00:01:09,320 --> 00:01:17,180
+time but you're using react, you're building this as a react app and gatsbyjs, this technology, this
+
+15
+00:01:17,180 --> 00:01:19,780
+library then actually does the rest for you,
+
+16
+00:01:19,770 --> 00:01:25,700
+splits everything up and upon a certain command, generates this folder structure where you got a couple
+
+17
+00:01:25,700 --> 00:01:30,520
+of folders with html files in there based on the react that you built.
+
+18
+00:01:30,560 --> 00:01:33,510
+You can learn more about it on gatsbyjs.com,
+
+19
+00:01:33,530 --> 00:01:39,830
+it's an amazing library and it actually would provide enough content for its own course.
+
+20
+00:01:39,860 --> 00:01:42,140
+Now I don't have such a course right now,
+
+21
+00:01:42,170 --> 00:01:46,880
+you could start with the docs here though to learn how to use it and definitely play around with
+
+22
+00:01:46,880 --> 00:01:53,630
+it a bit to learn more about how it works and if it makes sense for you, comparable alternatives mentioned
+
+23
+00:01:53,660 --> 00:01:56,930
+on the features page of gatsbyjs would be Jekyll
+
+24
+00:01:56,960 --> 00:02:00,940
+but there you don't use react or content management systems like Wordpress,
+
+25
+00:02:00,980 --> 00:02:04,810
+there however, you are stuck to writing some server side code too,
+
+26
+00:02:04,850 --> 00:02:11,780
+you need a SQL database and all that stuff. Gatsbyjs works with react and that offers quite a lot
+
+27
+00:02:11,780 --> 00:02:13,280
+of advantages.
+
+28
+00:02:13,280 --> 00:02:15,730
+So consider this for your next project,
+
+29
+00:02:15,740 --> 00:02:20,610
+check out the docs and the features page on their page to learn if it's the right choice for you
+
+30
+00:02:20,840 --> 00:02:25,610
+and once you decide that it's interesting to you, feel free to dive into it.
+
+31
+00:02:25,610 --> 00:02:29,370
+I wanted to make you aware of it because it's a really amazing project.
+

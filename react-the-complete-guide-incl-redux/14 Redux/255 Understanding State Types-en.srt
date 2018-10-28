@@ -1,0 +1,236 @@
+1
+00:00:02,200 --> 00:00:09,460
+Before we finish this module and dive into more advanced redux concepts later such as running asynchronous
+
+2
+00:00:09,460 --> 00:00:12,140
+code which we haven't covered at all yet,
+
+3
+00:00:12,280 --> 00:00:16,070
+let me walk you through different types of state and answer the question,
+
+4
+00:00:16,180 --> 00:00:20,050
+should every state be handled through redux.
+
+5
+00:00:20,110 --> 00:00:27,760
+Because in the demo application in this module, we eliminated the set state call in the component and
+
+6
+00:00:27,760 --> 00:00:30,810
+we eliminated the local component state,
+
+7
+00:00:30,970 --> 00:00:37,140
+the state we used thus far in all react applications and projects we built in this course,
+
+8
+00:00:37,270 --> 00:00:44,830
+instead we used the redux state and action dispatching and store binding to use that state.
+
+9
+00:00:44,890 --> 00:00:47,290
+Is this always the approach you should follow,
+
+10
+00:00:47,290 --> 00:00:50,370
+do you always have to use redux to begin with?
+
+11
+00:00:50,650 --> 00:00:55,810
+Well the question whether you use redux or not depends on the size of your application and the complexity
+
+12
+00:00:55,810 --> 00:00:56,910
+of your state.
+
+13
+00:00:56,950 --> 00:01:03,760
+You have a simple, a small application, setting up redux might take you longer than the benefits you get
+
+14
+00:01:03,760 --> 00:01:12,090
+out of it are worth it. For any decent medium size or big application, using redux and managing the state
+
+15
+00:01:12,100 --> 00:01:13,960
+there is probably a good idea
+
+16
+00:01:14,200 --> 00:01:19,440
+but then still, we have to ask which state should be used for redux
+
+17
+00:01:19,480 --> 00:01:23,500
+because you shouldn't necessarily manage all the state in it.
+
+18
+00:01:23,920 --> 00:01:28,990
+Let's have a look at the various types of state, some examples and whether you should use redux for them
+
+19
+00:01:28,990 --> 00:01:30,120
+or not.
+
+20
+00:01:30,370 --> 00:01:37,470
+Let's consider local UI state such as showing or hiding a backdrop, opening a modal,
+
+21
+00:01:37,510 --> 00:01:45,210
+all these things which of course change the state to update the UI of your react application and hence
+
+22
+00:01:45,210 --> 00:01:49,490
+to show something different, should you use redux for that?
+
+23
+00:01:49,610 --> 00:01:58,500
+The answer is often times, you might not use redux here, you mostly handle this within your components,
+
+24
+00:01:58,510 --> 00:02:01,090
+that being said, you can use redux for that.
+
+25
+00:02:01,120 --> 00:02:09,040
+You can have show modal property in your global state, dispatch an action to set it to true and dispatch
+
+26
+00:02:09,040 --> 00:02:10,970
+an action to set it to false
+
+27
+00:02:11,050 --> 00:02:19,360
+then connect your component and listen to that property to conditionally render a modal or not but
+
+28
+00:02:19,360 --> 00:02:21,570
+that might be overkill.
+
+29
+00:02:21,630 --> 00:02:26,970
+Often times, you can't handle that within your components just as we did it before.
+
+30
+00:02:27,980 --> 00:02:32,650
+Another important type of state is persistent state,
+
+31
+00:02:32,730 --> 00:02:39,100
+this means the state you typically also store in server side databases like the users of your application
+
+32
+00:02:39,120 --> 00:02:44,210
+or posts of a blog, all burger orders, stuff like that.
+
+33
+00:02:44,250 --> 00:02:50,310
+Now here, you typically do use redux but of course not for all the data you have in your service side
+
+34
+00:02:50,310 --> 00:02:55,800
+database because redux of course is just for managing the state in your application
+
+35
+00:02:55,800 --> 00:03:03,630
+as long as your application is alive. And always keep in mind, when the user refreshes your page, your
+
+36
+00:03:03,630 --> 00:03:05,030
+state is gone
+
+37
+00:03:05,100 --> 00:03:08,070
+so redux is not a replacement for a database,
+
+38
+00:03:08,100 --> 00:03:14,910
+instead you store such data on a server but the relevant slices are managed by redux.
+
+39
+00:03:14,970 --> 00:03:21,390
+So the post you're currently displaying, the users you currently need to display, the post the user currently
+
+40
+00:03:21,390 --> 00:03:22,360
+may edit,
+
+41
+00:03:22,500 --> 00:03:27,290
+these things are loaded and stored in redux so that you have them available so that you can render
+
+42
+00:03:27,300 --> 00:03:28,500
+them to the screen
+
+43
+00:03:28,680 --> 00:03:32,360
+but that might not include all the data you have in your database.
+
+44
+00:03:33,530 --> 00:03:41,280
+And then we have typical client state, things like is the user authenticated or filters set by the user,
+
+45
+00:03:41,330 --> 00:03:47,050
+so if you have a dropdown allowing the user to filter your posts, that's not data you store in the database,
+
+46
+00:03:47,120 --> 00:03:53,420
+you can't store if the user is authenticated because if he enters the wrong login information, you
+
+47
+00:03:53,420 --> 00:03:56,110
+don't need to store it on the server unnecessarily.
+
+48
+00:03:56,120 --> 00:04:01,430
+Also the filter set by the user, you might not store that on a server because it's not that important
+
+49
+00:04:01,430 --> 00:04:03,120
+to store it in the database,
+
+50
+00:04:03,170 --> 00:04:09,170
+you definitely need to be aware of the current filter settings on your client in your javascript code in the
+
+51
+00:04:09,170 --> 00:04:13,700
+react application though. This is state you definitely use redux for,
+
+52
+00:04:13,760 --> 00:04:21,080
+you managed that via redux because it might affect multiple components or areas of your application,
+
+53
+00:04:21,290 --> 00:04:26,870
+for example if the user is authenticated, it might be important for a lot of components in your app and there,
+
+54
+00:04:27,230 --> 00:04:33,640
+redux really shines because the central storage then offers a huge advantage.
+
+55
+00:04:33,650 --> 00:04:37,500
+So these are two different types of state and how you handle them.
+
+56
+00:04:37,820 --> 00:04:43,820
+Now we will see examples for all of that over the next modules when we also add redux to our course
+
+57
+00:04:43,820 --> 00:04:44,960
+project.
+
+58
+00:04:44,960 --> 00:04:46,520
+Before we do that though,
+
+59
+00:04:46,700 --> 00:04:48,380
+it's time to practice redux.
+

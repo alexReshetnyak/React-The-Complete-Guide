@@ -1,0 +1,360 @@
+1
+00:00:02,280 --> 00:00:07,230
+So in the last lecture we finally used a token to get access to protected resources,
+
+2
+00:00:07,230 --> 00:00:13,530
+now I want to make sure that we can see in our UI in the app whether we are authenticated or not.
+
+3
+00:00:13,530 --> 00:00:18,000
+Right now we always see authenticate here which leads us to the authentication form
+
+4
+00:00:18,240 --> 00:00:26,100
+but even if we do login successfully here, we still see authenticate here, would be better to see
+
+5
+00:00:26,100 --> 00:00:30,980
+logout here if we did authenticate so that we can see hey we are authenticated.
+
+6
+00:00:31,050 --> 00:00:31,590
+Of course you might
+
+7
+00:00:31,590 --> 00:00:34,690
+also show something like user to access your profile,
+
+8
+00:00:34,860 --> 00:00:37,060
+I'll just stick to logout though.
+
+9
+00:00:37,200 --> 00:00:43,080
+So this would be a great addition to our application and it is easy to implement.
+
+10
+00:00:43,170 --> 00:00:50,760
+We manage what we see in the navigation area here, in the components folder under navigation navigation
+
+11
+00:00:50,850 --> 00:00:52,510
+items, in this component,
+
+12
+00:00:52,530 --> 00:01:01,170
+we define what's inside our menu both the responsive one and this desktop navigation.
+
+13
+00:01:01,230 --> 00:01:06,410
+Now the idea is to only show navigation item with authenticate on it
+
+14
+00:01:06,510 --> 00:01:08,370
+if you are unauthenticated
+
+15
+00:01:08,430 --> 00:01:14,810
+so if you do need to sign up or sign in and show a logout link instead
+
+16
+00:01:14,910 --> 00:01:17,690
+if you are logged in.
+
+17
+00:01:17,700 --> 00:01:25,920
+So for that we need to check our state, our login state in navigation items, navigation items of course
+
+18
+00:01:25,920 --> 00:01:30,490
+is a presentational component so we can't connect this to redux.
+
+19
+00:01:30,540 --> 00:01:36,160
+While we could, we could simply turn it into a class based one and then use connect on this component,
+
+20
+00:01:36,450 --> 00:01:37,550
+you can do that,
+
+21
+00:01:37,590 --> 00:01:38,830
+I wouldn't recommend it though,
+
+22
+00:01:38,880 --> 00:01:44,370
+this breaks the idea of having a few container components which are connected to the store and having
+
+23
+00:01:44,370 --> 00:01:47,660
+a lot of dumb components which don't know about the store
+
+24
+00:01:47,910 --> 00:01:55,530
+so I wouldn't recommend using that approach. A better approach would be to pick a fitting container which
+
+25
+00:01:55,530 --> 00:01:57,720
+actually loads navigation items
+
+26
+00:01:57,990 --> 00:02:03,780
+and here it's not in the container folder but in the layout folder simply because we use it to wrap other components.
+
+27
+00:02:04,290 --> 00:02:12,510
+The layout.js file is a class based component and there, we implement the toolbar and the sidedrawer which
+
+28
+00:02:12,600 --> 00:02:16,650
+are of course the components which use navigation items in the end.
+
+29
+00:02:16,680 --> 00:02:26,250
+So it would make sense to connect the layout here to our store so that we can pass the auth information down
+
+30
+00:02:26,250 --> 00:02:33,090
+to toolbar and side drawer which then in turn could pass it to navigation items, this is exactly what I
+
+31
+00:02:33,090 --> 00:02:34,040
+want to do.
+
+32
+00:02:34,260 --> 00:02:45,020
+So I'll import connect from react-redux here and I will connect my layout,
+
+33
+00:02:45,040 --> 00:02:51,990
+now I'm interested in some state so I'll add the mapStateToProps constant here,
+
+34
+00:02:52,060 --> 00:02:57,580
+this will be a function where I receive the state as always and I return a javascript object where I
+
+35
+00:02:57,580 --> 00:03:06,650
+do map some props to slices of my state and I want to create a property which I'll name isAuthenticated
+
+36
+00:03:07,430 --> 00:03:09,360
+and I'll bind it to state
+
+37
+00:03:09,710 --> 00:03:15,980
+and now how can we find out if the user is authenticated? In the end, if we have a look at our auth reducer,
+
+38
+00:03:16,220 --> 00:03:22,230
+we see that in the state we have relevant to authentication, if the token is null
+
+39
+00:03:22,240 --> 00:03:25,520
+the user is unauthenticated, if the token is not
+
+40
+00:03:25,520 --> 00:03:28,200
+null, the user is authenticated,
+
+41
+00:03:28,280 --> 00:03:32,420
+that's especially true since we cleared a token automatically once it expires,
+
+42
+00:03:32,420 --> 00:03:37,970
+that's the code we added earlier. So we can rely on the token giving us an indication about whether the
+
+43
+00:03:37,970 --> 00:03:40,520
+user is authenticated or not
+
+44
+00:03:40,550 --> 00:03:47,510
+With that in mind we can go back to layout and simply set isAuthenticated equal to state.auth.token
+
+45
+00:03:47,930 --> 00:03:49,680
+and compare it to null,
+
+46
+00:03:49,790 --> 00:03:57,500
+if it's not equal to null, what this check checks that isAuthenticated is true because we are authenticated.
+
+47
+00:03:58,370 --> 00:04:08,110
+Now I'll use that together with connect so I'll pass this to connect and wrap the, whoops,  wrap the layout component
+
+48
+00:04:08,290 --> 00:04:15,910
+with the function return by the connect function and I can use isAuthenticated as a prop in my jsx
+
+49
+00:04:15,940 --> 00:04:21,880
+code here or anywhere in this component of course and I want to pass it to my toolbar, so I'll add
+
+50
+00:04:21,940 --> 00:04:30,470
+a new prop here and I'll name this isAuth for example, and I will pass this.props.isAuthenticated,
+
+51
+00:04:30,520 --> 00:04:37,190
+so this property we just mapped down there and I'll do the same for the side drawer.
+
+52
+00:04:38,340 --> 00:04:42,650
+Now of course I need to edit these two components to be able to use that new prop,
+
+53
+00:04:42,900 --> 00:04:47,070
+so I'll go to the toolbar component here and there,
+
+54
+00:04:47,070 --> 00:04:52,550
+I now receive that new prop information and I need to pass it to navigation items. Here,
+
+55
+00:04:52,550 --> 00:04:55,760
+I'll name this prop isAuthenticated
+
+56
+00:04:55,770 --> 00:05:00,540
+and I'm switching up these names just to make sure you're not confusing what's coming in and what we're
+
+57
+00:05:00,540 --> 00:05:01,610
+passing on,
+
+58
+00:05:01,860 --> 00:05:09,030
+so here isAuthenticated will be passed to navigation items as a prop and we pass on props isAuth,
+
+59
+00:05:09,690 --> 00:05:17,580
+isAuth because that is what we just picked in the layout, isAuth. The same for the side drawer of course, in
+
+60
+00:05:17,580 --> 00:05:19,170
+the side drawer, there
+
+61
+00:05:19,260 --> 00:05:23,500
+we also have the navigation items and I bind isAuthenticated
+
+62
+00:05:23,550 --> 00:05:29,070
+so the prop name I just chose in the toolbar and I pass on props.isAuth.
+
+63
+00:05:29,340 --> 00:05:31,890
+With that I save both components
+
+64
+00:05:31,890 --> 00:05:39,270
+and now in the navigation items, I know that I receive this isAuthenticated prop which is true or
+
+65
+00:05:39,270 --> 00:05:40,430
+false.
+
+66
+00:05:40,440 --> 00:05:44,750
+So now here, I can simply render this navigation item conditionally,
+
+67
+00:05:44,950 --> 00:05:47,240
+I can do this in line or separate,
+
+68
+00:05:47,300 --> 00:05:53,550
+I'll do it in line and I'll simply check if the props which I receive here so add them as an argument,
+
+69
+00:05:54,000 --> 00:06:01,050
+if props isAuthenticated, that's of course the prop we just defined in the side drawer and the toolbar,
+
+70
+00:06:01,860 --> 00:06:04,060
+if isAuthenticated is true
+
+71
+00:06:04,230 --> 00:06:11,370
+then I want to render this navigation item, I'll split this over multiple lines to make it a bit easier
+
+72
+00:06:11,370 --> 00:06:12,240
+to read.
+
+73
+00:06:12,240 --> 00:06:22,440
+The alternative is to render a navigation item where I actually link to /logout and where I say
+
+74
+00:06:22,740 --> 00:06:29,400
+logout, now /logout leads to a route we haven't registered yet but that's the logic I want to use.
+
+75
+00:06:29,640 --> 00:06:33,480
+Let's save this and we can actually see this logout
+
+76
+00:06:33,480 --> 00:06:37,070
+button here in the menu though right now, it's incorrect,
+
+77
+00:06:37,080 --> 00:06:41,630
+it's showing logout when we're not authenticated because we are not authenticated when the app reloads
+
+78
+00:06:41,760 --> 00:06:45,770
+so let's quickly check the logic in the layout container, isAuthenticated
+
+79
+00:06:45,780 --> 00:06:50,100
+is bound to state of token which is null initially,
+
+80
+00:06:50,100 --> 00:06:56,610
+so that is correct but in navigation items I have a logical error, if I'm authenticated then of course
+
+81
+00:06:56,610 --> 00:06:58,850
+I don't want to show authenticate but logout.
+
+82
+00:06:59,010 --> 00:07:03,020
+So I'll check the opposite if I'm not authenticated by adding an exclamation mark,
+
+83
+00:07:03,150 --> 00:07:04,420
+then I show authenticate
+
+84
+00:07:04,680 --> 00:07:08,010
+otherwise the logout, in this order it makes sense.
+
+85
+00:07:08,010 --> 00:07:09,960
+So now let's save this file again
+
+86
+00:07:10,170 --> 00:07:13,570
+and now if this app reloads you see authenticate is the default.
+
+87
+00:07:13,590 --> 00:07:18,950
+Now if we do login though, so we'll switch to sign in and submit,
+
+88
+00:07:19,050 --> 00:07:21,540
+you'll see it gets exchanged for logout.
+
+89
+00:07:21,810 --> 00:07:28,200
+So now we update the UI, in the next lecture we'll make sure that when we click logout, we actually do something
+
+90
+00:07:28,200 --> 00:07:30,540
+because right now this route doesn't exist.
+

@@ -1,0 +1,336 @@
+1
+00:00:02,110 --> 00:00:03,700
+Hazrlanan burger bileeni ile.
+
+2
+00:00:03,750 --> 00:00:06,800
+Hadi hamburger bileeni ile devam edelim.
+
+3
+00:00:06,990 --> 00:00:09,490
+Ve bunu tekrar fonksiyonel bir biimde deneyeceim.
+
+4
+00:00:09,570 --> 00:00:17,220
+lev burgeri adn baz sahne alm olarak adlandrn ve yine J harfi dnmeden nce
+
+5
+00:00:17,220 --> 00:00:21,260
+baz javascript mant ekleyebilmem iin kvrck ayralar kullanacam.
+
+6
+00:00:21,330 --> 00:00:25,280
+imdilik, yapaca JS X geriye dnleri var.
+
+7
+00:00:25,380 --> 00:00:32,280
+Ancak, onu gelitirmek ve koullu olarak daha sonra baka bir ey yaratmak iin bu bileeni tekrar gzden geireceiz.
+
+8
+00:00:32,280 --> 00:00:41,670
+aktive edelim, nk j'yi X olarak iyi kullanyoruz ve elbette bir burger fonksiyonunu bir varsaylana aktaralm.
+
+9
+00:00:41,670 --> 00:00:43,860
+imdilik, reaktif hareketi tekrar
+
+10
+00:00:43,860 --> 00:00:45,150
+imdi orada ne var.
+
+11
+00:00:45,230 --> 00:00:52,980
+James x Ben kendi JS X vermek istiyorum sadece bu Bergere bileen bileen kullanmanz gerekir.
+
+12
+00:00:53,040 --> 00:00:58,940
+Onlarn ounu aslnda yaratyoruz ama her eyi bir div iine sarmak istiyorum.
+
+13
+00:00:59,010 --> 00:01:06,780
+Yani ben burada kasten bir div kullanyorum, nk Bergere bileenini yapan bu sarmalayc aslnda
+
+14
+00:01:06,780 --> 00:01:09,950
+tm malzemelerin etrafnda bir sarc gibi.
+
+15
+00:01:10,150 --> 00:01:15,770
+demek iin Bruer'imizin geniliini ve yksekliini tanmlamak iin biraz stil vermek istiyorum.
+
+16
+00:01:15,780 --> 00:01:17,140
+Yeni bir d ekleyeceim.
+
+17
+00:01:17,160 --> 00:01:22,570
+Bergere nokta C S S dosyas ve hepsi snf olarak burger Seer's' ekliyor.
+
+18
+00:01:22,650 --> 00:01:24,380
+Bu snfa nefes alacak biri deil.
+
+19
+00:01:24,420 --> 00:01:28,840
+Diyelim ki yzde 100 ve otomatik kenar boluu.
+
+20
+00:01:29,100 --> 00:01:34,580
+Ancak ykseklii 250 piksel ile snrlamak ve farkl bir ykseklik semekten ekinmemek istiyorum.
+
+21
+00:01:34,580 --> 00:01:38,840
+Elbette sadece grneceini dndm bir ey var.
+
+22
+00:01:39,730 --> 00:01:48,880
+Tamay ayarlayacam, bylece daha byk bir burger, daha sonra 250 piksel ina etsek bile basite kaydrabiliriz ve
+
+23
+00:01:48,880 --> 00:01:55,150
+st ste getirme veya kesme ilemine tabi tutmamakta, nk burada ykseklii snrlyoruz.
+
+24
+00:01:55,150 --> 00:02:00,850
+burger ina edersek, bir ekilde tm sayfamz veya daha fazlasn alacaz ve doru grnmyor.
+
+25
+00:02:00,850 --> 00:02:03,520
+Eer ykseklii snrlamazsak ve ok byk bir
+
+26
+00:02:03,520 --> 00:02:10,220
+Ayrca, her eyi ortalamak iin metni hizalama metni ekleyeceim ve nerede ina edileceini bulacam.
+
+27
+00:02:10,300 --> 00:02:14,480
+Henz herhangi bir metin basmyoruz, ancak gelecekte yapacaz.
+
+28
+00:02:14,530 --> 00:02:21,400
+Ayrca yaz tipi boyutunu bir Hollandaca'dan R'ye ayarlayn. E. M. Bu, kullanc tarafndan seilen varsaylan yaz
+
+29
+00:02:21,400 --> 00:02:25,050
+tipi boyutuna bal olarak hangi lein temelini oluturduunu bilmiyorsanz bir birim olarak basite.
+
+30
+00:02:25,330 --> 00:02:28,560
+Bu yzden kullanmak istediim dzen bu.
+
+31
+00:02:28,600 --> 00:02:31,140
+Ancak mobil dzen.
+
+32
+00:02:31,300 --> 00:02:38,530
+ettiim bir medya sorgusu oluturmak istiyorum ve bu Bergere tabii ki kelime oluturduundan nemlidir.
+
+33
+00:02:38,620 --> 00:02:44,600
+imdi burada bir minimum 1000 piksellik bir ekrana sahip olup olmadm kontrol
+
+34
+00:02:45,040 --> 00:02:48,990
+En az 700 piksel yksekliimiz varsa.
+
+35
+00:02:49,150 --> 00:02:56,590
+Durum byleyse, Bergere snfm sktracak ve ei yzde 100'e, ancak 2
+
+36
+00:02:56,590 --> 00:03:00,860
+700 piksele ve ykseklii 600'e ayarlamayacam.
+
+37
+00:03:01,270 --> 00:03:09,500
+Ayrca, menwith'in 500 piksel kadar biraz daha kk olup olmadn ve min ykseklii 400 ve
+
+38
+00:03:09,790 --> 00:03:18,850
+bir piksel olup olmadn kontrol edecek baka bir medya sorgusu ekleyecek ve bu durumda 450 piksel
+
+39
+00:03:19,170 --> 00:03:30,030
+genilik ve 400 piksel ykseklik olarak almak istiyorum ve sonunda tm l beyaz ama olduka uzun olmayan cihazlar ele alacaz.
+
+40
+00:03:30,070 --> 00:03:33,160
+Portre modunda bir kelime yaz.
+
+41
+00:03:33,160 --> 00:03:40,100
+En az be yz piksel geniliinde, ancak en fazla 400 ykseklikte bir duvar resmi istiyorum.
+
+42
+00:03:40,480 --> 00:03:47,570
+Ve orada 350 ve ykseklii 300 piksel olduundan emin olmak istiyorum.
+
+43
+00:03:48,040 --> 00:03:56,220
+Yani bunlar, burgerin olabildiince ok bak asna iyi geldiinden emin olmak iin yalnzca baz medya sorular.
+
+44
+00:03:56,470 --> 00:04:00,270
+Her zaman olduu gibi bunu kendi ihtiyalarnza gre ayarlayabilirsiniz.
+
+45
+00:04:00,340 --> 00:04:03,790
+Cihaznzda iyi grnmediini dnyorsanz.
+
+46
+00:04:03,790 --> 00:04:05,260
+imdi C S S. yeterince.
+
+47
+00:04:05,270 --> 00:04:08,770
+Burger'e geri dnelim ve hadi D.'yi alalm. C. Var.
+
+48
+00:04:08,770 --> 00:04:13,510
+Daha sonra dzenlediimiz snflar bundan sonra o cam nesnede sakland.
+
+49
+00:04:13,600 --> 00:04:19,900
+Onlar burger CSSA dosyasndan ie aktaralm ve bunlar snf adyla sarmalamaya
+
+50
+00:04:19,900 --> 00:04:22,490
+ve bunlarn daima Asperger'a ekleyelim.
+
+51
+00:04:22,510 --> 00:04:25,210
+Medya Cuore bunun iin nemli deil.
+
+52
+00:04:25,270 --> 00:04:28,730
+imdi o burgerin iine ierikler eklemeye balayabiliriz.
+
+53
+00:04:28,960 --> 00:04:37,070
+Bylece Bergere bileenini Burger King blgesi klasrnden alacam ve burger ierikli CSSA dosyas var ve
+
+54
+00:04:37,170 --> 00:04:44,770
+imdi sadece Burgert bileeni gibi kendi kendine kapanan bir bileen olarak kullanabilirsiniz, ancak bir
+
+55
+00:04:44,770 --> 00:04:47,200
+tr tanmlamamz gerektiini unutmayn.
+
+56
+00:04:47,440 --> 00:04:49,060
+Tr bir dize olabilir.
+
+57
+00:04:49,090 --> 00:04:50,440
+Aslnda bir ip olamaz.
+
+58
+00:04:50,470 --> 00:04:51,660
+Bir dize olmal.
+
+59
+00:04:51,660 --> 00:04:57,780
+Pervane tip kontroln uyguluyoruz ve burada bir ekmek balayacaz.
+
+60
+00:04:57,940 --> 00:05:00,690
+Bu yzden sanrm bu ii yapmak mantkl.
+
+61
+00:05:00,720 --> 00:05:03,400
+En alttan st.
+
+62
+00:05:03,400 --> 00:05:12,080
+Bir saat iinde krmz dudakta tahmin edeceini asla dnmyorsunuz, belki biraz daha
+
+63
+00:05:12,320 --> 00:05:17,640
+iki peynir ve etin altnda etler ekleyelim.
+
+64
+00:05:17,890 --> 00:05:18,920
+imdi ller.
+
+65
+00:05:18,940 --> 00:05:25,620
+Ekmek eti ve peynirle burger yapacak burger bileenim var.
+
+66
+00:05:25,630 --> 00:05:29,950
+imdi bunu uygulamaya balayalm ve bu hamur iini yapalm.
+
+67
+00:05:30,100 --> 00:05:31,790
+Zaten ihra ediyoruz.
+
+68
+00:05:32,050 --> 00:05:39,700
+imdi burger Boulder konteynerine gidebiliriz ve bu Dammy lmnn yerini burgerimiz alyor.
+
+69
+00:05:40,030 --> 00:05:43,230
+Yani burgeri ie aktar.
+
+70
+00:05:43,510 --> 00:05:51,500
+Ve imdi kaynak seviyesine kmalyz burger ve ithal burger bileenlerine gitmeliyiz.
+
+71
+00:05:51,570 --> 00:05:58,870
+J. S. ve imdi bu fark kendi kendine kapanan burger bileenimizle deitir.
+
+72
+00:05:59,020 --> 00:06:07,740
+eyi kaydetmek iin kaydedelim ve sayfay yeniden ykleyelim ve stiliniz kapalysa bu burgeri grmelisiniz.
+
+73
+00:06:07,740 --> 00:06:09,310
+Bu bilgiyi her
+
+74
+00:06:09,310 --> 00:06:13,570
+Bu bileenin CSX kodunu benimkiyle karlatrdnzdan emin olun.
+
+75
+00:06:13,810 --> 00:06:18,450
+Sayfay kltp yeniden boyutlandrrsanz, yine de iyi grnyor olduunu grmelisiniz.
+
+76
+00:06:18,460 --> 00:06:24,340
+htiyacnz olan tm olas boyutlar sdrmak iin CSSA'y adaletsiz hissedin.
+
+77
+00:06:24,400 --> 00:06:25,280
+te burger.
+
+78
+00:06:25,300 --> 00:06:26,530
+Bu harika.
+
+79
+00:06:26,530 --> 00:06:28,040
+Bu o kadar da harika deil.
+
+80
+00:06:28,040 --> 00:06:31,780
+Bu burger ile ilgili her ey sonunda kodlanm sert.
+
+81
+00:06:31,780 --> 00:06:38,800
+Bileenler kullanyoruz, ancak bu burgeri dinamik olarak deitiremiyoruz ve bunu dinamik
+
+82
+00:06:38,800 --> 00:06:40,050
+olarak oluturmuyoruz.
+
+83
+00:06:40,100 --> 00:06:47,020
+yleyse neden bir devlet ynetmek ve sonraki derslerde hamburger'i dinamik olarak hazrlayarak
+
+84
+00:06:47,020 --> 00:06:47,790
+balayalm.
+

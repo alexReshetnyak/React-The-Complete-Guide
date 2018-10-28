@@ -1,0 +1,364 @@
+1
+00:00:02,340 --> 00:00:07,050
+Teraz mamy t podstawow konfiguracj formularza z naszym wasnym komponentem wejciowym.
+
+2
+00:00:07,110 --> 00:00:13,650
+Powiedzmy, e jest to rwnie w stanie reagowa na dane wprowadzane przez uytkownika i uzyska informacje od uytkownika.
+
+3
+00:00:13,650 --> 00:00:19,740
+W zwizku z tym mj komponent wejciowy powinien otrzymywa kady element na suchaczu zmian.
+
+4
+00:00:19,740 --> 00:00:24,120
+Dodajmy wic jeden do kadego z elementw, ktre tutaj tworzymy.
+
+5
+00:00:24,330 --> 00:00:31,730
+Przejd przez nie wszystkie i po prostu uyj opcji ID, w ktrej mog umieci wiele kursorw dodajc zmiany
+
+6
+00:00:31,790 --> 00:00:33,420
+do wszystkich z nich.
+
+7
+00:00:33,650 --> 00:00:37,080
+I oczywicie nie chc obsugiwa zmiany w komponencie dysku.
+
+8
+00:00:37,220 --> 00:00:42,220
+Spodziewam si uzyska referencj do metody z zewntrz, ktra wtedy si tym zajmie.
+
+9
+00:00:42,410 --> 00:00:48,440
+Tak wic po prostu dodaj rekwizyty, a nazw obiektu zmieni, a Ty oczywicie moesz wybra
+
+10
+00:00:48,440 --> 00:00:49,790
+dowoln nazw podpory.
+
+11
+00:00:49,820 --> 00:00:51,820
+Teraz zmie tylko nazw, ktr wybraem.
+
+12
+00:00:51,980 --> 00:00:59,600
+Tak wic w danych kontaktowych musz teraz wdroy metod, ktra reaguje na zmienione waciwoci.
+
+13
+00:00:59,600 --> 00:01:04,170
+Wic gdzie mog odpali zmienione, ktre mog przej, aby zmieni waciw.
+
+14
+00:01:04,250 --> 00:01:08,900
+Ktry nastpnie na kocu zostanie doczony do zdarzenia On Change.
+
+15
+00:01:08,930 --> 00:01:09,770
+Wic o to.
+
+16
+00:01:09,790 --> 00:01:19,420
+Stworz now metod w moim komponencie danych kontaktowych, w ktrej zmieni si nazwa wejciowego edytora nazw, oczekuj, e
+
+17
+00:01:19,420 --> 00:01:25,160
+otrzymam obiekt zdarzenia, poniewa zostanie on automatycznie przekazany mi przez reakcj.
+
+18
+00:01:25,180 --> 00:01:30,130
+Jeli ta metoda jest doczona do detektora zdarze, ktry jest oczywicie.
+
+19
+00:01:30,220 --> 00:01:36,200
+Wic zmieniony handler jest tym, co przekazaem zmienionemu Proppowi, ten input zmieni handler.
+
+20
+00:01:36,310 --> 00:01:38,700
+Bez nawiasw jak zawsze.
+
+21
+00:01:39,070 --> 00:01:48,790
+A teraz chc przede wszystkim zarejestrowa warto docelow zdarzenia, aby zobaczy dane wyjciowe i sprawdzi, czy oglnie
+
+22
+00:01:48,790 --> 00:01:49,660
+dziaa.
+
+23
+00:01:50,080 --> 00:01:52,570
+Pozwl mi wpisa co w twoje imi.
+
+24
+00:01:52,600 --> 00:01:58,810
+Widz to tutaj po prawej rwnie dla kodu, a take dla rozwijanego menu.
+
+25
+00:01:58,820 --> 00:02:00,800
+Tak wic otrzymujemy t warto.
+
+26
+00:02:00,800 --> 00:02:02,930
+Poczylimy to z powodzeniem.
+
+27
+00:02:03,110 --> 00:02:09,740
+Ale oczywicie moemy zobaczy wartoci i nasze dane wejciowe, poniewa brakuje tego elementu przyswkowego w
+
+28
+00:02:09,740 --> 00:02:10,820
+dwukierunkowy sposb.
+
+29
+00:02:10,820 --> 00:02:18,290
+Nie uywamy tutaj, gdy wprowadzane dane zmieniaj si, aby zaktualizowa warto naszych elementw.
+
+30
+00:02:18,350 --> 00:02:23,660
+I oczywicie mamy ten klucz wartoci dla kadego elementu wejciowego, ktry z nim wiemy.
+
+31
+00:02:23,660 --> 00:02:28,930
+Tak wic jest to obecnie klucz, ktry okrela warto wywietlan na ekranie.
+
+32
+00:02:29,150 --> 00:02:37,400
+Musimy wic zaktualizowa warto dla danego wejcia na zmiany uytkownika, poniewa potrzebujemy wicej informacji ni tylko
+
+33
+00:02:37,400 --> 00:02:42,260
+zdarzenie, ktre daje nam dostp do wartoci docelowej zdarzenia.
+
+34
+00:02:42,290 --> 00:02:51,110
+Otrzymujemy rwnie lub potrzebujemy drugiego argumentu, ktry jest identyfikatorem wejciowym, abymy mogli dotrze do naszego
+
+35
+00:02:51,110 --> 00:02:57,590
+stanu, aby uzyska waciwy element, waciwy obiekt i dostosowa jego warto.
+
+36
+00:02:58,280 --> 00:03:05,510
+Tak wic, aby to zrobi, przejd do mojego komponentu danych kontaktowych, a metoda, ktr przekazaem, aby zmieni
+
+37
+00:03:05,790 --> 00:03:08,520
+odniesienie, powinna by odniesieniem do anonimowej funkcji.
+
+38
+00:03:08,960 --> 00:03:16,250
+Tak, e mog teraz przekazywa argumenty do wprowadzonego zmienionego handler'a lub wywoania metody w tej
+
+39
+00:03:16,340 --> 00:03:21,210
+anonimowej funkcji, otrzymujemy teraz obiekt zdarzenia, ktry jest tworzony automatycznie.
+
+40
+00:03:21,410 --> 00:03:31,720
+I chc to przekaza, ale teraz chc przekaza mj identyfikator, ktry jest identyfikatorem elementu formularza, ktry jest tym identyfikatorem,
+
+41
+00:03:31,730 --> 00:03:35,330
+ktry jest tylko kluczem od naszego obiektu.
+
+42
+00:03:35,330 --> 00:03:36,990
+I dokadnie tego potrzebuj.
+
+43
+00:03:37,130 --> 00:03:40,490
+Te klucze, ktrymi jeste, s obiektem stanu.
+
+44
+00:03:40,490 --> 00:03:47,370
+S to identyfikatory poza wejciami i dokadnie optyka potrzebna do ich dopasowania.
+
+45
+00:03:47,390 --> 00:03:51,920
+Teraz oczywicie mog uy tych informacji, aby zaktualizowa warto.
+
+46
+00:03:51,920 --> 00:03:58,860
+Problemem jest oczywicie to, e nie mog uzyska dostpu do tego identyfikatora formularza zamwienia i zaktualizowa jego wartoci.
+
+47
+00:03:59,000 --> 00:04:01,310
+Czy nie w ten sposb mutujemy pastwo.
+
+48
+00:04:01,580 --> 00:04:03,230
+Zamiast tego musimy go zmutowa.
+
+49
+00:04:03,260 --> 00:04:13,400
+Niezmiennie i robimy to tak, jak powiedzielimy, a dla taty to, co zrobi, to przede wszystkim stworzy
+
+50
+00:04:13,400 --> 00:04:15,540
+kopi moich danych formularza.
+
+51
+00:04:15,560 --> 00:04:19,170
+Tak wic od stanu tutaj moje zamwienie tworzy cae drzewo.
+
+52
+00:04:19,190 --> 00:04:19,940
+Skopiuj to.
+
+53
+00:04:20,060 --> 00:04:28,760
+Tak wic nasza nazwa jest zaktualizowanym formularzem zamwienia i na ten rok utworz obiekt javascript, w ktrym
+
+54
+00:04:28,760 --> 00:04:32,070
+skopiuj ten formularz zamwienia na pastwo.
+
+55
+00:04:32,090 --> 00:04:39,950
+Jednak nie tworzy to gbokiego klonu, wic kopiuj ten obiekt i dystrybuuj wszystkie waciwoci.
+
+56
+00:04:39,950 --> 00:04:48,560
+Dostaj nowy obiekt, ale poniewa te obiekty mam wicej zagniedonych obiektw, nie zostan one sklonowane.
+
+57
+00:04:48,560 --> 00:04:49,410
+Gboko.
+
+58
+00:04:49,490 --> 00:04:55,520
+Ale tam znowu skopiowabym wskanik do nich, a wic jeli co tam zmieni,
+
+59
+00:04:55,520 --> 00:04:57,540
+to zmutowabym pierwotny stan.
+
+60
+00:04:57,560 --> 00:05:03,800
+Niestety, poniewa obiekt w skopiowanym obiekcie i obiekt w stanie nadal bd
+
+61
+00:05:04,990 --> 00:05:07,930
+rwne, musimy sklonowa to gboko.
+
+62
+00:05:08,080 --> 00:05:09,390
+Jak to zrobimy.
+
+63
+00:05:11,240 --> 00:05:14,150
+W kocu zaley mi tylko na wartoci tutaj.
+
+64
+00:05:14,240 --> 00:05:21,320
+Musz wic tylko upewni si, e ten obiekt tutaj jest rwnie sklonowany i nie wskazuj ju tego
+
+65
+00:05:21,320 --> 00:05:22,390
+samego obiektu.
+
+66
+00:05:22,490 --> 00:05:29,180
+Mog to osign w mojej procedurze wprowadzania zmian wejciowych, nie tylko rozpowszechniajc waciwoci formularza zamwienia,
+
+67
+00:05:29,270 --> 00:05:33,680
+ktre byyby wiadomociami z nazwami i tak dalej, ale martwe.
+
+68
+00:05:33,710 --> 00:05:44,530
+Kopiuj rwnie waciwoci DB w moim gboko wybranym elemencie formularza zamwienia.
+
+69
+00:05:44,600 --> 00:05:50,120
+Przyjm zaktualizowany formularz zamwienia, ktry jest klonem oryginau i nie odnosi si do
+
+70
+00:05:50,120 --> 00:05:53,200
+oryginau, a teraz wszyscy maj do niego dostp.
+
+71
+00:05:53,210 --> 00:05:54,890
+Mj identyfikator wejciowy.
+
+72
+00:05:54,980 --> 00:05:58,040
+Jest to warto podobna do poczty elektronicznej.
+
+73
+00:05:58,040 --> 00:05:59,580
+Sposb dostawy.
+
+74
+00:05:59,600 --> 00:06:03,850
+Teraz mam dostp do tego obiektu, ktrego ju nie zamknlimy.
+
+75
+00:06:03,890 --> 00:06:12,880
+Teraz musz sklonowa ten obiekt, a ja zapisz now sta aktualizacj, poniewa element moe by tutaj ponownie. Traktuj nowy
+
+76
+00:06:14,280 --> 00:06:18,300
+obiekt i uyj go do rozprzestrzeniania operatora tutaj.
+
+77
+00:06:19,800 --> 00:06:27,500
+Aby teraz utworzy klona, mog bezpiecznie zmieni warto zaktualizowanego elementu formularza, poniewa jest on
+
+78
+00:06:27,500 --> 00:06:28,610
+znowu klonem.
+
+79
+00:06:28,610 --> 00:06:34,010
+Tylko wtedy, gdybym mia zmieni element konfliktu, tata byby nadal obiektem, ktrego nie sklonowaem, co
+
+80
+00:06:34,010 --> 00:06:36,890
+wskazuje na oryginalny, ale nie robi tego tutaj.
+
+81
+00:06:36,920 --> 00:06:42,560
+Jeli to robisz, musisz rwnie sklonowa to gboko z operatorem rozprzestrzeniania.
+
+82
+00:06:42,560 --> 00:06:50,220
+Tak wic wycign rk, aby zaktualizowa warto elementu formularza i ustawi j rwn wartoci docelowej zdarzenia.
+
+83
+00:06:50,330 --> 00:06:58,760
+Teraz mog pobra zaktualizowany formularz zamwienia, ktry jest moj oryginaln wersj klona i mog teraz ponownie
+
+84
+00:06:58,760 --> 00:07:06,120
+uzyska dostp do identyfikatora wejciowego i ustawi go na rwni z zaktualizowanym elementem formularza.
+
+85
+00:07:06,120 --> 00:07:15,180
+Teraz dziki temu mog nazwa ten stan zestawu i ustawi formularz zamwienia do zaktualizowanego zamwienia.
+
+86
+00:07:15,290 --> 00:07:20,030
+Zobaczmy teraz, czy to dziaa, jeli jest to bezpieczne, a nastpnie wr do mojej aplikacji
+
+87
+00:07:20,030 --> 00:07:25,730
+i wpisz co w swoje imi, tak jak Chris, widzisz, e to dziaa, sprbujmy tego dla wszystkich tych wej.
+
+88
+00:07:26,580 --> 00:07:28,430
+Wyprbujmy list.
+
+89
+00:07:28,440 --> 00:07:31,550
+To wszystko jest zaktualizowane do wizania dwukierunkowego dziaa.
+
+90
+00:07:31,560 --> 00:07:36,960
+Teraz z powodzeniem ustawilimy to w bardzo oglny sposb, ktry jest wietny.
+
+91
+00:07:36,960 --> 00:07:40,830
+A teraz odwrmy gowy do skadania formularzy.
+

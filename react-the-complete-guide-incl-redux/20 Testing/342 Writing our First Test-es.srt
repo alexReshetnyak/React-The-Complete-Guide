@@ -1,0 +1,676 @@
+1
+00:00:02,180 --> 00:00:07,940
+Estoy de vuelta en el proyecto de hamburguesas y aqu, ahora quiero agregar algunas pruebas. Para eso, primero debemos asegurarnos de que
+
+2
+00:00:07,940 --> 00:00:13,600
+npm start no se est ejecutando porque necesitamos instalar algunos paquetes adicionales despus de
+
+3
+00:00:13,670 --> 00:00:16,870
+todo, no solo estamos usando bichos sino tambin enzimas.
+
+4
+00:00:16,940 --> 00:00:22,700
+Ahora si echamos un vistazo a nuestro paquete. json file y nos desplazamos un poco hacia arriba, vemos que la
+
+5
+00:00:22,760 --> 00:00:26,620
+broma realmente est instalada, es posible que tenga una versin diferente, pero debera estar instalada pero
+
+6
+00:00:26,780 --> 00:00:27,930
+la enzima no lo est.
+
+7
+00:00:28,100 --> 00:00:33,320
+Primero, instalemos eso con npm install --save enzyme, ahora que eso solo
+
+8
+00:00:33,380 --> 00:00:35,430
+no har el truco, tenemos
+
+9
+00:00:35,510 --> 00:00:41,830
+que instalar dos paquetes adicionales para que funcione correctamente con bromas y reacciones.
+
+10
+00:00:41,870 --> 00:00:48,820
+La primera es que tenemos que instalar el paquete de prueba del procesador de prueba,
+
+11
+00:00:48,980 --> 00:00:55,430
+que es una dependencia de la enzima que tenemos que instalar por separado y
+
+12
+00:00:55,440 --> 00:00:58,130
+tenemos que instalar un adaptador del
+
+13
+00:00:58,130 --> 00:01:07,310
+paquete de enzima a nuestra versin actual de reaccin. As que aqu esta es la enzima adapter-react-16 version 4 reaction 16.
+
+14
+00:01:07,320 --> 00:01:10,160
+Todos estos ahora se agregan al paquete. json y, por supuesto,
+
+15
+00:01:10,200 --> 00:01:16,650
+instalado en la carpeta de mdulos de nodo y una vez que esto termin, estamos listos para continuar y
+
+16
+00:01:16,650 --> 00:01:17,920
+escribir nuestra primera prueba.
+
+17
+00:01:17,970 --> 00:01:19,350
+As que aqu
+
+18
+00:01:19,350 --> 00:01:26,180
+termin, ahora vamos a escribir nuestra primera prueba y quiero comenzar escribiendo una prueba para un componente
+
+19
+00:01:26,190 --> 00:01:26,870
+porque obviamente
+
+20
+00:01:26,970 --> 00:01:29,630
+en reaccin, hablamos constantemente sobre los componentes,
+
+21
+00:01:29,670 --> 00:01:32,400
+entonces por qu no empezamos probando uno?
+
+22
+00:01:32,400 --> 00:01:38,640
+Ahora permtanme comenzar con un componente funcional aqu porque es, por supuesto, una manera muy fcil de probar
+
+23
+00:01:38,790 --> 00:01:42,840
+y luego tambin pasaremos a los contenedores y, a continuacin, a reducir.
+
+24
+00:01:42,840 --> 00:01:48,450
+Ahora quiero comenzar con mi componente de elementos de navegacin aqu, en la carpeta de navegacin en la carpeta
+
+25
+00:01:48,450 --> 00:01:51,480
+de componentes, ese es el componente de elementos de navegacin,
+
+26
+00:01:51,480 --> 00:01:58,440
+ahora tenga en cuenta que la mayora de sus componentes de reaccin son solo funciones y, por lo tanto, solo dependen de los
+
+27
+00:01:58,440 --> 00:01:59,810
+accesorios que reciben. eso es
+
+28
+00:01:59,850 --> 00:02:02,800
+algo que debes tener en cuenta para las pruebas.
+
+29
+00:02:02,820 --> 00:02:05,950
+Ahora crearemos un archivo de prueba para este componente, por lo tanto, junto a l
+
+30
+00:02:05,950 --> 00:02:13,200
+en la misma carpeta, agregar un nuevo archivo que denominar NavigationItems. prueba. js
+
+31
+00:02:13,350 --> 00:02:21,300
+el. prueba. js es importante porque la aplicacin crea reaccionar
+
+32
+00:02:21,340 --> 00:02:22,110
+una vez
+
+33
+00:02:22,110 --> 00:02:28,260
+que ejecutamos un comando especial, y luego se incluir en la prueba y, por lo tanto, se probar.
+
+34
+00:02:28,260 --> 00:02:36,750
+Ahora, dentro de este archivo de prueba, ahora puedo comenzar a escribir mi prueba y una prueba se usa de manera predeterminada y, por
+
+35
+00:02:36,750 --> 00:02:41,040
+otro lado, nos da un par de mtodos para definir la prueba.
+
+36
+00:02:41,280 --> 00:02:44,800
+El primer mtodo importante es el mtodo de descripcin,
+
+37
+00:02:44,850 --> 00:02:47,130
+no es necesario importarlo en ese
+
+38
+00:02:47,130 --> 00:02:51,870
+archivo, estar disponible automticamente en nuestro proyecto de creacin de la aplicacin
+
+39
+00:02:51,870 --> 00:02:59,070
+una vez que ejecutemos el comando de prueba. Describir es una funcin que toma dos argumentos, el primero es
+
+40
+00:02:59,070 --> 00:03:01,740
+solo una descripcin del paquete de prueba que
+
+41
+00:03:01,740 --> 00:03:03,110
+contiene este archivo, as
+
+42
+00:03:03,300 --> 00:03:09,630
+que aqu simplemente nombrar este NavigationItems y lo escribir como un elemento jsx, pero eso no es obligatorio.
+
+43
+00:03:09,840 --> 00:03:13,040
+Esto es solo lo que ver ms adelante en la salida de
+
+44
+00:03:13,080 --> 00:03:17,790
+la consola, por lo que debera ser algo que le permita identificar qu tipo de pruebas ejecutaremos aqu.
+
+45
+00:03:17,850 --> 00:03:22,980
+La parte ms interesante viene en un segundo argumento, esa es su funcin de prueba.
+
+46
+00:03:22,980 --> 00:03:28,620
+Es una funcin normal de JavaScript y usar una funcin de flecha ES6 aqu, aqu vas a
+
+47
+00:03:28,620 --> 00:03:32,850
+describir, vas a escribir tus pruebas reales. Ahora para hacer eso,
+
+48
+00:03:32,880 --> 00:03:35,470
+escribes una prueba escribindola, esa
+
+49
+00:03:35,580 --> 00:03:38,760
+es otra funcin que estar disponible.
+
+50
+00:03:38,880 --> 00:03:43,590
+Describe o le permite escribir una prueba individual,
+
+51
+00:03:43,620 --> 00:03:45,630
+tambin toma dos argumentos.
+
+52
+00:03:45,750 --> 00:03:50,960
+El primero es nuevamente solo una cadena, una descripcin que aparecer en la consola
+
+53
+00:03:51,240 --> 00:03:56,270
+y normalmente usted solo completa la oracin y luego describe lo que debera hacer.
+
+54
+00:03:56,280 --> 00:03:59,030
+As que debera y ahora echemos un
+
+55
+00:03:59,040 --> 00:04:01,580
+vistazo a nuestro componente NavigationItems, digamos
+
+56
+00:04:01,770 --> 00:04:09,660
+por defecto si no estamos autenticados, este componente debe representar un elemento de navegacin, el segundo no debe representarse y
+
+57
+00:04:10,290 --> 00:04:15,590
+que aqu debe generar uno ms que conduzca a / auth, por lo
+
+58
+00:04:15,810 --> 00:04:18,560
+que debera mostrarse en los elementos de
+
+59
+00:04:18,630 --> 00:04:20,830
+navegacin si no estamos autenticados.
+
+60
+00:04:21,240 --> 00:04:24,240
+Entonces, eso es lo que queremos probar,
+
+61
+00:04:24,240 --> 00:04:32,700
+as que vamos a escribir la oracin, debera mostrarse en los elementos del elemento de navegacin si no est autenticada.
+
+62
+00:04:33,090 --> 00:04:36,510
+As que esta es solo mi descripcin y no importa lo
+
+63
+00:04:36,510 --> 00:04:41,870
+que escribas aqu, esto no se analiza ni nada de eso, debera ser algo significativo que reconozcas
+
+64
+00:04:41,860 --> 00:04:46,140
+en una consola porque si la prueba falla, quieres saber qu prueba fall .
+
+65
+00:04:46,590 --> 00:04:49,070
+As que ese es el primer argumento para
+
+66
+00:04:49,080 --> 00:04:56,610
+la funcin it, el segundo argumento es ahora una funcin de prueba que describe la prueba real, aqu solo es una funcin normal
+
+67
+00:04:56,610 --> 00:04:57,660
+de JavaScript. Otra
+
+68
+00:04:57,660 --> 00:05:03,130
+vez voy a usar una funcin de flecha y aqu escribimos nuestro real lgica de prueba.
+
+69
+00:05:03,390 --> 00:05:10,620
+Ahora lo que queremos hacer es crear una instancia de este componente tal como se representara en el
+
+70
+00:05:10,620 --> 00:05:17,250
+dom, en el dom real a travs de reaccionar y luego echar un vistazo al componente renderizado
+
+71
+00:05:17,250 --> 00:05:22,920
+y ver qu se proces para el caso que el isAuthenticated prop es falso.
+
+72
+00:05:22,920 --> 00:05:28,770
+Ahora usted podra pensar que para esto, obviamente necesitamos renderizar toda la aplicacin de
+
+73
+00:05:28,770 --> 00:05:35,520
+reaccin porque los artculos de navegacin son solo una pequea parte en la aplicacin de reaccin completa,
+
+74
+00:05:35,520 --> 00:05:43,800
+que es donde entra una enzima, este paquete de prueba. Enzyme nos permite simplemente renderizar este componente de navegacin independiente de
+
+75
+00:05:43,800 --> 00:05:46,210
+la otra aplicacin de reaccin, esa
+
+76
+00:05:46,320 --> 00:05:52,980
+es la idea detrs del paquete de enzimas, que realmente podemos escribir pruebas unitarias, pruebas aisladas, pruebas en
+
+77
+00:05:52,980 --> 00:05:56,350
+las que no necesitamos renderizar el completo reaccionar aplicacin
+
+78
+00:05:56,580 --> 00:06:04,120
+Entonces, vamos a importar enzimas, necesito importar algo de la enzima, ahora volver a eso, pero primero tambin
+
+79
+00:06:04,150 --> 00:06:04,970
+necesitar configurar
+
+80
+00:06:04,970 --> 00:06:12,040
+la enzima y conectarla a mi versin de reaccin. Para eso, necesito importar el adaptador
+
+81
+00:06:12,050 --> 00:06:17,950
+y es una exportacin predeterminada para que pueda nombrarlo como quiera.
+
+82
+00:06:18,050 --> 00:06:25,820
+El adaptador del adaptador de enzimas reacciona 16, este paquete y del paquete de enzimas, ahora solo necesitamos importar algo
+
+83
+00:06:25,820 --> 00:06:27,220
+especfico, esta es una
+
+84
+00:06:27,230 --> 00:06:28,580
+exportacin con nombre, as
+
+85
+00:06:28,580 --> 00:06:34,260
+que necesitamos llaves, la funcin de configuracin. Con estas dos importaciones agregadas aqu
+
+86
+00:06:34,260 --> 00:06:41,120
+arriba de la funcin descrita, ahora podemos ejecutar configure y pasar un objeto javascript para configurar.
+
+87
+00:06:41,270 --> 00:06:47,990
+All deberamos configurar una propiedad de adaptador y asignar un nuevo adaptador como una funcin de constructor, por
+
+88
+00:06:47,990 --> 00:06:54,820
+lo que este adaptador se instancia con un nuevo adaptador y eso es todo, con esa enzima conectada.
+
+89
+00:06:55,250 --> 00:07:01,760
+Ahora queremos renderizar un componente de elementos de navegacin y luego examinarlo, ya que esta
+
+90
+00:07:01,760 --> 00:07:04,660
+enzima nos proporciona un mtodo de ayuda
+
+91
+00:07:04,840 --> 00:07:06,140
+especfico que podemos
+
+92
+00:07:06,290 --> 00:07:12,820
+usar, tambin lo importamos, es la funcin superficial. Poco profunda es la forma ms popular o la
+
+93
+00:07:12,830 --> 00:07:14,860
+mejor forma de reproducir componentes de
+
+94
+00:07:14,970 --> 00:07:20,510
+reaccin en muchas circunstancias, la enzima ofrece dos alternativas que tambin te indicar ms adelante, pero
+
+95
+00:07:20,510 --> 00:07:28,210
+superficial es la que debes usar con la mayor frecuencia posible porque una cosa superficial hace es renderizar el componente con todo
+
+96
+00:07:28,640 --> 00:07:31,750
+su contenido, pero el contenido no se representa profundamente.
+
+97
+00:07:31,850 --> 00:07:39,860
+Entonces, el componente de elementos de navegacin tiene componentes de elementos de navegacin, pero estos solo se representan como marcadores de posicin,
+
+98
+00:07:39,860 --> 00:07:40,840
+el contenido de
+
+99
+00:07:40,970 --> 00:07:46,430
+los mismos no se representa y eso, por supuesto, es importante para crear pruebas aisladas
+
+100
+00:07:46,490 --> 00:07:50,080
+donde no se renderiza todo un subrbol de componentes. ,
+
+101
+00:07:50,180 --> 00:07:55,520
+solo queremos representar este componente y saber qu hay dentro sin mostrar todo lo que
+
+102
+00:07:55,520 --> 00:07:58,460
+est anidado dentro de los componentes incluidos.
+
+103
+00:07:58,700 --> 00:08:01,540
+Tan poco profundo es el mtodo para
+
+104
+00:08:01,880 --> 00:08:06,970
+usar aqu y ahora, queremos renderizar eso. As que crear una constante a la que denominar
+
+105
+00:08:06,990 --> 00:08:09,590
+wrapper, el nombre depende de ti, pero a menudo se
+
+106
+00:08:09,830 --> 00:08:16,020
+usa el wrapper, donde voy a llamar a un shallow y ahora voy a pasar elementos de navegacin como un elemento de reaccin.
+
+107
+00:08:16,460 --> 00:08:23,510
+Entonces, para eso, primero necesito importar esto, necesito importar elementos de navegacin desde el archivo javascript
+
+108
+00:08:23,510 --> 00:08:29,360
+de elementos de navegacin que est viviendo al lado de nuestra prueba de navegacin.
+
+109
+00:08:29,390 --> 00:08:30,660
+viaje de javascript.
+
+110
+00:08:30,910 --> 00:08:34,240
+Con eso podemos representar esto aqu como jsx y
+
+111
+00:08:34,250 --> 00:08:35,110
+eso es
+
+112
+00:08:35,110 --> 00:08:39,360
+importante, pasamos jsx al mtodo superficial. Para que esto funcione, como
+
+113
+00:08:39,380 --> 00:08:46,070
+siempre, por supuesto, necesitamos importar reaccionar, porque no importa si se trata de una prueba o no,
+
+114
+00:08:46,070 --> 00:08:51,270
+el cdigo jsx debe convertirse a su alternativa de crear elemento de creacin.
+
+115
+00:08:51,290 --> 00:08:56,780
+As que ahora estamos procesando esto superficialmente y estamos almacenando el resultado en esta constante de envoltura,
+
+116
+00:08:56,780 --> 00:09:02,770
+ahora podemos echarle un vistazo al envoltorio en esta prueba. Y esa es la ltima parte de
+
+117
+00:09:02,810 --> 00:09:10,880
+las pruebas, ahora nuestra expectativa, para eso usamos otro mtodo que est disponible globalmente por broma, el mtodo esperado.
+
+118
+00:09:10,880 --> 00:09:15,370
+Dentro de esperar, definimos nuestro, lo que queremos verificar, as que
+
+119
+00:09:15,650 --> 00:09:19,890
+aqu quiero verificar si el contenedor contiene un determinado elemento.
+
+120
+00:09:20,210 --> 00:09:27,180
+Ahora en el contenedor, podemos volver a utilizar una funcin de utilidad proporcionada por el mtodo enzimtico definido, esto
+
+121
+00:09:27,400 --> 00:09:31,790
+nos permite mirar el contenedor y ver si contiene un cierto contenido
+
+122
+00:09:31,790 --> 00:09:34,580
+y aqu quiero encontrar un elemento de navegacin.
+
+123
+00:09:34,760 --> 00:09:43,250
+As que tenemos que importar esto tambin, importar elementos de navegacin desde. / elemento de navegacin de elementos de navegacin, as como as y por lo tanto
+
+124
+00:09:43,340 --> 00:09:50,830
+aqu en el mtodo de bsqueda, ahora quiero encontrar el elemento de navegacin. Importante, este ahora no es un
+
+125
+00:09:50,930 --> 00:09:58,260
+elemento jsx, es esta funcin exportada normal del archivo de elementos de navegacin.
+
+126
+00:09:59,290 --> 00:10:00,220
+Ahora con
+
+127
+00:10:00,250 --> 00:10:02,390
+eso importado, esperamos que no
+
+128
+00:10:02,410 --> 00:10:04,270
+esperemos nada ahora, solo decimos
+
+129
+00:10:04,420 --> 00:10:08,250
+qu es lo que queremos verificar, queremos verificar si lo
+
+130
+00:10:08,250 --> 00:10:13,360
+encontramos, pero cul es nuestra expectativa entonces? Se podra decir que la expectativa es que la
+
+131
+00:10:13,360 --> 00:10:14,360
+encontremos, pero las
+
+132
+00:10:14,470 --> 00:10:16,750
+pruebas son un poco ms flexibles que esto.
+
+133
+00:10:16,900 --> 00:10:21,820
+Puede esperar que lo encuentre solo una o dos veces o que no lo encuentre,
+
+134
+00:10:21,820 --> 00:10:23,530
+tal vez quiera probar lo
+
+135
+00:10:23,530 --> 00:10:26,750
+contrario, as que aqu tenemos que cambiar algo a la
+
+136
+00:10:26,980 --> 00:10:34,840
+espera, estos son mtodos de utilidad puestos a disposicin por broma . As que podemos esperar encontrar el elemento de navegacin como dijimos anteriormente, dos
+
+137
+00:10:34,840 --> 00:10:42,250
+veces si no estamos autenticados, por lo que el elemento de navegacin a la mitad de longitud es lo que podemos llamar ahora y
+
+138
+00:10:42,250 --> 00:10:43,170
+ver que hay
+
+139
+00:10:43,390 --> 00:10:45,540
+un par de mtodos de ayuda.
+
+140
+00:10:45,670 --> 00:10:47,870
+La longitud que esperamos encontrar es dos, queremos
+
+141
+00:10:47,890 --> 00:10:49,210
+encontrar dos por lo que
+
+142
+00:10:49,360 --> 00:10:51,420
+esto se agrega automticamente a una matriz
+
+143
+00:10:51,520 --> 00:10:54,260
+y queremos que esto tenga una longitud de 2.
+
+144
+00:10:54,460 --> 00:11:02,070
+Ahora tendr isAuthenticated establecido en falso porque no estamos aprobando este accesorio, recuerdas? Estamos simplemente renderizando elementos de navegacin,
+
+145
+00:11:02,060 --> 00:11:06,400
+no estamos enviando ningn accesorio aqu.
+
+146
+00:11:06,430 --> 00:11:12,670
+Ahora si lo renderizamos as, isAhenthenticated no se pasa y, por lo tanto, se tratar como falso.
+
+147
+00:11:12,820 --> 00:11:15,790
+Entonces con eso, esta prueba debera tener xito.
+
+148
+00:11:16,120 --> 00:11:18,930
+Ahora veamos cmo podemos probarlo en ese momento.
+
+149
+00:11:19,180 --> 00:11:21,150
+Para esto echemos un vistazo al paquete. json file y
+
+150
+00:11:21,180 --> 00:11:27,220
+all, si nos desplazamos un poco hasta el final, no todo el camino me disculpo un poco
+
+151
+00:11:27,220 --> 00:11:28,740
+ms abajo de nuestras
+
+152
+00:11:28,930 --> 00:11:30,800
+dependencias, vemos la seccin de scripts.
+
+153
+00:11:31,060 --> 00:11:32,380
+Conocemos el script de
+
+154
+00:11:32,380 --> 00:11:33,720
+inicio, esto se ejecuta
+
+155
+00:11:33,790 --> 00:11:35,710
+en el navegador, pronto veremos
+
+156
+00:11:35,710 --> 00:11:43,670
+el script de compilacin, ahora necesitamos el script de prueba. Y podemos ejecutar esto con la prueba de ejecucin de npm o simplemente con la prueba de npm en realidad,
+
+157
+00:11:43,690 --> 00:11:46,720
+como iniciar es una secuencia de comandos especial en la que no necesitamos ejecutar comandos.
+
+158
+00:11:46,950 --> 00:11:52,810
+Esto ahora ejecutar todas las pruebas y buscar automticamente todos los archivos de prueba mirando el
+
+159
+00:11:52,810 --> 00:11:54,780
+final, la prueba. js.
+
+160
+00:11:54,980 --> 00:11:58,430
+Ahora, nunca guardo este archivo, as que debera hacerlo ahora, esto
+
+161
+00:11:58,450 --> 00:12:00,790
+automticamente volver a ejecutar nuestras pruebas, est
+
+162
+00:12:00,790 --> 00:12:02,370
+viendo los archivos de prueba.
+
+163
+00:12:02,710 --> 00:12:05,480
+Esta advertencia sobre el relleno puede ignorarse,
+
+164
+00:12:05,710 --> 00:12:13,840
+ms interesante es que si amplo esto, tenemos un conjunto de pruebas pasadas, el conjunto de pruebas es la funcin descrita
+
+165
+00:12:14,260 --> 00:12:16,900
+y una prueba aprobada en general, esa
+
+166
+00:12:16,900 --> 00:12:19,930
+es la prueba aqu, la funcin it.
+
+167
+00:12:20,000 --> 00:12:23,240
+Entonces, nuestra prueba se aprueba como esperbamos y
+
+168
+00:12:23,380 --> 00:12:26,860
+as es como escribimos una prueba para un componente.
+
+169
+00:12:26,860 --> 00:12:32,570
+Ahora agreguemos algunas pruebas adicionales a este componente antes de sumergirnos en probar otras cosas.
+

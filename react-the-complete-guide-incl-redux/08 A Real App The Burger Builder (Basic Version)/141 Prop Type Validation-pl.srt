@@ -1,0 +1,80 @@
+1
+00:00:02,190 --> 00:00:03,870
+Zacznijmy od typw podpr.
+
+2
+00:00:04,050 --> 00:00:08,070
+Wanie teraz dokonujemy poprawnego sprawdzenia w komponencie czytajcym Burgert.
+
+3
+00:00:08,400 --> 00:00:15,170
+Tam upewniamy si, e typ jest ustawiony, wic jest wymagany i jest cigiem.
+
+4
+00:00:15,210 --> 00:00:19,100
+Nie przeprowadzam adnej weryfikacji w adnym innym komponencie.
+
+5
+00:00:19,440 --> 00:00:22,180
+A powd tego jest martwy.
+
+6
+00:00:22,230 --> 00:00:27,250
+Nie pracuj nad projektem, ktry zostanie wykorzystany przez inne osoby.
+
+7
+00:00:27,270 --> 00:00:29,580
+Nie pracuj nad bibliotek osb trzecich.
+
+8
+00:00:29,640 --> 00:00:32,250
+Nie pracuj nawet w zespole programistw.
+
+9
+00:00:32,250 --> 00:00:37,620
+Dlatego wiele powodw, dla ktrych waciwoci mog by uywane nieprawidowo, nie ma tutaj zastosowania.
+
+10
+00:00:37,800 --> 00:00:46,650
+Dodatkowo dostaniemy bdy logiczne w naszej aplikacji, jeli w ogle zapomnimy lub przypiszemy niewaciw waciwo
+
+11
+00:00:46,660 --> 00:00:47,530
+klucza.
+
+12
+00:00:47,820 --> 00:00:53,250
+I dlatego wanie w tej aplikacji nie uywam odpowiedniego sprawdzania poprawnoci.
+
+13
+00:00:53,250 --> 00:00:55,100
+Teraz jako wiczenie.
+
+14
+00:00:55,260 --> 00:00:57,410
+Zdecydowanie zachcamy do dodania.
+
+15
+00:00:57,540 --> 00:01:00,870
+Wpisz weryfikacj do niektrych lub wszystkich skadnikw.
+
+16
+00:01:01,020 --> 00:01:08,010
+Pamitaj tylko, e bdziesz musia przekonwertowa je z komponentw funkcjonalnych na oparte na klasach komponenty stanowe, co nie
+
+17
+00:01:08,010 --> 00:01:15,060
+jest ze samo w sobie, moesz to zrobi absolutnie, ale jest to take dobra praktyka, aby nie robi
+
+18
+00:01:15,060 --> 00:01:22,770
+tego niepotrzebnie i zamiast tego uywa jak najwicej stanw o mniejszej funkcjonalnoci. komponenty, jak to moliwe, a zatem naprawd tylko
+
+19
+00:01:22,770 --> 00:01:24,380
+to, jeli ma to sens.
+
+20
+00:01:24,390 --> 00:01:29,970
+Ale znowu w celach wiczeniowych zachcamy do sprawdzenia wikszej iloci typw podpr.
+

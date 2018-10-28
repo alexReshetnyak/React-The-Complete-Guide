@@ -1,0 +1,144 @@
+1
+00:00:02,140 --> 00:00:08,010
+Tak wic moemy odwiedzi stron kasy, na stronie kasy zrobimy przyciski,
+
+2
+00:00:08,020 --> 00:00:13,190
+ktre s czci pracy CheckoutSummary, przycisk anuluj i kontynuuj.
+
+3
+00:00:13,240 --> 00:00:18,460
+Teraz te przyciski s oczywicie w CheckoutSummary, mogem sobie z nimi poradzi,
+
+4
+00:00:18,460 --> 00:00:27,870
+zamieniajc je w klas, ale chc po prostu zdemaskowa to wydarzenie w zasadzie w kontenerze kasowym, ktry otacza komponent CheckoutSummary za
+
+5
+00:00:27,870 --> 00:00:34,240
+pomoc tego dobrego starego podejcia do uywania rekwizytw, a nastpnie wszelkie rekwizyty, ktre oczekuj,
+
+6
+00:00:34,300 --> 00:00:38,930
+aby uzyska odniesienie do metody, ktra powinna zosta wykonana po klikniciu.
+
+7
+00:00:39,220 --> 00:00:41,860
+Wic tutaj bd nazywa
+
+8
+00:00:41,860 --> 00:00:50,600
+si OnCheckoutCancelled lub po prostu CheckoutCancelled, aby by w zgodzie z moimi poprzednimi nazwami,
+
+9
+00:00:50,600 --> 00:00:52,650
+a nastpnie tutaj, propsCheckoutContinued.
+
+10
+00:00:52,650 --> 00:00:56,340
+Teraz musz zaimplementowa te rekwizyty przy
+
+11
+00:00:56,490 --> 00:01:05,350
+korzystaniu z komponentu CheckoutSummary, wic nie tylko przekazuj skadniki, mam rwnie CheckoutCancelled i mam CheckoutContinued.
+
+12
+00:01:05,610 --> 00:01:10,680
+Teraz potrzebuj metod, ktre robi co na kadym z
+
+13
+00:01:10,710 --> 00:01:17,850
+nich, dodam checkoutCancelledHandler, ktry jest metod, ktra powinna zrobi co, a ja uyj
+
+14
+00:01:17,850 --> 00:01:26,070
+tej metody skadni, aby mc uy tego sowa kluczowego wewntrz tam i sprawdziContinuedHandler, ktre powinno
+
+15
+00:01:26,580 --> 00:01:28,130
+te tak wygldam.
+
+16
+00:01:28,140 --> 00:01:35,310
+Teraz, odkd jestem w kontenerze kasowym, ktry zosta zaadowany komponentem trasy, mamy tu rwnie dostp
+
+17
+00:01:35,310 --> 00:01:42,390
+do tych rekwizytw i tam te, prop historii, a prop historii zawiera rwnie metod powrotu,
+
+18
+00:01:42,390 --> 00:01:44,990
+ktr chc wykona po anulowaniu .
+
+19
+00:01:45,000 --> 00:01:52,440
+To po prostu wraca do ostatniej strony, w drugim przypadku tutaj, gdzie chc kontynuowa, uyj
+
+20
+00:01:52,440 --> 00:02:02,690
+zamiast tego zastpi biec tras kasa / contactData na przykad. Nie obsugujemy tej cieki, ale powinna to
+
+21
+00:02:02,780 --> 00:02:10,010
+by cieka, ktra wkrtce aduje komponent contactData, ktrego jeszcze
+
+22
+00:02:10,010 --> 00:02:11,390
+nie mamy.
+
+23
+00:02:11,420 --> 00:02:15,230
+Teraz musimy podpi te uchwyty tak
+
+24
+00:02:15,530 --> 00:02:20,690
+na dole, to CheckoutCancelledHandler i robi checkoutContinuedHandler powinny by
+
+25
+00:02:20,870 --> 00:02:24,190
+uywane, zapisz wszystkie pliki, a teraz
+
+26
+00:02:24,230 --> 00:02:29,140
+wyprbujmy to na kasie. Jeli klikn przycisk "Anuluj" i odel go
+
+27
+00:02:29,360 --> 00:02:34,430
+do mojego "budowniczego burgeru", pozwl mi wrci do sprawdzania, jeli klikn przycisk Kontynuuj, zobaczysz
+
+28
+00:02:34,550 --> 00:02:39,910
+zmiany adresu URL, ale oczywicie nic nie zrobisz, poniewa jeszcze tego nie robimy, wic to
+
+29
+00:02:40,010 --> 00:02:43,590
+jest co, z czym bd musia sobie poradzi w przyszoci.
+
+30
+00:02:43,820 --> 00:02:50,390
+Tym, co chc zrobi, zanim jednak to zrobi, jest to, e chc uczyni burgera, ktry naprawd zbudowaem,
+
+31
+00:02:50,690 --> 00:02:55,010
+a nie jakim arbitralnym burgerem. Aby zrenderowa burger,
+
+32
+00:02:55,010 --> 00:03:04,010
+ktry faktycznie zbudowaem, bd musia przekaza odpowiednie dane o moim burgeru na stron kasy.
+
+33
+00:03:04,010 --> 00:03:11,030
+Tak wic od budowniczego burgerw tutaj. Tam buduj burgera, a jeli teraz klikn teraz i
+
+34
+00:03:11,300 --> 00:03:19,100
+kontynuuj, musz przekaza dane o skadnikach na stron kasy. To jest nastpny cel, przekazanie danych, ktre
+
+35
+00:03:19,100 --> 00:03:25,960
+chc przekaza, gdy rodzic zapytania jest tutaj. Znowu moesz to wdroy na wasn rk, nauczye
+
+36
+00:03:26,030 --> 00:03:31,380
+si wszystkiego, czego potrzebujesz w ostatnim module, zrobimy to razem podczas nastpnego wykadu.
+

@@ -1,0 +1,308 @@
+1
+00:00:02,100 --> 00:00:04,820
+Ento, ns vimos como testamos os componentes,
+
+2
+00:00:04,860 --> 00:00:08,000
+agora vamos dar uma olhada em contineres como
+
+3
+00:00:08,130 --> 00:00:10,550
+o construtor de hambrgueres, como vamos test-los?
+
+4
+00:00:10,590 --> 00:00:15,840
+A parte complicada dos contineres  que eles esto conectados ao armazenamento do redux
+
+5
+00:00:15,840 --> 00:00:20,180
+aqui, o armazenamento do redux tem alguma influncia externa sobre esse componente.
+
+6
+00:00:20,700 --> 00:00:26,850
+Se ele no estivesse conectado, test-lo seria muito igual aos outros componentes porque, ento, sim, ele poderia
+
+7
+00:00:26,850 --> 00:00:32,810
+ter estado, mas a enzima tambm tem mtodos para lidar com isso, da mesma forma que setProps,
+
+8
+00:00:32,820 --> 00:00:36,580
+tambm temos setState para simular estados diferentes em esse componente.
+
+9
+00:00:36,870 --> 00:00:39,930
+Ento a coisa complicada  mesmo a loja
+
+10
+00:00:40,150 --> 00:00:46,720
+do redux, agora a coisa boa  que ns realmente no precisamos testar a conexo deste container com
+
+11
+00:00:46,860 --> 00:00:54,120
+o redux store, ns podemos confiar no redux store para funcionar corretamente, e ento no final ns receber apenas dados
+
+12
+00:00:54,210 --> 00:00:56,420
+da loja como acessrios deste continer.
+
+13
+00:00:56,460 --> 00:00:58,370
+Ento, estamos de volta ao mundo
+
+14
+00:00:58,500 --> 00:01:04,290
+anterior, podemos apenas simular adereos em nossos testes, porque queremos simular diferentes resultados em diferentes estados de adereos de
+
+15
+00:01:04,290 --> 00:01:08,830
+qualquer maneira, para que no queremos conectar isso a alguma loja real, ns don '
+
+16
+00:01:08,850 --> 00:01:13,950
+No quero testar se a loja passa isso corretamente para o componente, esse  o trabalho do
+
+17
+00:01:13,950 --> 00:01:14,530
+mtodo de
+
+18
+00:01:14,610 --> 00:01:16,700
+conexo e que  proveniente de uma
+
+19
+00:01:16,770 --> 00:01:19,510
+biblioteca de terceiros, podemos confiar nisso para funcionar corretamente.
+
+20
+00:01:19,620 --> 00:01:24,930
+Ento, o que realmente precisamos fazer  que precisamos ter acesso ao componente por trs
+
+21
+00:01:24,930 --> 00:01:25,680
+desse continer,
+
+22
+00:01:25,890 --> 00:01:31,430
+portanto, para dizer e um truque conveniente  simplesmente exportar essa classe de construtor de
+
+23
+00:01:31,470 --> 00:01:35,280
+hambrguer, ento simplesmente adicione a declarao de exportao na frente disso.
+
+24
+00:01:35,340 --> 00:01:37,540
+Isso agora nos d uma exportao nomeada neste
+
+25
+00:01:37,560 --> 00:01:44,520
+arquivo, o burger builder que obtm acesso a essa classe que  apenas um componente de reao e ainda temos a exportao padro que ainda
+
+26
+00:01:44,520 --> 00:01:45,670
+temos em nosso aplicativo,
+
+27
+00:01:45,690 --> 00:01:53,640
+mas agora podemos escrever um arquivo de teste, o BurgerBuilder. teste. js e simplesmente importe a classe do
+
+28
+00:01:54,210 --> 00:02:00,760
+construtor de hambrguer aqui com o nome exportado. / BurgerBuilder.
+
+29
+00:02:00,820 --> 00:02:07,450
+Isso agora pode ser renderizado novamente com pouca profundidade e assim por diante, da mesma maneira que renderizamos o componente normal
+
+30
+00:02:07,450 --> 00:02:13,860
+porque  apenas um componente normal e ns removemos totalmente a conexo para o redux, que  o que queremos.
+
+31
+00:02:14,320 --> 00:02:22,210
+Ento, agora com essa mudana aqui, podemos ir para o arquivo de teste de itens de navegao e tambm copiar a
+
+32
+00:02:22,510 --> 00:02:23,830
+configurao referente 
+
+33
+00:02:23,830 --> 00:02:32,110
+enzima e ao adaptador, deixe-me copiar tudo isso para o construtor de hambrguer, livrar-se das importaes dos itens de navegao aqui em
+
+34
+00:02:32,110 --> 00:02:38,160
+vez disso, estamos importando o criador de hambrgueres nesse arquivo e agora podemos comear a escrever
+
+35
+00:02:38,160 --> 00:02:38,890
+testes aqui.
+
+36
+00:02:38,970 --> 00:02:42,140
+Ns ainda fazemos isso com a funo de
+
+37
+00:02:42,300 --> 00:02:49,360
+descrio, claro, ento aqui estamos realmente testando o burger builder e agora para simular isso, vamos rapidamente dar
+
+38
+00:02:49,400 --> 00:02:54,490
+uma olhada no que podemos testar aqui. Se dermos uma olhada nesse
+
+39
+00:02:54,530 --> 00:02:59,580
+arquivo, seria interessante ver se realmente temos controles de compilao aqui,
+
+40
+00:03:00,270 --> 00:03:07,340
+se os ingredientes so inexistentes, porque s devemos processar isso se os ingredientes forem repassados.
+
+41
+00:03:07,450 --> 00:03:15,700
+Ento, o que podemos fazer  ir para essa funo, a funo describe e ns precisaremos
+
+42
+00:03:15,700 --> 00:03:16,510
+importar controles
+
+43
+00:03:16,540 --> 00:03:25,970
+de construo, ento vamos adicionar essa importao j. / ou vamos subir realmente para controles de compilao de componentes do
+
+44
+00:03:25,990 --> 00:03:29,590
+burger e importar do BuildControls. arquivo js.
+
+45
+00:03:30,070 --> 00:03:37,060
+E ento, aqui, eu adicionarei novamente a funo beforeEach para configurar meu wrapper, portanto eu preciso adicionar
+
+46
+00:03:37,360 --> 00:03:38,650
+essa varivel wrapper
+
+47
+00:03:38,650 --> 00:03:44,680
+antes de fazer isso e ento beforeEach, wrapper deve ser igual a shallow novamente porque
+
+48
+00:03:44,680 --> 00:03:50,980
+eu no quero fazer rendering, eu quero ter uma unidade isolada testes como voc deve us-lo
+
+49
+00:03:51,190 --> 00:03:56,860
+sempre que possvel e eu quero rasa render construtor de hambrguer aqui, apenas assim.
+
+50
+00:03:56,980 --> 00:04:06,320
+Agora, para isso, tambm precisamos importar reagir como sempre, ento importe reagir de reagir.
+
+51
+00:04:06,420 --> 00:04:11,790
+Agora podemos escrever um teste com a
+
+52
+00:04:11,790 --> 00:04:24,190
+funo e l eu vou descrev-lo, ento ele deve renderizar controles de construo ao receber os ingredientes.
+
+53
+00:04:24,240 --> 00:04:31,350
+Agora vamos adicionar como um segundo argumento que a funo javascript que deve ser executada e agora
+
+54
+00:04:31,350 --> 00:04:33,170
+l, eu simplesmente usarei
+
+55
+00:04:33,210 --> 00:04:38,390
+meu wrapper e, antes de tudo, configurei adies e quero definir o valor
+
+56
+00:04:38,400 --> 00:04:39,890
+que estamos esperando obter.
+
+57
+00:04:40,080 --> 00:04:46,710
+ento este suporte que estamos verificando aqui,  o que estamos esperando obter. Aqui eu vou definir ing
+
+58
+00:04:46,710 --> 00:04:54,710
+igual a digamos um objeto javascript onde eu tenho salada, zero.
+
+59
+00:04:54,900 --> 00:05:05,990
+Agora com isso eu posso usar esperar e invlucro e encontrar meus controles de compilao, no um elemento jsx, apenas
+
+60
+00:05:05,990 --> 00:05:11,800
+o tipo aqui e isso deve ter um comprimento de 1.
+
+61
+00:05:11,820 --> 00:05:18,760
+Vamos salvar esse arquivo e tambm salvar o arquivo do construtor hambrguer para realmente exportar a classe e no caso de voc estar recebendo esse
+
+62
+00:05:18,760 --> 00:05:25,180
+erro em relao ao aplicativo. teste. js, remova o aplicativo. teste. js arquivo com o
+
+63
+00:05:25,180 --> 00:05:31,000
+qual o projeto comeou, ele realmente ir montar o seu aplicativo inteiro falhar devido ao uso de roteamento.
+
+64
+00:05:31,000 --> 00:05:38,500
+Agora voc ainda deve ter um erro agora, isso. adereos. onInitIngredients no  uma funo, este
+
+65
+00:05:38,500 --> 00:05:44,270
+erro faz sentido porque raso renderizar seu componente aqui mesmo que no faa isso
+
+66
+00:05:44,410 --> 00:05:49,360
+profundamente e no burger builder se voc o inspecionar, voc ver que
+
+67
+00:05:49,510 --> 00:05:57,030
+em componentDidMount, ns chamamos este prop e este claro que no  disponibilizado porque apenas definimos um suporte.
+
+68
+00:05:57,250 --> 00:06:00,850
+Ento, para consertar isso, ns temos que adicionar isso como um
+
+69
+00:06:00,850 --> 00:06:07,420
+prop, agora adicionando com setProps no vai fazer o truque porque isso  adicionado ou que  definido aps o
+
+70
+00:06:07,420 --> 00:06:09,900
+componente ter sido instanciado, ento  tarde demais.
+
+71
+00:06:09,910 --> 00:06:17,140
+Ns temos que adicion-lo aqui emInitIngredients e eu vou configur-lo para uma funo de seta vazia aqui, para simplesmente
+
+72
+00:06:17,140 --> 00:06:20,030
+preencher o requisito de passar uma funo.
+
+73
+00:06:20,350 --> 00:06:24,160
+Agora, com isso, se voc salv-lo, o teste ser aprovado.
+
+74
+00:06:24,520 --> 00:06:30,950
+Se agora passarmos a ser nulos apenas para verificar o contrrio, ele falhar e este
+
+75
+00:06:31,240 --> 00:06:38,540
+ um exemplo que voc pode perfeitamente ajustar a sua necessidade de ver como voc pode testar contineres.
+
+76
+00:06:38,650 --> 00:06:44,940
+Voc essencialmente tira a parte do componente e se livra da conexo ao redux.
+
+77
+00:06:44,950 --> 00:06:48,370
+Agora falando de redux, como testamos isso ento?
+

@@ -1,0 +1,212 @@
+1
+00:00:02,110 --> 00:00:08,020
+W ostatnim wykadzie skonfigurowalimy linki, ustawmy teraz pakiet routera. W tym celu opu mj serwer programistyczny i uyj instalacji
+
+2
+00:00:08,020 --> 00:00:14,430
+npm do zainstalowania pakietu z --save, utworz rwnie pakiet wpisu. plik json, abymy tam zapisali pakiet,
+
+3
+00:00:14,490 --> 00:00:20,560
+abymy mogli atwo udostpni projekt. I wtedy nazwa pakietu to
+
+4
+00:00:20,560 --> 00:00:23,320
+router reagujcy, potrzebujemy jednak
+
+5
+00:00:23,560 --> 00:00:30,420
+drugiego, router reagujcy zawiera logik, ktr mona powiedzie, ale eby
+
+6
+00:00:30,440 --> 00:00:38,120
+mc renderowa co do domingu, wic aby powiedzie reagowa na renderowanie, potrzebujemy
+
+7
+00:00:38,160 --> 00:00:44,800
+take-router-dom, wic te dwa pakiety. Wcinij Enter, a nastpnie pobierz i zainstaluj najnowsze
+
+8
+00:00:44,800 --> 00:00:45,710
+wersje tych
+
+9
+00:00:45,880 --> 00:00:53,170
+pakietw, i jak powiedziaem, jest to pakiet nie stworzony przez Facebooka, ale jest to de facto standard routingu
+
+10
+00:00:53,170 --> 00:00:54,360
+w aplikacjach reagujcych.
+
+11
+00:00:54,670 --> 00:00:58,670
+Tak wic z npm start moemy ponownie uruchomi serwer
+
+12
+00:00:58,770 --> 00:01:05,650
+programistyczny i teraz oczywicie chcemy rozpocz korzystanie z tego pakietu routerw, a ja chc zacz od
+
+13
+00:01:05,650 --> 00:01:14,160
+upewnienia si, e adujemy tutaj tylko komponent postu dla naszej trasy gwnej, ktra w zasadzie ma tylko cicie na kocu.
+
+14
+00:01:14,170 --> 00:01:21,070
+Tak wic dla tej trasy chc tylko zaadowa moje posty. W tej chwili w kontenerze blogw aduj
+
+15
+00:01:21,100 --> 00:01:24,300
+posty, peny post i nowy wpis. Teraz
+
+16
+00:01:24,370 --> 00:01:30,250
+chc to przerwa, a nastpnie usun z niego cay post i nowy wpis.
+
+17
+00:01:30,260 --> 00:01:33,970
+Teraz oczywicie aduj tylko posty, ale tak naprawd nie robi tego dynamicznie.
+
+18
+00:01:33,970 --> 00:01:42,000
+Robi to cay czas. Tak wic zgromadzenie ID ma teraz zaadowa to tylko, jeli
+
+19
+00:01:42,010 --> 00:01:48,050
+jestem w mojej domenie / nic, tak na ciece gwnej, nie ci uytkownikw, nic wicej,
+
+20
+00:01:48,070 --> 00:01:48,970
+po prostu
+
+21
+00:01:49,000 --> 00:01:50,290
+nic nie rb.
+
+22
+00:01:50,440 --> 00:01:56,340
+W tym celu musimy przede wszystkim wczy routing w naszej aplikacji reagowania, robimy
+
+23
+00:01:56,500 --> 00:02:01,020
+to w indeksie. js lub aplikacja. plik js.
+
+24
+00:02:01,130 --> 00:02:09,850
+Tam musisz owin cz swojego wrap'a, ktra powinna by w stanie renderowa trasy i
+
+25
+00:02:10,270 --> 00:02:16,510
+czyta trasy, musisz zawin je komponentem zaimportowanym z pakietu react-react-router-dom.
+
+26
+00:02:16,600 --> 00:02:20,290
+Teraz, jak ju powiedziaem, moesz to zrobi w obu indeksach. js i aplikacja. js,
+
+27
+00:02:20,300 --> 00:02:30,040
+robi to w aplikacji. js i tam, zaimportuj co z react-router-dom, wic z
+
+28
+00:02:30,070 --> 00:02:31,930
+wanie zainstalowanego pakietu.
+
+29
+00:02:31,930 --> 00:02:38,870
+Tam uywamy nawiasw klamrowych do importowania czego, ktre ma nazw, wic nazwany eksport
+
+30
+00:02:39,040 --> 00:02:42,460
+z pakietu i tutaj powinien to
+
+31
+00:02:42,670 --> 00:02:49,450
+by router przegldarki, ten obiekt routera przegldarki. Teraz powiniene zawija wszystko w swojej aplikacji, ktre powinno by w stanie uywa
+
+32
+00:02:49,450 --> 00:02:50,240
+routingu z tym.
+
+33
+00:02:50,440 --> 00:02:57,430
+Wic tak naprawd bd owija cay div tutaj, z takim routerem przegldarki.
+
+34
+00:02:58,130 --> 00:03:05,840
+To jest teraz router od tej aplikacji i teraz moemy korzysta z funkcji routingu
+
+35
+00:03:05,840 --> 00:03:10,050
+z tego pakietu routingu w dowolnym miejscu wewntrz
+
+36
+00:03:10,080 --> 00:03:17,490
+tych komponentw owijajcych, wic w kadym podskadniku, ktry tutaj umieszczamy, oczywicie zawiera on bloga.
+
+37
+00:03:17,710 --> 00:03:23,730
+Teraz wewntrz komponentu blogu chc teraz uywa routingu, sekcji postw,
+
+38
+00:03:23,730 --> 00:03:25,380
+teraz powinien to
+
+39
+00:03:25,450 --> 00:03:33,440
+by rzeczywicie komponent niestandardowy, ktry adujemy, gdy odwiedzimy / nic na adresie URL.
+
+40
+00:03:33,520 --> 00:03:40,780
+W zwizku z tym utworz nowy komponent, a teraz moesz zamieni wszystkie te komponenty
+
+41
+00:03:40,810 --> 00:03:47,520
+w kontenery, poniewa bd to odrbne strony, ktre zazwyczaj zawieraj podskadniki przekazujce im
+
+42
+00:03:47,530 --> 00:03:48,240
+swj stan.
+
+43
+00:03:48,370 --> 00:03:54,810
+Musiabym wic przenie cay post do folderu blogw kontenerw, nowego posta, a ja utworz nowy
+
+44
+00:03:54,910 --> 00:04:02,020
+folder w kontenerach na blogu, ktry jest postem. Teraz pojedynczy post, zostawi w komponentach,
+
+45
+00:04:02,020 --> 00:04:08,590
+poniewa jest tylko prezentacja, ale pozostae elementy zostay tam przeniesione.
+
+46
+00:04:08,890 --> 00:04:10,840
+Szybko wic dostosujmy teraz wszystkie importy, tutaj
+
+47
+00:04:10,840 --> 00:04:14,500
+w penym pocie nic nie musi by poprawione, to samo w nowym
+
+48
+00:04:14,560 --> 00:04:19,470
+pocie, posty musz zosta stworzone, dodajmy wic post. Plik js tutaj iw komponencie
+
+49
+00:04:19,590 --> 00:04:26,820
+blogu, moemy na razie po prostu pozby si nowego postu i penego posta, komponent postu
+
+50
+00:04:26,830 --> 00:04:30,380
+rwnie nie jest ju potrzebny tutaj, moemy to
+
+51
+00:04:30,400 --> 00:04:36,370
+usun, poniewa teraz mam zamiar przej do tego nowego posty zawieraj niszy komponent.
+
+52
+00:04:36,850 --> 00:04:38,610
+Teraz w nastpnym
+
+53
+00:04:38,650 --> 00:04:44,550
+wykadzie szybko go utworz, abymy mogli potem zacz korzysta z routingu.
+

@@ -1,0 +1,200 @@
+1
+00:00:02,160 --> 00:00:09,570
+Sadece kendi girdi bileenimizle dinamik olarak ilediimiz javascript'te kurduumuz bir forum oluturduk ve
+
+2
+00:00:09,570 --> 00:00:17,550
+girdi deiti ileyici biz yabanc unsurlarn herhangi bir etkisini deimez bir ekilde gncelledi.
+
+3
+00:00:17,550 --> 00:00:21,080
+imdi bu formu da gnderebileceimizden emin olalm.
+
+4
+00:00:21,330 --> 00:00:23,530
+Bunun iin tklanan ileyici ile dmeye sahibiz.
+
+5
+00:00:23,550 --> 00:00:26,210
+Ve ileci toplamak iin kullanmak istemiyorum.
+
+6
+00:00:26,220 --> 00:00:27,930
+Gerekten var.
+
+7
+00:00:27,930 --> 00:00:35,220
+Olay ileyicisi gnderirken formun kendisinde de kullanabiliriz ve u anda gnderimde
+
+8
+00:00:35,220 --> 00:00:39,990
+sipari ileyicisi iin kullandmz yntemi yrtmek istiyoruz.
+
+9
+00:00:40,350 --> 00:00:45,530
+imdi sipari ileyicisinde elbette varsaylan nlemek istiyoruz.
+
+10
+00:00:45,540 --> 00:00:49,320
+Hl tepki gstererek otomatik olarak getiiniz bir olay nesnesi alyoruz.
+
+11
+00:00:49,320 --> 00:00:53,730
+imdi varsaylan nlemek istiyorum, nk isteimi otomatik olarak gndermek
+
+12
+00:00:53,730 --> 00:00:56,440
+istemiyorum, bunun yerine sayfam yeniden ykleyeceim.
+
+13
+00:00:56,530 --> 00:00:58,810
+imdi verileri karmam lazm.
+
+14
+00:00:58,950 --> 00:01:05,040
+Gndermek istiyorum ve serin bir ey, bu verilerin zaten bu durumda ynetildii ve Form nesnemiz
+
+15
+00:01:05,040 --> 00:01:11,610
+burada her zaman iki balama ile gncelleniyor ve bu deer en az gncelleniyor ve deer kesinlikle
+
+16
+00:01:11,610 --> 00:01:13,140
+de ilgilendiim ey.
+
+17
+00:01:13,140 --> 00:01:14,430
+Yeni bir sabit yaratabilirim.
+
+18
+00:01:14,460 --> 00:01:22,920
+Belki veri formunu adlandralm ve oradaki verileri almak istiyorum ve element trn ve e atmasn
+
+19
+00:01:22,920 --> 00:01:28,780
+umursamam olsam da temel olarak sipari form nesnemi almam istiyorum.
+
+20
+00:01:28,950 --> 00:01:33,800
+Sadece ismi almak istiyorum ve sonra dorudan birbirine elenen deer.
+
+21
+00:01:33,840 --> 00:01:42,960
+Bu yzden, bu form iin veri dnm biraz deitireceim, balangta bo bir nesne olabilir ve sonra
+
+22
+00:01:43,030 --> 00:01:45,520
+formumun tamam dngye dnebilir.
+
+23
+00:01:45,520 --> 00:01:54,930
+Dolaysyla hepsi de bu durum sipari formunda form esi tanmlaycm var.
+
+24
+00:01:55,030 --> 00:02:02,340
+Yani bu ok uzun form unsuru ve yangn sadece e-posta lke ve benzeri.
+
+25
+00:02:03,600 --> 00:02:11,670
+Ve sonra form esi tanmlaycs ve exista deeri iin bu durum sipari formuna eit belirli bir
+
+26
+00:02:12,290 --> 00:02:16,400
+form esi tanmlaycs iin form verisi ayarlamak istiyorum.
+
+27
+00:02:16,440 --> 00:02:22,420
+Dolaysyla, yalnzca yabanc veriler iin yeni bir mlk eklemek zorunda olduum anahtar deer iftleri olutururum.
+
+28
+00:02:22,620 --> 00:02:26,090
+E-posta gibi lke gibi bir mlk vb.
+
+29
+00:02:26,250 --> 00:02:32,060
+Ve ben bu mlkn deerini bir nesneye eit deil, yalnzca kullancnn girdii deere ayarladm.
+
+30
+00:02:32,550 --> 00:02:35,490
+Ve imdi bu basit haritalamam var.
+
+31
+00:02:35,700 --> 00:02:38,570
+imdi bunu sunmak iin kullanabilirim.
+
+32
+00:02:38,640 --> 00:02:43,830
+Yani burada form verilerim sonunda gemek istediim eyi yapyor.
+
+33
+00:02:43,860 --> 00:02:49,720
+Bylece sipari nesnem iin mlkiyet sipari tarihi ekleyeceim ve yabanc verilere eit olarak ayarlayacam.
+
+34
+00:02:50,100 --> 00:02:53,420
+imdi de ie yarayp yaramayacan grmek istiyorum.
+
+35
+00:02:53,640 --> 00:02:56,400
+Bunun iin de ate alanna gidelim.
+
+36
+00:02:56,420 --> 00:02:58,700
+Buras gvenlik merkezimde emirlerim.
+
+37
+00:02:58,800 --> 00:03:04,190
+imdi yeni bir sipari ekleyelim ve ie yarayp yaramayacana bakalm, tam ilemden geeceim.
+
+38
+00:03:04,260 --> 00:03:07,350
+Tm tccar burgeri imdi tklayn.
+
+39
+00:03:07,360 --> 00:03:11,770
+Buraya devam etmeye devam edin ve sonra baz veriler oluturun.
+
+40
+00:03:11,770 --> 00:03:21,290
+Sokak posta kodunuz baz rasgele kod Birleik Devletler belki de test com adresinde test edin.
+
+41
+00:03:21,580 --> 00:03:24,480
+Burada en ucuzu seip tkla.
+
+42
+00:03:24,790 --> 00:03:28,480
+Yeniden ynlendirildiimizde, yeni bir emir eklendiinde gvenlik merkezine bakmayalm.
+
+43
+00:03:28,630 --> 00:03:33,370
+Ve daha sonra, kullanclarn girdii verilere sahip olduumuz tm elemelere sahip olduumuz
+
+44
+00:03:33,370 --> 00:03:38,630
+verileri sipari ettik, bylece form gnderilmesi ok iyi ve ok dinamik bir ekilde iliyor.
+
+45
+00:03:38,650 --> 00:03:40,980
+Yeni bir girdi eklemek ne kadar kolay grnyorsun.
+
+46
+00:03:40,990 --> 00:03:47,050
+Eyalette, sipari formunuza yeni bir mlk eklemeniz yeterliyse, buradaki eyi yaplandrn ve bir deer
+
+47
+00:03:47,060 --> 00:03:51,170
+atayn yazn hzl bir ekilde yeni bir girdi ekleyin.
+
+48
+00:03:51,190 --> 00:03:58,090
+bylece dinamik olarak yeni zellikler ekleyebilir, yeni girdiler gelitirebilir veya deitirebilir veya yaplandrmay deitirebilirsiniz.
+
+49
+00:03:58,240 --> 00:04:05,230
+Ve elbette bu durumdadr nk bu sipari formunu alma zamannda deimez ekilde de deitirebilirsiniz;
+
+50
+00:04:05,230 --> 00:04:09,150
+Bu yzden byle bir dinamik forum oluturma forumu harika.
+

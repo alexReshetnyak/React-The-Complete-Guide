@@ -1,0 +1,264 @@
+1
+00:00:02,290 --> 00:00:06,450
+Ci stiamo avvicinando alla fine di questa super lunga marcia, siamo tutti molto coperti.
+
+2
+00:00:06,540 --> 00:00:12,400
+Ora c' un'ultima funzione che voglio mostrarvi, che non userete spesso ma che
+
+3
+00:00:12,400 --> 00:00:18,950
+pu essere estremamente utile per alcune piccole cose che volete fare nei vostri componenti.
+
+4
+00:00:19,000 --> 00:00:22,760
+Principalmente quando si concentra l'input di testo e cose del genere.
+
+5
+00:00:22,870 --> 00:00:24,730
+Ora lascia che ti mostri cosa intendo.
+
+6
+00:00:25,000 --> 00:00:33,040
+Abbiamo un input di testo nel carcere J. S. e diciamo che vogliamo concentrarci sull'input di
+
+7
+00:00:33,040 --> 00:00:36,650
+testo della prima persona qui quando viene reso discreto.
+
+8
+00:00:36,940 --> 00:00:43,570
+metodo di messa a fuoco che possiamo ottenere su questo elemento di input in un determinato momento.
+
+9
+00:00:43,570 --> 00:00:49,580
+Ora focalizzare questo input in realt non  cos semplice qui perch vorremmo chiamare il
+
+10
+00:00:49,600 --> 00:00:56,710
+Quindi, ad esempio, dopo che un componente ha montato o in questo metodo per essere precisi, sappiamo che
+
+11
+00:00:57,500 --> 00:00:58,330
+esiste adesso.
+
+12
+00:00:58,390 --> 00:01:04,240
+Per questo abbiamo bisogno di accedere all'elemento input in modo che possiamo chiamare il metodo focus da questo metodo.
+
+13
+00:01:04,780 --> 00:01:11,040
+E potrebbero esserci dei problemi di funzionamento che  possibile trovare con l'impostazione di alcuni stati e quindi il
+
+14
+00:01:11,050 --> 00:01:14,930
+rendering di questo input condizionalmente nello stato focalizzato o non focalizzato.
+
+15
+00:01:15,370 --> 00:01:21,690
+E in realt spesso dovresti provare a usare questi metodi di lavoro, ma soprattutto per concentrarti.
+
+16
+00:01:21,680 --> 00:01:28,540
+riferimento,  possibile aggiungere una propriet o attributi speciali per l'input che  chiamato ref proprio come la chiave.
+
+17
+00:01:28,600 --> 00:01:33,310
+C' un modo semplice e veloce che  perfettamente adatto per usare un
+
+18
+00:01:33,340 --> 00:01:40,290
+Questa  una propriet speciale conosciuta da re-act ref che prende un input dinamico che dovrebbe essere una funzione.
+
+19
+00:01:40,390 --> 00:01:43,170
+Quindi qui user una funzione di freccia.
+
+20
+00:01:43,480 --> 00:01:47,630
+E in questa funzione si imposta un riferimento a questo elemento.
+
+21
+00:01:47,740 --> 00:01:52,360
+Quindi, mentre inserisco, ottieni l'accesso a questo elemento che puoi chiamare come vuoi.
+
+22
+00:01:52,360 --> 00:01:54,570
+Come I in P per l'input.
+
+23
+00:01:55,000 --> 00:02:00,610
+E qui puoi definire una propriet di questa classe.
+
+24
+00:02:00,620 --> 00:02:02,290
+E questo  gi importante.
+
+25
+00:02:02,290 --> 00:02:06,280
+I riferimenti sono disponibili solo in componenti a stato completo.
+
+26
+00:02:06,280 --> 00:02:13,610
+Quindi nei componenti creati con classe e si estende il componente,  possibile aggiungere una nuova propriet
+
+27
+00:02:13,610 --> 00:02:21,470
+a una classe aggiungendo semplicemente questo e quindi il nome della propriet qualsiasi propriet desiderata come elemento di
+
+28
+00:02:21,800 --> 00:02:22,480
+input.
+
+29
+00:02:22,520 --> 00:02:24,960
+Di nuovo questo nome  totalmente da te.
+
+30
+00:02:24,980 --> 00:02:28,010
+Questo creer una nuova propriet per l'intera classe.
+
+31
+00:02:28,160 --> 00:02:33,470
+Quindi per la classe di persone che  possibile utilizzare da qualsiasi punto della classe e che verr creata
+
+32
+00:02:33,470 --> 00:02:35,440
+in un certo momento, esegue le esecuzioni.
+
+33
+00:02:35,450 --> 00:02:41,150
+Quindi, se in un secondo momento provi ad accedervi dal componente che Mount dead funzioner, il componente
+
+34
+00:02:41,150 --> 00:02:45,440
+di costo che monta come hai appreso viene effettivamente eseguito dopo il rendering.
+
+35
+00:02:45,440 --> 00:02:47,080
+Ora questo da solo non far il trucco.
+
+36
+00:02:47,090 --> 00:02:52,020
+Dobbiamo assegnare un valore a questa nuova propriet creata e il valore dovrebbe essere ENP.
+
+37
+00:02:52,160 --> 00:02:54,920
+Quindi questo elemento di input a cui hai accesso.
+
+38
+00:02:54,980 --> 00:03:01,250
+Quindi ora abbiamo una propriet sulla classe che ci d accesso a questo elemento di input e
+
+39
+00:03:01,450 --> 00:03:06,210
+nella quantit di componenti che possiamo ora chiamare questo elemento di input focus.
+
+40
+00:03:06,340 --> 00:03:09,950
+Il metodo di messa a fuoco  un metodo disponibile sugli elementi di input.
+
+41
+00:03:09,950 --> 00:03:15,720
+Ora se salviamo questo e apriamo questa pagina vedremo che l'ultimo elemento  focalizzato.
+
+42
+00:03:15,830 --> 00:03:19,560
+L'ultimo perch l'attenzione  rivolta a tutti.
+
+43
+00:03:19,670 --> 00:03:25,040
+E quindi, dato che solo un elemento pu essere focalizzato alla volta, si attacca semplicemente all'ultimo
+
+44
+00:03:25,040 --> 00:03:27,920
+che  stato reso l'ultimo che ha chiamato Focus.
+
+45
+00:03:27,920 --> 00:03:33,920
+Ora, se vuoi assicurarti che il primo elemento sia focalizzato, non dovrai passare alla posizione che hai nel tuo inseguimento
+
+46
+00:03:34,190 --> 00:03:37,860
+di persistenza, segui il punto in cui fai un ciclo con l'indice.
+
+47
+00:03:38,150 --> 00:03:44,510
+Dovresti pastori come supporto in modo che tu possa passare la posizione che alla fine  solo l'indice
+
+48
+00:03:44,510 --> 00:03:47,780
+e se la posizione  0, allora vuoi chiamare questo.
+
+49
+00:03:47,810 --> 00:03:55,670
+E poi di persona come si aggiungerebbe semplicemente se la dichiarazione in cui si controlla se la posizione di questo prop  pari
+
+50
+00:03:55,670 --> 00:03:56,270
+a zero.
+
+51
+00:03:56,270 --> 00:04:01,770
+Quindi, se questo  il primo elemento, allora vuoi chiamare questo metodo di messa a fuoco.
+
+52
+00:04:01,790 --> 00:04:03,370
+Altrimenti non farai nulla.
+
+53
+00:04:03,380 --> 00:04:08,090
+E ora con quello se hai chiuso, il primo elemento sar focalizzato.
+
+54
+00:04:08,090 --> 00:04:09,980
+Questi sono i riferimenti importanti.
+
+55
+00:04:10,010 --> 00:04:13,230
+Puoi usarli solo in componenti stateful.
+
+56
+00:04:13,280 --> 00:04:19,910
+tuoi componenti non sei limitato agli elementi HVM come input e dovresti usarli con cura.
+
+57
+00:04:19,910 --> 00:04:21,500
+Puoi anche usarli sui
+
+58
+00:04:21,500 --> 00:04:29,840
+Non cercare di diventare pigri e certamente non fare cose come questo colore di sfondo dello stile degli elementi di input
+
+59
+00:04:29,840 --> 00:04:30,920
+equivale a qualcosa.
+
+60
+00:04:30,950 --> 00:04:37,460
+Fai questo con gli strumenti precedenti che impari a fidarti dinamicamente degli stili prima di fare qualcosa di dinamico.
+
+61
+00:04:37,460 --> 00:04:40,520
+Questo non dovrebbe essere la tua scorciatoia per essere pigro.
+
+62
+00:04:40,520 --> 00:04:48,710
+ per alcune cose selezionate che riguardano principalmente il controllo della messa a fuoco o della riproduzione multimediale e non
+
+63
+00:04:48,710 --> 00:04:50,510
+lo stile o la visualizzazione.
+
+64
+00:04:50,510 --> 00:04:52,340
+Usa lo strumento sopra per imparare.
+
+65
+00:04:52,340 --> 00:04:54,200
+Altrimenti non lo farai.
+
+66
+00:04:54,260 --> 00:04:55,340
+Il modo re-act.
+

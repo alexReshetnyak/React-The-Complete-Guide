@@ -1,0 +1,256 @@
+1
+00:00:02,180 --> 00:00:08,730
+Let's work on the my orders page and for that, I'll create a new folder into containers folder, i'll name
+
+2
+00:00:08,740 --> 00:00:13,610
+it orders and in there, I will obviously create orders.js
+
+3
+00:00:13,640 --> 00:00:20,490
+file which is the container for the orders. This will be created with the class keyword, class
+
+4
+00:00:20,510 --> 00:00:29,360
+Order extends component is the code I want to write there and in there I'll import react and component
+
+5
+00:00:29,840 --> 00:00:32,480
+to be able to create a component
+
+6
+00:00:32,480 --> 00:00:37,850
+in this way and then i'll export this class, this order class, orders
+
+7
+00:00:37,880 --> 00:00:44,690
+class excuse me, orders class as the default. Now in there, we obviously will have a render method where we
+
+8
+00:00:44,690 --> 00:00:48,870
+return the jsx for this component.
+
+9
+00:00:48,950 --> 00:00:55,070
+The question of course is what do we want to render in there? I want to output my orders in this
+
+10
+00:00:55,070 --> 00:00:56,040
+page obviously.
+
+11
+00:00:56,110 --> 00:01:03,400
+For that I'll create a new component in the order component folder, the order component itself, order.js
+
+12
+00:01:03,410 --> 00:01:11,840
+and order.css, and now the question of course is how should a single order look like in this
+
+13
+00:01:11,990 --> 00:01:12,920
+page.
+
+14
+00:01:13,280 --> 00:01:20,720
+Well I will create it as a function, I will receive props and I will return some jsx.
+
+15
+00:01:20,750 --> 00:01:28,850
+Obviously as always, we import react from react here and we export these function as the file default.
+
+16
+00:01:29,720 --> 00:01:36,530
+With that, our order should be a div which will receive some styling in the end of course and I simply want
+
+17
+00:01:36,530 --> 00:01:39,120
+to output the ingredients and the price here
+
+18
+00:01:39,130 --> 00:01:49,790
+let's say. So I want to have something like a paragraph here in that paragraph, I could say
+
+19
+00:01:50,720 --> 00:01:51,490
+ingredients:
+
+20
+00:01:51,560 --> 00:01:57,600
+and then here I have the ingredients like salad and that in parentheses, thereafter the amount like
+
+21
+00:01:57,620 --> 00:01:59,340
+1 or something like that,
+
+22
+00:01:59,840 --> 00:02:08,540
+and then I might have something like the price always in a paragraph and in strong tags to emphasize it
+
+23
+00:02:08,930 --> 00:02:18,500
+then the value like $5.45. This is how one order should look like and of course the ingredients
+
+24
+00:02:18,500 --> 00:02:20,990
+and the price of something I will need to receive
+
+25
+00:02:20,990 --> 00:02:25,090
+via props, so I need some styling though.
+
+26
+00:02:25,240 --> 00:02:29,540
+I'll create an order.css class the order.css file, our
+
+27
+00:02:29,780 --> 00:02:33,640
+Orders should span the full width let's say
+
+28
+00:02:33,890 --> 00:02:42,860
+so width 100%, I want to have a border of 1px solid in this gray color and I'll add a box-
+
+29
+00:02:42,860 --> 00:02:52,240
+shadow of 0 2px 3px and this gray color change the border color to a slightly brighter one.
+
+30
+00:02:53,340 --> 00:02:57,590
+I'll add some padding 10px, I'll add a margin
+
+31
+00:02:57,600 --> 00:03:06,330
+let's say 10px top and bottom but none to left and right. I'll set the box sizing to border box
+
+32
+00:03:06,330 --> 00:03:13,300
+so that the padding is included in the box size and with that, this should be a nicely looking order.
+
+33
+00:03:13,310 --> 00:03:21,250
+I can now import the classes from this css file from the orders.css file
+
+34
+00:03:21,650 --> 00:03:23,330
+and assign them here.
+
+35
+00:03:23,330 --> 00:03:28,260
+So class name can now be classes.order.
+
+36
+00:03:28,370 --> 00:03:33,100
+So this is how one order should look like in the orders component,
+
+37
+00:03:33,110 --> 00:03:40,430
+I obviously want to output multiple orders, actually as many orders as needed and the orders I need to output
+
+38
+00:03:40,430 --> 00:03:43,490
+of course should be fetched from the backend.
+
+39
+00:03:43,550 --> 00:03:44,540
+Now for that, I'll
+
+40
+00:03:44,630 --> 00:03:46,310
+first of all go to firebase
+
+41
+00:03:46,340 --> 00:03:51,640
+and actually I'm going to clean up my orders here because I got so many.
+
+42
+00:03:51,860 --> 00:03:57,080
+So to make this easier, I'll delete the whole orders node and simply create some new ones thereafter,
+
+43
+00:03:57,500 --> 00:04:02,440
+I'll also set meat to 0 again so that we start with an empty burger.
+
+44
+00:04:02,510 --> 00:04:09,410
+Now with that let's go back to the application, and in here in the orders component, let's for now just
+
+45
+00:04:09,410 --> 00:04:11,590
+output one dummy order.
+
+46
+00:04:11,660 --> 00:04:13,880
+So I'll import that order component
+
+47
+00:04:13,880 --> 00:04:20,690
+we just created and then I'll navigate into the components folder, into the order folder and grab that order.js
+
+48
+00:04:20,690 --> 00:04:24,140
+file and then here in jsx
+
+49
+00:04:24,290 --> 00:04:31,110
+as I said, here I'll have a wrapping div around this page and there I'll actually just output
+
+50
+00:04:31,340 --> 00:04:35,090
+let's say two orders so that we can see what it looks like.
+
+51
+00:04:35,090 --> 00:04:38,140
+Now before we populate this with real data,
+
+52
+00:04:38,240 --> 00:04:45,700
+let's load this route. And the orders page should of course be loaded instead of the burger builder or
+
+53
+00:04:45,690 --> 00:04:47,240
+the check out page.
+
+54
+00:04:47,480 --> 00:04:52,990
+So it's in the app.js file where we set the routes up where all to want to set up a route for the
+
+55
+00:04:53,120 --> 00:04:55,140
+orders. For that,
+
+56
+00:04:55,160 --> 00:05:05,440
+I'll first of all import orders from
+
+57
+00:05:05,440 --> 00:05:07,070
+./containers/orders/orders.js
+
+58
+00:05:07,410 --> 00:05:12,560
+and then I'll add this new route here. For let's say /orders,
+
+59
+00:05:12,720 --> 00:05:16,990
+I want to go to the orders component that's the route outside of an
+
+60
+00:05:17,040 --> 00:05:18,100
+app.js
+
+61
+00:05:18,330 --> 00:05:22,890
+Now to view this route, we'll have to do something which we haven't done yet
+
+62
+00:05:23,040 --> 00:05:25,120
+we have to add a link
+
+63
+00:05:25,290 --> 00:05:29,850
+and for that we actually have to touch our navigation items here.
+
+64
+00:05:30,000 --> 00:05:32,520
+Let's do this in the next lecture.
+

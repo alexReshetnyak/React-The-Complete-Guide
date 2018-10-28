@@ -1,0 +1,192 @@
+1
+00:00:02,180 --> 00:00:07,450
+Ento, quando voc est enfrentando  que todos os adereos esto faltando nos nossos componentes envolvidos, como
+
+2
+00:00:07,450 --> 00:00:09,110
+o nome e a idade.
+
+3
+00:00:09,120 --> 00:00:14,820
+A razo para isso  que uma hora de ordem superior com componente de classe que
+
+4
+00:00:15,330 --> 00:00:20,480
+estamos produzindo componente de rap, mas o componente envolvido pode ser Jesus ou pessoa Jesus.
+
+5
+00:00:20,940 --> 00:00:27,870
+Agora, corretamente, o ttulo e os adereos que a pessoa como componentes esperam esto faltando
+
+6
+00:00:27,900 --> 00:00:30,250
+porque esses componentes recebem adereos.
+
+7
+00:00:30,660 --> 00:00:37,050
+Exceto por agora, eles no mais, porque eles so o nosso componente embrulhado e ns no passamos nenhum
+
+8
+00:00:37,050 --> 00:00:37,950
+adereos aqui.
+
+9
+00:00:37,950 --> 00:00:43,080
+Agora,  claro, no podemos codificar os adereos aqui, porque no  como se ns devemos passar o nome aqui.
+
+10
+00:00:43,080 --> 00:00:49,470
+Isso funcionaria para o componente da pessoa, mas o componente EP ou qualquer outro componente que possamos
+
+11
+00:00:49,470 --> 00:00:52,680
+envolver com isso pode exigir adereos totalmente diferentes.
+
+12
+00:00:53,050 --> 00:00:59,310
+Existe uma nica coisa simples que devemos fazer, apenas transmita os adereos existentes.
+
+13
+00:00:59,460 --> 00:01:01,120
+Agora, como voc faz isso.
+
+14
+00:01:01,410 --> 00:01:06,840
+Voc aproveita isso como operador sexual, o operador de propagao.
+
+15
+00:01:07,200 --> 00:01:14,550
+Tenha em mente que os adereos so apenas o objeto apenas um objeto de pares de valores-chave.
+
+16
+00:01:15,540 --> 00:01:19,830
+Agora voc pode produzir algum contedo dinmico neste componente envolvido.
+
+17
+00:01:19,980 --> 00:01:28,020
+Estavam sentados com uma nica cinta curly e costumava liberar pontos do operador espalhado no objeto de adereos para
+
+18
+00:01:28,020 --> 00:01:33,440
+simplesmente dividi-los nos pares de valores-chave e pass-los para envolver o componente.
+
+19
+00:01:33,510 --> 00:01:39,320
+Este ndice pode parecer estranho no incio, mas, no final, simplesmente significa passar nos adereos  medida que
+
+20
+00:01:39,380 --> 00:01:42,150
+os recebe, no faa nada com eles, apenas transmita-os.
+
+21
+00:01:42,150 --> 00:01:48,100
+Divida-os e mantenha os pares de valores para que voc possa validamente atribu-los ao componente de deslocamento.
+
+22
+00:01:48,540 --> 00:01:52,040
+Agora com isso, se voc salvar isso, voc ver imediatamente o recarregamento.
+
+23
+00:01:52,080 --> 00:01:58,550
+O ttulo est de volta, assim como nossos dados atuais e tudo funciona como antes.
+
+24
+00:01:58,830 --> 00:02:04,440
+que mencionei que esse componente de ordem superior no precisa retornar um componente funcional como o faz aqui.
+
+25
+00:02:04,830 --> 00:02:10,430
+Ento, agora, ns conseguimos um componente realmente reutilizvel de ordem superior e, em seguida, existe essa outra coisa
+
+26
+00:02:10,470 --> 00:02:13,860
+Depende do que voc quer fazer no seu componente de ordem superior.
+
+27
+00:02:13,860 --> 00:02:19,920
+Se voc precisa acessar os ganchos do ciclo de vida, por exemplo, se voc planeja chegar  web
+
+28
+00:02:19,950 --> 00:02:23,860
+e buscar o usurio atualmente autenticado e fazer algo com isso.
+
+29
+00:02:23,970 --> 00:02:31,200
+Se esse for o seu plano, voc precisar de um componente completo do estado e voc pode fazer isso
+
+30
+00:02:31,200 --> 00:02:34,240
+para copiar esse cdigo e duplicar comentado l.
+
+31
+00:02:34,620 --> 00:02:37,050
+E agora simplesmente respondeu novamente.
+
+32
+00:02:37,410 --> 00:02:44,670
+amplia o componente ou mesmo seu componente, claro, que as dentais precisam importar do componente re-agir.
+
+33
+00:02:44,670 --> 00:02:50,510
+Em vez de retornar uma funo, voc tambm pode retornar uma classe que
+
+34
+00:02:50,710 --> 00:02:55,080
+E agora que estendemos isso, temos uma sintaxe normal.
+
+35
+00:02:55,150 --> 00:03:01,440
+Como voc sabe disso, devemos ter um mtodo de renderizao no mtodo de renderizao Meffert.
+
+36
+00:03:01,530 --> 00:03:04,980
+Ns, no final, devolveremos alguns j como x.
+
+37
+00:03:05,040 --> 00:03:12,240
+Assim, assim como fazemos em componentes normais com estado e, como sempre, os acessos de diferenas podem
+
+38
+00:03:12,330 --> 00:03:20,050
+ser acessados com esses adereos, de modo que um estado normal para as diferenas de componente somente de declasse.
+
+39
+00:03:20,130 --> 00:03:26,690
+No h nome porque  como uma classe annima, onde retornando estava tendo uma fbrica de classe
+
+40
+00:03:26,700 --> 00:03:32,900
+aqui, temos uma funo que retorna uma classe no MOND e o nome da classe  importante.
+
+41
+00:03:32,910 --> 00:03:38,600
+O que importa para ns  o mtodo de renderizao que envolve um componente com uma div.
+
+42
+00:03:38,610 --> 00:03:41,240
+Neste caso, um nome de classe.
+
+43
+00:03:41,400 --> 00:03:45,150
+Ento agora com isso se eu salvar isso funciona perfeitamente bem tambm.
+
+44
+00:03:45,150 --> 00:03:48,750
+Agora, temos um componente de embrulho que  uma classe.
+
+45
+00:03:49,020 --> 00:03:53,350
+Ento, estes so componentes de ordem superior e voc viu alguns exemplos aqui.
+
+46
+00:03:53,460 --> 00:03:55,750
+Voc no vai v-los novamente para o curso.
+
+47
+00:03:55,770 --> 00:04:01,710
+E, como mencionei, existem muitos pacotes de terceiros que realmente usam componentes de ordem superior, de modo que 
+
+48
+00:04:02,040 --> 00:04:04,800
+tudo para um frum onde voc os ver muito.
+

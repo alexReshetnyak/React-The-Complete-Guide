@@ -1,0 +1,188 @@
+1
+00:00:02,130 --> 00:00:07,900
+W ostatnim wykadzie stworzylimy nasz generator sagi i teraz nie wyglda to zbyt dobrze,
+
+2
+00:00:08,210 --> 00:00:11,200
+wic musimy go podczy do naszego sklepu.
+
+3
+00:00:11,390 --> 00:00:20,120
+Teraz, aby to zrobi, musimy przej do miejsca, w ktrym tworzymy nasz sklep w indeksie. js i tam, teraz nie chc
+
+4
+00:00:20,120 --> 00:00:22,890
+tylko tworzy sklepu, chc
+
+5
+00:00:22,940 --> 00:00:30,680
+te zarejestrowa moje sagi i upewni si, e s one czym,
+
+6
+00:00:30,680 --> 00:00:43,190
+czego mj sklep jest wiadomy i moe z nich korzysta. W tym celu musz zaimportowa co innego, zaimportuj oprogramowanie porednie sagi
+
+7
+00:00:43,280 --> 00:00:52,280
+z sagi redux, tak jak ja, a take zaimportuj co innego, zaimportuj sag, ktr wanie stworzyem,
+
+8
+00:00:52,280 --> 00:00:55,800
+wczeniej w moim auth. Plik js w
+
+9
+00:00:56,020 --> 00:01:02,420
+folderze sagas, dodam sowo eksportowe przed moj funkcj generatora i zapisz plik.
+
+10
+00:01:02,620 --> 00:01:18,470
+Wr do indeksu. js, mog tutaj zaimportowa sag wylogowania. / storeSagas auth. Js i by by
+
+11
+00:01:18,470 --> 00:01:20,770
+zgodnym z
+
+12
+00:01:20,840 --> 00:01:27,200
+nazewnictwem, wrc do auth. Plik js w folderze sagas i nazwij t logoutSaga
+
+13
+00:01:27,200 --> 00:01:30,730
+jako nazw generatora, dlatego te zaimportuj t nazw, jest to
+
+14
+00:01:30,740 --> 00:01:35,880
+opcjonalne, ale take wyjania, co to jest. Teraz zaimportowane, co moemy
+
+15
+00:01:36,140 --> 00:01:44,240
+zrobi, moemy take wykona funkcj middleware sagi create, zapisa wynik w staej, wic
+
+16
+00:01:44,240 --> 00:01:54,780
+nazw sta sagaMiddleware, a nastpnie wykonam create sagaMiddleware, tak samo bez adnych argumentw i teraz, gdy tworzymy
+
+17
+00:01:54,780 --> 00:02:00,180
+sklep, dzwoni applyMiddleware tu i tam nie tylko chc
+
+18
+00:02:00,180 --> 00:02:05,310
+zastosowa middleware middleware, ale take moje middleware sagi,
+
+19
+00:02:05,610 --> 00:02:08,980
+wic dodam je jako argument do applyMiddleware.
+
+20
+00:02:09,480 --> 00:02:16,680
+W kocu po tym wszystkim mog uy mojego sagaMiddleware, ktre jest rwnie zarejestrowane w sklepie i tam
+
+21
+00:02:16,680 --> 00:02:18,890
+mog uruchomi sag, wic tutaj
+
+22
+00:02:19,080 --> 00:02:28,470
+mog uruchomi sag wylogowania, ktr rwnie zaimportowalimy w tym pliku, tak. A teraz, jeli to wszystko zaoszczdz i
+
+23
+00:02:28,470 --> 00:02:35,250
+wrcimy do naszej aplikacji i przeadujemy j, nie widzimy tu
+
+24
+00:02:35,640 --> 00:02:38,360
+nic spektakularnego, prawda?
+
+25
+00:02:38,760 --> 00:02:44,970
+Przejdmy do naszych narzdzi redux dev i tam widzimy co interesujcego,
+
+26
+00:02:45,120 --> 00:02:50,390
+widzimy, e wylogowanie zostao wykonane tutaj kilka razy, teraz
+
+27
+00:02:50,640 --> 00:02:59,100
+ma to sens, poniewa w naszym auth action creator, faktycznie wysalimy rwnie akcj wylogowania w
+
+28
+00:02:59,100 --> 00:03:03,050
+naszym dziaaniu check check, gdzie staramy si
+
+29
+00:03:03,150 --> 00:03:13,270
+automatycznie zalogowa uytkownika, jeli nie znajdziemy prawidowego tokena. Teraz dla celw testowania, skomentujmy wszystkie wywoania logoutowe, wic jeli
+
+30
+00:03:13,410 --> 00:03:19,650
+zapiszemy ten plik i wrcimy do naszej aplikacji, jeli przeadujemy teraz t aplikacj,
+
+31
+00:03:19,650 --> 00:03:24,980
+nadal widzimy, e wylogowano si z auth, a to pochodzi z
+
+32
+00:03:25,230 --> 00:03:33,150
+naszej sagi, Mog udowodni, e id do indeksu. js i komentuj to sagaMiddleware, uruchom lini saga
+
+33
+00:03:33,150 --> 00:03:33,710
+wylogowania.
+
+34
+00:03:33,900 --> 00:03:39,890
+Jeli to zrobi i wrc, a teraz ponownie zaaduj stron, nie widzisz ju, e jest ona wysyana.
+
+35
+00:03:40,020 --> 00:03:43,730
+Wydaje si, e robimy co z nasz
+
+36
+00:03:43,830 --> 00:03:45,940
+sag, zawsze j wzywamy,
+
+37
+00:03:46,030 --> 00:03:52,920
+pozwl mi skomentowa wszystkie rzeczy, ktre skomentowalimy, poniewa zawsze wzywanie tej sagi nie wyglda
+
+38
+00:03:52,920 --> 00:03:55,230
+zbyt uytecznie, prawda? Ju na
+
+39
+00:03:55,290 --> 00:04:02,070
+samym pocztku, gdy tworzylimy aplikacj, kiedy zaczynalimy, uruchamiamy sag wylogowania, ktra pomimo tego dziwnego
+
+40
+00:04:02,070 --> 00:04:08,550
+dziaania generatora po prostu wykonuje jedn rzecz, usuwa wszystkie te elementy z lokalnego
+
+41
+00:04:08,850 --> 00:04:11,490
+magazynu i wywouje akcj autouzupeniania.
+
+42
+00:04:11,490 --> 00:04:15,250
+Oczywicie nie chcemy uruchamia tego przy uruchamianiu
+
+43
+00:04:15,510 --> 00:04:23,790
+aplikacji, zamiast tego chcemy uruchomi ten kod w miejscu, w ktrym poprzednio uruchomilimy nasz twrca wylogowania,
+
+44
+00:04:23,820 --> 00:04:25,570
+gdzie go uylimy,
+
+45
+00:04:25,680 --> 00:04:31,650
+wic naszym celem musi by wysanie Akcja, ktrej moemy sucha dziki
+
+46
+00:04:31,650 --> 00:04:38,030
+sakscie redux, aby nasz generator sagi mg dziaa, gdy tylko zostanie rozpoznana akcja.
+
+47
+00:04:38,220 --> 00:04:40,470
+Popracujmy nad tym w nastpnym wykadzie.
+

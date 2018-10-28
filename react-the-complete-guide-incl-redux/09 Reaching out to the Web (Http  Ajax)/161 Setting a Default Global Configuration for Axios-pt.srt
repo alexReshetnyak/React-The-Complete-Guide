@@ -1,0 +1,144 @@
+1
+00:00:02,120 --> 00:00:07,670
+Na ltima conferncia, mostrei como adicionar setores de interesse Agora s vezes voc
+
+2
+00:00:07,670 --> 00:00:12,270
+no quer interceptar o pedido, mas deseja configurar alguma configurao global.
+
+3
+00:00:12,470 --> 00:00:18,420
+Digamos que voc est enviando os pedidos e sua aplicao  sempre a mesma.
+
+4
+00:00:18,560 --> 00:00:25,040
+Portanto,  sempre um cdigo de tipo II antigo ou antigo no nosso caso aqui e depois cortar algo.
+
+5
+00:00:25,040 --> 00:00:27,840
+Ento a parte inicial  sempre a mesma.
+
+6
+00:00:28,130 --> 00:00:34,040
+Ento, o que seria bom se pudssemos cort-lo aqui e simplesmente enviar o pedido para obter
+
+7
+00:00:34,260 --> 00:00:37,980
+postagens e aprender automaticamente alguns comentrios iniciando o seu l.
+
+8
+00:00:38,000 --> 00:00:44,100
+isso no prximo ndice como outono, que  um bom lugar porque ele  executado. Primeiro ele comea a reagir.
+
+9
+00:00:44,100 --> 00:00:45,160
+Acontece que podemos fazer
+
+10
+00:00:45,440 --> 00:00:52,040
+Podemos usar X anos e seus exes para o objeto padro para configurar os padres que so verdadeiros para todas as
+
+11
+00:00:52,070 --> 00:00:59,600
+solicitaes que esto sendo enviadas e l podemos encontrar uma base voc  l e isso voc . Agora vou ser usado bem como
+
+12
+00:00:59,600 --> 00:01:05,420
+os nomes digerem como uma base de seu L para a qual d nossos POVs so ento simplesmente anexados.
+
+13
+00:01:05,450 --> 00:01:11,110
+Agora, com isso configurado aqui, estabelecemos, pelo caminho, importante ser o Eurail bsico, com os caracteres capitais
+
+14
+00:01:11,130 --> 00:01:13,650
+aqui para o invlucro Ural  importante aqui.
+
+15
+00:01:13,790 --> 00:01:18,480
+Agora, ns j removemos isso de todas as postagens aqui no bloco de continer.
+
+16
+00:01:18,680 --> 00:01:23,730
+Agora, no novo post, todos podemos nos livrar dele ao postar dados.
+
+17
+00:01:24,110 --> 00:01:31,760
+E na publicao completa, temos dois lugares onde chegamos a uma publicao nica e uma onde exclumos uma nica publicao, para que possamos
+
+18
+00:01:31,840 --> 00:01:37,550
+nos livrar daquele que comea seu L em todos os lugares e se voltarmos para o aplicativo,
+
+19
+00:01:37,550 --> 00:01:39,440
+voc ainda v isso. ainda funciona.
+
+20
+00:01:39,440 --> 00:01:47,810
+Tudo ainda funciona bem aqui, porque realmente no mudamos a maneira como enviamos pedidos, mas ns o tornamos
+
+21
+00:01:47,810 --> 00:01:52,750
+um pouco mais fcil para ns por causa dessa configurao global.
+
+22
+00:01:52,760 --> 00:01:56,560
+Agora voc tambm no se limita a apenas adicionar a base do seu L aqui.
+
+23
+00:01:56,720 --> 00:02:05,030
+com esse objeto comum de cabealhos comuns de autorizao ou simplesmente os cabealhos gerais que esto configurados para todos os tipos de solicitaes
+
+24
+00:02:05,240 --> 00:02:11,450
+e voc poderia configurar isso no token se voc tivesse um ou qualquer coisa isso .
+
+25
+00:02:11,450 --> 00:02:15,730
+Voc tambm pode acessar os cabealhos padro e definir um cabealho comum
+
+26
+00:02:15,830 --> 00:02:23,350
+Voc tambm pode definir cabealhos apenas para tipos de solicitao especficos, como somente para solicitaes de publicao, onde voc talvez queira definir
+
+27
+00:02:23,370 --> 00:02:30,110
+o tipo de contedo que voc est enviando ao aplicativo Chaisson, que voc no precisa,  o padro de
+
+28
+00:02:30,120 --> 00:02:32,160
+qualquer maneira apenas para mostrar isso.
+
+29
+00:02:32,420 --> 00:02:38,420
+Ento, agora, se voc fizer isso se voc voltar para o aplicativo e voc inspecionar o pedido que
+
+30
+00:02:38,420 --> 00:02:42,620
+foi enviado, voc ver que, sob os cabealhos, temos as ofertas sation autopen.
+
+31
+00:02:42,950 --> 00:02:50,570
+E para uma solicitao de publicao, faamos isso, voc ver que, se inspecionemos a configurao do pedido, obtivemos o
+
+32
+00:02:50,860 --> 00:02:53,810
+cabealho da recepo e o Tipo de Contedo.
+
+33
+00:02:53,810 --> 00:02:55,970
+Aplicao Jason.
+
+34
+00:02:55,970 --> 00:02:58,280
+Ento essa  outra caracterstica legal de.
+
+35
+00:02:58,400 --> 00:03:04,640
+Configurando uma configurao padro que ser usada de forma geral, super incrvel.
+
+36
+00:03:04,640 --> 00:03:08,140
+Ajuda voc a otimizar seu cdigo bastante.
+

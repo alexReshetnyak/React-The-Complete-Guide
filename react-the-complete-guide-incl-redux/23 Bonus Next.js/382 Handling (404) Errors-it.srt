@@ -1,0 +1,104 @@
+1
+00:00:02,050 --> 00:00:03,670
+Quindi abbiamo imparato un po
+
+2
+00:00:03,690 --> 00:00:10,820
+'su nextjs e sto gi avvicinandomi alla fine di questo modulo poich non  ancora un corso nextj completo, ma ci sono
+
+3
+00:00:10,980 --> 00:00:13,110
+ancora alcune cose che voglio toccare.
+
+4
+00:00:13,230 --> 00:00:21,450
+Torniamo alla pagina github di nextjs e se scorriamo il riepilogo qui, al contenuto che possiamo
+
+5
+00:00:21,450 --> 00:00:23,500
+esaminare, possiamo anche dare
+
+6
+00:00:23,520 --> 00:00:29,520
+un'occhiata alla gestione degli errori personalizzati, perch al momento abbiamo gi percorsi
+
+7
+00:00:29,520 --> 00:00:30,440
+nella nostra
+
+8
+00:00:30,440 --> 00:00:37,920
+applicazione nextjs ma se inserisco qui un percorso non valido, otteniamo questo errore 404 predefinito,
+
+9
+00:00:37,920 --> 00:00:45,270
+meglio di niente, ma possiamo personalizzarlo. Come descritto qui nel repository github di nextjs,  possibile creare il proprio
+
+10
+00:00:45,510 --> 00:00:48,770
+gestore di errori creando un _error. file js
+
+11
+00:00:48,810 --> 00:00:51,470
+nella cartella delle pagine.
+
+12
+00:00:51,560 --> 00:00:56,350
+Facciamolo, nelle pagine creiamo errori. js con il carattere di sottolineatura
+
+13
+00:00:56,580 --> 00:01:00,680
+all'inizio e quello  un normale componente di reazione javascript.
+
+14
+00:01:00,960 --> 00:01:02,840
+Quindi permettimi di copiare il contenuto dall'indice. js e
+
+15
+00:01:02,880 --> 00:01:08,550
+chiamer questa pagina di errore ma il nome naturalmente non ha molta importanza
+
+16
+00:01:08,850 --> 00:01:14,690
+e quindi posso dire, whoops qualcosa  andato storto e forse qui, diciamo
+
+17
+00:01:15,680 --> 00:01:23,660
+prova e poi sul link, diciamo di tornare indietro. Quindi importiamo ancora il collegamento, non abbiamo bisogno del
+
+18
+00:01:23,670 --> 00:01:24,510
+pulsante, quindi
+
+19
+00:01:24,510 --> 00:01:29,280
+liberiamoci dall'importazione del router e sul link, voglio andare alla barra.
+
+20
+00:01:29,730 --> 00:01:37,200
+Se ora riavviamo npm eseguire dev, dobbiamo farlo perch abbiamo scambiato quella pagina di errore e quindi abbiamo sovrascritto il valore
+
+21
+00:01:37,200 --> 00:01:38,820
+predefinito, ora se entriamo in
+
+22
+00:01:38,820 --> 00:01:44,610
+una rotta che non conosciamo, otteniamo la nostra pagina di errore personalizzata e ora possiamo tornare indietro
+
+23
+00:01:44,610 --> 00:01:48,540
+alla nostra pagina principale e continua automaticamente a funzionare in seguito.
+
+24
+00:01:48,540 --> 00:01:54,900
+Ecco come possiamo gestire gli errori in nextjs e come possiamo rendere la nostra pagina di errore personalizzata
+
+25
+00:01:54,900 --> 00:01:56,610
+che ovviamente  molto importante
+
+26
+00:01:56,760 --> 00:01:59,460
+se vogliamo davvero creare un'applicazione reale con quella.
+

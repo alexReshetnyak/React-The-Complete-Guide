@@ -1,0 +1,224 @@
+1
+00:00:02,220 --> 00:00:08,790
+Aprendemos sobre as importaes e as exportaes e no gravamos a caracterstica das aulas de arte de javascript da prxima gerao,
+
+2
+00:00:09,390 --> 00:00:14,190
+se voc vier de alguma outra linguagem de programao que voc j conhea as aulas.
+
+3
+00:00:14,250 --> 00:00:17,880
+As classes so essencialmente planos para objetos.
+
+4
+00:00:17,880 --> 00:00:24,390
+No nosso caso aqui para objetos javascript, uma classe  criada com a palavra-chave da classe
+
+5
+00:00:24,390 --> 00:00:27,860
+e uma classe pode ter propriedades e mtodos.
+
+6
+00:00:28,110 --> 00:00:33,720
+Os mtodos so simplesmente funes anexadas a classes em que as propriedades so variveis que possuem duas classes.
+
+7
+00:00:33,720 --> 00:00:39,440
+Voc poderia dizer que usar ambos os cursos de Findus e, obviamente, sempre explicar o que estamos fazendo aqui.
+
+8
+00:00:39,480 --> 00:00:46,850
+Quando adicionamos essa propriedade ou mtodo, uma classe  instanciada assim com a nova palavra-chave.
+
+9
+00:00:46,980 --> 00:00:50,790
+E isso pode, naturalmente, ser familiar para voc se voc trabalhou um pouco com javascript.
+
+10
+00:00:50,850 --> 00:00:56,190
+Voc pode notar de construir as funes e, de fato, as classes so uma maneira
+
+11
+00:00:56,190 --> 00:01:02,520
+mais conveniente de criar funes de construtor para que voc crie objetos javascript com classes como planos.
+
+12
+00:01:02,520 --> 00:01:06,290
+Essa  a idia e todas as classes suportam a herana.
+
+13
+00:01:06,300 --> 00:01:12,030
+O que significa que voc tem outra classe que voc herda de tirar todas as suas propriedades
+
+14
+00:01:12,030 --> 00:01:15,140
+e mtodos e, potencialmente, adicionar novas propriedades e mtodos.
+
+15
+00:01:15,350 --> 00:01:17,110
+Embora possa parecer familiar para voc.
+
+16
+00:01:17,250 --> 00:01:19,450
+Voc pode notar de prottipos.
+
+17
+00:01:19,470 --> 00:01:21,860
+Vamos dar uma olhada nas aulas em ao.
+
+18
+00:01:22,260 --> 00:01:24,160
+Vamos criar uma nova classe aqui.
+
+19
+00:01:24,270 --> 00:01:27,310
+Todos os nomes so assim.
+
+20
+00:01:27,330 --> 00:01:30,570
+Ento voc tem cordes curly para marcar o corpo da classe.
+
+21
+00:01:30,690 --> 00:01:38,070
+E agora, podemos comear a usar propriedades agora em sua forma mais simples ou propriedades adicionadas adicionando
+
+22
+00:01:38,070 --> 00:01:41,760
+um construtor que  um mtodo de funo padro.
+
+23
+00:01:41,820 --> 00:01:47,490
+Voc pode adicionar a qualquer classe que ser executada sempre que voc instanciar a classe e o mtodo
+
+24
+00:01:47,490 --> 00:01:52,470
+for criado apenas com o nome dos parnteses Meffert e depois ligue para as chaves.
+
+25
+00:01:52,860 --> 00:01:59,070
+E ento, agora podemos configurar propriedades com esta palavra-chave e podemos escrever esse nome igual ao
+
+26
+00:01:59,070 --> 00:02:00,290
+mximo, por exemplo.
+
+27
+00:02:00,750 --> 00:02:02,590
+Tambm podemos adicionar um mtodo.
+
+28
+00:02:02,880 --> 00:02:12,720
+Imprima meu nome e l, podemos simplesmente enviar este nome, referindo-se  propriedade de Nome que criamos.
+
+29
+00:02:12,720 --> 00:02:20,250
+Agora, podemos usar esta classe para armazenar uma instncia em uma constante com uma nova pessoa e ento podemos
+
+30
+00:02:20,260 --> 00:02:21,510
+executar a pessoa.
+
+31
+00:02:21,510 --> 00:02:23,870
+Imprima meu nome.
+
+32
+00:02:24,150 --> 00:02:27,780
+Se agora vamos correr, ns C-Max.
+
+33
+00:02:27,950 --> 00:02:30,930
+ assim que podemos usar uma classe facilmente.
+
+34
+00:02:30,960 --> 00:02:33,420
+Agora eu disse que as aulas tambm podem herdar.
+
+35
+00:02:33,450 --> 00:02:43,620
+Ento, o que podemos fazer  que podemos criar outro ser humano de classe e, alis, tambm podemos adicionar um construtor para definir este Chandor
+
+36
+00:02:43,620 --> 00:02:51,060
+igual a masculino ou feminino,  claro, se voc quer, mas o que quiser, e voc poderia em
+
+37
+00:02:51,060 --> 00:02:55,680
+Brint gnero e, em seguida, abrir o bloqueio do console .
+
+38
+00:02:55,770 --> 00:02:57,840
+Esse gnero.
+
+39
+00:02:58,180 --> 00:03:04,420
+E agora, se uma pessoa se estende, ento  uma palavra-chave que se estende de novo.
+
+40
+00:03:04,660 --> 00:03:12,280
+e podemos usar ambos na pessoa tambm, ento tambm podemos chamar uma pessoa de imprimir gnero assim.
+
+41
+00:03:12,730 --> 00:03:17,390
+Agora ns herdamos esta propriedade e esse mtodo imprime o gnero
+
+42
+00:03:17,390 --> 00:03:21,720
+No entanto, antes de corrermos com sucesso, estamos realmente, vamos tentar.
+
+43
+00:03:21,820 --> 00:03:28,480
+Obteremos um erro que devemos chamar o super construtor na classe derivada e isso  importante.
+
+44
+00:03:28,630 --> 00:03:34,320
+Se voc est estendendo outra classe e voc est implementando o construtor que voc no precisa.
+
+45
+00:03:34,330 --> 00:03:41,280
+Mas se voc , ento, voc deve adicionar Super este mtodo super especial no construtor.
+
+46
+00:03:41,320 --> 00:03:47,470
+ uma palavra-chave e simplesmente executa o construtor pai para o qual, claro, voc deve corrigir
+
+47
+00:03:47,470 --> 00:03:49,540
+para inicializar a classe pai.
+
+48
+00:03:49,570 --> 00:03:56,340
+definir o desafio de gnero para a FEMA, que no  100 por cento correto aqui, mas apenas para mostrar que isso funciona.
+
+49
+00:03:56,350 --> 00:04:02,740
+Ento, agora voc tinha claro e executado, voc ver o Max e o correio e, obviamente, voc poderia entrar na sua classe
+
+50
+00:04:02,740 --> 00:04:03,880
+de pessoa e ainda
+
+51
+00:04:03,940 --> 00:04:08,960
+Agora, voc v que imprimimos as mulheres, mesmo que ainda estejamos ligando ao gnero Brint aqui.
+
+52
+00:04:09,070 --> 00:04:17,800
+Mas  estendido por pessoa, ento estas so classes e as classes so usadas por reagir para criar seus componentes.
+
+53
+00:04:17,800 --> 00:04:20,960
+Pelo menos, como  uma das duas formas de criar componentes.
+
+54
+00:04:20,980 --> 00:04:26,500
+ assim que voc vai me ver us-lo neste curso e  importante entender
+
+55
+00:04:26,500 --> 00:04:33,850
+que as classes so apenas modelos para objetos javascript e so muito comparveis s funes do construtor onde a
+
+56
+00:04:33,880 --> 00:04:35,640
+herana  comparvel aos prottipos.
+

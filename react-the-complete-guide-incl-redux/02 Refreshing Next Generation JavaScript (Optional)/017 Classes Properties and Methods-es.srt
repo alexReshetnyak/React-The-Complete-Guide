@@ -1,0 +1,152 @@
+1
+00:00:02,150 --> 00:00:06,750
+As que en el ltimo ao aprendimos sobre las clases y aprendemos sobre propiedades y mtodos.
+
+2
+00:00:06,770 --> 00:00:14,670
+Q Ahora, javascript de prxima generacin tambin ofrece una sintaxis diferente de propiedades y mtodos de inicializacin.
+
+3
+00:00:14,830 --> 00:00:19,120
+Y en realidad es esta sintaxis ms moderna, todas usan guiones bajos.
+
+4
+00:00:19,160 --> 00:00:21,280
+As que quiero mostrarlo aqu tambin.
+
+5
+00:00:21,530 --> 00:00:27,170
+Ya aprendi que las propiedades son como las variables que adjunta a las clases y
+
+6
+00:00:27,170 --> 00:00:34,070
+objetos. Los mtodos son como funciones asociadas a clases y objetos, y aprender sobre esta sintaxis donde configuramos propiedades
+
+7
+00:00:34,070 --> 00:00:35,750
+en la funcin de constructor.
+
+8
+00:00:35,750 --> 00:00:43,400
+ahorra el uso de esta funcin de constructor con Javascript de prxima generacin, ya que lo usaremos en este curso.
+
+9
+00:00:43,400 --> 00:00:46,380
+Ahora hay una sintaxis ms moderna que nos
+
+10
+00:00:46,490 --> 00:00:52,880
+Puede asignar una propiedad directamente dentro de su clase con mi propiedad igual a valor.
+
+11
+00:00:52,880 --> 00:00:55,680
+Entonces omitiste la llamada a la funcin de constructor.
+
+12
+00:00:55,850 --> 00:00:59,270
+Detrs de escena, esto todava se transformar para usar funciones de constructor.
+
+13
+00:00:59,330 --> 00:01:04,010
+Pero es ms fcil escribir esto y formar efectos es bastante similar.
+
+14
+00:01:04,010 --> 00:01:05,140
+Esta es la vieja manera.
+
+15
+00:01:05,150 --> 00:01:07,070
+Te mostrar en la ltima conferencia.
+
+16
+00:01:07,310 --> 00:01:13,880
+en un mtodo como una propiedad que almacena una funcin como un valor y luego terminas con eso.
+
+17
+00:01:14,270 --> 00:01:20,930
+Ahora la forma javascript de prxima generacin es usar la sintaxis de la izquierda donde configuras una propiedad y
+
+18
+00:01:20,930 --> 00:01:21,580
+simplemente piensas
+
+19
+00:01:21,770 --> 00:01:26,030
+Mi mtodo es igual y luego una funcin de flecha.
+
+20
+00:01:26,030 --> 00:01:32,950
+La gran ventaja de esta sintaxis es que, dado que era una funcin de flecha como valor de propiedad, aqu no
+
+21
+00:01:32,960 --> 00:01:39,350
+tiene problemas con esta palabra clave y esa es la razn exacta por la que usaremos esta sintaxis aqu en
+
+22
+00:01:39,350 --> 00:01:44,080
+la esquina inferior derecha y la sintaxis en el esquina inferior izquierda para este curso.
+
+23
+00:01:44,150 --> 00:01:46,240
+Djame mostrarte la sintaxis.
+
+24
+00:01:47,040 --> 00:01:52,330
+Volvemos a J en el proyecto en el que ya trabajamos aqu con la clase humana y la persona.
+
+25
+00:01:52,440 --> 00:01:57,310
+No podemos deshacernos del constructor en la clase humana y deshacernos de esta palabra clave.
+
+26
+00:01:57,320 --> 00:02:00,890
+Simplemente establece el sexo igual a masculino e imprime.
+
+27
+00:02:00,900 --> 00:02:06,450
+El gnero se puede configurar igual a una funcin de flecha donde Kohn es un log.
+
+28
+00:02:06,450 --> 00:02:11,430
+Este gnero sigue utilizando esta palabra clave aqu cuando nos acercamos a la propiedad.
+
+29
+00:02:11,440 --> 00:02:17,610
+Aunque puede ignorar esa flecha por el momento, la persona ya no necesitar el constructor y ya
+
+30
+00:02:17,700 --> 00:02:20,860
+no necesitamos llamar a super por ese motivo.
+
+31
+00:02:20,880 --> 00:02:27,750
+En cambio, lo que hacemos es llamar a este nombre sin este nombre justo igual a Max y
+
+32
+00:02:27,760 --> 00:02:35,840
+gnero igual a femenino si lo deseas e imprimir mi nombre es igual a una funcin de flecha para que me guste.
+
+33
+00:02:35,840 --> 00:02:41,330
+Ahora, si el limpiador no funciona, obtendr un error porque no reconoce a Sendak
+
+34
+00:02:41,660 --> 00:02:46,600
+que realmente necesita ir al men desplegable donde dice javascript y elegirlo como.
+
+35
+00:02:46,700 --> 00:02:47,920
+Balbucea aqu
+
+36
+00:02:48,260 --> 00:02:52,230
+Si haces esto y presionas borrar y ejecutar, vers Max y hembra.
+
+37
+00:02:52,250 --> 00:02:55,490
+Todava ver las flechas a la izquierda, pero puede ignorarlas.
+
+38
+00:02:55,490 --> 00:03:01,490
+Esta es la sintaxis que es javascript de prxima generacin que realmente usaremos en este curso.
+

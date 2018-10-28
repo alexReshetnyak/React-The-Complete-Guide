@@ -1,0 +1,228 @@
+1
+00:00:02,190 --> 00:00:08,650
+En la ltima conferencia, nos aseguramos de que realmente pudiramos cambiar entre pginas, pero nuestra aplicacin se
+
+2
+00:00:08,650 --> 00:00:10,830
+recarga constantemente y no queremos eso.
+
+3
+00:00:10,960 --> 00:00:16,990
+Ahora queremos asegurarnos de mantenernos dentro de la aplicacin al hacer clic en los enlaces dentro de ella cuando
+
+4
+00:00:16,990 --> 00:00:20,820
+se llega desde fuera y se ingresa directamente a la nueva publicacin.
+
+5
+00:00:20,830 --> 00:00:23,380
+Obviamente, volver a cargar la aplicacin si presionamos Enter.
+
+6
+00:00:23,380 --> 00:00:24,720
+As es como funciona Internet.
+
+7
+00:00:24,720 --> 00:00:30,280
+Enviamos una nueva solicitud para obtener una nueva pgina, pero dentro de nuestra aplicacin y hacemos clic en los enlaces, no
+
+8
+00:00:30,280 --> 00:00:32,350
+necesitamos ese comportamiento porque estamos dentro de l.
+
+9
+00:00:32,350 --> 00:00:38,650
+Bsicamente, podemos evitar un incumplimiento y asegurarnos de que no se envan solicitudes y manejar ese clic internamente para
+
+10
+00:00:38,740 --> 00:00:41,280
+volver a ingresar a la pgina con javascript.
+
+11
+00:00:41,470 --> 00:00:44,200
+Para eso tenemos que cambiar nuestros enlaces.
+
+12
+00:00:44,200 --> 00:00:46,510
+En este momento usamos el texto de anclaje normal.
+
+13
+00:00:46,660 --> 00:00:50,350
+Y esto no es lo que realmente usamos cuando usamos el enrutador de reactivacin.
+
+14
+00:00:50,610 --> 00:00:58,660
+Si tenemos un componente especial, podemos usar el componente de enlace como nos permite el nombre del
+
+15
+00:00:58,660 --> 00:00:59,510
+enlace gests.
+
+16
+00:00:59,530 --> 00:01:02,150
+Lo has adivinado para crear un enlace.
+
+17
+00:01:02,140 --> 00:01:05,040
+Usamos esto en lugar de Yank o tag.
+
+18
+00:01:05,040 --> 00:01:07,430
+Ah usamos el enlace obviamente.
+
+19
+00:01:07,590 --> 00:01:15,400
+Adems, como un enlace de etiqueta de cierre solo, por supuesto, no hace mucho porque necesitamos decirle al enrutador de reactivacin a
+
+20
+00:01:15,400 --> 00:01:17,070
+dnde debe conducir el enlace.
+
+21
+00:01:17,080 --> 00:01:26,530
+Lo hacemos al igual que con las dos propiedades, la propiedad dos en su forma ms simple es una cadena como para cortar.
+
+22
+00:01:26,530 --> 00:01:32,280
+Ahora esto es esencialmente similar a un ref igual a slash.
+
+23
+00:01:32,590 --> 00:01:39,340
+Pero el enrutador reactivo crear la etiqueta yanker y luego evitar el defecto que sera enviar una nueva solicitud y
+
+24
+00:01:39,610 --> 00:01:42,570
+en su lugar manejar ese clic sobre s mismo.
+
+25
+00:01:42,580 --> 00:01:44,180
+Es por eso que necesitamos usar Layng.
+
+26
+00:01:44,380 --> 00:01:47,450
+No, dije en la forma ms simple que es una barra.
+
+27
+00:01:47,620 --> 00:01:53,720
+Tambin puede ser un elemento ms complejo que puede ser un objeto javascript y, por lo tanto, debe ser envuelto en una
+
+28
+00:01:53,730 --> 00:01:56,410
+sola llamada, las llaves para dar salida al contenido dinmico.
+
+29
+00:01:56,680 --> 00:01:59,830
+Y luego el contenido dinmico es un objeto javascript.
+
+30
+00:01:59,830 --> 00:02:02,300
+As que un par ms de llaves.
+
+31
+00:02:02,680 --> 00:02:06,050
+Y ahora podemos configurar a dnde queremos ir.
+
+32
+00:02:06,130 --> 00:02:13,080
+que publicamos, pero ahora tambin podemos agregar una posible etiqueta hash despus de eso, como enviar.
+
+33
+00:02:13,080 --> 00:02:23,240
+Podemos configurar una propiedad de nombre de ruta aqu, que una vez ms es la cadena a la que queremos ir, como Slash new
+
+34
+00:02:23,260 --> 00:02:24,210
+Que no tengo
+
+35
+00:02:24,220 --> 00:02:31,150
+Pero esto nos permitira saltar a cualquier idea: presentamos que hemos financiado elementos para usar esa caracterstica de anexar un fragmento
+
+36
+00:02:31,160 --> 00:02:35,770
+que se le ofreci o, de lo contrario, podra estar al tanto de eso.
+
+37
+00:02:35,800 --> 00:02:42,150
+Simplemente puede agregar algo de hash despus de donde quiera que salte a ese punto.
+
+38
+00:02:42,220 --> 00:02:52,610
+Tambin podemos configurar la bsqueda y la bsqueda nos permite agregar padres de consulta como Wake submit equal.
+
+39
+00:02:52,640 --> 00:02:53,130
+Cierto.
+
+40
+00:02:53,180 --> 00:02:54,760
+Ahora estos son solo ejemplos.
+
+41
+00:02:54,770 --> 00:03:00,380
+No harn nada en esta aplicacin, pero esta es una configuracin avanzada que podemos usar para
+
+42
+00:03:00,470 --> 00:03:05,330
+configurar a dnde vamos cuando haga clic en este enlace con estos enlaces implementados.
+
+43
+00:03:05,330 --> 00:03:12,500
+Ahora, si guardamos la aplicacin y volvemos, vers que estoy en la ltima publicacin nueva ahora, si hago clic en la
+
+44
+00:03:13,210 --> 00:03:16,190
+casa, vuelvo a casa, pero vers que esta recarga.
+
+45
+00:03:16,220 --> 00:03:19,380
+De hecho, nunca puedo gastar lo mismo para nuevas publicaciones.
+
+46
+00:03:19,550 --> 00:03:24,920
+Y aqu tambin ves que Querrey Perham y la etiqueta hash se agregaron al final.
+
+47
+00:03:24,920 --> 00:03:28,070
+Entonces ahora no estamos recargando la pgina.
+
+48
+00:03:28,070 --> 00:03:35,060
+exactamente igual que antes, pero ahora simplemente reacciona es el renderizado real de partes de la pgina que deben renderizarse.
+
+49
+00:03:35,060 --> 00:03:35,900
+Se ve
+
+50
+00:03:35,960 --> 00:03:38,090
+No estamos cargando una pgina nueva.
+
+51
+00:03:38,090 --> 00:03:40,560
+No estamos cargando esa misma pgina nuevamente.
+
+52
+00:03:40,640 --> 00:03:45,910
+Por supuesto, al cargar la misma pgina otra vez, todava se vuelve a actuar, renderizando el javascript en el DOM.
+
+53
+00:03:45,980 --> 00:03:51,110
+Pero como dije, volveremos a cargar la pgina mientras est haciendo eso y, por lo tanto, perderemos nuestro estado.
+
+54
+00:03:51,140 --> 00:03:53,150
+Ahora nuestro estado est contenido.
+
+55
+00:03:53,150 --> 00:03:54,960
+No recargamos la aplicacin.
+
+56
+00:03:55,040 --> 00:03:58,120
+Y esta es la forma en que realmente deberamos navegar.
+
+57
+00:03:58,120 --> 00:04:01,070
+Por lo tanto, usar el componente de desvinculacin.
+

@@ -1,0 +1,444 @@
+1
+00:00:02,230 --> 00:00:07,980
+Nas ltimas palestras, fizemos muita funcionalidade e tudo est funcionando, exceto para isso, nunca nos
+
+2
+00:00:07,980 --> 00:00:10,440
+reencaminhamos assim que fizemos um pedido.
+
+3
+00:00:10,440 --> 00:00:14,110
+Agora, existem vrias maneiras de implementar o redirecionamento.
+
+4
+00:00:14,130 --> 00:00:21,990
+Uma coisa  que voc poderia passar uma referncia a esse roteador um suporte de histrico para seu criador de ao de ordem e quando voc
+
+5
+00:00:22,260 --> 00:00:27,870
+despachar o sucesso de Bergere ou falhar onde pelo menos ele  acessado caso voc poderia usar isso se
+
+6
+00:00:27,870 --> 00:00:32,890
+voc o receber como um argumento para esta funo para chame o mtodo push para isso.
+
+7
+00:00:33,000 --> 00:00:35,770
+Ainda assim, no gosto muito desta abordagem.
+
+8
+00:00:35,850 --> 00:00:37,920
+Mas voc definitivamente pode fazer isso.
+
+9
+00:00:38,100 --> 00:00:41,510
+Agora, a abordagem que vou usar  uma abordagem apenas reduxada.
+
+10
+00:00:41,700 --> 00:00:48,630
+Eu adicionarei um novo tipo de ao ao arquivo de tipos de ao, ento eu vou exportar um novo
+
+11
+00:00:48,630 --> 00:00:51,090
+Konst e irei mesmo chamado percas nele.
+
+12
+00:00:52,090 --> 00:00:59,940
+Aqui, claro, todos usam o pr-Chase nele como um identificador de string por instncia de perseguio, ser despachado
+
+13
+00:00:59,940 --> 00:01:02,910
+sempre que carregarmos a pgina de check-out.
+
+14
+00:01:02,910 --> 00:01:06,310
+Agora vou criar minha ection criada para isso.
+
+15
+00:01:06,420 --> 00:01:07,810
+A posio no importa.
+
+16
+00:01:07,870 --> 00:01:10,470
+Como uma constante na qual eles compram.
+
+17
+00:01:11,290 --> 00:01:18,700
+E isso no receber argumentos e apenas retornar uma ao, ento apenas devolva um objeto javascript onde
+
+18
+00:01:18,700 --> 00:01:23,230
+o tipo ser tipo de ao por Che na mesma.
+
+19
+00:01:23,230 --> 00:01:27,200
+Agora eu preciso exportar Despard perseguir em uma funo no meu ndice.
+
+20
+00:01:27,290 --> 00:01:28,240
+Caia aqui
+
+21
+00:01:28,420 --> 00:01:36,910
+Ento, est na ordem de compra e ento vou para o meu recipiente de check-out e
+
+22
+00:01:37,300 --> 00:01:43,760
+l, eu quero adicionar o componente, o suporte e o componente foram montados.
+
+23
+00:01:43,780 --> 00:01:49,150
+Quero enviar esta ao neste ato ou no redutor.
+
+24
+00:01:49,180 --> 00:01:57,070
+configurei algo como comprar para falso, que  definido como verdadeiro quando acabamos de pre-Chase para que ns redirigssemos.
+
+25
+00:01:57,070 --> 00:02:02,140
+Eu no quero adicionar uma nova propriedade a um estado em que eu
+
+26
+00:02:02,140 --> 00:02:12,550
+Ento, deixe-me adicionar a lgica aqui, adicionando tambm o envio do mapa para enviar o envio do mapa do Konst para obter o seu objetivo de obter
+
+27
+00:02:12,610 --> 00:02:16,880
+a funo de despacho aqui e, em seguida, retornar um mapa.
+
+28
+00:02:17,050 --> 00:02:28,350
+Como sempre e neste mapa, todos vocs tm sobre ele para o Chase por exemplo, mantenha uma funo annima onde um despacho e onde eu
+
+29
+00:02:28,350 --> 00:02:33,740
+envio agora algo que eu tenho que importar desse arquivo de aes.
+
+30
+00:02:33,870 --> 00:02:43,730
+Ento importe tudo como aes desse arquivo de ndice na pasta de aes da loja assim e eu quero
+
+31
+00:02:43,760 --> 00:02:45,360
+ao de despacho.
+
+32
+00:02:45,370 --> 00:02:51,890
+Sua reao  d perseguir essa ao que no leva argumentos.
+
+33
+00:02:51,890 --> 00:02:59,810
+Ento, agora eu posso executar em um pr-Chase no meu componente que o mtodo Mount aqui, ento eu vou chamar este
+
+34
+00:03:00,590 --> 00:03:03,080
+suporte em um pr-Chase como este.
+
+35
+00:03:03,850 --> 00:03:11,630
+Na verdade, poderia levar o jejum a montar Lapsang com pouca ateno e com isso j estou despachando.
+
+36
+00:03:11,640 --> 00:03:21,050
+Agora eu posso ir para o meu redutor de pedidos e l vou adicionar um novo caso de tipos de ao por Che init do
+
+37
+00:03:21,060 --> 00:03:25,800
+tipo que eu apenas adicione e retornar um novo objeto de estado.
+
+38
+00:03:25,830 --> 00:03:32,980
+Eu vou adicionar uma nova propriedade ao meu estado, que  por perseguio e inicialmente configur-lo como falso e ou
+
+39
+00:03:32,990 --> 00:03:37,700
+desculpar-me, eu vou reivindic-lo comprado e inicialmente  falso no init da compra.
+
+40
+00:03:37,770 --> 00:03:44,270
+Eu vou copiar o estado existente e depois definir por perseguido para falso aqui tambm.
+
+41
+00:03:44,670 --> 00:03:49,210
+Mas no sucesso e isso  interessante agora em sucesso.
+
+42
+00:03:49,290 --> 00:03:52,210
+Todo o conjunto comprado para true.
+
+43
+00:03:52,560 --> 00:03:56,840
+Ento, agora, somos mudanas chaced assim que fizemos com sucesso o pr-Chase.
+
+44
+00:03:56,910 --> 00:04:03,270
+Mas, como sempre, reponha-se uma vez que revisamos o recipiente de pagamento e agora pode ir ao
+
+45
+00:04:03,450 --> 00:04:08,110
+recipiente de sada e redirecionar sempre que fizemos com sucesso comprar algo.
+
+46
+00:04:08,400 --> 00:04:14,370
+Ento eu posso ir ao resumo para o mtodo de renderista, desculpe-me onde j redirecionamos
+
+47
+00:04:14,370 --> 00:04:18,770
+porque no obtivemos ingredientes basicamente agora ou adicionamos um nmero constante.
+
+48
+00:04:18,780 --> 00:04:30,260
+Neste caso, onde irei nomear um redirecionamento por chaced, isso s ser relevante se tivermos adereos.
+
+49
+00:04:30,290 --> 00:04:32,710
+Ento, vou colocar isso nesta declarao se aqui.
+
+50
+00:04:33,660 --> 00:04:37,790
+E todos eles so definidos para sempre redirecionar.
+
+51
+00:04:37,840 --> 00:04:44,770
+Para casa, digamos ou e para isso eu preciso de uma expresso ternria.
+
+52
+00:04:44,800 --> 00:04:46,950
+Eu configurarei para no redirecionar.
+
+53
+00:04:46,960 --> 00:04:50,660
+Agora eu quero redirecionar se chaced  verdade.
+
+54
+00:04:50,920 --> 00:04:58,240
+palco do mapa prop 8 para todos os admiradores pr-Chase e alcanar a ordem do estado e l est tudo em
+
+55
+00:04:58,240 --> 00:05:05,320
+uma perseguio de papel,  um suporte. Acabamos de adicionar no redutor e depois aqui -Chase prob tudo usa aqui para
+
+56
+00:05:05,320 --> 00:05:12,970
+verificar se esses adereos foram perseguidos. Isso  um valento e, portanto, se isso for verdade, ento eu redirecionarei porque ento terminamos.
+
+57
+00:05:12,970 --> 00:05:16,120
+Ento, para isso, eu preciso mapear isso para um
+
+58
+00:05:16,120 --> 00:05:17,470
+Quero sair da pgina.
+
+59
+00:05:17,470 --> 00:05:20,230
+Caso contrrio, ainda estamos no processo de compra.
+
+60
+00:05:20,230 --> 00:05:27,280
+Ento eu vou definir isso como nulo e agora posso renderizar o redirecionamento pr-Chase no nosso ano Dith e a carga das
+
+61
+00:05:27,280 --> 00:05:29,650
+peas ser emaranhada e ele ir redirecionar-nos.
+
+62
+00:05:30,100 --> 00:05:33,490
+Vamos salvar todos os arquivos e ver se isso funciona como imaginado.
+
+63
+00:05:33,610 --> 00:05:41,360
+Se abrimos nosso aplicativo aqui vamos construir um hamburguer, clique no pedido agora continue.
+
+64
+00:05:41,620 --> 00:05:43,770
+E no gosta e  pr-Chase.
+
+65
+00:05:43,770 --> 00:05:47,740
+Ento, vamos dar uma olhada no que h de errado sobre isso.
+
+66
+00:05:47,740 --> 00:05:55,510
+O Pre-Chase mantm uma referncia a uma funo aqui, mas  claro que no vale a pena se no a adicionarmos  nossa
+
+67
+00:05:55,510 --> 00:05:57,170
+chamada de funo de conexo.
+
+68
+00:05:57,190 --> 00:06:00,220
+Ento, o envio do mapa para o suporte deve estar l.
+
+69
+00:06:00,460 --> 00:06:01,650
+Agora vamos tentar de novo.
+
+70
+00:06:01,660 --> 00:06:03,820
+Vamos construir um bom hambrguer.
+
+71
+00:06:03,910 --> 00:06:04,970
+Continuar.
+
+72
+00:06:05,140 --> 00:06:06,790
+Sim, continue.
+
+73
+00:06:06,880 --> 00:06:08,560
+Vamos preencher rapidamente este formulrio.
+
+74
+00:06:08,650 --> 00:06:17,710
+Teste a rua com algum cdigo arbitrrio com um endereo de e-mail e vamos clicar em ordem e ns somos redirecionados quando
+
+75
+00:06:17,710 --> 00:06:18,250
+terminarmos.
+
+76
+00:06:18,330 --> 00:06:24,800
+E agora, se adicionarmos um novo hambrguer e clicar em ordem agora e continuar, ns voltaremos a ser redirecionados.
+
+77
+00:06:24,820 --> 00:06:25,850
+Voc sabe por
+
+78
+00:06:29,150 --> 00:06:35,890
+que est relacionado ao nosso lugar onde chamamos no componente pr-Chase ir montar no recipiente de sada
+
+79
+00:06:35,900 --> 00:06:37,130
+ muito tarde.
+
+80
+00:06:37,160 --> 00:06:44,510
+a renderizao com os adereos antigos que recebemos e os antigos adereos por chaced ainda so verdadeiros.
+
+81
+00:06:44,510 --> 00:06:47,480
+Quer correr antes de executar, no impede
+
+82
+00:06:47,810 --> 00:06:50,680
+Portanto, no podemos despachar este ano em quantidade de componentes.
+
+83
+00:06:50,840 --> 00:06:51,470
+Vou livrar-me.
+
+84
+00:06:51,470 --> 00:06:53,570
+Mapeie esta pgina dois adereos aqui inteiramente.
+
+85
+00:06:53,630 --> 00:06:55,380
+No preciso despachar aqui.
+
+86
+00:06:55,580 --> 00:06:59,860
+Em vez disso, voc quer entrar nele para pre-Chase no Bergere Boulder.
+
+87
+00:06:59,870 --> 00:07:02,370
+Quando clicamos no boto "Fazer pedido agora".
+
+88
+00:07:02,510 --> 00:07:07,970
+Ento, aqui, pre-Chase continuou no final logo antes de pressionar a pgina de checkout.
+
+89
+00:07:07,970 --> 00:07:10,840
+Esse  o lugar onde queremos inicializar um pr-Chase.
+
+90
+00:07:11,060 --> 00:07:13,960
+Ento, para fazer isso, eu simplesmente adicionarei um novo.
+
+91
+00:07:13,960 --> 00:07:18,740
+Na verdade, posso despachar por perseguio.
+
+92
+00:07:19,040 --> 00:07:24,330
+Este buraco ter uma funo annima e aes de despacho.
+
+93
+00:07:24,470 --> 00:07:29,120
+Ou aqui  chamado de Bridgeable ou aes, eu deveria renomear isso porque  realmente mais do que apenas
+
+94
+00:07:29,120 --> 00:07:30,090
+Bergere aes mais ousadas.
+
+95
+00:07:30,350 --> 00:07:34,440
+Ento, vamos ler todos eles duas aes na importao e l embaixo.
+
+96
+00:07:34,640 --> 00:07:39,910
+Ento, aes e ento o Che est assim.
+
+97
+00:07:40,040 --> 00:07:46,700
+Com isso, estamos despachando essa ao de inicializao aqui no burger bowler ou pelo menos agora estamos
+
+98
+00:07:46,700 --> 00:07:48,100
+prontos para envi-lo.
+
+99
+00:07:48,110 --> 00:07:53,030
+Eu tenho que ligar nele pr-Chase e depois quero cham-lo antes de navegar.
+
+100
+00:07:53,090 --> 00:07:58,980
+Ento, este suporte est em que o pr-Chase foi executado aqui com essa mudana no lugar.
+
+101
+00:07:58,980 --> 00:08:02,250
+Vamos ver se isso agora funciona, o aplicativo foi recarregado.
+
+102
+00:08:02,420 --> 00:08:06,840
+Eu posso construir um hambrguer ou continuar continuar aqui tambm.
+
+103
+00:08:07,040 --> 00:08:09,060
+E  lindo para ele.
+
+104
+00:08:09,150 --> 00:08:13,450
+Mas experimente a rua assim, deixe nossa ordem.
+
+105
+00:08:13,520 --> 00:08:14,570
+Ns somos redirecionados.
+
+106
+00:08:14,750 --> 00:08:16,970
+Vamos agora voltar e clicar em ordem novamente.
+
+107
+00:08:17,090 --> 00:08:20,480
+E agora podemos ir l sem ser redirecionado mais uma vez.
+
+108
+00:08:20,480 --> 00:08:21,850
+Chegamos a um andar.
+
+109
+00:08:21,890 --> 00:08:24,820
+No tenho certeza se voc percebeu isso no burger bowler.
+
+110
+00:08:24,860 --> 00:08:28,090
+Nosso preo nunca  reiniciado aps o redirecionamento.
+
+111
+00:08:28,130 --> 00:08:32,640
+Ento, isso  algo que eu farei ou que possa me importar na prxima palestra.
+

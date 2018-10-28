@@ -1,0 +1,152 @@
+1
+00:00:02,050 --> 00:00:09,660
+W ostatnim wykadzie dodalimy kod, aby przekaza parametry trasy i wspomniaem, e robisz to po prostu
+
+2
+00:00:09,660 --> 00:00:16,860
+zawijajc element w odnonik, tak jak to robimy. Tam uywamy do tego, zamieniamy to
+
+3
+00:00:17,160 --> 00:00:23,680
+w absolutn ciek i mijamy poczt. id, ktry jestemy w stanie odebra, poniewa utworzylimy tutaj elastyczn ciek.
+
+4
+00:00:23,790 --> 00:00:27,560
+Jednak teraz musimy rwnie pobra ten parametr.
+
+5
+00:00:27,600 --> 00:00:30,030
+Tak wic w penym komponencie
+
+6
+00:00:30,120 --> 00:00:33,220
+po tym, teraz to. Identyfikator rekwizytw ju nie dziaa.
+
+7
+00:00:33,810 --> 00:00:34,800
+Jednak wczeniej
+
+8
+00:00:34,800 --> 00:00:36,080
+drukuj rekwizyty
+
+9
+00:00:36,090 --> 00:00:38,710
+na konsol. Jeli sprawdzimy to,
+
+10
+00:00:38,830 --> 00:00:40,430
+to s cztery rne
+
+11
+00:00:40,440 --> 00:00:43,310
+komponenty, ale obiekt zawsze ma tak sam struktur.
+
+12
+00:00:43,380 --> 00:00:45,140
+Widzisz, e w
+
+13
+00:00:45,270 --> 00:00:47,870
+rzeczywistoci jest to obiekt
+
+14
+00:00:48,270 --> 00:00:59,580
+params i jeli wypiszemy konsol logujemy rekwizyty w naszym penym komponencie pocztowym, i wane jest rwnie przeksztacenie componentDidUpdate
+
+15
+00:00:59,580 --> 00:01:05,420
+w componentDidMount, poniewa teraz nie aktualizujemy tego, jest ono
+
+16
+00:01:05,580 --> 00:01:08,850
+dodawane lub usuwane do i
+
+17
+00:01:08,850 --> 00:01:18,260
+od dom, wic musi to by componentDidMount. jeli to zrobimy, widzimy obiekt w naszym komponencie po wpisie
+
+18
+00:01:18,620 --> 00:01:23,250
+i s one podobiestwa, widzimy, e w paramach mamy idealny
+
+19
+00:01:23,540 --> 00:01:30,950
+param i nazywamy go ID, poniewa jest to nazwa, ktr ustawilimy jako nazw tego elastycznego elementu
+
+20
+00:01:30,950 --> 00:01:34,590
+w tej definicji trasy w komponencie blogu.
+
+21
+00:01:35,120 --> 00:01:37,880
+Teraz oczywicie pozwala nam to wyodrbni, wic tutaj nie tylko moemy si zalogowa,
+
+22
+00:01:37,940 --> 00:01:45,530
+ale moemy rwnie uzyska do niego dostp. rekwizyty. mecz. params. id i wiemy,
+
+23
+00:01:45,530 --> 00:01:52,750
+e bdzie tam, poniewa ten komponent jest adowany tylko przez t tras, ktra definiuje ten parametr id.
+
+24
+00:01:53,060 --> 00:02:01,060
+Jeli teraz to zrobimy, widzimy, e mamy tu bd, wic co jest lepiej, bd, ktry otrzymujemy, polega na
+
+25
+00:02:01,060 --> 00:02:06,080
+tym, e nadal mamy dostp do niewaciwego identyfikatora, nieprawidowego identyfikatora, ktry wysyamy.
+
+26
+00:02:06,220 --> 00:02:12,610
+C, powodem tego jest po prostu dodanie w penym pocie, robimy to do dania HTTP, ale nadal mamy dostp
+
+27
+00:02:12,610 --> 00:02:14,840
+do tego. rekwizyty. id Teraz
+
+28
+00:02:14,840 --> 00:02:21,970
+to oczywicie musi by to. rekwizyty. mecz. params. id, oraz z danymi,
+
+29
+00:02:21,970 --> 00:02:28,480
+jeli wszystko zapiszemy i odwieymy aplikacj, teraz z powodzeniem aduje si po trzecim numerze lub jeli wymienimy to na cztery,
+
+30
+00:02:28,480 --> 00:02:29,070
+post numer
+
+31
+00:02:29,110 --> 00:02:32,130
+cztery i oczywicie take, jeli klikniemy na nich tutaj.
+
+32
+00:02:32,530 --> 00:02:39,850
+Tak wic teraz mamy aplikacj, w ktrej mamy element dynamiczny, poniewa pomylnie przekazujemy
+
+33
+00:02:39,850 --> 00:02:42,770
+parametry trasy i wyodrbniamy je.
+
+34
+00:02:42,790 --> 00:02:46,840
+Teraz jest jeszcze kilka rzeczy, ktre nie dziaaj dokadnie tak, jak chcemy, eby dziaay.
+
+35
+00:02:46,870 --> 00:02:53,440
+Na przykad po klikniciu nowego postu adujemy nowy formularz postw, ale jeli zaadujemy ten
+
+36
+00:02:53,440 --> 00:02:54,580
+pojedynczy wpis.
+
+37
+00:02:54,580 --> 00:02:57,560
+Teraz wiesz, dlaczego tak si dzieje?
+
+38
+00:02:57,730 --> 00:03:01,360
+Przyjrzyjmy si bliej temu problemowi i jak go naprawi w nastpnym wykadzie.
+

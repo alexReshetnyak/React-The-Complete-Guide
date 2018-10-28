@@ -1,0 +1,240 @@
+1
+00:00:02,150 --> 00:00:05,740
+X iin varsaylan bir konfigrasyon belirleyebilmek olduka harika.
+
+2
+00:00:05,840 --> 00:00:11,570
+Ancak aslnda, uygulamanzn tamam iin ayn taban kullanmak istemiyorsanz ancak bunun sadece drt parasn
+
+3
+00:00:11,570 --> 00:00:17,060
+ve dier blmleri iin farkl bir Eurail'e sahipseniz ve tabii ki stbilgiler iin
+
+4
+00:00:17,060 --> 00:00:17,960
+de aynysanz.
+
+5
+00:00:18,350 --> 00:00:24,770
+Byle bir durumda, rnek olarak adlandrlan X-ists tarafndan salanan serin bir zellik yaratarak
+
+6
+00:00:24,860 --> 00:00:26,510
+yarm l yapabilirsiniz.
+
+7
+00:00:26,510 --> 00:00:27,880
+Yeni bir dosya oluturmama izin ver.
+
+8
+00:00:27,900 --> 00:00:30,430
+Kaynak klasrlerde olduu gibi Arjay' EXISTE.
+
+9
+00:00:30,430 --> 00:00:38,780
+Dolaysyla, Cheras endeksi ile ayn seviyede gerek pakete ve eski U 'dan x
+
+10
+00:00:38,840 --> 00:00:45,650
+yl ithal edeceim. S. zel olmas iin zel bir ilev veya yntem altrabilir
+
+11
+00:00:45,650 --> 00:00:47,870
+veya sonucu rnek olarak adlandrdmz bir sabitte depolarz.
+
+12
+00:00:47,870 --> 00:00:49,850
+Ve yine X-ists yaratmay kullanyorum.
+
+13
+00:00:49,850 --> 00:00:56,330
+imdi bu, X ylnn bir rneini, syleyebileceiniz Xs nesnesinin bir kopyas gibi oluturur ve bu
+
+14
+00:00:56,330 --> 00:00:58,340
+tr birden ok kopya yaratabilirsiniz.
+
+15
+00:00:58,340 --> 00:01:05,150
+imdi Java'nn tm yollar bu konfigrasyona itaat edebilir ve sizin temel olduunuzu belirleyebilir ve bu
+
+16
+00:01:05,150 --> 00:01:06,120
+taban alrm.
+
+17
+00:01:06,130 --> 00:01:09,910
+Hepiniz kk yaplandrmasnda ayarladnz.
+
+18
+00:01:10,100 --> 00:01:14,290
+imdi X Chase dtnde, bunu sadece kendi ayarna yapacam.
+
+19
+00:01:14,570 --> 00:01:17,780
+Ve imdi bir sonraki koltua u szleri ekledi:
+
+20
+00:01:18,640 --> 00:01:23,660
+imdiyse, her eyin bir paras var ama iimiz bitmedi.
+
+21
+00:01:23,890 --> 00:01:29,800
+imdi kendi Xs rneimize ulayoruz ve elbette uygulamanzn farkl blmleri iin farkl
+
+22
+00:01:30,100 --> 00:01:32,580
+dosyalarda birden fazla rnek oluturabilirsiniz.
+
+23
+00:01:32,590 --> 00:01:36,190
+Bu rnekleri saniyeler iinde nasl kullanacanz gstereceim.
+
+24
+00:01:36,190 --> 00:01:43,140
+varsaylarak poponuzu ayarlam olarak varsayacaz ve rnekte ayarlanan her eyi geersiz klacaktr.
+
+25
+00:01:43,140 --> 00:01:46,000
+Varsaylan olarak, rneiniz, varsaylan olarak
+
+26
+00:01:46,000 --> 00:01:52,800
+Mesela ben burada izin verilmesini brakabilirim.
+
+27
+00:01:53,000 --> 00:01:55,620
+Ama ayn zamanda kendi durumum iin kurmak istiyorum.
+
+28
+00:01:55,790 --> 00:01:59,490
+Dolaysyla, rnei oluturduktan sonra, temelinizi atayabildik.
+
+29
+00:01:59,630 --> 00:02:07,160
+imdi harfler iin X varsaylann rnek varsaylanlar olan Hatteras ve benzeri ile deitirdim.
+
+30
+00:02:07,220 --> 00:02:14,810
+Ve imdi burada bu rnei kullanarak gnderilen tm istekleri geersiz klmak iin rneinden bu iki
+
+31
+00:02:14,810 --> 00:02:16,550
+kapal simgeyi ayarlayabilirim.
+
+32
+00:02:16,680 --> 00:02:23,810
+sonbahar varsaylan olarak da aktarmak zorundayz ve bir Abra Foz kullanabilir ve imdi size nasl kullanlacan gsterebilirim.
+
+33
+00:02:23,810 --> 00:02:24,980
+imdi bu rnei
+
+34
+00:02:25,220 --> 00:02:30,390
+Tm blok gnderilerini almak iin X yl kullandmz blok konteynr.
+
+35
+00:02:30,620 --> 00:02:37,390
+Artk aksiom paketinden exis ie aktarmayacamz syleyelim, ancak burada bu X
+
+36
+00:02:37,400 --> 00:02:45,890
+yl deikenini x 'rneimize varsaylan olarak vermek zere dosyaya iaret ederek sabit tuttuumuzu varsayalm.
+
+37
+00:02:46,010 --> 00:02:49,780
+Tabii ki x 'rnei veya ne istediinizi seebilirsiniz.
+
+38
+00:02:50,000 --> 00:02:54,390
+X'leri burada brakacam, bylece orada kodumu ayarlamam gerekmiyor.
+
+39
+00:02:54,650 --> 00:03:00,630
+Tm dosyalar kaydettiinizden emin olun ve ardndan uygulamanza geri dnerseniz, yine de dzgn almaldr.
+
+40
+00:03:00,680 --> 00:03:08,720
+da alyor nk imdi dizin dosyanzdan L'nizi dbase'u kaldrdmz iin Ellas yanltr.
+
+41
+00:03:08,720 --> 00:03:15,110
+Artk bir ey farkedeceksiniz, fakat artk gnderilen istek iin
+
+42
+00:03:15,110 --> 00:03:23,990
+gnl yazdran ve bu da blokta daha fazla kullanmadmz genel eriim nesnesi iin
+
+43
+00:03:24,470 --> 00:03:31,200
+ayarlanan nlemi getiren yant alglad. konteyner imdi postalamaya alrsanz bir
+
+44
+00:03:31,500 --> 00:03:31,880
+hata
+
+45
+00:03:31,880 --> 00:03:38,490
+Ben yorumlad ve sadece bir blok konteyner kullanyorum benim rneime koymak ramen her
+
+46
+00:03:38,510 --> 00:03:43,670
+yerde benim uygulamada yine de gerek paketi kendisi import ediyorum.
+
+47
+00:03:44,060 --> 00:03:51,450
+ayn zamanda kendi rneimizi uygulamanz uygulamak istediimiz yerlerde kullanmak iin baz ayarlarn zerine
+
+48
+00:03:51,470 --> 00:03:57,650
+atmak iin kullanabilirsiniz. Varsaylan nesne yerine bu rnei kullandmz yerler.
+
+49
+00:03:57,920 --> 00:04:04,920
+Elbette varsaylan paketini tekrar yorumlayabiliriz, bylece asl paketi ntanml olarak kullanabiliriz ancak
+
+50
+00:04:04,970 --> 00:04:07,060
+Ve imdi her iki dnyann en iyisini alyoruz.
+
+51
+00:04:07,130 --> 00:04:13,280
+Tm gnderileri almak iin kendi rneimizi yaplandrdk ancak bir yayn gndermek iin varsaylan paketi
+
+52
+00:04:13,280 --> 00:04:14,200
+tekrar kullanyoruz.
+
+53
+00:04:14,240 --> 00:04:17,550
+Dolaysyla bu yzden burada da mdahalecilerimizi gryoruz.
+
+54
+00:04:17,840 --> 00:04:24,140
+Ve elbette, IN rneimize yalnzca interceptors da ekleyebiliriz, varsaylan rnekler
+
+55
+00:04:24,140 --> 00:04:31,130
+iin varsaylan eksenler nesnesine yaptnz gibi, yalnzca rnek alcs isteklerini kullanabilirsiniz.
+
+56
+00:04:31,250 --> 00:04:37,880
+gstermek istedim, nk rnekleri kullanabilme, uygulamanzda ihtiya duyduunuz esneklii verebilir.
+
+57
+00:04:37,880 --> 00:04:39,260
+Ben size
+
+58
+00:04:39,260 --> 00:04:46,670
+Uygulamanzn hangi blmnde kullanmak istediiniz varsaylan ayarlar ve mthi zellii ve bu modl tamamlayan bir
+
+59
+00:04:47,060 --> 00:04:53,360
+eyi, HTP isteklerini nasl gnderdiinizle ilgili iyi bir fikir sahibi olmasn ve X'in
+
+60
+00:04:53,360 --> 00:05:01,370
+paketini nasl kullanmasn ayrntl olarak kontrol etmenize olanak tanr size ho bir sr kolaylk vaat ediyor.
+

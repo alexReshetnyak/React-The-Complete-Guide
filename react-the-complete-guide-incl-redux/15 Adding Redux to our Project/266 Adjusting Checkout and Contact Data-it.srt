@@ -1,0 +1,444 @@
+1
+00:00:02,250 --> 00:00:07,230
+Knouted stiamo gestendo tutto ci che riguarda gli ingredienti per il redux.
+
+2
+00:00:07,230 --> 00:00:13,850
+Ovviamente dovremmo anche regolare i componenti medi in cui usiamo quel ingrediente Dator, vale a dire il check
+
+3
+00:00:13,860 --> 00:00:21,030
+out e i dati di contatto in particolare, e i dati di contatto sono super grandi ora e utilizziamo
+
+4
+00:00:21,450 --> 00:00:28,260
+i reindirizzamenti perch finora utilizziamo i programmi di query per passare i nostri ingredienti al componente di checkout .
+
+5
+00:00:28,270 --> 00:00:31,230
+Questo  qualcosa di cui possiamo finalmente sbarazzarci.
+
+6
+00:00:31,410 --> 00:00:38,730
+Quindi nella componente burger Bolar, dove passiamo i nostri ingredienti attraverso i genitori di Cuore,
+
+7
+00:00:38,730 --> 00:00:42,600
+qui acquistiamo, non abbiamo pi bisogno di farlo.
+
+8
+00:00:42,750 --> 00:00:45,540
+Possiamo semplicemente rimuovere questo metodo.
+
+9
+00:00:45,680 --> 00:00:49,360
+Invece abbiamo bisogno di gestire questo per.
+
+10
+00:00:49,380 --> 00:00:58,650
+Ora probabilmente vorremmo continuare a navigare ma non voglio pi sorpassare i genitori di Clarie, cos posso sbarazzarmi di tutto il
+
+11
+00:00:58,650 --> 00:01:06,240
+codice genitore di Kohary qui e posso anche rendere questo metodo push un po 'pi breve ora e
+
+12
+00:01:06,240 --> 00:01:13,610
+andare a fare checkout qui e possiamo semplicemente ottenere gli ingredienti da l per leggere X store.
+
+13
+00:01:13,770 --> 00:01:20,610
+Quindi i nostri acquisti continuano il gestore Lifson e l'hamburger Bolar, ma  molto pi snello e in
+
+14
+00:01:20,610 --> 00:01:22,110
+effetti controlla il contenitore.
+
+15
+00:01:22,110 --> 00:01:29,360
+Non abbiamo pi bisogno di ottenere i nostri ingredienti e il componente si monter in questo modo.
+
+16
+00:01:29,450 --> 00:01:33,800
+Invece possiamo sbarazzarci del componente che monteremo qui del tutto.
+
+17
+00:01:33,910 --> 00:01:37,770
+Non possiamo sbarazzarci del nostro stato che si occupa solo degli ingredienti e del prezzo.
+
+18
+00:01:37,780 --> 00:01:47,180
+Abbiamo capito e rilassato e ora possiamo importare nuovamente conect da re-act di nuovo, perch
+
+19
+00:01:47,180 --> 00:01:51,800
+ovviamente vogliamo collegare questo container anche a Rydex.
+
+20
+00:01:52,310 --> 00:01:58,490
+Quindi, se scendiamo in fondo al check out container tutti di nuovo creano una mappa costante
+
+21
+00:01:58,590 --> 00:02:06,260
+lo stato di oggetti di scena e l ho ancora una funzione che ottiene lo stato e NTN restituisce
+
+22
+00:02:06,290 --> 00:02:14,360
+un oggetto javascript dove mappiamo Bene il nostro stato memorizzato e reduce store per i puntelli di questo contenitore e
+
+23
+00:02:14,360 --> 00:02:16,910
+l potremmo avere IAG  anche propriet.
+
+24
+00:02:16,970 --> 00:02:22,410
+Puoi chiamarlo come vuoi e questo dovrebbe contenere gli ingredienti di stato.
+
+25
+00:02:22,430 --> 00:02:24,800
+Questo non pu essere nominato come vuoi.
+
+26
+00:02:24,800 --> 00:02:28,490
+Questa deve essere la propriet come lo chiami nel tuo stato.
+
+27
+00:02:28,490 --> 00:02:35,370
+Quindi come ingredienti per ridurre le ore e ovviamente abbiamo tutti bisogno del prezzo qui.
+
+28
+00:02:35,370 --> 00:02:40,380
+Quindi prendiamo il prezzo che  il prezzo totale dello stato.
+
+29
+00:02:40,380 --> 00:02:44,330
+Questo  il nome della propriet che usiamo il riduttore.
+
+30
+00:02:44,340 --> 00:02:50,310
+Ora non abbiamo bisogno di inviare mappe ai sostegni qui perch in realt non stiamo inviando nulla in questo
+
+31
+00:02:50,310 --> 00:02:55,790
+contenitore, ma navigiamo un po 'ma non lo facciamo attraverso il negozio Rydex, lo facciamo da un
+
+32
+00:02:55,800 --> 00:02:56,930
+router di reazione.
+
+33
+00:02:57,120 --> 00:03:00,330
+Quindi non c' nulla che viene inviato qui.
+
+34
+00:03:00,330 --> 00:03:05,760
+Quindi per ora abbiamo solo bisogno di uno stato della mappa per il prop non ho Raptor con CONNECT.
+
+35
+00:03:05,970 --> 00:03:15,480
+E qui passo lo stato della mappa a prop's come primo argomento e semplicemente ometto il secondo dato che non abbiamo una distribuzione
+
+36
+00:03:15,750 --> 00:03:20,670
+di mappe per il campo di dati del prop che vogliamo trasmettere.
+
+37
+00:03:20,930 --> 00:03:29,030
+A proposito, se solo avevi la mappa inviata ai sostegni e non lo stato della mappa a quello dei props, dovresti semplicemente impostare lo
+
+38
+00:03:29,030 --> 00:03:36,030
+stato della mappa Propst ora e passare la mappa inviata a prop perch mappare questo problema delle patch deve sempre essere
+
+39
+00:03:36,030 --> 00:03:39,750
+il secondo stato della mappa degli argomenti da propare il primo.
+
+40
+00:03:39,780 --> 00:03:45,570
+non  necessario, basta semplicemente impostarlo su null qui, tuttavia il primo  l'unico a cui siamo interessati.
+
+41
+00:03:45,570 --> 00:03:46,770
+Quindi se il primo
+
+42
+00:03:46,770 --> 00:03:54,540
+Abbiamo solo bisogno dello stato della mappa per sostenere che abbiamo ottenuto Ingredion, un premio disponibile tramite oggetti di scena
+
+43
+00:03:54,560 --> 00:03:55,780
+in questo componente.
+
+44
+00:03:56,030 --> 00:03:57,050
+Usiamolo.
+
+45
+00:03:57,050 --> 00:04:04,880
+Quindi, ogni volta che accediamo a questi ingredienti di stato, questo  ora questo materiale di scena e formaggio.
+
+46
+00:04:04,880 --> 00:04:07,880
+E quando usiamo il prezzo Bene, questo  adesso.
+
+47
+00:04:07,940 --> 00:04:11,230
+Tuttavia, il prezzo degli oggetti di scena
+
+48
+00:04:11,360 --> 00:04:17,490
+Ne abbiamo davvero bisogno solo qui, dove usiamo il nostro piccolo trucco per caricare i dati dei contatti.
+
+49
+00:04:17,840 --> 00:04:25,220
+Ora, grazie al nostro negozio di redux, non abbiamo pi bisogno di usare i trucchi, quindi in realt non abbiamo nemmeno bisogno del
+
+50
+00:04:25,220 --> 00:04:28,940
+prezzo perch non lo usiamo da nessun'altra parte in questo componente.
+
+51
+00:04:28,940 --> 00:04:35,930
+Quindi liberiamoci di questo oggetto premio qui nello stato della mappa per puntellare e liberiamoci del metodo
+
+52
+00:04:35,930 --> 00:04:36,570
+Raeder qui.
+
+53
+00:04:37,290 --> 00:04:45,920
+I passaggi di Editha semplicemente impostano un componente che vogliamo caricare e che dovrebbero essere i nostri componenti dei dati di contatto ancora.
+
+54
+00:04:46,080 --> 00:04:55,020
+Ma ora non  incluso come componente GSX ma semplicemente puntandolo sulla propriet del componente del percorso.
+
+55
+00:04:55,020 --> 00:05:01,860
+Detto questo, abbiamo anche bisogno di modificare i dati di contatto, ovviamente perch l, come sapete, usiamo anche
+
+56
+00:05:01,860 --> 00:05:07,010
+gli ingredienti che otteniamo sugli oggetti di scena e il prezzo prima dei reindirizzamenti.
+
+57
+00:05:07,020 --> 00:05:09,960
+L'abbiamo preso con questo piccolo trucco che abbiamo appena rimosso.
+
+58
+00:05:09,990 --> 00:05:15,560
+Ora possiamo semplicemente collegare questo contenitore qui per rilassarsi.
+
+59
+00:05:15,600 --> 00:05:27,330
+Quindi per quello il contenitore dei dati di contatto che  anche l'importazione si connette da re-act redux fino in fondo creiamo lo stato della mappa
+
+60
+00:05:27,330 --> 00:05:36,130
+per prop anno per assegnare la funzione che riceve lo stato e restituire il nostro oggetto dove mappiamo lo stato
+
+61
+00:05:36,190 --> 00:05:42,880
+rilevante noi Ho bisogno in questo componente di oggetti di scena e il coraggio voglio
+
+62
+00:05:42,880 --> 00:05:49,280
+ottenere il mio pubblico su ingredienti di stato e il mio premio sullo stato.
+
+63
+00:05:49,360 --> 00:05:53,380
+Il prezzo totale era da nominare e poi come prima.
+
+64
+00:05:53,410 --> 00:05:56,090
+Copiamo questo con passato CONNECT.
+
+65
+00:05:56,110 --> 00:06:02,940
+Mappare lo stato su oggetti di scena e omettere l'argomento di dissezione perch non stiamo nemmeno inviando nulla qui.
+
+66
+00:06:03,130 --> 00:06:08,850
+E quindi passare i dati di connessione al ritorno della funzione tramite la funzione di connessione.
+
+67
+00:06:10,140 --> 00:06:16,320
+Ora, naturalmente, dobbiamo aggiornare questo componente ovunque utilizziamo gli ingredienti di questo oggetto.
+
+68
+00:06:16,320 --> 00:06:23,220
+Ora possiamo usare le elegie di questo prop per rendere il pi veloce possibile l'aggiornamento semplicemente usando gli ingredienti qui come
+
+69
+00:06:23,220 --> 00:06:26,370
+nome proprio perch  il nome che gi usiamo.
+
+70
+00:06:26,550 --> 00:06:32,200
+Ma per evitare confusione con questi ingredienti otteniamo dallo stato che ho scelto di usare un nome diverso.
+
+71
+00:06:32,310 --> 00:06:33,880
+Quindi ora qualsiasi dato di contatto.
+
+72
+00:06:33,900 --> 00:06:39,260
+Aggiorniamo tutto ci che utilizza i probes di DS per i quali abbiamo ottenuto l'ordine.
+
+73
+00:06:39,390 --> 00:06:45,750
+Non ha sicuramente bisogno di aggiornamenti e occupa la maggior parte del posto in questo file.
+
+74
+00:06:45,930 --> 00:06:47,650
+Il gestore degli ordini qui.
+
+75
+00:06:47,700 --> 00:06:48,610
+Diamo un'occhiata.
+
+76
+00:06:48,630 --> 00:06:54,730
+Prendiamo molte informazioni dal nostro 4 e l'anno in cui passiamo sugli ingredienti del prop.
+
+77
+00:06:54,750 --> 00:06:56,120
+Questo dovrebbe essere puntelli I.
+
+78
+00:06:56,130 --> 00:07:05,360
+Il prezzo dell'elica di Geez  ancora corretto perch lo mappiamo ancora a una propriet di prezzo nello stato della mappa, quindi non
+
+79
+00:07:05,820 --> 00:07:07,350
+abbiamo bisogno di sostituirlo.
+
+80
+00:07:07,350 --> 00:07:12,420
+Si riferir gi a un negozio redux, proprio come facciamo noi per gli ingredienti.
+
+81
+00:07:12,690 --> 00:07:16,320
+Quindi continuiamo tutto il resto qui mi sembra buono.
+
+82
+00:07:17,540 --> 00:07:20,930
+E tutta la nostra validazione di input mi sembra buona.
+
+83
+00:07:20,930 --> 00:07:28,600
+Anche il gestore modificato di input dovrebbe essere correlato ai nostri ingredienti o al prezzo.
+
+84
+00:07:28,640 --> 00:07:31,220
+Aggiungi qui il metodo Raeder.
+
+85
+00:07:31,340 --> 00:07:40,060
+Inoltre, ci occupiamo semplicemente del nostro forum in cui non ci interessano veramente gli ingredienti o il prezzo, quindi tutto
+
+86
+00:07:40,070 --> 00:07:42,770
+ci  solo relativo agli stranieri.
+
+87
+00:07:42,770 --> 00:07:46,330
+Questo  il motivo per cui questo contenitore  grande come .
+
+88
+00:07:46,760 --> 00:07:50,390
+Quindi le informazioni di cui abbiamo bisogno dovrebbero essere l.
+
+89
+00:07:50,630 --> 00:07:54,680
+Proviamo ora tutto e vediamo se funziona come dovrebbe funzionare.
+
+90
+00:07:54,680 --> 00:07:56,660
+Assicurati di salvare tutti i file.
+
+91
+00:07:56,660 --> 00:07:58,390
+Torna alla tua applicazione.
+
+92
+00:07:59,230 --> 00:08:01,570
+Costruisci un esempio di Bergere qui.
+
+93
+00:08:01,810 --> 00:08:02,110
+Clic.
+
+94
+00:08:02,110 --> 00:08:03,360
+Ordina adesso.
+
+95
+00:08:03,700 --> 00:08:04,940
+Il riassunto sembra buono.
+
+96
+00:08:05,020 --> 00:08:06,640
+Facciamo clic continua.
+
+97
+00:08:06,680 --> 00:08:08,170
+Ti sembra buono.
+
+98
+00:08:08,370 --> 00:08:10,010
+Le gambe clicca continua.
+
+99
+00:08:10,240 --> 00:08:14,230
+I LED immettono dati fittizi qui.
+
+100
+00:08:17,130 --> 00:08:19,220
+Quindi tutto funziona bene.
+
+101
+00:08:19,510 --> 00:08:24,480
+Clicca ordine e siamo stati reindirizzati qui.
+
+102
+00:08:24,610 --> 00:08:29,340
+Ora controlla anche Firebase nel tuo database.
+
+103
+00:08:29,410 --> 00:08:31,010
+Per gli ordini
+
+104
+00:08:31,180 --> 00:08:35,420
+Dovresti vedere l'ordine che hai appena inserito.
+
+105
+00:08:35,420 --> 00:08:41,590
+Il desisting ordina ancora in modo che tutti i lavori che stiamo passando attorno al nostro redeco
+
+106
+00:08:41,590 --> 00:08:45,570
+state con successo ora senza trucchi fantasiosi sfruttino davvero il redux.
+
+107
+00:08:45,580 --> 00:08:50,170
+E anche questo, si spera, mostra dove risplende Redux.
+
+108
+00:08:50,170 --> 00:08:55,500
+Questa non  un'applicazione enorme ma  un po 'pi avanzata di una semplice lista.
+
+109
+00:08:55,570 --> 00:08:59,360
+E qui lo rendiamo davvero molto pi facile a noi stessi.
+
+110
+00:08:59,620 --> 00:09:06,380
+Se utilizziamo i reindirizzamenti, abbiamo un flusso di dati prevedibile e eseguiamo il passaggio dei dati nella nostra applicazione.
+
+111
+00:09:06,400 --> 00:09:08,550
+Super super semplice.
+

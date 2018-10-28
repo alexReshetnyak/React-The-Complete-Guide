@@ -1,0 +1,116 @@
+1
+00:00:02,140 --> 00:00:06,600
+Ento eu quero deixar o domnio dos parmetros da rota e assim por diante em breve.
+
+2
+00:00:06,610 --> 00:00:13,360
+Mais uma coisa que eu quero fazer, porm, temos que adicionar homilias que no esto marcadas como ativas quando
+
+3
+00:00:13,420 --> 00:00:17,150
+esto em uma nica publicao e que faz sentido pelo rtulo.
+
+4
+00:00:17,440 --> 00:00:22,910
+Mas e se isso fosse chamado de posts, o que faria sentido, porque temos muitas postagens l.
+
+5
+00:00:22,930 --> 00:00:26,720
+Ento, possamos mudar o nome desse link para ser postagens.
+
+6
+00:00:27,190 --> 00:00:34,410
+Se fizermos isso, agora ser estranho que no seja destacado quando estamos em uma nica publicao.
+
+7
+00:00:34,450 --> 00:00:43,420
+Ns certamente queremos no  uma razo para isso,  claro,  exato desde que o exeto  definido,
+
+8
+00:00:43,420 --> 00:00:48,570
+isso s  tratado como ativo se bem tivermos exatamente isso.
+
+9
+00:00:48,580 --> 00:00:55,040
+Voc est em L e apenas corta e no abre grtis, o que, claro,  para a postagem com ID.
+
+10
+00:00:55,060 --> 00:01:01,150
+O problema  que, se removemos exatamente o que vimos, antes disso, ser marcado como ativo
+
+11
+00:01:01,150 --> 00:01:04,810
+para uma nica publicao, mas tambm para uma nova postagem.
+
+12
+00:01:04,900 --> 00:01:11,340
+Ento, isso  um pouco complicado e  realmente complicado para este caso exato de que estamos falando sobre
+
+13
+00:01:11,340 --> 00:01:13,010
+voc raiz, voc  l.
+
+14
+00:01:13,120 --> 00:01:19,600
+Se tivssemos mensagens cortadas, ento ser uma histria diferente e poderamos usar este prefixo porque
+
+15
+00:01:19,600 --> 00:01:23,760
+provavelmente no temos conflitos com nossas rotas na aplicao.
+
+16
+00:01:23,770 --> 00:01:30,850
+grosseiro, ou ento esse rude POV de apenas uma barra que faz parte de qualquer pgina em nosso aplicativo.
+
+17
+00:01:30,880 --> 00:01:32,060
+ realmente to
+
+18
+00:01:32,200 --> 00:01:37,610
+Ento, este  apenas um caso de vantagem aqui um caso especial e vou adicionar exato novamente.
+
+19
+00:01:37,650 --> 00:01:40,720
+Portanto, no obtendo destaque para uma nica publicao.
+
+20
+00:01:40,720 --> 00:01:46,120
+E, novamente,  bom para mim, porque este  um caso adicional que voc raramente enfrentar.
+
+21
+00:01:46,120 --> 00:01:53,950
+Na maioria das vezes, suas postagens sero em posts de barra e eu no estou mudando aqui para
+
+22
+00:01:54,070 --> 00:01:57,200
+deixar deliberadamente este caso aqui para referncia.
+
+23
+00:01:57,220 --> 00:01:59,450
+Eu s queria trazer isso para sua conscincia.
+
+24
+00:01:59,470 --> 00:02:03,130
+Voc pode enfrentar problemas ao usar o POV de raiz.
+
+25
+00:02:03,190 --> 00:02:08,190
+Basta cortar e voc deseja modelar alguns componentes de chawl, mas no todos eles.
+
+26
+00:02:08,290 --> 00:02:11,550
+Ento, algumas partes que a seguem, mas no todas as POS.
+
+27
+00:02:11,560 --> 00:02:13,210
+Isso  realmente complicado de fazer.
+
+28
+00:02:13,210 --> 00:02:14,580
+No  realmente possvel.
+
+29
+00:02:14,680 --> 00:02:20,510
+Voc normalmente usa rotas mais especficas como as mensagens Slash, ento isso no deve ser um problema.
+

@@ -1,0 +1,300 @@
+1
+00:00:02,200 --> 00:00:06,300
+Wic zawsze zaczynamy tutaj przejmowa proces pobierania.
+
+2
+00:00:06,520 --> 00:00:14,300
+Jak wida, jeli sprawdzasz konsol, nie mamy adnych bdw, ale nigdy nie dostajemy skadnikw, ktre maj sens, poniewa
+
+3
+00:00:14,570 --> 00:00:20,170
+ustawienie regionw, ktre s wysyane, gdy tylko dostalimy skadniki, nigdy nie jest obsugiwane
+
+4
+00:00:20,170 --> 00:00:21,120
+przez naszego producenta.
+
+5
+00:00:21,200 --> 00:00:22,640
+Czas to zmieni.
+
+6
+00:00:22,670 --> 00:00:24,970
+To samo dotyczy nieudanych skadnikw fecche.
+
+7
+00:00:25,250 --> 00:00:31,680
+Wic w burgeru Boulder w folderze reduktorw wiem, kiedy poradzi sobie z tymi dwoma nowymi przypadkami.
+
+8
+00:00:31,700 --> 00:00:40,010
+Przede wszystkim lub dodaj przypadek dla typw akcji, zestaw skadnikw jest wykonywany, gdy tylko dostaniemy
+
+9
+00:00:40,010 --> 00:00:41,940
+skadniki z serwera.
+
+10
+00:00:41,960 --> 00:00:45,950
+Chc przywrci nowy stan i najpierw skopiuj stary stan.
+
+11
+00:00:45,950 --> 00:00:51,570
+Z tego powodu, a nastpnie musz ustawi moje skadniki tutaj.
+
+12
+00:00:51,620 --> 00:01:00,350
+Skadniki powinny by ustawione na skadniki dziaania i wiem, e otrzymaem te skadniki, poniewa w misce z
+
+13
+00:01:00,350 --> 00:01:06,860
+burgerami lub akcji spadaj, gdzie mamy ustawione skadniki, przekazuj t waciwo skadnikw.
+
+14
+00:01:06,860 --> 00:01:13,300
+Wic teraz inicjuj, gdzie ustawiam moje odczynniki i teoretycznie moemy wykona t akcj lub wysa
+
+15
+00:01:13,300 --> 00:01:14,770
+tak, jak chcemy.
+
+16
+00:01:14,870 --> 00:01:22,100
+Tak wic moglibymy rwnie uruchomi ten setter z dowolnym zestawem skadnikw z dowolnym obiektem javascript reprezentujcym nasze skadniki
+
+17
+00:01:22,130 --> 00:01:26,420
+w dowolnym momencie, na przykad w celu zresetowania do obecnych ludzi.
+
+18
+00:01:26,430 --> 00:01:28,180
+Zawsze by bohaterem Bergera.
+
+19
+00:01:28,220 --> 00:01:30,900
+Po prostu chc go uy do zainicjowania naszych skadnikw.
+
+20
+00:01:31,370 --> 00:01:34,350
+Teraz nazywam to zestawem skadnikw.
+
+21
+00:01:34,370 --> 00:01:41,750
+Chciabym rwnie poradzi sobie z przypadkiem, e nie udao si pobra skadnikw.
+
+22
+00:01:41,750 --> 00:01:49,880
+Zwrc rwnie nowy stan, w ktrym skopiowaem stary stan, a nastpnie oczywicie musz ustawi tutaj mj bd i
+
+23
+00:01:49,880 --> 00:01:53,340
+chc ustawi go na true, wic bd.
+
+24
+00:01:53,480 --> 00:01:54,550
+Prawdziwe.
+
+25
+00:01:55,100 --> 00:02:01,910
+Teraz jedna wana rzecz, kiedy nazywamy zestaw skadnikw tutaj, chc ustawi mj bd na false, aby zresetowa
+
+26
+00:02:02,060 --> 00:02:04,040
+go w przypadku wczeniejszego bdu.
+
+27
+00:02:04,130 --> 00:02:06,950
+A teraz ju go nie masz, wic zaakceptuj mj bd.
+
+28
+00:02:07,060 --> 00:02:08,090
+Fasz tutaj.
+
+29
+00:02:08,090 --> 00:02:11,790
+Dodalimy wic nasz logik producenta.
+
+30
+00:02:11,810 --> 00:02:14,040
+Teraz musimy poczy nasz kontener.
+
+31
+00:02:14,360 --> 00:02:19,760
+Udam si wic do pliku Bolara z burgerami i znajduj si na samym dole tego kontenera.
+
+32
+00:02:19,790 --> 00:02:26,140
+Nie potrzebujemy ju tylko skadnikw potrzebnych do uzyskania informacji o potencjalnym bdzie.
+
+33
+00:02:26,390 --> 00:02:29,770
+Wic tutaj chc uzyska mj bd od stanu.
+
+34
+00:02:30,020 --> 00:02:32,930
+A teraz s powietrzem lub wasnoci.
+
+35
+00:02:33,080 --> 00:02:36,830
+Pamitaj, e do tej pory nie mamy rnych plasterkw stanu.
+
+36
+00:02:36,830 --> 00:02:38,330
+Mamy tylko jeden reduktor.
+
+37
+00:02:38,330 --> 00:02:40,090
+Nie czymy adnych.
+
+38
+00:02:40,370 --> 00:02:43,270
+Tak wic mam swj bd.
+
+39
+00:02:43,520 --> 00:02:50,040
+Teraz mamy jeszcze jedn rzecz, ktrej nigdy nie wysalimy w tej akcji skadnikw.
+
+40
+00:02:50,120 --> 00:02:52,400
+Ten, ktry faktycznie dociera do sieci.
+
+41
+00:02:52,610 --> 00:02:54,200
+Nigdy tego nie wysalimy.
+
+42
+00:02:54,200 --> 00:02:56,570
+To nigdy nie zostanie zainicjowane.
+
+43
+00:02:56,630 --> 00:03:01,530
+Wic chc te mc wysa to z Burgert Boulder.
+
+44
+00:03:01,580 --> 00:03:05,910
+Dodaj wic now waciwo, aby odwzorowa ten Peche na rekwizyty.
+
+45
+00:03:05,980 --> 00:03:07,850
+Wezw to w nim.
+
+46
+00:03:07,850 --> 00:03:17,430
+Skadniki i bd wysya moje akcje cigacza burgera tutaj i musz doda akcje Bolara hamburgera do
+
+47
+00:03:17,430 --> 00:03:20,820
+chipw indeksowych, gdzie spakowaem je tutaj.
+
+48
+00:03:20,910 --> 00:03:22,630
+Musz to doda.
+
+49
+00:03:22,650 --> 00:03:24,280
+Skadniki.
+
+50
+00:03:24,330 --> 00:03:31,170
+Teraz mog to osign z mojej miseczki z burgerami lub pliku kontenera w jej skadnikach i wykona j.
+
+51
+00:03:31,170 --> 00:03:37,880
+Teraz ostatnim krokiem jest przywoanie skadnikw w naszym komponencie, ktre s tutaj stosowane.
+
+52
+00:03:38,190 --> 00:03:46,790
+Tak wic teraz wykonam ten proces na takich skadnikach, a naczynie powinno wykona t akcj i mam
+
+53
+00:03:46,790 --> 00:03:51,180
+nadziej, e uda nam si pobra nasze skadniki.
+
+54
+00:03:51,180 --> 00:03:57,570
+Ostatni, ale nie mniej wany, dodalimy to jako nasz wasno, aby odwzorowa j na nasz stan bdu.
+
+55
+00:03:57,570 --> 00:04:05,170
+Teraz oczywicie musz go rwnie uy i mog po prostu wyszuka wszystkie wystpienia bdu stanu DOT lub w
+
+56
+00:04:05,300 --> 00:04:09,580
+moim pliku tutaj s to miejsca, z ktrych musz skorzysta.
+
+57
+00:04:09,600 --> 00:04:11,350
+C, z wyjtkiem mojego stanu spada.
+
+58
+00:04:11,420 --> 00:04:17,780
+Wic to miejsce jest tutaj, gdzie musz teraz nazwa bd tego wniosku, poniewa teraz otrzymujemy to
+
+59
+00:04:17,780 --> 00:04:19,440
+jako rekwizyty z tat.
+
+60
+00:04:19,440 --> 00:04:24,950
+Zapiszmy wszystkie usterki i jeli wrcimy do naszej aplikacji, zobaczmy, czy mamy
+
+61
+00:04:24,950 --> 00:04:27,160
+jakie strzay, jeli przeadujemy tiap.
+
+62
+00:04:27,400 --> 00:04:28,770
+To mi dobrze wyglda.
+
+63
+00:04:28,770 --> 00:04:30,610
+Mamy tu burgera.
+
+64
+00:04:30,840 --> 00:04:37,830
+Rzumy teraz okiem na narzdzia dev redux, ktre widzimy, e zestaw skadnikw zosta wykonany i skonfigurowalimy
+
+65
+00:04:37,830 --> 00:04:45,090
+nasze skadniki, a teraz moemy zacz dodawa skadniki ponownie i moemy rwnie wprowadzi tutaj ten proces zamawiania.
+
+66
+00:04:45,240 --> 00:04:47,020
+Zrb to wszystko dziaa dobrze.
+
+67
+00:04:47,070 --> 00:04:49,580
+Ostatnio chc sprawdzi, czy obsuga bdw dziaa.
+
+68
+00:04:49,730 --> 00:04:56,680
+Wic pozwl mi uda si do mojego twrcy bugw Boulder'a i zepsu to, e jeste tutaj.
+
+69
+00:04:56,940 --> 00:04:57,890
+Zapiszmy to.
+
+70
+00:04:58,710 --> 00:05:02,240
+I to rwnie dziaa tak, jak powinno.
+
+71
+00:05:02,250 --> 00:05:03,230
+To jest wietne.
+
+72
+00:05:03,240 --> 00:05:08,550
+Widzimy, jak obsuga bdw z naszymi komponentami wyszego rzdu nadal dziaa dziki nam przy uyciu jednej z tej
+
+73
+00:05:08,550 --> 00:05:09,670
+samej instancji x '.
+
+74
+00:05:09,720 --> 00:05:13,990
+A teraz moemy Vonta w innych miejscach, gdzie musimy uy asynchronicznego kodu.
+
+75
+00:05:14,040 --> 00:05:16,950
+Nastpne miejsce to oczywicie, kiedy chcemy zamwi burgera.
+

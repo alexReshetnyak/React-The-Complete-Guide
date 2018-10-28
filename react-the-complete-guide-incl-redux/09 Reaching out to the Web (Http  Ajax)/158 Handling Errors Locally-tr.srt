@@ -1,0 +1,160 @@
+1
+00:00:02,250 --> 00:00:08,010
+Artk istek gnderdiimizi bildiimiz iin harika ve elbette ou web uygulamasnn
+
+2
+00:00:08,010 --> 00:00:09,820
+nemli bir paras.
+
+3
+00:00:10,030 --> 00:00:13,250
+Bununla birlikte, istekler her zaman baarl olamaz.
+
+4
+00:00:13,380 --> 00:00:17,020
+Ayrca, hatalar nasl halledebileceinizi bilmeniz gerekir.
+
+5
+00:00:17,220 --> 00:00:22,790
+Ve bu, size hatalar ileme konusunda size gstermek istediim bir ey, Eriim ile sper basittir.
+
+6
+00:00:23,100 --> 00:00:28,500
+Diyelim ki yanl gnderilmi bir yayn aldk ve elbette hatalar size gstereceim ekilde
+
+7
+00:00:28,500 --> 00:00:28,970
+uygulayabilirsiniz.
+
+8
+00:00:28,970 --> 00:00:32,150
+imdi gnderdiiniz her tr talepte.
+
+9
+00:00:32,250 --> 00:00:38,400
+Dolaysyla burada blok konteynerinde, istei yanl olan yaynlara gnderdiimizi dnelim.
+
+10
+00:00:38,400 --> 00:00:40,750
+Sonunda o ok ess ile Elswyth'sin.
+
+11
+00:00:41,190 --> 00:00:47,380
+imdi grebildiimiz u ki, eer bunu yeniden yklersek burada hata olur, ancak ilenmemi.
+
+12
+00:00:47,670 --> 00:00:49,500
+Tabii ki halletmek istiyoruz.
+
+13
+00:00:49,710 --> 00:00:56,640
+Eski U'dan beri. S. zincirle toplayabileceimiz yntemlere sahip olduumuza dair vaatlerde bulunmaz,
+
+14
+00:00:56,640 --> 00:00:59,180
+ancak bundan sonra deien ikinci bir yntem de ekleyebiliriz.
+
+15
+00:00:59,230 --> 00:01:06,030
+Ardndan, gestlerin adlarna gre yakalama yntemi, aldnz hatalar yakalar.
+
+16
+00:01:06,060 --> 00:01:14,520
+sadece l hava kilitlemek ya da tabii ki isteime bunu yaparsam yine de bakalarnz yanl olduundan baarsz oluyor.
+
+17
+00:01:14,550 --> 00:01:16,850
+yleyse u an iin Konsole
+
+18
+00:01:16,890 --> 00:01:22,260
+Ancak imdi hata ileniyor ve burada sadece konsol loguyla yapyorum.
+
+19
+00:01:22,380 --> 00:01:24,940
+Tabii ki bunu burada gnle kaydetmekten daha fazlasn yapabilirsiniz.
+
+20
+00:01:24,960 --> 00:01:27,110
+UI'nizi gncelleyebilirsiniz.
+
+21
+00:01:27,120 --> 00:01:33,600
+Durumunuzu, burada bize gsterdiiniz bireyin yanl gittiini gsterebilmek iin gncelleyebilirsiniz, hata
+
+22
+00:01:33,780 --> 00:01:42,550
+mlkn balangta yanl olarak ayarlayabiliriz ve bu catch ynteminde, hatay stokehole set durumuna kilitlemek ve
+
+23
+00:01:42,720 --> 00:01:46,550
+hatay ayarlamak istemiyorsanz ya da iki doru.
+
+24
+00:01:47,130 --> 00:01:54,390
+veya balangta bir eyler ters gittiini syleyen yeni bir deiken mesaj yaratmamzdr.
+
+25
+00:01:54,390 --> 00:02:02,740
+Ve imdi tek yapabileceimiz, posteri bir sabitte saklamak yerine ekranda farkl bir eyler ileyebiliriz
+
+26
+00:02:03,930 --> 00:02:12,260
+Ve merkeziletirme iin hzlca baz satr ii stil eklememe izin verin, bylece sadece metin hizalama merkezi
+
+27
+00:02:12,260 --> 00:02:17,240
+ekleyeceim ve hata kurulmamsa bu yazlar ok az geeceim.
+
+28
+00:02:17,250 --> 00:02:24,480
+Bu durum hatas, eer bu doru deilse bataki nlem iareti ile
+
+29
+00:02:24,480 --> 00:02:29,170
+gsterilirse, o zaman yaz dizisine yazlanlar yazarm.
+
+30
+00:02:29,250 --> 00:02:33,630
+yleyse imdi eer bunu kaydedip Merkezimiz bir ip olmal.
+
+31
+00:02:33,630 --> 00:02:34,400
+Teekkr ederim.
+
+32
+00:02:34,410 --> 00:02:41,950
+imdi bunu kaydedersek, burada bir eylerin ters gittiini gryoruz, nk imdi bu hataya sahibiz.
+
+33
+00:02:41,950 --> 00:02:51,880
+imdi bavurusuna dnp buradaki yaynlarm L adresine dzeltirsem, bunun yerine yaynlar tekrar
+
+34
+00:02:51,910 --> 00:02:52,860
+grecektim.
+
+35
+00:02:53,200 --> 00:02:58,570
+Dolaysyla, hatalar ileme konusunda olduka gzel bir yol budur ve bu da kesinlikle farknda olunmas
+
+36
+00:02:58,570 --> 00:02:59,490
+gereken bir eydir.
+
+37
+00:02:59,680 --> 00:03:05,680
+ler her zaman baarl olamaz, bu nedenle hatalar yakalamann ve onlarla bir eyler yaparak
+
+38
+00:03:05,680 --> 00:03:12,280
+konsolda oturum aarak bunlar kendi sunucunuza kendi sunucunuza gndererek hatay kilitlemenizi ve / veya kullancya
+
+39
+00:03:12,670 --> 00:03:19,810
+izin vermek iin UI'da bir ey gstermesini salamann bir yolu olmal halen devam ettirmek veya kullancnn ne
+
+40
+00:03:19,810 --> 00:03:21,500
+yapmas gerektiini ynergeler vermek.
+

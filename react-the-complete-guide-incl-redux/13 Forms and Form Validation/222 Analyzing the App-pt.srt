@@ -1,0 +1,84 @@
+1
+00:00:02,230 --> 00:00:09,220
+Vamos dar uma olhada no nosso estado atual do aplicativo de hambrguer na pgina de check-out no continer de
+
+2
+00:00:09,250 --> 00:00:12,220
+dados de contatos l, ns examinamos esse recipiente.
+
+3
+00:00:12,340 --> 00:00:20,410
+Ns vemos que ns temos algum estado geral configurado no topo da pgina e, claro, tambm temos o
+
+4
+00:00:20,470 --> 00:00:27,330
+nosso mtodo de envio onde enviamos nossa ordem para um servidor e tambm passamos esses dados.
+
+5
+00:00:27,340 --> 00:00:32,790
+Agora, os dados do cliente que esto configurados aqui no so adequados para este estado.
+
+6
+00:00:32,800 --> 00:00:35,010
+Na verdade, nem mesmo os campos so iguais.
+
+7
+00:00:35,020 --> 00:00:41,410
+Agora, parte desse mdulo ser muito cedo para adicionar, mas tambm se ns tivermos uma olhada no prprio frum,
+
+8
+00:00:41,410 --> 00:00:44,180
+temos alguns dos elementos de entrada normais l.
+
+9
+00:00:44,290 --> 00:00:46,420
+Deixe de lado que eles nem sequer so fortes.
+
+10
+00:00:46,660 --> 00:00:49,240
+Ns realmente no lidamos com sua contribuio.
+
+11
+00:00:49,240 --> 00:00:54,570
+Ns realmente no lidamos com isso quando as mudanas de valor deixam sozinhas que validamos a entrada que
+
+12
+00:00:54,580 --> 00:00:55,560
+o usurio deixou.
+
+13
+00:00:55,570 --> 00:01:02,180
+Ento, o primeiro passo  que teremos que decidir que tipo de dados precisamos para que possamos
+
+14
+00:01:02,290 --> 00:01:09,220
+armazenar isso no estado, ento seria melhor se acharmos uma maneira de gerar dinamicamente a nossa forma.
+
+15
+00:01:09,280 --> 00:01:15,250
+claro, como uma ltima etapa ou como no apenas lidar com a submisso do formulrio, mas tambm para lidar com a
+
+16
+00:01:15,250 --> 00:01:21,550
+validade do formulrio ou verificar a validade do formulrio e alterar o estilo do nosso formulrio com base na validade, por exemplo.
+
+17
+00:01:21,550 --> 00:01:22,560
+E ento, 
+
+18
+00:01:22,570 --> 00:01:30,670
+Estas so todas as coisas que eu quero fazer e encaminhar e vou comear por colocar os elementos de entrada
+
+19
+00:01:30,700 --> 00:01:38,710
+do DS aqui em componentes personalizados que tenham um estilo padronizado, talvez tenham um rtulo padro e tambm sejam estendidos
+
+20
+00:01:38,710 --> 00:01:41,670
+para ter espao para mensagens de erro.
+
+21
+00:01:41,680 --> 00:01:48,150
+Ento, um passo depois do outro vamos comear colocando insumos em seu prprio componente.
+

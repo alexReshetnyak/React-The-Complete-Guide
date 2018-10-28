@@ -1,0 +1,204 @@
+1
+00:00:01,990 --> 00:00:05,440
+En la ltima conferencia editamos el cdigo para obtener algunos datos.
+
+2
+00:00:05,590 --> 00:00:11,950
+Por supuesto, ese es un gran primer paso, pero sera an ms til si pudiramos escribir esa
+
+3
+00:00:11,950 --> 00:00:18,940
+informacin en la pantalla si pudiera mostrarla en la pantalla y reemplazarla es un rayo de mensajes de Dammy
+
+4
+00:00:18,940 --> 00:00:26,380
+aqu con una matriz generada dinmicamente en funcin de las publicaciones que a buscar, necesitamos administrar algn estado, por supuesto,
+
+5
+00:00:26,380 --> 00:00:29,340
+y deberamos tener algunas publicaciones en ese estado.
+
+6
+00:00:29,470 --> 00:00:32,290
+Inicialmente, esto puede ser una matriz vaca.
+
+7
+00:00:32,320 --> 00:00:38,530
+Ahora quiero actualizar este estado una vez que recuperamos los datos del servidor y, por lo tanto, el lugar para llamar
+
+8
+00:00:38,620 --> 00:00:42,140
+a este estado de conjunto se encuentra dentro del mtodo de entonces.
+
+9
+00:00:42,460 --> 00:00:50,200
+Si lo llamramos fuera de este perodo tan largo, los X-ers obtendran a Meffert, an no habramos depositado por
+
+10
+00:00:50,200 --> 00:00:51,860
+lo que mencion anteriormente.
+
+11
+00:00:52,090 --> 00:00:58,900
+El cdigo javascript no espera a que esto termine, por lo que si llama inmediatamente a este estado de conjunto despus
+
+12
+00:00:58,900 --> 00:01:02,020
+del mtodo get, los datos no se habrn recuperado an.
+
+13
+00:01:02,440 --> 00:01:10,550
+Entonces, dentro del bloque entonces es el lugar correcto y all podemos establecer publicaciones para los datos de respuesta.
+
+14
+00:01:10,600 --> 00:01:16,510
+Acabas de ver en la consola que la propiedad de datos est disponible en ese objeto de respuesta
+
+15
+00:01:16,510 --> 00:01:24,460
+y que la propiedad de datos contiene una matriz de publicaciones, por lo que comentar el registro de respuesta y en su lugar establecer
+
+16
+00:01:24,490 --> 00:01:26,170
+mi estado en las publicaciones.
+
+17
+00:01:26,170 --> 00:01:30,380
+Ahora visualicemos las publicaciones dinmicamente en el mtodo de renderizado reenviado.
+
+18
+00:01:30,400 --> 00:01:38,260
+Crear una nueva constante para tus publicaciones y debera ser una matriz de elementos GSX, as que usar esta
+
+19
+00:01:38,350 --> 00:01:40,180
+publicacin estatal para indicar.
+
+20
+00:01:40,180 --> 00:01:46,720
+Acabamos de actualizar eso con los datos del servidor y all, como aprendieron, llamaron al mtodo del mapa para mapearlo
+
+21
+00:01:46,780 --> 00:01:52,570
+en una matriz de varios elementos x y, por supuesto, el mtodo del mapa devuelve una nueva matriz
+
+22
+00:01:52,570 --> 00:01:54,790
+que almaceno en esas publicaciones constantes.
+
+23
+00:01:54,890 --> 00:01:56,830
+Ahora en el mtodo del mapa tu.
+
+24
+00:01:56,840 --> 00:02:03,560
+entrada en esa funcin que estamos pasando al mtodo de mapa y all quiero devolver un elemento j como x.
+
+25
+00:02:03,560 --> 00:02:05,480
+Obtengo mis publicaciones individuales como una
+
+26
+00:02:05,480 --> 00:02:08,100
+Quiero devolver mi publicacin nica aqu.
+
+27
+00:02:09,030 --> 00:02:11,420
+Al igual que abajo.
+
+28
+00:02:11,420 --> 00:02:18,060
+Entonces, por supuesto, quiero dar salida a este conjunto de publicaciones que se almacena en esa constante de mensajes.
+
+29
+00:02:18,060 --> 00:02:21,210
+Ahora bien, esta publicacin por lo menos arroja el ttulo.
+
+30
+00:02:21,210 --> 00:02:25,260
+Si inspeccionamos el componente de publicacin, veremos el resultado aqu.
+
+31
+00:02:25,650 --> 00:02:27,210
+Entonces, entonces tu.
+
+32
+00:02:27,270 --> 00:02:32,180
+Probablemente quiera obtener algunos accesorios tal vez un accesorio con el ttulo del nombre.
+
+33
+00:02:32,180 --> 00:02:35,810
+Por lo tanto, los titulares deben titular la propiedad de una sola publicacin.
+
+34
+00:02:35,970 --> 00:02:43,680
+Entonces, en el contenedor de bloques necesito establecer aqu una propiedad de ttulo y pasar el mensaje enseado que el ttulo de la
+
+35
+00:02:43,680 --> 00:02:50,130
+propiedad del ttulo en este elemento de publicacin est disponible debido a los datos que obtuvimos del servidor solo
+
+36
+00:02:50,130 --> 00:02:50,710
+para tranquilizarlo.
+
+37
+00:02:51,060 --> 00:02:52,940
+Ya te has echado a perder que funcion.
+
+38
+00:02:53,190 --> 00:02:58,260
+Pero hoy regresamos del servicio Desirae y cada elemento aqu tiene una propiedad de ttulo.
+
+39
+00:02:58,710 --> 00:03:01,450
+Entonces, como puedes ver claramente, ya funciona aqu.
+
+40
+00:03:01,650 --> 00:03:02,970
+El estilo est un poco apagado.
+
+41
+00:03:02,970 --> 00:03:08,580
+Tambin publicamos todas las publicaciones que podran ser demasiado y no hemos configurado para mantenerlas.
+
+42
+00:03:08,640 --> 00:03:10,750
+As que arreglemos estas tres cosas.
+
+43
+00:03:10,770 --> 00:03:12,280
+Vamos a configurar la clave.
+
+44
+00:03:12,510 --> 00:03:16,450
+Y como puede verificar revisando los datos que recibimos del servidor.
+
+45
+00:03:16,560 --> 00:03:19,760
+Vers que hay una propiedad de identificacin en cada publicacin.
+
+46
+00:03:19,800 --> 00:03:23,750
+Eso, por supuesto, compensa una clave perfecta porque es nica.
+
+47
+00:03:23,790 --> 00:03:30,120
+Ahora, con respecto al estilo y la cantidad de publicaciones para el diseo Vamos al componente de
+
+48
+00:03:30,120 --> 00:03:33,320
+publicacin y cambiamos a 2 tal vez 250 pxeles.
+
+49
+00:03:33,690 --> 00:03:37,020
+Ahora tienen un poco ms de espacio para el ttulo.
+
+50
+00:03:37,020 --> 00:03:41,920
+Todava hay demasiadas publicaciones y eso es algo de lo que me ocupar en la prxima conferencia.
+
+51
+00:03:42,000 --> 00:03:44,750
+Cuando te muestro cmo transformar los datos que recibes.
+

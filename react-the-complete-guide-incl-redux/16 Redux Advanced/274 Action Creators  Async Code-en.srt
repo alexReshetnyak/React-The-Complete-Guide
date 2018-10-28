@@ -1,0 +1,332 @@
+1
+00:00:02,230 --> 00:00:07,860
+Were you successful? Let's try together now. We have one action creator already,
+
+2
+00:00:07,870 --> 00:00:09,350
+now I'll add more.
+
+3
+00:00:09,370 --> 00:00:12,370
+The second one I'll add is simply called decrement,
+
+4
+00:00:12,460 --> 00:00:14,800
+therefore the type will be decrement,
+
+5
+00:00:14,920 --> 00:00:18,080
+I don't need to pass any payload to it. Now
+
+6
+00:00:18,180 --> 00:00:19,690
+come add and subtract
+
+7
+00:00:19,690 --> 00:00:22,980
+so let's start with add, I'll name the function add
+
+8
+00:00:23,200 --> 00:00:25,430
+and here, we now need a payload.
+
+9
+00:00:25,770 --> 00:00:30,040
+If we have a look at the counter.js file where we dispatch it, there
+
+10
+00:00:30,270 --> 00:00:35,460
+we set up a payload value 10 or value 15,
+
+11
+00:00:35,460 --> 00:00:38,940
+how do we get that payload into our action creator?
+
+12
+00:00:39,240 --> 00:00:42,520
+Well keep in mind, we execute it here in our container
+
+13
+00:00:42,720 --> 00:00:48,360
+so this is where we probably want to pass any payload as arguments to the action creator,
+
+14
+00:00:48,780 --> 00:00:52,910
+so we should expect that payload as arguments.
+
+15
+00:00:52,920 --> 00:00:59,140
+So here for example, a value argument you can name it whatever you like, to then set the val property
+
+16
+00:00:59,240 --> 00:01:04,230
+and I'll just use the value here because I use that before so that I don't have to change my code in the
+
+17
+00:01:04,230 --> 00:01:11,220
+reducer so well on the created action where we set equal to the incoming value.
+
+18
+00:01:11,250 --> 00:01:16,740
+Now the same will happen for subtract, oh I should also change the type before I do that though,
+
+19
+00:01:16,780 --> 00:01:26,260
+so the same will now happen to subtract, there subtract like this type should be set to subtract
+
+20
+00:01:26,410 --> 00:01:31,010
+and I also get the value which I'll pass on on the val prop.
+
+21
+00:01:31,020 --> 00:01:36,940
+Now finally, if we have a look at the counter.js file for the container, we also see for onStore and
+
+22
+00:01:36,940 --> 00:01:39,940
+onDeleteResults, so for the actions dispatched there,
+
+23
+00:01:40,150 --> 00:01:47,140
+we also get a payload result and resultElId, so we should also create the action creators with these
+
+24
+00:01:47,140 --> 00:01:48,640
+payloads in mind.
+
+25
+00:01:48,700 --> 00:01:57,130
+So I'll just add another action, another action creator I should say, I'll name this one storeResult,
+
+26
+00:01:57,130 --> 00:02:02,530
+that's the camel case notation I was referring to, starting with a lower case character but each word
+
+27
+00:02:02,590 --> 00:02:06,510
+inside the entire word then starts with an upper case one.
+
+28
+00:02:06,940 --> 00:02:14,220
+So here in this action creator for the storeResult action, I will get my result
+
+29
+00:02:14,230 --> 00:02:20,790
+I want to store and I expect to have a result property on the action which gets created in the end.
+
+30
+00:02:20,800 --> 00:02:27,760
+So let's go over there, let's expect the value or argument which I will name res, you can pick any name
+
+31
+00:02:27,760 --> 00:02:28,740
+you want,
+
+32
+00:02:28,740 --> 00:02:36,190
+important, a result property has to be set and I will pass res as a value, the type also is a different
+
+33
+00:02:36,190 --> 00:02:36,760
+one,
+
+34
+00:02:36,760 --> 00:02:38,830
+it's storeResult.
+
+35
+00:02:38,830 --> 00:02:43,630
+Now finally, let's create the action created for the last action we have.
+
+36
+00:02:43,630 --> 00:02:48,090
+It was deleteResult so I'll name it appropriately, here
+
+37
+00:02:48,130 --> 00:02:53,790
+I get the result element ID and therefore the type will be deleteResult
+
+38
+00:02:54,120 --> 00:03:00,670
+and if we consult our counter container one more time, we see that previously we dispatched an action
+
+39
+00:03:00,700 --> 00:03:06,650
+with ResultElId as a property, we should keep that pattern so that our reducers still works
+
+40
+00:03:06,660 --> 00:03:13,150
+so let's copy that property name, head back to the actions file, set it as a property here and assign the
+
+41
+00:03:13,160 --> 00:03:16,880
+incoming resElId value as a value.
+
+42
+00:03:17,080 --> 00:03:19,480
+With that, we got a bunch of action creators,
+
+43
+00:03:19,480 --> 00:03:23,010
+we can now import them all in our counter.js file.
+
+44
+00:03:23,200 --> 00:03:32,090
+So there I will simply import everything as action creators and now, I can use them down there when
+
+45
+00:03:32,090 --> 00:03:33,290
+I dispatch them.
+
+46
+00:03:33,290 --> 00:03:40,670
+So for example, increment now needs to be called on action creators, the same for decrement, you can use
+
+47
+00:03:41,150 --> 00:03:44,180
+action creators and call decrement there,
+
+48
+00:03:44,300 --> 00:03:50,930
+the same of course for add, there we call the add method but here we need to pass the value as an argument
+
+49
+00:03:50,930 --> 00:03:51,670
+as you learned
+
+50
+00:03:51,680 --> 00:04:01,560
+so make sure to do that. For delete, you can also call delete, excuse me, subtract and pass a value there
+
+51
+00:04:01,670 --> 00:04:04,770
+so there we used, if I have a look at the caption, 15
+
+52
+00:04:04,790 --> 00:04:07,540
+so let me subtract 15 here.
+
+53
+00:04:08,150 --> 00:04:15,590
+And for the storeResult action, I'll call action creators store result, here we need to pass the result
+
+54
+00:04:15,590 --> 00:04:20,530
+we want to store and we receive this here as an argument to that property related method,
+
+55
+00:04:20,690 --> 00:04:23,500
+so here I will pass on result.
+
+56
+00:04:23,630 --> 00:04:33,170
+And finally, for delete result, I'll call action creators delete result and pass my ID on, the ID is
+
+57
+00:04:33,200 --> 00:04:36,540
+also received on this anonymous function.
+
+58
+00:04:36,540 --> 00:04:39,990
+So I'm just using the action creators here to create actions,
+
+59
+00:04:40,040 --> 00:04:42,630
+I still dispatch the same actions as before,
+
+60
+00:04:42,710 --> 00:04:48,370
+this didn't change. Now I still get an error that some file isn't found,
+
+61
+00:04:48,380 --> 00:04:50,030
+this should be a bug here,
+
+62
+00:04:50,030 --> 00:04:52,940
+I'll simply restart npm start and it should fix it,
+
+63
+00:04:52,940 --> 00:04:54,860
+let's see, yeah
+
+64
+00:04:54,890 --> 00:04:58,920
+it was pointing at the wrong file but we still have a problem in the reducer
+
+65
+00:04:59,010 --> 00:05:03,540
+which makes sense because we moved the position of the actions.js file.
+
+66
+00:05:03,540 --> 00:05:10,230
+So in our reducers, we have to adjust the import paths, it's no longer in the folder above the reducers
+
+67
+00:05:10,230 --> 00:05:10,900
+folder,
+
+68
+00:05:11,020 --> 00:05:15,480
+there we have to go into the actions folder instead and then it will work again.
+
+69
+00:05:15,480 --> 00:05:19,490
+So adjust the import paths in both reducers like this,
+
+70
+00:05:19,680 --> 00:05:24,150
+save everything and thereafter the application should work again.
+
+71
+00:05:24,210 --> 00:05:34,100
+So now I click these buttons and we see indeed that we are successfully manipulating our store again, this time
+
+72
+00:05:34,820 --> 00:05:40,220
+through our action creators though. Thus far, only synchronous code runs in them,
+
+73
+00:05:40,340 --> 00:05:44,690
+as I said action creators are useful for handling asynchronous code
+
+74
+00:05:44,930 --> 00:05:47,360
+so let's dive into asynchronous code next.
+
+75
+00:05:47,510 --> 00:05:54,510
+But let me also quickly elaborate on the question whether we should use them for synchronous code or not,
+
+76
+00:05:54,530 --> 00:05:56,180
+the answer is it's up to you,
+
+77
+00:05:56,180 --> 00:05:58,600
+it's a clean way of creating your actions,
+
+78
+00:05:58,610 --> 00:06:00,910
+you have everything about actions in one file,
+
+79
+00:06:01,010 --> 00:06:04,280
+you don't have to create the action objects anywhere else.
+
+80
+00:06:04,280 --> 00:06:10,580
+This is a tiny cleanup which can be considered good so nothing speaks against using action creators
+
+81
+00:06:10,580 --> 00:06:12,280
+for synchronous code too
+
+82
+00:06:12,380 --> 00:06:16,060
+but as I said, it will be extremely useful for asynchronous code.
+
+83
+00:06:16,130 --> 00:06:18,300
+We'll see this in the next lecture.
+

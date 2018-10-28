@@ -1,0 +1,108 @@
+1
+00:00:02,070 --> 00:00:05,220
+Entonces aprendimos que las pruebas pueden tener
+
+2
+00:00:05,220 --> 00:00:07,170
+sentido, cmo probamos entonces?
+
+3
+00:00:07,530 --> 00:00:13,370
+Necesitamos dos herramientas para escribir buenas pruebas y poder probar nuestra aplicacin de reaccin.
+
+4
+00:00:13,410 --> 00:00:16,270
+La primera herramienta es el corredor de prueba,
+
+5
+00:00:16,350 --> 00:00:20,690
+bsicamente es una herramienta que se encarga de ejecutar nuestras pruebas para
+
+6
+00:00:20,730 --> 00:00:27,720
+ejecutar el cdigo, probar el cdigo y proporcionar una biblioteca de validacin que al final es una biblioteca que
+
+7
+00:00:27,720 --> 00:00:31,610
+nos permite hacer comparaciones y potencialmente arrojar algo errores
+
+8
+00:00:31,650 --> 00:00:38,700
+La idea detrs de las pruebas unitarias es que no se ejecutan en el navegador sino en nodeJS, aunque a menudo se emula para estar
+
+9
+00:00:38,760 --> 00:00:45,530
+en un entorno de navegador con la ayuda de paquetes JavaScript especficos. El corredor de prueba es entonces la herramienta central
+
+10
+00:00:45,580 --> 00:00:50,360
+que simplemente ejecuta nuestro cdigo utilizando ese entorno y lo bueno es que
+
+11
+00:00:50,520 --> 00:00:55,140
+la aplicacin createreaive ya viene con un entorno de prueba preconfigurado en
+
+12
+00:00:55,140 --> 00:00:56,510
+el que podemos construir.
+
+13
+00:00:56,850 --> 00:01:02,490
+As que ese es el corredor de prueba y usaremos la broma en este curso, broma ya est instalada en
+
+14
+00:01:02,490 --> 00:01:08,460
+la aplicacin creada con la aplicacin create reaccionar y es una popular herramienta de prueba de JavaScript que no est limitada
+
+15
+00:01:08,490 --> 00:01:15,450
+a reaccionar, pero que a menudo se usa en aplicaciones de reaccin. Ahora ejecutar la prueba es una cosa, cuando trabajamos con
+
+16
+00:01:15,450 --> 00:01:22,380
+componentes que reaccionan, tambin necesitamos una forma de emular estos componentes, de modo que basicamente los podemos montar en un
+
+17
+00:01:22,380 --> 00:01:28,350
+domino inexistente y luego atravesar nuestros componentes y queremos hacer esto de una manera manera eficiente y
+
+18
+00:01:28,350 --> 00:01:34,340
+rpida sin tener que crear realmente ese rbol de componentes completos que tambin podra presentar algunos efectos secundarios.
+
+19
+00:01:34,680 --> 00:01:42,030
+Para esto, necesitamos utilidades de prueba que nos ayuden con las pruebas y all, especficamente necesitamos la ayuda recin descrita
+
+20
+00:01:42,030 --> 00:01:48,510
+para simular la aplicacin de reaccin, montar componentes y profundizar en la dom que se crea con reaccionar.
+
+21
+00:01:49,230 --> 00:01:55,680
+En este curso pudimos reaccionar como utilidades de prueba, esa es la herramienta de utilidad oficial, pero hay otra herramienta
+
+22
+00:01:55,680 --> 00:02:01,160
+que se volvi ms y ms importante e interesante y tambin es sugerida por el equipo de
+
+23
+00:02:01,260 --> 00:02:04,980
+reaccin y esa es la enzima. Enzyme es una herramienta desarrollada por
+
+24
+00:02:04,980 --> 00:02:11,400
+AirBnB, que utilizan para reaccionar en muchos de sus proyectos y comparten esta herramienta que hace que sea fcil montar
+
+25
+00:02:11,610 --> 00:02:13,480
+componentes y luego navegar a travs
+
+26
+00:02:13,530 --> 00:02:18,710
+de ellos y, por supuesto, le mostrar cmo usar herramientas, bromas y enzimas. en este curso.
+
+27
+00:02:18,720 --> 00:02:24,450
+Estas son las herramientas de prueba, eso nos deja solo con una pregunta, qu deberamos probar?
+

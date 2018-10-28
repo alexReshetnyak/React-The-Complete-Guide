@@ -1,0 +1,124 @@
+1
+00:00:02,060 --> 00:00:08,210
+Son derste baz post verilerini aldk ve durumumuzu gncelleyerek ekrana aktarabiliriz.
+
+2
+00:00:08,550 --> 00:00:14,990
+Ancak elbette, gerek bir uygulama iin u anda ok fazla yayn getiriyoruz.
+
+3
+00:00:15,000 --> 00:00:20,280
+Muhtemelen srtnza baz sorgu parametreleri gnderebilir ve temel olarak baz sayfalemeyi
+
+4
+00:00:20,280 --> 00:00:22,880
+getirmek istediiniz veri miktarn kstlayabilirsiniz.
+
+5
+00:00:23,160 --> 00:00:26,370
+Elbette verileri elimizden geldii anda deitirebiliriz.
+
+6
+00:00:26,370 --> 00:00:29,160
+Bylece burada yeni bir sabit yayn ekleyeceim.
+
+7
+00:00:29,190 --> 00:00:36,300
+Yant verilerini buraya balayan ve imzalayan bileenin minibs bloundaym.
+
+8
+00:00:36,540 --> 00:00:43,380
+dilim yntemini aracam ve yalnzca ilk drt post getirmek iin 1'den 4'e kadar olan eleri alyorum.
+
+9
+00:00:43,380 --> 00:00:44,600
+imdi o dizide
+
+10
+00:00:44,610 --> 00:00:51,360
+Aslnda onu hepsine getirdim ama postlarmda korkun bir alan eklemek istiyor olsam da,
+
+11
+00:00:51,360 --> 00:00:57,290
+ikinci bir srekli gncellenmi mesajlar yaratmak iin bunlardan sadece 4'n saklyorum.
+
+12
+00:00:57,300 --> 00:01:02,540
+imdi tipik olarak tabii ki bunu arka utan alacaksn ama sahte geri dnd ve yok etti.
+
+13
+00:01:02,700 --> 00:01:08,010
+Bu yzden elbette sunucudan getirdiiniz verileri dzenleyebileceinizi gstermek iin herkese ekledim.
+
+14
+00:01:08,010 --> 00:01:13,090
+stediimiz herhangi bir javascript kodu ekleyebilmemiz iin yalnzca javascript ile alyoruz.
+
+15
+00:01:13,470 --> 00:01:22,920
+Yani ben burada bir harita yntemi olarak adlandrlan yazlarm alacam ve her yaz iin yeni bir javascript
+
+16
+00:01:22,950 --> 00:01:30,610
+nesnesi dndrmek istiyorum. Burada mlkiyetini postadan datacam, bylece sunucudan temelde var olan zellikler.
+
+17
+00:01:30,990 --> 00:01:38,640
+Ve sonra da verilerle birlikte maksimuma kadar tm sabit kodlarn gncellenmi yaynlar ald ve yaynlar onlara
+
+18
+00:01:38,650 --> 00:01:42,660
+kararl duruma ayarlayacam yeni bir teklif mlk ekleyin.
+
+19
+00:01:42,660 --> 00:01:49,890
+Sunucudan geri aldmz veriler ksaltlm ve teklif alann ekledik ve tabii ki vitrin iin
+
+20
+00:01:50,280 --> 00:01:55,170
+ek bir dnm rnei oldu; bu da tablonun ayarlarn yapmadan
+
+21
+00:01:55,170 --> 00:02:00,270
+nce geri alacanz verilerle birlikte alabildiinizi gsteriyor. Bu deiim yerinde.
+
+22
+00:02:00,270 --> 00:02:05,990
+Artk hepsinin post elemannda bir kt alan olduu ortaya kt.
+
+23
+00:02:06,210 --> 00:02:08,380
+Yani orada olsun bekliyoruz.
+
+24
+00:02:08,820 --> 00:02:10,410
+Propp teklif et.
+
+25
+00:02:10,500 --> 00:02:14,100
+imdi bu probu burada blok konteynerde ayarlayabilirim.
+
+26
+00:02:14,220 --> 00:02:14,710
+Yapabilirim.
+
+27
+00:02:14,740 --> 00:02:25,080
+Tm pastalar, bu teklif, devlete depoladmz her nesneye eklediimiz teklif alann post teklif
+
+28
+00:02:25,080 --> 00:02:26,230
+etmelidir.
+
+29
+00:02:26,370 --> 00:02:31,960
+Bunu kaydettiimizde imdi teklifi gryoruz ve sadece drt mesaj gryoruz.
+
+30
+00:02:32,010 --> 00:02:37,590
+Verileri, MT bileenindeki verilerle nasl altrabileceinize nasl dntrdnz budur.
+
+31
+00:02:37,590 --> 00:02:38,520
+Bu rnekte.
+

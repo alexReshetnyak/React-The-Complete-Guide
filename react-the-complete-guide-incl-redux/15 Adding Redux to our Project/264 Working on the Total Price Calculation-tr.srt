@@ -1,0 +1,264 @@
+1
+00:00:02,240 --> 00:00:09,390
+u anda Bergere Boulder eyaletinde hala sakladmz toplam fiyat zerinde alalm
+
+2
+00:00:09,410 --> 00:00:11,720
+ama elbette gncellemeyi okumuyoruz.
+
+3
+00:00:11,780 --> 00:00:14,080
+Bu nedenle her zaman iin.
+
+4
+00:00:14,330 --> 00:00:18,290
+Zaten onu kurduk ve onu indirdik, ancak burada deitirmiyoruz.
+
+5
+00:00:18,380 --> 00:00:25,100
+imdi maddeleri eklediimizde veya kardmzda fiyat deiir, imdi alabileceiniz iki gzergah var.
+
+6
+00:00:25,490 --> 00:00:30,440
+Bir fiyat deiiklii iin yeni bir eylem tr tanmlayabilirsiniz.
+
+7
+00:00:30,440 --> 00:00:38,180
+redktr tarafndan yakalanr ve ardndan yeniden hesaplanr fiyat iyi olur ve her
+
+8
+00:00:38,180 --> 00:00:45,350
+eylemin yalnzca redktrnzde bir devletin maniple edilmesine yol aacandan emin olabilirsiniz.
+
+9
+00:00:45,350 --> 00:00:53,510
+Gncelleme maddelerini arp fiyat gncelleyebilirdiniz ve elbette bunu, Bergere'deki bu tablay, altndaki
+
+10
+00:00:53,510 --> 00:01:02,150
+eylemin gnderilmesi iin uyguladmz bir mlke iaret edebiliriz ve bu eylem daha sonra
+
+11
+00:01:02,600 --> 00:01:09,350
+te yandan, fiyat katma maddesini deitiren ve kaldran sadece iki eylem tr
+
+12
+00:01:09,350 --> 00:01:10,520
+zaten var.
+
+13
+00:01:11,120 --> 00:01:18,000
+Bu yzden yalnzca burada malzemeleri gncellemek deil ayn zamanda fiyat gncellemek iin adil olmak gerekir.
+
+14
+00:01:18,060 --> 00:01:20,790
+Ve yine tamamen hangi yoldan alacanza baldr.
+
+15
+00:01:20,820 --> 00:01:26,730
+Durumunuzun yalnzca bir blmn vaka bana deitirmek istiyorsanz o zaman karmanz gerekiyor.
+
+16
+00:01:26,730 --> 00:01:32,220
+maniple etmekle iyi misiniz, o halde bir yolculua devam ederseniz, burada bir sonraki yol ile gidersiniz.
+
+17
+00:01:32,280 --> 00:01:33,860
+Durumunuzun birden fazla parasn
+
+18
+00:01:34,050 --> 00:01:36,540
+Yani burada zaten malzemeleri yeniliyoruz.
+
+19
+00:01:36,540 --> 00:01:42,870
+imdi fiyat yeniden hesaplamak istiyoruz, bylece toplam fiyatn tamam burada.
+
+20
+00:01:42,900 --> 00:01:49,330
+Dndnzde ve siz yeniden devlet edersek, nce her eyden nce eski devleti ve tm mlkleri kopyaladk.
+
+21
+00:01:49,350 --> 00:01:55,110
+imdi sadece malzemelerin zerine deil ayn zamanda eski fiyatn zerine yazdm ve elbette deer verdiler.
+
+22
+00:01:55,110 --> 00:02:01,070
+imdi D devleti ya da eski devletin toplam bedelini sylemeliyim.
+
+23
+00:02:01,210 --> 00:02:08,350
+Bylece Windass redktrn aldmz devlet eklendi ve imdi eklenen 40 Ingredion fiyatna
+
+24
+00:02:08,350 --> 00:02:09,670
+gre ayarland.
+
+25
+00:02:10,150 --> 00:02:14,080
+imdi burger Boler'da bunun iin bu fiyat haritasn edineceiz.
+
+26
+00:02:14,080 --> 00:02:19,390
+Zaten kaplanm olan tm kopyalanm madde fiyatlarmz var.
+
+27
+00:02:19,390 --> 00:02:23,740
+Aslnda artk burada ihtiyacm yok ve redktrn iine sokuyorum.
+
+28
+00:02:24,040 --> 00:02:31,780
+Bylece burada yalnzca balang durumumu tanmlayacam, ayn zamanda gerek fiyatlarm da uygulamanzn herhangi bir yerinde bulabileceiz
+
+29
+00:02:31,780 --> 00:02:36,000
+ancak bunu bir veritabanndan veya bir sunucudan getirebiliriz.
+
+30
+00:02:36,040 --> 00:02:40,850
+u anda bunu yapamadk nk ezamansz kodun nasl ileneceini bilmiyoruz ama gelecekte yapacaz.
+
+31
+00:02:41,130 --> 00:02:43,680
+Fakat oradaki kodlar zor.
+
+32
+00:02:43,930 --> 00:02:49,550
+Ve uygulamanzda her yerde kullandmz gibi yine ayn zellik mlk adlarna sahibiz.
+
+33
+00:02:49,690 --> 00:02:59,020
+Dolaysyla imdi toplam fiyat eski toplam fiyat artna ve imdi de eylem derecemizde
+
+34
+00:02:59,290 --> 00:03:04,110
+yl alacamz malzemenin fiyatlarndaki arta eit ayarlayabiliriz.
+
+35
+00:03:04,450 --> 00:03:12,100
+Bu, rnein burada ar satacak ve bize nokta 5 verecek ve daha sonra eski fiyat
+
+36
+00:03:12,100 --> 00:03:22,380
+ekleyecek ve burada yeni fiyat olarak ayarlayacaz; burada, katk maddelerini kaldrmak iin katk maddeleri eklemek iin fiyat nasl deitirebiliriz ve
+
+37
+00:03:22,380 --> 00:03:22,860
+gncelleyebilirsiniz.
+
+38
+00:03:22,860 --> 00:03:28,610
+Bu kodu kopyaladm ve ayrca Devlet Gncellemesine Riette davasn kaldrma ekledim.
+
+39
+00:03:28,620 --> 00:03:33,670
+Elbette, kaldrdmz derecenin fiyatn dyoruz.
+
+40
+00:03:33,930 --> 00:03:40,290
+oklar alyoruz, fiyat bileen fiyatlarn gncellemek iin hala eski kodu referans alyoruz.
+
+41
+00:03:40,290 --> 00:03:47,010
+Bununla birlikte, imdi her eyi kurtarrsak, burger Boulder'a geri dnmeliyiz, nk orada baz
+
+42
+00:03:47,340 --> 00:03:49,630
+Yaptmz ey, ADD bileen ileyicisini deil.
+
+43
+00:03:49,830 --> 00:03:57,480
+Aslnda imdi yapabildiimiz ey, madde hkndr yntemlerini ekleyip kaldrmaktr.
+
+44
+00:03:57,540 --> 00:03:58,860
+Bu dosyay temizlemek.
+
+45
+00:03:58,860 --> 00:04:06,470
+Elbette ok ey var, bu dosyay kaydettiimizde tm dosyalar kaydedip uygulamaya geri dnersek.
+
+46
+00:04:06,630 --> 00:04:08,650
+Bunu imdi grmeliyiz.
+
+47
+00:04:09,010 --> 00:04:12,420
+Birlikte daha yaknlatrmak iin bu ii klteyim.
+
+48
+00:04:12,420 --> 00:04:18,740
+Eer imdi o hcrenin ve pastrmay bulursak, fiyat deimez.
+
+49
+00:04:19,020 --> 00:04:28,100
+Niin iyi ki, imdi kresel devletimiz Fruita redksiyonunda gncellendiimize gre.
+
+50
+00:04:28,440 --> 00:04:36,360
+Ancak tabii ki burger Boulder konteynerinin alt ksmnda, hala yalnzca tmnn fiyatna
+
+51
+00:04:36,600 --> 00:04:41,740
+uygun olduundan emin olmamz gereken global durumumuzdan getiriliyorduk.
+
+52
+00:04:41,790 --> 00:04:48,000
+Devlet ve oradaki mlklere, llerle birlikte toplam fiyat deniyordu.
+
+53
+00:04:48,020 --> 00:04:54,840
+Burger Baldor konteynerindeki tm sahne fiyatn kullanabiliriz ve Fruita eyaletini ve burger
+
+54
+00:04:54,890 --> 00:04:59,910
+Boulder' artk ynetmediimiz iin toplam dl orada ezebiliriz.
+
+55
+00:05:00,440 --> 00:05:08,930
+imdi burada, burada olduu gibi devlet zerindeki eski toplam fiyatn kullanld bu blmdeki her yerde
+
+56
+00:05:08,930 --> 00:05:10,960
+ve toplam fiyat kullanalm.
+
+57
+00:05:11,210 --> 00:05:15,500
+Her kovalamaca devam eden ileyici bana 40 olmasna ramen onu deitirmeliyiz.
+
+58
+00:05:15,740 --> 00:05:19,510
+imdilik yapmayacam nk yaknda bu koddan kurtulacam.
+
+59
+00:05:19,610 --> 00:05:24,060
+imdi render yntemine gidelim ve orada fiyat gncellemeyi unutmayalm.
+
+60
+00:05:24,170 --> 00:05:28,010
+Burada, yerleik kontrollerimizi gncelledik ve nereden getiimize karar verdik.
+
+61
+00:05:28,100 --> 00:05:36,680
+imdi sadece bu pervanenin fiyatn geirdik ve fiyatn kullanld srayla bu
+
+62
+00:05:36,700 --> 00:05:44,430
+pervane fiyat da fiyat iin kullanlan btn yerlerde olmalyd.
+
+63
+00:05:44,420 --> 00:05:51,670
+imdi bu bileenden tasarruf edelim ve uygulamaya geri dnelim ve katk maddeleri eklemeye balayalm ve
+
+64
+00:05:51,670 --> 00:05:56,180
+u anda fiyat her iki ynde de gncelleyeceimizi gryoruz.
+
+65
+00:05:56,320 --> 00:06:01,890
+imdi hl gremediimiz eylerden biri sipari dmesi etkinleecek olmas.
+
+66
+00:06:01,900 --> 00:06:03,950
+Bu yzden bir sonraki iimize devam edeceiz.
+

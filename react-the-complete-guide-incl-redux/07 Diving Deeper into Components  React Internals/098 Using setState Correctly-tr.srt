@@ -1,0 +1,204 @@
+1
+00:00:02,270 --> 00:00:07,340
+u anda yksek sipari bileenlerini dnyay terk edelim ve demo projemize
+
+2
+00:00:07,340 --> 00:00:12,980
+geri dnelim ve nemli olabileceklerinden yeniden hareket uygulamalar olutururken aklnzda bulundurmanz gereken
+
+3
+00:00:12,980 --> 00:00:14,760
+baz faydal eylere dalalm.
+
+4
+00:00:15,110 --> 00:00:20,780
+Sana sahip olmak istediim nemli bir gtr devletle ilgili.
+
+5
+00:00:21,020 --> 00:00:26,570
+Rapture'daki bavurumuza ok lgnlk diyoruz nk devlet kullanm biimini
+
+6
+00:00:26,570 --> 00:00:30,440
+yalnzca birka sekin bileende kullanmanz gerekir.
+
+7
+00:00:30,590 --> 00:00:33,220
+Ve biz her zaman deimez bir ekilde kullanyoruz.
+
+8
+00:00:33,230 --> 00:00:39,410
+ve sonra bu kopyay mutasyona uratarak yeni kopyalama kopyasn yeni bir durum olarak atayacaz.
+
+9
+00:00:39,410 --> 00:00:45,200
+Yani, bir kii dizisi atarsak, o dizinin bir kopyasn oluturuyoruz, bylece orijinalini deitirmiyoruz
+
+10
+00:00:45,410 --> 00:00:47,660
+Tam olarak nasl yapmanz gerektiini.
+
+11
+00:00:47,870 --> 00:00:54,560
+imdi bazen eski durumuna bal ve biraz daha nemsiz olan bir devlet gncellemeniz var.
+
+12
+00:00:54,890 --> 00:00:59,060
+Diyelim ki, gei dmesini ne sklkta tkladmz konusunda bir saya almak istiyoruz.
+
+13
+00:00:59,090 --> 00:01:00,560
+Yani bir kiinin ileyicisinden bahsediliyor.
+
+14
+00:01:00,560 --> 00:01:06,890
+Temel olarak, ne kadar sklkla, yaam dngsnn orada ders verdii iin
+
+15
+00:01:06,890 --> 00:01:09,700
+yapcda balattmz durumumuzda idam edildi.
+
+16
+00:01:09,740 --> 00:01:15,110
+Balangta 0 olan tklanabilir tklama sayacmz olabilir.
+
+17
+00:01:15,170 --> 00:01:24,940
+imdi toggle ileyicimizde burada set state'i aryoruz ve tabii ki de tabii ki update toggle butonunu tkladk
+
+18
+00:01:24,950 --> 00:01:32,030
+ve elbette deeri toggle tklamann eski deerine balyor nk ip veya eski
+
+19
+00:01:32,030 --> 00:01:33,350
+deer art bir.
+
+20
+00:01:33,620 --> 00:01:40,430
+Dolaysyla bu duruma gei tklandnda art birinin yeni durum olduunu syleyebiliriz.
+
+21
+00:01:40,430 --> 00:01:46,820
+imdi bunu yapp yapmamamz salayacak olursak, Riak gelitirici aralarn kullanabiliriz.
+
+22
+00:01:46,820 --> 00:01:54,110
+Bu nedenle, yeniden gelitirme gelitirici aralarm Chrome gelitirici aralarmda aacam ve imdi tklanan
+
+23
+00:01:54,530 --> 00:01:58,270
+0 durum hedefini inceleyebileceim uygulama bileenine gideceim.
+
+24
+00:01:58,280 --> 00:02:01,190
+imdi 1 2 3.
+
+25
+00:02:01,220 --> 00:02:07,940
+Doru alyor ve hala yanl bir ekilde yapyor nk sz edilen devlet
+
+26
+00:02:07,940 --> 00:02:17,630
+asl olarak asenkron bir ekilde yrtlen bir yntem. Bu, denilen bu duruma gvenemezsiniz demektir. ten arama devleti
+
+27
+00:02:17,630 --> 00:02:24,260
+arrsanz devletin en son srmn yanstmak iin dedi. dedi uygulama baka bir
+
+28
+00:02:24,260 --> 00:02:25,530
+yerde devlet.
+
+29
+00:02:25,700 --> 00:02:32,510
+Temelde ortalama ayn zamanda devlet ars bunun ncesinde bitmi olabilir, bu
+
+30
+00:02:32,540 --> 00:02:36,070
+yzden buradaki bu devlet doru olmayabilir.
+
+31
+00:02:36,140 --> 00:02:39,720
+Bu durumda, bu ayar durumunu armak iin daha iyi bir szdizimi var.
+
+32
+00:02:39,830 --> 00:02:47,950
+ilev alr ve ok ilevini kullanacam ve iki bamsz deiken elde edersiniz gibi grnyor.
+
+33
+00:02:47,990 --> 00:02:56,370
+Bu durumu kendi iinde kullanmay planlyorsanz ve ilev szdiziminin ilevsel biimi buysa, bu ayarlanm durum
+
+34
+00:02:56,370 --> 00:02:57,390
+sonra bir
+
+35
+00:02:57,390 --> 00:03:01,190
+O halde gvenli bir ekilde eriebileceiniz nceki durum.
+
+36
+00:03:01,200 --> 00:03:04,940
+nk bu kesinlikle bu zaman noktasnda sahip olduu en son durum.
+
+37
+00:03:05,370 --> 00:03:07,360
+Ve sahip olabileceiniz herhangi bir alet.
+
+38
+00:03:07,890 --> 00:03:14,970
+Ve sonra ilev gvdesi, gncel durumunuz olan bir nesneye dnmeniz gerekir.
+
+39
+00:03:15,230 --> 00:03:22,950
+ancak burada, tkladmz ancak nceki durum etiketini tklattmz artk varolan durum etiketi deil ve nceki
+
+40
+00:03:23,370 --> 00:03:30,420
+durumun herhangi bir yerden mutasyona geememesi nedeniyle bunun artk eriilebilir olduunu syledik. uygulamada.
+
+41
+00:03:30,530 --> 00:03:33,170
+Yani burada eski kodumuzu koydunuz,
+
+42
+00:03:33,270 --> 00:03:36,360
+Bu ayarlanm kmr durumundayken.
+
+43
+00:03:36,660 --> 00:03:42,960
+Veri dosyas tekrar ykleniyorsa, uygulamay yeniden etkinletirin ve uygulamay sein.
+
+44
+00:03:43,290 --> 00:03:50,070
+imdi kiilerin konumasn tklarsam drt gibi alr ve birok Abaroa davasnda da kt
+
+45
+00:03:50,070 --> 00:03:51,450
+yaklamla birlikte alr.
+
+46
+00:03:51,690 --> 00:03:59,340
+Ancak, burada yaptmz gibi nceki durumuna gveniyorsanz durumu mutasyona uratmann en iyi rnei
+
+47
+00:03:59,340 --> 00:04:01,480
+buradaki nceki durumu armaktr.
+
+48
+00:04:01,560 --> 00:04:09,060
+mdahale etme riski varsa, burada tehlike yaamayacanz dnyoruz, nk hedef toplamay baka bir yerden deitirmiyoruz.
+
+49
+00:04:09,060 --> 00:04:14,960
+Bu sadece bir uzaklama ve eyalete mdahale etmenin daha iyi bir yoludur
+
+50
+00:04:14,960 --> 00:04:16,040
+nk eyaletimize
+
+51
+00:04:16,230 --> 00:04:19,490
+Ama sen daha iyi bir yaklamla eytansaydn.
+

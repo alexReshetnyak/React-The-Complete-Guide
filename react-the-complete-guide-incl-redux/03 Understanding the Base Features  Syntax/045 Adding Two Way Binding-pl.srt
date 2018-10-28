@@ -1,0 +1,292 @@
+1
+00:00:02,280 --> 00:00:05,290
+Wiele omwilimy i zmienilimy tutaj wiele nazw.
+
+2
+00:00:05,550 --> 00:00:14,260
+Ale co, jeli naprawd chcemy zmieni nazw na wasn rk. Powiedzmy wic, e w komponencie osoby
+
+3
+00:00:14,260 --> 00:00:23,290
+tutaj mamy rwnie inny element, normalny element wejciowy, ktry jest tekstem typu i
+
+4
+00:00:23,290 --> 00:00:26,380
+to wszystko, powinien by samozamykajcy.
+
+5
+00:00:26,470 --> 00:00:34,680
+Teraz, gdy co wpiszemy, chcemy uy tego, co tutaj wpisujemy, jako nowej nazwy,
+
+6
+00:00:34,690 --> 00:00:43,970
+teraz moemy posucha specjalnego wydarzenia na Zmie. onChange zostanie uruchomiony, gdy zmieni si warto w tym wejciu.
+
+7
+00:00:44,650 --> 00:00:53,440
+I tutaj, chc wykona pewn metod, ktr musz przekaza z mojej aplikacji. plik js.
+
+8
+00:00:53,440 --> 00:01:01,810
+Dostalimy to switchNameHandler i zostawi go bez zmian, a zamiast tego dodam
+
+9
+00:01:01,810 --> 00:01:04,950
+nowy handler, nazwijmy go nameChangedHandler.
+
+10
+00:01:05,380 --> 00:01:08,680
+Spodziewam si dosta obiekt zdarzenia tutaj,
+
+11
+00:01:08,680 --> 00:01:14,710
+nie uywalimy go wczeniej, ale tam, nadal chc zmieni stan.
+
+12
+00:01:14,820 --> 00:01:18,880
+Teraz oczywicie teoretycznie chciaby si zmieni.
+
+13
+00:01:18,880 --> 00:01:24,250
+stan lub imi osoby, dla ktrej j wpisujemy.
+
+14
+00:01:24,250 --> 00:01:31,450
+To jest co, co zrobimy pniej w trakcie, gdy nauczylimy si poprawnie renderowa list
+
+15
+00:01:31,480 --> 00:01:32,560
+elementw dynamicznych.
+
+16
+00:01:32,560 --> 00:01:36,340
+Wic na razie zawsze bd zmienia imi Manu tutaj.
+
+17
+00:01:36,580 --> 00:01:42,220
+Wic Max pozostanie Maxem, a Stephanie powinna zachowa wiek 26 lat,
+
+18
+00:01:42,340 --> 00:01:50,410
+ale Manu powinien zmieni nazw, bez wzgldu na to, w ktrym przypadku tego komponentu osoby, ktr
+
+19
+00:01:50,470 --> 00:01:53,190
+wpisuj, znowu to naprawimy pniej.
+
+20
+00:01:53,230 --> 00:01:56,490
+Wic tutaj dostan zdarzenie i jak mona si
+
+21
+00:01:56,620 --> 00:02:03,910
+dowiedzie o zdarzeniach javascript, to wydarzenie prawdopodobnie ma cel. Cel nie tworzy dobrej wartoci nazwy,
+
+22
+00:02:03,910 --> 00:02:11,280
+ale cel powinien by wprowadzonym przez nas wpisem, wic powinien on rwnie
+
+23
+00:02:11,470 --> 00:02:17,750
+mie warto value, ktra jest wartoci wprowadzon przez uytkownika, a
+
+24
+00:02:17,770 --> 00:02:23,180
+zatem teraz zapewnia dobr zaktualizowan warto dla imienia.
+
+25
+00:02:23,320 --> 00:02:27,580
+Wic warto docelowa zdarzenia jest tym, co chc przypisa jako now nazw Manu, ponownie
+
+26
+00:02:27,640 --> 00:02:35,320
+na razie bez wzgldu na to, z ktrego wejcia wpisaem wpisany komponent. nameChangedHandler to mj program obsugi, teraz
+
+27
+00:02:35,320 --> 00:02:36,640
+musz przekaza
+
+28
+00:02:36,640 --> 00:02:42,680
+go do komponentu, aby mc uzyska do niego dostp.
+
+29
+00:02:43,090 --> 00:02:47,830
+A poniewa mog zmieni tylko Manu, przekazuj go tylko
+
+30
+00:02:47,920 --> 00:02:50,730
+Manu, cho oczywicie moemy przekaza to
+
+31
+00:02:51,010 --> 00:03:01,870
+innemu, oczywicie, tutaj po prostu nazw to zmienione i przeka to. nameChangedHandler zgodnie z t sam logik, co w
+
+32
+00:03:01,890 --> 00:03:05,460
+przypadku zdarzenia kliknicia. Wewntrz osoby
+
+33
+00:03:05,500 --> 00:03:14,500
+mog teraz uzyska do niej dostp. Zmieniona wasno i po prostu wywoaj zmienione rekwizyty tutaj lub nie dzwo, nie dodawaj
+
+34
+00:03:14,500 --> 00:03:18,450
+nawiasw, ale po prostu przekazuj odwoanie do niego i pamitaj, e odnosi
+
+35
+00:03:18,580 --> 00:03:25,970
+si to do metody, ktr zadeklarowalimy w aplikacji. js, to. nameChangedHandler.
+
+36
+00:03:26,540 --> 00:03:33,410
+Obiekt zdarzenia zostanie automatycznie przekazany do niego automatycznie, reagujc jak normalny javascript.
+
+37
+00:03:33,430 --> 00:03:36,370
+gdzie zawsze domylnie uzyskujesz dostp do obiektu zdarzenia.
+
+38
+00:03:37,130 --> 00:03:40,050
+Po tym, uratujmy to i zobaczmy, co si stanie.
+
+39
+00:03:40,130 --> 00:03:46,090
+Mamy dane wejciowe poniej wszystkich komponentw, ale dla wikszoci z nich nic si nie dzieje, jeli je wpisuj, ale w przypadku
+
+40
+00:03:46,100 --> 00:03:53,650
+Manu widzisz, za kadym naciniciem klawisza nazwa aktualizacji, Manuel, cokolwiek bym tam napisa. Dzieje si tak, poniewa przywizujemy
+
+41
+00:03:53,690 --> 00:04:01,610
+si do Zmie na te podpory. zmieniony, ktry zawiera odwoanie do nameChangedHandler, a nastpnie
+
+42
+00:04:01,850 --> 00:04:07,820
+uylimy domylnego obiektu zdarzenia do wyodrbnienia celu, ktry jest elementem wejciowym,
+
+43
+00:04:07,820 --> 00:04:10,970
+a nastpnie wartoci celu, ktry wprowadzilimy.
+
+44
+00:04:10,970 --> 00:04:16,850
+To pokazuje nam dwie rzeczy, jak moemy dynamicznie aktualizowa co, dynamicznie wywoywa zdarzenie i wykorzystywa
+
+45
+00:04:16,850 --> 00:04:22,430
+rzeczy, ktrych si uczymy wczeniej, jak przekazywanie referencji zdarze lub odniesie do metod, ktre
+
+46
+00:04:22,430 --> 00:04:26,990
+powinienem powiedzie, ale pokazuje nam rwnie, jak moemy obsuy dane wejciowe.
+
+47
+00:04:27,530 --> 00:04:36,820
+Teraz byoby rwnie mio, gdybymy od razu widzieli aktualn warto nazwy na wejciu.
+
+48
+00:04:37,130 --> 00:04:43,760
+Zasadniczo chcemy wic ustanowi dwukierunkowe powizanie, kiedy to zmienimy, chcemy propagowa t zmian, abymy
+
+49
+00:04:43,760 --> 00:04:46,220
+mogli zaktualizowa stan, ale chcemy
+
+50
+00:04:46,430 --> 00:04:49,890
+te od samego pocztku zobaczy obecny stan.
+
+51
+00:04:50,390 --> 00:04:57,070
+Aby to zrobi, mog ustawi warto rwn nazwie podpory, to jest
+
+52
+00:04:57,080 --> 00:04:59,210
+nazwa mimo wszystko.
+
+53
+00:04:59,210 --> 00:05:02,160
+Teraz mamy wasn, wic konfiguracj,
+
+54
+00:05:02,270 --> 00:05:09,350
+suchamy zmian, wywoujemy w kocu metod change, ktra odnosi si do nameChangedHandler,
+
+55
+00:05:09,350 --> 00:05:17,030
+ktra aktualizuje stan i przekazalimy stan osobie z imieniem i wiekiem, a my
+
+56
+00:05:17,030 --> 00:05:20,510
+wyprowadzamy nazwa jako warto wejcia.
+
+57
+00:05:20,510 --> 00:05:24,800
+To teraz pozwala nam pokaza t warto ju na
+
+58
+00:05:25,070 --> 00:05:31,190
+samym pocztku i tutaj dostaj ostrzeenie, to ostrzeenie teoretycznie ma sens, poniewa
+
+59
+00:05:31,190 --> 00:05:38,910
+jeli podasz warto prop bez instrukcji onChange tutaj, faktycznie napotkasz problemy, poniewa wiisz warto do
+
+60
+00:05:38,910 --> 00:05:43,310
+nieruchomoci, nie pozwalajc sobie na reakcj na zmiany, dlatego
+
+61
+00:05:43,310 --> 00:05:45,730
+zablokowaby swoje dane wejciowe, mgbym
+
+62
+00:05:45,770 --> 00:05:51,800
+to pokaza, jeli usun na zmian. Teraz widzimy, e nadal widzimy wartoci, ale jeli
+
+63
+00:05:51,800 --> 00:05:55,550
+tam wpiszesz, nic si nie dzieje, nie mog pisa, poniewa
+
+64
+00:05:55,670 --> 00:06:00,920
+nie obsugujemy zmian, wic zawsze nadpisujemy cokolwiek prbujemy wpisywa z istniejc nazw wniosku.
+
+65
+00:06:01,340 --> 00:06:08,320
+Jeli jednak ponownie wprowadz zmiany, bd pozostanie tutaj, co jest po prostu faszywym alarmem, poniewa wyranie wida,
+
+66
+00:06:08,510 --> 00:06:14,180
+nie mog wpisa, poniewa nie jestem w stanie obsuy moich zmian, zaktualizowa mojego stanu,
+
+67
+00:06:14,180 --> 00:06:19,880
+zaktualizowa moich rekwizytw i tym samym odzwierciedli moje zmiany w tu te wejcie.
+
+68
+00:06:20,060 --> 00:06:25,230
+Mamy wic dziaajc dwukierunkow opraw i moemy teraz dynamicznie zmienia t nazw.
+
+69
+00:06:25,340 --> 00:06:31,730
+Znowu pamitajmy tylko o Manu, poniewa nie ustanowilimy logiki dla innych danych wejciowych, dlatego nie
+
+70
+00:06:31,760 --> 00:06:35,690
+moemy tam wpisa, poniewa nie moemy tam ich aktualizowa.
+
+71
+00:06:35,840 --> 00:06:40,630
+I prawdopodobnie dlatego narzeka tutaj na te inne dane.
+
+72
+00:06:40,860 --> 00:06:47,600
+Na razie moemy to zignorowa, ale poprawimy to, gdy mamy lepszy sposb dynamicznego
+
+73
+00:06:47,690 --> 00:06:49,410
+renderowania listy elementw.
+

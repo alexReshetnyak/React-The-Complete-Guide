@@ -1,0 +1,204 @@
+1
+00:00:02,270 --> 00:00:07,340
+Lasciamo il mondo dei componenti di ordine superiore per ora e torniamo al nostro progetto dimostrativo
+
+2
+00:00:07,340 --> 00:00:12,980
+e ci immergiamo in alcune delle cose utili che dovresti tenere a mente quando costruisci le applicazioni di
+
+3
+00:00:12,980 --> 00:00:14,760
+re-act perch potrebbero diventare importanti.
+
+4
+00:00:15,110 --> 00:00:20,780
+Un importante take away che voglio che tu abbia riguarda lo stato.
+
+5
+00:00:21,020 --> 00:00:26,570
+Lo chiamiamo molto nella nostra applicazione in Rapture come follia anche se a causa del modo in cui
+
+6
+00:00:26,570 --> 00:00:30,440
+si dovrebbe usare lo stato, lo si usa solo in alcuni componenti selezionati.
+
+7
+00:00:30,590 --> 00:00:33,220
+E l lo usiamo sempre in modo immutabile.
+
+8
+00:00:33,230 --> 00:00:39,410
+mutare quello originale e quindi modifichiamo questa copia e assegniamo il cambio di copia come nuovo stato.
+
+9
+00:00:39,410 --> 00:00:45,200
+Quindi se assegniamo un array di persone creiamo una copia di quell'array in modo da non
+
+10
+00:00:45,410 --> 00:00:47,660
+Questo  esattamente come dovresti farlo.
+
+11
+00:00:47,870 --> 00:00:54,560
+Ora a volte hai un aggiornamento di stato che dipende dal vecchio stato ed  un po 'pi banale.
+
+12
+00:00:54,890 --> 00:00:59,060
+Diciamo che vogliamo avere un contatore su quanto spesso facciamo clic sul pulsante di attivazione / disattivazione.
+
+13
+00:00:59,090 --> 00:01:00,560
+Quindi si parla del gestore di una persona.
+
+14
+00:01:00,560 --> 00:01:06,890
+Quante volte  stato eseguito fondamentalmente nel nostro stato che ora inizializzato nel costruttore dal momento che
+
+15
+00:01:06,890 --> 00:01:09,700
+le lezioni del ciclo di vita l.
+
+16
+00:01:09,740 --> 00:01:15,110
+Potremmo avere un contatore su cui  stato fatto clic su chi ha inizialmente 0.
+
+17
+00:01:15,170 --> 00:01:24,940
+Ora nel nostro gestore di commutazione qui chiamiamo lo stato di set e l ora dovremmo anche aggiornare il pulsante di attivazione e
+
+18
+00:01:24,950 --> 00:01:32,030
+il valore ovviamente dipende dal vecchio valore del clic di attivazione, perch il chip o il vecchio
+
+19
+00:01:32,030 --> 00:01:33,350
+valore pi uno.
+
+20
+00:01:33,620 --> 00:01:40,430
+Quindi potremmo dire che questo stato commuta e pi uno  il nuovo stato.
+
+21
+00:01:40,430 --> 00:01:46,820
+Ora se salviamo questo per vedere se questo  il caso, possiamo usare gli strumenti di sviluppo Riak.
+
+22
+00:01:46,820 --> 00:01:54,110
+Quindi aprir gli strumenti per gli sviluppatori di re-act nei miei strumenti per sviluppatori di Chrome e ora andr al componente App in cui
+
+23
+00:01:54,530 --> 00:01:58,270
+posso ispezionare il target di stato su cui ho fatto clic 0.
+
+24
+00:01:58,280 --> 00:02:01,190
+Ora  1 2 3.
+
+25
+00:02:01,220 --> 00:02:07,940
+Funziona correttamente e continua a farlo in modo errato perch detto stato  in realt
+
+26
+00:02:07,940 --> 00:02:17,630
+un metodo eseguito in modo asincrono per reazione, il che significa che non puoi fare affidamento su questo stato chiamato Interno dello
+
+27
+00:02:17,630 --> 00:02:24,260
+stato per riflettere realmente l'ultima versione dello stato se hai chiamato detto stato da qualche
+
+28
+00:02:24,260 --> 00:02:25,530
+altra parte nell'applicazione.
+
+29
+00:02:25,700 --> 00:02:32,510
+In pratica, all'incirca nello stesso tempo, la media della chiamata di stato potrebbe essere terminata prima di
+
+30
+00:02:32,540 --> 00:02:36,070
+questa, quindi questo stato qui potrebbe non essere corretto.
+
+31
+00:02:36,140 --> 00:02:39,720
+Quindi c' una sintassi migliore per chiamare questo stato impostato.
+
+32
+00:02:39,830 --> 00:02:47,950
+che questo stato impostato prenda una funzione e io user la funzione freccia e l otterrete due argomenti.
+
+33
+00:02:47,990 --> 00:02:56,370
+Se pensate di usare questo stato al suo interno e questa  la forma funzionale della sintassi della
+
+34
+00:02:56,370 --> 00:02:57,390
+funzione, sembra
+
+35
+00:02:57,390 --> 00:03:01,190
+Lo stato precedente a cui puoi accedere in modo sicuro.
+
+36
+00:03:01,200 --> 00:03:04,940
+Perch questo  sicuramente l'ultimo stato che aveva in questo momento.
+
+37
+00:03:05,370 --> 00:03:07,360
+E tutti gli oggetti di scena che potresti avere.
+
+38
+00:03:07,890 --> 00:03:14,970
+E poi il corpo della funzione devi restituire un oggetto che  il tuo stato aggiornato.
+
+39
+00:03:15,230 --> 00:03:22,950
+che avevamo ma non abbiamo pi tag di stato che abbiamo cliccato, ma il tag di stato precedente  stato cliccato e
+
+40
+00:03:23,370 --> 00:03:30,420
+come ho appena detto questo  ora sicuro perch lo stato precedente non pu essere mutato da nessun'altra parte nell'app.
+
+41
+00:03:30,530 --> 00:03:33,170
+Cos ora hai inserito il vecchio codice
+
+42
+00:03:33,270 --> 00:03:36,360
+Mentre siamo a questo set stato di carbone.
+
+43
+00:03:36,660 --> 00:03:42,960
+Quindi, se il file di dati ricarica l'applicazione, riattivare gli strumenti elettrici e selezionare l'app.
+
+44
+00:03:43,290 --> 00:03:50,070
+Ora se faccio clic su parla di persone funziona come i quattro e funzioner con l'approccio cattivo anche in
+
+45
+00:03:50,070 --> 00:03:51,450
+molti casi di Abaroa.
+
+46
+00:03:51,690 --> 00:03:59,340
+Ma il caso di best practice dello stato di mutamento se si fa affidamento sullo stato precedente, come facciamo qui,  per mezzo del
+
+47
+00:03:59,340 --> 00:04:01,480
+coolit che chiama lo stato precedente qui.
+
+48
+00:04:01,560 --> 00:04:09,060
+con il nostro stato di peggioramento dello stato, non avresti avuto il pericolo qui perch non cambiamo il target di raccolta da nessun'altra parte.
+
+49
+00:04:09,060 --> 00:04:14,960
+Questo  solo un take away e un modo migliore di mutare per affermare se si ha il
+
+50
+00:04:14,960 --> 00:04:16,040
+rischio di interferire
+
+51
+00:04:16,230 --> 00:04:19,490
+Ma se tu fossi alle daises l'approccio migliore.
+

@@ -1,0 +1,368 @@
+1
+00:00:02,150 --> 00:00:03,950
+Nosso formulrio certamente est funcionando muito bem.
+
+2
+00:00:04,090 --> 00:00:07,270
+Mas  claro que h uma falha na validao.
+
+3
+00:00:07,480 --> 00:00:09,540
+Ns sempre podemos enviar o formulrio.
+
+4
+00:00:09,550 --> 00:00:11,750
+No recebemos erros de validao.
+
+5
+00:00:11,770 --> 00:00:14,580
+No vemos se o formulrio  vlido ou no.
+
+6
+00:00:14,590 --> 00:00:21,530
+Agora, enquanto uma estrutura como o pescador tem um pacote de validao embutido basicamente reagem no tem.
+
+7
+00:00:21,580 --> 00:00:23,740
+Voc deve fazer uma validao por conta prpria.
+
+8
+00:00:23,770 --> 00:00:30,190
+de terceiros que voc pode querer verificar, mas, em geral, voc tambm pode criar validao por conta prpria.
+
+9
+00:00:30,220 --> 00:00:31,120
+Existem alguns pacotes
+
+10
+00:00:31,300 --> 00:00:34,460
+E eu quero construir isso sozinho.
+
+11
+00:00:34,480 --> 00:00:41,650
+Nenhum objetivo  que, sempre que mudarmos, os valores esto aqui e o manipulador de mudana de entrada tambm verificamos
+
+12
+00:00:41,740 --> 00:00:43,600
+se  vlido ou no.
+
+13
+00:00:43,900 --> 00:00:50,760
+E  claro que a validade do elemento deve ser definida por algumas regras que configuramos no formulrio de pedido.
+
+14
+00:00:50,770 --> 00:00:57,160
+Ento, aqui para uma determinada entrada, onde alteramos o tipo e o de-conflito, ento, basicamente os atributos M-L de DHV
+
+15
+00:00:57,160 --> 00:00:58,230
+e o valor.
+
+16
+00:00:58,600 --> 00:01:06,840
+Todos ns podemos ter alguma chave de validao onde estabelecemos as regras que queremos respeitar.
+
+17
+00:01:06,880 --> 00:01:13,420
+Esta pode ser uma regra como requerida deve ser definida como verdadeira para que este seja um campo que
+
+18
+00:01:13,420 --> 00:01:15,810
+ absolutamente necessrio que no seja vazio.
+
+19
+00:01:15,820 --> 00:01:18,610
+Isso  muitas vezes usado para governar,  claro.
+
+20
+00:01:19,110 --> 00:01:26,590
+Ento, vamos usar o vamos adicionar este campo de validao com apenas necessrio para todos os nossos elementos logo aps
+
+21
+00:01:26,590 --> 00:01:27,280
+os valores.
+
+22
+00:01:27,280 --> 00:01:33,710
+Ento, no nvel superior do elemento, portanto, no deve estar vazio.
+
+23
+00:01:33,910 --> 00:01:40,390
+E eu no preciso para o menu suspenso porque eu tenho que selecionar o valor l de qualquer forma, ento no h validao
+
+24
+00:01:40,390 --> 00:01:45,280
+adicional para a maioria dos meus elementos, exceto para o menu suspenso por voc, que acabei de mencionar.
+
+25
+00:01:45,280 --> 00:01:49,240
+Agora, como podemos verificar isso para isso.
+
+26
+00:01:49,250 --> 00:01:56,900
+Ou crie outro novo mtodo que incluir validao de verificao de nomes ou validade pode ser vlido.
+
+27
+00:01:57,040 --> 00:02:02,120
+T onde eu recebo o valor e depois as regras.
+
+28
+00:02:02,300 --> 00:02:09,110
+E ento isso deve retornar verdadeiro ou falso determinando se isso  vlido ou no, tambm significa que eu tenho
+
+29
+00:02:09,110 --> 00:02:16,130
+que ter alguma propriedade vlida em cada elemento no meu estado que eu possa gerenciar para que eles tenham como
+
+30
+00:02:16,130 --> 00:02:17,710
+vlido o que  falso.
+
+31
+00:02:17,720 --> 00:02:19,240
+Inicialmente, digamos isso.
+
+32
+00:02:19,250 --> 00:02:22,410
+Adicione tambm isso a todos os elementos que devem ter validao.
+
+33
+00:02:22,580 --> 00:02:28,240
+E, claro, voc tambm pode adicionar isso como uma sub-chave de validao ou algo assim.
+
+34
+00:02:28,310 --> 00:02:30,450
+Ento vou adicionar Valot aqui.
+
+35
+00:02:33,050 --> 00:02:37,640
+Defina-o como falso inicialmente talvez e agora e verifique a validade.
+
+36
+00:02:37,640 --> 00:02:45,420
+Eu quero retornar verdadeiro ou falso para importar o manipulador alterado apenas faz uma propriedade vlida tambm.
+
+37
+00:02:45,650 --> 00:02:49,050
+Agora,  claro, depende das regras que temos.
+
+38
+00:02:49,460 --> 00:02:54,800
+Simplesmente verifico se as regras tm uma regra necessria.
+
+39
+00:02:54,840 --> 00:03:04,460
+Ento, se isso for verdadeiro ish, ento eu quero ajustar alguns  uma varivel vlida que inicialmente  falsa como
+
+40
+00:03:04,460 --> 00:03:11,840
+padro, talvez eu queira definir  vlido igual  comparao de valor, portanto,  invlido.
+
+41
+00:03:11,870 --> 00:03:15,390
+Deve ser igual se no for igual a uma string vazia.
+
+42
+00:03:15,560 --> 00:03:21,390
+No entanto, eu quero usar o ajuste de valor aqui para remover qualquer espao em branco no incio ou no final.
+
+43
+00:03:21,530 --> 00:03:27,740
+Ento agora  vlido  atualizado para Verdadeiro ou falso dependendo da verificao se o valor aparado for igual
+
+44
+00:03:27,740 --> 00:03:28,970
+a uma string vazia.
+
+45
+00:03:28,970 --> 00:03:36,050
+Se no for igual, Izabella ser verdadeira e no final da verificao, a validade que eu retornarei  vlida.
+
+46
+00:03:36,140 --> 00:03:41,140
+Ento, verdadeiro ou falso no manipulador alterado de entrada.
+
+47
+00:03:41,420 --> 00:03:49,530
+Posso, claro, tambm atualizar meu valor vlido do elemento de formulrio atualizado aqui.
+
+48
+00:03:49,700 --> 00:03:59,120
+evento e, claro, quero passar meu objeto de validao de elemento de formulrio atualizado que  apenas meu regras.
+
+49
+00:03:59,150 --> 00:04:07,790
+Eu quero configurar esse elemento de formulrio de valor Valot igual a esta validade de verificao e
+
+50
+00:04:07,790 --> 00:04:15,080
+passar o valor do elemento de formulrio atualizado que j ajustamos ao valor passado pelo
+
+51
+00:04:15,270 --> 00:04:22,200
+Ento, a validao tem, por exemplo, uma propriedade obrigatria e  isso que eu controlo e verifique a validade.
+
+52
+00:04:22,320 --> 00:04:29,310
+Eu vejo se o objeto de minhas regras tem uma propriedade necessria e se o valor dessa
+
+53
+00:04:29,310 --> 00:04:38,010
+propriedade  verdadeiro ish ou  tratado como verdadeiro, ento agora com essa configurao devemos ser capazes de verificar isso e
+
+54
+00:04:38,010 --> 00:04:45,900
+definir vlido como verdadeiro ou falso porque tenha em mente Esta validade de verificao retorna verdadeira ou falsa, portanto,
+
+55
+00:04:45,900 --> 00:04:49,290
+armazenamos o resultado desse cheque na propriedade vlida.
+
+56
+00:04:49,290 --> 00:04:51,650
+Agora, para ver se isso realmente funciona.
+
+57
+00:04:51,690 --> 00:04:59,030
+Tudo simplesmente o Konsole bloqueia meu elemento de formulrio atualizado aqui por agora para que possamos ver em cada pressionamento de tecla.
+
+58
+00:04:59,130 --> 00:05:00,490
+Se isso mudar.
+
+59
+00:05:00,750 --> 00:05:06,460
+Ento, se eu inserir algo no meu nome abaixo do objeto e voc v bem,  verdade.
+
+60
+00:05:06,720 --> 00:05:11,330
+Se voc remover o T, voc ver vlido como falso porque agora est vazio.
+
+61
+00:05:11,330 --> 00:05:17,610
+Se eu entrar em alguns espaos em branco este ano, ento voc ver vlido ainda  falso
+
+62
+00:05:17,610 --> 00:05:24,150
+porque, para cortar o valor, o cheque personalizado est funcionando bem aqui e agora,  claro, podemos usar.
+
+63
+00:05:24,150 --> 00:05:25,850
+Ou podemos adicionar mais regras.
+
+64
+00:05:26,040 --> 00:05:31,290
+Podemos adicionar uma verificao de nmero aqui onde dizemos se as regras significam o comprimento.
+
+65
+00:05:31,290 --> 00:05:42,340
+Se tivermos algo assim, podemos definir  vlido igual ao comprimento do valor maior comprimento mdio das regras
+
+66
+00:05:42,460 --> 00:05:43,270
+iguais.
+
+67
+00:05:43,290 --> 00:05:51,540
+Ento, agora, meio-curso,  claro, seria um valor como um ou dois ou trs, que resolver trousseaux, que atuar da
+
+68
+00:05:51,630 --> 00:05:56,640
+maneira que ele governa e, claro, pode ser criativo e at mesmo
+
+69
+00:05:56,640 --> 00:06:04,740
+criar regras mais complexas que possam ter Objetos como um valor onde voc pode acessar as regras significa o
+
+70
+00:06:04,980 --> 00:06:13,120
+comprimento e, em seguida, algo como mnimo absoluto ou algo parecido para que voc possa realmente ser criativo e
+
+71
+00:06:13,120 --> 00:06:14,950
+criar suas prprias regras dinamicamente.
+
+72
+00:06:15,150 --> 00:06:24,010
+para homens Lang regra aqui para o cdigo postal digamos que o cdigo postal deve receber um mnimo de cinco.
+
+73
+00:06:24,140 --> 00:06:24,880
+Tudo usado
+
+74
+00:06:25,060 --> 00:06:28,080
+E digamos tambm um comprimento mximo de cinco.
+
+75
+00:06:28,570 --> 00:06:39,530
+E agora isso significa que eu tambm adicionarei uma verificao para o comprimento mximo mximo se o comprimento mximo das regras e aqui deve ser menor
+
+76
+00:06:39,530 --> 00:06:47,150
+ou igual ao comprimento mximo e nossa lgica de validao atual aqui tem uma falha crucial, por sinal.
+
+77
+00:06:47,150 --> 00:06:49,500
+Voltarei a isso em um segundo.
+
+78
+00:06:49,520 --> 00:06:59,140
+Ento, para ver se h uma validao de comprimento, no funciona, basta adicionar cheques ano e adicion-lo.
+
+79
+00:06:59,170 --> 00:07:05,480
+Nossa configurao aqui para o cdigo para ver se isso funciona, vamos voltar ao aplicativo, entremos
+
+80
+00:07:05,480 --> 00:07:08,400
+algo no cdigo SIP como 5 5 5.
+
+81
+00:07:08,630 --> 00:07:11,660
+Vamos expandir isso e voc ver que Valot  verdade.
+
+82
+00:07:11,720 --> 00:07:15,030
+Ento, no est funcionando aqui, infelizmente.
+
+83
+00:07:15,920 --> 00:07:18,130
+A razo para isso  a nossa falha.
+
+84
+00:07:18,650 --> 00:07:24,410
+Se analisarmos o nosso mtodo de validao, verificamos uma regra aps o yabber.
+
+85
+00:07:24,410 --> 00:07:31,910
+Isso significa que,  claro, apenas a ltima regra deve ser satisfeita para girar  vlida para verdadeiro, mesmo que os conjuntos de
+
+86
+00:07:32,060 --> 00:07:34,120
+intervalo mdio sejam invlidos para falso.
+
+87
+00:07:34,250 --> 00:07:43,940
+verdadeiro novamente que o assalto do ano passado que se eu adicionar seis dgitos ano, o que seria muito longo que agora ele no
+
+88
+00:07:43,950 --> 00:07:51,560
+ mais vlido j porque o ltimo comprimento mximo de verificao resolve falso por este longo perodo de entrada.
+
+89
+00:07:51,740 --> 00:07:58,440
+Se o comprimento mximo for cumprido, aps o qual ele est atualmente, isso ser definido como
+
+90
+00:07:58,460 --> 00:07:59,600
+Ento, esse  o problema.
+
+91
+00:07:59,600 --> 00:08:04,730
+A falha que temos agora estamos a verificar as regras uma aps o nmero.
+
+92
+00:08:04,850 --> 00:08:07,850
+Vamos corrigir essa falha na prxima palestra.
+

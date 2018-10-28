@@ -1,0 +1,212 @@
+1
+00:00:02,180 --> 00:00:09,370
+imdi sipari zetinde dmelere ihtiyacmz var Yani orada devam veya iptal etme seenei var.
+
+2
+00:00:09,860 --> 00:00:18,680
+zet sras zetle akas ne yapacam hepsi bir dmeye bir dme ve bir dieri.
+
+3
+00:00:18,730 --> 00:00:23,000
+lk dmeyle iptal etmek istedim.
+
+4
+00:00:23,050 --> 00:00:25,990
+Tamam, hepsi stil verme nedenlerinden tr byk harflerle tamamlanr.
+
+5
+00:00:26,020 --> 00:00:31,670
+Tabii ki bizi farkl tarzda farkl ekilde yazabilir ve devam edebilirsiniz.
+
+6
+00:00:31,990 --> 00:00:38,920
+Bu yzden, seim iptalcisinin temelde arka plan zerine tklayarak yapt gibi devam edeceini ve devam
+
+7
+00:00:38,920 --> 00:00:46,510
+ettireceimizi veya en azndan baka ey yapamayacan anlyoruz nk Diablo mantnn nereden gnderileceini burada bir sunucuya
+
+8
+00:00:46,510 --> 00:00:48,700
+gndereceiz ve bylece zerinde.
+
+9
+00:00:48,790 --> 00:00:52,340
+Ancak bu, kursa ekleyeceimiz bir ey.
+
+10
+00:00:52,340 --> 00:00:56,670
+imdi bu dmeler bakmak istediim gibi grnmyor.
+
+11
+00:00:56,890 --> 00:00:59,690
+Bu yzden onlar stil emin olun.
+
+12
+00:01:00,070 --> 00:01:08,410
+Ve aslnda baz kalplar yeniden kullanabilirim Bir iptal ve Devam dmesi olan uygulamadaki
+
+13
+00:01:08,410 --> 00:01:10,360
+stiller ok mantkl.
+
+14
+00:01:10,570 --> 00:01:15,800
+Bu yzden belki de batonu kendi bileenlerine dardan atmalyz.
+
+15
+00:01:15,970 --> 00:01:21,340
+dii olsa bile, onu kendi bileene koyabiliriz, bylece baz varsaylan stil
+
+16
+00:01:21,640 --> 00:01:27,850
+ile Rapide yapabilir ve bu dmeyi sfrdan tekrar kullanacamz herhangi bir bileende saklamamz gerekmez.
+
+17
+00:01:27,850 --> 00:01:30,300
+Zaten bir dme eleman ve
+
+18
+00:01:30,790 --> 00:01:36,430
+lsek lrsem, klasre gidip dme ile bir dme alt klasr ekleyeceim.
+
+19
+00:01:36,460 --> 00:01:38,720
+JS dosyas.
+
+20
+00:01:38,710 --> 00:01:43,750
+imdi bu dme bileeninin kodu tahmin edebileceiniz kadar sper basittir.
+
+21
+00:01:43,960 --> 00:01:53,050
+Bu, baz GSX'i artc ekilde dndrdm baz sahne alm ilevsel bir bileenidir ve biliyorum ki hepsi artc
+
+22
+00:01:53,050 --> 00:01:57,230
+bir ekilde buraya yeniden hareket etmem gerektiini biliyorum.
+
+23
+00:01:58,340 --> 00:02:07,790
+imdi tablonun ntanml olarak dmesini vermek iin u an herhangi birisi ve bununla birlikte normal bir dme elemann basite buraya
+
+24
+00:02:07,790 --> 00:02:13,340
+kaydrmak istiyorum, ancak onu yaplandrmak iin baz sahne takmlarna ihtiyacm olacak.
+
+25
+00:02:13,340 --> 00:02:20,240
+Ben tabii ki normal bir dme gibi kendi dmesini kullanp basite benim
+
+26
+00:02:20,360 --> 00:02:28,040
+zel dme esi ile ieri girmesi gereken ierii koymak iin pervane ocuklarn kartmak istiyorum
+
+27
+00:02:28,640 --> 00:02:35,040
+ve tklattmda Lisner'i mutlaka nerede yrtmek zorunda kalacam Pervane rnein tkland.
+
+28
+00:02:35,630 --> 00:02:38,350
+Ve tabii ki bu nemli bir blm deil.
+
+29
+00:02:38,450 --> 00:02:42,490
+Farkl buton trleri iin farkl stil balantlarna ihtiyacm var.
+
+30
+00:02:42,590 --> 00:02:46,900
+Devam butonuna benzer bir iptal dmesi.
+
+31
+00:02:47,120 --> 00:02:55,700
+Her eyden nce CBS dosyasndaki CBS dosyasnda baz Starling'ler ayarlayabiliriz ve bu videoya
+
+32
+00:02:55,700 --> 00:03:03,690
+eklenmi bir CBS dosyas bulmadan nce isteyebilirsiniz, bylece dmeler stillerini abucak kullanmaya balayabilirsiniz.
+
+33
+00:03:04,280 --> 00:03:05,570
+te buradaym.
+
+34
+00:03:05,600 --> 00:03:11,750
+Veya ekteki dosyann ierii ve bu sadece bir baar ve bir tehlike tanmlar
+
+35
+00:03:11,750 --> 00:03:18,460
+ancak baar dmesini esasen yeil olarak yerletirin ve tehlikeli dme krmz veya kahverengimsi krmzdr.
+
+36
+00:03:18,620 --> 00:03:23,630
+imdi bunu dmede snf ad ile kullanabiliriz.
+
+37
+00:03:23,630 --> 00:03:28,180
+Ve tabii bunun iin Klaas' C-s dmelerinden ie aktarmamz gerekiyor.
+
+38
+00:03:28,180 --> 00:03:33,500
+imdiye kadar burada snf adna yerletik.
+
+39
+00:03:33,560 --> 00:03:35,330
+Sonunda sicimi geirmek zorundayz.
+
+40
+00:03:35,330 --> 00:03:36,830
+Bunu aklnda tutun.
+
+41
+00:03:36,830 --> 00:03:45,890
+Bir dizi ekleyin nk her zaman dme snfn atamak istiyorum, ancak koullu olarak baar
+
+42
+00:03:45,890 --> 00:03:48,830
+veya tehlike snfna ekleyeceim.
+
+43
+00:03:49,020 --> 00:03:57,620
+Bu yzden, snflar dmeyi, eklemek istediiniz snflarn dizisinin bir paras olarak ve ardndan snflar olarak ayarlayacam.
+
+44
+00:03:57,750 --> 00:04:05,910
+Ve imdi dinamik olarak prop tipiyle belirli bir trn kartacam rnein dme tipi dardan ayarlamam gereken
+
+45
+00:04:05,910 --> 00:04:12,600
+bir butondur ve Dme tipi Ebuyer tehdidi ile bakent D veya bakent S.
+
+46
+00:04:12,600 --> 00:04:14,920
+ile baar elde eder. Ve tabii ki snflara atama farkl bir yaklam kullanabilirsiniz.
+
+47
+00:04:15,180 --> 00:04:18,880
+Bunu beendim nk gerekten esnek ve uygulanmas
+
+48
+00:04:18,890 --> 00:04:25,310
+kolay ve snfa getiimiz eyin bir dize olmas gerektiini aklnzda bulundurun.
+
+49
+00:04:25,320 --> 00:04:27,190
+u an iin bir dizgi dizisi var.
+
+50
+00:04:27,210 --> 00:04:29,520
+Bu yzden sonunda bunu
+
+51
+00:04:29,700 --> 00:04:36,150
+bir dize olan bir snf listesi olan bir bolukla gstererek deitirelim.
+
+52
+00:04:36,150 --> 00:04:36,710
+imdi sradaki zetimizde bu dmeyi kullanmak istediim bir sonraki video blmnde kendi dme bileenimiz var.
+
+53
+00:04:37,910 --> 00:04:44,340
+&nbsp;
+

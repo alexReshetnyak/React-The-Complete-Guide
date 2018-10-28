@@ -1,0 +1,360 @@
+1
+00:00:02,060 --> 00:00:10,330
+Para desligar o boto de ordem se o formulrio for invlido, preciso descobrir se o meu formulrio geral  invlido.
+
+2
+00:00:10,710 --> 00:00:15,300
+E como descobrimos isso no final.
+
+3
+00:00:15,300 --> 00:00:23,400
+H, naturalmente, algumas maneiras pelas quais podemos adicionar conjuntos de controles ao nosso formulrio de pedido e agora adicionar todos os controles
+
+4
+00:00:23,430 --> 00:00:30,510
+a isso e, em seguida, adicionar outra propriedade que seja vlida para o formulrio geral e a atualizao 
+
+5
+00:00:30,510 --> 00:00:33,020
+sempre que o usurio entra em valores.
+
+6
+00:00:33,270 --> 00:00:39,450
+Agora isso exigiria bastante refatorao aqui e  apenas uma abordagem que, claro, podemos
+
+7
+00:00:39,630 --> 00:00:43,210
+simplesmente adicionar uma nova propriedade em nosso estado.
+
+8
+00:00:43,350 --> 00:00:53,220
+formulrio de pedido, esse objeto, podemos adicionar um formulrio,  uma propriedade vlida que  falles inicialmente, o que agora queremos atualizar.
+
+9
+00:00:53,460 --> 00:00:54,960
+Ento, de nosso
+
+10
+00:00:55,110 --> 00:01:02,190
+Ento, o que voc quiser, voc pode usar ambas as abordagens e, em seguida, inserir o manipulador alterado.
+
+11
+00:01:02,190 --> 00:01:09,660
+Ento, sempre que escrevemos, no final, quero verificar se todos os elementos so vlidos agora e se todos
+
+12
+00:01:09,660 --> 00:01:13,860
+eles so vlidos, este formulrio  vlido para ser vlido.
+
+13
+00:01:13,860 --> 00:01:17,790
+Ento aqui vou adicionar uma constante constante constante.
+
+14
+00:01:17,820 --> 00:01:22,170
+A forma tambm  vlida para falso.
+
+15
+00:01:22,620 --> 00:01:28,520
+E ento agora preciso verificar todas as minhas entradas para a sua validade.
+
+16
+00:01:28,530 --> 00:01:35,040
+Ento, voc  simplesmente um loop por todos os meus identificadores de entrada.
+
+17
+00:01:36,040 --> 00:01:44,970
+No formulrio de ordem atualizado, este  o Estado Optik que contm todos os meus elementos e quero definir o formulrio vlido
+
+18
+00:01:45,000 --> 00:01:47,040
+aqui deve ser uma varivel.
+
+19
+00:01:47,040 --> 00:01:51,780
+Portanto, eu quero definir esse formulrio de ordem igual ao atualizado.
+
+20
+00:01:51,930 --> 00:01:56,300
+Selecione um determinado identificador identificador de entrada.
+
+21
+00:01:56,580 --> 00:02:04,710
+Isso tambm deve ser identificador de entrada singular e seu acesso  uma propriedade vlida.
+
+22
+00:02:05,120 --> 00:02:09,740
+Ento, a propriedade que estamos definindo aqui no final, mas aqui estamos configurando isso para um elemento aqui e fazendo
+
+23
+00:02:09,740 --> 00:02:11,020
+um loop para todos os elementos.
+
+24
+00:02:11,820 --> 00:02:17,460
+o problema de que apenas o ltimo cheque  aquele que determina o valor do formulrio  vlido.
+
+25
+00:02:17,460 --> 00:02:20,960
+Eu no s quero configur-lo para isso, porque, novamente, vamos enfrentar
+
+26
+00:02:21,180 --> 00:02:30,110
+Ento, portanto, todas as formas que so vlidas para o verdadeiro inicialmente e verificam se o elemento dado  vlido e a
+
+27
+00:02:30,180 --> 00:02:37,050
+forma  vlida em geral, somente se ambos forem vlidos, a atualizao  atualizada para a verdade.
+
+28
+00:02:37,230 --> 00:02:43,120
+E se isso for falso e a forma for vlida foi verdade, ento o valor resultante ser falso e
+
+29
+00:02:43,220 --> 00:02:47,340
+o formulrio disponvel ser definido como falso porque as substituies falsas so verdadeiras.
+
+30
+00:02:47,850 --> 00:02:53,550
+E com isso eu posso definir o meu estado e no s definir a ordem para ele, mas todo
+
+31
+00:02:53,550 --> 00:02:56,640
+o conjunto para ele  vlido igual para ele  vlido.
+
+32
+00:02:56,640 --> 00:03:03,090
+Ento, para minha varivel aqui, ento, novamente, o tamanho certo de seu formulrio  vlido  referente  minha varivel.
+
+33
+00:03:03,110 --> 00:03:06,920
+Para a maioria, o lado esquerdo est se referindo  propriedade no estado.
+
+34
+00:03:06,920 --> 00:03:07,910
+Eu quero atualizar.
+
+35
+00:03:08,030 --> 00:03:11,440
+O que naturalmente  que forma esta propriedade de veludo aqui.
+
+36
+00:03:12,820 --> 00:03:17,030
+Ento, com isso, devemos agora conhecer o valor geral da invalidez.
+
+37
+00:03:17,170 --> 00:03:19,690
+E isso nos permite desativar o boto.
+
+38
+00:03:19,900 --> 00:03:29,000
+Ento, todos ligaram este atributo capaz no boto para este estado para Miss Velayat ou para ser precisos
+
+39
+00:03:29,020 --> 00:03:30,070
+ao contrrio.
+
+40
+00:03:30,070 --> 00:03:31,960
+Somente se o formulrio no for vlido.
+
+41
+00:03:32,050 --> 00:03:36,930
+Isso deve ser desativado, portanto, desativar  verdade se o formulrio no for vlido.
+
+42
+00:03:37,350 --> 00:03:37,870
+Vamos salvar.
+
+43
+00:03:37,870 --> 00:03:39,590
+No v o resultado.
+
+44
+00:03:39,640 --> 00:03:45,040
+Na verdade, temos que inspecionar o boto porque no temos um estilo especial para botes invlidos
+
+45
+00:03:45,040 --> 00:03:49,020
+e vemos logo no incio que ele  tratado como vlido.
+
+46
+00:03:49,030 --> 00:03:52,970
+Infelizmente, porque no est desativado.
+
+47
+00:03:53,290 --> 00:03:56,830
+Se eu inserir algo aqui, isso nunca muda.
+
+48
+00:03:57,040 --> 00:04:03,630
+Portanto, nosso boto no  realmente atualizado com o estado do nosso formulrio.
+
+49
+00:04:03,640 --> 00:04:07,770
+No est realmente usando nossa validade.
+
+50
+00:04:07,770 --> 00:04:15,410
+Por que bem, porque usamos nosso prprio elemento de boto e no conhecemos uma propriedade desativada.
+
+51
+00:04:15,650 --> 00:04:24,540
+Ns temos que ir ao nosso elemento de boto e podemos definir desativados neste boto e configur-lo para o
+
+52
+00:04:24,540 --> 00:04:25,330
+prop desativado.
+
+53
+00:04:25,370 --> 00:04:31,490
+Ento, para essa propriedade apenas para encontrar porque voc deve se lembrar, no estamos usando o boto HMO original
+
+54
+00:04:31,510 --> 00:04:31,870
+l.
+
+55
+00:04:31,940 --> 00:04:33,800
+Estamos usando nossa prpria implementao.
+
+56
+00:04:33,920 --> 00:04:41,380
+Ento, ns precisamos esperar um Propp desabilitado e pass-lo para o atributo de habilidade putten nativo.
+
+57
+00:04:41,780 --> 00:04:44,410
+Com isso, se salvar todos os arquivos e voltar.
+
+58
+00:04:44,540 --> 00:04:46,810
+Agora voc v que est desativado no incio.
+
+59
+00:04:47,180 --> 00:04:52,900
+E se eu inserir algo aqui, preencha todos esses tweets aqui com dados vlidos.
+
+60
+00:04:53,770 --> 00:04:59,170
+Ento, agora deve ser vlido, exceto por isso, no.
+
+61
+00:04:59,170 --> 00:05:05,950
+Ento, descubra por que a validade no foi atualizada corretamente no componente de dados de contato.
+
+62
+00:05:05,950 --> 00:05:12,920
+Parece que no estamos definindo o formulrio,  vlido para verdadeiro, mesmo que todo o formulrio seja vlido.
+
+63
+00:05:13,160 --> 00:05:19,740
+Vamos confirmar isso por formulrio de registro  vlido aqui no manipulador alterado de entrada.
+
+64
+00:05:19,740 --> 00:05:26,350
+bloqueio do console e inserir algo em todos esses campos e voc ver que ele est constantemente indefinido.
+
+65
+00:05:26,350 --> 00:05:28,670
+E vamos voltar a abrir o
+
+66
+00:05:29,110 --> 00:05:32,530
+Por que  que.
+
+67
+00:05:32,580 --> 00:05:35,080
+Isso est relacionado s nossas entradas.
+
+68
+00:05:35,190 --> 00:05:41,540
+Lembre-se de que temos esse menu suspenso que no possui nenhuma regra de validao.
+
+69
+00:05:41,650 --> 00:05:45,040
+Agora, ele no tem uma propriedade vlida, portanto.
+
+70
+00:05:45,390 --> 00:05:51,780
+E se ns no seguimos todos os elementos e usamos esse atributo vlido,  claro que no 
+
+71
+00:05:51,780 --> 00:05:57,470
+verdadeiro ou falso para o menu suspenso  indefinido e indefinido sempre  tratado como falso.
+
+72
+00:05:57,480 --> 00:06:00,050
+Mas tambm nunca muda para verdadeiro.
+
+73
+00:06:00,510 --> 00:06:08,670
+Ento, uma maneira de corrigir isso  simplesmente adicionar esta propriedade vlida ao menu suspenso mesmo que, claro, no tenha
+
+74
+00:06:08,670 --> 00:06:10,520
+nenhuma regra de validao.
+
+75
+00:06:10,530 --> 00:06:12,610
+Mas, portanto, sempre deve ser vlido.
+
+76
+00:06:12,780 --> 00:06:17,640
+Ento, esse  nosso menu suspenso do mtodo de entrega com o que mudou.
+
+77
+00:06:17,700 --> 00:06:24,980
+Se inserimos algo vlido em todos esses campos, deixe-me inspecionar o pedido.
+
+78
+00:06:25,230 --> 00:06:30,710
+Se eu agora inserir um endereo de e-mail vlido, voc ver que o boto est ativado.
+
+79
+00:06:30,720 --> 00:06:38,730
+Agora eu posso remover um mtodo que adicionei para a depurao no meu manipulador de mudana de entrada e agora, claro,
+
+80
+00:06:38,730 --> 00:06:40,560
+tambm precisamos ajustar o boto.
+
+81
+00:06:40,680 --> 00:06:45,390
+Ento, no boto, agora precisamos de um estilo especial se estiver desativado.
+
+82
+00:06:45,420 --> 00:06:53,280
+Ento, vamos ao boto C-s s e adicionamos uma classe especial para o estilo especial da minha classe
+
+83
+00:06:53,280 --> 00:06:57,060
+de boto, devo dizer para o pseudo seletor desabilitado.
+
+84
+00:06:57,060 --> 00:07:03,260
+Eu quero definir a cor para o olhar de desgraa para que o boto realmente esteja desativado.
+
+85
+00:07:03,300 --> 00:07:11,910
+Vamos tambm definir o cursor para no permitir o permitido aqui, de modo que o cursor tambm reflete que podemos
+
+86
+00:07:11,910 --> 00:07:12,840
+clicar nisso.
+
+87
+00:07:12,840 --> 00:07:16,070
+Agora, tambm mostramos que isso est desativado.
+
+88
+00:07:16,070 --> 00:07:23,930
+mudamos sobre voc em um menu suspenso, ns realmente recebemos uma mensagem de erro relacionada  nossa validao.
+
+89
+00:07:23,970 --> 00:07:30,260
+Agora vamos virar nossas cabeas para um pequeno erro ou voc j descobriu se
+
+90
+00:07:30,480 --> 00:07:33,650
+Vamos corrigir esse erro na prxima palestra.
+

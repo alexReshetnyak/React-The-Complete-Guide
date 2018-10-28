@@ -1,0 +1,36 @@
+1
+00:00:02,230 --> 00:00:05,780
+Bu nedenle, bu projeyi son olarak ve bu
+
+2
+00:00:05,800 --> 00:00:10,240
+projeyi sonlandrmak iin son derece nemli bir adm olan uygulamada konulandrdk.
+
+3
+00:00:10,240 --> 00:00:15,030
+imdi internette kouyoruz ve tabii ki byk bir adm.
+
+4
+00:00:15,070 --> 00:00:22,030
+Gereki tepki uygulamalar oluturmak iin bir admdr, nk bu tr uygulamalar elbette
+
+5
+00:00:22,030 --> 00:00:23,710
+internette de yaynlanabilmelidir.
+
+6
+00:00:23,950 --> 00:00:26,150
+Datmn ok kolay olduunu grdnz gibi,
+
+7
+00:00:26,170 --> 00:00:27,220
+tek bir komut
+
+8
+00:00:27,250 --> 00:00:33,880
+ve aklda tutulmas gereken birka ey var ve hangi hostu seerseniz sein, bu admlar asla deimez.
+
+9
+00:00:33,880 --> 00:00:39,760
+Bu nedenle, bu uygulamay ina etmekten keyif aldnz umuyorum ve umarm lezzetli burgerinizi beenirsiniz.
+

@@ -1,0 +1,172 @@
+1
+00:00:02,110 --> 00:00:05,560
+Cos ora stavano passando con successo i parametri e li usavano.
+
+2
+00:00:05,690 --> 00:00:09,380
+Consentitemi ora di tornare di nuovo al componente di quel Post.
+
+3
+00:00:09,650 --> 00:00:15,830
+In questo momento stiamo usando un link per caricare un singolo post e navigare verso la sua pagina e non c'
+
+4
+00:00:15,830 --> 00:00:17,190
+niente di sbagliato in questo.
+
+5
+00:00:17,210 --> 00:00:24,320
+Comunque ora voglio mostrarti un'alternativa e per questo o commentare il link heart qui con un commento
+
+6
+00:00:24,320 --> 00:00:30,470
+normale perch non sono all'interno di GSX qui, quindi non ho raptus in un link.
+
+7
+00:00:30,480 --> 00:00:36,520
+Quindi ho bisogno di aggiungere la chiave per postare di nuovo perch ora post  di nuovo il pi alto elemento nel
+
+8
+00:00:36,520 --> 00:00:37,770
+nostro array che stiamo restituendo.
+
+9
+00:00:38,090 --> 00:00:40,490
+Ma ora non sto pi usando il collegamento.
+
+10
+00:00:40,820 --> 00:00:46,760
+E posso quindi rimuovere l'importazione e rimuovere effettivamente l'intera dichiarazione di importazione.
+
+11
+00:00:46,760 --> 00:00:50,220
+Devo trovare un altro modo per andare a quel post.
+
+12
+00:00:50,390 --> 00:00:56,150
+E ricorda che abbiamo questo listener cliccato in cui eseguiamo questo gestore selezionato per posta
+
+13
+00:00:56,150 --> 00:00:57,960
+in cui passiamo anche l'ID.
+
+14
+00:00:58,370 --> 00:00:59,710
+Possiamo usare quel metodo.
+
+15
+00:00:59,720 --> 00:01:01,950
+E qui invece non voglio usare lo stato.
+
+16
+00:01:01,960 --> 00:01:04,230
+Voglio navigare a livello di programmazione.
+
+17
+00:01:04,490 --> 00:01:10,070
+E stavo mostrando questo qui come una demo, naturalmente, usando il link sarebbe bene per questo caso d'uso ma
+
+18
+00:01:10,070 --> 00:01:16,640
+a volte hai anche casi d'uso in cui vuoi navigare dopo che qualcosa  finito dopo che  stata inviata la richiesta
+
+19
+00:01:16,640 --> 00:01:17,060
+HTP.
+
+20
+00:01:17,060 --> 00:01:20,080
+Ad esempio lo vedremo pi tardi.
+
+21
+00:01:20,090 --> 00:01:25,770
+Ora per fare questo possiamo approfittare di questo oggetto storico che abbiamo ricevuto sui puntelli.
+
+22
+00:01:25,850 --> 00:01:32,600
+Ricorda qui negli oggetti di scena che abbiamo la storia e che in realt abbiamo alcune funzioni che possiamo eseguire
+
+23
+00:01:32,720 --> 00:01:38,690
+per navigare come go back o go forward che fanno esattamente quello che suonano come fondamentalmente fanno lo
+
+24
+00:01:38,690 --> 00:01:41,910
+stesso che hai con i pulsanti avanti e indietro.
+
+25
+00:01:41,960 --> 00:01:50,360
+C' anche questo metodo push che ti permette di spingere una nuova pagina sulla pila di pagine perch la
+
+26
+00:01:50,600 --> 00:01:53,860
+navigazione fondamentalmente riguarda solo una pila di pagine.
+
+27
+00:01:53,900 --> 00:01:59,420
+Questo  il motivo per cui i pulsanti Indietro e Avanti funzionano nel browser perch puoi
+
+28
+00:01:59,450 --> 00:02:05,100
+tornare all'ultima pagina in pila o inoltrare nuovamente a quella pagina nella pila che hai in cima.
+
+29
+00:02:05,120 --> 00:02:07,330
+Prima che tornassi.
+
+30
+00:02:07,340 --> 00:02:12,160
+Quindi, quindi, possiamo usare la spinta storica di questo oggetto.
+
+31
+00:02:12,530 --> 00:02:23,690
+E poi una stringa o anche un oggetto cos essenzialmente lo stesso che usiamo nel collegamento router sulle due propriet
+
+32
+00:02:24,200 --> 00:02:27,080
+per navigare verso una pagina.
+
+33
+00:02:27,110 --> 00:02:36,300
+Quindi potremmo navigare verso un oggetto javascript dove un nome lbf detto per tagliare e poi pi l'ID.
+
+34
+00:02:36,410 --> 00:02:41,650
+E questo  esattamente lo stesso che avevo laggi con il collegamento all'utilizzo della notazione dell'oggetto.
+
+35
+00:02:41,720 --> 00:02:48,350
+Ma ancora una volta l'alternativa che commenter sar semplicemente andare alla barra pi ID.
+
+36
+00:02:48,350 --> 00:02:52,220
+Quindi, basta passare una stringa cos entrambi funzioneranno ora.
+
+37
+00:02:52,680 --> 00:02:53,560
+E con.
+
+38
+00:02:53,600 --> 00:02:59,910
+Se torno alla mia domanda a casa e clicco su un post che funziona ancora.
+
+39
+00:02:59,960 --> 00:03:07,430
+Ora, tuttavia, a livello di codice e chust dimostrare che funziona anche con la notazione Aberg
+
+40
+00:03:07,430 --> 00:03:09,690
+lasciatemi commentare in questo modo.
+
+41
+00:03:09,710 --> 00:03:15,000
+Ora se torno a casa e clicco su un post, andiamo ancora a quel post.
+
+42
+00:03:15,070 --> 00:03:21,950
+Quindi ora stiamo navigando il programma magicamente che pu essere importante di volta in volta per lo pi utilizzato dopo che
+
+43
+00:03:22,040 --> 00:03:23,730
+una determinata operazione  terminata.
+

@@ -1,0 +1,228 @@
+1
+00:00:02,180 --> 00:00:05,650
+Ento, vamos comear a implementar o componente Bergere Boulder.
+
+2
+00:00:05,900 --> 00:00:13,550
+E, como identificamos em nossa fase de design, isso deve ser realmente um continer, porque ns planejamos gerenciar o
+
+3
+00:00:13,550 --> 00:00:17,240
+estado para o Newberger que estamos prestes a construir.
+
+4
+00:00:17,330 --> 00:00:23,000
+Ento, irei para a pasta de continer na pasta de origem e eles so capazes de criar uma
+
+5
+00:00:23,000 --> 00:00:28,170
+nova subpasta que  chamada de criador de hamburguer porque esse seria o nome do componente.
+
+6
+00:00:28,250 --> 00:00:35,690
+Ento eles esto todos em um arquivo burger Boulder dot js e l vou criar esse componente, claro, com a
+
+7
+00:00:35,690 --> 00:00:40,430
+palavra-chave da classe, porque eu preciso gerenciar o estado l mais tarde.
+
+8
+00:00:40,800 --> 00:00:47,680
+Vou nomear um criador de hambrguer e preciso estender esse objeto componente.
+
+9
+00:00:47,840 --> 00:00:50,460
+Podemos importar de reagir.
+
+10
+00:00:50,560 --> 00:00:52,880
+Ento, vamos adicionar importa imediatamente.
+
+11
+00:00:52,880 --> 00:01:02,000
+ tudo que importa reagir para poder escrever J como X e, em seguida, como um componente de importao
+
+12
+00:01:02,000 --> 00:01:03,990
+nomeado do pacote Riak.
+
+13
+00:01:04,150 --> 00:01:06,620
+Esta  a nossa definio de classe terminada.
+
+14
+00:01:06,730 --> 00:01:12,590
+Agora, como voc aprende, h um mtodo de ciclo de vida importante, precisamos implementar o mtodo de renderizao.
+
+15
+00:01:12,730 --> 00:01:17,970
+Isso  uma obrigao porque devemos dizer re-agir o que queremos entrar l.
+
+16
+00:01:18,070 --> 00:01:25,420
+Voc precisa retornar o cdigo Zahm GSX e agora a questo,  claro,  o que queremos retornar aqui.
+
+17
+00:01:25,510 --> 00:01:29,500
+Agora isso provavelmente crescer  medida que construmos essa aplicao.
+
+18
+00:01:29,500 --> 00:01:35,540
+Por exemplo, ns tambm podemos retornar um modal aqui condicionalmente se  hora de mostr-lo.
+
+19
+00:01:35,980 --> 00:01:43,960
+Mas, por enquanto, eu gostaria de fazer  que eu quero renderizar duas coisas diferentes e vou envolv-la com uma div
+
+20
+00:01:43,970 --> 00:01:44,230
+aqui.
+
+21
+00:01:44,230 --> 00:01:46,300
+Por enquanto, estamos na verdade.
+
+22
+00:01:46,360 --> 00:01:49,560
+Vamos usar nosso componente auxiliar para isso.
+
+23
+00:01:49,700 --> 00:01:58,150
+Vamos rapidamente importar alks e, em seguida, suba todo o caminho at a idade do nvel fonte 0, veja alks porque realmente no precisa de
+
+24
+00:01:58,150 --> 00:02:01,070
+um dia sem que eles pensem sobre isso.
+
+25
+00:02:01,190 --> 00:02:07,540
+Faz isso para simplesmente cumprir o requisito de ter um elemento de embrulho porque
+
+26
+00:02:07,540 --> 00:02:11,110
+voc deseja retornar aos componentes adjacentes no final.
+
+27
+00:02:11,110 --> 00:02:14,100
+Por enquanto vamos usar diffs como espaos reservados.
+
+28
+00:02:14,470 --> 00:02:17,070
+Eu quero retornar o Bergere que eu constru.
+
+29
+00:02:17,230 --> 00:02:25,060
+Ento, uma representao grfica do Bergere com todos os ingredientes e abaixo que eu quero ter
+
+30
+00:02:25,060 --> 00:02:28,270
+meus controles de compilao ou algo assim.
+
+31
+00:02:28,270 --> 00:02:35,170
+Ento, basicamente, a rea onde eu posso adicionar e remover resduos de ingredientes configura um para usar.
+
+32
+00:02:35,170 --> 00:02:37,140
+Podemos adicionar mais a este componente.
+
+33
+00:02:37,150 --> 00:02:40,340
+Como mencionei, mas esta  a base de configurao.
+
+34
+00:02:40,720 --> 00:02:46,210
+Ento, por enquanto, deixe-me exportar rapidamente esta classe como um arquivo padro do escritrio.
+
+35
+00:02:46,420 --> 00:02:54,190
+E vamos agora importar o construtor Bergere depois de salv-lo em seu ltimo outono passado e substituir o teste
+
+36
+00:02:54,190 --> 00:02:55,070
+por isso.
+
+37
+00:02:55,420 --> 00:02:59,810
+Ento, vou importar o construtor de hambrguer.
+
+38
+00:02:59,950 --> 00:03:06,220
+E agora eu preciso ir para a pasta recipientes para criar pasta e usar o arquivo js do construtor de hamburguer,
+
+39
+00:03:06,220 --> 00:03:09,260
+ claro, sem a extenso do arquivo conforme voc aprende.
+
+40
+00:03:09,500 --> 00:03:12,260
+O construtor de hamburguer pode ser um componente de fechamento automtico.
+
+41
+00:03:12,280 --> 00:03:20,140
+Eu no preciso envolver qualquer contedo com os seletores e, depois de salvar isso, devemos ver os controles de
+
+42
+00:03:20,140 --> 00:03:21,480
+hambrguer e abaulamento.
+
+43
+00:03:21,610 --> 00:03:29,760
+Agora eu poderia entender se voc no est totalmente piscado, isso certamente pode ser melhorado a partir de uma perspectiva de estilo.
+
+44
+00:03:29,830 --> 00:03:39,010
+Ento, antes de tudo, vamos nos certificar de que temos alguma margem entre nossa barra de ferramentas, mesmo que seja apenas um
+
+45
+00:03:39,010 --> 00:03:40,370
+espao reservado agora.
+
+46
+00:03:40,570 --> 00:03:48,100
+E a nossa outra parte e eu faremos isso no componente lay-out porque  l onde temos a rea para a
+
+47
+00:03:48,100 --> 00:03:54,280
+barra de ferramentas e a rea para a parte principal e eu simplesmente quero adicionar uma srie
+
+48
+00:03:54,280 --> 00:04:00,210
+como Clarus para o elemento principal aqui para se certificar que tem alguma margem para isso.
+
+49
+00:04:00,250 --> 00:04:08,900
+Vou adicionar um novo layout de arquivo C S S e nesse arquivo criarei uma nova classe e um contedo de excluso coxo.
+
+50
+00:04:09,010 --> 00:04:10,980
+O nome  claro depende totalmente de voc.
+
+51
+00:04:11,230 --> 00:04:15,410
+E adicionaro margem 16 pixels superiores.
+
+52
+00:04:15,430 --> 00:04:24,910
+Agora vou voltar para a queda LaChaise e rapidamente importo Colossus desta queda CSSA de layout e com isso
+
+53
+00:04:24,910 --> 00:04:34,690
+no podemos ir ao elemento principal aqui adicionar o nome da classe e depois atribuir contedo de classes como esse.
+
+54
+00:04:34,690 --> 00:04:40,110
+Agora, se salvarmos isso, obtivemos alguma margem, mas isso ainda no parece exatamente um hambrguer.
+
+55
+00:04:40,120 --> 00:04:43,020
+Provavelmente ainda podemos aumentar isso.
+
+56
+00:04:43,090 --> 00:04:50,850
+como um prximo passo, vamos adicionar um componente de hambrguer e os ingredientes do hamburguer que realmente devem ser renderizados l.
+
+57
+00:04:50,860 --> 00:04:51,220
+Ento,
+

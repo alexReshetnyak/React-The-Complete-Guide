@@ -1,0 +1,540 @@
+1
+00:00:02,260 --> 00:00:06,260
+Let's set up a basic react application we can work with,
+
+2
+00:00:06,460 --> 00:00:16,060
+for that I'll add two files in the containers folder, a users.js file and a pizza.js file because
+
+3
+00:00:16,060 --> 00:00:21,010
+I want to show a pizza in my project, again it won't be super useful but it will use an image, it will
+
+4
+00:00:21,010 --> 00:00:24,190
+use lazy loading. In the components,
+
+5
+00:00:24,190 --> 00:00:29,570
+I'll then add my PizzaImage.js component,
+
+6
+00:00:29,740 --> 00:00:31,580
+whoops, that should be without
+
+7
+00:00:31,610 --> 00:00:33,290
+js though, that's just the folder name,
+
+8
+00:00:33,400 --> 00:00:40,560
+so PizzaImage and in there, I want to have my PizzaImage.js file and my PizzaImage.css
+
+9
+00:00:40,560 --> 00:00:41,240
+file
+
+10
+00:00:41,410 --> 00:00:45,120
+and I plan on using css modules here.
+
+11
+00:00:45,250 --> 00:00:49,090
+Now I won't create a users component because I don't really need one,
+
+12
+00:00:49,090 --> 00:00:54,110
+I'll code everything I want to display there into that users file. With that
+
+13
+00:00:54,140 --> 00:00:58,890
+let's work on the PizzaImage and for that, we of course need an image.
+
+14
+00:00:58,900 --> 00:01:04,320
+Now you can find one attached to this lecture and I'll just put it into the assets folder,
+
+15
+00:01:04,350 --> 00:01:06,190
+that's the pizza.jpeg file
+
+16
+00:01:06,190 --> 00:01:08,700
+I'll use. In the PizzaImage.js
+
+17
+00:01:08,700 --> 00:01:09,750
+file,
+
+18
+00:01:09,980 --> 00:01:13,930
+I'll then create this as a functional component, pizzaImage
+
+19
+00:01:14,050 --> 00:01:16,010
+will get some props eventually
+
+20
+00:01:16,030 --> 00:01:25,910
+then I want to output a div here which should get a class, className of and there, I want to use css
+
+21
+00:01:25,920 --> 00:01:28,290
+components and css modules,
+
+22
+00:01:28,330 --> 00:01:31,220
+so here this will have a class PizzaImage.
+
+23
+00:01:31,240 --> 00:01:39,080
+Now for that I need to import that so import classes from ./PizzaImage.css
+
+24
+00:01:39,160 --> 00:01:48,400
+and since we use jsx here, I also need to import react from react and export this as a
+
+25
+00:01:48,400 --> 00:01:49,990
+default.
+
+26
+00:01:49,990 --> 00:01:57,160
+Now you might notice that react of course isn't installed yet, we'll do this in the next lecture where
+
+27
+00:01:57,160 --> 00:02:00,420
+we install all the dependencies we need, for now I'll import it
+
+28
+00:02:00,580 --> 00:02:01,780
+but nothing will work here,
+
+29
+00:02:01,780 --> 00:02:07,990
+we don't have a workflow and we don't even install react, just writing the bare code.
+
+30
+00:02:08,050 --> 00:02:15,100
+So inside my pizzaImage div, I then want to have an image, self-closing where I want to import that image
+
+31
+00:02:15,130 --> 00:02:17,020
+and output it here as a source.
+
+32
+00:02:17,120 --> 00:02:24,150
+Now for that, I will import my PizzaImage from, whoops, from
+
+33
+00:02:24,270 --> 00:02:30,610
+and now I want to navigate to that assets folder and there grab that pizza.jpeg file and my build
+
+34
+00:02:30,610 --> 00:02:37,330
+workflow should essentially copy that file to a new destination then and give me a link to that file in
+
+35
+00:02:37,330 --> 00:02:41,750
+this constant which I can therefore output here, like this.
+
+36
+00:02:41,770 --> 00:02:44,870
+So this is my pizzaImage component,
+
+37
+00:02:44,890 --> 00:02:51,030
+I'll also give this image a class which can be classes pizzaImage.
+
+38
+00:02:51,030 --> 00:03:01,850
+Now I need to give this some styling and I should rename PizzaImage here to PizzaImg maybe because I already
+
+39
+00:03:01,850 --> 00:03:06,310
+have PizzaImage for the overall component style, so pizzaImage is the div here,
+
+40
+00:03:06,710 --> 00:03:14,550
+I'll give this a width of 80% and a height of let's say 300px, a margin of 20px and
+
+41
+00:03:14,580 --> 00:03:18,890
+auto to left and right and I want to center any text
+
+42
+00:03:18,980 --> 00:03:24,540
+and since the image is an inline style, it should be centered for that reason. I'll then have my pizzaImg
+
+43
+00:03:24,560 --> 00:03:31,340
+which is the image itself and there I want to set the max-width to 100% and the max-height
+
+44
+00:03:31,400 --> 00:03:37,750
+to 100% so that it respects the boundaries of the container while still keeping the aspect ratio.
+
+45
+00:03:37,760 --> 00:03:38,760
+Let's see if that works,
+
+46
+00:03:38,780 --> 00:03:41,120
+we can always fine tune these later.
+
+47
+00:03:41,470 --> 00:03:43,930
+With that we got our image configured,
+
+48
+00:03:44,120 --> 00:03:54,860
+now to the Pizza container, there I'll import react and the component from react and then here, I will create
+
+49
+00:03:54,890 --> 00:04:02,900
+a new class pizza which extends component and where I will have a render method of course, in that render
+
+50
+00:04:02,900 --> 00:04:04,100
+method, method
+
+51
+00:04:04,110 --> 00:04:09,950
+I'll return some jsx and here I want to use my pizza info and my pizzaImage, excuse me.
+
+52
+00:04:10,160 --> 00:04:12,920
+So I'll import pizzaImage from
+
+53
+00:04:12,920 --> 00:04:18,440
+and now I need to go to the components folder, pizzaImage and get that PizzaImage.js file and
+
+54
+00:04:18,460 --> 00:04:21,330
+then here, I'll have a wrapping div let's say
+
+55
+00:04:21,500 --> 00:04:26,020
+and in there, I'll have a h1 tag where I'll say The Pizza
+
+56
+00:04:26,180 --> 00:04:34,110
+but more importantly below that, I'll include my PizzaImage component like this and that should give
+
+57
+00:04:34,110 --> 00:04:35,830
+me this pizza,
+
+58
+00:04:36,120 --> 00:04:44,140
+well, component with the class based approach. I'll then of course export pizza the class as a default,
+
+59
+00:04:44,430 --> 00:04:47,910
+I'm now copying this and putting it into the users.js file.
+
+60
+00:04:48,120 --> 00:04:50,920
+Now I won't import my pizzaImage here
+
+61
+00:04:51,090 --> 00:04:59,700
+and the component will be named users but here I'll then say the users and maybe I'll put a paragraph
+
+62
+00:04:59,700 --> 00:05:07,040
+too where I'll say awesome users on board of these course
+
+63
+00:05:07,270 --> 00:05:10,280
+and that's just any dummy content I want to output.
+
+64
+00:05:10,330 --> 00:05:11,800
+Now I've got two containers,
+
+65
+00:05:11,980 --> 00:05:15,010
+now I also want to load them via routing.
+
+66
+00:05:15,100 --> 00:05:24,740
+So in my app.js file, my root component I'll also import react and component like this from react
+
+67
+00:05:25,790 --> 00:05:32,900
+and then I'll create my class app which extends component and in there, I'll have my render method of
+
+68
+00:05:32,900 --> 00:05:35,470
+course return some jsx
+
+69
+00:05:35,720 --> 00:05:37,340
+and here we now want to use routing.
+
+70
+00:05:37,340 --> 00:05:41,780
+So first of all I'll add a div to wrap everything and in here,
+
+71
+00:05:41,900 --> 00:05:46,790
+I'll then have another div where I want to have two links.
+
+72
+00:05:47,030 --> 00:05:52,860
+So there I'll now import something from react router which we also haven't installed yet,
+
+73
+00:05:52,970 --> 00:05:59,150
+I'll import the link component from react-router-dom, again we will install these dependencies
+
+74
+00:05:59,150 --> 00:06:07,360
+in the next lecture and then I'll add my link here to just slash let's say, there with this link
+
+75
+00:06:07,430 --> 00:06:14,440
+I want to reach my users and the pizza part should be lazy loaded
+
+76
+00:06:14,610 --> 00:06:18,810
+so add just a pipe symbol and a whitespace to have some separator between the links.
+
+77
+00:06:18,870 --> 00:06:22,630
+So here, /pizza that is another link
+
+78
+00:06:22,710 --> 00:06:26,000
+but this component should eventually be lazy loaded
+
+79
+00:06:26,250 --> 00:06:28,470
+so here I'll name this pizza.
+
+80
+00:06:28,500 --> 00:06:32,780
+The interesting part now comes below that div here with the links,
+
+81
+00:06:32,880 --> 00:06:38,130
+here's the div where I want to render the routes and for that I'll import route from react-router-
+
+82
+00:06:38,150 --> 00:06:38,990
+dom.
+
+83
+00:06:39,210 --> 00:06:41,200
+Now here, there will be two routes,
+
+84
+00:06:41,220 --> 00:06:48,030
+the first route is simple, for the slash path which I want to match exactly,
+
+85
+00:06:48,030 --> 00:06:53,970
+I want to load a component and that should be my users component so I'll jump up to the imports and
+
+86
+00:06:53,970 --> 00:06:57,900
+import users from ./containers users.js
+
+87
+00:06:58,110 --> 00:07:01,280
+but then I'll also import the pizza
+
+88
+00:07:01,560 --> 00:07:07,730
+so here I'll add another import where I also import the pizza component from containers pizza
+
+89
+00:07:08,250 --> 00:07:15,120
+and with that I can now say that for the first route here, I want to render users, it's a self-closing element
+
+90
+00:07:15,660 --> 00:07:16,870
+for the second
+
+91
+00:07:17,040 --> 00:07:25,110
+where the path is /pizza, I want to render another component but this one should now be lazy loaded
+
+92
+00:07:25,800 --> 00:07:28,690
+and we learned how to load stuff lazily,
+
+93
+00:07:28,710 --> 00:07:34,070
+we wrote the code for this in the routing section, so I'll quickly grab the code from there,
+
+94
+00:07:34,080 --> 00:07:38,640
+you can also find it attached to this lecture or you get it from your own routing project,
+
+95
+00:07:38,670 --> 00:07:41,540
+the one you wrote when following along maybe
+
+96
+00:07:41,850 --> 00:07:46,110
+and this is a new higher order component which I want to add.
+
+97
+00:07:46,230 --> 00:07:53,020
+So I'll create a higher order component folder in the source folder and there I'll name it AsyncComponent.js
+
+98
+00:07:53,070 --> 00:07:53,950
+.
+
+99
+00:07:54,030 --> 00:08:00,360
+and now I'll quickly add that code we wrote in the routing section and I'll paste it into this
+
+100
+00:08:00,360 --> 00:08:01,480
+AsyncComponent.js file,
+
+101
+00:08:01,500 --> 00:08:04,950
+It's the same code as we wrote in the routing section.
+
+102
+00:08:04,950 --> 00:08:09,130
+Now we can use that and I want to use it in my app.js file,
+
+103
+00:08:09,300 --> 00:08:20,330
+so here, I'll import AsyncComponent from ./hoc AsyncComponent.js, by the way all the file
+
+104
+00:08:20,330 --> 00:08:25,960
+extensions are missing because I want to have the same set up as in create react app where it's
+
+105
+00:08:25,990 --> 00:08:29,010
+automatically adding these file extensions.
+
+106
+00:08:29,560 --> 00:08:33,790
+So now I import that, I won't import pizza like this anymore
+
+107
+00:08:33,970 --> 00:08:37,160
+instead this should now happen asynchronously.
+
+108
+00:08:37,240 --> 00:08:43,240
+So now what I'll do in my app.js file, I'll create a new constant outside of the class declaration and I'll name it
+
+109
+00:08:43,330 --> 00:08:44,670
+asyncPizza,
+
+110
+00:08:44,710 --> 00:08:45,870
+the name is up to you.
+
+111
+00:08:45,880 --> 00:08:51,460
+Important is that I'll use my asyncComponent function here and as you might remember, we need to pass
+
+112
+00:08:51,460 --> 00:08:55,790
+an anonymous function to it so I'll do that and in here,
+
+113
+00:08:56,020 --> 00:09:01,200
+I now want to return a dynamic import
+
+114
+00:09:01,210 --> 00:09:04,300
+and here I now point to the path I want to import from
+
+115
+00:09:04,420 --> 00:09:07,570
+so that's containersPizza, like this.
+
+116
+00:09:07,570 --> 00:09:14,590
+Now we can use the asyncPizza here as a component we want to load when navigating to /pizza.
+
+117
+00:09:15,010 --> 00:09:17,170
+This is my app set up thus far
+
+118
+00:09:17,170 --> 00:09:22,750
+now of course we need to mount this app, for that I need to go to the index.js file where thus far I only
+
+119
+00:09:22,750 --> 00:09:24,540
+import my css,
+
+120
+00:09:24,670 --> 00:09:34,550
+here I want to import react of course from react and I want to import react-dom from react-dom because
+
+121
+00:09:34,550 --> 00:09:37,200
+I need to render my react app to the dom
+
+122
+00:09:37,580 --> 00:09:40,280
+and again we will install all these dependencies soon.
+
+123
+00:09:40,280 --> 00:09:51,730
+I also need to import the browser router from react-router-dom and then I can create a new constant,
+
+124
+00:09:51,850 --> 00:09:57,260
+app that's optional where I will use the browser router as a wrapper
+
+125
+00:09:57,470 --> 00:10:03,430
+and I want to wrap my app component with it so I need to import that too, I will import app from
+
+126
+00:10:03,430 --> 00:10:06,430
+./app, like this.
+
+127
+00:10:06,430 --> 00:10:10,070
+So this gets wrapped here, that's the component,
+
+128
+00:10:10,080 --> 00:10:17,290
+so this part is what I actually want to mount to the dom, so I'll add react-dom render here at the bottom
+
+129
+00:10:17,590 --> 00:10:23,710
+to then render app in the place of this root element,
+
+130
+00:10:23,820 --> 00:10:27,160
+so this div with the ID root in the index.html file.
+
+131
+00:10:27,360 --> 00:10:35,990
+So for that, I'll now reach out to it with document_getElementById and then pick the root element here.
+
+132
+00:10:36,020 --> 00:10:41,150
+Now with all of that, our react application is mounted, it should be ready to work,
+
+133
+00:10:41,150 --> 00:10:44,410
+we'll see if it works once we actually can see it in action
+
+134
+00:10:44,570 --> 00:10:47,880
+and that's the part I'll start working on in the next lecture,
+
+135
+00:10:47,960 --> 00:10:53,550
+creating a workflow so that we can build this project and see if it does work.
+

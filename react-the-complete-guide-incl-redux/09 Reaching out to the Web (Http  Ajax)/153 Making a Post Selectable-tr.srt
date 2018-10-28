@@ -1,0 +1,188 @@
+1
+00:00:02,010 --> 00:00:09,620
+imdi rneklerimizdeki istekleri gndermeyle ilgili temel bilgileri burada yllarn yardm ile reneceiz ve bu verileri kullanalm
+
+2
+00:00:09,620 --> 00:00:15,500
+ve devam edelim ve bu yaynlardan birine tklayp o zaman belirtilen mesaj
+
+3
+00:00:15,860 --> 00:00:20,900
+ykleyebildiimizden nasl emin olabildiimizi gremeyelim orada seilmemi posta iin veri getirildi.
+
+4
+00:00:20,960 --> 00:00:26,850
+Tabii bunun iin setiimizde burada ve tekli yaynlarmz tklayabileceimizden emin olmak demek.
+
+5
+00:00:27,080 --> 00:00:33,440
+Yani post bileeni her eyden nce bir makale iin bir dinleyici ekleyin ve orada
+
+6
+00:00:33,440 --> 00:00:39,070
+bir tklama zerine uygulanmas gereken yntemi referans alan bir zellik elde etmeyi umuyorum.
+
+7
+00:00:39,260 --> 00:00:43,730
+Bu yzden burada prop konteyneri kutusuna isim koyacam.
+
+8
+00:00:43,730 --> 00:00:49,880
+blmek zorundaym, daha nce sylediim gibi, bir tklamayla altrlacak olan yntem referansn tutmas gerektiini syledim .
+
+9
+00:00:49,880 --> 00:00:56,930
+l tklama paketi kuyruunu gndermek iin imdi gndermeliyim ve sadece okumak daha kolay hale getirmek ve burada
+
+10
+00:00:56,930 --> 00:00:59,130
+tklatmak iin birden ok satra
+
+11
+00:00:59,150 --> 00:01:03,780
+yleyse snf tabanl bir konteyner var, byle bir yntem ekleyelim.
+
+12
+00:01:03,920 --> 00:01:12,450
+Post, seilen ileyiciyi tklatt veya belki de postalayarak oradaki argmanlar almay umuyorduk.
+
+13
+00:01:12,530 --> 00:01:20,440
+Getiimiz gnlerde seilebilecek mesajn fikri, geebileceimiz mesajlarn listesini ve E-6 fonksiyonlu ok
+
+14
+00:01:20,510 --> 00:01:27,620
+fonksiyonunu, bir mesaja tkladmzda yrtlmesi gereken bir referans olarak ilerlik kazanmak
+
+15
+00:01:27,620 --> 00:01:31,470
+iin yrtmek istemiyorlard. Mesaj ileyiciyi sein.
+
+16
+00:01:31,640 --> 00:01:35,920
+Ancak imdi post ID'yi bu yntemin argman olarak geirebilirim.
+
+17
+00:01:36,110 --> 00:01:42,830
+imdi imdi almak iin bir fikrim var, bu kimlik tam yaz bileenine geirilmelidir.
+
+18
+00:01:43,070 --> 00:01:51,260
+Bu yzden muhtemelen eyalette belki de post postayla kimlii semi gibi post postadaki
+
+19
+00:01:51,260 --> 00:01:59,990
+zellikte saklayacaz, bylece postann tamamn postayla dinleyerek yeni bir kimlik kazanabileceiz ve onlarn kimlii
+
+20
+00:02:00,010 --> 00:02:01,170
+belirlenmi durumda.
+
+21
+00:02:01,220 --> 00:02:08,280
+imdi, bor seili mesajlar kimlii zelliklerini blok konteyner durumunda oluturmalyz ve daha sonra
+
+22
+00:02:08,360 --> 00:02:17,060
+bu ileyici gibi yaynlar, bu ayar durumunu arayabilir ve seilen yayn kimliini, burada bir argman olarak
+
+23
+00:02:17,090 --> 00:02:18,640
+aldmz kimlie ayarlayabiliriz.
+
+24
+00:02:18,650 --> 00:02:21,810
+imdi de bu kimlii tam post bileene geiriyorduk.
+
+25
+00:02:23,000 --> 00:02:27,010
+Ve belki de bir Selecta post KIMLIINI bir balang olarak tanmlamalsnz.
+
+26
+00:02:27,010 --> 00:02:29,430
+imdi belki buradayz.
+
+27
+00:02:29,780 --> 00:02:31,640
+imdi bu kodu ekledik.
+
+28
+00:02:31,640 --> 00:02:36,530
+imdi, tam yaz bileenine gitmemiz ve burada fikirle bir eyler yapmamz gerekiyor.
+
+29
+00:02:36,710 --> 00:02:40,870
+imdi her eyden nce kt iin kimlii kullanabiliriz.
+
+30
+00:02:40,880 --> 00:02:47,410
+Ltfen kim olduumuza bal olarak postay veya seilmemi postay sein.
+
+31
+00:02:47,420 --> 00:02:52,850
+yleyse varsaylann 3 3C olmas gerektiini syleyelim, ltfen postay sein ve ben
+
+32
+00:02:52,850 --> 00:02:57,270
+metnin ortalamasn ayarlayarak centredness'e baz satr ii stil ekleyeceim.
+
+33
+00:02:57,860 --> 00:03:02,380
+Ve imdi bunun kimlii sorup onaylamadn kontrol etmek istiyorum.
+
+34
+00:03:02,600 --> 00:03:11,210
+Eer bu doruysa, ilk nce blok konteynerindeki KIMLII null ve biz bunu tam postaya geiriyoruz ve
+
+35
+00:03:11,570 --> 00:03:13,700
+NULL yanl olarak deerlendiriliyor.
+
+36
+00:03:13,700 --> 00:03:16,400
+Bu yzden balangta burada kontrol eder.
+
+37
+00:03:16,550 --> 00:03:21,070
+If kutusuna girmeyeceimiz iin yanl dndrr.
+
+38
+00:03:21,350 --> 00:03:28,480
+eri girersek, yalnzca bir kez yaptk, kimlii yanl saylmayan bir ey.
+
+39
+00:03:28,520 --> 00:03:35,540
+Dolaysyla 1'in stnde veya 1'den byk veya 1'in stnde bir deer ve sunucudan aldmz tm kimlikler 1'e eit
+
+40
+00:03:35,540 --> 00:03:36,910
+veya daha yksek.
+
+41
+00:03:37,040 --> 00:03:40,100
+Durum byle olduunda bu postay kt almak istiyorum.
+
+42
+00:03:40,280 --> 00:03:45,970
+imdi u davrana sahip olmalyz: Eer bunu kaydettiysek u anda bu yazlardan birine tklayabiliriz.
+
+43
+00:03:46,190 --> 00:03:47,580
+Ve imdi onu gryoruz.
+
+44
+00:03:47,690 --> 00:03:51,760
+Ve tklamadan nce grdnz gibi, polis karakolunu setiimizi gryoruz.
+
+45
+00:03:51,980 --> 00:03:52,920
+Yani ie yaryor.
+
+46
+00:03:52,940 --> 00:03:58,070
+imdi bir sonraki dersimizde, verilen postann verilerini de getirdiimizden emin olalm.
+
+47
+00:03:58,190 --> 00:03:59,330
+Bir kereliine onu setik.
+

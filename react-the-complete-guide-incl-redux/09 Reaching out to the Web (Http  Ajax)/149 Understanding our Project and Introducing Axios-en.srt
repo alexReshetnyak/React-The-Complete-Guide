@@ -1,0 +1,192 @@
+1
+00:00:02,100 --> 00:00:07,220
+Attached to this lecture here you'll find the starting project you can see here.
+
+2
+00:00:07,250 --> 00:00:16,250
+I just started it with npm start, it uses create react project. I didn't edit it to use css modules, instead
+
+3
+00:00:16,250 --> 00:00:20,920
+I just import css files so that they affect the project globally
+
+4
+00:00:21,020 --> 00:00:23,360
+but that doesn't pose an issue here.
+
+5
+00:00:23,630 --> 00:00:28,220
+And I got a couple of containers or one container and a couple of components.
+
+6
+00:00:28,220 --> 00:00:33,530
+As you can see at the example of the full post component here which is responsible for rendering this
+
+7
+00:00:33,530 --> 00:00:40,160
+path here, I even have class based components here as components because I plan on adding some local
+
+8
+00:00:40,160 --> 00:00:45,940
+state and some lifecycle hooks to these components which is why I set them up like this.
+
+9
+00:00:45,950 --> 00:00:52,100
+Still I only have one component which will distribute some properties down to other components,
+
+10
+00:00:52,130 --> 00:00:58,730
+this is the root page you could say which should render some posts at the top then a full post with
+
+11
+00:00:58,730 --> 00:01:04,730
+some details about a post we clicked on and the area for creating a new post. You can see all these features
+
+12
+00:01:04,730 --> 00:01:06,790
+here on that page.
+
+13
+00:01:06,800 --> 00:01:13,230
+Now I do have some dummy content here because I want to load that post data from a server
+
+14
+00:01:13,370 --> 00:01:16,230
+and for that we're not going to use a real server,
+
+15
+00:01:16,310 --> 00:01:22,930
+we will do that though in the next module when we apply some HTTP functionality to our course project.
+
+16
+00:01:23,180 --> 00:01:31,070
+But here I will use JSONPlaceholder which you can find at jsonplaceholder.typeicode.com
+
+17
+00:01:31,220 --> 00:01:37,070
+which simply is a backend, a RESTful API backend which you typically use as I explained in the last
+
+18
+00:01:37,070 --> 00:01:44,350
+lecture, where you can send requests to to fetch some dummy data or to simulate storing sometimes data
+
+19
+00:01:44,390 --> 00:01:47,510
+there though you won't actually store something on that server
+
+20
+00:01:47,510 --> 00:01:53,510
+of course, it's just faking some data but exactly what we need for learning how to send HTTP
+
+21
+00:01:53,510 --> 00:01:54,730
+requests.
+
+22
+00:01:54,770 --> 00:02:02,030
+For example, you can send a request to that URL here, a GET request and you will get an array of javascript
+
+23
+00:02:02,060 --> 00:02:04,220
+object of dummy posts.
+
+24
+00:02:04,220 --> 00:02:06,730
+And this actually is what I want to start with
+
+25
+00:02:06,800 --> 00:02:10,010
+so we will start with that in the next lecture
+
+26
+00:02:10,040 --> 00:02:15,280
+but we of course need some way of sending these ajax requests.
+
+27
+00:02:15,470 --> 00:02:18,870
+And here you have basically two options,
+
+28
+00:02:19,250 --> 00:02:25,040
+Javascript of course has the XMLHttpRequest object,
+
+29
+00:02:25,130 --> 00:02:32,010
+this object here. With that, you can construct your own Ajax requests and send them to a specific URL
+
+30
+00:02:32,050 --> 00:02:33,890
+and handle the response.
+
+31
+00:02:33,890 --> 00:02:39,330
+Nothing wrong with that since react is just about writing javascript everywhere,
+
+32
+00:02:39,350 --> 00:02:46,640
+you can of course use all the javascript features including XMLHttpRequest but writing and configuring
+
+33
+00:02:46,640 --> 00:02:50,400
+requests with that object manually is quite cumbersome.
+
+34
+00:02:50,630 --> 00:02:57,560
+So the second option is to use package, a third party library which makes that easier
+
+35
+00:02:57,710 --> 00:03:04,130
+and for that I recommend using axios. Axios is a third party javascript library which you can add
+
+36
+00:03:04,160 --> 00:03:06,170
+to any javascript project,
+
+37
+00:03:06,170 --> 00:03:08,850
+it's not connected to react at all
+
+38
+00:03:08,990 --> 00:03:15,890
+but of course it fits nicely into react because it's well javascript, and the axios page here on Github
+
+39
+00:03:15,980 --> 00:03:18,970
+is a good starting point to learn more about this package,
+
+40
+00:03:19,010 --> 00:03:23,300
+I will of course walk you for some of its core features in this module though.
+
+41
+00:03:23,330 --> 00:03:29,720
+But again this is not something strongly connected to react, axios can be used in any javascript code.
+
+42
+00:03:29,720 --> 00:03:36,710
+So let's install axios in this lecture already and then get started using it in the next lecture. To
+
+43
+00:03:36,710 --> 00:03:37,480
+install axios,
+
+44
+00:03:37,470 --> 00:03:44,750
+I will quit my development server with CTRL+C and then run npm install axios --save
+
+45
+00:03:44,750 --> 00:03:48,640
+to also store an entry in the package.json file.
+
+46
+00:03:48,650 --> 00:03:54,200
+This will download and store the package and with that, we can start using it in the next lecture to
+
+47
+00:03:54,200 --> 00:04:01,580
+fetch some posts. So let me restart development server with npm start and I'll then see you in the next lecture
+
+48
+00:04:01,940 --> 00:04:04,460
+to download some posts and output them there.
+

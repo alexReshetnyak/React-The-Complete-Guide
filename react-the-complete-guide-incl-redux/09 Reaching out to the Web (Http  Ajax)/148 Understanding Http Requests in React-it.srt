@@ -1,0 +1,72 @@
+1
+00:00:02,120 --> 00:00:07,850
+Quindi, come l'invio di et alle richieste peer funziona normalmente in applicazioni di re-act.
+
+2
+00:00:07,920 --> 00:00:14,540
+E dico in genere perch se stai creando un'applicazione di re-act multi-pagina, in realt non c'
+
+3
+00:00:14,540 --> 00:00:16,030
+niente di speciale.
+
+4
+00:00:16,070 --> 00:00:22,870
+Probabilmente hai la tua applicazione nella tua pagina in cui invii un modulo e che invia una richiesta alla tua
+
+5
+00:00:22,880 --> 00:00:29,230
+schiena e torni indietro una nuova pagina del team di et con potenzialmente un nuovo codice di re-act.
+
+6
+00:00:29,300 --> 00:00:31,670
+Non hai un'applicazione singola pagina.
+
+7
+00:00:31,670 --> 00:00:34,300
+Non hai un forte disaccoppiamento in corso.
+
+8
+00:00:34,490 --> 00:00:40,690
+reagisci e i server devono ancora comunicare di tanto in tanto, ma non comunicano scambiando H.
+
+9
+00:00:40,730 --> 00:00:47,840
+Se hai un'applicazione di una singola pagina, hai una forte differenziazione tra il tuo front-end, reagisci con EP e
+
+10
+00:00:47,840 --> 00:00:53,660
+la tua schiena e comunque E. pagine di posta elettronica.
+
+11
+00:00:53,720 --> 00:00:56,470
+In modo troppo reattivo invia una richiesta a un server.
+
+12
+00:00:56,630 --> 00:01:03,860
+Non si torna indietro e si invecchia la pagina G-mail, invece  possibile eseguire il backup di alcuni dati Jason in genere oppure
+
+13
+00:01:03,860 --> 00:01:05,950
+si inviano alcuni dati Jason al server.
+
+14
+00:01:06,020 --> 00:01:11,840
+Ad esempio, se si desidera creare alcune risorse sul server, questo  il modo in cui
+
+15
+00:01:11,840 --> 00:01:14,050
+funziona il disaccoppiamento e il server.
+
+16
+00:01:14,060 --> 00:01:22,340
+ possibile inviare richieste per ottenere o rilevare i dati dal proprio stand-alone e reagire all'applicazione del proprio approccio.
+
+17
+00:01:22,550 --> 00:01:28,870
+Di conseguenza, tipicamente si tratta di un'API riposante che espone alcuni endpoint API a cui
+
+18
+00:01:28,880 --> 00:01:33,130
+Ti mostrer in questo Marchal e ti mostrer come farlo.
+

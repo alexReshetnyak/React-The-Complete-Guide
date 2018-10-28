@@ -1,0 +1,160 @@
+1
+00:00:02,500 --> 00:00:09,410
+Termine a ltima palestra que j utilizamos o nosso objeto de atualizao de funo de utilidade para tornar os nossos redutores mais
+
+2
+00:00:09,710 --> 00:00:11,510
+leais ao terceirizar nosso passo comum.
+
+3
+00:00:11,510 --> 00:00:15,770
+Repetimos tudo em todo o lugar em uma funo de utilidade.
+
+4
+00:00:15,770 --> 00:00:23,870
+Agora, nossos casos de redutores so realmente bonitos de Linville que, na recontagem REDUCE-IT, eles podem ficar muito mais magros e eles
+
+5
+00:00:24,580 --> 00:00:30,240
+so um produtor slido pelo menos temos um dos casos com um passo extra onde
+
+6
+00:00:30,240 --> 00:00:31,160
+atualizamos a matriz.
+
+7
+00:00:31,640 --> 00:00:37,720
+Alguns desenvolvedores no todos eles, mas alguns gostam de ter casos muito magros onde voc essencialmente possui clon
+
+8
+00:00:37,850 --> 00:00:40,750
+caso e depois uma funo que voc chama.
+
+9
+00:00:40,850 --> 00:00:47,640
+Obviamente, ainda precisamos executar nossa lgica, mas eles gostam de terceirizar isso em uma funo para que a indicao de
+
+10
+00:00:47,660 --> 00:00:49,490
+caso de troca seja muito magra.
+
+11
+00:00:49,520 --> 00:00:54,960
+Tem uma grande vantagem se uma declarao de caso de troca parecer no redutor contador.
+
+12
+00:00:55,100 --> 00:01:00,650
+Podemos ver rapidamente o que acontece em cada produtor ou pelo menos onde lidamos com algo.
+
+13
+00:01:00,710 --> 00:01:08,300
+Ento, vemos todos os casos em uma pgina, por assim dizer, para os resultados desse outono, o que significa que
+
+14
+00:01:08,330 --> 00:01:11,920
+voc pode terceirizar essa lgica aqui em sua prpria funo.
+
+15
+00:01:12,110 --> 00:01:14,660
+Essa funo entra no mesmo arquivo.
+
+16
+00:01:14,870 --> 00:01:20,100
+Ento, eu simplesmente adicionarei uma nova funo fora da funo redutora.
+
+17
+00:01:20,110 --> 00:01:24,060
+Obviamente, e eu irei nome-lo apagar.
+
+18
+00:01:24,160 --> 00:01:25,110
+Resultado.
+
+19
+00:01:25,220 --> 00:01:32,270
+A conveno deve ser usar o tipo de ao como o nome, porm no em todos os limites, mas em caso de camelo.
+
+20
+00:01:32,450 --> 00:01:38,150
+Ento, o sal literal e a eu tenho meu estado e eu preciso fazer minha ao.
+
+21
+00:01:38,150 --> 00:01:41,880
+Ento, essencialmente, os mesmos dados que recebo no redutor.
+
+22
+00:01:41,930 --> 00:01:48,580
+Agora, eu quero usar isso como sintaxe da funo de seta 6, ento farei isso.
+
+23
+00:01:48,960 --> 00:01:54,400
+E nesta funo, agora, basicamente, executo o que fiz antes na declarao do caso de troca.
+
+24
+00:01:54,620 --> 00:02:02,300
+todos atualizam a matriz de colocar esse mtodo l ou aquele cdigo l na funo de resultado de excluso.
+
+25
+00:02:02,300 --> 00:02:04,040
+Ento, no meu caso,
+
+26
+00:02:04,080 --> 00:02:10,530
+Agora, no final, nesta funo, eu,  claro, preciso retornar o estado atualizado ainda.
+
+27
+00:02:10,760 --> 00:02:18,950
+Ento, eu tambm irei esse cdigo do meu caso de assalto de excluso e chamarei o objeto atualizado com um estado.
+
+28
+00:02:19,190 --> 00:02:23,270
+E basicamente fazem o mesmo que fiz antes na declarao do caso de troca.
+
+29
+00:02:23,540 --> 00:02:26,320
+E essa  exatamente a idia por trs de sua ajuda ou funes.
+
+30
+00:02:26,360 --> 00:02:31,930
+Voc colocou seu cdigo antigo neles e ento no posso simplesmente chamar o pr-sal principal e retornar dados aqui.
+
+31
+00:02:32,090 --> 00:02:34,750
+Ento, depois de excluir Rosol, retorna o mapa que teve objeto.
+
+32
+00:02:34,760 --> 00:02:38,100
+Posso simplesmente retornar resultados de excluso aqui.
+
+33
+00:02:38,150 --> 00:02:39,410
+Apenas ligando assim.
+
+34
+00:02:39,410 --> 00:02:44,780
+E  claro que eu tenho que passar para o estado e a ao porque ambos so necessrios nessa funo.
+
+35
+00:02:46,280 --> 00:02:52,490
+Com isso, conseguimos um redutor mais enxuto aqui para me deixar remover os comentrios no fica mais enxuto do que isso.
+
+36
+00:02:52,490 --> 00:02:58,100
+Agora podemos tambm escrev-lo na linha ao lado do clon, se quisermos que voc tenha uma relao muito magra e
+
+37
+00:02:58,100 --> 00:02:59,950
+que tenha apenas um caso por linha.
+
+38
+00:03:00,170 --> 00:03:01,600
+E isso  tudo opcional.
+
+39
+00:03:01,670 --> 00:03:07,700
+ uma maneira de criar declaraes de caixa de opes muito limpas, porm, que facilita a visualizao dos casos
+
+40
+00:03:07,700 --> 00:03:12,660
+que voc est manipulando em um determinado redutor e que pode ser a vantagem desta abordagem.
+

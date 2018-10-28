@@ -1,0 +1,88 @@
+1
+00:00:02,110 --> 00:00:07,510
+Ento, bem-vindo de volta ao nosso projeto de curso, nosso Bergere Boulder agora o Bergere Boulder j  muito
+
+2
+00:00:07,510 --> 00:00:07,920
+bom.
+
+3
+00:00:07,930 --> 00:00:12,610
+Podemos construir hambrgueres com isso que no soa muito ruim para este tipo de aplicao.
+
+4
+00:00:12,610 --> 00:00:15,000
+Agora podemos continuar a verificar e ler.
+
+5
+00:00:15,010 --> 00:00:19,240
+Agora, quando clicamos, isso no acontece, exceto para esse alerta.
+
+6
+00:00:19,240 --> 00:00:24,430
+Agora, no ltimo mdulo, aprendemos como realmente podemos enviar pedidos HTP.
+
+7
+00:00:24,430 --> 00:00:28,680
+Ento, isso parece uma tima oportunidade para realmente armazenar esse pedido.
+
+8
+00:00:28,730 --> 00:00:35,570
+sabemos como criar pginas diferentes em nosso aplicativo de pgina nica e ter para mostrar um check-out para eles e assim por diante.
+
+9
+00:00:35,570 --> 00:00:40,840
+Os clientes que esto prestes a colocar em um servidor agora iro encontr-lo em seu aplicativo mais tarde
+
+10
+00:00:40,840 --> 00:00:42,280
+no curso uma vez que
+
+11
+00:00:42,490 --> 00:00:50,350
+Mas por agora, armazenar o pedido e obter os pedidos que seriam um avano incrvel em nossa aplicao.
+
+12
+00:00:50,350 --> 00:00:57,340
+Ento,  sobre isso que este modelo ir implementar o backend para que possamos realmente armazenar nossos
+
+13
+00:00:57,580 --> 00:00:59,580
+pedidos para que possamos recuper-los.
+
+14
+00:00:59,710 --> 00:01:07,780
+Mesmo depois que nossa pgina foi recarregada para essa histria na parte de trs, eu vou usar o firebase firebase 
+
+15
+00:01:07,780 --> 00:01:09,760
+um servio oferecido pelo Google.
+
+16
+00:01:09,970 --> 00:01:15,890
+ essencialmente fora da caixa de trabalho de volta e que inclui um banco de dados.
+
+17
+00:01:15,910 --> 00:01:22,840
+A coisa legal  que podemos us-lo de graa e para a quantidade de combustvel que vamos aplicar neste projeto do
+
+18
+00:01:22,840 --> 00:01:29,410
+curso, ele ficar livre e no precisamos escrever nenhum cdigo do lado do servidor, o que, claro, no  sobre
+
+19
+00:01:29,440 --> 00:01:36,170
+mas a maneira como nos comunicamos com a base de fogo  o mesmo que nos comunicamos com qualquer outro backend.
+
+20
+00:01:36,190 --> 00:01:40,220
+O mesmo  representativo para suas costas e em seu projeto.
+
+21
+00:01:40,390 --> 00:01:47,080
+Agora, com isso vamos mergulhar nisso e vamos criar o nosso melhor projeto de fogo na prxima palestra para
+
+22
+00:01:47,110 --> 00:01:50,150
+que possamos comear a armazenar nossos pedidos l.
+

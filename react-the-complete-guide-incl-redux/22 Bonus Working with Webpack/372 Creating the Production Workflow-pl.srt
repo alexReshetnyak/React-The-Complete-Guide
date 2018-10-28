@@ -1,0 +1,292 @@
+1
+00:00:02,190 --> 00:00:06,800
+Zakoczylimy prace nad ostatnimi wykadami, naprawilimy kilka bdw, ale teraz
+
+2
+00:00:06,810 --> 00:00:09,680
+otrzymalimy dziaajc konfiguracj, ktra jest wietna.
+
+3
+00:00:09,710 --> 00:00:15,470
+Teraz kolejnym krokiem jest praca nad workflow produkcji w moim pakiecie. plik json, chc mie drugi
+
+4
+00:00:15,480 --> 00:00:17,720
+skrypt, nazwijmy go kompilacj
+
+5
+00:00:17,760 --> 00:00:18,910
+i tutaj
+
+6
+00:00:19,230 --> 00:00:24,550
+nie chc uruchamia webpack-dev-server, ale webpacka. Teraz, jeli uruchomibym go w
+
+7
+00:00:24,570 --> 00:00:28,170
+ten sposb, wykorzystaby on konfiguracj przepywu pracy.
+
+8
+00:00:28,410 --> 00:00:33,180
+Moemy to zrobi, aby zobaczy wynik, poniewa serwer programistyczny zrobi wszystko w
+
+9
+00:00:33,180 --> 00:00:40,260
+pamici, teraz moemy tworzy rzeczywiste pliki, uruchamiajc npm uruchom kompilacj, wszystko oprcz skryptu startowego musi zosta wykonane przy
+
+10
+00:00:40,260 --> 00:00:46,860
+uyciu npm run, start jest wyjtkiem z npm pocztek. Wic npm uruchom build bdzie teraz uruchamia sam
+
+11
+00:00:46,950 --> 00:00:53,350
+pakiet i uywa tego samego pliku konfiguracyjnego, z ktrym wczeniej pracowalimy, ale teraz daje nam
+
+12
+00:00:53,370 --> 00:00:59,670
+ten folder dist, w ktrym teraz widzisz skopiowany plik obrazu i widzisz tutaj pliki javascript.
+
+13
+00:01:00,000 --> 00:01:06,040
+Widzisz plik indeksu, ktry skopiowae, gdzie rwnie wstrzykn nasz import i to jest cay
+
+14
+00:01:06,210 --> 00:01:11,000
+kod, jaki mamy, teraz to, co widzisz ju jest, to wcale
+
+15
+00:01:11,010 --> 00:01:13,260
+nie jest zoptymalizowane, to na
+
+16
+00:01:13,410 --> 00:01:14,520
+pewno nie jest
+
+17
+00:01:14,520 --> 00:01:22,370
+kod, ktry chcemy wysa, wic na razie usun ten folder. Zamiast tego celem jest posiadanie dedykowanego przepywu pracy dla produkcji, ktry dokonuje pewnych optymalizacji, wic to,
+
+18
+00:01:22,380 --> 00:01:30,570
+co zrobi, to dodam drugi plik konfiguracyjny, pakiet internetowy. szturcha. config. js.
+
+19
+00:01:30,720 --> 00:01:33,530
+Teraz nie uwzgldni tego pliku automatycznie, bdziemy
+
+20
+00:01:33,720 --> 00:01:37,550
+musieli wskaza na to, ale to jest naprawd bardzo proste.
+
+21
+00:01:37,680 --> 00:01:43,640
+Teraz skopiuj konfiguracj z drugiego pliku, z obiegu pracy programistycznej, abymy mogli dostosowa go
+
+22
+00:01:43,860 --> 00:01:45,020
+do przepywu pracy
+
+23
+00:01:45,060 --> 00:01:47,450
+produkcji, zobaczmy, co musimy zmieni.
+
+24
+00:01:47,520 --> 00:01:48,830
+Zacznijmy od gry,
+
+25
+00:01:48,900 --> 00:01:56,370
+narzdzie dla programistw, tutaj usun ewalu, aby stworzy bardziej optymalne mapy rdowe, ktre s mniej wymagajce zasobw, moesz
+
+26
+00:01:56,370 --> 00:01:59,760
+zawsze zdecydowa, czy chcesz je wdroy, czy nie,
+
+27
+00:01:59,760 --> 00:02:05,100
+ale dobrze jest mie tutaj mapy rdowe te, aby szybko znale bdy w
+
+28
+00:02:05,100 --> 00:02:06,590
+przepywie pracy, jeli takie istniej.
+
+29
+00:02:06,650 --> 00:02:15,880
+Teraz plik wejciowy nadal powinien by indeksem. js i wyjcie nadal ma sens, jak teraz, teraz
+
+30
+00:02:15,920 --> 00:02:18,550
+adowarki, a co z adowarkami?
+
+31
+00:02:18,710 --> 00:02:22,420
+C, chcemy zastosowa te same transformacje, co w
+
+32
+00:02:22,490 --> 00:02:28,820
+rozwoju, wic nie musimy dotyka adowarek, wykonamy nasz prac w dziale wtyczek, teraz mamy
+
+33
+00:02:28,820 --> 00:02:34,730
+wtyczk do podczenia pliku html i chc to zachowa , co chc teraz
+
+34
+00:02:34,730 --> 00:02:42,680
+zrobi, to chc rwnie podway moje wyniki, chc je zoptymalizowa i faktycznie jest to wtyczka wbudowana w pakiet
+
+35
+00:02:42,680 --> 00:02:43,200
+sieciowy,
+
+36
+00:02:43,220 --> 00:02:45,010
+nie musimy jej instalowa.
+
+37
+00:02:45,380 --> 00:02:49,540
+To, co zrobi, to po prostu zaimportuj do tego pliku
+
+38
+00:02:49,550 --> 00:02:52,640
+sam paczk sieciow, wic pakiet internetowy wymaga
+
+39
+00:02:53,240 --> 00:03:01,610
+pakietu internetowego, a nastpnie moemy uy jednej z wbudowanych wtyczek. Tak wic w sekcji wtyczek dodam t
+
+40
+00:03:01,610 --> 00:03:07,520
+wtyczk, tutaj dodam nowy pakiet, zoptymalizuj i tam mamy zagmatliw
+
+41
+00:03:07,550 --> 00:03:10,160
+wtyczk js. Ta wtyczka moe
+
+42
+00:03:10,280 --> 00:03:12,040
+by rwnie skonfigurowana i
+
+43
+00:03:12,470 --> 00:03:17,390
+zawsze moesz sprawdzi oficjalne strony githubu wszystkich tych wtyczek i adowarek,
+
+44
+00:03:17,480 --> 00:03:20,360
+aby to zrobi, jednak wem domyln
+
+45
+00:03:20,660 --> 00:03:28,490
+konfiguracj, wic usun to i dziki temu dostan przepyw pracy gdzie rwnie optymalizuj pliki, skracam je tak,
+
+46
+00:03:28,490 --> 00:03:31,210
+by wysya jak najmniejszy kod.
+
+47
+00:03:31,370 --> 00:03:38,510
+Teraz, aby uy tej konfiguracji, musz dostosowa mj pakiet. json, skrypty budujce tutaj, gdzie wska na webpacka,
+
+48
+00:03:38,510 --> 00:03:39,790
+nie chc uywa
+
+49
+00:03:39,950 --> 00:03:42,440
+domylnej konfiguracji zamiast tego chc
+
+50
+00:03:42,470 --> 00:03:48,800
+uy specjalnej, wic uyj --config, to flaga, ktr moemy przekaza skryptowi Webpack i tam
+
+51
+00:03:48,800 --> 00:03:55,520
+wska na webpacka. szturcha. config. Plik js, poniewa znajduje si w tym
+
+52
+00:03:55,520 --> 00:03:57,800
+samym folderze, co pakiet. plik json,
+
+53
+00:03:57,950 --> 00:03:59,570
+nie musz podawa
+
+54
+00:03:59,630 --> 00:04:05,340
+adnej cieki, wystarczy poda nazw pliku. Dodam do tego kilka dodatkowych opcji,
+
+55
+00:04:05,360 --> 00:04:13,700
+postp, profil, whoops, profil i kolory, aby dostosowa wyjcie konsoli do tworzenia kompilacji Webpack, a ja
+
+56
+00:04:13,730 --> 00:04:18,940
+zainstaluj jeden dodatkowy pakiet z npm install --save-dev, nazywa si
+
+57
+00:04:18,950 --> 00:04:26,210
+Rimraf i pozwala nam usun folder lub pliki i chc usun folder dist na
+
+58
+00:04:26,300 --> 00:04:33,770
+pocztku kadego procesu kompilacji, aby utworzy zupenie nowy. Wic najpierw wykonam polecenie rimraf dist, a potem dwa
+
+59
+00:04:33,800 --> 00:04:37,880
+i znaki, aby uruchomi ten projekt lub to polecenie, przepraszam,
+
+60
+00:04:37,880 --> 00:04:42,800
+po tym, jak zostao usunite. Z tym, uruchommy ponownie kompilacj, npm
+
+61
+00:04:43,040 --> 00:04:48,650
+uruchom kompilacj i zobaczmy, czy da nam to dobre wyjcie, daje mi bd,
+
+62
+00:04:48,710 --> 00:04:53,600
+poniewa powinien by --profile tutaj jako flaga sieci Web, wic naprawmy
+
+63
+00:04:53,660 --> 00:04:54,530
+to, zapiszmy
+
+64
+00:04:54,530 --> 00:05:01,400
+plik i uruchommy ponownie npm uruchom kompilacj. Teraz, budujc projekt, ktry tu widzimy, powinien si
+
+65
+00:05:02,380 --> 00:05:04,810
+powie, a robi to, daje nam
+
+66
+00:05:04,900 --> 00:05:06,880
+folder dist, ale jeli teraz
+
+67
+00:05:06,910 --> 00:05:11,410
+spojrzymy na plik pakietu, widzimy, e jest to minified code.
+
+68
+00:05:11,410 --> 00:05:15,000
+Jest duo kodu, poniewa zawiera pen bibliotek reagowania, ale to wszystko jest
+
+69
+00:05:15,220 --> 00:05:21,770
+zminimalizowane, a zatem zoptymalizowane i to samo w naszym 0. plik js.
+
+70
+00:05:21,790 --> 00:05:26,940
+Teraz mamy nasz folder dist i to jest to, co przesyamy na
+
+71
+00:05:26,950 --> 00:05:28,690
+serwer, zawarto folderu dist.
+
+72
+00:05:29,010 --> 00:05:34,720
+To jest teraz nasz wasny workflow i mam nadziej, e stao si nieco janiejsze, jak dziaa webpack i
+
+73
+00:05:34,720 --> 00:05:36,740
+jak mona skonfigurowa taki niestandardowy przepyw pracy.
+

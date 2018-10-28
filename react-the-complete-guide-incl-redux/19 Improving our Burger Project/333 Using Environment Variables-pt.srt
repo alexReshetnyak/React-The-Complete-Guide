@@ -1,0 +1,124 @@
+1
+00:00:02,260 --> 00:00:05,160
+Ns j melhoramos muito este projeto, agora h uma
+
+2
+00:00:05,170 --> 00:00:08,240
+outra coisa que eu quero chamar a sua ateno.
+
+3
+00:00:08,410 --> 00:00:15,970
+Se este projeto for implantado, todos podero procurar em sua loja com as ferramentas redux dev.
+
+4
+00:00:16,060 --> 00:00:18,830
+Isso no  estritamente ou necessariamente um problema, no final
+
+5
+00:00:18,880 --> 00:00:24,330
+as pessoas sempre podem olhar para o seu cdigo javascript se eles realmente quiserem, voc no pode criptograf-lo, mas
+
+6
+00:00:24,340 --> 00:00:32,800
+talvez queira torn-lo um pouco mais difcil e no to bvio para acessar seu estado. Para fazer isso, voc pode
+
+7
+00:00:32,800 --> 00:00:40,240
+entrar no seu ndice. arquivo js que  onde ns desbloqueamos as ferramentas
+
+8
+00:00:40,240 --> 00:00:49,030
+dev do redux e podemos ajustar este cdigo um pouquinho para desbloque-lo apenas se estivermos no modo de desenvolvimento e no
+
+9
+00:00:49,030 --> 00:00:55,900
+o fizermos se estivermos no modo de produo. Para fazer isso, podemos tirar proveito de um recurso chamado
+
+10
+00:00:56,220 --> 00:00:57,160
+de variveis de
+
+11
+00:00:57,280 --> 00:01:05,930
+ambiente em nosso projeto de criar reagir e este  um recurso que  especfico do projeto, podemos usar variveis de ambiente, podemos defini-los na
+
+12
+00:01:06,130 --> 00:01:11,130
+pasta de configurao, l no env. js arquivo, basicamente voc pode
+
+13
+00:01:11,200 --> 00:01:17,590
+adicionar suas prprias variveis de ambiente, voc pode adicion-los aqui onde voc v
+
+14
+00:01:17,800 --> 00:01:22,360
+NODE_ENV e URL pblico. Agora, a coisa NODE_ENV aqui  interessante,
+
+15
+00:01:22,360 --> 00:01:25,420
+ automaticamente configurada para voc e  desenvolvimento se
+
+16
+00:01:25,420 --> 00:01:32,410
+voc estiver no modo de desenvolvimento. Ento, com isso, podemos ir ao nosso ndice. arquivo js e s precisa acessar
+
+17
+00:01:32,410 --> 00:01:37,750
+essa varivel para definir somente essa extenso se estivermos no modo de desenvolvimento.
+
+18
+00:01:37,750 --> 00:01:43,990
+Ns acessamos nossas variveis de ambiente e, novamente, isso funciona para este projeto especfico configurado pelo processo
+
+19
+00:01:43,990 --> 00:01:46,810
+de chamada que  uma varivel global que
+
+20
+00:01:46,810 --> 00:01:53,130
+est disponvel aqui, no temos que import-lo, env para ambiente e l podemos acessar NODE_ENV,  isso
+
+21
+00:01:53,170 --> 00:01:56,590
+varivel de ambiente que voc acabou de ver que
+
+22
+00:01:56,590 --> 00:01:58,950
+ desenvolvimento, por exemplo, durante o desenvolvimento.
+
+23
+00:01:58,990 --> 00:02:02,320
+Ento ns podemos verificar se isso  igual ao desenvolvimento
+
+24
+00:02:02,790 --> 00:02:09,270
+e se , ento esta  uma expresso ternria, ns usaremos as ferramentas de desenvolvimento do redux como ns fizemos
+
+25
+00:02:09,310 --> 00:02:14,740
+antes, se no for, eu configurarei como nulo e ento ns faa essa comparao OR, portanto,
+
+26
+00:02:14,740 --> 00:02:18,630
+se a primeira parte for nula, usaremos a funo de composio padro.
+
+27
+00:02:18,820 --> 00:02:23,450
+Ento agora as ferramentas do redux dev s estaro disponveis no ambiente de desenvolvimento.
+
+28
+00:02:23,500 --> 00:02:26,160
+Se salvarmos isso e voltarmos e recarregarmos a
+
+29
+00:02:26,320 --> 00:02:27,250
+pgina, nada mudar,
+
+30
+00:02:27,250 --> 00:02:33,270
+ainda veremos nosso inspetor redux, mas depois voc ver uma vez que implantarmos o aplicativo, isso no
+
+31
+00:02:33,300 --> 00:02:34,120
+funcionar mais.
+

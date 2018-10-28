@@ -1,0 +1,252 @@
+1
+00:00:02,000 --> 00:00:08,070
+Nauczylimy si testowa pojemniki i wspomniaem, e wan czci jest to, e nie testujesz poczenia
+
+2
+00:00:08,070 --> 00:00:09,060
+z reduxem,
+
+3
+00:00:09,270 --> 00:00:12,630
+jak przetestujesz redux, czy w ogle go testujesz?
+
+4
+00:00:12,630 --> 00:00:17,340
+Odpowied brzmi: tak, testujemy to, ale musimy uwaa na to, co testujemy.
+
+5
+00:00:17,340 --> 00:00:24,100
+Prawdopodobnie nie chcemy testowa bardzo zoonych acuchw dziaa i reduktorw oraz stanu, w
+
+6
+00:00:24,100 --> 00:00:30,540
+kocu reduktory s misem, ktre chcemy przetestowa, szczeglnie jeli kierujemy si zasad nieuzasadniania
+
+7
+00:00:30,540 --> 00:00:36,740
+zbyt duej logiki w twrcach akcji. Nastpnie testowanie reduktorw jest bardzo proste, s
+
+8
+00:00:36,840 --> 00:00:42,000
+synchroniczne, wic nie mamy do czynienia z kodem asynchronicznym i s
+
+9
+00:00:42,000 --> 00:00:43,260
+tylko funkcje, co
+
+10
+00:00:43,410 --> 00:00:48,110
+przekazujemy, co dostajemy, na przykad dla uwierzytelnienia, zamy, e chcemy
+
+11
+00:00:48,180 --> 00:00:50,600
+napisa test dla to.
+
+12
+00:00:50,640 --> 00:00:57,510
+Dodaj wic autoryzacj. test. Plik js, tutaj nie potrzebujemy nawet
+
+13
+00:00:57,510 --> 00:00:58,230
+enzymu, poniewa
+
+14
+00:00:58,230 --> 00:01:05,820
+nie testujemy adnych komponentw reagujcych, nie musimy renderowa niczego, po prostu testujemy normalny kod javascript, testujemy funkcje, funkcj reduktora.
+
+15
+00:01:06,270 --> 00:01:16,230
+Wic to, co wanie robi, znajduje si w pliku testowym, przede wszystkim importuj funkcj reduktora. / auth. js w tym pliku, w tym przypadku
+
+16
+00:01:16,230 --> 00:01:20,790
+tak, a teraz musz rwnie zaimportowa typy akcji, tak jak
+
+17
+00:01:20,910 --> 00:01:26,970
+typy akcji, z ktrych wszystko importuj. / action typy akcji, a
+
+18
+00:01:26,970 --> 00:01:28,810
+teraz po prostu
+
+19
+00:01:29,010 --> 00:01:30,730
+piszemy test.
+
+20
+00:01:30,900 --> 00:01:32,680
+Ponownie opisalimy, teraz daj
+
+21
+00:01:33,030 --> 00:01:39,730
+jasny opis, ktry moemy zobaczy na konsoli, jak reduktor auth, a nastpnie w
+
+22
+00:01:40,170 --> 00:01:44,200
+funkcji tutaj, moemy napisa wiele testw, ktre mamy.
+
+23
+00:01:44,340 --> 00:01:49,140
+Oczywicie moemy ponownie uy opcji Before, aby wykona jak ogln
+
+24
+00:01:49,440 --> 00:01:51,730
+konfiguracj, jeli zajdzie taka potrzeba,
+
+25
+00:01:51,810 --> 00:01:52,800
+ale chc,
+
+26
+00:01:52,800 --> 00:01:59,550
+aby zacz od razu z testami, wic teraz zobaczmy, co testujemy, przetestujmy na przykad,
+
+27
+00:01:59,550 --> 00:02:02,680
+czy otrzymujemy waciwy stan pocztkowy, jeli faktycznie
+
+28
+00:02:02,730 --> 00:02:08,340
+przekaza do niego niepoprawny typ akcji, wic powinien zwrci stan pocztkowy, moe
+
+29
+00:02:08,340 --> 00:02:09,920
+to by opis tutaj.
+
+30
+00:02:10,620 --> 00:02:18,060
+A potem przekazuj funkcj javascript i tam oczekuj teraz swojego reduktora, jeli wykonam go, wic teraz w
+
+31
+00:02:18,240 --> 00:02:19,350
+rodku si spodziewam,
+
+32
+00:02:19,350 --> 00:02:25,140
+po prostu wykonuj kod, ktry chc przetestowa, tak jak poprzednio z otok, ale
+
+33
+00:02:25,140 --> 00:02:31,860
+teraz z normaln funkcj javascript i bdzie Faktycznie przekazujemy tu niezdefiniowane jako stan pocztkowy, tak jest
+
+34
+00:02:31,860 --> 00:02:39,840
+w przypadku, gdy stan jest wanie konfigurowany na pocztku naszej aplikacji, a akcja jest po prostu pustym obiektem, wic
+
+35
+00:02:39,850 --> 00:02:42,250
+nie ma adnego konkretnego dziaania.
+
+36
+00:02:42,270 --> 00:02:47,470
+Tak wic w tym przypadku oczekuj, e mj stan bdzie
+
+37
+00:02:47,730 --> 00:02:53,910
+rwny i teraz powinien by rwny mojemu pocztkowemu stanowi zdefiniowanemu w funkcji
+
+38
+00:02:54,000 --> 00:02:56,660
+reduktora, wic ten obiekt javascript,
+
+39
+00:02:56,880 --> 00:02:58,550
+dokadnie to, czego
+
+40
+00:02:58,560 --> 00:03:01,560
+testuj, powinien by rwny temu obiektowi.
+
+41
+00:03:01,560 --> 00:03:05,080
+Teraz, jeli zapiszemy ten plik, powinno to by rwnie wykonane i
+
+42
+00:03:05,220 --> 00:03:08,060
+jest to auth. test. js jest wykonywany, wic
+
+43
+00:03:08,370 --> 00:03:13,710
+widzimy, e to si udao i tak atwo mona przetestowa reduktor. Oczywicie moesz take przetestowa
+
+44
+00:03:13,710 --> 00:03:21,030
+konkretne przypadki, abymy mogli napisa kolejny test, w ktrym powinien
+
+45
+00:03:21,170 --> 00:03:23,760
+przechowywa token po zalogowaniu,
+
+46
+00:03:23,760 --> 00:03:34,340
+a teraz w tej funkcji, faktycznie spodziewam si wykona funkcj redukujc, powiedzmy, stan pocztkowy i
+
+47
+00:03:34,340 --> 00:03:38,920
+moemy ustawi to w przedtem przedtem.
+
+48
+00:03:39,110 --> 00:03:39,460
+Wykonuj
+
+49
+00:03:39,470 --> 00:03:48,190
+wic funkcj reduktora ze stanem pocztkowym i akcj, w ktrej typem jest actionTypes. AUTH_SUCCESS, a teraz oczywicie musimy przekaza prawidowy adunek
+
+50
+00:03:48,200 --> 00:03:54,360
+z t akcj rwnie tutaj, wic nie tylko typ, ale take adunek
+
+51
+00:03:54,500 --> 00:03:58,570
+tej akcji i moemy zobaczy, e adunek oczywicie
+
+52
+00:03:58,750 --> 00:04:03,710
+w naszym pliku twrcw akcji. W AUTH_SUCCESS przekazujemy rwnie token ID
+
+53
+00:04:03,770 --> 00:04:07,890
+i identyfikator uytkownika, wic to jest co, co powinnimy
+
+54
+00:04:07,890 --> 00:04:17,120
+przekaza tutaj rwnie, a to moe by jaki token, dokadna warto oczywicie nie ma znaczenia dla testu i jakiego identyfikatora uytkownika.
+
+55
+00:04:17,500 --> 00:04:21,040
+Teraz to jest funkcja reduktora, jak j wykonujemy.
+
+56
+00:04:21,040 --> 00:04:27,490
+Teraz spodziewamy si wyplu zaktualizowany stan, ktry respektuje ten token i identyfikator uytkownika, wic zaktualizowany
+
+57
+00:04:27,490 --> 00:04:37,270
+stan powinien by na og naszym pocztkowym stanem, ale token oczywicie powinien by jakim tokenem i tutaj, to musi by dokadn wartoci tutaj,
+
+58
+00:04:37,270 --> 00:04:42,650
+Gdyby tak nie byo, co byoby nie tak w naszym reduktorze, to jest
+
+59
+00:04:42,790 --> 00:04:44,610
+idea stojca za testowaniem,
+
+60
+00:04:45,620 --> 00:04:48,910
+dlatego identyfikator uytkownika powinien by pewnym identyfikatorem uytkownika.
+
+61
+00:04:48,960 --> 00:04:57,600
+Teraz, jeli to zapiszemy, to rwnie mija i gdy tylko zmieni oczekiwan warto dla jakiego uytkownika, to si nie uda,
+
+62
+00:04:57,840 --> 00:05:00,020
+poniewa teraz mamy rne wartoci.
+
+63
+00:05:00,360 --> 00:05:07,410
+W ten sposb moemy rwnie testowa reduktory, s one czystymi funkcjami i dlatego s bardzo proste w testowaniu.
+

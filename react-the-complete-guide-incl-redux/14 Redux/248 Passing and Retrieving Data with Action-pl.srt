@@ -1,0 +1,184 @@
+1
+00:00:02,110 --> 00:00:03,860
+Poprzednie zadanie.
+
+2
+00:00:03,910 --> 00:00:11,230
+Dodalimy trzy nowe akcje, ktre moemy wysa, i wysyamy im kontuar na godzin kontuarow szkod
+
+3
+00:00:11,440 --> 00:00:18,420
+dodawanie i odejmowanie teraz lub dodawanie i odejmowanie, ktre w oczywisty sposb przypisujemy naszemu reduktorowi.
+
+4
+00:00:18,520 --> 00:00:27,670
+Nie ma sensu rwnie otrzymywa adunku z dodatkowymi danymi przekazywanymi wraz z typem akcji, poniewa w tej chwili
+
+5
+00:00:28,300 --> 00:00:33,270
+mamy twardy kod plus 10 i minus 8 w reduktorze.
+
+6
+00:00:33,490 --> 00:00:40,300
+Ale oczywicie w wielu aplikacjach, na przykad podczas tworzenia nowego postu blokowego, otrzymywaby te
+
+7
+00:00:40,330 --> 00:00:47,680
+informacje ze swojego komponentu, dane wejciowe wprowadzone przez uytkownika, na przykad pomys kliknicia plakatu, e
+
+8
+00:00:47,680 --> 00:00:52,060
+nie moesz tego zakodowa na stae dla uytkownika ten powd.
+
+9
+00:00:52,060 --> 00:00:59,080
+Powiedzmy te, e nie chcemy sztywno zakodowa wartoci, ktr chcemy doda lub odj do
+
+10
+00:00:59,260 --> 00:01:02,020
+licznika lub od licznika do reduktora.
+
+11
+00:01:02,020 --> 00:01:10,210
+Zamiast tego chcemy uzyska te informacje wraz z dziaaniem, abymy mogli atwo wdroy to w
+
+12
+00:01:10,300 --> 00:01:11,790
+naszym dziaaniu tutaj.
+
+13
+00:01:11,860 --> 00:01:18,580
+Wanie wysyamy obiekt javascript i tylko dla waciwoci type jest ustawiona w kamie.
+
+14
+00:01:18,730 --> 00:01:24,620
+Wic moemy oczywicie doda wicej waciwoci do tego obiektu.
+
+15
+00:01:24,670 --> 00:01:33,690
+Nikt nas nie powstrzymuje od tego, e moemy po prostu doda drug waciwo, na przykad warto lub po prostu
+
+16
+00:01:33,730 --> 00:01:34,600
+cokolwiek zechcemy.
+
+17
+00:01:34,600 --> 00:01:39,570
+Moesz wybra dowoln nazw, ktr chcesz tutaj i moesz oczywicie doda wiele waciwoci.
+
+18
+00:01:39,570 --> 00:01:42,700
+Wic wezm tutaj warto.
+
+19
+00:01:42,710 --> 00:01:50,020
+A czsto widzisz, e tylko adunek adunku moe sam Dennet by obiektem javascript, ktry przechowuje cay
+
+20
+00:01:50,080 --> 00:01:52,290
+odpowiedni adunek do tego dziaania.
+
+21
+00:01:52,420 --> 00:01:54,550
+Ale to tylko co, co czsto widzisz.
+
+22
+00:01:54,550 --> 00:02:01,130
+Moesz take pomin adunek i po prostu mie warto, powiedzmy, e to jest dziesi i nazwisko, a to max.
+
+23
+00:02:01,180 --> 00:02:04,470
+Moesz wic doda tyle waciwoci, ile chcesz.
+
+24
+00:02:04,550 --> 00:02:06,900
+Teraz dodam jeden, ktry jest levell.
+
+25
+00:02:06,940 --> 00:02:08,290
+Ponownie nazwa zaley od Ciebie.
+
+26
+00:02:08,290 --> 00:02:10,940
+Powiedzmy, e zawsze chcemy doda 10.
+
+27
+00:02:11,020 --> 00:02:17,730
+No i oczywicie skoro jestemy w kontenerze, moemy to atwo poczy z jakim polem wejciowym.
+
+28
+00:02:17,740 --> 00:02:23,990
+Mamy teraz cztery odejmowania. Dodam Velle i powiedzmy, e jest 15.
+
+29
+00:02:24,460 --> 00:02:29,910
+Teraz przekazuj warto, ktr chc doda lub odj wraz z typem.
+
+30
+00:02:29,980 --> 00:02:35,690
+I znowu waciwo typu to jedyna waciwo, ktr musisz mie, gdzie nazwa nie naley do ciebie.
+
+31
+00:02:35,740 --> 00:02:40,120
+Teraz moemy wyodrbni t waciwo wartoci u naszego producenta.
+
+32
+00:02:40,120 --> 00:02:45,480
+Tak wic w przypadku dodawania i odejmowania nie chc ju dodawa 10 ani odejmowa 8.
+
+33
+00:02:45,610 --> 00:02:55,600
+Zamiast tego tutaj, w check at, wszystko po prostu w akcji kropka Velle I tutaj nazwa nieruchomoci Velle jest
+
+34
+00:02:55,600 --> 00:02:59,670
+oczywicie nazw nieruchomoci wybraem tutaj w moim kontenerze.
+
+35
+00:02:59,750 --> 00:03:04,540
+Czy przedmiot jest przepustk w tej akcji, czy te OP przyjmie t poprawk.
+
+36
+00:03:04,730 --> 00:03:11,330
+C, i to samo, oczywicie dla odejmowania tutaj, uywam po prostu akcji velle.
+
+37
+00:03:11,450 --> 00:03:17,240
+Wic jako programista oczywicie wiem, jak nazwaem t waciwo, kiedy wysa akcj i musz
+
+38
+00:03:17,240 --> 00:03:23,830
+odzyska swoj warto lub dane, ktre s istotne dla mnie i producenta z tej samej nazwy wasnoci.
+
+39
+00:03:23,840 --> 00:03:27,320
+Zapisz wszystkie pliki i wr do aplikacji.
+
+40
+00:03:27,320 --> 00:03:30,850
+Teraz etykiety s bdne, odejmujemy 15.
+
+41
+00:03:30,890 --> 00:03:33,410
+Ale kliknijmy przyciski, aby zobaczy, czy to dziaa.
+
+42
+00:03:33,620 --> 00:03:41,840
+Odejmijmy i odejmujemy 50, a moemy doda 10 ponownie, poniewa dla tego przycisku ustawiamy warto 10.
+
+43
+00:03:41,840 --> 00:03:48,980
+Wic szybko zaktualizujmy napis na przycisku, aby nie zawiera odejmowania 8, ale po
+
+44
+00:03:48,980 --> 00:03:51,000
+prostu mwi odejmij 15.
+
+45
+00:03:51,110 --> 00:03:56,660
+A teraz nasza aplikacja jest teraz w 100 procentach uaktualniona i to jest wane.
+
+46
+00:03:56,690 --> 00:04:04,040
+Przekazywanie adunku z akcj przekazujc dodatkowe dane, a nie tylko przekazywanie typu.
+

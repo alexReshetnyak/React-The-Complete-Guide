@@ -1,0 +1,276 @@
+1
+00:00:02,020 --> 00:00:05,690
+Ve Son Ders Snf daha yksek sipari bileeni ile dzenliyoruz.
+
+2
+00:00:06,120 --> 00:00:11,310
+Tpk kz bileeni gibi, aslnda sahneyi saran bir bileen.
+
+3
+00:00:11,310 --> 00:00:12,040
+ocuklar.
+
+4
+00:00:12,150 --> 00:00:18,220
+Yani al ve kapan vergi ksm ve bu gibi bir ey eklemek lm.
+
+5
+00:00:18,250 --> 00:00:26,010
+imdi bunu yapmak iin bir yol budur, ancak snf st sipari bileenini farkl biimde de yazabiliriz.
+
+6
+00:00:26,280 --> 00:00:34,220
+Kk bir harf w ile snfa isim verebiliriz ve nce forumu silmemiz gerektiini ileri srdm.
+
+7
+00:00:34,440 --> 00:00:40,110
+Ve bu, ayn zamanda, bu tr bir yksek sipari bileeni iin kullanlan szlemelerden yalnzca biridir; bu,
+
+8
+00:00:40,110 --> 00:00:42,450
+saniyede greceiniz gibi biraz farkl kullanlr.
+
+9
+00:00:42,510 --> 00:00:48,750
+Ve burada snfta bir sabit oluturacam, ancak bu kez sahne alann kullanan
+
+10
+00:00:48,750 --> 00:00:54,540
+bir ilev deil, snf ad gibi baz yaplandrmalar kullanan bir ilev.
+
+11
+00:00:54,540 --> 00:01:03,430
+Ve sonra bu sahne alan ve sonunda snf ad eit bir
+
+12
+00:01:03,480 --> 00:01:13,850
+snf ad ile bir div render gibi bir ey ilemek bir ilev dndrecektir.
+
+13
+00:01:13,870 --> 00:01:22,390
+Dolaysyla, orada kalm argmanm snf adn almamakla kalmayacak ayrca sarlm bileene baka bir
+
+14
+00:01:22,960 --> 00:01:29,870
+argman bekliyoruz ve sarlm bileen aslnda sarlm bileen iinde kullanlacak.
+
+15
+00:01:29,950 --> 00:01:33,150
+Kendini kapayan bir etiket var.
+
+16
+00:01:33,220 --> 00:01:40,800
+yazabilmek iin re-act'i tepki alanndan ie aktaracam ve daha sonra bunun bir snf ilevi ile da aktaracam.
+
+17
+00:01:40,800 --> 00:01:42,320
+Bu GSX kodunu
+
+18
+00:01:42,560 --> 00:01:48,720
+imdi aklda tutmak snf ilevi ile ilevsel bir bileen deildir, normal bir javascript ilevi,
+
+19
+00:01:48,720 --> 00:01:55,070
+daha sonra ilevsel bir bileen olarak nitelenen bir ilevi dndren iki bamsz deiken bekler.
+
+20
+00:01:55,290 --> 00:01:57,000
+Bu burada.
+
+21
+00:01:57,030 --> 00:01:59,460
+imdi bu yaklamn arkasndaki fikir nedir?
+
+22
+00:01:59,760 --> 00:02:01,000
+Sana gstereyim.
+
+23
+00:02:01,290 --> 00:02:08,870
+Burada bir bileen saran geerli bir GSX kodumuz var ancak imdi bunu biraz farkl kullanabiliriz.
+
+24
+00:02:08,940 --> 00:02:16,410
+Uygulama js dosyamza gidebilir ve elbette bir hata atacak olan bu sarmalaycdan kurtulabiliriz.
+
+25
+00:02:16,410 --> 00:02:23,340
+Bu sebeple, yardmc bileenimi omzunun dosyasndan ithal edeceim.
+
+26
+00:02:23,340 --> 00:02:26,600
+Bu yzden bunu temelde grnmez bir etiketle saracam.
+
+27
+00:02:26,660 --> 00:02:28,470
+Excel bunun doru olduunu.
+
+28
+00:02:28,500 --> 00:02:30,110
+Sadece ocuklar geri getiriyor.
+
+29
+00:02:30,120 --> 00:02:33,800
+Gerek bir h m l unsuru eklemez.
+
+30
+00:02:33,970 --> 00:02:42,000
+Ve imdi de bu yeni snf ileviyle ie aktaracam ve balangta bir kk harf W ile brakacam,
+
+31
+00:02:42,000 --> 00:02:47,910
+nk bu ilevi bir bileen olarak kullanmak zereyim, nk bu ilev sadece aklad
+
+32
+00:02:47,910 --> 00:02:50,300
+ey bir bileen nitelii tamyor.
+
+33
+00:02:50,580 --> 00:02:53,230
+GSX doru deil.
+
+34
+00:02:53,310 --> 00:03:01,660
+Sadece bir say ilevi dndrr, imdi burada bunu Snf 2 ile Agios bakn klasrnden
+
+35
+00:03:01,660 --> 00:03:03,000
+ie aktaracam.
+
+36
+00:03:03,520 --> 00:03:07,420
+Ve imdi snfla birlikte kullanlacak biri ancak GSX kodumda kullanmyorum.
+
+37
+00:03:07,420 --> 00:03:12,740
+Bununla bir ey sarmayacam nk tekrar bileen olarak nitelendirilmez.
+
+38
+00:03:13,150 --> 00:03:21,490
+Bunun yerine benim app kaydrma onunla snf ilevi ile sarlyorum ve bunun yan
+
+39
+00:03:21,490 --> 00:03:25,950
+sra uygulama snf uygulama geirerek ihracat ediyorum.
+
+40
+00:03:26,020 --> 00:03:32,440
+argman snf ileci ile atamak istediim, paketlemeyi ve snf adn almay beklediini umuyor.
+
+41
+00:03:32,440 --> 00:03:36,010
+Dolaysyla bizi snf olarak grmek iin, bu 32
+
+42
+00:03:36,010 --> 00:03:41,890
+imdi bunu yerinde yapalm ki, James'in kiisi zerindeki tm almalar, artk var olmayan snfla kullanmaya
+
+43
+00:03:41,890 --> 00:03:42,880
+devam edelim.
+
+44
+00:03:42,880 --> 00:03:44,290
+Bunu sildik.
+
+45
+00:03:44,590 --> 00:03:48,600
+imdi, snf dosyas ile bilen nottan snfta ieri aktaralm.
+
+46
+00:03:48,670 --> 00:03:50,740
+Kk harf W. Ve hepimiz bunu yardmc bileen olarak saralm.
+
+47
+00:03:50,930 --> 00:03:55,220
+Bylece, alks ile burada, bunu
+
+48
+00:03:55,220 --> 00:04:06,050
+alks sarmalamaya saralm ve sonra Alber app J.'de kullandmz gibi snfla kullanalm. S. buraya dosya.
+
+49
+00:04:06,410 --> 00:04:08,560
+Kiinin ilevini sarmalayarak kullanalm.
+
+50
+00:04:09,690 --> 00:04:14,130
+CLOS ile birlikte ihracat yapyoruz, bylece personelin tamam bileene sarlm olacak.
+
+51
+00:04:14,160 --> 00:04:20,340
+Ve ikinci argman, eklemek istediiniz snf olmaldr.
+
+52
+00:04:20,340 --> 00:04:23,220
+Bu durumda, tm dosyalarn kaydedildiinden
+
+53
+00:04:23,220 --> 00:04:30,750
+ve imdi uygulamaya geri dndnden emin olun ve daha nce olduu gibi almas gerekir.
+
+54
+00:04:30,750 --> 00:04:33,060
+Ancak bu dmeyi tklatmaz ve ilk grne gre iyi alyormu gibi grnyor.
+
+55
+00:04:33,060 --> 00:04:40,010
+Ancak, tm dinamik unsurlarn, kiilerin zerindeki tm sahnelerin, yazamayacamz
+
+56
+00:04:40,230 --> 00:04:46,620
+ya eksik bulduklarn ya da yazabileceimizi, ancak gncellenmediini gryorsunuz.
+
+57
+00:04:47,120 --> 00:04:50,020
+Bir hata yapmyoruz, ancak sahne artk eksik.
+
+58
+00:04:50,190 --> 00:04:54,380
+Genellikle yksek sipari bileenimiz alyor.
+
+59
+00:04:54,420 --> 00:04:57,640
+Ve bileeninizi, onu sarmalamak veya
+
+60
+00:04:57,750 --> 00:05:06,090
+onunla biraz Aberlour dnm yapmak gibi deitirmeyi planlyorsanz, bu sklkla greceiniz bir modeldir.
+
+61
+00:05:06,420 --> 00:05:09,660
+Sarf edilen bileeni maniple etmekle birlikte burada asla yapmaman gereken bir ey.
+
+62
+00:05:09,660 --> 00:05:14,320
+Onu burada kullandklarmz gibi kullann.
+
+63
+00:05:14,370 --> 00:05:16,610
+Durumunu veya zelliklerini eklemeye veya deitirmeye balamayn.
+
+64
+00:05:16,620 --> 00:05:20,870
+Ve yan not olarak fonksiyonel bir bileen burada dndrmekle snrl deilsiniz.
+
+65
+00:05:21,120 --> 00:05:26,700
+Duruma dayal bir bileen de dndrebilirsiniz.
+
+66
+00:05:26,730 --> 00:05:30,050
+imdi, durumsal bileene burada dndmze
+
+67
+00:05:30,060 --> 00:05:35,910
+gz atmadan nce bu sahne takmlarnn neyin yanl olduunu renelim.
+
+68
+00:05:35,910 --> 00:05:36,920
+Her ikisine de bir sonraki derste bir gz atacaz.
+
+69
+00:05:37,140 --> 00:05:39,180
+&nbsp;
+

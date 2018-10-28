@@ -1,0 +1,168 @@
+1
+00:00:02,090 --> 00:00:07,030
+In the last lectures, we learned how to pass and extract dynamic route parameters.
+
+2
+00:00:07,030 --> 00:00:12,600
+Now we also see that this somehow leads to issues with our new post route.
+
+3
+00:00:12,700 --> 00:00:18,760
+The reason for this can be seen if we have a look at the blog container, there where we set up our routes,
+
+4
+00:00:19,090 --> 00:00:24,160
+we have the new post route which loads the new post component and that flexible ID route.
+
+5
+00:00:24,310 --> 00:00:31,900
+Now I said that I would move it to the end so that it doesn't capture this route here because this
+
+6
+00:00:31,900 --> 00:00:32,590
+flexible
+
+7
+00:00:32,590 --> 00:00:38,290
+ID path here would of course also interpret new post as an ID.
+
+8
+00:00:38,320 --> 00:00:46,390
+Now it doesn't capture this route but remember that all routes here are rendered if they match the path.
+
+9
+00:00:47,260 --> 00:00:53,020
+This of course is a problem here because our flexible path here then is always rendered when new post is
+
+10
+00:00:53,060 --> 00:01:00,340
+rendered. Now we could of course fix this by naming this posts/:id and also fixing this here in our
+
+11
+00:01:00,340 --> 00:01:03,540
+link to posts/:id.
+
+12
+00:01:03,670 --> 00:01:10,720
+If we do that, now you see we only load the new post form and if I click on a single post we are at /post1
+
+13
+00:01:10,720 --> 00:01:14,950
+and therefore only see a single post.
+
+14
+00:01:14,980 --> 00:01:22,150
+Definitely viable but sometimes you simply have to use a given URL because your URLs would
+
+15
+00:01:22,180 --> 00:01:23,110
+otherwise look,
+
+16
+00:01:23,230 --> 00:01:28,580
+well not the way you want them to look in the end so therefore maybe we have to use that setup.
+
+17
+00:01:28,690 --> 00:01:37,210
+We can still tell react router to load only one of all these routes at a time, by wrapping our route
+
+18
+00:01:37,240 --> 00:01:43,710
+config here with another component provided by the react-router-dom package, this
+
+19
+00:01:43,720 --> 00:01:45,200
+switch component.
+
+20
+00:01:45,520 --> 00:01:47,650
+Switch tells the react router,
+
+21
+00:01:47,720 --> 00:01:50,980
+hey please only load one of the routes.
+
+22
+00:01:51,010 --> 00:01:56,190
+The first one actually you find that matches from a given set of routes.
+
+23
+00:01:56,200 --> 00:02:03,400
+So now we can wrap our three routes with switch and the first route that matches a given path will be
+
+24
+00:02:03,400 --> 00:02:11,150
+loaded and thereafter, it will just stop analyzing the routes, it won't render any other route.
+
+25
+00:02:11,650 --> 00:02:18,100
+With this in place, now you will see that if I go back to home and click on a single post, we load that
+
+26
+00:02:18,100 --> 00:02:19,020
+post.
+
+27
+00:02:19,120 --> 00:02:25,780
+If I click on new post, we only load that form and no longer see that single post.
+
+28
+00:02:25,780 --> 00:02:34,120
+We also now see that if I change the order and put ID first, that we can never reach new post in this
+
+29
+00:02:34,120 --> 00:02:35,090
+scenario
+
+30
+00:02:35,230 --> 00:02:41,230
+and of course we get an error because new post is now treated as the ID and obviously an invalid ID
+
+31
+00:02:41,230 --> 00:02:42,680
+for our backend.
+
+32
+00:02:43,120 --> 00:02:49,500
+So now we see that it does stop after finding the first fitting route which is of course this one with
+
+33
+00:02:49,500 --> 00:02:53,540
+a flexible parameter and therefore new post never gets rendered.
+
+34
+00:02:53,560 --> 00:02:59,740
+So the order is important especially when using switch of course, switch however is important if
+
+35
+00:02:59,740 --> 00:03:02,510
+you want to ensure that only one route gets loaded,
+
+36
+00:03:02,830 --> 00:03:04,420
+and of course you can also mix it,
+
+37
+00:03:04,510 --> 00:03:10,570
+you can put one route outside of switch. So this will always get analyzed at least and potentially also
+
+38
+00:03:10,570 --> 00:03:11,810
+rendered if it fits
+
+39
+00:03:12,040 --> 00:03:14,060
+and then one of the following
+
+40
+00:03:14,110 --> 00:03:19,580
+and then maybe add one more thereafter so you can really mix and match this as you want.
+
+41
+00:03:19,600 --> 00:03:24,910
+That's the cool thing about the router, it's really flexible. So this is one potential set up where we
+
+42
+00:03:24,910 --> 00:03:30,960
+can use URLs you want to use and still ensure that we only load one route at a time.
+

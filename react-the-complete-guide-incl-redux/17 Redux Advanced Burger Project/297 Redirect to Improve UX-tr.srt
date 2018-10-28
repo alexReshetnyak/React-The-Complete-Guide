@@ -1,0 +1,168 @@
+1
+00:00:02,260 --> 00:00:06,170
+Biz sipari redksiyon ve emir eylemleri biraz alt.
+
+2
+00:00:06,310 --> 00:00:12,130
+Ve reticilerimizi birletirmeden nce bir hata edindik veya deme sayfasndaki byle iletiim
+
+3
+00:00:12,130 --> 00:00:13,550
+verilerini ziyaret ederken.
+
+4
+00:00:13,690 --> 00:00:19,480
+Bunun nedeni, check-out zetindeki check-out sayfasnda elimizde bulunan hammaddelerle
+
+5
+00:00:19,480 --> 00:00:21,630
+burgerimizin bir nizlemesini gstermektedir.
+
+6
+00:00:21,760 --> 00:00:28,330
+Ve balangta malzemeyi yklemeden nce ierik maddeler bo ve bu nedenle malzemelerle dnmeye
+
+7
+00:00:28,330 --> 00:00:30,130
+alrsak baarsz olur.
+
+8
+00:00:30,460 --> 00:00:33,630
+imdi bunu zmenin birka yolu var.
+
+9
+00:00:33,670 --> 00:00:35,960
+Kolay yoldur sadece yk deil.
+
+10
+00:00:35,980 --> 00:00:42,040
+Malzemeler yklenmezse Samari'yi kontrol ettiniz, ancak oraya varncaya kadar bir spinner gsterebiliriz.
+
+11
+00:00:42,310 --> 00:00:48,940
+Ancak uygulamanzda en azndan malzemelerin orada olmad tek seferde balangta herhangi bir
+
+12
+00:00:49,300 --> 00:00:54,870
+katk maddesi bulunmad iin hibir malzeme bulunmad takdirde kullancya da ynlendirebiliriz.
+
+13
+00:00:55,000 --> 00:00:58,970
+yleyse bir deme sayfasnda olmas mantkl.
+
+14
+00:00:59,080 --> 00:01:04,450
+Bu yzden burada alacam yol bu ancak elbette burada zet yerine Spener
+
+15
+00:01:04,450 --> 00:01:05,560
+gsterebileceinin farknda olun.
+
+16
+00:01:05,560 --> 00:01:07,210
+Bunu yapmak istiyorsan.
+
+17
+00:01:07,660 --> 00:01:13,710
+Peki, ne yapacam, nk Rotterdam'tan tekrar hareket edeceim bir ey ithal edeceim ve bu da ynlendirme bileeni olacak.
+
+18
+00:01:13,750 --> 00:01:22,020
+Rotasyon blmnde ve Meffert ileyicisinde yeni bir sabit zette deiiklik yapldn ve bu zetin
+
+19
+00:01:22,030 --> 00:01:25,830
+varsaylan olarak yeniden ynlendirme olmas gerektiini grdk.
+
+20
+00:01:25,830 --> 00:01:26,590
+Diyelimki.
+
+21
+00:01:26,800 --> 00:01:31,900
+Yani hepiniz ynlendiriyorsunuz ve sadece eik izgiye ynlendireceim.
+
+22
+00:01:31,990 --> 00:01:38,680
+Dolaysyla rota sayfam burger Boulder sayfasnda burger Boulder sayfasnda herhangi bir madde ykl olmad srece bir
+
+23
+00:01:38,690 --> 00:01:39,460
+ykleyicim var.
+
+24
+00:01:40,530 --> 00:01:44,090
+imdi zet elbette ynlendirme yapmamal.
+
+25
+00:01:44,280 --> 00:01:47,370
+Bunun yerine bu Propst inj.
+
+26
+00:01:47,490 --> 00:01:53,280
+Dolaysyla, sadece Rydex eyaletinden aldm malzemeler var ve yklendiinde
+
+27
+00:01:53,280 --> 00:01:54,150
+kullanlabilir.
+
+28
+00:01:54,510 --> 00:02:02,400
+Bir kere bu elbette render yapmak istiyor ve bu nedenle bu bir kavram olmamal, ancak LET ile
+
+29
+00:02:02,400 --> 00:02:03,190
+deiken olmaldr.
+
+30
+00:02:03,240 --> 00:02:06,390
+Daha nce gsterdiimiz zetini vermek istiyorum.
+
+31
+00:02:06,600 --> 00:02:08,720
+zet kodunu oraya koyacam.
+
+32
+00:02:08,820 --> 00:02:12,220
+imdi bu zet deikenini kullanabilir ve buradan ktrabiliriz.
+
+33
+00:02:12,390 --> 00:02:15,610
+Bu yzden zet kt yapacam.
+
+34
+00:02:15,750 --> 00:02:20,370
+Ve biz de irtibat bilgilerine gzergah gstermek gerekmez.
+
+35
+00:02:20,480 --> 00:02:30,750
+Dolaysyla, bunu zet kodunu buradaki bitiik elere sahip olduum iin div ile sarmak iin kontrol
+
+36
+00:02:30,780 --> 00:02:32,530
+etmeye koyabilirim.
+
+37
+00:02:32,680 --> 00:02:39,450
+Ve bu da aslnda sadece yln gnnden kurtulmamza ve sadece zetlediim bir ynlendirmeye veya
+
+38
+00:02:39,450 --> 00:02:43,170
+daha nce grdm kodu dndrmemize izin veriyor.
+
+39
+00:02:43,170 --> 00:02:50,580
+imdi bu gncellemeyi kaydedersem konteyneri kontrol ettirirsem, emir sayfasna gider miyim, imdi hepsi ie
+
+40
+00:02:50,640 --> 00:02:57,770
+yarayp yaramayacam greceksiniz, ancak sadece giri tuuna basarak yeniden yklersem yeniden ynlendirme yapm olurum.
+
+41
+00:02:58,020 --> 00:03:02,100
+Yani Demerara bu kck ayarla sabitlendi.
+
+42
+00:03:02,100 --> 00:03:06,230
+imdi, indiricilerimizi birletirdiimizden emin olalm.
+

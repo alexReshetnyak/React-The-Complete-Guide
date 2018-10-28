@@ -1,0 +1,140 @@
+1
+00:00:02,240 --> 00:00:08,570
+Wrciem do projektu i chc wdroy te metody, abymy mogli zobaczy, jak dziaa
+
+2
+00:00:08,600 --> 00:00:09,720
+nasza aplikacja.
+
+3
+00:00:10,220 --> 00:00:13,140
+I mam tylko
+
+4
+00:00:13,310 --> 00:00:20,900
+jeden stanowy skadnik, aplikacj. Plik js, to jest mie, ale aby naprawd zobaczy, jak wszystkie
+
+5
+00:00:20,900 --> 00:00:27,950
+skadniki potomne s ponownie renderowane, chc rwnie przeksztaci niektre z nich w skadniki stanowe, abymy mogli wdroy te metody cyklu ycia,
+
+6
+00:00:27,950 --> 00:00:32,010
+poniewa jest to wane na wynos. Jeli potrzebujesz dostpu do metody
+
+7
+00:00:32,150 --> 00:00:35,000
+cyklu ycia, musisz mie element stanowy.
+
+8
+00:00:35,000 --> 00:00:38,440
+Tak wic komponent utworzony z klas i przez rozszerzenie
+
+9
+00:00:38,480 --> 00:00:41,330
+komponentu nie mona tego zrobi dla skadnikw funkcjonalnych.
+
+10
+00:00:41,330 --> 00:00:48,020
+Tak wic, ze wzgldu na to, zamieniam osoby i osoby w elementy stanowe, szybko zrobi to dla obu i to jest bardzo
+
+11
+00:00:48,020 --> 00:00:50,870
+atwe do zrobienia. W osobach. Plik js,
+
+12
+00:00:50,890 --> 00:00:54,540
+nie mamy ju osb staych, mamy klas,
+
+13
+00:00:54,680 --> 00:01:00,010
+a konwencj jest nadanie tej nazwy komponentu, ale ju z
+
+14
+00:01:00,030 --> 00:01:01,850
+wielk liter.
+
+15
+00:01:01,880 --> 00:01:09,620
+Teraz ta klasa powinna rozszerzy si o komponent sowa kluczowego extends, ktry teraz musisz zaimportowa jako
+
+16
+00:01:09,620 --> 00:01:13,240
+nazwany import, by reagowa, komponent taki jak ten.
+
+17
+00:01:13,280 --> 00:01:20,870
+Teraz klasa ma wtedy ciao klasowe i tam bdziemy mieli t metod renderowania, ktr wanie zobaczylimy na diagramie
+
+18
+00:01:20,870 --> 00:01:24,780
+i ktr rwnie widzielimy wczeniej. W tym miejscu chcemy
+
+19
+00:01:24,800 --> 00:01:30,670
+teraz zwrci jsx, wic nasza lista i jak nauczysz si rekwizytw nie
+
+20
+00:01:30,830 --> 00:01:37,700
+bdzie dostpna tutaj, otrzymamy to. rekwizyty. Wic gdziekolwiek uywasz rekwizytw, powinno by
+
+21
+00:01:37,700 --> 00:01:38,720
+tak. rekwizyty teraz.
+
+22
+00:01:38,720 --> 00:01:47,900
+Dziki temu mog usun kod tam i po prostu wyeksportowa Osoby o duej wartoci P, dziki czemu szybko to zapiszmy i zobaczmy, czy
+
+23
+00:01:47,910 --> 00:01:51,050
+nasza aplikacja nadal dziaa, Upewnij si, e npm
+
+24
+00:01:51,060 --> 00:01:53,110
+start nadal dziaa, a to
+
+25
+00:01:53,460 --> 00:01:54,500
+wyglda dobrze.
+
+26
+00:01:54,660 --> 00:01:59,550
+Teraz zmienilimy nasz bezpastwowy komponent na stanowy komponent.
+
+27
+00:01:59,550 --> 00:02:03,040
+Zrbmy to samo dla komponentu osoby, tam
+
+28
+00:02:03,060 --> 00:02:10,800
+tworzymy klas, nazwijmy go Person z wielkim P, rozszerzmy komponent, ktry nastpnie musimy zaimportowa jako nazwany
+
+29
+00:02:10,800 --> 00:02:18,450
+import z reakcji, zdefiniuj body dla tej klasy i dodaj do niego metod renderowania .
+
+30
+00:02:18,740 --> 00:02:28,520
+I tam, po prostu zwr jsx w ten sposb i upewnij si, e dostosujesz
+
+31
+00:02:28,530 --> 00:02:36,670
+domylny eksport do uycia duego P i jak poprzednio, rekwizyty nie istniej,
+
+32
+00:02:36,670 --> 00:02:40,030
+tak powinno by. rekwizyty, Teraz te
+
+33
+00:02:40,030 --> 00:02:41,730
+to poprawilimy, a
+
+34
+00:02:41,990 --> 00:02:45,020
+tu s jeszcze dwa.
+
+35
+00:02:45,050 --> 00:02:52,760
+Teraz z tym, e wszystkie rekwizyty s wymieniane, z tym, zaimplementujmy haki cyklu ycia w nastpnym wykadzie.
+

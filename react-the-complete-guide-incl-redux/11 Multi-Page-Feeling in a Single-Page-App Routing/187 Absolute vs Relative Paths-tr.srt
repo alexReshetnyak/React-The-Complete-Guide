@@ -1,0 +1,124 @@
+1
+00:00:02,170 --> 00:00:10,810
+Buraya balantlarnz yazdnz ekilde yeni postay kesmek iin eik izgi oluturmak zere ayarladnz balantlar hakknda bir
+
+2
+00:00:10,810 --> 00:00:11,890
+daha bilgi.
+
+3
+00:00:11,980 --> 00:00:15,370
+Mutlak veya greceli bir yol olup olmad gerei deil.
+
+4
+00:00:15,550 --> 00:00:18,930
+Zaten mutlak ve akraba ne demektir zaten.
+
+5
+00:00:19,420 --> 00:00:23,310
+Mutlak bir kazan, daima alannza sarktr.
+
+6
+00:00:23,440 --> 00:00:29,720
+rnein, example dot com'dan bu uygulamaya hizmet ediyorsanz Yeni postaya gitmek istiyorsunuz.
+
+7
+00:00:29,950 --> 00:00:37,360
+Yeni yayn kesmek iin gezinirseniz, alan ad hemen her zaman eik izgi ekleyerek yeni yayn sonras anlamna gelir.
+
+8
+00:00:37,420 --> 00:00:45,430
+yaz eklemeyeceksiniz, ancak yeni yaz gnderirken yeni bir yaz gnderir ve yaynlar atlarsnz.
+
+9
+00:00:45,440 --> 00:00:51,890
+Daha nce kompostolduunuz bir rnek olsanz bile, o Tournay'n sonunda yeni
+
+10
+00:00:52,140 --> 00:00:54,550
+Mutlak bir saman ne yapar.
+
+11
+00:00:54,550 --> 00:01:00,260
+imdi ikisini ayarlarken mutlak veya greceli POV olup olmadn kontrol edemezsiniz.
+
+12
+00:01:00,340 --> 00:01:06,620
+Her zaman mutlak bir POV olarak kabul edilir, bylece yeni yayn kesilip izilmedii veya yeni yaynlar olup olmad nemli deil.
+
+13
+00:01:06,730 --> 00:01:11,420
+Bu mutlak bir POV ve kk alannza her zaman eklenecektir.
+
+14
+00:01:11,770 --> 00:01:15,990
+imdi ne olsa bu greceli bir paras haline getirmek istedim.
+
+15
+00:01:16,000 --> 00:01:23,080
+Dolaysyla, alan ad yazm yazlar zerinde olsanz, alan iaretleri yaynlarnza yeni yaynlar
+
+16
+00:01:23,080 --> 00:01:28,640
+eklediinizden emin olmak istediyse, bunu geerli yolun sonuna ekleyin.
+
+17
+00:01:28,780 --> 00:01:35,650
+O halde u anda zerinde bulunduunuz POF'u bildiinizden yararlanarak bu yolu
+
+18
+00:01:35,650 --> 00:01:37,810
+dinamik olarak oluturmanz gerekir.
+
+19
+00:01:37,810 --> 00:01:41,230
+Bu sahne mana eriiminizin olduunu unutmayn.
+
+20
+00:01:41,230 --> 00:01:48,620
+Konsoldaki ma nesnesinin sonunda ykl olan Hauf olan dr rengi cisim
+
+21
+00:01:48,630 --> 00:01:50,010
+olduunu denetledik.
+
+22
+00:01:50,020 --> 00:01:56,860
+Artk Shane, diske yeni bir yaz gnderirken byle dinamik bir yol ina edebilirsiniz.
+
+23
+00:01:56,860 --> 00:02:00,470
+u anda greceli, nk u anda zerinde bulunduunuz sayfay alyor.
+
+24
+00:02:00,490 --> 00:02:07,480
+zerinde olduunuz ve eklediiniz kazan sonunda sona eriyor ve birdenbire greli bir yol ina ettiniz.
+
+25
+00:02:07,480 --> 00:02:08,210
+u anda
+
+26
+00:02:08,530 --> 00:02:15,110
+Bu nedenle, imdiki yolun sonuna yol ekleyen bir balant kurmak isterseniz.
+
+27
+00:02:15,150 --> 00:02:16,730
+Bu yaklam kullann.
+
+28
+00:02:17,140 --> 00:02:21,650
+Oberweis bu her zaman mutlak bir yol oluturur.
+
+29
+00:02:21,700 --> 00:02:23,910
+Burada daha iyi ya da kt bir ey yok.
+
+30
+00:02:23,920 --> 00:02:30,060
+Gerekten, hangi davran kk etki alanna eklediinize veya geerli yola eklemenize baldr.
+
+31
+00:02:30,070 --> 00:02:32,470
+Sizi her ikisine nasl ulaacanzdan haberdar etmek istedim.
+

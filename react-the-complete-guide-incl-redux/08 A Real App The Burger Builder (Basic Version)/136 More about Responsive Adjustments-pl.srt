@@ -1,0 +1,396 @@
+1
+00:00:02,140 --> 00:00:08,000
+W ostatnim wykadzie dopasowalimy logo do dobrego wygldu zarwno na pasku narzdzi, jak i na szufladzie Deeside.
+
+2
+00:00:08,230 --> 00:00:15,100
+Teraz dostosujmy elementy nawigacyjne, aby teraz je czyta, a nastpnie negacje, zwaszcza pojedyncze elementy
+
+3
+00:00:15,210 --> 00:00:18,810
+tutaj dopiero zaczynaj wyglda dobrze na komputerach.
+
+4
+00:00:18,820 --> 00:00:21,880
+To oczywicie problem na urzdzeniach mobilnych.
+
+5
+00:00:21,880 --> 00:00:23,650
+Porzucamy ten wygld pulpitu.
+
+6
+00:00:23,830 --> 00:00:28,600
+Ale zamiast chcie mie jakie przedmioty, ktre po prostu siedz pod sob i ktre nie
+
+7
+00:00:28,600 --> 00:00:31,090
+maj tej granicy na dole i tak dalej.
+
+8
+00:00:31,210 --> 00:00:37,240
+Musimy wic dostosowa elementy nawigacyjne i zrobi to za pomoc zapyta o media, a elementy
+
+9
+00:00:37,270 --> 00:00:39,260
+nawigacji zobacz nas jako plik.
+
+10
+00:00:39,280 --> 00:00:46,600
+Tak wic chc napisa to w telefonie komrkowym w pierwszej kolejnoci, wic moje klasy bazowe powinny by na urzdzenia mobilne, a
+
+11
+00:00:46,600 --> 00:00:50,990
+nastpnie dodam zapytania o media, aby wyglday dobrze rwnie na wikszych urzdzeniach.
+
+12
+00:00:51,040 --> 00:00:57,730
+Aby to osign, dodajmy najpierw do tego pulpitu zapytania Wise Media, czy te pojedyncze media s wydobywane
+
+13
+00:00:57,730 --> 00:01:04,440
+waciwie jako wszystkie odpowiednie media, a nastpnie mennice dla mnie, by odci tu punkt, bdzie 500 pikseli.
+
+14
+00:01:04,460 --> 00:01:07,360
+Ale oczywicie moesz teraz wybra inny.
+
+15
+00:01:07,360 --> 00:01:13,650
+Skopiuj wszystkie istniejce klasy Seer's na ten kana Querrey, poniewa wczeniej pisalimy na komputerze.
+
+16
+00:01:13,660 --> 00:01:19,870
+Zdecydowanie chcemy uywa tych klas dla szerszych urzdze i teraz chcemy dostosowa te klasy bazowe, aby
+
+17
+00:01:19,870 --> 00:01:21,940
+wyglday dobrze na urzdzeniach mobilnych.
+
+18
+00:01:21,940 --> 00:01:27,970
+Dotyczy to na przykad marginesu 10 pikseli od gry i dou oraz od zera do gry i od prawej.
+
+19
+00:01:28,180 --> 00:01:31,400
+Istnieje wic pewien odstp midzy wiadomociami.
+
+20
+00:01:31,440 --> 00:01:40,050
+Chc rwnie ustawi szeroko na 100 procent, ale nie na wysoko do ukrycia, powinien by tylko przyjmowanie wymaganej
+
+21
+00:01:40,050 --> 00:01:47,120
+wysokoci z perspektywy tekstowej, a wywietlacz nie musi by zginany, dlatego wywietlacz moe by tutaj
+
+22
+00:01:47,120 --> 00:01:47,670
+zablokowany.
+
+23
+00:01:48,460 --> 00:01:51,990
+Z tego powodu nie potrzebuj te elementu zamwienia.
+
+24
+00:01:52,120 --> 00:01:57,580
+Teraz dla danego linku kolor nie powinien by biay, poniewa to szuflady bocznej jest biae.
+
+25
+00:01:57,760 --> 00:02:01,600
+Chc tu uy brzowego koloru, a uyj 8 F 5.
+
+26
+00:02:01,670 --> 00:02:08,770
+Zobacz, eby zobaczy brzowy kolor, ktrego uylimy przed stworzeniem texta, ale oczywicie nie jest on na najwyszym poziomie,
+
+27
+00:02:08,770 --> 00:02:11,800
+ale nie na 100 procent, ale szeroko jest.
+
+28
+00:02:11,930 --> 00:02:17,010
+Chc rwnie upewni si, e rozmiar skrzynek to border borke, wic opucimy to.
+
+29
+00:02:17,150 --> 00:02:18,530
+Ale nie potrzebuj wyciki.
+
+30
+00:02:18,530 --> 00:02:20,410
+Nie musz graniczy z dnem.
+
+31
+00:02:20,420 --> 00:02:24,410
+To wszystko moe si uda, a wywietlacz nadal moe by blokowany.
+
+32
+00:02:25,680 --> 00:02:31,010
+Teraz dla aktywnych przedmiotw nie chc ustawia koloru ta na brzowy.
+
+33
+00:02:31,010 --> 00:02:36,000
+Chc ustawi, aby wywietla kolor, a nie kolor ta wybacz mi kolor.
+
+34
+00:02:36,030 --> 00:02:39,420
+Wic kolor tekstu, a ja pozbd si koloru ta i dolnej granicy.
+
+35
+00:02:39,450 --> 00:02:40,740
+Chc to mie.
+
+36
+00:02:40,920 --> 00:02:45,840
+I jak zawsze moesz swobodnie zadba o sprawiedliwo w taki sposb, aby wyglda adniej.
+
+37
+00:02:45,840 --> 00:02:48,060
+To s moje style Mobota.
+
+38
+00:02:48,150 --> 00:02:54,420
+Teraz oszukamy wszelkie zdublowane konfiguracje stylw, jakie mamy w telefonach komrkowych i na komputerach, na przykad w ramce do
+
+39
+00:02:54,420 --> 00:02:55,050
+wymiarowania pudeek.
+
+40
+00:02:55,050 --> 00:02:57,270
+Zdefiniowalimy to ju w komrce.
+
+41
+00:02:57,270 --> 00:03:03,240
+Nie musimy tu ponownie definiowa, poniewa zapytania o media s oczywicie poczone z oryginalnymi klauzulami.
+
+42
+00:03:03,330 --> 00:03:09,360
+Tak wic to, co tutaj ustawimy, jest generalnie ograniczone, a nastpnie moemy przesoni wybrane waciwoci, ale rozmiar
+
+43
+00:03:09,360 --> 00:03:13,470
+bloku nie musi by nadpisywany, poniewa chcemy uy tej samej wartoci.
+
+44
+00:03:13,470 --> 00:03:20,220
+Uyj tutaj tych samych wartoci, ale ustawi te szeroko, mimo e nie uyjesz
+
+45
+00:03:20,220 --> 00:03:26,570
+szerokoci 100%, ktr skonfigurowaem w ustawieniach mobilnych, ale bd rwnie nadpisywa rednie ustawienia.
+
+46
+00:03:26,610 --> 00:03:27,990
+To mi dobrze wyglda.
+
+47
+00:03:28,810 --> 00:03:34,720
+Dla zaznaczonego tutaj linku chc teraz ustawi kolor na biay.
+
+48
+00:03:34,720 --> 00:03:36,200
+Wic tutaj jest brzowo.
+
+49
+00:03:36,220 --> 00:03:37,870
+Dla mnie powinno by biae.
+
+50
+00:03:37,870 --> 00:03:40,960
+Wczono dekorowanie tekstu w ustawieniach urzdzenia mobilnego.
+
+51
+00:03:40,960 --> 00:03:43,330
+Wysoko i dopenienie s dla mnie wane.
+
+52
+00:03:43,420 --> 00:03:45,610
+Border Bawden jest wany.
+
+53
+00:03:45,610 --> 00:03:48,160
+Wymiarowanie i wywietlanie w pudeku.
+
+54
+00:03:48,160 --> 00:03:53,450
+Dostalimy to ustawienie ju w ustawieniach mobilnych, wic moemy si go pozby tutaj.
+
+55
+00:03:53,770 --> 00:03:58,150
+A dla unoszcych si i aktywnych linkw wszystko trzeba skonfigurowa, poniewa mamy
+
+56
+00:03:58,150 --> 00:04:00,490
+zupenie inny styl dla dugoci urzdze mobilnych.
+
+57
+00:04:00,850 --> 00:04:03,400
+Zachowajmy teraz bezpieczestwo i spjrzmy na to.
+
+58
+00:04:03,460 --> 00:04:07,470
+Wyglda dobrze, ale wci siedz obok siebie.
+
+59
+00:04:07,480 --> 00:04:08,980
+Przyczyna tego jest martwa.
+
+60
+00:04:08,980 --> 00:04:14,340
+Nasze elementy nawigacyjne widz list zamwie, ktra otacza linki.
+
+61
+00:04:14,410 --> 00:04:15,820
+Uywamy Fluxboksa.
+
+62
+00:04:15,880 --> 00:04:19,900
+A to prowadzi do pozycji siedzcej obok siebie domylnie.
+
+63
+00:04:19,900 --> 00:04:26,180
+Nie jest to problem, musimy doda tutaj zapytanie o media z minut z 500 pikselami.
+
+64
+00:04:26,400 --> 00:04:33,990
+I teraz ustawiam moj klas elementw nawigacyjnych, a ja ustawiam tutaj przepyw flexu na wiersz, poniewa pamitam, e
+
+65
+00:04:33,990 --> 00:04:37,410
+dla mnie jest to rwnoznaczne z urzdzeniami stacjonarnymi.
+
+66
+00:04:37,440 --> 00:04:39,840
+Wic powinni usi obok siebie.
+
+67
+00:04:40,110 --> 00:04:47,100
+Ale jeli chodzi o urzdzenia mobilne, ustawi nowy strumie Culloma Flack, eby usadowili si
+
+68
+00:04:47,100 --> 00:04:48,170
+pod sob.
+
+69
+00:04:48,180 --> 00:04:54,350
+Teraz, gdy to powiesz, widzimy, e przedmioty s rzeczywicie uoone jeden na drugim na wikszych ekranach.
+
+70
+00:04:54,360 --> 00:04:56,220
+Nadal mamy stary wygld.
+
+71
+00:04:56,370 --> 00:05:02,430
+Dostajemy tu rwnie kilka problemw, poniewa znieksztacona Briga podczas przeczania jest tylko ze wzgldu
+
+72
+00:05:02,520 --> 00:05:03,330
+na przeczanie.
+
+73
+00:05:03,330 --> 00:05:09,300
+Po ponownym wczytaniu i zaadowaniu aplikacji, jak zobaczy uytkownik, wszystko wyglda dobrze, ale
+
+74
+00:05:09,300 --> 00:05:16,230
+mamy tu problemy, na przykad elementy nawigacyjne s widoczne na pasku narzdzi na mniejszych ekranach.
+
+75
+00:05:16,230 --> 00:05:18,140
+I oczywicie tak nie powinno by.
+
+76
+00:05:18,150 --> 00:05:22,190
+Nie chc mie elementw nawigacyjnych na pasku narzdzi na maych ekranach.
+
+77
+00:05:22,350 --> 00:05:24,450
+Musz cyder za to.
+
+78
+00:05:24,570 --> 00:05:30,740
+Chc rwnie mie troch wicej odstpw midzy logo i moich elementw nawigacyjnych tutaj na telefonie komrkowym.
+
+79
+00:05:31,050 --> 00:05:40,570
+Aby to naprawi, wr do mojej aplikacji i tam, w katalogu, w ktrym umieciem logo i elementy
+
+80
+00:05:40,570 --> 00:05:48,670
+nawigacyjne, najpierw dodaj troch marginesu do dou na logo, abymy mieli troch odstpw od elementw
+
+81
+00:05:49,420 --> 00:05:53,590
+nawigacyjnych, ktre znajduj si poniej. moe 42 piksele.
+
+82
+00:05:54,070 --> 00:05:55,420
+To powinno wyglda lepiej.
+
+83
+00:05:55,450 --> 00:05:55,910
+Tak.
+
+84
+00:05:56,320 --> 00:06:02,560
+Aby usun elementy nawigacyjne na pasku narzdzi, musimy doda now klas S
+
+85
+00:06:02,800 --> 00:06:07,210
+pomocnika C-s, ktra wszystko dodaje do tego elementu owijajcego.
+
+86
+00:06:07,420 --> 00:06:17,120
+I dodaem natychmiastowe zapytanie, wic zapytanie o media bdzie si teraz rejestrowao z maksymaln wartoci 499 pikseli.
+
+87
+00:06:17,170 --> 00:06:24,910
+Wic jeli jestemy na urzdzeniu mobilnym, dodam, e mj pulpit jest widoczny tylko jako klasa S i
+
+88
+00:06:24,910 --> 00:06:27,140
+tam ustawi wywietlacz na Normalny.
+
+89
+00:06:27,250 --> 00:06:30,700
+Nie mam tej klasy dla domylnego przypadku.
+
+90
+00:06:30,700 --> 00:06:36,550
+Tak wic dla urzdze, ktre s szersze ni 500 pikseli, ale w zasadzie oznacza to, e
+
+91
+00:06:36,550 --> 00:06:41,140
+przyjmuje domyln stylizacj, ktra jest blokiem wywietlacza i dlatego bdzie mona wygra.
+
+92
+00:06:41,350 --> 00:06:44,140
+Dlatego nadpisuj to tylko dla maych urzdze.
+
+93
+00:06:44,140 --> 00:06:50,980
+Teraz mog uy tej nowej klasy na pasku narzdzi i mog j tutaj doda do elementu nawigacyjnego do elementu nav.
+
+94
+00:06:51,100 --> 00:06:53,600
+Mog uywa tylko pulpitu Klaas.
+
+95
+00:06:53,710 --> 00:07:00,180
+A teraz na mniejszych urzdzeniach elementy nawigacyjne powinny znikn, a zobaczysz tutaj logo.
+
+96
+00:07:00,190 --> 00:07:03,810
+Ale myl, e wyglda to cakiem adnie, wic moe zostawimy to tutaj.
+
+97
+00:07:03,940 --> 00:07:10,580
+Teraz, jeli mamy boczn szuflad, ktra wyglda lepiej, wygldaoby jeszcze lepiej, gdyby mia to.
+
+98
+00:07:10,720 --> 00:07:13,980
+I gdybymy mogli dynamicznie je otwiera i zamyka.
+
+99
+00:07:14,230 --> 00:07:16,560
+Oto kolejne kroki, nad ktrymi bdziemy pracowa.
+

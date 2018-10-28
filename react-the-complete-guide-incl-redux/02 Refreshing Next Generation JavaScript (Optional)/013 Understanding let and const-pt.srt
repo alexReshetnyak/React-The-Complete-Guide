@@ -1,0 +1,160 @@
+1
+00:00:02,210 --> 00:00:07,600
+Vamos mergulhar diretamente nisso com LET e Konst, estas so duas palavras-chave que
+
+2
+00:00:07,600 --> 00:00:13,970
+vo ver muito neste curso, especialmente Konst lead e Konst so diferentes maneiras de criar variveis.
+
+3
+00:00:13,970 --> 00:00:17,920
+Voc sabe que somos, ns criamos uma varivel em javascript.
+
+4
+00:00:17,930 --> 00:00:21,580
+Agora, o problema  que algumas variveis nunca mudam.
+
+5
+00:00:21,590 --> 00:00:23,750
+So as chamadas constantes.
+
+6
+00:00:23,900 --> 00:00:25,360
+Tecnicamente embora sejam.
+
+7
+00:00:25,370 --> 00:00:33,020
+tudo apenas variveis porque o javascript s conhece a guerra com 6 palavras de javascript duas palavras-chave diferentes
+
+8
+00:00:33,020 --> 00:00:41,180
+foram introduzidas e o Konst ainda funciona, mas voc  altamente encorajado a usar LET e Konst let is.
+
+9
+00:00:41,870 --> 00:00:42,730
+Eles so
+
+10
+00:00:42,770 --> 00:00:50,030
+Ento, para dizer No quer usar isso para valores variveis e o Konst est mudando algo por trs
+
+11
+00:00:50,030 --> 00:00:52,750
+do cenrio sobre o escopo das variveis.
+
+12
+00:00:52,850 --> 00:00:58,940
+Mas o takeaway mais importante aqui  usar LET se voc quiser criar uma varivel que realmente seja varivel.
+
+13
+00:00:58,940 --> 00:01:05,600
+Use o Konst se voc planeja criar um valor constante para algo que voc apenas atribui uma vez e
+
+14
+00:01:05,600 --> 00:01:06,400
+nunca muda.
+
+15
+00:01:06,500 --> 00:01:09,710
+E esse  o caso mais frequentemente do que voc pensa.
+
+16
+00:01:09,770 --> 00:01:16,490
+nunca ver onde voc s ver Lat e Konst e principalmente  Konst, ento no deve confundir voc.
+
+17
+00:01:16,490 --> 00:01:17,780
+Neste curso, voc
+
+18
+00:01:17,900 --> 00:01:24,590
+ simplesmente o mesmo que uma regra so apenas de uma maneira mais moderna e, no caso de Konst,
+
+19
+00:01:24,590 --> 00:01:28,570
+todos os dias que mostram claramente nunca recebero um novo valor.
+
+20
+00:01:28,850 --> 00:01:34,340
+Agora, uma vez que  sempre mais claro na prtica, vamos dar uma olhada nisso.
+
+21
+00:01:34,340 --> 00:01:35,950
+ melhor se voc  um genial Ben.
+
+22
+00:01:35,970 --> 00:01:36,730
+Dot com.
+
+23
+00:01:36,740 --> 00:01:42,920
+Esse  outro editor da web, o que torna mais fcil para ns entrar no JavaScript do ASM e ver uma
+
+24
+00:01:43,490 --> 00:01:50,130
+sada do console para que desabilite o H. T. mail e sada para cima e, em vez disso, habilite o Javascript e os contras. Agora, no lado esquerdo, voc pode acessar o javascript de prxima gerao no lado direito, voc ver a sada.
+
+25
+00:01:50,250 --> 00:01:55,780
+Ento, podemos criar uma varivel.
+
+26
+00:01:55,820 --> 00:01:57,460
+Meu nome configurou
+
+27
+00:01:57,500 --> 00:02:08,640
+um controle de console mximo e mximo, e se voc tiver acesso de controle, voc ver o Max  direita.
+
+28
+00:02:08,640 --> 00:02:09,260
+No  to novo para voc provavelmente.
+
+29
+00:02:09,270 --> 00:02:12,300
+Obviamente, podemos definir o meu nome para o menu e se o console Denne registrar meu nome novamente.
+
+30
+00:02:12,300 --> 00:02:19,550
+Tambm pode no surpreender totalmente que, se voc limpar e executar isso novamente, voc ver Max.
+
+31
+00:02:19,710 --> 00:02:25,210
+Da primeira declarao e menu do segundo.
+
+32
+00:02:25,230 --> 00:02:29,220
+Agora, se a mudana fosse para permitir.
+
+33
+00:02:29,310 --> 00:02:31,310
+Nada vai mudar.
+
+34
+00:02:31,310 --> 00:02:32,770
+Atingir ainda funciona e exatamente da mesma maneira se voc usar o Konst assim assim.
+
+35
+00:02:32,790 --> 00:02:39,750
+Em seguida, limpar e executar isso ir gerar Mx.
+
+36
+00:02:39,780 --> 00:02:43,210
+Mas, em seguida, lana um erro ou tentamos reatribuir uma varivel constante que  um tipo de nome estranho.
+
+37
+00:02:43,260 --> 00:02:50,480
+Isso  constante  a idia por trs do Konst.
+
+38
+00:02:50,720 --> 00:02:53,480
+Voc pode dizer que isso nunca deve obter um novo valor e
+
+39
+00:02:53,550 --> 00:02:59,100
+se voc no acidentalmente escreveu algum cdigo onde voc o reatribuir, voc obter o erro e, portanto, a chance de melhorar o seu cdigo.
+
+40
+00:02:59,100 --> 00:03:03,580
+&nbsp;
+

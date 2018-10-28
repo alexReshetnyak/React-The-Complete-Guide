@@ -1,0 +1,352 @@
+1
+00:00:01,980 --> 00:00:06,980
+Over the last lectures we learned how to write basic tests, I'll show with some other tests,
+
+2
+00:00:06,980 --> 00:00:07,540
+no worries
+
+3
+00:00:07,540 --> 00:00:10,990
+but how can you actually write tests on your own,
+
+4
+00:00:11,000 --> 00:00:14,380
+how do you know that there is a find method on the wrapper,
+
+5
+00:00:14,450 --> 00:00:19,270
+how do you know what the it method does in detail if I wouldn't have told you?
+
+6
+00:00:19,670 --> 00:00:25,040
+Well the official documentation helps you with that and for testing, I can only recommend looking into
+
+7
+00:00:25,040 --> 00:00:30,980
+the official docs as well as if you really want to dive deeper into testing, as well as checking out
+
+8
+00:00:30,980 --> 00:00:36,370
+some dedicated resources, some dedicated courses or tutorial articles I mean with that.
+
+9
+00:00:36,650 --> 00:00:39,590
+Let's have a look at the documentations, here
+
+10
+00:00:39,620 --> 00:00:45,200
+I want the jest documentation and you can simply find that by googling for jest, there you'll find the
+
+11
+00:00:45,200 --> 00:00:51,660
+Getting Started Guide and always keep in mind jest is not bound to react or create react app,
+
+12
+00:00:51,830 --> 00:00:53,850
+it's a javascript test runner,
+
+13
+00:00:53,900 --> 00:00:56,490
+you can use it in any javascript project.
+
+14
+00:00:56,560 --> 00:01:02,000
+So on this page, you'll find some general ideas about how it works and how you configure it
+
+15
+00:01:02,330 --> 00:01:07,270
+and then the API reference is especially useful if you click on the expect method.
+
+16
+00:01:07,610 --> 00:01:15,110
+There you'll learn how to actually use the expect method and which functions to chain to it, like toHaveLength
+
+17
+00:01:15,120 --> 00:01:17,680
+which we already used here,
+
+18
+00:01:18,020 --> 00:01:24,590
+you will find a detailed instruction and examples and a similar documentation is available for all
+
+19
+00:01:24,590 --> 00:01:26,290
+the utility methods here,
+
+20
+00:01:26,330 --> 00:01:28,560
+so that's a great way to find that function
+
+21
+00:01:28,610 --> 00:01:35,680
+you need to test your code. You also find more about how to mock certain things,
+
+22
+00:01:35,690 --> 00:01:37,290
+mock means replace,
+
+23
+00:01:37,430 --> 00:01:42,740
+that's especially useful when working with some async code where you don't want to execute that actual
+
+24
+00:01:42,740 --> 00:01:43,180
+code,
+
+25
+00:01:43,190 --> 00:01:45,190
+you don't want to reach out to the web,
+
+26
+00:01:45,350 --> 00:01:51,550
+you want to mock this, you want to step in and replace that function with a function that just returns
+
+27
+00:01:51,550 --> 00:01:53,440
+some demo data
+
+28
+00:01:53,450 --> 00:01:58,400
+you could work with because you're always not testing a service but you're testing what your code does
+
+29
+00:01:58,410 --> 00:01:59,870
+with the returned data.
+
+30
+00:02:00,200 --> 00:02:02,560
+So that's the jest documentation,
+
+31
+00:02:02,570 --> 00:02:05,420
+now there's a similar one for enzyme, here
+
+32
+00:02:05,450 --> 00:02:11,180
+you will also find installations about how to install it with different react versions, then the general
+
+33
+00:02:11,210 --> 00:02:17,450
+guide on how to use it with various test runners in case you don't want to use jest and the API reference,
+
+34
+00:02:18,170 --> 00:02:20,280
+there you'll find the shallow rendering
+
+35
+00:02:20,300 --> 00:02:23,390
+I already showed you and two alternatives.
+
+36
+00:02:23,810 --> 00:02:30,460
+You can always dive into it, full rendering is useful if you want render the complete component tree, that should
+
+37
+00:02:30,480 --> 00:02:31,750
+rarely be the case
+
+38
+00:02:31,760 --> 00:02:37,400
+but you might have some circumstances where you want to test some cross component dependency, always
+
+39
+00:02:37,400 --> 00:02:40,610
+see if you can solve it with a unit test first though.
+
+40
+00:02:40,730 --> 00:02:42,710
+Now we use shallow rendering thus far
+
+41
+00:02:42,710 --> 00:02:48,290
+so let's click into shallow rendering and there on the left side, you find all the helper methods you
+
+42
+00:02:48,290 --> 00:02:48,830
+have,
+
+43
+00:02:49,070 --> 00:02:54,740
+we for example used the find method, if you click on it you'll always find examples and explanation
+
+44
+00:02:54,920 --> 00:03:00,890
+and there you see exactly what we used, a wrapper which renders something with shallow and then find to
+
+45
+00:03:00,890 --> 00:03:01,900
+look into it
+
+46
+00:03:02,180 --> 00:03:06,830
+and here the toHaveLength looks different because they assume a different validation library
+
+47
+00:03:06,950 --> 00:03:07,880
+not jest
+
+48
+00:03:08,030 --> 00:03:12,440
+but that of course is the part which depends on your validation library,
+
+49
+00:03:12,440 --> 00:03:16,090
+the part on the wrapper is what's connected to enzyme.
+
+50
+00:03:16,190 --> 00:03:17,870
+So this is the documentation
+
+51
+00:03:17,870 --> 00:03:21,550
+and as I already said, I can only encourage you to look into it.
+
+52
+00:03:21,830 --> 00:03:29,810
+So with that, let's look into it and let's check the contains method because I want to write one other test before
+
+53
+00:03:29,810 --> 00:03:32,710
+we leave our navigation items component.
+
+54
+00:03:33,130 --> 00:03:37,600
+There, we already test for a lot of things regarding the navigation items,
+
+55
+00:03:37,610 --> 00:03:41,620
+now I want to test something very specific. If we have a look at that file,
+
+56
+00:03:41,630 --> 00:03:49,130
+we notice that there is a logout component which is only there if we are authenticated, which
+
+57
+00:03:49,130 --> 00:03:52,440
+makes sense it should only be there if we are authenticated.
+
+58
+00:03:52,790 --> 00:03:56,660
+So I want to check if that specific navigation item is there
+
+59
+00:03:56,960 --> 00:04:04,980
+and for that I can use this contains helper because the contains helper, unlike find does not take an element
+
+60
+00:04:05,010 --> 00:04:10,220
+type or a css selector to be precise, there as you can see for find,
+
+61
+00:04:10,260 --> 00:04:16,290
+you could also use class selectors but contains takes a real node and you can therefore check if you
+
+62
+00:04:16,290 --> 00:04:18,150
+have a exact match.
+
+63
+00:04:18,150 --> 00:04:23,330
+So let's write one more test, I'll copy my wrapper from before
+
+64
+00:04:23,340 --> 00:04:28,610
+because I again want to test if we're authenticated, now I'll get rid of my previous code
+
+65
+00:04:28,770 --> 00:04:35,550
+and now here I want to use the contains method on my wrapper component.
+
+66
+00:04:35,720 --> 00:04:39,530
+Now in there, I want to check for the existence of one specific node,
+
+67
+00:04:39,540 --> 00:04:46,350
+now since we don't use a selector, I'll use jsx code again for my navigation item and the navigation
+
+68
+00:04:46,380 --> 00:04:52,050
+item I'm looking for is actually not a self-closing one but one which has the opening and closing selector
+
+69
+00:04:52,410 --> 00:05:00,450
+because in between, there will be a logout text and the navigation item will have a prop link which
+
+70
+00:05:00,450 --> 00:05:02,520
+leads to /logout
+
+71
+00:05:02,520 --> 00:05:10,620
+so I'm basically writing exactly the same code as my navigation item component here. And with that, I'm
+
+72
+00:05:10,620 --> 00:05:14,000
+checking if that is really part of the wrapper,
+
+73
+00:05:14,250 --> 00:05:19,830
+now here I could write toHaveLength(1) to see if only one is there or to mix it up,
+
+74
+00:05:19,860 --> 00:05:25,000
+I can check if this is two equal true,
+
+75
+00:05:25,350 --> 00:05:30,380
+so I want to find it if we are authenticated. Now with that,
+
+76
+00:05:30,390 --> 00:05:34,380
+let's save this and we get a failed test here,
+
+77
+00:05:34,380 --> 00:05:37,010
+do you know why the third test failed?
+
+78
+00:05:39,130 --> 00:05:43,430
+Because I deleted wrapper.setProps and I did this on purpose,
+
+79
+00:05:43,450 --> 00:05:44,590
+I wanted to show you that
+
+80
+00:05:44,620 --> 00:05:49,530
+each test runs independent of the others because we call beforeEach,
+
+81
+00:05:49,630 --> 00:05:53,670
+so we rendered a wrapper anew before every test.
+
+82
+00:05:54,010 --> 00:06:01,210
+So if this test also assumes authentication, then we have to repeat wrapper.setProps in there.
+
+83
+00:06:01,210 --> 00:06:03,760
+Now with that, the test succeeds
+
+84
+00:06:03,760 --> 00:06:05,670
+so now we see two things,
+
+85
+00:06:05,800 --> 00:06:07,720
+each test runs independent of the other
+
+86
+00:06:07,750 --> 00:06:14,020
+and the key point of this lecture, we can use a different method from enzyme to test for different things
+
+87
+00:06:14,740 --> 00:06:20,540
+combined with a new method from jest. And now it's of course also up to you to play around with the
+
+88
+00:06:20,540 --> 00:06:26,510
+different methods and write clever tests, some hints regarding this in the next lecture.
+

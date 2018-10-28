@@ -1,0 +1,236 @@
+1
+00:00:02,200 --> 00:00:08,140
+Wspominam w ostatnim wykadzie, e twrcy akcji mog nam w tym pomc, dlatego utworz nowy podfolder
+
+2
+00:00:08,140 --> 00:00:09,250
+w folderze sklepu.
+
+3
+00:00:09,370 --> 00:00:14,160
+Nazwabym to dziaaniami i przeniesi tam moje dziaania.
+
+4
+00:00:14,250 --> 00:00:16,120
+Opuszcz upadek jak na razie.
+
+5
+00:00:16,240 --> 00:00:22,820
+Przenosz to do folderu dziaa, poniewa dodam take wiele akcji podczas kolejnych wykadw.
+
+6
+00:00:22,840 --> 00:00:25,500
+Ale na razie trzymajmy to tam.
+
+7
+00:00:25,510 --> 00:00:30,920
+Eksportujemy wszystkie nasze identyfikatory akcji i to dziaa dobrze.
+
+8
+00:00:30,970 --> 00:00:36,160
+Teraz chc wprowadzi nowy sposb tworzenia dziaa zwanych twrcami akcji.
+
+9
+00:00:36,160 --> 00:00:40,060
+Jak to wyglda, co to jest twrca ect.
+
+10
+00:00:40,120 --> 00:00:46,190
+Jest po prostu funkcj, ktra zwraca dziaanie lub tworzy akcj przeciwko nazwie.
+
+11
+00:00:46,570 --> 00:00:52,060
+Teraz tworzymy nasze dziaania na stae w naszym kodzie lub po prostu kiedy ich potrzebujemy.
+
+12
+00:00:52,060 --> 00:00:54,940
+Powiedziabym tutaj w kontradzie.
+
+13
+00:00:55,000 --> 00:00:58,080
+Na wysyce mapy do wniosku jest dziaanie.
+
+14
+00:00:58,120 --> 00:01:00,640
+To tylko obiekty javascript Deese'a.
+
+15
+00:01:00,670 --> 00:01:07,310
+Tworzymy je tutaj, tworzymy je po prostu wpisujc kod obiektu do naszej funkcji wysyki.
+
+16
+00:01:07,600 --> 00:01:14,020
+Twrca dziaania zwrci taki obiekt i moesz zauway korzyci, gdy mwimy o kodzie
+
+17
+00:01:14,020 --> 00:01:14,630
+asynchronicznym.
+
+18
+00:01:14,740 --> 00:01:17,660
+Stwrzmy teraz twrc akcji.
+
+19
+00:01:17,710 --> 00:01:23,280
+W przypadku kodu synchronicznego jednak utworz now funkcj i moesz uy sowa
+
+20
+00:01:23,340 --> 00:01:28,090
+kluczowego lub utworzy funkcj strzaki, a ja nadam jej nazw.
+
+21
+00:01:28,120 --> 00:01:31,700
+Konwencja polega na uyciu tej samej nazwy co twj identyfikator.
+
+22
+00:01:31,780 --> 00:01:39,870
+Ale w przypadku wielbda, pierwszy krok pierwszego znaku jest funkcj jako zbir.
+
+23
+00:01:39,970 --> 00:01:44,950
+Zwrci co w kocu i otrzyma co, co moe otrzyma co, co
+
+24
+00:01:44,950 --> 00:01:51,160
+powinienem powiedzie, e otrzymuje adunek, ktry chcesz przekaza z t akcj tutaj dla inkrementacji.
+
+25
+00:01:51,160 --> 00:01:52,540
+Nie chc przekaza adnego.
+
+26
+00:01:52,600 --> 00:01:58,200
+Zamiast tego po prostu zwracam co i e co jest dziaaniem lub obiektem javascript.
+
+27
+00:01:58,250 --> 00:02:03,660
+Teraz jak kada akcja musi mie typ, a typ powinien by inkrementowany.
+
+28
+00:02:03,850 --> 00:02:08,150
+Odwoujc si do naszego wczeniejszego identyfikatora, ktry si nie liczy.
+
+29
+00:02:08,170 --> 00:02:14,610
+Wystarczy postpowa zgodnie z przyrostem, ktry zaimportowaem z typw ict, wycigajc akcje, aby doda akcje.
+
+30
+00:02:14,720 --> 00:02:22,390
+Teraz waciwie nie mog pozby si tego importu i wkrtce bdziemy musieli zmieni to, co tutaj wysyamy.
+
+31
+00:02:22,390 --> 00:02:24,830
+Na razie wrmy do akcji, ktre dopiero upadaj.
+
+32
+00:02:24,900 --> 00:02:27,590
+To ju nasza pierwsza akcja Creator.
+
+33
+00:02:27,670 --> 00:02:28,660
+Powraca.
+
+34
+00:02:28,720 --> 00:02:34,150
+Tworzy wic akcj, a dziaanie musi mie swj typ. To minimalne
+
+35
+00:02:34,150 --> 00:02:35,840
+dziaanie, ktre moemy stworzy.
+
+36
+00:02:35,920 --> 00:02:41,980
+Moemy teraz uy tego kreatora akcji, a kontrolerzy spadaj tam, gdzie to robimy,
+
+37
+00:02:41,980 --> 00:02:43,200
+najpierw go importujc.
+
+38
+00:02:43,480 --> 00:02:48,590
+Wic tutaj zaimportuj co z dziaa, ktre podaj.
+
+39
+00:02:48,700 --> 00:02:55,540
+Tak wic przejd do folderu sklepu w akcje, a tam do akcji podam teraz i tam i
+
+40
+00:02:55,790 --> 00:02:57,210
+wracasz do niego.
+
+41
+00:02:57,220 --> 00:03:00,560
+Potrzebuj wyeksportowa t funkcj inkrementacji.
+
+42
+00:03:00,610 --> 00:03:02,420
+Teraz mog zaimportowa go po imieniu.
+
+43
+00:03:02,470 --> 00:03:08,700
+Tak wic w pliku counter js mog importowa inkrement i pamita, e jest to funkcja.
+
+44
+00:03:08,830 --> 00:03:11,820
+Teraz moemy uy tej funkcji w liczniku J jako spadek.
+
+45
+00:03:11,890 --> 00:03:18,390
+Na dole, gdzie mapujemy nasze rekwizyty, aby wywoywa funkcje dla inkrementacji.
+
+46
+00:03:18,570 --> 00:03:26,240
+Tutaj po prostu przekazuj inkrementacj jak dat, a take wykonuj j.
+
+47
+00:03:26,460 --> 00:03:33,000
+Poniewa raz wykonam inkrementacj, a stanie si to, gdy ten rekwizyt zostanie w zasadzie wykonany, gdy
+
+48
+00:03:33,000 --> 00:03:33,840
+wykonam inkrementacj.
+
+49
+00:03:34,140 --> 00:03:40,260
+To da mi dziaanie, poniewa to dziaanie tworzy lub nie zapominaj, e powrt zwraca jako
+
+50
+00:03:40,260 --> 00:03:40,840
+dziaanie.
+
+51
+00:03:40,860 --> 00:03:43,390
+Wic wykonalimy, otrzymujemy akcj.
+
+52
+00:03:43,570 --> 00:03:44,460
+To bardzo mie.
+
+53
+00:03:44,460 --> 00:03:49,250
+Nasza aplikacja nadal jest zepsuta, poniewa wszystkie inne dziaania tutaj nie s poczone.
+
+54
+00:03:49,470 --> 00:03:55,560
+To, co szybko zrobi, to wymieniam bardziej aktualnych twrcw na wszystkie dziaania lub dokadniej.
+
+55
+00:03:55,620 --> 00:03:56,760
+Powiniene to zrobi.
+
+56
+00:03:56,760 --> 00:03:58,290
+Oto twoje wyzwanie.
+
+57
+00:03:58,290 --> 00:04:05,070
+Twrz twrcw akcji, takich jak ten dla wszystkich akcji i zobacz, czy potrafisz wymyli sposb postpowania z
+
+58
+00:04:05,070 --> 00:04:07,280
+czynnociami, ktre faktycznie wymagaj adunku.
+
+59
+00:04:07,410 --> 00:04:09,390
+Zrobimy to razem w nastpnym filmie.
+

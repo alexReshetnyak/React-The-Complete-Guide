@@ -1,0 +1,392 @@
+1
+00:00:02,320 --> 00:00:08,470
+Bu gncellemelerle ilgili kitaplar hayata geirelim ve bunlar tm bileenlerde uygulamayacam nk
+
+2
+00:00:08,470 --> 00:00:11,490
+bu, konsol logumuzun patlamasna neden olabilir.
+
+3
+00:00:11,590 --> 00:00:12,780
+Bylece bizzat yaparsnz.
+
+4
+00:00:12,850 --> 00:00:17,470
+Evet bileeni, bunlar diskreasyonla ilikili elerin altnda uyguluyor.
+
+5
+00:00:17,530 --> 00:00:23,680
+Ancak yukarda render yntemini neden merak ediyorsanz, bu yntemleri havaclk ilevleri ile
+
+6
+00:00:23,740 --> 00:00:27,830
+deil, bu gibi yntemlerle uyguladysanz, bunu kesinlikle yapabilirsiniz.
+
+7
+00:00:28,000 --> 00:00:34,870
+yntemler Dom olaylar iin arlmadndan, bu anahtar kelime sorununu asla kullanmamak zorundayz, nk
+
+8
+00:00:35,020 --> 00:00:41,350
+bir programlama dilinden renebileceiniz bu szdizimini, yaam dngsne geri dndrmek de mmkndr.
+
+9
+00:00:41,350 --> 00:00:42,610
+Ancak bu
+
+10
+00:00:42,880 --> 00:00:50,540
+Bileen sahne alrken balayalm ve sonra yaklaan sahalar bir argman olarak alacaz.
+
+11
+00:00:50,770 --> 00:00:56,850
+imdi orada, gncelleme yapan kiileri yazacam bir konsol kilidi ifadesi ekleyeceim.
+
+12
+00:00:56,890 --> 00:00:59,970
+J. S. bylece bunu kolayca grebiliriz.
+
+13
+00:01:00,400 --> 00:01:10,390
+Ve hepsi dahili bileen alet alacak diyelim ve bunu da grebilmemiz iin bir sonraki
+
+14
+00:01:10,390 --> 00:01:12,400
+aleti de bastrabiliriz.
+
+15
+00:01:12,400 --> 00:01:15,940
+Bu kaydetmeme izin verin grelim Windass bir gayrimenkul uygulamas altrn.
+
+16
+00:01:15,940 --> 00:01:20,050
+Biz burada gremiyoruz nk onu satran dosyasnda buluyoruz.
+
+17
+00:01:20,110 --> 00:01:29,140
+Tklayp tklarsam Cancellara'y analiz edelim, burada tm kiinin ilgili yntemleri var, bylece
+
+18
+00:01:29,140 --> 00:01:37,660
+kiiler kurucudan kovalamacaklardan kiilerin sandalyelerini tek kiilik bileenini oluturacak ekilde monte ederler.
+
+19
+00:01:37,660 --> 00:01:39,910
+Yani hepsi tek kiilik bileenler.
+
+20
+00:01:41,160 --> 00:01:45,440
+Ve MT Gncelleme ile ilgili yaam tarz grnm yok muydu.
+
+21
+00:01:45,440 --> 00:01:48,440
+Bu yzden ok temizlememe izin verin, ancak sayfay yeniden yklemedi.
+
+22
+00:01:48,570 --> 00:01:51,150
+Ve imdi bir eyi deitirelim.
+
+23
+00:01:51,480 --> 00:01:58,680
+Belki de bu kiilerin el kitabndan birini elle kaldrmak iin tklayn nk render'n geri arldn
+
+24
+00:01:58,720 --> 00:02:01,080
+greceksiniz ve aslnda durum deiti.
+
+25
+00:02:01,290 --> 00:02:07,530
+Ve sonra gncellenmi gncelleme sahalarna ulatmzda gncellediimiz problemi alacamz gryoruz; imdi u
+
+26
+00:02:07,530 --> 00:02:13,980
+an sadece iki kii olan insanlar var ve DS'nin sunmas gereken kii
+
+27
+00:02:13,980 --> 00:02:18,390
+kalntlar ve kalan iki kiilik bileen ierisindeyiz. .
+
+28
+00:02:18,420 --> 00:02:23,030
+lenmi yntemin gncelleme mrnn bir paras olduunu grdnz.
+
+29
+00:02:23,520 --> 00:02:24,120
+Bu harika.
+
+30
+00:02:24,120 --> 00:02:25,570
+Bir mahalle ekleyelim.
+
+31
+00:02:25,680 --> 00:02:33,840
+ancak akllca bir ekilde kullanrsak bir miktar tasarruf salayabileceimiz bir bileen gncelleme gsterdi. Yaklamakta olan sahne ve devlet
+
+32
+00:02:33,840 --> 00:02:40,080
+elde ediliyor ve burada syleyeceim bir konsol kilidi de ekleyeceim gncelletirmek insanlar J.
+
+33
+00:02:40,080 --> 00:02:51,940
+ok nemli bir yntem aslnda yalnzca kolaylk metodu deil, S. shirred bileen gncellemesi iinde ve
+
+34
+00:02:52,570 --> 00:02:59,880
+bir sonraki sahne ve bir sonraki sahne burada da yazacak.
+
+35
+00:02:59,890 --> 00:03:04,640
+imdi dediim gibi, bu yntem doru dndrrse true veya false dndrmelidir.
+
+36
+00:03:04,840 --> 00:03:08,300
+Yanl dndrrse gncelleme devam eder.
+
+37
+00:03:08,320 --> 00:03:10,510
+Btn sreci durdurduk.
+
+38
+00:03:10,510 --> 00:03:13,410
+imdi bunun nasl olacan grmek iin yalan yere dnelim.
+
+39
+00:03:13,720 --> 00:03:18,680
+imdi her eyi kurtarsam ve hepsi ie yarayan kiileri hedeflersem.
+
+40
+00:03:18,850 --> 00:03:20,850
+Fakat elkitabn tekrar kaldralm.
+
+41
+00:03:21,600 --> 00:03:24,870
+Tkrdm, ancak gncellenmediini gryorsun.
+
+42
+00:03:24,870 --> 00:03:32,010
+Gncelleme ynteminin Bileen gncellemesi gerektiini ve deiikliklerini drdn bile birden
+
+43
+00:03:32,370 --> 00:03:34,490
+ok kez tklayabilirsiniz.
+
+44
+00:03:34,500 --> 00:03:41,280
+Kiiler yalnzca burada bir e barndryor nk iki kiiyi silmekteydik DOM'da yansmad, nk
+
+45
+00:03:41,610 --> 00:03:47,640
+gncelleme ilemini iptal ettik, bylece gerek Dom'un gncellenip gncellenmeyeceini kontrol etmek
+
+46
+00:03:47,640 --> 00:03:52,880
+iin tepki vermek iin nemli olan oluturma yntemlerine asla erimedik.
+
+47
+00:03:52,890 --> 00:03:55,930
+Bu, bileen gncelleme ileminin gcn gsterir.
+
+48
+00:03:56,310 --> 00:04:03,870
+imdi Fallston'u neden geri dndmz merak edebilirsiniz, nk elbette burada uygulamay kesiyor.
+
+49
+00:04:04,070 --> 00:04:07,960
+Ancak gncelleme gerektirmediini bildiiniz durumlarda olabilir.
+
+50
+00:04:08,150 --> 00:04:10,020
+Ve elbette normalde sabit kod kullanmazsnz.
+
+51
+00:04:10,040 --> 00:04:11,590
+Burada doru veya yanl.
+
+52
+00:04:11,700 --> 00:04:17,120
+Bunun yerine yaklamakta olan problara ve / veya eyalete gre kontrol edin.
+
+53
+00:04:17,120 --> 00:04:28,690
+rnein, burada, yalnzca, sonraki istemlerin, yal insanlar olan sahadaki insanlara eit olmadn, ancak
+
+54
+00:04:28,760 --> 00:04:32,420
+devam etmek istiyoruz biliyoruz.
+
+55
+00:04:32,420 --> 00:04:36,050
+imdi bu uygulamann yannda toggled kiilere gidelim.
+
+56
+00:04:36,060 --> 00:04:41,890
+bir kiiyi tklarsanz, kiiler dizisi deitiinden tm sreci baaryla getik.
+
+57
+00:04:41,980 --> 00:04:42,840
+imdi eer
+
+58
+00:04:43,220 --> 00:04:50,390
+Ve bu arada bu dorudur, nk kiinin dizisini gncellemenin deimez bir yaklamn kullandk, nk
+
+59
+00:04:50,630 --> 00:04:53,410
+bu kii dizisinin derinliini kontrol etmez.
+
+60
+00:04:53,510 --> 00:04:59,500
+Farkl nesneler olup olmadna bakar, ancak burada uygulayclarmz burada dosya
+
+61
+00:04:59,510 --> 00:05:03,620
+olarak gncelleme eklimiz nedeniyle bunlar farkl nesnelerdir.
+
+62
+00:05:03,620 --> 00:05:07,280
+Biz insanlar dedik biz yeni bir dizi syledi.
+
+63
+00:05:07,430 --> 00:05:10,570
+Dolaysyla, nemli olan tamamen farkl bir nesne.
+
+64
+00:05:10,640 --> 00:05:14,130
+Bir bileen gncellemesi burada bunu derinden kontrol etmez.
+
+65
+00:05:14,270 --> 00:05:17,150
+Yalnzca kk nesneleri karlatrr.
+
+66
+00:05:17,150 --> 00:05:23,100
+aretiler kesin olmakla birlikte bunlar farkldr, nk yeni bir dizi oluturduk
+
+67
+00:05:23,120 --> 00:05:29,330
+ancak bu bileen iin alakal olmayabilecek baz dier mlkleri bir ekilde deitirirsek,
+
+68
+00:05:29,330 --> 00:05:31,430
+imdi ne olacan dnyoruz.
+
+69
+00:05:31,430 --> 00:05:35,450
+Bu, bir gncelleme balatmaz ve burada performans drebiliriz.
+
+70
+00:05:36,110 --> 00:05:38,170
+Bu yzden kesin bir bileen gncellemesi.
+
+71
+00:05:38,180 --> 00:05:44,120
+eklemeniz gerekmez, nk bu durum bileenlerini her yerde kullanmanz gerektii anlamna gelir
+
+72
+00:05:44,120 --> 00:05:49,400
+ve ilev bileenlerini olabildiince sk kullandnzdan nce sylediklerime kar bir tr.
+
+73
+00:05:49,400 --> 00:05:51,360
+Her bileen iin mutlaka
+
+74
+00:05:51,680 --> 00:05:58,580
+Ancak yl kullandnz bildiiniz bir yerde kullandnz ve bir sr sahne ald fakat aslnda yeniden
+
+75
+00:05:58,580 --> 00:06:02,050
+dzenledii veya yalnzca bu sahalarn birinin deimesi halinde.
+
+76
+00:06:02,120 --> 00:06:08,810
+Sonra, bileeninizi tam bir devlet haline getirebilir ve sizin iin nemli olan bu pervanenin deiip deimediini kontrol
+
+77
+00:06:08,960 --> 00:06:14,960
+etmek iin dier bileen gncellemelerini grmezden gelip gelmediini kontrol etmek iin gereken bileen gncellemesini uygulayabilirsiniz.
+
+78
+00:06:15,410 --> 00:06:21,870
+Dolaysyla, bu ekstra denetimi alyoruz ve yaam dngsn uygulamaya devam edebiliyoruz. Bileen gncellemesi
+
+79
+00:06:22,040 --> 00:06:26,000
+yapldysa bir sonraki yaam dngsn deniyor bileen gncellenecektir.
+
+80
+00:06:26,030 --> 00:06:28,650
+imdi biz burada gncellemek zere olduumuzu karar verdik.
+
+81
+00:06:28,690 --> 00:06:31,770
+Ben de yaklaan devlet ve sahne ald.
+
+82
+00:06:31,910 --> 00:06:34,930
+imdi de bunu konsoloslua kilitleyelim.
+
+83
+00:06:35,250 --> 00:06:37,910
+Lauck gncelleme kiileri.
+
+84
+00:06:37,970 --> 00:06:51,480
+J. S. i bileen gncellenecek ve sonraki sahne ve sonraki durumu burada
+
+85
+00:06:51,480 --> 00:06:58,990
+gnle kaydedelim diyelim ki eer bu bir kiinin net diyalounun gerek zamanl konumasn grelim diyelim ki grdmz
+
+86
+00:06:59,440 --> 00:07:06,070
+kiiyi silelim aslnda bir teslimiyet bileeni, bileen gncellemesinin gerekirse sahay alacak ve daha sonra render
+
+87
+00:07:06,070 --> 00:07:09,100
+haritas tm ilgili bileenleri mkemmel klar.
+
+88
+00:07:09,160 --> 00:07:13,000
+Artk bilgisayarn kapal olaca bir sonraki yntem gncellenecekti.
+
+89
+00:07:13,030 --> 00:07:14,540
+Elimizde zaten var.
+
+90
+00:07:14,710 --> 00:07:20,870
+Sonraki yntem var sonra bileen kendi gncelleme yapt.
+
+91
+00:07:21,020 --> 00:07:31,370
+imdi, herhangi bir bileen takldnda olduu gibi yan etkilere neden olabilir ve bu ikisini abucak yazacam.
+
+92
+00:07:31,550 --> 00:07:38,130
+Burada bir sonraki proposuza sahip deiliz nk genelde sadece bu sahne takmna sahip olduumuz gncelleme ve
+
+93
+00:07:38,360 --> 00:07:44,360
+yeni problarn ve yeni durumun bu noktada sahne almas ve imdiki duruma ters yneltiyor olmas.
+
+94
+00:07:44,540 --> 00:07:50,690
+Bylece bir kere daha kurtardmz hedef kiilere netice gnderdikleri kiiyi silmek ve yol boyunca tmden.
+
+95
+00:07:50,720 --> 00:07:53,540
+Alt Usie bileeni gncellendi.
+
+96
+00:07:53,630 --> 00:07:55,580
+Yani gncellenen yaam dngs budur.
+
+97
+00:07:55,660 --> 00:08:02,960
+Gncelleme, deitirilen problar nedeniyle dardan tetiklenirse, kiiler deiir; kiiler deimi
+
+98
+00:08:03,030 --> 00:08:03,920
+demektir.
+

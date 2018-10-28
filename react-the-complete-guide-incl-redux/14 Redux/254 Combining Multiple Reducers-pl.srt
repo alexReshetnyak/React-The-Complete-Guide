@@ -1,0 +1,476 @@
+1
+00:00:02,180 --> 00:00:05,330
+The Last Lecture powierzylimy nasze typy dziaa.
+
+2
+00:00:05,450 --> 00:00:14,720
+Jest jeszcze co, co robimy duo, poniewa nasza aplikacja ronie i uywa si wielu reduktorw.
+
+3
+00:00:14,810 --> 00:00:22,310
+Teraz powiedziaem, e mamy tylko jednego uytkownika z redox i tak jest w przypadku, gdy wszystkie
+
+4
+00:00:22,310 --> 00:00:30,560
+dziaania w kocu zostaj przekazane przez jednego producenta, ale relaks pakiet daje nam metod uytecznoci, ktr moemy wykorzysta
+
+5
+00:00:30,560 --> 00:00:38,360
+do poczenia wielu recirusw Cirus w jeden, tak abymy nadal postpuj zgodnie ze schematem posiadania tylko jednego
+
+6
+00:00:38,360 --> 00:00:39,520
+producenta za kulisami.
+
+7
+00:00:39,530 --> 00:00:46,880
+Ale dla nas, jako programisty, moemy logicznie podzieli nasz kod, wic nie dostaniemy takiego, ktrego sobie wyobrazisz,
+
+8
+00:00:47,090 --> 00:00:53,270
+jak wzronie liczba uytkownikw, gdy bdziemy dodawa coraz wicej typw akcji, ktre chc obsuy,
+
+9
+00:00:53,270 --> 00:00:58,290
+ale moemy podzieli je wedug funkcji w naszej schludnej aplikacji demonstracyjnej.
+
+10
+00:00:58,340 --> 00:01:05,360
+Moe by sens mie reduktor, ktry radzi sobie z kontratakami i ktry obsuguje wyniki, nawet jeli s
+
+11
+00:01:05,360 --> 00:01:07,420
+one w jaki sposb powizane.
+
+12
+00:01:07,580 --> 00:01:14,750
+Z technicznego punktu widzenia s rne lub zarzdzaj rnymi czciami aplikacji, wic podzielenie ich moe mie
+
+13
+00:01:14,750 --> 00:01:15,280
+sens.
+
+14
+00:01:15,290 --> 00:01:18,020
+I wanie to zamierzamy zrobi.
+
+15
+00:01:18,050 --> 00:01:25,520
+Podzielmy wic naszego producenta na dwa reduktory jeden, aby policzy powizane czci instrukcji switch case
+
+16
+00:01:25,520 --> 00:01:28,800
+i jeden dla wynikw zwizanych z jednym.
+
+17
+00:01:28,820 --> 00:01:36,830
+Wic po prostu dodam tutaj w folderze sklepu Moine w nowym folderze reduktorw, a
+
+18
+00:01:36,830 --> 00:01:45,080
+potem dodam upadek, ktry podam jako takowy i taki, ktry nadadz nazw Daut Julius.
+
+19
+00:01:45,150 --> 00:01:51,660
+Teraz kopiuj cay kod od mojego producenta zeszej jesieni i umieciem go w kasie J jesieni.
+
+20
+00:01:51,690 --> 00:01:58,320
+Musz teraz dostosowa wypat do moich dziaa, po prostu podnoszc poziom o jeden poziom, a nastpnie znajdujemy
+
+21
+00:01:58,320 --> 00:02:01,200
+si w folderze, w ktrym znajduje si akcja.
+
+22
+00:02:01,760 --> 00:02:02,610
+Stan pocztkowy.
+
+23
+00:02:02,610 --> 00:02:07,590
+Teraz tutaj, jesieni tego roku, nie trzeba ju wicej wiedzie o wynikach, czy tylko o to, e
+
+24
+00:02:07,670 --> 00:02:09,250
+tu chodzi o win Julii.
+
+25
+00:02:09,400 --> 00:02:15,360
+Ich zredukowana funkcja wci wyglda jak przed stanem, ktry jest przypisany do stanu pocztkowego
+
+26
+00:02:15,360 --> 00:02:16,550
+i otrzymujemy akcj.
+
+27
+00:02:16,560 --> 00:02:22,380
+Po prostu pozbywam si tutaj przypadkw zwizanych z sol, aby uczyni to nieco szczuplejszym.
+
+28
+00:02:22,410 --> 00:02:25,320
+To ju jest mj gotowy producent.
+
+29
+00:02:25,320 --> 00:02:29,280
+Moemy wymieni, e twj licznik zmniejsza jej dysfunkcje.
+
+30
+00:02:29,280 --> 00:02:33,000
+Wszyscy moemy zostawi go o nazwie reduktor lub cokolwiek chcesz.
+
+31
+00:02:33,000 --> 00:02:38,610
+Teraz ponownie skopiuj kod z upadku reduktora Jr i wprowadz go do moich wynikw.
+
+32
+00:02:38,620 --> 00:02:44,790
+Chase ponownie spadnie na POV do rzeczywistego pliku, a teraz pozbd si licznika posiadajcego mj pocztkowy
+
+33
+00:02:44,790 --> 00:02:52,080
+reduktor stanu, a nastpnie pozostanie on tak jak jest, ale usuwam wszystkie sprawy zwizane z kontami, tak e
+
+34
+00:02:52,140 --> 00:02:54,910
+tylko te powizane z magazynem s tam.
+
+35
+00:02:54,930 --> 00:03:03,690
+Zauwa, e wci jest tutaj stan przeciw-IED stanu X-te, poniewa na kocu dwa reduktory
+
+36
+00:03:03,690 --> 00:03:07,230
+pocz si w jeden stan globalny.
+
+37
+00:03:07,470 --> 00:03:12,330
+Wic nadal bdzie tam przeciwdziaa pastwu.
+
+38
+00:03:12,330 --> 00:03:15,980
+By moe bdziemy musieli zaktualizowa to pniej, ale zobaczymy.
+
+39
+00:03:16,410 --> 00:03:19,010
+Wtedy nadal bd eksportowa mj reduktor tutaj.
+
+40
+00:03:19,260 --> 00:03:24,500
+A to pozwala mi pozby si zmniejszonego lub po prostu wpa do folderu sklepu.
+
+41
+00:03:24,520 --> 00:03:26,940
+Teraz oczywicie indeks tak.
+
+42
+00:03:27,010 --> 00:03:28,900
+Nie mam ju prawidowego importu.
+
+43
+00:03:28,900 --> 00:03:31,120
+Twoje pragnienie uycia lub nie istnieje.
+
+44
+00:03:31,120 --> 00:03:33,140
+Zamiast tego mam teraz dwa reduktory.
+
+45
+00:03:33,220 --> 00:03:35,080
+Wic zaimportujmy je.
+
+46
+00:03:35,080 --> 00:03:43,810
+Przejdmy do folderu sklepu do folderu reduktorw i zaimportujmy tutaj licznik J jako nienazwany
+
+47
+00:03:43,900 --> 00:03:45,080
+reduktor licznika.
+
+48
+00:03:45,250 --> 00:03:51,570
+Bd duplikowa import do dentystw importowa reduktor wynikw ze sklepu.
+
+49
+00:03:51,580 --> 00:03:55,990
+Reduktory powoduj najbardziej dotkliwy spadek.
+
+50
+00:03:56,080 --> 00:04:01,640
+Teraz, aby je poczy, musz zaimportowa funkcj pomocnicz z pakietu Rydex.
+
+51
+00:04:01,720 --> 00:04:06,040
+To si nazywa reduktory kombajnu, poniewa nazwy s gestami.
+
+52
+00:04:06,070 --> 00:04:14,290
+Jest to funkcja, ktra zajmuje obiekt javascript, mapujc naszych producentw na rne kawaki naszego stanu
+
+53
+00:04:14,290 --> 00:04:21,510
+jako dane wejciowe i czy wszystko w jeden stan i jednego producenta dla nas.
+
+54
+00:04:21,510 --> 00:04:26,680
+Tak wic przed stworzeniem sklepu zmieniono nowy stay lokalny na reduktorze nazwy nazwy
+
+55
+00:04:26,680 --> 00:04:30,000
+nazwa zaley od ciebie, a ja wezw kombinowane reduktory.
+
+56
+00:04:30,040 --> 00:04:38,500
+Teraz po prostu ustawiam t funkcj jako obiekt wejciowy jako obiekt javascript, a teraz moemy po prostu tworzy sekcje naszego
+
+57
+00:04:38,710 --> 00:04:45,850
+Apso, aby powiedzie, e kada nazwa, ktr chcesz policzy, lub po prostu CTE, to cokolwiek chcesz.
+
+58
+00:04:45,850 --> 00:04:53,650
+Wymieni nazw miasta, a mapowanie na licznik zmniejszyo j, a nastpnie dodaj
+
+59
+00:04:53,650 --> 00:04:56,710
+obszar adresu z reduktorem wynikw.
+
+60
+00:04:56,730 --> 00:05:03,750
+Teraz mwimy Rydexowi, e w kocu mam dwa rne obszary funkcji w mojej aplikacji.
+
+61
+00:05:03,780 --> 00:05:05,400
+Zabezpiecz nasz adres.
+
+62
+00:05:05,630 --> 00:05:12,860
+Prosz uy reduktorw DS dla kadego z nich i poczy wszystko razem w jeden sklep w
+
+63
+00:05:12,960 --> 00:05:14,980
+jeden stan w jeden reduktor.
+
+64
+00:05:15,020 --> 00:05:21,890
+Jeli teraz pominiemy tutaj gwny reduktor, aby utworzy magazyn i zapisa wszystkie pliki, nie powinnimy tam
+
+65
+00:05:21,890 --> 00:05:22,640
+dostrzega bdu.
+
+66
+00:05:22,670 --> 00:05:29,560
+Jestemy uruchamiani przez NPM w aplikacji, ale jeli przeadujemy, otrzymamy bd.
+
+67
+00:05:29,750 --> 00:05:32,930
+Ta mapa nie moe zosta wykonana na znalezisku.
+
+68
+00:05:33,380 --> 00:05:40,430
+Zasadniczo problem polega na tym, e przechowywane wyniki, w ktrych mapujemy wszystkie zapisane
+
+69
+00:05:40,490 --> 00:05:49,370
+wyniki, nie bd dziaay, poniewa rekordy tych przechowywanych wynikw odnosz si teraz do niezdefiniowanych, a nie do
+
+70
+00:05:49,370 --> 00:05:50,320
+tablicy wynikw.
+
+71
+00:05:50,480 --> 00:05:53,510
+Dzieje si tak z nami, czc reduktory.
+
+72
+00:05:53,510 --> 00:06:02,240
+Teraz bdziemy mie jeden stan na kocu, ale aby unikn konfliktu nazw, redux dodaje jeden poziom zagniedania,
+
+73
+00:06:02,600 --> 00:06:05,760
+w ktrym ma jeden obiekt stanu.
+
+74
+00:06:05,900 --> 00:06:13,400
+Ale w zasadzie z kluczami DS tutaj w kombinowanych reduktorach jako waciwociach, ktre daj nam dostp do
+
+75
+00:06:13,400 --> 00:06:21,740
+tych krajw CEP dla tych obszarw funkcji, mona powiedzie, e w przypadku kontrukcji przeciwnika, jeli chcemy uzyska dostp
+
+76
+00:06:22,430 --> 00:06:30,200
+do licznika, musimy uzyska dostp do globalnego stanu miasta DOT nasz DOT counter dot City Art. No.
+
+77
+00:06:30,410 --> 00:06:38,170
+Poniewa jest to nazwa, ktr nadalimy tej czci naszego globalnego stanu i przekazujemy wynik, bdzie to kropka.
+
+78
+00:06:38,270 --> 00:06:43,130
+A wic to jest takie DOT w tym stanie.
+
+79
+00:06:43,160 --> 00:06:47,030
+Teraz, jeli to zapiszemy, aplikacja nie zostanie ju zerwana.
+
+80
+00:06:47,360 --> 00:06:52,180
+A jeli teraz klikn przycisk, dziaa tak samo dla przechowywania wynikw.
+
+81
+00:06:52,220 --> 00:06:59,520
+Wic widzimy, e to dodaje wyniki, ale jako tak naprawd nie dodaje ich.
+
+82
+00:06:59,660 --> 00:07:02,250
+Naprawd nie wywietla ich tutaj.
+
+83
+00:07:02,270 --> 00:07:09,740
+Powodem jest to, e zapisany wynik faktycznie jest niezdefiniowany, poniewa producent
+
+84
+00:07:09,740 --> 00:07:20,040
+wynikw, ktry przechowujemy tutaj migawka dla dysku zliczajcego STATE, nie dziaa, poniewa ten stanowy licznik nie
+
+85
+00:07:20,700 --> 00:07:29,160
+jest znany, poniewa ten lokalny reduktor wartoci stanu pocztkowego nie ma waciwo licznika.
+
+86
+00:07:29,160 --> 00:07:35,250
+Teraz moesz pomyle, e po prostu dodajesz pastwowy licznik miasta, jeli to zrobisz i wszystko
+
+87
+00:07:35,250 --> 00:07:42,590
+zapiszesz, gdy klikniesz na wynik sklepu o godzinie 10, pojawi si bd, chocia ten ekonomiczny licznik waciwoci nieokrelonego.
+
+88
+00:07:42,590 --> 00:07:49,020
+Powodem tego jest to, e wgld zmniejsza funkcj, poniewa zasadniczo nie ma dostpu do globalnego stanu tylko
+
+89
+00:07:49,410 --> 00:07:52,680
+do tego stanu, ktry czsto zmniejsza si lub funkcjonuje.
+
+90
+00:07:52,680 --> 00:07:57,820
+To rni si od komponentu Kountry, w ktrym czymy nasz komponent "re-act" ze stanem globalnym.
+
+91
+00:07:57,960 --> 00:08:02,130
+Tam moemy uzyska dostp do rnych czci stanu dla naszych plastrw.
+
+92
+00:08:02,130 --> 00:08:03,230
+Stworzylimy indeks.
+
+93
+00:08:03,300 --> 00:08:03,890
+Tak.
+
+94
+00:08:04,020 --> 00:08:08,060
+To nie dziaa wewntrz reduktorw.
+
+95
+00:08:08,160 --> 00:08:17,750
+Jeli wic znajdujemy si w reduktorze, gdzie potrzebujemy uzyska warto ze stanu globalnego, powinnimy po prostu pobra
+
+96
+00:08:18,260 --> 00:08:20,500
+go jako adunek dziaania.
+
+97
+00:08:20,630 --> 00:08:23,590
+I tak zazwyczaj dziaaj redukcje.
+
+98
+00:08:23,600 --> 00:08:32,740
+W wikszoci przypadkw jest to stary stan plus akcja i opcjonalnie dane akcji, a ty wracasz i mwisz.
+
+99
+00:08:33,080 --> 00:08:39,950
+Tak wic spodziewam si uzyska t sam waciwo wyniku w mojej przychodzcej akcji i otrzyma,
+
+100
+00:08:39,950 --> 00:08:45,090
+e musz dostosowa mj plik counter js tam, gdzie wykonuj w sklepie.
+
+101
+00:08:45,110 --> 00:08:50,510
+Wynik tutaj Po prostu musz uzyska mj wynik.
+
+102
+00:08:50,780 --> 00:09:00,480
+Spodziewam si wic, e mj wynik bdzie tutaj argumentem, a nastpnie mog po prostu przekaza to razem z typem
+
+103
+00:09:00,480 --> 00:09:01,170
+kluczem.
+
+104
+00:09:01,250 --> 00:09:02,730
+Wybrae tutaj.
+
+105
+00:09:03,590 --> 00:09:05,040
+Wynik dziaania.
+
+106
+00:09:05,100 --> 00:09:07,660
+Wic powinnimy mie tutaj waciwo rozwizan.
+
+107
+00:09:07,660 --> 00:09:16,870
+Q W wysyanym opublikujemy bind lub ustawiamy warto na argument wynikowy, ktry spodziewamy si tu uzyska.
+
+108
+00:09:17,120 --> 00:09:24,110
+A teraz, aby uzyska to tak, jak te cztery z wiodc rzecz, ktr wykonujemy w tym roku na przycisku jako
+
+109
+00:09:24,110 --> 00:09:29,750
+anonimow funkcj, abymy mogli przekaza tu pewne dane dotyczce ataku na sklep, teraz powinnimy to zrobi.
+
+110
+00:09:29,760 --> 00:09:33,040
+Rekwizyty C-T Argives mwi o dostpie do licznika.
+
+111
+00:09:33,230 --> 00:09:36,950
+I to jest wanie warto, ktr chcemy przechowywa.
+
+112
+00:09:37,040 --> 00:09:44,960
+Teraz, jeli wrcimy i klikn na 10, mog ponownie zapisa 10, jeli trafisz napa sklepu naprawd szybko
+
+113
+00:09:44,960 --> 00:09:52,210
+po kadym ogoszeniu otrzymasz ten bd tylko dlatego, e identyfikator, ktry przypiszemy, jest biec dat.
+
+114
+00:09:52,370 --> 00:09:58,160
+A jeli uderzysz tak szybko, po prostu zostanie przypisana ta sama data, ktra prowadzi do
+
+115
+00:09:58,160 --> 00:09:58,780
+tego bdu.
+
+116
+00:09:58,820 --> 00:10:03,590
+To oczywicie tylko tymczasowe rozwizanie ID, ktrego nie uywasz i nie produkujesz.
+
+117
+00:10:03,590 --> 00:10:05,750
+Wic dla mnie to nie ma znaczenia.
+
+118
+00:10:05,750 --> 00:10:12,200
+Rdzeniem na wynos jest to, jak podzieli producentw na rne plasterki i jak si zachowa, a take
+
+119
+00:10:12,200 --> 00:10:16,670
+upewni si, e otrzymasz dane, ktrych potrzebujesz w kadym z tych kawakw.
+

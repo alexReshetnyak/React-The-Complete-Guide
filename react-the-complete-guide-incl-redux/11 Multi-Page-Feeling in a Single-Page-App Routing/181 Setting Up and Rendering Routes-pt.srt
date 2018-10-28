@@ -1,0 +1,280 @@
+1
+00:00:02,110 --> 00:00:06,990
+Assim, nas ltimas palestras, reestruturamos nosso projeto para ter pginas diferentes.
+
+2
+00:00:07,180 --> 00:00:10,780
+No, eu no quero mais gravar posts o tempo todo.
+
+3
+00:00:10,780 --> 00:00:18,820
+Eu quero carregar este pequeno quimicamente pendente no caminho que temos no U R L e para Slash nada.
+
+4
+00:00:18,820 --> 00:00:26,110
+Ento, para basicamente o localhost 3000 barra em nosso caso aqui ou o que quer que seja nosso domnio, no
+
+5
+00:00:26,110 --> 00:00:29,190
+final, eu quero carregar o componente de postagem.
+
+6
+00:00:29,260 --> 00:00:35,430
+Agora, ns j ativamos o roteamento e as vrias queda envolvendo tudo com o roteador do navegador.
+
+7
+00:00:35,650 --> 00:00:42,670
+Agora, no componente de bloco em que eu quero carregar minhas pginas diferentes, preciso importar outra coisa
+
+8
+00:00:42,670 --> 00:00:44,270
+do pacote do roteador.
+
+9
+00:00:44,270 --> 00:00:46,880
+Ento, do roteador Re-act Dom.
+
+10
+00:00:46,900 --> 00:00:56,980
+Novamente, porque est relacionado  renderizao a partir da, eu quero carregar o objeto de rota o componente de rota para
+
+11
+00:00:56,980 --> 00:00:58,110
+ser preciso.
+
+12
+00:00:58,330 --> 00:01:04,400
+Agora, usamos isso como qualquer outro componente em nosso cdigo J  X e  um componente de fechamento automtico.
+
+13
+00:01:04,760 --> 00:01:12,460
+A rota precisa de alguma configurao, embora a rota precise de uma propriedade de caminho e todos esses adeptos aqui que
+
+14
+00:01:12,460 --> 00:01:18,910
+estou configurando so, claro, palavras reservadas, tipo de elas que devem ser nomeadas assim por este componente.
+
+15
+00:01:18,970 --> 00:01:24,140
+Ento, voc no pode alterar o nome e paff simplesmente  uma string.
+
+16
+00:01:24,220 --> 00:01:31,720
+Aqui voc encontra o caminho pelo qual essa rota deve se tornar ativa como Poth Slash.
+
+17
+00:01:31,720 --> 00:01:36,880
+Ento voc precisa definir o que deve acontecer quando o ato de poder do ISDE.
+
+18
+00:01:36,970 --> 00:01:46,470
+Ento, quando re-agir roteador descobre que este  DIAK O caminho agora em sua forma mais simples voc agora pode adicionar um suporte
+
+19
+00:01:46,590 --> 00:01:53,800
+de renderizao que realmente contm uma referncia a uma funo e voc pode passar uma funo annima a
+
+20
+00:01:53,800 --> 00:01:55,510
+funo de seta aqui.
+
+21
+00:01:55,530 --> 00:01:59,910
+Ento, a disfuno ento deve retornar J como X, o que deve ser processado.
+
+22
+00:02:00,150 --> 00:02:05,600
+Ento, voc poderia simplesmente renderizar algo como etiqueta H-1, onde voc diz casa.
+
+23
+00:02:05,700 --> 00:02:11,970
+E, claro, voc tambm pode renderizar um ano GSX estruturado envolvendo entre parnteses e escrevendo multi-line, tal
+
+24
+00:02:12,150 --> 00:02:13,140
+como voc escreve.
+
+25
+00:02:13,170 --> 00:02:13,630
+Sim x.
+
+26
+00:02:13,650 --> 00:02:15,020
+Em qualquer outro lugar.
+
+27
+00:02:15,300 --> 00:02:21,170
+Se voc salvar esse cdigo e voltar para sua aplicao, voc realmente v a casa aqui.
+
+28
+00:02:21,390 --> 00:02:29,160
+Voc tambm v isso, embora, se voc tiver uma novidade nova e voc publicar, o motivo para isso  um roteador re-agir
+
+29
+00:02:29,370 --> 00:02:31,640
+para determinar qual caminho voc est.
+
+30
+00:02:31,670 --> 00:02:36,270
+CS se o seu caminho atual comear com esse caminho.
+
+31
+00:02:36,300 --> 00:02:43,240
+Ento, se este for um prefixo, voc pode substituir esse comportamento adicionando mais um Propp que  exato.
+
+32
+00:02:43,320 --> 00:02:47,380
+Isso  um Proole booleano Ento, apenas adicion-lo assim, isso o define como verdadeiro.
+
+33
+00:02:47,450 --> 00:02:48,840
+Padro quando no .
+
+34
+00:02:48,840 --> 00:02:50,580
+E  falso.
+
+35
+00:02:50,730 --> 00:02:58,950
+Agora, com a exceo da nova publicao, voc no pode mais ver a semente Yoli da casa para a pgina inicial onde,
+
+36
+00:02:59,010 --> 00:03:01,420
+de fato, o caminho completo  cortado.
+
+37
+00:03:01,560 --> 00:03:04,090
+Ento, j existe uma retirada importante.
+
+38
+00:03:04,170 --> 00:03:08,110
+Voc usa o POF aqui para contar o roteador re-agir.
+
+39
+00:03:08,160 --> 00:03:13,900
+O meu caminho no comea com isso, exceto pelo caso que voc define exatamente.
+
+40
+00:03:13,920 --> 00:03:15,510
+Ento a questo seria.
+
+41
+00:03:15,510 --> 00:03:18,420
+ meu caminho completo como esse.
+
+42
+00:03:18,420 --> 00:03:24,990
+E, em seguida, o seu processador determina o que voc reage, o roteador deve renderizar para a tela no
+
+43
+00:03:24,990 --> 00:03:28,710
+lugar desse componente, a sua rota celular simplesmente se substitui.
+
+44
+00:03:28,710 --> 00:03:36,120
+Voc poderia dizer com o contedo que voc define aqui e, claro, pode usar rotas mltiplas mesmo para
+
+45
+00:03:36,120 --> 00:03:37,460
+o mesmo caminho.
+
+46
+00:03:37,470 --> 00:03:41,410
+Ento, basta simplesmente duplicar e renderizar algo diferente.
+
+47
+00:03:41,440 --> 00:03:48,250
+E agora, se eu salvar isso, ns renderamos o lar e a casa para ser Neefe uns aos outros.
+
+48
+00:03:48,360 --> 00:03:52,800
+Ento voc pode usar a rota em qualquer lugar onde voc queira precisar um para o outro.
+
+49
+00:03:52,800 --> 00:03:55,790
+Voc tambm pode aninhar a segunda rota em uma div.
+
+50
+00:03:55,980 --> 00:03:59,080
+Voc pode usar tantas rotas na mesma pgina que desejar.
+
+51
+00:03:59,220 --> 00:04:00,730
+Reagir Roger Wilfer.
+
+52
+00:04:00,780 --> 00:04:05,100
+Cada um deles verifica se este critrio aqui  cumprido.
+
+53
+00:04:05,100 --> 00:04:06,880
+Ento, se este critrio for seu Asmat.
+
+54
+00:04:06,900 --> 00:04:15,360
+Se POF for o caminho atual ou se voc no especificar o exato se for o prefixo do
+
+55
+00:04:15,360 --> 00:04:18,680
+caminho atual e depois renderizar esse contedo.
+
+56
+00:04:18,680 --> 00:04:22,560
+Esta  a funcionalidade central do roteador at agora.
+
+57
+00:04:22,560 --> 00:04:26,450
+E aqui, por exemplo, onde removi exec em uma segunda rota.
+
+58
+00:04:26,610 --> 00:04:29,620
+Se salvarmos isso, ainda vemos os dois.
+
+59
+00:04:29,760 --> 00:04:37,530
+Mas se ns vamos para Nova publicao, s vemos a casa 2 porque o primeiro elemento de casa exira e, portanto,
+
+60
+00:04:37,530 --> 00:04:41,990
+o caminho completo tem acesso e, portanto, o caminho completo  avaliado.
+
+61
+00:04:42,090 --> 00:04:44,350
+O que, claro,  uma nova publicao agora.
+
+62
+00:04:44,550 --> 00:04:51,810
+A segunda rota no entanto no usa o Sodor POV exato s precisa comear com Slash e cada caminho comea
+
+63
+00:04:51,810 --> 00:04:52,650
+com Slash.
+
+64
+00:04:52,650 --> 00:04:55,100
+Ento, isso sempre ser processado.
+
+65
+00:04:55,320 --> 00:04:58,020
+Ento, esta  a funcionalidade principal do roteador.
+
+66
+00:04:58,080 --> 00:05:04,140
+Claro que no queremos renderizar a GSX em nosso caso, embora isso possa ser, naturalmente, o que voc quer
+
+67
+00:05:04,140 --> 00:05:05,410
+fazer em alguns casos.
+
+68
+00:05:05,670 --> 00:05:08,730
+Queremos carregar um dos nossos componentes.
+
+69
+00:05:08,910 --> 00:05:12,210
+O componente Post para apenas um caminho.
+
+70
+00:05:12,210 --> 00:05:16,730
+Ento, vamos nos certificar de que carregamos esse componente na prxima palestra.
+

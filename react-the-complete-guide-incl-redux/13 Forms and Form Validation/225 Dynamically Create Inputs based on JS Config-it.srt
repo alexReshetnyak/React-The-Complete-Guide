@@ -1,0 +1,248 @@
+1
+00:00:02,130 --> 00:00:07,610
+Quindi nell'ultima lezione abbiamo sfidato il nostro oggetto javascript che dovrebbe rappresentare la nostra forma.
+
+2
+00:00:07,620 --> 00:00:11,180
+Ora voglio mostrarlo qui nel mio metodo di rendering.
+
+3
+00:00:11,280 --> 00:00:18,240
+Voglio creare tutti questi input dinamicamente, quindi per il momento li eliminer nel modulo di rendering.
+
+4
+00:00:18,540 --> 00:00:26,790
+E ora devo prima trasformare il mio oggetto modulo ordine in una specie di array.
+
+5
+00:00:26,790 --> 00:00:33,120
+Posso scorrere un array dove fondamentalmente abbiamo oggetti javascript in cui Diski  solo una propriet
+
+6
+00:00:33,130 --> 00:00:37,790
+di un identificatore e quindi abbiamo anche le propriet di Alber.
+
+7
+00:00:38,010 --> 00:00:41,730
+Possiamo creare un array di questo tipo relativamente semplice qui.
+
+8
+00:00:41,790 --> 00:00:43,860
+Ci sono sempre pi di un metodo, ovviamente, qui.
+
+9
+00:00:43,860 --> 00:00:50,790
+Creer il mio array di elementi del form una costante che  un array vuoto e quindi user un ciclo for
+
+10
+00:00:50,880 --> 00:00:53,380
+in dove arrivo a chiavi del mio.
+
+11
+00:00:53,460 --> 00:01:02,700
+Ora questo modulo per gli ordini di stato e la chiave quindi sono ovviamente i nomi di propriet di quell'oggetto.
+
+12
+00:01:02,760 --> 00:01:09,130
+Quindi le chiavi saranno denominate Street zipcode e cos via.
+
+13
+00:01:09,300 --> 00:01:16,460
+E se noi X -istiamo il modulo d'ordine per una data chiave, otteniamo questi valori qui sulla destra, naturalmente.
+
+14
+00:01:17,640 --> 00:01:25,740
+Quindi con quell'informazione andiamo laggi e creiamo o facciamo Portia, dovrei dire una nuova matrice di elementi
+
+15
+00:01:25,950 --> 00:01:28,480
+del modulo di tipo sparatutto.
+
+16
+00:01:28,590 --> 00:01:34,620
+dovrebbe avere la config che  questo modulo di stato per una data chiave.
+
+17
+00:01:35,340 --> 00:01:45,720
+Questo oggetto dovrebbe averlo id che  una chiave perch di nuovo questo  il nome e cos su questi sono identificatori e quindi
+
+18
+00:01:45,720 --> 00:01:49,270
+Quindi questo  ora il lato destro di questa propriet.
+
+19
+00:01:49,290 --> 00:01:56,110
+Quindi questo oggetto javascript  ci che memorizzeremo in questa propriet di conflitto e, naturalmente, puoi dare un nome alla
+
+20
+00:01:56,110 --> 00:01:59,840
+propriet, qualunque cosa tu voglia, puoi nominarla impostando quello che vuoi.
+
+21
+00:02:00,190 --> 00:02:05,010
+Quindi ora abbiamo una serie di oggetti javascript con quell'array che possiamo lavorare.
+
+22
+00:02:05,410 --> 00:02:12,150
+Ora posso lavorarci creando il mio modulo qui mentre faccio il giro di tutti questi elementi.
+
+23
+00:02:12,520 --> 00:02:20,680
+Quindi aggiunger qui le parentesi graffe nel modulo e ora voglio passare in rassegna il mio array di quattro elementi
+
+24
+00:02:20,680 --> 00:02:25,640
+con il metodo map, ovviamente per generare un nuovo array praticamente qui.
+
+25
+00:02:25,660 --> 00:02:32,470
+Questo otterr l'altro elemento del modulo individuale e restituir solo j come x vicino a J
+
+26
+00:02:32,470 --> 00:02:37,440
+come X e restituisce, naturalmente, dovrebbe essere il mio componente inport personalizzato.
+
+27
+00:02:37,750 --> 00:02:43,210
+E ora possiamo configurarlo come dovrebbe avere gli elementi e il tipo di elemento.
+
+28
+00:02:43,240 --> 00:02:50,530
+Ora  possibile accedere al tipo di elemento sull'elemento del modulo nel mio array e l ho detto che in
+
+29
+00:02:50,530 --> 00:02:54,510
+questa propriet di conflitto memorizziamo il lato destro della nostra configurazione.
+
+30
+00:02:54,550 --> 00:02:55,940
+Quindi questo oggetto.
+
+31
+00:02:56,320 --> 00:03:00,600
+Quindi nella propriet del conflitto c' solo un numero di oggetti javascript.
+
+32
+00:03:00,640 --> 00:03:04,740
+Ci dovrebbe essere la propriet del tipo di elemento e il conflitto e il valore degli elementi.
+
+33
+00:03:04,930 --> 00:03:07,360
+E queste sono propriet che voglio trasmettere.
+
+34
+00:03:07,360 --> 00:03:16,390
+Quindi alla fine quello che passo qui  l'elemento di forma spesso e poi c' solo il tipo di elemento.
+
+35
+00:03:16,480 --> 00:03:25,340
+Quindi, solo il nome che abbiamo qui, tipo elemento, passiamo conflitto e valore agli elementi allo stesso modo.
+
+36
+00:03:25,600 --> 00:03:28,540
+Quindi qui abbiamo passato d tipo di elemento.
+
+37
+00:03:28,540 --> 00:03:35,080
+Ora il contenuto dell'elemento viene passato come ho appena detto nello stesso modo con il conflitto di
+
+38
+00:03:35,150 --> 00:03:41,030
+elementi di conflitto dell'elemento di forma e anche il valore viene passato come questo elemento.
+
+39
+00:03:41,290 --> 00:03:41,780
+Scusami.
+
+40
+00:03:41,790 --> 00:03:47,590
+Conflitto di elemento conflitto elemento forma modulo elemento.
+
+41
+00:03:48,070 --> 00:03:50,670
+Liberiamoci di quel manichino e mettiamo gli elementi qui in alto.
+
+42
+00:03:50,740 --> 00:03:54,380
+E con questo dovremmo creare dinamicamente i nostri elementi di input.
+
+43
+00:03:54,400 --> 00:04:02,580
+Ora come sempre ho dimenticato la mia chiave e adesso non abbiamo un gestore di modifiche.
+
+44
+00:04:02,650 --> 00:04:08,100
+Anche ora sembra che abbiamo problemi a estrarre il nostro segnaposto.
+
+45
+00:04:08,110 --> 00:04:10,180
+ un oggetto e non una stringa.
+
+46
+00:04:10,180 --> 00:04:12,070
+Quindi queste sono cose di cui dobbiamo occuparci.
+
+47
+00:04:12,100 --> 00:04:14,630
+Iniziamo con la chiave per la chiave.
+
+48
+00:04:14,650 --> 00:04:21,970
+Tutto ci che si ottiene semplicemente con la propriet dell'id dell'elemento form che aggiungiamo nel nostro loop qui ha un errore di battitura qui.
+
+49
+00:04:22,110 --> 00:04:27,030
+Ora riguardo al gestore di onchange mancante per il quale ho anche ricevuto un errore, mi occuper di
+
+50
+00:04:27,030 --> 00:04:27,990
+questo in un secondo.
+
+51
+00:04:28,320 --> 00:04:34,430
+Diamo un'occhiata al motivo per cui abbiamo problemi che emettono il nostro leaseholder per.
+
+52
+00:04:34,830 --> 00:04:38,250
+Ho trovato l'errore e passando i valori sbagliati non  il segnaposto.
+
+53
+00:04:38,250 --> 00:04:42,840
+Il valore  sbagliato, naturalmente, ci dovrebbe essere un conflitto di valore non un conflitto di elementi.
+
+54
+00:04:43,050 --> 00:04:46,070
+Ora se questo stava emettendo il segnaposto.
+
+55
+00:04:46,120 --> 00:04:48,090
+Tutto funziona.
+
+56
+00:04:48,090 --> 00:04:54,000
+componente di input che gestiamo mette e aree di testo, ma cerchiamo anche di trattare un elemento selezionato.
+
+57
+00:04:54,030 --> 00:05:01,680
+Ora, naturalmente, dobbiamo essere sicuri di poter reagire ai cambiamenti e di avere anche un modo di gestire il nostro menu a discesa perch
+
+58
+00:05:01,680 --> 00:05:07,780
+in questo momento questo viene creato in modo errato perch ovviamente qui abbiamo la nostra istruzione switch e il
+
+59
+00:05:07,800 --> 00:05:12,640
+Lo facciamo qui nel nostro set up per il metodo di consegna dovrebbe essere selezionato con le opzioni.
+
+60
+00:05:12,750 --> 00:05:17,760
+Quindi aggiungiamo o adattiamo il nostro componente di input per poterlo trattare prima di dare
+
+61
+00:05:17,760 --> 00:05:20,360
+un'occhiata a come possiamo effettivamente ottenere i dati.
+
+62
+00:05:20,400 --> 00:05:21,360
+L'utente entra.
+

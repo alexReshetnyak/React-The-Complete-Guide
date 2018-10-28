@@ -1,0 +1,132 @@
+1
+00:00:01,990 --> 00:00:07,330
+So in the last lecture we created this firebase project and we had changed the rules,
+
+2
+00:00:07,470 --> 00:00:14,730
+now let's start sending HTTP requests to this endpoint and to send HTTP requests,
+
+3
+00:00:14,730 --> 00:00:18,970
+we of course should install a new package in our course project.
+
+4
+00:00:19,050 --> 00:00:25,830
+We do this with npm install --save axios is the package I want to install because you're just
+
+5
+00:00:25,830 --> 00:00:27,690
+like in the HTTP module,
+
+6
+00:00:27,730 --> 00:00:31,890
+I want to use axios to set my HTTP requests.
+
+7
+00:00:31,890 --> 00:00:38,210
+You can of course use a different Ajax package but axios is really great and I can only recommend it.
+
+8
+00:00:38,250 --> 00:00:43,260
+Thereafter, we can restart the development server with npm start
+
+9
+00:00:43,530 --> 00:00:47,290
+and now of course we want to add axios to our application.
+
+10
+00:00:47,550 --> 00:00:55,020
+In the last course module, you saw different ways of adding it, adding it by creating an axios instance
+
+11
+00:00:55,290 --> 00:01:00,000
+or simply importing it and potentially setting up some defaults.
+
+12
+00:01:00,000 --> 00:01:08,700
+Now I will add it by adding axios instance but you could also just import it globally and set these global
+
+13
+00:01:08,700 --> 00:01:10,940
+defaults you saw in the last module,
+
+14
+00:01:11,010 --> 00:01:12,900
+definitely play around with both,
+
+15
+00:01:12,930 --> 00:01:15,110
+choose whichever one you like more.
+
+16
+00:01:15,210 --> 00:01:22,900
+Now to create an instance of axios, I'm going to create a new file and I'm going to name these axios
+
+17
+00:01:23,310 --> 00:01:30,600
+orders.js because I'm going to use that for all the order related stuff. And in there, I now need to
+
+18
+00:01:30,630 --> 00:01:38,010
+import axios from the axios package and then call axios create and pass a javascript object to configure
+
+19
+00:01:38,010 --> 00:01:38,780
+it.
+
+20
+00:01:38,790 --> 00:01:46,050
+Now in there, I'll set up the base URL to that path I just copied from firebase. This is your URL
+
+21
+00:01:46,050 --> 00:01:50,760
+where you want to send your request to to store your data in the database.
+
+22
+00:01:50,820 --> 00:01:55,260
+And again just in case you missed it, it's this path
+
+23
+00:01:55,440 --> 00:02:02,280
+here you can see under database data, that is what I set up as my default base URL here. Of course, this
+
+24
+00:02:02,330 --> 00:02:08,820
+instance which gets created here should be stored in some constants or a constant or variable and naming
+
+25
+00:02:08,820 --> 00:02:09,910
+it instance here
+
+26
+00:02:10,110 --> 00:02:13,520
+and then I can export this as the file default.
+
+27
+00:02:13,530 --> 00:02:18,100
+Now I have my own axios instance configured for this base URL,
+
+28
+00:02:18,140 --> 00:02:23,670
+this is also the reason why I use this instance approach because later in the course when we add authentication,
+
+29
+00:02:23,760 --> 00:02:27,230
+we'll all use a different URL with axios,
+
+30
+00:02:27,240 --> 00:02:34,230
+so I don't want to set to base URL as a global default even though for the moment I could do that.
+
+31
+00:02:34,260 --> 00:02:36,640
+So now we get the axios instance created,
+
+32
+00:02:36,690 --> 00:02:37,570
+that's great.
+
+33
+00:02:37,590 --> 00:02:40,440
+Let's now actually move on to sending requests there.
+

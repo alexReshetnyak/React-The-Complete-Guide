@@ -1,0 +1,220 @@
+1
+00:00:02,160 --> 00:00:08,190
+Ento, vamos comear configurando o carregamento para verdadeiro quando comeamos a buscar ou para que eu precise de um
+
+2
+00:00:08,190 --> 00:00:15,800
+novo tipo de ao, todos adicionados ao meu arquivo de pasta digitado por ao, desculpe-me e eu o nomearei por hambrguer do Che.
+
+3
+00:00:15,990 --> 00:00:20,360
+Comece e esse tambm ser o meu identificador.
+
+4
+00:00:21,720 --> 00:00:23,890
+Agora Altria  a criao criada para isso.
+
+5
+00:00:24,000 --> 00:00:25,950
+Ns temos um que  chamado assim.
+
+6
+00:00:25,950 --> 00:00:30,860
+Mas isso tem nosso cdigo assncrono e, portanto, no retorna um solo de ao.
+
+7
+00:00:30,870 --> 00:00:33,160
+Na verdade, o Reflektor faz.
+
+8
+00:00:33,300 --> 00:00:35,780
+E adicionarei uma nova ao criadora.
+
+9
+00:00:35,940 --> 00:00:45,060
+Este nome comea com Bergere e o antigo renomeado para comprar Bergere agora compra o comeo
+
+10
+00:00:45,060 --> 00:00:46,370
+de Burger.
+
+11
+00:00:46,410 --> 00:00:53,640
+Eu no espero que nenhum dos argumentos que eu quero fazer  retornar um objeto javascript onde o tipo est
+
+12
+00:00:53,640 --> 00:01:00,450
+configurado para os tipos de ao, comprar Bergere comear, para que eu possa lidar com isso e redux porque
+
+13
+00:01:00,450 --> 00:01:05,040
+esta  uma ao normal assncrona atinge o redux que tem que reduzir.
+
+14
+00:01:05,580 --> 00:01:10,190
+Agora eu preciso renomear apenas para comprar o Burger's ter que cuidar disso
+
+15
+00:01:10,200 --> 00:01:14,060
+no ndice, ou ns o exportamos, ns exportamos a Bergere agora.
+
+16
+00:01:14,400 --> 00:01:21,200
+E agora na ordem Jaspal ainda quando enviei isso antes de enviar minha solicitao de publicao.
+
+17
+00:01:21,210 --> 00:01:29,290
+Eu fui para executar por perseguio Bergere comece esta funo para despachar esta ao logo no incio.
+
+18
+00:01:29,310 --> 00:01:31,080
+Claro que no quero execut-lo assim.
+
+19
+00:01:31,080 --> 00:01:38,430
+Eu quero execut-lo envolto em um despacho para que a ao retornada pela compra Burgas comear seja
+
+20
+00:01:38,640 --> 00:01:41,370
+despachada para a loja com morto.
+
+21
+00:01:41,390 --> 00:01:49,220
+Eu preciso trabalhar em dados de contato, porque l eu ainda despacho a recompra de compra e devo enviar
+
+22
+00:01:49,370 --> 00:01:51,180
+a Bergere em vez disso.
+
+23
+00:01:51,380 --> 00:01:57,290
+Alm disso, h um erro nessa funo aqui onde ns enviamos.
+
+24
+00:01:57,290 --> 00:02:01,550
+ claro que devemos retornar um mapa de adereos para funes.
+
+25
+00:02:01,700 --> 00:02:07,910
+Ento, essa parte aqui deve entrar no objeto de retorno javascript desse tipo.
+
+26
+00:02:07,940 --> 00:02:11,840
+Agora com isso devemos ter nossa ao conectada.
+
+27
+00:02:11,840 --> 00:02:18,200
+Agora podemos voltar para ler x para o redutor e tambm lidar com o caso que acabamos de comear.
+
+28
+00:02:18,290 --> 00:02:20,440
+Este novo ato e ns adicionamos um segundo atrs.
+
+29
+00:02:20,780 --> 00:02:22,480
+Ento, vou adicionar um novo caso aqui.
+
+30
+00:02:22,490 --> 00:02:25,240
+A posio no importa, mas vou adicion-la no topo.
+
+31
+00:02:25,640 --> 00:02:32,390
+E seu nome como os tipos de ection adquire o comeo de Burger e eu quero retornar um objeto
+
+32
+00:02:32,420 --> 00:02:34,910
+javascript como sempre copiar o estado antigo.
+
+33
+00:02:34,910 --> 00:02:42,670
+Para manter meus pedidos antigos, mas disse que o carregamento  verdadeiro com a dvida, alteramos o carregamento.
+
+34
+00:02:42,670 --> 00:02:49,900
+Ns, obviamente, temos que nos certificar de que o continer de contatos que recebemos  carregado do nosso estado.
+
+35
+00:02:49,900 --> 00:02:55,900
+Agora, da Rydex porque estamos usando o carregamento para mostrar o Spener E agora estamos nos referindo ao
+
+36
+00:02:55,900 --> 00:02:57,050
+estado do carregamento.
+
+37
+00:02:57,190 --> 00:03:01,050
+Bem, isso  algo que no precisamos mais no estado deste recipiente.
+
+38
+00:03:01,120 --> 00:03:07,180
+Vou deixar todos os controles, mas ele realmente se livrar da propriedade de carregamento l.
+
+39
+00:03:07,420 --> 00:03:14,340
+Em vez disso, ele mapeia o estado para o suporte. Eu adicionarei o Propp de carregamento e o mapearei para o estado.
+
+40
+00:03:14,770 --> 00:03:20,950
+o douceur ordenado aqui no estado do mapa para o suporte no continer de dados de contato.
+
+41
+00:03:20,950 --> 00:03:28,720
+E agora podemos chegar ao carregamento, mas, na verdade, em breve combinaremos nossos produtores, ento teremos que mudar para ver quando tirar
+
+42
+00:03:28,870 --> 00:03:30,810
+uma fatia de pai jogar
+
+43
+00:03:30,850 --> 00:03:36,140
+Ento, por enquanto, vou deix-lo assim, mas logo o alterarei com o problema de carregamento disponvel no ano disponvel.
+
+44
+00:03:36,300 --> 00:03:42,880
+Eu,  claro, deveria chegar a este carregamento adequado aqui e no apenas estado carregando um cheque se ele tiver
+
+45
+00:03:42,880 --> 00:03:45,050
+algum estado de Aberdeen carregando lugares.
+
+46
+00:03:45,220 --> 00:03:46,960
+No, ns no.
+
+47
+00:03:46,960 --> 00:03:53,890
+O ltimo eu estava no mesmo arquivo e um continer de dados de contato para usar tambm o mapa para adereos e adicionado
+
+48
+00:03:54,100 --> 00:03:56,860
+ funo de conexo pass-lo como um segundo argumento.
+
+49
+00:03:56,950 --> 00:04:01,000
+Ento isso realmente  considerado por read read.
+
+50
+00:04:01,000 --> 00:04:03,640
+Ento, se esse cofre antigo no funcionasse.
+
+51
+00:04:03,790 --> 00:04:06,980
+Se voc voltar, vemos que temos um problema aqui.
+
+52
+00:04:07,120 --> 00:04:14,400
+Estamos tentando buscar ingredientes e isso no funciona e todos sabemos que nunca ser capaz
+
+53
+00:04:14,580 --> 00:04:17,580
+de alcanar nosso outro estado aqui.
+
+54
+00:04:17,610 --> 00:04:21,440
+A ordem  o estado porque no estamos combinando nenhum redutor.
+
+55
+00:04:21,600 --> 00:04:26,190
+Ento, vamos corrigir esse erro primeiro e vamos ento trabalhar na combinao de redutores.
+

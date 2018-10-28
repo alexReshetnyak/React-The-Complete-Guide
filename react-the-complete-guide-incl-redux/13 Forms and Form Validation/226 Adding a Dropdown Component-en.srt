@@ -1,0 +1,180 @@
+1
+00:00:02,130 --> 00:00:07,270
+So we need to be able to create select elements in our input component here too,
+
+2
+00:00:07,500 --> 00:00:14,320
+so let's add the code to handle this. In the input component where we have our case, switch case statement,
+
+3
+00:00:14,460 --> 00:00:20,090
+let's add a new case for selects the area elements.
+
+4
+00:00:20,130 --> 00:00:27,420
+So case select then the input element of course is select element or select object
+
+5
+00:00:27,420 --> 00:00:34,330
+and here this actually also has a closing tag because in between, we'll need to create our options.
+
+6
+00:00:34,470 --> 00:00:41,040
+Therefore I'll wrap this in normal parentheses so that I can write multi-line jsx code because again
+
+7
+00:00:41,300 --> 00:00:48,090
+between my select statements here or select tags, I want to add the options. The element config,
+
+8
+00:00:48,180 --> 00:00:54,690
+I don't want to pass it to this element here because in my set up, I only expect to get options let's
+
+9
+00:00:54,690 --> 00:01:01,410
+say, of course there would be attributes you can set on select and you probably would have to find or
+
+10
+00:01:01,410 --> 00:01:08,870
+define a nested config option here to have the normal attributes or you name it attributes, whatever
+
+11
+00:01:08,880 --> 00:01:09,580
+you want
+
+12
+00:01:09,660 --> 00:01:13,090
+but here I only expect to get the options as my element config
+
+13
+00:01:13,230 --> 00:01:18,830
+and I don't want to distribute the options as attributes across my select statement here,
+
+14
+00:01:19,050 --> 00:01:21,430
+instead I want to set up options here.
+
+15
+00:01:21,780 --> 00:01:26,760
+And by the way, having that value on the select is important to make two way binding work correctly and
+
+16
+00:01:26,760 --> 00:01:27,850
+so on.
+
+17
+00:01:27,870 --> 00:01:37,230
+So here I'll add my option element then and each option should have two pieces of information basically,
+
+18
+00:01:37,380 --> 00:01:40,330
+now obviously I want to create it dynamically,
+
+19
+00:01:40,500 --> 00:01:46,580
+I want to create it from this options array I'm passing as part of the element config.
+
+20
+00:01:47,160 --> 00:01:48,850
+So in the input component,
+
+21
+00:01:48,960 --> 00:01:57,360
+I actually don't want to hardcode it in there, I'll dynamically create it by taking my props element config
+
+22
+00:01:57,390 --> 00:01:59,220
+property here,
+
+23
+00:01:59,430 --> 00:02:06,360
+then there, this options property we set up and by mapping this into an array of jsx elements.
+
+24
+00:02:06,660 --> 00:02:14,130
+So here I'll have my option, I want to return jsx of course and the jsx will be an
+
+25
+00:02:14,220 --> 00:02:22,700
+option element, like this where I for one have the value of that element,
+
+26
+00:02:24,200 --> 00:02:36,290
+this will be option, whoops, option value referring to this value property in the individual option object
+
+27
+00:02:36,290 --> 00:02:38,130
+and then we have the display value,
+
+28
+00:02:38,180 --> 00:02:44,030
+so the thing we want to well show to the user. This is of course what should go between the opening and
+
+29
+00:02:44,030 --> 00:02:45,570
+closing option tag,
+
+30
+00:02:45,740 --> 00:02:48,520
+so option display value.
+
+31
+00:02:48,620 --> 00:02:51,690
+Now with that, we should create such a dropdown.
+
+32
+00:02:51,740 --> 00:02:56,580
+Now let's see if this works by saving this and having a look at our form
+
+33
+00:02:56,600 --> 00:03:01,040
+and yes, we can see a dropdown with the two options we set up.
+
+34
+00:03:01,040 --> 00:03:07,060
+We can't change the value for now because we don't have the onChange handler and the key is missing,
+
+35
+00:03:07,070 --> 00:03:13,220
+so that's something we have to add to the option element because we're creating it with the map method.
+
+36
+00:03:13,460 --> 00:03:15,970
+So let's simply add a key here
+
+37
+00:03:16,070 --> 00:03:18,890
+and the key can simply be the option value,
+
+38
+00:03:18,920 --> 00:03:21,370
+it is a unique value after all.
+
+39
+00:03:21,380 --> 00:03:26,600
+So now we get the input element adjusted to also be able to render dropdowns and you could of course
+
+40
+00:03:26,600 --> 00:03:31,020
+come up with more form elements you want to support like check boxes,
+
+41
+00:03:31,220 --> 00:03:36,770
+always think about how you need to configure it and make sure you get that configuration object into
+
+42
+00:03:36,770 --> 00:03:38,420
+your input component
+
+43
+00:03:38,420 --> 00:03:41,210
+but I want to go with the setup we use here.
+
+44
+00:03:41,510 --> 00:03:49,220
+Now with that all set up, I now want to take care about us actually receiving the values when the user
+
+45
+00:03:49,220 --> 00:03:50,110
+enters something.
+

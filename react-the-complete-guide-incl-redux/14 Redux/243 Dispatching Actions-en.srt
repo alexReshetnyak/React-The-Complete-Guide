@@ -1,0 +1,352 @@
+1
+00:00:02,150 --> 00:00:05,680
+In the last lecture we set up our root reducer and the store.
+
+2
+00:00:05,710 --> 00:00:11,930
+Now I want to use that store and not just output it with this console log statement but also dispatch
+
+3
+00:00:11,990 --> 00:00:16,490
+an action. An action is dispatched by simply accessing the store,
+
+4
+00:00:16,580 --> 00:00:19,930
+so this store constant which holds the created store
+
+5
+00:00:20,260 --> 00:00:25,820
+and on that store concept, we can call dispatch. Dispatch is a function
+
+6
+00:00:25,940 --> 00:00:33,950
+and now important, this dispatch function here takes an argument and that argument is an action, that
+
+7
+00:00:33,950 --> 00:00:39,360
+should be a javascript object which needs to have a type property.
+
+8
+00:00:39,680 --> 00:00:45,510
+So don't mistype or anything like that, it's just type, make sure to spell this correctly.
+
+9
+00:00:45,620 --> 00:00:53,930
+This will later be important building block in getting the information which type of action was dispatched
+
+10
+00:00:54,170 --> 00:00:56,100
+and what we should do in the reducer,
+
+11
+00:00:56,120 --> 00:00:58,310
+that is why type is so important.
+
+12
+00:00:58,610 --> 00:01:02,900
+Type then is just some unique identifier of your choice.
+
+13
+00:01:02,930 --> 00:01:09,950
+The convention is to use all uppercase string, for example INC_COUNTER, for increment counter,
+
+14
+00:01:10,070 --> 00:01:16,390
+now you can use whatever you want here but this is the convention, all uppercase and be descriptive whilst
+
+15
+00:01:16,400 --> 00:01:21,440
+also being short about what you're doing when this is dispatched.
+
+16
+00:01:21,470 --> 00:01:29,350
+Now I said you can also pass some optional payload, we'll do this with the next action. Besides INC_COUNTER,
+
+17
+00:01:29,360 --> 00:01:32,420
+let's also emit ADD_COUNTER.
+
+18
+00:01:32,430 --> 00:01:34,360
+Now inc should increase it by 1
+
+19
+00:01:34,400 --> 00:01:37,380
+so we don't need to pass any extra information
+
+20
+00:01:37,520 --> 00:01:44,750
+but ADD_COUNTER should actually add a specific number to the counter and that value needs to be passed
+
+21
+00:01:44,750 --> 00:01:50,920
+along with the type. Now the type is the one property you have to use like this,
+
+22
+00:01:51,050 --> 00:01:58,620
+you can add any other properties you want to this object now, you can add value, name, ID whatever you want
+
+23
+00:01:58,820 --> 00:02:04,550
+or you add one additional property which you might name payload or any other name you like which then
+
+24
+00:02:04,550 --> 00:02:10,310
+could in turn be a javascript object grouping all the data you want to pass with the action.
+
+25
+00:02:10,310 --> 00:02:11,990
+This is totally up to you,
+
+26
+00:02:12,320 --> 00:02:18,730
+I'll not pass a payload object because I only want to pass one other field of information, I'll name it
+
+27
+00:02:18,770 --> 00:02:19,480
+value
+
+28
+00:02:19,520 --> 00:02:25,190
+but again, the property name is totally up to you and I'll set value to 10 because I want to increase to
+
+29
+00:02:25,190 --> 00:02:26,290
+counter by 10
+
+30
+00:02:26,450 --> 00:02:28,820
+and of course, you can pick any number.
+
+31
+00:02:28,850 --> 00:02:31,550
+So now we're dispatching two actions,
+
+32
+00:02:32,030 --> 00:02:35,390
+what do you think does this do to our store?
+
+33
+00:02:35,750 --> 00:02:44,210
+Let's console log store getState here and before we execute this, I want you to guess what will
+
+34
+00:02:44,210 --> 00:02:47,250
+now be our state, our counter in the state,
+
+35
+00:02:47,300 --> 00:02:48,830
+what will it now be?
+
+36
+00:02:53,550 --> 00:02:55,220
+So do you have an opinion?
+
+37
+00:02:55,410 --> 00:02:56,280
+Let's find out.
+
+38
+00:02:56,280 --> 00:03:00,700
+Let's rerun node redux-basics.js and
+
+39
+00:03:00,930 --> 00:03:02,890
+let's see what it spits out.
+
+40
+00:03:03,030 --> 00:03:05,380
+We get counter zero twice,
+
+41
+00:03:05,430 --> 00:03:10,430
+the first is from the first console log statement right after creating the store,
+
+42
+00:03:10,620 --> 00:03:18,430
+the second stems from this console log statement which refers to when we dispatched our actions.
+
+43
+00:03:18,510 --> 00:03:22,360
+So here, we still have a counter of zero,
+
+44
+00:03:22,410 --> 00:03:25,420
+did you think we would have a counter of 11 here
+
+45
+00:03:25,440 --> 00:03:29,260
+because we incremented it by one and then add a 10?
+
+46
+00:03:29,280 --> 00:03:32,780
+Now this would somehow be expected
+
+47
+00:03:32,940 --> 00:03:38,730
+but of course we haven't added any logic to react to these different action types.
+
+48
+00:03:38,790 --> 00:03:41,110
+We could have also dispatched something,
+
+49
+00:03:41,190 --> 00:03:45,560
+it wouldn't matter because we don't listen for the action type anywhere.
+
+50
+00:03:45,630 --> 00:03:49,230
+This is what we'll now add, in our reducer
+
+51
+00:03:49,290 --> 00:03:51,820
+we get the action as a second argument
+
+52
+00:03:52,050 --> 00:03:55,900
+so of course, we can react to different types of actions.
+
+53
+00:03:56,070 --> 00:03:59,760
+We can add an if statement and see if action.type
+
+54
+00:03:59,940 --> 00:04:06,290
+and we noted a type property will be there because I said that it is mandatory on every action we dispatch,
+
+55
+00:04:07,580 --> 00:04:16,890
+so we can check if action.type is for example INC_COUNTER. If it is inside of the if statement,
+
+56
+00:04:16,910 --> 00:04:19,420
+I want to return something else. Now here,
+
+57
+00:04:19,460 --> 00:04:29,180
+one important thing, you don't set state counter plus plus which would increment it and return state because
+
+58
+00:04:29,180 --> 00:04:31,400
+this is not immutable,
+
+59
+00:04:31,440 --> 00:04:34,190
+you're mutating the original state here.
+
+60
+00:04:34,640 --> 00:04:42,320
+So what you instead do is you return a new javascript object where you may first copy the old state
+
+61
+00:04:42,380 --> 00:04:48,910
+with the spread operator, state and then overwrite the one property you want to adjust,
+
+62
+00:04:49,040 --> 00:04:50,380
+so the counter
+
+63
+00:04:50,570 --> 00:04:56,630
+and if that also would be a javascript object, you would have to copy it first too so that you never
+
+64
+00:04:56,720 --> 00:04:58,530
+mutate any data,
+
+65
+00:04:58,610 --> 00:05:00,490
+never, always do this
+
+66
+00:05:00,530 --> 00:05:07,220
+immutably. Here thankfully, counter is a number so I can simply take state.counter to get access to my
+
+67
+00:05:07,220 --> 00:05:08,170
+old counter,
+
+68
+00:05:08,210 --> 00:05:11,210
+just read access so I can do that,
+
+69
+00:05:11,210 --> 00:05:13,760
+I'm not changing anything with that expression
+
+70
+00:05:13,760 --> 00:05:15,370
+and now plus one.
+
+71
+00:05:15,650 --> 00:05:22,190
+And this gets now stored in this counter property which I add to this new javascript object where I first
+
+72
+00:05:22,190 --> 00:05:25,730
+of all copied the properties and values of my old state.
+
+73
+00:05:26,000 --> 00:05:32,540
+With that, I'm returning an updated counter or an updated state with an updated counter upon the
+
+74
+00:05:32,720 --> 00:05:35,180
+INC_COUNTER action here.
+
+75
+00:05:35,510 --> 00:05:38,190
+And of course I can duplicate this if statement
+
+76
+00:05:38,190 --> 00:05:42,580
+now to also do the same for ADD_COUNTER,
+
+77
+00:05:42,950 --> 00:05:47,440
+so if we don't make it into the first statement, maybe we make it into the second one
+
+78
+00:05:47,480 --> 00:05:52,530
+if the action type is ADD_COUNTER. Here however, I don't want to add one,
+
+79
+00:05:52,550 --> 00:06:00,560
+I want to add action and now its value because I've specified a value property here in the object I
+
+80
+00:06:00,590 --> 00:06:02,030
+dispatched.
+
+81
+00:06:02,030 --> 00:06:07,590
+Now with this, we only return state if none of these two if conditions applies,
+
+82
+00:06:07,850 --> 00:06:14,220
+so now if we save this file and re-execute node redux-basics, we see a different output.
+
+83
+00:06:14,360 --> 00:06:21,770
+We get counter 0 for the first log which is executed right after initializing the store but after dispatching
+
+84
+00:06:21,770 --> 00:06:27,800
+the two actions here, we actually get a different output for the second log where the second counter is 11
+
+85
+00:06:28,010 --> 00:06:32,080
+because we incremented it and we added 10 to it.
+
+86
+00:06:32,100 --> 00:06:36,710
+This is now actions and dispatching of actions in action,
+
+87
+00:06:36,710 --> 00:06:39,610
+however one thing is still missing, the subscription.
+
+88
+00:06:39,800 --> 00:06:42,290
+Let's take a closer look in the next lecture.
+

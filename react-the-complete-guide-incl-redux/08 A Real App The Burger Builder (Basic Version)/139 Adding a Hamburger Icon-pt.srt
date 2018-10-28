@@ -1,0 +1,100 @@
+1
+00:00:02,270 --> 00:00:06,040
+A ltima leitura que adicionamos apenas alterna o boto e funciona bem.
+
+2
+00:00:06,290 --> 00:00:11,130
+Certifique-se de que realmente transformemos isso em algo mais bonito.
+
+3
+00:00:11,200 --> 00:00:16,420
+Esquea que todos os Eddas nos vejam como cair na minha gaveta falar a gaveta do componente.
+
+4
+00:00:16,460 --> 00:00:23,450
+Fale sobre o ponto CSS e, l, eu quero modelar isso como um hamburger, agora posso anexar este vdeo,
+
+5
+00:00:23,450 --> 00:00:30,320
+voc encontrar o cdigo CSS que  responsvel por isso e este cdigo essencialmente cria apenas um div com
+
+6
+00:00:30,380 --> 00:00:36,290
+trs barras dentro dele, onde cada barra  uma das barras de Hamberger que eu consigo.
+
+7
+00:00:36,410 --> 00:00:42,460
+Agora voc faz esse C como o chamado trabalho, precisamos ajustar o HDMI real ou J tem cdigo X.
+
+8
+00:00:42,710 --> 00:00:46,760
+Ento, no temos mais um div que envolva o texto do menu.
+
+9
+00:00:46,760 --> 00:00:52,510
+Em vez disso, o que ter  um div que contm elementos de def livre dentro dele.
+
+10
+00:00:52,580 --> 00:00:55,190
+E esses desenvolvimentos no tm nenhum contedo.
+
+11
+00:00:55,190 --> 00:00:59,050
+No tem qualquer classe C como EUA devido ao estilo atribudo.
+
+12
+00:00:59,060 --> 00:01:05,240
+Eles sero desenhados corretamente porque eu estou marcando todas as divs que esto aninhadas em uma div ou em qualquer elemento que
+
+13
+00:01:05,420 --> 00:01:10,610
+tem que desenhar ou alto a classe,  claro, significa que devemos atribuir cada gaveta em direo 
+
+14
+00:01:10,610 --> 00:01:11,830
+classe na div externa.
+
+15
+00:01:12,200 --> 00:01:23,510
+Ento, todas as clusulas de importao do asfalto para obter acesso a essa classe e, em seguida, adicionar o nome da classe  div externa e atribuir
+
+16
+00:01:23,510 --> 00:01:31,230
+as classes desenhar ou alternar se referindo a que o caractere alterna C  como classe configurada l.
+
+17
+00:01:31,310 --> 00:01:32,990
+Portanto, verifique se todos os arquivos so salvos.
+
+18
+00:01:33,040 --> 00:01:34,730
+E vamos ento dar uma olhada nisso.
+
+19
+00:01:34,790 --> 00:01:41,930
+E aqui ns vemos o lindo hamberger de aparncia que eu posso e com isso ns conseguimos
+
+20
+00:01:42,050 --> 00:01:47,410
+uma aplicao de aparncia bonita onde podemos construir nossa prpria hambrguer, verific-la.
+
+21
+00:01:47,460 --> 00:01:52,820
+O que ainda no faz muito e tem muita funcionalidade agradvel em l.
+
+22
+00:01:53,040 --> 00:02:00,210
+para um servidor real, adicionando vrias pginas e manipulando o estado do aplicativo de forma diferente, mas eu j estou
+
+23
+00:02:00,210 --> 00:02:06,630
+bastante feliz com esse estado fora do aplicativo e eu diria que vamos agora ter um olhar sobre
+
+24
+00:02:06,720 --> 00:02:13,980
+como podemos otimizar isso ou sobre o que podemos encontrar sobre isso antes de avanarmos para um mdulo de registro.
+
+25
+00:02:13,980 --> 00:02:18,390
+Agora, nos prximos mdulos, adicionaremos mais funcionalidades, como enviar DS ou dados
+

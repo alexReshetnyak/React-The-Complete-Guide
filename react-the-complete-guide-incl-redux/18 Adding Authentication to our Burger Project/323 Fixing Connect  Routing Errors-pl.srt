@@ -1,0 +1,368 @@
+1
+00:00:02,180 --> 00:00:10,860
+Bd, ktry mamy tutaj do czynienia, ma zwizek z tym, e pakujemy nasz kontener aplikacji za pomoc
+
+2
+00:00:11,490 --> 00:00:20,200
+usugi connect i po prostu amie nasz router reagowania. Moemy to atwo naprawi, chocia musimy zaimportowa komponent wyszego
+
+3
+00:00:20,200 --> 00:00:23,440
+rzdu withRouter z react-router-dom i jeli pojawi
+
+4
+00:00:23,880 --> 00:00:29,220
+si bd podobny do tego, ktry jest zawsze zwizany z owijaniem
+
+5
+00:00:29,220 --> 00:00:36,900
+poczenia twojego komponentu, ktry rwnie chcesz zaadowa z routingiem i dlatego ten komponent nie otrzymuje twoich
+
+6
+00:00:36,900 --> 00:00:42,800
+rekwizytw trasy, moesz po prostu owija poczenie tutaj z pomoc routera.
+
+7
+00:00:43,080 --> 00:00:49,000
+A teraz z t drobn zmian, zRouter bdzie wymusza przekazywanie twoich rekwizytw do komponentu aplikacji,
+
+8
+00:00:49,000 --> 00:00:54,550
+a zatem router reaguje z powrotem na stron, a my dowiemy si, co si
+
+9
+00:00:54,660 --> 00:00:56,370
+aduje, wic znowu pracujemy.
+
+10
+00:00:56,730 --> 00:01:03,730
+A teraz wyprbujmy to, co pierwotnie chcielimy przetestowa, dodam, gdzie si tutaj zaloguj, to
+
+11
+00:01:03,750 --> 00:01:05,130
+dziaa dobrze, teraz
+
+12
+00:01:05,130 --> 00:01:11,180
+na reduxie widzimy, e udao nam si zalogowa, jeli spojrzymy na zakadk
+
+13
+00:01:11,280 --> 00:01:14,770
+aplikacji, zobacz, e mamy wypenione te trzy pola.
+
+14
+00:01:15,210 --> 00:01:22,900
+Teraz pozwl mi ponownie zaadowa aplikacj, zobaczysz, e zostaa wyczyszczona, a my w reduxie wysyamy autowy wylogowanie,
+
+15
+00:01:22,900 --> 00:01:25,220
+wic to nie dziaa poprawnie.
+
+16
+00:01:25,300 --> 00:01:33,550
+W jaki sposb docieramy do tej linii w naszym auth action creator, gdzie wysyamy wylogowanie lub ten, bdziemy
+
+17
+00:01:33,550 --> 00:01:36,100
+musieli dowiedzie si, ktry to jest,
+
+18
+00:01:36,100 --> 00:01:38,320
+wic sprbujmy szybko to debugowa.
+
+19
+00:01:38,350 --> 00:01:47,400
+Aby to debugowa, moesz przej do rde i tam do naszego rda folderw
+
+20
+00:01:47,640 --> 00:01:51,570
+i zagbi si w akcje sklepu,
+
+21
+00:01:51,620 --> 00:01:53,270
+plik auth.
+
+22
+00:01:53,280 --> 00:02:00,410
+Teraz moemy umieci punkt przerwania w naszej funkcji authCheckState, umiemy tutaj
+
+23
+00:02:00,530 --> 00:02:04,730
+tutaj, gdzie sprawdzamy, czy mamy token.
+
+24
+00:02:05,170 --> 00:02:13,660
+Pozwl, e teraz przejd do uwierzytelniania i zaloguj si ponownie, abymy mieli token na przyszo, a teraz
+
+25
+00:02:13,660 --> 00:02:21,680
+odwiemy stron, teraz utknlimy tutaj, poniewa punkt przerwania si uruchamia, a my z powodzeniem pobieramy tokeny.
+
+26
+00:02:22,480 --> 00:02:29,590
+Przejdmy teraz do tego, przechodzimy do tego bloku, poniewa mamy token, ale teraz
+
+27
+00:02:29,590 --> 00:02:35,230
+ju widzimy dat wyganicia to obiekt daty, wic wyglda dobrze.
+
+28
+00:02:35,230 --> 00:02:37,880
+Data wyganicia jest tu w przyszoci, a co
+
+29
+00:02:38,200 --> 00:02:44,020
+si dzieje tutaj, to wchodzimy w to blokowanie i ma to sens, poniewa sprawdzam, czy data wyganicia
+
+30
+00:02:44,320 --> 00:02:47,540
+jest wiksza ni dzisiejsza data czy aktualna data i oczywicie,
+
+31
+00:02:47,740 --> 00:02:52,480
+nie chc wylogowa si w tym przypadku, poniewa tak jest w przypadku, gdy token
+
+32
+00:02:52,480 --> 00:02:53,230
+jest wany.
+
+33
+00:02:53,500 --> 00:02:56,320
+Jest to logiczny bd, ktry moemy naprawi
+
+34
+00:02:56,350 --> 00:02:58,180
+dziki debugowaniu tutaj, wic musimy
+
+35
+00:02:58,450 --> 00:03:00,980
+to zmieni, chcemy si wylogowa, jeli
+
+36
+00:03:01,000 --> 00:03:07,420
+data wyganicia jest mniejsza lub rwna, mimo e jest to bardzo mao prawdopodobne w stosunku do
+
+37
+00:03:07,420 --> 00:03:09,130
+biecej daty. Jeli
+
+38
+00:03:09,130 --> 00:03:13,570
+teraz wrcimy do aplikacji, zalogujmy si ponownie,
+
+39
+00:03:13,810 --> 00:03:17,670
+wic szybko to zrbmy, zaloguj si,
+
+40
+00:03:17,860 --> 00:03:20,470
+a teraz zaadujmy stron
+
+41
+00:03:20,630 --> 00:03:27,100
+ponownie, a teraz widzicie, e mamy tutaj autouytek, ale wci nastpuje authLogout.
+
+42
+00:03:27,440 --> 00:03:33,800
+Znowu debugujmy to, umiemy tutaj punkt przerwania, aby dowiedzie si, co tu
+
+43
+00:03:34,040 --> 00:03:37,910
+jest nie tak, wic szybko dodam tutaj
+
+44
+00:03:38,750 --> 00:03:43,710
+swj kod, przelij to i tutaj zaaduj aplikacj, zrobimy
+
+45
+00:03:43,710 --> 00:03:44,710
+to tutaj
+
+46
+00:03:44,900 --> 00:03:52,040
+i teraz jeli przejdziemy przez to, przejdziemy do bloku else i pomylnie zalogujemy si.
+
+47
+00:03:52,060 --> 00:03:54,450
+Teraz kontynuujmy wykonywanie kodu,
+
+48
+00:03:55,630 --> 00:03:58,740
+wic dlaczego wylogowalimy si tutaj?
+
+49
+00:03:58,840 --> 00:04:01,930
+Moe to by zwizane z nasz funkcj
+
+50
+00:04:01,930 --> 00:04:04,270
+checkAuthTimeout, w ktrej rwnie wysyamy wylogowanie.
+
+51
+00:04:04,270 --> 00:04:12,090
+Wic umiemy tutaj punkt przerwania przy wylogowaniu wysyki, aby zobaczy, czy zostanie ono uruchomione z wyprzedzeniem, wic
+
+52
+00:04:12,520 --> 00:04:20,600
+tutaj bd teraz ponownie logowa si, ponownie zaadowa aplikacj, dotrzemy do pierwszego punktu przerwania, moemy po prostu
+
+53
+00:04:20,750 --> 00:04:22,690
+przeskoczy do przodu, wiemy,
+
+54
+00:04:22,700 --> 00:04:23,810
+e nie
+
+55
+00:04:23,810 --> 00:04:24,940
+ma problem
+
+56
+00:04:25,040 --> 00:04:28,120
+i rzeczywicie, docieramy do drugiego w setTimeout.
+
+57
+00:04:28,370 --> 00:04:30,180
+To nie powinno si jednak
+
+58
+00:04:30,620 --> 00:04:34,190
+uruchamia, prawdopodobnie chodzi o ustawiony czas wyganicia, wic umiemy
+
+59
+00:04:34,190 --> 00:04:39,520
+punkt przerwania na setTimeout, aby osign punkt, w ktrym ustawiony jest ten timer,
+
+60
+00:04:39,980 --> 00:04:45,950
+i kontynuujmy to teraz, i sprbujmy jeszcze raz, aby dowiedzie si, ktra warto jest faktycznie
+
+61
+00:04:45,950 --> 00:04:49,690
+skonfigurowany jako czas wyganicia, poniewa to musi by problem.
+
+62
+00:04:50,210 --> 00:04:59,300
+Jeli teraz przeadujemy nasz aplikacj tutaj, moemy pomin pierwszy punkt przerwania, a teraz zobaczmy czas
+
+63
+00:04:59,300 --> 00:05:05,470
+wyganicia, to jest -10 i ma sens, e jest to -10.
+
+64
+00:05:05,600 --> 00:05:07,360
+Otrzymujemy tutaj kilka bdw,
+
+65
+00:05:07,520 --> 00:05:09,620
+wic kontynuujmy na razie i
+
+66
+00:05:09,770 --> 00:05:10,920
+naprawmy, wyczymy rwnie
+
+67
+00:05:10,940 --> 00:05:12,510
+drugi punkt przerwania.
+
+68
+00:05:12,950 --> 00:05:19,910
+Wic jaki jest nasz problem? Aby sprawdziAuthTimeout na dole, gdzie automatycznie si loguj, przekazuj
+
+69
+00:05:19,910 --> 00:05:22,390
+rnic midzy dat przysz a dzisiejsz.
+
+70
+00:05:22,610 --> 00:05:25,040
+Problem polega na tym, e uywam getSeconds,
+
+71
+00:05:25,090 --> 00:05:27,130
+chciaem uy getTime tutaj, to jest
+
+72
+00:05:27,290 --> 00:05:28,910
+czas w milisekundach, to jest
+
+73
+00:05:28,910 --> 00:05:30,750
+dua liczba, ktrej chciaem uy.
+
+74
+00:05:31,040 --> 00:05:36,660
+Tak wic getTime podaje teraz poprawn rnic w milisekundach, teraz
+
+75
+00:05:36,740 --> 00:05:43,010
+w naszej funkcji checkAuthTimeout, nastpnie pomnoymy j przez tysic, teraz stanie si
+
+76
+00:05:43,010 --> 00:05:44,670
+to zbyt due,
+
+77
+00:05:44,810 --> 00:05:48,460
+wic warto, ktr tu przekazalimy, powinna by
+
+78
+00:05:48,640 --> 00:05:58,060
+w sekundach, wic zawi to obliczenie tutaj w nawiasie i podziel go przez tysic, tak jak to.
+
+79
+00:05:58,080 --> 00:06:04,780
+Zobaczmy teraz, czy to dziaa, wrmy do naszej aplikacji i umiemy
+
+80
+00:06:04,800 --> 00:06:07,080
+punkt przerwania w checkAuthTimeout,
+
+81
+00:06:07,080 --> 00:06:16,490
+aby sprawdzi, czy teraz otrzymamy prawidow warto. Pozwl mi si zalogowa, miejmy nadziej, e po raz ostatni powinno to dziaa, zoy
+
+82
+00:06:16,890 --> 00:06:17,420
+i spojrze,
+
+83
+00:06:17,450 --> 00:06:20,140
+tutaj jest 3600, ktre otrzymujemy z serwera, moemy
+
+84
+00:06:20,150 --> 00:06:21,310
+po prostu pomin.
+
+85
+00:06:21,320 --> 00:06:26,520
+Interesujce jest to, co si dzieje, jeli teraz si zalogujemy, widzimy czas
+
+86
+00:06:26,660 --> 00:06:27,290
+wyganicia,
+
+87
+00:06:27,290 --> 00:06:31,600
+ma sens, jest nieco poniej 3600, poniewa upyno 10 sekund.
+
+88
+00:06:31,610 --> 00:06:35,450
+Jeli teraz bdziemy kontynuowa, jestemy oczywicie zalogowani, poniewa moesz
+
+89
+00:06:35,540 --> 00:06:41,570
+stwierdzi, e mamy przycisk wylogowania, a my nadal przechowujemy lokalne dane i nasze dane
+
+90
+00:06:41,570 --> 00:06:47,240
+pozostaj tam, jeli bdziemy si logowa ponownie. Jeli jednak to usuniemy, a zalogujemy si
+
+91
+00:06:47,240 --> 00:06:49,500
+ponownie, nie bdziemy si logowa.
+
+92
+00:06:49,520 --> 00:06:56,580
+Teraz mamy funkcj automatycznego logowania, o ile otrzymamy wany token, ktry jeszcze nie wygas.
+

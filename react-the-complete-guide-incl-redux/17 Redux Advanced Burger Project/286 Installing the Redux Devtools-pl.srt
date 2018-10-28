@@ -1,0 +1,148 @@
+1
+00:00:02,200 --> 00:00:05,980
+Przede wszystkim chc zacz od wyczyszczenia bazy danych bazy firebase.
+
+2
+00:00:05,980 --> 00:00:12,220
+Zamierzam usun ten wze zamwie w bazie danych w czasie rzeczywistym, poniewa chc zacz od
+
+3
+00:00:12,220 --> 00:00:17,410
+zera i pozby si wszystkich starych zamwie. Zostawi tu jednak skadniki, poniewa wkrtce
+
+4
+00:00:17,410 --> 00:00:24,100
+wrcimy do pobierania ich z nie otrzymujemy ich lub nie przechowujemy ich lokalnie w naszym sklepie, ale
+
+5
+00:00:24,280 --> 00:00:29,680
+tylko w celach demonstracyjnych w prawdziwej aplikacji, ktra moe oczywicie mie rwnie sens
+
+6
+00:00:29,680 --> 00:00:31,270
+inicjowania skadnikw w kodzie.
+
+7
+00:00:31,270 --> 00:00:33,830
+A wic zobaczmy, co moemy zrobi.
+
+8
+00:00:33,900 --> 00:00:39,320
+I pierwsz rzecz, ktr naprawd chc zrobi i chc doda do naszego kodu narzdzi ARDE Rydex.
+
+9
+00:00:39,490 --> 00:00:43,740
+Zainstalowalimy to rozszerzenie dla przegldarki w ostatnim module.
+
+10
+00:00:43,740 --> 00:00:50,290
+Teraz chcemy skonfigurowa sklep w naszej odwaniejszej aplikacji Bergere, tak abymy mogli
+
+11
+00:00:50,290 --> 00:00:55,910
+uywa stopni deflektorskich rwnie dlatego, e chc mc analizowa mj sklep.
+
+12
+00:00:55,950 --> 00:01:01,390
+Wracam do Ciebie Czy relaksujesz si na stronie rozszerzenia Daffodil z instrukcj instalacji i
+
+13
+00:01:01,420 --> 00:01:07,050
+jest jedna rnica, ktr naley skonfigurowa, wykorzystalimy w ostatnim module, ktry powrci z martwej konfiguracji.
+
+14
+00:01:07,120 --> 00:01:09,140
+W tej chwili nie uywamy adnego oprogramowania poredniego.
+
+15
+00:01:09,190 --> 00:01:15,550
+Tak wic nie potrzebujemy skonfigurowanych wczeniej sklepw, w ktrych musielimy tworzy stae wzmacniacze i
+
+16
+00:01:15,550 --> 00:01:22,440
+uywa natywnej funkcji tworzenia lub specjalnej zmiennej przekazywanej przez narzdzia def, poniewa nie mam adnych
+
+17
+00:01:22,440 --> 00:01:23,090
+wzmacniaczy Ivrit.
+
+18
+00:01:23,080 --> 00:01:25,440
+W tej chwili nie uywamy jeszcze adnego oprogramowania poredniego.
+
+19
+00:01:25,720 --> 00:01:30,730
+Nie moemy przej do podstawowej konfiguracji, poniewa wanie powiedziaem, e wkrtce przejdziemy do
+
+20
+00:01:30,730 --> 00:01:36,130
+zaawansowanej konfiguracji, poniewa wkrtce dodamy oprogramowanie porednie z podstawow konfiguracj, ale wszystko, co musimy
+
+21
+00:01:36,490 --> 00:01:40,900
+zrobi, to dodaj ten argument tutaj, aby utworzy wywoanie funkcji przechowywania.
+
+22
+00:01:41,020 --> 00:01:47,560
+Tak wic dostp do specjalnej lub faktycznie jest to jedna z tych samych zmiennych specjalnych na
+
+23
+00:01:47,560 --> 00:01:55,770
+obiekcie okna, ktra jest dostarczana przez odczytane rozszerzenie X zeft, ktre przekazujemy jako zmienn, a nastpnie wykonujemy jako funkcj.
+
+24
+00:01:55,780 --> 00:02:01,930
+To jest po prostu co, co musimy doda jako drugi argument, aby utworzy dostp do odczytu magazynu
+
+25
+00:02:01,930 --> 00:02:08,890
+do rozszerzenia i wykona go jako funkcj z t drobn zmian, jeli zapisamy indeks j jako nastpujcy i wrcimy
+
+26
+00:02:08,890 --> 00:02:10,300
+do naszej aplikacji.
+
+27
+00:02:10,540 --> 00:02:20,800
+Powinnimy ju by w stanie otworzy nasze narzdzia deweloperskie na swoim przeczniku, aby odczyta X i powinien zaadowa naszego inspektora redux, a wtedy powinnimy
+
+28
+00:02:20,830 --> 00:02:26,650
+zobaczy w tym stanie i jeli dodaj skadnik, powinnimy zobaczy, e dodajemy tutaj
+
+29
+00:02:26,650 --> 00:02:27,540
+akcj skadnika.
+
+30
+00:02:27,560 --> 00:02:29,490
+Oczywicie to samo, aby go usun.
+
+31
+00:02:29,650 --> 00:02:31,800
+I tam moemy rwnie uy trebling czasu.
+
+32
+00:02:31,810 --> 00:02:33,040
+To dziaa wietnie.
+
+33
+00:02:33,040 --> 00:02:38,530
+Mamy wic tak funkcjonalno, jakiej potrzebujemy, abymy mogli wygodnie pracowa z nasz aplikacj i
+
+34
+00:02:38,530 --> 00:02:41,760
+atwo j debugowa i spojrze na nasz obecny stan.
+
+35
+00:02:41,800 --> 00:02:45,230
+Wic to pierwsza rzecz, ktr chciaem zrobi z tym na uboczu.
+
+36
+00:02:45,250 --> 00:02:53,020
+Przejdmy do naszej faktycznej logiki biznesowej i zacznijmy dodawa funkcjonalno do obsugi zamwie
+
+37
+00:02:53,020 --> 00:02:54,010
+z Rydex.
+

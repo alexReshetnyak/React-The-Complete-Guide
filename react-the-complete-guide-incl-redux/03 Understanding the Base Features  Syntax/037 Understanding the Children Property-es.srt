@@ -1,0 +1,116 @@
+1
+00:00:02,200 --> 00:00:08,590
+En la ltima conferencia, aprendemos cmo usar accesorios como cmo recibirlos como argumento y darles salida
+
+2
+00:00:08,590 --> 00:00:10,390
+dinmicamente en nuestro cdigo.
+
+3
+00:00:10,390 --> 00:00:17,320
+Ahora tambin quiero enviar lo que pase entre la etiqueta de apertura y cierre de nuestro componente personalizado.
+
+4
+00:00:17,320 --> 00:00:19,960
+Y esto es realmente muy simple tambin.
+
+5
+00:00:20,020 --> 00:00:27,610
+Hay un accesorio especial al que podemos acceder y que nos permite acceder a l para ser precisos en el componente de persona en
+
+6
+00:00:27,640 --> 00:00:29,020
+el que queremos recibirlo.
+
+7
+00:00:29,020 --> 00:00:37,360
+el prrafo dentro de este div y tambin agregar un elemento numrico despus de este
+
+8
+00:00:38,050 --> 00:00:46,540
+prrafo, cada elemento debera ser un prrafo, pero debera ser un prrafo que produzca esta parte.
+
+9
+00:00:46,810 --> 00:00:56,280
+Al final, ajustar mi prrafo en parntesis normales para poder escribir esto en mltiples lneas porque ahora
+
+10
+00:00:56,400 --> 00:01:03,980
+tambin quiero crear un elemento de envoltura simplemente como un dispositivo y quiero envolver
+
+11
+00:01:04,000 --> 00:01:13,610
+Pasamos entre el simplemente podemos hacer eso mediante el uso de llaves individuales para poner algo dinmico acceso
+
+12
+00:01:13,610 --> 00:01:14,680
+a accesorios.
+
+13
+00:01:14,930 --> 00:01:20,150
+Y luego aqu la propiedad especial para nios.
+
+14
+00:01:20,150 --> 00:01:28,190
+Esta es una investigacin de la palabra que no pasamos nada como nios sobre nuestras personas solo pasamos
+
+15
+00:01:28,190 --> 00:01:32,090
+nombres y edades nios se refiere a cualquier elemento.
+
+16
+00:01:32,090 --> 00:01:38,960
+Y esto incluye texto sin formato tal como lo tenemos aqu entre la etiqueta de apertura y cierre de nuestro componente.
+
+17
+00:01:39,200 --> 00:01:43,000
+Y podras anidar complejo H. T. Malcourt entre las dos.
+
+18
+00:01:43,060 --> 00:01:49,550
+Esto no tiene por qu ser solo una copia de texto o una lista ordenada con mltiples elementos de
+
+19
+00:01:49,550 --> 00:01:57,790
+la lista podra ser sobre los componentes de reaccin cualquier cosa puede ir por aqu y estos nios ahora se derrochan con esta sintaxis.
+
+20
+00:01:57,950 --> 00:02:03,240
+Por supuesto, no tiene que envolverlo en un prrafo, puede usarlo en cualquier parte de su cdigo GSX.
+
+21
+00:02:03,530 --> 00:02:11,080
+Y despus de guardar esto vemos que mis aficiones compiten por Man U, mientras que Max y Stephanie todava
+
+22
+00:02:11,080 --> 00:02:15,230
+muestran el contenido promedio solo porque no pasamos ningn nio.
+
+23
+00:02:15,530 --> 00:02:23,610
+vemos que el prrafo vaco est renderizado, por lo que los prrafos all estn vacos porque Propst children bsicamente
+
+24
+00:02:23,900 --> 00:02:30,680
+no est definido es nulo porque no tenemos nada entre las etiquetas de apertura y cierre.
+
+25
+00:02:30,680 --> 00:02:31,570
+Si inspeccionamos
+
+26
+00:02:32,030 --> 00:02:33,490
+Esto es importante saber
+
+27
+00:02:33,530 --> 00:02:40,130
+Puede poner su contenido en su componente desde afuera.
+
+28
+00:02:40,130 --> 00:02:48,230
+No solo aprobando elementos como este, sino tambin si desea pasar algo de contenido estructurado colocndolo entre la etiqueta
+
+29
+00:02:48,230 --> 00:02:54,160
+de apertura y cierre y accediendo a ella con los elementos secundarios del accesorio.
+

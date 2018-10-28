@@ -1,0 +1,264 @@
+1
+00:00:02,290 --> 00:00:06,450
+Estamos chegando ao final desta super longa marcha, todos ns estamos muito cobertos.
+
+2
+00:00:06,540 --> 00:00:12,400
+Agora, h um ltimo recurso que eu quero mostrar o que voc no usar para voc muitas
+
+3
+00:00:12,400 --> 00:00:18,950
+vezes, mas que pode ser extremamente valioso para algumas pequenas coisas de convenincia que voc deseja fazer em seus componentes.
+
+4
+00:00:19,000 --> 00:00:22,760
+Principalmente ao focar entradas de texto e coisas assim.
+
+5
+00:00:22,870 --> 00:00:24,730
+Agora, deixe-me mostrar o que quero dizer.
+
+6
+00:00:25,000 --> 00:00:33,040
+Ns temos uma entrada de texto na priso J. S. e digamos que queremos nos concentrar na entrada
+
+7
+00:00:33,040 --> 00:00:36,650
+de texto da primeira pessoa aqui sempre que seja processada discretamente.
+
+8
+00:00:36,940 --> 00:00:43,570
+mtodo de foco que podemos obter nesse elemento de entrada em um determinado ponto do tempo.
+
+9
+00:00:43,570 --> 00:00:49,580
+Agora, enfocar essa entrada, na verdade, no  direto aqui porque gostaramos de chamar o
+
+10
+00:00:49,600 --> 00:00:56,710
+Ento, por exemplo, depois de um componente montou ou neste mtodo ser preciso para que possamos saber que ele
+
+11
+00:00:57,500 --> 00:00:58,330
+existe agora.
+
+12
+00:00:58,390 --> 00:01:04,240
+Para isso, precisamos acessar o elemento de entrada para que possamos chamar o mtodo de foco desse mtodo.
+
+13
+00:01:04,780 --> 00:01:11,040
+E pode haver algum trabalho em torno do qual voc pode encontrar com a configurao de algum estado e, em
+
+14
+00:01:11,050 --> 00:01:14,930
+seguida, tornar esta entrada condicionalmente no estado focado ou estado no focado.
+
+15
+00:01:15,370 --> 00:01:21,690
+E na verdade muitas vezes voc deve tentar usar esses trabalhos em torno, mas especialmente para se concentrar.
+
+16
+00:01:21,680 --> 00:01:28,540
+referncia, voc pode adicionar uma propriedade especial ou atributos para entrada, que  chamado de ref como a chave.
+
+17
+00:01:28,600 --> 00:01:33,310
+H uma maneira rpida e fcil, que  perfeitamente adequada para usar uma
+
+18
+00:01:33,340 --> 00:01:40,290
+Essa  uma propriedade especial conhecida por re-act ref que toma uma entrada dinmica que deve ser uma funo.
+
+19
+00:01:40,390 --> 00:01:43,170
+Ento, aqui vou usar uma funo de seta.
+
+20
+00:01:43,480 --> 00:01:47,630
+E nesta funo voc configura uma referncia para este elemento.
+
+21
+00:01:47,740 --> 00:01:52,360
+Ento, ao inserir voc, voc pode acessar esse elemento, voc pode ser nomeado como o que quiser.
+
+22
+00:01:52,360 --> 00:01:54,570
+Como eu em P para a entrada.
+
+23
+00:01:55,000 --> 00:02:00,610
+E agora voc pode definir uma propriedade dessa classe.
+
+24
+00:02:00,620 --> 00:02:02,290
+E isso j  importante.
+
+25
+00:02:02,290 --> 00:02:06,280
+As referncias s esto disponveis nos componentes completos do estado.
+
+26
+00:02:06,280 --> 00:02:13,610
+Ento, em componentes que so criados com a classe e estende o componente, voc pode adicionar uma nova propriedade
+
+27
+00:02:13,610 --> 00:02:21,470
+a uma classe simplesmente adicionando isso e, em seguida, o nome da propriedade, qualquer propriedade que voc deseja, como elemento
+
+28
+00:02:21,800 --> 00:02:22,480
+de entrada.
+
+29
+00:02:22,520 --> 00:02:24,960
+Novamente, este nome  totalmente para voc.
+
+30
+00:02:24,980 --> 00:02:28,010
+Isso criar uma nova propriedade para toda a sua classe.
+
+31
+00:02:28,160 --> 00:02:33,470
+Assim, para a classe de pessoa que voc pode usar de qualquer lugar da classe e ser criada em
+
+32
+00:02:33,470 --> 00:02:35,440
+um ponto de renderizao de tempo executado.
+
+33
+00:02:35,450 --> 00:02:41,150
+Ento, se voc tentar mais tarde acess-lo a partir de um componente que Monte morto ir funcionar, o
+
+34
+00:02:41,150 --> 00:02:45,440
+componente de custo que montar como voc aprendeu  realmente executado aps a renderizao.
+
+35
+00:02:45,440 --> 00:02:47,080
+Agora, isso sozinho no vai fazer o truque.
+
+36
+00:02:47,090 --> 00:02:52,020
+Precisamos atribuir um valor a esta propriedade recm-criada e o valor deve ser a ENP.
+
+37
+00:02:52,160 --> 00:02:54,920
+Ento, esse elemento de entrada ao qual voc acessou.
+
+38
+00:02:54,980 --> 00:03:01,250
+Ento, agora temos uma propriedade na classe que nos d acesso a este elemento de entrada e
+
+39
+00:03:01,450 --> 00:03:06,210
+no valor do componente, podemos agora chamar esse foco de elemento de entrada.
+
+40
+00:03:06,340 --> 00:03:09,950
+O mtodo de foco  um mtodo disponvel nos elementos de entrada.
+
+41
+00:03:09,950 --> 00:03:15,720
+Agora, se salvarmos isso e abrimos esta pgina, voc ver que o ltimo elemento est focado.
+
+42
+00:03:15,830 --> 00:03:19,560
+O ltimo porque o foco  chamado para todos.
+
+43
+00:03:19,670 --> 00:03:25,040
+E, portanto, uma vez que apenas um elemento pode ser focado de cada vez, ele simplesmente se aproxima
+
+44
+00:03:25,040 --> 00:03:27,920
+do ltimo que foi processado o ltimo chamado Focus.
+
+45
+00:03:27,920 --> 00:03:33,920
+Agora, se voc quiser se certificar de que o primeiro elemento fica focado, voc no precisaria passar para a posio que voc
+
+46
+00:03:34,190 --> 00:03:37,860
+tem em sua perseguio persegue onde voc faz o loop com o ndice.
+
+47
+00:03:38,150 --> 00:03:44,510
+Voc teria que passar como um suporte para que voc talvez passasse uma posio que no final  apenas o ndice
+
+48
+00:03:44,510 --> 00:03:47,780
+e se a posio  0, ento voc quer chamar isso.
+
+49
+00:03:47,810 --> 00:03:55,670
+E, em seguida, em pessoa, como voc simplesmente adicionaria a afirmao se voc verificar se a posio desse suporte  igual
+
+50
+00:03:55,670 --> 00:03:56,270
+a zero.
+
+51
+00:03:56,270 --> 00:04:01,770
+Ento, se este for o primeiro elemento, voc deseja chamar esse mtodo de foco.
+
+52
+00:04:01,790 --> 00:04:03,370
+Caso contrrio, voc no far nada.
+
+53
+00:04:03,380 --> 00:04:08,090
+E agora com isso se voc fechou o boto, o primeiro elemento ser focado.
+
+54
+00:04:08,090 --> 00:04:09,980
+Estas so as referncias importantes.
+
+55
+00:04:10,010 --> 00:04:13,230
+Voc s pode us-los em componentes com estado.
+
+56
+00:04:13,280 --> 00:04:19,910
+em seus prprios componentes, voc no est limitado a elementos HVM como entrada e voc deve us-los com cuidado.
+
+57
+00:04:19,910 --> 00:04:21,500
+Voc tambm pode us-los
+
+58
+00:04:21,500 --> 00:04:29,840
+No tente ficar preguioso e certamente no faa coisas como essa cor de fundo do elemento de entrada 
+
+59
+00:04:29,840 --> 00:04:30,920
+igual a algo.
+
+60
+00:04:30,950 --> 00:04:37,460
+Faa isso com as ferramentas anteriores que voc aprender para criar estilos de confiana dinmicos antes de fazer algo dinmico.
+
+61
+00:04:37,460 --> 00:04:40,520
+Este no deve ser o seu atalho para ser preguioso.
+
+62
+00:04:40,520 --> 00:04:48,710
+ para algumas coisas selecionadas principalmente sobre o controle de foco ou reproduo de mdia e no
+
+63
+00:04:48,710 --> 00:04:50,510
+para design ou exibio.
+
+64
+00:04:50,510 --> 00:04:52,340
+Use a ferramenta acima para aprender.
+
+65
+00:04:52,340 --> 00:04:54,200
+Caso contrrio, voc no est fazendo isso.
+
+66
+00:04:54,260 --> 00:04:55,340
+A maneira de re-agir.
+

@@ -1,0 +1,624 @@
+1
+00:00:02,210 --> 00:00:03,750
+So I cleared firebase,
+
+2
+00:00:03,770 --> 00:00:07,380
+now we can work on the orders page which of course is empty right now.
+
+3
+00:00:07,460 --> 00:00:12,850
+So first of all with everything fixed, let's place a new order for our standard burger here,
+
+4
+00:00:13,000 --> 00:00:23,000
+let's enter some contact data into the field, test street, some zip code, country and an e-mail address,
+
+5
+00:00:23,030 --> 00:00:24,470
+let's place that order
+
+6
+00:00:24,700 --> 00:00:26,860
+and on the orders page, we do see it,
+
+7
+00:00:26,930 --> 00:00:32,500
+it's just that if we have a look at the orders container, we're not really using redux for that, here
+
+8
+00:00:32,510 --> 00:00:38,120
+we're reaching out to the web in componentDidMount. Of course I want to fetch my orders through an action
+
+9
+00:00:38,120 --> 00:00:41,270
+creator and I want to manage my orders through redux,
+
+10
+00:00:41,390 --> 00:00:44,550
+we already created that orders array in our state there,
+
+11
+00:00:44,600 --> 00:00:46,280
+we're just not using it.
+
+12
+00:00:46,310 --> 00:00:52,820
+So let's start with the action creator and for that I'll start with the action types, I'll export new
+
+13
+00:00:52,820 --> 00:01:01,180
+constants here and I'll name it FETCH_ORDERS_INIT maybe so that we have a similar pattern as for the
+
+14
+00:01:01,220 --> 00:01:06,860
+purchase where we can set loading to true and then trigger this starting process where we reach out to
+
+15
+00:01:06,860 --> 00:01:09,470
+the web and then we have the success case and so on.
+
+16
+00:01:09,710 --> 00:01:14,060
+So FETCH_ORDERS_INIT, fetch orders
+
+17
+00:01:14,330 --> 00:01:18,470
+let's name it start, let's name it start because we also name that PURCHASE_BURGER_START,
+
+18
+00:01:18,680 --> 00:01:31,680
+so start and then we have a constant FETCH_ORDERS_SUCCESS and of course use the same name as the string
+
+19
+00:01:31,700 --> 00:01:32,930
+identifier
+
+20
+00:01:33,270 --> 00:01:42,300
+and then finally a third constant I'll need, FETCH_ORDERS_FAIL and you guessed it, we'll use this name as
+
+21
+00:01:42,300 --> 00:01:46,470
+a string identifier too. With that, we get the action types,
+
+22
+00:01:46,470 --> 00:01:52,170
+now in my order.js file in the actions folder, I want to create the action creators, so I'll create
+
+23
+00:01:52,170 --> 00:01:56,440
+a couple of new constants which hold functions and there, I'll use a similar pattern
+
+24
+00:01:56,460 --> 00:02:03,630
+as for purchasing burgers where we also had success, fail and start and purchase burger itself which is
+
+25
+00:02:03,630 --> 00:02:08,840
+dispatched from a container which does the async code part.
+
+26
+00:02:09,120 --> 00:02:13,940
+So we'll have a fetch orders
+
+27
+00:02:14,230 --> 00:02:22,220
+success function where I do expect to get the orders as an argument so that in there, I can return a
+
+28
+00:02:22,220 --> 00:02:23,920
+new object where the type,
+
+29
+00:02:23,980 --> 00:02:32,380
+so that is our action of course, where the type is actionTypes.FETCH_ORDERS_SUCCESS and pass the orders
+
+30
+00:02:32,650 --> 00:02:33,700
+as a payload,
+
+31
+00:02:33,700 --> 00:02:42,790
+now I also want to create a new constant FETCH_ORDERS_FAIL, like this where I get a potential error
+
+32
+00:02:42,800 --> 00:02:49,200
+we receive and I return a javascript object where I set the type to, whoops,
+
+33
+00:02:49,330 --> 00:02:59,290
+where I set the type to actionTypes.FETCH_ORDERS_FAIL and pass on the error in case I want to
+
+34
+00:02:59,290 --> 00:02:59,910
+use it.
+
+35
+00:03:01,030 --> 00:03:07,270
+And I want to have an exported constant which I'll name fetchOrdersStart, there
+
+36
+00:03:07,300 --> 00:03:09,910
+I don't expect any argument,
+
+37
+00:03:10,330 --> 00:03:17,380
+what I want to do there though is I want to return a javascript object of course, our action where the
+
+38
+00:03:17,380 --> 00:03:29,470
+type is actionTypes fetch order, fetch orders not success but start and this again has a similar pattern
+
+39
+00:03:29,480 --> 00:03:37,450
+as for purchasing, PURCHASE_BURGER_START and then I need my constant here where I run my async code.
+
+40
+00:03:37,460 --> 00:03:46,010
+So the last action creator is just fetch orders, there I expect no argument either but in there, I will
+
+41
+00:03:46,010 --> 00:03:49,040
+now use axios to get my orders
+
+42
+00:03:49,160 --> 00:03:53,590
+and we already got the code in the orders file, here in componentDidMount,
+
+43
+00:03:53,750 --> 00:03:56,870
+I can actually copy that code here.
+
+44
+00:03:56,930 --> 00:03:59,850
+Here we also already used the error handlers, so that's good.
+
+45
+00:04:00,140 --> 00:04:05,450
+I can copy that code from there, put it into my action creator though here of course I need to return
+
+46
+00:04:05,450 --> 00:04:08,000
+a function which gets dispatch first,
+
+47
+00:04:08,030 --> 00:04:09,280
+that is what we return
+
+48
+00:04:09,440 --> 00:04:13,660
+and in there, we're now reaching out to axios and we get it from orders.json
+
+49
+00:04:13,700 --> 00:04:19,140
+here, use our axios instance of course. We won't call set state though,
+
+50
+00:04:19,310 --> 00:04:27,980
+instead I here want to dispatch my other actions so dispatch fetch orders success here in the then block
+
+51
+00:04:28,670 --> 00:04:34,880
+and there, I want to pass my fetched orders which I do transform here as an argument and that is a good
+
+52
+00:04:34,880 --> 00:04:37,530
+argument for where do we transform data.
+
+53
+00:04:37,820 --> 00:04:43,400
+I do it here because I'm transforming the data I'm getting back, I don't want to put this into the reducer
+
+54
+00:04:43,430 --> 00:04:50,300
+because if I ever change my backend data, I would have to change my reducer and in this case, I have
+
+55
+00:04:50,300 --> 00:04:52,410
+to change my action creator I guess,
+
+56
+00:04:52,460 --> 00:04:58,250
+but still it feels more natural for me to have a reducer where I get the data in the format I want
+
+57
+00:04:58,250 --> 00:04:59,450
+to store it,
+
+58
+00:04:59,650 --> 00:05:06,130
+where I only want to do logical changes and don't want to change anything just because of the data format I get.
+
+59
+00:05:06,230 --> 00:05:11,230
+That is why I do data format changes like this in my action creators.
+
+60
+00:05:11,230 --> 00:05:15,830
+So the fetched orders are then passed onto the FETCH_ORDER_SUCCESS
+
+61
+00:05:16,010 --> 00:05:22,430
+handler, I don't need to pass on loading here because I can set this right in my redux state and then
+
+62
+00:05:22,430 --> 00:05:30,590
+here, in catch I want to dispatch fetchOrdersFail and execute this of course and I want to pass on my
+
+63
+00:05:30,590 --> 00:05:31,420
+error.
+
+64
+00:05:31,910 --> 00:05:34,760
+So with that, we're handling this,
+
+65
+00:05:34,760 --> 00:05:40,830
+now of course the next step is to handle all these new action types in the reducer too.
+
+66
+00:05:41,210 --> 00:05:48,470
+So let's head over to the order reducer and there, I now want to add a couple of new cases in front of
+
+67
+00:05:48,470 --> 00:05:50,120
+the default case.
+
+68
+00:05:50,120 --> 00:05:56,530
+The first one is actionTypes.FETCH_ORDERS_START, in there.
+
+69
+00:05:56,530 --> 00:06:01,930
+I obviously will return an updated state where I copy the old state and there, I also want to set loading
+
+70
+00:06:01,930 --> 00:06:02,590
+to true,
+
+71
+00:06:02,710 --> 00:06:07,930
+it's the same loading property we use in the checkout page but we're only either on the checkout page
+
+72
+00:06:08,010 --> 00:06:09,610
+or the orders page,
+
+73
+00:06:09,610 --> 00:06:13,180
+so it's fine if we reuse the property on both pages.
+
+74
+00:06:13,180 --> 00:06:16,100
+That's the only thing I want to do here in action,
+
+75
+00:06:16,150 --> 00:06:23,470
+the next action type is success case so that we have FETCH_ORDERS_SUCCESS, here of course,
+
+76
+00:06:23,470 --> 00:06:31,870
+I want to store the orders I fetched so I'll get my state and I'll set orders equal to action and
+
+77
+00:06:31,870 --> 00:06:35,760
+there the property name was just orders,
+
+78
+00:06:35,800 --> 00:06:42,790
+we can confirm this in our action creator, in the order file, there we dispatched fetchOrderSuccess
+
+79
+00:06:42,910 --> 00:06:44,800
+and in fetchOrdersSuccess,
+
+80
+00:06:44,830 --> 00:06:51,250
+we have our orders property. So this is the orders property we can extract in our reducer therefore, this
+
+81
+00:06:51,250 --> 00:06:52,050
+one
+
+82
+00:06:52,300 --> 00:06:55,040
+and these are the orders already,
+
+83
+00:06:55,040 --> 00:07:01,750
+if you have a look at the transformation function in an array format, so we can store that in our array.
+
+84
+00:07:02,410 --> 00:07:09,550
+And the final thing I want to add to this update here is that I of course need to set loading to false
+
+85
+00:07:09,970 --> 00:07:17,730
+and now I of course need another case action types fail so FETCH_ORDER_FAIL.
+
+86
+00:07:17,830 --> 00:07:22,660
+There I'll also return a javascript object where I copy the state and we could handle the error,
+
+87
+00:07:22,660 --> 00:07:28,070
+we could store the error in our arrow property here but I don't want to use it here,
+
+88
+00:07:28,150 --> 00:07:29,950
+I'll do simply the following,
+
+89
+00:07:29,950 --> 00:07:35,800
+I'll set loading to false here too because even though it failed, the loading at least is done.
+
+90
+00:07:36,130 --> 00:07:38,460
+So that's the updated reducer,
+
+91
+00:07:38,500 --> 00:07:42,550
+we updated our order action creator file,
+
+92
+00:07:42,550 --> 00:07:47,490
+now I just need to export the fetch orders action in the index.js file here
+
+93
+00:07:47,530 --> 00:07:51,910
+in the actions folder so that we can trigger this from outside.
+
+94
+00:07:51,910 --> 00:07:55,430
+And with that we can connect our application,
+
+95
+00:07:55,570 --> 00:08:01,420
+so let's do that now in the orders component here in the orders container. There in componentDidMount,
+
+96
+00:08:01,530 --> 00:08:08,380
+I want to dispatch this new fetch orders action we just created and for this, I of course need to
+
+97
+00:08:08,380 --> 00:08:18,070
+create my new mapDispatchToProps constant where I receive the dispatch action or method and then
+
+98
+00:08:18,460 --> 00:08:21,970
+can return a map,
+
+99
+00:08:21,970 --> 00:08:29,230
+so a javascript object here where I do map my props to dispatchable functions,
+
+100
+00:08:29,470 --> 00:08:36,910
+so I name this onLoad or maybe onFetchOrders to be in line with the action names and there, I want
+
+101
+00:08:36,910 --> 00:08:41,540
+to execute an anonymous function where I eventually dispatch the action we just created it
+
+102
+00:08:41,650 --> 00:08:47,150
+which I therefore need to import. So I import everything as actions from
+
+103
+00:08:47,170 --> 00:08:50,100
+and now let's move on to the store folder,
+
+104
+00:08:50,110 --> 00:08:53,300
+the actions folder and the index.js file in there.
+
+105
+00:08:53,350 --> 00:08:58,320
+Again we could omit the index part here due to the way our workflow works
+
+106
+00:08:58,540 --> 00:09:05,500
+and with that added, I want to dispatch one action from the actions object we import, the fetch orders
+
+107
+00:09:05,500 --> 00:09:09,070
+action and we need to execute this function to really get the action,
+
+108
+00:09:09,130 --> 00:09:11,960
+keep in mind, these are action creators.
+
+109
+00:09:12,040 --> 00:09:20,230
+Now with that added, we can call onFetchOrders in our componentDidMount hook, this.props on fetch orders
+
+110
+00:09:20,340 --> 00:09:27,760
+executed but of course for this to work, we need to connect this constant here with our component.
+
+111
+00:09:27,970 --> 00:09:31,590
+So I should import connect from react-redux,
+
+112
+00:09:31,750 --> 00:09:38,610
+so import the connect function like this from react-redux, like that.
+
+113
+00:09:39,030 --> 00:09:47,580
+And then as we did in the other components too, let's add connect, execute it and pass for now null instead
+
+114
+00:09:47,580 --> 00:09:48,400
+of
+
+115
+00:09:48,420 --> 00:09:55,440
+mapStateToProps and mapDispatchToProps, the second function and let's then also wrap withErrorHandler
+
+116
+00:09:55,830 --> 00:09:58,640
+and its function call with parentheses.
+
+117
+00:09:59,040 --> 00:10:00,920
+Now this should work,
+
+118
+00:10:00,930 --> 00:10:05,520
+I'm of course also interested in the state though because I need my orders,
+
+119
+00:10:05,610 --> 00:10:08,610
+right now we manage orders and loading in the internal state,
+
+120
+00:10:08,760 --> 00:10:09,770
+let's get rid of that
+
+121
+00:10:09,780 --> 00:10:10,630
+we don't do that,
+
+122
+00:10:10,650 --> 00:10:12,190
+we use redux instead.
+
+123
+00:10:12,420 --> 00:10:21,660
+So let's add a second constant, mapStateToProps, I get the state here and I return a javascript object
+
+124
+00:10:21,660 --> 00:10:27,960
+where I do map slices of the state to props and there, I'm interested in my orders which I get from state
+
+125
+00:10:28,440 --> 00:10:35,790
+order orders. With state order, I'm reaching out to the order reducer and with orders,
+
+126
+00:10:35,790 --> 00:10:43,920
+I then reach out to the orders property in the state of that reducer and the other piece is the loading
+
+127
+00:10:43,920 --> 00:10:52,620
+state, here that is loading, that is state order loading. And now with that, I can pass mapStateToProps
+
+128
+00:10:52,890 --> 00:10:58,650
+to my connect function too and then we can use our orders.
+
+129
+00:10:58,770 --> 00:11:04,750
+So here, we don't use this.state.orders but this.props.orders, just like that
+
+130
+00:11:04,980 --> 00:11:12,790
+and if we wanted to show a spinner, we would have to import it, so we can import spinner from
+
+131
+00:11:12,790 --> 00:11:19,110
+and now let's reach out to our components, to the UI components and to the spinner there.
+
+132
+00:11:19,560 --> 00:11:29,770
+And let's use this loading state, I'll create a new variable loading, excuse me orders and this should be my
+
+133
+00:11:29,770 --> 00:11:32,660
+spinner initially but then I'll add an if check,
+
+134
+00:11:32,950 --> 00:11:36,250
+if this props loading,
+
+135
+00:11:36,280 --> 00:11:49,830
+if this is not true, so if we are not loading, I'll render this instead, this map. So then orders should be this jsx
+
+136
+00:11:49,870 --> 00:11:51,190
+code here
+
+137
+00:11:51,450 --> 00:11:57,430
+and since it's not wrapped in any html element, we can just write it like this.
+
+138
+00:11:58,330 --> 00:12:07,990
+Now down there, I can safely output orders and I should get rid of this curly brace here.
+
+139
+00:12:08,030 --> 00:12:17,710
+So with that, if I go back to my application and I reload the orders page, I get my orders but I never see
+
+140
+00:12:17,710 --> 00:12:18,540
+the spinner,
+
+141
+00:12:18,550 --> 00:12:26,100
+the reason for this is that in our order action creator file in fetch orders, we never dispatch fetch
+
+142
+00:12:26,140 --> 00:12:27,430
+orders start,
+
+143
+00:12:27,460 --> 00:12:29,920
+I need to do that of course to set loading to true.
+
+144
+00:12:30,070 --> 00:12:35,210
+So right at the start, I'll dispatch fetchOrdersStart, execute it.
+
+145
+00:12:35,230 --> 00:12:41,260
+Now if we save this, we see well it's so fast, firebase is too fast but we see the spinner for a fraction
+
+146
+00:12:41,260 --> 00:12:46,790
+of a second and we can confirm that fetchOrdersStart was accessed here.
+
+147
+00:12:46,900 --> 00:12:54,270
+So with that, we're now fetching the orders through redux, we're managing them in our store and we do manage
+
+148
+00:12:54,270 --> 00:13:01,540
+them both when we place an order and when we visit the orders page. Side note, since we always load orders
+
+149
+00:13:01,810 --> 00:13:08,980
+when loading the order container, it doesn't really matter that we also store an order on a successful
+
+150
+00:13:09,010 --> 00:13:14,780
+purchase. In the order reducer, purchaseBurgerSuccess where I store this new order,
+
+151
+00:13:14,920 --> 00:13:20,250
+that doesn't really matter because we load orders from the server anyways when you visit the order page.
+
+152
+00:13:20,470 --> 00:13:25,780
+But we can confirm in our redux dev tools that we do store it before we fetch it from there
+
+153
+00:13:25,780 --> 00:13:30,610
+and it's of course nice to know how we could store a new order programmatically without reaching out
+
+154
+00:13:30,610 --> 00:13:34,490
+to the server in case we needed that on some other page too.
+
+155
+00:13:34,810 --> 00:13:40,540
+So with that, the orders page is also working. Let's now have a look at our application and see if everything
+
+156
+00:13:40,540 --> 00:13:43,260
+works before we have a look at what we can improve.
+

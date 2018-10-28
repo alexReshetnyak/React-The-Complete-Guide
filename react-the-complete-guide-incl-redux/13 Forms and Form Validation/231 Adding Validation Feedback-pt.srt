@@ -1,0 +1,244 @@
+1
+00:00:02,270 --> 00:00:10,580
+Voc produz feedback sobre o nosso resultado de validao. Tenho que ir ao meu componente de entrada e, portanto,
+
+2
+00:00:10,640 --> 00:00:16,400
+cada elemento de entrada no final para adicionar uma classe especial a esse elemento.
+
+3
+00:00:16,460 --> 00:00:18,080
+Se for invlido.
+
+4
+00:00:18,440 --> 00:00:23,890
+Ento, minha aula este ano deve se tornar mais dinmica no final.
+
+5
+00:00:23,930 --> 00:00:32,720
+Eu adicionarei uma nova constante que as classes de entrada de nome, que  uma matriz que no incio  apenas
+
+6
+00:00:32,720 --> 00:00:34,630
+elemento de entrada de classes.
+
+7
+00:00:34,640 --> 00:00:43,380
+Eu sempre quero anexar isso agora aos elementos individuais aqui ou substituir o elemento de entrada do Klaas com
+
+8
+00:00:43,590 --> 00:00:44,500
+minha matriz.
+
+9
+00:00:44,640 --> 00:00:55,380
+Ento, com a minha entrada, as classes de entrada de Bub, essa coleo, eu acabei de criar aqui e vou junt-la a um espao em branco
+
+10
+00:00:55,800 --> 00:01:02,670
+para concatenar todas as minhas classes de string em uma seqncia longa onde as classes esto separadas
+
+11
+00:01:02,670 --> 00:01:07,930
+agora as classes de entrada tambm precisam receber D na propriedade Velayat.
+
+12
+00:01:08,130 --> 00:01:15,800
+Se a entrada estiver em veludo e vou fazer isso com uma verificao de profundidade de verificao  independente do tipo de entrada.
+
+13
+00:01:15,810 --> 00:01:18,360
+Ento eu s preciso fazer isso uma vez no incio.
+
+14
+00:01:18,360 --> 00:01:26,100
+Vou verificar se o invlido do prop  definido como verdadeiro se for, ento, vou empurrar uma nova classe para minhas classes de entrada.
+
+15
+00:01:26,260 --> 00:01:26,800
+D.
+
+16
+00:01:26,970 --> 00:01:29,310
+Classe C S S invlida.
+
+17
+00:01:29,490 --> 00:01:31,230
+E, claro, no  assim.
+
+18
+00:01:31,440 --> 00:01:32,760
+A classe  invlida.
+
+19
+00:01:32,760 --> 00:01:35,020
+Eu preciso definir essa classe.
+
+20
+00:01:35,040 --> 00:01:43,050
+Ento, agora, isso  empurrado para minhas classes de entrada que so anexadas em uma forma de string aos meus elementos para que
+
+21
+00:01:43,050 --> 00:01:46,770
+eu preciso receber o objeto invlido que  verdadeiro ou falso.
+
+22
+00:01:46,890 --> 00:01:54,480
+E eu tambm preciso encontrar algum estilo para que eu simplesmente v para o meu elemento de entrada ou para o arquivo C S
+
+23
+00:01:54,480 --> 00:01:57,810
+S para o componente de entrada e adicione uma classe invlida.
+
+24
+00:01:58,050 --> 00:02:00,930
+Essa  a classe a que me referi aqui.
+
+25
+00:02:01,020 --> 00:02:04,940
+A classe que eu tento empurrar para minha matriz.
+
+26
+00:02:04,950 --> 00:02:07,380
+Agora, voc pode configurar qualquer estilo que voc deseja.
+
+27
+00:02:07,530 --> 00:02:16,380
+Tudo simplesmente configura uma borda que  um pixel slido e vermelho talvez e uma cor de fundo de vermelho claro talvez
+
+28
+00:02:16,530 --> 00:02:23,600
+Sahlman para dar uma olhada e at mesmo escolher um pouco de um vermelho mais leve, algo assim.
+
+29
+00:02:23,620 --> 00:02:31,430
+Agora, para ver esse efeito, tenho que voltar aos dados de contato e, agora, preciso passar essa propriedade
+
+30
+00:02:31,440 --> 00:02:34,510
+invlida para a entrada que eu processo.
+
+31
+00:02:34,530 --> 00:02:38,800
+Ento, aqui esto invlidos e invlidos so alguns dados.
+
+32
+00:02:38,800 --> 00:02:47,460
+de formulrio no elemento de formulrio no objeto de conflito que, assim como um lembrete refere-se a objetos mortos, voc est  direita.
+
+33
+00:02:47,760 --> 00:02:50,210
+Eu novamente agora tenho no meu elemento
+
+34
+00:02:50,220 --> 00:02:58,650
+Na nossa propriedade do Pedido de Pedido do Estado, temos essa propriedade vlida vlida, obviamente, para verificar se o formulrio
+
+35
+00:02:58,650 --> 00:03:00,310
+ vlido ou no.
+
+36
+00:03:00,390 --> 00:03:08,610
+Eu quero passar uma propriedade n vlida, ento eu vou x  vlido e, em seguida, invertei, adicionando um ponto de exclamao no
+
+37
+00:03:08,610 --> 00:03:15,420
+incio para tornar verdadeiro e falso true porque estou passando o oposto com isso vamos salvar isso e vamos
+
+38
+00:03:15,420 --> 00:03:20,280
+de volta ao mapa e saiba que tudo  invlido no comeo, o que
+
+39
+00:03:20,280 --> 00:03:27,260
+faz sentido assim que e ou algo, embora as coisas se tornem Valot o cdigo SIP somente aps cinco caracteres
+
+40
+00:03:27,480 --> 00:03:29,070
+e no com mais.
+
+41
+00:03:29,070 --> 00:03:36,280
+Ento, podemos ver que agora, de fato, estamos devolvendo informaes corretas sobre a validade.
+
+42
+00:03:36,330 --> 00:03:42,910
+Ns tambm vemos que no  to amigvel comear com uma pgina que, ou com uma forma que astima ler,
+
+43
+00:03:42,950 --> 00:03:48,980
+todos ns vemos morto ou cado,  sempre lido mesmo que no tenhamos um olhar de regra de validao.
+
+44
+00:03:48,990 --> 00:03:50,960
+Ento, definitivamente precisamos de ajustes finos.
+
+45
+00:03:51,010 --> 00:03:52,730
+Mas comece com o menu suspenso.
+
+46
+00:03:52,890 --> 00:03:56,650
+No devemos sempre adicionar envelopes invlidos.
+
+47
+00:03:56,670 --> 00:03:57,520
+Verdadeiro ou falso.
+
+48
+00:03:57,540 --> 00:04:04,480
+Isso  bom ter, mas temos um problema em casos como o nosso menu suspenso onde no temos regras.
+
+49
+00:04:04,920 --> 00:04:07,820
+Ento, o que eu deveria verificar se for invlido.
+
+50
+00:04:08,040 --> 00:04:17,280
+E se possamos ter como adiantamentos, a propriedade de validao do Shote agora posso configurar deve validar nos meus dados de contato
+
+51
+00:04:17,310 --> 00:04:25,440
+como uma propriedade adicional passada para minha entrada e deve validar deve ser somente verdade se meu objeto no
+
+52
+00:04:25,440 --> 00:04:28,890
+formulrio de pedido tiver um objeto de validao.
+
+53
+00:04:28,890 --> 00:04:33,000
+Meu mtodo de entrega simplesmente seria descartado e o final no aconteceu.
+
+54
+00:04:33,210 --> 00:04:35,820
+Portanto, no deve valer nada.
+
+55
+00:04:35,820 --> 00:04:43,990
+Ento, aqui, eu simplesmente passarei um elemento de formulrio no pode validar falsas.
+
+56
+00:04:44,000 --> 00:04:50,630
+verdadeiro ou falso e, portanto, se o controle no meu componente de entrada aqui no ser executado e nunca entrar nessa classe.
+
+57
+00:04:50,780 --> 00:04:56,100
+E se a propriedade de validao no estiver configurada como para o meu menu suspenso, isso retornar
+
+58
+00:04:56,210 --> 00:05:00,160
+Ento, agora podemos ver o menu suspenso no ser mais tratado como invlido.
+
+59
+00:05:00,620 --> 00:05:04,190
+Todos ns temos que garantir que tudo seja invlido desde o incio.
+
+60
+00:05:04,190 --> 00:05:08,270
+Portanto, devemos tambm rastrear se uma entrada foi tocada pelo usurio ou no.
+
+61
+00:05:08,450 --> 00:05:10,740
+Vamos fazer isso na prxima palestra.
+

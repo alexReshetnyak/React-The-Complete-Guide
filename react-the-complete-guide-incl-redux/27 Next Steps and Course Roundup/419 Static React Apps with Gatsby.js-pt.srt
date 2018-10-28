@@ -1,0 +1,124 @@
+1
+00:00:02,150 --> 00:00:06,900
+Ento voc deu uma olhada para construir com reagir e reagir. rochas, agora vamos nos afastar
+
+2
+00:00:06,980 --> 00:00:10,550
+de projetos de demonstrao e assim por
+
+3
+00:00:10,610 --> 00:00:14,500
+diante e vamos dar uma olhada no gatsbyjs.
+
+4
+00:00:14,580 --> 00:00:22,160
+Agora, o gatsbyjs  na verdade uma biblioteca que se baseia em reagir, assim como o nextjs fez,
+
+5
+00:00:22,160 --> 00:00:25,550
+mas o gatsbyjs tem um propsito diferente e
+
+6
+00:00:25,550 --> 00:00:33,440
+ uma biblioteca bem interessante. Vou ser honesto com voc. Gatsbyjs  uma biblioteca que permite construir sites estticos com reagir.
+
+7
+00:00:33,440 --> 00:00:40,210
+Agora, o que  um site esttico? Um site esttico  uma pgina que usa apenas html, javascript e
+
+8
+00:00:40,310 --> 00:00:46,550
+css, bem que  verdade para o normal, reagir aplicativo de pgina nica tambm, mas um site esttico tambm tem uma coisa
+
+9
+00:00:46,550 --> 00:00:47,930
+especial para ele, voc normalmente
+
+10
+00:00:48,080 --> 00:00:53,220
+no usa roteador rea l, voc no use diretamente pelo menos, em vez disso, o que voc tem
+
+11
+00:00:53,330 --> 00:00:59,960
+ uma estrutura de pastas onde cada pasta possui um ndice. arquivo html e os ativos correspondentes
+
+12
+00:00:59,990 --> 00:01:02,780
+pertencentes ao arquivo contido nele.
+
+13
+00:01:02,780 --> 00:01:09,320
+Agora, a coisa legal com isso  que voc realmente constri sites como o que voc fez nos
+
+14
+00:01:09,320 --> 00:01:17,180
+anos 90 ou naquela poca, mas voc est usando reagir, voc est construindo isso como um aplicativo reagente e gatsbyjs, essa tecnologia,
+
+15
+00:01:17,180 --> 00:01:19,780
+essa biblioteca ento realmente faz resto para
+
+16
+00:01:19,770 --> 00:01:25,700
+voc, divide tudo e sobre um determinado comando, gera essa estrutura de pastas onde voc tem um
+
+17
+00:01:25,700 --> 00:01:30,520
+par de pastas com arquivos html l com base na reao que voc construiu.
+
+18
+00:01:30,560 --> 00:01:33,510
+Voc pode aprender mais sobre isso em gatsbyjs. com,  uma
+
+19
+00:01:33,530 --> 00:01:39,830
+biblioteca incrvel e, na verdade, forneceria contedo suficiente para seu prprio curso.
+
+20
+00:01:39,860 --> 00:01:42,140
+Agora eu no tenho esse curso agora,
+
+21
+00:01:42,170 --> 00:01:46,880
+voc poderia comear com os documentos aqui para aprender como us-lo e definitivamente brincar com
+
+22
+00:01:46,880 --> 00:01:53,630
+ele um pouco para aprender mais sobre como ele funciona e se faz sentido para voc, comparvel As alternativas mencionadas na
+
+23
+00:01:53,660 --> 00:01:56,930
+pgina de recursos do gatsbyjs seriam Jekyll, mas l voc
+
+24
+00:01:56,960 --> 00:02:00,940
+no usa sistemas de gerenciamento de contedo ou reagir como o Wordpress, mas
+
+25
+00:02:00,980 --> 00:02:04,810
+voc est preso a escrever algum cdigo do lado do servidor tambm,
+
+26
+00:02:04,850 --> 00:02:11,780
+voc precisa de um banco de dados SQL e todas essas coisas. Gatsbyjs trabalha com reagir e isso
+
+27
+00:02:11,780 --> 00:02:13,280
+oferece muitas vantagens.
+
+28
+00:02:13,280 --> 00:02:15,730
+Portanto, considere isso para o seu prximo projeto, confira
+
+29
+00:02:15,740 --> 00:02:20,610
+os documentos e a pgina de recursos em sua pgina para saber se  a escolha certa
+
+30
+00:02:20,840 --> 00:02:25,610
+para voc e, assim que decidir que  interessante para voc, sinta-se  vontade para mergulhar nela.
+
+31
+00:02:25,610 --> 00:02:29,370
+Eu queria que voc soubesse disso porque  um projeto realmente incrvel.
+

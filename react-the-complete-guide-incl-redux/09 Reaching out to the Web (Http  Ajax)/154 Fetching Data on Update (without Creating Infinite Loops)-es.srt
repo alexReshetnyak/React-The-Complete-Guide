@@ -1,0 +1,368 @@
+1
+00:00:02,130 --> 00:00:05,510
+En la ltima conferencia, aprendes cmo hacer que la publicacin sea seleccionable.
+
+2
+00:00:05,660 --> 00:00:10,380
+Pero eso, por supuesto, no tiene nada que ver con axiomas o con solicitudes HTP.
+
+3
+00:00:10,400 --> 00:00:13,070
+Fue Manila volver a actuar una buena prctica.
+
+4
+00:00:13,070 --> 00:00:17,230
+Pero ahora continuemos y enviemos la solicitud de HGP.
+
+5
+00:00:17,330 --> 00:00:22,670
+Una vez que obtuvimos un ID vlido, ahora qu gancho de ciclo de vida deberamos usar aqu.
+
+6
+00:00:22,910 --> 00:00:27,630
+Echemos un vistazo si echamos un vistazo al gancho del ciclo de vida para actualizar los componentes.
+
+7
+00:00:27,740 --> 00:00:34,100
+Y, por supuesto, estamos hablando del gancho del ciclo de vida de la actualizacin porque la computadora est all
+
+8
+00:00:34,100 --> 00:00:35,060
+desde el principio.
+
+9
+00:00:35,210 --> 00:00:38,900
+Pero los datos se deben buscar una vez que recibamos una nueva ID de prop.
+
+10
+00:00:38,960 --> 00:00:46,030
+Entonces, eso es lo que estamos buscando, componente que esa actualizacin es un buen lugar para causar efectos secundarios.
+
+11
+00:00:46,250 --> 00:00:48,110
+Tambin tiene un problema.
+
+12
+00:00:48,260 --> 00:00:55,690
+Si actualizamos el estado all, actualizamos el componente nuevamente y, por lo tanto, lo ingresamos en bucle infinito.
+
+13
+00:00:55,700 --> 00:00:57,890
+Eso es algo de lo que tendremos que tener cuidado.
+
+14
+00:00:58,040 --> 00:01:03,000
+Pero ante todo hagamos que la solicitud de HTP me dirija a la publicacin completa.
+
+15
+00:01:03,200 --> 00:01:12,620
+publicacin completa en el componente podemos implementar el componente se actualiz y hacer la solicitud de HTP para que puedan usar X aos entrar
+
+16
+00:01:12,620 --> 00:01:21,050
+ahora o usted tiene que hacerlo apunte a una sola publicacin por ID si echamos un vistazo a nuestro backend de Dammy.
+
+17
+00:01:21,460 --> 00:01:29,240
+Y antes que nada tenemos que importar x ao X aos del paquete de X aos y luego en la
+
+18
+00:01:29,540 --> 00:01:37,910
+Hay una ruta para obtener y luego publicar la ID para que podamos copiarla y ahora hacer una solicitud
+
+19
+00:01:37,910 --> 00:01:44,810
+para que seas Adell, aunque por supuesto no codificar una, sino que usars esta ID de
+
+20
+00:01:44,900 --> 00:01:49,440
+accesorios para tomar el ID nos subimos a los puntales.
+
+21
+00:01:49,700 --> 00:01:53,820
+Por supuesto, tampoco queremos enviar esta solicitud si ID es nulo.
+
+22
+00:01:53,830 --> 00:01:55,630
+Entonces no queremos hacer esto.
+
+23
+00:01:55,910 --> 00:01:57,930
+Y si la idea es invlida
+
+24
+00:01:58,490 --> 00:02:04,240
+Entonces, verificara si la idea de prop es tratada como verdadera, lo que significa que es una identificacin vlida.
+
+25
+00:02:04,520 --> 00:02:11,030
+Y luego podemos enviar esta solicitud con x 'y hacer que Meffert se endeude.
+
+26
+00:02:11,030 --> 00:02:23,750
+Usted es l Ahora, si hago un seguimiento de eso, entonces bloqueo su deuda de salida con la respuesta de registro de la consola y deberamos ver
+
+27
+00:02:23,750 --> 00:02:28,380
+una respuesta tan pronto como haga clic en un elemento.
+
+28
+00:02:28,400 --> 00:02:32,480
+Entonces, si hago clic en alimentos aqu, veo la respuesta.
+
+29
+00:02:32,480 --> 00:02:34,660
+Ahora esto funciona bien aqu.
+
+30
+00:02:34,850 --> 00:02:36,680
+Sin embargo, por supuesto, quieres sacarlo.
+
+31
+00:02:36,920 --> 00:02:44,270
+aqu y tal vez tengamos una publicacin cargada en este elemento en este componente que inicialmente se
+
+32
+00:02:44,270 --> 00:02:54,740
+establece en NULL y luego podemos publicar el ttulo de la publicacin cargada y el contenido de la publicacin cargada en nuestra publicacin.
+
+33
+00:02:54,920 --> 00:02:57,950
+As que tambin deberamos administrar algn estado
+
+34
+00:02:57,950 --> 00:03:05,750
+J. S. Contenido de X y en su lugar donde bloque la respuesta ya no lo registrar.
+
+35
+00:03:05,930 --> 00:03:07,630
+En cambio, lo que quiero hacer aqu es.
+
+36
+00:03:07,670 --> 00:03:16,190
+Quiero llamar a este estado de conjunto y establecer conjuntos de datos de respuesta post-carga cargados que sern la edicin posterior
+
+37
+00:03:16,230 --> 00:03:23,330
+que obtuvimos del back-end y una hora J como cdigo X, por supuesto, deberamos cargar X-ists en
+
+38
+00:03:23,570 --> 00:03:32,380
+este estado como ese ahora si eso, si vamos a nuestra aplicacin y la volvemos a cargar, y hago clic en
+
+39
+00:03:33,130 --> 00:03:38,050
+una publicacin, recibimos un error del que no podemos leer el ttulo.
+
+40
+00:03:38,050 --> 00:03:46,620
+publicacin completa, inmediatamente colocamos en X este ttulo cargado de estado y lo hacemos tan pronto como obtengamos una propiedad vlida.
+
+41
+00:03:46,630 --> 00:03:52,090
+Ahora, esto tiene mucho sentido, porque aqu, en nuestro cdigo GSX para la
+
+42
+00:03:52,090 --> 00:03:58,960
+Ahora obtenemos una propiedad vlida antes de tener una publicacin cargada vlida porque, como aprendi, la obtencin de
+
+43
+00:03:58,960 --> 00:04:00,320
+datos es asincrnica.
+
+44
+00:04:00,340 --> 00:04:06,940
+Entonces, primero obtenemos la identificacin y luego, un poco ms tarde, obtenemos la publicacin cargada, pero volvemos a dirigir la residencia de estudiantes
+
+45
+00:04:06,940 --> 00:04:08,770
+inmediatamente despus de que tuvimos la idea.
+
+46
+00:04:09,310 --> 00:04:15,970
+Podemos simplemente arreglar esto agregando un cheque para la validez del ID con las ideas de
+
+47
+00:04:15,970 --> 00:04:24,910
+este puntero que ya tenemos y decir que en este caso la publicacin debera ser un prrafo, pero tal vez un prrafo
+
+48
+00:04:24,910 --> 00:04:31,130
+donde simplemente digamos carga porque seleccionamos una publicacin pero la informacin an no est all.
+
+49
+00:04:31,180 --> 00:04:37,600
+Y luego, en la declaracin if inferior, verificamos si la publicacin cargada por estado se ha configurado porque inicialmente
+
+50
+00:04:37,600 --> 00:04:40,020
+es ahora o se tratara como falsa.
+
+51
+00:04:40,180 --> 00:04:44,470
+Pero tan pronto como tengamos uno, esto volver a ser verdadero o se resolver como verdadero.
+
+52
+00:04:44,650 --> 00:04:47,020
+Y, por lo tanto, presentaremos este cdigo GSX.
+
+53
+00:04:47,230 --> 00:04:53,710
+Y ahora si guardo esto y hago clic en una publicacin, vemos que se carga durante una fraccin de segundo
+
+54
+00:04:53,710 --> 00:04:55,390
+y luego vemos la publicacin.
+
+55
+00:04:55,390 --> 00:04:57,320
+Tambin tenemos un problema aqu.
+
+56
+00:04:57,550 --> 00:05:05,890
+Si abrimos la pestaa de red veremos que estamos reenviando despus de la solicitud despus de la solicitud despus de la solicitud.
+
+57
+00:05:06,100 --> 00:05:08,990
+Simplemente podemos volver a cargar la pgina para asegurarnos de que esto se detenga.
+
+58
+00:05:09,190 --> 00:05:20,920
+Pero por qu estamos viendo esto? Estamos viendo estas solicitudes infinitas porque estamos actualizando el estado desde el componente que actualiza y
+
+59
+00:05:20,920 --> 00:05:27,940
+esto crea un ciclo infinito porque cuando llamamos a dicho estado, el componente
+
+60
+00:05:27,940 --> 00:05:31,950
+se actualizar y el componente se actualiz nuevamente.
+
+61
+00:05:32,320 --> 00:05:41,080
+Entonces, debemos asegurarnos de que solo enviamos esta solicitud HTP y, por lo tanto, actualizamos el estado si realmente
+
+62
+00:05:41,100 --> 00:05:42,880
+cargamos una nueva publicacin.
+
+63
+00:05:42,880 --> 00:05:44,510
+Entonces cmo hacemos eso.
+
+64
+00:05:44,710 --> 00:05:53,470
+de la casilla externa. Si marca aqu y all, podemos mostrar si ya hemos cargado una publicacin si eso es cierto.
+
+65
+00:05:53,470 --> 00:05:55,350
+Podemos ingresar si marcamos dentro
+
+66
+00:05:55,360 --> 00:05:59,020
+Entonces, ese es un primer indicador de que ya cargamos las publicaciones.
+
+67
+00:05:59,230 --> 00:06:06,310
+Entonces, por supuesto, todos queremos asegurarnos de que los das cargados de Ford publiquen que la ID no es la misma que obtuvimos
+
+68
+00:06:06,310 --> 00:06:12,940
+con nuestros accesorios, porque eso significara que la ID para la que queremos obtener nuevos datos es la ID que ya hemos
+
+69
+00:06:12,940 --> 00:06:16,940
+cargado, por lo que no necesitamos hacer una solicitud HTP en este caso.
+
+70
+00:06:17,320 --> 00:06:20,080
+As que verificables si tenemos una publicacin cargada.
+
+71
+00:06:20,080 --> 00:06:29,170
+Y luego, si esta ID de publicacin cargada de estado es igual a la ID de prop.
+
+72
+00:06:29,230 --> 00:06:35,770
+de obtener datos para una nueva publicacin que est bien, en cuyo caso deseo hacer la solicitud de DHC en todos nuestros casos.
+
+73
+00:06:36,130 --> 00:06:37,200
+Entonces, si esencialmente tratamos
+
+74
+00:06:37,210 --> 00:06:41,740
+No continuar y lo har porque entonces estamos tratando de obtener datos para la solicitud de solicitudes.
+
+75
+00:06:41,770 --> 00:06:47,560
+Ya tenemos para una publicacin que ya tenemos que enviar estas instrucciones, por supuesto.
+
+76
+00:06:47,560 --> 00:06:51,070
+Ahora veamos si cargo esa pgina y hago clic en una publicacin.
+
+77
+00:06:51,430 --> 00:06:54,010
+Bueno, nunca recibimos los datos de la publicacin.
+
+78
+00:06:54,010 --> 00:06:57,000
+Entonces, de alguna manera, nuestro control aqu est fallando.
+
+79
+00:06:57,250 --> 00:07:03,040
+Bueno, tenemos que modificarlo un poco porque inicialmente, por supuesto, fallar porque la publicacin cargada
+
+80
+00:07:03,040 --> 00:07:04,230
+es nula inicialmente.
+
+81
+00:07:04,270 --> 00:07:07,530
+Entonces esto solo tendra xito si tuviramos al menos una publicacin cargada.
+
+82
+00:07:07,840 --> 00:07:16,270
+As que, en cambio, verificar si no tenemos esta publicacin cargada por estado o si la tenemos pero si tambin tiene una
+
+83
+00:07:16,270 --> 00:07:19,600
+ID diferente a la ID que planeamos cargar.
+
+84
+00:07:19,630 --> 00:07:25,660
+As que seguimos adelante y realizamos la solicitud incluso si no tenemos una publicacin cargada o si tenemos una, pero las
+
+85
+00:07:25,660 --> 00:07:26,590
+identificaciones son diferentes.
+
+86
+00:07:26,760 --> 00:07:27,060
+Whoops.
+
+87
+00:07:27,100 --> 00:07:28,620
+Esto debera cargarse luego.
+
+88
+00:07:28,660 --> 00:07:34,930
+aplicacin en la pestaa de red, haga clic en una publicacin que cargue y no comience a enviar solicitudes de infinito.
+
+89
+00:07:35,020 --> 00:07:37,510
+Entonces, si guardamos esto y volvemos a la
+
+90
+00:07:37,720 --> 00:07:42,940
+Y an puede cambiar, pero solo recibimos una solicitud por cambio y eso es exactamente lo que queremos.
+
+91
+00:07:42,940 --> 00:07:49,600
+As que ahora tenemos una forma de obtener datos de manera segura en el componente se actualiz y todava una actualizacin
+
+92
+00:07:49,600 --> 00:07:54,410
+completa es el lugar correcto porque queremos obtener datos cada vez que recibimos nuevas solicitudes.
+

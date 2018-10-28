@@ -1,0 +1,388 @@
+1
+00:00:02,140 --> 00:00:05,600
+Son dersin ieriini eklemek mantmz vard.
+
+2
+00:00:05,730 --> 00:00:11,520
+imdi elbette tm bunlar yapmak ve bunlar kaldrmak istiyorum zaten burger oluturucu
+
+3
+00:00:11,640 --> 00:00:14,030
+konteyner kaldrmak madde handler ekledi.
+
+4
+00:00:14,040 --> 00:00:16,800
+imdi babamn hayatyla doldurmamz lazm.
+
+5
+00:00:16,800 --> 00:00:21,190
+Mantk, sahip olduumuz manta ve ADD madde ileyicisine olduka benzemektedir.
+
+6
+00:00:21,210 --> 00:00:22,810
+Temel olarak tam tersi.
+
+7
+00:00:22,830 --> 00:00:24,540
+Bir maddenin peindeyim.
+
+8
+00:00:24,860 --> 00:00:28,310
+Bu nedenle, burada eklenen kodu kopyalayacam.
+
+9
+00:00:28,560 --> 00:00:35,290
+Eski saymla ilgileniyorum Gncelleme hesab eski Kontak eksi bir gncel malzemeler.
+
+10
+00:00:35,310 --> 00:00:42,120
+Tabii ayn mantkla ayn felsefenin aynsn ve fiyatn izliyorsa da tabii ki fiyat indirimi
+
+11
+00:00:42,280 --> 00:00:48,340
+artc deil, daha sonra buradan den ve eklememek iin olan veren dction.
+
+12
+00:00:48,590 --> 00:00:49,590
+Ve aslnda hepsi bu.
+
+13
+00:00:49,590 --> 00:00:56,540
+Dolaysyla sadece Ingrediance'imi 1 azaltrm ve fiyat derim.
+
+14
+00:00:56,540 --> 00:01:01,380
+imdi bununla malzemeleri ve fiyat tekrar gncelleyeceiz.
+
+15
+00:01:01,670 --> 00:01:04,760
+imdi geri dnelim ya da alarz.
+
+16
+00:01:04,770 --> 00:01:09,320
+Gemi ise Methot ileyici Methot bavurusu burada.
+
+17
+00:01:09,330 --> 00:01:10,490
+Bu olay ileyicisi.
+
+18
+00:01:10,550 --> 00:01:13,100
+Kontrolleri oluturmak iin aaya geelim.
+
+19
+00:01:13,310 --> 00:01:19,370
+Dolaysyla burada Propp'u kaldrp burada baz mant ekleyen ve Ingredion zellii
+
+20
+00:01:19,390 --> 00:01:26,330
+kaldrlan bu yntemin bavurusunu yalnzca bu iki denetimi de ierecek ekilde kullanmasn istiyorum.
+
+21
+00:01:26,330 --> 00:01:34,430
+imdi yalnzca bireysel yap denetimine eklemeyi deil ayn zamanda kaldrlan yerleik idam edilmi
+
+22
+00:01:34,470 --> 00:01:41,200
+okla ileve sahip olduum yerde Ingredion'u kaldrp ayn mantn ardndan karlmas
+
+23
+00:01:41,240 --> 00:01:44,030
+gereken bileen trn de getim.
+
+24
+00:01:44,150 --> 00:01:46,370
+Ekleme gelince.
+
+25
+00:01:46,570 --> 00:01:53,350
+imdi bireysel yap denetiminde kaldrma zelliini balamamz ve orada son dme zerinde olmas gerekiyor
+
+26
+00:01:53,450 --> 00:02:00,430
+ve bu nedenle tklama dinleyicisini eklemek ve yalnzca pervanenin kaldrlm ya da altrlmamasn altrmak
+
+27
+00:02:00,430 --> 00:02:02,380
+iin bir bavuru gnderin.
+
+28
+00:02:02,470 --> 00:02:05,930
+Bu yntemle ilgili referans ieren pervaneleri karn.
+
+29
+00:02:05,930 --> 00:02:10,510
+Dmeye tklandnda ve bu olay tetiklendiinde isteklerle altrlmak istiyoruz.
+
+30
+00:02:10,510 --> 00:02:12,720
+Bu yntemi uyguluyoruz.
+
+31
+00:02:13,330 --> 00:02:16,000
+Bununla birlikte, bunu saklayalm ve ie yarayp yarayp yaramadn grelim.
+
+32
+00:02:16,000 --> 00:02:21,400
+Biraz pastrma ekleyelim ve pastrmay, salata ve peyniri karalm.
+
+33
+00:02:21,400 --> 00:02:27,190
+imdi elimizde olmayan bir eyi terk etmeye balarsak bir hata yaparz, ancak o zaman
+
+34
+00:02:27,190 --> 00:02:31,800
+bir hata yaparz ve mantkldr nk sahip olmadmz bir maddeyi kaldrmaya altk.
+
+35
+00:02:32,020 --> 00:02:35,950
+Devlet olduunuz burger reticimiz negatif olur.
+
+36
+00:02:35,950 --> 00:02:39,110
+Eksi 1 pastrma var ve bu gerekten bir hata.
+
+37
+00:02:39,130 --> 00:02:43,160
+nk negatif bir deer oluturmak iin bir dizi oluturabiliriz.
+
+38
+00:02:43,570 --> 00:02:49,960
+Bu nedenle, karc reaktif ileyicimiz Belz ile balayacak ieriklerimiz olup olmadn kontrol ederek
+
+39
+00:02:49,960 --> 00:02:50,620
+bulmalyz.
+
+40
+00:02:50,950 --> 00:02:54,000
+Belirli bir bileenden eski saymak da yle.
+
+41
+00:02:54,130 --> 00:02:56,460
+Sfrdan byk olmaldr.
+
+42
+00:02:56,620 --> 00:03:06,070
+Eski saym Ciro'dan daha kk veya eitse, esas olarak geri dnmek istiyorum, bylece hibir ey olmaz.
+
+43
+00:03:06,200 --> 00:03:12,470
+u an sahip olmadmz bir maddeyi okumaya alrsak, aslnda satmaya baladm, pastrma
+
+44
+00:03:12,470 --> 00:03:14,270
+veya hibir ey olmaz.
+
+45
+00:03:14,740 --> 00:03:18,310
+Tabii dme devre d braklrsa daha da iyi olurdu.
+
+46
+00:03:18,440 --> 00:03:22,180
+O halde orada bu mant tantalm.
+
+47
+00:03:22,190 --> 00:03:28,730
+Hangi dmenin etkinletirilecei ve yap denetimlerim iin hangi dmenin devre d braklmas gerektiine ilikin
+
+48
+00:03:29,030 --> 00:03:30,840
+baz bilgileri iletmek istiyorum.
+
+49
+00:03:31,670 --> 00:03:34,120
+Dalat iin render yntemine kaydrn.
+
+50
+00:03:34,220 --> 00:03:42,470
+Ve J'yi X olarak dndrmeden nce, yeni bir sabit sava ad devre d brakma info
+
+51
+00:03:42,470 --> 00:03:49,640
+oluturacam ve orada yalnzca bu devletin zelliklerini datacak yeni bir nesne oluturmak istiyorum.
+
+52
+00:03:49,640 --> 00:03:51,060
+Malzemeler.
+
+53
+00:03:51,080 --> 00:03:56,120
+Bu madde ieriini basite bu nesne olarak aklnzda bulundurun.
+
+54
+00:03:56,240 --> 00:04:00,430
+Yani temelde deimez bir ekilde kopyaladm.
+
+55
+00:04:00,440 --> 00:04:05,080
+imdi sadece bu nesne elbette istediim tm bilgiler deil.
+
+56
+00:04:05,180 --> 00:04:15,050
+d tm anahtarlar zerinden dng ve sadece Ciro veya daha az olup olmadn kontrol edecek ve bilgi anahtar devre d brakmak iin gncellenir.
+
+57
+00:04:15,110 --> 00:04:19,980
+imdi devre d brakmak iin bir for dngs oluturun bylece devre
+
+58
+00:04:20,090 --> 00:04:26,980
+Bylece Sallet eti ve benzeri bilgilerle birlikte, eer nesne ekli
+
+59
+00:04:26,990 --> 00:04:31,330
+yukar hcreden 0'a gelmeyecekse bu 0' karlar.
+
+60
+00:04:31,460 --> 00:04:35,510
+Ama basite devre d braklmal ya da salam olamazsa.
+
+61
+00:04:35,540 --> 00:04:36,990
+Doru.
+
+62
+00:04:37,040 --> 00:04:42,190
+Gerek ve gerek, devre d brakldysa atanan deer olacaktr.
+
+63
+00:04:42,380 --> 00:04:47,370
+Bylece belirli bir anahtar iin devre d brakma arsnn sfrdan kk veya sfra eit olup olmadn kontrol eder.
+
+64
+00:04:47,420 --> 00:04:52,220
+Aklda tutarak bu gl bilgi anahtar her bir anahtarn deeridir.
+
+65
+00:04:52,220 --> 00:04:58,830
+Bu nedenle bataki tm bu durumlarda sfr ve burada kontrol doru mu yoksa yanl m yapar.
+
+66
+00:04:58,940 --> 00:05:03,090
+Bu yzden kopyalanan nesnemizde orijinali deil de gncelleneceiz.
+
+67
+00:05:03,170 --> 00:05:06,790
+Kopyalanan kii doru veya yanl.
+
+68
+00:05:06,800 --> 00:05:14,890
+imdi bununla birlikte, devre d brakma bilgisi devre d braklm bilgi iin yapm denetimi bileenine yaptrabiliriz.
+
+69
+00:05:14,960 --> 00:05:21,860
+Bylece engelli bir mlk ayarlayp devre d braklm bilgileri gnderirim.
+
+70
+00:05:21,860 --> 00:05:28,180
+imdi elbette bu yap denetim bileenindeki bu devre d braklm zelliin avantajlarndan yararlanmalsnz ve
+
+71
+00:05:28,700 --> 00:05:34,760
+bu bilgileri bu dmeyi devre d brakp brakmamaya alp almamas gerektiini bildirmek iin tek
+
+72
+00:05:34,760 --> 00:05:37,190
+tek yap denetimine geirmemiz gerekir.
+
+73
+00:05:37,190 --> 00:05:40,450
+Bu yzden orada da zrl bir mal varl ayarlayacam.
+
+74
+00:05:40,760 --> 00:05:48,530
+Ve bunun iin devre d brakmak iin alyorum zrl bilgileri kullanacam kontrol ina denetimleri
+
+75
+00:05:48,530 --> 00:05:49,960
+ina denetimleri pervane.
+
+76
+00:05:49,970 --> 00:05:56,660
+Burger oluturucu kapsaycsnda kullanyorum ve orada elbette belirli bir denetim tr iin devre d
+
+77
+00:05:56,750 --> 00:05:58,730
+braklm bilgilere erimek istiyorum.
+
+78
+00:05:58,940 --> 00:06:06,530
+Unutmayn ki bu abled bilgi yap temelde bu form katdr.
+
+79
+00:06:06,620 --> 00:06:10,650
+Gerek et der vb.
+
+80
+00:06:10,730 --> 00:06:14,750
+Yani bu yeniden yaplandrlm nesnede sahip olacamz ey budur.
+
+81
+00:06:14,750 --> 00:06:16,730
+Ve eer doruysa devre d braklmaldr.
+
+82
+00:06:16,730 --> 00:06:23,510
+Buna ihtiya duyduumuz ey, belirli bir denetim tr iin bilgiye erimek zorunda olduumuz ve
+
+83
+00:06:23,510 --> 00:06:29,980
+elbette denetim denetiminde hibir veri tr deil, nk eleri ekleme ve kaldrma iin
+
+84
+00:06:29,990 --> 00:06:33,680
+kullandmz bu tre depoladmz kontroller araclyla dng yapyoruz.
+
+85
+00:06:33,680 --> 00:06:40,910
+Ama burada ayrca devre d braklm bilgi yazmak iin eriebilir ve son dmeyi devre d brakmak
+
+86
+00:06:40,910 --> 00:06:49,940
+iin bireysel yap denetiminde devre d braklm Propp'u kullanabilir ve devre d braklm bir HCM dmesi esinde ayarlayabileceimiz varsaylan bir
+
+87
+00:06:49,940 --> 00:06:50,710
+zelliktir.
+
+88
+00:06:50,870 --> 00:06:54,030
+Ve elbette onu pervane engelli olarak ayarlamak istiyorum.
+
+89
+00:06:54,110 --> 00:06:56,870
+Yani ya doruya veya yanla.
+
+90
+00:06:56,930 --> 00:07:01,850
+Okumak biraz daha kolay hale getirmek iin bunu birden fazla satra gre yeniden yapacam.
+
+91
+00:07:01,940 --> 00:07:03,860
+Bu yzden buradaki mantk aktr umarm.
+
+92
+00:07:03,860 --> 00:07:11,210
+Bileen Ciro ya da daha dkse, daha az dmenin devre d kalmasn salamaya alyoruz.
+
+93
+00:07:11,210 --> 00:07:14,020
+imdi tm dmeleri engellediini gryorsunuz.
+
+94
+00:07:14,060 --> 00:07:18,900
+Tarzn ayarlanmas, dosyalar sizinle paylald iin bu C-lerin bir parasyd.
+
+95
+00:07:19,130 --> 00:07:23,660
+Ve bir kez bir madde eklemeye baladktan sonra dmeyi tekrar tklayabiliriz.
+
+96
+00:07:23,810 --> 00:07:26,120
+te bu bizim tekne kontrollerimiz alyor.
+
+97
+00:07:26,240 --> 00:07:28,790
+imdi fiyat da verelim.
+

@@ -1,0 +1,104 @@
+1
+00:00:02,300 --> 00:00:08,360
+In the last lecture, we improved our application a tiny bit by adding shouldComponentUpdate to the modal
+
+2
+00:00:08,420 --> 00:00:14,050
+to make sure we don't update any components there unnecessarily.
+
+3
+00:00:14,060 --> 00:00:21,620
+Now what about other lifecycle methods like componentDidMount or componentDidUpdate and all these
+
+4
+00:00:21,620 --> 00:00:22,430
+things?
+
+5
+00:00:22,430 --> 00:00:24,010
+Why don't we use any of them?
+
+6
+00:00:24,050 --> 00:00:25,910
+When would we use them?
+
+7
+00:00:25,910 --> 00:00:33,230
+Well actually you will see some of them being used once we add HTTP. As you saw in the slides in the last
+
+8
+00:00:33,230 --> 00:00:34,640
+course module,
+
+9
+00:00:34,640 --> 00:00:39,710
+the componentDidMount and componentDidUpdate lifecycle hooks are extremely important for causing
+
+10
+00:00:39,710 --> 00:00:40,830
+side effects,
+
+11
+00:00:40,940 --> 00:00:46,130
+that sounds strange but in the end just means things like reaching out to a web service and fetching
+
+12
+00:00:46,130 --> 00:00:47,610
+data from there.
+
+13
+00:00:47,630 --> 00:00:52,370
+Now we're not doing that yet in the application, there is much initialization we have to do in our
+
+14
+00:00:52,370 --> 00:00:53,230
+components.
+
+15
+00:00:53,270 --> 00:00:59,720
+That is why we don't need the lifecycle hooks, other hooks like WillUpdate and so on which we don't use
+
+16
+00:00:59,720 --> 00:01:01,620
+except for login here,
+
+17
+00:01:01,820 --> 00:01:05,110
+well you typically don't use these that often.
+
+18
+00:01:05,240 --> 00:01:12,120
+There might be some cases where you need to adjust your components state based on some props you received
+
+19
+00:01:12,120 --> 00:01:13,170
+from outside
+
+20
+00:01:13,460 --> 00:01:19,940
+and that certainly can occur in bigger react applications but it's also not that uncommon to have react
+
+21
+00:01:19,940 --> 00:01:26,830
+applications where you don't use that many lifecycle hooks except for componentDidUpdate maybe.
+
+22
+00:01:26,870 --> 00:01:30,520
+So that is the reason why you don't see too many of these being used,
+
+23
+00:01:30,530 --> 00:01:32,780
+there will be more once we add HTTP access
+
+24
+00:01:32,780 --> 00:01:37,220
+as I mentioned but for now this is how the application works and looks.
+
+25
+00:01:37,220 --> 00:01:43,680
+It's a pretty good application showing a lot of features of react and a lot of best practices
+
+26
+00:01:43,910 --> 00:01:47,070
+so let me now summarize it in the next lecture.
+

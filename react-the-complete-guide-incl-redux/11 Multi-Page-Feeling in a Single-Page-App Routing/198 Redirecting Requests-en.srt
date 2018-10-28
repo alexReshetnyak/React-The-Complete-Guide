@@ -1,0 +1,120 @@
+1
+00:00:02,210 --> 00:00:08,890
+So enough about route parameters and nested routes, let's talk about redirecting the user.
+
+2
+00:00:08,900 --> 00:00:11,190
+Sometimes you want to redirect the user,
+
+3
+00:00:11,240 --> 00:00:18,350
+for example, let's say that you also want to lead the user to /posts,
+
+4
+00:00:18,350 --> 00:00:25,280
+if he visits just slash. Of course you can duplicate that route and also handle the slash case here,
+
+5
+00:00:25,430 --> 00:00:29,780
+in this case, you could render component posts.
+
+6
+00:00:29,840 --> 00:00:36,640
+Now if you save this and you reload the page, you'll see that you load the posts component
+
+7
+00:00:36,650 --> 00:00:44,480
+even if you go onto just slash without /posts and if you then click on a post, the link still leads
+
+8
+00:00:44,480 --> 00:00:46,900
+to /posts /id
+
+9
+00:00:46,940 --> 00:00:49,340
+so now you're back to the old rule.
+
+10
+00:00:49,340 --> 00:00:51,590
+This of course works and there's nothing wrong with it,
+
+11
+00:00:51,620 --> 00:00:56,930
+you can definitely have multiple routes with different paths which render the same content,
+
+12
+00:00:57,020 --> 00:00:59,090
+that's absolutely fine.
+
+13
+00:00:59,090 --> 00:01:03,950
+I'm still going to comment this out because I want to show you a different solution.
+
+14
+00:01:03,950 --> 00:01:12,470
+You can also use a special component provided by react-router-dom, the redirect component.
+
+15
+00:01:12,670 --> 00:01:19,570
+The redirect component as it is a component is simply used in your jsx code, there
+
+16
+00:01:19,610 --> 00:01:27,860
+you can add it to your switch statement and then you specify a from property, so from which route you
+
+17
+00:01:27,860 --> 00:01:36,960
+want to navigate to which. For example, from / to /posts and then it's a self-closing component.
+
+18
+00:01:37,310 --> 00:01:44,300
+If you use it outside of the switch statement, from can't be specified, then you can just always redirect
+
+19
+00:01:44,300 --> 00:01:49,630
+to switch /posts and not respect the path you were navigating to.
+
+20
+00:01:49,640 --> 00:01:54,770
+I'll come back to conditional redirects outside of switch in the next lecture though.
+
+21
+00:01:54,980 --> 00:02:00,670
+So now we have that redirect statement in the switch statement and it's just like another route,
+
+22
+00:02:00,680 --> 00:02:08,060
+the only difference is it doesn't render content, it simply just changes the URL so that we then reach
+
+23
+00:02:08,060 --> 00:02:11,380
+another route for which we render content.
+
+24
+00:02:11,750 --> 00:02:19,520
+If you save all of that and we now load the root URL again, you'll see that URL changes to
+
+25
+00:02:19,520 --> 00:02:22,940
+/posts because we are redirected.
+
+26
+00:02:23,000 --> 00:02:31,130
+This is how we can redirect to ensure that the user is removed or is navigated to the route we
+
+27
+00:02:31,130 --> 00:02:32,580
+want to have him on.
+
+28
+00:02:33,020 --> 00:02:34,310
+That's redirection,
+
+29
+00:02:34,400 --> 00:02:40,210
+however I just mentioned that there also is some conditional redirection we can use,
+
+30
+00:02:40,220 --> 00:02:43,590
+let me show you what I mean with that in the next lecture.
+

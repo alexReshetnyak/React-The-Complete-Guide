@@ -1,0 +1,268 @@
+1
+00:00:02,270 --> 00:00:09,610
+Toquemos nuestros elementos de navegacin y ajstelos a nuestro nuevo mundo en el que estamos ahora con el enrutamiento.
+
+2
+00:00:09,980 --> 00:00:17,240
+Entonces en ese elemento de navegacin este ao aqu tenemos nuestros enlaces a los componentes de nuestro elemento de
+
+3
+00:00:17,240 --> 00:00:19,120
+navegacin donde pasamos el enlace.
+
+4
+00:00:19,220 --> 00:00:21,910
+Ahora aqu, ya quiero ajustar algo.
+
+5
+00:00:21,950 --> 00:00:26,780
+Tenemos el generador de hamburguesas y el POF de hecho debera ser barra.
+
+6
+00:00:27,230 --> 00:00:34,850
+Pero el segundo elemento debera llevar a una reduccin de los pedidos y, en realidad, debe tener un pie de foto de los pedidos para saber
+
+7
+00:00:34,850 --> 00:00:40,840
+que el artculo de navegacin tambin tiene que ajustar algo porque en este momento estamos usando una etiqueta de anclaje normal.
+
+8
+00:00:40,850 --> 00:00:45,380
+Ahora, como aprendi al usar el enrutamiento, realmente no quiero hacer eso.
+
+9
+00:00:45,410 --> 00:00:52,210
+En cambio, quiero usar el enlace provisto por el enrutador de reactivacin.
+
+10
+00:00:52,280 --> 00:00:56,360
+As que desde el enrutador Re-act Domm ese es el paquete.
+
+11
+00:00:56,630 --> 00:01:03,530
+Pero ahora no quiero usar el componente de enlace normal, todos usan el enlace NAV porque quiero darle un estilo al enlace
+
+12
+00:01:03,530 --> 00:01:10,520
+activo y realmente quiero usar el valor predeterminado de tener una clase C S S llamada activa porque esa es la clase
+
+13
+00:01:10,520 --> 00:01:11,460
+C como S.
+
+14
+00:01:11,480 --> 00:01:14,610
+He definido en mi C S tambin la culpa.
+
+15
+00:01:14,750 --> 00:01:20,990
+Si elige un nombre de clase diferente aqu, debe ajustar el nombre de clase asignado por un
+
+16
+00:01:20,990 --> 00:01:24,870
+enlace de navegacin como se muestra en el mdulo de enrutamiento.
+
+17
+00:01:24,890 --> 00:01:33,250
+Ahora con el revestimiento importado, quiero usarlo en lugar de la etiqueta de anclaje, ref., Por lo tanto, se convierte en dos y el nombre
+
+18
+00:01:33,260 --> 00:01:35,480
+de clase no es necesario en absoluto.
+
+19
+00:01:35,480 --> 00:01:38,100
+No tenemos que definir si est activo o no.
+
+20
+00:01:38,150 --> 00:01:41,320
+Esto determinar automticamente esto.
+
+21
+00:01:41,320 --> 00:01:44,590
+Ahora aqu la etiqueta de cierre, por supuesto, todo lo que debera ser Appling.
+
+22
+00:01:44,710 --> 00:01:50,680
+Ahora que ya no necesitamos pasar la informacin ya sea que est activa o no, puedo
+
+23
+00:01:50,920 --> 00:01:55,510
+volver al elemento de navegacin y ya no necesito configurar este Propp aqu.
+
+24
+00:01:55,510 --> 00:01:57,900
+As que deshagmonos de eso tambin.
+
+25
+00:01:57,940 --> 00:02:02,040
+Ahora guardemos todos los archivos y regresemos a nuestra aplicacin.
+
+26
+00:02:02,260 --> 00:02:09,550
+Y como puede ver, vemos los elementos de navegacin actualizados, pero no vemos un elemento activo.
+
+27
+00:02:09,550 --> 00:02:14,760
+Ahora pase el mouse sobre este elemento y ver que tiene la clase activa.
+
+28
+00:02:14,830 --> 00:02:16,330
+Sabes por qu no est funcionando?
+
+29
+00:02:16,330 --> 00:02:24,180
+Esto es difcil de detectar, pero tiene mucho sentido que no veamos que esta clase tenga ningn efecto.
+
+30
+00:02:26,490 --> 00:02:29,220
+Est relacionado con ver como mdulos.
+
+31
+00:02:29,220 --> 00:02:36,040
+Tenga en cuenta que el enlace se agrega automticamente donde se adjunta una clase llamada activa.
+
+32
+00:02:36,720 --> 00:02:42,600
+Y, por supuesto, configuramos la clase activa aqu, un elemento de navegacin C S S.
+
+33
+00:02:42,900 --> 00:02:50,700
+Pero tenga en cuenta que los mdulos C S S realmente tomarn nuestros nombres de clase aqu y los convertirn
+
+34
+00:02:50,760 --> 00:02:52,630
+en nombres de clase nicos.
+
+35
+00:02:52,650 --> 00:02:58,010
+Por lo tanto, cuando nos activemos aqu en C de S, no aparecer como activo.
+
+36
+00:02:58,080 --> 00:03:00,560
+Tendr algo de hash adjunto.
+
+37
+00:03:00,570 --> 00:03:02,350
+Ser nico.
+
+38
+00:03:02,610 --> 00:03:10,080
+Por lo tanto, el acto de clase adjunto en tiempo de ejecucin mediante snaffling no coincidir con nuestra clase activa.
+
+39
+00:03:10,140 --> 00:03:18,420
+Podemos arreglarlo fcilmente aunque ese elemento de enlace naff tiene una propiedad adicional que podemos configurar.
+
+40
+00:03:18,660 --> 00:03:22,300
+Podemos establecer nuestro propio nombre de clase activo a medida que aprende.
+
+41
+00:03:22,560 --> 00:03:26,240
+Puedes agregar el nombre de tu clase activa aqu.
+
+42
+00:03:26,240 --> 00:03:34,450
+Entonces querra usar clases activas de nuevo refirindome a mi objeto de clases que viene de mi cada C S S.
+
+43
+00:03:34,500 --> 00:03:41,840
+Esto ahora ser un defecto de nombre de clase ya que nuestra C es como la transformacin de los mdulos lo escupe.
+
+44
+00:03:41,900 --> 00:03:48,000
+Ahora con eso si guardamos esto ya ves que ahora est activo porque en realidad el nombre de la clase
+
+45
+00:03:48,030 --> 00:03:55,630
+es elemento de navegacin subrayado guin bajo en el guin bajo del guin bajo algunos hash daises nuestro nombre de clase nico tambin podemos
+
+46
+00:03:55,660 --> 00:03:57,480
+hacer clic en los pedidos ahora.
+
+47
+00:03:57,820 --> 00:04:00,530
+Y ves que estamos en rdenes.
+
+48
+00:04:00,550 --> 00:04:04,840
+Est activo pero el primer enlace tambin est activo.
+
+49
+00:04:04,850 --> 00:04:06,880
+Ahora probablemente puedas arreglar esto.
+
+50
+00:04:06,880 --> 00:04:08,730
+Definitivamente adelante y hazlo.
+
+51
+00:04:09,100 --> 00:04:12,660
+Y de lo contrario, te mostrar mi solucin a esto en un segundo.
+
+52
+00:04:14,120 --> 00:04:20,530
+Esto, por supuesto, tambin est activo debido a la forma en que el desmantelamiento interpreta la ruta activa.
+
+53
+00:04:20,810 --> 00:04:27,350
+Tenga en cuenta que pagar aqu es lo que determina si se trata de la ruta activa o no y se trata
+
+54
+00:04:27,370 --> 00:04:29,460
+como un prefijo a medida que aprendemos.
+
+55
+00:04:29,690 --> 00:04:36,310
+Por lo tanto, siempre que nuestras pauvres actuales comiencen con esta parte aqu, este enlace se considerar activo.
+
+56
+00:04:36,530 --> 00:04:40,120
+Y por solo barra cada ruta comienza con eso.
+
+57
+00:04:40,340 --> 00:04:43,990
+As que simplemente podemos solucionar esto agregando la ruta exacta aqu.
+
+58
+00:04:44,180 --> 00:04:48,530
+Y con eso nos aseguramos de que esto solo se use si se accede a l.
+
+59
+00:04:48,570 --> 00:04:52,290
+Ahora, por supuesto, adjuntaremos acceso a todos los enlaces de navegacin.
+
+60
+00:04:52,430 --> 00:04:58,640
+Si solo supiera que en algn lugar esto podra suceder, simplemente podra pasar a la propiedad exacta una propiedad nueva
+
+61
+00:04:58,640 --> 00:05:05,900
+o simplemente a un artculo de navegacin y en un elemento de navegacin, ahora puede vincular el enlace exacto de Propp of NAV
+
+62
+00:05:06,200 --> 00:05:10,490
+con el exacto de prop para el que est pasando adentro desde afuera.
+
+63
+00:05:10,490 --> 00:05:17,170
+Ahora esto solo se usar en el primer enlace con solo barra y no en el segundo con rdenes.
+
+64
+00:05:17,210 --> 00:05:22,910
+est activo si estamos en la roca de Bergere si estamos bajo rdenes, entonces las rdenes estn activas.
+
+65
+00:05:22,910 --> 00:05:25,980
+El resultado sigue siendo el mismo Bergere Boulder solo
+
+66
+00:05:26,180 --> 00:05:29,330
+Ahora es as como implementamos los enlaces.
+
+67
+00:05:29,330 --> 00:05:33,400
+Ahora asegurmonos de que realmente obtuvimos los pedidos del servidor.
+

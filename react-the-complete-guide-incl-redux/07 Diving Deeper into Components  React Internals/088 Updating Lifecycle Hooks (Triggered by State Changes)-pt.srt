@@ -1,0 +1,172 @@
+1
+00:00:02,220 --> 00:00:07,230
+Estamos quase terminando com os ciclos de vida, agora que examinamos as atualizaes desencadeadas de
+
+2
+00:00:07,470 --> 00:00:08,970
+fora pelas mudanas Propst.
+
+3
+00:00:09,060 --> 00:00:14,760
+Vamos agora dar uma olhada no processo do ciclo de vida da atualizao para mudanas internas por causa do estado definido
+
+4
+00:00:15,300 --> 00:00:15,710
+basicamente l.
+
+5
+00:00:15,750 --> 00:00:20,340
+Ns no comeamos com o componente receber adereos porque voc no receber adereos.
+
+6
+00:00:20,340 --> 00:00:25,320
+Em vez disso, comeamos de imediato, que deve atualizar o componente e ns obteremos o prximo estgio ou dois prximos.
+
+7
+00:00:25,440 --> 00:00:30,960
+E, assim como antes, podemos cancelar o processo de atualizao aqui e, como antes, devemos decidir se
+
+8
+00:00:30,960 --> 00:00:32,000
+continuaremos ou no.
+
+9
+00:00:32,100 --> 00:00:33,870
+E no devemos causar efeitos colaterais.
+
+10
+00:00:33,870 --> 00:00:36,580
+Ento, a lgica  a mesma que antes.
+
+11
+00:00:36,740 --> 00:00:43,620
+Posteriormente, chegamos ao componente bem montado e a lgica  a mesma que antes, ento, processe, ento ns
+
+12
+00:00:43,620 --> 00:00:47,490
+renderizamos todos os componentes filho e essa atualizao no final.
+
+13
+00:00:47,730 --> 00:00:53,680
+E eu passo rapidamente porque  basicamente o mesmo processo que antes para uma mudana externa.
+
+14
+00:00:53,730 --> 00:00:55,260
+Gatilho externo.
+
+15
+00:00:55,500 --> 00:01:01,320
+A nica diferena  que o primeiro gancho de ciclo de vida receber suporte est faltando aqui.
+
+16
+00:01:01,320 --> 00:01:07,080
+incluir ou implementar novos mtodos agora em nosso projeto porque j obtivemos todos esses mtodos.
+
+17
+00:01:07,080 --> 00:01:08,770
+Portanto, portanto, no precisamos
+
+18
+00:01:09,090 --> 00:01:10,710
+No entanto, eu vou implement-los.
+
+19
+00:01:10,740 --> 00:01:15,730
+Na verdade, sim, qual  o lugar onde mudamos de estado para que possamos v-lo l.
+
+20
+00:01:15,740 --> 00:01:18,630
+Q Ento, depois da MT e assim por diante.
+
+21
+00:01:18,690 --> 00:01:23,520
+Eu quero implementar a atualizao do componente do escudo atualizar e assim por diante os mtodos.
+
+22
+00:01:23,790 --> 00:01:30,400
+Ento, eu vou copi-los de xadrez de pessoas e mov-los para realmente, como sempre, o componente foi montado.
+
+23
+00:01:30,600 --> 00:01:39,480
+E  claro que seus olhos devem se ajustar, h referncia a que suas pessoas sero aptas, ento substitua todas as pessoas J
+
+24
+00:01:39,540 --> 00:01:41,960
+como referncia no registro do console.
+
+25
+00:01:41,960 --> 00:01:46,200
+Aqui com o Apicius e deve ser sobre uma atualizao aqui.
+
+26
+00:01:46,200 --> 00:01:49,170
+Eu tambm vou configur-lo como verdade por enquanto.
+
+27
+00:01:49,170 --> 00:01:53,960
+Agora vamos salvar isso e vamos agora ver como isso influencia o nosso aplicativo recarregado.
+
+28
+00:01:54,180 --> 00:01:57,300
+No vemos nenhum mtodo de atualizao aqui.
+
+29
+00:01:57,390 --> 00:02:03,030
+Deixe-me limpar isso e clique no boto sem alteraes de aviso que voc ver no incio.
+
+30
+00:02:03,060 --> 00:02:08,850
+Estamos na atualizao, na verdade, como deve ser o ativador de atualizao do componente e isso faz
+
+31
+00:02:08,850 --> 00:02:15,410
+sentido porque ao clicar apenas neste boto, o estado definido  definido, e, portanto, acionar o atualizador desse componente.
+
+32
+00:02:15,720 --> 00:02:22,050
+de atualizao nos componentes filho porque, antes de podermos alterar os componentes filho, o estado deve atualizar.
+
+33
+00:02:22,410 --> 00:02:26,570
+Obviamente, antes de alterar os adereos e, portanto, desencadeou o processo
+
+34
+00:02:26,970 --> 00:02:33,530
+Ento, estamos em deve concluir a atualizao e, em seguida, o componente ser atualizado e depois renderizado.
+
+35
+00:02:33,630 --> 00:02:37,200
+E agora deixamos o processo normal.
+
+36
+00:02:37,320 --> 00:02:43,440
+No final, porm, vemos dentro do componente atualizou o aplicativo Geass.
+
+37
+00:02:43,440 --> 00:02:44,630
+Ento, isso  importante.
+
+38
+00:02:44,790 --> 00:02:50,070
+Sim, ela est atualizando as execues primeiro, porque  desencadeada em uma mudana de estado que,
+
+39
+00:02:50,070 --> 00:02:52,190
+obviamente,  a primeira coisa que acontece.
+
+40
+00:02:52,260 --> 00:02:54,480
+Estes so todos os ganchos do ciclo de vida.
+
+41
+00:02:54,480 --> 00:03:00,420
+Agora vamos voltar a enviar a atualizao do componente e como podemos melhorar o desempenho do nosso aplicativo
+
+42
+00:03:00,420 --> 00:03:01,070
+com ele.
+
+43
+00:03:01,080 --> 00:03:02,530
+Deixe-me mostrar-lhe um exemplo.
+

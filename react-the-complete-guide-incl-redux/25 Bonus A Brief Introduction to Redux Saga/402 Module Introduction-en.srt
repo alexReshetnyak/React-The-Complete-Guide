@@ -1,0 +1,64 @@
+1
+00:00:02,360 --> 00:00:09,290
+Welcome to this bonus module. In this course, we obviously used a lot of redux as it is an integral part
+
+2
+00:00:09,380 --> 00:00:17,120
+of react applications. In our burger builder, we also used it and when working with redux, we also have
+
+3
+00:00:17,120 --> 00:00:24,890
+to deal with the problem, in quotation marks, of handling asynchronous actions like reaching out to a
+
+4
+00:00:24,890 --> 00:00:25,980
+server.
+
+5
+00:00:26,180 --> 00:00:33,140
+We dealt with this problem by using redux-thunk in this course, redux-thunk just to bring it back into
+
+6
+00:00:33,140 --> 00:00:40,510
+memory is a package which allows us to create action creators where we run the asynchronous code and
+
+7
+00:00:40,520 --> 00:00:42,520
+where we then dispatch other actions
+
+8
+00:00:42,530 --> 00:00:47,690
+once we're done and there's nothing wrong with this approach, that's really important to me.
+
+9
+00:00:47,930 --> 00:00:55,220
+In this module I will present an alternative which is not necessarily better or worse, it's just an alternative
+
+10
+00:00:55,250 --> 00:00:58,600
+which you might like more but which you also might not like
+
+11
+00:00:58,610 --> 00:01:07,130
+more, redux saga. Now redux saga is a package which follows a different approach of working with asynchronous
+
+12
+00:01:07,130 --> 00:01:12,440
+code and it doesn't mix it with the act of dispatching actions.
+
+13
+00:01:12,440 --> 00:01:16,840
+Now let's have a look at how it works and what better place to practice it
+
+14
+00:01:16,910 --> 00:01:23,080
+than in our burger builder project, that is where we already have all the logic, right?
+
+15
+00:01:23,180 --> 00:01:24,520
+So let's dive into that
+
+16
+00:01:24,620 --> 00:01:27,430
+and let me show you how redux saga works.
+

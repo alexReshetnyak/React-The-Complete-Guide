@@ -1,0 +1,252 @@
+1
+00:00:02,240 --> 00:00:08,730
+Oluturanlar zerinde emirler iin altk ve onlar sevk edebilmek iin altk imdi elbette Producer'm
+
+2
+00:00:08,730 --> 00:00:15,450
+iin devlet sipari etmeyi ynetmeliyiz ve bunun iin redktr klasrndeki sipari dne gideceim ve her
+
+3
+00:00:15,690 --> 00:00:22,440
+eyden nce yapacam. Hareket trlerimi buradan buraya aktarn nk switch case ifademde onlara ihtiyacm var,
+
+4
+00:00:22,440 --> 00:00:26,110
+bu nedenle eylemlere ve eylem trlerine ulamak istiyorum.
+
+5
+00:00:26,520 --> 00:00:34,010
+Sradaki bir sava sras ismi veya sadece indirgeyici oluturun, nk bu azaltc ilevi sonuna
+
+6
+00:00:34,020 --> 00:00:37,610
+yaklayor ve normal bir azaltc olarak yapacam.
+
+7
+00:00:37,680 --> 00:00:44,270
+Yani devlete ve renmi olduunuz gibi iki girdi alan bir ilev.
+
+8
+00:00:44,310 --> 00:00:49,390
+imdi bu redktr iin bu mlk adlandrmak iin balang durumu ayarlamak istiyorum.
+
+9
+00:00:49,410 --> 00:00:52,320
+Bu sabit bana balang durumunu balar.
+
+10
+00:00:52,320 --> 00:00:55,190
+Bir javascript nesnesi olmaldr ve orada olmamaldr.
+
+11
+00:00:55,200 --> 00:00:58,140
+Biraz bilgiye ihtiyacm var.
+
+12
+00:00:58,140 --> 00:01:00,460
+Kesinlikle btn emirlerimi almak istiyorum.
+
+13
+00:01:00,480 --> 00:01:02,620
+Byle bir dizi olabilir.
+
+14
+00:01:02,700 --> 00:01:11,610
+Ayrca, sipari verme aamamzda olup olmadn renmek isteriz, aksi takdirde bir mlk ekleyebilir veya
+
+15
+00:01:11,690 --> 00:01:19,760
+kovalamak veya yklemek ve onu yanl olarak ayarlayabilirsek balangta doru olarak ayarlanmaldr.
+
+16
+00:01:19,950 --> 00:01:25,390
+Elbette sipari vermeye baladktan sonra bir sorun hemen kar karya gelecektir.
+
+17
+00:01:25,530 --> 00:01:29,860
+Bu bizim emir yaratcs mzda m.
+
+18
+00:01:29,970 --> 00:01:36,590
+Baarya yalnzca balanr ve burada balatma eylemi baarsz olur.
+
+19
+00:01:36,630 --> 00:01:43,410
+Aslnda okuma X'de yakalayabileceimiz hibir eyi gndermiyoruz X yerine normal bir model
+
+20
+00:01:43,460 --> 00:01:50,610
+olan eylemlerimizi gndermek iin baz async kodu altryoruz, ancak yklemeye balarken durumumuzda ykleme
+
+21
+00:01:50,610 --> 00:01:55,790
+mlkmz gncellemek istiyoruz. Ek bir ileme ihtiyacmz var. sevk etmek.
+
+22
+00:01:55,830 --> 00:02:01,130
+Bu aklmzda tutmamz gereken bir ey ve burada bu konudaki bir sonraki konferansa deineceim.
+
+23
+00:02:01,230 --> 00:02:03,820
+Zaten sahip olduumuz faaliyetler zerinde alalm.
+
+24
+00:02:04,140 --> 00:02:10,410
+Bu yzden redktrmde farelerim var nce bu benim devletimi ilk duruma eit kabul ettiim anlamna geliyordu.
+
+25
+00:02:10,470 --> 00:02:17,540
+Bu yzden balangta bir duruma sahibiz ve ardndan ilem trn deitireceim switch case bildirimi ekleyeceim.
+
+26
+00:02:17,880 --> 00:02:24,720
+Ve imdi elbette farkl durumlarm ele almak istiyorum, bu yzden burada eylem trleri ve sonra l
+
+27
+00:02:25,140 --> 00:02:26,310
+bir dava var.
+
+28
+00:02:26,490 --> 00:02:30,600
+Kovalamamz baard.
+
+29
+00:02:30,600 --> 00:02:33,680
+Daha sonra belirli bir devlete dnmek istiyorum.
+
+30
+00:02:33,690 --> 00:02:34,820
+Bu konuda ok yaknda alacam.
+
+31
+00:02:34,920 --> 00:02:43,860
+Sradaki durum, eylem tr satn alma hamburgeri baarszlna sahip olduum ve o zaman farkl bir
+
+32
+00:02:43,890 --> 00:02:52,310
+durumu aka dndrmek istediim ve daha sonra geerli duruma geri dnmek istediim varsaylan durumum var.
+
+33
+00:02:52,350 --> 00:02:56,470
+Bu arada bir ok nemli, nk bir ift redktr yaknda birletiriyoruz.
+
+34
+00:02:56,480 --> 00:03:01,890
+Elbette, farkl bir redktrde ilem gren bir ey varsa, bir eyleri geri almanz gerekir.
+
+35
+00:03:02,150 --> 00:03:07,450
+Sonunda drclerimi burada sonbahar varsaylan olarak vermek istiyorum.
+
+36
+00:03:07,460 --> 00:03:11,500
+imdi baar zerine mantk zerinde alalm.
+
+37
+00:03:11,510 --> 00:03:18,740
+Akas, bu sray sipariler dizimime kaydetmek istiyorum ve yklemeyi yanl yapmak istiyorum nk
+
+38
+00:03:18,740 --> 00:03:19,600
+tamamland.
+
+39
+00:03:20,030 --> 00:03:22,760
+Bu nedenle her eyden nce eski durumu kopyalayn.
+
+40
+00:03:22,760 --> 00:03:32,570
+yeni bir eyi birletirdim ve concat rendiiniz gibi yeni bir dizi dndryor ve bu yzden bunu deimez olarak ekledik.
+
+41
+00:03:32,840 --> 00:03:39,860
+Daha sonra iki dosyay ykledi ve sonra emirlerimi gncellemem gerekiyor imdi emirlerim Shippey
+
+42
+00:03:39,950 --> 00:03:41,410
+eski siparilerimi ve
+
+43
+00:03:41,660 --> 00:03:51,220
+imdi buraya eklemek istediim yeni dzen, aslnda Neden eylemden aldm emirdir.
+
+44
+00:03:51,260 --> 00:03:54,110
+Bunu, sipari eylemi oluturucusunda grebilirsiniz.
+
+45
+00:03:54,260 --> 00:03:59,600
+Orada sipari verisi aldk, ancak hepsi ayr bir mlkte sipari kimlii ald.
+
+46
+00:03:59,630 --> 00:04:02,600
+kinizi birlikte tek bir nesne haline getirmeliyim.
+
+47
+00:04:02,930 --> 00:04:05,700
+yleyse, sipariime gre Jr'nin hatasn yapacam.
+
+48
+00:04:06,000 --> 00:04:14,700
+sipari kimlii ve bu sunucu geri alrsnz KIMLII olan yeni bir zellik kimlii ekleyin.
+
+49
+00:04:15,420 --> 00:04:23,270
+Yeni sipariinize belki yeni bir sabit ekleyeceim ve bunu, ncelikle, tmnn zerine aktarlan
+
+50
+00:04:23,280 --> 00:04:32,100
+sipari verileri olan eylem sipari verisinin tm zelliklerini yaptrdm bir javascript nesnesine eit ayarlayacam. sunucusu
+
+51
+00:04:32,100 --> 00:04:36,590
+ve ben bu dier mlk iin bavuran eylem
+
+52
+00:04:37,720 --> 00:04:42,260
+Babamla yeni bir emrim var ve burada birletirmek isteyeceim ey buydu.
+
+53
+00:04:42,400 --> 00:04:47,530
+Baarsz olduu iin imdi Yeni Sipari verin.
+
+54
+00:04:47,750 --> 00:04:51,140
+Eski devlete geri dnmek istiyorum.
+
+55
+00:04:51,140 --> 00:04:57,050
+istedim nk baarsz olsaydm bile yine de yaplrd ve D ile iletiim kurmak
+
+56
+00:04:57,050 --> 00:05:03,770
+iin hata ileyicisi yksek sipari bileeni ekledikten sonra hata o modelden ele alnmaldr veri.
+
+57
+00:05:03,830 --> 00:05:08,390
+Kesinlikle emirlerimi temizlemek istemiyorum, ancak elbette iki d de yklemek
+
+58
+00:05:08,390 --> 00:05:14,070
+Artk bunu yaptmza gre, burada yaptm bir hata da gryorum ancak bunu bir sonraki Lechter'da
+
+59
+00:05:14,060 --> 00:05:15,170
+sizinle birlikte dzelteceim.
+
+60
+00:05:15,170 --> 00:05:17,520
+Bu yzden her eyden nce kullancya geri dnn.
+
+61
+00:05:17,660 --> 00:05:21,150
+Baar ve baarszlk vakalarn ele alyoruz iyi grnyor.
+
+62
+00:05:21,170 --> 00:05:22,560
+imdi bu hatay dzeltelim.
+
+63
+00:05:22,570 --> 00:05:28,130
+Sadece grdm ve bir burger getirirken yklemeyi doru ayarladmzdan emin olalm.
+

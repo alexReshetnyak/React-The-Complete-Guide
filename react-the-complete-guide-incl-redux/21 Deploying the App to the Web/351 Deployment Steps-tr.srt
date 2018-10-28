@@ -1,0 +1,136 @@
+1
+00:00:02,280 --> 00:00:06,200
+Bir tepki uygulamas datrken hangi admlar izlememiz gerekiyor?
+
+2
+00:00:06,480 --> 00:00:11,410
+ncelikle temel yolu kontrol etmemiz ve ayarlamamz gerekiyor,
+
+3
+00:00:11,430 --> 00:00:16,890
+bu sadece tepki veren ynlendiriciyi kullandmzda ve uygulamay tarayc
+
+4
+00:00:16,890 --> 00:00:24,840
+ynlendiricindeyken yklediinde nemlidir, bazename zelliini ayarlayabilirsiniz. Uygulamanz, kk rotanzdan, rota alanndan baka bir eyden
+
+5
+00:00:24,840 --> 00:00:25,140
+sunulduunda
+
+6
+00:00:25,150 --> 00:00:32,040
+bu her zaman gereklidir. Uygulamanz rnek olarak sunuyorsanz. com / my-app, daha sonra
+
+7
+00:00:32,160 --> 00:00:36,920
+ynlendiricinin dzgn almas iin benim basename uygulamam ayarlamanz gerekir.
+
+8
+00:00:37,020 --> 00:00:38,910
+Bu ilk nemli ey,
+
+9
+00:00:38,910 --> 00:00:44,850
+ikinci nemli ey, optimize edilmi bir proje ina etmemiz gerektiidir, bu, bizim
+
+10
+00:00:44,850 --> 00:00:47,060
+uygulamada uygun bir komutla
+
+11
+00:00:47,160 --> 00:00:54,630
+gerekletirilir, npm run tepki uygulamas projelerinde altr. Bu, projeyi otomatik olarak oluturacak ve tm
+
+12
+00:00:54,690 --> 00:00:58,920
+javascript gruplarmz bir sunucuya ykleyeceimiz ok kk bir
+
+13
+00:00:58,920 --> 00:01:04,680
+kod tabanna sahip olacak ekilde optimize edecektir, nk mmkn olduu kadar
+
+14
+00:01:04,830 --> 00:01:07,800
+hzl olacandan, mmkn olduunca az kod gnderebilmektesiniz.
+
+15
+00:01:07,830 --> 00:01:16,650
+Aklda tutulmas gereken bir dier nemli nokta da sunucunuzun her zaman dizine hizmet etmesidir. html dosyas da, zellikle de
+
+16
+00:01:16,650 --> 00:01:23,910
+404 vakada, internetin alma eklinden dolay gereklidir.
+
+17
+00:01:23,940 --> 00:01:32,350
+Kullancnz uygulamay ziyaret ederse. com / users, daha sonra sunucu o rotay alan
+
+18
+00:01:32,460 --> 00:01:38,550
+ilk kiidir ve sunucu / kullanc yolunu bilmiyor nk tepki uygulamanzda tanmladnz.
+
+19
+00:01:39,090 --> 00:01:42,240
+imdi bir hata atmamak iin, tepki uygulamanzn yolu ayrtrma
+
+20
+00:01:42,360 --> 00:01:48,140
+ans elde etmesi ve endeksi dndrdnzde bunu yapmas gerekir. Bu bilinmeyen yol
+
+21
+00:01:48,130 --> 00:01:51,520
+iin html dosyas, sonunda
+
+22
+00:01:51,600 --> 00:01:54,360
+sunucu iin bilinmemektedir.
+
+23
+00:01:54,360 --> 00:01:59,190
+Yani daima endeksi dndr. 404 vakada html,
+
+24
+00:01:59,190 --> 00:02:05,160
+aksi halde ynlendirme baml tepki uygulamalarnz almayacaktr.
+
+25
+00:02:05,160 --> 00:02:12,600
+Son olarak, ikinci admdan aldnz yap dosyalarn ykleyin, projeyi statik bir sunucuya kurun ve optimize edin, PHP
+
+26
+00:02:12,600 --> 00:02:13,390
+veya Dm
+
+27
+00:02:13,620 --> 00:02:17,980
+altran bir sunucuya veya bunun gibi bir eye ihtiyacnz yoktur.
+
+28
+00:02:18,120 --> 00:02:24,570
+Sonunda, burada ne datacanz, html ve biraz css ve bir ok javascript'den oluan tek
+
+29
+00:02:24,660 --> 00:02:26,440
+bir sayfa uygulamasdr, bunlarn
+
+30
+00:02:26,490 --> 00:02:34,140
+hibiri sunucu taraf diline ihtiya duymaz, bu yzden AWS S3, Github sayfalar veya Firebase gibi statik
+
+31
+00:02:34,230 --> 00:02:41,420
+bir sunucu veya herhangi bir sunucu yapacak ve sadece proje arivinizi deil, yap eserlerini ykleyeceksiniz.
+
+32
+00:02:41,460 --> 00:02:47,200
+Yap malzemeleri bir / derleme klasrnde depolanacak ve bunu size bir saniye
+
+33
+00:02:47,610 --> 00:02:53,150
+iinde gstereceim ve aslnda hepsi bu. Tepki uygulamanz datmanz bu kadar kolaydr.
+
+34
+00:02:53,400 --> 00:02:56,040
+imdi bunu bir sonraki derste beraber yapalm.
+

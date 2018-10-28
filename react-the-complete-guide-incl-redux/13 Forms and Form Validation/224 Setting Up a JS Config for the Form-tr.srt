@@ -1,0 +1,376 @@
+1
+00:00:02,160 --> 00:00:05,060
+Bu yzden son konferansta formumuz iin baz temel stiller var.
+
+2
+00:00:05,080 --> 00:00:08,230
+Hepimiz hatay dzeltmek iin tekrar edeceiz.
+
+3
+00:00:08,230 --> 00:00:14,710
+imdi formumuzu dinamik olarak oluturmann ve her bir enin nasl grndn aka tanmlamann bir
+
+4
+00:00:14,710 --> 00:00:15,430
+yolunu bulalm.
+
+5
+00:00:15,430 --> 00:00:20,470
+Bunun iin siparile birlikte gemek istediim verilere, isim ve adres gibi baz mteri verilerini
+
+6
+00:00:20,470 --> 00:00:24,070
+elde etmek iin bakacam ve sonra bu teslim yntemi alacaz.
+
+7
+00:00:24,070 --> 00:00:29,260
+Bu, en hzldan en ucuza veya byle bir ey arasndan seim yapabileceimiz bir d olabilir.
+
+8
+00:00:29,260 --> 00:00:38,080
+eyaletimizdeki tm element verileri orada bir javascript nesne olmas gereken sipari formu mlkne sahip olabiliriz.
+
+9
+00:00:38,260 --> 00:00:45,580
+Yani bunun iin, bu form ekilini temelde saklamak veya ilemek istediinizi syleyin;
+
+10
+00:00:45,730 --> 00:00:50,870
+Ve bu javascript Optik'te tm yabanc alanlar bu yzden tm girdileri bulmak istedim.
+
+11
+00:00:51,040 --> 00:00:54,180
+Nasl yaplandrlacaklarn ve deerlerini.
+
+12
+00:00:54,460 --> 00:01:00,160
+imdi mterimle birlikte ayarm yapacam ve teslim yntemi, bu alanlar u an
+
+13
+00:01:00,160 --> 00:01:06,580
+Sipari nesnesinden silecek ve sipari formuna ekleyerek bunu dzeltmek istemiyorum, bylece sahip olmak
+
+14
+00:01:06,580 --> 00:01:09,520
+istediim tm girdilere sahip olacam .
+
+15
+00:01:09,520 --> 00:01:12,330
+Bylece mteriden ve adresten kurtuluyorum.
+
+16
+00:01:12,340 --> 00:01:15,780
+Yani burada bu i ie gemi zelliklerden.
+
+17
+00:01:15,790 --> 00:01:22,860
+Dolaysyla, artk her mlkn bir girdiyi temsil ettii sipari formundaki baz zelliklere sahibiz.
+
+18
+00:01:22,860 --> 00:01:24,650
+Yaratmak istiyorum
+
+19
+00:01:24,990 --> 00:01:32,050
+imdi ama, girdilerin neye benzediini tanmlamaktr, bylece bu nesneyi dinamik olarak geirebiliriz, bylece
+
+20
+00:01:32,050 --> 00:01:37,570
+eleri dinamik olarak ekleyebilir ve uygun bir giri esi oluturabiliriz.
+
+21
+00:01:37,570 --> 00:01:42,200
+Bunun iin her e iin o elemann tr zelliklerini istiyorum.
+
+22
+00:01:42,490 --> 00:01:44,380
+Ve bu normal bir girdi eleman olmaldr.
+
+23
+00:01:44,380 --> 00:01:51,910
+l vergisini temel olarak dk ve byk olmayan sadece bir etiket adn imzalamalyz, daha sonra Element'in sahte
+
+24
+00:01:51,910 --> 00:01:57,490
+olmasn istediimizi ve bu zelliklerin isimleri elbette tamamen size kalm olduunu varsayalm.
+
+25
+00:01:57,520 --> 00:01:58,790
+Burada normal HVM
+
+26
+00:01:59,030 --> 00:02:05,060
+Buradaki e atmas, yaplandrmay normal znitelikleri tanmlayabilir.
+
+27
+00:02:05,110 --> 00:02:08,680
+Seilen HVM etiketini oluturabiliriz.
+
+28
+00:02:09,010 --> 00:02:12,040
+Yani burada metin olmas gereken bir tr olabilir.
+
+29
+00:02:12,040 --> 00:02:15,710
+Burada da sizin adnz olabilecek yer tutucuyu ayarlayabiliriz.
+
+30
+00:02:15,760 --> 00:02:21,670
+Bu, boyal girdi oluturulan girdiyi datmak istediim ey olacak ve sonra da ad iin bir
+
+31
+00:02:21,670 --> 00:02:23,500
+deer elde etmek istiyoruz diyelim.
+
+32
+00:02:23,710 --> 00:02:31,120
+deer Maximillian veya tabii ki balangta bo bir deer olabilir ve imdilik bunun iindir.
+
+33
+00:02:31,120 --> 00:02:31,830
+Buradaki
+
+34
+00:02:31,930 --> 00:02:38,380
+Ve bu, imdi tm eler iin tekrarlamak istediim bir kalptr ve elbette biraz daha
+
+35
+00:02:38,380 --> 00:02:44,830
+temiz bir kod yazabilirsiniz; byle bir javascript nesnesi oluturan bir yardmc ilev oluturabilir, bylece
+
+36
+00:02:44,830 --> 00:02:48,010
+burada onu balatan bir ilevi arrsnz.
+
+37
+00:02:48,100 --> 00:02:52,090
+Burada neler olup bittiini netletirmek iin her ey yolunda.
+
+38
+00:02:52,180 --> 00:02:55,730
+Buna ramen u an snfmz iirecek.
+
+39
+00:02:56,230 --> 00:02:58,810
+Yani streatch de eleman metni girilecek.
+
+40
+00:02:59,170 --> 00:03:04,980
+Ve sonra da siz sadece giri caddesi gibi bu deer boalm olabilir.
+
+41
+00:03:05,230 --> 00:03:09,670
+Posta metnini ayn tipte metin girii yapyor mu?
+
+42
+00:03:09,670 --> 00:03:15,520
+Elbette burada numara numaras girebilirsiniz, ancak kullanclar metin olarak desteklemek iin
+
+43
+00:03:15,520 --> 00:03:22,060
+ayrlmak isteyebilir, bylece kullanclar ayn zamanda baz karakterleri ieren kodlar gerektii yerde girebilirler.
+
+44
+00:03:22,060 --> 00:03:25,440
+Dolaysyla tmnn kodunu yer tutucu olarak ekleyin.
+
+45
+00:03:27,110 --> 00:03:32,780
+lke ayrca alr listeyi kullanabileceinizi duyacak, ancak burada da bir metin girii yapacam, bylece
+
+46
+00:03:32,810 --> 00:03:38,390
+herhangi bir lkeyi kabul edebilelim. nk kstlanm lke ile bir alr kutu uygulamak
+
+47
+00:03:38,390 --> 00:03:42,860
+veri biraz daha karmaktr ve muhtemelen nc bunun iin parti paketi.
+
+48
+00:03:42,860 --> 00:03:44,010
+Sonra da e-posta.
+
+49
+00:03:44,030 --> 00:03:46,680
+Son olarak bu tr e-posta olabilir.
+
+50
+00:03:46,700 --> 00:03:50,890
+ylesine varsaylan HVM tr e-posta girdisine atayabilirsiniz.
+
+51
+00:03:51,020 --> 00:03:55,070
+Ve burada aslnda postanz ya da e-postanz syleyebilirsiniz.
+
+52
+00:03:55,070 --> 00:03:56,910
+Bu yzden bununla kuracaz.
+
+53
+00:03:56,920 --> 00:04:03,410
+imdi teslim yntemi tabii ki de byle bir cisim almal burada
+
+54
+00:04:03,440 --> 00:04:12,800
+elementler trdr ancak select ve D elemanlar elbette baz elementlere sahip olabilirler fakat yer tutucusu olmayan
+
+55
+00:04:12,800 --> 00:04:14,660
+tre sahip olabilirler.
+
+56
+00:04:14,660 --> 00:04:18,970
+Burada istee bal olmasn istediimiz seenekleri tanmlamak istediimizi syleyebiliriz.
+
+57
+00:04:18,980 --> 00:04:25,520
+Sonra tabii ki bir dizi olmal ve sonra javascript nesnelerine tekrar girebiliriz,
+
+58
+00:04:26,210 --> 00:04:33,870
+burada en hzl ve en hzls olan grnt deeri gibi bir ey olabilir.
+
+59
+00:04:33,890 --> 00:04:38,060
+Ve tabii ki disk ayarlarnz tam ihtiyalarnza gre ayarlayabilirsiniz.
+
+60
+00:04:38,060 --> 00:04:40,830
+Sadece baz rnekler gsteriyorum.
+
+61
+00:04:40,890 --> 00:04:50,720
+Yani burada elbette en ucuz olan ikinci bir seenek olabilir ve burada en ucuzu.
+
+62
+00:04:50,760 --> 00:04:53,130
+Bu benim datm yntemim olabilir bu.
+
+63
+00:04:53,130 --> 00:04:59,520
+Bylece, imdi bu olduka uzun sipari formunu, temel olarak farkl form elerimizin baz tanmlayclarna sahip olduumuz
+
+64
+00:04:59,580 --> 00:05:01,790
+tm anahtar deer iftleriyle elde ediyoruz.
+
+65
+00:05:01,920 --> 00:05:05,070
+Ve sonra yaplandrma ve yukar bir javascript nesnesi.
+
+66
+00:05:05,220 --> 00:05:12,330
+Ve imdi giri elemanmz, bununla birlikte alabilmek iin ayarlayalm, bylece bu girdileri
+
+67
+00:05:12,450 --> 00:05:19,680
+dinamik olarak, yalnzca bunun iin bir dizide dntrmek zorunda olduumuz iyi nesneyle dngleyerek
+
+68
+00:05:19,680 --> 00:05:21,470
+dinamik olarak oluturabiliriz.
+
+69
+00:05:21,660 --> 00:05:23,890
+Ancak girdi elemann ayarlayarak balayalm.
+
+70
+00:05:24,060 --> 00:05:26,140
+Bunu da bu konferansta yapacam.
+
+71
+00:05:26,370 --> 00:05:34,350
+Dolaysyla muhtemelen, bir tr, atmay ve deeri iletmek istiyoruz gibi grelim gibi
+
+72
+00:05:34,350 --> 00:05:36,600
+bir ey geirmek istiyoruz.
+
+73
+00:05:36,690 --> 00:05:45,630
+Bu yzden unu yapmalyz: Burada yer tutucu adn kaldralm burada eleman trn buraya gnderelim; burada dnmesi
+
+74
+00:05:45,960 --> 00:05:52,500
+gereken bir ey olmamal ve bu kk harfleri yazmamz gerekmiyor nk yaratt
+
+75
+00:05:52,500 --> 00:05:59,910
+yolda sahne datm yntemini deitireceiz element ve daha sonra da tabii ki gerek
+
+76
+00:06:00,210 --> 00:06:03,260
+deerler olan deer yaknda eklenecektir.
+
+77
+00:06:03,300 --> 00:06:06,800
+Sonra girdi elemanmza girelim.
+
+78
+00:06:06,930 --> 00:06:09,320
+imdi farkl sahne almtk.
+
+79
+00:06:09,480 --> 00:06:13,980
+Anahtar bildirimi hala kullanmak istediim e trne sahibiz.
+
+80
+00:06:14,340 --> 00:06:23,120
+Ama sonra artk sadece sahne datm tm sahne datmak ve unsur atma zellii yoktur.
+
+81
+00:06:23,190 --> 00:06:24,310
+Ben sadece kurdum.
+
+82
+00:06:24,390 --> 00:06:30,970
+Yani elbette sonunda belirli bir girdi iin kurulan e atmasn almal mlkiyet.
+
+83
+00:06:30,990 --> 00:06:36,130
+Eyaletimizde ve orada sahne datmn yaparsak bu varsaylan olur.
+
+84
+00:06:36,150 --> 00:06:42,550
+znitelik isimleri ve bunlar elbette e atmas iinde kullanmanz nemlidir.
+
+85
+00:06:42,570 --> 00:06:44,180
+Varsaylan adlar.
+
+86
+00:06:44,610 --> 00:06:48,770
+Dolaysyla bunu ayarladk, input eleman var.
+
+87
+00:06:48,930 --> 00:06:55,220
+Elbette sadece bu yl her bir girdi elemanna deer katmak istiyorum.
+
+88
+00:06:55,260 --> 00:07:03,130
+bileenime deer mlkn ekleyeceim ve bunu sahiplik deerlerine krelteceim, bylece bu da burada da alnacak.
+
+89
+00:07:03,150 --> 00:07:04,990
+Bu yzden giri
+
+90
+00:07:05,780 --> 00:07:11,780
+Ve imdi tm bunlar, anlamak ve okumak biraz daha kolay
+
+91
+00:07:11,780 --> 00:07:21,010
+olacak ekilde elemanlar yaratmak iin tm zellikleri bu ekilde sarmalamaktadr ve girdi elemanmz bir sonraki
+
+92
+00:07:21,020 --> 00:07:24,420
+dersimizde umut verici ekilde altn sylemeliyiz.
+
+93
+00:07:24,430 --> 00:07:32,230
+imdi, gerek girdi elemanlar oluturmak iin yaplandrlm veriler iin javascript'imizi kullanmak
+
+94
+00:07:32,230 --> 00:07:32,880
+istiyorum.
+

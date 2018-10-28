@@ -1,0 +1,44 @@
+1
+00:00:02,390 --> 00:00:07,640
+Bem-vindo a este mdulo Agora, cobrimos um monte de princpios bsicos e muita teoria sobre reagir.
+
+2
+00:00:07,940 --> 00:00:13,660
+Bem, felizmente no apenas a teoria, todos ns construmos um projeto, mas isso foi mais um projeto de demonstrao.
+
+3
+00:00:13,670 --> 00:00:19,880
+ hora de construir um aplicativo de reao real para que possamos ver todos esses conceitos se juntarem para
+
+4
+00:00:19,880 --> 00:00:26,570
+que voc possa ter uma idia de como voc realmente planeja tal aplicativo e como voc construiu essa rvore de componentes
+
+5
+00:00:26,930 --> 00:00:31,730
+e usa com sucesso todos os conceitos que voc aprendeu at agora em uma aplicao.
+
+6
+00:00:31,730 --> 00:00:33,870
+Ento,  isso que vamos fazer neste mdulo.
+
+7
+00:00:33,890 --> 00:00:40,790
+um aplicativo de hambrguer para que um aplicativo onde possamos ou o usurio possa construir dinamicamente um hambrguer
+
+8
+00:00:40,790 --> 00:00:47,510
+adicione ingredientes e, em seguida, o fim do curso tudo para compr-lo comear com a fase de planejamento.
+
+9
+00:00:47,510 --> 00:00:48,090
+Vamos construir
+
+10
+00:00:48,290 --> 00:00:52,220
+E essa  a primeira coisa que quero dar uma olhada na prxima palestra.
+
+11
+00:00:52,340 --> 00:00:55,530
+Como planejamos a aplicao de reao.
+

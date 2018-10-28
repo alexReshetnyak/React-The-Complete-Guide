@@ -1,0 +1,148 @@
+1
+00:00:02,200 --> 00:00:05,980
+Prima di tutto voglio iniziare pulendo il mio database di Firebase.
+
+2
+00:00:05,980 --> 00:00:12,220
+Ho intenzione di eliminare questo nodo ordini in un database in tempo reale qui perch voglio ricominciare
+
+3
+00:00:12,220 --> 00:00:17,410
+da zero e sbarazzarmi di tutti i vecchi ordini lascer qui gli ingredienti anche
+
+4
+00:00:17,410 --> 00:00:24,100
+se torneremo presto a recuperarli dal server e non ottenerli o non averli memorizzati localmente nel nostro store
+
+5
+00:00:24,280 --> 00:00:29,680
+anche se solo per scopi dimostrativi in un'applicazione reale che potrebbe ovviamente avere senso inizializzare
+
+6
+00:00:29,680 --> 00:00:31,270
+gli ingredienti nel codice.
+
+7
+00:00:31,270 --> 00:00:33,830
+Quindi con quello vediamo cosa possiamo fare.
+
+8
+00:00:33,900 --> 00:00:39,320
+E la prima cosa che voglio veramente fare e voglio aggiungere al nostro codice gli strumenti dev di ARDE Rydex.
+
+9
+00:00:39,490 --> 00:00:43,740
+Abbiamo installato quell'estensione per il browser nell'ultimo modulo.
+
+10
+00:00:43,740 --> 00:00:50,290
+Ora vogliamo impostare il negozio qui nella nostra applicazione pi audace di Bergere in modo tale da poter utilizzare
+
+11
+00:00:50,290 --> 00:00:55,910
+anche il def tool stair perch voglio essere in grado di analizzare il mio negozio per quello.
+
+12
+00:00:55,950 --> 00:01:01,390
+Sono tornato a rilassare la pagina di estensione di Daffodil con le istruzioni di installazione e
+
+13
+00:01:01,420 --> 00:01:07,050
+c' una differenza da impostare che abbiamo utilizzato nell'ultimo modulo che torner ai dead set da l.
+
+14
+00:01:07,120 --> 00:01:09,140
+Al momento non usiamo alcun middleware.
+
+15
+00:01:09,190 --> 00:01:15,550
+abbiamo bisogno dei set di memoria avanzati in cui abbiamo bisogno di creare stimolatori di discomposizione costanti e usare
+
+16
+00:01:15,550 --> 00:01:22,440
+la funzione di composizione nativa o quella variabile speciale passata dagli strumenti di def poich non ho avuto potenziatori Ivrit.
+
+17
+00:01:22,440 --> 00:01:23,090
+Quindi non
+
+18
+00:01:23,080 --> 00:01:25,440
+Al momento non stiamo ancora utilizzando alcun middleware.
+
+19
+00:01:25,720 --> 00:01:30,730
+Per ora non possiamo andare con la configurazione base, come ho appena detto che torneremo presto
+
+20
+00:01:30,730 --> 00:01:36,130
+alla configurazione avanzata perch stiamo per aggiungere il middleware con l'impostazione di base, ma tutto ci che
+
+21
+00:01:36,490 --> 00:01:40,900
+dobbiamo fare  aggiungi questo argomento qui per creare una chiamata alla funzione store.
+
+22
+00:01:41,020 --> 00:01:47,560
+Quindi accedere a special o in realt  una delle stesse variabili speciali sull'oggetto window che
+
+23
+00:01:47,560 --> 00:01:55,770
+viene fornita dall'estensione di lettura di De X che passiamo come variabile e quindi eseguiamo anche come una funzione.
+
+24
+00:01:55,780 --> 00:02:01,930
+funzione con questo piccolo cambiamento se salviamo l'indice j come segue e torniamo alla nostra applicazione.
+
+25
+00:02:01,930 --> 00:02:08,890
+Quindi questo  semplicemente qualcosa che dobbiamo aggiungere come secondo argomento per creare l'accesso in lettura in archivio all'estensione
+
+26
+00:02:08,890 --> 00:02:10,300
+ed eseguirlo come una
+
+27
+00:02:10,540 --> 00:02:20,800
+Dovremmo gi essere in grado di aprire i nostri strumenti di sviluppo al loro passaggio per leggere X e dovrebbe caricare il nostro ispettore di redux, quindi
+
+28
+00:02:20,830 --> 00:02:26,650
+dovremmo vedere in quello stato e se aggiungo un ingrediente dovremmo vedere che aggiungere l'azione
+
+29
+00:02:26,650 --> 00:02:27,540
+ingrediente qui.
+
+30
+00:02:27,560 --> 00:02:29,490
+Ovviamente lo stesso per rimuoverlo.
+
+31
+00:02:29,650 --> 00:02:31,800
+E l possiamo anche usare il tempo triplicato.
+
+32
+00:02:31,810 --> 00:02:33,040
+Quindi funziona alla grande.
+
+33
+00:02:33,040 --> 00:02:38,530
+Quindi abbiamo la funzionalit che vogliamo, in modo che possiamo lavorare comodamente con la nostra applicazione e facilmente
+
+34
+00:02:38,530 --> 00:02:41,760
+eseguirne il debug e dare un'occhiata al nostro stato attuale.
+
+35
+00:02:41,800 --> 00:02:45,230
+Questa  la prima cosa che volevo fare in questo modo.
+
+36
+00:02:45,250 --> 00:02:53,020
+Entriamo nella nostra attuale logica di business e iniziamo ad aggiungere funzionalit per gestire gli ordini
+
+37
+00:02:53,020 --> 00:02:54,010
+con Rydex.
+

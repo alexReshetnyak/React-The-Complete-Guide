@@ -1,0 +1,288 @@
+1
+00:00:02,210 --> 00:00:03,980
+As que aqu est nuestra
+
+2
+00:00:04,040 --> 00:00:06,100
+aplicacin y, en general, funciona bien.
+
+3
+00:00:06,110 --> 00:00:09,690
+Ahora que hay un pequeo problema cuando hacemos un
+
+4
+00:00:09,920 --> 00:00:17,240
+nuevo pedido, si inspecciona el archivo reductor de pedidos, ver que en la compra de BurgerStart, que por
+
+5
+00:00:17,330 --> 00:00:20,750
+supuesto se despacha cuando hacemos clic en el
+
+6
+00:00:20,750 --> 00:00:23,200
+pedido, cuando enviamos el pedido al
+
+7
+00:00:23,570 --> 00:00:26,330
+servidor, configuramos la carga a falso
+
+8
+00:00:26,330 --> 00:00:33,470
+Ahora eso no tiene ningn sentido porque aqu queremos establecer la carga como verdadera y la hicimos establecer como
+
+9
+00:00:33,470 --> 00:00:35,440
+cierta al principio de este
+
+10
+00:00:35,540 --> 00:00:38,310
+curso, la arruin al refacturar el reductor.
+
+11
+00:00:38,390 --> 00:00:44,270
+As que esto debera ser cierto, queremos mostrar un spinner si implementamos esta funcionalidad en
+
+12
+00:00:44,270 --> 00:00:47,680
+nuestro componente cuando lo estamos enviando a un servidor,
+
+13
+00:00:47,930 --> 00:00:51,160
+por lo que esta es la primera mejora pequea.
+
+14
+00:00:51,190 --> 00:00:53,190
+Ahora hay otra mejora, si
+
+15
+00:00:53,420 --> 00:00:58,070
+estamos hablando de hacer un pedido, construyamos una hamburguesa all.
+
+16
+00:00:58,070 --> 00:01:07,020
+Ahora inicie sesin primero, enve esto y nos redirigimos aqu a nuestra pgina principal.
+
+17
+00:01:07,050 --> 00:01:14,130
+Ahora que eso no debera suceder, solucionamos esto en la seccin de autenticacin que nos redirecciona
+
+18
+00:01:14,130 --> 00:01:14,970
+a la
+
+19
+00:01:15,000 --> 00:01:22,800
+salida y estuvimos all por una fraccin de segundo, pero de alguna manera decidi redirigirnos a la
+
+20
+00:01:22,800 --> 00:01:23,600
+pgina principal.
+
+21
+00:01:23,640 --> 00:01:30,000
+As que aqu ajustamos correctamente la redireccin de autenticacin de set, pero an as decidimos que un buen lugar para nosotros sera la pgina de
+
+22
+00:01:30,000 --> 00:01:31,290
+inicio, por lo que es
+
+23
+00:01:31,290 --> 00:01:33,730
+algo ms que quiero solucionar. Ahora la razn
+
+24
+00:01:33,750 --> 00:01:41,100
+de este problema con esta redireccin incorrecta es que redirigimos en el contenedor de autenticacin aqu este cdigo,
+
+25
+00:01:41,150 --> 00:01:46,410
+all establecemos o usamos nuestra ruta de redireccionamiento para redirigir al usuario.
+
+26
+00:01:46,410 --> 00:01:53,130
+El problema es que esto ocurre en el contenedor de autenticacin y en nuestro contenedor de aplicaciones, en nuestro
+
+27
+00:01:53,160 --> 00:01:59,670
+componente de la aplicacin raz donde procesamos diferentes rutas para diferentes estados de autenticacin, all donde estamos autenticados,
+
+28
+00:01:59,970 --> 00:02:02,400
+ya no procesamos el componente de autenticacin.
+
+29
+00:02:02,400 --> 00:02:07,860
+Por lo tanto, nunca se utilizar el cdigo en el componente de autenticacin que nos redirigira correctamente a
+
+30
+00:02:07,860 --> 00:02:08,920
+la pgina de pago.
+
+31
+00:02:09,330 --> 00:02:18,780
+Para solucionar esto, podemos reintroducir la ruta de autenticacin en nuestro conjunto de rutas en el estado de autenticacin; ahora, por supuesto, la desventaja
+
+32
+00:02:18,780 --> 00:02:24,990
+es que ahora los usuarios autenticados pueden visitar la pgina de autenticacin, por otro lado, no
+
+33
+00:02:24,990 --> 00:02:26,790
+pueden hacer dao all. .
+
+34
+00:02:26,910 --> 00:02:31,440
+Por supuesto, tambin podr encontrar otras soluciones para redirigir a cualquier otro
+
+35
+00:02:31,440 --> 00:02:37,110
+lugar, pero esta es una solucin rpida, fcil y segura para volver al comportamiento original.
+
+36
+00:02:37,110 --> 00:02:44,100
+Ahora, otro problema que enfrentamos es que si construyo una hamburguesa y estoy conectado aqu, en ese generador de hamburguesas
+
+37
+00:02:44,460 --> 00:02:50,080
+aqu, vers que en ciertos tamaos de pantalla, la hamburguesa est posicionada incorrectamente, no est centrada.
+
+38
+00:02:50,110 --> 00:02:55,230
+La razn de esto es que la hamburguesa tiene un ancho que se ajusta a
+
+39
+00:02:55,230 --> 00:02:59,830
+la ventana grfica, pero siempre est dentro de un div que toma el 100%
+
+40
+00:03:00,000 --> 00:03:01,570
+del ancho de su elemento
+
+41
+00:03:01,770 --> 00:03:07,920
+de envoltura y esa sera div, que tambin dicta un cierto ancho, 80% en este caso, el checkoutSummary.
+
+42
+00:03:07,920 --> 00:03:16,410
+As que el checkoutSummary aqu est dictando un cierto ancho para nuestra hamburguesa y eso est influenciando cmo
+
+43
+00:03:16,410 --> 00:03:18,990
+se muestra aqu nuestra hamburguesa.
+
+44
+00:03:19,230 --> 00:03:26,430
+Para solucionarlo, podemos ir a nuestros componentes, a la comprobacin Resumen, podemos encontrarlo en el
+
+45
+00:03:26,430 --> 00:03:33,520
+orden, resumen de pago y donde establecemos el ancho a 500px para pantallas ms amplias.
+
+46
+00:03:33,840 --> 00:03:35,770
+Al final no quiero hacer eso,
+
+47
+00:03:35,820 --> 00:03:42,990
+quiero quedarme con el 80% que tengo de manera predeterminada y ahora con eso, si volvemos a la aplicacin y creamos una
+
+48
+00:03:43,200 --> 00:03:46,700
+nueva hamburguesa, ya estoy conectado aqu, esto La hamburguesa ahora debera
+
+49
+00:03:46,820 --> 00:03:53,510
+estar bien centrada en todas las pantallas del dispositivo, por lo que ahora se ve mucho mejor, por lo que
+
+50
+00:03:53,530 --> 00:03:58,590
+ahora la hamburguesa se ve bien todo el tiempo, sin importar dnde la estemos viendo.
+
+51
+00:03:58,620 --> 00:04:04,770
+Ahora hay otro error visual que quiero eliminar y que est en dispositivos pequeos, si
+
+52
+00:04:04,770 --> 00:04:11,850
+abrimos nuestro navegador lateral y hago clic en un enlace, navega all correctamente sin errores pero no cierra
+
+53
+00:04:11,850 --> 00:04:12,690
+el navegador
+
+54
+00:04:12,690 --> 00:04:15,150
+lateral, tengo para hacer eso manualmente
+
+55
+00:04:15,160 --> 00:04:19,420
+Por supuesto, debera cerrar el navegador lateral cada vez que haga clic en un enlace aqu.
+
+56
+00:04:19,770 --> 00:04:26,520
+Ahora para arreglar esto tenemos que ir a nuestro SideDrawer donde al final tenemos nuestro SideDrawer aqu y all tenemos
+
+57
+00:04:26,520 --> 00:04:28,500
+los elementos de navegacin y ahora
+
+58
+00:04:28,890 --> 00:04:35,370
+queremos asegurarnos de que cada vez que hagamos clic en un elemento de navegacin, esencialmente cierremos ese cajn.
+
+59
+00:04:35,610 --> 00:04:43,820
+Por lo tanto, esencialmente queremos emitir o ejecutar este mtodo cerrado, el mtodo que obtenemos en el
+
+60
+00:04:43,840 --> 00:04:46,960
+elemento cerrado en este componente SideDrawer.
+
+61
+00:04:47,040 --> 00:04:54,180
+Ahora, para hacer eso, podramos, por ejemplo, simplemente escuchar un clic en cualquier parte del sideDrawer, eso significar que
+
+62
+00:04:54,180 --> 00:05:00,510
+no solo hacer clic en los enlaces lo cerrara. Tambin podramos acceder a los tems de navegacin
+
+63
+00:05:00,690 --> 00:05:07,050
+e intentar registrarlos en el oyente ClickClick, ir aqu con la estrategia de cierre general.
+
+64
+00:05:07,170 --> 00:05:15,990
+Entonces, al hacer clic en el SideDrawer en general, intentemos llegar a los accesorios. cerrado, que debe manejarse en el componente
+
+65
+00:05:16,170 --> 00:05:21,320
+padre de este componente y cerrar este men lateral.
+
+66
+00:05:21,450 --> 00:05:26,910
+Con ese cambio en su lugar, vamos a abrir el SideDrawer, si hago clic en algn lugar de l, se cierra, pero
+
+67
+00:05:26,910 --> 00:05:28,270
+eso debera estar bien, si
+
+68
+00:05:28,420 --> 00:05:31,000
+hago clic en los pedidos, por lo tanto, tambin se cierra.
+
+69
+00:05:31,260 --> 00:05:37,320
+Entonces ahora tenemos un SideDrawer que funciona como esperaramos que funcione
+
+70
+00:05:37,320 --> 00:05:38,130
+cuando cerramos.
+
+71
+00:05:38,220 --> 00:05:43,920
+Estas fueron algunas de las fallas visuales que tuvimos y las corregimos para que ahora nuestra aplicacin se vea y se
+
+72
+00:05:43,980 --> 00:05:46,340
+comporte mejor y ms de lo que cabra esperar.
+

@@ -1,0 +1,388 @@
+1
+00:00:02,230 --> 00:00:05,260
+So let's fetch ingredients asynchronously.
+
+2
+00:00:05,260 --> 00:00:11,680
+I'll do that in the burger builder file in the actions folder where we have our action creators. I'll
+
+3
+00:00:11,740 --> 00:00:14,020
+add a new action creator
+
+4
+00:00:14,320 --> 00:00:21,960
+so I'll export a new const and I'll name it fetchIngredients or maybe better name, initIngredients
+
+5
+00:00:22,060 --> 00:00:27,340
+because we want to do this initially to load the ingredients we can use in the burger builder.
+
+6
+00:00:27,850 --> 00:00:35,560
+I don't expect any arguments on this function and I want to of course return an action ultimately, though
+
+7
+00:00:35,560 --> 00:00:36,610
+to be precise
+
+8
+00:00:36,730 --> 00:00:42,790
+I want to return a function here where I receive the dispatch function which I then can use in this
+
+9
+00:00:42,790 --> 00:00:43,920
+function body
+
+10
+00:00:44,230 --> 00:00:47,490
+and this is available, the syntax due to redux-thunk
+
+11
+00:00:47,530 --> 00:00:50,770
+which allows me to use my action creators like this.
+
+12
+00:00:50,910 --> 00:00:56,830
+Now in here, I can execute async code and dispatch a new action whenever I'm done,
+
+13
+00:00:56,860 --> 00:01:02,770
+so I actually need a second action creator which I'll export to though theoretically, I only use it internally
+
+14
+00:01:02,770 --> 00:01:08,960
+in this file, I'll name this action creator setIngredients. Here,
+
+15
+00:01:08,980 --> 00:01:16,590
+I expect to get ingredients as an argument and here, I will just return an action I want to dispatch.
+
+16
+00:01:16,660 --> 00:01:19,690
+Now for that, I need an action type
+
+17
+00:01:19,810 --> 00:01:25,040
+so let's head over to action types and let's add a new action type here,
+
+18
+00:01:25,050 --> 00:01:30,760
+I'll name it SET_INGREDIENTS and as often or as always,
+
+19
+00:01:30,800 --> 00:01:37,120
+I'll use this as the string identifier too. So SET_INGREDIENTS, that is the identifier
+
+20
+00:01:37,130 --> 00:01:40,740
+I'll listen to it in my reducer later.
+
+21
+00:01:41,350 --> 00:01:47,400
+And with that added, I can go back to the burger builder action file and in the setIngredients action
+
+22
+00:01:47,410 --> 00:01:54,800
+creator, I want to return an object where the type is actionTypes.setIngredients, just like that
+
+23
+00:01:55,210 --> 00:02:02,430
+and of course, I'll need to pass a payload, I'll name the property ingredients and that name is totally up to you.
+
+24
+00:02:02,440 --> 00:02:05,910
+The value is not, the value should be our function argument
+
+25
+00:02:05,980 --> 00:02:08,510
+which here is also named ingredients,
+
+26
+00:02:08,530 --> 00:02:12,900
+this one. With that, we get the synchronous action creator,
+
+27
+00:02:12,970 --> 00:02:19,930
+that is the action I eventually want to dispatch once the async code in initIngredients is done.
+
+28
+00:02:19,940 --> 00:02:25,550
+Let's head over to the burger builder container to fetch the async code we want to execute, this thing
+
+29
+00:02:25,550 --> 00:02:26,130
+here.
+
+30
+00:02:26,540 --> 00:02:33,770
+So I'll just cut it out of the componentDidMount function there and I'll put it into my burger builder
+
+31
+00:02:33,860 --> 00:02:40,610
+file in the actions folder. Here I want to return to axios and for that, I of course need to be able
+
+32
+00:02:40,610 --> 00:02:48,050
+to access axios. Now in the burger builder component, we imported axios from axios orders, we don't need that
+
+33
+00:02:48,050 --> 00:02:49,450
+anymore in the burger builder
+
+34
+00:02:49,460 --> 00:02:55,970
+so I can cut it from there and also move that import to the burger builder action file. There,
+
+35
+00:02:55,970 --> 00:02:58,140
+I need to reach out to axios orders,
+
+36
+00:02:58,220 --> 00:03:01,000
+I need to check if my path is correct, it actually is
+
+37
+00:03:01,000 --> 00:03:02,590
+so that's all right
+
+38
+00:03:02,590 --> 00:03:09,590
+and now we can reach out to axios in this file too. Here, the path to firebase should still be correct
+
+39
+00:03:09,680 --> 00:03:16,220
+but then of course when we get the response, I won't call this.setState and I won't do it for getting
+
+40
+00:03:16,220 --> 00:03:17,010
+an error.
+
+41
+00:03:17,150 --> 00:03:24,200
+Instead here, I want to dispatch my setIngredients action creator
+
+42
+00:03:24,290 --> 00:03:34,580
+so here, I'll execute this as a function and of course, I will dispatch response data here on an axios
+
+43
+00:03:34,640 --> 00:03:40,320
+response, the data property holds the data which will be the javascript object we want to use.
+
+44
+00:03:40,490 --> 00:03:48,050
+Now when an error occurs, we probably also want to handle that, in the burger builder container,
+
+45
+00:03:48,050 --> 00:03:54,120
+we have that error state, we have the loading state and all these things were used here
+
+46
+00:03:54,230 --> 00:04:01,070
+so I can get rid of error and loading in my burger builder now because I won't manage these state fields
+
+47
+00:04:01,070 --> 00:04:02,950
+here in that file anymore.
+
+48
+00:04:02,990 --> 00:04:09,300
+Now loading was only used to show a spinner in the order summary in case we're still loading,
+
+49
+00:04:09,380 --> 00:04:15,410
+this however shouldn't be required here anymore because we're not doing anything asynchronous when viewing
+
+50
+00:04:15,410 --> 00:04:17,720
+the modal, when viewing the order summary
+
+51
+00:04:17,720 --> 00:04:23,180
+therefore. What is important though is the order, here
+
+52
+00:04:23,300 --> 00:04:27,620
+we set our burger equal to ingredients can't be loaded if we have an error
+
+53
+00:04:27,830 --> 00:04:29,260
+and to a spinner if we don't
+
+54
+00:04:29,570 --> 00:04:32,400
+and we actually set it to a real burger builder
+
+55
+00:04:32,510 --> 00:04:34,200
+if props have been loaded.
+
+56
+00:04:34,370 --> 00:04:38,760
+So we definitely need to set this error, though not on a state anymore,
+
+57
+00:04:38,840 --> 00:04:41,120
+we want to pass it with props.
+
+58
+00:04:41,480 --> 00:04:50,780
+So for that, I need to handle this error as part of my redux state, for that, I'll go to my burger builder
+
+59
+00:04:50,780 --> 00:04:51,860
+reducer
+
+60
+00:04:51,980 --> 00:04:58,550
+and here, I'll first of all set ingredients to null initially because now we're fetching them from the web
+
+61
+00:04:58,640 --> 00:05:02,330
+again and they should be null until they were fetched,
+
+62
+00:05:02,570 --> 00:05:07,390
+that is all that's required to make sure that this check here in the burger builder fails
+
+63
+00:05:07,400 --> 00:05:11,460
+if we don't have ingredients yet so that we do display a spinner instead.
+
+64
+00:05:12,050 --> 00:05:17,610
+But I also need to add a new state to my burger builder state, I'll name it
+
+65
+00:05:18,110 --> 00:05:20,200
+error and here, I'll set this to false
+
+66
+00:05:20,210 --> 00:05:27,320
+initially, I want to set it to true though if our loading does fail. With that added, we need one more
+
+67
+00:05:27,320 --> 00:05:28,100
+action though,
+
+68
+00:05:28,220 --> 00:05:33,640
+back to the burger builder file in the actions folder, we dispatch an action if we got ingredients that's
+
+69
+00:05:33,650 --> 00:05:36,910
+great but we also need to dispatch an action
+
+70
+00:05:36,950 --> 00:05:45,950
+if that fails so that we can adjust our error state in the redux state. So I'll add a new action type
+
+71
+00:05:46,850 --> 00:05:55,550
+and I'll name it FETCH_INGREDIENTS_FAILED and use the same name as the string identifier
+
+72
+00:05:55,550 --> 00:05:59,680
+as always and then I'll add an action creator here.
+
+73
+00:05:59,720 --> 00:06:06,320
+We not only have setIngredients, I also want to have fetchIngredientsFailed here,
+
+74
+00:06:06,680 --> 00:06:10,900
+I won't get an error message so I don't need to accept any argument,
+
+75
+00:06:11,090 --> 00:06:17,720
+I just want to return a javascript object here where the type is actionTypes and then FETCH_INGREDIENTS_
+
+76
+00:06:17,720 --> 00:06:19,120
+FAILED, like this
+
+77
+00:06:19,120 --> 00:06:23,830
+and this is the action I actually want to dispatch when it fails.
+
+78
+00:06:23,990 --> 00:06:30,230
+So I'll dispatch something in the error case too, I'll dispatch fetchIngredientsFailed and don't pass
+
+79
+00:06:30,290 --> 00:06:31,540
+any arguments.
+
+80
+00:06:31,850 --> 00:06:34,310
+So with that I'm handling both cases and
+
+81
+00:06:34,410 --> 00:06:42,230
+now of course, we need to handle these new actions in the reducer and also make sure that we connect
+
+82
+00:06:42,290 --> 00:06:49,820
+our burger builder correctly to these new things like for example, the error state and one thing I just
+
+83
+00:06:49,820 --> 00:06:56,400
+noticed, we also still need axios in the burger builder container for this withErrorHandler
+
+84
+00:06:56,420 --> 00:06:57,990
+higher order component.
+
+85
+00:06:58,130 --> 00:07:04,220
+So I'll quickly grab that axios import from the burger builder action file again and re-add it to the
+
+86
+00:07:04,220 --> 00:07:06,190
+burger builder container.
+
+87
+00:07:06,230 --> 00:07:13,100
+Now one important note about that, we can still handle the errors with our higher order component here
+
+88
+00:07:13,250 --> 00:07:19,250
+because we're using an axios instance, so no matter if we do send the request from another place in the app
+
+89
+00:07:19,280 --> 00:07:21,700
+like our async action creator,
+
+90
+00:07:21,740 --> 00:07:26,900
+we can still handle it with the same axios instance which we're passing to the higher order component to
+
+91
+00:07:26,900 --> 00:07:28,210
+show our error modal
+
+92
+00:07:28,250 --> 00:07:30,020
+which of course is what we want to do
+
+93
+00:07:30,020 --> 00:07:34,460
+still, we want to have this central error handling place.
+
+94
+00:07:34,460 --> 00:07:40,190
+Now with all that in place though, our application wouldn't work as expected because now we need to work
+
+95
+00:07:40,190 --> 00:07:43,490
+on the reducer to handle these new action types
+
+96
+00:07:43,490 --> 00:07:46,320
+we have for fetching ingredients.
+
+97
+00:07:46,400 --> 00:07:48,110
+Right now, it's always spinning.
+

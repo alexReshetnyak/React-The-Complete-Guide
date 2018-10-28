@@ -1,0 +1,76 @@
+1
+00:00:02,240 --> 00:00:05,200
+Geri bir saatlik Bergere projemiz var.
+
+2
+00:00:05,200 --> 00:00:12,460
+Ona baz rota oluturma zaman ve gerek ders uygulamasnda son ders modlnde
+
+3
+00:00:12,460 --> 00:00:14,150
+rendiimiz eyleri kullann.
+
+4
+00:00:14,350 --> 00:00:20,560
+imdi videodan zaman zaman yararlanmaya ve baz zellik uygulamaya ekinmeyin.
+
+5
+00:00:20,560 --> 00:00:24,580
+Ben size ynlendirici kullanarak uygulama gstermek zereyim.
+
+6
+00:00:25,060 --> 00:00:32,760
+Bergere'mizi kontrol etmemize izin veren bir sayfa ekleyerek balamak istiyorum, bunun gibi
+
+7
+00:00:32,760 --> 00:00:33,550
+grnmyor.
+
+8
+00:00:33,550 --> 00:00:39,700
+ve daha sonra talebi arkadan gnderdik ve o burgeri gnderdik ve orada sakladk.
+
+9
+00:00:39,700 --> 00:00:43,890
+Tkladmz bir madde ekledik, imdi devam et dmesini tkladk
+
+10
+00:00:43,960 --> 00:00:50,980
+imdi burgeri kaydetmeden nce onu kontrol iin bir miktar
+
+11
+00:00:51,220 --> 00:00:54,000
+bilgi girmek zorunda kaldm.
+
+12
+00:00:54,250 --> 00:00:59,130
+Bu yzden kontrol sayfasnda grmek istediim ilk sayfa olmal.
+
+13
+00:00:59,140 --> 00:01:05,630
+Ayrca burada stte gezinmemizi salayacak bir balant var, ancak bu modl
+
+14
+00:01:05,630 --> 00:01:10,620
+iin muhtemelen yerini sipariler sayfamzla deitirecek daha mantkl olacandan.
+
+15
+00:01:10,630 --> 00:01:16,840
+Ancak, deme bileeniyle balayalm ve bir sonraki konferansta Boulding borcuyla balayalm.
+
+16
+00:01:16,840 --> 00:01:21,610
+pek ok farkl yol var ama gerekten ynlendirme ile ilgili deil .
+
+17
+00:01:21,610 --> 00:01:27,520
+Kesinlikle nceden atlamak ve samalk kendi banza ekinmeyin ama ayn zamanda benimle birlikte yapmaktan
+
+18
+00:01:27,520 --> 00:01:32,330
+ekinmeyin, nk akas, kontrol bileeni oluturma ve bileenin kendisi oluturmak iin
+
+19
+00:01:32,380 --> 00:01:33,700
+Bir sonraki derside grrz.
+

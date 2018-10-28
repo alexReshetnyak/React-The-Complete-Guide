@@ -1,0 +1,276 @@
+1
+00:00:02,200 --> 00:00:05,940
+Fizemos um bom progresso e estamos chegando ao final deste mdulo,
+
+2
+00:00:05,980 --> 00:00:08,560
+h mais duas coisas que quero fazer.
+
+3
+00:00:08,610 --> 00:00:17,830
+Eu tambm quero armazenar o ID do usurio em qualquer ordem que eu colocar, de modo que no backend nos pedidos, ns no tenhamos apenas
+
+4
+00:00:17,830 --> 00:00:24,370
+ingredientes, mas nos dados do pedido ou como um campo extra, tambm armazenamos o ID do usurio
+
+5
+00:00:24,370 --> 00:00:25,510
+que fez esse
+
+6
+00:00:25,510 --> 00:00:31,540
+pedido  outra boa melhoria para nosso aplicativo e, alm disso, podemos garantir que s recebemos
+
+7
+00:00:31,540 --> 00:00:32,560
+pedidos desse usurio.
+
+8
+00:00:32,560 --> 00:00:39,250
+A outra coisa que quero fazer  tambm garantir que voc s possa visitar a pgina de
+
+9
+00:00:39,250 --> 00:00:45,430
+pedidos e a pgina de checkout, mesmo que redirecionemos para l, se voc no estiver criando
+
+10
+00:00:45,440 --> 00:00:46,420
+um hambrguer, mas
+
+11
+00:00:46,450 --> 00:00:49,280
+s poder visit-lo se estiver conectado dentro.
+
+12
+00:00:49,300 --> 00:00:55,900
+O que eu tambm quero fazer  que, se voc estiver desconectado como eu estou aqui agora, se voc visitar
+
+13
+00:00:55,900 --> 00:00:56,950
+/ orders, voc
+
+14
+00:00:57,010 --> 00:01:01,750
+no pode ir l, ns j removemos o item de navegao, mas visitando manualmente funciona.
+
+15
+00:01:01,750 --> 00:01:03,310
+Ento, essas so as coisas que quero
+
+16
+00:01:03,310 --> 00:01:11,240
+fazer, vamos comear guardando a pgina de pedidos para que os usurios no autenticados no possam visit-la. Para isso, eu ensinei como fazer isso na seo de
+
+17
+00:01:11,470 --> 00:01:15,150
+roteamento,  super fcil devido ao modo como o roteador
+
+18
+00:01:15,190 --> 00:01:23,170
+funciona, no container do aplicativo onde temos todas as nossas rotas, se no renderizarmos esse componente de rota, no teremos maneira
+
+19
+00:01:23,470 --> 00:01:28,090
+de ir l, ns apenas no podemos alcan-lo porque o roteador reage
+
+20
+00:01:28,120 --> 00:01:34,590
+no est ciente disso e nunca ir carreg-lo. Por esse motivo, podemos simplesmente adicionar
+
+21
+00:01:34,660 --> 00:01:42,190
+uma constante aqui ao componente app, mapStateToProps para acessar nosso estado e mape-lo para adereos
+
+22
+00:01:42,190 --> 00:01:44,330
+surpreendentemente e ento aqui,
+
+23
+00:01:44,620 --> 00:01:53,710
+eu quero retornar um objeto javascript e adicionar isAuthenticated como um prop e definir esse igual ao estado
+
+24
+00:01:53,710 --> 00:02:00,480
+auth e esta verificao antiga onde comparamos o token a no ser nulo.
+
+25
+00:02:00,970 --> 00:02:04,760
+Vamos agora passar o mapStateToProps para a funo connect e
+
+26
+00:02:04,990 --> 00:02:09,080
+agora podemos acessar o isAuthenticated em nosso container e l,
+
+27
+00:02:09,340 --> 00:02:13,340
+eu quero us-lo nos pedidos e na pgina de checkout.
+
+28
+00:02:13,360 --> 00:02:20,310
+Ento, na verdade, criarei uma nova varivel que nomeei rotas aqui, que contm alguns jsx, essas devem
+
+29
+00:02:20,320 --> 00:02:26,810
+ser minhas rotas padro e, em seguida, adicionarei uma instruo if onde verifico se essa propriedade
+
+30
+00:02:26,820 --> 00:02:27,730
+Autenticated 
+
+31
+00:02:27,730 --> 00:02:32,220
+o caso, portanto, se esto logados e as rotas sero diferentes.
+
+32
+00:02:32,560 --> 00:02:37,820
+Ento minhas rotas no autenticadas devem ser auth e slash, ento vou
+
+33
+00:02:38,020 --> 00:02:43,150
+copiar tudo isso aqui e remover a rota de logout e eu
+
+34
+00:02:44,860 --> 00:02:54,570
+preciso quebrar isso, claro, porque isso no  apreciado pelo meu cdigo jsx aqui, ento podemos cortar a instruo switch aqui tambm porque
+
+35
+00:02:54,640 --> 00:03:00,060
+agora essas so todas as nossas rotas, no precisamos disso l embaixo, esse
+
+36
+00:03:00,090 --> 00:03:05,960
+ o roteamento configurado para usurios no autenticados agora, corresponde aos nossos links.
+
+37
+00:03:06,340 --> 00:03:13,170
+Agora a configurao para usurios autenticados so as rotas restantes, ento vamos cort-las aqui e adicion-las
+
+38
+00:03:13,300 --> 00:03:21,380
+aqui e vamos nos livrar da rota auth porque eu no preciso ir para / auth se eu for
+
+39
+00:03:21,380 --> 00:03:24,010
+autenticado, todas as outras rotas so
+
+40
+00:03:24,230 --> 00:03:30,830
+vlido, portanto, a autenticao e a barra esto disponveis para usurios no autenticados, para usurios
+
+41
+00:03:30,830 --> 00:03:34,990
+autenticados, pedidos de sada, logout e barra esto disponveis.
+
+42
+00:03:35,140 --> 00:03:40,020
+E agora no meu cdigo jsx l eu simplesmente
+
+43
+00:03:40,040 --> 00:03:46,970
+renderizo minhas rotas para essa varivel. Com isso temos guardas no lugar, agora no podemos acessar a
+
+44
+00:03:46,970 --> 00:03:47,900
+pgina de pedidos
+
+45
+00:03:47,990 --> 00:03:49,330
+se no formos autenticados,
+
+46
+00:03:49,400 --> 00:03:55,370
+voc j pode ver isso aqui, se eu for para pedidos como esse, nada acontece, voc v uma pgina vazia.
+
+47
+00:03:55,370 --> 00:03:57,910
+Agora, para no apenas ver uma
+
+48
+00:03:57,980 --> 00:04:04,340
+pgina vazia, podemos ter certeza de que redirecionamos o usurio, agora para fazer isso, para
+
+49
+00:04:04,340 --> 00:04:04,580
+redirecionar
+
+50
+00:04:04,580 --> 00:04:15,050
+a barra para qualquer rota desconhecida, por exemplo, podemos adicionar o componente de redirecionamento aqui e adicion-lo ao nosso comando switch , redirecionar para
+
+51
+00:04:15,050 --> 00:04:16,330
+apenas cortar.
+
+52
+00:04:16,460 --> 00:04:18,240
+Agora vamos fechar isso aqui,
+
+53
+00:04:18,500 --> 00:04:24,830
+agora a ordem nos redireciona para o burger builder, o authenticate ainda funciona, porque a instruo switch
+
+54
+00:04:24,830 --> 00:04:31,050
+pega o primeiro hit, mas nada  desconhecido, incluindo pedidos que agora so desconhecidos porque no renderizamos
+
+55
+00:04:31,050 --> 00:04:34,490
+essa rota nos redireciona para a pgina principal .
+
+56
+00:04:34,520 --> 00:04:39,200
+Agora o mesmo para nossas outras rotas aqui, para qualquer coisa desconhecida, eu
+
+57
+00:04:39,230 --> 00:04:45,320
+tambm quero ir para a pgina de rota. E com isso ns temos guardas no lugar, nos certificamos de
+
+58
+00:04:45,320 --> 00:04:45,730
+no podermos
+
+59
+00:04:45,740 --> 00:04:47,370
+visitar pginas que no deveramos conseguir.
+
+60
+00:04:47,390 --> 00:04:53,260
+Agora, uma observao importante, como  claro, todo o javascript, as pessoas podem,  claro,
+
+61
+00:04:53,270 --> 00:04:59,310
+sempre mergulhar em seu cdigo-fonte e ainda manipul-lo para continuar na rota protegida, e  por
+
+62
+00:04:59,430 --> 00:05:04,830
+isso que temos proteo no servidor, no retorna nenhum dado para usurios no autenticados.
+
+63
+00:05:04,880 --> 00:05:06,490
+ assim que voc protege
+
+64
+00:05:06,560 --> 00:05:12,260
+seus dados, o front-end trata apenas de fornecer uma experincia do usurio que faa sentido e impedir que o
+
+65
+00:05:12,260 --> 00:05:17,030
+usurio visite acidentalmente uma pgina a qual ele no deveria poder visitar porque no conseguir fazer
+
+66
+00:05:17,030 --> 00:05:17,750
+nada nele.
+
+67
+00:05:18,110 --> 00:05:21,760
+Ento, essa  a proteo de rota no front-end
+
+68
+00:05:21,770 --> 00:05:30,290
+com guardas, agora vamos passar a usar nossos dados de usurio em nossos pedidos para que, quando fizermos um pedido, quando
+
+69
+00:05:30,770 --> 00:05:32,600
+estivermos autenticados, realmente o utilizemos.
+

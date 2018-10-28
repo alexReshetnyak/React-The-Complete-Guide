@@ -1,0 +1,208 @@
+1
+00:00:02,400 --> 00:00:05,630
+To create our own workflow I'm in a brand new folder,
+
+2
+00:00:05,640 --> 00:00:06,990
+it's an empty folder,
+
+3
+00:00:06,990 --> 00:00:12,300
+the only thing I have and here is the gitignore file since I'll be using git, just ignoring node modules
+
+4
+00:00:12,390 --> 00:00:15,260
+where we'll soon store all our dependencies,
+
+5
+00:00:15,340 --> 00:00:21,720
+a mac specific folder and the dist folder which I'll later use to spit out the build project.
+
+6
+00:00:21,790 --> 00:00:22,560
+This is optional,
+
+7
+00:00:22,560 --> 00:00:24,220
+you don't have to use git.
+
+8
+00:00:24,360 --> 00:00:32,250
+Now the first thing is that we want to use npm to manage our dependencies, so to manage all the files
+
+9
+00:00:32,310 --> 00:00:39,450
+and the tools we need to set up a working workflow. For that we need to put this project under control
+
+10
+00:00:39,450 --> 00:00:46,350
+of npm which we do by running npm init, you would simply run this in the terminal, navigate it into this
+
+11
+00:00:46,470 --> 00:00:47,660
+empty folder,
+
+12
+00:00:47,970 --> 00:00:50,060
+you'll then be asked a couple of questions.
+
+13
+00:00:50,100 --> 00:00:53,700
+you can simply hit enter on all of these or adjust them to your needs,
+
+14
+00:00:53,700 --> 00:00:55,020
+I'll quickly walk through them,
+
+15
+00:00:55,170 --> 00:00:59,030
+at the end you will be asked if everything is okay and you can hit yes. With that,
+
+16
+00:00:59,040 --> 00:01:01,620
+you'll see that the package.json file was added,
+
+17
+00:01:01,620 --> 00:01:07,020
+this is the file which we'll use to set up our build scripts and to also the manage the dependencies of our
+
+18
+00:01:07,020 --> 00:01:07,860
+project.
+
+19
+00:01:07,860 --> 00:01:12,140
+Speaking of that let's install the first import dependency,
+
+20
+00:01:12,300 --> 00:01:18,160
+actually two of them with npm install --save-dev,
+
+21
+00:01:18,270 --> 00:01:22,820
+we install new dependencies and we mark them as development only dependencies
+
+22
+00:01:23,130 --> 00:01:25,160
+which doesn't really have a big impact
+
+23
+00:01:25,170 --> 00:01:31,830
+here, doesn't make a difference, we could also use --save in our project but it makes it clear
+
+24
+00:01:31,920 --> 00:01:36,570
+which dependencies we use only for setting up the build workflow and which dependencies really have
+
+25
+00:01:36,570 --> 00:01:39,120
+an impact on the running application,
+
+26
+00:01:39,120 --> 00:01:43,280
+you will see that they will be grouped differently the package.json file later.
+
+27
+00:01:43,530 --> 00:01:50,340
+Both --save and --save-dev add an entry to package.json so that we can
+
+28
+00:01:50,340 --> 00:01:55,140
+easily share our project without having to share the big node modules folder too.
+
+29
+00:01:55,410 --> 00:01:57,060
+Enough talking about that though,
+
+30
+00:01:57,150 --> 00:01:59,550
+let's specify the two dependencies we need.
+
+31
+00:01:59,550 --> 00:02:06,530
+The first one is webpack and the second one is webpack-dev-server, like this,
+
+32
+00:02:06,570 --> 00:02:11,040
+the second one is this development server we want to use so that we can test our application locally
+
+33
+00:02:11,040 --> 00:02:13,870
+on the machine and webpack is well
+
+34
+00:02:13,890 --> 00:02:18,580
+basically the build tool itself, webpack-dev-server wraps this build tool,
+
+35
+00:02:18,590 --> 00:02:20,880
+they're both from the same team.
+
+36
+00:02:21,240 --> 00:02:27,680
+Let's now hit enter to download these packages and create a node modules folder where they are stored
+
+37
+00:02:27,690 --> 00:02:33,120
+and you will also see that entries are added to the package.json file, I'll be back once this is
+
+38
+00:02:33,120 --> 00:02:38,960
+done. So the installation did finish and you see that we have the new dev dependencies node in the package.json
+
+39
+00:02:38,960 --> 00:02:40,260
+file.
+
+40
+00:02:40,320 --> 00:02:41,320
+This is what I meant,
+
+41
+00:02:41,340 --> 00:02:47,610
+we can now share this project without node modules as all the source code downloads in this course are
+
+42
+00:02:47,900 --> 00:02:54,210
+and everyone taking this project can just run npm install so that all the dependencies listed in dev
+
+43
+00:02:54,210 --> 00:03:01,560
+dependencies or dependencies, the normal dependencies get installed and the node modules folder gets recreated.
+
+44
+00:03:02,220 --> 00:03:03,840
+In the node modules folder,
+
+45
+00:03:03,840 --> 00:03:09,870
+we see a bunch of dependencies not just webpack and webpack-dev-server, that simply is because web
+
+46
+00:03:09,870 --> 00:03:14,690
+pack and webpack-dev-server have their own dependencies which they also installed
+
+47
+00:03:14,700 --> 00:03:21,810
+but here you can see webpack and webpack-dev-server. So with that, we can use these dependencies and we will
+
+48
+00:03:21,810 --> 00:03:23,760
+do so over the next lectures,
+
+49
+00:03:23,970 --> 00:03:31,230
+a good place to start though is to not start working on the workflow but let's first set up a basic
+
+50
+00:03:31,830 --> 00:03:38,460
+folder structure and a basic react app so that we know in which environment we want to work and that
+
+51
+00:03:38,460 --> 00:03:42,980
+we can adjust the webpack configuration to that environment.
+
+52
+00:03:43,080 --> 00:03:45,030
+Let's do that in the next lecture.
+

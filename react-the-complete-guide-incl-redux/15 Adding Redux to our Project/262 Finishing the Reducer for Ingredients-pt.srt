@@ -1,0 +1,324 @@
+1
+00:00:02,140 --> 00:00:08,470
+Agora, com suas aes, os produtores criaram pelo menos o bsico sobre isso e nossa histria
+
+2
+00:00:08,470 --> 00:00:09,470
+conectada  aplicao.
+
+3
+00:00:09,640 --> 00:00:12,630
+Vamos preencher o nosso produtor com alguma vida.
+
+4
+00:00:12,940 --> 00:00:17,170
+E, no final, temos que ter as duas aes que criamos aqui.
+
+5
+00:00:17,320 --> 00:00:20,200
+Adicionando ingredientes e removendo ingredientes.
+
+6
+00:00:20,290 --> 00:00:26,010
+Portanto, como sempre, irei adicionar o tipo de ao de introduo de switch e switchy.
+
+7
+00:00:26,080 --> 00:00:29,930
+Tenha em mente que voc sempre precisa ter uma propriedade de tipo em sua ao.
+
+8
+00:00:29,930 --> 00:00:32,080
+ por isso que podemos sair com segurana aqui.
+
+9
+00:00:32,530 --> 00:00:37,120
+Agora, temos dois tipos que queremos lidar com nossas afirmaes de casos.
+
+10
+00:00:37,120 --> 00:00:44,650
+O primeiro  o tipo de ao adicionar ingrediente onde queremos retornar algum objeto que Holston
+
+11
+00:00:44,650 --> 00:00:45,580
+voc declare.
+
+12
+00:00:45,940 --> 00:00:51,500
+O segundo  o caso em que temos nossos tipos de ao e l remover o ingrediente.
+
+13
+00:00:51,730 --> 00:01:02,670
+E aqui tambm queremos retornar algumas lojas onde algum objeto estatal e, finalmente, sempre queremos retornar.
+
+14
+00:01:02,880 --> 00:01:09,850
+Basta declarar no caso de torn-lo em nenhum destes casos, embora aqui esteja o meu ID Dutreuil sugerindo que
+
+15
+00:01:09,850 --> 00:01:13,630
+devemos ter um estado padro ou um manipulador padro, quero dizer.
+
+16
+00:01:13,630 --> 00:01:18,490
+Ento, simplesmente adicione o padro  nossa declarao de mudana e volte ao estado aqui.
+
+17
+00:01:18,550 --> 00:01:21,630
+Isso ser alcanado se no forem aplicveis os casos.
+
+18
+00:01:21,640 --> 00:01:27,250
+Novamente, no precisamos de declaraes de interrupo porque retornamos em cada caso de qualquer forma, de modo que a
+
+19
+00:01:27,250 --> 00:01:29,410
+execuo do cdigo no continuar em disfuno.
+
+20
+00:01:29,410 --> 00:01:34,530
+Agora, para adicionar ingredientes,  claro, queremos adicionar ao nosso objeto de ingredientes.
+
+21
+00:01:34,540 --> 00:01:36,070
+Agora, comeamos com NULL.
+
+22
+00:01:36,090 --> 00:01:45,010
+Mas tenha em mente o construtor Burgi com o qual comeamos agora porque o componente fez MT Ns realmente
+
+23
+00:01:45,100 --> 00:01:48,750
+carregamos nossos ingredientes esto comeando ingredientes da Internet.
+
+24
+00:01:48,760 --> 00:01:55,360
+em vez disso, comeam com meus prprios ingredientes configurados aqui no estado ento seus ingredientes no sero.
+
+25
+00:01:55,360 --> 00:02:03,700
+Isso  algo que eu realmente adicionarei, mas por enquanto, uma vez que no aprendemos a lidar com o cdigo assncrono aqui,
+
+26
+00:02:03,700 --> 00:02:09,550
+eu ignoro que este ano basicamente comentar o cdigo e o componente que montar e,
+
+27
+00:02:09,610 --> 00:02:10,780
+No meu redutor.
+
+28
+00:02:10,930 --> 00:02:21,650
+Mas, em vez disso, seja um objeto em que possamos manter zero cero Siro com cero e atender zero.
+
+29
+00:02:21,660 --> 00:02:24,930
+Novamente isso  apenas uma reverso temporria.
+
+30
+00:02:25,000 --> 00:02:31,990
+Agora, quando adicionamos um ingrediente,  claro que precisamos obter a informao sobre o ingrediente de Thaddeus e
+
+31
+00:02:31,990 --> 00:02:38,010
+para esse ingrediente dado, ento, simplesmente precisamos adicionar um, ento no precisamos obter o valor porque
+
+32
+00:02:38,050 --> 00:02:39,370
+sempre mais um.
+
+33
+00:02:39,520 --> 00:02:42,310
+Mas precisamos saber qual ingrediente .
+
+34
+00:02:42,310 --> 00:02:48,910
+Ento, o que faremos aqui , em primeiro lugar, copiar todo o estado antigo com o operador de
+
+35
+00:02:48,940 --> 00:02:54,940
+propagao, de modo que, quando estabelecemos novos ingredientes, tambm conservamos qualquer uma de nossas propriedades, distribuindo-as
+
+36
+00:02:54,940 --> 00:02:57,030
+sobre esse novo objeto javascript primeiro.
+
+37
+00:02:57,400 --> 00:02:59,820
+Mas essa  a segunda coisa que queremos fazer.
+
+38
+00:02:59,860 --> 00:03:06,150
+Configure os ingredientes para algo de novos ingredientes que no devem ser um novo objeto javascript.
+
+39
+00:03:06,220 --> 00:03:08,500
+A imutabilidade no reutiliza a antiga.
+
+40
+00:03:08,500 --> 00:03:15,000
+Crie um novo onde primeiro distribuo todas as propriedades dos ingredientes do estado.
+
+41
+00:03:15,390 --> 00:03:23,980
+Mais uma vez, fazer isso para realmente criar um novo objeto apenas distribuindo o estado aqui no far isso
+
+42
+00:03:23,980 --> 00:03:27,080
+porque no cria clones profundos de objetos.
+
+43
+00:03:27,100 --> 00:03:31,600
+No entra em objetos e cria novos objetos para esses dois.
+
+44
+00:03:31,750 --> 00:03:37,930
+Simplesmente copia o objeto circundante, mas os ingredientes que so objetos por conta prpria
+
+45
+00:03:37,930 --> 00:03:45,280
+ainda apontar para esse objeto antigo enquanto ns corrigimos isso espalhando as propriedades desse objeto antigo em
+
+46
+00:03:45,280 --> 00:03:46,990
+um novo objeto aqui.
+
+47
+00:03:46,990 --> 00:03:53,920
+Agora com isso neste novo objeto de ingredientes, queremos substituir o ingrediente fornecido que precisamos
+
+48
+00:03:53,920 --> 00:03:56,950
+obter como uma carga til desta ao.
+
+49
+00:03:57,160 --> 00:04:04,600
+Agora no ano 6 h esta sintaxe especial que voc pode usar para substituir dinamicamente uma propriedade em um
+
+50
+00:04:04,600 --> 00:04:05,890
+determinado objeto javascript.
+
+51
+00:04:06,070 --> 00:04:08,080
+Voc pode usar colchetes agora.
+
+52
+00:04:08,080 --> 00:04:10,410
+Isso no cria uma matriz aqui.
+
+53
+00:04:10,690 --> 00:04:17,410
+Em vez disso, agora voc pode passar uma varivel sobre uma coisa que contm o nome que voc realmente deseja
+
+54
+00:04:17,410 --> 00:04:22,840
+usar como um nome de propriedade e espero obter esse nome de propriedade na minha ao.
+
+55
+00:04:22,900 --> 00:04:30,280
+Talvez na propriedade do nome do ingrediente, agora o nome do ingrediente  algo que obtemos como uma carga til para a
+
+56
+00:04:30,730 --> 00:04:35,190
+ao e, em seguida, aqui, simplesmente distribumos todos os ingredientes em nosso novo objeto.
+
+57
+00:04:35,260 --> 00:04:37,780
+Ento, esse objeto mantm a carne slida.
+
+58
+00:04:37,780 --> 00:04:40,480
+Bacon e queijo e um destes.
+
+59
+00:04:40,510 --> 00:04:46,120
+Qualquer que seja o que recebemos como carga til da ao receber um novo valor.
+
+60
+00:04:46,150 --> 00:04:51,030
+Ns o direcionamos com esta sintaxe e depois com dois pontos e o novo valor.
+
+61
+00:04:51,070 --> 00:05:00,480
+Bem, ns estabelecemos esse novo valor, o novo valor, agora simplesmente como ingredientes do estado, ento, novamente, selecione o nome do
+
+62
+00:05:00,480 --> 00:05:05,870
+ingrediente dado, ento este agora fatuus o valor antigo para esse ingrediente.
+
+63
+00:05:05,870 --> 00:05:11,170
+Ento, como 0 ou 1 ou seja o que fosse e depois adicionamos mais um.
+
+64
+00:05:11,180 --> 00:05:17,360
+adicione um e atribua esse ingrediente de cuteness onde substituimos a cpia que criamos aqui.
+
+65
+00:05:17,360 --> 00:05:20,530
+Ento, agora, obtemos o nmero dos ingredientes antigos,
+
+66
+00:05:20,550 --> 00:05:25,670
+Agora estamos retornando uma nova palavra e no o estado com os ingredientes atualizados.
+
+67
+00:05:26,060 --> 00:05:28,520
+Ento  assim que adicionamos um ingrediente.
+
+68
+00:05:28,550 --> 00:05:30,480
+Como removemos um.
+
+69
+00:05:30,830 --> 00:05:33,020
+Bom para remover.
+
+70
+00:05:33,020 --> 00:05:39,250
+Eu tambm quero criar uma nova verso do meu estado onde eu simplesmente decremento um ingrediente por um.
+
+71
+00:05:39,350 --> 00:05:46,200
+E para isso obtemos, claro, comear copiando esse cdigo aqui da lgica ADD ingrediente.
+
+72
+00:05:46,460 --> 00:05:54,980
+Ns ainda copiamos o estado antigo e, em seguida, distribui propriedades de ingredientes neste novo objeto de ingredientes.
+
+73
+00:05:55,010 --> 00:06:00,830
+Pego o ingrediente que recebo como uma carga real para esse caso aqui tambm.
+
+74
+00:06:01,100 --> 00:06:02,860
+Mas agora no adiciono um.
+
+75
+00:06:02,900 --> 00:06:10,350
+Eu removo um e com isso nos reunimos, o que deve ser capaz de atualizar nossos ingredientes.
+
+76
+00:06:10,400 --> 00:06:13,080
+No vai atualizar o preo agora mesmo.
+
+77
+00:06:13,160 --> 00:06:15,060
+Ns nos cuidaremos mais tarde.
+
+78
+00:06:15,380 --> 00:06:18,230
+Mas vamos atualizar nossos ingredientes aqui.
+
+79
+00:06:18,380 --> 00:06:24,560
+Agora com isso na prxima conferncia, obviamente, quero conectar isso ao meu burger Boler.
+
+80
+00:06:24,700 --> 00:06:32,900
+usamos o uster padro e essas aes para gerenciar RIAs que adicionamos ao nosso hambrguer ou removemos dele.
+
+81
+00:06:32,900 --> 00:06:33,290
+Ento,
+

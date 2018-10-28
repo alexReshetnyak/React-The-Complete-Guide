@@ -1,0 +1,428 @@
+1
+00:00:02,750 --> 00:00:08,810
+Now that we had look at references let's have a look at another awesome feature introduced by react 16.3,
+
+2
+00:00:08,820 --> 00:00:11,210
+the new context API,
+
+3
+00:00:11,380 --> 00:00:14,900
+a great tool for passing global state around in your app.
+
+4
+00:00:14,900 --> 00:00:22,790
+Now what do I mean with that? Let's say in our cockpit here, in the cockpit.js file, we have a new button,
+
+5
+00:00:22,970 --> 00:00:25,070
+below the button which we already have,
+
+6
+00:00:25,160 --> 00:00:29,360
+I'll add a second one and there I'll simply say login.
+
+7
+00:00:29,360 --> 00:00:36,260
+Now this button once clicked should actually set some global login state to true and change something
+
+8
+00:00:36,320 --> 00:00:38,560
+on different components.
+
+9
+00:00:38,560 --> 00:00:45,750
+So i'll add a on click listener and let's say we got a prop here so I'll use props
+
+10
+00:00:45,890 --> 00:00:48,110
+and then we got login.
+
+11
+00:00:48,200 --> 00:00:54,350
+So we need to pass down a login prop to that cockpit component which should hold a reference to a
+
+12
+00:00:54,350 --> 00:00:57,590
+function that is executed when we click the button.
+
+13
+00:00:57,630 --> 00:01:02,350
+So we go to the app.js file which is where we use the cockpit component here
+
+14
+00:01:02,900 --> 00:01:06,260
+And I'll add my new login property here,
+
+15
+00:01:06,290 --> 00:01:09,800
+that's the one we passed down, we're extracting in the cockpit.
+
+16
+00:01:09,800 --> 00:01:13,380
+Now this should hold a reference to a method that gets executed
+
+17
+00:01:13,380 --> 00:01:21,140
+so let's add our login handler method here in our app.js file, and then here I want to change a state
+
+18
+00:01:21,390 --> 00:01:23,870
+that true toggles off the indication status,
+
+19
+00:01:23,870 --> 00:01:30,440
+let's say. First of all let's assign the login handler as a function for the login prop and then
+
+20
+00:01:30,440 --> 00:01:32,620
+I'll go up to my state of this app.js
+
+21
+00:01:32,660 --> 00:01:39,610
+file all the way up here and then simply add a new property to it authenticated which is false now
+
+22
+00:01:39,920 --> 00:01:45,420
+and it should be true once we click that button let's say. So down in the new login handler, I'll call
+
+23
+00:01:45,420 --> 00:01:48,930
+this.setState and I'll set authenticated to true,
+
+24
+00:01:48,950 --> 00:01:50,340
+that's all I'm doing here.
+
+25
+00:01:50,390 --> 00:01:53,340
+Now let's say I want to change something in my person component whenever
+
+26
+00:01:53,420 --> 00:01:55,130
+this is set to true.
+
+27
+00:01:55,340 --> 00:02:00,830
+Now what we can of course do is we can try to pass our states down to persons.
+
+28
+00:02:00,830 --> 00:02:09,320
+We can do this here, that on this persons array we're setting is authenticated prop and we set this equal
+
+29
+00:02:09,320 --> 00:02:14,420
+to this state authenticated. In the persons component
+
+30
+00:02:14,420 --> 00:02:18,730
+we're getting this new prop and we can pass it down to the single person component,
+
+31
+00:02:18,890 --> 00:02:27,170
+we can pass down authenticated and this will refer to this props is authenticated so the prop we just
+
+32
+00:02:27,170 --> 00:02:28,850
+set up in the app.js file
+
+33
+00:02:29,240 --> 00:02:33,980
+and then the person component, we can then output some text if we are authenticated.
+
+34
+00:02:34,010 --> 00:02:41,540
+So here let's use a ternary expression, we could say if this props authenticated, if this is true then
+
+35
+00:02:41,540 --> 00:02:45,680
+I want to output let's say a paragraph where I'll say I'm
+
+36
+00:02:45,700 --> 00:02:46,710
+authenticated
+
+37
+00:02:47,700 --> 00:02:50,530
+otherwise if this is not true, I want to output
+
+38
+00:02:50,580 --> 00:02:51,300
+null.
+
+39
+00:02:51,590 --> 00:02:57,060
+Now with that in place if we save that and we reload, if we click show persons, it works fine.
+
+40
+00:02:57,080 --> 00:03:01,620
+and if I click this nice login button here, we see i'm authenticated and all the users.
+
+41
+00:03:01,630 --> 00:03:04,360
+So this is working, we're passing data around.
+
+42
+00:03:04,380 --> 00:03:10,310
+Now this is the default way of passing data around and it's the recommended way for most use cases
+
+43
+00:03:10,310 --> 00:03:17,090
+however you sometimes have some global state like the authentication status or for example regarding
+
+44
+00:03:17,090 --> 00:03:19,570
+a global theme color set up by the user,
+
+45
+00:03:19,700 --> 00:03:20,960
+things like that.
+
+46
+00:03:21,290 --> 00:03:26,570
+Now passing down the values is certainly an option but you can use the new context API to make this
+
+47
+00:03:26,570 --> 00:03:27,770
+a bit easier.
+
+48
+00:03:27,770 --> 00:03:30,150
+It works like this,
+
+49
+00:03:30,200 --> 00:03:30,690
+in the app.js
+
+50
+00:03:30,750 --> 00:03:32,560
+file, we first of all create context.
+
+51
+00:03:32,600 --> 00:03:39,380
+We do this out of the class, after the inputs and I'll store in a constant and I'll name it AuthContext,
+
+52
+00:03:39,380 --> 00:03:40,550
+like this.
+
+53
+00:03:40,550 --> 00:03:46,800
+We do that with react create context so a new method introduced by react 16.3
+
+54
+00:03:47,420 --> 00:03:53,360
+and there I can set up a default value like false for authentication, false,
+
+55
+00:03:53,480 --> 00:03:55,110
+this is optional though,
+
+56
+00:03:55,400 --> 00:03:58,390
+the more important part is how we used the AuthContext.
+
+57
+00:03:58,610 --> 00:04:06,250
+We do that in our jsx code and AuthContext or context in general works with providers and consumers.
+
+58
+00:04:06,260 --> 00:04:12,540
+We got paths in our app where we provide the context and others where we consume it. Now in the app.js file,
+
+59
+00:04:12,590 --> 00:04:17,150
+this is where we provide it because here we managed the authentication status.
+
+60
+00:04:17,150 --> 00:04:24,410
+So now we're wrapping all components where we plan on extracting that value from the context with a
+
+61
+00:04:24,410 --> 00:04:28,130
+special component, the AuthContext component.
+
+62
+00:04:28,160 --> 00:04:31,800
+Now the name of the component simply is the name of this constant here,
+
+63
+00:04:31,850 --> 00:04:36,350
+So create context creates a component you can use in jsx.
+
+64
+00:04:36,500 --> 00:04:38,990
+So now we got the AuthContext component,
+
+65
+00:04:38,990 --> 00:04:41,790
+however we don't use AuthContext like this
+
+66
+00:04:41,900 --> 00:04:49,430
+instead we access .provider, a subcomponent created by react so to say, and this is also what we close
+
+67
+00:04:49,430 --> 00:04:57,310
+here with the closing tag. Now persons is wrapped with AuthContext provider, another important building block
+
+68
+00:04:57,310 --> 00:04:58,820
+now is the value.
+
+69
+00:04:58,990 --> 00:05:04,750
+Now we get that initial value of false because we initialized create context with false
+
+70
+00:05:04,870 --> 00:05:10,780
+but if you want to have a dynamic value which can change, we add the value prop and note this has to be
+
+71
+00:05:10,780 --> 00:05:17,250
+named value to that AuthContext provider component and we set it equal to the value we want to use
+
+72
+00:05:17,350 --> 00:05:19,490
+and this value can of course change.
+
+73
+00:05:19,570 --> 00:05:25,600
+So here I'll set it to this state authenticated and it will change whenever the state changes.
+
+74
+00:05:25,600 --> 00:05:32,380
+So now we're providing this context to all child components in there, no matter on which level they are
+
+75
+00:05:32,380 --> 00:05:36,610
+so to say and this of course is only one here but this could be more,
+
+76
+00:05:36,760 --> 00:05:40,280
+and this one component actually holds more than one component.
+
+77
+00:05:40,360 --> 00:05:46,450
+So in the persons component, we can now get rid of that authenticated prop we're passing down to the single
+
+78
+00:05:46,450 --> 00:05:55,210
+person and on the app.js, we can also get rid of the this.authenticated.prop we're passing down to
+
+79
+00:05:55,210 --> 00:06:02,180
+persons and with that removed, we can go down to a single person component and this is where we want
+
+80
+00:06:02,180 --> 00:06:04,250
+to use our context right.
+
+81
+00:06:04,250 --> 00:06:06,780
+So first of all we need to be able to import it
+
+82
+00:06:06,860 --> 00:06:13,040
+so we go back to the app.js file and we simply export our AuthContext here,
+
+83
+00:06:13,040 --> 00:06:19,820
+this makes it available outside of this file too. We can now go to our single person files not to persons,
+
+84
+00:06:19,850 --> 00:06:28,220
+this is now what we need to work on,on person and in here, in our person component, we now simply import
+
+85
+00:06:28,400 --> 00:06:29,580
+this context.
+
+86
+00:06:29,750 --> 00:06:32,640
+So we import AuthContext from
+
+87
+00:06:32,660 --> 00:06:36,490
+and now we need to go up all the way to our app.js
+
+88
+00:06:36,550 --> 00:06:43,770
+file. We import AuthContext and now we need to wrap the element where we want to use that context
+
+89
+00:06:43,770 --> 00:06:44,590
+value.
+
+90
+00:06:44,670 --> 00:06:52,850
+In our case it's this first line here, there I now create a new component AuthContext, but now not provider
+
+91
+00:06:52,940 --> 00:06:59,210
+but consumer because now we'll consume that value stored in the context and I'll simply wrap this entire
+
+92
+00:06:59,210 --> 00:07:04,270
+expression here with our AuthContext consumer component.
+
+93
+00:07:04,310 --> 00:07:10,670
+Now in here, in this consumer component, we still use single curly braces but there we need to execute
+
+94
+00:07:10,670 --> 00:07:13,990
+a method which react will execute for us.
+
+95
+00:07:14,060 --> 00:07:20,570
+This method receives one argument and this is the data we're passing down with the context,
+
+96
+00:07:20,570 --> 00:07:23,880
+this could of course be an object, in our case it's a boolean.
+
+97
+00:07:24,020 --> 00:07:30,600
+So here it's our auth state and we return the jsx we want to render.
+
+98
+00:07:30,740 --> 00:07:33,970
+Now in our case we no longer need to check props authenticated,
+
+99
+00:07:34,100 --> 00:07:40,880
+we just check if auth, which remember is a boolean for us is true in which case we're rendering this,
+
+100
+00:07:40,880 --> 00:07:42,800
+otherwise, we render nothing.
+
+101
+00:07:43,100 --> 00:07:48,290
+And now, we're taking advantage of the context API react 16.3 introduced
+
+102
+00:07:48,350 --> 00:07:53,180
+and we can pass data around without having to set up this chain of props.
+
+103
+00:07:53,540 --> 00:07:57,530
+If now reload this component, we click show persons and we click login,
+
+104
+00:07:57,680 --> 00:07:59,210
+we still see I'm authenticated
+
+105
+00:07:59,240 --> 00:08:05,670
+but now without passing around props. Still the props approach is recommended for most cases,
+
+106
+00:08:05,720 --> 00:08:10,310
+it makes your components more reusable and doesn't tie them together that much.
+
+107
+00:08:10,310 --> 00:08:14,420
+However the context API is really great for global settings like this one.
+

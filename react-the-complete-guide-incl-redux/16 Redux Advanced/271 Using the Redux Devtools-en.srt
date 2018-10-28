@@ -1,0 +1,400 @@
+1
+00:00:02,240 --> 00:00:07,490
+So in the last lecture we added our own middleware which is a logging middleware outputting something
+
+2
+00:00:07,520 --> 00:00:09,800
+whenever we dispatch an action.
+
+3
+00:00:09,800 --> 00:00:15,680
+Now this is nice and it allows us to get some insights into our store but only if we dispatched an action,
+
+4
+00:00:16,310 --> 00:00:20,980
+that would be more useful if we could always look into the store.
+
+5
+00:00:21,050 --> 00:00:27,530
+Now in the debugging section, we learned about the react dev tools and there, we can have a look at all the
+
+6
+00:00:27,530 --> 00:00:31,690
+components, the component tree and the state of each of that.
+
+7
+00:00:31,970 --> 00:00:37,430
+And for the provider for example, we get the store but there we only see the utility functions,
+
+8
+00:00:37,430 --> 00:00:40,130
+we don't really see what's inside the store.
+
+9
+00:00:40,250 --> 00:00:43,420
+So this isn't that great, now
+
+10
+00:00:43,490 --> 00:00:45,720
+there are ways to work around that, if
+
+11
+00:00:45,800 --> 00:00:50,400
+we click on the counter component for example, we see the current value of the counter prop
+
+12
+00:00:50,600 --> 00:00:56,570
+but still, it's difficult if we have to navigate to a component which gets a certain slice of the state
+
+13
+00:00:56,810 --> 00:01:02,930
+just to see that slice, would be nicer to be able to look at the full store and even see the actions
+
+14
+00:01:02,930 --> 00:01:06,220
+which were dispatched, maybe even rewind.
+
+15
+00:01:06,770 --> 00:01:12,660
+Well for that there are special developer tools we can install, if you google for redux dev tools,
+
+16
+00:01:12,740 --> 00:01:14,080
+you'll find two results,
+
+17
+00:01:14,090 --> 00:01:19,840
+the second one, the redux dev tools extension or to be precise, the third one the redux dev tools
+
+18
+00:01:19,850 --> 00:01:21,100
+in the chrome web store,
+
+19
+00:01:21,230 --> 00:01:22,760
+that's an interesting thing.
+
+20
+00:01:23,210 --> 00:01:26,060
+You should install this extension to Chrome,
+
+21
+00:01:26,060 --> 00:01:30,340
+it will give you a nice plugin you can use to look into your store.
+
+22
+00:01:30,470 --> 00:01:33,510
+Now you can read more instructions on that second result,
+
+23
+00:01:33,560 --> 00:01:39,710
+the redux dev tools extension github repository, here you'll find more instructions about how to install and
+
+24
+00:01:39,710 --> 00:01:44,420
+set it up, in the end it's super simple, you just need to download that extension and install it and you're
+
+25
+00:01:44,420 --> 00:01:45,110
+pretty much done.
+
+26
+00:01:45,110 --> 00:01:46,780
+One more step is required though
+
+27
+00:01:46,880 --> 00:01:49,820
+but I will of course also walk you through the required steps.
+
+28
+00:01:49,820 --> 00:01:53,740
+Now important, don't have a look at the first result here,
+
+29
+00:01:53,750 --> 00:01:57,930
+these are also dev tools which you can implement programmatically into your app,
+
+30
+00:01:57,980 --> 00:02:00,280
+we want to have that browser extension though.
+
+31
+00:02:00,650 --> 00:02:03,410
+So there, we see the steps we need to apply,
+
+32
+00:02:03,440 --> 00:02:10,550
+now assume you already installed the dev tools, if you then open them via your developer tools, there should
+
+33
+00:02:10,550 --> 00:02:12,210
+be a redux option now,
+
+34
+00:02:13,810 --> 00:02:17,910
+might have to switch back to the console first.
+
+35
+00:02:17,950 --> 00:02:21,760
+You should see the redux dev tools open up here on the right,
+
+36
+00:02:21,760 --> 00:02:27,810
+now it's saying no store found because we haven't followed the second step where we have to basically
+
+37
+00:02:27,810 --> 00:02:35,830
+inform this extension that there is a store in our web app and for that, we simply need to set up a special
+
+38
+00:02:36,160 --> 00:02:43,510
+variable here or pass a special enhancer we should say to our create store method. Since we're using a
+
+39
+00:02:43,570 --> 00:02:46,470
+middleware we have to use the advance store set up
+
+40
+00:02:46,510 --> 00:02:52,930
+but it's still pretty simple. Let's copy that strangely named variable here on the window object,
+
+41
+00:02:52,990 --> 00:02:59,140
+the redux dev tools extension compose thing here, this essentially is a variable which is injected by
+
+42
+00:02:59,140 --> 00:03:05,500
+the Chrome extension into our javascript at runtime so it will be available. Back in our code in the
+
+43
+00:03:05,530 --> 00:03:06,340
+index.js file where
+
+44
+00:03:06,340 --> 00:03:07,690
+we create our store,
+
+45
+00:03:07,910 --> 00:03:17,320
+I will first of all as instructed here create a custom constant before we do anything on the store, I'll
+
+46
+00:03:17,320 --> 00:03:27,370
+name it composeEnhancers. This will then be our special variable or in case that can't be found,
+
+47
+00:03:27,720 --> 00:03:32,580
+we'll fall back to a default compose function provided by redux,
+
+48
+00:03:32,690 --> 00:03:36,190
+you can import it from the redux package.
+
+49
+00:03:36,340 --> 00:03:42,310
+Now compose is a little bit similar to combineReducers, combineReducers allows us to combine well
+
+50
+00:03:42,400 --> 00:03:48,880
+reducers, compose allows us to combine enhancers, applyMiddleware is only for middlewares if we have
+
+51
+00:03:48,910 --> 00:03:56,500
+other enhancers like the store dev tools, we need to use compose to compose a set of enhancers with both
+
+52
+00:03:56,500 --> 00:03:59,230
+the dev tools features and our middleware.
+
+53
+00:03:59,380 --> 00:04:08,360
+So we also add compose here, separate it with this or sign to take this dynamically injected variable if available
+
+54
+00:04:08,380 --> 00:04:14,500
+but if not, to still have to fall back to the native redux solution which of course doesn't give us dev
+
+55
+00:04:14,500 --> 00:04:16,030
+tools support then.
+
+56
+00:04:16,120 --> 00:04:20,410
+So now composeEnhancers essentially just holds a function,
+
+57
+00:04:20,440 --> 00:04:22,900
+if we go back to the documentation,
+
+58
+00:04:23,080 --> 00:04:28,540
+we see that now we should create our store and use this new composeEnhancers function which uses either
+
+59
+00:04:28,560 --> 00:04:35,420
+the dev tools function or the natively built-in one to then pass applyMiddleware to it.
+
+60
+00:04:35,490 --> 00:04:37,030
+So we'll do that,
+
+61
+00:04:37,080 --> 00:04:44,750
+I will wrap applyMiddleware in create store with composeEnhancers,
+
+62
+00:04:45,010 --> 00:04:52,530
+so with this constant name here composeEnhancers, wrap applyMiddleware with it so pass applyMiddleware
+
+63
+00:04:52,540 --> 00:04:54,070
+as a function to that,
+
+64
+00:04:54,250 --> 00:04:58,450
+you don't need to pass anything about the dev tools because it will be passed in automatically, if
+
+65
+00:04:58,450 --> 00:05:00,620
+that is chosen, so if that is available.
+
+66
+00:05:00,850 --> 00:05:07,330
+So we got a set up where we should be able to connect our browser extension to the store running in
+
+67
+00:05:07,330 --> 00:05:08,920
+our Javascript code.
+
+68
+00:05:09,280 --> 00:05:15,550
+Let's have a look, let's go back to the react application and there, you should already see that the
+
+69
+00:05:15,550 --> 00:05:19,160
+redux view here is filled with life.
+
+70
+00:05:19,240 --> 00:05:24,230
+Here you see all actions which were emitted, like the init action which happens first,
+
+71
+00:05:24,340 --> 00:05:27,290
+can shrink this to get a different view on this
+
+72
+00:05:27,640 --> 00:05:32,930
+and there you see for each action, what type this was or which payload it actually carried,
+
+73
+00:05:32,950 --> 00:05:38,390
+also anything besides type, what the state is at this point of time, how it changed the state
+
+74
+00:05:38,710 --> 00:05:45,610
+and you can always look into the state therefore with this state button at a given point of time.
+
+75
+00:05:45,610 --> 00:05:52,120
+Now if I dispatch a new action by for example subtracting 15, you'll see it gets added here
+
+76
+00:05:52,180 --> 00:05:56,780
+and if you click on it, we see what the state is after this action, this state here,
+
+77
+00:05:56,910 --> 00:06:00,280
+you also see the old state if you click on the action, on the init action,
+
+78
+00:06:00,400 --> 00:06:06,520
+so you see the state at different points of times. You'll see how the subtract action changed the state,
+
+79
+00:06:06,670 --> 00:06:11,820
+it deducted 15 off the counter and you'll see what the action carried,
+
+80
+00:06:12,280 --> 00:06:13,720
+that's pretty useful.
+
+81
+00:06:13,720 --> 00:06:19,510
+Now we can add more and more and we can always see how we adjusted our state and what our current state
+
+82
+00:06:19,510 --> 00:06:21,910
+is and what our state was in the past.
+
+83
+00:06:21,910 --> 00:06:28,600
+So redux dev tools are extremely useful and definitely dive into the documentation I pointed you to
+
+84
+00:06:28,850 --> 00:06:31,150
+to learn more about them.
+
+85
+00:06:31,150 --> 00:06:36,550
+Now one important feature I want to show you is the time traveling, with the redux dev tools,
+
+86
+00:06:36,640 --> 00:06:38,370
+you can travel through time.
+
+87
+00:06:38,500 --> 00:06:45,070
+So for example, of course the application we see here reflects the state after all these actions
+
+88
+00:06:45,340 --> 00:06:51,670
+but if we wanted to rewind and say yes let's go back to that subtracting here, you can click on subtract and
+
+89
+00:06:51,670 --> 00:06:52,930
+then on jump
+
+90
+00:06:53,170 --> 00:06:57,770
+and now you see you are back to that point of time where you just subtracted 15.
+
+91
+00:06:57,930 --> 00:06:59,400
+Now the old states are not lost,
+
+92
+00:06:59,400 --> 00:07:02,810
+you can always go back to there by clicking jump on that again
+
+93
+00:07:03,130 --> 00:07:10,800
+but you can also go back and for example skip this to update your state as if you haven't ever dispatched
+
+94
+00:07:10,800 --> 00:07:11,700
+this action
+
+95
+00:07:11,740 --> 00:07:13,520
+and of course, this can also be reverted.
+
+96
+00:07:13,690 --> 00:07:19,810
+So this is a extremely nice feature which gives you a lot of debugging possibilities and especially
+
+97
+00:07:19,810 --> 00:07:21,130
+more complex apps,
+
+98
+00:07:21,140 --> 00:07:26,110
+this is great to make sure that only actions are dispatched you expected to be dispatched and to
+
+99
+00:07:26,110 --> 00:07:28,290
+find out why the state is currently in
+
+100
+00:07:28,330 --> 00:07:30,100
+well the state it is in.
+

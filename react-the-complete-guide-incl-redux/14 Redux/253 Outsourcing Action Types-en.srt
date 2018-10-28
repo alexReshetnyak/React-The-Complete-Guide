@@ -1,0 +1,228 @@
+1
+00:00:02,210 --> 00:00:05,270
+If we have a look at our reducer here,
+
+2
+00:00:05,490 --> 00:00:10,180
+we see that we have all these different cases, incrementing, adding and so on,
+
+3
+00:00:10,200 --> 00:00:13,780
+delete, store result, all these things.
+
+4
+00:00:14,160 --> 00:00:20,820
+And of course I emphasize that the identifiers we're looking for here in the reducer are the identifiers
+
+5
+00:00:20,820 --> 00:00:27,410
+we should use in our container components, in our application where we want to dispatch these actions.
+
+6
+00:00:27,780 --> 00:00:35,010
+We do so of course but there always is the danger of us simply adding a tiny typo and searching for it
+
+7
+00:00:35,010 --> 00:00:44,100
+for hours because we don't find it. Therefore it is a good practice to outsource your action types into
+
+8
+00:00:44,100 --> 00:00:51,700
+constants you can use in your application so that you always just import a constant and eliminate the
+
+9
+00:00:51,700 --> 00:00:53,570
+danger of mistyping,
+
+10
+00:00:53,580 --> 00:00:56,730
+this is especially useful as your application grows.
+
+11
+00:00:56,880 --> 00:01:00,950
+If you only have two types of actions you dispatch, you might not need that
+
+12
+00:01:01,110 --> 00:01:07,540
+but for bigger applications, definitely add it. For this, I'll add a new file to my store folder and I'll
+
+13
+00:01:07,540 --> 00:01:08,750
+name it actions.js
+
+14
+00:01:08,820 --> 00:01:17,910
+and in there, we can simply export a constant which you now typically give the same name as the identifier
+
+15
+00:01:17,910 --> 00:01:18,660
+we'll have.
+
+16
+00:01:18,930 --> 00:01:27,510
+So you could have a constant which is increment and the value we assign is just that string identifier,
+
+17
+00:01:27,510 --> 00:01:34,920
+so we just stored that string in a constant now which we export and we do that for all our actions,
+
+18
+00:01:35,010 --> 00:01:39,690
+so we also have decrement here and the identifier is the same.
+
+19
+00:01:40,020 --> 00:01:46,290
+Now theoretically, name of the constant and identifier don't have to match but it is a good practice,
+
+20
+00:01:46,910 --> 00:01:49,540
+then here we have the same for add
+
+21
+00:01:49,860 --> 00:02:02,360
+and of course for subtract, like this and of course also for store result which we also then use as
+
+22
+00:02:02,400 --> 00:02:08,130
+the identifier and delete result, like this.
+
+23
+00:02:08,130 --> 00:02:12,610
+So now we have this extra file where we export all these actions,
+
+24
+00:02:12,630 --> 00:02:19,530
+this now allows us to go into the reducer and import the actions from there,
+
+25
+00:02:19,890 --> 00:02:28,140
+we can now simply import everything from a given file and store it in some javascript object, maybe action
+
+26
+00:02:28,140 --> 00:02:33,930
+types from ./actions. actionType
+
+27
+00:02:33,930 --> 00:02:41,990
+now is a javascript object which has all these properties here or all these consts here I should say
+
+28
+00:02:42,240 --> 00:02:44,200
+as properties.
+
+29
+00:02:44,220 --> 00:02:54,460
+So now here, we can check for case actionTypes. and now here that would be increment and the same
+
+30
+00:02:54,460 --> 00:02:57,190
+of course for decrement and so on.
+
+31
+00:02:57,430 --> 00:03:03,990
+The huge advantage of this approach simply is we're now importing our constants here
+
+32
+00:03:04,150 --> 00:03:11,710
+and if we mistype one constant name, we'll actually get an error by our IDE or by that build process, if
+
+33
+00:03:11,710 --> 00:03:17,550
+we store and save everything, I'll get an error 'export Incement' not found
+
+34
+00:03:17,560 --> 00:03:21,760
+so I have to fix my typo to have a working application again,
+
+35
+00:03:21,760 --> 00:03:29,950
+this is why you use this approach. So I'll replace all my hardcoded strings here with the action
+
+36
+00:03:29,950 --> 00:03:30,550
+types
+
+37
+00:03:30,580 --> 00:03:38,240
+I'm importing, so subtract, add and so on to eliminate the danger of mistyping here.
+
+38
+00:03:38,290 --> 00:03:41,430
+So actionTypes.STORE_RESULT
+
+39
+00:03:41,650 --> 00:03:47,820
+and of course also actionTypes.DELETE_RESULTS so that all are replaced.
+
+40
+00:03:47,990 --> 00:03:51,560
+And then I do the same where I dispatch them,
+
+41
+00:03:51,950 --> 00:03:57,400
+it of course doesn't make any sense to still have hardcoded values here because I could still mistype,
+
+42
+00:03:57,530 --> 00:04:00,860
+so I'll simply now import my action types here,
+
+43
+00:04:01,360 --> 00:04:06,130
+so import everything as action types and this name is up to you,
+
+44
+00:04:06,130 --> 00:04:09,850
+you can name this object whatever you want from
+
+45
+00:04:09,990 --> 00:04:17,230
+and now I simply move up to the store folder to the actions.js file and now I use my action types here
+
+46
+00:04:17,230 --> 00:04:18,740
+too for dispatching.
+
+47
+00:04:18,950 --> 00:04:23,780
+So here the type is actionTypes.INCREMENT, decrement and so on
+
+48
+00:04:24,050 --> 00:04:31,730
+and therefore, we're now always referring to that property, to the constants we are exporting in the actions
+
+49
+00:04:31,730 --> 00:04:40,580
+file and hence we can't mess up by mistyping or having different identifiers because now we have only
+
+50
+00:04:40,580 --> 00:04:43,630
+one place where we set up and store our identifiers
+
+51
+00:04:43,820 --> 00:04:47,550
+and that is in this actions.js file.
+
+52
+00:04:47,570 --> 00:04:53,700
+So now with this adjusted, the application should still work as before,
+
+53
+00:04:53,960 --> 00:05:00,680
+as you can see I can still add and delete results and change my counter but now, we eliminated that one
+
+54
+00:05:00,770 --> 00:05:03,310
+danger, one potential source of errors
+
+55
+00:05:03,560 --> 00:05:11,090
+therefore outsourcing your action types into a separate file from which you then import is a good practice
+
+56
+00:05:11,330 --> 00:05:15,920
+especially as your application grows but it doesn't have to grow that much
+
+57
+00:05:15,920 --> 00:05:17,290
+for this to make sense.
+

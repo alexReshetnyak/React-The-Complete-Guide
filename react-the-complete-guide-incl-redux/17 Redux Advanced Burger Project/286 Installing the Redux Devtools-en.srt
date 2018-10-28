@@ -1,0 +1,148 @@
+1
+00:00:02,200 --> 00:00:05,980
+First of all, I want to get start by cleaning up my firebase database.
+
+2
+00:00:05,980 --> 00:00:12,220
+I'm going to delete this orders node in our real time database here because I want to start from scratch
+
+3
+00:00:12,220 --> 00:00:17,410
+and get rid of all the old orders. I'll leave the ingredients here though because we'll soon go back
+
+4
+00:00:17,410 --> 00:00:24,100
+to fetching them from the server and not getting them or not having them stored locally in our store,
+
+5
+00:00:24,280 --> 00:00:29,680
+though only for demo purposes, in a real application that might of course also make sense to initialize
+
+6
+00:00:29,680 --> 00:00:31,270
+the ingredients in your code.
+
+7
+00:00:31,270 --> 00:00:33,830
+So with that let's see what we can do
+
+8
+00:00:33,900 --> 00:00:39,320
+and the first thing I actually want to do, I want to add to our code are the redux dev tools.
+
+9
+00:00:39,490 --> 00:00:43,740
+We installed that extension for the browser in the last module,
+
+10
+00:00:43,740 --> 00:00:50,290
+now we want to set up the store here in our burger builder application such that we can use the dev
+
+11
+00:00:50,290 --> 00:00:55,910
+tools there too because I want to be able to analyze my store. For that,
+
+12
+00:00:55,950 --> 00:01:01,390
+I'm back on the redux dev tools extension github page with the installation instructions and there's
+
+13
+00:01:01,420 --> 00:01:07,050
+one difference to the set up we used in the last module, though we'll go back to that set up from there.
+
+14
+00:01:07,120 --> 00:01:09,140
+Right now we don't use any middleware,
+
+15
+00:01:09,190 --> 00:01:15,550
+so we don't need the advance store set up where we need it to create this composeEnhancers constant and
+
+16
+00:01:15,550 --> 00:01:22,440
+use the native compose function or those special variable passed by the dev tools, since I got no other
+
+17
+00:01:22,440 --> 00:01:23,090
+enhancers
+
+18
+00:01:23,080 --> 00:01:25,440
+right now, we're not using any middleware yet,
+
+19
+00:01:25,720 --> 00:01:30,730
+we can go with the basic set up for now. Though as I just said, we're going to switch back to the advanced
+
+20
+00:01:30,730 --> 00:01:36,130
+set up soon because we're about to add middleware, with the basic set up however all we have to do is
+
+21
+00:01:36,490 --> 00:01:40,900
+add this argument here to our create store function call.
+
+22
+00:01:41,020 --> 00:01:47,560
+So accessing to special or actually it's one of the same, special variable on the window object which
+
+23
+00:01:47,560 --> 00:01:55,770
+is provided by the redux dev tools extension which we pass as a variable and then also execute as a function.
+
+24
+00:01:55,780 --> 00:02:01,930
+So this is simply something we have to add as a second argument to create store, redux dev tools extension
+
+25
+00:02:01,930 --> 00:02:08,890
+and executing it as a function. With this tiny change, if we save the index.js file and we go back
+
+26
+00:02:08,890 --> 00:02:10,300
+to our application,
+
+27
+00:02:10,540 --> 00:02:20,800
+we should already be able to open our dev tools and there, switch to redux and it should load our redux
+
+28
+00:02:20,830 --> 00:02:26,650
+inspector then, we should see init state and if I add an ingredient, we should see that add ingredient
+
+29
+00:02:26,650 --> 00:02:27,540
+action here,
+
+30
+00:02:27,560 --> 00:02:29,490
+of course the same for removing it.
+
+31
+00:02:29,650 --> 00:02:31,800
+And there we can also use time travelling,
+
+32
+00:02:31,810 --> 00:02:33,040
+so this is working great.
+
+33
+00:02:33,040 --> 00:02:38,530
+So here we got the functionality we want so that we're able to conveniently work with our application and
+
+34
+00:02:38,530 --> 00:02:41,760
+easily debug it and have a look at our current state.
+
+35
+00:02:41,800 --> 00:02:45,230
+So that's the first thing I wanted to do, with that out of the way,
+
+36
+00:02:45,250 --> 00:02:53,020
+let's dive into our actual business logic and let's start adding functionality to handle orders with
+
+37
+00:02:53,020 --> 00:02:54,010
+redux tool.
+

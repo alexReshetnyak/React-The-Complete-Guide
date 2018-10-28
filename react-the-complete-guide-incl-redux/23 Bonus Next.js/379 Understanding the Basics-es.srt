@@ -1,0 +1,200 @@
+1
+00:00:02,080 --> 00:00:06,310
+En la ltima conferencia, creamos nuestra primera aplicacin nextjs.
+
+2
+00:00:06,310 --> 00:00:11,980
+Ahora bien, este no es un curso completo de nextjs y podras crear un curso sobre
+
+3
+00:00:11,980 --> 00:00:16,710
+esto, solo quiero mostrarte las caractersticas bsicas para que puedas bucear ms profundo,
+
+4
+00:00:16,720 --> 00:00:20,080
+por ejemplo con el repositorio github al que te indiqu.
+
+5
+00:00:20,080 --> 00:00:26,230
+As que ahora veamos cmo podemos navegar fcilmente desde nuestra pgina de ndice principal a la pgina de ndice de
+
+6
+00:00:26,230 --> 00:00:32,170
+autenticacin, para eso, por supuesto, necesitamos un enlace y con el enrutador de reaccin, usamos el componente vinculado que el
+
+7
+00:00:32,200 --> 00:00:35,280
+enrutador de reaccin nos dio. Ahora con nextjs, tambin
+
+8
+00:00:35,290 --> 00:00:37,650
+tenemos un componente de enlace que
+
+9
+00:00:37,750 --> 00:00:40,140
+podemos usar, aunque no proviene del
+
+10
+00:00:40,240 --> 00:00:44,610
+router de reaccin, sino que viene de bien, nextjs por supuesto.
+
+11
+00:00:44,710 --> 00:00:48,430
+As que para navegar, importar un nuevo componente, el
+
+12
+00:00:48,430 --> 00:00:56,680
+componente de enlace del siguiente / enlace, el enlace importante tiene una L minscula aqu en la ruta de importacin.
+
+13
+00:00:56,980 --> 00:00:59,320
+Ahora podemos agregar tal enlace
+
+14
+00:00:59,500 --> 00:01:07,500
+aqu, por ejemplo, puedo agregar un prrafo en mi pgina principal y decir ir y ahora vincular auth.
+
+15
+00:01:07,540 --> 00:01:12,880
+Ahora, para que esto funcione, el enlace del curso debe configurarse para que apunte a algn lugar y lo
+
+16
+00:01:12,880 --> 00:01:16,990
+har con el atributo ref como en una etiqueta ancla normal en html normal.
+
+17
+00:01:17,080 --> 00:01:23,410
+Y all, puede apuntar a auth / auth para apuntar a la carpeta de autenticacin y all, siempre seleccionar el ndice. js archivo si
+
+18
+00:01:23,420 --> 00:01:25,660
+tienes uno.
+
+19
+00:01:25,690 --> 00:01:28,830
+Sin embargo, el enlace por s solo no
+
+20
+00:01:28,900 --> 00:01:35,530
+servir de nada, sin embargo, todava usas la etiqueta de anclaje normal sin el atributo ref, detrs
+
+21
+00:01:35,530 --> 00:01:42,790
+de las escenas, nextjs bsicamente agregar el atributo ref a la etiqueta de anclaje pero luego capturar cualquier clic
+
+22
+00:01:42,790 --> 00:01:47,770
+en el ancle tag y maniplelo internamente para que realmente no recargue la pgina.
+
+23
+00:01:47,800 --> 00:01:51,970
+Si ahora guardamos esto y volvemos a nuestra aplicacin, recarguemos la aplicacin, deberamos ver
+
+24
+00:01:52,270 --> 00:01:56,120
+el enlace hacia abajo, si hacemos clic en l, vamos a / auth.
+
+25
+00:01:56,320 --> 00:02:01,630
+Otra cosa interesante que debera poder ver es que vaya a la pestaa de red y
+
+26
+00:02:01,630 --> 00:02:04,200
+vuelva a cargar su pgina principal y haga
+
+27
+00:02:04,490 --> 00:02:11,850
+clic en auth, tambin ver que se carg un paquete adicional de autenticacin y eso es lo que nextjs hace por usted,
+
+28
+00:02:12,010 --> 00:02:13,790
+divisin de cdigo automtica .
+
+29
+00:02:13,870 --> 00:02:16,880
+Por cierto, no se deje intimidar por los tamaos de
+
+30
+00:02:16,890 --> 00:02:18,660
+archivo, esto no est optimizado en
+
+31
+00:02:18,670 --> 00:02:22,540
+absoluto, esto contiene una gran cantidad de sobrecarga del entorno de desarrollo.
+
+32
+00:02:22,750 --> 00:02:28,600
+As que esa es la divisin automtica de cdigos que obtienes de forma gratuita y con el enlace que
+
+33
+00:02:28,600 --> 00:02:31,280
+ves aqu, puedes navegar fcilmente en tu aplicacin.
+
+34
+00:02:31,590 --> 00:02:36,190
+Entonces, as es como usamos el enlace y as es como podemos movernos fcilmente en nuestra aplicacin.
+
+35
+00:02:36,190 --> 00:02:38,630
+Aqu tambin no se limita a usar el
+
+36
+00:02:38,680 --> 00:02:44,620
+enlace, digamos que tiene un botn donde quiere ir a autenticacin y desea hacer esto con un clic y, por
+
+37
+00:02:44,620 --> 00:02:45,930
+lo tanto, navegar de
+
+38
+00:02:45,940 --> 00:02:49,240
+manera imperativa, por lo que en su cdigo, siempre puede hacerlo.
+
+39
+00:02:49,300 --> 00:02:54,100
+Por ejemplo aqu, por supuesto, registrando el oyente ClickClick y luego definiendo un mtodo que debera
+
+40
+00:02:54,100 --> 00:02:58,350
+ejecutarse y, por supuesto, podra serlo si tienes un componente basado en clases, cualquier
+
+41
+00:02:58,360 --> 00:03:06,320
+mtodo en ese componente, aqu solo lo escribo en lnea para mantenerlo breve. Luego puede importar el enrutador desde el siguiente
+
+42
+00:03:06,320 --> 00:03:15,380
+/ enrutador, as con minscula y luego aqu, simplemente puede llamar al enrutador push / auth y
+
+43
+00:03:15,470 --> 00:03:17,810
+esta es una manera
+
+44
+00:03:17,990 --> 00:03:20,320
+muy rpida de hacerlo
+
+45
+00:03:20,360 --> 00:03:28,310
+de manera imperativa en el cdigo, navegando alrededor. Si ahora regresa y carga su pgina principal, obtuvo ese botn, si hace clic
+
+46
+00:03:28,340 --> 00:03:33,830
+en l, estar en la pgina de autenticacin que ahora navega por el cdigo con ese objeto de enrutador.
+
+47
+00:03:33,830 --> 00:03:36,870
+As es como te mueves, cmo usas el enlace en nextjs.
+
+48
+00:03:37,400 --> 00:03:43,210
+Uno de los conceptos bsicos y parece super simple, pero mucho est sucediendo detrs de escena,
+
+49
+00:03:43,280 --> 00:03:47,550
+lo ms importante es la divisin automtica de cdigo, que es increble.
+
+50
+00:03:47,900 --> 00:03:51,700
+Ahora veamos qu ms nos brinda nextjs y cmo trabajamos con l.
+

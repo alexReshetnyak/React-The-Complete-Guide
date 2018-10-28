@@ -1,0 +1,668 @@
+1
+00:00:02,260 --> 00:00:06,790
+W ostatnim wykadzie edytujemy ten przycisk teraz teraz i dziaa dobrze.
+
+2
+00:00:06,790 --> 00:00:12,640
+Teraz chc si upewni, e po klikniciu przycisku otwieramy podsumowanie zamwienia Modal Swiftie.
+
+3
+00:00:12,730 --> 00:00:19,730
+Teraz oczywicie potrzebujemy modau, ktrego potrzebujemy ta i musimy pokaza podsumowanie niektrych zamwie.
+
+4
+00:00:19,810 --> 00:00:26,590
+Ide motile jest posiadanie elementu owijajcego, ktry zapewnia stylizacj, ktra nastpnie owija si wok
+
+5
+00:00:26,590 --> 00:00:29,190
+jakiejkolwiek treci, ktr chcesz pokaza.
+
+6
+00:00:29,200 --> 00:00:33,010
+W tym modelu ma przynajmniej sens.
+
+7
+00:00:33,010 --> 00:00:40,660
+Tak wic utworz taki modalny komponent i chc go utworzy w nowym folderze
+
+8
+00:00:40,660 --> 00:00:45,510
+w folderze jego komponentw lub utworzy podfolder dla ciebie.
+
+9
+00:00:45,580 --> 00:00:52,170
+Elementy takie jak modal Tak wic dodam tam modal, by modowa plik Che.
+
+10
+00:00:52,690 --> 00:00:59,950
+Jak ju powiedziaem, bdzie to rwnie to, wic dodam folder ta, naprawd, Eifel lub dwa, ktre nie
+
+11
+00:00:59,980 --> 00:01:05,000
+dodaem ta do ruchu, poniewa moesz ponownie wykorzysta to w innych miejscach.
+
+12
+00:01:05,020 --> 00:01:09,600
+Na przykad dla bocznej szuflady do nawigacji, ktr zamierzamy doda pniej.
+
+13
+00:01:10,120 --> 00:01:13,960
+I w folderze to s dla wszystkich, aby doda to po prostu.
+
+14
+00:01:14,080 --> 00:01:16,310
+Teraz mamy te dwa skadniki.
+
+15
+00:01:16,540 --> 00:01:25,450
+Zacznijmy od modalu Teraz, jak powinien wyglda ten komponent Modalu, bdzie to skadnik
+
+16
+00:01:25,450 --> 00:01:26,160
+funkcjonalny.
+
+17
+00:01:26,170 --> 00:01:28,750
+Nie ma z nim adnego stanu.
+
+18
+00:01:28,750 --> 00:01:34,800
+Otrzymaem tylko kilka rekwizytw i zwrciem GSX-a, co moe ci zaskoczy.
+
+19
+00:01:34,810 --> 00:01:42,460
+Ale oczywicie importujemy take ponowne odczytanie z tutaj, i eksportujemy funkcj modaln jako domyln
+
+20
+00:01:42,700 --> 00:01:44,400
+dla tego pliku.
+
+21
+00:01:45,340 --> 00:01:52,990
+Teraz jak wyglda kod GSX, moton powinien po prostu by divem w kocu, ktry
+
+22
+00:01:52,990 --> 00:01:54,800
+otacza kad tre.
+
+23
+00:01:55,000 --> 00:02:02,260
+Wic div, ktry jest owinity wok dzieci i rekwizytw dziecka naprawd moe by czymkolwiek moe by
+
+24
+00:02:02,260 --> 00:02:10,240
+naszym wasnym komponentem moe by jakim tekstem akapit, ktry cakowicie zaley od nas, jak uywamy modemu i
+
+25
+00:02:10,240 --> 00:02:12,340
+nie moemy niczego tam przekaza.
+
+26
+00:02:12,460 --> 00:02:19,660
+Oczywicie, owijka div powinna otrzyma zbyt dobre stylizacje, aby dobrze wygldaa na koniec, aby mie
+
+27
+00:02:19,750 --> 00:02:20,590
+modalny wygld.
+
+28
+00:02:20,860 --> 00:02:27,310
+W zwizku z tym dodam modalne C-s jako plik tu i tam.
+
+29
+00:02:27,310 --> 00:02:33,280
+Dziel si take pewnymi rdami kodu, ktre mona znale doczone do tego wideo, ktre moesz po prostu
+
+30
+00:02:33,280 --> 00:02:33,820
+wklei tam.
+
+31
+00:02:33,940 --> 00:02:42,970
+Tam mamy nasz modaln klas i moemy zobaczy, e to po prostu tworzy sta pozycj modw Sandersa w rodku strony i
+
+32
+00:02:43,090 --> 00:02:50,550
+daje nam may cie w pudeku, a take zmienia niektre z gwiazd Starling na szerszy ekran, naprawd
+
+33
+00:02:50,560 --> 00:02:56,840
+wszystko jest z tym zwizane mona importowa klasy z tego SEUSa w nastpujcy sposb.
+
+34
+00:02:56,840 --> 00:03:04,630
+Wic importuj klasy z modalnego C-s jako plik i przypisz go do gbokoci zawijania za pomoc atrybutu
+
+35
+00:03:04,900 --> 00:03:05,910
+nazwy klasy.
+
+36
+00:03:05,920 --> 00:03:13,110
+A wic tutaj mamy klasy, ktre poruszaj si duymi literami M, poniewa tak nazywa si klasa C S S.
+
+37
+00:03:13,180 --> 00:03:16,560
+Przy okazji upewnij si, e C S S odpada.
+
+38
+00:03:16,600 --> 00:03:18,980
+Wklejasz tam moje treci.
+
+39
+00:03:19,120 --> 00:03:22,310
+Wic to jest modalne J. S. plik.
+
+40
+00:03:22,360 --> 00:03:25,000
+Stworzy to taki modal.
+
+41
+00:03:25,000 --> 00:03:27,540
+Teraz dodajmy may od razu.
+
+42
+00:03:27,610 --> 00:03:34,280
+I oczywicie jest pytanie, gdzie w naszej aplikacji powinnimy doda modalny.
+
+43
+00:03:34,870 --> 00:03:41,530
+C, powiedziabym, e dodalimy miejsce, w ktrym chcemy je pokaza, poniewa jest to logiczne miejsce,
+
+44
+00:03:41,530 --> 00:03:47,560
+w ktrym naley i gdzie prawdopodobnie musimy poda i metody kontroli tego wywietlenia.
+
+45
+00:03:47,890 --> 00:03:50,410
+W naszym przypadku jest to budowniczy z burgerami.
+
+46
+00:03:50,920 --> 00:03:55,320
+Po prostu dodajmy kolejno od gry.
+
+47
+00:03:55,540 --> 00:04:02,200
+A teraz musimy przej do tego pliku modalnego, ktry moemy znale w komponentach.
+
+48
+00:04:02,200 --> 00:04:09,310
+Jeste modalnym i modalnym Jeyem jest rwnie paskudnie jak zawsze bez rozszerzenia pliku.
+
+49
+00:04:09,310 --> 00:04:13,970
+A nastpnie we modal i dodaj go do J jest X Bergere Boulder.
+
+50
+00:04:14,050 --> 00:04:16,280
+Teraz mamy nasz pomocniczy skadnik.
+
+51
+00:04:16,300 --> 00:04:18,380
+Mamy Bergere i wikszo kontroli.
+
+52
+00:04:18,580 --> 00:04:24,280
+Teraz tutaj po prostu doda modal i oczywicie to wkrtce zostanie dostosowane, aby nie by widocznym cay czas na
+
+53
+00:04:24,980 --> 00:04:25,240
+czerwono.
+
+54
+00:04:25,240 --> 00:04:29,920
+Teraz, jeli to zapiszemy, widzimy pole modalne w rodku.
+
+55
+00:04:29,920 --> 00:04:35,640
+Oczywicie bez adnych treci, poniewa, jak ju powiedziaem, powinnimy owija ten tryb, abymy chcieli wywietli
+
+56
+00:04:35,950 --> 00:04:41,490
+i przeczyta teraz, e jest to element samozamykajcy si, a wic nie owijajcy si niczym.
+
+57
+00:04:41,500 --> 00:04:49,320
+Celem byo pokazanie podsumowania zamwienia i rozadowanie pliku budowniczego jest ju do zatoczone.
+
+58
+00:04:49,540 --> 00:04:57,910
+Wic nie chc dodawa do logiki, aby przeksztaci t tablic w adnie uporzdkowane podsumowanie w tym pliku.
+
+59
+00:04:57,910 --> 00:05:06,370
+Wydziel go na swj wasny komponent, poniewa jest to oglnie dobra praktyka przy ponownym
+
+60
+00:05:06,400 --> 00:05:08,460
+wprowadzaniu elementw ziarnistych.
+
+61
+00:05:08,820 --> 00:05:15,130
+Skadnik, ktry chc utworzy, jest komponentem podsumowujcym zamwienie i dodam to.
+
+62
+00:05:15,180 --> 00:05:23,800
+Skadnik Andrew's Burger i tam ma sens by dodany na tym samym poziomie co elementy sterujce budow i
+
+63
+00:05:23,800 --> 00:05:25,750
+skadniki hamburgera, jak sdz.
+
+64
+00:05:25,750 --> 00:05:33,350
+Dodajmy wic podsumowanie zamwienia tam, a tam oczywicie kolejno podsumowanie J jako plik.
+
+65
+00:05:33,520 --> 00:05:40,950
+Teraz, kiedy wszyscy jestecie traktowani podsumowanie funkcji, ktre otrzymuje pewne rekwizyty i ktre wtedy powinno
+
+66
+00:05:40,950 --> 00:05:47,890
+mie normalne ciao funkcyjne, poniewa bd musia wykona jaki kod, aby uzyska podsumowanie zamwie
+
+67
+00:05:47,920 --> 00:05:51,850
+skadnikw, ktre dostaj we waciwym formacie i tak dalej.
+
+68
+00:05:51,940 --> 00:06:02,810
+Oczywicie, jak zwykle, musimy zaimportowa powtrk z ponownego aktu, a my take chcemy eksportowa podsumowanie
+
+69
+00:06:02,810 --> 00:06:05,270
+zamwie do pliku domylnie.
+
+70
+00:06:05,300 --> 00:06:12,030
+Teraz, jak powinnimy wyskoczy z podsumowaniem zamwienia, jak na pewno wyglda na kocu.
+
+71
+00:06:12,040 --> 00:06:18,590
+Chc mie tytu, ktry okrela twoje zamwienie, a moe krtki tekst, a nastpnie list wszystkich
+
+72
+00:06:18,590 --> 00:06:22,830
+przedmiotw w zamwieniu i cenie, a potem moe pytanie.
+
+73
+00:06:22,880 --> 00:06:24,330
+Kontynuuj eby sprawdzi.
+
+74
+00:06:24,530 --> 00:06:25,590
+I niektre przyciski.
+
+75
+00:06:25,660 --> 00:06:27,290
+Tyle rzeczy.
+
+76
+00:06:27,290 --> 00:06:29,980
+Teraz naprawd nie potrzebuj tutaj elementu owijajcego.
+
+77
+00:06:30,080 --> 00:06:41,480
+Dlatego zaimportuj mj element pomocniczy z als whoops Agios Seahawks.
+
+78
+00:06:41,490 --> 00:06:48,490
+Teraz moemy zwrci cz kodu X z dodatkowym elementem pomocniczym i bez obaw.
+
+79
+00:06:48,490 --> 00:06:53,850
+Zamierzamy doda troch logiki przed instrukcj return, tak aby miao sens faktyczne
+
+80
+00:06:53,850 --> 00:06:57,270
+ciao funkcyjne, a nie tylko owiadczenie zwrotne.
+
+81
+00:06:57,750 --> 00:07:06,080
+Wic dodam darmowy tag, w ktrym mwi twoje zamwienie poniej, e chc doda
+
+82
+00:07:06,080 --> 00:07:06,710
+akapit,
+
+83
+00:07:08,760 --> 00:07:15,460
+w ktrym mwi po prostu pyszne burger z nastpujcych skadnikw.
+
+84
+00:07:15,510 --> 00:07:22,520
+Colin, a teraz chc doda nieuporzdkowan list, ktra powinna zawiera tyle elementw listy, ile potrzeba,
+
+85
+00:07:22,790 --> 00:07:26,030
+aby wyprowadzi wszystkie informacje o moim burgeru.
+
+86
+00:07:26,030 --> 00:07:29,090
+Tak wic dla kadego skadnika jeden element listy.
+
+87
+00:07:29,150 --> 00:07:34,850
+Oczywicie mogem tam na stae wpisywa, ale chc tworzy to dynamicznie, poniewa jestemy zawsze dynamiczni
+
+88
+00:07:34,880 --> 00:07:41,240
+i reagujemy, dziki czemu s oni w stanie doda now zmienn w rzeczywistoci, poniewa nie planuj
+
+89
+00:07:41,240 --> 00:07:41,990
+jej zmiany.
+
+90
+00:07:41,990 --> 00:07:46,700
+Podsumowanie skadnikw, ktre powinny zawiera pewne skadniki.
+
+91
+00:07:46,700 --> 00:07:53,730
+Spodziewam si uzyska rekwizyty i zasadniczo zamapowa je na elementy listy.
+
+92
+00:07:53,810 --> 00:08:01,010
+Teraz dla skadnikw bdziemy mieli stary problem, e s one w formacie obiektowym, a
+
+93
+00:08:01,160 --> 00:08:02,540
+nie w tablicy.
+
+94
+00:08:02,540 --> 00:08:08,360
+Oczywicie moemy rwnie stworzy ten komponent w taki sposb, aby oczekiwa tablicy i przeksztaci
+
+95
+00:08:08,360 --> 00:08:12,790
+tablic w budowniczym hamburgerw, a nastpnie przekaza j do podsumowania Oracle.
+
+96
+00:08:13,100 --> 00:08:17,990
+Ale moesz te zrobi to na odwrt i po prostu przekaza obiekt i wykona
+
+97
+00:08:17,990 --> 00:08:19,330
+transformacj w podsumowaniu celu.
+
+98
+00:08:19,340 --> 00:08:26,390
+Jest to podejcie, ktre pod, poniewa uwaam, e to pozwala nam utrzyma gbokiego budowniczego lepiej, ale mona argumentowa
+
+99
+00:08:26,600 --> 00:08:30,370
+w obu kierunkach, w ktrym powinno si to odby.
+
+100
+00:08:30,680 --> 00:08:36,770
+Tak wic spodziewam si, e moje skadniki zostan umieszczone w formacie obiektowym, a na kocu to, co chc wydrukowa, jest czym
+
+101
+00:08:36,770 --> 00:08:37,160
+takim.
+
+102
+00:08:37,160 --> 00:08:45,350
+Chc mie element listy, na ktrym mog zasadniczo powiedzie, jak nazwa go sprzedawa, a nastpnie po prostu liczb
+
+103
+00:08:45,440 --> 00:08:47,060
+skadnikw tego typu.
+
+104
+00:08:47,090 --> 00:08:51,040
+I oczywicie mam element listy dla kadego skadnika.
+
+105
+00:08:51,080 --> 00:08:56,000
+Teraz, gdy twarde kodowanie to robi, byoby oczywicie atwiejsze, poniewa mogem po prostu
+
+106
+00:08:56,270 --> 00:09:00,880
+twardo kodowa list i mie dostp do odpowiedniej waciwoci na obiekcie skadnikw.
+
+107
+00:09:01,040 --> 00:09:04,000
+Ale chc tworzy w bardziej elastyczny sposb.
+
+108
+00:09:04,060 --> 00:09:06,560
+Czy wyjcie, ktre chc mie jeszcze raz.
+
+109
+00:09:06,650 --> 00:09:17,390
+Moemy wic uy skadnikw, ktre otrzymujemy, i ponownie uywa kluczy obiektw, aby przeksztaci to
+
+110
+00:09:17,390 --> 00:09:22,790
+w tablic kluczy komrki i tak dalej.
+
+111
+00:09:22,790 --> 00:09:25,620
+Teraz pytam, zanim chcemy to zamapowa.
+
+112
+00:09:25,910 --> 00:09:30,140
+Chcemy odwzorowa to na szereg elementw J S X na kocu.
+
+113
+00:09:30,140 --> 00:09:34,110
+Mamy tutaj klucze Ingredion jako dane wejciowe i chcemy je zwrci.
+
+114
+00:09:34,190 --> 00:09:39,910
+C, w zasadzie nie ma pozycji na licie, ktr znajd tutaj.
+
+115
+00:09:39,980 --> 00:09:43,240
+Chwy ostatni przedmiot i dodaj go tutaj.
+
+116
+00:09:43,270 --> 00:09:48,290
+Teraz, jak moemy uzyska komrk tam ju nazw skadnika.
+
+117
+00:09:48,290 --> 00:09:58,700
+Teraz to tylko nasz klucz do skadu, a warto to tylko skadniki podpory, a nastpnie dostp do klucza
+
+118
+00:09:58,700 --> 00:10:00,800
+skadnika i to wszystko.
+
+119
+00:10:00,860 --> 00:10:09,050
+Jedyn rzecz, ktr dodam, jest to, e zawijam klucz do skadnika tutaj w rozpitoci, poniewa chc go skapitalizowa,
+
+120
+00:10:09,230 --> 00:10:15,950
+wic zamie pierwsz liter w kapita jednej, poniewa nasza macierz skadnikw zarzdzana w budowniczym burgera
+
+121
+00:10:16,250 --> 00:10:18,200
+w obiekcie skadnikw przepraszam.
+
+122
+00:10:18,260 --> 00:10:20,600
+Oczywicie mamy bekon saatkowy i tak dalej.
+
+123
+00:10:20,630 --> 00:10:22,860
+Wszystkie zaczynajce si od maych liter.
+
+124
+00:10:23,000 --> 00:10:27,260
+Teraz, jeli je wyprowadzamy, chc mie wielkie znaki pocztkowe.
+
+125
+00:10:27,260 --> 00:10:35,180
+Dlatego te zawijam t nazw w zakres, dziki czemu mog korzysta z niektrych wbudowanych stylw tutaj i po prostu
+
+126
+00:10:35,180 --> 00:10:37,240
+ustawi to na obiekt javascript.
+
+127
+00:10:37,340 --> 00:10:45,860
+Wanie dlatego mam podwjne nawiasy klamrowe, a zewntrzna para suy do zaznaczania i dynamicznego wprowadzania, a wewntrzne
+
+128
+00:10:45,950 --> 00:10:48,580
+klamry Cauleya to obiekt javascript.
+
+129
+00:10:48,980 --> 00:10:54,800
+I tam ustawi tekst transformuje C-s jako wasno, by kapitalizowa.
+
+130
+00:10:54,800 --> 00:10:58,360
+Po prostu uyj tutaj niektrych wbudowanych stylw.
+
+131
+00:10:58,800 --> 00:11:04,570
+Teraz pozwl mi zawin to przez wiele linii, aby byo atwiejsze do odczytania.
+
+132
+00:11:04,580 --> 00:11:13,030
+Mamy tutaj pozycj listy i na tej pozycji listy mamy nasze Spanne.
+
+133
+00:11:13,080 --> 00:11:17,650
+Teraz to wanie chc utworzy list tych elementw listy.
+
+134
+00:11:17,820 --> 00:11:24,870
+Teraz moemy po prostu wypisa podsumowania z Ingredion na tej nieuporzdkowanej licie oraz wycen w stylu
+
+135
+00:11:24,870 --> 00:11:32,490
+uporzdkowanej listy, poniewa korzystasz z tej rzadkiej okazji lub uywasz domylnego stylu wszystkich tych elementw, dlatego komponent
+
+136
+00:11:32,790 --> 00:11:38,950
+podsumowania zamwie nie ma nawet mie wasne podsumowania zamwienia Cs w nastpujcy sposb.
+
+137
+00:11:39,030 --> 00:11:43,270
+Cho oczywicie moesz doda jednego i stylisty do swoich potrzeb.
+
+138
+00:11:43,590 --> 00:11:50,920
+A potem chc doda akapit, w ktrym mwi, e dalej to sprawdzam.
+
+139
+00:11:51,160 --> 00:11:57,360
+Przejdmy teraz do tego podejcia z tym podsumowaniem zamwienia i uyjmy go w konstruktorze Bergere.
+
+140
+00:11:57,760 --> 00:12:02,780
+Chc przekaza to midzy moimi modalnymi znacznikami otwierajcymi i zamykajcymi.
+
+141
+00:12:03,010 --> 00:12:10,720
+Najpierw zaimportujmy ten komponent podsumowania zamwie z naszego folderu komponentw, a tam z folderu
+
+142
+00:12:10,720 --> 00:12:17,020
+Bergere z folderu z podsumowaniem zamwie w pliku podsumowania zamwie te instrukcje
+
+143
+00:12:17,020 --> 00:12:19,710
+importowania mog by do dugie.
+
+144
+00:12:19,720 --> 00:12:23,950
+Teraz pobierzmy t lub zmienn zbiorcz, w ktrej importujemy bezpieczestwo.
+
+145
+00:12:24,380 --> 00:12:29,770
+I zejdmy do modala i zmiemy tylko po to, by mie tag otwierajcy i zamykajcy.
+
+146
+00:12:30,040 --> 00:12:38,800
+I w midzyczasie chc teraz wydrukowa podsumowanie mojego zamwienia oczywicie jako komponent samozamykajcy.
+
+147
+00:12:39,760 --> 00:12:40,980
+Aby dziaa poprawnie.
+
+148
+00:12:40,990 --> 00:12:47,680
+Podsumowanie zamwienia oczywicie musi dosta waciwo skadnikw, poniewa mamy dostp do skadnikw
+
+149
+00:12:47,680 --> 00:12:49,960
+na obiekcie rekwizytw tutaj.
+
+150
+00:12:50,760 --> 00:12:52,140
+W podsumowaniu zamwienia.
+
+151
+00:12:52,560 --> 00:12:56,990
+Musimy wic przekaza nasze skadniki i otrzymujemy je z naszego stanu.
+
+152
+00:12:57,000 --> 00:13:00,090
+Wic te skadniki pastwowe.
+
+153
+00:13:00,390 --> 00:13:06,170
+Zobaczmy teraz, jak to wyglda, jeli uratujemy wszystkie bdy i wrcimy do jej aplikacji.
+
+154
+00:13:07,800 --> 00:13:11,610
+Zobaczysz, e otrzymalimy ostrzeenie, e zapomnielimy doda klucz do naszej tablicy.
+
+155
+00:13:11,670 --> 00:13:13,890
+Ale oglnie to wyglda dobrze.
+
+156
+00:13:14,130 --> 00:13:17,030
+A jeli kliknem przyciski, zaktualizuje rwnie modem.
+
+157
+00:13:17,160 --> 00:13:21,240
+I oczywicie dobrze byoby nie pokazywa tego modelu cigle, ale wkrtce nad
+
+158
+00:13:21,240 --> 00:13:22,060
+tym popracujemy.
+
+159
+00:13:22,230 --> 00:13:25,110
+Naprawmy ten kluczowy obszar lub najpierw.
+
+160
+00:13:25,170 --> 00:13:27,070
+Oczywicie atwo to naprawi.
+
+161
+00:13:27,090 --> 00:13:33,000
+Wyprbuj to na wasn rk to oczywicie podsumowanie zamwienia na licie.
+
+162
+00:13:33,010 --> 00:13:38,180
+Musimy doda klucz, a martwy klucz powinien by unikalnym kluczem.
+
+163
+00:13:38,200 --> 00:13:45,280
+Jak wiecie, po prostu uyjmy klucza IGY tak solidnego i tak dalej, jak klucz tutaj.
+
+164
+00:13:45,400 --> 00:13:48,190
+A z tym ostrzeenie powinno znikn.
+
+165
+00:13:48,380 --> 00:13:54,340
+Teraz kolejnym krokiem jest upewnienie si, e nie zawsze widzimy model, ale moemy go doda lub
+
+166
+00:13:54,340 --> 00:13:54,850
+pokaza.
+
+167
+00:13:54,850 --> 00:13:56,410
+Po klikniciu przycisku Zamw teraz.
+

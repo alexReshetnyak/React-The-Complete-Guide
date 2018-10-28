@@ -1,0 +1,504 @@
+1
+00:00:02,230 --> 00:00:08,000
+Ento, agora cobrimos muito e ns temos o nosso controle construdo configurado e Bullah Berger pode
+
+2
+00:00:08,020 --> 00:00:16,030
+criar esse modal que nos permite exibir a ordem de um resumo simplificado, o modal deve ser exibido uma vez que clicamos no
+
+3
+00:00:16,030 --> 00:00:20,330
+boto Check out que tambm temos que adicionar abaixo ou construir controles.
+
+4
+00:00:20,620 --> 00:00:27,540
+Ento, estas so as coisas que eu quero fazer em seguida, como  verificar o boto para criar controles e
+
+5
+00:00:27,580 --> 00:00:34,750
+adicionar  modal, que deve basicamente envolver-se em torno de algum tipo de resumo de ordem, que provavelmente tambm deve
+
+6
+00:00:34,750 --> 00:00:36,560
+entrar em seu prprio componente.
+
+7
+00:00:36,580 --> 00:00:40,150
+Vamos dar um passo a passo e vamos comear com isso.
+
+8
+00:00:40,150 --> 00:00:42,310
+Veja BOTTEN para o pai.
+
+9
+00:00:42,310 --> 00:00:47,560
+Vamos ao controle do barco porque eu quero adicionar o boto check-out na parte inferior desses controles.
+
+10
+00:00:47,740 --> 00:00:54,160
+E a podemos simplesmente adicionar tambm esse boto no final que deve mostrar esse modelo no
+
+11
+00:00:54,160 --> 00:00:54,770
+final.
+
+12
+00:00:55,070 --> 00:01:02,140
+Ento, todos os anos  um boto normal boto normal HGL elemento ou J como X como sempre est aqui.
+
+13
+00:01:02,160 --> 00:01:06,870
+Mas voc sabe o que quero dizer com quimioterapia e isso deve dizer ordem.
+
+14
+00:01:06,880 --> 00:01:12,320
+Agora eu vou colocar esta legenda em todos os limites, mas isso, claro,  opcional.
+
+15
+00:01:12,370 --> 00:01:18,970
+Voc pode modelar este boto e o texto no boto de qualquer maneira que desejar.
+
+16
+00:01:19,000 --> 00:01:20,110
+Agora, o boto.
+
+17
+00:01:20,110 --> 00:01:24,180
+Falar de bloqueio deve, claro, tambm receber alguns estilos.
+
+18
+00:01:24,430 --> 00:01:29,030
+Ento, vamos abrir os dois controles e anexar este arquivo.
+
+19
+00:01:29,050 --> 00:01:32,550
+Voc encontrar o cdigo s s para este boto.
+
+20
+00:01:33,680 --> 00:01:37,720
+Aqui vou simplesmente adicionar o boto da ordem da classe S da Zia.
+
+21
+00:01:37,880 --> 00:01:45,710
+Ento eu adicionei o inativo Active Stahl ativo o estilo de desativao que queremos usar quando ns
+
+22
+00:01:45,710 --> 00:01:53,660
+pedimos um hambrguer porque no adicionamos nenhum ingrediente e Elham qualquer coisa que simplesmente criou o boto.
+
+23
+00:01:53,660 --> 00:01:58,280
+Uma vez que ele se torna ativo agora com essa atitude  vista como uma falta.
+
+24
+00:01:58,280 --> 00:02:02,740
+Certifique-se de salvar os controles de parafuso atualizados C-s conforme segue.
+
+25
+00:02:02,900 --> 00:02:09,340
+E agora podemos adicionar o nome da nossa classe a esse boto e l  o nome da classe.
+
+26
+00:02:09,350 --> 00:02:12,010
+Eu apenas adiciono isso no C S como.
+
+27
+00:02:12,380 --> 00:02:18,210
+Boto de ordem e simplesmente verifique o arquivo para confirmar este boto de ordem.
+
+28
+00:02:18,230 --> 00:02:20,400
+Esta  a classe s.
+
+29
+00:02:20,720 --> 00:02:25,200
+O estilo do boto agora  agora para desativar esse boto.
+
+30
+00:02:25,220 --> 00:02:32,270
+Precisamos verificar onde todos os ingredientes tm uma quantidade de 0 ou se pelo menos um dos ingredientes
+
+31
+00:02:32,330 --> 00:02:38,450
+estiver em 1, o que tornaria este boto ativado porque, ento, podemos, claro, clicar nele.
+
+32
+00:02:38,480 --> 00:02:46,310
+de hambrguer, porque  a que devemos afirmar que  onde sabemos quanto de cada ingrediente queremos para adicionar a este hambrguer.
+
+33
+00:02:46,640 --> 00:02:52,460
+Da mesma forma, a lgica para verificar onde quer que seja, mas o navio seja ativo, ento,
+
+34
+00:02:52,460 --> 00:02:57,820
+onde podemos perseguir o hambrguer ou no, claro, deve ser gerenciado e o recipiente de Boulder
+
+35
+00:02:57,920 --> 00:03:02,800
+O que precisamos saber aqui  a quantidade total de todos os ingredientes.
+
+36
+00:03:02,840 --> 00:03:09,110
+Ento, basicamente, uma soma de todos os ingredientes e eu simplesmente adicionarei uma nova propriedade, onde vou dizer
+
+37
+00:03:09,680 --> 00:03:13,440
+por mesa de Shea e vou configurar isso para forar inicialmente.
+
+38
+00:03:13,480 --> 00:03:16,740
+Agora comprvel deve simplesmente se tornar realidade.
+
+39
+00:03:16,770 --> 00:03:25,640
+Uma vez que possamos comprar este comprvel uma vez que possamos comprar seu hambrguer, ento, pelo menos, um ingrediente  um
+
+40
+00:03:25,640 --> 00:03:26,490
+ou mais.
+
+41
+00:03:26,660 --> 00:03:34,550
+Agora vou adicionar um novo mtodo  data de criao do hamburguer por estado de perseguio.
+
+42
+00:03:34,550 --> 00:03:39,050
+Qualquer nome que voc gosta faz isso aqui e eu quero chamar esse mtodo.
+
+43
+00:03:39,050 --> 00:03:46,720
+No final de um ingrediente e remover o manipulador mdio em denso, basta verificar se precisamos
+
+44
+00:03:46,730 --> 00:03:51,980
+de dois ou se devemos tornar comprvel como verdadeiro ou falso.
+
+45
+00:03:52,130 --> 00:04:00,020
+Portanto, aqui eu quero verificar os ingredientes que tenho no meu estado, ento vou criar um novo objeto aqui
+
+46
+00:04:00,110 --> 00:04:02,740
+para criar uma cpia desse estado.
+
+47
+00:04:02,750 --> 00:04:04,260
+Ingredientes.
+
+48
+00:04:04,310 --> 00:04:09,770
+Agora eu preciso resumir todos os valores aqui.
+
+49
+00:04:09,770 --> 00:04:15,800
+Agora, isso  super fcil de fazer no final o que eu preciso fazer  que eu preciso
+
+50
+00:04:15,860 --> 00:04:20,420
+transformar este objeto aqui em uma matriz novamente em uma matriz desses valores aqui.
+
+51
+00:04:20,420 --> 00:04:31,490
+Agora, por isso, o que posso fazer  que eu posso criar alguma constante onde eu pegue meu objeto de objeto javascript e
+
+52
+00:04:31,490 --> 00:04:36,950
+l eu uso as chaves novamente e passar meus ingredientes para isso.
+
+53
+00:04:37,070 --> 00:04:42,390
+E isso criar novamente uma srie de string e.
+
+54
+00:04:42,600 --> 00:04:46,140
+Salada de queijo com bacon e assim por diante.
+
+55
+00:04:46,160 --> 00:04:54,170
+Agora, eu disse que precisava desses valores aqui, ento as quantidades dos ingredientes no so os nomes.
+
+56
+00:04:54,500 --> 00:04:57,800
+Bem, podemos simplesmente mapear essa matriz na matriz.
+
+57
+00:04:57,800 --> 00:05:04,610
+Precisamos criar uma nova linha para facilitar a leitura do mtodo do mapa,  claro, ainda receber a chave
+
+58
+00:05:04,910 --> 00:05:07,810
+e, em seguida, isso  usado no Word.
+
+59
+00:05:08,000 --> 00:05:13,460
+A funo que ns passamos para o mtodo do mapa recebido Sakia deve dizer e ento podemos usar isso
+
+60
+00:05:13,850 --> 00:05:21,390
+para retornar o novo valor e substituir o valor antigo que era a salada do nome da propriedade e assim por diante com esse novo valor.
+
+61
+00:05:21,740 --> 00:05:30,610
+E aqui eu simplesmente queria retornar ingredientes e o valor para uma determinada chave.
+
+62
+00:05:30,720 --> 00:05:37,500
+E esta ser a quantidade por causa dos ingredientes e esta notao, eu estou acessando uma determinada propriedade na
+
+63
+00:05:37,500 --> 00:05:42,230
+chave IGY do objeto de ingredientes  assar assando e assim por diante.
+
+64
+00:05:42,330 --> 00:05:47,870
+Ento, basicamente, estou obtendo esses valores os nmeros e  o que eu ganho para cada chave.
+
+65
+00:05:47,910 --> 00:05:50,990
+Ento, agora tenho uma srie de valores.
+
+66
+00:05:51,000 --> 00:05:55,250
+Agora, tudo o que preciso fazer  chamar reduzir para reduzir novamente a desireza.
+
+67
+00:05:55,300 --> 00:06:00,210
+Neste momento, no aplique a matriz, mas para transform-la em um nico nmero.
+
+68
+00:06:00,240 --> 00:06:06,990
+A soma de todos os ingredientes para isso ter um nmero inicial de 0 e ento temos uma
+
+69
+00:06:06,990 --> 00:06:11,730
+funo que  executada em cada elemento nesta matriz mapeada nesta funo.
+
+70
+00:06:11,730 --> 00:06:19,770
+Recebo novos elementos individuais e tenha em mente que alguns simplesmente so atualizados constantemente.
+
+71
+00:06:19,800 --> 00:06:24,870
+Soma atual at a iterao atual onde as disfunes foram executadas.
+
+72
+00:06:24,960 --> 00:06:31,620
+a soma atual, mais o elemento e manter o elemento mente  um nmero porque  um valor de valor que acessamos aqui.
+
+73
+00:06:31,620 --> 00:06:37,960
+E uma vez que esta funo foi executada em todos os elementos da matriz, a soma  o resultado final e
+
+74
+00:06:38,040 --> 00:06:39,380
+aqui  simplesmente retornado
+
+75
+00:06:39,660 --> 00:06:47,280
+Com isso eu recebo uma constante constante que  zero se no tivermos ingredientes adicionados ou qualquer outro nmero que represente
+
+76
+00:06:47,370 --> 00:06:49,090
+a quantidade total de ingredientes.
+
+77
+00:06:49,740 --> 00:06:54,320
+E com isso eu posso simplesmente chamar o estado definido e configur-la.
+
+78
+00:06:54,350 --> 00:06:56,810
+Ela  capaz de.
+
+79
+00:06:57,080 --> 00:07:00,650
+E agora depende de quem tem algum  maior que zero ou no.
+
+80
+00:07:00,650 --> 00:07:04,130
+Ento, vamos configur-lo para mais 0 0.
+
+81
+00:07:04,130 --> 00:07:05,680
+VERDADEIRO OU FALSO.
+
+82
+00:07:05,840 --> 00:07:09,950
+E  verdade se temos pelo menos um ingrediente ento comprvel  verdade.
+
+83
+00:07:10,040 --> 00:07:12,710
+E esse  exatamente o comportamento que eu quero.
+
+84
+00:07:12,710 --> 00:07:18,940
+Ento agora com isso conseguimos comprar e agora podemos passar para controles de cinto.
+
+85
+00:07:19,070 --> 00:07:25,820
+Ento, vamos adicionar uma nova propriedade, vamos tambm nomear a propriedade comprvel talvez e isso  ligar a
+
+86
+00:07:25,820 --> 00:07:27,140
+propriedade a este estado.
+
+87
+00:07:27,140 --> 00:07:28,430
+Comprvel.
+
+88
+00:07:28,700 --> 00:07:34,490
+com isso passamos a informao sobre se podemos verificar esse hambrguer e pag-lo ou no.
+
+89
+00:07:34,490 --> 00:07:35,020
+E
+
+90
+00:07:35,150 --> 00:07:41,720
+Para baixo para os controles abobadados, onde agora posso tirar essas informaes para desativar este boto
+
+91
+00:07:41,720 --> 00:07:42,530
+ou habilit-lo.
+
+92
+00:07:42,560 --> 00:07:49,490
+Ento, deixe-me dividir isso em linhas de modelo e bind disabled oft  o elemento do boto HVM l.
+
+93
+00:07:49,490 --> 00:07:52,770
+Novamente  GSX, mas vai renderizar um boto no final.
+
+94
+00:07:53,060 --> 00:07:56,260
+Vamos vincular esses dois adereos e l estava.
+
+95
+00:07:56,270 --> 00:07:58,860
+Comprvel o que acabamos de configurar.
+
+96
+00:07:59,090 --> 00:08:04,760
+aqui e no deve ser to comprvel, de modo algum, no  transmitido corretamente.
+
+97
+00:08:05,270 --> 00:08:14,570
+Agora, se salvarmos isso e ns voltarmos para uma aplicao em execuo, temos o boto de agora em baixo, embora seja ativado
+
+98
+00:08:14,570 --> 00:08:17,370
+Deixe-me rapidamente ver o que h de errado.
+
+99
+00:08:17,400 --> 00:08:25,140
+Eu identifiquei o problema comprvel,  claro,  verdade se o boto se o hambrguer for comprvel
+
+100
+00:08:25,230 --> 00:08:28,250
+isto a. m. deve ser definido como True embora no seja comprvel.
+
+101
+00:08:28,350 --> 00:08:30,480
+Ento, simplesmente temos que escrever N aqui.
+
+102
+00:08:30,690 --> 00:08:35,820
+Ento, adicione um ponto de exclamao na frente do comprador de prop e agora o boto deve ser desativado.
+
+103
+00:08:35,820 --> 00:08:41,220
+ claro que nunca se torna ativo, porque nunca chamamos o mtodo amigvel.
+
+104
+00:08:41,220 --> 00:08:44,760
+Criamos essa atualizao por mtodo de estado de perseguio.
+
+105
+00:08:44,880 --> 00:08:48,790
+Ns nunca chamamos isso, devemos cham-lo depois de correr.
+
+106
+00:08:48,810 --> 00:08:55,890
+Manipulador Ed Ingredion ou remoo do manipulador Reagen para que possam ento executar esta atualizao por estado
+
+107
+00:08:55,890 --> 00:09:02,650
+de perseguio o mesmo no final do manipulador de substituio do Ingredion e com a dvida adicionada.
+
+108
+00:09:02,730 --> 00:09:05,180
+Se salvarmos agora, devemos ver isso.
+
+109
+00:09:05,190 --> 00:09:10,860
+Mas isso ocorre quando eu adiciono um ingrediente, permanece desativado.
+
+110
+00:09:10,980 --> 00:09:13,710
+S uma vez que tive um segundo, ele se torna ativo.
+
+111
+00:09:13,710 --> 00:09:16,330
+Agora, por que voc detecta o erro?
+
+112
+00:09:16,650 --> 00:09:25,290
+ingredientes atualizados e, portanto, uma vez que copiamos os ingredientes e os analisamos, podemos simplesmente obter uma palavra desatualizada.
+
+113
+00:09:25,300 --> 00:09:35,670
+Tem algo a ver com a atualizao de mtodos de estado pr-Chase, o problema  que os ingredientes que estou analisando so, obviamente,
+
+114
+00:09:35,670 --> 00:09:43,710
+meu estado antigo aqui agora, devido  forma como o estado estabelecido funciona quando executamos a atualizao
+
+115
+00:09:43,710 --> 00:09:47,940
+por estado de perseguio, talvez no possamos obter os
+
+116
+00:09:48,040 --> 00:09:55,560
+Agora podemos, naturalmente, simplesmente corrigir isso passando os ingredientes atualizados que temos em adicionar e remover o ingrediente hndler
+
+117
+00:09:55,560 --> 00:09:56,810
+de qualquer maneira.
+
+118
+00:09:57,030 --> 00:10:03,580
+Q A atualizao por mtodo de estado de perseguio e espera obter ingredientes l.
+
+119
+00:10:03,600 --> 00:10:11,650
+Ento, ingredientes e agora podemos simplesmente usar esses ingredientes dentro desse mtodo em vez de
+
+120
+00:10:11,650 --> 00:10:12,980
+copiar do estado.
+
+121
+00:10:13,000 --> 00:10:20,650
+Agora, se salvarmos isso no primeiro item que adicionamos, torna-se ativo e devemos remover todos os ingredientes para
+
+122
+00:10:20,650 --> 00:10:22,400
+desativar o boto novamente.
+
+123
+00:10:22,480 --> 00:10:25,080
+E voc v essa animao agradvel.
+
+124
+00:10:25,270 --> 00:10:27,440
+Ento, ns conseguimos o primeiro passo do primeiro.
+
+125
+00:10:27,460 --> 00:10:34,670
+Agora, no prximo passo, eu tambm quero adicionar um modal para exibir o resumo da ordem e no apenas mostrar o boto.
+
+126
+00:10:34,840 --> 00:10:37,400
+Ento vamos seguir em frente na prxima palestra.
+

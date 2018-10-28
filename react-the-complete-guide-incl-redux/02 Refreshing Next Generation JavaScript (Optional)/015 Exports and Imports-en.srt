@@ -1,0 +1,228 @@
+1
+00:00:02,290 --> 00:00:09,990
+Another feature which next generation javascript offers is about writing modular code so javascript
+
+2
+00:00:09,990 --> 00:00:12,980
+code you split up over multiple files.
+
+3
+00:00:13,170 --> 00:00:17,500
+And obviously we already can split our code over multiple files.
+
+4
+00:00:17,670 --> 00:00:22,720
+We just have to import them in the correct order in our html files.
+
+5
+00:00:22,920 --> 00:00:30,060
+And the idea behind export and import statements and so-called modules is that inside of a javascript
+
+6
+00:00:30,060 --> 00:00:37,260
+file we can import content from another file so that the javascript files themselves know their
+
+7
+00:00:37,260 --> 00:00:38,850
+dependencies.
+
+8
+00:00:38,850 --> 00:00:40,510
+It might look like this.
+
+9
+00:00:40,530 --> 00:00:46,830
+We have one file, person.js and there we have this constant person which is stored as a javascript object
+
+10
+00:00:47,430 --> 00:00:49,380
+and then this is the interesting part.
+
+11
+00:00:49,440 --> 00:00:57,210
+We export this the default keyword this is a special keyword marking this as the default export of
+
+12
+00:00:57,210 --> 00:01:04,290
+this file and we can then import this somewhere else and the import statement will be shown in a second.
+
+13
+00:01:04,290 --> 00:01:10,620
+We also might have a number of files where we export multiple things, here a constant named clean which
+
+14
+00:01:10,620 --> 00:01:15,810
+holds a function at the end and baseData which holds a number in a third file.
+
+15
+00:01:15,810 --> 00:01:24,130
+We might need to import from person.js and utility.js so app.js requires import statements.
+
+16
+00:01:24,180 --> 00:01:29,970
+And here are a couple of different import syntaxes you will see in this course. person.js as you see
+
+17
+00:01:30,250 --> 00:01:38,460
+uses the default keyword, the default keyword simply means if we just import something from that file
+
+18
+00:01:38,670 --> 00:01:40,890
+it will always be our default export.
+
+19
+00:01:40,890 --> 00:01:49,470
+So in this case the person constant therefore in import person from person.js we can name person whatever
+
+20
+00:01:49,470 --> 00:01:54,480
+we want, which is why I printed it twice here, person or prs doesn't matter.
+
+21
+00:01:54,480 --> 00:02:00,940
+It always refers to the thing you marked as the default with the default keyword. For utility.
+
+22
+00:02:00,990 --> 00:02:03,240
+js it's a bit different. There
+
+23
+00:02:03,390 --> 00:02:13,050
+We import from two different constants and therefore the import syntax uses the curly braces to explicitly
+
+24
+00:02:13,050 --> 00:02:16,170
+target specific things from that file.
+
+25
+00:02:16,170 --> 00:02:21,890
+These are so-called named exports because we import the stuff by its name.
+
+26
+00:02:21,900 --> 00:02:28,500
+We import the clean constant by its name and we import baseData by its name because we didn't mark anything
+
+27
+00:02:28,500 --> 00:02:29,410
+as the default.
+
+28
+00:02:29,520 --> 00:02:35,870
+So for javascript to know what exactly we're pointing to, we need to give it the exact name and the name
+
+29
+00:02:35,870 --> 00:02:37,860
+goes between curly braces.
+
+30
+00:02:37,950 --> 00:02:43,770
+By the way, you could also write this as one import statement with baseData comma clean or the other
+
+31
+00:02:43,770 --> 00:02:44,870
+way around.
+
+32
+00:02:44,880 --> 00:02:47,910
+So these are imports and exports.
+
+33
+00:02:47,970 --> 00:02:53,570
+You write all of this in your javascript files and will heavily use this throughout this course.
+
+34
+00:02:53,760 --> 00:03:00,420
+Now as with all these next generation javascript features, it won't run like this in all browsers.
+
+35
+00:03:00,420 --> 00:03:05,460
+Not even the most modern browsers support all the features we'll use in this project.
+
+36
+00:03:05,460 --> 00:03:11,700
+Therefore in the next course module I'll also show you how to quickly set up a project which in the
+
+37
+00:03:11,710 --> 00:03:18,330
+end just compiles all these next generation javascript features to current gen javascript features
+
+38
+00:03:18,630 --> 00:03:24,720
+so that we as a developer can use the next generation javascript without us shipping code that runs
+
+39
+00:03:24,720 --> 00:03:25,940
+nowhere.
+
+40
+00:03:25,980 --> 00:03:28,090
+So back to the imports and exports.
+
+41
+00:03:28,090 --> 00:03:32,290
+This is the syntax we use and you will see getting used a lot in this course.
+
+42
+00:03:32,310 --> 00:03:38,370
+You might also see some variations because we can also write this differently when we have a default
+
+43
+00:03:38,400 --> 00:03:39,330
+export.
+
+44
+00:03:39,330 --> 00:03:44,700
+You already saw that person is name you can choose totally on your own.
+
+45
+00:03:44,760 --> 00:03:47,970
+It doesn't matter here if you use person or prs.
+
+46
+00:03:48,210 --> 00:03:54,450
+If you have a named export you actually have to use the exact name defined in the file with the export
+
+47
+00:03:54,450 --> 00:03:55,770
+keyword.
+
+48
+00:03:55,770 --> 00:03:57,400
+Still what you can do.
+
+49
+00:03:57,480 --> 00:04:03,540
+You can assign an alias which you then again can freely choose in the file you are importing it with
+
+50
+00:04:03,540 --> 00:04:09,510
+the as keyword or if you have multiple named exports in a file.
+
+51
+00:04:09,510 --> 00:04:16,940
+You can import everything with this * special character and then assign an alias and bundled.
+
+52
+00:04:16,950 --> 00:04:23,340
+In this case would be a javascript object which exposes all constants and whatever you export in the other
+
+53
+00:04:23,580 --> 00:04:31,320
+file as properties so that you simply have bundled.baseData, bundled.clean to access the
+
+54
+00:04:31,320 --> 00:04:32,430
+export of things.
+
+55
+00:04:32,460 --> 00:04:36,780
+That's up to you and you will see me use these things throughout the course.
+
+56
+00:04:36,780 --> 00:04:39,020
+The most common use search is the top one.
+
+57
+00:04:39,030 --> 00:04:41,700
+Import curly braces something curly brace from.
+

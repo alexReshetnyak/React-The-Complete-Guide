@@ -1,0 +1,60 @@
+1
+00:00:02,010 --> 00:00:04,020
+No  s reagir.
+
+2
+00:00:04,030 --> 00:00:08,330
+H tambm alternativas de reagem,  claro, o que abordaremos neste curso.
+
+3
+00:00:08,380 --> 00:00:14,350
+Mas tambm h Engler e haveria caos visto e h avareza como espinha dorsal ou mbar,
+
+4
+00:00:14,380 --> 00:00:17,730
+mas angular e viso so as alternativas mais populares.
+
+5
+00:00:17,950 --> 00:00:22,330
+E eu s posso recomendar mergulhar no DS para realmente escolher o seu favorito.
+
+6
+00:00:22,330 --> 00:00:25,250
+Eu tambm tenho cursos sobre eles se voc estiver interessado.
+
+7
+00:00:25,600 --> 00:00:32,500
+Todos os trs so excelentes na criao de aplicativos web altamente escalveis que se parecem e se sentem
+
+8
+00:00:32,500 --> 00:00:34,090
+bem para o usurio.
+
+9
+00:00:34,090 --> 00:00:41,050
+No  tanto uma alternativa como Jake, onde ele pode pensar que  um, mas Shakeri  realmente apenas
+
+10
+00:00:41,350 --> 00:00:44,820
+sobre atravessar o dormitrio e direcionar elementos em um dormitrio.
+
+11
+00:00:44,830 --> 00:00:51,490
+Agora, como voc viu no nosso exemplo, re-agir  apenas declarar o que voc v e concentrar-se na
+
+12
+00:00:51,790 --> 00:00:59,050
+lgica, em vez disso, concentrando-se no modo como, e, portanto, reage angular e vista, voc pode criar aplicativos mais poderosos
+
+13
+00:00:59,050 --> 00:01:05,860
+porque voc pode se concentrar na lgica e na sua modelo de negcios e no tanto no lado
+
+14
+00:01:05,860 --> 00:01:08,450
+tcnico de realmente alcanar o elemento morto.
+
+15
+00:01:08,500 --> 00:01:09,670
+Voc queria mudar.
+

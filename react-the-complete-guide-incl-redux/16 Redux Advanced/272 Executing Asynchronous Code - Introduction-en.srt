@@ -1,0 +1,92 @@
+1
+00:00:02,080 --> 00:00:07,560
+So now that we learned a lot about middleware over the last lectures and we have a great way of debugging
+
+2
+00:00:07,580 --> 00:00:15,720
+the app, let's go back to our app and let's think about running asynchronous code. In our demo project here,
+
+3
+00:00:15,830 --> 00:00:21,760
+unlike any burger builder, we have no asynchronous tasks. Of course it's easy to create some,
+
+4
+00:00:21,830 --> 00:00:29,630
+let's say that when storing a new result, we actually want to simulate that we also stored this on a
+
+5
+00:00:29,630 --> 00:00:30,320
+server.
+
+6
+00:00:30,500 --> 00:00:35,510
+Now we won't reach out to a server here because it doesn't matter but we can simply use set timeout to
+
+7
+00:00:35,510 --> 00:00:36,140
+simulate that
+
+8
+00:00:36,140 --> 00:00:41,900
+this simply takes a short period of time and we want to update the store after this is completed, let's
+
+9
+00:00:41,900 --> 00:00:44,230
+say, the same for delete result.
+
+10
+00:00:44,510 --> 00:00:49,320
+So essentially we want to create asynchronous code or actions here,
+
+11
+00:00:49,340 --> 00:00:54,010
+now as I said, the reducer function has to run synchronously,
+
+12
+00:00:54,110 --> 00:01:01,290
+you cannot add set timeout here because set timeout which as you know takes a function
+
+13
+00:01:01,430 --> 00:01:03,010
+and then the timing,
+
+14
+00:01:03,020 --> 00:01:09,410
+let's say two seconds, here you can't return the new state in there, it doesn't work,
+
+15
+00:01:09,410 --> 00:01:14,750
+that's not how javascript works. This function only gets executed after two seconds, the switch statement
+
+16
+00:01:14,750 --> 00:01:17,990
+will be done by then, you can't return in there.
+
+17
+00:01:17,990 --> 00:01:23,810
+So typically what you would do, you would return a promise which calls resolve inside of set timeout
+
+18
+00:01:23,840 --> 00:01:29,720
+after a certain period of time but your reducer just doesn't expect to get a promise.
+
+19
+00:01:29,750 --> 00:01:34,060
+So there is just no way you can execute asynchronous code in here,
+
+20
+00:01:34,130 --> 00:01:41,060
+there is a different way though. We can execute asynchronous code with the help of so-called action
+
+21
+00:01:41,060 --> 00:01:42,520
+creators,
+
+22
+00:01:42,560 --> 00:01:49,940
+so let's dive into action creators first before we then learn how we can utilize them to execute asynchronous
+
+23
+00:01:49,940 --> 00:01:50,470
+code.
+

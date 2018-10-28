@@ -1,0 +1,48 @@
+1
+00:00:02,180 --> 00:00:03,560
+Ento, voc aprender muito sobre a Rydex.
+
+2
+00:00:03,590 --> 00:00:09,650
+Nas ltimas palestras e mdulos, enfatizei que existem alternativas e mostrei-lhe algumas boas prticas
+
+3
+00:00:09,650 --> 00:00:14,380
+de boas prticas e formas de otimizar seus redutores e aes.
+
+4
+00:00:14,630 --> 00:00:21,990
+Voc aprendeu a executar cdigo assncrono com criadores de ao, como este, como usar o middleware do redux
+
+5
+00:00:22,080 --> 00:00:23,950
+fonk para fazer isso.
+
+6
+00:00:24,200 --> 00:00:31,100
+Voc aprendeu a combinar redutores e a usar d read X dev tools para obter informaes sobre sua loja e
+
+7
+00:00:31,400 --> 00:00:34,840
+at mesmo viajar de volta no tempo, se voc quiser.
+
+8
+00:00:34,850 --> 00:00:41,630
+em muitos aplicativos de reao, agora tambm voltar para o Bergere mais ousado e aprimorado  um pouco mais.
+
+9
+00:00:41,630 --> 00:00:47,310
+Estas so todas ferramentas teis e relaxar  uma biblioteca extremamente poderosa que voc ver
+
+10
+00:00:47,330 --> 00:00:53,090
+O BI, por exemplo, adicionando cdigo assncrono e em conjunto com redox e as chances so que voc tambm
+
+11
+00:00:53,090 --> 00:00:55,220
+ir trabalhar com ele no prximo projeto.
+
+12
+00:00:55,250 --> 00:00:58,600
+O bsico deste mdulo deve ter voc bem preparado.
+

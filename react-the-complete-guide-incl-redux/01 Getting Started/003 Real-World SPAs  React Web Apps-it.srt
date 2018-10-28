@@ -1,0 +1,132 @@
+1
+00:00:02,250 --> 00:00:08,470
+Quindi nell'ultima conferenza ho spiegato a Ted che il reattore  tutto sui componenti e che i componenti sono fantastici.
+
+2
+00:00:08,700 --> 00:00:12,760
+Questo  in realt il cedro su una vera pagina web qui reagisce.
+
+3
+00:00:12,810 --> 00:00:15,280
+J. S. dot org che  la pagina web ufficiale.
+
+4
+00:00:15,310 --> 00:00:17,030
+O reagisci a loro.
+
+5
+00:00:17,250 --> 00:00:21,550
+E se lo diamo un'occhiata in realt  costruito con re-act, ovviamente.
+
+6
+00:00:21,570 --> 00:00:27,530
+Sembra una normale pagina Web, ma  ovviamente possibile suddividerla in componenti.
+
+7
+00:00:27,540 --> 00:00:33,380
+Abbiamo questo componente per l'hatter, otteniamo questi componenti di navigazione singola.
+
+8
+00:00:33,390 --> 00:00:42,030
+vediamo pi componenti anno come componenti di componenti di snippet di codice di emerge di DS con alcune descrizioni a sinistra di esso.
+
+9
+00:00:42,030 --> 00:00:49,860
+Abbiamo ottenuto questo richiamo di immagine ai componenti di azione qui e abbiamo qui tutti i nostri elementi qui dove
+
+10
+00:00:49,860 --> 00:00:53,040
+pubblicizzano la reazione e di cosa si tratta
+
+11
+00:00:53,130 --> 00:00:59,400
+Tutte queste cose sono fondamentalmente delle fondamenta che possiamo facilmente considerare come pezzi riutilizzabili e
+
+12
+00:00:59,610 --> 00:01:02,880
+in realt stiamo riutilizzando questo anno sugli alimenti.
+
+13
+00:01:02,880 --> 00:01:09,890
+Abbiamo qui un elemento e poi lo stesso elemento con contenuto diverso utilizzato al di sotto di esso.
+
+14
+00:01:09,900 --> 00:01:15,810
+Ora ovviamente puoi codificare tutto con solo H-G mail javascript e C-s else, ma poi
+
+15
+00:01:15,810 --> 00:01:22,050
+dovrai ripetere il codice pi e pi volte qui con componenti che costruisci i tuoi elementi
+
+16
+00:01:22,050 --> 00:01:24,970
+hm l e quindi riutilizzi solo quell'elemento.
+
+17
+00:01:25,110 --> 00:01:31,560
+E dietro le quinte l'elemento H Tim L ha gi tutto questo contenuto al suo interno e lo
+
+18
+00:01:31,560 --> 00:01:33,680
+vedremo in dettaglio in un secondo.
+
+19
+00:01:34,030 --> 00:01:40,080
+E questo  un buon esempio sarebbe che mi avresti qui nella pagina in cui ho cercato il
+
+20
+00:01:40,170 --> 00:01:42,130
+Regno Unito come alternativa a reagire.
+
+21
+00:01:42,150 --> 00:01:44,880
+L vediamo che otteniamo anche molti componenti.
+
+22
+00:01:44,900 --> 00:01:47,830
+Abbiamo ottenuto l'intero hador con il componente della barra di ricerca.
+
+23
+00:01:47,880 --> 00:01:53,580
+Quindi abbiamo qui il componente di riepilogo dei risultati di ricerca, in cui ci consente anche di filtrare i risultati della
+
+24
+00:01:54,090 --> 00:01:56,290
+ricerca e quindi i risultati della ricerca stessi.
+
+25
+00:01:56,430 --> 00:01:59,540
+Abbiamo davvero usato i componenti delle voci dell'elenco qui.
+
+26
+00:01:59,670 --> 00:02:02,060
+Ognuno di loro ha un'immagine e un titolo diverso.
+
+27
+00:02:02,250 --> 00:02:04,680
+Ma nel nucleo sono tutti uguali.
+
+28
+00:02:04,680 --> 00:02:06,390
+Hanno tutti la stessa struttura.
+
+29
+00:02:06,510 --> 00:02:13,440
+E tu mi fai anche usare un framework javascript per ottenere questo e per avere uno sviluppo pi facile.
+
+30
+00:02:13,560 --> 00:02:14,760
+E questo  importante.
+
+31
+00:02:14,850 --> 00:02:16,820
+Manutenzione e aggiornamento di questa pagina.
+
+32
+00:02:16,950 --> 00:02:22,970
+come sviluppatori, probabilmente vogliamo utilizzare i componenti e questo  il motivo per cui agiamo riguarda esclusivamente i componenti.
+
+33
+00:02:22,970 --> 00:02:25,680
+Ecco perch i componenti sono fantastici e perch noi,
+

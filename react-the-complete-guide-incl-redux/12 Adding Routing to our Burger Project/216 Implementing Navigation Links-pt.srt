@@ -1,0 +1,268 @@
+1
+00:00:02,270 --> 00:00:09,610
+Vamos tocar nos itens de navegao e ajust-los ao nosso novo mundo em que estamos agora com o encaminhamento.
+
+2
+00:00:09,980 --> 00:00:17,240
+Ento, nesse item de navegao este ano, aqui temos nossos links nossos componentes de itens de navegao,
+
+3
+00:00:17,240 --> 00:00:19,120
+onde passamos o link.
+
+4
+00:00:19,220 --> 00:00:21,910
+Agora, eu j quero ajustar algo.
+
+5
+00:00:21,950 --> 00:00:26,780
+Ns temos o construtor de hambrguer e o POF de fato deve ser cortado.
+
+6
+00:00:27,230 --> 00:00:34,850
+Mas o segundo item deve levar a barras de pedidos e na verdade ter uma legenda de pedidos para saber  que
+
+7
+00:00:34,850 --> 00:00:40,840
+o item de navegao tambm precisamos ajustar algo porque agora estamos usando uma marca de ncora normal.
+
+8
+00:00:40,850 --> 00:00:45,380
+Agora, como voc aprendeu ao usar o encaminhamento, eu realmente no quero fazer isso.
+
+9
+00:00:45,410 --> 00:00:52,210
+Em vez disso, eu quero usar o link fornecido pelo roteador re-agir.
+
+10
+00:00:52,280 --> 00:00:56,360
+Ento, do roteador D-re-act  o pacote.
+
+11
+00:00:56,630 --> 00:01:03,530
+Mas agora no quero usar o componente de link normal, todos usam o link NAV porque eu quero estilo do link
+
+12
+00:01:03,530 --> 00:01:10,520
+ativo e, na verdade, quero usar o padro de ter uma classe C S S chamada ativa porque essa  a classe
+
+13
+00:01:10,520 --> 00:01:11,460
+C como S.
+
+14
+00:01:11,480 --> 00:01:14,610
+Eu tambm definei a culpa de meu C S s.
+
+15
+00:01:14,750 --> 00:01:20,990
+Se voc escolheu um nome de classe diferente aqui, voc deve ajustar o nome da classe atribudo
+
+16
+00:01:20,990 --> 00:01:24,870
+por um link de navegao, como mostrado no mdulo de roteamento.
+
+17
+00:01:24,890 --> 00:01:33,250
+Agora, com manteiga importada eu quero us-lo em vez da referncia de referncia ncora torna-se, portanto, dois e o nome
+
+18
+00:01:33,260 --> 00:01:35,480
+da classe no  necessrio.
+
+19
+00:01:35,480 --> 00:01:38,100
+No precisamos definir se est ativo ou no.
+
+20
+00:01:38,150 --> 00:01:41,320
+Isso determinar isso automaticamente.
+
+21
+00:01:41,320 --> 00:01:44,590
+Agora, aqui, a tag de fechamento do curso tudo o que deveria ser Appling.
+
+22
+00:01:44,710 --> 00:01:50,680
+Agora, j que no precisamos mais passar a informao, seja ativo ou no, posso voltar para o
+
+23
+00:01:50,920 --> 00:01:55,510
+item de navegao e no preciso mais definir este ato do Propp aqui.
+
+24
+00:01:55,510 --> 00:01:57,900
+Ento, vamos nos livrar disso tambm.
+
+25
+00:01:57,940 --> 00:02:02,040
+Agora vamos salvar todos os arquivos e voltar para nossa aplicao.
+
+26
+00:02:02,260 --> 00:02:09,550
+E, como voc v, vemos os itens de navegao atualizados, mas no vemos um item ativo.
+
+27
+00:02:09,550 --> 00:02:14,760
+Agora vamos passar sobre este item e voc ver que ele tem a classe ativa.
+
+28
+00:02:14,830 --> 00:02:16,330
+Voc sabe por que no est funcionando.
+
+29
+00:02:16,330 --> 00:02:24,180
+Isso  complicado de detectar, mas faz todo o sentido que no vemos essa classe ter algum efeito.
+
+30
+00:02:26,490 --> 00:02:29,220
+ relacionado a ver como como mdulos.
+
+31
+00:02:29,220 --> 00:02:36,040
+Tenha em mente que o link anexa automaticamente onde ele atribui uma classe chamada ativa.
+
+32
+00:02:36,720 --> 00:02:42,600
+E, claro, configuramos a classe ativa aqui um item de navegao C S S.
+
+33
+00:02:42,900 --> 00:02:50,700
+Mas tenha em mente que os mdulos C S S realmente levaro nossos nomes de classe aqui e os convertero
+
+34
+00:02:50,760 --> 00:02:52,630
+em nomes de classes nicos.
+
+35
+00:02:52,650 --> 00:02:58,010
+Portanto, quando configurarmos ativos aqui em C de S, ele no ser ativado.
+
+36
+00:02:58,080 --> 00:03:00,560
+Ter algum hash ligado a ele.
+
+37
+00:03:00,570 --> 00:03:02,350
+Ser nico.
+
+38
+00:03:02,610 --> 00:03:10,080
+Portanto, o ato de classe anexado no tempo de execuo pelo snaffling no ir corresponder  nossa classe ativa.
+
+39
+00:03:10,140 --> 00:03:18,420
+Podemos corrigir facilmente isso, embora esse elemento de ligao naff tenha uma propriedade adicional que possamos configurar.
+
+40
+00:03:18,660 --> 00:03:22,300
+Podemos definir nosso prprio nome de classe ativo como voc aprende.
+
+41
+00:03:22,560 --> 00:03:26,240
+Voc pode adicionar a classe ativa seu fim aqui.
+
+42
+00:03:26,240 --> 00:03:34,450
+Gostaria, ento, de usar classes ativas novamente, referindo-me ao meu objeto de classes que vem da queda do meu C S S.
+
+43
+00:03:34,500 --> 00:03:41,840
+Isso agora ser um defeito do nome da classe, pois nosso C  como a transformao de mdulos o esconde.
+
+44
+00:03:41,900 --> 00:03:48,000
+Agora, com isso, se salvarmos isso, voc j v que agora est ativo porque, na verdade, o
+
+45
+00:03:48,030 --> 00:03:55,630
+nome da classe  item de navegao subrayado sublinhado no subttulo sublinhado alguns hash daises nosso nome de classe exclusivo, tambm
+
+46
+00:03:55,660 --> 00:03:57,480
+podemos clicar em pedidos agora.
+
+47
+00:03:57,820 --> 00:04:00,530
+E voc v que estamos nas ordens.
+
+48
+00:04:00,550 --> 00:04:04,840
+Est ativo, mas o primeiro link ainda est ativo.
+
+49
+00:04:04,850 --> 00:04:06,880
+Agora voc provavelmente pode consertar isso.
+
+50
+00:04:06,880 --> 00:04:08,730
+Definitivamente, v em frente e faa isso.
+
+51
+00:04:09,100 --> 00:04:12,660
+E caso contrrio, vou mostrar-lhe o meu problema para isso em um segundo.
+
+52
+00:04:14,120 --> 00:04:20,530
+Isso, claro, tambm  ativo devido  forma como o desmantelamento interpreta a rota ativa.
+
+53
+00:04:20,810 --> 00:04:27,350
+Tenha em mente que pagar aqui  o que determina se  a rota ativa ou no e 
+
+54
+00:04:27,370 --> 00:04:29,460
+tratado como um prefixo conforme aprendemos.
+
+55
+00:04:29,690 --> 00:04:36,310
+Assim, enquanto o nosso atual pauvres comear com esta parte, este link  tratado para estar ativo.
+
+56
+00:04:36,530 --> 00:04:40,120
+E, por apenas cortar, cada rota comea com isso.
+
+57
+00:04:40,340 --> 00:04:43,990
+Ento podemos simplesmente corrigir isso adicionando a rota exata aqui.
+
+58
+00:04:44,180 --> 00:04:48,530
+E com isso nos asseguramos de que isso s seja usado se for acessado.
+
+59
+00:04:48,570 --> 00:04:52,290
+Agora, claro, iremos anexar acesso a todos os links de navegao.
+
+60
+00:04:52,430 --> 00:04:58,640
+Se voc soubesse que, em algum lugar, isso deveria acontecer, voc poderia simplesmente passar para a propriedade exata de uma
+
+61
+00:04:58,640 --> 00:05:05,900
+nova propriedade ou apenas bem para o item de navegao e no item de navegao, agora pode vincular o link exato do Propp
+
+62
+00:05:06,200 --> 00:05:10,490
+of NAV para o exato exatamente para o que voc est passando de fora.
+
+63
+00:05:10,490 --> 00:05:17,170
+Agora, isso realmente s ser usado no primeiro link com apenas barra e no no segundo com pedidos.
+
+64
+00:05:17,210 --> 00:05:22,910
+est ativo se estivssemos no pedregulho de Bergere se estivermos no pedido, ento os pedidos esto ativos.
+
+65
+00:05:22,910 --> 00:05:25,980
+O resultado ainda  o mesmo Bergere Boulder s
+
+66
+00:05:26,180 --> 00:05:29,330
+Agora,  assim que implementamos os links.
+
+67
+00:05:29,330 --> 00:05:33,400
+Agora, vamos nos certificar de que realmente obtivemos os pedidos do servidor.
+

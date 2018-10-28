@@ -1,0 +1,464 @@
+1
+00:00:02,310 --> 00:00:06,260
+Daha fazla vakumlu tam bileenler elde ettiimizi ve dolaysyla yaam dngs kancalarn grebildiinizi syledik.
+
+2
+00:00:06,360 --> 00:00:11,050
+Drt boyutlu bileen oluturma hakknda rendiimiz yaam evrimi insanlarna bir gz atalm.
+
+3
+00:00:11,070 --> 00:00:12,290
+Apple ile balayalm.
+
+4
+00:00:12,300 --> 00:00:13,220
+Evet.
+
+5
+00:00:13,470 --> 00:00:20,610
+Burada size bu kurucunuz olduunu ve kurucunun sahne aldn syledim; bu bileen yalnzca
+
+6
+00:00:21,060 --> 00:00:22,170
+kurucu olur.
+
+7
+00:00:22,170 --> 00:00:27,330
+Dolaysyla, hala bu bileen snfndaki bir baka yerde yalnzca bir yapcda pervane arayamayz.
+
+8
+00:00:27,330 --> 00:00:30,720
+Sahne balklarna her yerden eriebilir miyiz
+
+9
+00:00:30,750 --> 00:00:33,990
+Bu pervanenin bal olmal.
+
+10
+00:00:34,380 --> 00:00:40,150
+Artk bunun ie yaramas iin u anda sper sahne Osterweis'i aramanz gerekiyor.
+
+11
+00:00:40,350 --> 00:00:42,710
+Bu ilem baarl olamaz.
+
+12
+00:00:42,900 --> 00:00:47,030
+Bunu size yorumlayp bunu kaydedersem, bunu kantlayabilirim.
+
+13
+00:00:47,160 --> 00:00:50,610
+imdi, sper ar yapcs eksik bir hata mesaj alyoruz.
+
+14
+00:00:50,670 --> 00:00:53,930
+Dolaysyla hata zaten neyin yanl olduunu aka belli ediyor.
+
+15
+00:00:54,090 --> 00:01:00,630
+imdi yapcy uygulamadan nce alt nk tepki gsterildiinde otomatik olarak sper yapcya
+
+16
+00:01:00,630 --> 00:01:01,470
+ulat.
+
+17
+00:01:01,590 --> 00:01:04,640
+Yani uzattmz bileenin yapcsna.
+
+18
+00:01:04,980 --> 00:01:10,280
+Ancak, kendi modelimizi uygularsak, varsaylanlar reddettiimizi reddederiz ve bu nedenle, sper'i armak
+
+19
+00:01:10,400 --> 00:01:15,350
+ve pervaneyi gemek iin bunu yapmamz gerekir, u anda yararsz bir yapcdr.
+
+20
+00:01:15,420 --> 00:01:19,090
+Eastland bizi uyarrken baka bir ey yapmadmz iin.
+
+21
+00:01:19,250 --> 00:01:25,980
+Bu yzden bireyi kilitleyeyim ve burada yapmc iinden nereden geldiini kolayca grebilmem
+
+22
+00:01:25,980 --> 00:01:30,460
+iin app Julias'y syleyen bir kilit deyimi oluturacam.
+
+23
+00:01:30,570 --> 00:01:35,390
+Bu mantkl ve bana sahne almam salyor.
+
+24
+00:01:35,470 --> 00:01:40,690
+imdi bunu kaydedersek ve uygulama yklerse, sadaki bu konsol gnl grrsnz.
+
+25
+00:01:40,720 --> 00:01:41,370
+Aslnda evet.
+
+26
+00:01:41,410 --> 00:01:42,720
+u kurucuda.
+
+27
+00:01:42,820 --> 00:01:46,800
+Sahne demirini, bu unvan aldmz bir nesne olarak gryoruz.
+
+28
+00:01:46,840 --> 00:01:49,760
+imdi dier kancalar da uygulayalm.
+
+29
+00:01:50,040 --> 00:01:54,350
+Bu orada kalacak bir bileen olurdu.
+
+30
+00:01:54,360 --> 00:02:06,340
+Ayrca, gnle kaydetme ilemini konsoldan yapacam ve app dot J. S. teki bileen byle monte edilecek.
+
+31
+00:02:06,530 --> 00:02:08,910
+imdi Dadley ile tekrar sylemek gvende.
+
+32
+00:02:09,700 --> 00:02:15,490
+Ve bu yeniden yklendikten sonra ilk nce yaplandrcy altrdmz ve ardndan bileen taklacan grrsnz.
+
+33
+00:02:15,490 --> 00:02:20,980
+Yapc hakknda bir kelime daha, burada devleti balatyoruz.
+
+34
+00:02:21,010 --> 00:02:26,160
+imdi belirttiim gibi, halen burada durumun balatld kod snippet'lerini grebilirsiniz.
+
+35
+00:02:26,290 --> 00:02:28,780
+Bunu bu durumu arayarak yapabilirsiniz.
+
+36
+00:02:28,780 --> 00:02:36,430
+Sper ormana bu durumu ardnzdan emin olun ve onu orada yaptmz gibi balatn.
+
+37
+00:02:36,670 --> 00:02:39,190
+Bu temel olarak alternatif bir szdizimi.
+
+38
+00:02:39,520 --> 00:02:44,650
+Yapcy mutlaka tavsiye etmiyoruz, nk daha nce yaptmz gibi durum balatmay uygulamak
+
+39
+00:02:44,650 --> 00:02:47,680
+daha kolaydr, ancak bir kurucuya sahip olmanzdr.
+
+40
+00:02:47,710 --> 00:02:49,160
+Kesinlikle yapabilirsin.
+
+41
+00:02:49,180 --> 00:02:53,040
+Gerekten bir deiiklik yapmazsanz, bouffe ince ve kod da.
+
+42
+00:02:53,080 --> 00:02:59,760
+Dier derslerde de grlebilecei gibi, baka bir deyile tepki vermeniz veya eylem iin
+
+43
+00:02:59,770 --> 00:03:03,270
+oluturulan projenin tm szcklerinde kesin olmas iin.
+
+44
+00:03:03,460 --> 00:03:10,630
+Alt snfn zelliklerini balatan nispeten yeni bir yola eriimimiz yoktu.
+
+45
+00:03:10,660 --> 00:03:16,570
+te bu yzden, ou projede bu yaklam geerli olacaktr, nk burada kullandmz
+
+46
+00:03:16,570 --> 00:03:19,750
+gibi yalnzca modern proje ayarlarnda alacaktr.
+
+47
+00:03:19,780 --> 00:03:21,110
+Bylece onunla greceksin.
+
+48
+00:03:21,160 --> 00:03:22,060
+Hala iyi alyor.
+
+49
+00:03:22,060 --> 00:03:25,210
+Hepimiz ayn durumu ve davranlar eskisi gibi alyoruz.
+
+50
+00:03:25,210 --> 00:03:30,440
+imdi balatma, yapcda Deese yaam dngsne geri dnd.
+
+51
+00:03:30,460 --> 00:03:33,190
+Geri bir yntem retmek zorundayz.
+
+52
+00:03:33,180 --> 00:03:39,520
+Sonra, slaytmz hatrlarsanz ve bunu uygulamak zorundayz nk her durumlu bileenin buna sahip
+
+53
+00:03:39,520 --> 00:03:40,490
+olmas gerekir.
+
+54
+00:03:40,510 --> 00:03:44,340
+Zorunlu olan bu, neyin gsterileceini bilmemiz gerekiyor.
+
+55
+00:03:44,470 --> 00:03:56,640
+Bylece orada imdi Larke J.'yi konsolide edecek. S. iimizde bunu kaydettiimiz gibi yaratmaktayz, ayn zamanda
+
+56
+00:03:56,640 --> 00:04:01,490
+slaytta grdnz gibi konuma arlan Drenthe'yi de gryoruz.
+
+57
+00:04:01,820 --> 00:04:04,270
+Ve imdi, component mount uygulamasn hayata geirelim.
+
+58
+00:04:04,440 --> 00:04:06,230
+imdi gzya tepesinde uygulayacam.
+
+59
+00:04:06,230 --> 00:04:11,030
+Dzen nemli deildir, ancak genelde veya ou zaman, yaam mr kancalarnn
+
+60
+00:04:11,030 --> 00:04:12,530
+st bileende uygulanacan greceksiniz.
+
+61
+00:04:12,560 --> 00:04:14,400
+Buraya montaj yaptn.
+
+62
+00:04:14,780 --> 00:04:18,310
+Ayrca bireyler kilitlenecek.
+
+63
+00:04:18,360 --> 00:04:25,080
+J. S. teki bileen byle monte edildi.
+
+64
+00:04:25,130 --> 00:04:28,900
+imdi, gvenlik nlemlerini kaydedersek, buna Lost denildiini grebiliriz.
+
+65
+00:04:28,900 --> 00:04:30,460
+imdi ilgin.
+
+66
+00:04:30,460 --> 00:04:36,910
+imdi bu mr dngs kancalarn Bileenler iin Arbre durumuna da ekleyelim.
+
+67
+00:04:37,140 --> 00:04:44,150
+Onlar kopyalayn ve Cheesus'taki kiilere tayn veya bir tampon ve / veya yntemle yaptrn.
+
+68
+00:04:44,440 --> 00:04:49,660
+Devleti balatmak istemiyorum, nk bu bileen iinde devlet kullanmyorum ve imdi bu
+
+69
+00:04:49,690 --> 00:04:51,410
+Konsole kilitlerini ayarlamam gerekiyor.
+
+70
+00:04:51,550 --> 00:04:59,320
+Yani burada insanlar var J. S. ve biz de orada ve bu iki kilit ve render yntemi var.
+
+71
+00:04:59,420 --> 00:05:03,350
+Ben de syleyeceim bir konsol kilidini ekleyeceim.
+
+72
+00:05:03,360 --> 00:05:06,610
+J. S. ite render.
+
+73
+00:05:06,760 --> 00:05:08,230
+imdi ilgin hale geliyor.
+
+74
+00:05:08,260 --> 00:05:14,380
+imdi bunu kaydedersek, tm bu insanlarn yaam dngs kancalarnn infaz edilince grelim.
+
+75
+00:05:15,130 --> 00:05:22,940
+Diyelim ki dediklerini yapalm, bizi kurtardnzdan ve sayfay yeniden yklediinizden emin olun; gryorsunuz ki bunlar hi grmyoruz.
+
+76
+00:05:22,980 --> 00:05:27,520
+Bu mantkl nk sadece bu kiileri artl olarak gsterdik.
+
+77
+00:05:27,840 --> 00:05:32,060
+Tkladm kiileri tklar amaz hepsini grrsnz.
+
+78
+00:05:32,160 --> 00:05:39,720
+Aslnda oradaki grebildiiniz udur: Safdar kk konteyneri hatrlatldnda diyafram akl olutu.
+
+79
+00:05:39,900 --> 00:05:42,420
+Bu durum devletin deimesinden dolay mantkl.
+
+80
+00:05:42,540 --> 00:05:45,800
+Yani gerekten yrtlen hatrlayn render.
+
+81
+00:05:46,140 --> 00:05:52,410
+Ve sonra grdnz gibi, yapmcnn yapm olduu idam edildiinde kiilerin kapandraca ve
+
+82
+00:05:52,440 --> 00:05:54,320
+iinin monte edildii grlyor.
+
+83
+00:05:54,330 --> 00:06:03,930
+imdi de, yukarda tanmland gibi kiinin J'ye Oldys yntemlerini, bunu tanmlayabilmeniz iin kilidi ayarlamanza ve i parac kilidini oluturmak iin
+
+84
+00:06:03,930 --> 00:06:12,960
+render ynteminde bir gnlk uygulamak zere ayarlamaya devam edelim. S.
+
+85
+00:06:13,650 --> 00:06:16,380
+ite render.
+
+86
+00:06:16,390 --> 00:06:19,110
+imdi bu dosyay sana yapalm.
+
+87
+00:06:19,230 --> 00:06:21,140
+Ve imdi unu bir daha grelim.
+
+88
+00:06:21,410 --> 00:06:25,520
+Uygulama yklendiinde yalnzca Abdias' gryoruz, ancak artk kalabalklayor.
+
+89
+00:06:25,520 --> 00:06:27,510
+Bir keresinde hedef sebat etmeye altm.
+
+90
+00:06:27,890 --> 00:06:34,300
+Bu yzden, bata, aslnda buraya balanan bileen kadar buraya kadar armamz gereken
+
+91
+00:06:34,290 --> 00:06:35,210
+yolu balatn.
+
+92
+00:06:35,360 --> 00:06:41,720
+Ardndan dmeyi tklyoruz ve bu geri ekilme bize teslim olmaz, nk akas devlet deitiini
+
+93
+00:06:41,720 --> 00:06:44,680
+grmek iin render iini geri armaldr.
+
+94
+00:06:44,750 --> 00:06:52,130
+Ardndan, Jr'nin yntemlerini, sent bana sopalar alan kurucuya kadar
+
+95
+00:06:52,130 --> 00:06:53,110
+ileriz.
+
+96
+00:06:53,120 --> 00:07:01,130
+Bu nedenle, diziyi ieriye alan tm bu bileen, balanacak ve oluturulacak, ancak bu nemli.
+
+97
+00:07:01,280 --> 00:07:05,670
+nsann taklp bindii bileenlerin peinde olduunu grmyoruz.
+
+98
+00:07:05,720 --> 00:07:11,170
+Onun yerine J. ahsna devam ediyoruz. S. ve bu da mantkldr.
+
+99
+00:07:11,180 --> 00:07:17,160
+Kaydrmadan sonra bu adm kaydrn ocuk bileenlerini oluturdu.
+
+100
+00:07:17,530 --> 00:07:24,590
+Bu yzden bileen henz yklenmediini grmyoruz ancak neden kii J'yi kurucuda gryoruz?
+
+101
+00:07:24,600 --> 00:07:34,130
+Ve bu yzden listeyi oluturduk ve listede yzde 3'lk tekil bileen var, bu nedenle de kii
+
+102
+00:07:34,130 --> 00:07:44,390
+geus'u sonuna kadar grmekteyiz  kez render ve sa'nn serbest zamanlarn kurduu kiiyi grdkten sonra, bu yl
+
+103
+00:07:44,390 --> 00:07:46,440
+bo zamanlar yok.
+
+104
+00:07:46,970 --> 00:07:50,630
+Ve Chia'nn takt kiiler var.
+
+105
+00:07:50,960 --> 00:07:53,960
+Ve bu tam olarak slaytta grdnz emirdir.
+
+106
+00:07:53,960 --> 00:08:00,080
+Bileen aa gider ve ystem'i oluturur ve bu Meffert'da kendi kodunu altrma ansna
+
+107
+00:08:00,080 --> 00:08:00,980
+sahip olursun.
+
+108
+00:08:01,160 --> 00:08:07,430
+Ama sadece gnle kaydettirirken bile, yeniden hareketin nasl altn ve bu bileeni
+
+109
+00:08:07,430 --> 00:08:09,500
+nasl oluturduunu grmek ilgin.
+
+110
+00:08:09,500 --> 00:08:12,160
+imdi yaratmak ilgin bir ey.
+
+111
+00:08:12,560 --> 00:08:15,890
+Ve tabii ki ayn ekilde ilevsel bileenleri yaratr.
+
+112
+00:08:16,010 --> 00:08:18,680
+Orada sadece yaam dngs kancalarmz ekleyemiyoruz.
+
+113
+00:08:18,800 --> 00:08:24,650
+Ancak, herhangi bir mantk yrtmenize gerek yoksa, bunlara ihtiyacnz yoktur ancak bileenleri oluturmak ilgin
+
+114
+00:08:24,650 --> 00:08:25,560
+bir eydir.
+
+115
+00:08:25,580 --> 00:08:29,900
+imdi, bileenleri gncellediimizde ne olacana bir gz atalm.
+
+116
+00:08:29,900 --> 00:08:31,780
+Bu yaam dngs nasl grnd.
+

@@ -1,0 +1,300 @@
+1
+00:00:02,180 --> 00:00:05,820
+Y la ltima conferencia que aprendi cmo configurar el estado en fro correctamente.
+
+2
+00:00:05,910 --> 00:00:12,300
+Si su nuevo estado depende de su estado anterior y existe el peligro de editar este antiguo estado en el
+
+3
+00:00:12,300 --> 00:00:18,430
+mismo punto de tiempo en cualquier otro lugar de la aplicacin porque ese estado realmente se ejecuta de forma asncrona.
+
+4
+00:00:18,440 --> 00:00:25,920
+Ahora que tenemos una buena manera de establecer el escenario en tales casos, tambin tenemos una mejor manera de manejar
+
+5
+00:00:25,920 --> 00:00:29,950
+props, al menos en algunos casos de uso podra ser mejor.
+
+6
+00:00:29,970 --> 00:00:35,820
+Sobre todo si escribes componentes que pueden ser utilizados por nuestros desarrolladores durante su proceso
+
+7
+00:00:36,450 --> 00:00:43,520
+de desarrollo, puedes restringir los tipos y valores que recibes para tus accesorios, como por ejemplo para la persona.
+
+8
+00:00:43,530 --> 00:00:47,290
+J. S. all recibimos cuatro accesorios importantes.
+
+9
+00:00:47,310 --> 00:00:52,500
+Haz clic en la edad del nombre y cambia.
+
+10
+00:00:52,500 --> 00:01:00,030
+Ahora, dado que nuestra aplicacin y hemos probado regularmente, no corremos el riesgo de transmitir los valores incorrectos, pero
+
+11
+00:01:00,600 --> 00:01:08,640
+an podemos aplicar ciertos valores para garantizar que la edad siempre sea una cadena o un nmero y el nombre siempre
+
+12
+00:01:08,640 --> 00:01:12,560
+es una cadena o un nmero como en nuestro caso.
+
+13
+00:01:12,610 --> 00:01:14,570
+En realidad, como la edad es un nmero.
+
+14
+00:01:14,700 --> 00:01:19,710
+Ahora, si pasramos una secuencia, nuestra aplicacin seguira funcionando correctamente, pero tal vez hagamos algunos
+
+15
+00:01:19,710 --> 00:01:23,370
+clculos con eso y, por lo tanto, definitivamente necesitamos un nmero.
+
+16
+00:01:23,520 --> 00:01:29,050
+Entonces queremos asegurarnos de que Frode tenga una advertencia o un error durante el desarrollo.
+
+17
+00:01:29,250 --> 00:01:37,050
+Si un desarrollador utiliza nuestro componente incorrectamente, en otras palabras, queremos verificar los tipos de propiedades entrantes
+
+18
+00:01:37,050 --> 00:01:40,770
+para asegurarnos de que se estn usando correctamente.
+
+19
+00:01:40,950 --> 00:01:45,930
+Y para eso hay una biblioteca extra o un paquete adicional que puede agregar a su reaccin.
+
+20
+00:01:45,960 --> 00:01:53,270
+As que hagmoslo con todos los Dudas con el terminal integrado y all una ejecucin de guardar el tablero de instrumentos para
+
+21
+00:01:53,270 --> 00:01:58,770
+guardar la entrada en el paquete del archivo adyacente y luego simplemente se llama tipos de Propp.
+
+22
+00:01:58,810 --> 00:02:06,180
+Esto es por el equipo de re-acto subcontratado en su propio paquete y nos da acceso a algunas funciones
+
+23
+00:02:06,180 --> 00:02:09,710
+de utilidad para verificar el tipo de nuestra propiedad.
+
+24
+00:02:10,200 --> 00:02:11,780
+Entonces aqu la persona JS es falsa.
+
+25
+00:02:11,790 --> 00:02:13,240
+Podemos usarlo
+
+26
+00:02:13,280 --> 00:02:17,020
+En primer lugar, importar tipos de Propp desde ese paquete.
+
+27
+00:02:17,100 --> 00:02:19,280
+As que importa los tipos de Propp.
+
+28
+00:02:19,440 --> 00:02:25,380
+Esa es la exportacin predeterminada de este paquete desde tipos de Propp como este.
+
+29
+00:02:25,380 --> 00:02:33,060
+Ahora, cmo usamos los tipos de utilera? Entonces simplemente utilcelos yendo por debajo de la definicin de su clase y luego
+
+30
+00:02:33,060 --> 00:02:34,120
+tomando su clase.
+
+31
+00:02:34,350 --> 00:02:43,070
+As que la persona que es el nombre de esta clase y el final y all ahora simplemente agrega la propiedad
+
+32
+00:02:43,070 --> 00:02:44,220
+del tipo apropiado.
+
+33
+00:02:44,240 --> 00:02:51,920
+Bsicamente ests editando esta clase ofrecida para encontrar los tipos de Propp es un objeto justado y all ahora puedes
+
+34
+00:02:51,920 --> 00:02:58,180
+tener pares de valores clave donde tus claves o propiedades son los nombres de los accesorios.
+
+35
+00:02:58,220 --> 00:03:05,710
+As que haga clic en el nombre y as sucesivamente y los valores son las condiciones de las reglas para que pueda decir que tenemos
+
+36
+00:03:05,720 --> 00:03:09,100
+un clic en las condiciones de la propiedad a punto de seguir.
+
+37
+00:03:09,290 --> 00:03:14,380
+Tenemos una propiedad de edad de propiedad de nombre y una propiedad de cambio.
+
+38
+00:03:14,450 --> 00:03:22,610
+Ahora faltan todas las condiciones y despus de esta conferencia encontrar el artculo donde incluyo todas las condiciones
+
+39
+00:03:22,670 --> 00:03:23,290
+disponibles.
+
+40
+00:03:23,300 --> 00:03:32,300
+reglas ahora, por ejemplo, podra decir que klick debera ser una funcin para que pueda acceder a los tipos de proc.
+
+41
+00:03:32,300 --> 00:03:36,440
+Puede agregar y puede usar para definir sus conjuntos de
+
+42
+00:03:36,440 --> 00:03:45,690
+Los datos objetan que est importando desde la biblioteca de tipos y que exponen un par de reglas o tipos
+
+43
+00:03:45,720 --> 00:03:47,590
+diferentes que puede aplicar.
+
+44
+00:03:47,700 --> 00:03:55,590
+Por ejemplo, func y la mitad de lo que est diciendo que el valor que paso a mi propiedad klick tiene que ser
+
+45
+00:03:55,590 --> 00:04:00,750
+una funcin que, por supuesto, tiene mucho sentido porque estamos tratando de ejecutarlo como una
+
+46
+00:04:01,920 --> 00:04:03,570
+funcin para el nombre.
+
+47
+00:04:03,720 --> 00:04:13,320
+Podramos decir que los tipos de Propp deberan ser una cadena activada para los tipos de Hprop puede ser un nmero.
+
+48
+00:04:13,610 --> 00:04:19,190
+hay tipos an ms avanzados que podran incluso encontrar la forma exacta de un Optik que est recibiendo.
+
+49
+00:04:19,200 --> 00:04:20,050
+Y, por cierto,
+
+50
+00:04:20,120 --> 00:04:24,850
+Entonces, qu propiedades debera tener y qu tipos deberan tener las propiedades de ese objeto.
+
+51
+00:04:25,040 --> 00:04:26,580
+Puedes ser realmente detallado.
+
+52
+00:04:26,750 --> 00:04:31,880
+Y de nuevo, recomiendo echar un vistazo al artculo despus de su conferencia para conocer
+
+53
+00:04:31,880 --> 00:04:32,890
+todas las posibilidades.
+
+54
+00:04:33,020 --> 00:04:35,960
+Cuando se le pregunt que hay mucho, usted est cambiado.
+
+55
+00:04:35,960 --> 00:04:41,810
+Quizs tambin deberas ser una funcin y esa es una configuracin de tipo Propp muy bsica.
+
+56
+00:04:41,810 --> 00:04:47,750
+y volvemos a cargar, acceda a la consola para ver los posibles mensajes de error y ver que todo funciona.
+
+57
+00:04:49,730 --> 00:04:51,410
+Ahora, si volvemos a la aplicacin
+
+58
+00:04:51,420 --> 00:04:57,870
+Ahora bien, si tratamos de pasar una propiedad incorrecta, por ejemplo yendo al archivo de captura
+
+59
+00:04:57,930 --> 00:05:06,940
+y estableciendo la edad de Max en 28 como una cadena, ahora ver si hago clic en Alternar personas, aqu obtenemos un error.
+
+60
+00:05:07,200 --> 00:05:11,810
+El tipo de solicitud fallida no es vlido. Propp age of type string.
+
+61
+00:05:11,880 --> 00:05:13,550
+Espera ese nmero.
+
+62
+00:05:13,620 --> 00:05:15,450
+Esto es exactamente lo que conseguimos all.
+
+63
+00:05:15,690 --> 00:05:16,980
+Y por qu es esto til para nosotros.
+
+64
+00:05:16,980 --> 00:05:20,110
+Nos aseguramos de que no recibamos accesorios incorrectos.
+
+65
+00:05:20,160 --> 00:05:25,880
+Y de nuevo, esto es ms til si trabajas en componentes de team building que son utilizados por personas
+
+66
+00:05:25,890 --> 00:05:32,310
+en parte y donde es crucial que obtengas los accesorios adecuados porque a veces tienes accesorios en los que realmente no importa
+
+67
+00:05:32,310 --> 00:05:37,680
+si se trata de una cadena o un nmero porque simplemente lo est imprimiendo en la pantalla de
+
+68
+00:05:37,700 --> 00:05:38,400
+todos modos.
+
+69
+00:05:38,530 --> 00:05:40,330
+En casos promedio, podra ser importante.
+
+70
+00:05:40,530 --> 00:05:44,200
+Por lo tanto, no tiene que usar tipos de utilera en cada componente que defina.
+
+71
+00:05:44,340 --> 00:05:49,410
+De nuevo, una razn que habla en contra es que no funciona y los componentes funcionales que
+
+72
+00:05:49,410 --> 00:05:51,650
+debes usar con la mayor frecuencia posible.
+
+73
+00:05:51,990 --> 00:05:59,940
+Pero en algunos componentes de nivel de rube es posible que desee controlar qu propiedad le interesa y
+
+74
+00:05:59,940 --> 00:06:01,050
+qu propiedad transfiere.
+
+75
+00:06:01,200 --> 00:06:05,200
+Y de nuevo especialmente importante si trabajas con o para otras personas.
+

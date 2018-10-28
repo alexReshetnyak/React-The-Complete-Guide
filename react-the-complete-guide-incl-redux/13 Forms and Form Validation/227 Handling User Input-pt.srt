@@ -1,0 +1,364 @@
+1
+00:00:02,340 --> 00:00:07,050
+Ento, agora temos esse formulrio bsico configurado com nosso prprio componente de entrada.
+
+2
+00:00:07,110 --> 00:00:13,650
+Digamos isso tambm para reagir  entrada do usurio e para obter a entrada do usurio.
+
+3
+00:00:13,650 --> 00:00:19,740
+Ento, para isso, meu componente de entrada, cada elemento, claro, deve receber no ouvinte de mudanas.
+
+4
+00:00:19,740 --> 00:00:24,120
+Ento, vamos adicionar um a cada um dos elementos que estamos criando aqui.
+
+5
+00:00:24,330 --> 00:00:31,730
+Ento eu vou passar por todos eles e eu vou usar uma opo de ID onde eu posso colocar vrios cursores adicionar
+
+6
+00:00:31,790 --> 00:00:33,420
+a mudana para todos eles.
+
+7
+00:00:33,650 --> 00:00:37,080
+E, claro, no quero lidar com a mudana no componente de disco.
+
+8
+00:00:37,220 --> 00:00:42,220
+Eu espero obter uma referncia de mtodo de fora, que ento se preocupa com isso.
+
+9
+00:00:42,410 --> 00:00:48,440
+Ento, aqui, eu simplesmente adicionarei adereos e irei nomear a propriedade mudada e voc pode, claro, escolher qualquer nome de
+
+10
+00:00:48,440 --> 00:00:49,790
+suporte que voc deseja.
+
+11
+00:00:49,820 --> 00:00:51,820
+Agora mude apenas o nome que escolhi.
+
+12
+00:00:51,980 --> 00:00:59,600
+Ento, em dados de contato, agora preciso implementar um mtodo que reage s propriedades alteradas.
+
+13
+00:00:59,600 --> 00:01:04,170
+Ento, onde eu posso disparar em mudana que eu posso passar para mudar corretamente.
+
+14
+00:01:04,250 --> 00:01:08,900
+O que, no final, ser anexado ao evento On Change.
+
+15
+00:01:08,930 --> 00:01:09,770
+Ento, para isso.
+
+16
+00:01:09,790 --> 00:01:19,420
+identificador de entrada de ID de identificao, eu espero obter um objeto de evento, pois ele ser automaticamente passado por mim por reao.
+
+17
+00:01:19,420 --> 00:01:25,160
+Eu criarei um novo mtodo no meu componente de dados de contato, todo o
+
+18
+00:01:25,180 --> 00:01:30,130
+Se esse mtodo for anexado a um ouvinte de eventos,  claro que ele .
+
+19
+00:01:30,220 --> 00:01:36,200
+Ento, o manipulador de mudana de entrada  o que eu passei para o Propp alterado, esse manipulador alterado de entrada.
+
+20
+00:01:36,310 --> 00:01:38,700
+Sem parnteses como sempre.
+
+21
+00:01:39,070 --> 00:01:48,790
+E agora, eu quero primeiro registrar o valor do objetivo do evento para ver qualquer sada e ver se ele geralmente
+
+22
+00:01:48,790 --> 00:01:49,660
+est funcionando.
+
+23
+00:01:50,080 --> 00:01:52,570
+Deixe-me digitar algo em seu nome.
+
+24
+00:01:52,600 --> 00:01:58,810
+Eu vejo isso aqui  direita tambm para o cdigo e tambm para o menu suspenso.
+
+25
+00:01:58,820 --> 00:02:00,800
+Ento, recebemos esse valor.
+
+26
+00:02:00,800 --> 00:02:02,930
+Conectmo-lo com sucesso.
+
+27
+00:02:03,110 --> 00:02:09,740
+Mas  claro que podemos ver os valores e as nossas entradas, porque o que falta  a parte do advrbio de
+
+28
+00:02:09,740 --> 00:02:10,820
+ligao de dois sentidos.
+
+29
+00:02:10,820 --> 00:02:18,290
+Ns no estamos usando o estado aqui quando a entrada muda para atualizar o valor de nossos elementos.
+
+30
+00:02:18,350 --> 00:02:23,660
+E  claro que temos essa chave de valor para cada elemento de entrada que nos vinculamos.
+
+31
+00:02:23,660 --> 00:02:28,930
+Portanto, esta  atualmente a chave que determina o valor que  mostrado na tela.
+
+32
+00:02:29,150 --> 00:02:37,400
+pois,  claro, precisamos de mais informaes do que apenas um evento que nos d acesso ao valor do objetivo do evento.
+
+33
+00:02:37,400 --> 00:02:42,260
+Portanto, precisamos atualizar o valor de uma determinada entrada nas mudanas do usurio,
+
+34
+00:02:42,290 --> 00:02:51,110
+Tambm recebemos ou precisamos de um segundo argumento, que  o identificador de entrada, para que possamos alcanar
+
+35
+00:02:51,110 --> 00:02:57,590
+nosso estado, obter o elemento certo aqui o objeto certo e ajustar seu valor.
+
+36
+00:02:58,280 --> 00:03:05,510
+Ento, para fazer isso, v para o meu componente de dados de contato e o mtodo que passei para mudar a referncia aqui
+
+37
+00:03:05,790 --> 00:03:08,520
+deve ser uma referncia a uma funo annima.
+
+38
+00:03:08,960 --> 00:03:16,250
+Para que agora eu possa passar argumentos para o manipulador de mudana de entrada ou chamada de mtodo nesta funo
+
+39
+00:03:16,340 --> 00:03:21,210
+annima, agora ns obtemos esse objeto de evento que  criado por reagem automaticamente.
+
+40
+00:03:21,410 --> 00:03:31,720
+passar o meu identificador, que  o ID do elemento do formulrio, que  essa ID que  apenas uma chave do nosso objeto.
+
+41
+00:03:31,730 --> 00:03:35,330
+E eu quero passar isso, mas tambm agora quer
+
+42
+00:03:35,330 --> 00:03:36,990
+E  exatamente isso que eu preciso.
+
+43
+00:03:37,130 --> 00:03:40,490
+Essas chaves em que voc est esto em um objeto de estado.
+
+44
+00:03:40,490 --> 00:03:47,370
+Estes so os identificadores das entradas e exatamente as pticas que eu preciso para ajust-lo.
+
+45
+00:03:47,390 --> 00:03:51,920
+Agora  claro que posso usar essa informao para atualizar o valor.
+
+46
+00:03:51,920 --> 00:03:58,860
+O problema  que, claro, no consigo acessar este identificador de formulrio de ordem do estado e atualizar o valor.
+
+47
+00:03:59,000 --> 00:04:01,310
+Isso no  como ns moramos o estado.
+
+48
+00:04:01,580 --> 00:04:03,230
+Em vez disso, temos que transform-lo.
+
+49
+00:04:03,260 --> 00:04:13,400
+Bem imutavelmente e ns fazemos isso como dissemos o estado e para o pai o que eu farei , em primeiro lugar, criar meus dados
+
+50
+00:04:13,400 --> 00:04:15,540
+de formulrio da minha cpia.
+
+51
+00:04:15,560 --> 00:04:19,170
+Ento, do estado aqui meu pedido forma todas as rvores.
+
+52
+00:04:19,190 --> 00:04:19,940
+Copie-o.
+
+53
+00:04:20,060 --> 00:04:28,760
+Ento nosso nome  um formulrio de pedido atualizado e, nesse ano, agora criarei um objeto javascript onde
+
+54
+00:04:28,760 --> 00:04:32,070
+copiem este formulrio de pedido de estado.
+
+55
+00:04:32,090 --> 00:04:39,950
+No entanto, isso no cria um clone profundo, ento eu copio esse objeto e distribuo todas as propriedades.
+
+56
+00:04:39,950 --> 00:04:48,560
+Recebo um novo objeto, mas, uma vez que esses objetos eu tenho mais objetos aninhados, esses no seriam clonados.
+
+57
+00:04:48,560 --> 00:04:49,410
+Profundamente.
+
+58
+00:04:49,490 --> 00:04:55,520
+Mas l, eu voltaria a copiar o ponteiro para eles e, portanto, se eu mudar algo,
+
+59
+00:04:55,520 --> 00:04:57,540
+eu ainda mutaria o estado original.
+
+60
+00:04:57,560 --> 00:05:03,800
+Infelizmente, porque o objeto em meu objeto copiado e o objeto no estado ainda
+
+61
+00:05:04,990 --> 00:05:07,930
+seria igual, ento precisamos clonar isso profundamente.
+
+62
+00:05:08,080 --> 00:05:09,390
+Como fazemos isso.
+
+63
+00:05:11,240 --> 00:05:14,150
+Bem, no final, eu me preocupo com o valor aqui.
+
+64
+00:05:14,240 --> 00:05:21,320
+preciso ter certeza de que este objeto aqui tambm esteja clonado e no apontei para o mesmo objeto.
+
+65
+00:05:21,320 --> 00:05:22,390
+Ento eu s
+
+66
+00:05:22,490 --> 00:05:29,180
+Eu posso conseguir isso no meu manipulador de mudanas de entrada, no apenas distribuindo as propriedades do formulrio
+
+67
+00:05:29,270 --> 00:05:33,680
+de pedido, que seria o e-mail e assim por diante, mas morto.
+
+68
+00:05:33,710 --> 00:05:44,530
+Eu tambm copio as propriedades de DB dentro do meu elemento de formulrio de pedido selecionado profundamente para isso.
+
+69
+00:05:44,600 --> 00:05:50,120
+Vou pegar o formulrio de pedido atualizado, que  um clone do original e que no se
+
+70
+00:05:50,120 --> 00:05:53,200
+refere ao original, e agora todos eles tm acesso.
+
+71
+00:05:53,210 --> 00:05:54,890
+Meu identificador de entrada.
+
+72
+00:05:54,980 --> 00:05:58,040
+Ento, esse  um valor como o email.
+
+73
+00:05:58,040 --> 00:05:59,580
+Mtodo de Entrega.
+
+74
+00:05:59,600 --> 00:06:03,850
+Agora eu tenho acesso a esse objeto que j no encerramos.
+
+75
+00:06:03,890 --> 00:06:12,880
+Ento, agora eu preciso clonar esse objeto e vou armazenar a nova atualizao constante para eles, o elemento pode estar aqui novamente. Eu
+
+76
+00:06:14,280 --> 00:06:18,300
+vou tratar o novo objeto e costumava espalhar o operador aqui.
+
+77
+00:06:19,800 --> 00:06:27,500
+Para criar um clone agora, posso alterar o valor do elemento de formulrio atualizado com segurana, pois 
+
+78
+00:06:27,500 --> 00:06:28,610
+novamente um clone.
+
+79
+00:06:28,610 --> 00:06:34,010
+S se eu mudasse o conflito de elemento, o pai ainda seria um objeto que no clonava, o que
+
+80
+00:06:34,010 --> 00:06:36,890
+aponta para o original, mas no estou fazendo isso aqui.
+
+81
+00:06:36,920 --> 00:06:42,560
+Se voc est fazendo isso, voc tambm precisa clonar isso profundamente com o operador de propagao.
+
+82
+00:06:42,560 --> 00:06:50,220
+Ento, vou chegar a atualizar o valor do elemento do formulrio e configur-lo igual ao valor do objetivo do evento.
+
+83
+00:06:50,330 --> 00:06:58,760
+E agora eu posso tomar meu formulrio de ordem atualizado, ento o que  o meu formulrio original do clone
+
+84
+00:06:58,760 --> 00:07:06,120
+e l posso agora acessar novamente o identificador de entrada e configur-lo igual ao elemento de formulrio atualizado.
+
+85
+00:07:06,120 --> 00:07:15,180
+Agora, com isso, posso chamar esse estado definido e definir o formulrio de pedido para uma ordem atualizada.
+
+86
+00:07:15,290 --> 00:07:20,030
+Agora, vamos ver se isso funciona se  seguro isso e depois volte para minha aplicao
+
+87
+00:07:20,030 --> 00:07:25,730
+e digite algo em seu nome como Chris, voc v isso funcionar, vamos tentar isso por todas essas entradas l.
+
+88
+00:07:26,580 --> 00:07:28,430
+Vamos tentar o menu suspenso.
+
+89
+00:07:28,440 --> 00:07:31,550
+Tudo est atualizado para a ligao de duas vias agora est funcionando.
+
+90
+00:07:31,560 --> 00:07:36,960
+Agora, conseguimos configurar isso de forma muito genrica, o que  timo.
+
+91
+00:07:36,960 --> 00:07:40,830
+Agora vamos voltar nossas cabeas para a submisso de formas ento.
+

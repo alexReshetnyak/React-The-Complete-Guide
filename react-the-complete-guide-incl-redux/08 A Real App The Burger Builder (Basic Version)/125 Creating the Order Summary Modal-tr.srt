@@ -1,0 +1,668 @@
+1
+00:00:02,260 --> 00:00:06,790
+Son dersimizde imdi bu sipari dmesini aada dzenledik ve ok gzel alyor.
+
+2
+00:00:06,790 --> 00:00:12,640
+imdi, dmeyi tkladnzda bu Modal Swiftie sipari zetini atmdan emin olmak istiyorum.
+
+3
+00:00:12,730 --> 00:00:19,730
+Bunun iin akas modalaya ihtiyacmz var, bir zemin gerekiyor ve baz sipari zetini gstermemiz gerekiyor.
+
+4
+00:00:19,810 --> 00:00:26,590
+Hareketin arkasndaki fikir, daha sonra gstermek istediiniz herhangi bir ierik hakknda kendini saran ekillendirmeyi
+
+5
+00:00:26,590 --> 00:00:29,190
+salayan bir sarma esine sahip olmaktr.
+
+6
+00:00:29,200 --> 00:00:33,010
+Bu modelde en azndan bana mantkl geliyor.
+
+7
+00:00:33,010 --> 00:00:40,660
+Bu yzden byle bir kalc bileen oluturacam ve bileen klasrndeki yeni bir klasrde oluturmak ya
+
+8
+00:00:40,660 --> 00:00:45,510
+da genel iin alt klasr yazmak istiyorsanz onu istiyorum.
+
+9
+00:00:45,580 --> 00:00:52,170
+e gibi modeller Yani orada modal Che dosyasna modalite ekleyeceim.
+
+10
+00:00:52,690 --> 00:00:59,950
+Dediim gibi ayn zamanda bir zemin katman ekleyeceim zemin de olacak, nk Eifel ya da ikisi de
+
+11
+00:00:59,980 --> 00:01:05,000
+motifin arka plann eklemedim, nk baka yerlerde de zemin de yeniden kullanabilirsin.
+
+12
+00:01:05,020 --> 00:01:09,600
+rnein navigasyon iin bir yan ekmece iin daha sonra eklemek zereyiz.
+
+13
+00:01:10,120 --> 00:01:13,960
+Ve zemin klasrnde herkes iin bir zemin eklemek iin sadece izleyin.
+
+14
+00:01:14,080 --> 00:01:16,310
+imdi bu iki bileene sahibiz.
+
+15
+00:01:16,540 --> 00:01:25,450
+imdi modal ile balayalm. imdi bu Modal bileeni nasl ilevsel bir bileen olacak gibi
+
+16
+00:01:25,450 --> 00:01:26,160
+grnmelidir.
+
+17
+00:01:26,170 --> 00:01:28,750
+Ona bal herhangi bir devlet yok.
+
+18
+00:01:28,750 --> 00:01:34,800
+Sadece birka sahne ald ve baz GSX iade etti ve sizi artabilir.
+
+19
+00:01:34,810 --> 00:01:42,460
+Fakat elbette yeniden eylemi buradan tekrar alyoruz ve modal ilevi bu dosyann
+
+20
+00:01:42,700 --> 00:01:44,400
+varsaylan olarak veriliyoruz.
+
+21
+00:01:45,340 --> 00:01:52,990
+imdi GSX kodu nasl grnyorsa o zaman moton yalnzca herhangi bir ierik etrafnda dolaan
+
+22
+00:01:52,990 --> 00:01:54,800
+bir div olmaldr.
+
+23
+00:01:55,000 --> 00:02:02,260
+div ve gerekten ocuklua dnk sahne her ey olabilir. Kendi bileenleri, modemi nasl
+
+24
+00:02:02,260 --> 00:02:10,240
+kullandmz konusunda tamamen bize kalm bir paragraf olabilir ve orada bir ey geiremeyiz.
+
+25
+00:02:10,240 --> 00:02:12,340
+Pervane'nin ocuklarna sarlm bir
+
+26
+00:02:12,460 --> 00:02:19,660
+Elbette sarc div modal bir grnm elde etmek iin sonunda iyi grnmek iin ok iyi stil
+
+27
+00:02:19,750 --> 00:02:20,590
+alm olmaldr.
+
+28
+00:02:20,860 --> 00:02:27,310
+Bunun iin burada ve orada bir modal modal C-s dosyas ekleyeceim.
+
+29
+00:02:27,310 --> 00:02:33,280
+Ayrca, yaptrabileceiniz bu videoyla balantl olarak bulabileceiniz baz kod tohumlarn da
+
+30
+00:02:33,280 --> 00:02:33,820
+paylayorum.
+
+31
+00:02:33,940 --> 00:02:42,970
+bir konum modals yarattn ve bize kk bir kutu glgesi verdiini ve ayrca Starling'in bazlarn daha geni
+
+32
+00:02:43,090 --> 00:02:50,550
+ekran admnda deitirdiini gerekten de grebiliyoruz. aadaki SEUS snflarn aadaki gibi ie aktarabilirler.
+
+33
+00:02:50,560 --> 00:02:56,840
+Orada modal snfmz var ve bunun artk sadece Sanders'n sayfann ortasnda sabit
+
+34
+00:02:56,840 --> 00:03:04,630
+Bylece, snflar modal C-s'den dosya olarak ie aktarn ve snf ad zniteliiyle sarmalam
+
+35
+00:03:04,900 --> 00:03:05,910
+derinliine atayn.
+
+36
+00:03:05,920 --> 00:03:13,110
+Bu yzden, burada bir sermayeyle hareketsiz nokta snflar var nk C S S snfnn ad budur.
+
+37
+00:03:13,180 --> 00:03:16,560
+Bu arada C S S'nin dtn kaydettiinizden emin olun.
+
+38
+00:03:16,600 --> 00:03:18,980
+eriimi ieri yaptrrsn.
+
+39
+00:03:19,120 --> 00:03:22,310
+Yani bu modal J S. dosya.
+
+40
+00:03:22,360 --> 00:03:25,000
+Bu byle bir modal yaratacaktr.
+
+41
+00:03:25,000 --> 00:03:27,540
+imdi biraz daha ekleyelim.
+
+42
+00:03:27,610 --> 00:03:34,280
+Ve elbette ki soru, uygulamann neresinde kalb ekleyeceiz.
+
+43
+00:03:34,870 --> 00:03:41,530
+Onlara, gstermek istediimiz yeri eklediimizi syleyebilirim nk bu, ait olduu mantksal yer ve
+
+44
+00:03:41,530 --> 00:03:47,560
+muhtemelen devlete gstermek zorunda olduumuz yerler ve bu ekran kontrol etme yntemleri.
+
+45
+00:03:47,890 --> 00:03:50,410
+Bu durumda bizim davamzda burger reticisi var.
+
+46
+00:03:50,920 --> 00:03:55,320
+'Nin st modalinde srayla ekleyin.
+
+47
+00:03:55,540 --> 00:04:02,200
+Ve imdi, bileenlerde bulabileceimiz modal dosyaya gitmemiz gerekiyor.
+
+48
+00:04:02,200 --> 00:04:09,310
+Siz modalisiniz ve dosya uzants olmadan her zaman olduu gibi faal olarak modal Jey var.
+
+49
+00:04:09,310 --> 00:04:13,970
+Ve sonra modl alp Bergere Boulder'n X'sine ekleyin.
+
+50
+00:04:14,050 --> 00:04:16,280
+imdi burada yardmc bileene sahibiz.
+
+51
+00:04:16,300 --> 00:04:18,380
+Bergere ve toplu kontrollerimiz var.
+
+52
+00:04:18,580 --> 00:04:24,280
+imdi burada sadece kalp ekleyecek ve tabii ki bu yaknda her zaman krmz grnmeyecek ekilde
+
+53
+00:04:24,980 --> 00:04:25,240
+ayarlanacaktr.
+
+54
+00:04:25,240 --> 00:04:29,920
+imdi bunu kaydedersek ortadaki kutu grrz.
+
+55
+00:04:29,920 --> 00:04:35,640
+Tabii ki herhangi bir ierii yok nk dediim gibi, bu modu evirmeli ve grntlemeyi ve
+
+56
+00:04:35,950 --> 00:04:41,490
+okumay istiyoruz; imdi kendiliinden kapanan bir edir ve bu nedenle kendisini herhangi bir yere sarmamaktr.
+
+57
+00:04:41,500 --> 00:04:49,320
+Hedef, sipari zetini gstermek ve inaat dosyasn datmak zaten olduka kalabalklat.
+
+58
+00:04:49,540 --> 00:04:57,910
+Dolaysyla, bu diziyi bu dosyaya gzelce yaplandrlm bir zet haline dntrmek iin manta eklemek istemiyorum.
+
+59
+00:04:57,910 --> 00:05:06,370
+Yeniden hareket etmede genelde iyi bir uygulama olan paral odakl bileenlere sahip olduum iin onu
+
+60
+00:05:06,400 --> 00:05:08,460
+kendi bileenine da aktaracam.
+
+61
+00:05:08,820 --> 00:05:15,130
+Oluturmak istediim bileen bir sipari zeti bileenidir ve bunu ekleyeceim.
+
+62
+00:05:15,180 --> 00:05:23,800
+Andrew bileeninin burgeridir ve sanrm sanrm kontrol kontrolleri ve hamburger malzemeleri ile ayn
+
+63
+00:05:23,800 --> 00:05:25,750
+seviyede eklenmek mantkldr.
+
+64
+00:05:25,750 --> 00:05:33,350
+Bylece, sipari zetini orada ekleyelim ve elbette sipari dosyasnda zet nokta J'yi sipari edelim.
+
+65
+00:05:33,520 --> 00:05:40,950
+Artk, baz sahne alan ve normal bir ilev gvdesine sahip olan
+
+66
+00:05:40,950 --> 00:05:47,890
+bir ilev sipari zetine baktnzda, sipari zetini doru formata almak
+
+67
+00:05:47,920 --> 00:05:51,850
+iin baz kodlar altrmak zorunda kalacam.
+
+68
+00:05:51,940 --> 00:06:02,810
+Elbette ki her zaman olduu gibi yeniden ilemden yeniden aktarma almamz gerekiyor ve ayrca varsaylan dosya olarak
+
+69
+00:06:02,810 --> 00:06:05,270
+sipari zetini vermek istiyoruz.
+
+70
+00:06:05,300 --> 00:06:12,030
+imdi, sipari zetini, nasl kesin olarak neye benzediini nasl dkmeliyiz?
+
+71
+00:06:12,040 --> 00:06:18,590
+Sipariinizi ve belki ksa bir metni ieren bir balk istiyorum, daha sonra sipariteki tm
+
+72
+00:06:18,590 --> 00:06:22,830
+elerin listesi ve fiyat ve sonra belki bir soru.
+
+73
+00:06:22,880 --> 00:06:24,330
+Kontrol etmeye devam et.
+
+74
+00:06:24,530 --> 00:06:25,590
+Ve baz dmeler.
+
+75
+00:06:25,660 --> 00:06:27,290
+Bu yzden baz eyler.
+
+76
+00:06:27,290 --> 00:06:29,980
+imdi burada gerekten bir sarma elemanna ihtiyacm yok.
+
+77
+00:06:30,080 --> 00:06:41,480
+Bu nedenle yardmc elementimi, Agios Seahawks'tan alks belki alacam.
+
+78
+00:06:41,490 --> 00:06:48,490
+imdi baz X kodunu bir kaydrma yardmc eleman ile geri getirebiliriz ve endielenmeyin.
+
+79
+00:06:48,490 --> 00:06:53,850
+Return deyiminin nnde baz mantklar ekleyeceiz, bylece yalnzca return deyimi deil de
+
+80
+00:06:53,850 --> 00:06:57,270
+gerek bir ilev gvdesinin olmas mantkl olacaktr.
+
+81
+00:06:57,750 --> 00:07:06,080
+Bu yzden aada sipariinizi verdiimde cretsiz bir etiket ekleyeceim,
+
+82
+00:07:06,080 --> 00:07:06,710
+u
+
+83
+00:07:08,760 --> 00:07:15,460
+paragraf ekleyerek u ieriklerle leziz burger sylyorum.
+
+84
+00:07:15,510 --> 00:07:22,520
+Colin ve imdi, burgerimle ilgili tm bilgileri ktlamak iin gereken birok liste esini iermek
+
+85
+00:07:22,790 --> 00:07:26,030
+zere srasz bir liste eklemek istiyorum.
+
+86
+00:07:26,030 --> 00:07:29,090
+Yani her madde iin bir liste esi.
+
+87
+00:07:29,150 --> 00:07:34,850
+kod zebilirim ancak bunu dinamik olarak oluturmak istiyorum nk hep dinamik ve
+
+88
+00:07:34,880 --> 00:07:41,240
+tepki veriyoruz, bylece deimeyi planlamadm iin yeni bir deiken aslnda bir kavram ekleyebiliyoruz.
+
+89
+00:07:41,240 --> 00:07:41,990
+Elbette orada
+
+90
+00:07:41,990 --> 00:07:46,700
+Baz maddeler almas gereken ierik zet.
+
+91
+00:07:46,700 --> 00:07:53,730
+Tayc olarak almak ve temelde onlar liste elerine elemek istiyoruz.
+
+92
+00:07:53,810 --> 00:08:01,010
+Artk maddeler iin eski sorunumuzun bir nesne formatnda deil, bir dizi
+
+93
+00:08:01,160 --> 00:08:02,540
+olmas gerekiyor.
+
+94
+00:08:02,540 --> 00:08:08,360
+phesiz, elbette bu bileeni, bir diziyi bekleyip, Oracle zetine aktaracamz
+
+95
+00:08:08,360 --> 00:08:12,790
+burger oluturucudaki diziyi dntrmek iin bir yol oluturabiliriz.
+
+96
+00:08:13,100 --> 00:08:17,990
+bir yolla da yapabilirsiniz ve nesneyi basite geip zet zet aknda dnm yapabilirsiniz.
+
+97
+00:08:17,990 --> 00:08:19,330
+Fakat bunu baka
+
+98
+00:08:19,340 --> 00:08:26,390
+Takip edeceim yaklam bu, bunun, nerede olmas gerektii her iki ynde de tartabilmenize ramen, derin oluturucuya
+
+99
+00:08:26,600 --> 00:08:30,370
+daha iyi bir yaln kalmam saladna inandmza inanyoruz.
+
+100
+00:08:30,680 --> 00:08:36,770
+Dolaysyla burada ieriklerimi bir nesne formatnda almam bekliyorum ve nihayetinde unu
+
+101
+00:08:36,770 --> 00:08:37,160
+istiyorum:
+
+102
+00:08:37,160 --> 00:08:45,350
+Temelde adn satmak gibi syleyebileceim bir liste esine sahip olmak istiyorum ve daha sonra sadece bu tr
+
+103
+00:08:45,440 --> 00:08:47,060
+malzemelerin saysn istiyorum.
+
+104
+00:08:47,090 --> 00:08:51,040
+Ve elbette her madde iin bir liste esi olurdu.
+
+105
+00:08:51,080 --> 00:08:56,000
+imdi, zor kodlama yaparsa, tabii ki daha kolay olurdu, nk bir listeye
+
+106
+00:08:56,270 --> 00:09:00,880
+girmek iin zor kod yazabilir ve maddeler nesnesinde ilgili mlke eriebilirim.
+
+107
+00:09:01,040 --> 00:09:04,000
+Ancak daha esnek bir ekilde oluturmak istiyorum.
+
+108
+00:09:04,060 --> 00:09:06,560
+kt yine istiyorum istiyorum mu.
+
+109
+00:09:06,650 --> 00:09:17,390
+Yapabildiimiz ey, elde ettiimiz malzemeleri alp buraya hcre ve benzeri anahtarlarn bir
+
+110
+00:09:17,390 --> 00:09:22,790
+dizisine dntrmek iin nesne anahtarlarn kullanabilmemiz.
+
+111
+00:09:22,790 --> 00:09:25,620
+imdi bunu haritalamak istemeden nce soruyorum.
+
+112
+00:09:25,910 --> 00:09:30,140
+Bunu, sonunda bir dizi J S x esine elemek istiyoruz.
+
+113
+00:09:30,140 --> 00:09:34,110
+Dolaysyla, Ingredion anahtarlarn bir girdi olarak aldk ve geri dnmek istiyoruz.
+
+114
+00:09:34,190 --> 00:09:39,910
+Peki temelde ben sadece burada bulabilirsiniz liste esi yok.
+
+115
+00:09:39,980 --> 00:09:43,240
+yleyse son maddeyi alalm ve buraya ekleyin.
+
+116
+00:09:43,270 --> 00:09:48,290
+imdi hcrenin ieriine nasl ulaacaz.
+
+117
+00:09:48,290 --> 00:09:58,700
+imdi, sadece bileen anahtarmz var ve deer yalnzca porsiyonun ierikleridir ve bileen anahtarna eriir ve
+
+118
+00:09:58,700 --> 00:10:00,800
+hepsi bu kadar.
+
+119
+00:10:00,860 --> 00:10:09,050
+bir madde anahtarn bir sreyle sarmak nk bunu byk harfle yazmak istiyorum, bu yzden ilk harfini bir
+
+120
+00:10:09,230 --> 00:10:15,950
+sermayeye evirelim, nk maddelerim dizisi burger yapmcs iinde ynetilen maddeler nesnesinde beni balar.
+
+121
+00:10:16,250 --> 00:10:18,200
+Ekleyeceim tek ey, burada
+
+122
+00:10:18,260 --> 00:10:20,600
+Elbette salatas pastrmas vb. Var.
+
+123
+00:10:20,630 --> 00:10:22,860
+Hepsi kk harflerle balar.
+
+124
+00:10:23,000 --> 00:10:27,260
+imdi onlar kartrsak, byk harf balang karakterleri isterim.
+
+125
+00:10:27,260 --> 00:10:35,180
+Dolaysyla, burada baz satr ii stilleri kullanabilmem iin adm bir aralkla saryorum ve bunu basite
+
+126
+00:10:35,180 --> 00:10:37,240
+bir javascript nesnesine ayarlayalm.
+
+127
+00:10:37,340 --> 00:10:45,860
+Bu yzden ift kvrck parantezim var; d ifti iaretleme ve dinamik giri iin, i Cauley
+
+128
+00:10:45,950 --> 00:10:48,580
+parantezleri ise javascript nesnesi.
+
+129
+00:10:48,980 --> 00:10:54,800
+Ve orada metni, C-s'leri maddi olarak yararlanmak iin ayarlayacam.
+
+130
+00:10:54,800 --> 00:10:58,360
+Dolaysyla, sadece baz satr ii stilleri burada kullanyor.
+
+131
+00:10:58,800 --> 00:11:04,570
+imdi biraz okumay kolaylatrmak iin bunu birden ok satra sarmam iin bana izin verin.
+
+132
+00:11:04,580 --> 00:11:13,030
+Bu yzden, burada bir liste esi var ve bu liste esinde Spanne sahibiz.
+
+133
+00:11:13,080 --> 00:11:17,650
+imdi, bu liste elerinin listesini oluturmanz istediim ey bu.
+
+134
+00:11:17,820 --> 00:11:24,870
+Ve imdi, Ingredius zetini srasz listenin iinde ve bu nadir frsatta
+
+135
+00:11:24,870 --> 00:11:32,490
+olduunuzdan veya aslnda tm bu unsurlarn varsaylan stilini kullandnzdan sipari zeti bileeni
+
+136
+00:11:32,790 --> 00:11:38,950
+neden bile Aadaki gibi kendi sipari zeti Cs'ye sahip olmak.
+
+137
+00:11:39,030 --> 00:11:43,270
+Elbette kendi ihtiyalarnza bir tane ve stilist ekleyebilirsiniz.
+
+138
+00:11:43,590 --> 00:11:50,920
+Ve sonra, byle bir gz atmaya devam ettiimi sylediim bir paragraf eklemek istiyorum.
+
+139
+00:11:51,160 --> 00:11:57,360
+imdi bu yaklamla bu sipari zetiyle devam edelim ve onu Bergere yapcda kullanalm.
+
+140
+00:11:57,760 --> 00:12:02,780
+Modal al ve kapan etiketlerim arasnda geirmek istiyorum.
+
+141
+00:12:03,010 --> 00:12:10,720
+Bu yzden ncelikle bu sipari zet bileenini bileenler klasrnden ie aktaralm ve
+
+142
+00:12:10,720 --> 00:12:17,020
+sipari zeti dosyasndaki Bergere klasrnden bu ie aktarma ifadelerinin olduka
+
+143
+00:12:17,020 --> 00:12:19,710
+uzun sre almasna izin verelim.
+
+144
+00:12:19,720 --> 00:12:23,950
+imdi onu veya gvenlii ie aktaran zet bir deikeni ele alalm.
+
+145
+00:12:24,380 --> 00:12:29,770
+Ve modalete gidelim ve sadece al ve kapan etiketini alalm.
+
+146
+00:12:30,040 --> 00:12:38,800
+Arasnda imdi sipari zetimi z-kapan bileeni olarak buradan kt olarak vermek istiyorum.
+
+147
+00:12:39,760 --> 00:12:40,980
+Doru almak iin.
+
+148
+00:12:40,990 --> 00:12:47,680
+Tabii sipari zeti, maddeler mlkiyetini elde etmek iin gerekiyor, nk burada
+
+149
+00:12:47,680 --> 00:12:49,960
+pervane nesnesindeki malzemelere eriiyoruz.
+
+150
+00:12:50,760 --> 00:12:52,140
+Srayla zet.
+
+151
+00:12:52,560 --> 00:12:56,990
+Dolaysyla, malzemelerimizi iletmek zorundayz ve onlar devletimizden alyoruz.
+
+152
+00:12:57,000 --> 00:13:00,090
+Yani bu devlet malzemeleri.
+
+153
+00:13:00,390 --> 00:13:06,170
+imdi, tm hatalar biriktirsek ve bavurusuna dnersek bunun nasl bir hale geldiini grelim.
+
+154
+00:13:07,800 --> 00:13:11,610
+Anahtar dizimize eklemeyi unuttuumuz bir uyar aldmz greceksiniz.
+
+155
+00:13:11,670 --> 00:13:13,890
+Ancak genellikle iyi grnyor.
+
+156
+00:13:14,130 --> 00:13:17,030
+Dmeleri tklarsam modemi de gnceller.
+
+157
+00:13:17,160 --> 00:13:21,240
+Ve elbette, bu modeli srekli gstermemek iyi bir fikir olurdu, ancak biz bunu ksa sre
+
+158
+00:13:21,240 --> 00:13:22,060
+iinde zerinde alacaz.
+
+159
+00:13:22,230 --> 00:13:25,110
+Bu anahtar alan veya ilkini dzeltelim.
+
+160
+00:13:25,170 --> 00:13:27,070
+Ve elbette dzeltmek kolaydr.
+
+161
+00:13:27,090 --> 00:13:33,000
+Bunu kendi banza deneyin, liste esinde elbette bir sipari zeti olsun.
+
+162
+00:13:33,010 --> 00:13:38,180
+Bir anahtar eklemek zorundayz ve l anahtar benzersiz bir anahtar olmaldr.
+
+163
+00:13:38,200 --> 00:13:45,280
+Bildiiniz gibi imdi basite IGY anahtarn salam ve bu ekilde bir anahtar olarak kullanalm.
+
+164
+00:13:45,400 --> 00:13:48,190
+Ve bununla birlikte uyar gitmi olmal.
+
+165
+00:13:48,380 --> 00:13:54,340
+imdi bir sonraki adm, modelin her zaman grmediimizden, ancak onu ekleyip gsterebileceimizden emin
+
+166
+00:13:54,340 --> 00:13:54,850
+olmaktr.
+
+167
+00:13:54,850 --> 00:13:56,410
+imdi sipari verdikten sonra.
+

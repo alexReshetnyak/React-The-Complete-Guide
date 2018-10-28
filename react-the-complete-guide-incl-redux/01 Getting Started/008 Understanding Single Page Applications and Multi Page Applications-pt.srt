@@ -1,0 +1,176 @@
+1
+00:00:02,210 --> 00:00:09,050
+O que falamos sobre reagir ou tambm sobre angular e viso como nota lateral, tambm temos que ter em mente
+
+2
+00:00:09,140 --> 00:00:14,620
+que podemos essencialmente bloquear dois tipos de aplicativos da Web com todas essas bibliotecas e frameworks.
+
+3
+00:00:14,750 --> 00:00:18,980
+No podemos criar um aplicativo de pgina nica ou um aplicativo de vrias pginas.
+
+4
+00:00:18,980 --> 00:00:22,400
+Agora, qual  a diferena em um aplicativo de pgina nica.
+
+5
+00:00:22,400 --> 00:00:29,540
+Ns s recebemos um nico arquivo byte de um servidor e voltamos a cair na primeira vez para usar um assistente para pgina da
+
+6
+00:00:29,600 --> 00:00:31,570
+primeira vez para usar um assistente.
+
+7
+00:00:31,580 --> 00:00:40,430
+Exxon-Mobile dot com Deira de tudo  gerenciado com javascript com re-agir, a pgina inteira 
+
+8
+00:00:40,520 --> 00:00:45,770
+composta de componentes que so processados e processados pelo javascript.
+
+9
+00:00:46,070 --> 00:00:53,150
+Por outro lado, em um aplicativo de vrias pginas, recuperamos vrias pginas de HMO onde cada pgina tem que se contentar
+
+10
+00:00:53,150 --> 00:00:54,680
+com uma determinada rota.
+
+11
+00:00:54,740 --> 00:01:02,090
+Dado que voc  o que ns visitamos, por exemplo, ou venha um exemplo, os usurios de barras de rede retornamos a
+
+12
+00:01:02,090 --> 00:01:02,630
+pginas diferentes.
+
+13
+00:01:02,630 --> 00:01:04,370
+Isso  importante.
+
+14
+00:01:04,370 --> 00:01:10,550
+Agora, em aplicativos de vrias pginas, tambm podemos usar reagir, mas apenas criar pequenos widgets.
+
+15
+00:01:10,580 --> 00:01:17,570
+Ento, para dizer, os componentes contidos individualmente despejamos nessa pgina, mas no a pgina inteira que 
+
+16
+00:01:17,570 --> 00:01:18,880
+gerenciada por reagir.
+
+17
+00:01:18,890 --> 00:01:24,410
+Tambm vemos isso em algumas pginas, mas a abordagem mais popular nos dias de hoje  a abordagem
+
+18
+00:01:24,410 --> 00:01:30,830
+de aplicao de pgina nica porque, se voc gerencia a pgina inteira com javascript, voc nunca precisa voltar para o servidor
+
+19
+00:01:30,860 --> 00:01:32,030
+e recarregar a pgina.
+
+20
+00:01:32,180 --> 00:01:37,850
+E essa  uma experincia de usurio incrvel porque tudo acontece de forma instantnea e mesmo que o usurio precise
+
+21
+00:01:37,850 --> 00:01:44,300
+aguardar que voc esteja mostrando um spinner ou ainda estiver apresentando um aplicativo da Web reativo, voc no est apenas mostrando uma pgina
+
+22
+00:01:44,570 --> 00:01:47,620
+de carregamento ou o usurio no pode faa qualquer coisa.
+
+23
+00:01:48,020 --> 00:01:54,680
+pgina  ampliada com componentes e cada componente  um componente de reagem e toda a pgina tambm
+
+24
+00:01:54,680 --> 00:02:03,740
+ gerenciada por um componente de reao repentino e est apenas sob o controle de reaes na aplicao de vrias pginas da outra mo .
+
+25
+00:02:04,040 --> 00:02:06,480
+Assim, em aplicativos de pgina nica, nossa
+
+26
+00:02:06,740 --> 00:02:13,550
+Tambm podemos dividir o nosso aplicativo em componentes tericos, mas na verdade, muita pgina ser apenas HVM normal e
+
+27
+00:02:13,550 --> 00:02:19,740
+C  o cdigo dos EUA e alguns widgets que despejamos como uma galeria de imagens ou
+
+28
+00:02:19,740 --> 00:02:22,290
+algo como isso  gerenciado por reagir.
+
+29
+00:02:22,430 --> 00:02:30,210
+Assim, a pgina inteira no  um controle sub-reativo, os widgets individuais no sabem da existncia uns dos outros.
+
+30
+00:02:30,250 --> 00:02:36,080
+Portanto, no caso de aplicao nica que  o caso, iremos cobrir o curso do
+
+31
+00:02:36,080 --> 00:02:43,070
+ndice normalmente, normalmente temos um re-atuar Dom renderizar esse mtodo que voc viu nas palestras anteriores onde trocamos
+
+32
+00:02:43,070 --> 00:02:44,120
+nosso primeiro aplicativo.
+
+33
+00:02:44,120 --> 00:02:49,970
+Agora, s precisamos de um porque temos um componente de aplicativo de raiz l, que  montado no DOM
+
+34
+00:02:49,970 --> 00:02:56,090
+que hospeda todos os seus componentes de reativao em um aplicativo de vrias pginas que normalmente chamaremos de reao em
+
+35
+00:02:56,090 --> 00:03:00,490
+renderizar com mais freqncia para tornar nossos diferentes componentes em diferentes locais do aplicativo.
+
+36
+00:03:00,530 --> 00:03:06,230
+Voc viu que reagir no render permite que voc escolha um lugar no seu cdigo HMO
+
+37
+00:03:06,230 --> 00:03:13,220
+onde deseja renderizar seu aplicativo e, portanto, voc possui esses widgets que no conhecem a existncia uns dos outros.
+
+38
+00:03:13,220 --> 00:03:15,880
+Agora, voc pode criar uma aplicao desse tipo tambm.
+
+39
+00:03:15,980 --> 00:03:18,950
+E voc reage o cdigo que voc escreve no ser diferente.
+
+40
+00:03:18,980 --> 00:03:21,120
+Ento, os discursos cobrem os dois.
+
+41
+00:03:21,260 --> 00:03:27,260
+Mas vou me concentrar no caso de aplicao de uma nica pgina, pois isso tambm nos permite usar algumas
+
+42
+00:03:27,260 --> 00:03:28,750
+bibliotecas como roteador de re-atuao.
+
+43
+00:03:28,820 --> 00:03:34,500
+ a maneira mais popular de criar aplicativos da web hoje em dia e tambm a abordagem.
+
+44
+00:03:34,550 --> 00:03:36,230
+Eu s posso recomendar a voc.
+

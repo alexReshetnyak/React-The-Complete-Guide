@@ -1,0 +1,84 @@
+1
+00:00:02,230 --> 00:00:09,220
+Diamo un'occhiata al nostro attuale stato di applicazione di hamburger nella pagina di check-in nel contenitore dei dati di
+
+2
+00:00:09,250 --> 00:00:12,220
+contatto in cui diamo un'occhiata a quel contenitore.
+
+3
+00:00:12,340 --> 00:00:20,410
+Vediamo che abbiamo un po 'di stato generale impostato nella parte superiore della pagina e ovviamente abbiamo anche il nostro metodo
+
+4
+00:00:20,470 --> 00:00:27,330
+di invio in cui inviamo il nostro ordine ad un server e dove passiamo anche questi dati.
+
+5
+00:00:27,340 --> 00:00:32,790
+Ora i dati dei clienti che sono impostati qui non sono adatti a questo stato.
+
+6
+00:00:32,800 --> 00:00:35,010
+In realt nemmeno i campi sono uguali.
+
+7
+00:00:35,020 --> 00:00:41,410
+Ora una parte di quel modulo sar troppo presto per essere sommata, ma anche se diamo un'occhiata al forum stesso,
+
+8
+00:00:41,410 --> 00:00:44,180
+abbiamo un paio di elementi di input normali l.
+
+9
+00:00:44,290 --> 00:00:46,420
+Lascia che non siano nemmeno robusti.
+
+10
+00:00:46,660 --> 00:00:49,240
+Non gestiamo realmente i loro input.
+
+11
+00:00:49,240 --> 00:00:54,570
+Non lo gestiamo veramente quando il valore cambia, lasciamo da soli la convalida dell'input
+
+12
+00:00:54,580 --> 00:00:55,560
+lasciato all'utente.
+
+13
+00:00:55,570 --> 00:01:02,180
+Quindi, il primo passo  che dovremo decidere quale tipo di dati abbiamo bisogno per poi
+
+14
+00:01:02,290 --> 00:01:09,220
+archiviarlo nello stato, quindi sarebbe meglio se trovassimo anche un modo per generare dinamicamente la nostra forma.
+
+15
+00:01:09,280 --> 00:01:15,250
+come ultimo passo o come non solo gestire l'invio del modulo, ma anche per gestire la validit del
+
+16
+00:01:15,250 --> 00:01:21,550
+modulo o controllare la validit del modulo e modificare lo stile del nostro modulo in base alla validit per esempio.
+
+17
+00:01:21,550 --> 00:01:22,560
+E poi, naturalmente,
+
+18
+00:01:22,570 --> 00:01:30,670
+Queste sono tutte le cose che voglio fare e inoltrare e inizier inserendo gli elementi di input di DS
+
+19
+00:01:30,700 --> 00:01:38,710
+qui in componenti personalizzati che hanno uno stile standardizzato, magari con un'etichetta predefinita e in seguito verranno estesi per
+
+20
+00:01:38,710 --> 00:01:41,670
+avere spazio per i messaggi di errore.
+
+21
+00:01:41,680 --> 00:01:48,150
+Quindi, un passo dopo l'altro, iniziamo inserendo gli input nel proprio componente.
+

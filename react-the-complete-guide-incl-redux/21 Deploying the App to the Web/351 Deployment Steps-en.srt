@@ -1,0 +1,136 @@
+1
+00:00:02,280 --> 00:00:06,200
+So which steps do we need to follow when we deploy a react app?
+
+2
+00:00:06,480 --> 00:00:11,410
+First of all we need to check and possibly adjust the base path,
+
+3
+00:00:11,430 --> 00:00:16,890
+this is only important when we use the react router and there when wrapping the app in the browser
+
+4
+00:00:16,890 --> 00:00:24,840
+router, you can set your basename property. That is always required when your app is served from something
+
+5
+00:00:24,840 --> 00:00:25,140
+else
+
+6
+00:00:25,150 --> 00:00:32,040
+than the root route, the route domain. If you're serving your app from example.com/my-app,
+
+7
+00:00:32,160 --> 00:00:36,920
+then you'll need to set the basename to my app for the router to work correctly.
+
+8
+00:00:37,020 --> 00:00:38,910
+That's the first important thing,
+
+9
+00:00:38,910 --> 00:00:44,850
+the second important thing is that we need to build an optimized project, this is done with one convenient
+
+10
+00:00:44,850 --> 00:00:47,060
+command in our application,
+
+11
+00:00:47,160 --> 00:00:54,630
+npm run build in create react app projects. That will automatically build the project and optimize
+
+12
+00:00:54,690 --> 00:00:58,920
+all our javascript bundles to have a very small codebase
+
+13
+00:00:58,920 --> 00:01:04,680
+we then actually will upload on a server, because you obviously want to ship as little code as possible
+
+14
+00:01:04,830 --> 00:01:07,800
+since that will be as fast as possible.
+
+15
+00:01:07,830 --> 00:01:16,650
+Now another important thing to keep in mind is your server must always serve the index.html file also
+
+16
+00:01:16,650 --> 00:01:23,910
+and especially in 404 cases, that's required due to the way the Internet works.
+
+17
+00:01:23,940 --> 00:01:32,350
+If your user visits my-app.com/users, then the server is the first to receive that route
+
+18
+00:01:32,460 --> 00:01:38,550
+and chances are the server doesn't know the /users path because you defined it in your react app.
+
+19
+00:01:39,090 --> 00:01:42,240
+Now for that to not throw an error,
+
+20
+00:01:42,360 --> 00:01:48,140
+your react app needs to get a chance of parsing the path and it only does so if you return the index.html
+
+21
+00:01:48,130 --> 00:01:51,520
+file for that unknown route,
+
+22
+00:01:51,600 --> 00:01:54,360
+it is unknown to the server in the end.
+
+23
+00:01:54,360 --> 00:01:59,190
+So always return index.html in 404 cases
+
+24
+00:01:59,190 --> 00:02:05,160
+otherwise your routing dependent react applications won't work.
+
+25
+00:02:05,160 --> 00:02:12,600
+Finally upload the build artefacts you get from the second step, build and optimize the project to a static
+
+26
+00:02:12,600 --> 00:02:13,390
+server,
+
+27
+00:02:13,620 --> 00:02:17,980
+you don't need a server running PHP or Node or anything like that.
+
+28
+00:02:18,120 --> 00:02:24,570
+In the end, what you will deploy here is a single page app consisting of html and a little bit of css
+
+29
+00:02:24,660 --> 00:02:26,440
+and a lot of javascript,
+
+30
+00:02:26,490 --> 00:02:34,140
+none of that needs a server side language, so a static server like AWS S3, Github pages or Firebase
+
+31
+00:02:34,230 --> 00:02:41,420
+or any other server will do and you just upload the build artefacts, not your entire project folder.
+
+32
+00:02:41,460 --> 00:02:47,200
+The build artefacts will be stored in a /build folder and I will show this to you in a second
+
+33
+00:02:47,610 --> 00:02:53,150
+and that's actually all. That is how easy it is to deploy your react application.
+
+34
+00:02:53,400 --> 00:02:56,040
+Let's now do this together in the next lecture.
+

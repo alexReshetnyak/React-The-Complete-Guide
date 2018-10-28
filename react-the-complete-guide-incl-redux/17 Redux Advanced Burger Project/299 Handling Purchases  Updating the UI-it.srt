@@ -1,0 +1,444 @@
+1
+00:00:02,230 --> 00:00:07,980
+Durante le ultime lezioni abbiamo fatto un sacco di funzionalit e tutto funziona tranne che non siamo mai
+
+2
+00:00:07,980 --> 00:00:10,440
+stati reindirizzati dopo aver effettuato un ordine.
+
+3
+00:00:10,440 --> 00:00:14,110
+Ora ci sono vari modi per implementare il reindirizzamento.
+
+4
+00:00:14,130 --> 00:00:21,990
+Una cosa  che potresti passare un riferimento a quel router come prop di cronologia al tuo creatore di azioni e quando invii
+
+5
+00:00:22,260 --> 00:00:27,870
+il successo o il fallimento di Bergere dove almeno si accede al caso, puoi usarlo se
+
+6
+00:00:27,870 --> 00:00:32,890
+lo ricevi come argomento per questa funzione chiama il metodo push su di esso.
+
+7
+00:00:33,000 --> 00:00:35,770
+Non mi piace troppo questo approccio per.
+
+8
+00:00:35,850 --> 00:00:37,920
+Ma puoi sicuramente farlo.
+
+9
+00:00:38,100 --> 00:00:41,510
+Ora l'approccio che user  un approccio solo redux.
+
+10
+00:00:41,700 --> 00:00:48,630
+Aggiunger un nuovo tipo di azione al file dei tipi di azione, quindi esporter un nuovo Konst e
+
+11
+00:00:48,630 --> 00:00:51,090
+in esso verranno effettivamente chiamati perches.
+
+12
+00:00:52,090 --> 00:00:59,940
+Qui, naturalmente, tutti usano pre-Chase in quanto un identificatore di stringa per chase init verr inviato ogni
+
+13
+00:00:59,940 --> 00:01:02,910
+volta che caricheremo la pagina di checkout.
+
+14
+00:01:02,910 --> 00:01:06,310
+Ora creer la mia erezione creata per questo.
+
+15
+00:01:06,420 --> 00:01:07,810
+La posizione non ha importanza.
+
+16
+00:01:07,870 --> 00:01:10,470
+Come una costante in cui acquistano
+
+17
+00:01:11,290 --> 00:01:18,700
+E questo non ricever argomenti e semplicemente restituir un'azione, quindi ti baster restituire un oggetto javascript in
+
+18
+00:01:18,700 --> 00:01:23,230
+cui digitare i tipi di azioni per Che's in esso.
+
+19
+00:01:23,230 --> 00:01:27,200
+Ora ho bisogno di esportare l'inseguimento di Despard in una funzione nel mio indice.
+
+20
+00:01:27,290 --> 00:01:28,240
+Cadi qui
+
+21
+00:01:28,420 --> 00:01:36,910
+Quindi  nell'ordine per l'acquisto e poi andr al mio check out container e
+
+22
+00:01:37,300 --> 00:01:43,760
+l voglio aggiungere il componente mount e nel componente mount.
+
+23
+00:01:43,780 --> 00:01:49,150
+Voglio inviare questa azione in questo atto o nel riduttore.
+
+24
+00:01:49,180 --> 00:01:57,070
+qualcosa come l'acquisto su false, che  impostato su true una volta terminato il pre-Chase in modo da reindirizzare.
+
+25
+00:01:57,070 --> 00:02:02,140
+Non voglio aggiungere una nuova propriet a uno stato in cui imposto
+
+26
+00:02:02,140 --> 00:02:12,550
+Quindi lascia che aggiunga la logica qui aggiungendo anche l'invio di mappe per mostrare la mappa di Konst alla puntina, per ottenere la
+
+27
+00:02:12,610 --> 00:02:16,880
+funzione di invio qui e quindi restituire una mappa.
+
+28
+00:02:17,050 --> 00:02:28,350
+Come sempre e in questa mappa su cui tutto  attivo per Chase, ad esempio, tieni una funzione anonima dove inviare e
+
+29
+00:02:28,350 --> 00:02:33,740
+dove invio qualcosa che devo importare da quel file di azioni.
+
+30
+00:02:33,870 --> 00:02:43,730
+Quindi importa tutto come azioni da quel file di indice nella cartella delle azioni del negozio in quel modo e voglio
+
+31
+00:02:43,760 --> 00:02:45,360
+un'azione di invio.
+
+32
+00:02:45,370 --> 00:02:51,890
+La tua reazione  d inseguimento in quell'azione che non prende argomenti.
+
+33
+00:02:51,890 --> 00:02:59,810
+Quindi ora posso eseguire in un pre-Chase nel mio componente che il metodo Mount qui cos chiamer questo
+
+34
+00:03:00,590 --> 00:03:03,080
+oggetto in un pre-Chase come questo.
+
+35
+00:03:03,850 --> 00:03:11,630
+Potrebbe effettivamente fare in modo che la volont aumenti la cura di Lapsang e con ci sto facendo il dispaccio.
+
+36
+00:03:11,640 --> 00:03:21,050
+Ora posso andare al mio ordine riduttore e l aggiunger un nuovo tipo di azione di caso per init di Che
+
+37
+00:03:21,060 --> 00:03:25,800
+il tipo che aggiungo e restituir un nuovo oggetto di stato.
+
+38
+00:03:25,830 --> 00:03:32,980
+Aggiunger una nuova propriet al mio stato che  per chasing e inizialmente lo imposter in falso e, o
+
+39
+00:03:32,990 --> 00:03:37,700
+mi scusi, lo rivendicher acquistato e inizialmente  falso in init di acquisto.
+
+40
+00:03:37,770 --> 00:03:44,270
+Copier lo stato esistente e quindi imposteremo anche per chased su false.
+
+41
+00:03:44,670 --> 00:03:49,210
+Ma nel successo e questa  la cosa interessante ora nel successo.
+
+42
+00:03:49,290 --> 00:03:52,210
+Tutto set acquistato su true.
+
+43
+00:03:52,560 --> 00:03:56,840
+Cos ora abbiamo cambiato i cambiamenti non appena abbiamo fatto con successo il pre-Chase.
+
+44
+00:03:56,910 --> 00:04:03,270
+Ma come sempre resettare una volta che abbiamo rivisitare il contenitore cassa e ora pu andare al
+
+45
+00:04:03,450 --> 00:04:08,110
+contenitore cassa e reindirizzare quando mai abbiamo fatto con successo l'acquisto di qualcosa.
+
+46
+00:04:08,400 --> 00:04:14,370
+Quindi posso andare al riepilogo del metodo di rendering scusami dove gi reindirizziamo il motivo per
+
+47
+00:04:14,370 --> 00:04:18,770
+cui non abbiamo praticamente ingredienti ora o aggiungiamo un numero costante.
+
+48
+00:04:18,780 --> 00:04:30,260
+In questo caso, dove chiamer un reindirizzamento per chaced, ci sar rilevante solo se avremo degli oggetti di scena.
+
+49
+00:04:30,290 --> 00:04:32,710
+Quindi inserir questa affermazione se qui.
+
+50
+00:04:33,660 --> 00:04:37,790
+E sono tutti impostati come sempre per reindirizzare.
+
+51
+00:04:37,840 --> 00:04:44,770
+A casa diciamo o e per questo ho bisogno di un'espressione ternaria.
+
+52
+00:04:44,800 --> 00:04:46,950
+Lo imposter per non reindirizzare.
+
+53
+00:04:46,960 --> 00:04:50,660
+Ora voglio reindirizzare se chaced  vero.
+
+54
+00:04:50,920 --> 00:04:58,240
+di scena 8 puntello per ammirare tutti i pre-Chase prop e raggiungere l'ordine statale e l  tutto in un inseguimento cartaceo 
+
+55
+00:04:58,240 --> 00:05:05,320
+un sostegno Abbiamo appena aggiunto nel riduttore e poi qui questo pre -I prob? Di fase sono tutti usati qui per controllare
+
+56
+00:05:05,320 --> 00:05:12,970
+se questi oggetti di scena sono stati inseguiti? Questo  un bullo e quindi se questo  vero, io lo reindirizzer perch poi abbiamo finito.
+
+57
+00:05:12,970 --> 00:05:16,120
+Quindi per quello ho bisogno di mapparlo ad un palco
+
+58
+00:05:16,120 --> 00:05:17,470
+Voglio lasciare la pagina.
+
+59
+00:05:17,470 --> 00:05:20,230
+Altrimenti siamo ancora nel processo di acquisto.
+
+60
+00:05:20,230 --> 00:05:27,280
+Quindi imposter questo valore su null e ora posso eseguire il rendering del reindirizzamento pre-Chase nel nostro anno Dith e il caricamento
+
+61
+00:05:27,280 --> 00:05:29,650
+delle parti si bloccher e ci reindirizzer.
+
+62
+00:05:30,100 --> 00:05:33,490
+Salviamo tutti i file e vediamo se funziona come immaginato.
+
+63
+00:05:33,610 --> 00:05:41,360
+Se apriamo la nostra applicazione qui costruiamo un hamburger clicca su ordine ora continua.
+
+64
+00:05:41,620 --> 00:05:43,770
+E non gli piace e pre-Chase.
+
+65
+00:05:43,770 --> 00:05:47,740
+Diamo quindi un'occhiata veloce a cosa c' che non va su di esso.
+
+66
+00:05:47,740 --> 00:05:55,510
+Pre-Chase contiene un riferimento a una funzione qui, ma ovviamente non vale pi di tanto se non lo aggiungiamo alla nostra
+
+67
+00:05:55,510 --> 00:05:57,170
+chiamata di funzione di connessione.
+
+68
+00:05:57,190 --> 00:06:00,220
+Quindi l'invio di mappe a oggetti di scena dovrebbe essere l fuori.
+
+69
+00:06:00,460 --> 00:06:01,650
+Ora proviamo di nuovo.
+
+70
+00:06:01,660 --> 00:06:03,820
+Costruiamo un bel hamburger.
+
+71
+00:06:03,910 --> 00:06:04,970
+Continua.
+
+72
+00:06:05,140 --> 00:06:06,790
+S, continua.
+
+73
+00:06:06,880 --> 00:06:08,560
+Riempiamo rapidamente questo modulo.
+
+74
+00:06:08,650 --> 00:06:17,710
+Prova via codice arbitrario un indirizzo e-mail e facciamo clic sull'ordine e veniamo reindirizzati una volta che abbiamo
+
+75
+00:06:17,710 --> 00:06:18,250
+finito.
+
+76
+00:06:18,330 --> 00:06:24,800
+E ora se aggiungiamo un nuovo hamburger e facciamo clic sull'ordine ora e proseguiamo, siamo nuovamente reindirizzati.
+
+77
+00:06:24,820 --> 00:06:25,850
+Sai perch 
+
+78
+00:06:29,150 --> 00:06:35,890
+collegato al nostro posto in cui chiamiamo al pre-Chase che il componente monter nel contenitore cassa
+
+79
+00:06:35,900 --> 00:06:37,130
+ troppo tardi.
+
+80
+00:06:37,160 --> 00:06:44,510
+impedisce il rendering con i vecchi oggetti di scena che abbiamo ricevuto e i vecchi oggetti di scena per chaced  ancora vero.
+
+81
+00:06:44,510 --> 00:06:47,480
+Vuole essere eseguito prima dell'esecuzione del rendering, ma non
+
+82
+00:06:47,810 --> 00:06:50,680
+Quindi non possiamo spedire quest'anno nel componente ammonter.
+
+83
+00:06:50,840 --> 00:06:51,470
+Mi liberer.
+
+84
+00:06:51,470 --> 00:06:53,570
+Mappa questa pagina due oggetti di scena qui interamente.
+
+85
+00:06:53,630 --> 00:06:55,380
+Non ho bisogno di inviarlo qui.
+
+86
+00:06:55,580 --> 00:06:59,860
+Invece ci vuoi per pre-Chase nel Bergere Boulder.
+
+87
+00:06:59,870 --> 00:07:02,370
+Quando clicchiamo sul pulsante ordina ora.
+
+88
+00:07:02,510 --> 00:07:07,970
+Quindi qui pre-Chase  proseguito alla fine giusto prima di passare alla pagina di checkout.
+
+89
+00:07:07,970 --> 00:07:10,840
+Questo  il posto in cui vogliamo inizializzare un pre-Chase.
+
+90
+00:07:11,060 --> 00:07:13,960
+Quindi per fare questo aggiunger semplicemente un nuovo.
+
+91
+00:07:13,960 --> 00:07:18,740
+In realt posso inviarlo per ogni inseguimento.
+
+92
+00:07:19,040 --> 00:07:24,330
+Questo buco manterr una funzione anonima e azioni di invio.
+
+93
+00:07:24,470 --> 00:07:29,120
+O qui si chiama "pontefatto" o "azioni" dovrei rinominarlo perch  molto pi di una semplice
+
+94
+00:07:29,120 --> 00:07:30,090
+azione di Berger.
+
+95
+00:07:30,350 --> 00:07:34,440
+Quindi leggiamo loro tutte e due le azioni nell'importazione e laggi.
+
+96
+00:07:34,640 --> 00:07:39,910
+Quindi le azioni e poi il Che  cos.
+
+97
+00:07:40,040 --> 00:07:46,700
+Con questo stiamo inviando questa azione di inizializzazione qui nella bombetta dell'hamburger o almeno ora siamo
+
+98
+00:07:46,700 --> 00:07:48,100
+pronti a inviarlo.
+
+99
+00:07:48,110 --> 00:07:53,030
+Devo fare una chiamata pre-Chase e poi chiamarla prima di navigare.
+
+100
+00:07:53,090 --> 00:07:58,980
+Quindi questa scena  finita in quel pre-Chase mal eseguito qui con quel cambiamento in atto.
+
+101
+00:07:58,980 --> 00:08:02,250
+Vediamo se ora funziona l'applicazione ricaricata.
+
+102
+00:08:02,420 --> 00:08:06,840
+Posso costruire un hamburger o continuare anche qui.
+
+103
+00:08:07,040 --> 00:08:09,060
+Ed  bello per lui.
+
+104
+00:08:09,150 --> 00:08:13,450
+Ma test street come questo, facciamo ordine.
+
+105
+00:08:13,520 --> 00:08:14,570
+Siamo reindirizzati.
+
+106
+00:08:14,750 --> 00:08:16,970
+Torniamo indietro e facciamo nuovamente clic sull'ordine.
+
+107
+00:08:17,090 --> 00:08:20,480
+E ora possiamo andare l senza essere reindirizzati ancora una volta.
+
+108
+00:08:20,480 --> 00:08:21,850
+Siamo arrivati a un piano.
+
+109
+00:08:21,890 --> 00:08:24,820
+Non sono sicuro se l'hai notato anche sul bombetta di hamburger.
+
+110
+00:08:24,860 --> 00:08:28,090
+Il nostro prezzo non si reimposta mai dopo il reindirizzamento.
+
+111
+00:08:28,130 --> 00:08:32,640
+Quindi questo  qualcosa che far o in grado di preoccuparmi nella prossima lezione.
+

@@ -1,0 +1,128 @@
+1
+00:00:02,170 --> 00:00:07,660
+Teraz poznasz ca teori o tym, jak komponenty dziaaj, jak przekazujesz dane dotyczce dziaania rekwizytw i
+
+2
+00:00:07,660 --> 00:00:08,350
+tak dalej.
+
+3
+00:00:08,350 --> 00:00:12,760
+I to wszystko jest mie, ale jak waciwie planujesz aplikacj ponownie.
+
+4
+00:00:12,760 --> 00:00:14,260
+Jak to dziaa.
+
+5
+00:00:14,260 --> 00:00:18,470
+Teraz moesz oczywicie podzieli to na bardziej szczegowe kroki, a nastpnie oszuka.
+
+6
+00:00:18,490 --> 00:00:25,840
+Ale tutaj s trzy bardzo wane kroki, ktre widz i regularnie przechodz podczas planowania aplikacji ponownie.
+
+7
+00:00:25,930 --> 00:00:30,810
+Pierwszym krokiem jest zaplanowanie struktury komponentw komponentw.
+
+8
+00:00:30,880 --> 00:00:38,620
+Najprawdopodobniej zostae zaprojektowany przez swojego projektanta lub sam stworzye projekt aplikacji i teraz to ty
+
+9
+00:00:38,620 --> 00:00:42,760
+musisz podzieli to na komponenty, ktre ponownie dziaaj.
+
+10
+00:00:42,760 --> 00:00:48,880
+I absolutnie normalne jest to, e wyniki, jakie moesz mie na kocu, mog wyglda inaczej ni pocztkowo zaplanowany
+
+11
+00:00:48,880 --> 00:00:54,610
+komponent, ale bardzo wane jest, aby mie pojcie o tym, co powinno znale si we wasnym komponencie,
+
+12
+00:00:54,700 --> 00:00:55,950
+a co nie.
+
+13
+00:00:56,110 --> 00:01:00,640
+Wan czci aplikacji oczywicie jest stan aplikacji.
+
+14
+00:01:00,640 --> 00:01:06,820
+Wszyscy tumacze mog dysponowa danymi, ktre planujesz uy i ktrymi moesz manipulowa na przykad w aplikacji,
+
+15
+00:01:06,830 --> 00:01:11,270
+i oczywicie zrobisz to podczas kolejnych wykadw w naszej aplikacji Bergere.
+
+16
+00:01:11,350 --> 00:01:16,600
+Musimy ledzi skadniki dodane przez uytkownika, poniewa to okreli, co musimy
+
+17
+00:01:16,600 --> 00:01:20,650
+renderowa, a take, co uytkownik musi zapaci w kocu.
+
+18
+00:01:20,650 --> 00:01:27,280
+Teraz, gdy ju znasz rozkad i struktur swojej aplikacji i stwierdzasz, e bdziesz jej uywa, nie
+
+19
+00:01:27,280 --> 00:01:30,100
+moesz planowa komponentw w porwnaniu z kontenerami.
+
+20
+00:01:30,190 --> 00:01:35,650
+Wic ktre skadniki w aplikacji powinny by bezpastwowcami lub funkcjonalne.
+
+21
+00:01:35,680 --> 00:01:42,690
+Czasami okrelane rwnie jako gupie komponenty i komponenty, ktre musz by penymi komponentami stanu utworzonymi za
+
+22
+00:01:42,700 --> 00:01:49,030
+pomoc sowa kluczowego tej klasy, poniewa musz one zarzdza pewnym stanem i dystrybuowa je
+
+23
+00:01:49,180 --> 00:01:52,910
+do swoich gupich skadnikw do stanu mniej skadnikw.
+
+24
+00:01:52,960 --> 00:01:59,360
+S to trzy kroki, ktre regularnie przechodz i s to kroki, ktre chc przej z gabrem.
+
+25
+00:01:59,590 --> 00:02:05,890
+Zamierzamy zaplanowa struktur komponentw komponentw, a nastpnie sprawdzimy, ktry stan jest nam potrzebny
+
+26
+00:02:05,890 --> 00:02:10,540
+i jaki moe by komponent oraz jaki powinien by kontener.
+
+27
+00:02:10,540 --> 00:02:13,570
+A potem zaczniemy budowa aplikacj.
+
+28
+00:02:13,600 --> 00:02:19,570
+Jak wida, moemy nawet doda wicej komponentw, ni pocztkowo planowalimy, poniewa widzimy, e
+
+29
+00:02:19,570 --> 00:02:21,320
+moemy dzieli jeszcze wicej.
+
+30
+00:02:21,370 --> 00:02:22,660
+A moe to jaki rozam.
+
+31
+00:02:22,660 --> 00:02:27,650
+Zrobilimy plan, ktry nie ma sensu, kiedy zaczniemy go wdraa i to jest zupenie normalne.
+
+32
+00:02:27,730 --> 00:02:29,950
+Ale posiadanie planu jest oczywicie bardzo wane.
+

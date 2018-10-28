@@ -1,0 +1,268 @@
+1
+00:00:02,230 --> 00:00:06,430
+ ora di leggere X in azione in un vero progetto.
+
+2
+00:00:06,520 --> 00:00:08,980
+Quindi sono di nuovo nella bombetta di Bergere nello stato.
+
+3
+00:00:08,980 --> 00:00:10,560
+L'ultima volta l'abbiamo lasciata.
+
+4
+00:00:10,780 --> 00:00:17,620
+E ora vediamo dove possiamo aggiungere un po 'di magia redox Keywood per rendere la gestione dello stato un po' pi facile
+
+5
+00:00:17,620 --> 00:00:18,210
+per pap.
+
+6
+00:00:18,370 --> 00:00:25,060
+In questa prima conferenza voglio analizzare il nostro progetto esistente per scoprire quale tipo di stato
+
+7
+00:00:25,060 --> 00:00:26,180
+potremmo voler gestire.
+
+8
+00:00:26,220 --> 00:00:33,970
+la gestione dello stato avviene in contenitori e quindi non abbiamo bisogno di scavare attraverso tutti i componenti.
+
+9
+00:00:33,970 --> 00:00:41,080
+Frue Rydex Quindi tuffiamoci nei nostri contenitori perch per fortuna abbiamo gi una struttura in cui tutta
+
+10
+00:00:41,080 --> 00:00:44,060
+ davvero solo uno stato che gestiamo in contenitori.
+
+11
+00:00:44,140 --> 00:00:47,310
+Probabilmente vorremmo riuscire a rilassarci in futuro.
+
+12
+00:00:47,320 --> 00:00:49,310
+Iniziamo con il costruttore di Bergere.
+
+13
+00:00:49,450 --> 00:00:55,900
+Se ispezioniamo lo stato in questa classe di costruttori di hamburger qui vediamo che abbiamo preso gli
+
+14
+00:00:55,900 --> 00:01:01,990
+ingredienti del burger al momento stiamo costruendo il prezzo e poi un paio di campi statali.
+
+15
+00:01:01,990 --> 00:01:09,640
+Per quanto riguarda lo stato attuale che abbiamo quando si tratta di acquistare quel burger ad esempio per chasing  uno
+
+16
+00:01:09,910 --> 00:01:17,380
+stato che usiamo se scorriamo verso il metodo di rendering che usiamo per mostrare o nascondere in modo condizionale quel modale.
+
+17
+00:01:17,500 --> 00:01:20,710
+Quindi qui l'acquisto di stato  usato per quello.
+
+18
+00:01:20,890 --> 00:01:30,370
+Con questo ordine il caricamento del sommario viene utilizzato per visualizzare uno spinner e qui viene anche usato l'errore per rendere diverso
+
+19
+00:01:30,370 --> 00:01:31,250
+il contenuto.
+
+20
+00:01:31,480 --> 00:01:39,490
+Quindi, se diamo un'occhiata al nostro stato, potremmo obiettare che il chasing per il caricamento e l'errore sono il nostro tipo
+
+21
+00:01:39,610 --> 00:01:41,570
+di stato dell'interfaccia utente locale.
+
+22
+00:01:41,770 --> 00:01:47,620
+Li usiamo qui per determinare se mostriamo una modale ovunque mostriamo o un messaggio di errore.
+
+23
+00:01:47,620 --> 00:01:52,870
+Naturalmente potremmo anche gestirlo tramite redox e direi che sarebbe male.
+
+24
+00:01:52,870 --> 00:01:58,270
+assolutamente gestire tutto tramite CDEX, ma potrebbe anche non esserci una necessit per farlo.
+
+25
+00:01:58,270 --> 00:01:59,310
+Non si pu
+
+26
+00:01:59,620 --> 00:02:05,410
+Quindi, ci che  decisamente interessante gestire il redox  per gli ingredienti e il
+
+27
+00:02:05,410 --> 00:02:07,360
+prezzo totale dell'hamburger per Chasuble.
+
+28
+00:02:07,390 --> 00:02:15,040
+Se diamo un'occhiata a dove usiamo stat, possiamo vedere che se scorriamo verso il basso passiamo all'acquirente ai
+
+29
+00:02:15,040 --> 00:02:19,920
+nostri controlli della cintura e l per sbloccare il pulsante dell'ordine.
+
+30
+00:02:20,050 --> 00:02:25,350
+Quindi, se ispezioniamo il componente di controllo bullone Bergere e vediamo cosa facciamo con il Propst
+
+31
+00:02:25,350 --> 00:02:28,230
+acquistabile, lo usiamo per passare a un pulsante qui.
+
+32
+00:02:28,240 --> 00:02:32,930
+Il pulsante ordina ora da questo abilitato a abilitato e viceversa.
+
+33
+00:02:32,950 --> 00:02:36,000
+Quindi questo  anche pi stato DUI.
+
+34
+00:02:36,010 --> 00:02:39,070
+Cambiamo qualcosa nell'interfaccia utente.
+
+35
+00:02:39,070 --> 00:02:45,100
+Potrebbe non essere molto importante per noi gestirlo tramite il redux.
+
+36
+00:02:45,160 --> 00:02:52,820
+Ovviamente si potrebbe anche dire dell'acquirente il valore che ci vuole dipende dalla fine sul Bergere che abbiamo configurato.
+
+37
+00:02:52,960 --> 00:02:55,600
+Quindi dovremo vedere dove siamo a questo.
+
+38
+00:02:56,050 --> 00:02:57,680
+Sicuramente un caso riduttivo.
+
+39
+00:02:57,700 --> 00:03:00,180
+I nostri ingredienti e il prezzo totale per.
+
+40
+00:03:00,610 --> 00:03:01,890
+Diamo un'occhiata al checkout.
+
+41
+00:03:01,920 --> 00:03:08,560
+Se andate al componente check out l se scorriamo, vediamo rapidamente che tutti abbiamo ingredienti
+
+42
+00:03:08,560 --> 00:03:09,710
+e prezzo qui.
+
+43
+00:03:09,880 --> 00:03:16,260
+C' gi un forte motivo per utilizzare i reindirizzamenti perch abbiamo quel problema di passare dei gradi da
+
+44
+00:03:16,300 --> 00:03:19,910
+genitori queery e sarebbe fantastico se ci liberassimo del debito.
+
+45
+00:03:20,020 --> 00:03:25,990
+Sarebbe anche fantastico se noi nel metodo di rendering del componente di checkout potessimo cambiare il modo in cui
+
+46
+00:03:25,990 --> 00:03:33,220
+abbiamo reso questa rotta in modo che non dovessimo usare in questo modo solo per far s che i Regan contassero i dati.
+
+47
+00:03:33,310 --> 00:03:40,210
+effettivamente a ripristinare il nostro negozio di redox, non possiamo semplicemente rendere questo componente qui e nei dati
+
+48
+00:03:40,450 --> 00:03:48,520
+contestuali possiamo collegarlo tramite disconnettere i negozi tudy redux dei componenti di ordine superiore in modo da ottenere qui gli ingredienti.
+
+49
+00:03:48,520 --> 00:03:50,210
+Una volta che riusciamo
+
+50
+00:03:50,220 --> 00:03:56,500
+D Perch nel componente dei dati di contatto, se osserviamo lo stato, abbiamo ovviamente ricevuto tutti
+
+51
+00:03:56,560 --> 00:04:02,090
+i nostri controlli dal modulo d'ordine e voglio lasciarli qui perch  di nuovo locale.
+
+52
+00:04:02,260 --> 00:04:07,290
+Non abbiamo davvero bisogno di informazioni sul nostro modulo qui o altrove nell'applicazione.
+
+53
+00:04:07,690 --> 00:04:13,780
+Ma naturalmente approfittiamo anche degli ingredienti che otteniamo attraverso gli oggetti di scena, quindi non li
+
+54
+00:04:13,780 --> 00:04:15,230
+vediamo qui nello stato.
+
+55
+00:04:15,310 --> 00:04:22,180
+Quindi in quel contesto di dati lo stato  in realt solo lo stato di DUI qui che
+
+56
+00:04:22,180 --> 00:04:28,260
+gestisce il modulo ma otteniamo alcuni oggetti di scena qui che in futuro potrebbero ottenere direttamente
+
+57
+00:04:28,330 --> 00:04:35,010
+dallo store reimpostato invece di passarli qui con questo lavoro che stiamo attualmente utilizzando in un contenitore
+
+58
+00:04:35,020 --> 00:04:42,220
+di cassa ora nell'ordine come componente l abbiamo anche gli ordini nello stato ora gli ordini vengono effettivamente prelevati
+
+59
+00:04:42,310 --> 00:04:49,240
+dal server e abbiamo imparato come recuperare i dati da un server come gestire azioni asincrone come richieste
+
+60
+00:04:49,270 --> 00:04:51,630
+HTP naturalmente sono insieme con rilassare.
+
+61
+00:04:51,670 --> 00:04:58,390
+Quindi gli ordini sono qualcosa che dar un'occhiata pi tardi una volta esaminato pi da vicino come gestire il
+
+62
+00:04:58,390 --> 00:05:00,110
+codice asincrono e i reindirizzamenti.
+
+63
+00:05:00,130 --> 00:05:07,820
+Per ora concentriamoci sul codice e sulle prossime lezioni. Implementiamo la lettura di X spostandoci il nostro stadio e connettendo i
+
+64
+00:05:07,820 --> 00:05:10,190
+nostri contenitori in modo da ridurli.
+
+65
+00:05:10,370 --> 00:05:16,160
+Sicuramente sentiti libero di andare avanti da solo e poi risolverlo insieme a me nelle prossime lezioni.
+
+66
+00:05:16,280 --> 00:05:23,000
+Ma se non ti senti cos a tuo agio e prova a fare del tuo meglio per quanto sai come fare le cose
+
+67
+00:05:23,000 --> 00:05:24,640
+e poi lo costruiremo insieme.
+

@@ -1,0 +1,152 @@
+1
+00:00:02,070 --> 00:00:04,350
+Bu yzden, bir sonraki konuyla
+
+2
+00:00:04,470 --> 00:00:10,230
+ilgili temel bilgileri reniyoruz, ancak hala uygulamalarm sadece sayfalardan deil, bileenlerden oluturmak istiyorsam, artk
+
+3
+00:00:10,230 --> 00:00:11,420
+bunu yapmamal mym?
+
+4
+00:00:11,520 --> 00:00:13,360
+Kesinlikle yapmalyz.
+
+5
+00:00:13,380 --> 00:00:16,770
+Reaksiyon uygulamanz oluturma ekliniz deimez,
+
+6
+00:00:16,800 --> 00:00:22,800
+birok kk paray uygulamanz oluturmak iin hala iyi bir uygulamadr.
+
+7
+00:00:22,800 --> 00:00:27,420
+Yani yeni bir klasr ekleyelim, bileenler ve bu klasr ad aslnda size
+
+8
+00:00:27,450 --> 00:00:29,340
+kalm, nextjs bunu umursamyor, C,
+
+9
+00:00:29,370 --> 00:00:33,890
+CMP, ne isterseniz onu adlandrabilirsiniz. Orada, kullancm
+
+10
+00:00:34,080 --> 00:00:37,920
+ekleyeceim. js, bir kullanc bileeni,
+
+11
+00:00:38,160 --> 00:00:46,670
+ben sabit bir kullanc oluturacam, belki baz sahne almak ve sonra baz jsx kt ve bunun iin her zaman
+
+12
+00:00:46,670 --> 00:00:57,230
+gibi tepki tepki ve bu kullanc sabit dosya varsaylan olarak da aktarn. Burada imdi, rnein, sahne araclyla elde etmeyi umduum
+
+13
+00:00:57,250 --> 00:00:58,010
+isim
+
+14
+00:00:58,090 --> 00:01:06,110
+gibi baz kullanc verilerinin ktsn almak istediim yeni bir div oluturabiliriz
+
+15
+00:01:06,110 --> 00:01:07,920
+ve sonra da
+
+16
+00:01:08,240 --> 00:01:13,020
+ya, sahne diyebiliriz. ya.
+
+17
+00:01:13,140 --> 00:01:17,760
+Tabii ki bu ok basit bir bileen deil, nk biz
+
+18
+00:01:17,780 --> 00:01:21,920
+bileenleri ekmiyoruz, bunu nasl kullanacamz gstermek istiyorum nextjs uygulamasnda.
+
+19
+00:01:22,010 --> 00:01:26,260
+imdi bir kez aldmzda, bu bileeni aldmzda, her zaman olduu gibi kullanyoruz, hadi
+
+20
+00:01:26,390 --> 00:01:29,230
+authIndex'te kullanmak istediimizi syleyelim. js dosyas,
+
+21
+00:01:29,240 --> 00:01:32,350
+biz imdi basite kullanc ithalat
+
+22
+00:01:32,450 --> 00:01:39,520
+ve hadi yukar gidelim ve bileenleri klasrne gidelim ve orada kullanc dosyasn
+
+23
+00:01:39,530 --> 00:01:41,930
+ie aktaryorum ve sonra
+
+24
+00:01:42,110 --> 00:01:49,470
+basite kullanc bileenimi ekleyeceim, bunu beklediimden beri sahne prodksiyonunu geiyorum. say byle, bunu
+
+25
+00:01:49,480 --> 00:01:49,950
+nasl kullanabilirim.
+
+26
+00:01:50,100 --> 00:01:52,760
+imdi tm dosyalar kaydedersek ve
+
+27
+00:01:52,760 --> 00:01:54,130
+geri dnersek, onu
+
+28
+00:01:54,170 --> 00:01:56,120
+zaten burada grrsnz.
+
+29
+00:01:56,300 --> 00:02:02,050
+Yani bizim nextjs uygulamasnda bileenleri ile alyoruz, biz de bileenleri, fonksiyonel
+
+30
+00:02:02,180 --> 00:02:09,980
+veya snf tabanl olanlar ieren zel sayfalar klasr var ama hangi biz zel dosyalar tm
+
+31
+00:02:09,980 --> 00:02:16,700
+dosyalar ayrtrmak gibi nextjs nk baz zel tedavi alr tek klasr sayfalar olarak,
+
+32
+00:02:16,700 --> 00:02:21,740
+onlar iin rotalar oluturur ve otomatik olarak kod blnr.
+
+33
+00:02:21,860 --> 00:02:28,060
+Bu kod ayrm, bu sayfada kullanc bileeni gibi bulunan bileenleri de ierdiinden,
+
+34
+00:02:28,070 --> 00:02:28,820
+yalnzca
+
+35
+00:02:29,060 --> 00:02:33,490
+auth bileeninde, authindex kullanyoruz. js dosyas bu
+
+36
+00:02:33,680 --> 00:02:36,100
+yzden bu sayfaya gidersek
+
+37
+00:02:36,260 --> 00:02:42,650
+sadece kodu ykleriz. Btn zamanmz ana endekste geirirsek. Kullanc bileenini kullanmadmz js
+
+38
+00:02:42,650 --> 00:02:46,310
+sayfas, bunun iin de asla kodu yklemeyecektik.
+

@@ -1,0 +1,492 @@
+1
+00:00:02,150 --> 00:00:05,940
+En la ltima conferencia, nos aseguramos de poder enviar una solicitud POST.
+
+2
+00:00:05,980 --> 00:00:11,860
+Ahora, en una aplicacin tpica, queremos mostrarle algo al usuario una vez que la solicitud est en camino.
+
+3
+00:00:11,900 --> 00:00:13,170
+Ahora tendr que agregar.
+
+4
+00:00:13,180 --> 00:00:16,790
+Firebase es realmente muy rpido.
+
+5
+00:00:17,000 --> 00:00:23,030
+Por lo tanto, probablemente ni siquiera tengamos la oportunidad de ver una pantalla de carga o algo que quiera mostrarle
+
+6
+00:00:23,030 --> 00:00:25,640
+al usuario si la solicitud est en camino.
+
+7
+00:00:25,640 --> 00:00:30,890
+An as, es una buena prctica mostrar algo como esto porque en caso de que tengamos alguna latencia o tal vez
+
+8
+00:00:30,890 --> 00:00:32,460
+la red de usuarios sea lenta.
+
+9
+00:00:32,570 --> 00:00:36,230
+Definitivamente quiere mostrarle al usuario que est sucediendo algo.
+
+10
+00:00:36,260 --> 00:00:37,750
+Entonces, qu es lo que queremos mostrar?
+
+11
+00:00:37,850 --> 00:00:40,840
+Bueno, quiero mostrar un spinner dentro de este mdem.
+
+12
+00:00:40,850 --> 00:00:47,030
+Entonces, en lugar del resumen de la orden, quiero mostrar una ruleta para que el usuario pueda ver que algo
+
+13
+00:00:47,030 --> 00:00:47,940
+est sucediendo aqu.
+
+14
+00:00:48,050 --> 00:00:54,660
+Y una vez que hayas terminado, Malda debera cerrarse y, por lo tanto, el divisor tambin desaparecer.
+
+15
+00:00:55,010 --> 00:00:56,740
+Entonces cmo hacemos eso.
+
+16
+00:00:56,780 --> 00:01:01,600
+En primer lugar, necesitamos un componente de Spener que sea claramente un elemento de UI.
+
+17
+00:01:01,610 --> 00:01:08,180
+As que aqu voy a agregar una carpeta spinner y luego a Baynard J como archivo.
+
+18
+00:01:08,180 --> 00:01:16,570
+Ahora el spinner puede ser simplemente un simple componente funcional en el que devolver el acento j s, como siempre.
+
+19
+00:01:16,590 --> 00:01:24,410
+Por lo tanto, importa volver a actuar desde reaccionar y exportar la funcin spinner a tu culo al archivo predeterminado por supuesto.
+
+20
+00:01:24,410 --> 00:01:26,960
+Ahora para crear un SEUS como un spinner.
+
+21
+00:01:26,960 --> 00:01:31,120
+Simplemente podemos aprovechar algunos recursos que podemos encontrar en Internet.
+
+22
+00:01:31,310 --> 00:01:37,940
+Si busca C-s como spinner, encontrar ese increble proyecto aqu, el primer resultado de bsqueda
+
+23
+00:01:37,940 --> 00:01:44,930
+que puede ver en el video, que es una pgina con muchos C-s como spinner y
+
+24
+00:01:44,930 --> 00:01:47,620
+el cdigo que simplemente puede usar.
+
+25
+00:01:47,640 --> 00:01:52,190
+Tambin puede ajustarlos aqu seleccionando un color de fondo.
+
+26
+00:01:52,190 --> 00:02:01,360
+Y aqu voy a ingresar una capa hexagonal de color blanco para el fondo y luego un color frontal de
+
+27
+00:02:01,530 --> 00:02:05,770
+esta Nye, o con eso puedes elegir cualquier tirador.
+
+28
+00:02:05,920 --> 00:02:12,210
+S este sobre el que te guste y luego vers que es tan fro
+
+29
+00:02:12,210 --> 00:02:13,310
+como el spinner.
+
+30
+00:02:13,320 --> 00:02:15,540
+Ahora voy a agarrar todo ese cdigo.
+
+31
+00:02:15,730 --> 00:02:21,180
+Es todo cdigo HTML de CDH que es realmente simple y puede tomar todo ese cdigo y luego
+
+32
+00:02:21,180 --> 00:02:23,190
+regresar a la aplicacin de reactivacin all.
+
+33
+00:02:23,190 --> 00:02:26,300
+Agregar un archivo see SS de spinner y pegar en el cdigo.
+
+34
+00:02:26,310 --> 00:02:27,630
+Acabo de copiar.
+
+35
+00:02:27,930 --> 00:02:34,610
+No, lo que har es cambiar rpidamente el nombre del cargador al cargador con una L. mayscula.
+
+36
+00:02:34,710 --> 00:02:40,860
+Solo para estar en lnea con la avaricia cada que estoy usando en este proyecto y luego
+
+37
+00:02:40,860 --> 00:02:49,650
+voy a agarrar ese HDMI. Lo matar aqu en el spinner y lo usar en mi componente spinner como X y la clase. por supuesto
+
+38
+00:02:49,710 --> 00:02:51,200
+tiene que ser ajustado.
+
+39
+00:02:51,210 --> 00:02:56,680
+Es un nombre de clase y necesito haber ordenado que las clases de Mei's C sean las siguientes.
+
+40
+00:02:56,680 --> 00:03:03,870
+L mayscula y que en realidad es toda la carga intermedia como una alternativa en caso de que CSSA no se muestre.
+
+41
+00:03:03,870 --> 00:03:10,170
+Lo estoy importando de spitters C S y luego de ese nombre de clase igual al cargador de inicio de
+
+42
+00:03:10,170 --> 00:03:10,970
+clases con una
+
+43
+00:03:11,040 --> 00:03:12,410
+Entonces esto se mostrar.
+
+44
+00:03:12,600 --> 00:03:15,370
+Ese es realmente todo el cdigo que necesito para un spinner.
+
+45
+00:03:15,390 --> 00:03:19,880
+Ahora solo necesito un poco de lgica para mostrarlo dentro del modal mientras estamos cargando.
+
+46
+00:03:19,920 --> 00:03:26,290
+Entonces, esencialmente, quiero condicionalmente hacer un resumen de orden o mi spinner.
+
+47
+00:03:26,460 --> 00:03:30,420
+Ahora necesito un nuevo estado en mi constructor de Bergere.
+
+48
+00:03:30,420 --> 00:03:37,310
+Aqu hay ocho en un estado que nombrar la carga y que es falso inicialmente cuando es verdadero.
+
+49
+00:03:37,320 --> 00:03:39,690
+Quiero mostrar el divisor cuando es falso.
+
+50
+00:03:39,720 --> 00:03:42,800
+Quiero mostrar el resumen de la orden en este componente.
+
+51
+00:03:43,290 --> 00:03:44,940
+Entonces en el mtodo de renderizado
+
+52
+00:03:44,970 --> 00:03:53,650
+Ahora agregue un control donde digo si este estado se est cargando, entonces quiero mostrar el divisor y, en primer lugar, establecer
+
+53
+00:03:53,710 --> 00:04:01,020
+la alternativa que es el resumen de mi pedido anual, que simplemente debera ser ese elemento que ordena
+
+54
+00:04:01,020 --> 00:04:02,490
+el elemento de resumen.
+
+55
+00:04:02,490 --> 00:04:04,310
+Hemos anidado en el modal.
+
+56
+00:04:04,650 --> 00:04:12,210
+de orden aqu que cre con la palabra clave let y lo anular en caso de que tengamos que cargar el estado.
+
+57
+00:04:12,210 --> 00:04:14,570
+Lo almacenar en esta variable de resumen
+
+58
+00:04:14,640 --> 00:04:19,350
+Luego, aqu quiero usar ese nuevo componente de Spener que acabamos de crear.
+
+59
+00:04:19,380 --> 00:04:25,950
+As que vamos a pedir un spinner y luego lo agregar aqu. Importe Spener desde.
+
+60
+00:04:26,130 --> 00:04:31,710
+Y ahora tenemos que ir a la carpeta de componentes, por supuesto, a la carpeta UI y
+
+61
+00:04:31,710 --> 00:04:39,570
+all a la carpeta spinner e imploramos la cada del rotor desde all y ahora podemos agarrar esa ruleta y usarla all en
+
+62
+00:04:39,570 --> 00:04:40,850
+nuestro mtodo de renderizado.
+
+63
+00:04:41,070 --> 00:04:48,180
+Aqu, ahora quiero establecer el resumen del pedido, debera ser mi spinner y esta es simplemente una etiqueta de cierre automtico.
+
+64
+00:04:48,600 --> 00:04:53,250
+Con eso podemos salvarlo ahora deberamos sacar el ao del resumen de la orden.
+
+65
+00:04:53,250 --> 00:04:56,240
+Esta variable que acabamos de crear entre el impuesto modal.
+
+66
+00:04:56,250 --> 00:05:01,320
+Entonces ahora mostramos esto mejor o mostramos el resumen de la orden.
+
+67
+00:05:01,590 --> 00:05:07,370
+Guardemos esto y asegurmonos de que ahora el estado de carga que estamos verificando aqu.
+
+68
+00:05:07,380 --> 00:05:13,820
+Por supuesto, queremos cambiarlo aqu cuando en realidad estamos continuando con la compra.
+
+69
+00:05:13,980 --> 00:05:15,420
+Hay justo al comienzo.
+
+70
+00:05:15,450 --> 00:05:22,140
+Quiero llamar a este estado de conjunto y dijo que la carga es verdadera, por supuesto, porque ahora que estamos cargando,
+
+71
+00:05:22,200 --> 00:05:26,830
+la solicitud est a punto de enviarse una vez que la respuesta est all.
+
+72
+00:05:26,850 --> 00:05:34,140
+cargar y quiero dejar de cargar, sin importar cul sea la respuesta, porque la solicitud se realiza incluso si falla.
+
+73
+00:05:34,140 --> 00:05:38,800
+Aqu donde lo registro, ya no quiero iniciar sesin, pero quiero dejar de
+
+74
+00:05:38,850 --> 00:05:45,330
+As que aqu voy a llamar ahora a este estado de conjunto y establecer la carga a falso nuevamente.
+
+75
+00:05:45,390 --> 00:05:48,920
+Por supuesto, para que volvamos al Ivor.
+
+76
+00:05:49,080 --> 00:05:51,620
+Bien paginado el estado.
+
+77
+00:05:51,990 --> 00:05:58,380
+Tambin, por supuesto, quiero decir que cargue dos archivos si tenemos un error o porque, incluso si se produjo un
+
+78
+00:05:58,650 --> 00:06:02,830
+error, queremos dejar de cargar. Ya no queremos mostrar el hilandero porque nuestro.
+
+79
+00:06:02,860 --> 00:06:06,390
+Usted estara atrapado en este caso y el usuario lo pensara an.
+
+80
+00:06:06,420 --> 00:06:07,950
+Bien cargando
+
+81
+00:06:08,310 --> 00:06:11,500
+Por supuesto que tambin quiero cerrar el mvil.
+
+82
+00:06:11,820 --> 00:06:18,900
+Bueno, eso se puede hacer fcilmente porque el mdem solo se muestra si la propiedad de compra estatal est
+
+83
+00:06:18,900 --> 00:06:20,000
+configurada como verdadera.
+
+84
+00:06:20,250 --> 00:06:23,550
+As que simplemente deberamos tener que establecer la bsqueda de false aqu.
+
+85
+00:06:23,730 --> 00:06:31,190
+Por lo tanto, en ambos casos, tambin establecer para perseguir a falso para que cierre el modal.
+
+86
+00:06:31,350 --> 00:06:31,930
+Entonces si eso.
+
+87
+00:06:31,940 --> 00:06:32,820
+Vamos a salir.
+
+88
+00:06:32,850 --> 00:06:38,910
+Si volvemos a nuestra hamburguesa y creamos una hamburguesa, hago clic en "ordenar ahora" y continuar.
+
+89
+00:06:39,710 --> 00:06:42,980
+Realmente no vimos el spinner, verdad?
+
+90
+00:06:43,170 --> 00:06:46,780
+Ahora esto tiene sentido debido a la forma en que configuramos nuestra aplicacin.
+
+91
+00:06:46,790 --> 00:06:52,940
+Pero, sabes por qu no vimos que la ruleta puede ser difcil de detectar, pero te dar la oportunidad de publicar un
+
+92
+00:06:52,940 --> 00:06:57,850
+video y encontrar el problema por tu cuenta, y luego te mostrar por qu no est funcionando?
+
+93
+00:06:59,590 --> 00:07:01,750
+Descubriste lo que est mal?
+
+94
+00:07:02,110 --> 00:07:08,870
+Ahora no puedo decirte que estamos configurando correctamente la carga, y as sucesivamente, y por lo tanto, el resumen del pedido
+
+95
+00:07:08,880 --> 00:07:09,560
+es girar.
+
+96
+00:07:09,760 --> 00:07:15,730
+Pero de alguna manera nuestra mvil no se actualiza y no muestra esto cuando dijimos esto.
+
+97
+00:07:15,740 --> 00:07:17,880
+Ahora hay una buena razn para eso.
+
+98
+00:07:18,040 --> 00:07:26,270
+Considere nuestro cdigo modal que usamos debera actualizarse ese ao y, bsicamente, solo actualizamos descompuesto si el estado
+
+99
+00:07:26,440 --> 00:07:34,090
+del espectculo cambi aqu; sin embargo, los elementos secundarios del componente simplemente cambian a los hijos
+
+100
+00:07:34,090 --> 00:07:35,380
+del accesorio cambiados.
+
+101
+00:07:35,380 --> 00:07:39,910
+Estamos pasando a un nio nuevo repasar la ruleta en lugar del resumen de la orden.
+
+102
+00:07:40,240 --> 00:07:47,380
+Eso no desencadena una actualizacin aqu, as que simplemente tenemos que ajustar nuestro mtodo de redaccin y
+
+103
+00:07:47,470 --> 00:07:49,330
+actualizacin en el componente modal.
+
+104
+00:07:49,510 --> 00:07:57,430
+a estator por una fraccin de segundo, pero si haces clic en Continuar, vers ese cargador y vers que el diseo est un poco roto.
+
+105
+00:07:57,430 --> 00:08:04,120
+Y tenemos que verificar si los hijos del prximo accesorio son realmente diferentes a los de este apoyo, de modo
+
+106
+00:08:04,120 --> 00:08:09,250
+que se actualice si recibe nios nuevos con ese cambio en su lugar una vez
+
+107
+00:08:09,250 --> 00:08:15,960
+que lo guardaste si ahora vuelves a tu aplicacin y construyes una hamburguesa, no tienes para ver de cerca porque
+
+108
+00:08:15,950 --> 00:08:16,690
+solo va
+
+109
+00:08:16,690 --> 00:08:18,140
+Arreglemos esto rpidamente
+
+110
+00:08:18,240 --> 00:08:26,120
+Tenemos que ir al spinner y all el color de fondo de ese cargador antes de la regla debera ser blanco.
+
+111
+00:08:26,140 --> 00:08:33,030
+Entonces, si el cargador de color verdadero tambin debe ser blanco y con pap.
+
+112
+00:08:33,030 --> 00:08:37,890
+Ahora si guardamos esto, creamos una hamburguesa ms y pedimos dat.
+
+113
+00:08:37,980 --> 00:08:39,500
+Ahora tenemos un spinner agradable.
+
+114
+00:08:39,590 --> 00:08:43,020
+De nuevo, no lo vemos tanto porque Firebase es tan rpido.
+
+115
+00:08:43,080 --> 00:08:45,220
+Sintase libre de comentarlo.
+
+116
+00:08:45,250 --> 00:08:49,130
+Publicar solicitud aqu para verlo un poco ms?
+
+117
+00:08:49,150 --> 00:08:50,160
+Voy a hacer eso.
+
+118
+00:08:50,160 --> 00:08:54,810
+Entonces, ahora no estamos enviando una solicitud y nunca volveremos del estado de carga.
+
+119
+00:08:54,810 --> 00:08:57,420
+Ahora puedes ver la ruleta aqu.
+
+120
+00:08:57,420 --> 00:09:01,930
+As que ahora tenemos un girador en el lugar que estamos mostrando mientras algo est sucediendo.
+
+121
+00:09:02,110 --> 00:09:07,800
+Nada est sucediendo, por supuesto, porque comenc a comentar, pero ahora lo manejamos.
+
+122
+00:09:07,810 --> 00:09:11,680
+Ahora vamos a manejar el caso muerto.
+
+123
+00:09:11,730 --> 00:09:17,910
+Nuestra solicitud HTP falla porque queremos informar al usuario sobre tal falla.
+

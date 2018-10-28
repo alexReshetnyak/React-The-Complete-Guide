@@ -1,0 +1,128 @@
+1
+00:00:02,230 --> 00:00:07,750
+Son derslerden sonra ekledik veya maazamz yaratt ve eylemler ekledik.
+
+2
+00:00:07,750 --> 00:00:15,880
+imdi de abonelik aboneliklerimi eklemek istiyorum, nk mevcut durum grntsn almak istiyorum, ancak bir ey
+
+3
+00:00:15,880 --> 00:00:23,530
+deitiinde yeni bir duruma ihtiyacm olduunda beni bilgilendirmek istiyorsanz kodumda elle get state'i armamam
+
+4
+00:00:23,530 --> 00:00:28,880
+gerekir. nk elle bunu bir konsol gnl gibi yapn.
+
+5
+00:00:29,020 --> 00:00:31,370
+Her zaman bir ey deiip deimediini tahmin etmeliyim.
+
+6
+00:00:31,480 --> 00:00:39,720
+Peki nasl abonelik oluturabilirim, o zaman maazamza eriebilirim ve orada altrabileceim bir abonelik yntemim var.
+
+7
+00:00:40,150 --> 00:00:46,890
+imdi abone olmak, bir bamsz deikeni, eyalet gncellendiinde yrtlecek bir fonksiyon alr.
+
+8
+00:00:47,050 --> 00:00:55,260
+Bu nedenle, abone olmak iin ilettiimiz fonksiyonu azaltmak iin ection ulatnda herhangi bir argman almaz.
+
+9
+00:00:55,300 --> 00:00:59,450
+Dolaysyla, bo alt parantezle alt ok Arison metnine alksnz.
+
+10
+00:00:59,740 --> 00:01:05,660
+Ve sonra ilev gvdesinde devlet gncellemeleri iin istediimiz herhangi bir kodu altrabiliriz.
+
+11
+00:01:05,680 --> 00:01:09,350
+Yani hepiniz Lague aboneliiniziz.
+
+12
+00:01:09,400 --> 00:01:12,370
+Sadece bir gsterge ki nereden geldiini gryorum.
+
+13
+00:01:12,520 --> 00:01:18,370
+Ve imdi de maazaya ulaabilir ve devlet yntemini elde etmemi salayan devletimi
+
+14
+00:01:18,370 --> 00:01:19,360
+orada alabilirim.
+
+15
+00:01:19,420 --> 00:01:26,140
+Aradaki fark u ki burada bir eyler deitiini ve l aboneliini bildiimden dolay
+
+16
+00:01:26,770 --> 00:01:28,680
+devleti almam gerektiini biliyorum.
+
+17
+00:01:28,750 --> 00:01:35,380
+Aslnda tabii ki genellikle maaza oluturulduktan sonra kurulacak, bylece gelecekteki
+
+18
+00:01:35,440 --> 00:01:37,530
+gnderiler konusunda bilgilendirileceiz.
+
+19
+00:01:37,870 --> 00:01:43,990
+Bu nedenle, abonelerin eylemleri gndermeden nce geldiini ve eylemin gnderildiinde SUBSCRIBE yntemindeki
+
+20
+00:01:44,560 --> 00:01:49,190
+bu ilev yrtleceini ve yky mutasyona urattna dikkat edin.
+
+21
+00:01:49,270 --> 00:01:57,450
+Bununla birlikte, dmleri gevet temelleri olan J.'yi yeniden altralm. S. ve grdmz ey, nce maazay
+
+22
+00:01:57,450 --> 00:02:01,590
+oluturduktan sonra konsol kilit admnn ktsn almaktr.
+
+23
+00:02:02,650 --> 00:02:10,140
+Ve daha sonra abonelik ktlarn seeceim ve sonra eylemin yamalandktan sonra kt kt.
+
+24
+00:02:10,170 --> 00:02:15,730
+devlet almadan nce deil, herhangi bir eylem gnderildiinde tetiklendiinden geldi.
+
+25
+00:02:15,730 --> 00:02:20,910
+imdi abonelik ktlarn semek iin, abonelik Descanso'nun kilit deyiminden nce
+
+26
+00:02:20,980 --> 00:02:24,150
+Tabii ki konsol log ifadesini yapmadan nce tabii ki olur.
+
+27
+00:02:25,340 --> 00:02:27,260
+Bir abonelik bu ekilde ie yarar.
+
+28
+00:02:27,260 --> 00:02:31,010
+Devlet gncellendiinde tetikleniyor.
+
+29
+00:02:31,010 --> 00:02:35,600
+imdi hepsi gzel ve bu bize redux'un tm yap talarn gsteriyor.
+
+30
+00:02:35,600 --> 00:02:41,100
+Bununla birlikte, bu bizim tekrar uygulama bavurumuza nasl uyduunu bize hi gstermez.
+
+31
+00:02:41,420 --> 00:02:44,150
+O halde nasl balandmz tepki verecek ekilde tepki gsterelim.
+
+32
+00:02:44,150 --> 00:02:45,380
+Bir sonraki Nycteris'de.
+

@@ -1,0 +1,76 @@
+1
+00:00:02,060 --> 00:00:07,580
+Bu derste, tepki uygulamalarnda test etmeye ksa bir giri yaptk ve daha
+
+2
+00:00:07,580 --> 00:00:14,750
+derinlere dallabileceinden bahsettim, tm kurslarn veya makalelerin testlere daldn ve sadece daha fazla bilgi edinmek istiyorsanz
+
+3
+00:00:14,750 --> 00:00:17,850
+daha derinlere dalmanz neriyorum. test hakknda, bu
+
+4
+00:00:17,860 --> 00:00:19,680
+sadece kaba bir giri.
+
+5
+00:00:19,820 --> 00:00:24,980
+Test etmek sz konusu olduunda en nemli eylerden biri, testler
+
+6
+00:00:24,980 --> 00:00:32,990
+hakknda dnme eklinizdir, gereksiz eyleri test etmeyin nk gereksiz eyler genellikle test edilmesi en zor olandr,
+
+7
+00:00:32,990 --> 00:00:40,810
+eer tm i akn test ediyorsanz bir dmeyi tklarm Benim durumum iin baka bir bileendeki
+
+8
+00:00:40,820 --> 00:00:42,080
+deiiklikler deiiyor,
+
+9
+00:00:42,080 --> 00:00:48,500
+o zaman bunu simle etmekten zevk almayacaksnz. Bu, ok fazla zor i gerektirecek ve
+
+10
+00:00:48,500 --> 00:00:54,350
+kodlar p arlarna ynlendirmeniz gerekecek, bylece testler srasnda sunucuya gerekten ulaamayacaksnz ve hepsi
+
+11
+00:00:55,130 --> 00:00:56,920
+bu hi de elenceli deil.
+
+12
+00:00:56,960 --> 00:01:01,970
+Ve bu sadece elenmek deil, ayn zamanda gereksizdir, nk sunucuya ulaabileceimizi
+
+13
+00:01:01,970 --> 00:01:02,860
+test etmemize
+
+14
+00:01:02,990 --> 00:01:06,620
+gerek yok, redktrmzn doru altn test etmemiz gerekiyor,
+
+15
+00:01:06,680 --> 00:01:10,460
+eer girdiler deiiyorsa bileenlerimizi doru bir ekilde gncelliyoruz,
+
+16
+00:01:10,580 --> 00:01:15,630
+belki biz Belirli bir dmeyi tklarsak, doru bir pervane bulmay denemek isteriz.
+
+17
+00:01:15,980 --> 00:01:20,210
+Btn bunlar, izole nite testlerinde kolayca test edilebilir ve
+
+18
+00:01:20,210 --> 00:01:22,290
+bu, onu dnmenin ve
+
+19
+00:01:22,400 --> 00:01:24,860
+pratik yapmanz tevik etmenin yolu.
+

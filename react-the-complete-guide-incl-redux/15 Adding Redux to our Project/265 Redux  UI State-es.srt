@@ -1,0 +1,200 @@
+1
+00:00:02,180 --> 00:00:08,810
+En nuestra aplicacin podemos actualizar el precio, est bien, podemos subir los ingredientes, pero el orden ahora,
+
+2
+00:00:08,810 --> 00:00:10,160
+pero nunca se desbloquea.
+
+3
+00:00:11,000 --> 00:00:18,420
+La razn de esto es que la propiedad que determina si esto est desbloqueado o no es propiedad
+
+4
+00:00:18,440 --> 00:00:21,700
+adquirible cuando se establece en los controles incorporados.
+
+5
+00:00:21,980 --> 00:00:25,120
+Podemos verificar eso simplemente buceando en ambos controles.
+
+6
+00:00:25,150 --> 00:00:27,730
+Ah vemos que el botn est deshabilitado.
+
+7
+00:00:27,830 --> 00:00:31,310
+Si el accesorio de compra es falso.
+
+8
+00:00:31,580 --> 00:00:37,750
+Entonces, lo que tenemos que hacer es actualizar el Propp adquirible siempre que cambien nuestros ingredientes.
+
+9
+00:00:38,690 --> 00:00:45,990
+En el Bergere Boulder, hasta ahora logramos comprar en el estado.
+
+10
+00:00:46,040 --> 00:00:47,710
+Ahora podemos eliminarlo de all.
+
+11
+00:00:47,720 --> 00:00:54,200
+Ya no quiero administrarlo aqu y, por lo tanto, tambin puedo mover la actualizacin segn el mtodo de estado
+
+12
+00:00:54,740 --> 00:00:55,520
+del Che.
+
+13
+00:00:55,520 --> 00:01:00,890
+Por ahora quiero dejarlo aqu porque tenemos esa buena lgica para determinar cundo actualizar esto.
+
+14
+00:01:00,890 --> 00:01:03,910
+Aqu ahora tenemos dos opciones.
+
+15
+00:01:03,950 --> 00:01:11,760
+Podramos dejar el mtodo y simplemente agregar solo un poco para regresar al resultado de nuestro cheque
+
+16
+00:01:11,760 --> 00:01:12,550
+booleano aqu.
+
+17
+00:01:13,250 --> 00:01:21,850
+As que de mayor es 0 y todava calculamos la suma aqu con los ingredientes que pasamos para actualizar
+
+18
+00:01:21,860 --> 00:01:23,540
+por estado de seguimiento.
+
+19
+00:01:23,540 --> 00:01:26,410
+Entonces podramos ir a nuestro mtodo Redner.
+
+20
+00:01:27,170 --> 00:01:34,640
+Y all donde pasamos a comprar, simplemente no podamos extendernos hacia St. propiedad adquirible porque ya no
+
+21
+00:01:34,640 --> 00:01:36,370
+tenemos eso.
+
+22
+00:01:36,680 --> 00:01:46,200
+Pero para nuestra aplicacin, ellos usan el mtodo de estado de persecucin que ahora simplemente devuelve VERDADERO o FALSO Edward convirti el resultado de
+
+23
+00:01:46,200 --> 00:01:47,860
+esta llamada de funcin.
+
+24
+00:01:47,970 --> 00:01:51,340
+Entonces podramos llamar esto al estado de Paperchase aqu.
+
+25
+00:01:51,360 --> 00:01:56,570
+Aqu tenemos que ejecutar esto porque queremos ejecutar esto cuando se vuelve a renderizar
+
+26
+00:01:56,580 --> 00:02:02,510
+para que obtengamos el resultado actualizado y all tenemos que pasar nuestros ingredientes como argumento.
+
+27
+00:02:02,640 --> 00:02:05,840
+Simplemente podemos pasar el hierro de este puntal.
+
+28
+00:02:06,180 --> 00:02:13,590
+Alternativamente Por supuesto tambin podramos obtener nuestros ingredientes de esta propiedad aqu directamente y actualizar el estado anterior a
+
+29
+00:02:13,590 --> 00:02:18,330
+la Caza al no esperar un argumento, sino acceder a estos accesorios.
+
+30
+00:02:18,450 --> 00:02:24,070
+Ella est aqu en la misma clase despus de todo lo que hacemos y guardamos todo.
+
+31
+00:02:24,090 --> 00:02:32,550
+Ahora puede ver que el botn se habilita y deshabilita nuevamente porque ahora obtenemos constantemente informacin dondequiera que se pueda
+
+32
+00:02:32,580 --> 00:02:34,720
+comprar sea verdadera o falsa.
+
+33
+00:02:34,770 --> 00:02:38,160
+Para este mtodo, esta es una forma de hacerlo.
+
+34
+00:02:38,170 --> 00:02:42,870
+Eso est absolutamente bien porque podra considerarlo como estado de IU local.
+
+35
+00:02:42,900 --> 00:02:48,390
+Por supuesto, tambin puede decir que no, esto es algo que quiero administrar en mi estado de Rydex.
+
+36
+00:02:48,390 --> 00:02:55,020
+Y siempre tiene casos como este y muchas veces no hay un uso claro, correcto o incorrecto, lo que le parezca
+
+37
+00:02:55,110 --> 00:02:58,890
+ms fcil, lo que hace que su aplicacin sea mejor para usted.
+
+38
+00:02:59,130 --> 00:03:07,470
+Por lo tanto, tambin podra, por supuesto, llegar al estado adquirible en su empresa, agregando
+
+39
+00:03:07,470 --> 00:03:14,730
+algo como comprable y luego tambin actualizarlo cada vez que cambien los ingredientes.
+
+40
+00:03:14,740 --> 00:03:20,000
+por mtodo de estado de persecucin en el burgo de Boulder y llamndolo desde nuestro mtodo de rendicin de Julias.
+
+41
+00:03:20,000 --> 00:03:23,400
+Ahora me atengo al enfoque que acabo de mostrar al tener la actualizacin
+
+42
+00:03:23,650 --> 00:03:27,820
+Pero quera llamar nuestra atencin para que pueda usar ambos.
+
+43
+00:03:27,820 --> 00:03:35,170
+Con eso, aunque hacemos mucho con nuestros ingredientes y ves que nuestro estado se redujo mucho.
+
+44
+00:03:35,170 --> 00:03:38,320
+Ahora solo tenemos compras cargando un error all.
+
+45
+00:03:38,320 --> 00:03:45,730
+Y como mencion al principio de este mdulo, estos son todos los estados donde la propiedad del estado es
+
+46
+00:03:45,730 --> 00:03:52,700
+ms que nuestro estado de ojos, solo debemos mostrar un modal si mostramos un mensaje de error.
+
+47
+00:03:52,720 --> 00:03:56,890
+No es necesario que gestionemos nada para nuestra tienda de lectores global.
+
+48
+00:03:56,890 --> 00:03:59,080
+Entonces es por eso que los dejar aqu.
+
+49
+00:03:59,290 --> 00:04:02,440
+Pueden coexistir junto con Rydex.
+
+50
+00:04:02,440 --> 00:04:05,950
+Puede poner todo en lectura X pero no es necesario.
+

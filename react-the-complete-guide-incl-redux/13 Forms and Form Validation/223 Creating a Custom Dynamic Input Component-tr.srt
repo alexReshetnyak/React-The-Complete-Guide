@@ -1,0 +1,568 @@
+1
+00:00:02,200 --> 00:00:07,750
+Input elements'i kendi bileenlerine koyalm, nk cupolas klasrne gideceim ve orada Eifel var
+
+2
+00:00:07,750 --> 00:00:11,010
+ya da uzun sre nce beklediim eyler var.
+
+3
+00:00:11,310 --> 00:00:14,850
+imdi orada hepsi girii adlandran yeni bir alt klasr oluturuyorlar.
+
+4
+00:00:14,860 --> 00:00:20,470
+Ayrca, giri alt klasr oluturmadnz forumlar adlandrdnz yeni bir alt klasr oluturabilirsiniz, ancak
+
+5
+00:00:20,830 --> 00:00:23,260
+burada bu yaklamla devam edeceim.
+
+6
+00:00:23,260 --> 00:00:29,930
+Akas js dosyas oluturmak veya ie aktarmak istiyorum ve girdi stil iin son ekildedir.
+
+7
+00:00:29,930 --> 00:00:34,330
+Ve imdi Jr'in girdiinin girdi bileenini dnelim.
+
+8
+00:00:34,510 --> 00:00:36,280
+Fonksiyonel formu kullanmak istiyorum.
+
+9
+00:00:36,280 --> 00:00:43,010
+Bu yzden, baz sahne alan ve tabii ki Hindistan'n IMJ'yi X kodu olarak geri getirecei bir ilevi yaratn.
+
+10
+00:00:43,060 --> 00:00:50,050
+Bu nedenle her zaman olduu gibi Riak paketinden tekrar aktarmay import etmeliyiz ve daha sonra bu
+
+11
+00:00:50,110 --> 00:00:54,340
+ie aktarma ilevini bu dosyann varsaylan olarak da aktaracaz.
+
+12
+00:00:54,340 --> 00:00:57,640
+imdi her gn bir X kodu olarak oraya geri dnmek istiyoruz.
+
+13
+00:00:57,700 --> 00:01:00,150
+Aslnda bir div'yi bir girdi olarak kullanmak istiyorum.
+
+14
+00:01:00,180 --> 00:01:03,650
+imdi sadece girdi eleman deil, onun iin bir konteyner olarak.
+
+15
+00:01:03,650 --> 00:01:06,270
+nk orada birden fazla e olacak.
+
+16
+00:01:06,490 --> 00:01:11,520
+Elbette etiketi dardan ayarladm bir etiket esine sahip olmak istiyorum.
+
+17
+00:01:11,590 --> 00:01:18,450
+Bu yzden, etiketi isimlendirebileceim zel girdi bileenime girmeyi umduum bir pervane ekleyeceim.
+
+18
+00:01:18,720 --> 00:01:21,870
+Bundan sonra elbette girdi emi almak istiyorum.
+
+19
+00:01:21,880 --> 00:01:28,240
+imdi bu bile sper esnek deildir, nk yalnzca daha genel bir yol veya daha genel bir
+
+20
+00:01:28,240 --> 00:01:31,180
+yntem yazmak istersek eleri yerletirmesine izin verir.
+
+21
+00:01:31,270 --> 00:01:38,500
+Aslnda bu ilevi burada J'yi sadece X olarak dndren gerek ilev gvdesine sahip bir
+
+22
+00:01:38,500 --> 00:01:46,330
+ileve dndrebiliriz, burada J'yi X olarak dndrrz. Elbette, fakat elimizdeki girdiyi gerekten kontrol ettiimiz yerden
+
+23
+00:01:46,330 --> 00:01:48,870
+nce elimizde bir kontrol var.
+
+24
+00:01:48,880 --> 00:01:56,920
+deiken olutururuz balangta, giri enizin girie l gibi bir eyle eit olduunu sylemek iin null'dir.
+
+25
+00:01:56,920 --> 00:02:05,440
+Bu yzden, burada ops iin gei yapabileceiniz ve daha sonra istediiniz tr veya herhangi bir mlk
+
+26
+00:02:05,440 --> 00:02:15,130
+adn ie aktardmz bir switch deyimine sahip olabiliriz ve sonra da girdi gibi durumlarda idare edebiliriz; burada, deikenimizi
+
+27
+00:02:15,940 --> 00:02:19,330
+set ettiimizde, input esi adl bir
+
+28
+00:02:19,330 --> 00:02:22,000
+Kesinlikle orada daha fazla deer eklemeliyiz.
+
+29
+00:02:22,240 --> 00:02:30,070
+Dolaysyla bu daha kapsaml bir yaklam ve burada her karmakla ulaabilirsin, nk elbette elbette her
+
+30
+00:02:30,070 --> 00:02:35,020
+biri sahip olabileceiniz e bana farkl niteliklere sahip olursunuz.
+
+31
+00:02:35,020 --> 00:02:41,350
+Vaka metni alanna sahipseniz, bir metin alan ayn girdileri veya normalde koyduunuz enin
+
+32
+00:02:41,770 --> 00:02:44,000
+yapt gibi ayn znitelikleri almaz.
+
+33
+00:02:44,020 --> 00:02:52,150
+Yani eer metin alann eklersek ve bu nedenle girdi esini metin alanna eit olarak ayarlarsak.
+
+34
+00:02:52,150 --> 00:02:55,830
+imdi aniden baz kstlamalarla kar karya kaldk.
+
+35
+00:02:55,960 --> 00:02:59,760
+Yan not olarak, bir metin alan kendiliinden kapanan bir unsurdur ve tepki verir.
+
+36
+00:02:59,770 --> 00:03:06,880
+Bu, farkl giri trleri iin birden ok zel bileen oluturarak ele almamz
+
+37
+00:03:06,910 --> 00:03:08,470
+gereken baz karmaklktr.
+
+38
+00:03:08,560 --> 00:03:14,940
+Bu yzden temelde metin girii alanlar iin normal girdiler iin bir sarmalayc bileeni var.
+
+39
+00:03:15,100 --> 00:03:19,360
+Veya basite byle bir switch ifadesi ekleyerek.
+
+40
+00:03:19,360 --> 00:03:25,140
+imdi Switch bildirimi yaklam iin gidin ve ben de sonra bir mola ekleyeceiz.
+
+41
+00:03:25,570 --> 00:03:34,380
+Ve burada sana ve belki giri elemannn giriine eit olan bir varsaylan deeri dndryoruz.
+
+42
+00:03:34,520 --> 00:03:40,460
+Ve imdi hepimizin farkl zniteliklere sahip olduu davay idare etmek iin, bir girdi zerinde
+
+43
+00:03:40,460 --> 00:03:44,990
+ayarlamak istediiniz znitelikleri, giri sarmalaycs iin sahne olarak almam bekliyoruz.
+
+44
+00:03:45,200 --> 00:03:49,340
+Bu, bunlar yalnzca giri esine datmam salar.
+
+45
+00:03:49,340 --> 00:03:53,360
+Yani giriiniz zerinde ayarlamak istediiniz varsaylan HDL znitelikleri.
+
+46
+00:03:53,510 --> 00:03:59,420
+Yalnzca giri trn ayarlamanz gerekir ve ardndan veri trne geeceiniz normal znitelikleri
+
+47
+00:03:59,450 --> 00:04:00,060
+geersiniz.
+
+48
+00:04:00,230 --> 00:04:05,270
+bileenimin ierisinden gemesini isterseniz, sahip olduum kesin tip konusunda endielenmene gerek yoktur.
+
+49
+00:04:05,300 --> 00:04:11,840
+Bir metin alannz varsa veya sadece normal sopadan geerseniz, sopay dardan ve benim zel girdi
+
+50
+00:04:11,840 --> 00:04:17,880
+Sarmalaycy doru kullanarak ve doru normal yal kadn zelliklerini geirerek size gveniyorum.
+
+51
+00:04:17,930 --> 00:04:23,970
+Bu, karmakl azaltmann bir yoludur, bylece yalnzca doru eyi ayarlamam gerekiyor.
+
+52
+00:04:24,140 --> 00:04:27,330
+Sonra sahne almaya da baylrsn.
+
+53
+00:04:27,350 --> 00:04:32,300
+imdi elbette daha fazla eleman ekleyebiliriz, bylece bir alr liste seme eleman ekleyebiliriz vb.
+
+54
+00:04:32,300 --> 00:04:40,810
+imdilik bu kurulumla balayalm ve imdi giri elemanlarm burada ktsn istiyorum, bu yzden input l l
+
+55
+00:04:40,850 --> 00:04:46,800
+girdi eleman bu girdiyi girii veya kt alacak metin alann burada saklyorum.
+
+56
+00:04:47,150 --> 00:04:48,470
+Ve u an bu kadar.
+
+57
+00:04:48,470 --> 00:04:52,410
+Bunu daha sonra tekrar grebiliriz, ancak u an kullandmn kurulumu budur.
+
+58
+00:04:52,700 --> 00:04:55,180
+Akas bunu imdi zmek istemiyorum.
+
+59
+00:04:55,280 --> 00:04:58,160
+imdi de C giriimi aadaki gibi gidelim.
+
+60
+00:04:58,250 --> 00:05:01,630
+Sonra zel giri snfm byk bir Y ile ekleyeceim.
+
+61
+00:05:01,810 --> 00:05:10,340
+imdi burada ncelikle bu snf atamak iin kullanacam def'nin mevcut alann tam
+
+62
+00:05:10,340 --> 00:05:13,710
+geniliini sardndan emin olmak istiyorum.
+
+63
+00:05:13,820 --> 00:05:14,970
+Yani yzde yz.
+
+64
+00:05:14,970 --> 00:05:23,930
+da altnda oturan herhangi bir unsura sahip olacamza gre 10 piksel diyelim biraz dolgu ayarlamak istiyoruz diyelim.
+
+65
+00:05:23,930 --> 00:05:29,600
+Diyelim ki burada da otomatik olarak otomatik olarak girdinin stnde ya
+
+66
+00:05:29,600 --> 00:05:38,870
+Ben de kutu boyutlandrma Boxter emriyle ayarlayacam Bu kurulum bittikten sonra artk unsurlar Stolle
+
+67
+00:05:38,960 --> 00:05:39,910
+yapabilirsiniz.
+
+68
+00:05:40,310 --> 00:05:45,280
+Dolaysyla, burada aka bir girdi veya metin alanna sahip olduumuz bir etiket var.
+
+69
+00:05:45,290 --> 00:05:49,830
+imdi bunun iin de farkl snflar kullanacam.
+
+70
+00:05:49,880 --> 00:05:58,430
+Yani hepsi etiket snfn buraya ekliyor ve etiketimin cesur bir yaz tipi arlna sahip olmas gerekiyor, bu nedenle gn etiketinin
+
+71
+00:05:58,520 --> 00:06:02,650
+de grntleme bloklar olmas gereken bir ya etiketi olacak.
+
+72
+00:06:02,690 --> 00:06:10,230
+Kendi satrn almak iin tam genilie sahip olalm, demek ki kendi hizalamzda olan html belgenizde.
+
+73
+00:06:10,670 --> 00:06:18,990
+Ayrca, 8 piksel diyelim girdi eleman iin alt kenar boluuna biraz sahip olmak istiyorum.
+
+74
+00:06:19,130 --> 00:06:21,130
+Ve benim etiketim iin de bu kadaryla.
+
+75
+00:06:21,410 --> 00:06:29,360
+Ardndan, giri esi stilimi ekleyeceim ve elbette farkl giri eleri trleri iin farkl
+
+76
+00:06:29,360 --> 00:06:31,370
+snflara ihtiyacnz olabilir.
+
+77
+00:06:31,370 --> 00:06:33,060
+imdi burada genel bir tane oluturuyorum.
+
+78
+00:06:33,140 --> 00:06:40,710
+Anahat sahibi olmak istemiyorum, bu yzden sipariin tek bir piksele sabitlenmesini istedim, salam ve
+
+79
+00:06:40,720 --> 00:06:42,020
+gri grnyor.
+
+80
+00:06:42,020 --> 00:06:45,770
+Arka plan rengini beyaza ayarlamak istiyorum.
+
+81
+00:06:45,770 --> 00:06:52,750
+Ayrca, uygulamann geri kalannda sahip olduumuz normal yaz tipi ayarlarn kullanmak iin yaz tipini devralacak ekilde ayarlamak istiyorum.
+
+82
+00:06:53,060 --> 00:06:59,120
+Baz dolgu oluturmak istiyorum, stten ve alttan alt piksel ve soldan ve sadan 10 piksel diyelim.
+
+83
+00:06:59,410 --> 00:07:01,790
+Ve ayrca k elementi ile ilgilenelim.
+
+84
+00:07:01,790 --> 00:07:09,380
+Odak szde seiciye odakladmzda anahatt ak olarak ayarlamak istedim ancak arka plan
+
+85
+00:07:09,380 --> 00:07:11,680
+rengini size ayarlamak istiyorum.
+
+86
+00:07:11,780 --> 00:07:15,060
+Drage'nin de buraya baktn varsayalm.
+
+87
+00:07:15,290 --> 00:07:18,040
+Artk elbette daha fazla stil tanmlayabilirsiniz.
+
+88
+00:07:18,110 --> 00:07:26,120
+braklm bir hcreyi ekleyebilirsiniz veya ne yapmak isterseniz hepsi basite sper karmak giri esi sarmalaycy oluturmayn.
+
+89
+00:07:26,150 --> 00:07:27,090
+Devre d
+
+90
+00:07:27,140 --> 00:07:32,340
+Buraya kesinlikle girebilir ve son derece karmak olanlar yaratabilirsiniz.
+
+91
+00:07:32,360 --> 00:07:40,390
+imdi bununla yaratclk snfm tm bu elere atayacam Yani burada snf ad ile birlikte
+
+92
+00:07:40,430 --> 00:07:42,700
+giri esi snf atand.
+
+93
+00:07:42,710 --> 00:07:49,160
+Ben sadece kurdum ve bunun iin ncelikle snflarm sf asfalt ithal snflarndan
+
+94
+00:07:49,160 --> 00:07:57,180
+dnce eik izgiden alp C S S'yi koyup bunlar tekrar snflardaki tm elerime eklemeliyim
+
+95
+00:07:57,410 --> 00:08:00,290
+ve elbette input esi vard.
+
+96
+00:08:00,290 --> 00:08:03,090
+imdi diff iin bir snf atamak istiyorum.
+
+97
+00:08:03,170 --> 00:08:08,500
+Yani burada snf ad, Woodward snf snflar.
+
+98
+00:08:08,630 --> 00:08:10,890
+Ve iki kiiyi etiketlemek iin biri nermitik.
+
+99
+00:08:11,030 --> 00:08:14,060
+Burada snf etiketi olmal.
+
+100
+00:08:14,180 --> 00:08:18,430
+Ve imdi fark ettim ki burada giri esi snf iin bir ey unuttum.
+
+101
+00:08:18,470 --> 00:08:25,850
+Put elementi tm bloke olarak gsterilmeli ve tamamyla mevcut olsun, diyelim ki gerekten
+
+102
+00:08:25,910 --> 00:08:28,950
+de alabilecei genilii alm olsun diyelim.
+
+103
+00:08:29,030 --> 00:08:35,270
+imdi bu kurulumda, iletiim bilgilerine geri dnelim ve Them input elementini kullanalm.
+
+104
+00:08:35,570 --> 00:08:44,870
+ve daha sonra girdi klasrne alacak ve bu girdi elemann alacak ve elbette bu girii kullanmayacam.
+
+105
+00:08:44,870 --> 00:08:52,330
+Yani burada imdi girdiyi hzl bir ekilde ie aktaracam ve ardndan bileen klasrne
+
+106
+00:08:52,360 --> 00:08:54,250
+gidip klasre gideceim
+
+107
+00:08:54,250 --> 00:08:55,320
+Benimkine in.
+
+108
+00:08:55,360 --> 00:08:58,700
+Sizin ve tm deitirme girdiniz nedir.
+
+109
+00:08:58,710 --> 00:09:02,850
+Kendi girdi unsurumla kurulan bor yl.
+
+110
+00:09:03,220 --> 00:09:09,700
+CLOS'u yazarsanz, imdi snfmdan kurtulabilirim, nk girdi eleman zaten yeni
+
+111
+00:09:09,750 --> 00:09:16,560
+ayarladm ekillendirmeye sahiptir ve bu ekilde burada benim girdi stilinden
+
+112
+00:09:16,620 --> 00:09:17,260
+kurtulabilirim.
+
+113
+00:09:17,290 --> 00:09:20,220
+Sadece DB kilit tipindeydi.
+
+114
+00:09:20,230 --> 00:09:27,370
+Ancak burada bulunan dier tm eler yer tutucudur ve bylece devam etmeliyiz,
+
+115
+00:09:27,370 --> 00:09:30,640
+nk girdi bileenimizde tanmladmz pervaneyi geiyoruz.
+
+116
+00:09:30,670 --> 00:09:34,670
+Gemek zorunda olduumuz bir tane daha Propp girdi tipine.
+
+117
+00:09:34,840 --> 00:09:40,950
+Tm girdilere tm girdi tiplerini hzla yapn, normal girdiler olmaldr.
+
+118
+00:09:40,990 --> 00:09:44,710
+Bu yzden basite girdiye ayarlayacam.
+
+119
+00:09:44,710 --> 00:09:48,480
+imdi gvence verelim alan uygulamanza bir gz atalm.
+
+120
+00:09:48,520 --> 00:09:54,970
+NPM balang ileminin devam ettiinden ve bundan sonra sizinle birlikte burgerinizle birlikte olduundan emin olun ve burada bir tane oluturun.
+
+121
+00:09:55,030 --> 00:09:57,770
+deme sayfasna gidin ve devam edin.
+
+122
+00:09:57,850 --> 00:10:04,380
+Burada, saniyede bir zenle bakabileceiniz bir hata var, ancak styling uygulandmz gryoruz.
+
+123
+00:10:04,400 --> 00:10:06,840
+imdi eklememiz gereken bir ekstra stil kural var.
+
+124
+00:10:06,880 --> 00:10:14,560
+Sadece genilii doru hesaplanacak ekilde kutu boyutlandrma kenarlk kutusunu almas gereken tm giri elemanlarn
+
+125
+00:10:14,560 --> 00:10:15,700
+fark ettiniz.
+
+126
+00:10:15,700 --> 00:10:17,560
+imdi Starling'e bir ey olmaz.
+
+127
+00:10:17,560 --> 00:10:22,710
+Ayrca, bunlar vurgulayabileceimizi ve elemanlar koyabileceimizi ancak bu hatayla ne alakal olduunu grebiliriz.
+
+128
+00:10:23,040 --> 00:10:31,650
+balyor. 16 Tm pervanelerin yllarnda ve giri trnn kaplamas nedeniyle Adeste geii varsaylan olarak kullanlamyor.
+
+129
+00:10:31,700 --> 00:10:36,670
+imdi bu hata mesaj, yeniden dzenleme ileminde bir deiiklie
+
+130
+00:10:36,700 --> 00:10:41,760
+H-G Malaprop nk DOM Tim Allen byk kk harf duyarl deildir.
+
+131
+00:10:42,010 --> 00:10:46,170
+Bu nedenle, tepki vermeden nce bu hatay gemite atar 16.
+
+132
+00:10:46,330 --> 00:10:49,790
+Bilmedii bu stteki pervaneye geemezdi.
+
+133
+00:10:49,870 --> 00:10:54,810
+imdi var ve muhafaza nedeniyle bor A-stan geersiz ilan etti.
+
+134
+00:10:55,000 --> 00:11:01,120
+Dolaysyla bunu dzeltmenin bir yolu yalnzca iki giri trn deitirmektir.
+
+135
+00:11:01,390 --> 00:11:05,780
+Tm kk harfler, bu say iin hzl ve kolay bir dzeltmedir.
+
+136
+00:11:05,830 --> 00:11:10,120
+Bunu kullanrsak ve tabii ki bunu atarken de burada kullanabilirsiniz.
+
+137
+00:11:10,270 --> 00:11:12,980
+Artk bu hatay artk almamamz gerektiini grmeliyiz.
+
+138
+00:11:13,030 --> 00:11:16,680
+Ve yer tutucu gibi sahne takmlarmzn da getiini grebilirsiniz.
+
+139
+00:11:16,690 --> 00:11:18,990
+Bu bizim kaydrma girdi elemanmz.
+
+140
+00:11:19,000 --> 00:11:20,080
+Olutur.
+
+141
+00:11:20,080 --> 00:11:24,480
+imdi farkl veri trlerini nasl ele alabileceimizi grelim.
+
+142
+00:11:24,700 --> 00:11:28,390
+Ve gerekte ihtiyacmz olan verilerle gerek bir form oluturalm.
+

@@ -1,0 +1,168 @@
+1
+00:00:02,060 --> 00:00:06,620
+Skoro wiemy, jakie narzdzia uywamy i dlaczego testowanie jest
+
+2
+00:00:06,620 --> 00:00:13,010
+dobrym pomysem, musimy oczywicie dowiedzie si, co powinnimy przetestowa, a odpowied jest prosta.
+
+3
+00:00:13,040 --> 00:00:19,760
+W rzeczywistoci pisanie dobrych testw jest do skomplikowane i wymaga wielu wicze, co jest rwnie jednym z
+
+4
+00:00:19,760 --> 00:00:22,520
+powodw, dla ktrych nie jest to kompletny
+
+5
+00:00:22,580 --> 00:00:23,700
+podrcznik do testowania.
+
+6
+00:00:24,050 --> 00:00:27,450
+Wic na og tutaj jest kilka rzeczy, ktrych
+
+7
+00:00:27,470 --> 00:00:29,220
+nie chciaby przetestowa, nie
+
+8
+00:00:29,240 --> 00:00:33,340
+chcesz testowa biblioteki, nie chcesz przetestowa reakcji, osi lub redux,
+
+9
+00:00:33,590 --> 00:00:38,270
+s to biblioteki stron trzecich, ktre ju zostay przetestowane przez programistw.
+
+10
+00:00:38,270 --> 00:00:40,400
+Nie musisz sprawdza, czy dziaaj
+
+11
+00:00:40,460 --> 00:00:44,610
+poprawnie, nie musisz sprawdza, czy sklep, sklep redux dziaa poprawnie,
+
+12
+00:00:44,720 --> 00:00:45,940
+chcesz przetestowa kod
+
+13
+00:00:45,980 --> 00:00:51,520
+dodany do aplikacji i tam chcesz przetestowa kod, ktry nie uywa tej biblioteki.
+
+14
+00:00:51,530 --> 00:00:57,830
+Na przykad, jeli wysyasz danie postu, nie musisz sprawdza, czy jest ono wysyane pomylnie, jeli nie powiedzie si, prawdopodobnie nie
+
+15
+00:00:58,040 --> 00:01:04,100
+masz poczenia z Internetem, nie jest to biblioteka Axios. Zwykle chcesz sfaszowa dane, ktre otrzymujesz
+
+16
+00:01:04,100 --> 00:01:10,700
+z mojego serwera w takim przypadku uycia i po prostu przetestowa, co robisz z
+
+17
+00:01:10,700 --> 00:01:11,300
+tymi
+
+18
+00:01:11,420 --> 00:01:14,360
+zwrconymi danymi, wic to jest idea testowania.
+
+19
+00:01:14,360 --> 00:01:19,580
+Dodatkowo nie chcesz testowa zbyt skomplikowanych pocze, szczeglnie w reakcji, istnieje
+
+20
+00:01:19,580 --> 00:01:24,770
+niebezpieczestwo testowania, e klikniesz przycisk w jednym komponencie i zmienisz co
+
+21
+00:01:24,770 --> 00:01:26,770
+w zupenie innym komponencie.
+
+22
+00:01:26,780 --> 00:01:33,050
+Teraz nie musisz ju sprawdza, czy reakcja jest w stanie wykorzysta koncepcj rekwizytw do emisji zdarzenia
+
+23
+00:01:33,050 --> 00:01:33,660
+i przekaza
+
+24
+00:01:33,920 --> 00:01:39,080
+je dalej, byby zainteresowany testowaniem, jeli przycisk kliknie w twoj reakcj wyzwala konkretny rekwizyt
+
+25
+00:01:39,080 --> 00:01:40,160
+w pierwszej kolejnoci
+
+26
+00:01:40,310 --> 00:01:46,790
+lub jeli zmiana danych, ktre otrzymujesz za pomoc rekwizytw w jednym komponencie, prowadzi do odmiennego wyniku, czyli
+
+27
+00:01:46,850 --> 00:01:48,570
+tego, co chcesz przetestowa.
+
+28
+00:01:48,590 --> 00:01:55,320
+Istnieje kilka przewodnikw testowych, ktre do tej pory mwi o komponentach reagujcych, wystarczy przetestowa, czy
+
+29
+00:01:55,320 --> 00:01:58,310
+sam komponent reagowania jest poprawnie renderowany.
+
+30
+00:01:58,310 --> 00:02:04,250
+Teraz poka wam, jak przetestowa rne rzeczy z reagowaniem na komponenty, ale zdecydowanie naley
+
+31
+00:02:04,250 --> 00:02:06,830
+pamita, nie testuj zbyt skomplikowanych pocze.
+
+32
+00:02:06,890 --> 00:02:08,980
+Wic to s rzeczy, ktrych
+
+33
+00:02:09,110 --> 00:02:14,210
+nie chcesz testowa, co masz zamiar przetestowa? Typowymi przykadami s izolowane jednostki,
+
+34
+00:02:14,210 --> 00:02:17,160
+chcesz przetestowa utworzon funkcj reduktora, chcesz
+
+35
+00:02:17,270 --> 00:02:20,660
+przetestowa utworzon funkcj komponentu, chcesz take przetestowa
+
+36
+00:02:20,660 --> 00:02:23,860
+wynik warunkowy, jeli komponent ma waciwo, ktra
+
+37
+00:02:23,960 --> 00:02:31,160
+prowadzi do renderowania czego, jeli ta waciwo jest prawdziwa , a nastpnie chcesz sprawdzi, czy
+
+38
+00:02:31,160 --> 00:02:33,430
+tak naprawd si dzieje.
+
+39
+00:02:33,590 --> 00:02:36,790
+Co si stanie, jeli niektre waciwoci ulegn zmianie w skadniku?
+
+40
+00:02:36,890 --> 00:02:39,150
+Czy to wpywa poprawnie na wynik?
+
+41
+00:02:39,350 --> 00:02:42,980
+S to rzeczy, ktre chcesz przetestowa w swoich testach jednostkowych.
+
+42
+00:02:42,980 --> 00:02:48,330
+Teraz dziki zdobytej wiedzy nauczmy si, jak faktycznie piszemy testy jednostkowe w aplikacji reagowania.
+

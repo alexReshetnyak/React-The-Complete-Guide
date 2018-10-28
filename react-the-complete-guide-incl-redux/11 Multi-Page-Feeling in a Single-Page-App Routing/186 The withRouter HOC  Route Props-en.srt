@@ -1,0 +1,164 @@
+1
+00:00:02,100 --> 00:00:07,680
+In the last video we learned about the props we can output, this utility information
+
+2
+00:00:07,850 --> 00:00:14,540
+and regarding the history object, the utility methods even we can use to navigate around or find out where
+
+3
+00:00:14,540 --> 00:00:17,080
+we are at. Now
+
+4
+00:00:17,150 --> 00:00:22,930
+what if we actually want to get this information not in one of our containers,
+
+5
+00:00:23,030 --> 00:00:31,820
+so not in a component which was loaded through a route as defined in the blog.js file but in a component
+
+6
+00:00:31,850 --> 00:00:38,390
+which is rendered as part of such a container, like the Post's container. The post container is loaded
+
+7
+00:00:38,660 --> 00:00:46,190
+with this route here in the blog container and the post container simply renders the post component
+
+8
+00:00:46,220 --> 00:00:47,200
+then.
+
+9
+00:00:47,330 --> 00:00:57,080
+Now if we go into that post component and for a second we turn this post component into a component
+
+10
+00:00:57,620 --> 00:01:01,760
+where we actually return jsx like this.
+
+11
+00:01:01,760 --> 00:01:03,150
+If we dare
+
+12
+00:01:03,290 --> 00:01:06,320
+now console log the props,
+
+13
+00:01:06,680 --> 00:01:12,640
+then you will actually see that the props in the post components we see that four times because we're
+
+14
+00:01:12,640 --> 00:01:16,710
+rendering four posts is just author, clicked, title,
+
+15
+00:01:16,850 --> 00:01:24,560
+There is no match, location, history prop in there as we have it in the posts component, plural, not the single
+
+16
+00:01:24,560 --> 00:01:25,700
+one.
+
+17
+00:01:25,700 --> 00:01:34,100
+So the routing relay the props are not passed down the component tree, we can't access them in components
+
+18
+00:01:34,100 --> 00:01:39,980
+which we simply embed as part of the jsx code of a container.
+
+19
+00:01:39,980 --> 00:01:45,440
+Now if you wanted to use the props there, there are two ways to get access,
+
+20
+00:01:45,470 --> 00:01:53,680
+one of course is we can pass them on with the spread operator and this props, this passes any props
+
+21
+00:01:53,690 --> 00:01:57,590
+this post container has onto the post component.
+
+22
+00:01:57,590 --> 00:02:03,560
+Of course we could also explicitly target certain props like for example if you want to pass on the
+
+23
+00:02:03,560 --> 00:02:04,890
+matched property,
+
+24
+00:02:04,910 --> 00:02:08,320
+We could also do this.props.match.
+
+25
+00:02:08,330 --> 00:02:10,500
+Now this is one way of passing it on
+
+26
+00:02:10,640 --> 00:02:16,820
+but there also is a higher order component we can use on the post component, there
+
+27
+00:02:16,850 --> 00:02:24,050
+we can import something which is called withRouter from react-router-dom.
+
+28
+00:02:24,170 --> 00:02:32,070
+Now withRouter is a higher order component which we use by wrapping our export with it, just like that.
+
+29
+00:02:32,450 --> 00:02:40,310
+With this added, if we now save all files you see that now that the props are out for for the individual
+
+30
+00:02:40,310 --> 00:02:45,030
+posts, they do have a history location and match property.
+
+31
+00:02:45,320 --> 00:02:52,990
+So withRouter adds these props to other components, to any component we wrap with it.
+
+32
+00:02:53,300 --> 00:03:00,560
+So withRouter is a nice way of making that component route aware and it will use or it will get the props
+
+33
+00:03:00,890 --> 00:03:05,240
+containing information for the nearest loaded route.
+
+34
+00:03:05,240 --> 00:03:11,840
+So in this case since post is included in posts, we get the same props as we receive in posts.
+
+35
+00:03:12,080 --> 00:03:18,170
+I'm going to remove it here but this is one way for you to get access to routing related props which
+
+36
+00:03:18,170 --> 00:03:25,910
+you might need for calling push on the history prop or for getting information about the loaded route.
+
+37
+00:03:25,910 --> 00:03:27,980
+This is one way of getting access
+
+38
+00:03:28,070 --> 00:03:35,420
+using this approach of accessing props with the higher order component here.
+
+39
+00:03:35,420 --> 00:03:37,060
+Now again I'm removing it here
+
+40
+00:03:37,130 --> 00:03:40,490
+so I'm going back to the original state for my post component.
+
+41
+00:03:40,640 --> 00:03:42,780
+I just wanted to share this with you.
+
