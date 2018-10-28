@@ -39,6 +39,17 @@ class App extends PureComponent {
     // console.log('[UPDATE] Component Did Update');
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) { // * React 16 LifeCircle 
+    // * Called when all props updated 
+    console.log('[UPDATE] Get Derived State From Props', nextProps, prevState);
+
+    return prevState; // * The same like this.setState();
+  }
+
+  getSnapshotBeforeUpdate() {// * React 16 LifeCircle Executed before DOM will update
+    console.log('[UPDATE] Get Snapshot Before Update');
+  }
+
   state = {
     persons: [
       { id: 1, name: "alex", age: 29 },
