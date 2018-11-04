@@ -10,15 +10,11 @@ const Burger = ({ ingredients }) => {
         <BurgerIngredient key={igKey + i} type={igKey} />
       ));
     })
-    .reduce((sum, el) => {
-      return sum.concat(el);
-    }, []);
+    .reduce((sum, el) => sum.concat(el), []);
 
   if (!transformedIngredients.length) {
     transformedIngredients = <p>Please start adding ingredients</p>;
   }
-
-  console.log("Ingredients:", transformedIngredients);
 
   return (
     <div className={classes.Burger}>
