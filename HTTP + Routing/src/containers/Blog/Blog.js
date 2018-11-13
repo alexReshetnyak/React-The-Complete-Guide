@@ -49,7 +49,15 @@ class Blog extends Component {
 	
 	render () {
 		return (
-			<div>
+			<div className='Blog'>
+				<header>
+					<nav>
+						<ul>
+							<li><a href='/'>Home</a></li>
+							<li><a href='/new-post'>New Post</a></li>
+						</ul>
+					</nav>
+				</header>
 				<section className="Posts">
 					{this.posts}
 				</section>
