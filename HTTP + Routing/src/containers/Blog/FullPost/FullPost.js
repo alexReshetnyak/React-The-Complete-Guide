@@ -8,17 +8,18 @@ class FullPost extends Component {
 		loadedPost: null,
 	}
 
-	async componentDidUpdate() {
-		const { id } = this.props;
+	async componentDidMount() {
+		const { match: { params: { id } } } = this.props;
 		const { loadedPost } = this.state;
-
-		try {
-			if (id && (!loadedPost || id !== loadedPost.id)) {
-				const { data: post } = await axios.get(`/posts/${id}`);
-				this.setState({ loadedPost: post });
-			}
-		} catch (error) {
-			console.log(error);
+		if ( id ) {
+			try {
+				if (!loadedPost || (id !== loadedPost.id)) {
+					const { data: post } = await axios.get(`/posts/${id}`);
+					this.setState({ loadedPost: post });
+				}
+			} catch (error) {
+				console.log(error);
+			}	
 		}
 	}
 

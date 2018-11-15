@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Link from "react-router-dom/Link";
+
 import axios from "../../../axios";
 import Post from "../../../components/Post/Post";
 
@@ -11,6 +13,8 @@ class Posts extends Component {
   };
 
   async componentDidMount() {
+    // console.log('PROPS:', this.props);
+    
     try {
       let { data: posts } = await axios.get("/posts");
       posts = posts.slice(0, 4);
@@ -33,12 +37,13 @@ class Posts extends Component {
 
     posts = this.state.posts.map(post => {
       return (
-        <Post
-          key={post.id}
-          title={post.title}
-          author={post.author}
-          clicked={() => this.postSelectedHandler(post.id)}
-        />
+        <Link key={post.id} to={'/' + post.id}>
+          <Post
+            title={post.title}
+            author={post.author}
+            clicked={() => this.postSelectedHandler(post.id)}
+          />
+        </Link>       
       );
     });
 

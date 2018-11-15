@@ -7,7 +7,13 @@ class NewPost extends Component {
     title: "",
     content: "",
     author: "Alex"
-	};
+  };
+  
+  componentDidMount = () => {
+    console.log('NEW POST Props:', this.props);
+    
+  }
+  
 	
 	 postDataHandler = async () => {
 		try {
