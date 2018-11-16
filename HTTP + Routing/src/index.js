@@ -11,12 +11,12 @@ axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 // *  axios requests Interceptor
 axios.interceptors.request.use(request => {
-  console.log('Intercepted Request:', request);
+  // console.log('Intercepted Request:', request);
   return request;
 }, error => {
 
   /// * Itercept Request Errors
-  console.log('Request Failed!');
+  // console.log('Request Failed!');
   return Promise.reject(error);
 });
 
