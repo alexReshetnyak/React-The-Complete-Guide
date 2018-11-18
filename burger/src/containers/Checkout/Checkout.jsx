@@ -1,20 +1,49 @@
 import React, { Component } from "react";
+import queryString from "query-string";
+import { Route } from "react-router-dom";
+
 import CheckoutSummary from "../../components/Order/CheckoutSummary/CheckoutSummary";
+import ContactData from "./ContactData/ContactData";
 
 class Checkout extends Component {
   state = {
-    ingredients: {
-      salad: 1,
-      meat: 1,
-      cheese: 1,
-      bacon: 1
-    }
+    ingredients: null
   };
+
+  componentDidMount = () => {
+    const {
+      location: { search: query }
+    } = this.props;
+
+    this.setState({
+      ingredients: queryString.parse(query)
+    });
+  };
+
+  checkoutCanceledHandler = () => {
+    this.props.history.goBack();
+  };
+
+  checkoutContinuedHandler = () => {
+    this.props.history.replace("/checkout/contact-data");
+  };
+
   render() {
     const { ingredients } = this.state;
+
     return (
       <div>
-        <CheckoutSummary ingredients={ingredients} />
+        {ingredients && (
+          <CheckoutSummary
+            ingredients={ingredients}
+            checkoutCanceled={this.checkoutCanceledHandler}
+            checkoutContinued={this.checkoutContinuedHandler}
+          />
+        )}
+        <Route
+          path={this.props.match.path + "/contact-data"}
+          component={ContactData}
+        />
       </div>
     );
   }

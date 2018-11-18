@@ -15,7 +15,7 @@ class Posts extends Component {
 
   async componentDidMount() {
     // console.log('PROPS:', this.props);
-    
+
     try {
       let { data: posts } = await axios.get("/posts");
       posts = posts.slice(0, 4);
@@ -32,7 +32,7 @@ class Posts extends Component {
   postSelectedHandler = id => {
     this.setState({ selectedPostId: id });
 
-    this.props.history.push({ pathname: this.props.match.url + '/' + id});
+    this.props.history.push({ pathname: this.props.match.url + "/" + id });
     // this.props.history.push('/posts/' + id);
   };
 
@@ -42,23 +42,25 @@ class Posts extends Component {
     posts = this.state.posts.map(post => {
       return (
         // <Link key={post.id} to={'/posts/' + post.id}>
-          <Post
-            key={post.id}
-            title={post.title}
-            author={post.author}
-            clicked={() => this.postSelectedHandler(post.id)}
-          />
-        // </Link>       
+        <Post
+          key={post.id}
+          title={post.title}
+          author={post.author}
+          clicked={() => this.postSelectedHandler(post.id)}
+        />
+        // </Link>
       );
     });
 
     return (
       <div>
-        <section className="Posts">
-          {posts}
-        </section>
+        <section className="Posts">{posts}</section>
 
-        <Route path={this.props.match.url + '/:id'} exact component={FullPost} />
+        <Route
+          path={this.props.match.url + "/:id"}
+          exact
+          component={FullPost}
+        />
       </div>
     );
   }
