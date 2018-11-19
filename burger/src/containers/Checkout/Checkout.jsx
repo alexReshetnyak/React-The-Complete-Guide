@@ -5,19 +5,23 @@ import { Route } from "react-router-dom";
 import CheckoutSummary from "../../components/Order/CheckoutSummary/CheckoutSummary";
 import ContactData from "./ContactData/ContactData";
 
+
 class Checkout extends Component {
   state = {
-    ingredients: null
+    ingredients: null,
+    price: null
   };
 
-  componentDidMount = () => {
+  componentWillMount = () => {
     const {
       location: { search: query }
     } = this.props;
 
-    this.setState({
-      ingredients: queryString.parse(query)
-    });
+    const { price, ...ingredients } = queryString.parse(query);
+
+    // console.log('CheckOut ComponentDidMount price + ingredients', price, ingredients);
+    
+    this.setState({ ingredients, price });
   };
 
   checkoutCanceledHandler = () => {
@@ -29,7 +33,7 @@ class Checkout extends Component {
   };
 
   render() {
-    const { ingredients } = this.state;
+    const { ingredients, price } = this.state;
 
     return (
       <div>
@@ -42,7 +46,7 @@ class Checkout extends Component {
         )}
         <Route
           path={this.props.match.path + "/contact-data"}
-          component={ContactData}
+          render={() => <ContactData price={price} ingredients={ingredients}/>}
         />
       </div>
     );
