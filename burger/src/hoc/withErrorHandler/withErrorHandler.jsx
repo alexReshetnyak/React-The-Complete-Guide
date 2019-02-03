@@ -27,7 +27,7 @@ const withErrorHandler = ( WrappedComponent, axios ) => {
       this.setState({ error: null });
     }
 
-    render() { 
+    render() {
       const { error } = this.state;
       return (
         <Aux>
