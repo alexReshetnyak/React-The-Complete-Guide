@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './Order.css';
 
 const order = ({ ingredients, price }) => {
-  const transformedIngredients = Object.keys(ingredients)
+  const transformedIngredients = Object.keys(ingredients || {})
    .reduce((sum, key) => {
      const transformed = {
        name: key,
