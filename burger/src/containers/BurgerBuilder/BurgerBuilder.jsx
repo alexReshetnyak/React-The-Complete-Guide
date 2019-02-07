@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import queryString from "query-string";
+// import queryString from "query-string";
 import { connect } from 'react-redux';
 
 import * as actionTypes from '../../store/actions';
@@ -15,7 +15,6 @@ import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 
 class BurgerBuilder extends Component {
   state = {
-    purchasable: false,
     purchasing: false,
     loading: false,
     error: false
@@ -30,18 +29,15 @@ class BurgerBuilder extends Component {
     // } catch (error) {
     //   this.setState({ error: true, loading: false });
     // }
-  }
+  };
 
-  updatePurchaseState() {
-    const ingredients = {
-      ...this.state.ingredients
-    };
+  updatePurchaseState(ingredients) {
     const sum = Object.keys(ingredients)
       .map(key => ingredients[key])
       .reduce((sum, el) => sum + el, 0);
 
-    this.setState({ purchasable: !!sum });
-  }
+    return sum > 0;
+  };
 
   purchaseHandler = () => {
     this.setState({ purchasing: true });
@@ -52,21 +48,13 @@ class BurgerBuilder extends Component {
   };
 
   purchaseContinueHandler = () => {
-    this.props.history.push({
-      pathname: "/checkout",
-      search: queryString.stringify(Object.assign(
-        {}, 
-        this.state.ingredients, 
-        { price: this.state.totalPrice.toFixed(2) }
-      ))
-    });
+    this.props.history.push('./checkout');
   };
 
   render() {
     const disabledInfo = { ...this.props.ings };
     const { ings: ingredients, price: totalPrice } = this.props;
     const {
-      purchasable,
       purchasing,
       loading,
       error
@@ -98,9 +86,9 @@ class BurgerBuilder extends Component {
         <BuildControls
           price={totalPrice}
           ingredientAdd={this.props.onIngredientAdded}
-          ingredientRemove={this.props.onIngredientRemove}
+          ingredientRemove={this.props.onIngredientRemoved}
           disabled={disabledInfo}
-          purchasable={purchasable}
+          purchasable={this.updatePurchaseState(ingredients)}
           handlePurchase={this.purchaseHandler}
         />
       {/* </React.Fragment> */}
@@ -116,7 +104,7 @@ class BurgerBuilder extends Component {
       </Aux>
     );
   }
-}
+};
 
 const mapStateToProps = state => {
   return {
@@ -136,7 +124,7 @@ const mapDispatchToProps = dispatch => {
       ingredientName  
     })
   }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(
   withErrorHandler(BurgerBuilder, axios)
