@@ -5,6 +5,8 @@ import { withRouter } from "react-router-dom";
 import classes from "./Burger.css";
 
 const Burger = ({ ingredients }) => {
+  // console.log('[Burger] ingredients:', ingredients);
+  
   let transformedIngredients = Object.keys(ingredients)
     .map(igKey => {
       return [...Array(+ingredients[igKey])].map((_, i) => (
