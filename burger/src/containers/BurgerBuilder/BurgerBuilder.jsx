@@ -17,11 +17,11 @@ import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 class BurgerBuilder extends Component {
   state = {
     purchasing: false
-  };
+  }
 
   componentDidMount() {
     this.props.onInitIngredients();
-  };
+  }
 
   updatePurchaseState(ingredients) {
     const sum = Object.keys(ingredients)
@@ -29,24 +29,26 @@ class BurgerBuilder extends Component {
       .reduce((sum, el) => sum + el, 0);
 
     return sum > 0;
-  };
+  }
 
   purchaseHandler = () => {
-    this.setState({ purchasing: true });
-  };
+    this.props.isAuthenticated ?
+      this.setState({ purchasing: true }) :
+      this.props.history.push('/auth');
+  }
 
   purchaseCancelHandler = () => {
     this.setState({ purchasing: false });
-  };
+  }
 
   purchaseContinueHandler = () => {
     this.props.onInitPurchase();
     this.props.history.push('./checkout');
-  };
+  }
 
   render() {
     const disabledInfo = { ...this.props.ings };
-    const { ings: ingredients, price: totalPrice, error } = this.props;
+    const { ings: ingredients, price: totalPrice, error, isAuthenticated } = this.props;
     const { purchasing } = this.state;
 
     Object.keys(disabledInfo || {}).forEach(key => {
@@ -56,9 +58,7 @@ class BurgerBuilder extends Component {
     let orderSummary = null;
     let burger = error ? <p>Ingredients load failed :(</p> : null;
 
-    // loading && !ingredients && (burger = <Spinner />);
-
-    /*!loading &&*/ ingredients && (orderSummary = (
+    ingredients && (orderSummary = (
       <OrderSummary
         ingredients={ingredients || {}}
         price={totalPrice}
@@ -76,6 +76,7 @@ class BurgerBuilder extends Component {
           ingredientAdd={this.props.onIngredientAdded}
           ingredientRemove={this.props.onIngredientRemoved}
           disabled={disabledInfo}
+          isAuth={isAuthenticated}
           purchasable={this.updatePurchaseState(ingredients)}
           handlePurchase={this.purchaseHandler}
         />
@@ -95,11 +96,12 @@ class BurgerBuilder extends Component {
 };
 
 const mapStateToProps = state => {
-  const { burgerBuilder } = state;
+  const { burgerBuilder, auth } = state;
   return {
     ings: burgerBuilder.ingredients,
     price: burgerBuilder.totalPrice,
-    error: burgerBuilder.error
+    error: burgerBuilder.error,
+    isAuthenticated: !!auth.token
   }
 };
 

@@ -4,7 +4,7 @@ import NavigationItems from '../NavigationItems/NavigationItems';
 import classes from './SideDrawer.css';
 import BackDrop from '../../UI/Backdrop/Backdrop';
 
-const SideDrawer = ({closed, open}) => {
+const SideDrawer = ({ closed, open, isAuth }) => {
   let attachedClasses = [classes.SideDrawer, classes.Close];
   open && (attachedClasses = [classes.SideDrawer, classes.Open]);
 
@@ -16,7 +16,7 @@ const SideDrawer = ({closed, open}) => {
           <Logo />
         </div>
         <nav>
-          <NavigationItems />
+          <NavigationItems isAuthenticated={isAuth}/>
         </nav>  
       </div>
     </React.Fragment>
