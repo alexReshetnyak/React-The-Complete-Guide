@@ -24,16 +24,20 @@ export const authFail = error => {
 };
 
 export const logout = () => {
+  localStorage.removeItem('token');
+  localStorage.removeItem('expirationDate');
+  localStorage.removeItem('userId');
+
   return {
     type: actionTypes.AUTH_LOGOUT
   };
 };
 
-export const checkAuthTimeout = expirationTime => {
+export const checkAuthTimeout = expirationDate => {
   return dispatch => {
     setTimeout(() => {
       dispatch(logout());
-    }, expirationTime*1000);
+    }, expirationDate*1000);
   };
 };
 
@@ -55,7 +59,14 @@ export const auth = (email, password, isSignUp) => {
         authData
       );
 
+      const expirationDate = new Date(
+        new Date().getTime() + response.data.expiresIn * 1000
+      );
+
       console.log('Auth response: ', response);
+      localStorage.setItem('token', response.data.idToken);
+      localStorage.setItem('expirationDate', expirationDate);
+      localStorage.setItem('userId', response.data.localId);
 
       dispatch(authSuccess(response.data.idToken, response.data.localId));
       dispatch(checkAuthTimeout(response.data.expiresIn));
@@ -66,3 +77,35 @@ export const auth = (email, password, isSignUp) => {
     }
   };
 };
+
+export const setAuthRedirectPath = path => {
+  return {
+    type: actionTypes.SET_AUTH_REDIRECT_PATH,
+    path
+  };
+};
+
+export const authCheckState = () => {
+  return dispatch => {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+      dispatch(logout());
+    } else {
+      const expirationDate = new Date(localStorage.getItem('expirationDate'));
+      const userId = localStorage.getItem('userId');
+      
+      if (expirationDate > new Date()) {
+        dispatch(authSuccess(token, userId));
+        dispatch(
+          checkAuthTimeout(
+            (expirationDate.getTime() - new Date().getTime()) / 1000
+          )
+        );
+      } else {
+        dispatch(logout());
+      }
+    }
+  };
+};
+
