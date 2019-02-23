@@ -63,12 +63,21 @@ export const fetchOrderStart = () => {
   };
 };
 
-export const fetchOrders = (token) => {
+export const fetchOrders = (token, userId) => {
   return async (dispatch/*, getState*/) => {
     try {
       dispatch(fetchOrderStart());
+      
+      const queryParams = {
+        auth    : token,
+        orderBy : '"userId"',
+        equalTo : `"${userId}"`
+      };
 
-      const { data: orders } = await axios.get('/orders.json?auth=' + token);
+      const { data: orders } = await axios.get(
+        `/orders.json`,
+        { params: queryParams }
+      );
       
       const fetchedOrders = Object.keys(orders).map(key => 
         Object.assign({}, { id: key }, {...orders[key]})
@@ -76,7 +85,7 @@ export const fetchOrders = (token) => {
 
       dispatch(fetchOrderSuccess(fetchedOrders));
     } catch (error) {
-      dispatch(fetchOrderFail(error))
+      dispatch(fetchOrderFail(error));
     }
   };
 };
