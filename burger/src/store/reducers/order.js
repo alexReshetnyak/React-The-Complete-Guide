@@ -1,6 +1,7 @@
-
 import * as actionTypes from '../actions/actionTypes';
-import { updateObject } from '../utility';
+import {
+  updateObject
+} from '../../shared/utility';
 
 
 const initialState = {
@@ -10,7 +11,9 @@ const initialState = {
 };
 
 const purchaseBurgerSuccess = (state, orderData, orderId) => {
-  const newOrder = updateObject(orderData, { id: orderId });
+  const newOrder = updateObject(orderData, {
+    id: orderId
+  });
   const updatedPurchase = {
     loading: false,
     purchased: true,
@@ -21,31 +24,50 @@ const purchaseBurgerSuccess = (state, orderData, orderId) => {
 };
 
 const reducer = (state = initialState, action) => {
-  const { type, orderData, orderId, orders } = action;
-  
+  const {
+    type,
+    orderData,
+    orderId,
+    orders
+  } = action;
+
   switch (type) {
     case actionTypes.PURCHASE_INIT:
-      return updateObject(state, { purchased: false });
+      return updateObject(state, {
+        purchased: false
+      });
 
     case actionTypes.PURCHASE_BURGER_START:
-      return updateObject(state, { loading: true });
+      return updateObject(state, {
+        loading: true
+      });
 
     case actionTypes.PURCHASE_BURGER_SUCCESS:
       return purchaseBurgerSuccess(state, orderData, orderId);
-    
+
     case actionTypes.PURCHASE_BURGER_FAIL:
-      return updateObject(state, { loading: false });
+      return updateObject(state, {
+        loading: false
+      });
 
     case actionTypes.FETCH_ORDERS_START:
-      return updateObject(state, { loading: true });
-  
+      return updateObject(state, {
+        loading: true
+      });
+
     case actionTypes.FETCH_ORDERS_SUCCESS:
-      return updateObject(state, { orders, loading: false });
+      return updateObject(state, {
+        orders,
+        loading: false
+      });
 
     case actionTypes.FETCH_ORDERS_FAIL:
-      return updateObject(state, { loading: false });
+      return updateObject(state, {
+        loading: false
+      });
 
-    default: return state;
+    default:
+      return state;
   }
 };
 

@@ -1,4 +1,3 @@
-
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
 
@@ -37,7 +36,7 @@ export const checkAuthTimeout = expirationDate => {
   return dispatch => {
     setTimeout(() => {
       dispatch(logout());
-    }, expirationDate*1000);
+    }, expirationDate * 1000);
   };
 };
 
@@ -53,7 +52,7 @@ export const auth = (email, password, isSignUp) => {
         password,
         returnSecureToken: true
       };
-      
+
       const response = await axios.post(
         isSignUp ? signUpUrl : signInUrl,
         authData
@@ -93,7 +92,7 @@ export const authCheckState = () => {
     } else {
       const expirationDate = new Date(localStorage.getItem('expirationDate'));
       const userId = localStorage.getItem('userId');
-      
+
       if (expirationDate > new Date()) {
         dispatch(authSuccess(token, userId));
         dispatch(
@@ -107,4 +106,3 @@ export const authCheckState = () => {
     }
   };
 };
-

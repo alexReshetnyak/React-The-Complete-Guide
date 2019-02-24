@@ -1,8 +1,8 @@
-import React from 'react';
-import Logo from '../../Logo/Logo';
-import NavigationItems from '../NavigationItems/NavigationItems';
-import classes from './SideDrawer.css';
-import BackDrop from '../../UI/Backdrop/Backdrop';
+import React from "react";
+import Logo from "../../Logo/Logo";
+import NavigationItems from "../NavigationItems/NavigationItems";
+import classes from "./SideDrawer.css";
+import BackDrop from "../../UI/Backdrop/Backdrop";
 
 const SideDrawer = ({ closed, open, isAuth }) => {
   let attachedClasses = [classes.SideDrawer, classes.Close];
@@ -10,18 +10,17 @@ const SideDrawer = ({ closed, open, isAuth }) => {
 
   return (
     <React.Fragment>
-      <BackDrop show={open} clicked={closed}/>
-      <div className={attachedClasses.join(' ')}>
+      <BackDrop show={open} clicked={closed} />
+      <div className={attachedClasses.join(" ")} onClick={closed}>
         <div className={classes.Logo}>
           <Logo />
         </div>
         <nav>
-          <NavigationItems isAuthenticated={isAuth}/>
-        </nav>  
+          <NavigationItems isAuthenticated={isAuth} />
+        </nav>
       </div>
     </React.Fragment>
- 
   );
-}
- 
+};
+
 export default SideDrawer;

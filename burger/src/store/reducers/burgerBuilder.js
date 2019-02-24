@@ -1,6 +1,7 @@
-
-import * as actionTypes  from '../actions/actionTypes';
-import { updateObject } from '../utility';
+import * as actionTypes from '../actions/actionTypes';
+import {
+  updateObject
+} from '../../shared/utility';
 
 
 const INGREDIENT_PRICES = {
@@ -18,7 +19,9 @@ const initialState = {
 };
 
 const addIngredient = (state, ingredientName) => {
-  const updatedIngredient = { [ingredientName]: state.ingredients[ingredientName] + 1 };
+  const updatedIngredient = {
+    [ingredientName]: state.ingredients[ingredientName] + 1
+  };
   const updatedIngredients = updateObject(state.ingredients, updatedIngredient);
   const updatedState = {
     ingredients: updatedIngredients,
@@ -30,7 +33,9 @@ const addIngredient = (state, ingredientName) => {
 };
 
 const removeIngredient = (state, ingredientName) => {
-  const updatedIng = { [ingredientName]: state.ingredients[ingredientName] - 1 };
+  const updatedIng = {
+    [ingredientName]: state.ingredients[ingredientName] - 1
+  };
   const updatedIngs = updateObject(state.ingredients, updatedIng);
   const updatedSt = {
     ingredients: updatedIngs,
@@ -42,11 +47,11 @@ const removeIngredient = (state, ingredientName) => {
 };
 
 const setIngredients = (state, ingredients) => {
-  const updatedOrder = { 
-    ingredients, 
-    totalPrice: 4, 
+  const updatedOrder = {
+    ingredients,
+    totalPrice: 4,
     error: false,
-    building: false 
+    building: false
   };
   return updateObject(state, updatedOrder);
 };
@@ -54,7 +59,10 @@ const setIngredients = (state, ingredients) => {
 
 
 const reducer = (state = initialState, action) => {
-  const { ingredientName, ingredients } = action;
+  const {
+    ingredientName,
+    ingredients
+  } = action;
 
   switch (action.type) {
     case actionTypes.ADD_INGREDIENT:
@@ -65,14 +73,15 @@ const reducer = (state = initialState, action) => {
 
     case actionTypes.SET_INGREDIENTS:
       return setIngredients(state, ingredients);
-    
+
     case actionTypes.FETCH_INGREDIENTS_FAILED:
-      return updateObject(state, { error: true });
-  
+      return updateObject(state, {
+        error: true
+      });
+
     default:
       return state;
   }
 };
 
 export default reducer;
-
