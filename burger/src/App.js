@@ -10,8 +10,10 @@ import * as actions from "./store/actions";
 const AsyncCheckout = React.lazy(() =>
   import("./containers/Checkout/Checkout")
 );
-const AsyncOrders = React.lazy(() => import("./containers/Orders/Orders"));
-const AsyncAuth = React.lazy(() => import("./containers/Auth/Auth"));
+const AsyncOrdersPromise = import("./containers/Orders/Orders")
+const AsyncOrders = React.lazy(() => AsyncOrdersPromise);
+const AsyncAuthPromise = import("./containers/Auth/Auth");
+const AsyncAuth = React.lazy(() => AsyncAuthPromise);
 
 class App extends Component {
   componentDidMount = () => {
@@ -20,6 +22,9 @@ class App extends Component {
 
   render() {
     const routes = [
+      <Route key="home" path="/" exact component={BurgerBuilder} />,
+      <Route key="logout" path="/logout" component={Logout} />,
+      <Route key="error" path="/error" render={() => <h1>Not Found!</h1>} />,
       <Route
         key="auth"
         path="/auth"
@@ -29,9 +34,6 @@ class App extends Component {
           </Suspense>
         )}
       />,
-      <Route key="logout" path="/logout" component={Logout} />,
-      <Route key="error" path="/error" render={() => <h1>Not Found!</h1>} />,
-      <Route key="home" path="/" exact component={BurgerBuilder} />,
       <Redirect key="redirect" from="/**" to="/error" />
     ];
 
