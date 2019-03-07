@@ -12,7 +12,7 @@ import App from "./App";
 import burgerBuilderReducer from "./store/reducers/burgerBuilder";
 import orderReducer from "./store/reducers/order";
 import authReducer from "./store/reducers/auth";
-import { logoutSaga } from "./store/sagas/auth";
+import { watchAuth } from "./store/sagas";
 // import axios from 'axios';
 
 // * For redux dev-tools
@@ -27,11 +27,16 @@ const rootReducer = combineReducers({
   auth: authReducer
 });
 
+const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   rootReducer,
-  composeEnhancers(applyMiddleware(thunk)) // * thunk for async actions
+  composeEnhancers(
+    applyMiddleware(thunk, sagaMiddleware) // * thunk for async actions , saga for side effects
+  )
 );
+
+sagaMiddleware.run(watchAuth);
 
 const app = (
   <Provider store={store}>
