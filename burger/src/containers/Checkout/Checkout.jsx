@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import queryString from "query-string";
 import { Route, Redirect } from "react-router-dom";
 import { connect } from 'react-redux';
+import { withRouter } from "react-router";
 
 import CheckoutSummary from "../../components/Order/CheckoutSummary/CheckoutSummary";
 import ContactData from "./ContactData/ContactData";
@@ -20,9 +21,6 @@ class Checkout extends Component {
   render() {
     const { ings: ingredients, purchased } = this.props;
     let summary = <Redirect  to='/'/>;
-    
-    console.log('PROPS Checkout', this.props);
-    
 
     ingredients && !purchased && ( summary = (
       <div>
@@ -48,4 +46,6 @@ const mapStateToProps = state => {
   }
 };
 
-export default connect(mapStateToProps)(Checkout);
+export default withRouter(
+  connect(mapStateToProps)(Checkout)
+);

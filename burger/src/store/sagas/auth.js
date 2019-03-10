@@ -1,13 +1,16 @@
 
 import { delay } from 'redux-saga/effects';
-import { put } from 'redux-saga/effects';
+import { put, call } from 'redux-saga/effects';
 import axios from 'axios';
 
 // import * as actionTypes from '../actions/actionTypes';
 import * as actions from '../actions';
 
 export function* logoutSaga(action) {
-  yield localStorage.removeItem('token');
+  // * way to work with object methods if you want to test them after
+  yield call([localStorage, 'removeItem'], 'token');
+
+  // yield localStorage.removeItem('token');
   yield localStorage.removeItem('expirationDate');
   yield localStorage.removeItem('userId');
 

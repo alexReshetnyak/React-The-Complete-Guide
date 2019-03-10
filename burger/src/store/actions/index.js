@@ -14,7 +14,10 @@ export {
   fetchOrders,
   purchaseBurgerStart,
   purchaseBurgerSuccess,
-  purchaseBurgerFail
+  purchaseBurgerFail,
+  fetchOrderStart,
+  fetchOrderFail,
+  fetchOrderSuccess
 } from './order';
 
 export {

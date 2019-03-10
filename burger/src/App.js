@@ -44,7 +44,7 @@ class App extends Component {
           path="/checkout"
           render={() => (
             <Suspense fallback={<div>Loading...</div>}>
-              <AsyncCheckout {...this.props}/>
+              <AsyncCheckout />
             </Suspense>
           )}
         />,
@@ -53,7 +53,7 @@ class App extends Component {
           path="/orders"
           render={() => (
             <Suspense fallback={<div>Loading...</div>}>
-              <AsyncOrders {...this.props}/>
+              <AsyncOrders />
             </Suspense>
           )}
         />
