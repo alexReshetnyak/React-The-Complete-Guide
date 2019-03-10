@@ -15,7 +15,8 @@ const initialState = {
   ingredients: null,
   totalPrice: 4,
   error: false,
-  building: false
+  building: false,
+  loading: false
 };
 
 const addIngredient = (state, ingredientName) => {
@@ -51,7 +52,8 @@ const setIngredients = (state, ingredients) => {
     ingredients,
     totalPrice: 4,
     error: false,
-    building: false
+    building: false,
+    loading: false
   };
   return updateObject(state, updatedOrder);
 };
@@ -74,9 +76,16 @@ const reducer = (state = initialState, action) => {
     case actionTypes.SET_INGREDIENTS:
       return setIngredients(state, ingredients);
 
+    case actionTypes.INIT_INGREDIENTS_START:
+      return updateObject(state, {
+        error: false,
+        loading: true
+      });
+
     case actionTypes.FETCH_INGREDIENTS_FAILED:
       return updateObject(state, {
-        error: true
+        error: true,
+        loading: false
       });
 
     default:

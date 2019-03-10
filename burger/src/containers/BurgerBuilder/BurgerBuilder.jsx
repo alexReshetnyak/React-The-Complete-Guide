@@ -10,7 +10,7 @@ import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
-// import Spinner from "../../components/UI/Spinner/Spinner";
+import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 
 
@@ -49,7 +49,13 @@ export class BurgerBuilder extends Component {
 
   render() {
     const disabledInfo = { ...this.props.ings };
-    const { ings: ingredients, price: totalPrice, error, isAuthenticated } = this.props;
+    const { 
+      ings: ingredients, 
+      price: totalPrice, 
+      error, 
+      isAuthenticated, 
+      loading 
+    } = this.props;
     const { purchasing } = this.state;
 
     Object.keys(disabledInfo || {}).forEach(key => {
@@ -90,7 +96,7 @@ export class BurgerBuilder extends Component {
         <Modal show={purchasing} modalClosed={this.purchaseCancelHandler}>
           {orderSummary}
         </Modal>
-        {burger}
+        { loading ? <Spinner /> : burger}
       </Aux>
     );
   }
@@ -102,6 +108,7 @@ const mapStateToProps = state => {
     ings: burgerBuilder.ingredients,
     price: burgerBuilder.totalPrice,
     error: burgerBuilder.error,
+    loading: burgerBuilder.loading,
     isAuthenticated: !!auth.token
   }
 };

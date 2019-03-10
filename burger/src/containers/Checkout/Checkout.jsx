@@ -20,6 +20,9 @@ class Checkout extends Component {
   render() {
     const { ings: ingredients, purchased } = this.props;
     let summary = <Redirect  to='/'/>;
+    
+    console.log('PROPS Checkout', this.props);
+    
 
     ingredients && !purchased && ( summary = (
       <div>
