@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../auth-context';
 
 const Header = ({ onLoadTodoList, onLoadAuth }) => {
+  const auth = useContext(AuthContext);
+
   return ( 
     <header>
-      <button onClick={onLoadTodoList}>Todo List</button> | 
+      { 
+        auth.status &&
+        <button onClick={onLoadTodoList}>Todo List</button> 
+      }
       <button onClick={onLoadAuth}>Auth</button>
     </header>
    );
