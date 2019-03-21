@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import classes from "./Layout.css";
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
-import Aux from "../Aux/Aux";
+import Aux from "../wrapper/Aux";
 
 class Layout extends Component {
   state = {
