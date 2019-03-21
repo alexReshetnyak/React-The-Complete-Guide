@@ -5,6 +5,7 @@ import axios from 'axios'
 const Todo = (props) => {
   const [todoName, setTodoName] = useState('');
   const [todoList, setTodoList] = useState([]);
+  const [submittedTodo, setSubmittedTodo] = useState(null);
   const [saveCounter, setSaveCounter] = useState(0);
 
   const fetchTodoList = async () => {
@@ -50,6 +51,10 @@ const Todo = (props) => {
       console.log('Component UnMount');
     };
   }, []);
+
+  useEffect(() => {
+    submittedTodo && setTodoList([...todoList, submittedTodo]);
+  }, [submittedTodo]);
   
 
   const inputChangeHandler = ({ target }) => {
@@ -63,14 +68,17 @@ const Todo = (props) => {
         { name: todoName }
       );
 
+      const todoItem = { id: savedItem.name, name: todoName };
+
       setTodoName('');
+      setSubmittedTodo(todoItem);
 
       console.log('Saved Item', savedItem);
       setSaveCounter(1 + saveCounter);
     } catch (error) {
       console.error(error);
     }
-  }
+  };
 
   return (
     <React.Fragment>
