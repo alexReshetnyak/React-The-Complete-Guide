@@ -1,4 +1,4 @@
-import React, { Component, Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -15,58 +15,43 @@ const AsyncOrders = React.lazy(() => AsyncOrdersPromise);
 const AsyncAuthPromise = import("./containers/Auth/Auth");
 const AsyncAuth = React.lazy(() => AsyncAuthPromise);
 
-class App extends Component {
-  componentDidMount = () => {
-    this.props.onTryAutoSignup();
-  };
+const App = (props) => {
+  useEffect(() => { props.onTryAutoSignup() }, []);
 
-  render() {
-    const routes = [
-      <Route key="home" path="/" exact component={BurgerBuilder} />,
-      <Route key="logout" path="/logout" component={Logout} />,
-      <Route key="error" path="/error" render={() => <h1>Not Found!</h1>} />,
-      <Route
-        key="auth"
-        path="/auth"
-        render={() => (
-          <Suspense fallback={<div>Loading...</div>}>
-            <AsyncAuth />
-          </Suspense>
-        )}
-      />,
-      <Redirect key="redirect" from="/**" to="/error" />
-    ];
+  const routes = [
+    <Route key="home" path="/" exact component={BurgerBuilder} />,
+    <Route key="logout" path="/logout" component={Logout} />,
+    <Route key="error" path="/error" render={() => <h1>Not Found!</h1>} />,
+    <Route
+      key="auth"
+      path="/auth"
+      render={() => ( <AsyncAuth /> )}
+    />,
+    <Redirect key="redirect" from="/**" to="/error" />
+  ];
 
-    this.props.isAuthenticated &&
-      routes.unshift(
-        <Route
-          key="checkout"
-          path="/checkout"
-          render={() => (
-            <Suspense fallback={<div>Loading...</div>}>
-              <AsyncCheckout />
-            </Suspense>
-          )}
-        />,
-        <Route
-          key="orders"
-          path="/orders"
-          render={() => (
-            <Suspense fallback={<div>Loading...</div>}>
-              <AsyncOrders />
-            </Suspense>
-          )}
-        />
-      );
+  props.isAuthenticated && routes.unshift(
+    <Route
+      key="checkout"
+      path="/checkout"
+      render={() => ( <AsyncCheckout /> )}
+    />,
+    <Route
+      key="orders"
+      path="/orders"
+      render={() => ( <AsyncOrders /> )}
+    />
+  );
 
-    return (
-      <div>
-        <Layout>
+  return (
+    <div>
+      <Layout>
+        <Suspense fallback={<div>Loading...</div>}>
           <Switch>{routes}</Switch>
-        </Layout>
-      </div>
-    );
-  }
+        </Suspense>
+      </Layout>
+    </div>
+  );
 }
 
 const mapStateToProps = state => {
