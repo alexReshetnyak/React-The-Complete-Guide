@@ -1,45 +1,39 @@
 
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from "../../components/UI/Modal/Modal";
 import Aux from "../wrapper/Aux";
 
 const withErrorHandler = ( WrappedComponent, axios, orders = null ) => {
-  return class withErrorHandler extends Component {
-    state = {
-      error: null
-    }
-    
-    componentWillMount() {
-      this.reqInterceptor = axios.interceptors.request.use(req => {
-        this.setState({ error: null });
-        return req;
-      });
-      this.resInterceptor = axios.interceptors.response.use(res => res, error => {
-        this.setState({ error });
-      });
-    }
+  return props => {
+    const [error, setError] = useState(null);
 
-    componentWillUnmount() { // * Delete interceptors before component will be destroy         
-      axios.interceptors.request.eject(this.reqInterceptor);
-      axios.interceptors.response.eject(this.resInterceptor);
-    }
+    const reqInterceptor = axios.interceptors.request.use(req => {
+      setError(null);
+      return req;
+    });
+    const resInterceptor = axios.interceptors.response.use(res => res, err => {
+      setError(err);
+    });
 
-    errorConfirmedHandler = () => {
-      this.setState({ error: null });
-    }
+    useEffect(() => {
+      return () => {// * Delete interceptors before component will be destroy
+        axios.interceptors.request.eject(reqInterceptor);
+        axios.interceptors.response.eject(resInterceptor);
+      }
+    }, [reqInterceptor, resInterceptor]);
 
-    render() {
-      const { error } = this.state;
+    const errorConfirmedHandler = () => {
+      setError(null);
+    };
       
-      return (
-        <Aux>
-          <Modal show={error} modalClosed={this.errorConfirmedHandler}>
-            { error ? error.message : null }
-          </Modal>
-          <WrappedComponent { ...this.props} />
-        </Aux>
-      )
-    }
+    return (
+      <Aux>
+        <Modal show={error} modalClosed={errorConfirmedHandler}>
+          { error ? error.message : null }
+        </Modal>
+        <WrappedComponent { ...props} />
+      </Aux>
+    );
   }
 }
  

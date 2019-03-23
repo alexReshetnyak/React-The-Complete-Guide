@@ -10,7 +10,7 @@ import * as actions from "./store/actions";
 const AsyncCheckout = React.lazy(() =>
   import("./containers/Checkout/Checkout")
 );
-const AsyncOrdersPromise = import("./containers/Orders/Orders")
+const AsyncOrdersPromise = import("./containers/Orders/Orders");
 const AsyncOrders = React.lazy(() => AsyncOrdersPromise);
 const AsyncAuthPromise = import("./containers/Auth/Auth");
 const AsyncAuth = React.lazy(() => AsyncAuthPromise);
@@ -25,7 +25,7 @@ const App = (props) => {
     <Route
       key="auth"
       path="/auth"
-      render={() => ( <AsyncAuth /> )}
+      render={props => (<AsyncAuth {...props}/>)}
     />,
     <Redirect key="redirect" from="/**" to="/error" />
   ];
@@ -34,12 +34,12 @@ const App = (props) => {
     <Route
       key="checkout"
       path="/checkout"
-      render={() => ( <AsyncCheckout /> )}
+      render={props => ( <AsyncCheckout {...props}/> )}
     />,
     <Route
       key="orders"
       path="/orders"
-      render={() => ( <AsyncOrders /> )}
+      render={props => ( <AsyncOrders {...props}/> )}
     />
   );
 
