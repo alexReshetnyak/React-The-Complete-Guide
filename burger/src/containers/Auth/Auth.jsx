@@ -85,18 +85,18 @@ const Auth = props => {
     );
   };
 
-    return (
-      <div className={classes.Auth}>
-        {isAuthenticated ? authRedirect : null}
+  return (
+    <div className={classes.Auth}>
+      {isAuthenticated ? authRedirect : null}
 
-        {errorMessage}
+      {errorMessage}
 
-        {loading ? spinner : getForm()}
-        <Button btnType="Danger" clicked={switchAuthModeHandler}>
-          SWITCH TO {isSignup ? "SIGNIN" : "SIGNUP"}
-        </Button>
-      </div>
-    );
+      {loading ? spinner : getForm()}
+      <Button btnType="Danger" clicked={switchAuthModeHandler}>
+        SWITCH TO {isSignup ? "SIGNIN" : "SIGNUP"}
+      </Button>
+    </div>
+  );
 };
 
 
