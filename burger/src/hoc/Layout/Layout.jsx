@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import classes from "./Layout.css";
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
-import Aux from "../wrapper/Aux";
+import Aux from "../wrapper/Wrapper";
 
 const Layout = props => {
 

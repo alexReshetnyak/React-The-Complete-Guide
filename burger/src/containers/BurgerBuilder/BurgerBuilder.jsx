@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../store/actions';
 import axios from '../../axios-orders';
 
-import Aux from "../../hoc/wrapper/Aux";
+import Aux from "../../hoc/wrapper/Wrapper";
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";

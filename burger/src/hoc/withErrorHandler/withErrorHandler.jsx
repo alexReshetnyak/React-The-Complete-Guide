@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Modal from "../../components/UI/Modal/Modal";
-import Aux from "../wrapper/Aux";
+import Aux from "../wrapper/Wrapper";
 
 const withErrorHandler = ( WrappedComponent, axios, orders = null ) => {
   return props => {
